@@ -264,9 +264,9 @@
 ## [SIEM server integration](siem-server-integration.md)
 
 # Compliance solutions
-## [Get started with the Microsoft Service Trust Portal](get-started-with-service-trust-portal.md)
-## [Use Compliance Manager to help meet data protection and regulatory requirements when using Microsoft cloud services](meet-data-protection-and-regulatory-reqs-using-microsoft-cloud.md)
-## [Manage GDPR data subject requests with the DSR case tool](manage-gdpr-data-subject-requests-with-the-dsr-case-tool.md)
+## [Microsoft Service Trust Portal](get-started-with-service-trust-portal.md)
+## [Compliance Manager](meet-data-protection-and-regulatory-reqs-using-microsoft-cloud.md)
+## [GDPR data subject request tool](manage-gdpr-data-subject-requests-with-the-dsr-case-tool.md)
 ## [Office 365 Information Protection for GDPR](office-365-information-protection-for-gdpr.md)
 ### [Overview: Office 365 Protection for GDPR](office-365-info-protection-for-gdpr-overview.md)
 ### [Search for and find personal data](search-for-and-find-personal-data.md)
