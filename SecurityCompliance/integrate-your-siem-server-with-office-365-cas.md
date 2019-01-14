@@ -62,7 +62,7 @@ Office 365 Cloud App Security currently supports the following SIEM servers:
  
 ## Step 1: Set it up a SIEM agent in Office 365 Cloud App Security
 
-1. Go to [https://security.microsoft.com](https://security.microsoft.com) and sign in using your work or school account for Office 365. (This takes you to the Security &amp; Compliance Center.) 
+1. Go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account for Office 365. (This takes you to the Security &amp; Compliance Center.) 
     
 2. Go to **Alerts** \> **Manage advanced alerts**.
     

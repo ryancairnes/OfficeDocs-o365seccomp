@@ -46,7 +46,7 @@ description: "Set up Safe Links policies to protect your organization from malic
 
 When you have [Office 365 Advanced Threat Protection](office-365-atp.md), you will have a default ATP Safe Links policy that applies to everyone in your organization. Make sure to review, and if needed, edit your default policy.
   
-1. Go to [https://security.microsoft.com](https://security.microsoft.com) and sign in with your work or school account. 
+1. Go to [https://protection.office.com](https://protection.office.com) and sign in with your work or school account. 
     
 2. In the left navigation, under **Threat management**, choose **Policy \>** **Safe Links**.
     
@@ -62,7 +62,7 @@ When you have [Office 365 Advanced Threat Protection](office-365-atp.md), you wi
 
 After you have reviewed (or edited) the default ATP Safe Links policy that applies to everyone, your next step is to define additional policies that would apply to specific recipients. For example, you can specify exceptions to your default policy by defining an additional policy. 
   
-1. Go to [https://security.microsoft.com](https://security.microsoft.com) and sign in with your work or school account. 
+1. Go to [https://protection.office.com](https://protection.office.com) and sign in with your work or school account. 
     
 2. In the left navigation, under **Threat management**, choose **Policy**.
     

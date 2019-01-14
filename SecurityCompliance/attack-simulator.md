@@ -61,7 +61,7 @@ This attack focuses on letting you manipulate who the message appears to have or
   
 You can craft the rich HTML editor directly in the **Email body** field itself or work with HTML source.
   
-1. In the [Security &amp; Compliance Center](https://security.microsoft.com), choose **Threat management** \> **Attack simulator**.
+1. In the [Security &amp; Compliance Center](https://protection.office.com), choose **Threat management** \> **Attack simulator**.
     
 2. Specify a meaningful campaign name for the attack or select a template. <br/>![Phishing Start Page](media/5e93b3cc-5981-462f-8b45-bdf85d97f1b8.jpg)
   
@@ -91,7 +91,7 @@ This attack focuses on letting you specify a common password against a large tar
   
 ### To simulate a password-spray attack
 
-1. In the [Security &amp; Compliance Center](https://security.microsoft.com), choose **Threat management** \> **Attack simulator**.
+1. In the [Security &amp; Compliance Center](https://protection.office.com), choose **Threat management** \> **Attack simulator**.
     
 2. Specify a meaningful campaign name for the attack.
     
@@ -107,7 +107,7 @@ A brute-force password attack against an organization is typically used after a 
   
 ### To simulate a brute-force password attack
 
-1. In the [Security &amp; Compliance Center](https://security.microsoft.com), choose **Threat management** \> **Attack simulator**.
+1. In the [Security &amp; Compliance Center](https://protection.office.com), choose **Threat management** \> **Attack simulator**.
     
 2. Specify a meaningful campaign name for the attack.
     

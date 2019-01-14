@@ -16,14 +16,14 @@ description: "Learn how to set up and download a report with a custom date range
 
 # Set up and download a custom report in the Security &amp; Compliance Center
 
-In the [Security &amp; Compliance Center](https://security.microsoft.com), several [reports and insights](reports-and-insights-in-security-and-compliance.md) are available to help your organization's security team mitigate and address threats to your organization. If you're a member of your organization's security team, you can configure a report with custom date ranges and filters, and then download your custom report. 
+In the [Security &amp; Compliance Center](https://protection.office.com), several [reports and insights](reports-and-insights-in-security-and-compliance.md) are available to help your organization's security team mitigate and address threats to your organization. If you're a member of your organization's security team, you can configure a report with custom date ranges and filters, and then download your custom report. 
   
 ## Download a custom report
 
 > [!IMPORTANT]
 > Make sure that you have the necessary [permissions for the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md). In general, Office 365 global administrators, security administrators, and security readers can access reports in the Security &amp; Compliance Center. 
   
-1. In the [Security &amp; Compliance Center](https://security.microsoft.com), go to **Reports** \> **Dashboard**.
+1. In the [Security &amp; Compliance Center](https://protection.office.com), go to **Reports** \> **Dashboard**.
     
 2. Choose a report. (For this example, we'll use the Message Disposition Report.)<br/>![Choose Request Report to download a report](media/b566925d-b9d9-453d-9bdd-f2637c7ba140.png)
   

@@ -25,7 +25,7 @@ This is one of several walkthroughs for the Security &amp; Compliance Center. To
 
 Let's walk through the flow from a detailed report to an insight and actions. (This is a brief [anti-spam and anti-malware](anti-spam-and-anti-malware-protection.md) example.) 
   
-1. We begin with [Security &amp; Compliance Center](https://security.microsoft.com) reports. (Go to **Reports** \> **Dashboard**.) <br/>![In the Security &amp; Compliance Center, go to Reports \> Dashboard](media/68f3bb7c-b4f7-4cca-904b-478643a93c94.png)
+1. We begin with [Security &amp; Compliance Center](https://protection.office.com) reports. (Go to **Reports** \> **Dashboard**.) <br/>![In the Security &amp; Compliance Center, go to Reports \> Dashboard](media/68f3bb7c-b4f7-4cca-904b-478643a93c94.png)
   
 2. We choose a report to get a more detailed view. (Choose a report, such as the **Threat Protection Status** report.)<br/>![Threat Protection Status report showing insights](media/f47d7dbd-816a-47ba-b8db-53919fbed192.png)
   

@@ -23,7 +23,7 @@ description: "Ever wonder how secure your organization really is in Office 365? 
 
 If your organization has a subscription that includes [Office 365 Enterprise](https://docs.microsoft.com/office365/enterprise/), [Microsoft 365 Business](https://docs.microsoft.com/microsoft-365/business/), or Office 365 Business Premium, and you have the necessary permissions, you can view your organization's secure score by visiting [https://securescore.office.com](https://securescore.office.com). 
 
-Alternatively, you can visit the Security & Compliance Center ([https://security.microsoft.com](https://security.microsoft.com)), where you'll find a Secure Score widget that provides you with your current score.
+Alternatively, you can visit the Security & Compliance Center ([https://protection.office.com](https://protection.office.com)), where you'll find a Secure Score widget that provides you with your current score.
 
 ![Secure Score widget](media/SecureScoreWidget-o365.png)
 

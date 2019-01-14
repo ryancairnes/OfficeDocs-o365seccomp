@@ -46,7 +46,7 @@ Make sure that:
     
 ## View your anomaly detection policies
 
-1. As a global administrator or security administrator, go to [https://security.microsoft.com](https://security.microsoft.com) and sign in using your work or school account. 
+1. As a global administrator or security administrator, go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account. 
     
 2. In the Security &amp; Compliance Center, choose **Alerts** \> **Manage advanced alerts**.
     
@@ -84,11 +84,10 @@ The following table describes the default anomaly detection policies, what they 
 |Multiple failed login attempts  <br/> |Identifies users that failed multiple login attempts in a single session with respect to the baseline learned, which could indicate on a breach attempt.  <br/> |
    
 ## Triage anomaly detection alerts
-<a name="triage"> </a>
 
 As alerts come in, you can triage those alerts quickly and determine which ones to handle first. Having context for an alert enables you to see the bigger picture and determine whether something malicious is indeed happening. Use the following procedure to get started exploring an alert:
   
-1. As a global administrator or security administrator, go to [https://security.microsoft.com](https://security.microsoft.com) and sign in using your work or school account. 
+1. As a global administrator or security administrator, go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account. 
     
 2. In the Security &amp; Compliance Center, choose **Alerts** \> **Manage advanced alerts**.
     

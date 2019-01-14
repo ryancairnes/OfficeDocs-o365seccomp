@@ -24,7 +24,7 @@ This article describes how to specify a list of URLs that are excluded from ATP 
 
 ATP Safe Links protection uses several lists, including your organization's blocked URLs list and the "do not rewrite" lists for exceptions. If you have the necessary permissions, you can set up your custom "do not rewrite" lists. You do this when you add or edit Safe Links policies that apply to specific recipients in your organization. 
   
-1. Go to [https://security.microsoft.com](https://security.microsoft.com) and sign in with your work or school account. 
+1. Go to [https://protection.office.com](https://protection.office.com) and sign in with your work or school account. 
     
 2. In the left navigation, under **Threat management** \> **Policy** \> **Safe Links**.
     

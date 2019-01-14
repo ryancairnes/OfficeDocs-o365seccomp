@@ -25,7 +25,7 @@ Office 365 Cloud App Security works with your [Office 365 audit log](detailed-pr
   
 ## How to get to the Activity log page
 
-1. As a global administrator or security administrator, go to [https://security.microsoft.com](https://security.microsoft.com) and sign in using your work or school account. (See [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md).)
+1. As a global administrator or security administrator, go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account. (See [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md).)
     
 2. In the Security &amp; Compliance Center, choose **Alerts** \> **Manage advanced alerts**.
     

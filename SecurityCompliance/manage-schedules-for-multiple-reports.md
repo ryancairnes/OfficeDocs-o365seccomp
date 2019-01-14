@@ -25,14 +25,16 @@ In the Security &amp; Compliance Center, several [reports and insights](reports-
 > Make sure that you have the necessary [permissions assigned in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md). In general, Office 365 global administrators, security administrators, and security readers can access reports in the Security &amp; Compliance Center. 
   
 ![In the Security &amp; Compliance Center, choose Reports \> Manage schedules](media/efa5e2f9-bf73-4f85-acea-f1ca7e2bca5e.png)
-  
-1. In the Security &amp; Compliance Center, go to **Reports** \> **Manage schedules**.
+
+1. Go to [https://protection.office.com](https://protection.office.com) and sign in. This takes you to the Security & Compliance Center.
+
+2. In the Security &amp; Compliance Center, go to **Reports** \> **Manage schedules**.
     
-2. Select an item in the list.
+3. Select an item in the list.
     
-3. Review the information for the report's schedule.
+4. Review the information for the report's schedule.
     
-4. As appropriate, edit or delete the schedule, and then click **Close**.
+5. As appropriate, edit or delete the schedule, and then click **Close**.
     
 ## Related topics
 

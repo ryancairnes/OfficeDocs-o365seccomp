@@ -43,7 +43,7 @@ Malicious attackers may be sending mail to your users to try and phish their cre
 > [!TIP]
 > [Threat Explorer](get-started-with-ti.md#threat-explorer) (also referred to as Explorer), is a powerful report that can serve multiple purposes, such as finding and deleting messages, identifying the IP address of a malicious email sender, or starting an incident for further investigation. The following procedure focuses on using Explorer to find and delete malicious email from recipients mailboxes. 
   
-1. Go to [https://security.microsoft.com](https://security.microsoft.com) and sign in using your work or school account for Office 365. This takes you to the Security &amp; Compliance Center. 
+1. Go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account for Office 365. This takes you to the Security &amp; Compliance Center. 
     
 2. In the left navigation, choose **Threat management** \> **Explorer**.
     

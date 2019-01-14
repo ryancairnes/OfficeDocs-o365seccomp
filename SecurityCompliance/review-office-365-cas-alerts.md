@@ -27,7 +27,7 @@ You can use the Alerts page in Office 365 Cloud App Security to view potential i
   
 ## How to get to the Alerts page
 
-1. As a global administrator or security administrator, go to [https://security.microsoft.com](https://security.microsoft.com) and sign in using your work or school account. 
+1. As a global administrator or security administrator, go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account. 
     
 2. In the Security &amp; Compliance Center, choose **Alerts** \> **Manage advanced alerts**.
     

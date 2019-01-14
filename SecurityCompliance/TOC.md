@@ -156,7 +156,7 @@
 ### [View keyword statistics for Content Search results](view-keyword-statistics-for-content-search.md)
 ### [Export Content Search results ](export-search-results.md)
 ### [Export a Content Search report](export-a-content-search-report.md)
-### [Search for and delete email messages](search-for-and-delete-messagesadmin-help.md)
+### [Search for and delete email messages](search-for-and-delete-messages-in-your-organization.md)
 ### [Search the cloud-based mailboxes of on-premises users in Office 365](search-cloud-based-mailboxes-for-on-premises-users.md)
 ### [Bulk edit multiple Content Searches](bulk-edit-content-searches.md)
 ### [Prepare a CSV file for an ID list Content Search](csv-file-for-an-id-list-content-search.md)

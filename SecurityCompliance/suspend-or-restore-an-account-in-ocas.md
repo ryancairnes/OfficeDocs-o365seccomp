@@ -39,9 +39,7 @@ When you suspend a user account, you prevent the user from signing in again. It'
     
 2. In the Security &amp; Compliance Center, choose **Alerts** \> **Manage advanced alerts**.
     
-3. Choose **Go to Office 365 Cloud App Security**.
-    
-    ![In the Security &amp; Compliance Center, choose Manage Advanced Alerts to go to Office 365 Cloud App Security](media/958632d4-03e3-4ade-8e22-d5509db6fca7.png)
+3. Choose **Go to Office 365 Cloud App Security**.<br>![In the Security &amp; Compliance Center, choose Manage Advanced Alerts to go to Office 365 Cloud App Security](media/958632d4-03e3-4ade-8e22-d5509db6fca7.png)<br>
   
 4. In the navigation bar across the top of the screen, choose **Alerts**.
     

@@ -19,13 +19,13 @@ description: "See how you can move from an insight to a detailed report in the S
 
 If you're new to [reports and insights in the Office 365 Security &amp; Compliance Center](reports-and-insights-in-security-and-compliance.md), it might help to see how you can easily navigate from an insight to a detailed report. 
   
-This is one of several walkthroughs for the [Security &amp; Compliance Center](https://security.microsoft.com). To see additional walkthroughs, see the [Related topics](#related-topics) section. 
+This is one of several walkthroughs for the [Security &amp; Compliance Center](https://protection.office.com). To see additional walkthroughs, see the [Related topics](#related-topics) section. 
   
 ## From an insight to a detailed report
 
 Let's walk through the flow from the dashboard to an insight to a detailed report for data exploration. (This is a brief [data loss prevention](data-loss-prevention-policies.md) example.) 
   
-1. We begin with a dashboard in the [Security &amp; Compliance Center](https://security.microsoft.com). (Go to **Reports** \> **Dashboard**.)<br/>![In the Security &amp; Compliance Center, choose Reports \> Dashboard](media/2a668c3d-3fa3-4e37-8149-46989b33ae8c.png)
+1. We begin with a dashboard in the [Security &amp; Compliance Center](https://protection.office.com). (Go to **Reports** \> **Dashboard**.)<br/>![In the Security &amp; Compliance Center, choose Reports \> Dashboard](media/2a668c3d-3fa3-4e37-8149-46989b33ae8c.png)
   
 2. In the upper left corner of the dashboard, next to **Top insights &amp; recommendations**, we have a link. (Click **View all**.)<br/>![In the Security &amp; Compliance Center, choose Reports \> Dashboard to see your top insights](media/9bb64e11-494f-40a4-ab3d-8d3c7789f300.png)<br/>This takes us to a list of insights for our organization.<br/>![In the Security &amp; Compliance Center, you can view all insights in a list](media/1289af77-bf5a-444a-97a1-03d8a83f75a9.png)
   
