@@ -30,8 +30,8 @@ When information barriers become available for Microsoft Teams, your organizatio
  
 When information barrier policies are in effect, people in one group are not able to call people in the other group with Microsoft Teams.
 
-> [!NOTE]
-> Information barriers for Microsoft Teams will prevent people in one group from calling people in another group, as specified in your organization's policies. However, these policies will not apply to email communications or to file sharing through SharePoint Online, OneDrive, or Microsoft Teams. 
+> [!IMPORTANT]
+> Information barriers for Microsoft Teams will prevent people in one group from calling people in another group, as specified in your organization's policies. In addition, potentially all the users in a policy can be blocked from communicating and will also be removed from Teams and Groups chats if they are part of the same Team or Group chat. However, these policies will not apply to email communications or to file sharing through SharePoint Online, OneDrive, or Microsoft Teams. 
 
 Information barriers
 
