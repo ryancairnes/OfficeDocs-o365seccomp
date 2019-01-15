@@ -28,15 +28,16 @@ To learn more about the Microsoft Teams experience with information barriers, se
 
 ## How policies are defined for information barriers
 
-Currently, information barriers policies are defined by using PowerShell cmdlets, as follows:
+Currently, information barriers policies are defined and managed with PowerShell cmdlets. This is typically done by a compliance administrator or a global administrator.
 
-|PowerShell cmdlet  |Description  |
-|---------|---------|
-|[Get-InformationBarrierPolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/InfoBarrier-chrisda/exchange/exchange-ps/exchange/policy-and-compliance/Get-InformationBarrierPolicy.md)     |Enables you to view information barrier policies in the Office 365 Security & Compliance Center         |
-|[Set-informationBarrierPolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/InfoBarrier-chrisda/exchange/exchange-ps/exchange/policy-and-compliance/Set-InformationBarrierPolicy.md)     |Enables you to modify information barrier policies in the Office 365 Security & Compliance Center         |
-|[Remove-InformationBarrierPolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/InfoBarrier-chrisda/exchange/exchange-ps/exchange/policy-and-compliance/Remove-InformationBarrierPolicy.md)     |Enables you to remove information barrier policies from the Office 365 Security & Compliance Center         |
+1. As a global administrator or compliance administrator, create a remote PowerShell session to the Security & Compliance Center. (To get help with this, see [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell).)
 
-This is typically done by a compliance administrator or a global administrator.
+2. Depending on whether you want to view, modify, or remove an information barriers policy, use one of the following PowerShell cmdlets.
+    - To view existing policies, see  [Get-InformationBarrierPolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/InfoBarrier-chrisda/exchange/exchange-ps/exchange/policy-and-compliance/Get-InformationBarrierPolicy.md)
+    - To define or edit a policy, see  [Set-informationBarrierPolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/InfoBarrier-chrisda/exchange/exchange-ps/exchange/policy-and-compliance/Set-InformationBarrierPolicy.md)
+    - To remove a policy, see [Remove-InformationBarrierPolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/InfoBarrier-chrisda/exchange/exchange-ps/exchange/policy-and-compliance/Remove-InformationBarrierPolicy.md)
+
+3. After your information barriers policies are in place, wait about 30 minutes for those policies to work their way through your data center and services, and then test your policies.
 
 
 
