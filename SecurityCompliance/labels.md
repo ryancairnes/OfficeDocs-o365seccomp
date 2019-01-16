@@ -341,7 +341,7 @@ When an item is labeled as a record, four things happen:
     
 ### Who can classify content as a record
 
-For SharePoint content, any user in the default Members group (the Contribute permission level) can apply a record label to content. Only the site collection administrator can remove or change that retention label after it's been applied. In addition, a retention label that classifies content as a record needs to be applied manually; it can't be auto-applied.
+For SharePoint content, any user in the default Members group (the Contribute permission level) can apply a record label to content. Only the site collection administrator can remove or change that retention label after it's been applied. In addition, a retention label that classifies content as a record can be [auto-applied to content](#auto-apply-retention-labels).
   
 ### Records and folders
 
