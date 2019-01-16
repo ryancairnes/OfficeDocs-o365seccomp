@@ -15,13 +15,13 @@ description: "Use information barriers to ensure communication compliance within
 
 ## Overview
 
-Among the many powerful features included in Microsoft cloud services are communication and collaboration capabilities. But suppose that you want to restrict communications between two groups to avoid a conflict of interest from occurring in your organization. Or, suppose that you want to restrict communications between a group in your organization and outside parties to safeguard internal information. [Information barriers, coming soon for Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams), can help! 
+Among the many powerful features included in Microsoft cloud services are communication and collaboration capabilities. But suppose that you want to restrict communications between two groups to avoid a conflict of interest from occurring in your organization. Or, suppose that you want to restrict communications between a group in your organization and outside parties to safeguard internal information. Information barriers, coming soon for Microsoft Teams, can help! 
 
 Read this article to get a brief overview of information barriers, how it works, and how policies are defined.
 
 ## How information barriers work
 
-When information barriers become available for Microsoft Teams, your organization's compliance administrator (or global administrator) can define policies that restrict communications in Microsoft Teams between two groups of people within your organization. 
+When information barriers become available, your organization's compliance administrator (or global administrator) can define policies that restrict communications in Microsoft Teams between two groups of people within your organization. 
 
 When information barriers policies are in effect, people in one group affected by those policies are unable to call people in the other affected group using Microsoft Teams (and vice-versa), as specified in your organization's policies.  
 
