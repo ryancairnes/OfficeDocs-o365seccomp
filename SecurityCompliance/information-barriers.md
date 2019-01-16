@@ -28,7 +28,7 @@ When information barriers policies are in effect, people in one group affected b
 > [!IMPORTANT]
 > Potentially, everyone included in an information barriers policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barriers policies are part of the same Microsoft Teams team or group chat, they will be removed from those chat sessions. However, information barriers will not apply to email communications or to file sharing through SharePoint Online, OneDrive, or Microsoft Teams. 
 
-To learn more about the Microsoft Teams experience with information barriers, see [Information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
+To learn more about the user experience with information barriers, see [Information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
 
 ## How policies are defined for information barriers
 
@@ -41,8 +41,7 @@ Currently, information barriers policies are defined and managed in the Office 3
     - To define or edit a policy, see  [Set-informationBarrierPolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/InfoBarrier-chrisda/exchange/exchange-ps/exchange/policy-and-compliance/Set-InformationBarrierPolicy.md)
     - To remove a policy, see [Remove-InformationBarrierPolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/InfoBarrier-chrisda/exchange/exchange-ps/exchange/policy-and-compliance/Remove-InformationBarrierPolicy.md)
 
-3. After your information barriers policies are in place, wait about 30 minutes for those policies to work their way through your data center and services, and then test your policies.<br>> [!TIP]
-> We recommend testing with a few users who are and aren't included in information barriers policies.
+3. After your information barriers policies are in place, wait about 30 minutes for those policies to work their way through your data center and services, and then test your policies.<br>We recommend testing with a few users who are and aren't included in information barriers policies.
 
 
 
