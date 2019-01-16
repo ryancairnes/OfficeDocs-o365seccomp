@@ -21,7 +21,7 @@ Read this article to get a brief overview of information barriers, how it works,
 
 ## How information barriers work
 
-When information barriers become available for Microsoft Teams, your organization's compliance administrator (or global administrator) can define policies that limit communications between two groups of people within your organization. 
+When information barriers become available for Microsoft Teams, your organization's compliance administrator (or global administrator) can define policies that restrict communications in Microsoft Teams between two groups of people within your organization. 
 
 When information barriers policies are in effect, people in one group affected by those policies are unable to call people in the other affected group using Microsoft Teams (and vice-versa), as specified in your organization's policies.  
 
