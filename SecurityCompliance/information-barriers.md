@@ -15,7 +15,9 @@ description: "Use information barriers to ensure communication compliance within
 
 ## Overview
 
-Among the many powerful features included in Microsoft cloud services are communication and collaboration capabilities. But suppose that you want to restrict communications between two groups to avoid a conflict of interest from occurring in your organization. Information barriers, **coming soon to [Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams)**, can help! Read this article to get an overview of information barriers as part of your organization's security and compliance strategy, including what to expect, and next steps.
+Among the many powerful features included in Microsoft cloud services are communication and collaboration capabilities. But suppose that you want to restrict communications between two groups to avoid a conflict of interest from occurring in your organization. Or, suppose that you want to restrict communications between a group in your organization and outside parties to safeguard internal information. [Information barriers, coming soon for Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams), can help! 
+
+Read this article to get a brief overview of information barriers, how it works, and how policies are defined.
 
 ## How information barriers work
 
@@ -37,7 +39,7 @@ Currently, information barriers policies are defined and managed with PowerShell
     - To define or edit a policy, see  [Set-informationBarrierPolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/InfoBarrier-chrisda/exchange/exchange-ps/exchange/policy-and-compliance/Set-InformationBarrierPolicy.md)
     - To remove a policy, see [Remove-InformationBarrierPolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/InfoBarrier-chrisda/exchange/exchange-ps/exchange/policy-and-compliance/Remove-InformationBarrierPolicy.md)
 
-3. After your information barriers policies are in place, wait about 30 minutes for those policies to work their way through your data center and services, and then test your policies.
+3. After your information barriers policies are in place, wait about 30 minutes for those policies to work their way through your data center and services, and then test your policies.<br><br>We recommend testing with a few users who are and aren't included in information barriers policies.
 
 
 
