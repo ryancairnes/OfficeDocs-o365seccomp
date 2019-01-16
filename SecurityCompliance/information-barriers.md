@@ -30,7 +30,7 @@ To learn more about the Microsoft Teams experience with information barriers, se
 
 ## How policies are defined for information barriers
 
-Currently, information barriers policies are defined and managed with PowerShell cmdlets. This is typically done by a compliance administrator or a global administrator.
+Currently, information barriers policies are defined and managed in the Office 365 Security & Compliance Center using PowerShell cmdlets. This is typically done by a compliance administrator or a global administrator.
 
 1. As a global administrator or compliance administrator, create a remote PowerShell session to the Security & Compliance Center. (To get help with this, see [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell).)
 
