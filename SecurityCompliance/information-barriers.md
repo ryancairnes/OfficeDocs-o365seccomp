@@ -11,7 +11,7 @@ localization_priority: None
 description: "Use information barriers to ensure communication compliance within your organization."
 ---
 
-# Information barriers
+# Information barriers (coming soon to Microsoft Teams!)
 
 ## Overview
 
