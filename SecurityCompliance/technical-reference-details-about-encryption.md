@@ -3,7 +3,7 @@ title: "Technical reference details about encryption in Office 365"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.date: 4/12/2018
+ms.date: 1/15/2019
 ms.audience: ITPro
 ms.topic: reference
 ms.service: o365-administration
@@ -21,8 +21,8 @@ description: "View technical details about encyption in Office 365."
 Refer to this article to learn about certificates, technologies, and TLS cipher suites used for [encryption in Office 365](encryption.md). This article also provides details about planned deprecations.
   
 - If you're looking for overview information, see [Encryption in Office 365](encryption.md).
-    
 - If you're looking for setup information, see [Set up encryption in Office 365 Enterprise](set-up-encryption.md).
+- For information about cipher suites supported by specific versions of Windows, see [Cipher Suites in TLS/SSL (Schannel SSP)](https://docs.microsoft.com/windows/desktop/SecAuthN/cipher-suites-in-schannel).
     
 ## Microsoft Office 365 certificate ownership and management
 
@@ -30,7 +30,10 @@ You do not need to purchase or maintain certificates for Office 365 because Micr
   
 ## Current encryption standards and planned deprecations
 
-In order to continue to provide best-in-class encryption for Office 365, Microsoft regularly reviews supported encryption standards. Sometimes, we need to deprecate old standards as they become out of date and therefore less secure. This topic describes currently supported cipher suites and other standards as well as details about planned deprecations.
+In order to continue to provide best-in-class encryption for Office 365, Microsoft regularly reviews supported encryption standards. Sometimes, we need to deprecate old standards as they become out of date and therefore less secure. This topic describes currently supported cipher suites and other standards as well as details about planned deprecations. 
+
+## FIPS compliance for Office 365
+All cipher suites supported by Office 365 use algorithms acceptable under FIPS 140-2. Office 365 inherits FIPS validations from Windows (through Schannel). For information about Schannel, see [Cipher Suites in TLS/SSL (Schannel SSP)](https://docs.microsoft.com/windows/desktop/SecAuthN/cipher-suites-in-schannel).
   
 ## Versions of TLS supported by Office 365
 
@@ -84,6 +87,8 @@ A cipher suite is a collection of encryption algorithms that TLS uses to establi
   
 |**Protocols**|**Cipher suite name**|**Key exchange algorithm/Strength**|**Perfect Forward Secrecy support**|**Authentication algorithm/Strength**|**Cipher/Strength**|
 |:-----|:-----|:-----|:-----|:-----|:-----|
+|TLS 1.2  <br/> |TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384  <br/> |ECDH/192  <br/> |Yes  <br/> |RSA/112  <br/> |AES/256  <br/> |
+|TLS 1.2  <br/> |TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256  <br/> |ECDH/128  <br/> |Yes  <br/> |RSA/112  <br/> |AES/128  <br/> |
 |TLS 1.2  <br/> |TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384  <br/> |ECDH/192  <br/> |Yes  <br/> |RSA/112  <br/> |AES/256  <br/> |
 |TLS 1.2  <br/> |TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256  <br/> |ECDH/128  <br/> |Yes  <br/> |RSA/112  <br/> |AES/128  <br/> |
 |TLS 1.0, 1.1, 1.2  <br/> |TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA_P384  <br/> |ECDH/192  <br/> |Yes  <br/> |RSA/112  <br/> |AES/256  <br/> |
@@ -92,10 +97,9 @@ A cipher suite is a collection of encryption algorithms that TLS uses to establi
 |TLS 1.2  <br/> |TLS_RSA_WITH_AES_128_CBC_SHA256  <br/> |RSA/112  <br/> |No  <br/> |RSA/112  <br/> |AES/128  <br/> |
 |TLS 1.0, 1.1, 1.2  <br/> |TLS_RSA_WITH_AES_256_CBC_SHA  <br/> |RSA/112  <br/> |No  <br/> |RSA/112  <br/> |AES/256  <br/> |
 |TLS 1.0, 1.1, 1.2  <br/> |TLS_RSA_WITH_AES_128_CBC_SHA  <br/> |RSA/112  <br/> |No  <br/> |RSA/112  <br/> |AES/128  <br/> |
-|TLS 1.0, 1.1, 1.2  <br/> |TLS_RSA_WITH_3DES_EDE_CBC_SHA  <br/> |RSA/112  <br/> |No  <br/> |RSA/112  <br/> |3DES/192  <br/> |
    
 ## Related topics
-<a name="TLSCipherSuites"> </a>
+[TLS Cipher Suites in Windows 10 v1607](https://docs.microsoft.com/windows/desktop/SecAuthN/tls-cipher-suites-in-windows-10-v1607)
 
 [Encryption in Office 365](encryption.md)
   

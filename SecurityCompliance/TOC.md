@@ -239,7 +239,7 @@
 # [Monitor security and compliance]()
 ## [Alert policies](alert-policies.md)
 ## [Smart reports and insights in the Security & Compliance Center](reports-and-insights-in-security-and-compliance.md)
-### [ View email security reports in the Security & Compliance Center](view-email-security-reports.md)
+### [View email security reports in the Security & Compliance Center](view-email-security-reports.md)
 #### [Walkthrough - From a detailed report to an insight](from-a-detailed-report-to-an-insight.md)
 #### [Walkthrough - From an insight to a detailed report](from-an-insight-to-a-detailed-report.md)
 #### [Walkthrough - From a dashboard to an insight](from-a-dashboard-to-an-insight.md)
@@ -249,6 +249,14 @@
 #### [Download existing reports](download-existing-reports.md)
 ## [Enable or disable safety tips in Office 365](enable-or-disable-safety-tips.md)
 ## [Enable the Report Message add-in](enable-the-report-message-add-in.md)
+# Mail flow
+## [Message trace in the Security & Compliance Center](message-trace-scc.md)
+## [Mail flow insights in the Security & Compliance Center](mail-flow-insights.md)
+### [Auto-forwarded messages report](mfi-auto-forwarded-messages-report.md)
+### [Mail loop insight](mfi-mail-loop-insight.md)
+### [Outbound and inbound mail flow](mfi-outbound-and-inbound-mail-flow.md)
+### [Queue alerts and Queues](mfi-queue-alerts-and-queues.md)
+### [Slow mail flow rules insight](mfi-slow-mail-flow-rules-insight.md)
 # Security solutions
 ## [Microsoft Security Guidance for Political Campaigns, Nonprofits, and Other Agile Organizations](microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-o.md)
 ### [Configure groups and users for a political campaign dev/test environment](configure-groups-and-users-for-a-political-campaign-dev-test-environment.md)
@@ -263,7 +271,6 @@
 ### [Manage an isolated SharePoint Online team site](manage-an-isolated-sharepoint-online-team-site.md)
 ### [Isolated SharePoint Online team site dev/test environment](isolated-sharepoint-online-team-site-dev-test-environment.md)
 ## [SIEM server integration](siem-server-integration.md)
-
 # Compliance solutions
 ## [Microsoft Service Trust Portal](get-started-with-service-trust-portal.md)
 ## [Compliance Manager](meet-data-protection-and-regulatory-reqs-using-microsoft-cloud.md)

@@ -3,7 +3,7 @@ title: "Enable archive mailboxes in the Office 365 Security &amp; Compliance Cen
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 6/29/2018
+ms.date: 
 ms.audience: Admin
 ms.topic: article
 f1_keywords:
@@ -83,6 +83,42 @@ To disable an archive mailbox:
 > [!TIP]
 > You can also bulk-disable archive mailboxes by selecting multiple users with enabled archive mailboxes (use the Shift or Ctrl keys). After selecting multiple mailboxes, click **Disable** in the details pane. 
   
+## Use Exchange Online PowerShell to enable or disable archive mailboxes
+
+You can also use Exchange Online PowerShell to enable archive mailboxes. The primary reason to use PowerShell is that you can quickly enable the archive mailbox for all users in your organization.
+
+The first step is to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell).
+
+After you're connected to Exchange Online, you can run the commands in the following sections to enable or disable archive mailboxes.
+
+### Enable archive mailboxes
+
+Run the following command to enable the archive mailbox for a single user.
+    
+  ```
+  Enable-Mailbox -Identity <username> -Archive
+  ```
+
+Run the following command to enable the archive mailbox for all users in your organization (whose archive mailbox is currently not enabled).
+    
+  ```
+  Get-Mailbox -Filter {ArchiveStatus -Eq "None" -AND RecipientTypeDetails -eq "UserMailbox"} | Enable-Mailbox -Archive
+  ```
+  
+### Disable archive mailboxes
+
+Run the following command to disable the archive mailbox for a single user.
+    
+  ```
+  Disable-Mailbox -Identity <username> -Archive
+  ```
+
+Run the following command to disable the archive mailbox for all users in your organization (whose archive mailbox is currently enabled).
+    
+  ```
+  Get-Mailbox -Filter {ArchiveStatus -Eq "Active" -AND RecipientTypeDetails -eq "UserMailbox"} | Disable-Mailbox -Archive
+  ```
+
 ## More information
   
 - Archive mailboxes help you and your users to meet your organization's retention, eDiscovery, and hold requirements. For example, you can use your organization's Exchange retention policy to move mailbox content to users' archive mailbox. When you use the Content Search tool in the Security &amp; Compliance Center to search a user's mailbox for specific content, the user's archive mailbox will also be searched. And, when you place a Litigation Hold or apply an Office 365 retention policy to a user's mailbox, items in the archive mailbox are also retained.
@@ -97,7 +133,6 @@ To disable an archive mailbox:
     
 - For more information about archive mailboxes and Exchange retention policies, see:
   
-  - [Archive mailboxes in Exchange Online](https://go.microsoft.com/fwlink/?LinkId=404421)
     
   - [Retention tags and retention policies](https://go.microsoft.com/fwlink/?LinkId=404424)
     

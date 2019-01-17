@@ -22,7 +22,7 @@ As an admin, you can view, release, and delete quarantined messages, and report 
   
 By default, Office 365 sends phishing messages and messages containing malware directly to quarantine. Other filtered messages are sent to users' Junk Email folder unless you set up a policy to send them to quarantine.
   
-You must have admin permissions in Office 365 to work with quarantined messages that were sent to other users and to work with quarantined files.
+You must have global administrator (GA) permissions in Office 365 to work with quarantined messages that were sent to other users and to work with quarantined files.
   
 > [!IMPORTANT]
 > By default, spam, bulk, malware, phishing, and messages that were quarantined because they matched a mail flow rule are kept in quarantine for 30 days. You can customize the quarantine time in anti-spam settings in the Security &amp; Compliance Center. When Office 365 deletes a message from quarantine, you can't get it back. If you like, you can change the retention period for quarantined messages in your anti-spam filter policies. For more information, see [Setting the quarantine retention period](manage-quarantined-messages-and-files.md#BKMK_ModQuarantineTime) in this article. 
