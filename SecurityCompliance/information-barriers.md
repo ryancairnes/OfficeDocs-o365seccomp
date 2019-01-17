@@ -62,7 +62,7 @@ Currently, information barriers policies are defined and managed in the Office 3
 3. After your information barriers policies are in place, allow 24 hours for those policies to work their way through your data center and services, and then test your policies, and adjust as needed.<br>We recommend testing with a few users who are and aren't included in information barriers policies.
 
 > [!IMPORTANT]
-> If your organization has changes that affect an information barriers policy, such as a change in position, adding or removing a user, and so on, allow 24 hours for the changes to take effect. 
+> If your organization has personnel changes that affect an information barriers policy, such as a change in position, adding or removing a user, and so on, allow 24 hours for the changes to take effect. 
 
 ## Related articles
 
