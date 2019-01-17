@@ -3,7 +3,7 @@ title: "Information barriers"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 01/16/2019
+ms.date: 01/17/2019
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -31,7 +31,9 @@ For all of these example scenarios, information barriers policies can be defined
 
 - Adding a member to a team
 
-- Starting a chat 
+- Starting a chat session with someone
+
+- Starting a group chat 
 
 - Inviting someone to join a meeting
 
@@ -57,9 +59,10 @@ Currently, information barriers policies are defined and managed in the Office 3
     - To define or edit a policy, see  [Set-informationBarrierPolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/InfoBarrier-chrisda/exchange/exchange-ps/exchange/policy-and-compliance/Set-InformationBarrierPolicy.md)
     - To remove a policy, see [Remove-InformationBarrierPolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/InfoBarrier-chrisda/exchange/exchange-ps/exchange/policy-and-compliance/Remove-InformationBarrierPolicy.md)
 
-3. After your information barriers policies are in place, wait about 30 minutes for those policies to work their way through your data center and services, and then test your policies, and adjust as needed.<br>We recommend testing with a few users who are and aren't included in information barriers policies.
+3. After your information barriers policies are in place, allow 24 hours for those policies to work their way through your data center and services, and then test your policies, and adjust as needed.<br>We recommend testing with a few users who are and aren't included in information barriers policies.
 
-
+> [!IMPORTANT]
+> If your organization has changes that affect an information barriers policy, such as a change in position, adding or removing a user, and so on, allow 24 hours for the changes to take effect. 
 
 ## Related articles
 
