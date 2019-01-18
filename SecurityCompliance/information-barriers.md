@@ -3,12 +3,12 @@ title: "Information barriers"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 01/17/2019
+ms.date: 01/18/2019
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
 localization_priority: None
-description: "Use information barriers to ensure communication compliance within your organization."
+description: "Use information barriers to ensure communication compliance using Microsoft Teams within your organization."
 ---
 
 # Information barriers (coming soon to Microsoft Teams!)
