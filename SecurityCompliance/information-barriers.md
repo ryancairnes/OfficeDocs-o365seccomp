@@ -46,7 +46,7 @@ If the people involved are included in an information barriers policy to prevent
 > [!IMPORTANT]
 > Potentially, everyone included in an information barriers policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barriers policies are part of the same team or group chat, they will be removed from those chat sessions. However, information barriers will not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
 
-## How to define policies for information barriers
+## Defining policies for information barriers
 
 Currently, information barriers policies are defined and managed in the Office 365 Security & Compliance Center using PowerShell cmdlets. This is typically done by a compliance administrator or a global administrator.
 
@@ -61,6 +61,10 @@ Currently, information barriers policies are defined and managed in the Office 3
 
 > [!IMPORTANT]
 > If your organization has personnel changes that affect an information barriers policy, such as a change in position, adding or removing a user, and so on, allow 24 hours for the changes to take effect. 
+
+## Required licenses and permissions
+
+
 
 ## Related articles
 
