@@ -36,17 +36,15 @@ In order for Office 365 Cloud App Security to work correct, audit logging must b
   
 ## Step 3: Go to the Office 365 Cloud App Security portal
 
-1. Go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account for Office 365. (This takes you to the Security &amp; Compliance Center.) 
+You can get to the Office 365 Cloud App Security portal by going to [https://portal.cloudappsecurity.com](https://portal.cloudappsecurity.com) and signing in. 
+
+You can also get there from the Office 365 Security &amp; Compliance Center. Here's one good way to do it:
+
+1. Go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account for Office 365. (This takes you to the Security &amp; Compliance Center.)
     
 2. Go to **Alerts** \> **Manage advanced alerts**.
     
-3. Choose **Go to Office 365 Cloud App Security** to go to the Office 365 Cloud App Security portal. 
-    
-    ![In the Security &amp; Compliance Center, choose Manage Advanced Alerts to go to Office 365 Cloud App Security](media/958632d4-03e3-4ade-8e22-d5509db6fca7.png)
-  
-    When you go to the Office 365 Cloud App Security portal, the first page you see is the Policies page, which resembles the following image:
-    
-    ![When you go to the Office 365 Cloud App Security portal, you start with the Policies page](media/5cb8833c-4e08-438c-bab3-91b5106f6f3f.png)
+3. Choose **Go to Office 365 Cloud App Security** to go to the Office 365 Cloud App Security portal.<br> ![Choose Manage Advanced Alerts to go to Office 365 Cloud App Security](media/958632d4-03e3-4ade-8e22-d5509db6fca7.png)<br>When you go to the Office 365 Cloud App Security portal, the first page you see is the Policies page, which resembles the following image:<br>![When you go to the Office 365 Cloud App Security portal, you start with the Policies page](media/5cb8833c-4e08-438c-bab3-91b5106f6f3f.png)<br>
   
 ## Step 4: Define policies and set up alerts &amp; actions
 
