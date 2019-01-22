@@ -3,8 +3,8 @@ title: "Information barriers"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 01/18/2019
-ms.audience: Admin
+ms.date: 01/22/2019
+ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
 localization_priority: None
@@ -49,6 +49,9 @@ If the people involved are included in an information barriers policy to prevent
 ## Defining policies for information barriers
 
 Currently, information barriers policies are defined and managed in the Office 365 Security & Compliance Center using PowerShell cmdlets. This is typically done by a compliance administrator or a global administrator.
+
+> [!IMPORTANT]
+> **Before you begin the following procedure, you must [enable scoped director search in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-scoped-directory-search)**. Wait at least 24 hours after enabling scoped directory search before you set up or define policies for information barriers. 
 
 1. As a global administrator or compliance administrator, create a remote PowerShell session to the Security & Compliance Center. (To get help with this, see [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell).)
 
