@@ -86,6 +86,9 @@ We recommend testing with a few users who are included in information barriers p
 
 3. Run the Remove-InformationBarrierPolicy (https://github.com/MicrosoftDocs/office-docs-powershell/blob/InfoBarrier-chrisda/exchange/exchange-ps/exchange/policy-and-compliance/Set-InformationBarrierPolicy.md) cmdlet.
 
+> [!IMPORTANT]
+> Allow 24 hours for your changes to take effect. 
+
 ## Required licenses and permissions
 
 
