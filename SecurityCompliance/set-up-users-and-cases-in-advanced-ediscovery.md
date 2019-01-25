@@ -58,6 +58,4 @@ After you create an eDiscovery case and add members, you (or any member of the c
 [Office 365 Advanced eDiscovery](office-365-advanced-ediscovery.md)
   
 [Preparing data](prepare-data-for-advanced-ediscovery.md)
-  
-[User roles and access](user-roles-and-access-in-advanced-ediscovery.md)
-
+ 
