@@ -92,7 +92,7 @@ After you have defined your information barriers policy, wait at least 24 hours 
 
 ## Required licenses and permissions
 
-
+INFO COMING SOON
 
 ## Related articles
 
