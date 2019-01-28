@@ -117,9 +117,15 @@ Currently, information barriers policies are defined and managed in the Office 3
 
 1. As a global administrator or compliance administrator, create a remote PowerShell session to the Security & Compliance Center. (To get help with this, see [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell).)
 
-2. View your organization's existing information barriers policies by running the Get-InformationBarrierPolicy (https://github.com/MicrosoftDocs/office-docs-powershell/blob/InfoBarrier-chrisda/exchange/exchange-ps/exchange/policy-and-compliance/Get-InformationBarrierPolicy.md) cmdlet.
+2. View your organization's existing information barriers policies by running the **Get-InformationBarrierPolicy** cmdlet.<br>
+    ```
+    Get-InformationBarrierPolicy [-ExoPolicyId <Guid>] [<CommonParameters>]
+    ```
 
-3. Run the Remove-InformationBarrierPolicy (https://github.com/MicrosoftDocs/office-docs-powershell/blob/InfoBarrier-chrisda/exchange/exchange-ps/exchange/policy-and-compliance/Set-InformationBarrierPolicy.md) cmdlet.
+3. Remove a policy by running the **Remove-InformationBarrierPolicy** cmdlet.<br>
+    ```
+    Remove-InformationBarrierPolicy [-Identity] <PolicyIdParameter> [-Confirm] [-WhatIf] [<CommonParameters>]
+    ```
 
 > [!IMPORTANT]
 > Allow 24 hours for your changes to take effect. 
