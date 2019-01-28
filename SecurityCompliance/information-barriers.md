@@ -3,7 +3,7 @@ title: "Information barriers"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 01/24/2019
+ms.date: 01/28/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -57,13 +57,33 @@ Currently, information barriers policies are defined and managed in the Office 3
 
 1. As a global administrator or compliance administrator, create a remote PowerShell session to the Security & Compliance Center. (To get help with this, see [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell).)
 
-2. Define a policy using the New-InformationBarrierPolicy (https://github.com/MicrosoftDocs/office-docs-powershell/blob/InfoBarrier-chrisda/exchange/exchange-ps/exchange/policy-and-compliance/New-InformationBarrierPolicy.md) cmdlet.
+2. Define a policy by running the **New-InformationBarrierPolicy** cmdlet.<br>
+    ```
+    New-InformationBarrierPolicy [-Name] <String> -AssigneeFilter <String> -AssigneeFilterName <String> -CommunicationAllowedFilter <String> -CommunicationAllowedFilterName <String>
+     [-Comment <String>]
+     [-Confirm]
+     [-State <EopInformationBarrierPolicyState>]
+     [-WhatIf] [<CommonParameters>]
+    ```
+<br>
 
-3. Run the policy application using the Start-InformationBarrierPoliciesApplication (https://github.com/MicrosoftDocs/office-docs-powershell/blob/InfoBarrier-chrisda/exchange/exchange-ps/exchange/policy-and-compliance/Start-InformationBarrierPoliciesApplication.md) cmdlet.
+3. Start the policy application by running the **Start-InformationBarrierPoliciesApplication**  cmdlet.<br>
+    ```
+    Start-InformationBarrierPoliciesApplication [[-Identity] <PolicyIdParameter>] [-Confirm] [-WhatIf]
+     [<CommonParameters>]
+    ```
+<br>
 
-4. Validate the policy application status using the Get-InformationBarrierPoliciesApplicationStatus (https://github.com/MicrosoftDocs/office-docs-powershell/blob/InfoBarrier-chrisda/exchange/exchange-ps/exchange/policy-and-compliance/Get-InformationBarrierPoliciesApplicationStatus.md) cmdlet.
+4. Validate the policy application by running the **Get-InformationBarrierPoliciesApplicationStatus** cmdlet.<br>
+    ```
+    Get-InformationBarrierPoliciesApplicationStatus [-All <Boolean>] [[-Identity] <PolicyIdParameter>]
+     [<CommonParameters>]
+    ```
 
-After you have defined your information barriers policy, wait at least 24 hours for the policy to work its way through your data center and services. Then, validate the information barriers status for a specific user by using the Get-InformationBarrierRecipientStatus (https://github.com/MicrosoftDocs/office-docs-powershell/blob/InfoBarrier-chrisda/exchange/exchange-ps/exchange/policy-and-compliance/Get-InformationBarrierRecipientStatus.md) cmdlet.
+5. After you have defined your information barriers policy, wait at least 24 hours for the policy to work its way through your data center and services. Then, validate the information barriers status for a specific user by running the **Get-InformationBarrierRecipientStatus** cmdlet.<br>
+    ```
+    Get-InformationBarrierRecipientStatus [-Identity] <RecipientIdParameter> [<CommonParameters>]
+    ```
 
 > [!TIP]
 > We recommend testing with a few users who are included in information barriers policies, as well as with a few users who are not included in those policies.
@@ -72,9 +92,23 @@ After you have defined your information barriers policy, wait at least 24 hours 
 
 1. As a global administrator or compliance administrator, create a remote PowerShell session to the Security & Compliance Center. (To get help with this, see [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell).)
 
-2. View your organization's existing information barriers policies by running the Get-InformationBarrierPolicy (https://github.com/MicrosoftDocs/office-docs-powershell/blob/InfoBarrier-chrisda/exchange/exchange-ps/exchange/policy-and-compliance/Get-InformationBarrierPolicy.md) cmdlet.
+2. View your organization's existing information barriers policies by running the **Get-InformationBarrierPolicy** cmdlet.<br>
+    ```
+    Get-InformationBarrierPolicy [-ExoPolicyId <Guid>] [<CommonParameters>]
+    ```
 
-3. To edit an information barriers policy, run the Set-InformationBarrierPolicy (https://github.com/MicrosoftDocs/office-docs-powershell/blob/InfoBarrier-chrisda/exchange/exchange-ps/exchange/policy-and-compliance/Set-InformationBarrierPolicy.md) cmdlet.
+3. To edit an information barriers policy, run the **Set-InformationBarrierPolicy** cmdlet.<br>
+    ```
+    Set-InformationBarrierPolicy [-AssigneeFilter <String>] [-AssigneeFilterName <String>] [-Comment <String>]
+     [-CommunicationAllowedFilter <String>] [-CommunicationAllowedFilterName <String>]
+     [-Identity] <PolicyIdParameter> [-State <EopInformationBarrierPolicyState>] [<CommonParameters>]
+    ```
+
+4. Run the policy application using the **Start-InformationBarrierPoliciesApplication** cmdlet.<br>
+    ```
+    Start-InformationBarrierPoliciesApplication [[-Identity] <PolicyIdParameter>] [-Confirm] [-WhatIf]
+     [<CommonParameters>]
+    ```
 
 > [!IMPORTANT]
 > If your organization has personnel changes that affect an information barriers policy, such as a change in position, adding or removing a user, and so on, allow 24 hours for the changes to take effect. 
