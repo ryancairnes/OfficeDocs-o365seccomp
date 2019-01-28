@@ -51,7 +51,7 @@ If the people involved are included in an information barriers policy to prevent
 
 ## Define or manage policies for information barriers
 
-Currently, information barriers policies are defined and managed in the Office 365 Security & Compliance Center using PowerShell cmdlets. This is typically done by a compliance administrator or a global administrator.
+Currently, information barriers policies are defined and managed in the Office 365 Security & Compliance Center using PowerShell cmdlets. This is typically done by a compliance administrator or a global administrator, and requires familiarity with PowerShell cmdlets (and parameters).
 
 ### Define an information barriers policy
 
@@ -82,11 +82,13 @@ Currently, information barriers policies are defined and managed in the Office 3
     Get-InformationBarrierPoliciesApplicationStatus [-All <Boolean>] [[-Identity] <PolicyIdParameter>]
      [<CommonParameters>]
     ```
+<br>
 
 5. After you have defined your information barriers policy, wait at least 24 hours for the policy to work its way through your data center and services. Then, validate the information barriers status for a specific user by running the **Get-InformationBarrierRecipientStatus** cmdlet.<br>
     ```
     Get-InformationBarrierRecipientStatus [-Identity] <RecipientIdParameter> [<CommonParameters>]
     ```
+<br>
 
 > [!TIP]
 > We recommend testing with a few users who are included in information barriers policies, as well as with a few users who are not included in those policies.
@@ -99,6 +101,7 @@ Currently, information barriers policies are defined and managed in the Office 3
     ```
     Get-InformationBarrierPolicy [-ExoPolicyId <Guid>] [<CommonParameters>]
     ```
+<br>
 
 3. To edit an information barriers policy, run the **Set-InformationBarrierPolicy** cmdlet.<br>
     ```
@@ -106,12 +109,14 @@ Currently, information barriers policies are defined and managed in the Office 3
      [-CommunicationAllowedFilter <String>] [-CommunicationAllowedFilterName <String>]
      [-Identity] <PolicyIdParameter> [-State <EopInformationBarrierPolicyState>] [<CommonParameters>]
     ```
+<br>
 
 4. Run the policy application using the **Start-InformationBarrierPoliciesApplication** cmdlet.<br>
     ```
     Start-InformationBarrierPoliciesApplication [[-Identity] <PolicyIdParameter>] [-Confirm] [-WhatIf]
      [<CommonParameters>]
     ```
+<br>
 
 > [!IMPORTANT]
 > If your organization has personnel changes that affect an information barriers policy, such as a change in position, adding or removing a user, and so on, allow 24 hours for the changes to take effect. 
@@ -124,11 +129,13 @@ Currently, information barriers policies are defined and managed in the Office 3
     ```
     Get-InformationBarrierPolicy [-ExoPolicyId <Guid>] [<CommonParameters>]
     ```
+<br>
 
 3. Remove a policy by running the **Remove-InformationBarrierPolicy** cmdlet.<br>
     ```
     Remove-InformationBarrierPolicy [-Identity] <PolicyIdParameter> [-Confirm] [-WhatIf] [<CommonParameters>]
     ```
+<br>
 
 > [!IMPORTANT]
 > Allow 24 hours for your changes to take effect. 
@@ -139,4 +146,4 @@ INFO COMING SOON
 
 ## Related articles
 
-https://github.com/MicrosoftDocs/OfficeDocs-SkypeForBusiness-pr/blob/v-sharos-info-barriers/Teams/information-barriers-in-teams.md
+[Information barriers in Microsoft Teams](https://docs.microsoft.com/SkypeForBusiness/MicrosoftTeams/information-barriers-in-teams)
