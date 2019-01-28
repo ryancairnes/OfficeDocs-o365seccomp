@@ -30,13 +30,9 @@ This article describes where to go to manage OAuth apps, how to approve, ban, or
 > [!NOTE]
 > OAuth apps are managed in the Office 365 Cloud App Security portal. You must be a global administrator or security administrator to perform the following task. To learn more see [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md). 
   
-1. Go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account for Office 365. (This takes you to the Security &amp; Compliance Center.) 
-    
-2. Go to **Alerts** \> **Manage advanced alerts**.
-    
-3. Click (or tap) **Go to Office 365 Cloud App Security**.<br/>![In the Security &amp; Compliance Center, choose Manage Advanced Alerts to go to Office 365 Cloud App Security](media/958632d4-03e3-4ade-8e22-d5509db6fca7.png)<br/>**NOTE**: If Office 365 Cloud App Security is not turned on yet, you can do that on this page. See [Get ready for Office 365 Cloud App Security](get-ready-for-office-365-cas.md). 
+1. Go to the Cloud App Security portal ([https://portal.cloudappsecurity.com](https://portal.cloudappsecurity.com)) and sign in.
   
-4. Choose **Investigate** \> **OAuth apps**.<br/>![In the O365 CAS portal, choose Investigate.](media/OCAS-OAuthApps.png)<br/>
+2. Choose **Investigate** \> **OAuth apps**.<br/>![In the O365 CAS portal, choose Investigate.](media/OCAS-OAuthApps.png)<br/>
   
 ## What you'll see on the Manage OAuth apps page
 

@@ -40,7 +40,7 @@ You can get to the Office 365 Cloud App Security portal by going to [https://por
 
 You can also get there from the Office 365 Security &amp; Compliance Center. Here's one good way to do it:
 
-1. Go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account for Office 365. (This takes you to the Security &amp; Compliance Center.)
+1. Go to [https://protection.office.com](https://protection.office.com) and sign in. (This takes you to the Security &amp; Compliance Center.)
     
 2. Go to **Alerts** \> **Manage advanced alerts**.
     

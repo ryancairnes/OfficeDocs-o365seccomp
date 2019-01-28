@@ -3,7 +3,7 @@ title: "Group your IP addresses to simplify management in Office 365 Cloud App S
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 2/22/2018
+ms.date: 01/28/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -30,21 +30,13 @@ Each group of IP ranges can be tagged with tag names that you choose, and then t
   
 ## To set up an IP address range in Office 365 Cloud App Security
 
-1. As a global administrator or security administrator, go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account. (This takes you to the Security &amp; Compliance Center.) 
+1. As a global administrator or security administrator, go to the Cloud App Security portal ([https://portal.cloudappsecurity.com](https://portal.cloudappsecurity.com)) and sign in.
     
-2. In the Security &amp; Compliance Center, choose **Alerts** \> **Manage advanced alerts**.
-    
-3. Choose **Go to Office 365 Cloud App Security**.
-    
-    ![In the Security &amp; Compliance Center, choose Manage Advanced Alerts to go to Office 365 Cloud App Security](media/958632d4-03e3-4ade-8e22-d5509db6fca7.png)
+2. On the upper right of the page, click **Settings** \> **IP address ranges**.<br>![In O365 Cloud App Security, choose Settings to access your system and data settings](media/f6c48ee3-39b4-4b5a-8252-b6493b7bcd3d.png)<br>
   
-4. On the upper right of the page, click **Settings** \> **IP address ranges**.
+3. Click the new button, which resembles a plus sign ( **+**).
     
-    ![In O365 Cloud App Security, choose Settings to access your system and data settings](media/f6c48ee3-39b4-4b5a-8252-b6493b7bcd3d.png)
-  
-5. Click the new button, which resembles a plus sign ( **+**).
-    
-6. In the **New IP address range** window, specify the following values: 
+4. In the **New IP address range** window, specify the following values: 
     
 |**Field or list**|**What to do**|
 |:-----|:-----|

@@ -32,6 +32,8 @@ description: "Read this article to learn how to turn on Office 365 Advanced Secu
 3. Select **Turn on Office 365 Cloud App Security**.
     
 4. Choose **Go to Office 365 Cloud App Security**.<br/>![In the Security &amp; Compliance Center, choose Manage Advanced Alerts to go to Office 365 Cloud App Security](media/958632d4-03e3-4ade-8e22-d5509db6fca7.png)<br/>This takes you to the Office 365 Cloud App Security portal, where you can view reports and create or edit your policies.
+
+After you have turned on Office 365 Cloud App Security, you can go to the Cloud App Security portal by visiting [https://portal.cloudappsecurity.com](https://portal.cloudappsecurity.com) and signing in.
     
 > [!NOTE]
 > When you turn on Office 365 Cloud App Security, auditing information about your Office 365 user accounts and user activities is transferred to [Microsoft Cloud App Security](https://aka.ms/whatiscas). This allows Office 365 to provide advanced alerts, filtering, and other features so you can get information and take action about suspicious activities. 

@@ -62,30 +62,25 @@ Office 365 Cloud App Security currently supports the following SIEM servers:
  
 ## Step 1: Set it up a SIEM agent in Office 365 Cloud App Security
 
-1. Go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account for Office 365. (This takes you to the Security &amp; Compliance Center.) 
-    
-2. Go to **Alerts** \> **Manage advanced alerts**.
-    
-3. Choose **Go to Office 365 Cloud App Security**. <br/>
-    ![In the Security &amp; Compliance Center, choose Manage Advanced Alerts to go to Office 365 Cloud App Security](media/958632d4-03e3-4ade-8e22-d5509db6fca7.png)
+1. Go to the Cloud App Security portal ([https://portal.cloudappsecurity.com](https://portal.cloudappsecurity.com)) and sign in.
   
-4. Click **Settings** \> **Security extensions**, and then choose SIEM agents.<br/>
+2. Click **Settings** \> **Security extensions**, and then choose SIEM agents.<br/>
 ![Choose Settings > Security extensions](media/Settings-SecurityExtensions.png)
 
-5. Choose **Add SIEM agent**.<br/>![Choose Add SIEM agent.](media/SIEMAgents.png)
+3. Choose **Add SIEM agent**.<br/>![Choose Add SIEM agent.](media/SIEMAgents.png)
     
-6. Choose **Start wizard**.<br/>![Get help or start the wizard](media/HelpOrWizard.png) 
+4. Choose **Start wizard**.<br/>![Get help or start the wizard](media/HelpOrWizard.png) 
     
-7. In the **General** step, specify a name, and **Select your SIEM format** and set any **Advanced settings** that are relevant to that format. Then choose **Next**.<br/>![Specify a name and type](media/ChooseAgentTypeAndName.png)
+5. In the **General** step, specify a name, and **Select your SIEM format** and set any **Advanced settings** that are relevant to that format. Then choose **Next**.<br/>![Specify a name and type](media/ChooseAgentTypeAndName.png)
     
-8. In the **Remote Syslog** step, specify the IP address or hostname of the **Remote syslog host** and the **Syslog port number**. Select TCP or UDP as the Remote Syslog protocol. (You can work with your network administrator or security administrator to get these details if you don't have them.) Then choose **Next**.<br/>![Specify Remote Syslog details](media/ArcSightS1Syslog.png)
+6. In the **Remote Syslog** step, specify the IP address or hostname of the **Remote syslog host** and the **Syslog port number**. Select TCP or UDP as the Remote Syslog protocol. (You can work with your network administrator or security administrator to get these details if you don't have them.) Then choose **Next**.<br/>![Specify Remote Syslog details](media/ArcSightS1Syslog.png)
   
-9. In the **Data Types** step, do one of the following, and then click **Next**:
+7. In the **Data Types** step, do one of the following, and then click **Next**:
     - Keep the default setting of **All Alerts**<br/>OR
     - Click **All alerts**, and then choose **Specific filters**. Define filters to select the kinds of alerts you want to send to your SIEM server.
 <br/>![Data Types step of the wizard](media/ArcSightS1ExportOptions.png)
   
-10. On the Congratulations screen, copy the token and save it for later.<br/>![SIEM agent created screen](media/SIEMAgentFinished.png) 
+8. On the Congratulations screen, copy the token and save it for later.<br/>![SIEM agent created screen](media/SIEMAgentFinished.png) 
 
 > [!IMPORTANT]
 > At this point, you have set up a SIEM agent in Office 365 Cloud App Security, but your SIEM server integration is not yet finished. Proceed to the next step to continue your SIEM server integration.
@@ -173,7 +168,7 @@ After you have configured your SIEM server and have integrated it with Office 36
 
 If you lose your token, you can regenerate one. 
 
-1. In the Office 365 Cloud App Security portal, choose **Settings** > **Security extensions**.
+1. In the Office 365 Cloud App Security portal ([https://portal.cloudappsecurity.com](https://portal.cloudappsecurity.com)), choose **Settings** > **Security extensions**.
 
 2. In the table, locate the row for the SIEM agent. 
 
@@ -181,7 +176,7 @@ If you lose your token, you can regenerate one.
   
 ### Edit a SIEM agent
 
-1. In the Office 365 Cloud App Security portal, choose **Settings** > **Security extensions**.
+1. In the Office 365 Cloud App Security portal ([https://portal.cloudappsecurity.com](https://portal.cloudappsecurity.com)), choose **Settings** > **Security extensions**.
 
 2. Locate the row for the SIEM agent. 
 
@@ -189,7 +184,7 @@ If you lose your token, you can regenerate one.
   
 ### Delete a SIEM agent
 
-1. In the Office 365 Cloud App Security portal, choose **Settings** > **Security extensions**.
+1. In the Office 365 Cloud App Security portal ([https://portal.cloudappsecurity.com](https://portal.cloudappsecurity.com)), choose **Settings** > **Security extensions**.
 
 2. Locate the row for the SIEM agent. 
 
