@@ -19,6 +19,9 @@ Among the many powerful features included in Microsoft cloud services are commun
 
 Read this article to get a [brief overview of information barriers](#how-information-barriers-work), and [how to define and manage policies](#define-or-manage-policies-for-information-barriers).
 
+> [!IMPORTANT]
+> You must be familiar with PowerShell cmdlets in order to perform the procedures described in this article. Although the general syntax of various PowerShell cmdlets is provided, you'll need to know additional details, such as parameters, for your organization.
+
 ## How information barriers work
 
 Information barriers help prevent communications in Microsoft Teams between specific groups of people. Here are a few examples:
