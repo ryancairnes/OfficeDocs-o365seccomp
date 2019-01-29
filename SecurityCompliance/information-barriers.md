@@ -51,7 +51,8 @@ If the people involved are included in an information barriers policy to prevent
 
 ## Walkthrough: Contoso and information barriers
 
-Contoso, a financial service institution, has a number of groups. These include an investment banking group and a wealth management group. Contoso is a large organization, with lots of people in each group. Contoso needs to implement information barriers to maintain compliance with industry regulations and ethical financial practices.
+Contoso, a large financial service institution, has a number of groups. These include an investment banking group and a wealth management group. Contoso wants to implement information barriers to limit communications between the investment banking personnel and the wealth management group in order to maintain compliance with industry regulations and ethical financial practices.
+
 
 
 ## Using information barriers in your organization
