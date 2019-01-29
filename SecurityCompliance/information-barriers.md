@@ -53,6 +53,10 @@ If the people involved are included in an information barriers policy to prevent
 
 Contoso, a large financial service institution, has a number of groups. These include an investment banking group and a wealth management group. Contoso wants to implement information barriers to limit communications between the investment banking personnel and the wealth management group in order to maintain compliance with industry regulations and ethical financial practices.
 
+Contoso's global administrator begins by [enabling scoped directory search](https://docs.microsoft.com/MicrosoftTeams/teams-scoped-directory-search) in Microsoft Teams, and waits 24 hours for that change to go into effect.
+
+Next, 
+
 (more details to follow)
 
 ## Using information barriers in your organization
