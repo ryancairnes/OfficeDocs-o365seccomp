@@ -261,22 +261,34 @@ After you select a policy template, you can add or remove any types of sensitive
     
 - The type of sensitive information that's detected has a match accuracy (or confidence level) of at least 75. Many sensitive information types are defined with multiple patterns, where a pattern with a higher match accuracy requires more evidence to be found (such as keywords, dates, or addresses), while a pattern with a lower match accuracy requires less evidence. Simply put, the lower the **min** match accuracy, the easier it is for content to match the condition. 
     
-    If you change the match accuracy (or confidence level), you should use one of confidence levels used in a pattern for that type of sensitive information, as defined in [What the sensitive information types look for](what-the-sensitive-information-types-look-for.md).
+For more information on these options, see [Tuning rules to make them easier or harder to match](data-loss-prevention-policies.md#tuning-rules-to-make-them-easier-or-harder-to-match).
     
 ![Options for identifying sensitive information types](media/de255881-f596-4c8d-8359-e974e3a0819a.png)
   
-### Auto-apply retention labels to content with keywords
+### Auto-apply labels to content with keywords or searchable properties
 
-You can auto-apply retention labels to content that satisfies certain conditions. The conditions now available support applying a retention label to content that contains specific words or phrases. You can refine your query by using search operators like AND, OR, and NOT. 
+You can auto-apply labels to content that satisfies certain conditions. The conditions now available support applying a label to content that contains specific words, phrases, or values of searchable properties. You can refine your query by using search operators like AND, OR, and NOT.
 
 For more information on query syntax, see:
 
-- [Keyword Query Language (KQL) syntax reference](https://docs.microsoft.com/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference)
+- [Keyword Query Language (KQL) syntax reference](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference)
 
-Query-based retention labels use the search index to identify content.
-  
+Query-based labels use the search index to identify content. For more information on valid searchable properties, see:
+
+- [Keyword queries and search conditions for Content Search](keyword-queries-and-search-conditions.md)
+- [Overview of crawled and managed properties in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/technical-reference/crawled-and-managed-properties-overview)
+
+Examples queries:
+
+- Exchange
+    - subject:"Quarterly Financials"
+    - recipients:garthf<!--nolink-->@contoso.com
+- SharePoint and OneDrive for Business
+    - contenttype:contract
+    - site:https<!--nolink-->://contoso.sharepoint.com/sites/teams/procurement AND contenttype:contract
+
 ![Query editor](media/ac5b8e5e-7453-4ec7-905c-160df57298d3.png)
-  
+
 ## Applying a default retention label to all content in a SharePoint library, folder, or document set
 
 In addition to enabling people to apply a retention label to individual documents, you can also apply a default retention label to a SharePoint library, folder, or document set, so that all documents in that location get the default retention label.

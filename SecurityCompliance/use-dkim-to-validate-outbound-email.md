@@ -83,8 +83,10 @@ For each domain for which you want to add a DKIM signature in DNS, you need to p
 Use the following format for the CNAME records.
 
 > [!IMPORTANT]
-> If you are one of our GCC customers, the domainGUID method will not work for you! Be sure to use the proper MX value for your domain. Use: 
-`selector2-<domain-key>._domainkey.<initialDomain>` for the examples below. Use [this article](https://docs.microsoft.com/en-us/office365/admin/get-help-with-domains/information-for-dns-records?view=o365-worldwide) to find the MX record needed for your *domain-key* value.
+> If you are one of our GCC High customers, we calculate _domainGuid_ differently! Instead of looking up the MX record for your _initialDomain_ to calculate _domainGuid_, instead we calculate it directly from the customized domain. For example, if your customized domain is “contoso.com” your domainGuid becomes “contoso-com”, any periods are replaced with a dash.
+
+So, regardless of what MX record your initialDomain points to, you’ll always use the above method to calculate the domainGuid to use in your CNAME records.
+
   
 ```
 Host name:			selector1._domainkey

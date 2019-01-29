@@ -1,4 +1,4 @@
-# [Get started]
+# Get started
 ## [Office 365 security roadmap](security-roadmap.md)
 ## [Configure your Office 365 tenant for increased security](tenant-wide-setup-for-increased-security.md)
 ## [Go to the Office 365 Security & Compliance Center](go-to-the-securitycompliance-center.md)

@@ -57,6 +57,8 @@ For information about keyboard shortcuts that may apply to the procedures in thi
       - If you include spaces within the custom header text, or if you add the colon yourself (such as "X This is my custom header" or "X-This-is-my-custom-header:"), the X-header text reverts to the default as "X-This-Is-Spam: This message appears to be spam."
     
       - You can't specify the header text in the format \< *header*  \>:\<  *value*  \>. If you do this, both values before and after the colon will be ignored, and the default X-header text appears instead: "X-This-Is-Spam: This message appears to be spam." 
+      
+      - Be aware that mails with this X-header might be still moved to mailbox Junk Mail folder due to mailbox junk configuration. You can change this by disabling this feature with Set-MailboxJunkEmailConfiguration.
         
       - **Prepend subject line with text** Sends the message to the intended recipients but prepends the subject line with the text that you specify in the **Prefix subject line with this text** input box. Using this text as an identifier, you can optionally create rules to filter or route the messages as necessary. 
         
