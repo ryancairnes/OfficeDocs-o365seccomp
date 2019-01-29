@@ -3,7 +3,7 @@ title: "Anomaly detection policies in Office 365 Cloud App Security"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 2/26/2018
+ms.date: 01/28/2019
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -23,13 +23,13 @@ Office 365 Advanced Security Management is now Office 365 Cloud App Security.
 |:-----|:-----|:-----|:-----|
 |[Start evaluating](office-365-cas-overview.md) <br/> |[Start planning](get-ready-for-office-365-cas.md) <br/> |You are here!  <br/> [Next step](integrate-your-siem-server-with-office-365-cas.md) <br/> |[Start utilizing](utilization-activities-for-ocas.md) <br/> |
    
-Beginning with [Microsoft Cloud App Security release 116](https://docs.microsoft.com/cloud-app-security/release-notes), Office 365 Cloud App Security includes several predefined anomaly detection policies ("out of the box") that include user and entity behavioral analytics (UEBA) and machine learning (ML).
+Beginning with [Microsoft Cloud App Security release 116](new-in-office-365-cas-2018.md#office-365-cloud-app-security-release-116), Office 365 Cloud App Security includes several predefined anomaly detection policies ("out of the box") that include user and entity behavioral analytics (UEBA) and machine learning (ML).
   
 ![To view your anomaly detection policies, choose Control \> Policies.](media/9663baa5-98bf-45e0-9458-6e572b43ec72.png)
   
 These anomaly detection policies provide immediate results by providing immediate detections, targeting numerous behavioral anomalies across your users and the machines and devices connected to your network. In addition, the new policies expose more data from the Cloud App Security detection engine to help you speed up the investigation process and contain ongoing threats.
   
-As a [global administrator or security administrator](permissions-in-the-security-and-compliance-center.md), you can review, and if necessary, revise the default policies that are available with Office 365 Cloud App Security.
+As an Office 365 global administrator or security administrator, you can review, and if necessary, revise the default policies that are available with Office 365 Cloud App Security.
   
  > [!IMPORTANT]
 > There is an initial learning period of seven (7) days during which anomalous behavior alerts are not triggered. The anomaly detection algorithm is optimized to reduce the number of false positive alerts. 
@@ -46,23 +46,13 @@ Make sure that:
     
 ## View your anomaly detection policies
 
-1. As a global administrator or security administrator, go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account. 
+1. As a global administrator or security administrator, go to the Cloud App Security portal ([https://portal.cloudappsecurity.com](https://portal.cloudappsecurity.com)) and sign in.<br>This takes you to the Office 365 Cloud App Security Policies page.
     
-2. In the Security &amp; Compliance Center, choose **Alerts** \> **Manage advanced alerts**.
-    
-3. Choose **Go to Office 365 Cloud App Security**.
-    
-    This takes you to the Office 365 Cloud App Security Policies page.
-    
-4. In the **TYPE** list, choose **Anomaly detection policy**.
-    
-    Your organization's default (or existing) anomaly detection policies are displayed.
-    
-    ![Several anomaly detection policies are available by default in Office 365 Cloud App Security](media/2e0ee770-787a-4d4a-bea8-389dc765d4c6.png)
+2. In the **TYPE** list, choose **Anomaly detection policy**.<br>Your organization's default (or existing) anomaly detection policies are displayed.<br>![Anomaly detection policies in Office 365 Cloud App Security](media/2e0ee770-787a-4d4a-bea8-389dc765d4c6.png)
   
-5. Select a policy to review or edit its settings.
+3. Select a policy to review or edit its settings.
     
-6. Choose **Update** to save your changes. 
+4. Choose **Update** to save your changes. 
     
 ## Learn more about anomaly detection policies
 
@@ -87,27 +77,19 @@ The following table describes the default anomaly detection policies, what they 
 
 As alerts come in, you can triage those alerts quickly and determine which ones to handle first. Having context for an alert enables you to see the bigger picture and determine whether something malicious is indeed happening. Use the following procedure to get started exploring an alert:
   
-1. As a global administrator or security administrator, go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account. 
+1. As a global administrator or security administrator, go to the Cloud App Security portal ([https://portal.cloudappsecurity.com](https://portal.cloudappsecurity.com)) and sign in. 
     
-2. In the Security &amp; Compliance Center, choose **Alerts** \> **Manage advanced alerts**.
+2. Choose **Alerts** to view your alerts. 
     
-3. Choose **Go to Office 365 Cloud App Security**.
+3. To get context for an alert, follow these steps:
     
-4. Choose **Alerts** to view your alerts. 
+4. Choose **Investigate** \> **Activity log**.
     
-5. To get context for an alert, follow these steps:
-    
-1. Choose **Investigate** \> **Activity log**.
-    
-2. Select an item, such as a user or IP address. This opens the relevant insights drawer.
-    
-    ![In the Activity log, you can investigate an IP address.](media/32a727c5-e406-4fe2-9443-c1a7fb6628fc.png)
+5. Select an item, such as a user or IP address. This opens the relevant insights drawer.<br>![In the Activity log, you can investigate an IP address.](media/32a727c5-e406-4fe2-9443-c1a7fb6628fc.png)
   
-3. In the relevant insights drawer, click an available command, such as an icon in the **SHOW SIMILAR** section. 
-    
-    ![In the relevant insights drawer, you can click the clock icon to see activities performed within 48 hours of a selected activity](media/c6c96aa0-98e5-4205-8873-45f8d6fd0843.png)
+6. In the relevant insights drawer, click an available command, such as an icon in the **SHOW SIMILAR** section.<br> ![Click the clock icon to see activities performed within 48 hours of a selected activity](media/c6c96aa0-98e5-4205-8873-45f8d6fd0843.png)
   
-4. Gain insight about the selected item by continuing to explore details for that item.
+7. Gain insight about the selected item by continuing to explore details for that item.
     
 An alert on multiple failed logins might indeed be suspicious, and can indicate a potential brute-force attack. However, such an alert can also be an application misconfiguration, causing the alert to be a benign true positive. If you see a multiple-failed-logins alert with additional suspicious activities, then there is a higher probability that an account is compromised. For example, suppose that a multiple-failed-login alert is followed by activity from a TOR IP address and impossible travel activity, both strong indicators of compromise. You might even see that the same user performed a mass download activity, which is often an indicator of the attacker performing exfiltration of data. It's things like that that you can explore in Office 365 Cloud App Security to view and triage your alerts, and take action where needed.
   

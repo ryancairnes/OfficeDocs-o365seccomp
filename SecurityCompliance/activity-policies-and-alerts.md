@@ -3,7 +3,7 @@ title: "Activity policies and alerts in Office 365 Cloud App Security"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 2/26/2018
+ms.date: 01/28/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -42,42 +42,25 @@ Make sure that:
     
 ## Create a new activity policy
 
-1. As a global administrator or security administrator, go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account. 
-    
-2. In the Security &amp; Compliance Center, choose **Alerts** \> **Manage advanced alerts**.
-    
-3. Choose **Go to Office 365 Cloud App Security**.
-    
-    This takes you to the Office 365 Cloud App Security Policies page.
-    
-    ![When you go to the Office 365 Cloud App Security portal, you start with the Policies page](media/5cb8833c-4e08-438c-bab3-91b5106f6f3f.png)
+1. As a global administrator or security administrator, go to the Cloud App Security portal ([https://portal.cloudappsecurity.com](https://portal.cloudappsecurity.com)) and sign in. <br>This takes you to the Office 365 Cloud App Security Policies page.<br>![When you go to the Office 365 Cloud App Security portal, you start with the Policies page](media/5cb8833c-4e08-438c-bab3-91b5106f6f3f.png)
   
-4. Click **Create policy**, and then select **Activity policy**.
-    
-    ![When you create a policy in O365 CAS, you can choose between Activity policies and Anomaly Detection policies.](media/79f34535-ddf9-4a5b-a0a3-8766bf9c174c.png)
+2. Click **Create policy**, and then select **Activity policy**.<br>![When you create a policy in O365 CAS, you can choose between Activity policies and Anomaly Detection policies.](media/79f34535-ddf9-4a5b-a0a3-8766bf9c174c.png)
   
-5. On the **Create activity policy** page, specify the **Policy name** and **Description**. To base your policy on a default template, choose one in the **Policy template** list, or create your own policy without using a template. 
-    
-    ![You can create activity policies with Office 365 Cloud App Security.](media/4083a76f-7074-4d6a-8200-6d76d49259d7.png)
+3. On the **Create activity policy** page, specify the **Policy name** and **Description**. To base your policy on a default template, choose one in the **Policy template** list, or create your own policy without using a template.<br>![You can create activity policies with Office 365 Cloud App Security.](media/4083a76f-7074-4d6a-8200-6d76d49259d7.png)
   
-6. Choose a **Policy severity** (Low, Medium, or High) that measures how serious it is to you if this policy triggers an alert. This will help you filter alerts when you're reviewing them later. 
+4. Choose a **Policy severity** (Low, Medium, or High) that measures how serious it is to you if this policy triggers an alert. This will help you filter alerts when you're reviewing them later. 
     
-7. Choose a **Category** for this policy. This will help you filter and sort alerts that have been triggered, or to group policies when you're reviewing them to make changes. 
+5. Choose a **Category** for this policy. This will help you filter and sort alerts that have been triggered, or to group policies when you're reviewing them to make changes. 
     
-8. Choose **Activity filters** to set up other actions or metrics that will trigger an alert based on this policy. 
+6. Choose **Activity filters** to set up other actions or metrics that will trigger an alert based on this policy. 
     
-9. Under **Activity match parameters**, specify whether a policy violation will be triggered when a single activity matches the filters, or if a specified number of repeated activities is required before the alert triggers.
+7. Under **Activity match parameters**, specify whether a policy violation will be triggered when a single activity matches the filters, or if a specified number of repeated activities is required before the alert triggers.<br>If you select **Repeated activity**, specify the number of activities, the time frame, and whether a violation will count for a user within a specific app or for the same user with any app.
     
-    If you select **Repeated activity**, specify the number of activities, the time frame, and whether a violation will count for a user within a specific app or for the same user with any app.
-    
-10. Optionally, you can select **Create alert** to create additional alerts to receive notifications from this policy (via email, text message, or both). 
-    
-    > [!IMPORTANT]
-    > Make sure that your email provider doesn't block emails sent from no-reply@cloudappsecurity.com. 
+8. Optionally, you can select **Create alert** to create additional alerts to receive notifications from this policy (via email, text message, or both).<br>**Make sure that your email provider doesn't block emails sent from `no-reply@cloudappsecurity.com`**. 
   
-11. Choose the **Actions** that should be taken when an alert is triggered to suspend the user or require the user to sign in again to Office 365 apps. 
+9. Choose the **Actions** that should be taken when an alert is triggered to suspend the user or require the user to sign in again to Office 365 apps. 
     
-12. Choose **Create** to finish creating your policy. 
+10. Choose **Create** to finish creating your policy. 
     
 ## Next steps
 

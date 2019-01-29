@@ -253,13 +253,37 @@ By using PowerShell, you can exclude specific types of Exchange items from a ret
 To do this, use the  `ExcludedItemClasses` parameter of the  `New-RetentionComplianceRule` and  `Set-RetentionComplianceRule` cmdlets. For more information about PowerShell, see the below section [Find the PowerShell cmdlets for retention policies](#find-the-powershell-cmdlets-for-retention-policies).
   
 ## Locking a retention policy
-Some organizations may need to comply with rules defined by regulatory bodies such as the Securities and Exchange Commission (SEC) Rule 17a-4, which requires that after a retention policy is turned on, it cannot be turned off or made less restrictive. With Preservation Lock, you can lock the policy so that no one—including the administrator—can turn off the policy or make it less restrictive.
+Some organizations may need to comply with rules defined by regulatory bodies such as the Securities and Exchange Commission (SEC) Rule 17a-4, which requires that after a retention policy is turned on, it cannot be turned off or made less restrictive. With Preservation Lock, you can lock the policy so that no one — including the administrator — can turn off the policy or make it less restrictive.
   
 After a policy's been locked, no one can turn it off or remove locations from the policy. And it's not possible to modify or delete content that's subject to the policy during the retention period. After the policy's been locked, the only ways you can modify the retention policy are by adding locations to it or extending its duration. A locked policy can be increased or extended, but it can't be reduced or turned off.
   
-Therefore, before you lock a retention policy, it's **critical** that you understand your organization's compliance requirements, and that **you do not lock a policy** until you're certain that it's what you need.
+Therefore, before you lock a retention policy, it's **critical** that you understand your organization's compliance requirements, and that **you do not lock a policy** until you're certain that's what you need.
+
+### Lock a retention policy by using PowerShell
   
-You can lock a retention policy only by using PowerShell. Use the  `RestrictiveRetention` parameter of the  `New-RetentionCompliancePolicy` or  `Set-RetentionCompliancePolicy` cmdlet. For more information about PowerShell, see the below section [Find the PowerShell cmdlets for retention policies](#find-the-powershell-cmdlets-for-retention-policies).
+You can lock a retention policy only by using PowerShell.
+
+First, [connect to Office 365 Security & Compliance Center PowerShell](http://go.microsoft.com/fwlink/p/?LinkID=799771).
+
+Second, to view a list of your retention policies and find the name of the policy that you want to lock, run `Get-RetentionCompliancePolicy`.
+
+![List of retention policies in PowerShell](media/retention-policy-preservation-lock-get-retentioncompliancepolicy.PNG)
+
+Third, to place a Preservation Lock on the retention policy, run `Set-RetentionCompliancePolicy` with the `RestrictiveRetention` parameter set to true -- for example:
+
+`Set-RetentionCompliancePolicy -Identity “<Name of Policy>” – RestrictiveRetention $true`
+
+![RestrictiveRetention parameter in PowerShell](media/retention-policy-preservation-lock-restrictiveretention.PNG)
+
+After you run that cmdlet, you see a confirmation prompt. Choose **Yes to All**.
+
+![Prompt to confirm you want to lock a retention policy in PowerShell](media/retention-policy-preservation-lock-confirmation-prompt.PNG)
+
+A Preservation Lock is now placed on the retention policy. If you run `Get-RetentionCompliancePolicy`, the `RestrictiveRetention` parameter is set to true -- for example:
+
+`Get-RetentionCompliancePolicy -Identity “<Name of Policy>” |Fl`
+
+![Locked policy with all parameters shown in PowerShell](media/retention-policy-preservation-lock-locked-policy.PNG)
   
 ## The principles of retention, or what takes precedence?
 

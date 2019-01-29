@@ -1,4 +1,4 @@
-# Get started
+# [Get started]
 ## [Office 365 security roadmap](security-roadmap.md)
 ## [Configure your Office 365 tenant for increased security](tenant-wide-setup-for-increased-security.md)
 ## [Go to the Office 365 Security & Compliance Center](go-to-the-securitycompliance-center.md)
@@ -15,6 +15,7 @@
 # Protect information
 ## [Sensitivity labels](sensitivity-labels.md)
 ### [Restrict access to content by using encryption in sensitivity labels](encryption-sensitivity-labels.md)
+### [Apply a sensitivity label to content automatically](apply_sensitivity_label_automatically.md)
 ## [Prevent data loss (DLP)](data-loss-prevention-policies.md)
 ### [Watch an extended overview of DLP](https://channel9.msdn.com/events/ignite/microsoft-ignite-orlando-2017/brk3111)
 ## Set up DLP
@@ -37,6 +38,15 @@
 ### [Create a custom sensitive information type in Office 365 Security & Compliance Center PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md)
 ### [Create a keyword dictionary](create-a-keyword-dictionary.md)
 ### [Document Fingerprinting](document-fingerprinting.md) 
+# Records management
+## [Retention policies](retention-policies.md)
+## [Retention labels](labels.md)
+## [Use Exchange Online and the Security & Compliance Center to comply with SEC Rule 17a-4](use-exchange-online-to-comply-with-sec-rule-17a-4.md)
+## [Disposition reviews](disposition-reviews.md)
+## [Event-driven retention](event-driven-retention.md)
+## [Automate event-based retention](automate-event-driven-retention.md)
+## [File plan manager](file-plan-manager.md)
+## [Bulk create and publish retention labels by using PowerShell](https://docs.microsoft.com/en-us/office365/securitycompliance/bulk-create-publish-labels-using-powershell)
 # Manage data governance		
 ## [Import data](importing-pst-files-to-office-365.md)
 ### [Use network upload to import PST files](use-network-upload-to-import-pst-files.md)
@@ -54,10 +64,12 @@
 ## Retain data
 ### [Retention policies](retention-policies.md)
 ### [Retention labels](labels.md)
-### [Bulk create and publish retention labels by using PowerShell](https://docs.microsoft.com/en-us/office365/securitycompliance/bulk-create-publish-labels-using-powershell)
+### [Use Exchange Online and the Security & Compliance Center to comply with SEC Rule 17a-4](use-exchange-online-to-comply-with-sec-rule-17a-4.md)
 ### [Disposition reviews](disposition-reviews.md)
 ### [Event-driven retention](event-driven-retention.md)
+### [Automate event-based retention](automate-event-driven-retention.md)
 ### [File plan manager](file-plan-manager.md)
+### [Bulk create and publish retention labels by using PowerShell](https://docs.microsoft.com/en-us/office365/securitycompliance/bulk-create-publish-labels-using-powershell)
 ## [Supervise communications](supervision-policies.md)
 ### [Configure supervision policies for your organization](configure-supervision-policies.md)
 ## [Manage inactive mailboxes](inactive-mailboxes-in-office-365.md)
@@ -194,6 +206,67 @@
 ### [Delete items in the Recoverable Items folder of cloud-based mailboxes on hold](delete-items-in-the-recoverable-items-folder-of-mailboxes-on-hold.md)
 ### [Increase the Recoverable Items quota for mailboxes on hold](increase-the-recoverable-quota-for-mailboxes-on-hold.md)
 ### [How to identify the type of hold placed on an Exchange Online mailbox](identify-a-hold-on-an-exchange-online-mailbox.md)
+
+## [Advanced eDiscovery (Preview) in Microsoft 365](compliance20/overview-ediscovery-20.md)
+### [Release notes](compliance20/release-notes-ediscovery20.md)
+### [Create a new case](compliance20/create-new-ediscovery-case.md)
+
+### [Working with custodians](compliance20/managing-custodians.md)
+#### [Add custodians to a case](compliance20/add-custodians-to-case.md)
+#### [Managing custodians](compliance20/manage-new-custodians.md)
+#### [Viewing custodian activity](compliance20/view-custodian-activity.md)
+
+### [Working with communications](compliance20/managing-custodian-communications.md)
+#### [Create a hold notification](compliance20/create-hold-notification.md)
+#### [Using the communications editor](compliance20/using-communications-editor.md)
+#### [Manage hold notifications](compliance20/manage-hold-notification.md)
+#### [Edit a hold notification](compliance20/edit-hold-notification.md)
+#### [Acknowledging hold notifications](compliance20/acknowledge-hold-notification.md)
+
+### [Managing holds](compliance20/managing-holds.md)
+
+### [Fixing processing errors](compliance20/processing-data-for-case.md)
+#### [Advanced indexing of custodian data](compliance20/indexing-custodian-data.md)
+#### [Error remediation when processing data](compliance20/error-remediation.md)
+
+### [Collecting data for a case](compliance20/collecting-data-for-ediscovery.md)
+#### [Create a search to collect data](compliance20/create-search-to-collect-data.md)
+#### [Building search queries](compliance20/building-search-queries.md)
+#### [Search statistics](compliance20/search-statistics.md)
+#### [Add search results to a working set](compliance20/add-data-to-working-set.md)
+
+### [Reviewing case data](compliance20/reviewing-data-in-working-set.md)
+#### [Managing working sets](compliance20/managing-working-sets.md)
+#### [Manage load sets](compliance20/manage-load-sets.md)
+#### [Load non-Office 365 data into a working set](compliance20/load-non-office365-data.md)
+#### [Querying the data in a working set](compliance20/working-set-search.md)
+#### [Viewing documents in a working set](compliance20/annotating-and-redacting-documents.md)
+#### [Tagging documents in a working set](compliance20/tagging-documents.md)
+
+### [Analyzing case data](compliance20/analyzing-data-in-working-set.md)
+#### [Near duplicate detection](compliance20/near-duplicates.md)
+#### [Email threading](compliance20/email-threading.md)
+#### [Themes](compliance20/themes.md)
+#### [Using the Relevance module to analyze data](compliance20/using-relevance.md)
+
+### [Exporting case data](compliance20/exporting-data-ediscover20.md)
+#### [Export documents from a working set](compliance20/export-documents-from-working-set.md)
+#### [Download export jobs](compliance20/download-export-jobs.md)
+
+### [Managing jobs](compliance20/managing-jobs-ediscovery20.md)
+
+### [Configuring case settings](compliance20/configuring-case-settings-ediscovery20.md)
+#### [Close or delete a case](compliance20/close-or-delete-case.md)
+#### [Add or remove members from a case](compliance20/add-remove-members.md)
+#### [Configure search and analytics settings](compliance20/configure-search-analytics-settings.md)
+
+### Advanced eDiscovery (Preview) reference
+#### [Search limits](compliance20/search-limits-ediscovery20.md)
+#### [Indexing limits](compliance20/indexing-limits-ediscovery20.md)
+#### [Export limits](compliance20/export-limits-ediscovery20.md)
+#### [Download limits](compliance20/download-limits-ediscovery20.md)
+#### [Supported file types](compliance20/supported-filetypes-ediscovery20.md)
+#### [Document metadata fields](compliance20/document-metadata-fields.md)
 
 ## [Office 365 Advanced eDiscovery](office-365-advanced-ediscovery.md)
 ### [Getting started in Advanced eDiscovery](quick-setup-for-advanced-ediscovery.md)

@@ -72,6 +72,11 @@ After a sensitivity label is applied to an email or document, the protection set
 
 - **Prevent data loss** by turning on endpoint protection in Intune. If sensitive content gets downloaded, you can help prevent the loss of data from Windows devices. For example, you can’t copy labeled content into Dropbox, Gmail, or USB drive. Before your sensitivity labels can use Windows Information Protection (WIP), you first need to create an app protection policy in the Azure portal. For more information, see [How Windows Information Protection protects files with a sensitivity label](https://docs.microsoft.com/en-us/windows/security/information-protection/windows-information-protection/how-wip-works-with-labels?branch=vsts17546553).
 
+- **Apply the label automatically to content that contains sensitive information.** You can choose what types of sensitive information that you want labeled, and the label can either be applied automatically, or you can prompt users to apply the label that you recommend. If you recommend a label, the prompt displays whatever text you choose. For more information, see [Apply a sensitivity label to content automatically](apply_sensitivity_label_automatically.md).
+
+    ![Prompt to assign a required label](media/Sensitivity_label_Prompt_for_required_label.png)
+
+
 All of these options are available when you create a label in the Security & Compliance Center.
 
 ![Options when creating a sensitivity label](media/Sensitivity_label_create_options.png)
@@ -111,6 +116,10 @@ With a label policy, you can:
 - **Require a justification for changing a label.** If content is marked Confidential and a user wants to remove that label or replace it with a lower classification, such as a label named Public, you can require that the user provide a justification when performing this action. These justifications will be available for the admin to review. We’re currently working on a report where admins can view the user justifications.
 
     ![Prompt where users enter a justification](media/Sensitivity_label_justification_required.png)
+
+- **Require users to apply a label to their email and documents.** If you want all of a user's content to be labeled, you can require that a label must be applied to all of their saved documents and sent emails. The label can be assigned manually by the user, automatically as a result of a condition, or be assigned by default (the default label option described above). Here's the prompt shown in Outlook when a user is required to assign a label.
+
+    ![Prompt in Outlook asking user to apply required label](media/sensitivity_labels_mandatory_prompt_aipv2_outlook.PNG)
 
 - **Provide help link to a custom help page.** If your users aren’t sure what your sensitivity labels mean or how they should be used, you can provide a Learn More URL that appears at the bottom of the Sensitivity label menu in the Office apps.
 
