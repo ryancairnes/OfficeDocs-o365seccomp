@@ -3,7 +3,7 @@ title: "Information barriers"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 01/28/2019
+ms.date: 01/29/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -17,7 +17,7 @@ description: "Use information barriers to ensure communication compliance using 
 
 Among the many powerful features included in Microsoft cloud services are communication and collaboration capabilities. But suppose that you want to restrict communications between two groups to avoid a conflict of interest from occurring in your organization. Or, suppose that you want to restrict communications between a group in your organization and outside parties to safeguard internal data. Information barriers, coming soon for Microsoft Teams, can help! 
 
-Read this article to get a [brief overview of information barriers](#how-information-barriers-work), and [how to define and manage policies](#define-or-manage-policies-for-information-barriers).
+Read this article to get a [brief overview of information barriers](#how-information-barriers-work), a [walkthrough with Contoso and information barriers](#walkthrough-contoso-and-information-barriers), and an overview of [using information barriers in your organization](#using-information-barriers-in-your-organization).
 
 > [!IMPORTANT]
 > You must be familiar with PowerShell cmdlets in order to perform the procedures described in this article. Although the general syntax of various PowerShell cmdlets is provided, you'll need to know additional details, such as parameters, for your organization.
@@ -49,7 +49,12 @@ If the people involved are included in an information barriers policy to prevent
 > [!IMPORTANT]
 > Potentially, everyone included in an information barriers policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barriers policies are part of the same team or group chat, they will be removed from those chat sessions. However, information barriers will not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
 
-## Define or manage policies for information barriers
+## Walkthrough: Contoso and information barriers
+
+Contoso, a financial service institution, has a number of groups. These include an investment banking group and a wealth management group. Contoso is a large organization, with lots of people in each group. Contoso needs to implement information barriers to maintain compliance with industry regulations and ethical financial practices.
+
+
+## Using information barriers in your organization
 
 Currently, information barriers policies are defined and managed in the Office 365 Security & Compliance Center using PowerShell cmdlets. This is typically done by a compliance administrator or a global administrator, and requires familiarity with PowerShell cmdlets (and parameters).
 
