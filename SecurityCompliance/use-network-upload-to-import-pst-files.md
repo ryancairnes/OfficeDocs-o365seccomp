@@ -3,7 +3,7 @@ title: "Use network upload to import your organization PST files to Office 365"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 6/29/2018
+ms.date: 
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -76,17 +76,19 @@ Note that you have to perform Step 1 only once to import PST files to Office 365
     > [!TIP]
     > To identify the message receive size for a mailbox, you can run this command in Exchange Online PowerShell:  `Get-Mailbox <user mailbox> | FL MaxReceiveSize`. 
 
-### Step 1: Copy the SAS URL and install Azure AzCopy
+## Step 1: Copy the SAS URL and install Azure AzCopy
 
 The first step is to download and install the Azure AzCopy tool, which is the tool that you'll run in Step 2 to upload PST files to Office 365. You'll also copy the SAS URL for your organization. This URL is a combination of the network URL for the Azure storage location in the Microsoft cloud for your organization and a Shared Access Signature (SAS) key. This key provides you with the necessary permissions to upload PST files to your Azure storage location. Be sure to take precautions to protect the SAS URL. It's unique to your organization and will be used in Step 2.
-  
- **Important:** We recommend that you use Azure AzCopy version 7.1.0 to import PST files by using the network upload method. Version 7.1.0 is downloaded in step 6b in the following procedure. 
+
+> [!IMPORTANT]
+> To import PST files using the network upload method, we recommend that you use the version of Azure AzCopy that can be downloaded in step 6b in the following procedure.
   
 1. Go to [https://protection.office.com](https://protection.office.com) and sign in using the credentials for an administrator account in your Office 365 organization. 
     
 2. In the left pane of the Security &amp; Compliance Center, click **Data governance** \> **Import**.
     
-    **Note:** You have to be assigned the appropriate permissions to access the **Import** page in the Security &amp; Compliance Center. See the **Before you begin** section for more information. 
+    > [!NOTE]
+    > You have to be assigned the appropriate permissions to access the **Import** page in the Security &amp; Compliance Center. See the **Before you begin** section for more information. 
     
 3. On the **Import** page, click ![Add Icon](media/ITPro-EAC-AddIcon.gif) **New import job**.
     
@@ -104,9 +106,10 @@ The first step is to download and install the Azure AzCopy tool, which is the to
   
     a. In step 2, click **Show network upload SAS URL**. After the SAS URL is displayed, click **Copy to clipboard** and then paste it and save it to a file so you can access it later.
     
-    b. In step 3, click **Download Azure AzCopy** to download and install the Azure AzCopy tool. As previously stated, version 7.1.0 will be downloaded. In the pop-up window, click **Run** to install AzCopy. 
+    b. In step 3, click **Download Azure AzCopy** to download and install the Azure AzCopy tool. In the pop-up window, click **Run** to install AzCopy. 
     
-  **Note:** You can leave the **Import data** page open (in case you need to copy the SAS URL again) or click **Cancel** to close it. 
+> [!NOTE]
+> You can leave the **Import data** page open (in case you need to copy the SAS URL again) or click **Cancel** to close it. 
  
 ## Step 2: Upload your PST files to Office 365
 
@@ -141,8 +144,9 @@ Here's an example of the syntax for the AzCopy.exe tool using actual values for 
 ```
 
 After you run the command, status messages are displayed that show the progress of uploading the PST files. A final status message shows the total number of files that were successfully uploaded.
-    
-**Tip:** After you successfully run the AzCopy.exe command and verify that all the parameters are correct, save a copy of the command line syntax to the same (secured) file where you copied the information you obtained in Step 1. Then you can copy and paste this command in a Command Prompt each time that you want to run the AzCopy.exe tool to upload PST files to Office 365. The only value you might have to change are the ones for the  `/Source:` parameter. This depends on the source directory where the PST files are located. 
+
+> [!TIP]
+> After you successfully run the AzCopy.exe command and verify that all the parameters are correct, save a copy of the command line syntax to the same (secured) file where you copied the information you obtained in Step 1. Then you can copy and paste this command in a Command Prompt each time that you want to run the AzCopy.exe tool to upload PST files to Office 365. The only value you might have to change are the ones for the  `/Source:` parameter. This depends on the source directory where the PST files are located.
 
 ## (Optional) Step 3: View a list of the PST files uploaded to Office 365
 
@@ -154,7 +158,8 @@ As an optional step, you can install and use the Microsoft Azure Storage Explore
     
 The Microsoft Azure Storage Explorer is in Preview.
   
- **Important:** You can't use the Azure Storage Explorer to upload or modify PST files. The only supported method for importing PST files to Office 365 is to use AzCopy. Also, you can't delete PST files that you've uploaded to the Azure blob. If you try to delete a PST file, you'll receive an error about not having the required permissions. Note that all PST files are automatically deleted from your Azure storage area. If there are no import jobs in progress, then all PST files in the ** ingestiondata ** container are deleted 30 days after the most recent import job was created. 
+> [!IMPORTANT]
+> You can't use the Azure Storage Explorer to upload or modify PST files. The only supported method for importing PST files to Office 365 is to use AzCopy. Also, you can't delete PST files that you've uploaded to the Azure blob. If you try to delete a PST file, you'll receive an error about not having the required permissions. Note that all PST files are automatically deleted from your Azure storage area. If there are no import jobs in progress, then all PST files in the **ingestiondata** container are deleted 30 days after the most recent import job was created.
   
 To install the Azure Storage Explorer and connect to your Azure storage area:
   
@@ -258,7 +263,7 @@ The next step is to create the PST Import job in the Import service in Office 36
     
     A status flyout page is displayed, with a status of **Analysis in progress** and the new import job is displayed in the list on the **Import** page. 
     
-11. Click **Refresh**![Refresh icon](media/O365-MDM-Policy-RefreshIcon.gif) to update the status information that's displayed in the **Status** column. When the analysis is complete and the data is ready to be imported, the status is changed to **Analysis completed**.
+11. Click **Refresh** ![Refresh icon](media/O365-MDM-Policy-RefreshIcon.gif) to update the status information that's displayed in the **Status** column. When the analysis is complete and the data is ready to be imported, the status is changed to **Analysis completed**.
     
     You can click the import job to display the status flyout page, which contains more detailed information about the import job such as the status of each PST file listed in the mapping file.
  
@@ -356,11 +361,11 @@ Here's an illustration and description of the network upload process to import P
     AzCopy.exe /Source:"\\FILESERVER1\PSTs" /Dest:"https://3c3e5952a2764023ad14984.blob.core.windows.net/ingestiondata/PSTFiles?sv=2012-02-12&amp;se=9999-12-31T23%3A59%3A59Z&amp;sr=c&amp;si=IngestionSasForAzCopy201601121920498117&amp;sig=Vt5S4hVzlzMcBkuH8bH711atBffdrOS72TlV1mNdORg%3D" /V:"c:\Users\Admin\Desktop\AzCopy1.log" /Y
 ``
 
-- As previously explained, the Office 365 Import service turns on the retention hold setting (for an indefinite duration) after PST files are imported to a mailbox. This means the  *RetentionHoldEnabled*  property is set to  `True` so that the retention policy assigned to the mailbox won't be processed. This gives the mailbox owner time to manage the newly-imported messages by preventing a deletion or archive policy from deleting or archiving older messages. Here are some steps you can take to manage this retention hold: 
+- As previously explained, the Office 365 Import service turns on the retention hold setting (for an indefinite duration) after PST files are imported to a mailbox. This means the  *RetentionHoldEnabled*  property is set to  **True** so that the retention policy assigned to the mailbox won't be processed. This gives the mailbox owner time to manage the newly-imported messages by preventing a deletion or archive policy from deleting or archiving older messages. Here are some steps you can take to manage this retention hold: 
     
-    - After a certain period of time, you can turn off the retention hold by running the  `Set-Mailbox -RetentionHoldEnabled $false` command. For instructions, see [Place a mailbox on retention hold](https://go.microsoft.com/fwlink/p/?LinkId=544749).
+    - After a certain period of time, you can turn off the retention hold by running the **Set-Mailbox -RetentionHoldEnabled $false** command. For instructions, see [Place a mailbox on retention hold](https://go.microsoft.com/fwlink/p/?LinkId=544749).
     
-   - You can configure the retention hold so that it's turned off on some date in the future. You do this by running the  `Set-Mailbox -EndDateForRetentionHold <date>` command. For example, assuming that today's date is July 1, 2016 and you want the retention hold turned off in 30 days, you would run the following command:  `Set-Mailbox -EndDateForRetentionHold 8/1/2016`. In this scenario, you would leave the  *RetentionHoldEnabled*  property set to  *True*  . For more information, see [Set-Mailbox](https://go.microsoft.com/fwlink/p/?LinkId=150317).
+   - You can configure the retention hold so that it's turned off on some date in the future. You do this by running the **Set-Mailbox -EndDateForRetentionHold *date*** command. For example, assuming that today's date is July 1, 2016 and you want the retention hold turned off in 30 days, you would run the following command:  **Set-Mailbox -EndDateForRetentionHold 8/1/2016**. In this scenario, you would leave the  **RetentionHoldEnabled**  property set to  *True*. For more information, see [Set-Mailbox](https://go.microsoft.com/fwlink/p/?LinkId=150317).
     
    - You can change the settings for the retention policy that's assigned to the mailbox so that older items that were imported won't be immediately deleted or moved to the user's archive mailbox. For example, you could lengthen the retention age for a deletion or archive policy that's assigned to the mailbox. In this scenario, you would turn off the retention hold on the mailbox after you changed the settings of the retention policy. For more information, see [Set up an archive and deletion policy for mailboxes in your Office 365 organization](set-up-an-archive-and-deletion-policy-for-mailboxes.md).
     

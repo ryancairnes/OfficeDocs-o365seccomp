@@ -38,31 +38,29 @@ The following video provides an overview of configuring spam filtering in EOP.
   
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/608be94c-d763-4c47-af94-99e7cb277713?autoplay=false]
   
-For more details, see the [Configure spam filter policies](https://go.microsoft.com/fwlink/p/?LinkId=617147) topic. 
+For more details, see the [Configure spam filter policies](https://go.microsoft.com/fwlink/p/?LinkId=617147) topic.
   
 ## Check your outgoing messages to prevent spam in Office 365
 
  **Outbound filtering.** Office 365 also checks to make sure that your users don't send spam. For instance, a user's computer may get infected with malware that causes it to send spam messages, so we build protection against that called  *outbound filtering*  . You can't turn off outbound filtering, but you can configure the settings described in [Configure the outbound spam policy](https://technet.microsoft.com/library/jj200737%28v=exchg.150%29.aspx). If you're concerned about too much spam in Office 365, use outbound filtering to help prevent spam in Exchange Online.
   
 ## Beyond the basics: More ways to prevent spam in Office 365
-<a name="BeyondBasics"> </a>
 
- **Mail flow rules.** If you want to go beyond built-in spam filtering and create custom rules that are based on your business policies,  *[mail flow rules](https://technet.microsoft.com/library/jj919238%28v=exchg.150%29.aspx)*  , also called  *transport rules*  , are another filter that help you prevent spam in Office 365. For example, you can use mail flow rules to set the spam confidence level (SCL) value for messages that match specific conditions, as described in [Use mail flow rules to set the spam confidence level (SCL) in messages](https://technet.microsoft.com/library/dn798345%28v=exchg.150%29.aspx). 
+ **Mail flow rules.** If you want to go beyond built-in spam filtering and create custom rules that are based on your business policies,  *[mail flow rules](https://technet.microsoft.com/library/jj919238%28v=exchg.150%29.aspx)*, also called  *transport rules*, are another filter that help you prevent spam in Office 365. For example, you can use mail flow rules to set the spam confidence level (SCL) value for messages that match specific conditions, as described in [Use mail flow rules to set the spam confidence level (SCL) in messages](https://technet.microsoft.com/library/dn798345%28v=exchg.150%29.aspx).
   
- **Email authentication.** Techniques that use the Domain Name System (DNS) to add verifiable information to email messages about the sender of an email message are called email authentication. More advanced Office 365 admins can make use of these email authentication methods: 
+ **Email authentication.** Techniques that use the Domain Name System (DNS) to add verifiable information to email messages about the sender of an email message are called email authentication. More advanced Office 365 admins can make use of these email authentication methods:
   
 - **Sender Policy Framework (SPF).** SPF validates the origin of email messages by verifying the IP address of the sender against the alleged owner of the sending domain. For a quick introduction to SPF and to get it configured quickly, see [Set up SPF in Office 365 to help prevent spoofing](https://technet.microsoft.com/library/dn789058%28v=exchg.150%29.aspx). For a more in-depth understanding of how Office 365 uses SPF, or for troubleshooting or non-standard deployments such as hybrid deployments, start with [How Office 365 uses Sender Policy Framework (SPF) to prevent spoofing](https://technet.microsoft.com/library/mt712724%28v=exchg.150%29.aspx).
-    
+
 - **DomainKeys Identified Mail (DKIM).** DKIM lets you attach a digital signature to email messages in the message header of emails you send. Email systems that receive email from your domain use this digital signature to determine if incoming email that they receive is legitimate. For information about DKIM and Office 365, see [Use DKIM to validate outbound email sent from your domain in Office 365](https://technet.microsoft.com/library/mt695945%28v=exchg.150%29.aspx).
-    
+
 - **Domain-based Message Authentication, Reporting, and Conformance (DMARC).** DMARC helps receiving mail systems determine what to do with messages that fail SPF or DKIM checks and provides another level of trust for your email partners. For information on setting up DMARC, see [Use DMARC to validate email in Office 365](https://technet.microsoft.com/library/mt734386%28v=exchg.150%29.aspx).
-    
+
 If you're concerned about spam, phishing, and spoofing in Office 365, use SPF, DKIM, and DMARC together to help prevent spam and unwanted spoofing.
   
  **End-user managed settings.** If you're looking for information about how end users can manage their own spam settings, check out [Overview of the Junk Email Filter](https://go.microsoft.com/fwlink/?LinkId=270065) (for Microsoft Outlook users) or [Learn about Junk email and phishing](https://go.microsoft.com/fwlink/?LinkId=270068) (for Outlook on the web users). If you're using EOP to protect on-premises mailboxes, be sure to use directory synchronization to ensure that these settings are synced to the service. For more information about setting up directory synchronization, see "Use directory synchronization to manage mail users" in [Manage mail users in EOP](https://technet.microsoft.com/library/dn636911%28v=exchg.150%29.aspx).
   
 ## For more information
-<a name="BeyondBasics"> </a>
 
 [Blog: Why does spam and phishing get through Office 365?](https://go.microsoft.com/fwlink/?LinkId=528179 )
   
@@ -77,14 +75,11 @@ If you're concerned about spam, phishing, and spoofing in Office 365, use SPF, D
 [Anti-spam message headers](https://technet.microsoft.com/library/dn205071%28v=exchg.150%29.aspx)
   
 [Backscatter Messages and EOP](https://technet.microsoft.com/library/dn499795%28v=exchg.150%29.aspx)
-  
-## Still need help?
-<a name="BeyondBasics"> </a>
 
-[![Get help from the Office 365 community forums](media/12a746cc-184b-4288-908c-f718ce9c4ba5.png)](https://go.microsoft.com/fwlink/p/?LinkId=518605)
-  
-[![Admins: Sign in and create a service request](media/10862798-181d-47a5-ae4f-3f8d5a2874d4.png)]( https://go.microsoft.com/fwlink/p/?LinkId=519124)
-  
-[![Admins: Call Support](media/9f262e67-e8c9-4fc0-85c2-b3f4cfbc064e.png)](https://go.microsoft.com/fwlink/p/?LinkID=518322)
-  
+## More resources
 
+[Get help from the Office 365 community forums](https://go.microsoft.com/fwlink/p/?LinkId=518605)
+  
+[Admins: Sign in and create a service request](https://go.microsoft.com/fwlink/p/?LinkId=519124)
+  
+[Admins: Call Support](https://go.microsoft.com/fwlink/p/?LinkID=518322)

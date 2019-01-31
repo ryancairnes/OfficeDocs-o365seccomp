@@ -19,7 +19,7 @@ description: "This article describes the new version of Advanced eDiscovery (Pre
 
 # Release notes for Data Investigations (Preview) in Microsoft 365
 
-You can use the new Data Investigations (Preview) tool in in Microsoft 365 to triage, investigate, and remediate data related incidents, such as a data spillage incident or an internal investigation. The Public Preview of Data investigations provides you with early access to the upcoming functionality and updates. To get early access to the newest features, create a new investigation in Data investigations (Preview) in the Office 365 Security & Compliance Center. To learn how, see [Managing a data spillage incident in Microsoft 365](data-investigations.md).
+You can use the new Data Investigations (Preview) tool in in Microsoft 365 to triage, investigate, and remediate data related incidents, such as a data spillage incident or an internal investigation. The Public Preview of Data investigations provides you with early access to the upcoming functionality and updates. To get early access to the newest features, create a new investigation in Data investigations (Preview) in the Office 365 Security & Compliance Center. To learn how, see [Managing a data spillage incident in Microsoft 365](manage-data-spillage-incidents.md).
 
 ## What’s new 
 

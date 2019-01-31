@@ -1,7 +1,7 @@
 ---
 title: "Office 365 Encryption Risks and Protections"
-ms.author: robmazz
-author: robmazz
+ms.author: krowley
+author: kccross
 manager: laurawi
 audience: ITPro
 ms.topic: article
