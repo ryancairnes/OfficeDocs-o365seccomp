@@ -1,5 +1,5 @@
 ---
-title: "Collecting data for a case in Advanced eDiscovery (Preview)"
+title: "Collect data for a case in Advanced eDiscovery (Preview)"
 ms.author: esclee
 author: markjjo
 manager: laurawi
@@ -17,7 +17,7 @@ ms.assetid:
 description: ""
 ---
 
-# Collecting data for a case in Advanced eDiscovery (Preview)
+# Collect data for a case in Advanced eDiscovery (Preview)
 
 Once you have identified custodians and data sources that are of interest for your case, it's time to identify the set of documents to delve into. You can use the Search tool in Advanced eDiscovery (Preview) to identify these from custodial and non-custodial locations in Office 365.
 

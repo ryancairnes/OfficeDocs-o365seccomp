@@ -1,5 +1,5 @@
 ---
-title: "Manage communications"
+title: "Manage hold notifications"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,7 +17,7 @@ ms.assetid:
 description: ""
 ---
 
-# Manage communications
+# Manage hold notifications
 
 After you have initiated your legal hold notification workflow, you can leverage  Advanced eDiscovery (Preview) to track the status of your communications. The Communications Tab showcases all of the hold notifications within your Advanced eDiscovery (Preview) case. Here, you can see details, such as the number of custodians that have been assigned or have acknowledged the notice.
 
@@ -67,6 +67,8 @@ When you update the content or settings of the Issuance, Release, Reissue, Remin
 
 ## Related information 
 
-    - [Create a Legal Hold Notification] (~SecurityCompliance\compliance20\create-hold-notification.md)
-    - [Acknowledge a Legal Hold Notification] (~/acknowledge-hold-notification.md)
-    - [Adding Custodians to a Case]
+- [Create a legal hold notice](create-hold-notification.md)
+    
+- [Acknowledge a hold notification](acknowledge-hold-notification.md)
+    
+- [Add custodians to a case](add-custodians-to-case.md)

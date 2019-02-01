@@ -52,7 +52,7 @@ To create the portal content:
 3. Click **Next**.
 
   >[!Tip]
-  >To learn more about how to can customize the content and format of the portal content, see [Using the Communications Editor](using-communications-editor.md).
+  >To learn more about how to can customize the content and format of the portal content, see [Use the Communications Editor](using-communications-editor.md).
 
 ## Step 3: Set the required notifications
 

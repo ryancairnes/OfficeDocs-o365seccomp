@@ -33,7 +33,7 @@ After accessing the message header information, search for **X-Forefront-Antispa
 |CTRY|The country from which the message connected to the service. This is determined by the connecting IP address, which may not be the same as the originating sending IP address.|
 |LANG|The language in which the message was written, as specified by the country code (for example, ru_RU for Russian).|
 |SCL|The Spam Confidence Level (SCL) value of the message. For more information about interpreting these values, see [Spam confidence levels](spam-confidence-levels.md).|
-|PCL|The Phishing Confidence Level (PCL) value of the message. See [PCL](anti-spam-message-headers.md#PCL) for more information about PCL values.|
+|PCL|The Phishing Confidence Level (PCL) value of the message. |
 |SRV:BULK|The message was identified as a bulk email message. If the **Block all bulk email messages advanced spam filtering option** is enabled, it will be marked as spam. If it is not enabled, it will only be marked as spam if the rest of the filtering rules determine that the message is spam.|
 |SFV:SFE|Filtering was skipped and the message was let through because it was sent from an address on an individual's safe sender list.|
 |SFV:BLK|Filtering was skipped and the message was blocked because it was sent from an address on an individual's blocked sender list.  <br/> **Tip**: For more information about how end users can create safe and blocked sender lists, see [Block or allow (junk email settings)](https://go.microsoft.com/fwlink/p/?LinkId=294862) (Outlook on the web) and [Overview of the Junk Email Filter](https://go.microsoft.com/fwlink/p/?LinkId=270065) (Outlook).|

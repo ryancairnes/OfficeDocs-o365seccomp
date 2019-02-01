@@ -3,7 +3,6 @@ title: "Revoke email encrypted by Office 365 Message Encryption"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.date: 1/29/2019
 ms.audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -54,22 +53,41 @@ There are multiple ways to find the Message ID of the email that you want to rev
 2. Choose the **View details** table and identify the message that you want to revoke.
 3. Double-click the message to view details that include the Message ID.
 
-### Step 2. Revoke the mail  
+### Step 2. Verify that the mail is revocable
 
-Once you know the Message ID of the email you want to revoke, you can revoke the email by using the Set-OMEMessageRevocation cmdlet.
+To verify whether or not you can revoke a particular email message, complete these steps.
 
-1. [Connect to Exchange Online Using Remote PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps).
+1. Using a work or school account that has global administrator permissions in your Office 365 organization, start a Windows PowerShell session and connect to Exchange Online. For instructions, see [Connect to Exchange Online PowerShell](https://aka.ms/exopowershell).
+
+2. Run the Set-OMEMessageStatus cmdlet as follows:
+     ```powershell
+     Get-OMEMessageStatus -MessageId "<messagieid>" | ft -a  Subject, IsRevocable
+     ```
+
+   This returns the subject of the message and whether the message is revocable. For example,
+
+     ```text
+     Subject IsRevocable
+     ------- -----------
+     “Test message”  True
+     ```
+
+### Step 3. Revoke the mail  
+
+Once you know the Message ID of the email you want to revoke, and you have verified that the message is revocable, you can revoke the email by using the Set-OMEMessageRevocation cmdlet.
+
+1. [Connect to Exchange Online PowerShell](https://aka.ms/exopowershell).
 
 2. Run the Set-OMEMessageRevocation cmdlet as follows:
 
     ```powershell
     Set-OMEMessageRevocation -Revoke $true -MessageId "<messageId>"
-    ```  
+    ```
 
 3. To check whether the email was revoked, run the Get-OMEMessageStatus cmdlet as follows:
 
     ```powershell
-    Get-OMEMessageStatus -MessageId "<messageId>" | fl Revoked
+    Get-OMEMessageStatus -MessageId "<messageId>" | ft -a  Subject, Revoked
     ```  
     If revocation was successful, the cmdlet returns the following result:  
 

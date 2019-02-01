@@ -3,7 +3,6 @@ title: "Manage Office 365 Message Encryption"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.date: 6/13/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -16,15 +15,16 @@ description: "Once you've finished setting up Office 365 Message Encryption (OME
 
 # Manage Office 365 Message Encryption
 
-Once you've finished setting up Office 365 Message Encryption (OME), you can customize the configuration of your deployment in a number of ways. For example, you can configure whether to enable one-time pass codes, display the **Protect** button in Outlook on the web, and more. The tasks in this article describe how. 
+Once you've finished setting up Office 365 Message Encryption (OME), you can customize the configuration of your deployment in a number of ways. For example, you can configure whether to enable one-time pass codes, display the **Protect** button in Outlook on the web, and more. The tasks in this article describe how.
   
 ||
 |:-----|
-|This article is part of a larger series of articles about Office 365 Message Encryption. This article is intended for administrators and IT Pros. If you're just looking for information on sending or receiving an encrypted message, see the list of articles in [Office 365 Message Encryption (OME)](ome.md) and locate the article that best fits your needs. |
+|This article is part of a larger series of articles about Office 365 Message Encryption. This article is intended for administrators and ITPros. If you're just looking for information on sending or receiving an encrypted message, see the list of articles in [Office 365 Message Encryption (OME)](ome.md) and locate the article that best fits your needs. |
+||
 
 ## Managing whether Google, Yahoo, and Microsoft Account recipients can use these accounts to sign in to the Office 365 Message Encryption portal
 
-By default, when you set up the new Office 365 Message Encryption capabilities, users in your organization can send messages to recipients that are outside of your Office 365 organization. If the recipient uses a *social ID* such as a Google account, Yahoo account, or Microsoft account, the recipient can sign in to the OME portal using the social ID. If you want, you can choose not to allow recipients to use social IDs to sign in to the OME portal. 
+By default, when you set up the new Office 365 Message Encryption capabilities, users in your organization can send messages to recipients that are outside of your Office 365 organization. If the recipient uses a *social ID* such as a Google account, Yahoo account, or Microsoft account, the recipient can sign in to the OME portal using the social ID. If you want, you can choose not to allow recipients to use social IDs to sign in to the OME portal.
   
 ### To manage whether or not to allow recipients to use social IDs to sign in to the OME portal
   
@@ -32,21 +32,21 @@ By default, when you set up the new Office 365 Message Encryption capabilities, 
 
 2. Run the Set-OMEConfiguration cmdlet with the SocialIdSignIn parameter as follows:
 
-  ```
-  Set-OMEConfiguration -Identity <"OMEConfigurationIdParameter "> -SocialIdSignIn <$true | $false>
-  ```
+   ```powershell
+   Set-OMEConfiguration -Identity <"OMEConfigurationIdParameter "> -SocialIdSignIn <$true | $false>
+   ```
 
-  For example, to disable social IDs:
-  
-  ```
-  Set-OMEConfiguration -Identity "OME Configuration" -SocialIdSignIn $false
-  ```
+   For example, to disable social IDs:
 
-  To enable social IDs:
+   ```powershell
+   Set-OMEConfiguration -Identity "OME Configuration" -SocialIdSignIn $false
+   ```
 
-  ```
-  Set-OMEConfiguration -Identity "OME Configuration" -SocialIdSignIn $true
-  ```
+   To enable social IDs:
+
+   ```powershell
+   Set-OMEConfiguration -Identity "OME Configuration" -SocialIdSignIn $true
+   ```
 
 ## Managing the use of one-time pass codes for signing in to the Office 365 Message Encryption portal
 
@@ -58,19 +58,25 @@ By default, if the recipient of a message encrypted by OME doesn't use Outlook, 
 
 2. Run the Set-OMEConfiguration cmdlet with the OTPEnabled parameter:
 
-   ```Set-OMEConfiguration -Identity <"OMEConfigurationIdParameter "> -OTPEnabled <$true|$false>```
+   ```powershell
+   Set-OMEConfiguration -Identity <"OMEConfigurationIdParameter "> -OTPEnabled <$true|$false>
+   ```
 
    For example, to disable one-time pass codes:
 
-   ```Set-OMEConfiguration -Identity "OME Configuration" -OTPEnabled $false```
+   ```powershell
+   Set-OMEConfiguration -Identity "OME Configuration" -OTPEnabled $false
+   ```
 
    To enable one-time pass codes:
 
-   ```Set-OMEConfiguration -Identity "OME Configuration" -OTPEnabled $true```
+   ```powershell
+   Set-OMEConfiguration -Identity "OME Configuration" -OTPEnabled $true
+   ```
 
 ## Managing the display of the Protect button in Outlook on the web
 
-By default, the **Protect** button in Outlook on the web is not enabled when you set up OME. As an administrator, you can manage whether or not to display this button to end users. 
+By default, the **Protect** button in Outlook on the web is not enabled when you set up OME. As an administrator, you can manage whether or not to display this button to end users.
   
 ### To manage whether or not the Protect button appears in Outlook on the web
   
@@ -78,15 +84,21 @@ By default, the **Protect** button in Outlook on the web is not enabled when you
 
 2. Run the Set-IRMConfiguration cmdlet with the -SimplifiedClientAccessEnabled parameter:
 
-   ```Set-IRMConfiguration -SimplifiedClientAccessEnabled <$true|$false>```
+   ```powershell
+   Set-IRMConfiguration -SimplifiedClientAccessEnabled <$true|$false>
+   ```
 
    For example, to disable the **Protect** button:
 
-   ```Set-IRMConfiguration -SimplifiedClientAccessEnabled $false```
+   ```powershell
+   Set-IRMConfiguration -SimplifiedClientAccessEnabled $false
+   ```
 
    To enable the **Protect** button:
 
-   ```Set-IRMConfiguration -SimplifiedClientAccessEnabled $true```
+   ```powershell
+   Set-IRMConfiguration -SimplifiedClientAccessEnabled $true
+   ```
 
 ## Enable service-side decryption of email messages for iOS mail app users
 
@@ -94,7 +106,7 @@ The iOS mail app can't decrypt messages protected with Office 365 Message Encryp
   
 If you choose not to allow decrypted messages to be sent to iOS mail app users, users receive a message that states that they don't have the rights to view the message. By default, service-side decryption of email messages is not enabled.
   
-For more information, and for a view of the client experience, see the section, "[View encrypted messages on your iPhone or iPad](https://support.office.com/article/4d631321-0d26-4bcc-a483-d294dd0b1caf#iOSEncryptedMail)" in [View encrypted messages on your iPhone or iPad](https://support.office.com/article/4d631321-0d26-4bcc-a483-d294dd0b1caf).
+For more information, and for a view of the client experience, see [View encrypted messages on your iPhone or iPad](https://support.office.com/article/4d631321-0d26-4bcc-a483-d294dd0b1caf).
   
 ### To manage whether or not iOS mail app users can view messages protected by Office 365 Message Encryption
   
@@ -102,19 +114,25 @@ For more information, and for a view of the client experience, see the section, 
 
 2. Run the Set-ActiveSyncOrganizations cmdlet with the AllowRMSSupportForUnenlightenedApps parameter:
 
-   ```Set-ActiveSyncOrganizationSettings -AllowRMSSupportForUnenlightenedApps <$true|$false>```
+   ```powershell
+   Set-ActiveSyncOrganizationSettings -AllowRMSSupportForUnenlightenedApps <$true|$false>
+   ```
 
    For example, to configure the service to decrypt messages before they are sent to unenlightened apps such as the iOS mail app:
 
-   ```Set-ActiveSyncOrganizationSettings -AllowRMSSupportForUnenlightenedApps $true```
+   ```powershell
+   Set-ActiveSyncOrganizationSettings -AllowRMSSupportForUnenlightenedApps $true
+   ```
 
    Or, to configure the service not to send decrypted messages to unenlightened apps:
 
-   ```Set-ActiveSyncOrganizationSettings -AllowRMSSupportForUnenlightenedApps $false```
+   ```powershell
+   Set-ActiveSyncOrganizationSettings -AllowRMSSupportForUnenlightenedApps $false
+   ```
 
 ## Enable service-side decryption of email attachments for web browser mail clients
 
-Normally, when you use Office 365 message encryption, attachments are automatically encrypted. As an Office 365 administrator, you can apply service-side decryption for email attachments that users download from a web browser. 
+Normally, when you use Office 365 message encryption, attachments are automatically encrypted. As an Office 365 administrator, you can apply service-side decryption for email attachments that users download from a web browser.
   
 When you choose to do this, the service sends a decrypted copy of the file to the device. The message is still encrypted. The email attachment also retains information about usage rights even though the browser does not apply client-side usage rights to the user. This means that the user can copy or print the email attachment even if they did not originally have the rights to do so. However, if the user attempts to complete an action that requires the Office 365 mail server, such as forwarding the attachment, the server will not permit the action if the user did not originally have the usage right to do so.
   
@@ -130,15 +148,21 @@ For more information about how Office 365 implements encryption for emails and e
 
 2. Run the Set-IRMConfiguration cmdlet with the DecryptAttachmentFromPortal parameter:
 
-   ```Set-IRMConfiguration -DecryptAttachmentFromPortal <$true|$false>```
+   ```powershell
+   Set-IRMConfiguration -DecryptAttachmentFromPortal <$true|$false>
+   ```
 
    For example, to configure the service to decrypt email attachments when a user downloads them from a web browser:
 
-   ```Set-IRMConfiguration -DecryptAttachmentFromPortal $true```
+   ```powershell
+   Set-IRMConfiguration -DecryptAttachmentFromPortal $true
+   ```
 
    To configure the service to leave encrypted email attachments as they are upon download:
 
-   ```Set-IRMConfiguration -DecryptAttachmentFromPortal $false```
+   ```powershell
+   Set-IRMConfiguration -DecryptAttachmentFromPortal $false
+   ```
 
 ## Customizing the appearance of email messages and the OME portal
 
@@ -154,8 +178,12 @@ We hope it doesn't come to it, but if you need to, disabling the new capabilitie
 
 2. If you enabled the **Protect** button in Outlook on the web, disable it by running the Set-IRMConfiguration cmdlet with the SimplifiedClientAccessEnabled parameter. Otherwise, skip this step.
 
-   ```Set-IRMConfiguration -SimplifiedClientAccessEnabled $false```
+   ```powershell
+   Set-IRMConfiguration -SimplifiedClientAccessEnabled $false
+   ```
 
 3. Disable the new capabilities for OME by running the Set-IRMConfiguration cmdlet with the AzureRMSLicensingEnabled parameter set to false:
 
-   ```Set-IRMConfiguration -AzureRMSLicensingEnabled $false```
+   ```powershell
+   Set-IRMConfiguration -AzureRMSLicensingEnabled $false
+   ```

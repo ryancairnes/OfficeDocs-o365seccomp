@@ -1,5 +1,5 @@
 ---
-title: "Managing working sets in Advanced eDiscovery (Preview)"
+title: "Manage working sets in Advanced eDiscovery (Preview)"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,7 +17,7 @@ ms.assetid:
 description: ""
 ---
 
-# Managing working sets in Advanced eDiscovery (Preview)  
+# Manage working sets in Advanced eDiscovery (Preview)  
 
 Content coming soon.
 

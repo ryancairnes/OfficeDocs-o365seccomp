@@ -1,5 +1,5 @@
 ---
-title: "Using the Relevance module to analyze data in Advanced eDiscovery (Preview)"
+title: "Use the Relevance module to analyze data in Advanced eDiscovery (Preview)"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,7 +17,7 @@ ms.assetid:
 description: ""
 ---
 
-# Using the Relevance module to analyze data in Advanced eDiscovery (Preview)
+# Use the Relevance module to analyze data in Advanced eDiscovery (Preview)
 
 In Advanced eDiscovery (Preview), the Relevance module includes the Relevance training and review of files related to a case. The Relevance workflow is shown and described as follows:
   

@@ -1,5 +1,5 @@
 ---
-title: "Tagging documents in a working set"
+title: "Tag documents in a working set"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,6 +17,6 @@ ms.assetid:
 description: ""
 ---
 
-# Tagging documents in a working set
+# Tag documents in a working set
 
 Content coming soon.

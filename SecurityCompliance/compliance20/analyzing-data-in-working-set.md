@@ -1,5 +1,5 @@
 ---
-title: "Analyzing data in a working set in Advanced eDiscovery (Preview)"
+title: "Analyze data in a working set in Advanced eDiscovery (Preview)"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,7 +17,7 @@ ms.assetid:
 description: ""
 ---
 
-# Analyzing data in a working set in Advanced eDiscovery (Preview)
+# Analyze data in a working set in Advanced eDiscovery (Preview)
 
 When the number of collected documents is large, it can be quite difficult to review them all. Advanced eDiscovery (Preview) provides a number of tools to analyze the documents to reduce the volume of documents to be reviewed without any loss in information, and to help you organize the documents in a coherent manner. To learn more about these capabilities, see:
 

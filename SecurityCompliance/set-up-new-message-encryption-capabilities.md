@@ -3,7 +3,6 @@ title: "Set up new Office 365 Message Encryption capabilities"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.date: 5/19/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -17,7 +16,12 @@ description: "New Office 365 Message Encryption capabilities built on top of Azu
 # Set up new Office 365 Message Encryption capabilities
 
 With the new Office 365 Message Encryption (OME) capabilities, which leverage the protection features in Azure Information Protection, your organization can easily share protected email with anyone on any device. Users can send and receive protected messages with other Office 365 organizations as well as non-Office 365 customers using Outlook.com, Gmail, and other email services.
-  
+
+||
+|:-----|
+|This article is part of a larger series of articles about Office 365 Message Encryption. This article is intended for administrators and ITPros. If you're just looking for information on sending or receiving an encrypted message, see the list of articles in [Office 365 Message Encryption (OME)](ome.md) and locate the article that best fits your needs. |
+||
+
 ## Get started with OME by activating Azure Rights Management, part of Azure Information Protection
 
 It's now easy to get started with the new OME capabilities. As of February 2018, Office 365 automatically enables the new OME capabilities for eligible organizations within our datacenters. Your organization is eligible if it is a new Office 365 tenant and your organization has the appropriate subscriptions. **If you have enabled Azure Rights Management (Azure RMS), part of Azure Information Protection, then we automatically enable Office 365 Message Encryption for you.** You don't have to do anything else to enable OME. To activate Azure Rights Management, see [Activating Azure Rights Management](https://docs.microsoft.com/azure/information-protection/deploy-use/activate-service).﻿ For information on subscriptions, see "What subscriptions do I need to use the new OME capabilities?" in the [Office 365 Message Encryption FAQ](ome-faq.md).﻿ For information about purchasing a subscription to Azure Information Protection, see [Azure Information Protection](https://azure.microsoft.com/services/information-protection/).
@@ -31,10 +35,12 @@ If you choose to continue to use on-premises AD RMS with Exchange Online instead
 The new Office 365 Message Encryption capabilities use the protection capabilities, also called Azure Rights Management (Azure RMS), from Azure Information Protection. This includes encryption, identity, and authorization policies to help secure your email. You can encrypt messages by using rights management templates, the [Do Not Forward option](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#do-not-forward-option-for-emails), and the [encrypt-only option](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#encrypt-only-option-for-emails). Users can then encrypt email messages and a variety of Office 365 attachments by using these options. For a full list of supported attachment types, see ["File types covered by IRM policies when they are attached to messages" in Introduction to IRM for email messages](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM). As an administrator, you can also define mail flow rules to apply this protection. For example, you can define a rule where all unprotected messages that are addressed to a specific recipient or that contain specific words in the subject line are protected from unauthorized access, and the recipients can't copy or print the contents of the message.
   
 Unlike the previous version of OME, these new capabilities provide a unified sender experience whether you're sending mail inside your organization or to recipients outside of Office 365. In addition, recipients who receive a protected email message sent to an Office 365 account in Outlook 2016 or Outlook on the web, don't have to take any additional action to view the message. It works seamlessly. Recipients using other email clients and email service providers also have an improved experience. For information, see [Learn about protected messages in Office 365](https://support.office.com/article/Learn-about-protected-messages-in-Office-365-2baf3ac7-12db-40a4-8af7-1852204b4b67) and [How do I open a protected message](https://support.office.com/article/How-do-I-open-a-protected-message-1157a286-8ecc-4b1e-ac43-2a608fbf3098).
+
+For a detailed list of the differences between the previous version of OME and the new OME capabilities, see [Compare versions of OME](ome-version-comparison.md).
   
 ## Steps to manually set up the new capabilities for OME
 
-If your organization does not automatically have OME enabled, or if you turned OME off, follow these steps to manually set up the new capabilities for OME.
+The new OME capabilities are automatically enabled for most Office 365 organizations. If your organization does not automatically have OME enabled, or if you turned the new OME capabilities off, follow these steps to manually set up the new capabilities for OME.
   
 ### To manually set up the new capabilities for OME
 
@@ -57,16 +63,19 @@ Follow these steps to verify that your tenant is properly configured to use the 
 
 2. Run the Test-IRMConfiguration cmdlet using the following syntax:
 
-    ```Test-IRMConfiguration [-Sender <email address >]```  
+     ```powershell
+     Test-IRMConfiguration [-Sender <email address >]
+     ```  
 
    For example:
 
-    ```Test-IRMConfiguration -Sender securityadmin@contoso.com```
+     ```powershell
+     Test-IRMConfiguration -Sender securityadmin@contoso.com
+     ```
 
     Where email address is the email address of a user in your Office 365 organization. While optional, providing a sender email address forces the system to perform additional checks. Your results should look like these:
 
-    
-    ```
+     ```text
     Results : Acquiring RMS Templates ...
                 - PASS: RMS Templates acquired.  Templates available: Contoso  - Confidential View Only, Contoso  - Confidential, Do Not 
             Forward.
@@ -76,11 +85,11 @@ Follow these steps to verify that your tenant is properly configured to use the 
                 - PASS: Decryption verified successfully.
             Verifying IRM is enabled ...
                 - PASS: IRM verified successfully.
-            
+
             OVERALL RESULT: PASS
     ```
 
-    Where *Contoso* is replaced with the name of your Office 365 organization. 
+    Where *Contoso* is replaced with the name of your Office 365 organization.
 
     The names of the default templates returned in the results may be different from those displayed in the results above.
 
@@ -88,10 +97,11 @@ Follow these steps to verify that your tenant is properly configured to use the 
 
 3. Run the Remove-PSSession cmdlet to disconnect from the Rights Management service.
     
-    ```Remove-PSSession $session```
+     ```powershell
+     Remove-PSSession $session
+     ```
 
 ## Next steps: Define new mail flow rules that use the new OME capabilities
-<a name="Rules_1"> </a>
 
 This step is optional for new OME deployments, however, this step is required for existing OME deployments that already have mail flow rules set up to encrypt outgoing mail. If you want to take advantage of the new OME capabilities, you must update your existing mail flow rules. Otherwise, your users will continue to receive encrypted mail that uses the previous HTML attachment format instead of the new, seamless OME experience.
   

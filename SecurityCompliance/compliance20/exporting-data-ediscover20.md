@@ -1,5 +1,5 @@
 ---
-title: "Exporting case data in Advanced eDiscovery (Preview)"
+title: "Export case data in Advanced eDiscovery (Preview)"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,6 +17,6 @@ ms.assetid:
 description: ""
 ---
 
-# Exporting case data in Advanced eDiscovery (Preview)
+# Export case data in Advanced eDiscovery (Preview)
 
 Content coming soon.

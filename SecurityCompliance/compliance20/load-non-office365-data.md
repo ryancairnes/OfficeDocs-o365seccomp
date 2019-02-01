@@ -26,15 +26,22 @@ Not all documents that you may need to analyze with Office 365 Advanced eDiscove
 
 ## Before you begin
 Using the upload Non-Office 365 feature as described in this procedure requires that you have:
-* An Office 365 E3 with Advanced Compliance add-on or E5 subscription
-* All custodians whose non-Office 365 content will be uploaded must have E3 with Advanced Compliance add-on or E5 licenses
-* An existing eDiscovery case
-* All the files for uploading gathered into folders where there is one folder per custodian and the folders' name is in this format *alias@domainname* . The *alias@domainname* must be users Office 365 alias and domain. You can collect all the *alias@domainname* folders into a root folder. The root folder can only contain the *alias@domainname* folders, there must be no loose files in the root folder
-* An account that is either an eDiscovery Manager or eDiscovery Administrator
+
+- An Office 365 E3 with Advanced Compliance add-on or E5 subscription.
+
+- All custodians whose non-Office 365 content will be uploaded must have E3 with Advanced Compliance add-on or E5 licenses.
+
+- An existing eDiscovery case.
+
+- All the files for uploading gathered into folders where there is one folder per custodian and the folders' name is in this format *alias@domainname* . The *alias@domainname* must be users Office 365 alias and domain. You can collect all the *alias@domainname* folders into a root folder. The root folder can only contain the *alias@domainname* folders, there must be no loose files in the root folder.
+
+- An account that is either an eDiscovery Manager or eDiscovery Administrator
 Microsoft Azure Storage Tools installed on a computer that has access to the non-Office 365 content folder structure.
-* Install AzCopy, you can do this from here: https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy
+
+- Install AzCopy, which you can do from here: https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy
 
 ## Upload non-Office 365 content into Advanced eDiscovery
+
 1. As an eDiscovery Manager or eDiscovery Administrator, open Advanced eDiscovery, then the case that the non-Office 365 data will be uploaded to.  Click the **Working sets** tab, then select the working set you wish to load the Non-Office 365 data to.  If you have not already created a working set, you can do so now.  Finally, click **Manage workings set** then **View uploads** in the Non-Office 365 data section
 
 2. Click the **Upload files** button to start the Non-Office 365 data import wizard.

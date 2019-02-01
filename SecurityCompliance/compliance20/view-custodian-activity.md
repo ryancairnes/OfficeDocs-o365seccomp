@@ -16,7 +16,7 @@ ms.assetid:
 
 description: ""
 ---
-# Viewing custodian audit activity
+# View custodian audit activity
 
 Need to find if a user viewed a specific document or purged an item from their mailbox? Advanced eDiscovery (Preview) is now integrated with the existing audit log search tool in the Security & Compliance Center. Using this embedded experience, you can use the Advanced eDiscovery (Preview) Custodian Management tool to facilitate your investigation by easily accessing and searching the activity for custodians within your case.
 
@@ -96,8 +96,4 @@ You can export the results of an audit log search to a comma separated value (CS
 
 3. After you select an export option, a message is displayed at the bottom of the window that prompts you to open the CSV file, save it to the Downloads folder, or save it to a specific folder
 
-[!NOTE] 
- For more information about viewing, filtering, or exporting audit log search results, see:
-   - View List of Audited Activities 
-   - Before You Begin: Unified Audit Logs
- 
+For more information about viewing, filtering, or exporting audit log search results, see [Search the audit log in the Office 365 Security & Compliance Center](../search-the-audit-log-in-security-and-compliance.md).

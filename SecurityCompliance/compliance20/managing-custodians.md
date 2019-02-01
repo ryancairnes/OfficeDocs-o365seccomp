@@ -1,5 +1,5 @@
 ---
-title: "Working with custodians in Advanced eDiscovery (Preview)"
+title: "Work with custodians in Advanced eDiscovery (Preview)"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,7 +17,7 @@ ms.assetid:
 description: ""
 ---
 
-# Working with custodians in Advanced eDiscovery (Preview)
+# Work with custodians in Advanced eDiscovery (Preview)
 
 Often, when an organization is responding to a legal investigation, the workflow around identifying, preserving, and collecting potentially relevant content is based off people or data custodians within their organization. In eDiscovery, these individuals are called data custodians and are defined as “persons having administrative control of a document or electronic file”. For example, the data custodian of an email could be the owner of the mailbox which contains the relevant message.  
 
@@ -29,9 +29,9 @@ For more information about working with custodians, see the following articles:
 
 - [Add custodians to a case](add-custodians-to-case.md)
 
-- [Managing custodians in a case](manage-new-custodians.md)
+- [Manage custodians in a case](manage-new-custodians.md)
 
-- [Viewing custodian activity](view-custodian-activity.md)
+- [View custodian activity](view-custodian-activity.md)
 
 ## Roles and permissions
 

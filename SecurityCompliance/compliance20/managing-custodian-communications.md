@@ -1,5 +1,5 @@
 ---
-title: "Working with communications in Advanced eDiscovery (Preview)"
+title: "Work with communications in Advanced eDiscovery (Preview)"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,7 +17,7 @@ ms.assetid:
 description: ""
 ---
 
-# Working with communications in Advanced eDiscovery (Preview)
+# Work with communications in Advanced eDiscovery (Preview)
 
 Advanced eDiscovery (Preview) allows legal departments to simplify their processes around tracking and distributing legal hold notifications. The custodian communications feature enables legal departments to manage and automate their entire legal hold processes--from notifications, reminders, and escalations--all in one place.
 

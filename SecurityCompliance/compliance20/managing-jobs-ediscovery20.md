@@ -1,5 +1,5 @@
 ---
-title: "Managing jobs in Advanced eDiscovery (Preview)"
+title: "Manage jobs in Advanced eDiscovery (Preview)"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,7 +17,7 @@ ms.assetid:
 description: ""
 ---
 
-# Managing jobs in Advanced eDiscovery (Preview)
+# Manage jobs in Advanced eDiscovery (Preview)
 
 Here's a list of the jobs that are tracked on the **Jobs** tab of a case in Advanced eDiscovery (Preview).
 

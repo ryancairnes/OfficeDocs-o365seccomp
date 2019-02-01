@@ -1,5 +1,5 @@
 ---
-title: "Acknowledging hold notifications"
+title: "Acknowledge a hold notifications"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,6 +17,6 @@ ms.assetid:
 description: ""
 ---
 
-# Acknowledging hold notifications 
+# Acknowledge a hold notification 
 
 Content coming soon.

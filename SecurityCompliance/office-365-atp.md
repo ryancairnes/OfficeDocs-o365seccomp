@@ -3,7 +3,7 @@ title: "Office 365 Advanced Threat Protection"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 01/08/2019
+ms.date: 02/01/2019
 ms.audience: Admin
 ms.topic: hub-page
 ms.service: o365-administration
@@ -31,7 +31,7 @@ Office 365 Advanced Threat Protection (ATP) helps to protect your organization f
     
 - Detecting when someone attempts to impersonate your users and your organization's custom domains with [ATP anti-phishing capabilities in Office 365](atp-anti-phishing.md)
     
-**Protection through Office 365 ATP is determined by policies that your organization's security team defines for Safe Links, Safe Attachments, and Anti-Phishing**. It's important to periodically review and revise your policies to keep them up to date and to take advantages of new features that are added to the service. 
+**Protection through Office 365 ATP is determined by policies that your organization's security team defines for Safe Links, Safe Attachments, and Anti-Phishing**. It's important to define policies, and to periodically review and revise those policies to keep them up to date and to take advantages of new features that are added to the service. 
 
 [Reports are available](view-reports-for-atp.md) to show how ATP is working for your organization. These reports can also show you areas where you might need to review and update your policies. And, if you have files that are marked as malware that shouldn't be, or files you'd like Microsoft to examine, you can [submit a file to Microsoft for analysis](#submit-a-suspicious-file-to-microsoft-for-analysis).
 
@@ -42,7 +42,7 @@ We are continuing to add new features to Office 365, and that includes ATP. Belo
 
 |Feature updates  |Action items  |
 |---------|---------|
-|Beginning in October 2018 and rolling out over the next several months, when people are using Outlook Web Application (OWA) or Outlook, ATP Safe Links renders original URLs, not rewritten URLs. (We call this native link visibility.)|None         |
+|Beginning in October 2018 and rolling out over the next several months, when people are using Outlook or Outlook Web Application (OWA), ATP Safe Links renders original URLs, not rewritten URLs. (We call this native link rendering.)<br>When native link rendering is available for your organization, this feature will work in Outlook 365 (Click-to-Run) and OWA.|None         |
 |Beginning in September 2018, [Office 365 ATP warning pages](atp-safe-links-warning-pages.md) feature a new color scheme, more details, and the ability to continue to a site despite given warnings and recommendations. |None         |
 |Beginning in the second half of 2018, ATP Safe Links protection is extended to apply to URLs in Office Online (Word Online, Excel Online, PowerPoint Online, and OneNote Online) and Office 365 ProPlus on Mac.   |[Review and edit your ATP Safe Links policies](set-up-atp-safe-links-policies.md)  |
 |Beginning in late May 2018, [quarantine](quarantine-email-messages.md) capabilities in the Security &amp; Compliance Center are being extended to [ATP for SharePoint Online, OneDrive for Business, and Microsoft Teams](atp-for-spo-odb-and-teams.md). |[Review and edit your ATP Safe Attachments policies](set-up-atp-safe-attachments-policies.md) |

@@ -18,7 +18,12 @@ description: "Admins can learn to to create mail flow rules (also known as trans
 
 As an Office 365 global administrator, you can create mail flow rules (also known as transport rules) to help protect email messages you send and receive. You can set up rules to encrypt any outgoing email messages and remove encryption from encrypted messages coming from inside your organization or from replies to encrypted messages sent from your organization. You can use the Exchange admin center (EAC) or Exchange Online PowerShell to create these rules. In addition to overall encryption rules, you can also choose to enable or disable individual message encryption options for end-users.
 
-If you recently migrated from AD RMS to Azure Information Protection, you'll need to review your existing mail flow rules to ensure that they continue to work in your new environment. Additionally, if you want to take advantage of the new Office 365 Message Encryption (OME) capabilities available to you through Azure Information Protection, you need to update your existing mail flow rules. Otherwise, your users will continue to receive encrypted mail that uses the previous HTML attachment format instead of the new, seamless OME experience. If you haven't set up OME yet, see [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](set-up-new-message-encryption-capabilities.md) for information.
+||
+|:-----|
+|This article is part of a larger series of articles about Office 365 Message Encryption. This article is intended for administrators and ITPros. If you're just looking for information on sending or receiving an encrypted message, see the list of articles in [Office 365 Message Encryption (OME)](ome.md) and locate the article that best fits your needs. |
+||
+
+If you recently migrated from AD RMS to Azure Information Protection, you'll need to review your existing mail flow rules to ensure that they continue to work in your new environment. Additionally, if you want to take advantage of the new Office 365 Message Encryption (OME) capabilities available to you through Azure Information Protection, you need to update your existing mail flow rules. Otherwise, your users will continue to receive encrypted mail that uses the previous HTML attachment format instead of the new, seamless OME experience. If you haven't set up OME yet, see [Set up new Office 365 Message Encryption capabilities](set-up-new-message-encryption-capabilities.md) for information.
 
 For information about the components that make up mail flow rules and how mail flow rules work, see [Mail flow rules (transport rules) in Exchange Online](https://docs.microsoft.com/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules). For additional information about how mail flow rules work with Azure Information Protection, see [Configuring Exchange Online mail flow rules for Azure Information Protection labels](https://docs.microsoft.com/azure/information-protection/deploy-use/configure-exo-rules).
 
@@ -46,7 +51,7 @@ You can define mail flow rules for triggering message encryption with the new OM
    1. In **Apply this rule if**, select **the recipient is**.
 
    2. Select an existing name from the contact list or type a new email address in the **check names** box.
-    
+
       - To select an existing name, select it from the list and then click **OK**.
 
       - To enter a new name, type an email address in the **check names** box and then select **check names** \> **OK**.
@@ -57,7 +62,7 @@ You can define mail flow rules for triggering message encryption with the new OM
 
 8. To enable encryption using the new OME capabilities, from **Do the following**, select **Modify the message security** and then choose **Apply Office 365 Message Encryption and rights protection**. Select an RMS template from the list, choose **Save**, and then choose **OK**.
   
-  The list of templates includes all default templates and options as well as any custom templates you've created for use by Office 365. If the list is empty, ensure that you have set up Office 365 Message Encryption with the new capabilities as described in [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](set-up-new-message-encryption-capabilities.md). For information about the default templates, see [Configuring and managing templates for Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/configure-policy-templates). For information about the **Do Not Forward** option, see [Do Not Forward option for emails](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#do-not-forward-option-for-emails). For information about the **encrypt only** option, see [Encrypt Only option for emails](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#encrypt-only-option-for-emails).
+  The list of templates includes all default templates and options as well as any custom templates you've created for use by Office 365. If the list is empty, ensure that you have set up Office 365 Message Encryption with the new capabilities as described in [Set up new Office 365 Message Encryption capabilities](set-up-new-message-encryption-capabilities.md). For information about the default templates, see [Configuring and managing templates for Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/configure-policy-templates). For information about the **Do Not Forward** option, see [Do Not Forward option for emails](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#do-not-forward-option-for-emails). For information about the **encrypt only** option, see [Encrypt Only option for emails](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#encrypt-only-option-for-emails).
 
   You can choose **add action** if you want to specify another action.
 
@@ -99,7 +104,7 @@ If you haven't yet moved your Office 365 organization to the new OME capabilitie
 
 5. In **Name**, type a name for the rule, such as Encrypt mail for DrToniRamos@hotmail.com.
 
-6. In **Apply this rule if** select a condition, and enter a value if necessary. For example, to encrypt messages going to DrToniRamos@hotmail.com: 
+6. In **Apply this rule if** select a condition, and enter a value if necessary. For example, to encrypt messages going to DrToniRamos@hotmail.com:
 
    1. In **Apply this rule if**, select **the recipient is**.
 
@@ -127,7 +132,7 @@ If you haven't yet moved your Office 365 organization to the new OME capabilitie
 
    This example requires that all email messages sent to DrToniRamos@hotmail.com must be encrypted.
 
-   ```
+   ```powershell
    New-TransportRule -Name "Encrypt rule for Dr Toni Ramos" -SentTo "DrToniRamos@hotmail.com" -SentToScope "NotinOrganization" -ApplyOME $true
    ```
 
@@ -171,7 +176,7 @@ When your email users send encrypted messages, recipients of those messages can 
 
    This example removes the encryption from all mail sent to recipients in the Office 365 organization.
 
-   ```
+   ```powershell
    New-TransportRule -Name "Remove encryption from incoming mail" -SentToScope "InOrganization" -RemoveOME $true
    ```
 
@@ -179,7 +184,7 @@ When your email users send encrypted messages, recipients of those messages can 
 
    - The unique name of the new rule is "Remove encryption from incoming mail".
 
-   - The _SentToScope_ parameter specifies the location of the message recipients. In this example, the value `InOrganization` value is used, which indicates: 
+   - The _SentToScope_ parameter specifies the location of the message recipients. In this example, the value `InOrganization` value is used, which indicates:
 
      - The recipient is a mailbox, mail user, group, or mail-enabled public folder in your organization.
 
@@ -193,7 +198,7 @@ For detailed syntax and parameter information, see [New-TransportRule](https://d
 
 [Encryption in Office 365](encryption.md)
 
-[Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](set-up-new-message-encryption-capabilities.md)
+[Set up new Office 365 Message Encryption capabilities](set-up-new-message-encryption-capabilities.md)
 
 [Add branding to encrypted messages](add-your-organization-brand-to-encrypted-messages.md)
 

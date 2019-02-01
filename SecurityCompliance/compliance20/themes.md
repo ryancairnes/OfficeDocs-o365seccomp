@@ -18,6 +18,7 @@ description: ""
 ---
 
 # Themes
+
 When someone composes a document, they do not choose words randomly; they are trying to convey some ideas or concepts, and the words are chosen accordingly. Themes modules clusters documents that discuss similar subject matters so that reviewers can be more efficient in going through documents.
 
 ## How does Themes work?
