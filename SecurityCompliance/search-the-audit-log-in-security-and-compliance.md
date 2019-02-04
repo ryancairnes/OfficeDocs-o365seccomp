@@ -169,6 +169,9 @@ Here's the process for searching the audit log in Office 365.
     
     Leave this box blank to return entries for all files and folders in your organization.
     
+    > [!TIP]
+    > If you're looking for all activities related to a **site**, add the wildcard symbol (\*) after the URL to return all entries for that site; for example, **"https://contoso-my.sharepoint.com/personal/*"**.
+    
 5. Click **Search** to run the search using your search criteria. 
     
     The search results are loaded, and after a few moments they are displayed under **Results**. When the search is finished, the number of results found is displayed. Note that a maximum of 5,000 events will be displayed in the **Results** pane in increments of 150 events; if more than 5,000 events meet the search criteria, the most recent 5,000 events are displayed. 

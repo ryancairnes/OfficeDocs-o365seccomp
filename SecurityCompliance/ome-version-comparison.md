@@ -27,12 +27,13 @@ This article compares legacy Office 365 Message Encryption to the new OME capabi
 |-----------------------------------|-------------------|-------------------|--------------------------|
 |**Capability**                     | **Legacy OME**    | **IRM**           | **New OME capabilities** |
 |*Sending an encrypted mail*        |Through Exchange mail flow rules|End-user initiated from Outlook desktop or Outlook on the Web; or through Exchange mail flow rules|End-user initiated from Outlook desktop, Outlook for Mac, or Outlook on the Web; through Exchange Transport Rules and Office 365 Data Loss Prevention (DLP)|
-|*Rights management template*       |   N/A      |Do Not Forward and custom templates|Do Not Forward, Encrypt-Only templates and custom templates|
+|*Rights management template*       |   N/A      |Do Not Forward option and custom templates|Do Not Forward option, Encrypt-Only option, and custom templates|
 |*Recipient type*                   |Internal and external recipients|Internal recipients only         |Internal and external recipients|
-|*Experience for internal recipient*|Recipients received an HTML message, which they download and open in a web browser or mobile app|Native inline experience in Outlook clients|Native inline experience for O365 recipients. All other recipients can read message from OME portal (no download or app required).|
-|*Experience for internal recipient*|Recipients received html message, which they downloaded and opened in browser or mobile app|N/A|Native inline experience for O365 recipients. All other recipients can read message from OME portal (no download or app required).|
-|*Attachment permissions*           |No restrictions on attachments|Attachments are protected|Attachments are protected for Do Not Forward and custom templates. Admins can choose whether attachments for Encrypt-Only template are protected or not.|
+|*Experience for internal recipient*|Recipients receive an HTML message, which they download and open in a web browser or mobile app|Native inline experience in Outlook clients|Native inline experience for Office 365 recipients. All other recipients can read message from OME portal (no download or app required).|
+|*Experience for external recipient*|Recipients receive an HTML message, which they download and open in a web browser or mobile app|N/A|Native inline experience for Office 365 recipients. All other recipients can read message from OME portal (no download or app required).|
+|*Attachment permissions*           |No restrictions on attachments|Attachments are protected|Attachments are protected for the Do Not Forward option and custom templates. Admins can choose whether attachments for the Encrypt-Only option are protected or not.|
 |*Bring your own key (BYOK) support*|None                |None               |BYOK supported          |
+||
 
 ## Advantages of using the new OME capabilities over legacy OME
 
@@ -41,7 +42,7 @@ The new capabilities provide the following advantages:
 - Ability to use Encrypt-Only (which enables secure collaboration), Do Not Forward, as well as custom restrictions.
 - Senders can send mail encrypted with the new capabilities manually from Outlook Desktop, Outlook for Mac and Outlook on the web clients.
 - Office 365 recipients get to use an inline experience in supported Outlook clients. Alternatively, admins can choose to show Office 365 recipients a branded experience.
-- Gmail, Yahoo, and Microsoft identities are federated with the OME portal, which provides a better user experience for these recipients. All other identities use a one-time pass code to access encrypted messages.
+- Accounts outside of Office 365, such as Gmail, Yahoo, and Microsoft accounts, are federated with the OME portal, which provides a better user experience for these recipients. All other identities use a one-time pass code to access encrypted messages.
 - Admins can customize branding, and create multiple branding templates.
 - Admins can revoke emails encrypted with the new capabilities.
 - The new capabilities provide detailed usage reports through the Security &amp; Compliance Center.
