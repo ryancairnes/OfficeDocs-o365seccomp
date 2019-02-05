@@ -269,9 +269,8 @@
 
 ### [Work with communications](compliance20/managing-custodian-communications.md)
 #### [Create a hold notification](compliance20/create-hold-notification.md)
-#### [Using the communications editor](compliance20/using-communications-editor.md)
+#### [Use the communications editor](compliance20/using-communications-editor.md)
 #### [Manage hold notifications](compliance20/manage-hold-notification.md)
-#### [Edit a hold notification](compliance20/edit-hold-notification.md)
 #### [Acknowledge a hold notification](compliance20/acknowledge-hold-notification.md)
 
 ### [Manage holds](compliance20/managing-holds.md)

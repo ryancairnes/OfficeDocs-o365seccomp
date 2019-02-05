@@ -360,8 +360,8 @@ Step 2: Run the following script.
 <tbody>
 <tr class="odd">
 <td><p>param([string]$baseUri)</p>
-<p>$userName = &quot;admin@o365ediscoverydemo.onmicrosoft.com&quot;</p>
-<p>$password = &quot;EDiscoO365Demo&quot;</p>
+<p>$userName = &quot;UserName&quot;</p>
+<p>$password = &quot;Password&quot;</p>
 <p>$securePassword = ConvertTo-SecureString $password -AsPlainText -Force</p>
 <p>$credentials = New-Object System.Management.Automation.PSCredential($userName, $securePassword)</p>
 <p>$EventName=&quot;EventByRESTPost-$(([Guid]::NewGuid()).ToString('N'))&quot;</p>

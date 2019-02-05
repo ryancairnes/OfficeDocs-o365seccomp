@@ -61,23 +61,72 @@ The primary eDiscovery-related role group in Security &amp; Compliance Center is
 > [!NOTE]
 > You can also use the **Add-eDiscoveryCaseAdmin** cmdlet to make a user an eDiscovery Administrator. However, the user must be assigned the Case Management role before you can use this cmdlet to make them an eDiscovery Administrator. For more information, see [Add-eDiscoveryCaseAdmin](https://go.microsoft.com/fwlink/p/?LinkID=798217). 
   
-On the **Permissions** page in the Security &amp; Compliance Center, you can also assign users eDiscovery-related permissions, by adding them to the Compliance Administrator, Organization Management, and Reviewer role groups. For a description of the eDiscovery-related RBAC roles assigned to each of these role groups, see the next section [RBAC roles related to eDiscovery](#rbac-roles-related-to-ediscovery). 
+On the **Permissions** page in the Security &amp; Compliance Center, you can also assign users eDiscovery-related permissions, by adding them to the Compliance Administrator, Organization Management, and Reviewer role groups. For a description of the eDiscovery-related RBAC roles assigned to each of these role groups, see the [RBAC roles related to eDiscovery](#rbac-roles-related-to-ediscovery) section. 
 
 ## RBAC roles related to eDiscovery
 
-The following table describes the eDiscovery-related RBAC roles in the Security & Compliance Center, and indicates the built-in role groups that each role is assigned to by default. 
+The following table lists the eDiscovery-related RBAC roles in the Security & Compliance Center, and indicates the built-in role groups that each role is assigned to by default. 
     
-|**Role**|**Compliance Administrator**|**eDiscovery Manager &amp; Administrator**|**Organization Management**|**Reviewer**|
-|:-----|:-----|:-----|:-----|:-----|
-|**Case Management** <br/> Lets users create, edit, delete, and control access to eDiscovery cases in the Security &amp; Compliance Center. For more information, see [Manage eDiscovery cases in the Office 365 Security &amp; Compliance Center](manage-ediscovery-cases.md).  <br/> As previously explained, a user must be assigned the Case Management role before you can use the **Add-eDiscoveryCaseAdmin** cmdlet to make them an eDiscovery Administrator.  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> | <br/> |
-|**Compliance Search** <br/> Lets users run the Content Search tool in the Security &amp; Compliance Center to search mailboxes and public folders, SharePoint Online sites, OneDrive for Business sites, Skype for Business conversations, Office 365 Groups, and Microsoft Teams. This role allows a user to get an estimate of the search results and create export reports, but additional roles are needed to initiate content search actions such as previewing, exporting, or deleting search results.<br/><br/>Note that users assigned the Compliance Search role but don't have the Preview role can preview the results of a search in which the preview action has been initiated by a user that's assigned the Preview role. The user without the Preview role can preview results for up to 2 weeks after the initial preview action was created.  <br/><br/> Similarly, users assigned the Compliance Search role but don't have the Export role can download the results of a search in which the export action has initiated by a user that's assigned the Export role. The user without the Export role can download the results of a search for up to 2 weeks after the initial export action was created. After that they won’t be able to download the results unless someone with the Export role restarts the export.<br/><br/>For more information, see [Content Search in Office 365](content-search.md).  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> | <br/> |
-|**Export** <br/> Lets users export the results of a Content Search to a local computer. It also lets them prepare search results for analysis in Advanced eDiscovery.  <br/> For more information about exporting search results, see [Export search results from the Office 365 Security &amp; Compliance Center](export-search-results.md).  <br/> | <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> | <br/> | <br/> |
-|**Hold** <br/>  Lets users place content in mailboxes, public folders, sites, Skype for Business conversations, and Office 365 groups on hold. When content is on hold, content owners will still be able to modify or delete the original content, but the content will be preserved until the hold is removed or until the hold duration expires.  <br/>  For more information about holds, see:  <br/><br/> • [Manage eDiscovery cases in the Office 365 Security &amp; Compliance Center](manage-ediscovery-cases.md) <br/> • [Overview of retention policies](retention-policies.md) <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> | <br/> |
-|**Preview** <br/> Lets users view a list of items that were returned from a Content Search. They'll also be able to open and view each item from the list to view its contents.  <br/> | <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> | <br/> | <br/> |
-|**Review** <br/> Lets users access case data in Office 365 Advanced eDiscovery. The primary purpose of this role is to give users access to Advanced eDiscovery. Users who are assigned this role can see and open the list of cases on the eDiscovery page in the Security & Compliance Center that they are members of. After the user accesses a case in the Security & Compliance Center, they can click **Switch to Advanced eDiscovery** to access and analyze the case data in Advanced eDiscovery. This role doesn't allow the user to preview the results of a content search that's associated with the case or to perform other content search or case management tasks.<br/> | <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> | <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |
-|**RMS Decrypt** <br/> Lets users decrypt RMS-encrypted email messages when exporting search results or preparing search results for analysis in Advanced eDiscovery. For more information about decrypting search results during export, see [Export search results from the Office 365 Security &amp; Compliance Center](export-search-results.md).  <br/> ||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |||
-|**Search And Purge** <br/> Lets users perform bulk removal of data matching the criteria of a content search. For more information, see [Search for and delete email messages in your Office 365 organization](search-for-and-delete-messages-in-your-organization.md).  <br/> | <br/> | <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> | <br/> | 
+|**Role**|**Compliance Administrator**|**eDiscovery Manager & Administrator**|**Organization Management**|**Reviewer**|
+|:-----|:-----:|:-----:|:-----:|:-----:|
+|Case Management <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png) <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png) <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png) <br/> | <br/> |
+|Compliance Search <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png) <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png) <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png) <br/> | <br/> |
+|Export <br/> | <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png) <br/> | <br/> | <br/> |
+|Hold <br/>  |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png) <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png) <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png) <br/> | <br/> |
+|Preview <br/>  | <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png) <br/> | <br/> | <br/> |
+|Review <br/>  | <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png) <br/> | <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png) <br/> |
+|RMS Decrypt <br/>  ||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png) <br/> |||
+|Search And Purge <br/> | <br/> | <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> | <br/> | 
+||||
   
+The following sections describe each of the eDiscovery-related RBAC roles listed in the previous table.
+
+### Case Management
+
+This role lets users create, edit, delete, and control access to eDiscovery cases in the Security & Compliance Center. For more information, see [Manage eDiscovery cases in the Office 365 Security &amp; Compliance Center](manage-ediscovery-cases.md). As previously explained, a user must be assigned the Case Management role before you can use the **Add-eDiscoveryCaseAdmin** cmdlet to make them an eDiscovery Administrator. 
+
+### Compliance Search
+
+This role lets users run the Content Search tool in the Security & Compliance Center to search mailboxes and public folders, SharePoint Online sites, OneDrive for Business sites, Skype for Business conversations, Office 365 Groups, and Microsoft Teams. This role allows a user to get an estimate of the search results and create export reports, but additional roles are needed to initiate content search actions such as previewing, exporting, or deleting search results.
+
+Note that users assigned the Compliance Search role but don't have the Preview role can preview the results of a search in which the preview action has been initiated by a user that's assigned the Preview role. The user without the Preview role can preview results for up to 2 weeks after the initial preview action was created.
+
+Similarly, users assigned the Compliance Search role but don't have the Export role can download the results of a search in which the export action has initiated by a user that's assigned the Export role. The user without the Export role can download the results of a search for up to 2 weeks after the initial export action was created. After that they won’t be able to download the results unless someone with the Export role restarts the export.
+
+For more information, see [Content Search in Office 365](content-search.md). 
+
+### Export
+
+The role lets users export the results of a Content Search to a local computer. It also lets them prepare search results for analysis in Advanced eDiscovery. 
+
+For more information about exporting search results, see [Export search results from the Office 365 Security & Compliance Center](export-search-results.md).
+
+### Hold
+
+This role lets users place content in mailboxes, public folders, sites, Skype for Business conversations, and Office 365 groups on hold. When content is on hold, content owners will still be able to modify or delete the original content, but the content will be preserved until the hold is removed or until the hold duration expires. 
+
+For more information about holds, see:
+
+- [eDiscovery cases in the Office 365 Security & Compliance Center](ediscovery-cases.md) 
+- [Overview of retention policies](retention-policies.md)
+
+### Preview
+
+This role lets users view a list of items that were returned from a Content Search. They'll also be able to open and view each item from the list to view its contents.
+
+### Review
+
+This role lets users access case data in Office 365 Advanced eDiscovery. The primary purpose of this role is to give users access to Advanced eDiscovery. Users who are assigned this role can see and open the list of cases on the eDiscovery page in the Security & Compliance Center that they are members of. After the user accesses a case in the Security & Compliance Center, they can click **Switch to Advanced eDiscovery** to access and analyze the case data in Advanced eDiscovery. This role doesn't allow the user to preview the results of a content search that's associated with the case or to perform other content search or case management tasks.
+
+### RMS Decrypt
+
+This role lets users decrypt RMS-encrypted email messages when exporting search results or preparing search results for analysis in Advanced eDiscovery. For more information about decrypting search results during export, see [Export search results from the Office 365 Security & Compliance Center](export-search-results.md).
+
+### Search And Purge
+
+This role lets users perform bulk removal of data matching the criteria of a content search. For more information, see [Search for and delete email messages in your Office 365 organization](search-for-and-delete-messages-in-your-organization.md). 
+
+
 ## More information
 
 - **Why create an eDiscovery Administrator?** As previously explained, an eDiscovery Administrator is member of the eDiscovery Manager role group who can view and access all eDiscovery cases in your organization. This ability to access all the eDiscovery cases has two important purposes: 

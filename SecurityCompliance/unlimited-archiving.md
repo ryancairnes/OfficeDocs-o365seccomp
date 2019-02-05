@@ -3,7 +3,7 @@ title: "Overview of unlimited archiving in Office 365"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 6/29/2018
+ms.date: 
 ms.audience: Admin
 ms.topic: overview
 ms.service: o365-administration
@@ -64,11 +64,11 @@ The following screen shots show a folder list before and after messages are move
 
 To access messages that are stored in an auto-expanded archive, users have to use one of the following Outlook clients:
   
-- Outlook 2016 for Windows
+- Outlook 2016 or Outlook 2019 for Windows
     
 - Outlook on the web 
     
-- Outlook 2016 for Mac 
+- Outlook 2016 or Outlook 2019 for Mac 
     
 > [!NOTE]
 > Outlook 2013 users can only access items that were originally stored in their archive mailbox. They won't be able to access items that are moved to additional archive storage. 
@@ -91,7 +91,7 @@ This section explains the functionality between auto-expanding archiving and oth
   
 - **eDiscovery** - When you use an Office 365 eDiscovery tool, such as Content Search or In-Place eDiscovery, the additional storage areas in an auto-expanded archive are also searched.
     
-- **Retention** - When you put a mailbox on hold by using tools such as Litigation Hold in Exchange Online or eDiscovery case holds and retention policies in the Office 365 Security &amp; Compliance Center, content located in an auto-expanded archive is also placed on hold.
+- **Retention** - When you put a mailbox on hold by using tools such as Litigation Hold in Exchange Online or eDiscovery case holds and retention policies in the Office 365 Security & Compliance Center, content located in an auto-expanded archive is also placed on hold.
     
 - **Messaging records management (MRM)** - If you use MRM deletion policies in Exchange Online to permanently delete expired mailbox items, expired items located in the auto-expanded archive will also be deleted.
     
