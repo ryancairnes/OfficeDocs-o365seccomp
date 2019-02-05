@@ -153,7 +153,14 @@ Currently, information barriers policies are defined and managed in the Office 3
 
 ## Required licenses and permissions
 
-INFO COMING SOON
+Currently, information barriers is in private preview. When these features are generally available, they'll be included in subscriptions, such as:
+- Microsoft 365 Enterprise E3 or E5
+- Office 365 Enterprise E5
+
+To define or edit information barriers policies, you must be assigned one of the following roles:
+- Microsoft 365 Enterprise Global Administrator
+- Office 365 Global Administrator
+- Compliance Administrator
 
 ## Related articles
 
