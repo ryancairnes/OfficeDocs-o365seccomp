@@ -33,9 +33,9 @@ You can use the Content Search feature in Office 365 to search for and delete an
   
 ## Before you begin
 
-- To create and run a Content Search, you have to be a member of the **eDiscovery Manager** role group or be assigned the **Compliance Search** management role. To delete messages, you have to be a member of the **Organization Management** role group or be assigned the **Search And Purge** management role. For information about adding users to a role group, see [Give users access to the Office 365 Security &amp; Compliance Center](grant-access-to-the-security-and-compliance-center.md).
+- To create and run a Content Search, you have to be a member of the **eDiscovery Manager** role group or be assigned the **Compliance Search** management role. To delete messages, you have to be a member of the **Organization Management** role group or be assigned the **Search And Purge** management role. For information about adding users to a role group, see [Give users access to the Office 365 Security & Compliance Center](grant-access-to-the-security-and-compliance-center.md).
     
-- You have to use Security &amp; Compliance Center PowerShell to delete messages. See [Step 2](#step-2-connect-to-security-amp-compliance-center-powershell) for instructions about how to connect.
+- You have to use Security & Compliance Center PowerShell to delete messages. See [Step 2](#step-2-connect-to-security-amp-compliance-center-powershell) for instructions about how to connect.
     
 - A maximum of 10 items per mailbox can be removed at one time. Because the capability to search for and remove messages is intended to be an incident-response tool, this limit helps ensure that messages are quickly removed from mailboxes. This feature isn't intended to clean up user mailboxes. To delete more than 10 items, you can use the **Search-Mailbox -DeleteContent** command in Exchange Online PowerShell. See [Search for and delete messages - Admin help](search-for-and-delete-messagesadmin-help.md).
     
@@ -45,7 +45,7 @@ You can use the Content Search feature in Office 365 to search for and delete an
     
 ## Step 1: Create a Content Search to find the message to delete
 
-The first step is to create and run a Content Search to find the message that you want to remove from mailboxes in your organization. You can create the search by using the Security &amp; Compliance Center or by running the **New-ComplianceSearch** and **Start-ComplianceSearch** cmdlets. The messages that match the query for this search will be deleted by running the **New-ComplianceSearchAction** cmdlet in [Step 3](#step-3-delete-the-message). For information about creating a Content Search and configuring search queries, see the following topics: 
+The first step is to create and run a Content Search to find the message that you want to remove from mailboxes in your organization. You can create the search by using the Security &amp; Compliance Center or by running the **New-ComplianceSearch** and **Start-ComplianceSearch** cmdlets. The messages that match the query for this search will be deleted by running the **New-ComplianceSearchAction -Purge** command in [Step 3](#step-3-delete-the-message). For information about creating a Content Search and configuring search queries, see the following topics: 
   
 - [Content Search in Office 365](content-search.md)
     
@@ -86,11 +86,11 @@ Here are two examples of queries to find suspicious email messages.
     (From:chatsuwloginsset12345@outlook.com) AND (Subject:"Update your account information")
     ```
 
-## Step 2: Connect to Security &amp; Compliance Center PowerShell
+## Step 2: Connect to Security & Compliance Center PowerShell
 
-The next step is to connect to Security &amp; Compliance Center PowerShell for your organization. For step-by-step instructions, see [Connect to Office 365 Security &amp; Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
+The next step is to connect to Security & Compliance Center PowerShell for your organization. For step-by-step instructions, see [Connect to Office 365 Security &amp; Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
   
-If your Office 365 account uses multi-factor authentication (MFA) or federated authentication, you can't use the instructions in the previous topic on connecting to Security &amp; Compliance Center PowerShell. Instead, see the instructions in the topic [Connect to Office 365 Security &amp; Compliance Center PowerShell using multi-factor authentication](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/mfa-connect-to-scc-powershell).
+If your Office 365 account uses multi-factor authentication (MFA) or federated authentication, you can't use the instructions in the previous topic on connecting to Security & Compliance Center PowerShell. Instead, see the instructions in the topic [Connect to Office 365 Security & Compliance Center PowerShell using multi-factor authentication](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/mfa-connect-to-scc-powershell).
   
 ## Step 3: Delete the message
 
@@ -101,22 +101,16 @@ In the following example, the command will soft-delete the search results return
 ```
 New-ComplianceSearchAction -SearchName "Remove Phishing Message" -Purge -PurgeType SoftDelete
 ```
-In the following example, the command will hard delete the search results returned by a Content Search named "Remove Phishing Message". 
-
-```
-New-ComplianceSearchAction -SearchName "Remove Phishing Message" -Purge -PurgeType HardDelete
-```
-
-The search specified by the  *SearchName*  parameter is the Content Search that you created in Step 1. 
 
 To hard-deleted the items returned by the  "Remove Phishing Message" content search, you would run this command:
 
 ```
 New-ComplianceSearchAction -SearchName "Remove Phishing Message" -Purge -PurgeType HardDelete
 ```
+
+Note that when you run the previous command to soft- or hard-delete messages, the search specified by the  *SearchName*  parameter is the Content Search that you created in Step 1. 
   
 For more information, see [New-ComplianceSearchAction](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-content-search/New-ComplianceSearchAction).
-  
 
 ## More information
 

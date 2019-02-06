@@ -5,7 +5,7 @@ author: kccross
 manager: laurawi
 ms.audience: ITPro
 ms.topic: article
-ms.date: 02/04/2019
+ms.date: 02/06/2019
 ms.service: o365-administration
 localization_priority: Normal
 ms.assetid: 5a6f2d7f-d998-4f31-b4f5-f7cbf6f38578
@@ -38,9 +38,11 @@ What to do:
     |Role  |Where/how assigned  |
     |---------|---------|
     |Office 365 Global Administrator |The person who signs up to buy Office 365 is a global admin by default. (See [About Office 365 admin roles](https://docs.microsoft.com/office365/admin/add-users/about-admin-roles) to learn more.)         |
-    |Office 365 Security Administrator |Admin center ([https://aka.ms/admincenter](https://aka.ms/admincenter))|
+    |Security Administrator |Azure Active Directory admin center ([https://aad.portal.azure.com](https://aad.portal.azure.com))|
     |Exchange Online Organization Management |Exchange admin center ([https://outlook.office365.com/ecp](https://outlook.office365.com/ecp)) <br>or <br>  PowerShell cmdlets (See [Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell?view=exchange-ps)) |
     
+    To learn more about roles and permissions, see [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md).
+
 - You will probably set up multiple anti-phishing policies for your organization. Office 365 enforces these policies in the order they're listed on the **Anti-phishing page** and **ATP anti-phishing** pages in the Security &amp; Compliance Center. Once you've reviewed your [policy options](#learn-about-atp-anti-phishing-policy-options), take some time to determine how many policies you'll need and the priority for each. 
     
 - Plan to spend about 5-15 minutes to set up your first anti-phishing policy.

@@ -73,7 +73,7 @@ The simplest way to verify the Illicit Consent Grant attack is to run  [Get-Azur
 2. Download or copy the [Get-AzureADPSPermissions.ps1](https://gist.github.com/psignoret/41793f8c6211d2df5051d77ca3728c09) script from GitHub to a folder from which you will run the scruipt.  This will be the same folder to which the output “permissions.csv” file will be written.
 3. Open a PowerShell instance as an administrator and open to the folder you saved the script to.
 4. Connect to your directory using the [Connect-AzureAD](https://docs.microsoft.com/powershell/module/azuread/connect-azuread?view=azureadps-2.0) cmdlet.
-5. Run this PowerShell command line as follows: `.Get-AzureASPSPermissions.ps1 | Export-csv -path "Permissions.csv" -NoTypeInformation`
+5. Run this PowerShell command line as follows: `Get-AzureADPSPermissions.ps1 | Export-csv -path "Permissions.csv" -NoTypeInformation`
 
 The script produces one file named Permissions.csv. Follow these steps to look for illicit application permission grants: 
 1. In the ConsentType column (column G) search for the value “AllPrinciples”. The AllPrincipals permission allows the client application to access everyone’s content in the tenancy. Native Office 365 applications need this permission to work correctly. Every non-Microsoft application with this permission should be reviewed carefully.
