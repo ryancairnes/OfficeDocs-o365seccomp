@@ -48,8 +48,6 @@ You create and manage retention policies on the **Retention** page in the Office
   
 ![Retention page in Security and Compliance Center](media/107fc33a-6a29-44d1-85e4-0efef0544147.png)
   
-> [!NOTE]
-> To include an Exchange Online mailbox in a retention policy, the mailbox must be assigned an Exchange Online Plan 2 license. If a mailbox is assigned an Exchange Online Plan 1 license, you would have to assign it a separate Exchange Online Archiving license to include it in a retention policy. 
   
 ## How a retention policy works with content in place
 

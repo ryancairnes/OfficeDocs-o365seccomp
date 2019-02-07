@@ -51,8 +51,6 @@ Here's a list of Azure Active Directory user attributes that you can use for com
   
 - Company
     
-- CountryCode
-    
 - CustomAttribute1 - CustomAttribute15
     
 - Department

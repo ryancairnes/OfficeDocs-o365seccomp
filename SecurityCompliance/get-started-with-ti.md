@@ -3,7 +3,7 @@ title: "Get started with Office 365 Threat Intelligence"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 01/22/2019
+ms.date: 02/07/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -18,8 +18,6 @@ description: "Learn about Office 365 Threat Intelligence and how to get started.
 # Get started with Office 365 Threat Intelligence
 
 If you are part of your organization's security team, you can use Office 365 Threat Intelligence to protect your users from attacks. Office 365 Threat Intelligence helps security analysts and administrators keep users safe by bubbling up insights and identifying action based on what is happening in their your Office 365 environment. These insights are based on a comprehensive repository of threat intelligence data and systems to spot patterns that correspond to attack behaviors and suspicious activity.
-  
-![Threat intelligence helps you understand attacks targeted at your organization](media/6ce67cf2-3bbb-4008-9c55-1b4c7af0471f.png)
   
 Read this article to learn more about what Office 365 Threat Intelligence includes and how to get started.
   

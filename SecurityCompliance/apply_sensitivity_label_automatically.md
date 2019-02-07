@@ -31,7 +31,7 @@ The ability to apply sensitivity labels to content automatically is important be
 
 ![Auto labeling options for sensitivity labels](media/Sensitivity_labels_Auto_labeling_options.png)
 
-# Apply a sensitivity label automatically based on conditions
+## Apply a sensitivity label automatically based on conditions
 
 One of the most powerful features of sensitivity labels is the ability to apply them automatically to content that matches certain conditions. In this case, people in your organization don't need to apply the sensitivity labels - Office 365 does the work for them.
    
@@ -47,7 +47,7 @@ When a sensitivity label is automatically applied, the user sees a notification 
 
 ![Notification that a document had a label applied automatically](media/sensitivity_labels_msg_doc_was_auto_labeled.PNG)
 
-# Recommend that the user apply a sensitivity label
+## Recommend that the user apply a sensitivity label
 
 If you prefer, instead of applying a sensitivity label automatically to content, you can recommend to your users that they apply the label. This option provides your users the flexibility of accepting the classification and any associated protection, or dismissing the recommendation if the label is not suitable for their document or email.
 
@@ -59,7 +59,7 @@ Here's an example of a prompt when you configure a condition to apply a label as
 
 ![Prompt to apply a recommended label](media/Sensitivity_label_Prompt_for_required_label.png)
 
-# How automatic or recommended labels are applied
+## How automatic or recommended labels are applied
 
 - Automatic labeling applies to Word, Excel, and PowerPoint when documents are saved, and to Outlook when emails are sent. These conditions detect sensitive information in the body text in documents and emails, and to headers and footers -- but not in the subject line or attachments of email.
 
@@ -69,6 +69,6 @@ Here's an example of a prompt when you configure a condition to apply a label as
 
 - You cannot use recommended classification for documents that were previously labeled with a higher classification. In this case, when the content's already labeled with a higher classification, the user won't see the prompt with the recommendation and policy tip.
 
-# How multiple conditions are evaluated when they apply to more than one label
+## How multiple conditions are evaluated when they apply to more than one label
 
 The labels are ordered for evaluation according to their position that you specify in the policy: The label positioned first has the lowest position (least sensitive) and the label positioned last has the highest position (most sensitive). For more information on priority, see [Label priority (order matters)](sensitivity-labels.md#label-priority-order-matters).
