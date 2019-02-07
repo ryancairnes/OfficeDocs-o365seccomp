@@ -3,7 +3,7 @@ title: "Information barriers"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 02/05/2019
+ms.date: 02/07/2019
 ms.audience: ITPro
 ms.topic: article
 ROBOTS: NOINDEX, NOFOLLOW
@@ -64,6 +64,30 @@ Next,
 
 Currently, information barriers policies are defined and managed in the Office 365 Security & Compliance Center using PowerShell cmdlets. This is typically done by a compliance administrator or a global administrator, and requires familiarity with PowerShell cmdlets (and parameters).
 
+### Prepare your environment for information barriers
+
+Before define your first information barriers policy, you must **[enable scoped directory search in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-scoped-directory-search)**. Wait at least 24 hours after enabling scoped directory search before you set up or define policies for information barriers.
+
+Next, make sure to complete the admin consent flow. To do that, follow these steps:
+
+1. As a global administrator or compliance administrator, create a remote PowerShell session to WHAT.
+
+2. Run the following PowerShell script:<br>
+
+    ```
+    Login-AzureRmAccount  
+     
+    $appId="__TODO__" 
+     
+    New-AzureRmADServicePrincipal -ApplicationId $appId 
+    
+    ```
+
+3. When prompted, sign in using your work or school account.
+
+4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
+
+    
 ### Define an information barriers policy
 
 > [!IMPORTANT]
