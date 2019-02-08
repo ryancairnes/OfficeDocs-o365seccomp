@@ -50,33 +50,23 @@ If the people involved are included in an information barriers policy to prevent
 > [!IMPORTANT]
 > Potentially, everyone included in an information barriers policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barriers policies are part of the same team or group chat, they will be removed from those chat sessions. However, information barriers will not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
 
-## Walkthrough: Contoso and information barriers
-
-Contoso, a large financial service institution, has a number of groups. These include an investment banking group and a wealth management group. Contoso wants to implement information barriers to limit communications between the investment banking personnel and the wealth management group in order to maintain compliance with industry regulations and ethical financial practices.
-
-Contoso's global administrator begins by [enabling scoped directory search](https://docs.microsoft.com/MicrosoftTeams/teams-scoped-directory-search) in Microsoft Teams, and waits 24 hours for that change to go into effect.
-
-Next, 
-
-(more details to follow)
-
 ## Using information barriers in your organization
 
-Currently, information barriers policies are defined and managed in the Office 365 Security & Compliance Center using PowerShell cmdlets. This is typically done by a compliance administrator or a global administrator, and requires familiarity with PowerShell cmdlets (and parameters).
+Currently, information barriers policies are defined and managed in Office 365 by using PowerShell cmdlets. This is typically done by a compliance administrator or a global administrator, and requires familiarity with PowerShell cmdlets (and parameters).
 
-### Prepare your environment for information barriers
+## Prepare your environment for information barriers
 
 Before define your first information barriers policy, you must **[enable scoped directory search in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-scoped-directory-search)**. Wait at least 24 hours after enabling scoped directory search before you set up or define policies for information barriers.
 
 Next, make sure to complete the admin consent flow. To do that, follow these steps:
 
-1. As a global administrator or compliance administrator, create a remote PowerShell session to Exchange Online. (To get help with this, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps).)
+1. As a global administrator or compliance administrator, create a remote PowerShell session to Office 365. Because some cmdlets will be run in Exchange Online and others in the Office 365 Security & Compliance Center, we recommend that you [connect to all Office 365 services in a single Windows PowerShell window](https://docs.microsoft.com/Office365/Enterprise/powershell/connect-to-all-office-365-services-in-a-single-windows-powershell-window).
 
 2. Run the following PowerShell script:<br>
 
     ```
     Login-AzureRmAccount  
-     
+    
     $appId="__TODO__" 
      
     New-AzureRmADServicePrincipal -ApplicationId $appId 
@@ -87,105 +77,50 @@ Next, make sure to complete the admin consent flow. To do that, follow these ste
 
 4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
 
-After you have completed these setps, proceed to define your information barriers policy.
+After you have completed these steps, select one of the following scenarios:
+
+
+## Scenario 1: Block communications between two groups
+
+In this scenario, we will set up information barriers policies that prevent people in one group (we'll call them Investors) from communicating with people in another group (we'll call them Research).
+
+> [!IMPORTANT]
+> **Before you begin the following procedure, make sure you have completed the steps in the section, [Prepare your environment for information barriers](#prepare-your-environment-for-information-barriers). 
+
+1. As a global administrator or compliance administrator, define two groups by running the following PowerShell cmdlets in Exchange Online:<br>
+
+    ```
+    $investorsGroup = Get-DistributionGroup -Identity Investors | select DistinguishedName
     
-### Define an information barriers policy
-
-> [!IMPORTANT]
-> **Before you begin the following procedure, make sure you have completed the steps in the preceding section, [Prepare your environment for information barriers](#prepare-your-environment-for-information-barriers). 
-
-1. As a global administrator or compliance administrator, create a remote PowerShell session to the Security & Compliance Center. (To get help with this, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps).)
-
-2. Define a policy by running the **New-InformationBarrierPolicy** cmdlet.<br>
+    $researchGroup = Get-DistributionGroup -Identity Research | select DistinguishedName
     ```
-    New-InformationBarrierPolicy [-Name] <String> -AssigneeFilter <String> -AssigneeFilterName <String> -CommunicationAllowedFilter <String> -CommunicationAllowedFilterName <String>
-     [-Comment <String>]
-     [-Confirm]
-     [-State <EopInformationBarrierPolicyState>]
-     [-WhatIf] [<CommonParameters>]
+
+2. Define filter variables for the Investors group as follows:<br>
+
     ```
-<br>
+    $investorsFilter = "(MemberOfGroup -eq $investorsGroup)"
+    $researchFilter = "(MemberOfGroup -ne $researchGroup)"
+    ``` 
 
-3. Start the policy application by running the **Start-InformationBarrierPoliciesApplication**  cmdlet.<br>
+3. Define an information barriers policy that prevents the Investors group from communicating with the Research group in Microsoft Teams, as follows: <br>
+
     ```
-    Start-InformationBarrierPoliciesApplication [[-Identity] <PolicyIdParameter>] [-Confirm] [-WhatIf]
-     [<CommonParameters>]
+    New-InformationBarrierPolicy -Name "InvestorsIBPolicy" -AssigneeFilterName "Investors" -AssigneeFilter $investorsFilter -CommunicationAllowedFilterName "NotResearch" -CommunicationAllowedFilter $researchFilter
     ```
-<br>
 
-4. Validate the policy application by running the **Get-InformationBarrierPoliciesApplicationStatus** cmdlet.<br>
+4. Define filter variables for the Research group as follows: <br>
+
     ```
-    Get-InformationBarrierPoliciesApplicationStatus [-All <Boolean>] [[-Identity] <PolicyIdParameter>]
-     [<CommonParameters>]
+    $researchFilter = "(MemberOfGroup -eq $researchGroup)"
+    $investorsFilter = "(MemberOfGroup -ne $investorsGroup)"
+    
     ```
-<br>
 
-5. After you have defined your information barriers policy, wait at least 24 hours for the policy to work its way through your data center and services. Then, validate the information barriers status for a specific user by running the **Get-InformationBarrierRecipientStatus** cmdlet.<br>
+5. Define an information barriers policy that prevents the Research group from communicating with the Investors group in Microsoft Teams, as follows:
+
     ```
-    Get-InformationBarrierRecipientStatus [-Identity] <RecipientIdParameter> [<CommonParameters>]
+    New-InformationBarrierPolicy -Name "ResearchIBPolicy" -AssigneeFilterName "Research" -AssigneeFilter $researchFilter -CommunicationAllowedFilterName "NotInvestors" -CommunicationAllowedFilter $investorsFilter
     ```
-<br>
-
-> [!TIP]
-> We recommend testing with a few users who are included in information barriers policies, as well as with a few users who are not included in those policies.
-
-### View and edit information barriers policies
-
-1. As a global administrator or compliance administrator, create a remote PowerShell session to the Security & Compliance Center. (To get help with this, see [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell).)
-
-2. View your organization's existing information barriers policies by running the **Get-InformationBarrierPolicy** cmdlet.<br>
-    ```
-    Get-InformationBarrierPolicy [-ExoPolicyId <Guid>] [<CommonParameters>]
-    ```
-<br>
-
-3. To edit an information barriers policy, run the **Set-InformationBarrierPolicy** cmdlet.<br>
-    ```
-    Set-InformationBarrierPolicy [-AssigneeFilter <String>] [-AssigneeFilterName <String>] [-Comment <String>]
-     [-CommunicationAllowedFilter <String>] [-CommunicationAllowedFilterName <String>]
-     [-Identity] <PolicyIdParameter> [-State <EopInformationBarrierPolicyState>] [<CommonParameters>]
-    ```
-<br>
-
-4. Run the policy application using the **Start-InformationBarrierPoliciesApplication** cmdlet.<br>
-    ```
-    Start-InformationBarrierPoliciesApplication [[-Identity] <PolicyIdParameter>] [-Confirm] [-WhatIf]
-     [<CommonParameters>]
-    ```
-<br>
-
-> [!IMPORTANT]
-> If your organization has personnel changes that affect an information barriers policy, such as a change in position, adding or removing a user, and so on, allow 24 hours for the changes to take effect. 
-
-### Remove an information barriers policy
-
-1. As a global administrator or compliance administrator, create a remote PowerShell session to the Security & Compliance Center. (To get help with this, see [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell).)
-
-2. View your organization's existing information barriers policies by running the **Get-InformationBarrierPolicy** cmdlet.<br>
-    ```
-    Get-InformationBarrierPolicy [-ExoPolicyId <Guid>] [<CommonParameters>]
-    ```
-<br>
-
-3. Remove a policy by running the **Remove-InformationBarrierPolicy** cmdlet.<br>
-    ```
-    Remove-InformationBarrierPolicy [-Identity] <PolicyIdParameter> [-Confirm] [-WhatIf] [<CommonParameters>]
-    ```
-<br>
-
-> [!IMPORTANT]
-> Allow 24 hours for your changes to take effect. 
-
-## Required licenses and permissions
-
-Currently, information barriers is in private preview. When these features are generally available, they'll be included in subscriptions, such as:
-- Microsoft 365 Enterprise E3 or E5
-- Office 365 Enterprise E5
-
-To define or edit information barriers policies, you must be assigned one of the following roles:
-- Microsoft 365 Enterprise Global Administrator
-- Office 365 Global Administrator
-- Compliance Administrator
 
 ## Related articles
 
