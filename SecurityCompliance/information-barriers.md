@@ -177,7 +177,7 @@ In this scenario, we will set up information barriers policies that allows peopl
 > [!IMPORTANT]
 > **Before you begin the following procedure, make sure you have completed the steps in the section, [Start here: Prepare your environment for information barriers](#start-here-prepare-your-environment-for-information-barriers). 
 
-1. As a global administrator or compliance administrator, define two groups by running the following PowerShell cmdlets in Exchange Online:<br>
+1. As a global administrator or compliance administrator, define two groups by running the following PowerShell cmdlets in Exchange Online:
 
     ```
     $productssGroup = Get-DistributionGroup  -Identity Products | select DistinguishedName
@@ -185,7 +185,7 @@ In this scenario, we will set up information barriers policies that allows peopl
     $researchGroup = Get-DistributionGroup -Identity Research | select DistinguishedName
     ```
 
-2. Define filter variables for the Products and Research groups as follows:<br>
+2. Define filter variables for the Products and Research groups as follows:
 
     ```
     $productsFilter = "(MemberOfGroup -eq $productsGroup)"
@@ -193,11 +193,33 @@ In this scenario, we will set up information barriers policies that allows peopl
     $researchFilter = "(MemberOfGroup -eq $researchGroup)"    
     ``` 
 
-3. Define an information barriers policy that allows the Products group to communicate with only the Research group in Microsoft Teams, as follows: <br>
+3. Define an information barriers policy that allows the Products group to communicate with only the Research group in Microsoft Teams, as follows: 
 
     ```
-    New-InformationBarrierPolicy -Name "InvestorsResearchIBPolicy" -AssigneeFilterName "Investors" -AssigneeFilter $investorsFilter -CommunicationAllowedFilterName "Research" -CommunicationAllowedFilter $researchFilter
+    New-InformationBarrierPolicy -Name "ProductsResearchIBPolicy" -AssigneeFilterName "Products" -AssigneeFilter $productsFilter -CommunicationAllowedFilterName "Research" -CommunicationAllowedFilter $researchFilter
     ```
+
+4. Start the policy application by running the **Start-InformationBarrierPoliciesApplication**  cmdlet.
+
+    ```
+    Start-InformationBarrierPoliciesApplication -ProductsResearchIBPolicy
+    ```
+
+5. Validate the policy application by running the **Get-InformationBarrierPoliciesApplicationStatus** cmdlet.
+
+    ```
+    Get-InformationBarrierPoliciesApplicationStatus -ProductsResearchIBPolicy
+    ```
+
+6. After you have defined your information barriers policy, wait at least 24 hours for the policy to work its way through your data center and services. Then, validate the information barriers status for a specific user by running the **Get-InformationBarrierRecipientStatus** cmdlet.
+
+    ```
+    Get-InformationBarrierRecipientStatus [-Identity] <RecipientIdParameter> [<CommonParameters>]
+    ```
+
+> [!TIP]
+> We recommend testing with a few users who are included in information barriers policies, as well as with a few users who are not included in those policies.
+
 
 ## Scenario 3: Prevent one group from communicating with two other groups
 
