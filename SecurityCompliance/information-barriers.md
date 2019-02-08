@@ -54,6 +54,17 @@ If the people involved are included in an information barriers policy to prevent
 
 Currently, information barriers policies are defined and managed in Office 365 by using PowerShell cmdlets. This is typically done by a compliance administrator or a global administrator, and requires familiarity with PowerShell cmdlets (and parameters).
 
+## Required licenses and permissions
+
+Currently, information barriers is in private preview. When these features are generally available, they'll be included in subscriptions, such as:
+- Microsoft 365 Enterprise E5
+- Office 365 Enterprise E5
+
+To define or edit information barriers policies, you must be assigned one of the following roles:
+- Microsoft 365 Enterprise Global Administrator
+- Office 365 Global Administrator
+- Compliance Administrator
+
 ## Prepare your environment for information barriers
 
 Before define your first information barriers policy, you must **[enable scoped directory search in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-scoped-directory-search)**. Wait at least 24 hours after enabling scoped directory search before you set up or define policies for information barriers.
