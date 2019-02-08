@@ -186,7 +186,7 @@ In this scenario, we will set up information barriers policies that allows peopl
 > [!IMPORTANT]
 > Before you begin the following procedure, make sure you have completed the steps in the section, [Prepare your environment for information barriers](#prepare-your-environment-for-information-barriers). 
 
-
+STEPS WILL FOLLOW SOON
 
 ## Related articles
 
