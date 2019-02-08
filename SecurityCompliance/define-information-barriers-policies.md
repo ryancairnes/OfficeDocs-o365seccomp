@@ -27,7 +27,7 @@ To define or edit information barriers policies, you must be assigned one of the
 > [!IMPORTANT]
 > Potentially, everyone included in an information barriers policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barriers policies are part of the same team or group chat, they will be removed from those chat sessions. However, information barriers will not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
 
-Currently, information barriers policies are defined and managed in Office 365 by using PowerShell cmdlets. This is typically done by a compliance administrator or a global administrator, and requires familiarity with PowerShell cmdlets (and parameters). Although several examples of PowerShell cmdlets are provided, you'll need to know additional details, such as parameters, for your organization.
+Currently, information barriers policies are defined and managed in Office 365 by using PowerShell cmdlets. This is typically done by a compliance administrator or a global administrator, and requires familiarity with PowerShell cmdlets (and parameters). Although several scenarios and examples of PowerShell cmdlets are provided, you'll need to know additional details, such as parameters, for your organization.
 
 ## Prepare your environment for information barriers
 
@@ -65,7 +65,7 @@ After you have completed these steps, select one of the following scenarios:
 In this scenario, we will set up information barriers policies that prevent people in one group (we'll call them Investors) from communicating with people in another group (we'll call them Research).
 
 > [!IMPORTANT]
-> **Before you begin the following procedure, make sure you have completed the steps in the section, [Prepare your environment for information barriers](#prepare-your-environment-for-information-barriers). 
+> Before you begin the following procedure, make sure you have completed the steps in the section, [Prepare your environment for information barriers](#prepare-your-environment-for-information-barriers). 
 
 1. As a global administrator or compliance administrator, define two groups by running the following PowerShell cmdlets in Exchange Online:<br>
 
@@ -135,7 +135,7 @@ In this scenario, we will set up information barriers policies that prevent peop
 In this scenario, we will set up information barriers policies that allows people in one group (we'll call them Products) to communicate with only one other group (we'll call them Research).
 
 > [!IMPORTANT]
-> **Before you begin the following procedure, make sure you have completed the steps in the section, [Prepare your environment for information barriers](#prepare-your-environment-for-information-barriers). 
+> Before you begin the following procedure, make sure you have completed the steps in the section, [Prepare your environment for information barriers](#prepare-your-environment-for-information-barriers). 
 
 1. As a global administrator or compliance administrator, define two groups by running the following PowerShell cmdlets in Exchange Online:
 
@@ -184,7 +184,7 @@ In this scenario, we will set up information barriers policies that allows peopl
 ## Scenario 3: Prevent one group from communicating with two other groups
 
 > [!IMPORTANT]
-> **Before you begin the following procedure, make sure you have completed the steps in the section, [Prepare your environment for information barriers](#prepare-your-environment-for-information-barriers). 
+> Before you begin the following procedure, make sure you have completed the steps in the section, [Prepare your environment for information barriers](#prepare-your-environment-for-information-barriers). 
 
 
 
