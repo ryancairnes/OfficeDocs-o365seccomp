@@ -143,6 +143,33 @@ In this scenario, we will set up information barriers policies that prevent peop
     New-InformationBarrierPolicy -Name "ResearchIBPolicy" -AssigneeFilterName "Research" -AssigneeFilter $researchFilter -CommunicationAllowedFilterName "NotInvestors" -CommunicationAllowedFilter $investorsFilter
     ```
 
+6. Apply the policies you defined in steps 1-5 by running the **Start-InformationBarrierPoliciesApplication**  cmdlets.
+
+    ```
+    Start-InformationBarrierPoliciesApplication -InvestorsIBPolicy
+
+     Start-InformationBarrierPoliciesApplication -ResearchIBPolicy
+    ```
+
+7. Validate the policy application by running the **Get-InformationBarrierPoliciesApplicationStatus** cmdlet.
+
+    ```
+    Get-InformationBarrierPoliciesApplicationStatus -All -InvestorsIBPolicy
+
+    Get-InformationBarrierPoliciesApplicationStatus -All -ResearchIBPolicy
+
+    ```
+
+8. After you have defined your information barriers policy, wait at least 24 hours for the policy to work its way through your data center and services. Then, validate the information barriers status for a specific user by using the **Get-InformationBarrierRecipientStatus** cmdlet.
+
+    ```
+    Get-InformationBarrierRecipientStatus [-Identity] <RecipientIdParameter> [<CommonParameters>]
+    ```
+
+
+> [!TIP]
+> We recommend testing with a few users who are included in information barriers policies, as well as with a few users who are not included in those policies.
+
 ## Scenario 2: Allow one group to communicate with only one other group
 
 In this scenario, we will set up information barriers policies that allows people in one group (we'll call them Products) to communicate with only one other group (we'll call them Research).
