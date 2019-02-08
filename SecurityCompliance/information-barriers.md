@@ -70,7 +70,7 @@ Before define your first information barriers policy, you must **[enable scoped 
 
 Next, make sure to complete the admin consent flow. To do that, follow these steps:
 
-1. As a global administrator or compliance administrator, create a remote PowerShell session to WHAT.
+1. As a global administrator or compliance administrator, create a remote PowerShell session to Exchange Online. (To get help with this, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps).)
 
 2. Run the following PowerShell script:<br>
 
@@ -92,9 +92,9 @@ After you have completed these setps, proceed to define your information barrier
 ### Define an information barriers policy
 
 > [!IMPORTANT]
-> **Before you begin the following procedure, you must [enable scoped directory search in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-scoped-directory-search)**. Wait at least 24 hours after enabling scoped directory search before you set up or define policies for information barriers. 
+> **Before you begin the following procedure, make sure you have completed the steps in the preceding section, [Prepare your environment for information barriers](#prepare-your-environment-for-information-barriers). 
 
-1. As a global administrator or compliance administrator, create a remote PowerShell session to the Security & Compliance Center. (To get help with this, see [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell).)
+1. As a global administrator or compliance administrator, create a remote PowerShell session to the Security & Compliance Center. (To get help with this, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps).)
 
 2. Define a policy by running the **New-InformationBarrierPolicy** cmdlet.<br>
     ```
