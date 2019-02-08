@@ -113,6 +113,7 @@ In this scenario, we will set up information barriers policies that prevent peop
 
     ```
     $investorsFilter = "(MemberOfGroup -eq $investorsGroup)"
+    
     $researchFilter = "(MemberOfGroup -ne $researchGroup)"
     ``` 
 
@@ -126,6 +127,7 @@ In this scenario, we will set up information barriers policies that prevent peop
 
     ```
     $researchFilter = "(MemberOfGroup -eq $researchGroup)"
+    
     $investorsFilter = "(MemberOfGroup -ne $investorsGroup)"
     
     ```
