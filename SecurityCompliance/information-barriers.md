@@ -25,7 +25,7 @@ Read this article to get a [brief overview of information barriers](#how-informa
 
 ## How information barriers work
 
-Information barriers help prevent communications in Microsoft Teams between specific groups of people. Here are a few examples:
+Information barriers help limit communications in Microsoft Teams between specific groups of people. Here are a few examples:
 
 - A day trader can be restricted from calling someone on the marketing team
 - Finance personnel working on confidential company information can be prevented from receiving phone calls from people outside the organization
@@ -87,6 +87,7 @@ Next, make sure to complete the admin consent flow. To do that, follow these ste
 
 4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
 
+After you have completed these setps, proceed to define your information barriers policy.
     
 ### Define an information barriers policy
 
