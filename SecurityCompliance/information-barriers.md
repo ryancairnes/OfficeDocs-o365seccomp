@@ -93,6 +93,11 @@ Next, make sure to complete the admin consent flow. To do that, follow these ste
 
 After you have completed these steps, select one of the following scenarios:
 
+- [Scenario 1: Block communications between two groups](#scenario-1-block-communications-between-two-groups)
+
+- [Scenario 2: Allow one group to communicate with only one other group](#scenario-2-allow-one-group-to-communicate-with-only-one-other-group)
+
+[Scenario 3: Prevent one group from communicating with two other groups](#scenario-3-prevent-one-group-from-communicating-with-two-other-groups)
 
 ## Scenario 1: Block communications between two groups
 
@@ -167,11 +172,12 @@ In this scenario, we will set up information barriers policies that allows peopl
     New-InformationBarrierPolicy -Name "InvestorsResearchIBPolicy" -AssigneeFilterName "Investors" -AssigneeFilter $investorsFilter -CommunicationAllowedFilterName "Research" -CommunicationAllowedFilter $researchFilter
     ```
 
-
 ## Scenario 3: Prevent one group from communicating with two other groups
 
 > [!IMPORTANT]
 > **Before you begin the following procedure, make sure you have completed the steps in the section, [Start here: Prepare your environment for information barriers](#start-here-prepare-your-environment-for-information-barriers). 
+
+
 
 ## Related articles
 
