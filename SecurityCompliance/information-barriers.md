@@ -65,7 +65,7 @@ To define or edit information barriers policies, you must be assigned one of the
 
 - Compliance Administrator
 
-You must be familiar with PowerShell cmdlets in order to define, validate, or edit infomration barriers policies. Although several examples of PowerShell cmdlets are provided, you'll need to know additional details, such as parameters, for your organization.
+You must be familiar with PowerShell cmdlets in order to define, validate, or edit information barriers policies. Although several examples of PowerShell cmdlets are provided, you'll need to know additional details, such as parameters, for your organization.
 
 ## Next steps
 
