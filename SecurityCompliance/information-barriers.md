@@ -140,10 +140,38 @@ In this scenario, we will set up information barriers policies that prevent peop
 
 ## Scenario 2: Allow one group to communicate with only one other group
 
+In this scenario, we will set up information barriers policies that allows people in one group (we'll call them Products) to communicate with only one other group (we'll call them Research).
+
 > [!IMPORTANT]
 > **Before you begin the following procedure, make sure you have completed the steps in the section, [Start here: Prepare your environment for information barriers](#start-here-prepare-your-environment-for-information-barriers). 
 
+1. As a global administrator or compliance administrator, define two groups by running the following PowerShell cmdlets in Exchange Online:<br>
+
+    ```
+    $productssGroup = Get-DistributionGroup  -Identity Products | select DistinguishedName
+    
+    $researchGroup = Get-DistributionGroup -Identity Research | select DistinguishedName
+    ```
+
+2. Define filter variables for the Products and Research groups as follows:<br>
+
+    ```
+    $productsFilter = "(MemberOfGroup -eq $productsGroup)"
+    
+    $researchFilter = "(MemberOfGroup -eq $researchGroup)"    
+    ``` 
+
+3. Define an information barriers policy that allows the Products group to communicate with only the Research group in Microsoft Teams, as follows: <br>
+
+    ```
+    New-InformationBarrierPolicy -Name "InvestorsResearchIBPolicy" -AssigneeFilterName "Investors" -AssigneeFilter $investorsFilter -CommunicationAllowedFilterName "Research" -CommunicationAllowedFilter $researchFilter
+    ```
+
+
 ## Scenario 3: Prevent one group from communicating with two other groups
+
+> [!IMPORTANT]
+> **Before you begin the following procedure, make sure you have completed the steps in the section, [Start here: Prepare your environment for information barriers](#start-here-prepare-your-environment-for-information-barriers). 
 
 ## Related articles
 
