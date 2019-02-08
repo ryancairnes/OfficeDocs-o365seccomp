@@ -23,6 +23,7 @@ Information barriers help limit communications in Microsoft Teams between specif
 - A day trader can be restricted from calling someone on the marketing team
 - Finance personnel working on confidential company information can be prevented from receiving phone calls from people outside the organization
 - An internal team working on trade secret material can be prevented from calling or chatting online with people outside the organization
+- A research team can only call or chat online with a product development team
 
 For all of these example scenarios, information barriers policies can be defined to prevent people from calling or chatting with those they shouldn't be communicating with in Microsoft Teams. Once information barriers policies are in place, certain user activities in Microsoft Teams trigger checks against those policies to prevent unauthorized communication. These activities include:
 
@@ -43,6 +44,8 @@ If the people involved are included in an information barriers policy to prevent
 > [!IMPORTANT]
 > Potentially, everyone included in an information barriers policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barriers policies are part of the same team or group chat, they will be removed from those chat sessions. However, information barriers will not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
 
+Currently, information barriers policies are defined and managed in Office 365 by using PowerShell cmdlets. This is typically done by a compliance administrator or a global administrator, and requires familiarity with PowerShell cmdlets (and parameters).
+
 ## Required licenses and permissions
 
 **Currently, the information barriers feature is in private preview**. When these features are generally available, they'll be included in subscriptions, such as:
@@ -53,10 +56,6 @@ To define or edit information barriers policies, you must be assigned one of the
 - Microsoft 365 Enterprise Global Administrator
 - Office 365 Global Administrator
 - Compliance Administrator
-
-## Using information barriers in your organization
-
-Currently, information barriers policies are defined and managed in Office 365 by using PowerShell cmdlets. This is typically done by a compliance administrator or a global administrator, and requires familiarity with PowerShell cmdlets (and parameters).
 
 > [!IMPORTANT]
 > You must be familiar with PowerShell cmdlets in order to perform the procedures described in this article. Although several examples of PowerShell cmdlets are provided, you'll need to know additional details, such as parameters, for your organization.
