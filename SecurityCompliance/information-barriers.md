@@ -21,8 +21,11 @@ Among the many powerful features included in Microsoft cloud services are commun
 Information barriers help limit communications in Microsoft Teams between specific groups of people. Here are a few examples:
 
 - A day trader can be restricted from calling someone on the marketing team
+
 - Finance personnel working on confidential company information can be prevented from receiving phone calls from people outside the organization
+
 - An internal team working on trade secret material can be prevented from calling or chatting online with people outside the organization
+
 - A research team can only call or chat online with a product development team
 
 For all of these example scenarios, information barriers policies can be defined to prevent people from calling or chatting with those they shouldn't be communicating with in Microsoft Teams. Once information barriers policies are in place, certain user activities in Microsoft Teams trigger checks against those policies to prevent unauthorized communication. These activities include:
