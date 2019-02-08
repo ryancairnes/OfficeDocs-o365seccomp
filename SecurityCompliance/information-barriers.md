@@ -18,11 +18,6 @@ description: "Use information barriers to ensure communication compliance using 
 
 Among the many powerful features included in Microsoft cloud services are communication and collaboration capabilities. But suppose that you want to restrict communications between two groups to avoid a conflict of interest from occurring in your organization. Or, suppose that you want to restrict communications between a group in your organization and outside parties to safeguard internal data. Information barriers, coming soon for Microsoft Teams, can help! 
 
-Read this article to get a [brief overview of information barriers](#how-information-barriers-work), a [walkthrough with Contoso and information barriers](#walkthrough-contoso-and-information-barriers), and an overview of [using information barriers in your organization](#using-information-barriers-in-your-organization).
-
-> [!IMPORTANT]
-> You must be familiar with PowerShell cmdlets in order to perform the procedures described in this article. Although the general syntax of various PowerShell cmdlets is provided, you'll need to know additional details, such as parameters, for your organization.
-
 ## How information barriers work
 
 Information barriers help limit communications in Microsoft Teams between specific groups of people. Here are a few examples:
@@ -50,13 +45,9 @@ If the people involved are included in an information barriers policy to prevent
 > [!IMPORTANT]
 > Potentially, everyone included in an information barriers policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barriers policies are part of the same team or group chat, they will be removed from those chat sessions. However, information barriers will not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
 
-## Using information barriers in your organization
-
-Currently, information barriers policies are defined and managed in Office 365 by using PowerShell cmdlets. This is typically done by a compliance administrator or a global administrator, and requires familiarity with PowerShell cmdlets (and parameters).
-
 ## Required licenses and permissions
 
-Currently, information barriers is in private preview. When these features are generally available, they'll be included in subscriptions, such as:
+**Currently, the information barriers feature is in private preview**. When these features are generally available, they'll be included in subscriptions, such as:
 - Microsoft 365 Enterprise E5
 - Office 365 Enterprise E5
 
@@ -65,7 +56,14 @@ To define or edit information barriers policies, you must be assigned one of the
 - Office 365 Global Administrator
 - Compliance Administrator
 
-## Prepare your environment for information barriers
+## Using information barriers in your organization
+
+Currently, information barriers policies are defined and managed in Office 365 by using PowerShell cmdlets. This is typically done by a compliance administrator or a global administrator, and requires familiarity with PowerShell cmdlets (and parameters).
+
+> [!IMPORTANT]
+> You must be familiar with PowerShell cmdlets in order to perform the procedures described in this article. Although several examples of PowerShell cmdlets are provided, you'll need to know additional details, such as parameters, for your organization.
+
+## Start here: Prepare your environment for information barriers
 
 Before define your first information barriers policy, you must **[enable scoped directory search in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-scoped-directory-search)**. Wait at least 24 hours after enabling scoped directory search before you set up or define policies for information barriers.
 
