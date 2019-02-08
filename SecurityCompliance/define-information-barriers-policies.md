@@ -190,6 +190,6 @@ STEPS WILL FOLLOW SOON
 
 ## Related articles
 
-[Information barriers (coming soon to Microsoft Teams!)](information-barriers.md)
+[Get an overview of information barriers](information-barriers.md)
 
-[Information barriers in Microsoft Teams](https://docs.microsoft.com/SkypeForBusiness/MicrosoftTeams/information-barriers-in-teams)
+[Learn more about the user experience of information barriers in Microsoft Teams](https://docs.microsoft.com/SkypeForBusiness/MicrosoftTeams/information-barriers-in-teams)
