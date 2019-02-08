@@ -99,7 +99,7 @@ After you have completed these steps, select one of the following scenarios:
 In this scenario, we will set up information barriers policies that prevent people in one group (we'll call them Investors) from communicating with people in another group (we'll call them Research).
 
 > [!IMPORTANT]
-> **Before you begin the following procedure, make sure you have completed the steps in the section, [Prepare your environment for information barriers](#prepare-your-environment-for-information-barriers). 
+> **Before you begin the following procedure, make sure you have completed the steps in the section, [Start here: Prepare your environment for information barriers](#start-here-prepare-your-environment-for-information-barriers). 
 
 1. As a global administrator or compliance administrator, define two groups by running the following PowerShell cmdlets in Exchange Online:<br>
 
@@ -135,6 +135,13 @@ In this scenario, we will set up information barriers policies that prevent peop
     ```
     New-InformationBarrierPolicy -Name "ResearchIBPolicy" -AssigneeFilterName "Research" -AssigneeFilter $researchFilter -CommunicationAllowedFilterName "NotInvestors" -CommunicationAllowedFilter $investorsFilter
     ```
+
+## Scenario 2: Allow one group to communicate with only one other group
+
+> [!IMPORTANT]
+> **Before you begin the following procedure, make sure you have completed the steps in the section, [Start here: Prepare your environment for information barriers](#start-here-prepare-your-environment-for-information-barriers). 
+
+## Scenario 3: Prevent one group from communicating with two other groups
 
 ## Related articles
 
