@@ -97,7 +97,7 @@ After you have completed these steps, select one of the following scenarios:
 
 - [Scenario 2: Allow one group to communicate with only one other group](#scenario-2-allow-one-group-to-communicate-with-only-one-other-group)
 
-[Scenario 3: Prevent one group from communicating with two other groups](#scenario-3-prevent-one-group-from-communicating-with-two-other-groups)
+- [Scenario 3: Prevent one group from communicating with two other groups](#scenario-3-prevent-one-group-from-communicating-with-two-other-groups)
 
 ## Scenario 1: Block communications between two groups
 
@@ -166,7 +166,6 @@ In this scenario, we will set up information barriers policies that prevent peop
     Get-InformationBarrierRecipientStatus [-Identity] <RecipientIdParameter> [<CommonParameters>]
     ```
 
-
 > [!TIP]
 > We recommend testing with a few users who are included in information barriers policies, as well as with a few users who are not included in those policies.
 
@@ -211,7 +210,7 @@ In this scenario, we will set up information barriers policies that allows peopl
     Get-InformationBarrierPoliciesApplicationStatus -ProductsResearchIBPolicy
     ```
 
-6. After you have defined your information barriers policy, wait at least 24 hours for the policy to work its way through your data center and services. Then, validate the information barriers status for a specific user by running the **Get-InformationBarrierRecipientStatus** cmdlet.
+6. After you have defined your information barriers policy, **wait at least 24 hours for the policy to work its way through your data center and services**. Then, validate the information barriers status for a specific user by running the **Get-InformationBarrierRecipientStatus** cmdlet.
 
     ```
     Get-InformationBarrierRecipientStatus [-Identity] <RecipientIdParameter> [<CommonParameters>]
