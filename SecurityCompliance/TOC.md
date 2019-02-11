@@ -10,6 +10,7 @@
 ## [Plan for security and compliance in Office 365](plan-for-security-and-compliance.md)
 # Protect access to data and services
 ## [Protect access to data and services in Office 365](protect-access-to-data-and-services.md)
+
 # Protect information
 ## [Sensitivity labels](sensitivity-labels.md)
 ### [Restrict access to content by using encryption in sensitivity labels](encryption-sensitivity-labels.md)

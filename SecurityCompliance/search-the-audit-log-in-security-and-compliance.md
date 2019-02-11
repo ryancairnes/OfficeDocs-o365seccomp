@@ -277,7 +277,7 @@ You can export the results of an audit log search to a comma separated value (CS
 
 ## Audited activities
 
-The tables in this section describe the activities that are audited in Office 365. You can search for these events by searching the audit log in the Security &amp; Compliance Center. Click the **Search the audit log** tab for step-by-step instructions. 
+The tables in this section describe the activities that are audited in Office 365. You can search for these events by searching the audit log in the Security & Compliance Center.
   
 These tables group related activities or the activities from a specific Office 365 service. The tables include the friendly name that's displayed in the **Activities** drop-down list and the name of the corresponding operation that appears in the detailed information of an audit record and in the CSV file when you export the search results. For descriptions of the detailed information, see [Detailed properties in the Office 365 audit log](detailed-properties-in-the-office-365-audit-log.md).
   
@@ -289,9 +289,10 @@ Click one of the following links to go to a specific table.
 |[Synchronization activities](#synchronization-activities)<br/> |[Site administration activities](#site-administration-activities)<br/> |[Exchange mailbox activities](#exchange-mailbox-activities)<br/> |
 |[Sway activities](#sway-activities) <br/> |[User administration activities](#user-administration-activities) <br/> |[Azure AD group administration activities](#azure-ad-group-administration-activities) <br/> |
 |[Application administration activities](#application-administration-activities) <br/> |[Role administration activities](#role-administration-activities) <br/> |[Directory administration activities](#directory-administration-activities) <br/> |
-|[eDiscovery activities](#ediscovery-activities) <br/> |[Power BI activities](#power-bi-activities) <br/> |[Microsoft Teams activities](#microsoft-teams-activities) <br/> |
-|[Yammer activities](#yammer-activities) <br/> |[Microsoft Flow](#microsoft-flow) <br/> |[Microsoft Stream](#microsoft-stream) <br/>|
-|[Exchange admin audit log](#exchange-admin-audit-log) <br/> |
+|[eDiscovery activities](#ediscovery-activities) <br/> |[Power BI activities](#power-bi-activities) <br/> |[Microsoft Workplace Analytics](#microsoft-workplace-analytics-activities)<br/>|
+[Microsoft Teams activities](#microsoft-teams-activities) <br/> |[Yammer activities](#yammer-activities) <br/> |[Microsoft Flow](#microsoft-flow) <br/> 
+|[Microsoft Stream](#microsoft-stream) <br/>|[Exchange admin activities](#exchange-admin-audit-log)<br/>
+||||
    
   
 ### File and page activities
@@ -322,6 +323,7 @@ The following table describes the file and page activities in SharePoint Online 
 |Uploaded file  <br/> |FileUploaded  <br/> |User uploads a document to a folder on a site.  <br/> |
 |Viewed page  <br/> |PageViewed  <br/> |User views a page on a site. This doesn't include using a Web browser to view files located in a document library.  <br/> |
 |(none)  <br/> |PageViewedExtended  <br/> |This is related to the "Viewed page" (PageViewed) activity. A PageViewedExtended event is logged when the same person continually views a web page for an extended period of time (up to 3 hours). The purpose of logging PageViewedExtended events is to reduce the number of PageViewed events that are logged when a page is continually viewed. This helps reduce the noise of multiple PageViewed records for what is essentially the same user activity, and lets you focus on the initial (and more important) PageViewed event.  <br/> |
+||||
   
 ### Folder activities
   
@@ -338,6 +340,7 @@ The following table describes the folder activities in SharePoint Online and One
 |Moved folder  <br/> |FolderMoved  <br/> |User moves a folder to a different location on a site.  <br/> |
 |Renamed folder  <br/> |FolderRenamed  <br/> |User renames a folder on a site.  <br/> |
 |Restored folder  <br/> |FolderRestored  <br/> |User restores a deleted folder from the recycle bin on a site.  <br/> |
+||||
   
 ### Sharing and access request activities
   
@@ -378,6 +381,7 @@ The following table describes the user sharing and access request activities in 
 |User added to secure link  <br/> |AddedToSecureLink  <br/> |A user was added to the list of entities who can use a secure sharing link.  <br/> |
 |User removed from secure link  <br/> |RemovedFromSecureLink  <br/> |A user was removed from the list of entities who can use a secure sharing link.  <br/> |
 |Withdrew sharing invitation  <br/> |SharingInvitationRevoked  <br/> |User withdrew a sharing invitation to a resource.  <br/> |
+||||
   
 ### Synchronization activities
   
@@ -391,6 +395,7 @@ The following table lists file synchronization activities in SharePoint Online a
 |Downloaded file changes to computer  <br/> |FileSyncDownloadedPartial  <br/> |User successfully downloads any changes to files from a document library. This activity indicates that any changes that were made to files in the document library were downloaded to the user's computer. Only changes were downloaded because the document library was previously downloaded by the user (as indicated by the **Downloaded files to computer** activity).  <br/> |
 |Uploaded files to document library  <br/> |FileSyncUploadedFull  <br/> |User establishes a sync relationship and successfully uploads files for the first time from their computer to a document library.  <br/> |
 |Uploaded file changes to document library  <br/> |FileSyncUploadedPartial  <br/> |User successfully uploads changes to files on a document library. This event indicates that any changes made to the local version of a file from a document library are successfully uploaded to the document library. Only changes are unloaded because those files were previously uploaded by the user (as indicated by the ** Uploaded files to document library ** activity).  <br/> |
+||||
   
 ### Site administration activities
   
@@ -428,6 +433,7 @@ The following table lists the events that result from site administration tasks 
 |Scheduled site geo move  <br/> |SiteGeoMoveScheduled  <br/> |A SharePoint or global administrator successfully schedules a SharePoint or OneDrive site geo move. The Multi-Geo capability lets an Office 365 organization span multiple Office 365 datacenter geographies, which are called geos. For more information, see [Multi-Geo Capabilities in OneDrive and SharePoint Online in Office 365](https://go.microsoft.com/fwlink/?linkid=860840).  <br/> |
 |Set host site  <br/> |HostSiteSet  <br/> |A SharePoint or global administrator changes the designated site to host personal or OneDrive for Business sites.  <br/> |
 |Updated group  <br/> |GroupUpdated  <br/> |Site administrator or owner changes the settings of a group for a site. This can include changing the group's name, who can view or edit the group membership, and how membership requests are handled.  <br/> |
+||||
   
 ### Exchange mailbox activities
   
@@ -450,6 +456,7 @@ The following table lists the activities that can be logged by mailbox audit log
 |Updated message  <br/> |Update  <br/> |A message or its properties was changed.  <br/> |
 |User signed in to mailbox  <br/> |MailboxLogin  <br/> |The user signed in to their mailbox.  <br/> |
 |(none)  <br/> |UpdateInboxRules  <br/> |An inbox rule has been added, removed, or changed. Inbox rules are used to process messages in the user's Inbox based on the specified conditions and take actions when the conditions of a rule are met, such as moving a message to a specified folder or deleting a message.  <br/> To return entries for inbox rule activities, you have to select **Show results for all activities** in the **Activities** list. Use the date range boxes and the **Users** list to narrow the search results.  <br/> |
+||||
   
 ### Sway activities
   
@@ -471,6 +478,7 @@ The following table lists user and admin activities in Sway. Sway is an Office 3
 |Turned off Sway service  <br/> |SwayServiceOff  <br/> |Administrator disables Sway for the entire organization by using the Office 365 admin center.  <br/> |
 |Turned on Sway service  <br/> |SwayServiceOn  <br/> |Administrator enables Sway for the entire organization by using the Office 365 admin center (Sway service is enabled by default).  <br/> |
 |Viewed Sway  <br/> |SwayView  <br/> |User views a Sway.  <br/> |
+||||
 
   
 ### User administration activities
@@ -487,6 +495,7 @@ The following table lists user administration activities that are logged when an
 |Set property that forces user to change password  <br/> |Set force change user password  <br/> |Administrator set the property that forces a user to change their password the next time the user sign in to Office 365.  <br/> |
 |Set license properties  <br/> |Set license properties  <br/> |Administrator modifies the properties of a licensed assigned to a user.  <br/> |
 |Updated user  <br/> |Update user  <br/> |Administrator changes one or more properties of a user account. For a list of the user properties that can be updated, see the "Update user attributes" section in [Azure Active Directory Audit Report Events](https://go.microsoft.com/fwlink/p/?LinkID=616549).  <br/> |
+||||
   
 ### Azure AD group administration activities
   
@@ -499,6 +508,7 @@ The following table lists group administration activities that are logged when a
 |Deleted group  <br/> |Delete group  <br/> |A group was deleted.  <br/> |
 |Removed member from group  <br/> |Remove member from group  <br/> |A member was removed from a group.  <br/> |
 |Updated group  <br/> |Update group  <br/> |A property of a group was changed.  <br/> |
+||||
    
 ### Application administration activities
   
@@ -513,6 +523,7 @@ The following table lists application admin activities that are logged when an a
 |Removed a service principal from the directory  <br/> |Remove service principal  <br/> |An application was deleted/unregistered from Azure AD. An application is represented by a service principal in the directory.  <br/> |
 |Removed credentials from a service principal  <br/> |Remove service principal credentials  <br/> |Credentials were removed from a service principal in Azure AD. A service principle represents an application in the directory.  <br/> |
 |Set delegation entry  <br/> |Set delegation entry  <br/> |An authentication permission was updated for an application in Azure AD.  <br/> |
+||||
 
 ### Role administration activities
   
@@ -523,6 +534,7 @@ The following table lists Azure AD role administration activities that are logge
 |Add member to Role  <br/> |Add role member to role  <br/> |Added a user to an admin role in Office 365.  <br/> |
 |Removed a user from a directory role  <br/> |Remove role member from role  <br/> |Removed a user to from an admin role in Office 365.  <br/> |
 |Set company contact information  <br/> |Set company contact information  <br/> |Updated the company-level contact preferences for your Office 365 organization. This includes email addresses for subscription-related email sent by Office 365, as well as technical notifications about Office 365 services.  <br/> |
+||||
    
 ### Directory administration activities
   
@@ -542,6 +554,7 @@ The following table lists Azure AD directory and domain related activities that 
 |Updated domain  <br/> |Update domain  <br/> |Updated the settings of a domain in your Office 365 organization.  <br/> |
 |Verified domain  <br/> |Verify domain  <br/> |Verified that your organization is the owner of a domain.  <br/> |
 |Verified email verified domain  <br/> |Verify email verified domain  <br/> |Used email verification to verify that your organization is the owner of a domain.  <br/> |
+||||
    
 ### eDiscovery activities
   
@@ -568,6 +581,24 @@ You can search the audit log for activities in Power BI. For information about P
   
 Note that audit logging for Power BI isn't enabled by default. To search for Power BI activities in the Office 365 audit log, you have to enable auditing in the Power BI admin portal. For instructions, see the "Audit logs" section in [Power BI admin portal](https://docs.microsoft.com/power-bi/service-admin-portal#audit-logs).
   
+### Microsoft Workplace Analytics activities
+
+The following table lists the admin and analyst activities in Microsoft Workplace Analytics that are logged in the Office 365 audit log. Workplace Analytics provides insight into how groups collaborate across your Office 365 organization. For more information, see [Workplace Analytics](https://docs.microsoft.com/en-us/workplace-analytics/index-orig).
+
+|**Friendly name**|**Operation**|**Description**|
+|:-----|:-----|:-----|
+|Accessed OData link <br/> |AccessedOdataLink <br/> |Analyst accessed the OData link for a query.|
+|Canceled query <br/> |CanceledQuery <br/> |Analyst canceled a running query.|
+|Created meeting exclusion <br/> |MeetingExclusionCreated <br/> |Analyst created a new meeting exclusion rule.|
+|Deleted result <br/> |DeletedResult <br/> |Analyst deleted a query result.|
+|Downloaded report <br/> |DownloadedReport <br/> |Analyst downloaded a query result file.|
+|Executed query <br/> |ExecutedQuery <br/> |Analyst ran a query.|
+|Updated data access setting <br/> |UpdatedDataAccessSetting <br/> |Admin updated data access settings.|
+|Updated privacy setting <br/> |UpdatedPrivacySetting <br/> |Admin updated privacy settings; for example,  minimum group size.|
+|Uploaded organization data <br/> |UploadedOrgData <br/> |Admin uploaded organizational data file.|
+|Viewed Explore <br/> |ViewedExplore <br/> |Analyst viewed visualizations in one or more Explore page tabs.|
+||||
+
 ### Microsoft Teams activities
   
 The following table lists the user and admin activities in Microsoft Teams that are logged in the Office 365 audit log. Microsoft Teams is a chat-centered workspace in Office 365. It brings a team's conversations, meetings, files and notes together into a single place. For more information and links to help topics, see:
@@ -597,6 +628,7 @@ The following table lists the user and admin activities in Microsoft Teams that 
 |Updated connector  <br/> |ConnectorUpdated  <br/> |A user modified a connector in a channel.  <br/> |
 |Updated tab  <br/> |TabUpdated  <br/> |A user modified a tab in a channel.  <br/> |
 |User signed in to Teams  <br/> |TeamsSessionStarted  <br/> |A user signs in to a Microsoft Teams client.  <br/> |
+||||
 
 ### Yammer activities
   
@@ -621,6 +653,7 @@ The following table lists the user and admin activities in Yammer that are logge
 |Updated file description  <br/> |FileUpdateDescription  <br/> |User changes the description of a file.  <br/> |
 |Updated file name  <br/> |FileUpdateName  <br/> |User changes the name of a file.  <br/> |
 |Viewed file  <br/> |FileVisited  <br/> |User views a file.  <br/> |
+||||
    
 ### Microsoft Flow
 
