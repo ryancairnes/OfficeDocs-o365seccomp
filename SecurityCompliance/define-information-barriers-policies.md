@@ -3,7 +3,7 @@ title: "Define information barriers policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 02/08/2019
+ms.date: 02/11/2019
 ms.audience: ITPro
 ms.topic: article
 ROBOTS: NOINDEX, NOFOLLOW
@@ -14,7 +14,7 @@ description: "Using PowerShell, you can define policies for information barriers
 
 # Define policies for information barriers in Microsoft Teams
 
-Coming soon to Microsoft Teams, information barriers policies can help limit communications between specific groups of people. Infomration barriers can help your organization comply with industry standards and regulations, and avoid potential conflicts of interest. To learn more, see [Information barriers (coming soon to Microsoft Teams!)](information-barriers.md).
+Coming soon to Microsoft Teams, information barriers policies can help limit communications between specific groups of people. Information barriers can help your organization comply with industry standards and regulations, and avoid potential conflicts of interest. To learn more, see [Information barriers (coming soon to Microsoft Teams!)](information-barriers.md).
 
 To define or edit information barriers policies, you must be assigned one of the following roles:
 
@@ -31,9 +31,9 @@ Currently, information barriers policies are defined and managed in Office 365 b
 
 ## Prepare your environment for information barriers
 
-Before define your first information barriers policy, you must **[enable scoped directory search in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-scoped-directory-search)**. Wait at least 24 hours after enabling scoped directory search before you set up or define policies for information barriers.
+**Before define your first information barriers policy, you must [enable scoped directory search in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-scoped-directory-search)**. Wait at least 24 hours after enabling scoped directory search before you set up or define policies for information barriers.
 
-Next, make sure to complete the admin consent flow. To do that, follow these steps:
+Then, follow these steps:
 
 1. As a global administrator or compliance administrator, create a remote PowerShell session to Office 365. Because some cmdlets will be run in Exchange Online and others in the Office 365 Security & Compliance Center, we recommend that you [connect to all Office 365 services in a single Windows PowerShell window](https://docs.microsoft.com/Office365/Enterprise/powershell/connect-to-all-office-365-services-in-a-single-windows-powershell-window).
 
