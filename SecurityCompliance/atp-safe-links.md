@@ -4,7 +4,7 @@ ms.author: deniseb
 author: denisebmsft
 manager: laurawi
 ms.audience: Admin
-ms.date: 02/05/2019
+ms.date: 02/11/2019
 ms.topic: overview
 f1_keywords:
 - '197503'
@@ -94,7 +94,7 @@ ATP Safe Links features are active when:
     
 - **Users have signed into Office 365** using their work or school account. (See [Sign in to Office or Office 365](https://support.office.com/article/b9582171-fd1f-4284-9846-bdd72bb28426).)
     
-- **Your organization's email is hosted in Office 365**. 
+- **Your organization's email passes through Exchange Online Protection**.  
 
 To define (or edit) ATP policies, you must be assigned one of the roles described in the following table:
 
