@@ -1,5 +1,5 @@
 ---
-title: "Use DKIM to validate outbound email sent from your custom domain in Office 365"
+title: "Use DKIM for email in your custom domain in Office 365"
 ms.author: krowley
 author: kccross
 manager: laurawi
@@ -17,7 +17,7 @@ description: "Summary: This article describes how you use DomainKeys Identified 
 
 # Use DKIM to validate outbound email sent from your custom domain in Office 365
 
- **Summary:** This article describes how you use DomainKeys Identified Mail (DKIM) with Office 365 to ensure that destination email systems trust messages sent from your custom domain. 
+ **Summary:** This article describes how you use DomainKeys Identified Mail (DKIM) with Office 365 to ensure that destination email systems trust messages sent outbound from your custom domain. 
   
 You should use DKIM in addition to SPF and DMARC to help prevent spoofers from sending messages that look like they are coming from your domain. DKIM lets you add a digital signature to email messages in the message header. Sounds complicated, but it's really not. When you configure DKIM, you authorize your domain to associate, or sign, its name to an email message by using cryptographic authentication. Email systems that receive email from your domain can use this digital signature to help determine if incoming email that they receive is legitimate.
   
