@@ -192,4 +192,6 @@ STEPS WILL FOLLOW SOON
 
 [Get an overview of information barriers](information-barriers.md)
 
+[View, edit, or remove information barriers in Microsoft Teams](view-edit-remove-information-barriers-policies.md)
+
 [Learn more about the user experience of information barriers in Microsoft Teams](https://docs.microsoft.com/SkypeForBusiness/MicrosoftTeams/information-barriers-in-teams)

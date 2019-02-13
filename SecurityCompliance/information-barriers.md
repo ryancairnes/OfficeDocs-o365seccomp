@@ -1,9 +1,9 @@
 ---
-title: "Information barriers"
+title: "Information barriers overview"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 02/08/2019
+ms.date: 02/13/2019
 ms.audience: ITPro
 ms.topic: article
 ROBOTS: NOINDEX, NOFOLLOW
@@ -72,3 +72,5 @@ You must be familiar with PowerShell cmdlets in order to define, validate, or ed
 1. [Learn more about the user experience of information barriers in Microsoft Teams](https://docs.microsoft.com/SkypeForBusiness/MicrosoftTeams/information-barriers-in-teams).
 
 2. [Define policies for information barriers in Microsoft Teams](define-information-barriers-policies.md). 
+
+3. [View, edit, or remove information barriers in Microsoft Teams](view-edit-remove-information-barriers-policies.md).
