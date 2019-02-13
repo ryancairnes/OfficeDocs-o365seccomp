@@ -14,7 +14,7 @@ description: "Using PowerShell, you can define policies for information barriers
 
 # View, edit, or remove information barriers in Microsoft Teams
 
-Coming soon to Microsoft Teams, information barriers policies can help limit communications between specific groups of people. Information barriers can help your organization comply with industry standards and regulations, and avoid potential conflicts of interest. To learn more, see [Information barriers (coming soon to Microsoft Teams!)](information-barriers.md).
+Coming soon to Microsoft Teams, information barriers policies can help limit communications between specific groups of people. Information barriers can help your organization comply with industry standards and regulations, and avoid potential conflicts of interest. To learn more, see [Information barriers (coming soon to Microsoft Teams!)](information-barriers.md). After [information barriers policies are defined](define-information-barriers-policies.md) for your organization, you can view, edit, or even remove those policies as appropriate.
 
 To edit or remove information barriers policies, you must be assigned one of the following roles:
 
