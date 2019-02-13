@@ -62,7 +62,7 @@ After you have completed these steps, select one of the following scenarios:
 
 ## Scenario 1: Block communications between two groups
 
-In this example scenario, we will set up Information Barriers policies that prevent people in one group (we'll call them Investors) from communicating with people in another group (we'll call them Research).
+In this example scenario, we will set up an Information Barriers policy that prevents people in one group (we'll call them Investors) from communicating with people in another group (we'll call them Research).
 
 > [!IMPORTANT]
 > Before you begin the following procedure, make sure you have completed the steps in the section, [Prepare your environment for Information Barriers](#prepare-your-environment-for-information-barriers). 
@@ -132,7 +132,7 @@ In this example scenario, we will set up Information Barriers policies that prev
 
 ## Scenario 2: Allow one group to communicate with only one other group
 
-In this example scenario, we will set up Information Barriers policies that allows people in one group (we'll call them Products) to communicate with only one other group (we'll call them Research).
+In this example scenario, we will set up an Information Barriers policy that allows people in one group (we'll call them Products) to communicate with only one other group (we'll call them Research). With this policy in place, people in the Products group will not be able to call or chat with anyone except people in the Research group.
 
 > [!IMPORTANT]
 > Before you begin the following procedure, make sure you have completed the steps in the section, [Prepare your environment for Information Barriers](#prepare-your-environment-for-information-barriers). 
@@ -183,12 +183,57 @@ In this example scenario, we will set up Information Barriers policies that allo
 
 ## Scenario 3: Prevent one group from communicating with two other groups
 
-In this scenario, 
+In this scenario, we will set up an Information Barriers policy that prevents people in one group (we'll call them Investors) to communicate with two other groups (we'll call them Research and Sales). 
 
 > [!IMPORTANT]
 > Before you begin the following procedure, make sure you have completed the steps in the section, [Prepare your environment for Information Barriers](#prepare-your-environment-for-information-barriers). 
 
-STEPS WILL FOLLOW SOON
+1. As a global administrator or compliance administrator, define three groups by running the following PowerShell cmdlets in Exchange Online:
+
+    ```
+    $investorsGroup = Get-DistributionGroup -Identity Investors | select DistinguishedName
+    
+    $researchGroup = Get-DistributionGroup -Identity Research | select DistinguishedName
+
+    $salesGroup = Get-DistributionGroup -Identity Sales | select DistinguishedName 
+    ```
+
+2. Define filter variables for the Investors, Research, and Sales groups as follows:
+
+    ```
+    $investorsFilter = "(MemberOfGroup -eq $investorsGroup)"
+
+    $researchFilter = "(MemberOfGroup -ne $researchGroup)"
+    
+    $salesFilter = "(MemberOfGroup -ne $salesGroup"
+    ``` 
+
+3. Define an Information Barriers policy that allows the Products group to communicate with only the Research group in Microsoft Teams, as follows: 
+
+    ```
+    New-InformationBarrierPolicy -Name "ProductsResearchIBPolicy" -AssigneeFilterName "Products" -AssigneeFilter $productsFilter -CommunicationAllowedFilterName "Research" -CommunicationAllowedFilter $researchFilter
+    ```
+
+4. Start the policy application by running the **Start-InformationBarrierPoliciesApplication**  cmdlet.
+
+    ```
+    Start-InformationBarrierPoliciesApplication -ProductsResearchIBPolicy
+    ```
+
+5. Validate the policy application by running the **Get-InformationBarrierPoliciesApplicationStatus** cmdlet.
+
+    ```
+    Get-InformationBarrierPoliciesApplicationStatus -ProductsResearchIBPolicy
+    ```
+
+6. After you have defined your Information Barriers policy, **wait at least 24 hours for the policy to work its way through your data center and services**. Then, validate the Information Barriers status for a specific user by running the **Get-InformationBarrierRecipientStatus** cmdlet.
+
+    ```
+    Get-InformationBarrierRecipientStatus [-Identity] <RecipientIdParameter> [<CommonParameters>]
+    ```
+
+> [!TIP]
+> We recommend testing with a few users who are included in Information Barriers policies, as well as with a few users who are not included in those policies.
 
 ## Related articles
 
