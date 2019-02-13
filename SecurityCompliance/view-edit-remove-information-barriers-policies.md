@@ -67,10 +67,14 @@ After you have completed these steps, select one of the following procedures:
 
 ## Edit Information Barriers policies
 
-1. 
+1. As a global administrator or compliance administrator, create a remote PowerShell session to the Security & Compliance Center. (To get help with this, see [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell).)
 
-2. 
+2. View your organization's existing Information Barriers policies by running the **Get-InformationBarrierPolicy** cmdlet.
 
+    ```
+    Get-InformationBarrierPolicy [-ExoPolicyId <Guid>] [<CommonParameters>]
+    ```
+    
 3. 
 
 ## Remove Information Barriers policies
