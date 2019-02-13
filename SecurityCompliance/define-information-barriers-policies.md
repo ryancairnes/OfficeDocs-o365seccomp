@@ -3,7 +3,7 @@ title: "Define information barriers policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 02/11/2019
+ms.date: 02/13/2019
 ms.audience: ITPro
 ms.topic: article
 ROBOTS: NOINDEX, NOFOLLOW
@@ -31,7 +31,7 @@ Currently, information barriers policies are defined and managed in Office 365 b
 
 ## Prepare your environment for information barriers
 
-**Before define your first information barriers policy, you must [enable scoped directory search in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-scoped-directory-search)**. Wait at least 24 hours after enabling scoped directory search before you set up or define policies for information barriers.
+**Before you define your organization's first information barriers policy, you must [enable scoped directory search in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-scoped-directory-search)**. Wait at least 24 hours after enabling scoped directory search before you set up or define policies for information barriers.
 
 Then, follow these steps:
 
@@ -140,7 +140,7 @@ In this scenario, we will set up information barriers policies that allows peopl
 1. As a global administrator or compliance administrator, define two groups by running the following PowerShell cmdlets in Exchange Online:
 
     ```
-    $productssGroup = Get-DistributionGroup  -Identity Products | select DistinguishedName
+    $productsGroup = Get-DistributionGroup  -Identity Products | select DistinguishedName
     
     $researchGroup = Get-DistributionGroup -Identity Research | select DistinguishedName
     ```
