@@ -62,20 +62,20 @@ After you have completed these steps, select one of the following scenarios:
 
 ## Scenario 1: Block communications between two groups
 
-In this scenario, we will set up Information Barriers policies that prevent people in one group (we'll call them Investors) from communicating with people in another group (we'll call them Research).
+In this example scenario, we will set up Information Barriers policies that prevent people in one group (we'll call them Investors) from communicating with people in another group (we'll call them Research).
 
 > [!IMPORTANT]
 > Before you begin the following procedure, make sure you have completed the steps in the section, [Prepare your environment for Information Barriers](#prepare-your-environment-for-information-barriers). 
 
-1. As a global administrator or compliance administrator, define two groups by running the following PowerShell cmdlets in Exchange Online:<br>
+1. As a global administrator or compliance administrator, define the Investors and Research groups by running the following PowerShell cmdlets in Exchange Online.
 
     ```
     $investorsGroup = Get-DistributionGroup -Identity Investors | select DistinguishedName
-    
+
     $researchGroup = Get-DistributionGroup -Identity Research | select DistinguishedName
     ```
 
-2. Define filter variables for the Investors group as follows:<br>
+2. Define filter variables for the Investors group as follows:
 
     ```
     $investorsFilter = "(MemberOfGroup -eq $investorsGroup)"
@@ -83,13 +83,13 @@ In this scenario, we will set up Information Barriers policies that prevent peop
     $researchFilter = "(MemberOfGroup -ne $researchGroup)"
     ``` 
 
-3. Define an Information Barriers policy that prevents the Investors group from communicating with the Research group in Microsoft Teams, as follows: <br>
+3. Define an Information Barriers policy that prevents the Investors group from communicating with the Research group in Microsoft Teams, as follows:
 
     ```
     New-InformationBarrierPolicy -Name "InvestorsIBPolicy" -AssigneeFilterName "Investors" -AssigneeFilter $investorsFilter -CommunicationAllowedFilterName "NotResearch" -CommunicationAllowedFilter $researchFilter
     ```
 
-4. Define filter variables for the Research group as follows: <br>
+4. Define filter variables for the Research group as follows:
 
     ```
     $researchFilter = "(MemberOfGroup -eq $researchGroup)"
@@ -109,7 +109,7 @@ In this scenario, we will set up Information Barriers policies that prevent peop
     ```
     Start-InformationBarrierPoliciesApplication -InvestorsIBPolicy
 
-     Start-InformationBarrierPoliciesApplication -ResearchIBPolicy
+    Start-InformationBarrierPoliciesApplication -ResearchIBPolicy
     ```
 
 7. Validate the policy application by running the **Get-InformationBarrierPoliciesApplicationStatus** cmdlet.
@@ -132,7 +132,7 @@ In this scenario, we will set up Information Barriers policies that prevent peop
 
 ## Scenario 2: Allow one group to communicate with only one other group
 
-In this scenario, we will set up Information Barriers policies that allows people in one group (we'll call them Products) to communicate with only one other group (we'll call them Research).
+In this example scenario, we will set up Information Barriers policies that allows people in one group (we'll call them Products) to communicate with only one other group (we'll call them Research).
 
 > [!IMPORTANT]
 > Before you begin the following procedure, make sure you have completed the steps in the section, [Prepare your environment for Information Barriers](#prepare-your-environment-for-information-barriers). 
@@ -182,6 +182,8 @@ In this scenario, we will set up Information Barriers policies that allows peopl
 
 
 ## Scenario 3: Prevent one group from communicating with two other groups
+
+In this scenario, 
 
 > [!IMPORTANT]
 > Before you begin the following procedure, make sure you have completed the steps in the section, [Prepare your environment for Information Barriers](#prepare-your-environment-for-information-barriers). 
