@@ -12,6 +12,8 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 38e9b67f-d188-490f-bc91-a1ae4b270441
+ms.collection:
+- M365-security-compliance
 description: "Learn about Office 365 Threat Intelligence and how to get started."
 ---
 

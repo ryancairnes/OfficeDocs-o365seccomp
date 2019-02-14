@@ -12,6 +12,7 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: bdd5372d-775e-4442-9c1b-609627b94b5d
+ms.collection: M365-security-compliance
 description: "Set up Safe Links policies to protect your organization from malicious links in Word, Excel, PowerPoint, and Visio files, as well as in email messages."
 ---
 

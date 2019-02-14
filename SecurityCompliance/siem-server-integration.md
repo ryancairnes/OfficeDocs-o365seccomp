@@ -12,6 +12,7 @@ ms.collection: Ent_O365
 ms.custom: 
  - Ent_Solutions
  - SIEM
+ - M365-security-compliance
 description: "Summary: Read this article to get an overview of SIEM server integration with Microsoft 365."
 ---
 

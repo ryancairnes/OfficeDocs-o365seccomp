@@ -1,5 +1,5 @@
 ---
-title: "Smart and insights in the Office 365 Security &amp; Compliance Center"
+title: "Smart reports and insights in the Office 365 Security & Compliance Center"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
@@ -12,6 +12,7 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: e3e95f68-36e9-4256-bcca-78fe7fe5ea5d
+ms.collection: M365-security-compliance
 description: "Get an overview of reports and insights avialable in the Security &amp; Compliance Center."
 ---
 

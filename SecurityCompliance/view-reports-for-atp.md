@@ -12,6 +12,7 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: e47e838c-d99e-4c0b-b9aa-e66c4fae902f
+ms.collection: M365-security-compliance
 description: "Learn how to find and use reports for Office 365 Advanced Threat Protection in the Security &amp; Compliance Center."
 ---
 

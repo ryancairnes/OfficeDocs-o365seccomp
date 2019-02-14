@@ -12,6 +12,7 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 414fa693-d7b7-4a1d-a387-ebc3b6a52889
+ms.collection: M365-security-compliance
 description: "Integrate Office 365 Advanced Threat Protection with Windows Defender Advanced Threat Protection to see more detailed threat management information."
 ---
 

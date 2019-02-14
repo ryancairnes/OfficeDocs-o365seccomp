@@ -13,6 +13,8 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 6e13311e-92ae-495e-a619-56d770199170
+ms.collection:
+- M365-security-compliance
 description: "The Safe Attachments feature provides time-of-click verification of email attachments. Use Safe Attachments to protect your organization from malicious files people send or receive in email."
 ---
 

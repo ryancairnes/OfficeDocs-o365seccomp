@@ -49,6 +49,8 @@ Need to find if a user viewed a specific document or purged an item from their m
 - User and admin activity in Microsoft Flow
     
 - User and admin activity in Microsoft Stream
+
+- Analyst and admin activity in Microsoft Workplace Analytics
     
    
 ## Before you begin
@@ -558,7 +560,7 @@ The following table lists Azure AD directory and domain related activities that 
    
 ### eDiscovery activities
   
-Content Search and eDiscovery-related activities that are performed in Office 365 Security &amp; Compliance Center or by running the corresponding Windows PowerShell cmdlets are logged in the Office 365 audit log. This includes the following activities:
+Content Search and eDiscovery-related activities that are performed in Office 365 Security & Compliance Center or by running the corresponding Windows PowerShell cmdlets are logged in the Office 365 audit log. This includes the following activities:
   
 - Creating and managing eDiscovery cases
     
@@ -583,7 +585,7 @@ Note that audit logging for Power BI isn't enabled by default. To search for Pow
   
 ### Microsoft Workplace Analytics activities
 
-The following table lists the admin and analyst activities in Microsoft Workplace Analytics that are logged in the Office 365 audit log. Workplace Analytics provides insight into how groups collaborate across your Office 365 organization. For more information, see [Workplace Analytics](https://docs.microsoft.com/en-us/workplace-analytics/index-orig).
+Workplace Analytics provides insight into how groups collaborate across your Office 365 organization. The following table lists activities performed by users that are assigned the Administrator role or the Analyst roles in Workplace Analytics. Users assigned the Analyst role have full access to all service features and use the product to do analysis. Users assigned the Administrator role can configure privacy settings and system defaults, and can prepare, upload, and verify organizational data in Workplace Analytics. For more information, see [Workplace Analytics](https://docs.microsoft.com/en-us/workplace-analytics/index-orig).
 
 |**Friendly name**|**Operation**|**Description**|
 |:-----|:-----|:-----|

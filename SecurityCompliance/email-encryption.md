@@ -12,7 +12,6 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: c0d87cbe-6d65-4c03-88ad-5216ea5564e8
-
 description: "Compare encryption options in Office 365 including Office Message Encryption (OME), S/MIME, Information Rights Management (IRM), and learn about Transport Layer Security (TLS)."
 ---
 

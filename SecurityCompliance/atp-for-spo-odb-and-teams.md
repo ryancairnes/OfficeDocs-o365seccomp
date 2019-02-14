@@ -12,6 +12,8 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 26261670-db33-4c53-b125-af0662c34607
+ms.collection:
+- M365-security-compliance
 description: "Extend Office 365 Advanced Threat Protection to files in SharePoint Online, OneDrive for Business, and Microsoft Teams to enable safer collaboration for your organization."
 ---
 

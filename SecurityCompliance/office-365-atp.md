@@ -12,6 +12,8 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: e100fe7c-f2a1-4b7d-9e08-622330b83653
+ms.collection:
+- M365-security-compliance
 description: "Office 365 Advanced Threat Protection includes spoof intelligence, safe links, safe attachments, advanced anti-phishing capabilities, and threat intelligence."
 ---
 

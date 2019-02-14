@@ -12,6 +12,8 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: da5845db-c578-4a41-b2cb-5a09689a551b
+ms.collection:
+- M365-security-compliance
 description: "As an Office 365 global administrator, you can use Attack Simulator to run realistic attack scenarios in your organization. This can help you identify and find vulnerable users before a real attack hits your business."
 ---
 

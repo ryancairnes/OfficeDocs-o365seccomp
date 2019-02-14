@@ -13,7 +13,6 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 0a322724-08ca-43db-b69a-afbfa20484cd
-
 description: "With Office 365, your content is encrypted at rest and in transit, using the strongest encryption, protocols, and technologies available. Get an overview of encryption in Office 365."
 ---
 

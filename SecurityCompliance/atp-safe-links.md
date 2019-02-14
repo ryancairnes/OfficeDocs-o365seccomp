@@ -10,7 +10,9 @@ f1_keywords:
 - '197503'
 ms.service: o365-administration
 localization_priority: Normal
-ms.collection: Strat_O365_IP
+ms.collection: 
+- Strat_O365_IP
+- M365-security-compliance
 search.appverid:
 - MET150
 - MOE150

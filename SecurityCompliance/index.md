@@ -6,6 +6,7 @@ author: robmazz
 manager: laurawi
 layout: LandingPage
 ms.service: office-365
+ms.collection: M365-security-compliance
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: landing-page
