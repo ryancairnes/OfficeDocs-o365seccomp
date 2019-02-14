@@ -19,10 +19,10 @@ description: "Office 365 Advanced Threat Protection includes spoof intelligence,
 
 # Office 365 Advanced Threat Protection
 
+## Overview of Office 365 Advanced Threat Protection
+
 > [!IMPORTANT]
 > This article is intended for business customers. If you are a home user looking for information about Safe Links in Outlook, see [Advanced Outlook.com security](https://support.office.com/article/advanced-outlook-com-security-for-office-365-subscribers-882d2243-eab9-4545-a58a-b36fee4a46e2).
-
-## Overview of Office 365 Advanced Threat Protection
 
 Office 365 Advanced Threat Protection (ATP) helps to protect your organization from malicious attacks by:
   
@@ -55,8 +55,6 @@ We are continuing to add new features to Office 365, and that includes ATP. Belo
 |Beginning in March 2018, ATP Safe Links protection is extended to apply to email sent between people within an organization. |[Review and edit your ATP Safe Links policies](set-up-atp-safe-links-policies.md) |
 |Beginning in late October 2017, ATP Safe Links protection is extended to apply to URLs in email as well as URLs in Office 365 ProPlus documents, such as Word, Excel, PowerPoint, and Visio on Windows, as well as Office apps on iOS and Android devices.  |Make sure you're using [Modern Authentication for Office](https://docs.microsoft.com/office365/enterprise/modern-auth-for-office-2013-and-2016) |
 
-
-      
 ## Get Office 365 ATP
 
 Office 365 ATP is included in subscriptions, such as [Microsoft 365 Enterprise](https://www.microsoft.com/microsoft-365/enterprise/home), [Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business), Office 365 Enterprise E5, and Office 365 Education A5. If your organization has an Office 365 subscription that does not include Office 365 ATP, you can potentially purchase ATP as an add-on. For more information, see [Office 365 Advanced Threat Protection plans and pricing](https://products.office.com/exchange/advance-threat-protection) and the [Office 365 Advanced Threat Protection Service Description](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description). 
@@ -93,9 +91,9 @@ After your ATP policies are in place, reports are available to show how the serv
 2. Go to **Reports** > **Dashboard**. (To get help with these reports, see [View reports for Advanced Threat Protection](view-reports-for-atp.md).)
     
 3. If needed, make adjustments to your security policies. To get help with this, see the following resources:
-      - [ATP anti-phishing policies in Office 365](set-up-anti-phishing-policies.md)
-      - [ATP Safe Links policies in Office 365](set-up-atp-safe-links-policies.md)
-      - [ATP Safe Attachments policies in Office 365](set-up-atp-safe-attachments-policies.md)
+    - [ATP anti-phishing policies](set-up-anti-phishing-policies.md)
+    - [ATP Safe Links policies](set-up-atp-safe-links-policies.md)
+    - [ATP Safe Attachments policies](set-up-atp-safe-attachments-policies.md)
     
     
 ## Submit a suspicious file to Microsoft for analysis
