@@ -172,14 +172,14 @@ To view this report, in the [Security &amp; Compliance Center](https://protectio
   
 ## What permissions are needed to view these reports?
 
-In order to view and use the reports described in this article, **you must have an appropriate role assigned in both the Security &amp; Compliance Center and the Exchange Admin Center**.
+In order to view and use the reports described in this article, **you must have an appropriate role assigned for both the Security &amp; Compliance Center and the Exchange Admin Center**.
 
 - For the Security &amp; Compliance Center, you must have one of the following roles assigned:
     - Organization Management
-    - Security Administrator
+    - Security Administrator (this can be assigned in the Azure Active Directory admin center ([https://aad.portal.azure.com](https://aad.portal.azure.com))
     - Security Reader
 
-- For Exchange Online, you must have one of the following roles assigned:
+- For Exchange Online, you must have one of the following roles assigned in either the Exchange admin center ([https://outlook.office365.com/ecp](https://outlook.office365.com/ecp)) or with PowerShell cmdlets (See [Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell?view=exchange-ps)):
     - Organization Management
     - View-only Organization Management
     - View-Only Recipients role

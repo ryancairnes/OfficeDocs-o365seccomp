@@ -3,7 +3,7 @@ title: "View reports for Office 365 Advanced Threat Protection"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 01/07/2019
+ms.date: 02/13/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -75,7 +75,6 @@ When you hover over a bar in the chart, you can see what actions were taken for 
 
 In addition to the ATP reports described in this article, several other reports are available, as described in the following table:
 
-
 |Report type  |Learn more  |
 |---------|---------|
 |**Email security reports**, such as a Top Senders and Recipients report, a Spoof Mail report, and a Spam Detections report. | [View email security reports in the Security &amp; Compliance Center](view-email-security-reports.md)        |
@@ -86,14 +85,14 @@ In addition to the ATP reports described in this article, several other reports 
   
 ## What permissions are needed to view the ATP reports?
 
-In order to view and use the reports described in this article, **you must have an appropriate role assigned in both the Security &amp; Compliance Center and the Exchange Admin Center**.
+In order to view and use the reports described in this article, **you must have an appropriate role assigned for both the Security &amp; Compliance Center and the Exchange Admin Center**.
 
 - For the Security &amp; Compliance Center, you must have one of the following roles assigned:
     - Organization Management
-    - Security Administrator
+    - Security Administrator (this can be assigned in the Azure Active Directory admin center ([https://aad.portal.azure.com](https://aad.portal.azure.com))
     - Security Reader
 
-- For Exchange Online, you must have one of the following roles assigned:
+- For Exchange Online, you must have one of the following roles assigned in either the Exchange admin center ([https://outlook.office365.com/ecp](https://outlook.office365.com/ecp)) or with PowerShell cmdlets (See [Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell?view=exchange-ps)):
     - Organization Management
     - View-only Organization Management
     - View-Only Recipients role

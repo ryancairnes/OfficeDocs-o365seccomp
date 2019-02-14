@@ -19,6 +19,9 @@ description: "Office 365 Advanced Threat Protection includes spoof intelligence,
 
 # Office 365 Advanced Threat Protection
 
+> [!IMPORTANT]
+> This article is intended for business customers. If you are a home user looking for information about Safe Links in Outlook, see [Advanced Outlook.com security](https://support.office.com/article/advanced-outlook-com-security-for-office-365-subscribers-882d2243-eab9-4545-a58a-b36fee4a46e2).
+
 ## Overview of Office 365 Advanced Threat Protection
 
 Office 365 Advanced Threat Protection (ATP) helps to protect your organization from malicious attacks by:
