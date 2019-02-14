@@ -6,7 +6,6 @@ manager: laurawi
 ms.date: 02/13/2019
 ms.audience: ITPro
 ms.topic: article
-ROBOTS: NOINDEX, NOFOLLOW
 ms.service: o365-administration
 localization_priority: None
 description: "Use Information Barriers to ensure communication compliance using Microsoft Teams within your organization."
