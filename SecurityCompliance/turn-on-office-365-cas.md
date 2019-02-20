@@ -11,7 +11,7 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: ba919c73-d021-404d-9850-eec57e78678c
-description: "Read this article to learn how to turn on Office 365 Advanced Security Management,  powered by Cloud App Security in Microsoft Azure."
+description: "Read this article to learn how to turn on Office 365 Cloud App Security,  powered by Cloud App Security in Microsoft Azure."
 ---
 
 # Turn on Office 365 Cloud App Security

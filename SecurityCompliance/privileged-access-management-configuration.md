@@ -9,7 +9,9 @@ ms.service: o365-solutions
 localization_priority: Normal
 search.appverid:
 - MET150
-ms.collection: Strat_O365_IP
+ms.collection:
+- Strat_O365_IP
+- M365-security-compliance
 ms.custom: Ent_Solutions
 ms.assetid: 
 description: "Use this topic to learn more about configuring privileged access management in Office 365"

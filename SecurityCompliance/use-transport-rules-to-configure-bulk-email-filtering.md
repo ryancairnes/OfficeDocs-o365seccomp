@@ -3,7 +3,6 @@ title: "Use mail flow rules to configure bulk email filtering in Exchange Online
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.date: 
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -17,21 +16,19 @@ description: "Admins can learn how to use mail flow rules in Exchange Online Pro
 
 # Use mail flow rules to configure bulk email filtering in Exchange Online Protection
 
-You can set company-wide content filters for spam and bulk email using the default spam content-filter policies. Check out [Configure your spam filter policies](configure-your-spam-filter-policies.md) and [Set-HostedContentFilterPolicy](http://technet.microsoft.com/library/f597aa65-baa7-49d0-8832-2a300073f211.aspx) on how to set the content filter policies. 
+You can set company-wide content filters for spam and bulk email using the default spam content-filter policies. Check out [Configure your spam filter policies](configure-your-spam-filter-policies.md) and [Set-HostedContentFilterPolicy](https://docs.microsoft.com/powershell/module/exchange/antispam-antimalware/Set-HostedContentFilterPolicy?view=exchange-ps) on how to set the content filter policies. 
   
 If you want to more options to filter bulk messages, you can create mail flow rules (also known as transport rules) to search for text patterns or phrases frequently found in bulk emails. Any message containing these characteristics will be marked as spam. Using these rules can help reduce the amount of unwanted bulk email your organization receives.
-  
-**Notes**:
 
-- Before creating the mail flow rules documented this topic, we recommend that you first read [What's the difference between junk email and bulk email?](what-s-the-difference-between-junk-email-and-bulk-email.md) and [Bulk Complaint Level values](bulk-complaint-level-values.md). 
+> [!IMPORTANT]
+> Before creating the mail flow rules documented this topic, we recommend that you first read [What's the difference between junk email and bulk email?](what-s-the-difference-between-junk-email-and-bulk-email.md) and [Bulk Complaint Level values](bulk-complaint-level-values.md).<br> 
+> The following procedures mark a message as spam for your entire organization. However, you can add another condition to apply these rules only to specific recipients in your organization. This way, the aggressive bulk email filtering settings can apply to a few users who are highly targeted, while the rest of your users (who mostly get the bulk email they signed up for) aren't impacted. 
   
-- The following procedures mark a message as spam for your entire organization. However, you can add another condition to apply these rules only to specific recipients in your organization. This way, the aggressive bulk email filtering settings can apply to a few users who are highly targeted, while the rest of your users (who mostly get the bulk email they signed up for) aren't impacted. 
-  
-### Create mail flow rule to filter bulk email messages based on text patterns
+## Create a mail flow rule to filter bulk email messages based on text patterns
 
 1. In the Exchange admin center (EAC), go to **Mail flow** \> **Rules**.
     
-2. Click **Add**![Add Icon](media/ITPro-EAC-AddIcon.gif) and then select **Create a new rule**.
+2. Click **Add** ![Add Icon](media/ITPro-EAC-AddIcon.gif) and then select **Create a new rule**.
     
 3. Specify a name for the rule.
     
@@ -39,35 +36,31 @@ If you want to more options to filter bulk messages, you can create mail flow ru
     
 5. In the **specify words or phrases** dialog box, add the following regular expressions commonly found in bulk emails, one at a time, and click **ok** when you're done: 
     
-   - If you are unable to view the content of this email\, please
+   - `If you are unable to view the content of this email\, please`
     
-   - \\>(safe )?unsubscribe( here)?\\</a\\>
+   - `\>(safe )?unsubscribe( here)?\</a\>`
     
-   - If you do not wish to receive further communications like this\, please
+   - `If you do not wish to receive further communications like this\, please`
     
-   - \\<img height\="?1"? width\="?1"? src\=.?http\://
+   - `\<img height\="?1"? width\="?1"? sr\c=.?http\://`
     
-   - To stop receiving these\s+emails\:http\://
+   - `To stop receiving these+emails\:http\://`
     
-   - To unsubscribe from \w+ (e\-?letter|e?-?mail|newsletter)
+   - `To unsubscribe from \w+ (e\-?letter|e?-?mail|newsletter)`
     
-   - no longer (wish )?(to )?(be sent|receive) \w+ email
+   - `no longer (wish )?(to )?(be sent|receive) w+ email`
     
-   - If you are unable to view the content of this email\, please click here
+   - `If you are unable to view the content of this email\, please click here`
     
-   - To ensure you receive (your daily deals|our e-?mails)\, add
+   - `To ensure you receive (your daily deals|our e-?mails)\, add`
     
-   - If you no longer wish to receive these emails
+   - `If you no longer wish to receive these emails`
     
-   - to change your (subscription preferences|preferences or unsubscribe)
+   - `to change your (subscription preferences|preferences or unsubscribe)`
     
-   - click (here to|the) unsubscribe
+   - `click (here to|the) unsubscribe`
     
-   **Notes**:
-
-   - The above list isn't an exhaustive set of regular expressions found in bulk emails; more can be added or removed as needed. However, it's a good starting point.
-    
-   - The search for words or text patterns in the subject or other header fields in the message occurs  *after*  the message has been decoded from the MIME content transfer encoding method that was used to transmit the binary message between SMTP servers in ASCII text. You can't use conditions or exceptions to search for the raw (typically, Base64) encoded values of the subject or other header fields in messages. 
+   The above list isn't an exhaustive set of regular expressions found in bulk emails; more can be added or removed as needed. However, it's a good starting point.<br>The search for words or text patterns in the subject or other header fields in the message occurs  *after*  the message has been decoded from the MIME content transfer encoding method that was used to transmit the binary message between SMTP servers in ASCII text. You can't use conditions or exceptions to search for the raw (typically, Base64) encoded values of the subject or other header fields in messages. 
     
 6. Under **Do the following**, select **Modify the message properties** \> **set the spam confidence level (SCL)**.
     
@@ -75,18 +68,17 @@ If you want to more options to filter bulk messages, you can create mail flow ru
     
    Setting the SCL to 5 or 6 takes the **Spam** action, while setting the SCL to 9 takes the **High confidence spam** action, as configured in the content filter policy. The service will perform the action set in the content filter policy. The default action is to deliver the message to the recipients' Junk Email folder, but different actions can be configured as described in [Configure your spam filter policies](configure-your-spam-filter-policies.md).
     
-   > [!NOTE]
-   > If your configured action is to quarantine the message rather than send it to the recipients' Junk Email folder, the message will be sent to the administrator quarantine as a mail flow rule match, and it will not be available in the end user spam quarantine or via end-user spam notifications. 
+   If your configured action is to quarantine the message rather than send it to the recipients' Junk Email folder, the message will be sent to the administrator quarantine as a mail flow rule match, and it will not be available in the end user spam quarantine or via end-user spam notifications. 
   
    For more information about SCL values in the service, see [Spam confidence levels](spam-confidence-levels.md).
     
 8. Save the rule.
     
-### Create a mail flow rule to filter bulk email messages based on phrases
+## Create a mail flow rule to filter bulk email messages based on phrases
 
 1. In the EAC, go to **Mail flow** \> **Rules**.
     
-2. Click **Add**![Add Icon](media/ITPro-EAC-AddIcon.gif) and then select **Create a new rule**.
+2. Click **Add** ![Add Icon](media/ITPro-EAC-AddIcon.gif) and then select **Create a new rule**.
     
 3. Specify a name for the rule.
     
@@ -94,33 +86,33 @@ If you want to more options to filter bulk messages, you can create mail flow ru
     
 5. In the **specify words or phrases** dialog box, add the following phrases commonly found in bulk emails, one at a time, and click **ok** when you're done: 
     
-   - to change your preferences or unsubscribe
+   - `to change your preferences or unsubscribe`
     
-   - Modify email preferences or unsubscribe
+   - `Modify email preferences or unsubscribe`
     
-   - This is a promotional email
+   - `This is a promotional email`
     
-   - You are receiving this email because you requested a subscription
+   - `You are receiving this email because you requested a subscription`
     
-   - click here to unsubscribe
+   - `click here to unsubscribe`
     
-   - You have received this email because you are subscribed
+   - `You have received this email because you are subscribed`
     
-   - If you no longer wish to receive our email newsletter
+   - `If you no longer wish to receive our email newsletter`
     
-   - to unsubscribe from this newsletter
+   - `to unsubscribe from this newsletter`
     
-   - If you have trouble viewing this email
+   - `If you have trouble viewing this email`
     
-   - This is an advertisement
+   - `This is an advertisement`
     
-   - you would like to unsubscribe or change your
+   - `you would like to unsubscribe or change your`
     
-   - view this email as a webpage
+   - `view this email as a webpage`
     
-   - You are receiving this email because you are subscribed
+   - `You are receiving this email because you are subscribed`
     
-   **Note**: Once again, this list isn't an exhaustive set of phrases found in bulk emails; more can be added or removed as needed. However, it's a good starting point.
+   This list isn't an exhaustive set of phrases found in bulk emails; more can be added or removed as needed. However, it's a good starting point.
     
 6. Under **Do the following**, select **Modify the message properties** \> **set the spam confidence level (SCL)**.
     
@@ -128,8 +120,7 @@ If you want to more options to filter bulk messages, you can create mail flow ru
     
    Setting the SCL to 5 or 6 takes the **Spam** action, while setting the SCL to 9 takes the **High confidence spam** action, as configured in the content filter policy. The service will perform the action set in the content filter policy. The default action is to deliver the message to the recipients' Junk Email folder, but different actions can be configured as described in [Configure your spam filter policies](configure-your-spam-filter-policies.md).
     
-   > [!NOTE]
-   > If your configured action is to quarantine the message rather than send it to the recipients' Junk Email folder, the message will be sent to the administrator quarantine as a mail flow rule match, and it will not be available in the end user spam quarantine or via end-user spam notifications. 
+   If your configured action is to quarantine the message rather than send it to the recipients' Junk Email folder, the message will be sent to the administrator quarantine as a mail flow rule match, and it will not be available in the end user spam quarantine or via end-user spam notifications. 
   
    For more information about SCL values in the service, see [Spam confidence levels](spam-confidence-levels.md).
 

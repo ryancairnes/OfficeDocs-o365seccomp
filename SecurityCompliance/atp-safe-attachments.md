@@ -50,7 +50,7 @@ Next, make sure your ATP Safe Attachments policies are defined. (See [Set up Off
     
 - Users have signed into Office 365 using their work or school account. (See [Sign in to Office or Office 365](https://support.office.com/article/b9582171-fd1f-4284-9846-bdd72bb28426).)
 
-To define (or edit) ATP policies, you must be assigned one of the roles described in the following table:
+To define (or edit) ATP policies, you must be assigned an appropriate role. Some examples are described in the following table:
 
 |Role  |Where/how assigned  |
 |---------|---------|

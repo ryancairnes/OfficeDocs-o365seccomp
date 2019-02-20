@@ -72,8 +72,6 @@ description: "See what released in 2017 for Office 365 Cloud App Security"
 2. Go to **Alerts** \> **Manage advanced alerts**.
     
 3. Choose **Go to Office 365 Cloud App Security**.
-    
-    ![In the Security &amp; Compliance Center, choose Alerts \> Manage advanced alerts \> Go to Advanced Security Management](media/9792b121-9cd4-4faa-a6e0-81cfab4bf2f2.png)
   
 4. Choose **Settings** \> **Security extensions**.
     

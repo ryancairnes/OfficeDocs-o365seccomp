@@ -33,7 +33,7 @@ What to do:
     
 ## Review the prerequisites
 
-- To define (or edit) ATP policies, you must be assigned one of the roles described in the following table: <br>
+- To define (or edit) ATP policies, you must be assigned an appropriate role. Some examples are described in the following table: <br>
 
     |Role  |Where/how assigned  |
     |---------|---------|
@@ -138,5 +138,5 @@ Once your anti-phishing policies are in place, you can see how your threat prote
 - [View reports for Office 365 Advanced Threat Protection](view-reports-for-atp.md) or [View email security reports](view-email-security-reports.md)
 - [Use Explorer (also referred to as Threat Explorer)](use-explorer-in-security-and-compliance.md)
 
-Stay on top of new features coming to ATP. visit the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=O365) and learn about [new features that are being added to ATP](office-365-atp.md#new-features-are-continually-being-added-to-atp).
+Stay on top of new features coming to ATP. visit the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=O365) and learn about [new features that are being added to ATP](office-365-atp.md#new-features-in-office-365-atp).
  

@@ -101,8 +101,7 @@ Be sure to read the following items before you start searching the Office 365 au
     |Advanced Threat Protection and Threat Intelligence  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)| |
     |Azure Active Directory (user login events)  <br/> ||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |
     |Azure Active Directory (admin events)  <br/> ||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png) |
-    |Azure Active Directory (user login events)  <br/> ||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |
-    |Data Loss Prevention  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
+    |Data Loss Prevention  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)       <br/>| |
     |Dynamics 365 CRM <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
     |eDiscovery  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
     |Exchange Online  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> ||

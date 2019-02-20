@@ -10,7 +10,9 @@ ms.service: Office 365 Administration
 localization_priority: None
 search.appverid:
 - MET150
-ms.collection: Strat_O365_Enterprise
+ms.collection:
+- Strat_O365_IP
+- M365-security-compliance
 description: "An explanation of the various aspects of data resiliency within Exchange Online and Office 365."
 ---
 

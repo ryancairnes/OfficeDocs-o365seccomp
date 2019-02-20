@@ -17,8 +17,6 @@ description: "Define activity policies with Office 365 Cloud App Security to set
 
 # Activity policies and alerts in Office 365 Cloud App Security
 
-Office 365 Advanced Security Management is now Office 365 Cloud App Security.
-  
 |****Evaluation** \>**|****Planning** \>**|****Deployment** \>**|****Utilization****|
 |:-----|:-----|:-----|:-----|
 |[Start evaluating](office-365-cas-overview.md) <br/> |[Start planning](get-ready-for-office-365-cas.md) <br/> |You are here!  <br/> [Next step](anomaly-detection-policies-in-ocas.md) <br/> |[Start utilizing](utilization-activities-for-ocas.md) <br/> |

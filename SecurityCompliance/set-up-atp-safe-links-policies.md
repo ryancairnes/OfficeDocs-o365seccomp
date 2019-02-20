@@ -23,7 +23,7 @@ description: "Set up Safe Links policies to protect your organization from malic
 
 [ATP Safe Links](atp-safe-links.md), a feature of [Office 365 Advanced Threat Protection](office-365-atp.md) (ATP), can help protect your organization from malicious links used in phishing and other attacks. If you have the necessary [permissions for the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md), you can set up ATP Safe Links policies to help ensure that when people click web addresses (URLs), your organization is protected. Your ATP Safe Links policies can be configured to scan URLs in email and URLs in Office documents.
   
-[New features are continually being added to ATP](office-365-atp.md#new-features-are-continually-being-added-to-atp). As new features are added, you may need to make adjustments to your existing ATP Safe Links policies.
+[New features are continually being added to ATP](office-365-atp.md#new-features-in-office-365-atp). As new features are added, you may need to make adjustments to your existing ATP Safe Links policies.
 
 ## What to do 
   
@@ -39,7 +39,7 @@ description: "Set up Safe Links policies to protect your organization from malic
 
 - Make sure that your organization has [Office 365 Advanced Threat Protection](office-365-atp.md).
     
-- Make sure that you have the necessary permissions. To define (or edit) ATP policies, you must be assigned one of the roles described in the following table: <br>
+- Make sure that you have the necessary permissions. To define (or edit) ATP policies, you must be assigned an appropriate role. Some examples are described in the following table: <br>
 
     |Role  |Where/how assigned  |
     |---------|---------|
@@ -140,4 +140,4 @@ Once your ATP Safe Links policies are in place, you can see how ATP is working f
 
 - [Use Explorer in the Security &amp; Compliance Center](use-explorer-in-security-and-compliance.md)
 
-Stay on top of new features coming to ATP. visit the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=O365) and learn about [new features that are being added to ATP](office-365-atp.md#new-features-are-continually-being-added-to-atp).
+Stay on top of new features coming to ATP. visit the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=O365) and learn about [new features that are being added to ATP](office-365-atp.md#new-features-in-office-365-atp).

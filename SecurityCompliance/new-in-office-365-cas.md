@@ -17,7 +17,7 @@ description: "See what's new in Office 365 Cloud App Security"
 
 # What is new in Office 365 Cloud App Security
 
-**Summary** Read this article to get a quick overview of updates and new features in Office 365 Cloud App Security (formerly known as Office 365 Advanced Security Management), which is powered by [Microsoft Cloud App Security](https://aka.ms/whatiscas).
+**Summary** Read this article to get a quick overview of updates and new features in Office 365 Cloud App Security, which is powered by [Microsoft Cloud App Security](https://aka.ms/whatiscas).
   
 > [!TIP]
 > This article is updated frequently, as features are added or improved. Office 365 Cloud App Security updates are released approximately two weeks after Microsoft Cloud App Security updates, and not all Microsoft Cloud App Security updates apply to Office 365 Cloud App Security. In addition, new features might take a week or more after their release date to show up in your Office 365 Cloud App Security environment.

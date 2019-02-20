@@ -5,6 +5,7 @@ author: denisebmsft
 manager: laurawi
 ms.audience: ITPro
 ms.topic: overview
+ms.date: 02/15/2019
 ms.service: o365-administration
 localization_priority: Normal
 search.appverid:
@@ -20,7 +21,7 @@ description: "Get started using Office 365 Cloud App Security"
 |:-----|:-----|:-----|:-----|
 |[Start evaluating](office-365-cas-overview.md) <br/> |You are here!  <br/> [Next step](turn-on-office-365-cas.md) <br/> |[Start deploying](turn-on-office-365-cas.md) <br/> |[Start utilizing](utilization-activities-for-ocas.md) <br/> |
    
-As you prepare to turn on and implement Office 365 Cloud App Security (formerly known as Advanced Security Management) for your organization, there are a few things to take into account. Use this article as a guide to plan for Office 365 Cloud App Security.
+As you prepare to turn on and implement Office 365 Cloud App Security for your organization, there are a few things to take into account. Use this article as a guide to plan for Office 365 Cloud App Security.
     
 ## Step 1: Identify and protect your global and security administrator accounts
 
@@ -60,7 +61,18 @@ See the following resources to learn more:
     
 - [Review and take action on Office 365 Cloud App Security alerts](review-office-365-cas-alerts.md)
     
-## Step 5: Learn about your organization's cloud usage
+
+## Step 5: Set up Conditional Access App Control
+
+Set up and enforce controls on your organization's apps, based on certain conditions, such as which users can use what apps, and where. Define user app access and session policies to determine whether sensitive documents can be downloaded and encrypted, block access to certain apps, set up read-only mode for certain apps, and restrict user sessions from non-corporate networks.
+
+See the following resources to learn more:
+
+- [Protect apps with Office 365 Cloud App Security Conditional Access App Control](ocas-conditional-access-app-control.md)
+
+- [Deploy Conditional Access App Control for Office 365 apps](ocas-deploy-conditional-access-app-control.md)
+
+## Step 6: Learn about your organization's cloud usage
 
 As a global administrator, security administrator, or security reader, you can learn about your organization's cloud usage through reports and a Cloud Discovery dashboard (also called Productivity App Discovery). This dashboard shows information about users, apps, web traffic, and risk levels.
   
@@ -76,11 +88,16 @@ To populate reports with the information you need, upload your log files from yo
     
 - [Review app discovery findings in Office 365 Cloud App Security](review-app-discovery-findings-in-ocas.md)
     
-## Step 6: Manage apps that your organization is using to access Office 365
+## Step 7: Manage apps that your organization is using to access Office 365
 
 As a global administrator or security administrator, you can manage apps, such as custom apps or third-party apps, that people in your organization are using on their devices with Office 365. For example, suppose that someone has downloaded a custom app they want to use with Office 365. You can review the apps people are using, ban untrusted apps, or mark apps as approved for your tracking purposes. [Manage OAuth apps using Office 365 Cloud App Security](manage-app-permissions-in-ocas.md).
   
-## Step 7: Use your SIEM server with Office 365 Cloud App Security
+## Step 8: Create a maintenance plan
+
+After you have set up and configured Office 365 Cloud App Security, you'll want to perform certain utilization tasks as an Office 365 global administrator or security administrator for your organization.
+By performing these tasks, you'll help ensure that Office 365 Cloud App Security is configured correctly, your policies are up to date, and your organization realizes value from Office 365. Use this article as a guide to help you plan for these tasks. See [Utilization activities after rolling out Office 365 Cloud App Security](utilization-activities-for-ocas.md).
+
+## (Optional) Step 9: Use your SIEM server with Office 365 Cloud App Security
 
 Is your organization using a security information and event management (SIEM) server? Office 365 Cloud App Security can now integrate with your SIEM server to enable centralized monitoring of alerts. Integrating with a SIEM service allows you to better protect your cloud applications while maintaining your usual security workflow, automating security procedures and correlating between cloud-based and on-premises events. The SIEM agent runs on your server, pulls alerts from Office 365 Cloud App Security, and streams those alerts into your SIEM server. See [SIEM integration with Office 365 Cloud App Security](integrate-your-siem-server-with-office-365-cas.md).
   

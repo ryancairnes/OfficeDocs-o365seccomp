@@ -20,7 +20,7 @@ description: "Learn how to turn on ATP for SharePoint, OneDrive, and Teams, incl
 
 [Office 365 ATP for SharePoint, OneDrive, and Microsoft Teams](atp-for-spo-odb-and-teams.md) protects your organization from inadvertently sharing malicious files. When a malicious file is detected, that file is blocked so that no one can open, copy, move, or share it until further actions are taken by the organization's security team. Read this article to turn on ATP for SharePoint, OneDrive, and Teams, set up alerts to be notified about detected files, and take your next steps. 
   
-To define (or edit) ATP policies, you must be assigned one of the roles described in the following table:
+To define (or edit) ATP policies, you must be assigned an appropriate role. Some examples are described in the following table:
 
 |Role  |Where/how assigned  |
 |---------|---------|

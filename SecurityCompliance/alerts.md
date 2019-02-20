@@ -17,7 +17,7 @@ description: "Find out about alerts you can set to help with security in Office 
 
 # Alerts in the Office 365 Security &amp; Compliance Center
 
-Use the alerts features in the Office 365 Security &amp; Compliance Center to view and manage alerts for your Office 365 organization, including managing advanced alerts as part of [Advanced Security Management alerts](office-365-cas-overview.md).
+Use the alerts features in the Office 365 Security &amp; Compliance Center to view and manage alerts for your Office 365 organization, including managing advanced alerts as part of [Office 365 Cloud App Security alerts](office-365-cas-overview.md).
   
 ## How to get to the Office 365 alerts features
 
@@ -48,6 +48,6 @@ The following table describes the tools that are available under **Alerts** in t
 |**Tool**|**Description**|
 |:-----|:-----|
 |[Manage alerts](create-activity-alerts.md) <br/> |Use activity alerts to send email notifications to yourself or other administrators when users perform specific activities in Office 365. Activity alerts are similar to searching the Office 365 audit log for events, except that you'll be sent an email message when an event that you've created an alert for occurs.  <br/> |
-|[Manage advanced alerts ](office-365-cas-overview.md) <br/> |Use the **Manage advanced alerts** feature of Advanced Security Management to set up policies that can alert you to suspicious and anomalous activity in Office 365. After you're alerted, you can investigate situations that are potentially problematic and, if needed, take action to address security issues.  <br/> |
+|[Manage advanced alerts ](office-365-cas-overview.md) <br/> |Use the **Manage advanced alerts** feature of Office 365 Cloud App Security to set up policies that can alert you to suspicious and anomalous activity in Office 365. After you're alerted, you can investigate situations that are potentially problematic and, if needed, take action to address security issues.  <br/> |
    
 

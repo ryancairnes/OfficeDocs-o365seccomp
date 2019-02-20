@@ -10,7 +10,9 @@ ms.service: Office 365 Administration
 localization_priority: None
 search.appverid:
 - MET150
-ms.collection: Strat_O365_Enterprise
+ms.collection:
+- Strat_O365_IP
+- M365-security-compliance
 description: "An overview of the eDiscovery feature, and other search features within Office 365 for audit use and transparency."
 ---
 

@@ -3,7 +3,7 @@ title: "Anomaly detection policies in Office 365 Cloud App Security"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 01/28/2019
+ms.date: 02/15/2019
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -17,11 +17,9 @@ description: "Anomaly detection policies in Office 365 Cloud App Security use bu
 
 # Anomaly detection policies in Office 365 Cloud App Security
 
-Office 365 Advanced Security Management is now Office 365 Cloud App Security.
-  
 |****Evaluation** \>**|****Planning** \>**|****Deployment** \>**|****Utilization****|
 |:-----|:-----|:-----|:-----|
-|[Start evaluating](office-365-cas-overview.md) <br/> |[Start planning](get-ready-for-office-365-cas.md) <br/> |You are here!  <br/> [Next step](integrate-your-siem-server-with-office-365-cas.md) <br/> |[Start utilizing](utilization-activities-for-ocas.md) <br/> |
+|[Start evaluating](office-365-cas-overview.md) <br/> |[Start planning](get-ready-for-office-365-cas.md) <br/> |You are here!  <br/> [Next step](ocas-conditional-access-app-control.md) <br/> |[Start utilizing](utilization-activities-for-ocas.md) <br/> |
    
 Beginning with [Microsoft Cloud App Security release 116](new-in-office-365-cas-2018.md#office-365-cloud-app-security-release-116), Office 365 Cloud App Security includes several predefined anomaly detection policies ("out of the box") that include user and entity behavioral analytics (UEBA) and machine learning (ML).
   
@@ -95,10 +93,13 @@ An alert on multiple failed logins might indeed be suspicious, and can indicate 
   
 ## Next steps
 
+- [Deploy Conditional Access App Control for Office 365 apps](ocas-deploy-conditional-access-app-control.md)
+
+- [Group your IP addresses to simplify management](group-your-ip-addresses-in-ocas.md)
+
 - [Integrate your SIEM server](integrate-your-siem-server-with-office-365-cas.md)
     
 - [Review and take action on alerts](review-office-365-cas-alerts.md)
     
-- [Group your IP addresses to simplify management](group-your-ip-addresses-in-ocas.md)
     
 

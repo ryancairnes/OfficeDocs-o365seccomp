@@ -10,7 +10,10 @@ ms.service: Office 365 Administration
 localization_priority: None
 search.appverid:
 - MET150
-ms.collection: Strat_O365_Enterprise
+ms.collection:
+- Strat_O365_IP
+- M365-security-compliance
+- M365-analytics
 description: "An overview of auditing and reporting features within Office 365, as well as Service Assurance."
 ---
 
@@ -23,7 +26,7 @@ Microsoft cloud services includes several auditing and reporting features that c
 The [Office 365 Security & Compliance Center](https://support.office.com/article/Go-to-the-Office-365-Security-Compliance-Center-7e696a40-b86b-4a20-afcc-559218b7b1b8) is a one-stop portal for protecting your data in Office 365, and it includes many auditing and reporting features. It is an evolution of the Office 365 Compliance Center. The Security & Compliance Center is designed for organizations that have data protection or compliance needs, or that want to audit user and administrator activity. You can use the Security & Compliance Center to manage compliance for all of your organization's Office 365 data. You can access the Security & Compliance Center at [http://protection.office.com](http://protection.office.com/) using your Office 365 admin account.
 
 The Security & Compliance Center includes navigation panes that provide you with access to several features:
-- **Alerts** - Enables you to manage alerts, view security-related alerts, and manage advanced alerts using [Advanced Security Management](https://support.office.com/article/overview-of-office-365-cloud-app-security-81f0ee9a-9645-45ab-ba56-de9cbccab475). 
+- **Alerts** - Enables you to manage alerts, view security-related alerts, and manage advanced alerts using [Office 365 Cloud App Security](https://docs.microsoft.com/en-us/Office365/SecurityCompliance/office-365-cas-overview). 
 - **Permissions** - Enables you to [assign permissions](https://support.office.com/article/Give-users-access-to-the-Office-365-Security-Compliance-Center-2cfce2c8-20c5-47f9-afc4-24b059c1bd76) such as Compliance Administrator, eDiscovery Manager, and others to people in your organization so that they can perform tasks in the Security & Compliance Center. You can assign permissions for most features in the Security & Compliance Center, but other permissions must be configured using the Exchange admin center and SharePoint admin center.
 - **Threat management** - Enables you to create and apply device management policies using [Office 365 Mobile Device Management](https://support.office.com/article/Overview-of-Mobile-Device-Management-for-Office-365-faa7d8e5-645d-4d59-839c-c8d4c1869e4a), to set up [Data Loss Prevention](https://support.office.com/article/Overview-of-data-loss-prevention-policies-1966b2a7-d1e2-4d92-ab61-42efbb137f5e) (DLP) policies for your organization, to configure email filtering, anti-malware, DomainKeys Identified Mail (DKIM), safe attachments, safe links, and OAuth apps.
 - **Data governance** - Enables you to [import email or SharePoint data from other systems into Office 365](https://support.office.com/article/Import-PST-files-or-SharePoint-data-to-Office-365-ba688e0a-0fcb-4bd7-8e57-2b669564ea84), [configure archive mailboxes](https://support.office.com/article/Enable-archive-mailboxes-in-the-Office-365-Security-Compliance-Center-268a109e-7843-405b-bb3d-b9393b2342ce), and set [retention policies](https://support.office.com/article/Retention-in-the-Office-365-Security-Compliance-Center-2a0fc432-f18c-45aa-a539-30ab035c608c) for email and other content within your organization.
