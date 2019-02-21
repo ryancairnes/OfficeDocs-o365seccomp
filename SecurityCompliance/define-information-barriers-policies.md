@@ -135,21 +135,15 @@ In this example scenario, we will set up an Information Barriers policy that all
 
 3. Define an Information Barriers policy that allows the Products group to communicate with only the Research group in Microsoft Teams. Do this by running the following PowerShell cmdlet in the Office 365 Security & Compliance Center: 
 
-    ```
-    New-InformationBarrierPolicy -Name "ProductsResearchIBPolicy" -AssigneeFilterName "Products" -AssigneeFilter $productsFilter -CommunicationAllowedFilterName "Research" -CommunicationAllowedFilter $researchFilter
-    ```
+    `New-InformationBarrierPolicy -Name "ProductsResearchIBPolicy" -AssigneeFilterName "Products" -AssigneeFilter $productsFilter -CommunicationAllowedFilterName "Research" -CommunicationAllowedFilter $researchFilter`
 
 4. Start the policy application by running the **Start-InformationBarrierPoliciesApplication**  cmdlet in the Office 365 Security & Compliance Center:
 
-    ```
-    Start-InformationBarrierPoliciesApplication -ProductsResearchIBPolicy
-    ```
+    `Start-InformationBarrierPoliciesApplication -ProductsResearchIBPolicy`
 
 5. Validate the policy application by running the **Get-InformationBarrierPoliciesApplicationStatus** cmdlet in the Office 365 Security & Compliance Center:
 
-    ```
-    Get-InformationBarrierPoliciesApplicationStatus -ProductsResearchIBPolicy
-    ```
+    `Get-InformationBarrierPoliciesApplicationStatus -ProductsResearchIBPolicy`
 
 6. After you have defined your Information Barriers policy, **wait at least 24 hours for the policy to work its way through your data center and services**. Then, validate the Information Barriers status for a specific user by running the **Get-InformationBarrierRecipientStatus** cmdlet in the Office 365 Security & Compliance Center:
 
