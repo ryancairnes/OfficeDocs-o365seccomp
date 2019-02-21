@@ -67,7 +67,6 @@ Currently, Information Barriers policies are defined and managed in Office 365 b
 - Information Protection & Compliance
 
 
-
 To define or edit Information Barriers policies, you must be assigned one of the following roles:
 
 - Microsoft 365 Enterprise Global Administrator
