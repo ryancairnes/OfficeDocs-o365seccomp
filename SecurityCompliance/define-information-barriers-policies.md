@@ -209,6 +209,4 @@ To do that, follow these steps:
 
 [Get an overview of Information Barriers](information-barriers.md)
 
-[View, edit, or remove Information Barriers in Microsoft Teams](view-edit-remove-information-barriers-policies.md)
-
-[Learn more about the user experience of Information Barriers in Microsoft Teams](https://docs.microsoft.com/SkypeForBusiness/MicrosoftTeams/information-barriers-in-teams)
+[Learn more Information Barriers in Microsoft Teams](https://docs.microsoft.com/SkypeForBusiness/MicrosoftTeams/information-barriers-in-teams)
