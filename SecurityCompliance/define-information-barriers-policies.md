@@ -47,7 +47,9 @@ Then, follow these steps:
 2. In the Office 365 Security & Compliance Center PowerShell window, run the following PowerShell cmdlets, one at a time:<br>
 
     `Login-AzureRmAccount`  
+
     `$appId="__TODO__"` 
+
     `New-AzureRmADServicePrincipal -ApplicationId $appId` 
 
 3. When prompted, sign in using your work or school account for Office 365.
@@ -190,9 +192,7 @@ In this scenario, we will set up an Information Barriers policy that prevents pe
 
 6. After you have defined your Information Barriers policy, **wait at least 24 hours for the policy to work its way through your data center and services**. Then, validate the Information Barriers status for a specific user by running the **Get-InformationBarrierRecipientStatus** cmdlet in the Office 365 Security & Compliance Center:
 
-    ```
-    Get-InformationBarrierRecipientStatus [-Identity] <RecipientIdParameter> [<CommonParameters>]
-    ```
+    `Get-InformationBarrierRecipientStatus`
 
 > [!TIP]
 > We recommend testing with a few users who are included in Information Barriers policies, as well as with a few users who are not included in those policies.
