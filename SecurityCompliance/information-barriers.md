@@ -7,6 +7,8 @@ ms.date: 02/13/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
+ms.collection:
+- M365-security-compliance
 localization_priority: None
 description: "Use Information Barriers to ensure communication compliance using Microsoft Teams within your organization."
 ---

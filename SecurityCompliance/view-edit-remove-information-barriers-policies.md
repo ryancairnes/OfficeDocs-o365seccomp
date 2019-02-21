@@ -3,10 +3,11 @@ title: "View, edit, or remove Information Barriers policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 02/13/2019
+ms.date: 02/21/2019
 ms.audience: ITPro
 ms.topic: article
-ROBOTS: NOINDEX, NOFOLLOW
+ms.collection:
+- M365-security-compliance
 ms.service: o365-administration
 localization_priority: None
 description: "Using PowerShell, you can define policies for Information Barriers in Microsoft Teams."
