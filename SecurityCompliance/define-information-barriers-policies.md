@@ -147,9 +147,7 @@ In this example scenario, we will set up an Information Barriers policy that all
 
 6. After you have defined your Information Barriers policy, **wait at least 24 hours for the policy to work its way through your data center and services**. Then, validate the Information Barriers status for a specific user by running the **Get-InformationBarrierRecipientStatus** cmdlet in the Office 365 Security & Compliance Center:
 
-    ```
-    Get-InformationBarrierRecipientStatus [-Identity] <RecipientIdParameter> [<CommonParameters>]
-    ```
+    `Get-InformationBarrierRecipientStatus`
 
 > [!TIP]
 > We recommend testing with a few users who are included in Information Barriers policies, as well as with a few users who are not included in those policies.
@@ -162,25 +160,21 @@ In this scenario, we will set up an Information Barriers policy that prevents pe
 > [!IMPORTANT]
 > Before you begin the following procedure, make sure you have completed the steps in the section, [Prepare your environment for Information Barriers](#prepare-your-environment-for-information-barriers). 
 
-1. As a global administrator or compliance administrator, define three groups by running the following PowerShell cmdlets in Exchange Online:
+1. As a global administrator or compliance administrator, define three groups by running the following PowerShell cmdlets in Exchange Online. Run these cmdlets one a time:
 
-    ```
-    $investorsGroup = Get-DistributionGroup -Identity Investors | select DistinguishedName
+    `$investorsGroup = Get-DistributionGroup -Identity Investors | select DistinguishedName`
     
-    $researchGroup = Get-DistributionGroup -Identity Research | select DistinguishedName
+    `$researchGroup = Get-DistributionGroup -Identity Research | select DistinguishedName`
 
-    $salesGroup = Get-DistributionGroup -Identity Sales | select DistinguishedName 
-    ```
+    `$salesGroup = Get-DistributionGroup -Identity Sales | select DistinguishedName`
 
-2. Define filter variables for the Investors, Research, and Sales groups by running the following PowerShell cmdlets in the Office 365 Security & Compliance Center:
+2. Define filter variables for the Investors, Research, and Sales groups by running the following PowerShell cmdlets in the Office 365 Security & Compliance Center. Run these cmdlets one a time:
 
-    ```
-    $investorsFilter = "(MemberOfGroup -eq $investorsGroup)"
+    `$investorsFilter = "(MemberOfGroup -eq $investorsGroup)"`
 
-    $researchFilter = "(MemberOfGroup -ne $researchGroup)"
+    `$researchFilter = "(MemberOfGroup -ne $researchGroup)"`
     
-    $salesFilter = "(MemberOfGroup -ne $salesGroup"
-    ``` 
+    `$salesFilter = "(MemberOfGroup -ne $salesGroup"` 
 
 3. Define an Information Barriers policy that allows the Products group to communicate with only the Research group in Microsoft Teams. Do this by running the following PowerShell cmdlet in the Office 365 Security & Compliance Center: 
 
