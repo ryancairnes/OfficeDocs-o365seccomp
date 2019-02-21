@@ -29,7 +29,11 @@ Information Barriers help limit communications in Microsoft Teams between specif
 
 - A research team can only call or chat online with a product development team
 
-For all of these example scenarios, Information Barriers policies can be defined to prevent people from calling or chatting with those they shouldn't be communicating with in Microsoft Teams. Once Information Barriers policies are in place, when users who are covered by those policies attempt to communicate with others in Microsoft Teams, checks are in place to prevent unauthorized communication. Examples of activities that would be checked include:
+For all of these example scenarios, Information Barriers policies can be defined to prevent people from calling or chatting with those they shouldn't be communicating with in Microsoft Teams. Once Information Barriers policies are in place, when users who are covered by those policies attempt to communicate with others in Microsoft Teams, checks are in place to prevent unauthorized communication. 
+
+Information Barriers policies determine and prevent the following kinds of unauthorized communications:
+
+- Searching for user
 
 - Adding a member to a team
 
@@ -57,6 +61,12 @@ Currently, Information Barriers policies are defined and managed in Office 365 b
 - Microsoft 365 Enterprise E5
 
 - Office 365 Enterprise E5
+
+- Advanced Compliance
+
+- Information Protection & Compliance
+
+
 
 To define or edit Information Barriers policies, you must be assigned one of the following roles:
 
