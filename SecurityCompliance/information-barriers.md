@@ -29,7 +29,7 @@ Information Barriers help limit communications in Microsoft Teams between specif
 
 - A research team can only call or chat online with a product development team
 
-For all of these example scenarios, Information Barriers policies can be defined to prevent people from calling or chatting with those they shouldn't be communicating with in Microsoft Teams. Once Information Barriers policies are in place, certain user activities in Microsoft Teams trigger checks against those policies to prevent unauthorized communication. These activities include:
+For all of these example scenarios, Information Barriers policies can be defined to prevent people from calling or chatting with those they shouldn't be communicating with in Microsoft Teams. Once Information Barriers policies are in place, when users who are covered by those policies attempt to communicate with others in Microsoft Teams, checks are in place to prevent unauthorized communication. Examples of activities that would be checked include:
 
 - Adding a member to a team
 
