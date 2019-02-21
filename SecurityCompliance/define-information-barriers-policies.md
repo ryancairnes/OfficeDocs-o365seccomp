@@ -197,6 +197,14 @@ In this scenario, we will set up an Information Barriers policy that prevents pe
 > [!TIP]
 > We recommend testing with a few users who are included in Information Barriers policies, as well as with a few users who are not included in those policies.
 
+## What if something goes wrong?
+
+If you make a mistake with an Information Barriers policy, or find that it's not working as expected, you can edit or remove the policy. 
+
+To do that, follow these steps:
+
+1. 
+
 ## Related articles
 
 [Get an overview of Information Barriers](information-barriers.md)
