@@ -14,7 +14,6 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: 712cfcc1-31e8-4e51-8561-b64258a8f1e5
-
 description: "If a user continuously sends email messages from Office 365 that is classified as spam, they will be blocked from sending any more messages."
 ---
 
@@ -49,7 +48,7 @@ You complete this task in the Office 365 Security & Compliance Center (SCC). [Go
 3. Click **Yes** to confirm the change. 
     
 > [!NOTE]
-> There's a limit to the number of times that an account can be unblocked by the tenant admin. If the limit for a user has been exceeded, an error message appears. You will then need to contact Support to unblock the user.</br></br> It may take up to 1 hour before the user is unblocked.
+> There's a limit to the number of times that an account can be unblocked by the tenant admin. If the limit for a user has been exceeded, an error message appears. You will then need to contact Support to unblock the user.<br/><br/> It may take up to 1 hour before the user is unblocked.
   
 ## Third-party block lists
 

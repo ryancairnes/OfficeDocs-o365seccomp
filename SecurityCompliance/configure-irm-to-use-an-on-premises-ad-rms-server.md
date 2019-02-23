@@ -1,7 +1,7 @@
 ---
 title: "Configure IRM to use an on-premises AD RMS server"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.date: 12/13/2017
 ms.audience: End User
@@ -12,6 +12,8 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: 3ecde857-4b7c-451d-b4aa-9eeffc8a8c61
+ms.collection:
+- M365-security-compliance
 description: "This topic shows you how to configure IRM to use an AD RMS server."
 ---
 
@@ -94,7 +96,7 @@ To verify that you have successfully imported the TPD, run the **Get-RMSTrustedP
   
 ### Step 3: Use the Exchange Management Shell to distribute an AD RMS rights policy template
 
-After you import the TPD, you must make sure an AD RMS rights policy template is distributed. A distributed template is visible to Outlook Web App users, who can then apply the templates to an email message.
+After you import the TPD, you must make sure an AD RMS rights policy template is distributed. A distributed template is visible to Outlook on the web (formerly known as Outlook Web App) users, who can then apply the templates to an email message.
   
 To return a list of all templates contained in the default TPD, run the following command:
   
@@ -102,7 +104,7 @@ To return a list of all templates contained in the default TPD, run the followin
 Get-RMSTemplate -Type All | fl
 ```
 
-If the value of the  _Type_ parameter is  `Archived`, the template isn't visible to users. Only distributed templates in the default TPD are available in Outlook Web App.
+If the value of the  _Type_ parameter is  `Archived`, the template isn't visible to users. Only distributed templates in the default TPD are available in Outlook on the web.
   
 To distribute a template, run the following command:
   
@@ -160,6 +162,6 @@ To verify that you have successfully imported the TPD and enabled IRM, do the fo
   
 - Use the **Test-IRMConfiguration** cmdlet to test IRM functionality. For details, see "Example 1" in [Test-IRMConfiguration](http://technet.microsoft.com/library/a730e7ff-a67f-4360-b5ff-70d171bb5e1d.aspx).
     
-- Compose a new message in Outlook Web App and IRM-protect it by selecting **Set permissions** option from the extended menu ( ![More Options Icon](media/ITPro-EAC-MoreOptionsIcon.gif)).
+- Compose a new message in Outlook on the web and IRM-protect it by selecting **Set permissions** option from the extended menu ( ![More Options Icon](media/ITPro-EAC-MoreOptionsIcon.gif)).
     
 

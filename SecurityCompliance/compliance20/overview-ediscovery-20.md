@@ -6,7 +6,7 @@ manager: laurawi
 ms.date: 
 ms.audience: Admin
 ms.topic: article
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Normal
 ms.collection: 
 search.appverid: 

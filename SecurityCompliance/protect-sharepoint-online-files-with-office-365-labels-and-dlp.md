@@ -6,7 +6,7 @@ manager: laurawi
 ms.date: 12/12/2018
 ms.audience: ITPro
 ms.topic: article
-ms.service: o365-solutions
+ms.service: O365-seccomp
 localization_priority: Priority
 search.appverid:
 - MET150

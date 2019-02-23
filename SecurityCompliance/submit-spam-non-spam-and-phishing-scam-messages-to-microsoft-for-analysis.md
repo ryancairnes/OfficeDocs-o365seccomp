@@ -12,7 +12,6 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: dad30e2f-93fe-4d21-9a36-21c87ced85c1
-
 description: "You and your users can submit false negative and false positive spam messages to Microsoft for analysis. "
 ---
 
@@ -65,11 +64,11 @@ Administrators can review more spam setting information that applies to a whole 
   
 You can submit non-spam messages in the following ways:
   
-- If you use the **Move message to Junk Email folder** action when you configure your content filters (this is the default action), users can release false positive messages in their Outlook or OWA Junk Email folder. 
+- If you use the **Move message to Junk Email folder** action when you configure your content filters (this is the default action), users can release false positive messages in their Outlook or Outlook on the web (formerly known as Outlook Web App) Junk Email folder. 
     
   - Outlook users can release false positive messages by using the **Not Junk** right-click menu option. However, they must submit the message to Microsoft through email, as shown in the procedure in this article. 
     
-  - OWA users can release false positive messages and submit them to Microsoft for analysis using the **Mark as not junk** action. For more information about how to do this, see [Report junk email and phishing scams in Outlook on the web ](report-junk-email-and-phishing-scams-in-outlook-on-the-web-eop.md).
+  - Outlook on the web users can release false positive messages and submit them to Microsoft for analysis using the **Mark as not junk** action. For more information about how to do this, see [Report junk email and phishing scams in Outlook on the web ](report-junk-email-and-phishing-scams-in-outlook-on-the-web-eop.md).
     
 - If you use the **Quarantine message** action instead of the **Move message to Junk Email folder** action when you configure your content filters: 
     

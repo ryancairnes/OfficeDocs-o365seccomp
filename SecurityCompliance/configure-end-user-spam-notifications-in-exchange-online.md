@@ -1,7 +1,7 @@
 ---
 title: "Configure end-user spam notifications in Exchange Online"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.audience: ITPro
 ms.topic: article
@@ -11,6 +11,8 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: bfc91c73-a955-40e1-a95f-ad466624339a
+ms.collection:
+- M365-security-compliance
 description: "You can configure end-user spam notifications for the default company-wide spam filter policy or for custom spam filter policies that are applied to domains."
 ---
 

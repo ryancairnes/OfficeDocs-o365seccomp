@@ -146,7 +146,7 @@
 #### [Configure IRM to use an on-premises AD RMS server](configure-irm-to-use-an-on-premises-ad-rms-server.md)
 ### [S/MIME](s-mime-for-message-signing-and-encryption.md)
 #### [S/MIME for message signing and encryption](s-mime-for-message-signing-and-encryption.md)
-#### [Configure S/MIME settings for Outlook Web App](configure-s-mime-settings-for-outlook-web-app.md)
+#### [Configure S/MIME settings for Outlook on the web](configure-s-mime-settings-for-outlook-web-app.md)
 #### [Send and receive S/MIME signed and encrypted email](send-and-receive-s-mime-signed-and-encrypted-email.md)
 #### [Sync user certificates to Office 365 for S/MIME](sync-user-certificates-to-office-365-for-s-mime.md)
 #### [Set up virtual certificate collection to validate S/MIME](set-up-virtual-certificate-collection-to-validate-s-mime.md)
@@ -282,7 +282,7 @@
 
 ### [Manage holds](compliance20/managing-holds.md)
 
-### [Fix processing errors](compliance20/processing-data-for-case.md)
+### [Work with processing errors](compliance20/processing-data-for-case.md)
 #### [Advanced indexing of custodian data](compliance20/indexing-custodian-data.md)
 #### [Error remediation when processing data](compliance20/error-remediation.md)
 
@@ -474,7 +474,7 @@
 ### [Office 365 Technology Controls](office-365-technology-controls.md)
 ### [Yammer Enterprise Access Controls](office-365-yammer-enterprise-access-controls.md)
 ## [Defending against denial-of-service attacks in Office 365](office-365-defending-against-denial-of-service-attacks-overview.md)
-### [Microsoft's Denial-of-Services Defense Strategy](office-365-microsoft-dos-defense-strategy.md)
+### [Microsoft's Denial-of-Services Defense Strategy](office-365-microsoft-dos-defense-strategy.md)
 ### [Core Principles of Defense Against Denial-of-Service Attacks](office-365-core-principles-of-defense-against-dos-attacks.md)
 ## [Auditing and Reporting in Office 365](office-365-auditing-and-reporting-overview.md)
 ### [Office 365 Reporting Features](office-365-reporting-features.md)

@@ -1,7 +1,7 @@
 ---
 title: "Configure the connection filter policy"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.date: 10/24/2018
 ms.audience: ITPro
@@ -12,7 +12,8 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: 6ae78c12-7bbe-44fa-ab13-c3768387d0e3
-
+ms.collection:
+- M365-security-compliance
 description: "To make sure that email sent from people you trust isn't blocked, you can use the connection filter policy to create an Allow list, also known as a safe sender list, of IP addresses that you trust. You can also create a blocked senders list."
 ---
 

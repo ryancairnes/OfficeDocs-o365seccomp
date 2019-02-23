@@ -6,12 +6,14 @@ manager: laurawi
 ms.date: 7/2/2018
 ms.audience: Admin
 ms.topic: article
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Priority
 search.appverid: 
 - MOE150
 - MET150
 ms.assetid: da21c0b6-e8f0-4cc8-af2e-5029a9433d59
+ms.collection:
+- M365-security-compliance
 description: "Tips to set up the Office 365 spam filter to help block email spam and prevent false negative messages, An Admin uses Office 365 anti-spam filtering to help prevent spam from being sent to user inboxes."
 ---
 
@@ -29,7 +31,7 @@ An Admin can use several Office 365 spam filter settings to help prevent email s
 
 Customize your Office 365 spam filter by adding the sender IP address to the connection filter IP block list:
   
-1. Obtain the headers for the message you want to block in your mail client such as Outlook or Outlook Web App, as described in [Message Header Analyzer](https://go.microsoft.com/fwlink/p/?LinkId=306583).
+1. Obtain the headers for the message you want to block in your mail client such as Outlook or Outlook on the web (formerly known as Outlook Web App), as described in [Message Header Analyzer](https://go.microsoft.com/fwlink/p/?LinkId=306583).
     
 2. Search for the IP address following the CIP tag in the X-Forefront-Antispam-Report header using the [message header analyzer](https://testconnectivity.microsoft.com/?tabid=mha) or manually. 
     
@@ -53,9 +55,9 @@ For more spam settings that apply to the whole organization, take a look at [Pre
   
 ## Email users can also help ensure that false negative and email spam is blocked with Office 365 spam filter
 
-It will help your Office 365 anti-spam efforts to prevent false negatives and junk mail if you tell your users to add the spam sender address to their blocked sender list in [Outlook](https://go.microsoft.com/fwlink/p/?LinkId=270065) or [Outlook Web App](https://go.microsoft.com/fwlink/p/?LinkId=294862). In Outlook Web App, get started by clicking **Settings** \> **Options** \> **Block or allow**, and then adding the address to the **Blocked senders** list, as shown here. 
+It will help your Office 365 anti-spam efforts to prevent false negatives and junk mail if you tell your users to add the spam sender address to their blocked sender list in [Outlook](https://go.microsoft.com/fwlink/p/?LinkId=270065) or [Outlook on the web](https://go.microsoft.com/fwlink/p/?LinkId=294862). In Outlook on the web, get started by clicking **Settings** \> **Options** \> **Block or allow**, and then adding the address to the **Blocked senders** list, as shown here. 
   
-![Blocking a sender in Outlook Web App](media/fdf51381-2527-4819-ac2a-5dff84d2a36d.png)
+![Blocking a sender in Outlook on the web](media/fdf51381-2527-4819-ac2a-5dff84d2a36d.png)
   
 > [!NOTE]
 > For more detailed information about safe sender lists, see [Safe Sender and Blocked Sender Lists FAQ](https://technet.microsoft.com/en-us/library/dn133608%28v=exchg.150%29.aspx). 

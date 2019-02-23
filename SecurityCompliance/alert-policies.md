@@ -3,10 +3,9 @@ title: "Alert policies in the Office 365 Security &amp; Compliance Center"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 
 ms.audience: Admin
 ms.topic: overview
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Normal
 ms.collection: Strat_O365_IP
 search.appverid:
@@ -96,7 +95,7 @@ The table also indicates the Office 365 Enterprise and Office 365 US Government 
   
 |**Default alert policy**|**Description**|**Category**|**Office 365 Enterprise subscription**|
 |:-----|:-----|:-----|:-----|
-|**Creation of forwarding/redirect rule** <br/> |Generates an alert when someone in your organization creates an inbox rule for their mailbox that forwards or redirects messages to another email account. This policy only tracks inbox rules that are created using Outlook Web App or Exchange Online PowerShell. This policy has a **Low** severity setting. For more information using inbox rules to forward and redirect email in Outlook Web App, see [Use rules in Outlook Web App to automatically forward messages to another account](https://support.office.com/article/1433e3a0-7fb0-4999-b536-50e05cb67fed).  <br/> |Threat management <br/> |E1/G1, E3/G3, or E5/G5  <br/> |
+|**Creation of forwarding/redirect rule** <br/> |Generates an alert when someone in your organization creates an inbox rule for their mailbox that forwards or redirects messages to another email account. This policy only tracks inbox rules that are created using Outlook on the web (formerly known as Outlook Web App) or Exchange Online PowerShell. This policy has a **Low** severity setting. For more information using inbox rules to forward and redirect email in Outlook on the web, see [Use rules in Outlook on the web to automatically forward messages to another account](https://support.office.com/article/1433e3a0-7fb0-4999-b536-50e05cb67fed).  <br/> |Threat management <br/> |E1/G1, E3/G3, or E5/G5  <br/> |
 |**eDiscovery search started or exported** <br/> |Generates an alert when someone uses the Content search tool in the Security & Compliance Center. An alert is triggered when the following content search activities are performed: <br/><br/>• A content search is started<br/>• The results of a content search are exported<br/>• A content search report is exported<br/><br/>Alerts are also trigged when the previous content search activities are performed in association with an eDiscovery case. This policy has a **Medium** severity setting. For more information about content search activities, see [Search for eDiscovery activities in the Office 365 audit log](search-for-ediscovery-activities-in-the-audit-log.md#ediscovery-activities). <br/> |Threat management<br/> |E1/G1, E3/G3, or E5/G5  <br/> |
 |**Elevation of Exchange admin privilege** <br/> |Generates an alert when someone is assigned administrative permissions in your Exchange Online organization; for example, if a user is added to the Organization Management role group in Exchange Online. This policy has a **Low** severity setting.  <br/> |Permissions <br/> |E1/G1, E3/G3, or E5/G5  <br/> |
 |**Messages have been delayed** <br/> |Generates an alert when Office 365 can't deliver email messages to your on-premises organization or a partner servers by using a connector. When this happen, the message is queued in Office 365. This alert is triggered when there are 2,000 messages or more that have been queued for more than an hour. This policy has a **High** severity setting.  <br/> |Mail flow<br/> |E1/G1, E3/G3, or E5/G5  <br/> |

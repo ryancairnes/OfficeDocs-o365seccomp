@@ -3,7 +3,6 @@ title: "Mail flow insights in the Security & Compliance Center"
 ms.author: chrisda
 author: chrisda
 manager: serdars
-ms.date:
 ms.audience: ITPro
 ms.topic: article
 ms.prod: office-online-server

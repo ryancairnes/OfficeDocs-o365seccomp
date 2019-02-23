@@ -5,8 +5,7 @@ author: MikePlumleyMSFT
 manager: pamgreen
 ms.audience: ITPro
 ms.topic: article
-ms.service: o365-solutions
-ms.custom: 
+ms.service: O365-seccomp
 localization_priority: Priority
 description: "Learn about how to address GDPR requirements in on-premises Windows Server file shares."
 ---

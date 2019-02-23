@@ -3,7 +3,6 @@ title: "Anti-spam message headers"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.date:
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -12,6 +11,8 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: 2e3fcfc5-5604-4b88-ac0a-c5c45c03f1db
+ms.collection:
+- M365-security-compliance
 description: "When Exchange Online Protection scans an inbound email message it inserts the **X-Forefront-Antispam-Report** header into each message."
 ---
 

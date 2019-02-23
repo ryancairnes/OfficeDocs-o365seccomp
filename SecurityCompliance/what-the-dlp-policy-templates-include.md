@@ -8,7 +8,7 @@ ms.audience: Admin
 ms.topic: reference
 f1_keywords:
 - 'ms.o365.cc.DLPNewPolicyFromTemplate'
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid: 
 - MOE150

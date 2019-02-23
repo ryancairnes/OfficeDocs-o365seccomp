@@ -5,7 +5,7 @@ author: robmazz
 manager: laurawi
 ms.audience: ITPro
 ms.topic: overview
-ms.service: o365-solutions
+ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid:
 - MET150

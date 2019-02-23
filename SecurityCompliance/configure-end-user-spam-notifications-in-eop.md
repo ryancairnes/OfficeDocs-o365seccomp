@@ -11,6 +11,8 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: e9947db5-1dd1-4493-872d-7362b24c7ba0
+ms.collection:
+- M365-security-compliance
 description: "You can configure end-user spam notifications for the default company-wide content filter policy or for custom content filter policies that are applied to domains."
 ---
 

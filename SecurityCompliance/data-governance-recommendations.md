@@ -6,7 +6,7 @@ manager: laurawi
 ms.date: 1/15/2019
 ms.audience: Admin
 ms.topic: overview
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Priority
 search.appverid: 
 - MOE150

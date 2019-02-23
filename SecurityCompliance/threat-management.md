@@ -6,7 +6,7 @@ manager: laurawi
 ms.date: 9/24/2018
 ms.audience: Admin
 ms.topic: hub-page
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid:
 - MET150

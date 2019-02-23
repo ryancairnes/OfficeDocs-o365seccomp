@@ -6,7 +6,7 @@ manager: laurawi
 ms.date: 7/2/2018
 ms.audience: Admin
 ms.topic: article
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid:
 - SPO160
@@ -14,7 +14,8 @@ search.appverid:
 - OSU160
 - MET150
 ms.assetid: 3bdb5c4e-94fc-4741-b02f-4e7cc3c54aa1
-
+ms.collection:
+- M365-security-compliance
 description: "You can use Information Rights Management (IRM) to help control and protect files that are downloaded from lists or libraries."
 ---
 

@@ -3,7 +3,6 @@ title: "Support for validation of DKIM signed messages"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.date: 
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp

@@ -1,7 +1,7 @@
 ---
 title: "Configure your spam filter policies"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.date: 12/05/2018
 ms.audience: ITPro
@@ -12,12 +12,14 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: 316544cb-db1d-4c25-a5b9-c73bbcf53047
+ms.collection:
+- M365-security-compliance
 description: "Basic spam filter settings include selecting the action to take on messages that are identified as spam, and choosing whether to filter messages that are written in specific languages or sent from specific countries or regions."
 ---
 
 # Configure your spam filter policies
   
-Basic spam filter settings include selecting the action to take on messages that are identified as spam, and choosing whether to filter messages that are written in specific languages or sent from specific countries or regions. Spam filter policy settings are applied to inbound messages only. You can edit the default spam filter policy to configure your company-wide spam filter settings and create custom spam filter policies, and then apply them to specific users, groups, or domains in your organization. Custom policies always take precedence over the default policy. You can change the order in which your custom policies run by changing the priority of each custom policy.
+Basic spam filter settings include selecting the action to take on messages that are identified as spam. Spam filter policy settings are applied to inbound messages only. You can edit the default spam filter policy to configure your company-wide spam filter settings and create custom spam filter policies, and then apply them to specific users, groups, or domains in your organization. Custom policies always take precedence over the default policy. You can change the order in which your custom policies run by changing the priority of each custom policy; however, only the highest priority policy will apply if multiple policies meet the criteria set. 
   
 > [!IMPORTANT]
 > For Exchange Online Protection (EOP) stand-alone customers: By default, the EOP spam filters send spam-detected messages to each recipient's Junk Email folder. However, in order to ensure that the **Move message to Junk Email folder** action works for on-premises mailboxes, you must configure Exchange Transport rules on your on-premises servers to detect spam headers that are added by EOP. For details, see [Ensure that spam is routed to each user's Junk Email folder](ensure-that-spam-is-routed-to-each-user-s-junk-email-folder.md). 
@@ -30,15 +32,15 @@ You need to be assigned permissions before you can perform this procedure or pro
   
 For information about keyboard shortcuts that may apply to the procedures in this topic, see **Keyboard shortcuts in the Exchange admin center**.
   
-## Use the Exchange Admin Center (EAC) to configure spam filter policies
+## Use the Security & Compliance Center (SCC) to configure spam filter policies
 
-1. In the Exchange admin center (EAC), navigate to **Protection** \> **Spam filter**.
+1. In the Security & Compliance Center (SCC), navigate to **Threat management** \> **Policy** \> **Anti-spam**.
     
-2. Do one of the following on the **general** page: 
+2. Do one of the following on the **Anti-spam settings** page: 
     
-      - Double-click the default policy in order to edit this company-wide policy.
+      - Review the default company-wide policy under the Standard settings.
     
-      - Click the ![Add Icon](media/ITPro-EAC-AddIcon.gif) **New** icon in order to create a new custom spam-filter policy that can be applied to users, groups, and domains in your organization. You can also edit existing custom policies by double-clicking them. 
+      - Click on the **Custom** tab, change the **Custom settings** selector to **On**, and click on the **![Add Icon](media/ITPro-EAC-AddIcon.gif) **Creatge a policy** button in order to create a new custom spam-filter policy that can be applied to users, groups, and domains in your organization. You can also edit existing custom policies by double-clicking them. 
     
 3. For custom policies only, specify a name for this policy. Optionally, you can also specify a more detailed description. You cannot rename the default policy.<br/><br/>NOTE: When you create a policy, all configuration settings appear on a single screen. By contrast, when you edit a policy, you must navigate through multiple screens. The settings are the same in either case, but the rest of this procedure describes how to access these settings when you edit a policy. 
   
@@ -108,8 +110,10 @@ For information about keyboard shortcuts that may apply to the procedures in thi
   
 16. Click **save**. A summary of your policy settings appears in the right pane.
 
+The default policy cannot be disabled or deleted and custom policies always take precedence over the default policy. For custom policies, you can select or clear the check boxes in the **ENABLED** column to enable or disable them. By default, all policies are enabled. To delete a custom policy, select the policy, click the ![Delete icon](media/ITPro-EAC-DeleteIcon.gif) **Delete** icon, and then confirm that you want to delete the policy.
+
 > [!TIP]
->  You can select or clear the check boxes in the **ENABLED** column to enable or disable your custom policies. By default, all policies are enabled. The default policy cannot be disabled. >  To delete a custom policy, select the policy, click the ![Delete icon](media/ITPro-EAC-DeleteIcon.gif) **Delete** icon, and then confirm that you want to delete the policy. The default policy cannot be deleted. >  Custom policies always take precedence over the default policy. Custom policies run in the reverse order in which you created them (from oldest to newest), but you can change the priority (running order) of your custom policies by clicking the ![Up Arrow Icon](media/ITPro-EAC-UpArrowIcon.gif) up arrow and ![Down Arrow Icon](media/ITPro-EAC-DownArrowIcon.gif) down arrow. The policy that has a **PRIORITY** of **0** will run first, followed by **1**, then **2**, and so on. 
+>  You can change the priority (running order) of your custom policies by clicking the ![Up Arrow Icon](media/ITPro-EAC-UpArrowIcon.gif) up arrow and ![Down Arrow Icon](media/ITPro-EAC-DownArrowIcon.gif) down arrow. The policy that has a **PRIORITY** of **0** will run first, followed by **1**, then **2**, and so on. 
   
 ## Use remote PowerShell to configure spam filter policies
 

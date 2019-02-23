@@ -6,7 +6,7 @@ manager: laurawi
 ms.date: 5/16/2014
 ms.audience: Admin
 ms.topic: overview
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid:
 - WSU150

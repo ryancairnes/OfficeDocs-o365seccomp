@@ -6,12 +6,14 @@ manager: laurawi
 ms.date: 2/14/2018
 ms.audience: Admin
 ms.topic: hub-page
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid:
 - MOE150
 - BCS160
 ms.assetid: 2bb4e7c0-5f7f-4144-b647-cc6a956aaa53
+ms.collection:
+- M365-security-compliance
 description: "Find out about alerts you can set to help with security in Office 365."
 ---
 

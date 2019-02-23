@@ -9,7 +9,7 @@ ms.topic: article
 ms.collection: 
 - o365_security_incident_response
 - Strat_O365_IP
-ms.service: o365-solutions
+ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid:
 - MET150

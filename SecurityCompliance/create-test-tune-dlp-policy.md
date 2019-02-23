@@ -3,12 +3,11 @@ title: "Create, test, and tune a DLP policy"
 ms.author: stephow
 author: stephow-MSFT
 manager: laurawi
-ms.date: 
 ms.audience: Admin
 ms.topic: article
 f1_keywords:
 - 'ms.o365.cc.NewPolicyFromTemplate'
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Normal
 ms.collection:
 - Strat_O365_IP
@@ -21,10 +20,10 @@ description: "The easiest, most common way to get started with DLP policies is t
 
 # Create, test, and tune a DLP policy
 
-**Principal author** </br>
-Paul Cunningham, Microsoft MVP </br>
-[Practical 365](https://practical365.com/) </br>
-[@Practical365](https://twitter.com/practical365)</br>
+**Principal author** <br/>
+Paul Cunningham, Microsoft MVP <br/>
+[Practical 365](https://practical365.com/) <br/>
+[@Practical365](https://twitter.com/practical365)<br/>
 __________________________________________________
 
 Data loss prevention is a compliance feature of Office 365 that is designed to help your organization prevent the intentional or accidental exposure of sensitive information to unwanted parties. DLP has its roots in Exchange Server and Exchange Online, and is also applicable in SharePoint Online and OneDrive for Business.

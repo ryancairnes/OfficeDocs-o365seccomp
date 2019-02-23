@@ -5,8 +5,8 @@ author: chrfox
 manager: laurawi
 ms.date: 9/14/2017
 ms.audience: Admin
-ms.topic: get-started-article
-ms.service: o365-administration
+ms.topic: article
+ms.service: O365-seccomp
 localization_priority: Priority
 search.appverid: 
 - MOE150

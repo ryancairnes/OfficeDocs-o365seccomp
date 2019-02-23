@@ -6,7 +6,7 @@ manager: laurawi
 ms.date: 8/17/2018
 ms.audience: Admin
 ms.topic: reference
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Normal
 ms.assetid: 1fabd341-e594-4bfe-961c-62aa82893f60
 description: "This topic shows what a data loss prevention (DLP) policy looks for when it detects the EU Social Security Number or Equivalent ID sensitive information type. This sensitive information type defines different patterns, keywords, and other evidence for each country."

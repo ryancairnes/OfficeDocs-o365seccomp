@@ -4,9 +4,9 @@ ms.author: deniseb
 author: denisebmsft
 manager: laurawi
 ms.audience: ITPro
-ms.topic: overview
+ms.topic: article
 ms.date: 02/15/2019
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid:
 - MET150

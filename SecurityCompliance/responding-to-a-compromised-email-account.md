@@ -8,13 +8,10 @@ ms.topic: article
 ms.collection: 
 - o365_security_incident_response
 - Strat_O365_IP
-ms.service: o365-solutions
+ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid:
 - MET150
-ms.custom: 
-ms.assetid:
-
 description: "Learn how to recognize and respond to a compromised email account in Office 365"
 ---
 # Responding to a Compromised Email Account in Office 365
@@ -32,7 +29,7 @@ Users might notice and report unusual activity in their Office 365 mailboxes. He
 - The presence of inbox rules that weren't created by the intended user or the administrator. These rules may automatically forward emails to unknown addresses or move them to the **Notes**, **Junk Email**, or **RSS Subscriptions** folders.
 - The user's display name might be changed in the Global Address List.
 - The user's mailbox is blocked from sending email.
-- The Sent or Deleted Items folders in Microsoft Outlook or in Microsoft Outlook Web App contain common hacked-account messages, such as "I'm stuck in London, send money."
+- The Sent or Deleted Items folders in Microsoft Outlook or Outlook on the web (formerly known as Outlook Web App) contain common hacked-account messages, such as "I'm stuck in London, send money."
 - Unusual profile changes, such as the name, the telephone number, or the postal code were updated.
 - Unusual credential changes, such as multiple password changes are required.
 - Mail forwarding was recently added.
@@ -45,8 +42,6 @@ If a user reports any of the above symptoms, you should perform further investig
     - sign-in locations
     - sign-in times
     - sign-in success or failure
-
-
 
 ## How to secure and restore email function to a suspected compromised Office 365 account and mailbox
 
@@ -77,7 +72,7 @@ You must perform all the following steps to regain access to your account the so
 4. Remove any suspicious forwarding addresses.
 
 ### Step 3 Disable any suspicious inbox rules
-1. Sign in to the user's mailbox using Outlook Web App (OWA).
+1. Sign in to the user's mailbox using Outlook on the web.
 2. Click on the gear icon and click **Mail**.
 3. Click **Inbox and sweep rules** and review the rules.
 4. Disable or delete suspicious rules.

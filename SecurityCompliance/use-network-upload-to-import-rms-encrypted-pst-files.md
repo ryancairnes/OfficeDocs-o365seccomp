@@ -6,14 +6,13 @@ manager: laurawi
 ms.date: 5/29/2018
 ms.audience: Admin
 ms.topic: article
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid:
 - MOE150
 - MED150
 - MET150
 ms.assetid: 84a595b8-cd77-4f66-ac52-57a33ddd4773
-
 description: "Learn how to use network upload to import RMS-encrypted PST files to user mailboxes in Office 365."
 ---
 

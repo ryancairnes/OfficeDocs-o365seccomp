@@ -6,7 +6,7 @@ manager: laurawi
 ms.date: 12/30/2016
 ms.audience: Admin
 ms.topic: article
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Normal
 ms.assetid: 55f31488-288a-473a-9b9e-831a11e3711a
 description: "Use a PowerShell script to create an In-Place eDiscovery search in Exchange Online based on a search created in the Office 365 Security &amp; Compliance Center.

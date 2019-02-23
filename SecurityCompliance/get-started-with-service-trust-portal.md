@@ -3,10 +3,9 @@ title: "Get started with the Microsoft Service Trust Portal"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 
 ms.audience: Admin
 ms.topic: overview
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid: MET150
 ms.custom: Adm_O365

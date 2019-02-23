@@ -6,14 +6,13 @@ manager: laurawi
 ms.date: 9/14/2017
 ms.audience: Admin
 ms.topic: article
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid: 
 - MOE150
 - MET150
 ms.assetid: 48d37ee7-05bd-4cb8-9723-a8959ad23fbe
-description: "Learn how to add or edit an issue, including assigning users to it, or delete an issue for an eDiscovery case in Office 365 Advanced eDiscovery. 
-"
+description: "Learn how to add or edit an issue, including assigning users to it, or delete an issue for an eDiscovery case in Office 365 Advanced eDiscovery."
 ---
 
 # Define issues and assign users in Office 365 Advanced eDiscovery

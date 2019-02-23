@@ -7,7 +7,7 @@ ms.audience: Admin
 ms.topic: article
 f1_keywords:
 - 'ms.o365.cc.SupervisoryReview'
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Normal
 ms.collection:
 - Strat_O365_IP
@@ -210,7 +210,7 @@ Use the supervision reports to see the review activity at the policy and reviewe
   
 ### How to use the report
 
-When a supervision policy identifies a communication message for review, the email is delivered to the reviewer's Supervision folder in Outlook and Outlook web app. This report lists each policy's name and the number of communications at each stage in the review process.
+When a supervision policy identifies a communication message for review, the email is delivered to the reviewer's Supervision folder in Outlook and Outlook on the web (formerly known as Outlook Web App). This report lists each policy's name and the number of communications at each stage in the review process.
   
 Use the report to:
   
@@ -223,7 +223,7 @@ Here's a breakdown of the values you might see in the **Tag type** column.
   
 |**Tag type**|**What it means**|
 |:-----|:-----|
-| Not Reviewed | The number of emails that have not been reviewed yet. These emails are awaiting review in the Office 365 supervision dashboard or in the reviewer's supervision folder in Outlook/Outlook Web App.|
+| Not Reviewed | The number of emails that have not been reviewed yet. These emails are awaiting review in the Office 365 supervision dashboard or in the reviewer's supervision folder in Outlook/Outlook on the web
 | Compliant | The number of emails reviewed and marked as compliant. These messages still need to be resolved. |
 | Questionable | The number of emails reviewed and marked questionable. This acts as a flag; other reviewers can help check whether an email needs investigation for compliance. These messages still need to be resolved. |
 | Non-Compliant (Active) | The number of non-compliant emails that reviewers are currently investigating. |

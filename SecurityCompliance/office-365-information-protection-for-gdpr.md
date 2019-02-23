@@ -9,12 +9,10 @@ ms.topic: overview
 ms.collection: 
 - Ent_O365
 - Strat_O365_Enterprise
-ms.service: o365-solutions
+ms.service: O365-seccomp
 localization_priority: Priority
 search.appverid:
 - MET150
-ms.custom: 
-ms.assetid:
 description: "This solution demonstrates how to protect sensitive data that is stored in Office 365 services."
 ---
 

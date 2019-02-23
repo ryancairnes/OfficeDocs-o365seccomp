@@ -3,10 +3,9 @@ title: "Create a custom sensitive information type in Office 365 Security & Comp
 ms.author: stephow
 author: stephow-MSFT
 manager: laurawi
-ms.date: 
 ms.audience: Admin
 ms.topic: article
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Priority
 ms.collection: Strat_O365_IP
 search.appverid: 

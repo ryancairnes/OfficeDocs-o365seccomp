@@ -6,7 +6,7 @@ manager: laurawi
 ms.date: 01/18/2019
 ms.audience: Admin
 ms.topic: article
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid:
 - MET150
@@ -52,7 +52,7 @@ If you're an Office 365 global administrator or an Exchange Online administrator
 After the add-in is installed and enabled, you'll see the following icons: 
 
 - In Outlook, the icon looks like this: <br/> ![Report Message add-in icon for Outlook](media/OutlookReportMessageIcon.png)<br/>
-- In Outlook Web App (or Outlook on the web), the icon looks like this:<br/>![Outlook on the web Report Message add-in icon](media/d9326d0b-1769-4bc2-ae58-51f0ebc69a17.png)<br/>
+- In Outlook on the web (formerly known as Outlook Web App), the icon looks like this:<br/>![Outlook on the web Report Message add-in icon](media/d9326d0b-1769-4bc2-ae58-51f0ebc69a17.png)<br/>
 
 > [!TIP]
 > As a next step, learn how to [Use the Report Message add-in](https://support.office.com/article/b5caa9f1-cdf3-4443-af8c-ff724ea719d2).
@@ -84,7 +84,7 @@ After the add-in is installed and enabled, you'll see the following icons:
 Depending on what you selected when you set up the add-in (steps 7-8 above), people in your organization will have the [Report Message add-in](https://support.office.com/article/b5caa9f1-cdf3-4443-af8c-ff724ea719d2) available. People in your organization will see the following icons: 
 
 - In Outlook, the icon looks like this: <br/> ![Report Message Add-in icon for Outlook](media/OutlookReportMessageIcon.png)<br/>
-- In Outlook Web App (or Outlook on the web), the icon looks like this:<br/>![Outlook on the Web Report Message Add-in icon](media/d9326d0b-1769-4bc2-ae58-51f0ebc69a17.png)<br/>
+- In Outlook on the web, the icon looks like this:<br/>![Outlook on the Web Report Message Add-in icon](media/d9326d0b-1769-4bc2-ae58-51f0ebc69a17.png)<br/>
 
 > [!TIP]
 > When you notify users about the Report Message add-in, include a link to [Use the Report Message add-in](https://support.office.com/article/b5caa9f1-cdf3-4443-af8c-ff724ea719d2).

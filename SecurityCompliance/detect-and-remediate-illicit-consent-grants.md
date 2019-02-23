@@ -9,10 +9,8 @@ ms.topic: article
 ms.collection: 
 - o365_security_incident_response
 - Strat_O365_IP
-ms.service: o365-solutions
+ms.service: O365-seccomp
 localization_priority: Normal
-ms.custom: 
-ms.assetid:
 search.appverid:
 - MET150
 description: "Learn how to recognize and remediate the illicit consent grants attack in Office 365."

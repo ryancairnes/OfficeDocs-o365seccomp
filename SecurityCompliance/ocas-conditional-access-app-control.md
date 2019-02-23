@@ -7,7 +7,7 @@ ms.reviewer: alesibov
 ms.audience: Admin
 ms.topic: reference
 ms.date: 02/14/2019
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Normal
 description: "Stop breaches and leaks in real time with Office 365 Cloud App Security Conditional Access App Control."
 ---

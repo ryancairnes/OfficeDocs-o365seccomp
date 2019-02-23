@@ -20,9 +20,9 @@ description: "Microsoft is committed to making its products and services easier 
 
 The following features help make Microsoft Exchange more accessible for people with disabilities:
   
-- [Keyboard shortcuts in Exchange 2013 Preview](http://technet.microsoft.com/library/146b2b52-1ef8-4606-991a-4cf4da694970.aspx)
+- [Keyboard shortcuts in Exchange Server](http://technet.microsoft.com/library/146b2b52-1ef8-4606-991a-4cf4da694970.aspx)
     
-- [Keyboard Shortcuts in Outlook Web App](https://go.microsoft.com/fwlink/p/?LinkId=268079)
+- [Keyboard Shortcuts in Outlook on the web](https://go.microsoft.com/fwlink/p/?LinkId=268079)
     
 In addition, some accessibility features and utilities of Windows may benefit Exchange users with disabilities. Also, Windows PowerShell size and color changes provide accessibility options when using the Exchange Management Shell. For more information about Windows PowerShell accessibility options, see [Accessibility in Windows PowerShell 2.0 ISE](https://go.microsoft.com/fwlink/p/?LinkId=258240).
   

@@ -3,7 +3,6 @@ title: "Mail loop insight"
 ms.author: chrisda
 author: chrisda
 manager: serdars
-ms.date:
 ms.audience: ITPro
 ms.topic: article
 ms.prod: office-online-server

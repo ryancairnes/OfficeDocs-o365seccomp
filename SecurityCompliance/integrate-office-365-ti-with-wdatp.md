@@ -6,13 +6,14 @@ manager: laurawi
 ms.date: 01/22/2019
 ms.audience: ITPro
 ms.topic: article
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid:
 - MET150
 - MOE150
 ms.assetid: 414fa693-d7b7-4a1d-a387-ebc3b6a52889
-ms.collection: M365-security-compliance
+ms.collection: 
+- M365-security-compliance
 description: "Integrate Office 365 Advanced Threat Protection with Windows Defender Advanced Threat Protection to see more detailed threat management information."
 ---
 

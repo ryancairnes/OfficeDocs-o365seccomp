@@ -6,12 +6,14 @@ manager: laurawi
 ms.date: 7/2/2018
 ms.audience: ITPro
 ms.topic: overview
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid: 
 - SPO160
 - MET150
 ms.assetid: 6501b5ef-6bf7-43df-b60d-f65781847d6c
+ms.collection:
+- M365-security-compliance
 description: "Understand the basic elements of encryption for data security in OneDrive for Business and SharePoint Online."
 ---
 

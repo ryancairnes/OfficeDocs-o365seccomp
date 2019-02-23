@@ -3,15 +3,13 @@ title: "Use the PST Collection tool to find, copy, and delete PST files in your 
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 
 ms.audience: Admin
 ms.topic: article
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Normal
 ms.collection: Strat_O365_IP
 search.appverid: MOE150
 ms.assetid: 7a150c84-049c-4a9c-8c91-22355b35f2a7
-
 description: "Use the Microsoft PST Collection Tool to search your organization's network to get an inventory of PST files that are scattered throughout your organization. After you find PST files, you can use the PST Collection Tool to copy them in a central location so you can import them to Office 365."
 ---
 

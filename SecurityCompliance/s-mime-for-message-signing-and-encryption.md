@@ -1,5 +1,5 @@
 ---
-title: "S/MIME for message signing and encryption"
+title: "S/MIME for message signing and encryption in Exchange Online"
 ms.author: krowley
 author: kccross
 manager: laurawi
@@ -24,13 +24,11 @@ As an administrator, you can enable S/MIME-based security for your organization 
 ## Supported scenarios and technical considerations
 <a name="sectionSection0"> </a>
 
-If your organization uses either Exchange 2013 SP1 or Exchange Online, you can set up S/MIME to work with any of the following end points: 
+You can set up S/MIME to work with any of the following end points: 
   
-- Outlook 2010
+- Outlook 2010 or later
     
-- Outlook 2013
-    
-- Outlook Web App
+- Outlook on the web (formerly known as Outlook Web App)
     
 - Exchange ActiveSync (EAS)
     
@@ -42,16 +40,16 @@ The steps that you follow to set up S/MIME with each of these end points is slig
     
 - For Exchange Online organizations, synchronize the user certificates from AD DS to Azure Active Directory by using an appropriate version of DirSync. These certificates will then get synchronized from Azure Active Directory to Exchange Online directory and will be used when encrypting a message to a recipient.
     
-- Set up a virtual certificate collection in order to validate S/MIME. This information is used by OWA when validating the signature of an email and ensuring that it was signed by a trusted certificate.
+- Set up a virtual certificate collection in order to validate S/MIME. This information is used by Outlook on the web (formerly known as Outlook on the web) when validating the signature of an email and ensuring that it was signed by a trusted certificate.
     
 - Set up the Outlook or EAS end point to use S/MIME. 
     
-## Setup S/MIME with Outlook Web App
+## Setup S/MIME with Outlook on the web
 <a name="sectionSection1"> </a>
 
-Setting up S/MIME for Exchange 2013 SP1 or Exchange Online with Outlook Web App involves the following key steps:
+Setting up S/MIME for Exchange Online with Outlook on the web involves the following key steps:
   
-1. [Configure S/MIME settings for Outlook Web App](configure-s-mime-settings-for-outlook-web-app.md)
+1. [Configure S/MIME settings for Outlook on the web](configure-s-mime-settings-for-outlook-web-app.md)
     
 2. [Set up virtual certificate collection to validate S/MIME](set-up-virtual-certificate-collection-to-validate-s-mime.md)
     
@@ -75,7 +73,7 @@ S/MIME requires a certificate and publishing infrastructure that is often used i
 ## More information
 <a name="sectionSection3"> </a>
 
-[Outlook Web App](http://technet.microsoft.com/library/3814b665-01e8-4881-9a44-163f14789ee4.aspx)
+[Outlook on the web](http://technet.microsoft.com/library/3814b665-01e8-4881-9a44-163f14789ee4.aspx)
   
 [Secure Mail (2000)](https://technet.microsoft.com/en-us/library/cc962043.aspx)
   

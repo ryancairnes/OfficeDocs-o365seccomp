@@ -6,7 +6,7 @@ manager: laurawi
 ms.date: 8/17/2018
 ms.audience: Admin
 ms.topic: reference
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Normal
 ms.assetid: f04919c8-2356-4de2-bb2a-b9f67f339726
 description: "This topic shows what a data loss prevention (DLP) policy looks for when it detects the EU Tax Identification Number sensitive information type. This sensitive information type defines different patterns, keywords, and other evidence for each country."

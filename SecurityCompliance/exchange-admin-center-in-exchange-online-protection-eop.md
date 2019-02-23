@@ -1,7 +1,7 @@
 ---
 title: "Exchange admin center in Exchange Online Protection "
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.date: 12/9/2016
 ms.audience: ITPro
@@ -12,7 +12,8 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: 97921f0e-832f-40c7-b56d-414faede5191
-
+ms.collection:
+- M365-security-compliance
 description: "The Exchange admin center (EAC) is the web-based management console for Microsoft Exchange Online Protection (EOP)."
 ---
 

@@ -8,7 +8,7 @@ ms.date: 02/11/2019
 ms.topic: overview
 f1_keywords:
 - '197503'
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Normal
 ms.collection: 
 - Strat_O365_IP

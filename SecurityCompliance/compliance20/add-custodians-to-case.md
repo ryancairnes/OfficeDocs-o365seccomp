@@ -6,7 +6,7 @@ manager: laurawi
 ms.date: 
 ms.audience: Admin
 ms.topic: article
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Normal
 ms.collection: 
 search.appverid: 
@@ -55,7 +55,8 @@ To identify custodian data sources:
 Depending on your case, you may also want to add mailboxes that a given custodian may have used in the past, groups where a custodian is currently a member, or sites that a custodian had access to in the past. In addition to primary custodian data sources, you can add additional Office 365 data sources to a custodian or leverage Office 365 to help you identify potentially relevant data sources as well. 
 
 To map mailboxes, sites, or teams to a specific custodian:
-1. Select **Update** to assign content locations, like mailboxes, sites, and Teams, to a specific custodian. 
+
+1. Select **Update** to assign content locations, like mailboxes, sites, and Teams to a specific custodian. 
 
 2. In the flyout, specify the following:
    
@@ -78,7 +79,7 @@ After you have finished mapping your sources, you can view the total mailboxes, 
 
 To place the selected custodians and data sources on hold:
 
-1. Verify your custodian selections and select the checkox to place each custodian on hold.Once a custodian is placed on hold, a custodian hold policy containing all custodial sources will automatically be created. If the option is not checked, the custodian & selected data sources will be added to the case but the content will not be preserved.
+1. Verify your custodian selections and select the checkbox to place each custodian on hold.Once a custodian is placed on hold, a custodian hold policy containing all custodial sources will automatically be created. If the option is not checked, the custodian & selected data sources will be added to the case but the content will not be preserved.
 
 2. Go to the **Holds** tab and select the **Custodian Hold Policy**. 
 

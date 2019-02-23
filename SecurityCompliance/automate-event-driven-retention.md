@@ -3,10 +3,9 @@ title: "Automate event-driven retention"
 ms.author: stephow
 author: stephow-MSFT
 manager: laurawi
-ms.date: 
 ms.audience: Admin
 ms.topic: article
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Priority
 ms.collection: Strat_O365_IP
 search.appverid: 
@@ -480,4 +479,4 @@ An Enterprise Resource Planning (ERP) system can work with Microsoft 365 and Mic
 
 This topic was reviewed by:
 
-Antonio Maio</br>Microsoft Office Apps and Services MVP</br> Antonio.Maio@Protiviti.com
+Antonio Maio<br/>Microsoft Office Apps and Services MVP<br/> Antonio.Maio@Protiviti.com

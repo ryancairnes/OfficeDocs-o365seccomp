@@ -6,7 +6,7 @@ manager: laurawi
 ms.date: 1/15/2019
 ms.audience: ITPro
 ms.topic: reference
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Normal
 ms.collection: Strat_O365_IP
 search.appverid:

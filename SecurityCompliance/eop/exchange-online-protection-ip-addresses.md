@@ -10,7 +10,6 @@ ms.service: O365-seccomp
 ms.custom: TN2DMC
 localization_priority: Normal
 ms.assetid: eb14f38b-7b55-4a47-84a0-4a56a59e4111
-
 description: "The following Microsoft data center IP addresses are used by Microsoft Exchange Online Protection (EOP) when sending email, receiving email, or for Exchange Online Protection portal and administrative services. In order to send and receive messages from EOP or use the administrative services, make sure your network allows connections from these IP addresses."
 ---
 

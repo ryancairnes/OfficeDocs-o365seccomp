@@ -6,7 +6,7 @@ manager: laurawi
 ms.date: 6/6/2018
 ms.audience: Admin
 ms.topic: conceptual
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid:
 - MET150
@@ -47,7 +47,7 @@ The rest of this article applies to the new OME capabilities.
 
 Office 365 Message Encryption is an online service that's built on Microsoft Azure Rights Management (Azure RMS) which is part of Azure Information Protection. Office 365 administrators can define mail flow rules to determine the conditions for encryption. For example, a rule can require the encryption of all messages addressed to a specific recipient.
   
-When someone sends an email message in Exchange Online that matches an encryption mail flow rule, the message is encrypted before it's sent. All Office 365 end-users that use Outlook clients to read mail receive native, first-class reading experiences for encrypted and rights-protected mail even if they're not in the same organization as the sender. Supported Outlook clients include Outlook desktop, Outlook Mac, Outlook mobile on iOS and Android, and Outlook Web App.
+When someone sends an email message in Exchange Online that matches an encryption mail flow rule, the message is encrypted before it's sent. All Office 365 end-users that use Outlook clients to read mail receive native, first-class reading experiences for encrypted and rights-protected mail even if they're not in the same organization as the sender. Supported Outlook clients include Outlook desktop, Outlook Mac, Outlook mobile on iOS and Android, and Outlook on the web (formerly known as Outlook Web App).
   
 Recipients of encrypted messages who receive encrypted or rights-protected mail sent to their Outlook.com, Gmail, and Yahoo accounts can easily authenticate to the OME portal using their Microsoft account, or Gmail or Yahoo credentials.
   

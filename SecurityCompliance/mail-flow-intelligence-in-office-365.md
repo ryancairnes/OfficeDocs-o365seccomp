@@ -3,7 +3,6 @@ title: "Mail flow intelligence in Office 365"
 ms.author: chrisda
 author: chrisda
 manager: serdars
-ms.date: 
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp

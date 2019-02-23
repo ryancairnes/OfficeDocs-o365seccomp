@@ -8,7 +8,7 @@ ms.audience: Admin
 ms.topic: overview
 f1_keywords:
 - 'ms.o365.cc.UnindexedItemsLearnMore'
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Normal
 ms.collection: Strat_O365_IP
 search.appverid:
@@ -16,7 +16,6 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: d1691de4-ca0d-446f-a0d0-373a4fc8487b
-
 description: "Learn about unindexed items in Exchange and SharePoint that you can include in a Content Search run via the Office 365 Security &amp; Compliance Center.
 "
 ---

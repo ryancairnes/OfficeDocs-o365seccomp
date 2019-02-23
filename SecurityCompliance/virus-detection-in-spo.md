@@ -6,7 +6,7 @@ manager: laurawi
 ms.date: 01/14/2019
 ms.audience: Admin
 ms.topic: reference
-ms.service: o365-administration
+ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid:
 - SPO160

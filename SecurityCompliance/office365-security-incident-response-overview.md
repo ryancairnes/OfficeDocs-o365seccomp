@@ -9,12 +9,10 @@ ms.topic: overview
 ms.collection: 
 - o365_security_incident_response
 - Strat_O365_IP
-ms.service: o365-solutions
+ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid:
 - MET150
-ms.custom: 
-ms.assetid:
 description: "This solution tells you what the most common cyber-security attacks might look like in Office 365 and how to respond to them"
 ---
 
