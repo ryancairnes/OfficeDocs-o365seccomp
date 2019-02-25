@@ -3,7 +3,7 @@ title: "Define Information Barriers policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 02/21/2019
+ms.date: 02/25/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
