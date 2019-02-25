@@ -17,6 +17,24 @@ description: "Using PowerShell, you can define policies for Information Barriers
 
 Coming soon to Microsoft Teams, Information Barriers policies can help limit communications between specific groups of people. Information Barriers can help your organization comply with industry standards and regulations, and avoid potential conflicts of interest. To learn more, see [Information Barriers (coming soon to Microsoft Teams!)](information-barriers.md).
 
+## Prerequisites
+
+### Licenses & subscriptions
+
+**Currently, the Information Barriers feature is in private preview**. When these features are generally available, they'll be included in subscriptions, such as:
+
+- Microsoft 365 Enterprise E5
+
+- Office 365 Enterprise E5
+
+- Office 365 Advanced Compliance
+
+- Information Protection & Compliance
+
+For more details, see [Compliance Solutions](https://products.office.com/business/security-and-compliance/compliance-solutions).
+
+### Permissions
+
 To define or edit Information Barriers policies, you must be assigned one of the following roles:
 
 - Microsoft 365 Enterprise Global Administrator
@@ -25,10 +43,12 @@ To define or edit Information Barriers policies, you must be assigned one of the
 
 - Compliance Administrator
 
+### PowerShell
+
+Currently, Information Barriers policies are defined and managed in Office 365 by using PowerShell cmdlets. This irequires familiarity with PowerShell cmdlets (and parameters). Although several scenarios and examples of PowerShell cmdlets are provided in this article, you'll need to know additional details, such as which parameters to use for your organization.
+
 > [!IMPORTANT]
 > Potentially, everyone included in an Information Barriers policy can be blocked from communicating with others in Microsoft Teams. When people affected by Information Barriers policies are part of the same team or group chat, they will be removed from those chat sessions. However, Information Barriers will not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
-
-Currently, Information Barriers policies are defined and managed in Office 365 by using PowerShell cmdlets. This is typically done by a compliance administrator or a global administrator, and requires familiarity with PowerShell cmdlets (and parameters). Although several scenarios and examples of PowerShell cmdlets are provided in this article, you'll need to know additional details, such as which parameters to use for your organization.
 
 ## Prepare your environment for Information Barriers
 
