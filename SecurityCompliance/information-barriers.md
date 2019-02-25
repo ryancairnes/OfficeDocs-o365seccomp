@@ -13,7 +13,7 @@ localization_priority: None
 description: "Use Information Barriers to ensure communication compliance using Microsoft Teams within your organization."
 ---
 
-# Information Barriers (coming soon to Microsoft Teams!)
+# Information Barriers (coming soon!)
 
 ## Overview
 
@@ -68,7 +68,7 @@ Currently, Information Barriers policies are defined and managed in Office 365 b
 
 For more details, see [Compliance Solutions](https://products.office.com/business/security-and-compliance/compliance-solutions).
 
-To define or edit Information Barriers policies, you must be assigned one of the following roles:
+To [define or edit Information Barriers policies](define-information-barriers-policies.md), you must be assigned one of the following roles:
 
 - Microsoft 365 Enterprise Global Administrator
 
@@ -76,7 +76,7 @@ To define or edit Information Barriers policies, you must be assigned one of the
 
 - Compliance Administrator
 
-You must be familiar with PowerShell cmdlets in order to define, validate, or edit Information Barriers policies. Although several examples of PowerShell cmdlets are provided, you'll need to know additional details, such as parameters, for your organization.
+You must be familiar with PowerShell cmdlets in order to define, validate, or edit Information Barriers policies. Although we provide several examples of PowerShell cmdlets in the [how-to information](define-information-barriers-policies.md), you'll need to know additional details, such as parameters, for your organization.
 
 ## Next steps
 
