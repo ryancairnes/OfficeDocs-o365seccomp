@@ -11,6 +11,8 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 5ed8abf1-c0e9-4e5b-a5b7-2059cea50b61
+ms.collection:
+- M365-security-compliance
 description: "Learn where to go to view information about malicious files detected in SharePoint, OneDrive, or Teams, and how to take action on those files."
 ---
 

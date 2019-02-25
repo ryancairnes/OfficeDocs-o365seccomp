@@ -11,7 +11,8 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: a097f5ca-eac0-44a4-bbce-365f35b79ed1
-ms.collection: M365-security-compliance
+ms.collection: 
+- M365-security-compliance
 description: "Learn about Threat Trackers, including new Noteworthy Trackers, to help your organization stay on top of security concerns."
 ---
 

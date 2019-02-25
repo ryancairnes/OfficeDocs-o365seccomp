@@ -12,7 +12,8 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 35dbfd99-da5a-422b-9b0e-c6caf3b645fa
-ms.collection: M365-security-compliance
+ms.collection: 
+- M365-security-compliance
 description: "When you set up your ATP safe links policies, you can include a do-not-rewrite' list of URLs to enable some people in your organization to visit sites that you include in your list."
 ---
 
