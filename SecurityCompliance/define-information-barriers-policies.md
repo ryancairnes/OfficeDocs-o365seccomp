@@ -222,13 +222,23 @@ In this scenario, we will set up an Information Barriers policy that prevents pe
 > [!TIP]
 > We recommend testing with a few users who are included in Information Barriers policies, as well as with a few users who are not included in those policies.
 
-## What if something goes wrong?
+## What if I want to edit or remove a policy?
 
-If you make a mistake with an Information Barriers policy, or find that it's not working as expected, you can edit or remove the policy. 
+If you want to edit or remove an Information Barriers policy, follow these steps:
 
-To do that, follow these steps:
+1. As a global administrator or compliance administrator, connect to PowerShell for Exchange Online, and connect to PowerShell for the Office 365 Security & Compliance Center.  
 
-1. 
+    - [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps)
+
+    - [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps)
+
+    (Depending on the changes you want to make, some cmdlets must be run for Exchange Online, and others for the Office 365 Security & Compliance Center.)
+
+2. View a list of current Information Barriers policies by running the following PowerShell cmdlet in the Office 365 Security & Compliance Center:
+
+    `Get-ExoInformationBarrierPolicy`
+
+3. 
 
 ## Related articles
 
