@@ -240,15 +240,16 @@ If you want to edit or remove an Information Barriers policy, follow these steps
 
     `Get-InformationBarrierPolicy`
 
-3. In the list of results, identify the policy that you want to change (or remove). Make note of the policy's name or GUID.
+3. In the list of results, identify the policy that you want to change (or remove). Make note of the policy's name.
 
-4. Depending on whether you're using the policy's name or GUID, run one of the following PowerShell cmdlets in the Office 365 Security & Compliance Center:
+4. Run the **Set-InformationBarrierPolicy** cmdlet in the Office 365 Security & Compliance Center:
 
     `Set-InformationBarrierPolicy -Name "POLICYNAMEGOESHERE" -State "Inactive`
 
-    `Set-InformationBarrierPolicy -Identity "GUIDGOESHERE" -State "Inactive`
+5. Run the **Start-InformationBarrierPoliciesApplication** cmdlet in the Office 365 Security & Compliance Center:
 
-5. WORK IN PROGRESS
+    `Start-InformationBarrierPoliciesApplication -POLICYNAMEGOESHERE`
+
 
 
 ## Related articles
