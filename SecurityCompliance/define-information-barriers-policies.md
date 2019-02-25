@@ -236,9 +236,11 @@ If you want to edit or remove an Information Barriers policy, follow these steps
 
 2. View a list of current Information Barriers policies by running the following PowerShell cmdlet in the Office 365 Security & Compliance Center:
 
-    `Get-ExoInformationBarrierPolicy`
+    `Get-InformationBarrierPolicy`
 
-3. 
+3. In the list of results, identify the policy that you want to change (or remove).
+
+4. 
 
 ## Related articles
 
