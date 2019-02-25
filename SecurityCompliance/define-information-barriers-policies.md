@@ -49,14 +49,11 @@ Currently, Information Barriers policies are defined and managed in Office 365 b
 
 ## Important considerations and best practices
 
-Information Barriers policies have an effect similar to [address book policies in Exchange](https://docs.microsoft.com/exchange/address-books/address-book-policies/address-book-policies). We recommend using either Information Barriers policies or address book policies, but not both. 
+- Information Barriers policies have an effect similar to [address book policies in Exchange](https://docs.microsoft.com/exchange/address-books/address-book-policies/address-book-policies). We recommend using either Information Barriers policies or address book policies, but not both. 
 
-Make sure that no single user is included in two or more Information Barriers policies.
+- Information Barriers will not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
 
-Potentially, everyone included in an Information Barriers policy can be blocked from communicating with others in Microsoft Teams. When people affected by Information Barriers policies are part of the same team or group chat, they will be removed from those chat sessions. 
-
-Information Barriers will not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
-
+- Potentially, everyone included in an Information Barriers policy can be blocked from communicating with others in Microsoft Teams. When people affected by Information Barriers policies are part of the same team or group chat, they will be removed from those chat sessions. 
 
 ## Prepare your environment for Information Barriers
 
