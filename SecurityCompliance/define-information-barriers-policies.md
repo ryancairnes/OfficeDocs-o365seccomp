@@ -19,7 +19,7 @@ Coming soon to Microsoft Teams, Information Barriers policies can help limit com
 
 ## Important considerations and best practices
 
-- Information Barriers policies have an effect similar to [address book policies in Exchange](https://docs.microsoft.com/exchange/address-books/address-book-policies/address-book-policies). We recommend using either Information Barriers policies or address book policies, but not both. 
+- Information Barriers policies have effects similar to [address book policies in Exchange](https://docs.microsoft.com/exchange/address-books/address-book-policies/address-book-policies). These effects include potential limitations in people picker and email address resolution, depending on how policies are configured. We recommend using either Information Barriers policies or address book policies, but not both. 
 
 - Information Barriers will not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
 
