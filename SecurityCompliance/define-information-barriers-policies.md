@@ -17,6 +17,8 @@ description: "Using PowerShell, you can define policies for Information Barriers
 
 Coming soon to Microsoft Teams, Information Barriers policies can help limit communications between specific groups of people. Information Barriers can help your organization comply with industry standards and regulations, and avoid potential conflicts of interest. To learn more, see [Information Barriers](information-barriers.md).
 
+This article describes how to define Information Barriers policies. Before you define a policy, make sure to review the information in the important considerations and prerequisites sections.
+
 ## Important considerations and best practices
 
 - Information Barriers policies have effects similar to [address book policies in Exchange](https://docs.microsoft.com/exchange/address-books/address-book-policies/address-book-policies). These effects include potential limitations in people picker and email address resolution, depending on how policies are configured. We recommend using either Information Barriers policies or address book policies, but not both. 
@@ -242,9 +244,9 @@ If you want to edit or remove an Information Barriers policy, follow these steps
 
 4. Depending on whether you're using the policy's name or GUID, run one of the following PowerShell cmdlets in the Office 365 Security & Compliance Center:
 
-    `Set-InformationBarrierPolicy -Name "" -State "Inactive`
+    `Set-InformationBarrierPolicy -Name "POLICYNAMEGOESHERE" -State "Inactive`
 
-    ` `
+    `Set-InformationBarrierPolicy -Identity "GUIDGOESHERE" -State "Inactive`
 
 WORK IN PROGRESS
 
