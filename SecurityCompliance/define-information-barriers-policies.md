@@ -15,7 +15,7 @@ description: "Using PowerShell, you can define policies for Information Barriers
 
 # Define policies for Information Barriers in Microsoft Teams
 
-Coming soon to Microsoft Teams, Information Barriers policies can help limit communications between specific groups of people. Information Barriers can help your organization comply with industry standards and regulations, and avoid potential conflicts of interest. To learn more, see [Information Barriers (coming soon to Microsoft Teams!)](information-barriers.md).
+Coming soon to Microsoft Teams, Information Barriers policies can help limit communications between specific groups of people. Information Barriers can help your organization comply with industry standards and regulations, and avoid potential conflicts of interest. To learn more, see [Information Barriers](information-barriers.md).
 
 ## Prerequisites
 
@@ -47,8 +47,14 @@ To define or edit Information Barriers policies, you must be assigned one of the
 
 Currently, Information Barriers policies are defined and managed in Office 365 by using PowerShell cmdlets. This irequires familiarity with PowerShell cmdlets (and parameters). Although several scenarios and examples of PowerShell cmdlets are provided in this article, you'll need to know additional details, such as which parameters to use for your organization.
 
-> [!IMPORTANT]
-> Potentially, everyone included in an Information Barriers policy can be blocked from communicating with others in Microsoft Teams. When people affected by Information Barriers policies are part of the same team or group chat, they will be removed from those chat sessions. However, Information Barriers will not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
+## Important considerations and best practices
+
+Information Barriers policies have an effect similar to [address book policies in Exchange](https://docs.microsoft.com/exchange/address-books/address-book-policies/address-book-policies). We recommend using either Information Barriers policies or address book policies, but not both. 
+
+Make sure that no single user is included in two or more Information Barriers policies.
+
+Potentially, everyone included in an Information Barriers policy can be blocked from communicating with others in Microsoft Teams. When people affected by Information Barriers policies are part of the same team or group chat, they will be removed from those chat sessions. However, Information Barriers will not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
+
 
 ## Prepare your environment for Information Barriers
 
