@@ -55,7 +55,7 @@ To define or edit Information Barriers policies, you must be assigned one of the
 
 ### PowerShell
 
-Currently, Information Barriers policies are defined and managed in Office 365 by using PowerShell cmdlets. This irequires familiarity with PowerShell cmdlets (and parameters). Although several scenarios and examples of PowerShell cmdlets are provided in this article, you'll need to know additional details, such as which parameters to use for your organization.
+Currently, Information Barriers policies are defined and managed in Office 365 by using PowerShell cmdlets. This requires familiarity with PowerShell cmdlets (and parameters). Although several scenarios and examples of PowerShell cmdlets are provided in this article, you'll need to know additional details, such as which parameters to use for your organization.
 
 ## Prepare your environment for Information Barriers
 
@@ -248,7 +248,7 @@ If you want to edit or remove an Information Barriers policy, follow these steps
 
     `Set-InformationBarrierPolicy -Identity "GUIDGOESHERE" -State "Inactive`
 
-WORK IN PROGRESS
+5. WORK IN PROGRESS
 
 
 ## Related articles
