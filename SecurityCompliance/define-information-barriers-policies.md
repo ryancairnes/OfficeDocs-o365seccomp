@@ -53,7 +53,9 @@ Information Barriers policies have an effect similar to [address book policies i
 
 Make sure that no single user is included in two or more Information Barriers policies.
 
-Potentially, everyone included in an Information Barriers policy can be blocked from communicating with others in Microsoft Teams. When people affected by Information Barriers policies are part of the same team or group chat, they will be removed from those chat sessions. However, Information Barriers will not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
+Potentially, everyone included in an Information Barriers policy can be blocked from communicating with others in Microsoft Teams. When people affected by Information Barriers policies are part of the same team or group chat, they will be removed from those chat sessions. 
+
+Information Barriers will not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
 
 
 ## Prepare your environment for Information Barriers
