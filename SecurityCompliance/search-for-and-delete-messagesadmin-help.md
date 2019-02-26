@@ -7,6 +7,7 @@ ms.date: 12/20/2017
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
+ms.collection: M365-security-compliance
 ms.custom: TN2DMC
 localization_priority: Normal
 search.appverid:

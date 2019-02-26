@@ -8,6 +8,7 @@ ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
+ms.collection: M365-security-compliance
 search.appverid: MOE150
 ms.assetid: cca08d26-6fbf-4b2c-b102-b226e4cd7381
 description: "Use the script in this article to generate a report that contains information about all the holds that are associated with eDiscovery cases in the Office 365 Security &amp; Compliance Center."

@@ -3,7 +3,11 @@ title: "Get started with Office 365 Threat Intelligence"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
+<<<<<<< HEAD
+ms.date: 01/22/2019
+=======
 ms.date: 02/13/2019
+>>>>>>> upstream/compliance20
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -68,25 +72,45 @@ As part of the Office 365 Advanced Threat Protection Plan 2 offering, security a
   
 ## How do we get Threat Intelligence?
 
+<<<<<<< HEAD
+Office 365 Threat Intelligence is included in Office 365 Enterprise E5. 
+
+> [!TIP]
+> If your organization has an Office 365 subscription that does not include Office 365 Threat Intelligence, you can potentially purchase Threat Intelligence as an add-on. For more information about plan options, see [Office 365 Platform Service Description: Office 365 Security &amp; Compliance Center](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-securitycompliance-center) and [Buy or edit an add-on for Office 365 for business](https://docs.microsoft.com/office365/admin/subscriptions-and-billing/buy-or-edit-an-add-on).
+=======
 **Threat Intelligence is now part of in Office 365 Advanced Threat Protection Plan 2**, which is included in in certain subscriptions, such as [Microsoft 365 Enterprise](https://www.microsoft.com/microsoft-365/enterprise/home), [Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business), Office 365 Enterprise E5, Office 365 Education A5, etc. If your organization has a subscription that does not include Office 365 ATP, you can potentially purchase ATP as an add-on. For more information, see [Office 365 Advanced Threat Protection plans and pricing](https://products.office.com/exchange/advance-threat-protection) and the [Office 365 Advanced Threat Protection Service Description](https://docs.microsoft.com/en-us/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#whats-new-in-office-365-advanced-threat-protection-atp).
+>>>>>>> upstream/compliance20
   
 1. As an Office 365 global administrator, go to [https://portal.office.com](https://portal.office.com) and sign in using your work or school account for Office 365. 
     
 2. Choose **Admin** \> **Billing** to see what your current subscription includes. 
 
+<<<<<<< HEAD
+    - If you see **Office 365 Enterprise E5**, then your organization has Office 365 Threat Intelligence. 
+    - If you see a different subscription, such as **Office 365 Enterprise E3** or **Office 365 Enterprise E1**, consider adding Threat Intelligence. (To do that, choose **+ Add subscription**.)
+    
+3. In the Office 365 admin center, choose **Users** \> **Active users**.
+    
+5. Assign Office 365 Threat Intelligence licenses to all active users. (Only users who have a license for Threat Intelligence will show up in reports, such as Explorer.)
+=======
     - If you see **Office 365 Enterprise E5**, then your organization has Office 365 Advanced Threat Protection Plan 2, which includes Threat Intelligence. 
     - If you see a different subscription, such as **Office 365 Enterprise E3** or **Office 365 Enterprise E1**, consider adding Advanced Threat Protection Plan 2. (To do that, choose **+ Add subscription**.)
     
 3. In the Office 365 admin center, choose **Users** \> **Active users**.
     
 5. Assign Office 365 Advanced Threat Protection licenses to all active users. (Only users who have a license for Threat Intelligence capabilities will show up in reports, such as Explorer.)
+>>>>>>> upstream/compliance20
     
 6. Assign roles to people in your organization who will be working with the Office 365 Advanced Threat Protection. See [Give users access to the Office 365 Security &amp; Compliance Center](grant-access-to-the-security-and-compliance-center.md), and refer to the following table:
     
 |||
 |:-----|:-----|
 |**To do this activity...** <br/> |**You must have one of these roles** <br/> |
+<<<<<<< HEAD
+|Use the Threat dashboard (or the new [Security dashboard](security-dashboard.md))  <br/> View information about recent or current threats  <br/> |Office 365 Global Administrator  <br/> Security Administrator (assigned in the Security &amp; Compliance Center)  <br/> Security Reader (assigned in the Security &amp; Compliance Center)  <br/> |
+=======
 |Use the Threat dashboard (or the new [Security dashboard](security-dashboard.md))  <br/> View information about recent or current threats  <br/> |Office 365 Global Administrator  <br/> Security Administrator (assigned in the Azure Active Directory admin center)  <br/> Security Reader (assigned in the Azure Active Directory admin center)  <br/> |
+>>>>>>> upstream/compliance20
 |Use Threat Explorer (also referred to as Explorer)  <br/> Analyze threats  <br/> |Office 365 Global Administrator  <br/> Security Administrator (assigned in the Security &amp; Compliance Center)  <br/> Security Reader (assigned in the Security &amp; Compliance Center)  <br/> |
 |View Incidents (also referred to as Investigations) <br/> Add email messages to an incident  <br/> |Office 365 Global Administrator  <br/> Security Administrator (assigned in the Security &amp; Compliance Center)  <br/> Security Reader (assigned in the Security &amp; Compliance Center)  <br/> |
 |Trigger email actions in an incident  <br/> Find and delete suspicious email messages  <br/> |Office 365 Global Administrator or Security Administrator  <br/> One of the roles above and Search and Purge (assigned in the Security &amp; Compliance Center)  <br/> |

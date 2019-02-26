@@ -8,6 +8,7 @@ ms.audience: End User
 ms.topic: article
 ms.service: O365-seccomp
 ms.custom: TN2DMC
+ms.collection: M365-security-compliance
 localization_priority: Normal
 search.appverid:
 ms.assetid: adee4621-3626-4aec-aa53-00b35ff0d0b0
