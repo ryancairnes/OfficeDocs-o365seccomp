@@ -183,7 +183,6 @@ In this example scenario, we will set up an Information Barriers policy that all
 > [!TIP]
 > We recommend testing with a few users who are included in Information Barriers policies, as well as with a few users who are not included in those policies.
 
-
 ## Scenario 3: Prevent one group from communicating with two other groups
 
 In this scenario, we will set up an Information Barriers policy that prevents people in one group (we'll call them Investors) to communicate with two other groups (we'll call them Research and Sales). 
@@ -219,7 +218,7 @@ In this scenario, we will set up an Information Barriers policy that prevents pe
 
     `Get-InformationBarrierPoliciesApplicationStatus -InvestorsResearchSalesIBPolicy`
 
-6. After you have defined your Information Barriers policy, **wait at least 24 hours for the policy to work its way through your data center and services**. Then, validate the Information Barriers status for a specific user by running the **Get-InformationBarrierRecipientStatus** cmdlet in the Office 365 Security & Compliance Center:
+6. After you have defined your Information Barriers policy, **wait at least 24 hours for the policy to work its way through your data center and services**. Then, validate the Information Barriers status for a specific user by running the following cmdlet in the Office 365 Security & Compliance Center:
 
     `Get-InformationBarrierRecipientStatus`
 
@@ -252,7 +251,7 @@ If you want to edit or remove an Information Barriers policy, follow these steps
 
     `Start-InformationBarrierPoliciesApplication -POLICYNAMEGOESHERE`
 
-    It can take a while for the process to finish.
+    It can take a while for the process to finish. To expedite this process, see LINKGOESHERE.
 
 6. WHAT IS NEXT...
 
