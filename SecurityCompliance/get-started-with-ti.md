@@ -3,11 +3,7 @@ title: "Get started with Office 365 Threat Intelligence"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-<<<<<<< HEAD
-ms.date: 01/22/2019
-=======
 ms.date: 02/13/2019
->>>>>>> upstream/compliance20
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
