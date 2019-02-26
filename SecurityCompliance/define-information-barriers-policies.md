@@ -83,7 +83,7 @@ Then, follow these steps:
 
 4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
 
-5. Prepare a list of groups that are defined in Exchange Online. If necessary, define those groups before you define Information Barriers policies. <br>In our example scenarios below, we have several groups predefined (Investors, Research, Products, and Sales), and we use their Distinguished Name values in our cmdlets.
+5. Prepare a list of groups that are defined in Exchange Online. If necessary, define those groups before you define Information Barriers policies. In our example scenarios below, we have several groups predefined (Investors, Research, Products, and Sales), and we use their Distinguished Name values in our cmdlets.
 
 After you have completed these steps, select one of the following scenarios:
 
