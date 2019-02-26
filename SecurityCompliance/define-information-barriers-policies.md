@@ -230,7 +230,9 @@ In this scenario, we will set up an Information Barriers policy that prevents pe
 
 ## What if I want to edit or remove a policy?
 
-If you want to edit or remove an Information Barriers policy, follow these steps:
+If you want to edit or remove an Information Barriers policy, you should first set the policy to inactive status. 
+
+### To set an Information Barriers policy to inactive status
 
 1. As a global administrator or compliance administrator, connect to PowerShell for Exchange Online, and connect to PowerShell for the Office 365 Security & Compliance Center.  
 
@@ -253,10 +255,10 @@ If you want to edit or remove an Information Barriers policy, follow these steps
 5. To apply the change (and make the policy inactive), run the **Start-InformationBarrierPoliciesApplication** cmdlet in the Office 365 Security & Compliance Center:
 
     `Start-InformationBarrierPoliciesApplication -POLICYNAMEGOESHERE`
+    
+6. (This is optional) If the process is taking a long time to finish, you can update recipients in Azure Active Directory and wait 30 minutes for FwdSync to occur. See [New address lists that you create in Exchange Online don't contain all the expected recipients](https://support.microsoft.com/help/2955640/new-address-lists-that-you-create-in-exchange-online-don-t-contain-all).
 
-    It can take a while for the process to finish. To expedite this process, see LINKGOESHERE.
-
-6. WHAT IS NEXT...
+At this point, your Information Barriers policy is set to inactive. You can leave it as is, edit it, or remove it altogether.
 
 ## Related articles
 
