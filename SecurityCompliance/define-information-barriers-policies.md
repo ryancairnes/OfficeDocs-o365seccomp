@@ -268,4 +268,4 @@ At this point, your Information Barriers policy is set to inactive. You can leav
 
 [Get an overview of Information Barriers](information-barriers.md)
 
-[Learn more Information Barriers in Microsoft Teams](https://docs.microsoft.com/SkypeForBusiness/MicrosoftTeams/information-barriers-in-teams)
+[Learn more Information Barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams)

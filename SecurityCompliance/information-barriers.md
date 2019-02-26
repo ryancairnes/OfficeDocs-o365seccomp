@@ -80,7 +80,7 @@ You must be familiar with PowerShell cmdlets in order to define, validate, or ed
 
 ## Next steps
 
-- [Learn more about the user experience of Information Barriers in Microsoft Teams](https://docs.microsoft.com/SkypeForBusiness/MicrosoftTeams/information-barriers-in-teams).
+- [Learn more about the user experience of Information Barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
 
 - [Define policies for Information Barriers in Microsoft Teams](define-information-barriers-policies.md). 
 
