@@ -56,6 +56,10 @@ To define or edit Information Barriers policies, you must be assigned one of the
 
 - Compliance Administrator
 
+### Directory data
+
+You must have enough data in your directory to be able to segment users. You could use attributes, such as group membership, department name, etc. as configured in Azure Active Directory (or your on-premises directory solution).
+
 ### PowerShell
 
 Currently, Information Barriers policies are defined and managed in Office 365 by using PowerShell cmdlets. This requires familiarity with PowerShell. Although several scenarios and examples of PowerShell cmdlets are provided in this article, you'll need to know additional details to define policies for your organization.
@@ -86,7 +90,7 @@ Then, follow these steps:
 
 4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
 
-5. Prepare a list of groups that are defined in Exchange Online. If necessary, define those groups before you define Information Barriers policies. In our example scenarios below, we have several groups predefined (Investors, Research, Products, and Sales), and we use their Distinguished Name values in our cmdlets.
+5. Gather a list of groups that will be included in your Information Barriers policy. In our example scenarios below, we have several groups predefined in Exchange (Investors, Research, Products, and Sales), and we use their Distinguished Name values in our cmdlets.
 
 After you have completed these steps, select one of the following scenarios:
 
