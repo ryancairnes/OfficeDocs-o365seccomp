@@ -1,7 +1,7 @@
 ---
 title: "Support for anonymous inbound email messages over IPv6"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.date: 
 ms.audience: ITPro
@@ -12,6 +12,8 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: b68df621-0a5f-4824-8abc-41e0c4fd1398
+ms.collection:
+- M365-security-compliance
 description: "Learn how to configure support for anonymous messages from IPv6 sources for Exchange Online Protection and Exchange Online."
 ---
 

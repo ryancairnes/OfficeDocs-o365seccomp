@@ -1,7 +1,7 @@
 ---
 title: "Use DKIM for email in your custom domain in Office 365"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.audience: ITPro
 ms.topic: article
@@ -11,6 +11,8 @@ ms.custom: TN2DMC
 search.appverid:
 - MET150
 ms.assetid: 56fee1c7-dc37-470e-9b09-33fff6d94617
+ms.collection:
+- M365-security-compliance
 description: "Summary: This article describes how you use DomainKeys Identified Mail (DKIM) with Office 365 to ensure that destination email systems trust messages sent from your custom domain."
 ---
 

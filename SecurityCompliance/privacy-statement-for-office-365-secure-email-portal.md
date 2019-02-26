@@ -1,7 +1,7 @@
 ---
 title: "Privacy statement for Office 365 Secure Email Portal"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.date: 10/12/2018
 ms.audience: End User
@@ -11,6 +11,8 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 ms.assetid: 278917cd-a930-46cc-9580-6b9d2361a5f9
+ms.collection:
+- M365-security-compliance
 description: "Last Updated: May 2017"
 ---
 

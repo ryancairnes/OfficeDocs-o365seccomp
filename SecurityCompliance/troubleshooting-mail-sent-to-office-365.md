@@ -1,7 +1,7 @@
 ---
 title: "Troubleshooting mail sent to Office 365"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.date: 5/2/2016
 ms.audience: ITPro
@@ -12,6 +12,8 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: f4caa4e1-e414-4b21-8822-31c08064c059
+ms.collection:
+- M365-security-compliance
 description: "This article provides troubleshooting information for senders who are experiencing issues when trying to send email to inboxes in Office 365 and best practices for bulk mailing to Office 365 customers."
 ---
 

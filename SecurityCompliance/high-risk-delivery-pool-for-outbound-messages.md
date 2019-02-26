@@ -1,7 +1,7 @@
 ---
 title: "High-risk delivery pool for outbound messages"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.date: 8/24/2016
 ms.audience: ITPro
@@ -12,6 +12,8 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: ac11edd9-2da3-462d-8ea3-bbf9dbc6f948
+ms.collection:
+- M365-security-compliance
 description: "When a customer's email system has been compromised by malware or a malicious spam attack, and it's sending outbound spam through the hosted filtering service, this can result in the IP addresses of the Office 365 data center servers being listed on third-party block lists."
 ---
 

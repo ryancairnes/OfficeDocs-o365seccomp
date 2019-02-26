@@ -1,7 +1,7 @@
 ---
 title: "Report junk email messages to Microsoft"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.date: 12/9/2016
 ms.audience: ITPro
@@ -12,6 +12,8 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: c31406ea-2979-4fac-9288-f835269b9d2f
+ms.collection:
+- M365-security-compliance
 description: "The Microsoft Junk Email Reporting Add-in for Microsoft Office Outlook offers several ways for you to report junk email messages:"
 ---
 

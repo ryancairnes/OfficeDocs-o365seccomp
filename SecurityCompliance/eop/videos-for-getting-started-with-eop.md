@@ -1,7 +1,7 @@
 ---
 title: "Videos for getting started with EOP"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.date: 3/13/2015
 ms.audience: ITPro
@@ -10,6 +10,8 @@ ms.service: O365-seccomp
 ms.custom: TN2DMC
 localization_priority: Normal
 ms.assetid: c9c39ada-6100-4034-a479-8bd39d428498
+ms.collection:
+- M365-security-compliance
 description: "The following series of videos will help you set up and use the Exchange Online Protection (EOP) hosted email filtering service."
 ---
 

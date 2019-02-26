@@ -1,7 +1,7 @@
 ---
 title: "Install the Junk Email Reporting Add-in for Microsoft Outlook"
-ms.author: krowley
-author: kccross
+ms.author: MSFTTracyP
+author: tracyp
 manager: laurawi
 ms.date: 12/9/2016
 ms.audience: ITPro
@@ -10,6 +10,8 @@ ms.service: O365-seccomp
 ms.custom: TN2DMC
 localization_priority: Normal
 ms.assetid: 8dcc752f-e22e-44ce-a104-4cc4d7e439f3
+ms.collection:
+- M365-security-compliance
 description: "In this articleSupported LanguagesInstall the Junk Email Reporting Add-inUninstall the Junk Email Reporting Add-inFor more information"
 ---
 

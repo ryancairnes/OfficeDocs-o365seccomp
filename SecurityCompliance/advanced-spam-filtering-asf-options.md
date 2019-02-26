@@ -1,7 +1,7 @@
 ---
 title: "Advanced spam filtering options"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.date: 6/26/2015
 ms.audience: ITPro

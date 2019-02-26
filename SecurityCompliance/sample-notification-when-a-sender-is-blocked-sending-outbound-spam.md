@@ -1,7 +1,7 @@
 ---
 title: "Sample notification when a sender is blocked sending outbound spam"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.date: 11/2/2017
 ms.audience: ITPro
@@ -12,6 +12,8 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: c33fd406-a4c8-4ac8-ad85-123996c5cded
+ms.collection:
+- M365-security-compliance
 description: "When a sender is blocked from the service due to sending outbound spam, the domain admin specified when you Configure the outbound spam policy will receive a notification email similar to the following:"
 ---
 

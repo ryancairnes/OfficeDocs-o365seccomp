@@ -1,7 +1,7 @@
 ---
 title: "Reference Policies, practices, and guidelines"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.date: 12/9/2016
 ms.audience: ITPro
@@ -12,6 +12,8 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: ff3f140b-b005-445f-bfe0-7bc3f328aaf0
+ms.collection:
+- M365-security-compliance
 description: "Microsoft has developed various policies, procedures, and adopted several industry best practices to help protect our users from abusive, unwanted, or malicious email."
 ---
 

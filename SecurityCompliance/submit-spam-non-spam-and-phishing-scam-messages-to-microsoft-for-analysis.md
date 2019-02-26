@@ -1,7 +1,7 @@
 ---
 title: "Submit spam, non-spam, and phishing scam messages to Microsoft for analysis"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.date: 6/11/2018
 ms.audience: ITPro
@@ -12,6 +12,8 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: dad30e2f-93fe-4d21-9a36-21c87ced85c1
+ms.collection:
+- M365-security-compliance
 description: "You and your users can submit false negative and false positive spam messages to Microsoft for analysis. "
 ---
 

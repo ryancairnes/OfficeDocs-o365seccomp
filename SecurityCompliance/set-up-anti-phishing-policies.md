@@ -1,7 +1,7 @@
 ---
 title: "Set up Office 365 ATP anti-phishing policies"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.audience: ITPro
 ms.topic: article
@@ -9,6 +9,8 @@ ms.date: 02/06/2019
 ms.service: O365-seccomp
 localization_priority: Normal
 ms.assetid: 5a6f2d7f-d998-4f31-b4f5-f7cbf6f38578
+ms.collection:
+- M365-security-compliance
 description: "Anti-phishing protection, with comprehensive protection as a part of Office 365 Advanced Threat Protection and basic protection in Office 365 Exchange Online Protection, can help protect your organization from malicious impersonation-based phishing attacks and other phishing attacks."
 ---
 

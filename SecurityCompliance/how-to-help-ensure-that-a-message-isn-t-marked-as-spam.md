@@ -1,7 +1,7 @@
 ---
 title: "How to help ensure that a message isn't marked as spam"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.date: 12/9/2016
 ms.audience: ITPro
@@ -12,6 +12,8 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: ceeda109-6c24-4270-bd09-a36959417276
+ms.collection:
+- M365-security-compliance
 description: "As an Exchange Online or Exchange Online Protection (EOP) administrator, you can help ensure that an email message traveling through the service isn't marked as spam. See the updated version of the tips and procedures to accomplish this in Prevent false positive email marked as spam with a safelist or other techniques."
 ---
 

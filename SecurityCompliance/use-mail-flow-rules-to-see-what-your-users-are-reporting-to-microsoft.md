@@ -1,7 +1,7 @@
 ---
 title: "Use mail flow rules to see what your users are reporting to Microsoft"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.audience: ITPro
 ms.topic: article
@@ -11,6 +11,8 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: 8401f520-8e7c-467b-9e06-4a9fdb2ba548
+ms.collection:
+- M365-security-compliance
 description: "You can create an Exchange Transport rule to prevent your users from sending email messages to Microsoft for analysis and use them in your own security processes"
 ---
 

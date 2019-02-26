@@ -1,7 +1,7 @@
 ---
 title: "Safe sender and blocked sender lists in Exchange Online"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.audience: ITPro
 ms.topic: reference
@@ -11,6 +11,8 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: 111ab6b0-2dd2-4a87-a928-4931df6b3c4d
+ms.collection:
+- M365-security-compliance
 description: "As an Exchange Online or Exchange Online Protection (EOP) administrator, you can help ensure that an email message traveling through the service isn't marked as spam. One way to do this is to create safe sender and blocked sender lists for the people in your organization."
 ---
 

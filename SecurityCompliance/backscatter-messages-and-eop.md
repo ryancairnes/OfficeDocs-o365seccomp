@@ -1,7 +1,7 @@
 ---
 title: "Backscatter messages and EOP"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.date: 12/9/2016
 ms.audience: ITPro

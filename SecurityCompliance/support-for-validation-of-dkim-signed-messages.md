@@ -1,7 +1,7 @@
 ---
 title: "Support for validation of DKIM signed messages"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.audience: ITPro
 ms.topic: article
@@ -11,6 +11,8 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: a4c95148-a00c-4d12-85ed-88520b547d97
+ms.collection:
+- M365-security-compliance
 description: "Learn about the validation of DKIM signed messages in Exchange Online Protection and Exchange Online"
 ---
 

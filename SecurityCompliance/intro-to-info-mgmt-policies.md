@@ -1,7 +1,7 @@
 ---
 title: "Introduction to information management policies"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.date: 5/16/2014
 ms.audience: Admin
@@ -14,6 +14,8 @@ search.appverid:
 - OSU150
 - MET150
 ms.assetid: 63a0b501-ba59-44b7-a35c-999f3be057b2
+ms.collection:
+- M365-security-compliance
 description: "An information management policy is a set of rules for a type of content. Information management policies enable organizations to control and track things like how long content is retained or what actions users can take with that content. Information management policies can help organizations comply with legal or governmental regulations, or they can simply enforce internal business processes."
 ---
 

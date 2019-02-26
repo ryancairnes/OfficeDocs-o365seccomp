@@ -1,7 +1,7 @@
 ---
 title: "Manage Office 365 Message Encryption"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.audience: ITPro
 ms.topic: article
@@ -10,6 +10,8 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: 09f6737e-f03f-4bc8-8281-e46d24ee2a74
+ms.collection:
+- M365-security-compliance
 description: "Once you've finished setting up Office 365 Message Encryption (OME), you can customize the configuration of your deployment in a number of ways. For example, you can configure whether to enable one-time pass codes, display the Protect button in Outlook on the web, and more. The tasks in this article describe how."
 ---
 

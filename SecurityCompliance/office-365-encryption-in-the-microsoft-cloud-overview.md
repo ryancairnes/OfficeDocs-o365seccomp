@@ -10,6 +10,8 @@ localization_priority: None
 search.appverid:
 - MET150
 ms.collection: Strat_O365_Enterprise
+ms.collection:
+- M365-security-compliance
 description: "An overview of encryption in the Microsoft Cloud."
 ---
 

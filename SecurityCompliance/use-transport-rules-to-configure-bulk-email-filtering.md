@@ -1,7 +1,7 @@
 ---
 title: "Use mail flow rules to configure bulk email filtering in Exchange Online Protection"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.audience: ITPro
 ms.topic: article
@@ -11,6 +11,8 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: 2889c82e-fab0-4e85-87b0-b001b2ccd4f7
+ms.collection:
+- M365-security-compliance
 description: "Admins can learn how to use mail flow rules in Exchange Online Protection for bulk email filtering."
 ---
 

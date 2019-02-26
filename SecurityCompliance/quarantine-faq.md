@@ -1,7 +1,7 @@
 ---
 title: "Quarantine FAQ"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.date: 6/16/2017
 ms.audience: ITPro
@@ -12,6 +12,8 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: c440b2ac-cafa-4be5-ba4c-14278a7990ae
+ms.collection:
+- M365-security-compliance
 description: "This topic provides frequently asked questions and answers about the hosted quarantine."
 ---
 

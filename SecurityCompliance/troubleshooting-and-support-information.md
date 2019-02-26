@@ -1,7 +1,7 @@
 ---
 title: "Troubleshooting and support information"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.date: 11/17/2014
 ms.audience: ITPro
@@ -12,6 +12,8 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: 5d9f75f5-bb7f-458c-ad30-5c8eae0b0e4e
+ms.collection:
+- M365-security-compliance
 description: "This topic describes troubleshooting steps for end users and administrators, and provides information about how to contact technical support for assistance."
 ---
 

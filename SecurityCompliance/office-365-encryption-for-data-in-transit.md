@@ -10,6 +10,8 @@ localization_priority: None
 search.appverid:
 - MET150
 ms.collection: Strat_O365_Enterprise
+ms.collection:
+- M365-security-compliance
 description: "Summary: A brief explanation of how Microsoft encrypts data in transit."
 ---
 

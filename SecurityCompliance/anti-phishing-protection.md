@@ -1,7 +1,7 @@
 ---
 title: "Anti-phishing protection in Office 365"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.date: 10/11/2018
 ms.audience: ITPro

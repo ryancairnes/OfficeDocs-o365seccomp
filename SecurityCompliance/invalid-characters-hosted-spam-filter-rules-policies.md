@@ -1,7 +1,7 @@
 ---
 title: "Avoid invalid characters in your spam filter rules and the spam filter policy"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.date: 9/24/2018
 ms.audience: ITPro
@@ -10,6 +10,8 @@ ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid:
 - MET150
+ms.collection:
+- M365-security-compliance
 description: "Provides help for administrators who have invalid characters in their anti-spam configuration and run into issues when attempting to use the Security &amp; Compliance Center."
 ---
 

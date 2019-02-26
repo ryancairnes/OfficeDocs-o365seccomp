@@ -1,7 +1,7 @@
 ---
 title: "Spam confidence levels"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.date: 10/2/2017
 ms.audience: ITPro
@@ -12,7 +12,8 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: 34681000-0022-4b92-b38a-e32b3ed96bf6
-
+ms.collection:
+- M365-security-compliance
 description: "When an email message goes through spam filtering it is assigned a spam score. That score is mapped to an individual Spam Confidence Level (SCL) rating and stamped in an X-header. The service takes actions upon the messages depending upon the spam confidence interpretation of the SCL rating. The following table shows how the different SCL ratings are interpreted by the filters and the default action that is taken on inbound messages for each rating."
 ---
 

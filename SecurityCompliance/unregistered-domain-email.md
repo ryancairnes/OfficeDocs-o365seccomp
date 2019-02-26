@@ -1,7 +1,7 @@
 ---
 title: "Unregistered Domain Email"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.date: 10/17/2018
 ms.audience: Admin
@@ -11,6 +11,8 @@ localization_priority: Normal
 search.appverid:
 - MET150
 - MOE150
+ms.collection:
+- M365-security-compliance
 description: "If you send a high volume of unregistered domain email, you run the risk of your email getting blocked. Read this article to learn more."
 ---
 

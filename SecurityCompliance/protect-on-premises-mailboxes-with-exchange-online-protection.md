@@ -1,7 +1,7 @@
 ---
 title: "Protect on-premises mailboxes with Exchange Online Protection"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.date: 6/1/2017
 ms.audience: ITPro
@@ -14,6 +14,8 @@ search.appverid:
 - GPA150
 - MET150
 ms.assetid: c5e95951-da67-4ec7-92c5-982abd477e69
+ms.collection:
+- M365-security-compliance
 description: "Even if you plan to host some or all of your mailboxes on-premises, you can still protect the mailboxes with Exchange Online Protection (EOP). To configure connectors, your account must be an Office 365 Global Admin, or an Exchange Company Administrator (the Organization Management role group). For information about how Office 365 permissions relate to Exchange permissions, see Assigning admin roles in Office 365 operated by 21Vianet. If all of your Exchange mailboxes are on-premise, follow these steps to set up your EOP service."
 ---
 
