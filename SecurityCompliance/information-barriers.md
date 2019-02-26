@@ -66,7 +66,7 @@ Currently, Information Barriers policies are defined and managed in Office 365 b
 
 - Information Protection & Compliance
 
-For more details, see [Compliance Solutions](https://products.office.com/business/security-and-compliance/compliance-solutions).
+For more details, including plans and pricing, see [Compliance Solutions](https://products.office.com/business/security-and-compliance/compliance-solutions).
 
 To [define or edit Information Barriers policies](define-information-barriers-policies.md), you must be assigned one of the following roles:
 
