@@ -95,7 +95,7 @@
 ### [How to reduce spam email in Office 365](reduce-spam-email.md)
 ### [Prevent email from being marked as spam in EOP and Office 365](prevent-email-from-being-marked-as-spam-0.md)
 ### [Controlling outbound spam in Office 365](outbound-spam-controls.md)
-### [Block email spam with the Office 365 spam filter to prevent false negative issues](block-email-spam-to-prevent-false-negatives.md)
+### [Block email spam with the Office 365 spam filter to prevent false negative issues](reduce-spam-email.md)
 ### [Zero-hour auto purge - protection against spam and malware](zero-hour-auto-purge.md)
 ### [Ensure that spam is routed to each user's Junk Email folder](ensure-that-spam-is-routed-to-each-user-s-junk-email-folder.md)
 ### [Report junk email messages to Microsoft](report-junk-email-messages-to-microsoft.md)

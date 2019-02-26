@@ -1,9 +1,10 @@
 ---
-title: "Block email spam with the Office 365 spam filter to prevent false negative issues"
-ms.author: krowley
-author: kccross
+title: "Block email spam in EOP Standalone"
+ms.author: tracyp
+author: msfttracyp
+ms.reviewer: andypunt
 manager: laurawi
-ms.date: 7/2/2018
+ms.date: 2/25/2019
 ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
@@ -14,15 +15,9 @@ search.appverid:
 ms.assetid: da21c0b6-e8f0-4cc8-af2e-5029a9433d59
 ms.collection:
 - M365-security-compliance
-description: "Tips to set up the Office 365 spam filter to help block email spam and prevent false negative messages, An Admin uses Office 365 anti-spam filtering to help prevent spam from being sent to user inboxes."
+description: "Document for EOP Standalone admins to help prevent spam false negatives"
 ---
 
-# Block email spam with the Office 365 spam filter to prevent false negative issues
-
-Exchange Online Protection (EOP) is a cloud-based email filtering service that helps protect your organization against spam and malware. If you have mailboxes in Office 365, they are already protected by default with EOP. 
-  
-You can help to ensure spam and junk messages are blocked by adjusting your Office 365 spam filter. This helps to prevent the false negative issue, where email spam is allowed through to a user inbox. As an Exchange Online or Exchange Online Protection (EOP) administrator, use the following steps to adjust your Office 365 anti-spam filter and help prevent spam from being delivered to your user's inboxes.
-  
 ## Customize the Office 365 anti-spam filter with these settings
 
 An Admin can use several Office 365 spam filter settings to help prevent email spam from being sent to a user inbox. The Office 365 spam filter will become better able to block email spam and prevent false negative messages if you use the options listed here. In this context, a false negative refers to email spam or junk messages that are getting sent to a user inbox.
@@ -47,12 +42,6 @@ Is the spam primarily bulk mail, for example, newsletters or promotions? You can
 
 [Configure your spam filter policies](https://technet.microsoft.com/en-us/library/jj200684%28v=exchg.150%29.aspx) to add the sender address to the sender block list or domain to the domain block list in the spam filter. Emails from a sender or domain on a spam filter block list will marked as spam. 
   
-### Advanced spam filtering options
-
-[Configure your spam filter policies](https://technet.microsoft.com/en-us/library/jj200684%28v=exchg.150%29.aspx) and turn on additional [Advanced Spam Filtering Options](https://technet.microsoft.com/en-us/library/jj200750%28v=exchg.150%29.aspx).
-  
-For more spam settings that apply to the whole organization, take a look at [Prevent false positive email marked as spam with a safelist or other techniques](prevent-email-from-being-marked-as-spam-0.md). This is helpful if you have administrator-level control and you want to prevent false positives.
-  
 ## Email users can also help ensure that false negative and email spam is blocked with Office 365 spam filter
 
 It will help your Office 365 anti-spam efforts to prevent false negatives and junk mail if you tell your users to add the spam sender address to their blocked sender list in [Outlook](https://go.microsoft.com/fwlink/p/?LinkId=270065) or [Outlook on the web](https://go.microsoft.com/fwlink/p/?LinkId=294862). In Outlook on the web, get started by clicking **Settings** \> **Options** \> **Block or allow**, and then adding the address to the **Blocked senders** list, as shown here. 
@@ -62,12 +51,8 @@ It will help your Office 365 anti-spam efforts to prevent false negatives and ju
 > [!NOTE]
 > For more detailed information about safe sender lists, see [Safe Sender and Blocked Sender Lists FAQ](https://technet.microsoft.com/en-us/library/dn133608%28v=exchg.150%29.aspx). 
   
-The previous paragraphs in this subsection applies only to customers who use EOP as service to protect on-premises email systems or as part of a hybrid email deployment. Learn more about EOP at the [Exchange Online Protection home page](https://products.office.com/en-us/exchange/exchange-email-security-spam-protection).
-  
-## EOP-only customers: Set up the Office 365 spam filter to block email spam
+## EOP-only customers: Set up directory synchronization
 
-For EOP-only customers with on-premises mailboxes: If you setup a spam filter for the default action, Move message to Junk Email folder, follow the required steps provided in Ensure that spam is routed to each user's Junk Email folder. We've tried to make this easy by providing the Exchange Management Shell commands in a separate topic, as well as a link to more general information about how to get started with the shell.
-  
 It will help you to avoid false negative email spam if you sync user settings with the service via directory synchronization to ensure that your blocked senders are respected. For more information, see "Use directory synchronization to manage mail users" in Manage mail users in EOP.
   
 ## EOP-only customers who are not using directory synchronization
@@ -97,6 +82,4 @@ The EOP service is designed to honor the user's safe and blocked senders, if the
 
 [Office 365 Email Anti-Spam Protection](anti-spam-protection.md)
   
-[Prevent false positive email marked as spam with a safelist or other techniques](prevent-email-from-being-marked-as-spam-0.md)
-  
-
+[Prevent false positive email marked as spam with a safelist or other techniques](prevent-email-from-being-marked-as-spam.md)

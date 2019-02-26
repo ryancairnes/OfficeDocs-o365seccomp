@@ -89,6 +89,6 @@ Rules created by admins (mail flow rules) or Block and Allow rules take preceden
 
 [Office 365 Email Anti-Spam Protection](anti-spam-protection.md)
   
-[Block email spam with the Office 365 spam filter to prevent false negative issues](block-email-spam-to-prevent-false-negatives.md)
+[Block email spam with the Office 365 spam filter to prevent false negative issues](reduce-spam-email.md)
   
 

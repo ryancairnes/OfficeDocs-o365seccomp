@@ -70,7 +70,7 @@ If you're concerned about spam, phishing, and spoofing in Office 365, use SPF, D
   
 [Prevent false positive email marked as spam with a safelist or other techniques](prevent-email-from-being-marked-as-spam-0.md)
   
-[How to set up Office 365 spam filtering to help block junk messages](block-email-spam-to-prevent-false-negatives.md)
+[How to set up Office 365 spam filtering to help block junk messages](reduce-spam-email.md)
   
 [What's the Difference Between Junk Email and Bulk Email?](https://technet.microsoft.com/library/dn720441%28v=exchg.150%29.aspx)
   

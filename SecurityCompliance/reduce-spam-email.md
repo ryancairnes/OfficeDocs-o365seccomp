@@ -22,15 +22,16 @@ description: "Learn the most common ways to help reduce spam and junk mail in Of
 
  **Are you getting too much spam in Office 365? Do this.**
   
-Many issues with spam in Office 365 can be resolved by [viewing the e-mail message headers](https://support.office.com/article/cd039382-dc6e-4264-ac74-c048563d212c) and determining what went wrong. You will need to look for a header named X-Forefront-Antispam-Report.
+We strongly recommend that you report False Negative messages by [using the Report Message add-in](https://support.office.com/article/b5caa9f1-cdf3-4443-af8c-ff724ea719d2) to help us improve our filters. Additionally, you can forward the message *as an attachment* to junk@office365.microsoft.com or phish@office365.microsoft.com (if it was phish).
 
-  If it contains the string SFV:NSPM, this means that Exchange Online Protection (EOP) scanned the message and didn't think it was spam. If you don't agree, this is called a false negative and we strongly recommend that you [use the Report Message add-in](https://support.office.com/article/b5caa9f1-cdf3-4443-af8c-ff724ea719d2) to help us improve our filters.
+>[Warning]
+> If you think the message is junk and it is in the Junk Email folder, that should not be a problem. If you don't want to see it at all in the mailbox, you should change the antispam policy to quarantine the message. More information on quarantining a message can be found in [Quarantine email messages in Office 365](quarantine-email-messages.md).
 
-  If you don't see this value in the headers, it could mean either that the mail didn't pass through spam scanning, or that there was a configuration issue that caused the message to be ignored. In this case, consult the information below. 
-  
-You can learn more about [anti-spam message headers](https://technet.microsoft.com/library/dn205071%28v=exchg.150%29.aspx).
+## Fixing allowed spam
 
-## Solutions to common causes of getting too much spam
+We often see that customers get junk mail into their inbox because of incorrect configurations. The most common of which is configuring your domains in a transport rule to bypass filters or listing your domain(s) in the allowed/safe-senders list. This is not good because these messages skip spam filtering and could have otherwise been caught.  
+
+## Solutions to other common causes of getting too much spam
 
 In order to protect you from getting too much spam, Exchange Online Protection (EOP) requires that administrators complete a few tasks. If you are not the administrator for your Office 365 tenant and you are getting too much spam, then you may want to work with your administrator on these tasks. Otherwise, you can skip to the user section.
   
@@ -42,13 +43,11 @@ In order to protect you from getting too much spam, Exchange Online Protection (
     
     When viewing the output, the Enable property should be set to True. If it is set to False, you can run Set-MailboxJunkEmailConfiguration to change it to True.
     
-- **Check your mail flow rules and safe lists** Look at the message header for a message that should have been marked as spam. Find the SCL property in the X-Forefront-Antispam-Report header. If the SCL value is -1, this indicates that the message was safe listed and bypassed EOP spam filtering. Investigate mail flow rules, allow lists, and the recipient's allowed senders list. A [Find and fix email delivery issues as an Office 365 for business admin](https://support.office.com/article/e7758b99-1896-41db-bf39-51e2dba21de6) will also be useful in providing details about why a message received an SCL of -1. 
-    
-- **Create mail flow rules in on-premises Exchange Server** If you are using Exchange Online Protection, but your mailboxes are located in on-premises Exchange Server, then you will need to create a couple of mail flow rules in on-premises Exchange Server. See the [instructions for EOP-only](https://technet.microsoft.com/library/ms.exch.eac.EditAntispamPolicy_SpamAction%28EXCHG.150%29.aspx?v=15.20.548.14&amp;l=1&amp;s=BPOS_S_E15_0).
+- **Create mail flow rules in on-premises Exchange Server** If you are using Exchange Online Protection, but your mailboxes are located in on-premises Exchange Server, then you will need to create a couple of mail flow rules in on-premises Exchange Server. See the [instructions for EOP-only](https://docs.microsoft.com/previous-versions/exchange-server/exchange-150/jj900470(v=exchg.150)).
     
 - **Mark bulk email as spam** Bulk email is email which users may have signed up for, but may still be undesirable. In the message header, find the BCL (Bulk Confidence Level) property in the X-Microsoft-Antispam header. If the BCL value is less than the threshold set in the spam filter, you may want to adjust the threshold to instead mark these types of bulk messages as spam. Different users have different tolerances and preferences for [how bulk email](https://docs.microsoft.com/en-us/office365/SecurityCompliance/bulk-complaint-level-values) is handled. You can create different policies or rules for different user preferences. 
     
-- **Immediately block a sender** In the case where you need to immediately block a sender, you can block by email address, domain, or IP address. See [Block email spam with the Office 365 spam filter to prevent false negative issues](block-email-spam-to-prevent-false-negatives.md). An entry in an end-user allow list can override a block set by the administrator.
+- **Immediately block a sender** In the case where you need to immediately block a sender, you can block by email address, domain, or IP address. See [Block email spam with the Office 365 spam filter to prevent false negative issues](create-organization-wide-safe-sender-or-blocked-sender-lists-in-office-365.md#use-the-eac-to-create-a-transport-rule-that-blocks-messages-sent-from-a-domain-or-user). An entry in an end-user allow list can override a block set by the administrator.
     
 - **Turn on the report message add-in for users** We strongly recommend that you [enable the report message add-in for you users](enable-the-report-message-add-in.md). As an administrator, you may also be able to view the feedback your users are sending and use any patterns to adjust any settings that may be causing problems.
     
