@@ -62,7 +62,7 @@ You must have enough data in your directory to be able to segment users. You cou
 
 ### PowerShell
 
-Currently, Information Barriers policies are defined and managed in Office 365 by using PowerShell cmdlets. This requires familiarity with PowerShell. Although several scenarios and examples of PowerShell cmdlets are provided in this article, you'll need to know additional details to define policies for your organization.
+Currently, Information Barriers policies are defined and managed in Office 365 by using PowerShell cmdlets. Although several scenarios and examples are provided in this article, you'll need to be familiar with PowerShell cmdlets and parameters.
 
 ## Prepare your environment for Information Barriers
 
