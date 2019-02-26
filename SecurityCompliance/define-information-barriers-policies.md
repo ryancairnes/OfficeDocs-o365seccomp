@@ -3,7 +3,7 @@ title: "Define Information Barriers policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 02/25/2019
+ms.date: 02/26/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -17,7 +17,7 @@ description: "Using PowerShell, you can define policies for Information Barriers
 
 Coming soon to Microsoft Teams, Information Barriers policies can help limit communications between specific groups of people. Information Barriers can help your organization comply with industry standards and regulations, and avoid potential conflicts of interest. To learn more, see [Information Barriers](information-barriers.md).
 
-This article describes how to define Information Barriers policies. Before you define a policy, make sure to review the information in the important considerations and prerequisites sections.
+This article describes how to define Information Barriers policies. Before you define a policy, make sure to review the information in the important considerations, prerequisites, and preparing your environment sections.
 
 ## Important considerations and best practices
 
@@ -41,7 +41,7 @@ This article describes how to define Information Barriers policies. Before you d
 
 - Information Protection & Compliance
 
-For more details, see [Compliance Solutions](https://products.office.com/business/security-and-compliance/compliance-solutions).
+For more details about these plans and compliance features, see [Compliance Solutions](https://products.office.com/business/security-and-compliance/compliance-solutions).
 
 ### Permissions
 
@@ -55,7 +55,7 @@ To define or edit Information Barriers policies, you must be assigned one of the
 
 ### PowerShell
 
-Currently, Information Barriers policies are defined and managed in Office 365 by using PowerShell cmdlets. This requires familiarity with PowerShell cmdlets (and parameters). Although several scenarios and examples of PowerShell cmdlets are provided in this article, you'll need to know additional details, such as which parameters to use for your organization.
+Currently, Information Barriers policies are defined and managed in Office 365 by using PowerShell cmdlets. This requires familiarity with PowerShell. Although several scenarios and examples of PowerShell cmdlets are provided in this article, you'll need to know additional details to define policies for your organization.
 
 ## Prepare your environment for Information Barriers
 
@@ -83,6 +83,8 @@ Then, follow these steps:
 
 4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
 
+5. Prepare a list of groups that are defined in Exchange Online. If necessary, define those groups before you define Information Barriers policies. <br>In our example scenarios below, we have several groups predefined (Investors, Research, Products, and Sales), and we use their Distinguished Name values in our cmdlets.
+
 After you have completed these steps, select one of the following scenarios:
 
 - [Scenario 1: Block communications between two groups](#scenario-1-block-communications-between-two-groups)
@@ -93,14 +95,14 @@ After you have completed these steps, select one of the following scenarios:
 
 ## Scenario 1: Block communications between two groups
 
-In this example scenario, we will set up an Information Barriers policy that prevents people in one group (we'll call them Investors) from communicating with people in another group (we'll call them Research).
+In this example scenario, we will set up an Information Barriers policy that prevents people in one group (we'll call them Investors) from communicating with people in another group (we'll call them Research). These groups are defined by attributes in Exchange Online.
 
 > [!IMPORTANT]
 > Before you begin the following procedure, make sure you have completed the steps in the section, [Prepare your environment for Information Barriers](#prepare-your-environment-for-information-barriers). 
 
 1. As a global administrator or compliance administrator, define the Investors and Research groups by running the following PowerShell cmdlets in Exchange Online. Run these cmdlets one at a time:
 
-    `$investorsGroup = Get-DistributionGroup -Identity Investors | select DistinguishedName'`
+    `$investorsGroup = Get-DistributionGroup -Identity Investors | select DistinguishedName`
 
     `$researchGroup = Get-DistributionGroup -Identity Research | select DistinguishedName`
 
