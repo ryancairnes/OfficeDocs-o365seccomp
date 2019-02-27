@@ -49,9 +49,9 @@ Follow these steps to set up and use supervision in your Office 365 organization
 
     Testing your supervision policy to make sure it is functioning as desired is an important part of ensuring that your compliance strategy is meeting your standards.
 
-- **Step 6 - (optional)** [Set up Outlook add-in for reviewers who do not want to use Office 365 supervision dashboard or Outlook on the web (formerly known as Outlook Web App) to review supervised communications](configure-supervision-policies.md#UseOutlook)
+- **Step 6 - (optional)** [Configure Outlook for reviewers who do not want to use Office 365 supervision dashboard or Outlook on the web (formerly known as Outlook Web App) to review supervised communications](configure-supervision-policies.md#UseOutlook)
 
-    The Supervision add-in for Outlook gives reviewers access to the supervision functionality right within the Outlook client so they can assess and categorize each item.
+    Outlook can be configured to give reviewers access to the supervision functionality within the Outlook client so they can assess and categorize each item.
 
 <a name="exampledist"> </a>
 
@@ -185,13 +185,13 @@ After you create a supervision policy, it's a good idea to test to make sure tha
 
 <a name="UseOutlook"> </a>
 
-## Step 6 - Set up Outlook add-in for reviewers (optional)
+## Step 6 - Configure Outlook for reviewers (optional)
 
-Reviewers that want to use Outlook instead of using the Supervision dashboard in Office 365 or Outlook on the web to review communications must install the Supervision add-in for their Outlook client.
+Reviewers that want to use Outlook instead of using the Supervision dashboard in Office 365 to review communications must configure their Outlook client.
 
 ### Step 1: Copy the address for the supervision mailbox
 
-To install the add-in for Outlook desktop, you'll need the address for the supervision mailbox that was created as part of the supervision policy setup.
+To configure review for Outlook desktop or Outlook for the web, you'll need the address for the supervision mailbox that was created as part of the supervision policy setup.
   
 > [!NOTE]
 > If someone else created the policy, you'll need to get this address from them to install the add-in.
@@ -206,7 +206,7 @@ To install the add-in for Outlook desktop, you'll need the address for the super
 
 4. In the policy details flyout, under **Supervision mailbox**, copy the address.<br/>![The 'Supervision Mailbox' section of a supervision policy's details flyout showing the supervision mailbox address highlighted](media/71779d0e-4f01-4dd3-8234-5f9c30eeb067.jpg)
   
-### Step 2: Configure the supervision mailbox for Outlook desktop access
+### Step 2: Configure the supervision mailbox for Outlook access
 
 Next, reviewers will need to run a couple Exchange Online PowerShell commands so they can connect Outlook to the supervision mailbox.
   
