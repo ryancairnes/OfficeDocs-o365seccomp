@@ -40,7 +40,7 @@ For information about keyboard shortcuts that may apply to the procedures in thi
     
       - Review the default company-wide policy under the Standard settings.
     
-      - Click on the **Custom** tab, change the **Custom settings** selector to **On**, and click on the **![Add Icon](media/ITPro-EAC-AddIcon.gif) **Create a policy** button in order to create a new custom spam-filter policy that can be applied to users, groups, and domains in your organization. You can also edit existing custom policies by double-clicking them. 
+      - Click on the **Custom** tab, change the **Custom settings** selector to **On**, and click on the ![Add Icon](media/ITPro-EAC-AddIcon.gif) **Create a policy** button in order to create a new custom spam-filter policy that can be applied to users, groups, and domains in your organization. You can also edit existing custom policies by double-clicking them. 
     
 3. For custom policies only, specify a name for the policy. Optionally, you can also specify a more detailed description. You cannot rename the default policy.<br/><br/>NOTE: When you create a policy, all configuration settings appear on a single screen. By contrast, when you edit a policy, you must navigate through multiple screens. The settings are the same in either case, but the rest of this procedure describes how to access these settings when you edit a policy. 
   

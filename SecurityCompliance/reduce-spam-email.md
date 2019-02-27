@@ -24,7 +24,7 @@ description: "Learn the most common ways to help reduce spam and junk mail in Of
   
 We strongly recommend that you report False Negative messages by [using the Report Message add-in](https://support.office.com/article/b5caa9f1-cdf3-4443-af8c-ff724ea719d2) to help us improve our filters. Additionally, you can forward the message *as an attachment* to junk@office365.microsoft.com or phish@office365.microsoft.com (if it was phish).
 
->[Warning]
+> [!TIP]
 > If you think the message is junk and it is in the Junk Email folder, that should not be a problem. If you don't want to see it at all in the mailbox, you should change the antispam policy to quarantine the message. More information on quarantining a message can be found in [Quarantine email messages in Office 365](quarantine-email-messages.md).
 
 ## Fixing allowed spam

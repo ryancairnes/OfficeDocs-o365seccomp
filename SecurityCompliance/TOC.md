@@ -89,7 +89,7 @@
 
 # [Protect against threats](protect-against-threats.md)
 ## [Anti-spam and anti-malware protection](anti-spam-and-anti-malware-protection.md)
-### [Videos for getting started with protecting your email](videos-for-getting-started-with-protecting-your-email.md)
+### [Overview of EOP](videos-for-getting-started-with-protecting-your-email.md)
 ### [Office 365 email anti-spam protection](anti-spam-protection.md)
 ### [How to prevent real email from being marked as spam in Office 365](prevent-email-from-being-marked-as-spam.md)
 ### [How to reduce spam email in Office 365](reduce-spam-email.md)

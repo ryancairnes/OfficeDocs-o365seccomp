@@ -1,9 +1,10 @@
 ---
 title: "Videos for getting started with protecting your email"
 ms.author: tracyp
-author: MSFTTracyP
+author: msfttracyp
+ms.reviewer: andypunt
 manager: laurawi
-ms.date: 11/17/2014
+ms.date: 2/25/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -12,51 +13,36 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: 393b0050-7c7e-49e6-a03d-b1e09fe4de9e
-ms.collection:
-- M365-security-compliance
-description: "The following series of introductory videos will help you use Exchange Online Protection (EOP) to protect your mailboxes. These videos are applicable for EOP standalone customers who are protecting on-premises mailboxes such as Exchange Server 2013, and for Exchange Online customers whose cloud-hosted mailboxes by default are protected by EOP."
+description: "This introductory document will help you understand Exchange Online Protection (EOP) and some important terminology. This is applicable for Office 365 customers who are protecting Exchange Online cloud-hosted mailboxes and EOP standalone customers who are protecting on-premises mailboxes such as Exchange Server 2016."
 ---
 
-# Videos for getting started with protecting your email
+## What is Exchange Online Protection (EOP)
 
-The following series of introductory videos will help you use Exchange Online Protection (EOP) to protect your mailboxes. These videos are applicable for EOP standalone customers who are protecting on-premises mailboxes such as Exchange Server 2013, and for Exchange Online customers whose cloud-hosted mailboxes by default are protected by EOP. 
-  
-The following three videos are about tailoring your anti-spam settings to fit the needs of your organization. For inbound mail traveling through the service to your organization, this includes creating safe sender and blocked sender lists based on IP addresses, and configuring content filter settings. There's also a video showing how admins can find and release content-filtered spam messages or messages that matched a transport rule that were sent to the quarantine, and also how to report spam messages to help us improve the service.
-  
-- Configure IP Allow and IP Block Lists in EOP
-    > [!VIDEO https://www.microsoft.com/videoplayer/embed/b2f5bea3-e1a7-44b3-b7e2-07fac0d0ca40?autoplay=false]
-  
-    For more details, see the [Configure the connection filter policy](configure-the-connection-filter-policy.md) topic. 
-    
-- Configure Spam Content Filtering in EOP
-    > [!VIDEO https://www.microsoft.com/videoplayer/embed/608be94c-d763-4c47-af94-99e7cb277713?autoplay=false]
-  
-    For more details, see the [Configure your spam filter policies](configure-your-spam-filter-policies.md) topic. 
-    
-- Find and Release Messages From the Quarantine
-    > [!VIDEO https://www.microsoft.com/videoplayer/embed/2a78346d-a3ab-4d70-a88e-0c9d562f7545?autoplay=false]
-  
-    For more details, see the [Find and release quarantined messages as an administrator](find-and-release-quarantined-messages-as-an-administrator.md) topic. 
-    
-You'll also want to configure the outbound spam policy because you'll want to monitor if spam is being sent from your organization. Check out the outbound spam video to learn how.
-  
-- Configure the Outbound Spam Policy
-    > [!VIDEO https://www.microsoft.com/videoplayer/embed/1f20d655-0d3d-4141-9cae-e57f5a6cffe8?autoplay=false]
-  
-    For more details, see the [Configure the outbound spam policy](configure-the-outbound-spam-policy.md)
-    
-There are also settings for how to handle malware that's detected by the service, which the anti-malware filtering video describes.
-  
-- Configure the Anti-Malware Policy
-    > [!VIDEO https://www.microsoft.com/videoplayer/embed/12517702-ab48-4df8-a7ff-8eb02aa31724?autoplay=false]
-  
-    For more details, see the [Configure anti-malware policies](configure-anti-malware-policies.md) topic. 
-    
-To filter and route messages based on specific conditions you set, based on company policy or regulations, you'll want to watch the video about how to create transport rules.
-  
-- Configure Exchange Transport Rules in EOP
-    > [!VIDEO https://www.microsoft.com/videoplayer/embed/7cdcd2cb-9382-4065-98e1-81257b32a189?autoplay=false]
-  
-    For more details, see the [Mail flow rules (transport rules) in Exchange Online Protection](eop/mail-flow-rules-transport-rules-0.md) topic if you use EOP standalone, or see the [Transport rules](http://technet.microsoft.com/library/743bd525-0ca2-426d-b76c-b4a052bc8886.aspx) topic if you use Exchange Online. 
-    
+Exchange Online Protection (EOP) is a cloud-based email filtering service that helps protect your organization against spam and malware. If you have mailboxes in Office 365, they are automatically protected by EOP since it is part of the service. This includes organizations that have mailboxes in both Office 365 and on-premise, which is commonly known as a hybrid scenario. EOP standalone is also available for customers who do not have mailboxes in the cloud but want to protect their on-premise mailboxes. 
 
+EOP attempts to filter out junk, keeping your Inbox clear of content that users don't want to see. Normally, junk mail is delivered to the Junk Email folder. Some users like to check to make sure the filtering is doing what they want so the Junk Email folder is an easy way for users to check on their own.  
+
+> [!TIP]
+> It is a good thing when junk or otherwise bad email goes into the Junk Email folder automatically. The service will do what is necessary based on what the default or the custom admin settings state. In other words, users should not worry about seeing a lot of spam mail in the Junk Email folder. If admins prefer to move all junk out of sight, then the Quarantine should be configured. For more details, see the [Quarantine email messages in Office 365](quarantine-email-messages.md) article.
+
+## Important terms
+
+**Inbound:** Messages that are coming into Office 365.
+
+**Outbound:** Messages that are going out of Office 365.
+
+**Internal:** Messages that are from someone inside the organization to someone inside the organization. This includes customers who are in hybrid scenarios and one mailbox could be on-premise and the other mailbox is in the cloud.
+
+**False Negative (FN):** Spam and other junk that incorrectly gets sent into the inbox.
+
+**False Positive (FP):** Legitimate messages that incorrectly get marked as spam and put into the Junk Email folder or Quarantine.
+
+**Spam, also known as unsolicited e-mail:** This comes in the form of commercial advertising, chain letters, political mailings, etc. This is email that users do not sign up for and from spammers who are trying to solicit products or attempting to commit fraud.
+
+**Phish:** Phishing is a special type of spam that is intended to trick you into giving up personal information for the purpose of committing identity theft or fraud. This type of message usually contains a malicious link or attachment, but not always.
+
+**Spoof:** Spoofing is when spammers forge the FROM header so that messages appear to have originated from someone or somewhere other than the actual source. This can be spam but most commonly used to phish users.
+
+**Impersonation:** This type of spam is also a way to forge the sender address, but it is done by modifying part of the name or domain so that it looks like the real source. For example, Bi11@micr0s0ft.com, where the "l" in Bill was actually the number eleven and the "o" in Microsoft was replaced with the number zero.
+
+**Bulk:** Bulk mail is usually solicited by users, although sometimes indirectly when companies sell information to other companies. It is common that users intentionally sign up for bulk mail (i.e. newletters) but forget later on and think it is spam. Bulk mail becomes spam when bulk mailers send more than users sign up and complaint levels get too high.
