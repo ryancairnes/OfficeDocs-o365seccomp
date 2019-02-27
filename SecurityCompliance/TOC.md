@@ -418,6 +418,9 @@
 # Compliance solutions
 ## [Microsoft Service Trust Portal](get-started-with-service-trust-portal.md)
 ## [Compliance Manager](meet-data-protection-and-regulatory-reqs-using-microsoft-cloud.md)
+## [Information Barriers](information-barriers.md)
+### [Define policies for Information Barriers in Microsoft Teams](define-information-barriers-policies.md)
+### [Information Barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams)
 ## [GDPR data subject request tool](manage-gdpr-data-subject-requests-with-the-dsr-case-tool.md)
 ## [Office 365 Information Protection for GDPR](office-365-information-protection-for-gdpr.md)
 ### [Overview: Office 365 Protection for GDPR](office-365-info-protection-for-gdpr-overview.md)
