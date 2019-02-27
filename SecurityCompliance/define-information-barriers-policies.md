@@ -3,7 +3,7 @@ title: "Define Information Barriers policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 02/26/2019
+ms.date: 02/27/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -26,9 +26,9 @@ This article describes how to define Information Barriers policies.
 
 - Information Barriers policies have effects similar to [address book policies in Exchange](https://docs.microsoft.com/exchange/address-books/address-book-policies/address-book-policies). These effects include potential limitations in people picker and email address resolution, depending on how policies are configured. We recommend using either Information Barriers policies or address book policies, but not both. 
 
-- Information Barriers will not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
+- Information Barriers policies do not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
 
-- Potentially, everyone included in an Information Barriers policy can be blocked from communicating with others in Microsoft Teams. When people affected by Information Barriers policies are part of the same team or group chat, they will be removed from those chat sessions. 
+- Potentially, everyone included in an Information Barriers policy can be blocked from communicating with others in Microsoft Teams. When people affected by Information Barriers policies are part of the same team or group chat, they might be removed from those chat sessions. To learn more, see [Learn more Information Barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
 
 ## Prerequisites
 
@@ -90,7 +90,7 @@ Then, follow these steps:
 
 4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
 
-5. Gather a list of groups that will be included in your Information Barriers policy. In our example scenarios below, we have several groups predefined in Exchange (Investors, Research, Products, and Sales), and we use their Distinguished Name values in our cmdlets.
+5. Gather a list of users and groups to be included in an Information Barriers policy. <br>In our example scenarios below, we have several groups predefined in Exchange (Investors, Research, Products, and Sales), and we use their Distinguished Name values in our cmdlets.
 
 After you have completed these steps, select one of the following scenarios:
 
@@ -102,7 +102,7 @@ After you have completed these steps, select one of the following scenarios:
 
 ## Scenario 1: Block communications between two groups
 
-In this example scenario, we will set up an Information Barriers policy that prevents people in one group (we'll call them Investors) from communicating with people in another group (we'll call them Research). These groups are defined by attributes in Exchange Online.
+In this example scenario, we define an Information Barriers policy that prevents people in one group (Investors) from communicating with people in another group (Research). In our example, these groups are defined by their Department attribute in Exchange Online.
 
 > [!IMPORTANT]
 > Before you begin the following procedure, make sure you have completed the steps in the section, [Prepare your environment for Information Barriers](#prepare-your-environment-for-information-barriers). 
@@ -154,7 +154,7 @@ In this example scenario, we will set up an Information Barriers policy that pre
 
 ## Scenario 2: Allow one group to communicate with only one other group
 
-In this example scenario, we will set up an Information Barriers policy that allows people in one group (we'll call them Products) to communicate with only one other group (we'll call them Research). With this policy in place, people in the Products group will not be able to call or chat with anyone except people in the Research group.
+In this example scenario, we define an Information Barriers policy that allows people in one group (Products) to communicate with only one other group (Research). With this policy in place, people in the Products group will not be able to call or chat with anyone except people in the Research group.
 
 > [!IMPORTANT]
 > Before you begin the following procedure, make sure you have completed the steps in the section, [Prepare your environment for Information Barriers](#prepare-your-environment-for-information-barriers). 
@@ -192,7 +192,7 @@ In this example scenario, we will set up an Information Barriers policy that all
 
 ## Scenario 3: Prevent one group from communicating with two other groups
 
-In this scenario, we will set up an Information Barriers policy that prevents people in one group (we'll call them Investors) to communicate with two other groups (we'll call them Research and Sales). 
+In this scenario, we define an Information Barriers policy that prevents people in one group (Investors) to communicate with two other groups (Research and Sales). 
 
 > [!IMPORTANT]
 > Before you begin the following procedure, make sure you have completed the steps in the section, [Prepare your environment for Information Barriers](#prepare-your-environment-for-information-barriers). 

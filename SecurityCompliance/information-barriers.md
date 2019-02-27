@@ -3,7 +3,7 @@ title: "Information Barriers overview"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 02/13/2019
+ms.date: 02/27/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -50,7 +50,7 @@ Information Barriers policies determine and prevent the following kinds of unaut
 If the people involved are included in an Information Barriers policy to prevent the activity, they will not be able to proceed. To learn more about the user experience with Information Barriers, see [Information Barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
 
 > [!IMPORTANT]
-> Potentially, everyone included in an Information Barriers policy can be blocked from communicating with others in Microsoft Teams. When people affected by Information Barriers policies are part of the same team or group chat, they will be removed from those chat sessions. However, Information Barriers will not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
+> Potentially, everyone included in an Information Barriers policy can be blocked from communicating with others in Microsoft Teams. When people affected by Information Barriers policies are part of the same team or group chat, they might be removed from those chat sessions and further communication with the group might not be allowed. However, Information Barriers will not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
 
 Currently, Information Barriers policies are defined and managed in Office 365 by using PowerShell cmdlets. This is typically done by a compliance administrator or a global administrator, and requires familiarity with PowerShell cmdlets (and parameters).
 
