@@ -5,7 +5,7 @@ author: denisebmsft
 manager: laurawi
 ms.audience: Admin
 ms.topic: reference
-ms.date: 01/25/2019
+ms.date: 02/27/2019
 ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid:
@@ -21,6 +21,22 @@ description: "See what's new in Office 365 Cloud App Security"
   
 > [!TIP]
 > This article is updated frequently, as features are added or improved. Office 365 Cloud App Security updates are released approximately two weeks after Microsoft Cloud App Security updates, and not all Microsoft Cloud App Security updates apply to Office 365 Cloud App Security. In addition, new features might take a week or more after their release date to show up in your Office 365 Cloud App Security environment.
+
+## Office 365 Cloud App Security release 142
+
+*Released February 17, 2019*
+
+Following  [Microsoft Cloud App Security release 142](https://docs.microsoft.com/en-us/cloud-app-security/release-notes#cloud-app-security-release-142)
+
+- **Access/Session policies for Office 365 Cloud App Security** Conditional Access App Control has been added to Office 365 Cloud App Security. Access and Session policies can now be configured on the following applications in public preview:
+    - Exchange Online (preview)
+    - OneDrive for Business (preview)
+    - Power BI (preview)
+    - SharePoint Online (preview)
+    - Yammer (preview)
+    - Microsoft Teams (preview)
+
+    To learn more, see [Protect apps with Office 365 Cloud App Security Conditional Access App Control](ocas-conditional-access-app-control.md).
 
 ## Office 365 Cloud App Security releases 139, 140
 
