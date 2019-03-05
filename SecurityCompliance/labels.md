@@ -5,14 +5,14 @@ author: stephow-MSFT
 manager: laurawi
 ms.date: 6/22/2018
 ms.audience: Admin
-ms.topic: overview
+ms.topic: conceptual
 ms.service: O365-seccomp
 localization_priority: Priority
 ms.collection: Strat_O365_IP
+ms.collection: M365-security-compliance
 search.appverid: 
 - MOE150
 - MET150
-ms.assetid: af398293-c69d-465e-a249-d74561552d30
 description: "Retention labels in Office 365 can help you take the right actions on the right content. With retention labels, you can classify data across your organization for governance, and enforce retention rules based on that classification. You can also use retention labels to implement records management across Office 365."
 ---
 

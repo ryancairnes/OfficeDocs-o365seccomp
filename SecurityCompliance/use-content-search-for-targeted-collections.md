@@ -50,7 +50,7 @@ The script that you run in this first step will return a list of mailbox folders
     
 - **Your user credentials** - The script will use your credentials to connect to Exchange Online and the Security &amp; Compliance Center with remote PowerShell. As previously explained, you have to assigned the appropriate permissions to successfully run this script.
     
-To display a list of mailbox folders or site path names:
+To display a list of mailbox folders or site documentlink (path) names:
   
 1. Save the following text to a Windows PowerShell script file by using a filename suffix of .ps1; for example, `GetFolderSearchParameters.ps1`.
     
@@ -61,9 +61,10 @@ To display a list of mailbox folders or site path names:
   #      Online and who is an eDiscovery Manager in the Security &amp; Compliance Center.			#
   # The script will then:											#
   #    * If an email address is supplied: list the folders for the target mailbox.			#
-  #    * If a SharePoint or OneDrive for Business site is supplied: list the folder paths for the site.	#
-  #    * In both cases, the script supplies the correct search properties (folderid: or path:)		#
-  #      appended to the folder ID or path ID to use in a Content Search.				#
+  #    * If a SharePoint or OneDrive for Business site is supplied: list the documentlinks (folder paths) #
+  #    * for the site.	                                                                                #
+  #    * In both cases, the script supplies the correct search properties (folderid: or documentlink:)	#
+  #      appended to the folder ID or documentlink to use in a Content Search.				#
   # Notes:												#
   #    * For SharePoint and OneDrive for Business, the paths are searched recursively; this means the 	#
   #      the current folder and all sub-folders are searched.						#
@@ -149,7 +150,7 @@ To display a list of mailbox folders or site path names:
           {
               $rawUrl = $match.Value
               $rawUrl = $rawUrl -replace "Data Link: " -replace "," -replace "}"
-              Write-Host "path:""$rawUrl"""
+              Write-Host "DocumentLink:""$rawUrl"""
           }
       }
       else
@@ -191,18 +192,15 @@ The example in Step 2 shows the query used to search the Purges subfolder in the
   
 ### Script output for site folders
 
-If you're getting paths from SharePoint or OneDrive for Business sites, the script connects to the Security &amp; Compliance Center using remote PowerShell, creates a new Content Search that searches the site for folders, and then displays a list of the folders located in the specified site. The script displays the name of each folder and adds the prefix of **path** (which is the name of the site property) to the folder URL. Because the **path** property is a searchable property, you'll use  `path:<path>` in a search query in Step 2 to search that folder. 
+If you're getting documentlinks from SharePoint or OneDrive for Business sites, the script connects to the Security &amp; Compliance Center using remote PowerShell, creates a new Content Search that searches the site for folders, and then displays a list of the folders located in the specified site. The script displays the name of each folder and adds the prefix of **path** (which is the name of the site property) to the folder URL. Because the **path** property is a searchable property, you'll use  `path:<path>` in a search query in Step 2 to search that folder. 
   
 Here's an example of the output returned by the script for site folders.
   
-![Example of the list of path names for site folders returned by the script](media/519e8347-7365-4067-af78-96c465dc3d15.png)
+![Example of the list of documentlink names for site folders returned by the script](media/519e8347-7365-4067-af78-96c465dc3d15.png)
   
-## Step 2: Use a folder ID or path to perform a targeted collection
+## Step 2: Use a folder ID or documentlink to perform a targeted collection
 
-After you've run the script to collect a list of folder IDs or paths for a specific user, the next step to go to the Security &amp; Compliance Center and create a new Content Search to search a specific folder. You'll use the  `folderid:<folderid>` or  `path:<path>` property in the search query that you configure in the Content Search keyword box (or as the value for the  *ContentMatchQuery*  parameter if you use the **New-ComplianceSearch** cmdlet). You can combine the  `folderid` or  `path` property with other search parameters or search conditions. If you only include the  `folderid` or  `path` property in the query, the search will return all items located in the specified folder. 
-  
-> [!NOTE]
-> Using the  `path` property to search OneDrive locations won't return media files, such as .png, .tiff, or .wav files, in the search results. 
+After you've run the script to collect a list of folder IDs or documentlinks for a specific user, the next step to go to the Security &amp; Compliance Center and create a new Content Search to search a specific folder. You'll use the  `folderid:<folderid>` or  `documentlink:<path>` property in the search query that you configure in the Content Search keyword box (or as the value for the  *ContentMatchQuery*  parameter if you use the **New-ComplianceSearch** cmdlet). You can combine the  `folderid` or  `documentlink` property with other search parameters or search conditions. If you only include the  `folderid` or  `documentlink` property in the query, the search will return all items located in the specified folder. 
   
 1. Go to [https://protection.office.com](https://protection.office.com).
     
@@ -222,17 +220,17 @@ After you've run the script to collect a list of folder IDs or paths for a speci
     
 6. Click **Next**.
     
-7. In the keyword box on the **What do you want us to look for** page, paste the  `folderid:<folderid>` or  `path:<path>` value that was returned by the script in Step 1. 
+7. In the keyword box on the **What do you want us to look for** page, paste the  `folderid:<folderid>` or  `documentlink:<path>` value that was returned by the script in Step 1. 
     
     For example, the query in the following screenshot will search for any item in the Purges subfolder in the user's Recoverable Items folder (the value of the `folderid` property for the Purges subfolder is shown in the screenshot in Step 1):
     
-    ![Paste the folderid or path in to the keyword box of the search query](media/84057516-b663-48a4-a78f-8032a8f8da80.png)
+    ![Paste the folderid or documentlink in to the keyword box of the search query](media/84057516-b663-48a4-a78f-8032a8f8da80.png)
   
 8. Click **Search** to start the targeted collection search. 
   
 ### Examples of search queries for targeted collections
 
-Here are some examples of using the  `folderid` and  `path` properties in a search query to perform a targeted collection. Note that placeholders are used for  `folderid:<folderid>` and  `path:<path>` to save space. 
+Here are some examples of using the  `folderid` and  `documentlink` properties in a search query to perform a targeted collection. Note that placeholders are used for  `folderid:<folderid>` and  `documentlink:<path>` to save space. 
   
 - This example searches three different mailbox folders. You could use similar query syntax to search the hidden folders in a user's Recoverable Items folder.
     
@@ -249,13 +247,13 @@ Here are some examples of using the  `folderid` and  `path` properties in a sear
 - This example searches a site folder (and any subfolders) for documents that contain the letters "NDA" in the title.
     
   ```
-  path:<path> AND filename:nda
+  documentlink:<path> AND filename:nda
   ```
 
 - This example searches a site folder (and any subfolder) for documents there were changed within a date range.
     
   ```
-  path:<path> AND (lastmodifiedtime>=01/01/2017 AND lastmodifiedtime<=01/21/2017)
+  documentlink:<path> AND (lastmodifiedtime>=01/01/2017 AND lastmodifiedtime<=01/21/2017)
   ```
   
 ## More information
@@ -268,8 +266,6 @@ Keep the following things in mind when using the script in this article to perfo
     
 - When searching mailbox folders, only the specified folder (identified by its  `folderid` property) will be searched. Subfolders won't be searched. To search sub-folders, you need to use the  folder ID for the sub-folder that you want to search. 
     
-- When searching site folders, the folder (identified by its  `path` property) and all sub-folders will be searched. 
+- When searching site folders, the folder (identified by its  `documentlink` property) and all sub-folders will be searched. 
     
-- As previously stated, you can't use  `path` property to search for media files, such as .png, .tiff, or .wav files, located in OneDrive locations. Use a different [site property](keyword-queries-and-search-conditions.md#searchable-site-properties) to search for media files in OneDrive folders. 
-
 - When exporting the results of a search in which you only specified the `folderid` property in the search query, you can choose the first export option, "All items, excluding ones that have an unrecognized format, are encrypted, or weren't indexed for other reasons." All items in the folder will always be exported regardless of their indexing status because the folder ID is always indexed.

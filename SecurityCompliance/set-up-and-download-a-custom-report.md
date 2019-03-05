@@ -11,6 +11,8 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 1a7be622-f6a5-4ce1-a343-f249475334f6
+ms.collection:
+- M365-security-compliance
 description: "Learn how to set up and download a report with a custom date range and filters in the Security &amp; Compliance Center."
 ---
 

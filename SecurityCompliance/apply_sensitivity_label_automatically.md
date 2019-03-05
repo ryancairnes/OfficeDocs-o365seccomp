@@ -7,6 +7,8 @@ ms.audience: Admin
 ms.service: O365-seccomp
 localization_priority: Priority
 ms.collection: Strat_O365_IP
+ms.collection: M365-security-compliance
+ms.topic: article
 search.appverid: 
 - MOE150
 - MET150

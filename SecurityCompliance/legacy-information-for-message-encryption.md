@@ -162,7 +162,7 @@ RMS provides Information Rights Protection capabilities for an organization's in
   
  **Q. How is Office 365 Message Encryption different from S/MIME?**
   
-S/MIME is essentially a client-side encryption technology, and requires complicated certificate management and publishing infrastructure. Office 365 Message Encryption uses transport rules and does not depend on certificate publishing.
+S/MIME is essentially a client-side encryption technology, and requires complicated certificate management and publishing infrastructure. Office 365 Message Encryption uses mail flow rules (also known as transport rules) and does not depend on certificate publishing.
   
  **Q. Can I read the encrypted messages over mobile devices?**
   
@@ -208,7 +208,7 @@ No. You can't revoke a message to a particular person after it's sent.
   
  **Q. Can I view a report of encrypted messages that have been received and read?**
   
-There isn't a report that shows if an encrypted message has been viewed, but there are Office 365 reports available that you can leverage to determine the number of messages that matched a specific transport rule, for instance.
+There isn't a report that shows if an encrypted message has been viewed, but there are Office 365 reports available that you can leverage to determine the number of messages that matched a specific mail flow rule (also known as a transport rule), for instance.
   
  **Q. What does Microsoft do with the information I provide through the OME Portal and the OME Viewer App?**
   

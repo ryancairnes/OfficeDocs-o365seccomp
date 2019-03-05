@@ -5,10 +5,11 @@ author: stephow-MSFT
 manager: laurawi
 ms.date: 9/25/2018
 ms.audience: Admin
-ms.topic: overview
+ms.topic: conceptual
 ms.service: O365-seccomp
 localization_priority: Priority
 ms.collection: Strat_O365_IP
+ms.collection: M365-security-compliance
 search.appverid: 
 - MOE150
 - MET150
@@ -21,10 +22,6 @@ description: "File plan manager provides advanced management capabilities for re
 File plan manager provides advanced management capabilities for retention labels and policies, and provides an integrated way to traverse label and label-to-content activity for your entire content lifecycle – from creation, through collaboration, record declaration, retention, and finally disposition.
 
 ![File plan page](media/file-plan-page.png)
-
-## Important: This feature is currently available only as part of the Office 365 Preview program
-
-You will see this feature in your tenant only if your organization has enrolled in the Office 365 Preview program.
 
 ## Accessing file plan manager
 

@@ -5,7 +5,7 @@ author: stephow-MSFT
 manager: laurawi
 ms.date: 6/29/2018
 ms.audience: Admin
-ms.topic: overview
+ms.topic: conceptual
 f1_keywords:
 - 'ms.o365.cc.AdminRoleGroups'
 ms.service: O365-seccomp
@@ -14,7 +14,6 @@ ms.collection: Strat_O365_IP
 search.appverid: 
 - MOE150
 - MET150
-ms.assetid: d10608af-7934-490a-818e-e68f17d0e9c1
 description: "The Office 365 Security &amp; Compliance Center lets you grant permissions to people who perform compliance tasks like device management, data loss prevention, eDiscovery, retention, and so on. These people can perform only the tasks that you explicitly grant them access to. To access the Security &amp; Compliance Center, users need to be an Office 365 global administrator or a member of one or more Security &amp; Compliance Center role groups."
 ---
 
@@ -42,7 +41,7 @@ You can edit or delete the existing role groups, but we don't recommend this. In
 
 The following table lists the default role groups that are available in the Security &amp; Compliance Center. To grant permissions to a user to perform a compliance task, add them to the appropriate Security &amp; Compliance Center role group.
   
-Managing permissions in the Security &amp; Compliance Center only gives users access to the compliance features that are available within the Security &amp; Compliance Center itself. If you want to grant permissions to other compliance features that aren't in the Security &amp; Compliance Center, such as Exchange transport rules, you need to use the Exchange Admin Center.
+Managing permissions in the Security &amp; Compliance Center only gives users access to the compliance features that are available within the Security &amp; Compliance Center itself. If you want to grant permissions to other compliance features that aren't in the Security &amp; Compliance Center, such as Exchange mail flow rules (also known as transport rules), you need to use the Exchange admin center.
   
 To see how to grant access to the Security &amp; Compliance Center, check out [Give users access to Office 365 Compliance admin center](grant-access-to-the-security-and-compliance-center.md).
   

@@ -44,7 +44,7 @@ You must have global administrator (GA) permissions in Office 365 to work with q
     
   - Mail identified as spam
     
-  - Mail quarantined because it matched a policy set by a mail flow rule (also called a transport rule)
+  - Mail quarantined because it matched a policy set by a mail flow rule (also known as a transport rule)
     
   - Mail identified as bulk mail
     
@@ -82,7 +82,7 @@ Depending on your settings, there may be a lot of quarantined messages and files
       - To search for files, set the filters to show **files** quarantined due to **malware**.<br/>
     For quarantined files, the page displays all quarantined files, not just your own, regardless of what you tell it to show.
     
-      - To search for quarantined messages, set filters to show **all** or **only my** **email**. For the last filter choose the type of quarantined message that you're looking for. You can search for quarantined messages that have been identified as **spam**, for messages that matched a mail flow or **transport rule**, **bulk** mail, **phishing** mail, or mail that contains **malware**.
+      - To search for quarantined messages, set filters to show **all** or **only my** **email**. For the last filter choose the type of quarantined message that you're looking for. You can search for quarantined messages that have been identified as **spam**, for messages that matched a mail flow rule (**transport rule**), **bulk** mail, **phishing** mail, or mail that contains **malware**.
     
 2. Under **Sort results by**, choose the filter or filters you want to use to search from the drop-down lists. The options vary based on whether you are searching for files or messages. Wildcards are not supported in search fields at this time.<br/><br/>For both files and messages, you can choose to filter by the date the message or file was sent to quarantine. You can specify the date or a date range, including the time. You can also filter your search results by the expiration date on which the file or message will be deleted from quarantine, or you can use a combination of filters. To search by expiration date, choose **Advanced filter**. Under **Expires**, you can select messages that will be deleted from quarantine within the next 24 hours ( **Today**), within the next 48 hours ( **Next 2 days**), within the next week ( **Next 7 days**), or you can select a custom time interval.<br/><br/>For messages, you have the following additional options:
     
@@ -110,7 +110,7 @@ When you select an item displayed in the quarantine list, you'll see a summary o
     
 - **Subject**. The text of the subject line of the message. 
     
-- **Type**. Shows if a message has been identified as **Spam**, **Bulk**, **Phish**, matched a mail flow rule ( **Transport rule**), or was identified as containing **Malware**.
+- **Type**. Shows if a message has been identified as **Spam**, **Bulk**, **Phish**, matched a mail flow rule (**Transport rule**), or was identified as containing **Malware**.
     
 - **Expires**. The date and time when the message will automatically be deleted from quarantine. 
     

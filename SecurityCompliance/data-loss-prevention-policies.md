@@ -5,15 +5,15 @@ author: stephow-MSFT
 manager: laurawi
 ms.date: 6/29/2018
 ms.audience: Admin
-ms.topic: overview
+ms.topic: conceptual
 f1_keywords:
 - 'ms.o365.cc.DLPLandingPage'
 ms.service: O365-seccomp
 localization_priority: Normal
 ms.collection: Strat_O365_IP
+ms.collection: M365-security-compliance
 search.appverid: 
 - MET150
-ms.assetid: 1966b2a7-d1e2-4d92-ab61-42efbb137f5e
 description: "With a data loss prevention (DLP) policy in the Office 365 Security &amp; Compliance Center, you can identify, monitor, and automatically protect sensitive information across Office 365."
 ---
 
@@ -451,7 +451,7 @@ DLP evaluates any content that can be indexed. For more information on what file
 
 When you create a DLP policy that includes Exchange Online as a location, the policy's synced from the Office 365 Security &amp; Compliance Center to Exchange Online, and then from Exchange Online to Outlook on the web and Outlook 2013 and later.
   
-When a message is being composed in Outlook, the user can see policy tips as the content being created is evaluated against DLP policies. And after a message is sent, it's evaluated against DLP policies as a normal part of mail flow, along with Exchange transport rules and DLP policies created in the Exchange Admin Center (see the next section for more info). DLP policies scan both the message and any attachments.
+When a message is being composed in Outlook, the user can see policy tips as the content being created is evaluated against DLP policies. And after a message is sent, it's evaluated against DLP policies as a normal part of mail flow, along with Exchange mail flow rules (also known as transport rules) and DLP policies created in the Exchange admin center (see the next section for more info). DLP policies scan both the message and any attachments.
   
 ### Policy evaluation in the Office 2016 desktop programs
 

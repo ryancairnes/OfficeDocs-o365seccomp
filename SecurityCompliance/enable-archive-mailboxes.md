@@ -133,7 +133,6 @@ Run the following command to disable the archive mailbox for all users in your o
     - Moves items that are 14 days or older from the Recoverable Items folder in the user's primary mailbox to the Recoverable Items folder in their archive mailbox.
     
 - For more information about archive mailboxes and Exchange retention policies, see:
-  
     
   - [Retention tags and retention policies](https://go.microsoft.com/fwlink/?LinkId=404424)
     

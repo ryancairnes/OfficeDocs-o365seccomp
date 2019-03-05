@@ -86,7 +86,7 @@ In addition to the ATP reports described in this article, several other reports 
   
 ## What permissions are needed to view the ATP reports?
 
-In order to view and use the reports described in this article, **you must have an appropriate role assigned for both the Security &amp; Compliance Center and the Exchange Admin Center**.
+In order to view and use the reports described in this article, **you must have an appropriate role assigned for both the Security &amp; Compliance Center and the Exchange admin center**.
 
 - For the Security &amp; Compliance Center, you must have one of the following roles assigned:
     - Organization Management

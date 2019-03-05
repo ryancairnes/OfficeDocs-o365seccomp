@@ -12,6 +12,8 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: d2104778-f0a1-4b69-baf3-c4b32e98a573
+ms.collection:
+- M365-security-compliance
 description: "Learn how you can move from a detailed report to an insight with recommended actions in the Security &amp; Compliance Center."
 ---
 

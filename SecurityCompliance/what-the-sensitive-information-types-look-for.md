@@ -12,7 +12,7 @@ f1_keywords:
 ms.service: O365-seccomp
 localization_priority: Normal
 ms.collection: Strat_O365_IP
-ms.assetid: fd505979-76be-4d9f-b459-abef3fc9e86b
+ms.collection: M365-security-compliance
 description: "Data loss prevention (DLP) in the Office 365 Security &amp; Compliance Center includes 80 sensitive information types that are ready for you to use in your DLP policies. This topic lists all of these sensitive information types and shows what a DLP policy looks for when it detects each type."
 ---
 

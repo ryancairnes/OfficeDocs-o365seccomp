@@ -42,10 +42,10 @@ In order to re-create the source organization in the target organization, make s
     
 - Connectors
     
-- Transport rules
+- Mail flow rules (also known as transport rules)
     
     > [!NOTE]
-    > Cmdlet support for the export and import of the Transport Rule Collection is currently only supported for EOP Premium subscription plans. 
+    > Cmdlet support for the export and import of the mail flow rule collection is currently only supported for EOP Premium subscription plans. 
   
 The easiest way to collect all of your settings is to use remote Windows PowerShell. To connect to EOP by using remote Windows PowerShell, see [Connect to Exchange Online Protection Using Remote PowerShell](http://technet.microsoft.com/library/054e0fd7-d465-4572-93f8-a00a9136e4d1.aspx).
   
@@ -61,10 +61,10 @@ mkdir C:\EOP\Export
 cd C:\EOP\Export
 ```
 
-The following script can be used to collect all the mail users, groups, anti-spam settings, anti-malware settings, connectors, and transport rules in the source organization. Copy and paste the following text into a text editor like Notepad, save the file as Source_EOP_Settings.ps1 in the Export directory you just created, and run the following command:
+The following script can be used to collect all the mail users, groups, anti-spam settings, anti-malware settings, connectors, and mail flow rules in the source organization. Copy and paste the following text into a text editor like Notepad, save the file as Source_EOP_Settings.ps1 in the Export directory you just created, and run the following command:
   
 ```
-&amp; "C:\EOP\Export\Source_EOP_Settings.ps1"
+& "C:\EOP\Export\Source_EOP_Settings.ps1"
 
 ```
 
@@ -128,11 +128,10 @@ Get-MalwareFilterRule | Export-Clixml MalwareFilterRule.xml
 Get-InboundConnector | Export-Clixml InboundConnector.xml
 Get-OutboundConnector | Export-Clixml OutboundConnector.xml
 #****************************************************************************
-# Exchange transport rules
+# Exchange mail flow rules
 #****************************************************************************
 $file = Export-TransportRuleCollection
 Set-Content -Path ".TransportRules.xml" -Value $file.FileData -Encoding Byte
-
 ```
 
 Run the following commands from the Export directory to update the .xml files with the target organization. Replace contoso.onmicrosoft.com and contososuites.onmicrosoft.com with your source and target organization names.

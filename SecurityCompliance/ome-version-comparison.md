@@ -26,7 +26,7 @@ This article compares legacy Office 365 Message Encryption to the new OME capabi
 |                                   |Old features       |                   |New features              |
 |-----------------------------------|-------------------|-------------------|--------------------------|
 |**Capability**                     | **Legacy OME**    | **IRM**           | **New OME capabilities** |
-|*Sending an encrypted mail*        |Through Exchange mail flow rules|End-user initiated from Outlook desktop or Outlook on the Web; or through Exchange mail flow rules|End-user initiated from Outlook desktop, Outlook for Mac, or Outlook on the Web; through Exchange Transport Rules and Office 365 Data Loss Prevention (DLP)|
+|*Sending an encrypted mail*        |Through Exchange mail flow rules|End-user initiated from Outlook desktop or Outlook on the Web; or through Exchange mail flow rules|End-user initiated from Outlook desktop, Outlook for Mac, or Outlook on the Web; through Exchange mail flow rules (also known as transport rules) and Office 365 Data Loss Prevention (DLP)|
 |*Rights management template*       |   N/A      |Do Not Forward option and custom templates|Do Not Forward option, Encrypt-Only option, and custom templates|
 |*Recipient type*                   |Internal and external recipients|Internal recipients only         |Internal and external recipients|
 |*Experience for internal recipient*|Recipients receive an HTML message, which they download and open in a web browser or mobile app|Native inline experience in Outlook clients|Native inline experience for Office 365 recipients. All other recipients can read message from OME portal (no download or app required).|

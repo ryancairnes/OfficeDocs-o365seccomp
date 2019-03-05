@@ -21,7 +21,5 @@ Microsoft Exchange Online Protection provides messaging policy and compliance fe
 
 |**Topic**|**Description**|
 |:-----|:-----|
-|[Auditing reports in EOP](auditing-reports-in-eop.md) <br/> |Auditing reports provide information about how to run the administrator role group report, which shows the changes to management role groups in your organization within a particular timeframe, and the administrator audit log, which keeps a record of all configuration changes made in your organization.  <br/> |
-|[Transport Rules](http://technet.microsoft.com/library/743bd525-0ca2-426d-b76c-b4a052bc8886.aspx) <br/> |Provides information about Transport rules, which provide you with the flexibility to apply your own company-specific policies to email.  <br/> |
-   
-
+|[Auditing reports in EOP](auditing-reports-in-eop.md)|Auditing reports provide information about how to run the administrator role group report, which shows the changes to management role groups in your organization within a particular timeframe, and the administrator audit log, which keeps a record of all configuration changes made in your organization.|
+|[Mail flow rules (transport rules) in Exchange Online Protection](mail-flow-rules-transport-rules-0.md)|Provides information about mail flow rules (also known as transport rules), which provide you with the flexibility to apply your own company-specific policies to email.|

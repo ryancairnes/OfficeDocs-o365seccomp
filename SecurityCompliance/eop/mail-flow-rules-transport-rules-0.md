@@ -10,7 +10,7 @@ ms.service: O365-seccomp
 ms.custom: TN2DMC
 localization_priority: Normal
 ms.assetid: 9c2cf227-eff7-48ef-87fb-487186e47363
-description: "You can use mail flow rules (also known as transport rules) to identify and take action on messages that flow through your Office 365 organization."
+description: "You can use mail flow rules (transport rules) to identify and take action on messages that flow through your Office 365 organization."
 ---
 
 # Mail flow rules (transport rules) in Exchange Online Protection
@@ -118,19 +118,9 @@ There are several types of messages that pass through an organization. The follo
 - After you create or modify a mail flow rule, it can take up to 30 minutes for the new or updated rule to be applied to messages.
     
 ## For more information
-
-[Manage Transport Rules](http://technet.microsoft.com/library/e7a81372-b6d7-4d1f-bc9e-a845a7facac2.aspx)
   
-[Transport Rule Predicates](http://technet.microsoft.com/library/04edeaba-afd4-4207-b2cb-51bcc44e483c.aspx)
-  
-[Transport Rule Actions](http://technet.microsoft.com/library/f8621ecb-a177-4025-9011-a6569999746a.aspx)
-  
-[Using transport rules to inspect message attachments](http://technet.microsoft.com/library/874d1c78-a8ec-4938-b388-d3208c2fa971.aspx)
+[Use mail flow rules to inspect message attachments in Exchange Online](http://technet.microsoft.com/library/874d1c78-a8ec-4938-b388-d3208c2fa971.aspx)
   
 [Email encryption in Office 365](https://support.office.com/article/c0d87cbe-6d65-4c03-88ad-5216ea5564e8)
   
-[Transport rule procedures](http://technet.microsoft.com/library/bc682071-eb68-4cd9-a306-e5de0e1e79cc.aspx)
-  
-[Transport and Inbox rule limits](https://go.microsoft.com/fwlink/p/?LinkId=324584)
-  
-
+[Journal, Transport, and Inbox rule limits](https://go.microsoft.com/fwlink/p/?LinkId=324584)

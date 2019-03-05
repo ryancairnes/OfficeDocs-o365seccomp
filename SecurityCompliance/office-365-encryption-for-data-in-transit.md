@@ -9,9 +9,10 @@ ms.service: O365-seccomp
 localization_priority: None
 search.appverid:
 - MET150
-ms.collection: Strat_O365_Enterprise
 ms.collection:
+- Strat_O365_Enterprise
 - M365-security-compliance
+- Strat_O365_Enterprise
 description: "Summary: A brief explanation of how Microsoft encrypts data in transit."
 ---
 
@@ -20,6 +21,7 @@ description: "Summary: A brief explanation of how Microsoft encrypts data in tra
 In addition to protecting customer data at rest, Microsoft uses encryption technologies to protect Office 365 customer data in transit. 
 
 Data is in transit:
+
 - when a client machine communicates with an Office 365 server;
 - when an Office 365 server communicates with another Office 365 server; and
 - when an Office 365 server communicates with a non-Office 365 server (e.g., Exchange Online delivering email to a foreign email server).
@@ -29,6 +31,7 @@ Inter-datacenter communications between Office 365 servers takes place over TLS 
 The public certificates are issued by Microsoft IT SSL using SSLAdmin, an internal Microsoft tool to protect confidentiality of transmitted information. All certificates issued by Microsoft IT have a minimum of 2048 bits in length, and [Webtrust](http://www.webtrust.org/homepage-documents/item70372.pdf) compliance requires SSLAdmin to make sure that certificates are issued only to public IP addresses owned by Microsoft. Any IP addresses that fail to meet this criterion are routed through an exception process.
 
 All implementation details such as the version of TLS being used, whether Forward Secrecy (FS) is enabled, the order of cipher suites, etc., are available publicly. One way to see these details is to use a third-party website, such as Qualys SSL Labs (www.ssllabs.com). Below are the links to automated test pages from Qualys that display information for the following services:
+
 - [Office 365 Portal](https://www.ssllabs.com/ssltest/analyze.html?d=portal.office.com&hideResults=on)
 - [Exchange Online](https://www.ssllabs.com/ssltest/analyze.html?d=outlook.office365.com&hideResults=on)
 - [SharePoint Online](https://www.ssllabs.com/ssltest/analyze.html?d=microsoft-my.sharepoint.com&hideResults=on)

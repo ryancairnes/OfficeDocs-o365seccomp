@@ -12,6 +12,8 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: f3724c6c-ec64-4a24-ba71-bfd68020d4d2
+ms.collection:
+- M365-security-compliance
 description: "See how you can move from an insight to a detailed report in the Security &amp; Compliance Center through a data loss prevention example."
 ---
 

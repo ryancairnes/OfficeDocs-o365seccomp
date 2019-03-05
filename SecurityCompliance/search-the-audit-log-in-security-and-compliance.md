@@ -116,6 +116,7 @@ Be sure to read the following items before you start searching the Office 365 au
     |Security &amp; Compliance Center  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> ||
     |SharePoint Online and OneDrive for Business  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> ||
     |Sway  <br/> ||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |
+    |Workplace Analytics<br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> || 
     |Yammer  <br/> ||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |
    
 - Azure Active Directory (Azure AD) is the directory service for Office 365. The unified audit log contains user, group, application, domain, and directory activities performed in the Office 365 admin center or in the in Azure management portal. For a complete list of Azure AD events, see [Azure Active Directory Audit Report Events](https://go.microsoft.com/fwlink/p/?LinkID=616549).
@@ -290,12 +291,13 @@ Click one of the following links to go to a specific table.
 |:-----|:-----|:-----|
 |[File and page activities](#file-and-page-activities)<br/> |[Folder activities](#folder-activities)<br/> |[Sharing and access request activities](#sharing-and-access-request-activities)<br/> |
 |[Synchronization activities](#synchronization-activities)<br/> |[Site administration activities](#site-administration-activities)<br/> |[Exchange mailbox activities](#exchange-mailbox-activities)<br/> |
-|[Sway activities](#sway-activities) <br/> |[User administration activities](#user-administration-activities) <br/> |[Azure AD group administration activities](#azure-ad-group-administration-activities) <br/> |
-|[Application administration activities](#application-administration-activities) <br/> |[Role administration activities](#role-administration-activities) <br/> |[Directory administration activities](#directory-administration-activities) <br/> |
-|[eDiscovery activities](#ediscovery-activities) <br/> |[Power BI activities](#power-bi-activities) <br/> |[Microsoft Workplace Analytics](#microsoft-workplace-analytics-activities)<br/>|
-[Microsoft Teams activities](#microsoft-teams-activities) <br/> |[Yammer activities](#yammer-activities) <br/> |[Microsoft Flow](#microsoft-flow) <br/> 
-|[Microsoft PowerApps](#microsoft-powerapps)<br/>|[Microsoft Stream](#microsoft-stream) <br/>|[Exchange admin activities](#exchange-admin-audit-log)<br/>|
-|||
+|[Retention policy and label activities](#retention-policy-and-label-activities) <br/>|[Sway activities](#sway-activities) <br/> |[User administration activities](#user-administration-activities) <br/> 
+|[Azure AD group administration activities](#azure-ad-group-administration-activities) <br/> |[Application administration activities](#application-administration-activities) <br/> |[Role administration activities](#role-administration-activities) <br/> |
+|[Directory administration activities](#directory-administration-activities) <br/> |[eDiscovery activities](#ediscovery-activities) <br/> |[Power BI activities](#power-bi-activities) <br/> |
+|[Microsoft Workplace Analytics](#microsoft-workplace-analytics-activities)<br/>|[Microsoft Teams activities](#microsoft-teams-activities) <br/> |[Yammer activities](#yammer-activities) <br/> |
+[Microsoft Flow](#microsoft-flow) <br/> |[Microsoft PowerApps](#microsoft-powerapps)<br/>|[Microsoft Stream](#microsoft-stream) <br/>|
+|[Exchange admin activities](#exchange-admin-audit-log)<br/>
+||||
    
   
 ### File and page activities
@@ -445,8 +447,10 @@ The following table lists the activities that can be logged by mailbox audit log
 |**Friendly name**|**Operation**|**Description**|
 |:-----|:-----|:-----|
 |Added delegate mailbox permissions  <br/> |Add-MailboxPermission  <br/> |An administrator assigned the FullAccess mailbox permission to a user (known as a delegate) to another person's mailbox. The FullAccess permission allows the delegate to open the other person's mailbox, and read and manage the contents of the mailbox.  <br/> |
+|Classified message as a record  <br/> |ApplyRecordLabel<br/> |A message was classified as a record. This occurs when a retention label that classifies content as a record is manually or automatically applied to a message.<br/> |
 |Copied messages to another folder  <br/> |Copy  <br/> |A message was copied to another folder.  <br/> |
 |Created mailbox item  <br/> |Create  <br/> |An item is created in the Calendar, Contacts, Notes, or Tasks folder in the mailbox; for example, a new meeting request is created. Note that creating, sending, or receiving a message isn't audited. Also, creating a mailbox folder is not audited.  <br/> |
+|Created new inbox rule in Outlook web app  <br/> |NewInboxRule<br/> |<br/> |
 |Deleted messages from Deleted Items folder  <br/> |SoftDelete  <br/> |A message was permanently deleted or deleted from the Deleted Items folder. These items are moved to the Recoverable Items folder. Messages are also moved to the Recoverable Items folder when a user selects it and presses **Shift+Delete**.  <br/> |
 |Moved messages to another folder  <br/> |Move  <br/> |A message was moved to another folder.  <br/> |
 |Moved messages to Deleted Items folder  <br/> |MoveToDeletedItems  <br/> |A message was deleted and moved to the Deleted Items folder.  <br/> |
@@ -461,6 +465,28 @@ The following table lists the activities that can be logged by mailbox audit log
 |(none)  <br/> |UpdateInboxRules  <br/> |An inbox rule has been added, removed, or changed. Inbox rules are used to process messages in the user's Inbox based on the specified conditions and take actions when the conditions of a rule are met, such as moving a message to a specified folder or deleting a message.  <br/> To return entries for inbox rule activities, you have to select **Show results for all activities** in the **Activities** list. Use the date range boxes and the **Users** list to narrow the search results.  <br/> |
 ||||
   
+### Retention policy and label activities
+
+The following table describes the activities related to retention policies and retention labels in the Security & Compliance Center. For more information, see:
+
+- [Overview of retention policies](retention-policies.md)
+- [Overview of retention labels](labels.md)
+<br/>
+
+|**Activity**|**Operation**|**Description**|
+|:-----|:-----|:-----|
+| Created retention configuration for a retention policy<br/> |NewRetentionComplianceRule<br/> |Administrator configures the retention settings for a new retention policy. Retention settings include how long items are retained, and what happens to items when the retention period expires (such as deleting items, retaining items, or retaining and then deleting them). This activity also corresponds to running the [New-RetentionComplianceRule](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/new-retentioncompliancerule) cmdlet.<br/>|
+| Created retention label <br/> |NewComplianceTag<br/>  |Administrator creates a new retention label.<br/> |
+| Created retention policy<br/> |NewRetentionCompliancePolicy<br/> |Administrator creates a new retention policy.<br/>  |
+| Deleted retention configuration for a retention policy<br/> | RemoveRetentionComplianceRule<br/>| Administrator deletes the configuration settings of a retention policy. Most likely, this activity is logged when an administrator deletes a retention policy or runs the **Remove-RetentionComplianceRule** cmdlet.<br/> |
+| Deleted retention label <br/> |RemoveComplianceTag<br/>  | Administrator deletes a retention label.<br/>|
+| Deleted retention policy<br/> |RemoveRetentionCompliancePolicy<br/> |Administrator deletes a retention policy. <br/>  |
+| Enable regulatory compliance features<br/> |SetRestrictiveRetentionUI<br/> |Administrator enables regulatory compliance features by running the **Set-RegulatoryComplianceUI** cmdlet. After this cmdlet is run, administrators can lock a retention policy and specify a retention label as a regulatory record by using the Security & Compliance Center UI. Until an organization uses the **Set-RegulatoryComplianceUI** cmdlet to enable these features, locking a retention policy and creating an regulatory retention label can only be accomplished by using PowerShell. <br/>|
+| Updated retention configuration for a retention policy<br/> | SetRetentionComplianceRule<br/>| Administrator changes the retention settings for an existing retention policy. Retention settings include how long items are retained, and what happens to items when the retention period expires (such as deleting items, retaining items, or retaining and then deleting them). This activity also corresponds to running the [Set-RetentionComplianceRule](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/set-retentioncompliancerule) cmdlet. <br/>|
+| Updated retention label <br/> |SetComplianceTag<br/>  | Administrator updates an existing retention label.<br/>|
+| Updated retention policy<br/> |SetRetentionCompliancePolicy <br/>|Administrator updates an existing a retention policy. Updates that trigger this event include adding or excluding content locations that the retention policy is applied to.<br/>|
+||||
+
 ### Sway activities
   
 The following table lists user and admin activities in Sway. Sway is an Office 365 app that helps users gather, format, and share ideas, stories, and presentations on an interactive, web-based canvas. For more information, see [Frequently asked questions about Sway - Admin Help](https://support.office.com/article/446380fa-25bf-47b2-996c-e12cb2f9d075).
@@ -658,7 +684,7 @@ The following table lists the user and admin activities in Yammer that are logge
 |Viewed file  <br/> |FileVisited  <br/> |User views a file.  <br/> |
 ||||
    
-### Microsoft Flow
+### Microsoft Flow activities
 
 You can search the audit log for activities in Microsoft Flow. These activities include creating, editing and deleting flows, and changing flow permissions. For information about auditing for Flow activities, see the blog  [Microsoft Flow audit events now available in Office 365 Security & Compliance Center](https://flow.microsoft.com/blog/security-and-compliance-center).
 
@@ -666,10 +692,10 @@ You can search the audit log for activities in Microsoft Flow. These activities 
 
 You can search the audit log for app-related activities in PowerApps. These activities include creating, launching, and publishing an app. Assigning permissions to apps is also audited. For a description of all PowerApps activities, see [Activity logging for PowerApps](https://docs.microsoft.com/en-us/power-platform/admin/logging-powerapps#what-events-are-audited).
 
-### Microsoft Stream
+### Microsoft Stream activities
   
 You can search the audit log for activities in Microsoft Stream. These activities include video activities performed by users, group channel activities, and admin activities such as managing users, managing organization settings, and exporting reports. For a description of these activities, see the "Activities logged in Microsoft Stream" section in [Audit Logs in Microsoft Stream](https://docs.microsoft.com/stream/audit-logs).
-  
+
 ### Exchange admin audit log
   
 Exchange administrator audit logging—which is enabled by default in Office 365—logs an event in the Office 365 audit log when an administrator (or a user who has been assigned administrative permissions) makes a change in your Exchange Online organization. Changes made by using the Exchange admin center or by running a cmdlet in Windows PowerShell are logged in the Exchange admin audit log. For more detailed information about admin audit logging in Exchange, see [Administrator audit logging](https://go.microsoft.com/fwlink/p/?LinkID=619225).

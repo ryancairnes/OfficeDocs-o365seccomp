@@ -44,7 +44,7 @@ In Office 365, use the Security &amp; Compliance Center to manage threats in you
 
 These options are available under **Threat management** in the Security &amp; Compliance Center.
   
-We're still rolling out threat management for the Security &amp; Compliance Center, so you might not see all of these yet, or you might see more than the options listed here. During the rollout, some of these, for example Anti-malware, Dkim, and others, will continue to be available through the Exchange Admin Center (EAC) for a limited time.
+We're still rolling out threat management for the Security &amp; Compliance Center, so you might not see all of these yet, or you might see more than the options listed here. During the rollout, some of these, for example Anti-malware, Dkim, and others, will continue to be available through the Exchange admin center (EAC) for a limited time.
 
 In some cases, there are minor differences between the EAC and the Security &amp; Compliance Center implementations. For example, supported characters for spam filters are different between the two platforms. Articles are provided that give more information about specific differences when they occur.
   

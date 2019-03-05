@@ -7,6 +7,8 @@ ms.date: 01/23/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
+ms.collection:
+- M365-security-compliance
 localization_priority: Normal
 description: "Get ready for the all-new Microsoft 365 security center and compliance center"
 ---

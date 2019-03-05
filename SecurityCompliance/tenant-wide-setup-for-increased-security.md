@@ -8,6 +8,10 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
+ms.collection:
+- Ent_O365
+- Strat_O365_IP
+- M365-security-compliance
 search.appverid: MET150
 ms.assetid: 8d274fe3-db51-4107-ba64-865e7155b355
 description: "Walks you through recommended configuration for tenant-wide settings that affect the security of your Office 365 environment. Your security needs might require more or less security. Use these recommendations as a starting point."
@@ -56,8 +60,8 @@ Many of the controls for security and protection in the Exchange admin center ar
   
 |****Area****|****Includes a default policy****|****Recommendation****|
 |:-----|:-----|:-----|
-|**Mail Flow** (Transport rules)  <br/> |No  <br/> | Add a mail flow rule to help protect against ransomware. See "How to use Exchange Transport Rules to track or block emails with file extensions used by ransomware" in this blog article: [How to deal with ransomware](https://blogs.technet.microsoft.com/office365security/how-to-deal-with-ransomware/).  <br><br/> Create a transport rule to prevent auto-forwarding of email to external domains. For more information, see [Mitigating Client External Forwarding Rules with Secure Score](https://blogs.technet.microsoft.com/office365security/mitigating-client-external-forwarding-rules-with-secure-score/).  <br/> <br>More information: [Mail flow rules (transport rules) in Exchange Online](https://technet.microsoft.com/en-us/library/jj919238%28v=exchg.150%29.aspx) <br/> |
-|**Enable modern authentication** <br/> |No  <br/> | Modern authentication in Office 365 is a prerequisite for using multi-factor authentication (MFA). MFA is recommended for securing access to cloud resources, including email.  <br/>  <br>See these topics:  <br/> •   [Enable or disable modern authentication in Exchange Online](https://support.office.com/article/58018196-f918-49cd-8238-56f57f38d662) <br/> •   [Skype for Business Online: Enable your tenant for modern authentication](https://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx) <br/>  <br>Modern authentication is enabled by default for Office 2016 clients, SharePoint Online, and OneDrive for Business.  <br/>  <br>More information: [Using Office 365 modern authentication with Office clients](https://support.office.com/article/776c0036-66fd-41cb-8928-5495c0f9168a) <br/> |
+|**Mail Flow** (mail flow rules, also known as transport rules)|No|Add a mail flow rule to help protect against ransomware. See "How to use Exchange Transport Rules to track or block emails with file extensions used by ransomware" in this blog article: [How to deal with ransomware](https://blogs.technet.microsoft.com/office365security/how-to-deal-with-ransomware/).  <br><br/> Create a mail flow rule to prevent auto-forwarding of email to external domains. For more information, see [Mitigating Client External Forwarding Rules with Secure Score](https://blogs.technet.microsoft.com/office365security/mitigating-client-external-forwarding-rules-with-secure-score/). <br/><br/> More information: [Mail flow rules (transport rules) in Exchange Online](https://technet.microsoft.com/en-us/library/jj919238%28v=exchg.150%29.aspx)|
+|**Enable modern authentication**|No|Modern authentication in Office 365 is a prerequisite for using multi-factor authentication (MFA). MFA is recommended for securing access to cloud resources, including email. <br/><br/> See these topics:  <br/>• [Enable or disable modern authentication in Exchange Online](https://support.office.com/article/58018196-f918-49cd-8238-56f57f38d662) <br/>• [Skype for Business Online: Enable your tenant for modern authentication](https://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx) <br/><br/> Modern authentication is enabled by default for Office 2016 clients, SharePoint Online, and OneDrive for Business. <br/><br/> More information: [Using Office 365 modern authentication with Office clients](https://support.office.com/article/776c0036-66fd-41cb-8928-5495c0f9168a)|
    
 ## Configure tenant-wide sharing policies in SharePoint admin center
 
@@ -69,7 +73,7 @@ To support the goals for baseline protection, configure tenant-wide sharing poli
   
 |****Area****|****Includes a default policy****|****Recommendation****|
 |:-----|:-----|:-----|
-|**Sharing** (SharePoint Online and OneDrive for Business)  <br/> |Yes  <br/> | External sharing is enabled by default. These settings are recommended:  <br/>  •   Allow sharing to authenticated external users and using anonymous access links (default setting).  <br/>  •   Anonymous access links expire in this many days. Enter a number, if desired, such as 30 days.  <br/>  •   Default link type — select Internal (people in the organization only). Users who wish to share using anonymous links must choose this option from the sharing menu.  <br/>  <br>More information: [External sharing overview](https://support.office.com/article/c8a462eb-0723-4b0b-8d0a-70feafe4be85) <br/> |
+|**Sharing** (SharePoint Online and OneDrive for Business)|Yes|External sharing is enabled by default. These settings are recommended: <br/>• Allow sharing to authenticated external users and using anonymous access links (default setting). <br/>  • Anonymous access links expire in this many days. Enter a number, if desired, such as 30 days. <br/>• Default link type — select Internal (people in the organization only). Users who wish to share using anonymous links must choose this option from the sharing menu. <br/><br/> More information: [External sharing overview](https://support.office.com/article/c8a462eb-0723-4b0b-8d0a-70feafe4be85)|
    
 SharePoint admin center and OneDrive for Business admin center include the same settings. The settings in either admin center apply to both.
   

@@ -8,7 +8,6 @@ ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
-ms.collection: Strat_O365_IP
 search.appverid:
 - MOE150
 - MED150
@@ -17,7 +16,9 @@ search.appverid:
 - MET150
 ms.assetid: 9295e396-e53d-49b9-ae9b-0b5828cdedc3
 ms.collection:
+- Strat_O365_IP
 - M365-security-compliance
+- Strat_O365_IP
 description: "Minimize the potential of a data breach or a compromised account by following these recommended best practices."
 ---
 
@@ -42,37 +43,37 @@ Access Secure Score at [https://SecureScore.office.com](https://SecureScore.offi
 MFA adds an additional layer of protection to a strong password strategy by requiring users to acknowledge a phone call, text message, or an app notification on their smart phone after correctly entering their password. With MFA in place, Office 365 user accounts are still protected against unauthorized access even if a user's password is compromised. Accounts are protected because access is not granted to an account until after the additional challenge has been satisfied. A compromised or stolen password is not enough.
   
 - [Plan for multi-factor authentication for Office 365 Deployments](https://support.office.com/article/043807b2-21db-4d5c-b430-c8a6dee0e6ba)
-    
+
 - [Set up multi-factor authentication for Office 365 users](https://support.office.com/article/8f0454b2-f51a-4d9c-bcde-2c48e41621c6)
-    
+
 ## Use Office 365 Cloud App Security
 
 Set up policies based on your business needs to track anomalous activity and act on it. Set up alerts with Office 365 Cloud App Security so that admins can review unusual or risky user activity, such as downloading large amounts of data, multiple failed sign-in attempts, or sign-ins from an unknown or dangerous IP address. For organizations with an Office 365 Enterprise E5 plan, you can start using Office 365 Cloud App Security right away. If you have a different enterprise plan, you can purchase Office 365 Cloud App Security as an add-on.
   
 - [Overview of O365 Cloud App Security](office-365-cas-overview.md)
-    
+
 - [Turn on Office 365 Cloud App Security](turn-on-office-365-cas.md)
-    
+
 ## Secure mail flow
 
 Implement the rich feature set in Exchange Online Protection and gain greater assurance about the identity of the sender of each email message, and protect against unknown malware, viruses, and malicious URLs transmitted through emails.
   
-- Configure [Office 365 Email Anti-Spam Protection](anti-spam-protection.md) policies for your organization. 
-    
+- Configure [Office 365 Email Anti-Spam Protection](anti-spam-protection.md) policies for your organization.
+
 - Learn about and then use [Advanced threat protection for safe attachments and safe links](https://technet.microsoft.com/library/mt148491.aspx).
-    
+
 - [Add anti-malware protection to your organization](https://technet.microsoft.com/en-us/library/jj200669%28v=exchg.150%29.aspx).
-    
-- Learn about and enable [Safety tips in email messages in Office 365](safety-tips-in-office-365.md) for your users. 
-    
+
+- Learn about and enable [Safety tips in email messages in Office 365](safety-tips-in-office-365.md) for your users.
+
 - If you're using a custom domain for your organization in Office 365, set up SPF, DKIM, and then DMARC to validate mail sent by your organization and to help prevent spoofing:
-    
+
   - [Set up SPF in Office 365 to help prevent spoofing](https://docs.microsoft.com/office365/SecurityCompliance/set-up-spf-in-office-365-to-help-prevent-spoofing).
-    
+
   - [Use DKIM to validate outbound email sent from your custom domain in Office 365](https://docs.microsoft.com/office365/SecurityCompliance/set-up-spf-in-office-365-to-help-prevent-spoofing).
-    
+
   - [Use DMARC to validate email in Office 365](https://technet.microsoft.com/library/mt734386%28v=exchg.150%29.aspx).
-    
+
 ## Enable mailbox audit logging
 
 Some audit logging is automatically enabled for you in Office 365; however, mailbox audit logging is not turned on by default. You turn on audit logging for all user mailboxes in Office 365 by using Exchange Online PowerShell. For information, see [Enable mailbox auditing in Office 365](https://go.microsoft.com/fwlink/p/?LinkID=626109).
@@ -95,13 +96,11 @@ As an Office 365 admin, you can use Customer Lockbox to control how a Microsoft 
 See these security features working in an Office 365 trial subscription prior to adopting them in production.
   
 - [Create an Office 365 trial subscription](https://technet.microsoft.com/library/mt736406.aspx)
-    
-- [Configure and test MFA for a user account](https://technet.microsoft.com/library/mt492459.aspx)
-    
-- [Configure and test Office 365 Cloud App Security to notify you of global admin activity](https://technet.microsoft.com/library/mt757250.aspx)
-    
-- [Configure and test ATP for suspicious email](https://technet.microsoft.com/library/mt490479.aspx)
-    
-- Check the [Office 365 Secure Score](https://securescore.office.com/) for your trial subscription for each of the above steps 
-    
 
+- [Configure and test MFA for a user account](https://technet.microsoft.com/library/mt492459.aspx)
+
+- [Configure and test Office 365 Cloud App Security to notify you of global admin activity](https://technet.microsoft.com/library/mt757250.aspx)
+
+- [Configure and test ATP for suspicious email](https://technet.microsoft.com/library/mt490479.aspx)
+
+- Check the [Office 365 Secure Score](https://securescore.office.com/) for your trial subscription for each of the above steps

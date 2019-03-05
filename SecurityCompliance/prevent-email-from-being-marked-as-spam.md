@@ -5,14 +5,14 @@ author: stephow-MSFT
 manager: laurawi
 ms.date: 6/7/2018
 ms.audience: Admin
-ms.topic: overview
+ms.topic: article
 ms.service: O365-seccomp
+ms.collection: M365-security-compliance
 localization_priority: Priority
 ms.collection: Strat_O365_IP
 search.appverid: 
 - MOE150
 - MET150
-ms.assetid: 34823bbc-a3e3-4949-ba42-97c73997eeed
 description: "Learn how to prevent False Positives and keep real email out of junk in Office 365."
 ---
 
@@ -36,7 +36,7 @@ In the header, look for the following headings and values.
 
 - **SFV:BLK** Indicates that the message was marked as spam because the sending address is on the recipient's Blocked Senders List. 
     
-- **SFV:SKS** Indicates that the message was marked as spam prior to the content filter. This could include a transport rule marking the message as spam. Run a message trace to see if a transport rule triggered which may have set a high spam confidence level (SCL). 
+- **SFV:SKS** Indicates that the message was marked as spam prior to the content filter. This could include a mail flow rule (also known as a transport rule) marking the message as spam. Run a message trace to see if a mail flow rule triggered which may have set a high spam confidence level (SCL). 
     
 - **SFV:SKB** Indicates that the message was marked as spam because it matched a block list in the spam filter policy. 
     
@@ -54,7 +54,7 @@ In order to work effectively, Exchange Online Protection (EOP) requires that adm
   
 ### For admins
 
-- **Point your DNS records to Office 365** In order for EOP to provide protection, your mail exchanger (MX) DNS record(s) for all domains must be pointed to Office 365 -- and only to Office 365. If your MX does not point to Office 365, then EOP will not provide spam filtering for your users. In the situation where you wish to use another service or appliance to provide spam filtering for your domain, you should consider disabling the spam protection in EOP. You can do this by creating a transport rule that sets the SCL value to -1. If you later decide to use EOP, make sure to remove this transport rule. 
+- **Point your DNS records to Office 365** In order for EOP to provide protection, your mail exchanger (MX) DNS record(s) for all domains must be pointed to Office 365 -- and only to Office 365. If your MX does not point to Office 365, then EOP will not provide spam filtering for your users. In the situation where you wish to use another service or appliance to provide spam filtering for your domain, you should consider disabling the spam protection in EOP. You can do this by creating a mail flow rule that sets the SCL value to -1. If you later decide to use EOP, make sure to remove this mail flow rule. 
     
 - **Turn on the report message add-in for users** We strongly recommend that you [enable the report message add-in for your users](enable-the-report-message-add-in.md). As an administrator, you may also be able to view the feedback your users are sending and use any patterns to adjust any settings that may be causing problems.
     

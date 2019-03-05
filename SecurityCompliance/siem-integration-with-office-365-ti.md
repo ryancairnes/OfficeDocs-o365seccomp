@@ -11,6 +11,8 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: eb56b69b-3170-4086-82cf-ba40a530fa1b
+ms.collection:
+- M365-security-compliance
 description: "Integrate your organization's SIEM server with Office 365 Threat Intelligence and Advanced Threat Protection with the Office 365 Activity Management API."
 ---
 

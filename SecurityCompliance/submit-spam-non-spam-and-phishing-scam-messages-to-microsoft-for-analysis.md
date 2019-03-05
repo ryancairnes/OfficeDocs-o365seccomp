@@ -74,7 +74,7 @@ You can submit non-spam messages in the following ways:
     
 - If you use the **Quarantine message** action instead of the **Move message to Junk Email folder** action when you configure your content filters: 
     
-  - Administrators can release spam-quarantined messages and report them as false positives from the Exchange Admin Center. For more information, see [Find and release quarantined messages as an administrator](find-and-release-quarantined-messages-as-an-administrator.md).
+  - Administrators can release spam-quarantined messages and report them as false positives from the Exchange admin center. For more information, see [Find and release quarantined messages as an administrator](find-and-release-quarantined-messages-as-an-administrator.md).
     
   - Users can release their own spam-quarantined messages and report them as false positives through the following channels: 
     

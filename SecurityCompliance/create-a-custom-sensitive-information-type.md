@@ -8,10 +8,11 @@ ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Priority
 ms.collection: Strat_O365_IP
+ms.collection: M365-security-compliance
+ms.topic: article
 search.appverid: 
 - MOE150
 - MET150
-ms.assetid: 
 description: "Learn how to create, modify, remove, and test custom sensitive information types for DLP in the graphical user interface in Office 365 Security & Compliance Center."
 ---
 

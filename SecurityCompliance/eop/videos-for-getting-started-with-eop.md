@@ -22,7 +22,7 @@ The following series of videos will help you set up and use the Exchange Online 
 > [!NOTE]
 > Before you start the tasks described in the videos, we recommend that you set up mail flow. For more information, see the [Configure mail flow using connectors in Office 365](http://technet.microsoft.com/library/854b5a50-4462-4836-a092-37e208d29624.aspx) topic. 
   
-These videos are about tailoring your anti-spam settings to fit the needs of your organization. For inbound mail traveling through the service to your organization, this includes creating safe sender and blocked sender lists based on IP addresses, and configuring content filter settings. There's also a video showing how admins can find and release content-filtered spam messages or messages that matched a transport rule that were sent to the quarantine, and also how to report spam messages to help us improve the service.
+These videos are about tailoring your anti-spam settings to fit the needs of your organization. For inbound mail traveling through the service to your organization, this includes creating safe sender and blocked sender lists based on IP addresses, and configuring content filter settings. There's also a video showing how admins can find and release content-filtered spam messages or messages that matched a mail flow rule (also known as a transport rule) that were sent to the quarantine, and also how to report spam messages to help us improve the service.
   
 - Configure IP Allow and IP Block Lists in EOP
     > [!VIDEO https://www.microsoft.com/videoplayer/embed/b2f5bea3-e1a7-44b3-b7e2-07fac0d0ca40?autoplay=false]
@@ -53,12 +53,12 @@ EOP also has settings for how to handle malware that's detected by the service, 
   
     For more details, see the [Configure anti-malware policies](../configure-anti-malware-policies.md) topic. 
     
-To filter and route messages based on specific conditions you set, based on company policy or regulations, you'll want to watch the video about how to create transport rules.
+To filter and route messages based on specific conditions you set, based on company policy or regulations, you'll want to watch the video about how to create mail flow rules.
   
-- Configure Exchange Transport Rules in EOP
+- Configure Exchange mail flow rules in EOP
     > [!VIDEO https://www.microsoft.com/videoplayer/embed/7cdcd2cb-9382-4065-98e1-81257b32a189?autoplay=false]
   
-    For more details, see the [Mail flow rules (transport rules) in Exchange Online Protection](mail-flow-rules-transport-rules-0.md) topic if you use EOP standalone, or see the [Transport rules](http://technet.microsoft.com/library/743bd525-0ca2-426d-b76c-b4a052bc8886.aspx) topic if you use Exchange Online. 
+    For more details, see the [Mail flow rules (transport rules) in Exchange Online Protection](mail-flow-rules-transport-rules-0.md) topic if you use EOP standalone, or see [Mail flow rules (transport rules) in Exchange Online](http://technet.microsoft.com/library/743bd525-0ca2-426d-b76c-b4a052bc8886.aspx) topic if you use Exchange Online.
     
 f you're interested in configuring the service by running scripts from the command line, the remote PowerShell video will help you get started.
   

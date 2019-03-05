@@ -8,7 +8,8 @@ ms.topic: article
 ms.date: 10/29/2018
 ms.service: O365-seccomp
 localization_priority: Normal
-ms.collection: Ent_O365
+ms.collection:
+- M365-security-compliance
 ms.custom: 
  - Ent_Solutions
  - SIEM

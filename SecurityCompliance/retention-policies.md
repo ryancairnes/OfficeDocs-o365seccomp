@@ -5,14 +5,14 @@ author: stephow-MSFT
 manager: laurawi
 ms.date: 11/16/2018
 ms.audience: Admin
-ms.topic: overview
+ms.topic: conceptual
 ms.service: O365-seccomp
 localization_priority: Priority
 ms.collection: Strat_O365_IP
+ms.collection: M365-security-compliance
 search.appverid: 
 - MOE150
 - MET150
-ms.assetid: 5e377752-700d-4870-9b6d-12bfc12d2423
 description: "With a retention policy, you can decide proactively whether to retain content, delete content, or both - retain and then delete the content; apply a single policy to the entire organization or just specific locations or users; and apply a policy to all content or just content meeting certain conditions"
 ---
 
@@ -163,7 +163,7 @@ Notes:
   
 - Advanced retention for sensitive information doesn't apply to Exchange public folders or Skype for Business because those locations don't support sensitive information types.
     
-- You should understand that Exchange Online uses transport rules to identify sensitive information, so this works only on messages in transit — not on all items already stored in a mailbox. For Exchange Online, this means that a retention policy can identify sensitive information and take retention actions only on messages that are received **after** the policy is applied to the mailbox. (Note that query-based retention described in the previous section doesn't have this limitation because it uses the search index to identify content.) 
+- You should understand that Exchange Online uses mail flow rules (also known as transport rules) to identify sensitive information, so this works only on messages in transit — not on all items already stored in a mailbox. For Exchange Online, this means that a retention policy can identify sensitive information and take retention actions only on messages that are received **after** the policy is applied to the mailbox. (Note that query-based retention described in the previous section doesn't have this limitation because it uses the search index to identify content.) 
     
 ## Applying a retention policy to an entire organization or specific locations
 

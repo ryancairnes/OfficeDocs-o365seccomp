@@ -41,10 +41,10 @@ After accessing the message header information, search for **X-Forefront-Antispa
 |IPV:CAL|The message was allowed through the spam filters because the IP address was specified in an IP Allow list in the connection filter.|
 |IPV:NLI|The IP address was not listed on any IP reputation list.|
 |SFV:SPM|The message was marked as spam by the content filter.|
-|SFV:SKS|The message was marked as spam prior to being processed by the content filter. This includes messages where the message matched a Transport rule to automatically mark it as spam and bypass all additional filtering.|
+|SFV:SKS|The message was marked as spam prior to being processed by the content filter. This includes messages where the message matched a mail flow rule (also known as a transport rule) to automatically mark it as spam and bypass all additional filtering.|
 |SFV:SKA|The message skipped filtering and was delivered to the inbox because it matched an allow list in the spam filter policy, such as the **Sender allow** list.|
 |SFV:SKB|The message was marked as spam because it matched a block list in the spam filter policy, such as the **Sender block** list.|
-|SFV:SKN|The message was marked as non-spam prior to being processed by the content filter. This includes messages where the message matched a transport rule to automatically mark it as non-spam and bypass all additional filtering.|
+|SFV:SKN|The message was marked as non-spam prior to being processed by the content filter. This includes messages where the message matched a mail flow rule to automatically mark it as non-spam and bypass all additional filtering.|
 |SFV:SKI|Similar to SFV:SKN, the message skipped filtering for another reason such as being intra-organizational email within a tenant.|
 |SFV:SKQ|The message was released from the quarantine and was sent to the intended recipients.|
 |SFV:NSPM|The message was marked as non-spam and was sent to the intended recipients.|

@@ -8,13 +8,14 @@ ms.audience: Admin
 ms.topic: overview
 ms.service: O365-seccomp
 localization_priority: Priority
-ms.collection: Strat_O365_IP
 search.appverid: 
 - MOE150
 - MET150
 ms.assetid: 07824c51-2c45-4005-8596-03c0d7c4ff2a
 ms.collection:
+- Strat_O365_IP
 - M365-security-compliance
+- Strat_O365_IP
 description: "Learn the most common ways to help reduce spam and junk mail in Office 365."
 ---
 
@@ -29,7 +30,7 @@ We strongly recommend that you report False Negative messages by [using the Repo
 
 ## Fixing allowed spam
 
-We often see that customers get junk mail into their inbox because of incorrect configurations. The most common of which is configuring your domains in a transport rule to bypass filters or listing your domain(s) in the allowed/safe-senders list. This is not good because these messages skip spam filtering and could have otherwise been caught.  
+We often see that customers get junk mail into their inbox because of incorrect configurations. The most common of which is configuring your domains in a mail flow rule (also known as a transport rule) to bypass filters or listing your domain(s) in the allowed/safe-senders list. This is not good because these messages skip spam filtering and could have otherwise been caught.  
 
 ## Solutions to other common causes of getting too much spam
 
@@ -47,7 +48,7 @@ In order to protect you from getting too much spam, Exchange Online Protection (
     
 - **Mark bulk email as spam** Bulk email is email which users may have signed up for, but may still be undesirable. In the message header, find the BCL (Bulk Confidence Level) property in the X-Microsoft-Antispam header. If the BCL value is less than the threshold set in the spam filter, you may want to adjust the threshold to instead mark these types of bulk messages as spam. Different users have different tolerances and preferences for [how bulk email](https://docs.microsoft.com/en-us/office365/SecurityCompliance/bulk-complaint-level-values) is handled. You can create different policies or rules for different user preferences. 
     
-- **Immediately block a sender** In the case where you need to immediately block a sender, you can block by email address, domain, or IP address. See [Block email spam with the Office 365 spam filter to prevent false negative issues](create-organization-wide-safe-sender-or-blocked-sender-lists-in-office-365.md#use-the-eac-to-create-a-transport-rule-that-blocks-messages-sent-from-a-domain-or-user). An entry in an end-user allow list can override a block set by the administrator.
+- **Immediately block a sender** In the case where you need to immediately block a sender, you can block by email address, domain, or IP address. See [Use the EAC to create a mail flow rule that blocks messages sent from a domain or user](create-organization-wide-safe-sender-or-blocked-sender-lists-in-office-365.md#use-the-eac-to-create-a-mail-flow-rule-that-blocks-messages-sent-from-a-domain-or-user). An entry in an end-user allow list can override a block set by the administrator.
     
 - **Turn on the report message add-in for users** We strongly recommend that you [enable the report message add-in for you users](enable-the-report-message-add-in.md). As an administrator, you may also be able to view the feedback your users are sending and use any patterns to adjust any settings that may be causing problems.
     

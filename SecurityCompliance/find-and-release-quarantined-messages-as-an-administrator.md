@@ -19,7 +19,7 @@ description: "This topic describes how Exchange Online and Exchange Online Prote
 
 # Find and release quarantined messages as an administrator
 
-This topic describes how Exchange Online and Exchange Online Protection (EOP) admins can find, release, and report on quarantined messages in the Exchange admin center (EAC). Office 365 directs messages to quarantine either because they were identified as spam or they matched a transport rule. 
+This topic describes how Exchange Online and Exchange Online Protection (EOP) admins can find, release, and report on quarantined messages in the Exchange admin center (EAC). Office 365 directs messages to quarantine either because they were identified as spam or they matched a mail flow rule (also known as a transport rule). 
   
 Use the Security &amp; Compliance Center instead of the EAC to complete any of these tasks as well as view and work with messages that were sent to quarantine because they contain malware. For more information, see [Quarantine email messages in Office 365](https://support.office.com/article/Quarantine-email-messages-in-Office-365-4c234874-015e-4768-8495-98fcccfc639b).
   
@@ -65,9 +65,9 @@ In the Exchange admin center (EAC), you can filter quarantined items based on se
 6. **Expires** You can select that the message will be deleted from quarantine within the next 24 hours ( **Today**), within the next 48 hours ( **Next 2 days**), within the next week ( **Next 7 days**), or you can select a custom time interval during which the message will be deleted from quarantine.
     
     > [!IMPORTANT]
-    > By default, spam-quarantined messages are kept in quarantine for 15 days, while quarantined messages that matched a transport rule are kept in the quarantine for 7 days. After this period of time Office 365 deletes the messages and they are not retrievable. The retention period for quarantined messages that matched a transport rule is not configurable. However, the retention period for spam-quarantined messages can be lowered via the **Retain spam for (days)** setting in your content filter policies. For more information, see [Configure your spam filter policies](configure-your-spam-filter-policies.md). 
+    > By default, spam-quarantined messages are kept in quarantine for 15 days, while quarantined messages that matched a mail flow rule are kept in the quarantine for 7 days. After this period of time Office 365 deletes the messages and they are not retrievable. The retention period for quarantined messages that matched a mail flow rule is not configurable. However, the retention period for spam-quarantined messages can be lowered via the **Retain spam for (days)** setting in your content filter policies. For more information, see [Configure your spam filter policies](configure-your-spam-filter-policies.md). 
   
-7. **Type** You can specify whether to search for quarantined messages that have been identified as **Spam**, or whether to search for messages that matched a **Transport rule**.
+7. **Type** You can specify whether to search for quarantined messages that have been identified as **Spam**, or whether to search for messages that matched a mail flow rule (**Transport rule**).
     
 3. Click **OK** to start running the advanced search. 
     
@@ -85,7 +85,7 @@ After locating a specific quarantined message on the **quarantine** page, you ca
     
     The **Message status** values are as follows: 
     
-  - **Type** Denotes whether the message has been identified as **Spam** or matched a **Transport rule**.
+  - **Type** Denotes whether the message has been identified as **Spam** or matched a mail flow rule (**Transport rule**).
     
   - **Expires** The date when the message will be deleted from the quarantine. 
     
@@ -140,7 +140,7 @@ If you want to release messages to recipients, your options are:
   
 Click **Release selected message and allow sender** from the drop-down list. 
     
-3. The **release message and allow sender** dialog box opens. Optionally, you can choose to report the message to Microsoft, then click **release and allow**. The message will be released to all recipients it's addressed to and all future messages from this sender will be allowed. However, if this message was quarantined because of a transport rule or blocked sender, the sender will continue to be blocked for future messages. 
+3. The **release message and allow sender** dialog box opens. Optionally, you can choose to report the message to Microsoft, then click **release and allow**. The message will be released to all recipients it's addressed to and all future messages from this sender will be allowed. However, if this message was quarantined because of a mail flow rule or blocked sender, the sender will continue to be blocked for future messages. 
     
 ### Release a quarantined message to specific recipients without reporting it as a false positive
 <a name="Releasequarantinedmessagetospecificrecipientswithoutreportingasfalsepositive"> </a>

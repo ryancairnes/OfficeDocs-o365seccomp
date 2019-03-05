@@ -105,7 +105,7 @@ If the suspected compromised mailbox was used illicitly to send spam email, it i
 5. Manually review the role groups to see if the suspected compromised account is a member of any of them.  If it is:
     a. Click the role group and click **Edit Role Group**.
     b. Click **Chose Members** and **Edit** to remove the user from the role group.
-6. Open the **Exchange Admin Center**
+6. Open the **Exchange admin center**
 7. Click **Permissions**.
 8. Manually review the role groups to see if the suspected compromised account is a member of any of them. If it is:
     a. Click the role group and click **Edit**.

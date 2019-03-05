@@ -3,7 +3,7 @@ title: "Use drive shipping to import your organization PST files to Office 365"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 6/14/2018
+ms.date: 
 ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp

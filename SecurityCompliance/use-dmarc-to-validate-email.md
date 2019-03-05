@@ -204,7 +204,7 @@ Office 365 is configured like this because some legitimate email may fail DMARC.
   
 - Users add safe senders individually by using their email client
     
-- Administrators create an Exchange transport rule (ETR) for all users that allows messages for those particular senders. 
+- Administrators create an Exchange mail flow rule (also known as a transport rule) for all users that allows messages for those particular senders. 
     
 ## Troubleshooting your DMARC implementation
 <a name="dmarctroubleshoot"> </a>

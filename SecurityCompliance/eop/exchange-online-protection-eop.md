@@ -45,7 +45,7 @@ The Help content for EOP administrators consists of the following top-level cate
     
 - [Best practices for configuring EOP](best-practices-for-configuring-eop.md) Describes recommended configuration settings and considerations for after you set up and provision your service. 
     
-- [Messaging policy and compliance in EOP](messaging-policy-and-compliance-in-eop.md) Describes how to use Exchange Transport rules (custom filtering rules) to enforce specific company regulations and policies, and how to use auditing reports to track configuration changes to the service. 
+- [Messaging policy and compliance in EOP](messaging-policy-and-compliance-in-eop.md) Describes how to use Exchange mail flow rules (also known as transport rules) to enforce specific company regulations and policies, and how to use auditing reports to track configuration changes to the service. 
     
 - [Anti-Spam and Anti-Malware Protection](http://technet.microsoft.com/library/93c6c227-7442-4293-b64d-ec8f15c928db.aspx) Describes spam filtering and malware filtering and shows how to customize them to best meet the needs of your organization. Also describes tasks that administrators and end users can perform on quarantined messages. 
     
