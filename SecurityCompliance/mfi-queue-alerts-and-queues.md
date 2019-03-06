@@ -5,7 +5,7 @@ author: chrisda
 manager: serdars
 ms.audience: ITPro
 ms.topic: article
-ms.prod: office-online-server
+ms.service: O365-seccomp
 localization_priority: Normal
 ms.assetid: 37640c80-ce6f-47e2-afd1-bc1d3c50e637
 description: "Admins can learn about queue alerts and Queues in the mail flow dashboard in the Office 365 Security & Compliance Center."

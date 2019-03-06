@@ -8,8 +8,8 @@ ms.audience: Admin
 ms.topic: reference
 ms.service: O365-seccomp
 localization_priority: Normal
-ms.collection: Strat_O365_IP
-ms.collection: M365-security-compliance
+ms.collection: 
+- M365-security-compliance
 search.appverid: 
 - MOE150
 - MET150

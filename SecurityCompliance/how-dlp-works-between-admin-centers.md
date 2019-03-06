@@ -7,7 +7,8 @@ ms.date: 8/4/2017
 ms.audience: Admin
 ms.topic: conceptual
 ms.service: O365-seccomp
-ms.collection: M365-security-compliance
+ms.collection: 
+- M365-security-compliance
 localization_priority: Normal
 search.appverid: 
 - MOE150

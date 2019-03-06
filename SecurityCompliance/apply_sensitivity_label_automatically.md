@@ -6,8 +6,8 @@ manager: laurawi
 ms.audience: Admin
 ms.service: O365-seccomp
 localization_priority: Priority
-ms.collection: Strat_O365_IP
-ms.collection: M365-security-compliance
+ms.collection: 
+- M365-security-compliance
 ms.topic: article
 search.appverid: 
 - MOE150
@@ -73,3 +73,7 @@ Here's an example of a prompt when you configure a condition to apply a label as
 ## How multiple conditions are evaluated when they apply to more than one label
 
 The labels are ordered for evaluation according to their position that you specify in the policy: The label positioned first has the lowest position (least sensitive) and the label positioned last has the highest position (most sensitive). For more information on priority, see [Label priority (order matters)](sensitivity-labels.md#label-priority-order-matters).
+
+## Don't configure a parent label to be applied automatically or recommended
+
+Remember, a parent label (a label with sublabels) can't be applied to content. Make sure that you don't configure a parent label to be auto-applied or recommended, because the parent label won't be applied to content in Office apps that use the Azure Information Protection unified labeling client. For more information on parent labels and sublabels, see [Sublabels (grouping labels)](sensitivity-labels.md#sublabels-grouping-labels).

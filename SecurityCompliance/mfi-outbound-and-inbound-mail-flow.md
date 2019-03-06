@@ -6,7 +6,7 @@ manager: serdars
 ms.date: 8/7/2018
 ms.audience: ITPro
 ms.topic: article
-ms.prod: office-online-server
+ms.service: O365-seccomp
 localization_priority: Normal
 ms.assetid: f2738dec-41b0-43c4-b814-84c0a4e45c6d
 description: "Admins can learn about the Outbound and inbound mail flow widget in the mail flow dashboard in the Office 365 Security & Compliance Center."

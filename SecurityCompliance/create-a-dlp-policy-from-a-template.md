@@ -10,8 +10,8 @@ f1_keywords:
 - 'ms.o365.cc.NewPolicyFromTemplate'
 ms.service: O365-seccomp
 localization_priority: Normal
-ms.collection: Strat_O365_IP
-ms.collection: M365-security-compliance
+ms.collection: 
+- M365-security-compliance
 search.appverid: 
 - MET150
 description: "The easiest, most common way to get started with DLP policies is to use one of the templates included in Office 365.

@@ -20,6 +20,8 @@ description: ""
 
 The Custodians tab contains a sortable list of all the custodians in the case. After you add custodians to a case, details about each custodian will automatically be collected from Azure Active Directory.
 
+![Manage Custodians](../media/CustodianDetails.PNG)
+
 ## Viewing custodian details
 
 The flyout page that contains custodian details appears after you add a custodian to a case and select them from the list on the **Custodians** tab. From here, you can view all the details related to that custodian. The flyout page contains the following fields:
@@ -51,7 +53,7 @@ The flyout page that contains custodian details appears after you add a custodia
   - **Indexing Last Updated Time**: Indicates the datestamp of when the deep indexing job was last triggered.
   - **Data sources**: Shows the count of mailboxes, sites, and Teams that have been selected for the custodian.
 
-## Updating a custodian
+## Editing a custodian
 
 As your case progresses, you may discover that there may be additional data sources relevant to a specific custodian & your case. In other scenarios, you may want to remove certain data sources that have been reviewed and deemed as not relevant.
 
@@ -62,6 +64,8 @@ To update a custodian and the selected data sources:
 2. In the case, click the **Custodians** tab.
   
 3. Select the custodian(s) from the list and click **Edit sources**.
+
+    ![Edit Data Sources](../media/EditCustodianDataSource.PNG)
   
 4. Update selections for Exchange and OneDrive locations by clicking **Choose data sources**.
   
@@ -84,7 +88,7 @@ To trigger a re-indexing process to address partially indexed items:
 
 2. In the case, click to **Custodians tab**. 
 
-3. Select the custodian(s) that needs to be re-indexed, and then click **Update index** on the flyout page.
+3. Select the custodian(s) that needs to be re-indexed, and then click ![Update Index](../media/UpdateIndex.PNG) on the flyout page.
 
 4. Check the status of the custodian index by clicking the link in the **Indexing job Status** column on the **Custodians** tab.  
 
@@ -104,7 +108,7 @@ To release a custodian:
 
 1.	Go to the **Custodians** tab.
 
-2.	Select the custodian from the list and click **Release custodians** on the flyout page.
+2.	Select the custodian from the list and click ![Release Custodian](../media/ReleaseCustodian.PNG) on the flyout page.
 
     The status of the custodian on the **Custodians** tab is set to **Released** and the **Hold status** on the flyout page is changed to **Inactive**. 
 

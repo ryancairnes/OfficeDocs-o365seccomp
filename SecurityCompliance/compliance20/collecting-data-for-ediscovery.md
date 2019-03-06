@@ -37,7 +37,6 @@ Once the search estimate is completed, click the search to display the flyout pa
 - Summary
 - Top locations
 - Queries
-- Refiners
 
 For more information about search statistics, see [Search statistics](search-statistics.md).
 

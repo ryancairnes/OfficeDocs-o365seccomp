@@ -5,7 +5,7 @@ author: chrisda
 manager: serdars
 ms.audience: ITPro
 ms.topic: article
-ms.prod: office-online-server
+ms.service: O365-seccomp
 localization_priority: Normal
 ms.assetid: cb801985-3c89-4979-9c18-17829a4cb563
 description: "Admins can learn about the mail loop insight in the mail flow dashboard in the Office 365 Security & Compliance Center."

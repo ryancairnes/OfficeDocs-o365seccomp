@@ -5,7 +5,7 @@ author: chrisda
 manager: serdars
 ms.audience: ITPro
 ms.topic: article
-ms.prod: office-online-server
+ms.service: O365-seccomp
 localization_priority: Normal
 ms.assetid: b5543faa-44fa-44c5-8180-fb835e7e452d
 description: "Admins can learn about the Auto-forwarded messages report in the mail flow dashboard in the Office 365 Security & Compliance Center."

@@ -9,7 +9,7 @@ ms.collection:
 - o365_security_incident_response
 - Strat_O365_IP
 ms.service: O365-seccomp
-localization_priority: Normal
+localization_priority: Priority
 search.appverid:
 - MET150
 description: "Learn how to recognize and respond to a compromised email account in Office 365"

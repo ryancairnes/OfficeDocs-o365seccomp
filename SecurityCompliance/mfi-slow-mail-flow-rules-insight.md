@@ -6,7 +6,7 @@ manager: serdars
 ms.date: 5/3/2018
 ms.audience: ITPro
 ms.topic: article
-ms.prod: office-online-server
+ms.service: O365-seccomp
 localization_priority: Normal
 ms.assetid: 37125cdb-715d-42d0-b669-1a8efa140813
 description: "Admins can learn about the Slow mail flow rules insight in the mail flow dashboard in the Office 365 Security & Compliance Center."

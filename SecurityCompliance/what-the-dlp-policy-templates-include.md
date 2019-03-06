@@ -9,7 +9,8 @@ ms.topic: reference
 f1_keywords:
 - 'ms.o365.cc.DLPNewPolicyFromTemplate'
 ms.service: O365-seccomp
-ms.collection: M365-security-compliance
+ms.collection: 
+- M365-security-compliance
 localization_priority: Normal
 search.appverid: 
 - MOE150

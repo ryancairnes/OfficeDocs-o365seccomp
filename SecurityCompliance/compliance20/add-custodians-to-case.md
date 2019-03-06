@@ -64,12 +64,11 @@ Depending on your case, you may also want to add mailboxes that a given custodia
 ![Map Additional Data Sources](../media/AddCustodianStep3.PNG)
 
 To map mailboxes, sites, or teams to a specific custodian:
-
-1. Select **Update** to assign content locations, like mailboxes, sites, and Teams to a specific custodian. 
+1. Select **Add** to assign content locations, like mailboxes, sites, and Teams, to a specific custodian. 
 
 2. In the flyout, specify the following:
-   
-    -  **Exchange Mailboxes** - Click **Choose users, groups, or Teams** and then click **Choose users, groups, or teams** again. To specify mailboxes to assign to the selected custodian, use the search box to find user mailboxes and distribution groups. You can also assign the associated mailbox for an Office 365 Group or a Microsoft Team. Select the user, group, team check box, click **Choose**, and then click **Done**.
+   ![Map Data Sources](../media/AddCustodianStep4.PNG)
+  -  **Exchange Mailboxes** - Click **Choose users, groups, or Teams** and then click **Choose users, groups, or teams** again. To specify mailboxes to assign to the selected custodian, use the search box to find user mailboxes and distribution groups. You can also assign the associated mailbox for an Office 365 Group or a Microsoft Team. Select the user, group, team check box, click **Choose**, and then click **Done**.
 
         > [!NOTE]
         > When you click Choose users, groups, or teams to specify mailboxes, the mailbox picker that's displayed is empty. This is by design to enhance performance. To add people to this list, type a name (a minimum of 3 characters) in the search box.
@@ -84,6 +83,8 @@ After you have finished mapping your sources, you can view the total mailboxes, 
 
 ## (Optional) Step 4: Place custodians on hold
 
+![Place Holds](../media/AddCustodianStep5.PNG)
+
 After you have finalized the custodians and data sources that you would like to add to your case, you can optionally place some or all of your custodians on hold. When you place a custodian on hold, the content mapped to that user is held until you release the custodian from the case or until you delete the hold. In some cases, you may want to add custodians to a case without placing them on hold. 
 
 To place the selected custodians and data sources on hold:
@@ -94,4 +95,4 @@ To place the selected custodians and data sources on hold:
 
 3. Click **Edit** to view all the selected custodian data sources.
 
-    ![Place Holds](../media/AddCustodianStep4.PNG)
+   
