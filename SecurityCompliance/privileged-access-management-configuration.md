@@ -115,7 +115,7 @@ You can create and configure up to 30 privileged access policies for your Office
     
     **Policy type**: Task, Role, or Role Group
 
-    **Policy scope**: Exchange or Office 365
+    **Policy scope**: Exchange
 
     **Policy name**: Select from the available policies
 

@@ -6,11 +6,13 @@ manager: laurawi
 ms.date: 12/05/2018
 ms.audience: Admin
 ms.topic: article
-ms.service: O365-seccomp
+ms.service: o365-administration
 localization_priority: Normal
 search.appverid: 
 - MET150
 ms.assetid: f09668bd-fe1a-4c01-89e3-e88c370e66c7
+	ms.collection:
+	- M365-security-compliance
 description: "Tells Office 365 and EOP admins how to enable and disable safety tips in email messages."
 ---
 

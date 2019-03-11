@@ -13,6 +13,7 @@ search.appverid:
 - MOE150
 ms.assetid: dce7a700-3b6e-435f-88ba-e4b82c0f2b26
 description: "Get an overview of the Analyze process, which allows you to set parameters, run options, and view results, in Office 365 Advanced eDiscovery. "
+ms.collection: M365-security-compliance
 ---
 
 # Analyze case data with Office 365 Advanced eDiscovery

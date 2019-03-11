@@ -562,7 +562,476 @@ A DLP policy is 85% confident that it's detected this type of sensitive informat
 - 7777777777
 - 8888888888
 - 9999999999
-   
+
+## Azure DocumentDB Auth Key
+
+### Format
+
+The string "DocumentDb" followed by the characters and strings outlined in the pattern below.
+
+### Pattern
+
+- The string "DocumentDb"
+- Any combination of between 3-200 lower- or uppercase letters, digits, symbols, special characters, or spaces
+- A greater than symbol (>), an equal sign (=), a quotation mark ("), or an apostrophe (')
+- Any combination of 86 lower- or uppercase letters, digits, forward slash (/), or plus sign (+)
+- Two equal signs (=)
+
+### Checksum
+
+No
+
+### Definition
+
+A DLP policy is 85% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
+- The regular expression CEP_Regex_AzureDocumentDBAuthKey finds content that matches the pattern.
+- The regular expression CEP_CommonExampleKeywords does **not** find content that matches the pattern.
+
+```
+<!-- Azure Document DB Auth Key -->
+<Entity id="0f587d92-eb28-44a9-bd1c-90f2892b47aa" patternsProximity="300" recommendedConfidence="85">
+  <Pattern confidenceLevel="85">
+        <IdMatch idRef="CEP_Regex_AzureDocumentDBAuthKey" />
+        <Any minMatches="0" maxMatches="0">
+            <Match idRef="CEP_CommonExampleKeywords" />
+          </Any>
+  </Pattern>
+</Entity>
+```
+
+### Keywords
+
+#### CEP_CommonExampleKeywords
+
+(Note that technically, this sensitive information type identifies these keywords by using a regular expression, not a keyword list.)
+
+- contoso
+- fabrikam
+- northwind
+- sandbox
+- onebox
+- localhost
+- 127.0.0.1
+- testacs.<!--no-hyperlink-->com
+- s-int.<!--no-hyperlink-->net
+
+## Azure IAAS Database Connection String and Azure SQL Connection String
+
+### Format
+
+The string "Server", "server", or "data source" followed by the characters and strings outlined in the pattern below, including the string "cloudapp.azure.<!--no-hyperlink-->com" or "cloudapp.azure.<!--no-hyperlink-->net" or "database.windows.<!--no-hyperlink-->net", and the string "Password" or "password" or "pwd".
+
+### Pattern
+
+- The string "Server", "server", or "data source"
+- 0-2 whitespace characters
+- An equal sign (=)
+- 0-2 whitespace characters
+- Any combination of between 1-200 lower- or uppercase letters, digits, symbols, special characters, or spaces
+- The string "cloudapp.azure.<!--no-hyperlink-->com", "cloudapp.azure.<!--no-hyperlink-->net", or "database.windows.<!--no-hyperlink-->net"
+- Any combination of between 1-300 lower- or uppercase letters, digits, symbols, special characters, or spaces
+- The string "Password", "password", or "pwd"
+- 0-2 whitespace characters
+- An equal sign (=)
+- 0-2 whitespace characters
+- One or more characters that is not a semicolon (;), quotation mark ("), or apostrophe (')
+- A semicolon (;), quotation mark ("), or apostrophe (')
+
+### Checksum
+
+No
+
+### Definition
+
+A DLP policy is 85% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
+- The regular expression CEP_Regex_AzureConnectionString finds content that matches the pattern.
+- The regular expression CEP_CommonExampleKeywords does **not** find content that matches the pattern.
+
+```
+<!--Azure IAAS Database Connection String and Azure SQL Connection String-->
+<Entity id="ce1a126d-186f-4700-8c0c-486157b953fd" patternsProximity="300" recommendedConfidence="85">
+  <Pattern confidenceLevel="85">
+        <IdMatch idRef="CEP_Regex_AzureConnectionString" />
+        <Any minMatches="0" maxMatches="0">
+            <Match idRef="CEP_CommonExampleKeywords" />
+        </Any>
+    </Pattern>
+</Entity>
+```
+
+### Keywords
+
+#### CEP_CommonExampleKeywords
+
+(Note that technically, this sensitive information type identifies these keywords by using a regular expression, not a keyword list.)
+
+- contoso
+- fabrikam
+- northwind
+- sandbox
+- onebox
+- localhost
+- 127.0.0.1
+- testacs.<!--no-hyperlink-->com
+- s-int.<!--no-hyperlink-->net
+
+## Azure IoT Connection String
+
+### Format
+
+The string "HostName" followed by the characters and strings outlined in the pattern below, including the strings "azure-devices.<!--no-hyperlink-->net" and "SharedAccessKey".
+
+### Pattern
+
+- The string "HostName"
+- 0-2 whitespace characters
+- An equal sign (=)
+- 0-2 whitespace characters
+- Any combination of between 1-200 lower- or uppercase letters, digits, symbols, special characters, or spaces
+- The string "azure-devices.<!--no-hyperlink-->net"
+- Any combination of between 1-200 lower- or uppercase letters, digits, symbols, special characters, or spaces
+- The string "SharedAccessKey"
+- 0-2 whitespace characters
+- An equal sign (=)
+- 0-2 whitespace characters
+- Any combination of 43 lower- or uppercase letters, digits, forward slash (/), or plus sign (+)
+- An equal sign (=)
+
+### Checksum
+
+No
+
+### Definition
+
+A DLP policy is 85% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
+- The regular expression CEP_Regex_AzureIoTConnectionString finds content that matches the pattern.
+- The regular expression CEP_CommonExampleKeywords does **not** find content that matches the pattern.
+
+```
+<!--Azure IoT Connection String-->
+<Entity id="0b34bec3-d5d6-4974-b7b0-dcdb5c90c29d" patternsProximity="300" recommendedConfidence="85">
+  <Pattern confidenceLevel="85">
+        <IdMatch idRef="CEP_Regex_AzureIoTConnectionString" />
+        <Any minMatches="0" maxMatches="0">
+            <Match idRef="CEP_CommonExampleKeywords" />
+        </Any>
+  </Pattern>
+</Entity>
+```
+
+### Keywords
+
+#### CEP_CommonExampleKeywords
+
+(Note that technically, this sensitive information type identifies these keywords by using a regular expression, not a keyword list.)
+
+- contoso
+- fabrikam
+- northwind
+- sandbox
+- onebox
+- localhost
+- 127.0.0.1
+- testacs.<!--no-hyperlink-->com
+- s-int.<!--no-hyperlink-->net
+
+## Azure Publish Setting Password
+
+### Format
+
+The string "userpwd=" followed by an alphanumeric string.
+
+### Pattern
+
+- The string "userpwd="
+- Any combination of 60 lowercase letters or digits
+- A quotation mark (")
+
+### Checksum
+
+No
+
+### Definition
+
+A DLP policy is 85% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
+- The regular expression CEP_Regex_AzurePublishSettingPasswords finds content that matches the pattern.
+- The regular expression CEP_CommonExampleKeywords does **not** find content that matches the pattern.
+
+
+```
+<!--Azure Publish Setting Password-->
+<Entity id="75f4cc8a-a68e-49e5-89ce-fa8f03d286a5" patternsProximity="300" recommendedConfidence="85">
+  <Pattern confidenceLevel="85">
+       <IdMatch idRef="CEP_Regex_AzurePublishSettingPasswords" />
+       <Any minMatches="0" maxMatches="0">
+           <Match idRef="CEP_CommonExampleKeywords" />
+       </Any>
+  </Pattern>
+</Entity>
+```
+
+### Keywords
+
+#### CEP_CommonExampleKeywords
+
+(Note that technically, this sensitive information type identifies these keywords by using a regular expression, not a keyword list.)
+
+- contoso
+- fabrikam
+- northwind
+- sandbox
+- onebox
+- localhost
+- 127.0.0.1
+- testacs.<!--no-hyperlink-->com
+- s-int.<!--no-hyperlink-->net
+
+## Azure Redis Cache Connection String
+
+### Format
+
+The string "redis.cache.windows.<!--no-hyperlink-->net" followed by the characters and strings outlined in the pattern below, including the string "password" or "pwd".
+
+### Pattern
+
+- The string "redis.cache.windows.<!--no-hyperlink-->net"
+- Any combination of between 1-200 lower- or uppercase letters, digits, symbols, special characters, or spaces
+- The string "password" or "pwd"
+- 0-2 whitespace characters
+- An equal sign (=)
+- 0-2 whitespace characters
+- Any combination of 43 characters that are lower- or uppercase letters, digits, forward slash (/), or plus sign (+)
+- An equal sign (=)
+
+### Checksum
+
+No
+
+### Definition
+
+A DLP policy is 85% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
+- The regular expression CEP_Regex_AzureRedisCacheConnectionString finds content that matches the pattern..
+- The regular expression CEP_CommonExampleKeywords does **not** find content that matches the pattern.
+
+```
+<!--Azure Redis Cache Connection String-->
+<Entity id="095a7e6c-efd8-46d5-af7b-5298d53a49fc" patternsProximity="300" recommendedConfidence="85">
+  <Pattern confidenceLevel="85">
+        <IdMatch idRef="CEP_Regex_AzureRedisCacheConnectionString" />
+        <Any minMatches="0" maxMatches="0">
+            <Match idRef="CEP_CommonExampleKeywords" />
+        </Any>
+  </Pattern>
+</Entity>
+```
+
+### Keywords
+
+#### CEP_CommonExampleKeywords
+
+(Note that technically, this sensitive information type identifies these keywords by using a regular expression, not a keyword list.)
+
+- contoso
+- fabrikam
+- northwind
+- sandbox
+- onebox
+- localhost
+- 127.0.0.1
+- testacs.<!--no-hyperlink-->com
+- s-int.<!--no-hyperlink-->net
+
+## Azure SAS
+
+### Format
+
+The string "sig" followed by the characters and strings outlined in the pattern below.
+
+### Pattern
+
+- The string "sig"
+- 0-2 whitespace characters
+- An equal sign (=)
+- 0-2 whitespace characters
+- Any combination of between 43-53 characters that are lower- or uppercase letters, digits, or the percent sign (%)
+- The string "%3d"
+- Any character that is not a lower- or uppercase letter, digit, or percent sign (%)
+
+### Checksum
+
+No
+
+### Definition
+
+A DLP policy is 85% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
+- The regular expression CEP_Regex_AzureSAS finds content that matches the pattern.
+
+```
+<!--Azure SAS-->
+<Entity id="4d235014-e564-47f4-a6fb-6ebb4a826834" patternsProximity="300" recommendedConfidence="85">
+  <Pattern confidenceLevel="85">
+        <IdMatch idRef="CEP_Regex_AzureSAS" />
+  </Pattern>
+</Entity>
+```
+
+## Azure Service Bus Connection String
+
+### Format
+
+The string "EndPoint" followed by the characters and strings outlined in the pattern below, including the strings "servicebus.windows.<!--no-hyperlink-->net" and "SharedAccesKey".
+
+### Pattern
+
+- The string "EndPoint"
+- 0-2 whitespace characters
+- An equal sign (=)
+- 0-2 whitespace characters
+- Any combination of between 1-200 lower- or uppercase letters, digits, symbols, special characters, or spaces
+- The string "servicebus.windows.<!--no-hyperlink-->net"
+- Any combination of between 1-200 lower- or uppercase letters, digits, symbols, special characters, or spaces
+- The string "SharedAccessKey"
+- 0-2 whitespace characters
+- An equal sign (=)
+- 0-2 whitespace characters
+- Any combination of 43 characters that are lower- or uppercase letters, digits, forward slash (/), or plus sign (+)
+- An equal sign (=)
+
+### Checksum
+
+No
+
+### Definition
+
+A DLP policy is 85% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
+- The regular expression CEP_Regex_AzureServiceBusConnectionString finds content that matches the pattern..
+- The regular expression CEP_CommonExampleKeywords does **not** find content that matches the pattern.
+
+```
+<!--Azure Service Bus Connection String-->
+<Entity id="b9a6578f-a83f-4fcd-bf44-2130bae49a6f" patternsProximity="300" recommendedConfidence="85">
+  <Pattern confidenceLevel="85">
+        <IdMatch idRef="CEP_Regex_AzureServiceBusConnectionString" />
+        <Any minMatches="0" maxMatches="0">
+            <Match idRef="CEP_CommonExampleKeywords" />
+        </Any>
+  </Pattern>
+</Entity>
+```
+
+### Keywords
+
+#### CEP_CommonExampleKeywords
+
+(Note that technically, this sensitive information type identifies these keywords by using a regular expression, not a keyword list.)
+
+- contoso
+- fabrikam
+- northwind
+- sandbox
+- onebox
+- localhost
+- 127.0.0.1
+- testacs.<!--no-hyperlink-->com
+- s-int.<!--no-hyperlink-->net
+
+## Azure Storage Account Key
+
+### Format
+
+The string "DefaultEndpointsProtocol" followed by the characters and strings outlined in the pattern below, including the string "AccountKey".
+
+### Pattern
+
+- The string "DefaultEndpointsProtocol"
+- 0-2 whitespace characters
+- An equal sign (=)
+- 0-2 whitespace characters
+- Any combination of between 1-200 lower- or uppercase letters, digits, symbols, special characters, or spaces
+- The string "AccountKey"
+- 0-2 whitespace characters
+- An equal sign (=)
+- 0-2 whitespace characters
+- Any combination of 86 characters that are lower- or uppercase letters, digits, forward slash (/), or plus sign (+)
+- Two equal signs (=)
+
+### Checksum
+
+No
+
+### Definition
+
+A DLP policy is 85% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
+- The regular expression CEP_Regex_AzureStorageAccountKey finds content that matches the pattern.
+- The regular expression CEP_AzureEmulatorStorageAccountFilter does **not** find content that matches the pattern.
+- The regular expression CEP_CommonExampleKeywords does **not** find content that matches the pattern.
+
+```
+<!--Azure Storage Account Key-->
+<Entity id="c7bc98e8-551a-4c35-a92d-d2c8cda714a7" patternsProximity="300" recommendedConfidence="85">
+  <Pattern confidenceLevel="85">
+        <IdMatch idRef="CEP_Regex_AzureStorageAccountKey" />
+        <Any minMatches="0" maxMatches="0">
+            <Match idRef="CEP_AzureEmulatorStorageAccountFilter" />
+            <Match idRef="CEP_CommonExampleKeywords" />
+        </Any>
+  </Pattern>
+</Entity>
+```
+
+### Keywords
+
+#### CEP_AzureEmulatorStorageAccountFilter
+
+(Note that technically, this sensitive information type identifies these keywords by using a regular expression, not a keyword list.)
+
+- Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==
+
+#### CEP_CommonExampleKeywords
+
+(Note that technically, this sensitive information type identifies these keywords by using a regular expression, not a keyword list.)
+
+- contoso
+- fabrikam
+- northwind
+- sandbox
+- onebox
+- localhost
+- 127.0.0.1
+- testacs.<!--no-hyperlink-->com
+- s-int.<!--no-hyperlink-->net
+
+## Azure Storage Account Key (Generic)
+
+### Format
+
+Any combination of 86 lower- or uppercase letters, digits, the forward slash (/), or plus sign (+), preceded or followed by the characters outlined in the pattern below.
+
+### Pattern
+
+- 0-1 of the greater than symbol (>), apostrophe ('), equal sign (=), quotation mark ("), or number sign (#)
+- Any combination of 86 characters that are lower- or uppercase letters, digits, the forward slash (/), or plus sign (+)
+- Two equal signs (=)
+
+
+### Checksum
+
+No
+
+### Definition
+
+A DLP policy is 85% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
+- The regular expression CEP_Regex_AzureStorageAccountKeyGeneric finds content that matches the pattern.
+
+```
+<!--Azure Storage Account Key (Generic)-->
+<Entity id="7ff41bd0-5419-4523-91d6-383b3a37f084" patternsProximity="300" recommendedConfidence="85">
+  <Pattern confidenceLevel="85">
+        <IdMatch idRef="CEP_Regex_AzureStorageAccountKeyGeneric" />
+  </Pattern>
+</Entity>
+```
+
 ## Belgium National Number
 
 ### Format
@@ -4536,7 +5005,84 @@ A DLP policy is 85% confident that it's detected this type of sensitive informat
 ### Keywords
 
 None
-   
+
+## SQL Server Connection String
+
+### Format
+
+The string "User Id", "User ID", "uid", or "UserId" followed by the characters and strings outlined in the pattern below.
+
+### Pattern
+
+- The string "User Id", "User ID", "uid", or "UserId"
+- Any combination of between 1-200 lower- or uppercase letters, digits, symbols, special characters, or spaces
+- The string "Password" or "pwd" where "pwd" is not preceded by a lowercase letter
+- An equal sign (=)
+- Any character that is not a dollar sign ($), percent symbol (%), greater than symbol (>), at symbol (@), quotation mark ("), semicolon (;), left brace ([), or left bracket ({)
+- Any combination of 7-128 characters that are not a semicolon (;), forward slash (/), or quotation mark (")
+- A semicolon (;) or quotation mark (")
+
+### Checksum
+
+No
+
+### Definition
+
+A DLP policy is 85% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
+- The regular expression CEP_Regex_SQLServerConnectionString finds content that matches the pattern.
+- A keyword from CEP_GlobalFilter is **not** found.
+- The regular expression CEP_PasswordPlaceHolder does **not** find content that matches the pattern.
+- The regular expression CEP_CommonExampleKeywords does **not** find content that matches the pattern.
+
+```
+<!---SQL Server Connection String>
+<Entity id="e76b6205-d3cb-46f2-bd63-c90153f2f97d" patternsProximity="300" recommendedConfidence="85">
+  <Pattern confidenceLevel="85">
+        <IdMatch idRef="CEP_Regex_SQLServerConnectionString" />
+        <Any minMatches="0" maxMatches="0">
+            <Match idRef="CEP_GlobalFilter" />
+            <Match idRef="CEP_PasswordPlaceHolder" />
+            <Match idRef="CEP_CommonExampleKeywords" />
+        </Any>
+    </Pattern>
+</Entity>
+```
+
+### Keywords
+
+#### CEP_GlobalFilter
+
+- some-password
+- somepassword
+- secretPassword
+- sample
+
+#### CEP_PasswordPlaceHolder
+
+(Note that technically, this sensitive information type identifies these keywords by using a regular expression, not a keyword list.)
+
+- Password or pwd followed by 0-2 spaces, an equal sign (=), 0-2 spaces, and an asterisk (*)
+--OR--
+- Password or pwd followed by:
+    - Equal sign (=)
+    - Less than symbol (<)
+    - Any combination of 1-200 characters that are upper- or lowercase letters, digits, an asterisk (*), hyphen (-), underline (_), or whitespace character
+    - Greater than symbol (>)
+
+#### CEP_CommonExampleKeywords
+
+(Note that technically, this sensitive information type identifies these keywords by using a regular expression, not a keyword list.)
+
+- contoso
+- fabrikam
+- northwind
+- sandbox
+- onebox
+- localhost
+- 127.0.0.1
+- testacs.<!--no-hyperlink-->com
+- s-int.<!--no-hyperlink-->net
+
 ## Sweden National ID
 
 ### Format

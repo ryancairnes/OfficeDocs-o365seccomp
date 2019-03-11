@@ -18,10 +18,10 @@ description: "Learn about Threat Trackers, including new Noteworthy Trackers, to
 
 # Threat Trackers - New and Noteworthy
 
-[Office 365 Threat Intelligence](office-365-ti.md) enables your organization's security team to discover and take action against cybersecurity threats. Beginning in late March 2018 and over the next several weeks, Office 365 Threat Intelligence will include new Threat Tracker features, including Noteworthy trackers. Read this article to get an overview of these new features and next steps. 
+[Office 365 Threat Investigation and Response](office-365-ti.md) capabilities enable your organization's security team to discover and take action against cybersecurity threats. Office 365 Threat Investigation and Response capabilities include Threat Tracker features, including Noteworthy trackers. Read this article to get an overview of these new features and next steps. 
 
 > [!IMPORTANT]
-> Beginning in February 2019 and rolling out over the next several months, Office 365 Threat Intelligence is becoming Office 365 Advanced Threat Protection Plan 2, with additional threat protection capabilities. To learn more, see [Office 365 Advanced Threat Protection plans and pricing](https://products.office.com/exchange/advance-threat-protection) and the [Office 365 Advanced Threat Protection Service Description](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description).
+> Office 365 Threat Intelligence is now part of Office 365 Advanced Threat Protection Plan 2, with additional threat protection capabilities. To learn more, see [Office 365 Advanced Threat Protection plans and pricing](https://products.office.com/exchange/advance-threat-protection) and the [Office 365 Advanced Threat Protection Service Description](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description).
   
 ## What are Threat Trackers?
 
@@ -33,9 +33,9 @@ Most tracker pages include trending numbers that are updated periodically, widge
   
 ![Example of campaign information in Explorer](media/e426f220-fdcb-4dd9-99a2-db97dbcf71d5.png)
   
-Trackers are just a few of the many great features you get with [Office 365 Threat Intelligence](office-365-ti.md). When available, your new Threat Trackers will include [Noteworthy trackers](threat-trackers.md#notey), [Trending trackers](threat-trackers.md#trending), [Tracked queries](threat-trackers.md#trackedq), and [Saved queries](threat-trackers.md#savedq).
+Trackers are just a few of the many great features you get with [Office 365 Advanced Threat Protection Plan 2](office-365-ti.md). Threat Trackers include [Noteworthy trackers](threat-trackers.md#notey), [Trending trackers](threat-trackers.md#trending), [Tracked queries](threat-trackers.md#trackedq), and [Saved queries](threat-trackers.md#savedq).
   
-To view and use your Threat Trackers when they are available for your organization, go to the Security &amp; Compliance Center ([https://protection.office.com](https://protection.office.com)) and choose **Threat management** \> **Threat tracker**.
+To view and use your Threat Trackers for your organization, go to the Security &amp; Compliance Center ([https://protection.office.com](https://protection.office.com)) and choose **Threat management** \> **Threat tracker**.
   
 > [!NOTE]
 > To use Threat Trackers, you must be an Office 365 global administrator, security administrator, or security reader. See [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md). 
@@ -72,7 +72,7 @@ You can always save a Noteworthy tracker query or any of your own Explorer queri
 
 Whether you're reviewing email, content, or Office activities (coming soon), Explorer and Trackers work together to help you investigate and track security risks and threats. All together, Trackers provide you with information to protect your Office 365 users by highlighting new, notable, and frequently searched issues - ensuring your business is better protected as it moves to the cloud.
   
-When Threat Trackers are available to you, please try them out - and remember that you can always provide us feedback on this or other Office 365 security features by clicking on the **Feedback** button in the lower right corner of the [Overview of the Office 365 Security &amp; Compliance Center](https://support.office.com/article/a5f2fd18-b029-4257-b5a8-ae83e7768c85).
+And remember that you can always provide us feedback on this or other Office 365 security features by clicking on the **Feedback** button in the lower right corner of the [Overview of the Office 365 Security &amp; Compliance Center](https://support.office.com/article/a5f2fd18-b029-4257-b5a8-ae83e7768c85).
   
 ![Office 365 Security &amp; Compliance Center](media/86c330db-8132-4150-8475-220258fe04fb.png)
   
@@ -88,7 +88,7 @@ The new Noteworthy threat filter highlights items that were recently detected th
   
 ## Next steps
 
-- If your organization doesn't already have Office 365 Threat Intelligence, see [How do we get Office 365 Threat Intelligence?](get-started-with-ti.md).
+- If your organization doesn't already have these Office 365 Threat Investigation and Response capabilities, see [How do we get Office 365 Threat Investigation and Response capabilities?](get-started-with-ti.md).
     
 - Make sure that your security team has the correct roles and permissions assigned. You must be an Office 365 global administrator, or have the Security Administrator or Search and Purge role assigned in the Security &amp; Compliance Center. See [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md).
     

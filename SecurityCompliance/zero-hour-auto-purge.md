@@ -39,7 +39,7 @@ Office 365 updates anti-spam engine and malware signatures in real-time on a dai
 
 - For mail that is identified as spam, ZAP moves unread messages to users' Junk mail folder. 
 
-- For mail that is identified as spam, ZAP moves messages to users' Junk mail folder, regardless of whether the email has been read.
+- For mail that is identified as phish, ZAP moves messages to users' Junk mail folder, regardless of whether the email has been read.
 
 - For newly detected malware, ZAP removes attachments from email messages, regardless of whether the email has been read. 
   

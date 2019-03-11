@@ -1,7 +1,7 @@
 ---
 title: "Threat management in the Office 365 Security &amp; Compliance Center"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.date: 9/24/2018
 ms.audience: Admin
@@ -11,6 +11,8 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: 0a73d5fa-b2c8-43e7-9ed4-61f0552b1c98
+ms.collection:
+- M365-security-compliance
 description: "Use Threat management to help control and manage mobile device access to your organization's data, help protect your organization from data loss, and help protect inbound and outbound messages from malicious software and spam. You also use threat management to protect your domain's reputation and to determine whether or not senders are maliciously spoofing accounts from your domain."
 ---
 
@@ -44,7 +46,7 @@ In Office 365, use the Security &amp; Compliance Center to manage threats in you
 
 These options are available under **Threat management** in the Security &amp; Compliance Center.
   
-We're still rolling out threat management for the Security &amp; Compliance Center, so you might not see all of these yet, or you might see more than the options listed here. During the rollout, some of these, for example Anti-malware, Dkim, and others, will continue to be available through the Exchange admin center (EAC) for a limited time.
+We're still rolling out threat management for the Security &amp; Compliance Center, so you might not see all of these yet, or you might see more than the options listed here. During the rollout, some of these, for example Anti-malware, Dkim, and others, will continue to be available through the Exchange Admin Center (EAC) for a limited time.
 
 In some cases, there are minor differences between the EAC and the Security &amp; Compliance Center implementations. For example, supported characters for spam filters are different between the two platforms. Articles are provided that give more information about specific differences when they occur.
   

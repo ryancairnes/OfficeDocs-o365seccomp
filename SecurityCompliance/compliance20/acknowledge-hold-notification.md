@@ -22,7 +22,7 @@ When responding to a regulatory request or investigation, you may be required to
 
 To help reduce the time, cost, and effort of following up with your custodians,  Advanced eDiscovery (Preview) allows you to send and follow-up on legal hold notifications through email. In addition to email notices, each custodian will also have access to an individualized Compliance Portal, allowing custodians to be kept informed of changes to their obligation status.
 
-## Email Notifications
+## Email notifications
 Once a Legal Hold Notification has been issued, each custodian will receive a unique and personalized email containing your defined legal hold notice and added instructions. 
 
 > [!Tip] 
@@ -30,22 +30,17 @@ Once a Legal Hold Notification has been issued, each custodian will receive a un
 
 Based on the configuration of your legal hold notification, your custodians may receive the following notices: 
 
-### Issuance Notice
-This is the first notice sent to your custodian. This will contain your issuance instructions as well as the hold notice appended to the end of your message.
+- **Issuance notice** - This is the first notice sent to your custodian. This will contain your issuance instructions as well as the hold notice appended to the end of your message.
 
-### Reminder Notice
-If enabled, a reminder notice will be sent to your custodians based on the specified frequency and interval. The reminders will continue to be sent either until the custodian has acknowledged their notice or until the number of reminders have been exhausted.
+- **Reminder notice** - If enabled, a reminder notice will be sent to your custodians based on the specified frequency and interval. The reminders will continue to be sent either until the custodian has acknowledged their notice or until the number of reminders have been exhausted.
 
-### Escalation Notice
-If enabled, an escalation notice will be sent to your custodian and their manager after the reminder notices have been exhausted. The system will automatically send escalation notices until the alloted escalations have been completed or until the custodian acknowledges their hold notification.
+- **Escalation notice** - If enabled, an escalation notice will be sent to your custodian and their manager after the reminder notices have been exhausted. The system will automatically send escalation notices until the alloted escalations have been completed or until the custodian acknowledges their hold notification.
 
-### Re-Issue Notice
-During the course of an investigation, if the contents of the hold notice are updated, then the updated notice will automatically be sent to the custodian. 
+- **Re-issue notice** - During the course of an investigation, if the contents of the hold notice are updated, then the updated notice will automatically be sent to the custodian.
 
-### Release Notice
-Once a custodian is released from the case, they will be sent the release notice. 
+- **Release notice** - When a custodian is released from the case, they will be sent the release notice. 
 
 ## Compliance Portal
-In addition to the email notifications, each custodian will also have access to a unique Compliance Portal. Through the portal, each custodian will be able to view, access, and acknowledge their active hold notifications. 
+In addition to the email notifications, each custodian will also have access to a unique Compliance Portal. Through the portal, each custodian will be able to view, access, and acknowledge their active hold notifications.
 
-![Custodian Compliance Portal](../media/CustodianPortal.png)
+![Compliance Portal for a custodian](../media/CustodianPortal.jpg)

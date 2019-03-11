@@ -6,11 +6,13 @@ manager: laurawi
 ms.date: 4/27/2017
 ms.audience: ITPro
 ms.topic: article
-ms.service: O365-seccomp
+ms.service: o365-administration
 ms.custom: TN2DMC
 localization_priority: Normal
 ms.assetid: e313c489-ce5e-4015-aadf-981c697ab51f
-description: "Office 365 Message Encryption lets email users send encrypted messages to people inside our outside their organization. As an administrator, you can enable Office 365 Message Encryption by creating mail flow rules (transport rules) that set the conditions for encryption."
+ms.collection:
+	- M365-security-compliance
+description: "Office 365 Message Encryption lets email users send encrypted messages to people inside our outside their organization. As an administrator, you can enable Office 365 Message Encryption by creating mail flow rules (also known as transport rules) that set the conditions for encryption."
 ---
 
 # Enable message encryption and decryption in Office 365

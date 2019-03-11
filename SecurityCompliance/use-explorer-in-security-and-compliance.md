@@ -1,9 +1,9 @@
 ---
-title: "Use Explorer in the Security &amp; Compliance Center"
+title: "Use Threat Explorer in the Security &amp; Compliance Center"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 02/13/2019
+ms.date: 03/10/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -17,20 +17,20 @@ ms.collection:
 description: "Learn about Explorer (also called Threat Explorer) in the Security &amp; Compliance Center."
 ---
 
-# Use Explorer in the Security &amp; Compliance Center
+# Use Threat Explorer in the Security &amp; Compliance Center
 
-If your organization has [Office 365 Threat Intelligence](office-365-ti.md), and you have the necessary permissions, you can use Explorer to identify and analyze threats. For example, you can identify and delete malicious email that was delivered, or see malware that was caught by Office 365 security features. Explorer (also referred to as Threat Explorer) is a powerful near real-time report in the Security &amp; Compliance Center.
+If your organization has [Office 365 Advanced Threat Protection Plan 2](office-365-ti.md), and you have the necessary permissions, you can use Threat Explorer to identify and analyze threats. For example, you can identify and delete malicious email that was delivered, or see malware that was caught by Office 365 security features. Threat Explorer (also referred to as Explorer) is a powerful near real-time tool to help Security Operations teams investigate and respond to threats in the Security &amp; Compliance Center.
   
 ![Go to Threat management \> Explorer](media/cab32fa2-66f1-4ad5-bc1d-2bac4dbeb48c.png)
   
 To use Explorer, in the Security &amp; Compliance Center, go to **Threat management** \> **Explorer**.
 
 > [!IMPORTANT]
-> Beginning in February 2019 and rolling out over the next several months, Office 365 Threat Intelligence is becoming Office 365 Advanced Threat Protection Plan 2, with additional threat protection capabilities. To learn more, see [Office 365 Advanced Threat Protection plans and pricing](https://products.office.com/exchange/advance-threat-protection) and the [Office 365 Advanced Threat Protection Service Description](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description).
+> Office 365 Threat Intelligence is now part of Office 365 Advanced Threat Protection Plan 2, with additional threat protection capabilities. To learn more, see [Office 365 Advanced Threat Protection plans and pricing](https://products.office.com/exchange/advance-threat-protection) and the [Office 365 Advanced Threat Protection Service Description](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description).
       
 ## Explorer overview
 
-Explorer displays information about suspected malware in email and files in Office 365, as well as other security threats and risks to your organization. When you first open Explorer, the default view shows malware detections from antivirus for the past 7 days. Explorer can also show security protection features in Office 365, including [Safe Links](atp-safe-links.md) and [Safe Attachments](atp-safe-attachments.md) and can be modified to show data for the past 30 days.
+Explorer displays information about suspected malware and phish in email and files in Office 365, as well as other security threats and risks to your organization. When you first open Explorer, the default view shows email malware detections for the past 7 days. Explorer can also show security protection features in Office 365, including [Safe Links](atp-safe-links.md) and [Safe Attachments](atp-safe-attachments.md) and can be modified to show data for the past 30 days. If you have a trial subcription for Office 365 Advanced Threat Protection Plan 2 or Office 365 E5, you will only see detections and email data for the past 7 days.
   
 ![Explorer shows info about top malware and targeted users](media/8e8c1582-d6f4-4521-8591-686a1cb01f7e.png)
   
@@ -38,7 +38,7 @@ Use the View menu to change what information is displayed.
   
 ![The View menu for Explorer](media/2bb34f58-555f-4967-ba55-740334ef1f8e.png)
   
-Explorer has several filtering and querying capabilities that enable you to drill into details, such as top targeted users, top malware families, and more. Each kind of report offers a variety of ways to view and explore data.
+Explorer has several filtering and querying capabilities that enable you to drill into details, such as top targeted users, top malware families, detection technology and more. Each kind of report offers a variety of ways to view and explore data.
 
 > [!IMPORTANT]
 > Do not use wildcard characters, such as an asterisk (*) or a question mark (?), with Explorer. When you search on the Subject field for email messages, Explorer will perform partial matching and yield results similar to a wildcard search.
@@ -88,7 +88,7 @@ Below the chart, view more details about specific email messages, such as subjec
 
 ## Content \> Malware
 
-This view shows files that were identified as malicious in SharePoint Online, OneDrive for Business, and Microsoft Teams.
+This view shows files that were identified as malicious by Office 365 Advanced Threat Protection in SharePoint Online, OneDrive for Business, and Microsoft Teams.
 
 View information by malware family, detection technology (how the malware was detected), and workload (OneDrive, SharePoint, or Teams). 
 
@@ -98,7 +98,7 @@ Below the chart, view more details about specific files, such as attachment file
   
 ## (New!) Click-to-filter capabilities
 
-New to Explorer is the ability to click to filter. Beginning in late May 2018, when you click an item in the legend, that item becomes a filter for the report. For example, suppose we are looking at the Malware view in Explorer:
+New to Explorer is the ability to click to filter. When you click an item in the legend, that item becomes a filter for the report. For example, suppose we are looking at the Malware view in Explorer:
   
 ![Go to Threat management \> Explorer](media/cab32fa2-66f1-4ad5-bc1d-2bac4dbeb48c.png)
   
@@ -118,7 +118,7 @@ The ability to filter in a click and navigate to specific details can save you a
   
 ## How do I get Explorer?
 
-Explorer is included in [Office 365 Threat Intelligence](office-365-ti.md). 
+Explorer is included in [Office 365 Advanced Threat Protection Plan 2](office-365-ti.md). 
 
 You must have appropriate permissions, such as those granted to a security administrator or security reader, in order to view and use Explorer. To learn more, see [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md).
   
@@ -126,7 +126,7 @@ You must have appropriate permissions, such as those granted to a security admin
 
 [Reports and insights in the Office 365 Security &amp; Compliance Center](reports-and-insights-in-security-and-compliance.md)
   
-[Find and investigate malicious email that was delivered (Office 365 Threat Intelligence)](investigate-malicious-email-that-was-delivered.md)
+[Find and investigate malicious email that was delivered (Office 365 Threat Invesitgation and Response)](investigate-malicious-email-that-was-delivered.md)
   
 [Anti-spam and anti-malware protection in Office 365](anti-spam-and-anti-malware-protection.md)
   
