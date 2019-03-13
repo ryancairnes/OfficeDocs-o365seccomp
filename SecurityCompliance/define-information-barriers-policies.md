@@ -90,7 +90,7 @@ Then, follow these steps:
 
 4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
 
-5. Gather a list of users and groups to be included in an information barrier policy. <br>In our example scenarios below, we have several groups predefined in Exchange (Investors, Research, Products, and Sales), and we use their Distinguished Name values in our cmdlets.
+5. Gather a list of users and groups to be included in an information barrier policy. (In our example scenarios below, we have several groups predefined in Exchange. These include **Investors**, **Research**, **Products**, and **Sales**. We use their *Distinguished Name* values in our cmdlets.)
 
 After you have completed these steps, select one of the following scenarios:
 
@@ -119,7 +119,7 @@ In this example scenario, we define an information barriers policy that prevents
     
     `$researchFilter = "(MemberOfGroup -ne $researchGroup)"` 
 
-3. Define an information barriers policy that prevents the Investors group from communicating with the Research group in Microsoft Teams. Do this by running the following PowerShell cmdlet in the Office 365 Security & Compliance Center:
+3. Define an information barrier policy that prevents the Investors group from communicating with the Research group in Microsoft Teams. Do this by running the following PowerShell cmdlet in the Office 365 Security & Compliance Center:
 
     `New-InformationBarrierPolicy -Name "InvestorsIBPolicy" -AssigneeFilterName "Investors" -AssigneeFilter $investorsFilter -CommunicationAllowedFilterName "NotResearch" -CommunicationAllowedFilter $researchFilter`
 
@@ -129,7 +129,7 @@ In this example scenario, we define an information barriers policy that prevents
     
     `$investorsFilter = "(MemberOfGroup -ne $investorsGroup)"`
 
-5. Define an information barriers policy that prevents the Research group from communicating with the Investors group in Microsoft Teams. Do this by running the following PowerShell cmdlet in the Office 365 Security & Compliance Center:
+5. Define an information barrier policy that prevents the Research group from communicating with the Investors group in Microsoft Teams. Do this by running the following PowerShell cmdlet in the Office 365 Security & Compliance Center:
 
     `New-InformationBarrierPolicy -Name "ResearchIBPolicy" -AssigneeFilterName "Research" -AssigneeFilter $researchFilter -CommunicationAllowedFilterName "NotInvestors" -CommunicationAllowedFilter $investorsFilter`
 
@@ -165,7 +165,7 @@ In this example scenario, we define an information barrier policy that allows pe
     
     `$researchGroup = Get-DistributionGroup -Identity Research | select DistinguishedName`
 
-2. Define filter variables for the Products and Research groups  by running the following PowerShell cmdlets in the Office 365 Security & Compliance Center. Run these cmdlets one a time:
+2. Define filter variables for the Products and Research groups by running the following PowerShell cmdlets in the Office 365 Security & Compliance Center. Run these cmdlets one a time:
 
     `$productsFilter = "(MemberOfGroup -eq $productsGroup)"`
     
@@ -188,14 +188,14 @@ In this example scenario, we define an information barrier policy that allows pe
     `Get-InformationBarrierRecipientStatus`
 
 > [!TIP]
-> We recommend testing with a few users who are included in Information Barrier policies, as well as with a few users who are not included in those policies.
+> We recommend testing with a few users who are included in information barrier policies, as well as with a few users who are not included in those policies.
 
 ## Scenario 3: Prevent one group from communicating with two other groups
 
-In this scenario, we define an information barriers policy that prevents people in one group (Investors) to communicate with two other groups (Research and Sales). 
+In this scenario, we define an information barrier policy that prevents people in one group (Investors) to communicate with two other groups (Research and Sales). 
 
 > [!IMPORTANT]
-> Before you begin the following procedure, make sure you have completed the steps in the section, [Prepare your environment for Information Barriers](#prepare-your-environment-for-information-barriers). 
+> Before you begin the following procedure, make sure you have completed the steps in the section, [Prepare your environment for information barriers](#prepare-your-environment-for-information-barriers). 
 
 1. As a global administrator or compliance administrator, define three groups by running the following PowerShell cmdlets in Exchange Online. Run these cmdlets one a time:
 
