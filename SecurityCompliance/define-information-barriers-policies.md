@@ -1,21 +1,21 @@
 ---
-title: "Define Information Barriers policies"
+title: "Define information barrier policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 02/27/2019
+ms.date: 03/13/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
 ms.collection:
 - M365-security-compliance
 localization_priority: None
-description: "Using PowerShell, you can define policies for Information Barriers in Microsoft Teams."
+description: "Learn how to define policies for information barriers in Microsoft Teams."
 ---
 
-# Define policies for Information Barriers in Microsoft Teams
+# Define policies for information barriers in Microsoft Teams (Preview)
 
-[Information Barriers](information-barriers.md) can help limit communications between specific groups of people to help your organization comply with certain industry standards and regulations. Information Barriers can also help your organization avoid potential conflicts of interest. Information Barriers are implemented through policies that are defined by an Office 365 global administrator or compliance administrator.
+[Information Barriers](information-barriers.md) can help limit communications between specific groups of people to help your organization comply with certain industry standards and regulations. Information barriers can also help your organization avoid potential conflicts of interest. Information barriers are implemented through policies that are defined by an Office 365 global administrator or compliance administrator.
 
 This article describes how to define Information Barriers policies. 
 
