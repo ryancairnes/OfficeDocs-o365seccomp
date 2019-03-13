@@ -213,7 +213,7 @@ In this scenario, we define an information barrier policy that prevents people i
     
     `$salesFilter = "(MemberOfGroup -ne $salesGroup"` 
 
-3. Define an information barriers policy that allows the Products group to communicate with only the Research group in Microsoft Teams. Do this by running the following PowerShell cmdlet in the Office 365 Security & Compliance Center: 
+3. Define an information barrier policy that allows the Products group to communicate with only the Research group in Microsoft Teams. Do this by running the following PowerShell cmdlet in the Office 365 Security & Compliance Center: 
 
     `New-InformationBarrierPolicy -Name "InvestorsResearchSalesIBPolicy"  -AssigneeFilterName "Investors" -AssigneeFilter $investorFilter -CommunicationAllowedFilterName "NotResearchAndSales"  -CommunicationFilter $researchFilter and $salesFilter`
 
@@ -225,7 +225,7 @@ In this scenario, we define an information barrier policy that prevents people i
 
     `Get-InformationBarrierPoliciesApplicationStatus -InvestorsResearchSalesIBPolicy`
 
-6. After you have defined your Information Barriers policy, **wait at least 24 hours for the policy to work its way through your data center and services**. Then, validate the information barrier status for a specific user by running the following cmdlet in the Office 365 Security & Compliance Center:
+6. After you have defined your information barrier policy, **wait at least 24 hours for the policy to work its way through your data center and services**. Then, validate the information barrier status for a specific user by running the following cmdlet in the Office 365 Security & Compliance Center:
 
     `Get-InformationBarrierRecipientStatus`
 
