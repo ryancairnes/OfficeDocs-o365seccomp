@@ -145,12 +145,12 @@ In this example scenario, we define an information barriers policy that prevents
 
     `Get-InformationBarrierPoliciesApplicationStatus -All -ResearchIBPolicy`
 
-8. After you have defined your Information Barriers policy, wait at least 24 hours for the policy to work its way through your data center and services. Then, validate the Information Barriers status for a specific user by using the **Get-InformationBarrierRecipientStatus** cmdlet in the Office 365 Security & Compliance Center.
+8. After you have defined your information barrier policy, wait at least 24 hours for the policy to work its way through your data center and services. Then, validate the Information Barriers status for a specific user by using the **Get-InformationBarrierRecipientStatus** cmdlet in the Office 365 Security & Compliance Center.
 
     `Get-InformationBarrierRecipientStatus`
 
 > [!TIP]
-> We recommend testing with a few users who are included in Information Barrier policies, as well as with a few users who are not included in those policies.
+> We recommend testing with a few users who are included in information barrier policies, as well as with a few users who are not included in those policies.
 
 ## Scenario 2: Allow one group to communicate with only one other group
 
@@ -171,7 +171,7 @@ In this example scenario, we define an information barriers policy that allows p
     
     `$researchFilter = "(MemberOfGroup -eq $researchGroup)"` 
 
-3. Define an information barriers policy that allows the Products group to communicate with only the Research group in Microsoft Teams. Do this by running the following PowerShell cmdlet in the Office 365 Security & Compliance Center: 
+3. Define an information barrier policy that allows the Products group to communicate with only the Research group in Microsoft Teams. Do this by running the following PowerShell cmdlet in the Office 365 Security & Compliance Center: 
 
     `New-InformationBarrierPolicy -Name "ProductsResearchIBPolicy" -AssigneeFilterName "Products" -AssigneeFilter $productsFilter -CommunicationAllowedFilterName "Research" -CommunicationAllowedFilter $productsFilter or $researchFilter`
 
@@ -183,7 +183,7 @@ In this example scenario, we define an information barriers policy that allows p
 
     `Get-InformationBarrierPoliciesApplicationStatus -ProductsResearchIBPolicy`
 
-6. After you have defined your Information Barriers policy, **wait at least 24 hours for the policy to work its way through your data center and services**. Then, validate the Information Barriers status for a specific user by running the **Get-InformationBarrierRecipientStatus** cmdlet in the Office 365 Security & Compliance Center:
+6. After you have defined your information barrier policy, **wait at least 24 hours for the policy to work its way through your data center and services**. Then, validate the Information Barriers status for a specific user by running the **Get-InformationBarrierRecipientStatus** cmdlet in the Office 365 Security & Compliance Center:
 
     `Get-InformationBarrierRecipientStatus`
 
