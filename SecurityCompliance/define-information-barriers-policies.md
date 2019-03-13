@@ -15,26 +15,26 @@ description: "Learn how to define policies for information barriers in Microsoft
 
 # Define policies for information barriers in Microsoft Teams (Preview)
 
-[Information Barriers](information-barriers.md) can help limit communications between specific groups of people to help your organization comply with certain industry standards and regulations. Information barriers can also help your organization avoid potential conflicts of interest. Information barriers are implemented through policies that are defined by an Office 365 global administrator or compliance administrator.
+[Information barriers](information-barriers.md) can help limit communications between specific groups of people to help your organization comply with certain industry standards and regulations. Information barriers can also help your organization avoid potential conflicts of interest. Information barriers are implemented through policies that are defined by an Office 365 global administrator or compliance administrator.
 
-This article describes how to define Information Barriers policies. 
+This article describes how to define information barrier policies. 
 
 > [!IMPORTANT]
 > Before you define a policy, make sure to review the information in the [important considerations](#important-considerations-and-best-practices), [prerequisites](#prerequisites), and [prepare your environment](#prepare-your-environment-for-information-barriers) sections.
 
 ## Important considerations and best practices
 
-- Information Barriers policies have effects similar to [address book policies in Exchange](https://docs.microsoft.com/exchange/address-books/address-book-policies/address-book-policies). These effects include potential limitations in people picker and email address resolution, depending on how policies are configured. We recommend using either Information Barriers policies or address book policies, but not both. 
+- Information barrier policies have effects similar to [address book policies in Exchange](https://docs.microsoft.com/exchange/address-books/address-book-policies/address-book-policies). These effects include potential limitations in people picker and email address resolution, depending on how policies are configured. We recommend using EITHER information barrier policies OR address book policies, but not both. 
 
-- Information Barriers policies do not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
+- Information barrier policies do not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
 
-- Potentially, everyone included in an Information Barriers policy can be blocked from communicating with others in Microsoft Teams. When people affected by Information Barriers policies are part of the same team or group chat, they might be removed from those chat sessions. To learn more, see [Learn more Information Barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
+- Potentially, everyone included in an information barrier policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barrier policies are part of the same team or group chat, they might be removed from those chat sessions. To learn more, see [Learn more information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
 
 ## Prerequisites
 
 ### Licenses & subscriptions
 
-**Currently, the Information Barriers feature is in private preview**. When these features are generally available, they'll be included in subscriptions, such as:
+**Currently, the information barrier feature is in preview**. When these features are generally available, they'll be included in subscriptions, such as:
 
 - Microsoft 365 Enterprise E5
 
@@ -48,7 +48,7 @@ For more details about these plans and compliance features, see [Compliance Solu
 
 ### Permissions
 
-To define or edit Information Barriers policies, you must be assigned one of the following roles:
+To define or edit information barrier policies, you must be assigned one of the following roles:
 
 - Microsoft 365 Enterprise Global Administrator
 
@@ -62,11 +62,11 @@ You must have enough data in your directory to be able to segment users. You cou
 
 ### PowerShell
 
-Currently, Information Barriers policies are defined and managed in Office 365 by using PowerShell cmdlets. Although several scenarios and examples are provided in this article, you'll need to be familiar with PowerShell cmdlets and parameters.
+Currently, information barrier policies are defined and managed in Office 365 by using PowerShell cmdlets. Although several scenarios and examples are provided in this article, you'll need to be familiar with PowerShell cmdlets and parameters.
 
-## Prepare your environment for Information Barriers
+## Prepare your environment for information barriers
 
-**Before you define your organization's first Information Barriers policy, you must [enable scoped directory search in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-scoped-directory-search)**. Wait at least 24 hours after enabling scoped directory search before you set up or define policies for Information Barriers.
+**Before you define your organization's first information barrier policy, you must [enable scoped directory search in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-scoped-directory-search)**. Wait at least 24 hours after enabling scoped directory search before you set up or define information barrier policies.
 
 Then, follow these steps:
 
@@ -90,7 +90,7 @@ Then, follow these steps:
 
 4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
 
-5. Gather a list of users and groups to be included in an Information Barriers policy. <br>In our example scenarios below, we have several groups predefined in Exchange (Investors, Research, Products, and Sales), and we use their Distinguished Name values in our cmdlets.
+5. Gather a list of users and groups to be included in an information barrier policy. <br>In our example scenarios below, we have several groups predefined in Exchange (Investors, Research, Products, and Sales), and we use their Distinguished Name values in our cmdlets.
 
 After you have completed these steps, select one of the following scenarios:
 
@@ -102,10 +102,10 @@ After you have completed these steps, select one of the following scenarios:
 
 ## Scenario 1: Block communications between two groups
 
-In this example scenario, we define an Information Barriers policy that prevents people in one group (Investors) from communicating with people in another group (Research). In our example, these groups are defined by their Department attribute in Exchange Online.
+In this example scenario, we define an information barriers policy that prevents people in one group (Investors) from communicating with people in another group (Research). In our example, these groups are defined by their Department attribute in Exchange Online.
 
 > [!IMPORTANT]
-> Before you begin the following procedure, make sure you have completed the steps in the section, [Prepare your environment for Information Barriers](#prepare-your-environment-for-information-barriers). 
+> Before you begin the following procedure, make sure you have completed the steps in the section, [Prepare your environment for information barriers](#prepare-your-environment-for-information-barriers). 
 
 1. As a global administrator or compliance administrator, define the Investors and Research groups by running the following PowerShell cmdlets in Exchange Online. Run these cmdlets one at a time:
 
@@ -119,7 +119,7 @@ In this example scenario, we define an Information Barriers policy that prevents
     
     `$researchFilter = "(MemberOfGroup -ne $researchGroup)"` 
 
-3. Define an Information Barriers policy that prevents the Investors group from communicating with the Research group in Microsoft Teams. Do this by running the following PowerShell cmdlet in the Office 365 Security & Compliance Center:
+3. Define an information barriers policy that prevents the Investors group from communicating with the Research group in Microsoft Teams. Do this by running the following PowerShell cmdlet in the Office 365 Security & Compliance Center:
 
     `New-InformationBarrierPolicy -Name "InvestorsIBPolicy" -AssigneeFilterName "Investors" -AssigneeFilter $investorsFilter -CommunicationAllowedFilterName "NotResearch" -CommunicationAllowedFilter $researchFilter`
 
@@ -129,7 +129,7 @@ In this example scenario, we define an Information Barriers policy that prevents
     
     `$investorsFilter = "(MemberOfGroup -ne $investorsGroup)"`
 
-5. Define an Information Barriers policy that prevents the Research group from communicating with the Investors group in Microsoft Teams. Do this by running the following PowerShell cmdlet in the Office 365 Security & Compliance Center:
+5. Define an information barriers policy that prevents the Research group from communicating with the Investors group in Microsoft Teams. Do this by running the following PowerShell cmdlet in the Office 365 Security & Compliance Center:
 
     `New-InformationBarrierPolicy -Name "ResearchIBPolicy" -AssigneeFilterName "Research" -AssigneeFilter $researchFilter -CommunicationAllowedFilterName "NotInvestors" -CommunicationAllowedFilter $investorsFilter`
 
@@ -150,11 +150,11 @@ In this example scenario, we define an Information Barriers policy that prevents
     `Get-InformationBarrierRecipientStatus`
 
 > [!TIP]
-> We recommend testing with a few users who are included in Information Barriers policies, as well as with a few users who are not included in those policies.
+> We recommend testing with a few users who are included in Information Barrier policies, as well as with a few users who are not included in those policies.
 
 ## Scenario 2: Allow one group to communicate with only one other group
 
-In this example scenario, we define an Information Barriers policy that allows people in one group (Products) to communicate with only one other group (Research). With this policy in place, people in the Products group will not be able to call or chat with anyone except people in the Research group.
+In this example scenario, we define an information barriers policy that allows people in one group (Products) to communicate with only one other group (Research). With this policy in place, people in the Products group will not be able to call or chat with anyone except people in the Research group.
 
 > [!IMPORTANT]
 > Before you begin the following procedure, make sure you have completed the steps in the section, [Prepare your environment for Information Barriers](#prepare-your-environment-for-information-barriers). 
@@ -171,7 +171,7 @@ In this example scenario, we define an Information Barriers policy that allows p
     
     `$researchFilter = "(MemberOfGroup -eq $researchGroup)"` 
 
-3. Define an Information Barriers policy that allows the Products group to communicate with only the Research group in Microsoft Teams. Do this by running the following PowerShell cmdlet in the Office 365 Security & Compliance Center: 
+3. Define an information barriers policy that allows the Products group to communicate with only the Research group in Microsoft Teams. Do this by running the following PowerShell cmdlet in the Office 365 Security & Compliance Center: 
 
     `New-InformationBarrierPolicy -Name "ProductsResearchIBPolicy" -AssigneeFilterName "Products" -AssigneeFilter $productsFilter -CommunicationAllowedFilterName "Research" -CommunicationAllowedFilter $productsFilter or $researchFilter`
 
@@ -188,11 +188,11 @@ In this example scenario, we define an Information Barriers policy that allows p
     `Get-InformationBarrierRecipientStatus`
 
 > [!TIP]
-> We recommend testing with a few users who are included in Information Barriers policies, as well as with a few users who are not included in those policies.
+> We recommend testing with a few users who are included in Information Barrier policies, as well as with a few users who are not included in those policies.
 
 ## Scenario 3: Prevent one group from communicating with two other groups
 
-In this scenario, we define an Information Barriers policy that prevents people in one group (Investors) to communicate with two other groups (Research and Sales). 
+In this scenario, we define an information barriers policy that prevents people in one group (Investors) to communicate with two other groups (Research and Sales). 
 
 > [!IMPORTANT]
 > Before you begin the following procedure, make sure you have completed the steps in the section, [Prepare your environment for Information Barriers](#prepare-your-environment-for-information-barriers). 
@@ -213,7 +213,7 @@ In this scenario, we define an Information Barriers policy that prevents people 
     
     `$salesFilter = "(MemberOfGroup -ne $salesGroup"` 
 
-3. Define an Information Barriers policy that allows the Products group to communicate with only the Research group in Microsoft Teams. Do this by running the following PowerShell cmdlet in the Office 365 Security & Compliance Center: 
+3. Define an information barriers policy that allows the Products group to communicate with only the Research group in Microsoft Teams. Do this by running the following PowerShell cmdlet in the Office 365 Security & Compliance Center: 
 
     `New-InformationBarrierPolicy -Name "InvestorsResearchSalesIBPolicy"  -AssigneeFilterName "Investors" -AssigneeFilter $investorFilter -CommunicationAllowedFilterName "NotResearchAndSales"  -CommunicationFilter $researchFilter and $salesFilter`
 
@@ -230,13 +230,13 @@ In this scenario, we define an Information Barriers policy that prevents people 
     `Get-InformationBarrierRecipientStatus`
 
 > [!TIP]
-> We recommend testing with a few users who are included in Information Barriers policies, as well as with a few users who are not included in those policies.
+> We recommend testing with a few users who are included in Information Barrier policies, as well as with a few users who are not included in those policies.
 
 ## What if I want to edit or remove a policy?
 
-If you want to edit or remove an Information Barriers policy, you should first set the policy to inactive status. 
+If you want to edit or remove an information barriers policy, you should first set the policy to inactive status. 
 
-### To set an Information Barriers policy to inactive status
+### To set an information barriers policy to inactive status
 
 1. As a global administrator or compliance administrator, connect to PowerShell for Exchange Online, and connect to PowerShell for the Office 365 Security & Compliance Center.  
 
@@ -246,7 +246,7 @@ If you want to edit or remove an Information Barriers policy, you should first s
 
     (Depending on the changes you want to make, some cmdlets must be run for Exchange Online, and others for the Office 365 Security & Compliance Center.)
 
-2. View a list of current Information Barriers policies by running the following PowerShell cmdlet in the Office 365 Security & Compliance Center:
+2. View a list of current Information Barrier policies by running the following PowerShell cmdlet in the Office 365 Security & Compliance Center:
 
     `Get-InformationBarrierPolicy`
 
