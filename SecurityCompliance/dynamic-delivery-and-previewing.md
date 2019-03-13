@@ -3,7 +3,7 @@ title: "Dynamic Delivery and previewing with Office 365 ATP Safe Attachments"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 01/08/2019
+ms.date: 03/12/2019
 ms.audience: Admin
 ms.topic: overview
 ms.service: O365-seccomp
@@ -19,7 +19,9 @@ description: "When you set up your ATP safe attachments policies, you choose Dyn
 
 # Dynamic Delivery and previewing with Office 365 ATP Safe Attachments
 
-**Summary**: Dynamic Delivery is an option that can be selected for [ATP Safe Attachments](atp-safe-attachments.md). Read this article to learn about Dynamic Delivery and attachment preview capabilities in [ATP Safe Attachments in Office 365](atp-safe-attachments.md).
+## Overview
+
+Dynamic Delivery is an option that can be selected for [ATP Safe Attachments](atp-safe-attachments.md). Read this article to learn about Dynamic Delivery and attachment preview capabilities in [ATP Safe Attachments in Office 365](atp-safe-attachments.md).
 
 When [ATP Safe Attachments policies are set up](set-up-atp-safe-attachments-policies.md) for your organization, there are several options for how email attachments are handled. These include **Block**, **Replace**, and **Dynamic Delivery**. Depending on how ATP Safe Attachments policies are configured, email recipients might experience a minor delay in email delivery while their attachments are scanned. To avoid message delays, choose **Dynamic Delivery**.
   
@@ -46,7 +48,7 @@ Suppose that an organization is using Dynamic Delivery for their [ATP Safe Attac
   
 - If a recipient is covered by an ATP Safe Attachments policy using the Dynamic Delivery option, then the recipient sees the placeholder, with the ability to preview compatible files.
     
-- If a recipient is not covered by an ATP Safe Attachments policy, then the email and attachment will go through, without ATP Safe Attachments scanning or attachment placeholders.
+- If a recipient is not covered by an ATP Safe Attachments policy, then the email and attachment will go through, without any ATP Safe Attachments scanning or attachment placeholders.
     
 ## What's required for Dynamic Delivery to work?
 
@@ -54,9 +56,9 @@ Suppose that an organization is using Dynamic Delivery for their [ATP Safe Attac
     
 - Policies must be defined for ATP Safe Attachments using the Dynamic Delivery option (See [Set up ATP Safe Attachments policies in Office 365](set-up-atp-safe-attachments-policies.md))
     
-- Your organization's email must be hosted in Office 365
+- Your organization's email must be hosted in Office 365. Although [Office 365 Advanced Threat Protection can be used with any SMTP mail transfer agent](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#requirements-for-office-365-advanced-threat-protection-atp) (such as Exchange Server), the Dynamic Delivery option for ATP Safe Attachments requires that your organization's email be hosted in Office 365. If your email is not hosted in Office 365, choose a different [ATP Safe Attachments policy option](set-up-atp-safe-attachments-policies.md#step-3-learn-about-atp-safe-attachments-policy-options), such as **Block**.
     
-## Are there scenarios for which Dynamic Delivery is not available?
+## Additional considerations
 
 There are certain scenarios in which Dynamic Delivery is not supported. These include the following:
   
@@ -74,3 +76,4 @@ There are certain scenarios in which Dynamic Delivery is not supported. These in
 
 - Messages encrypted with [Secure/Multipurpose Internet Mail Extensions (S/MIME)](s-mime-for-message-signing-and-encryption.md))
 
+In cases where Dynamic Delivery is not supported, ATP Safe Attachments will not scan email messages. However, depending on how your [ATP Safe Links policies](set-up-atp-safe-links-policies.md) are configured, URLs in email messages (and Office files) will be checked.

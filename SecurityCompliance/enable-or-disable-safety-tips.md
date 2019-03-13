@@ -11,8 +11,8 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 ms.assetid: f09668bd-fe1a-4c01-89e3-e88c370e66c7
-	ms.collection:
-	- M365-security-compliance
+ms.collection:
+- M365-security-compliance
 description: "Tells Office 365 and EOP admins how to enable and disable safety tips in email messages."
 ---
 

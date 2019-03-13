@@ -1,13 +1,13 @@
 ---
-title: "Removing a user, domain, or IP address from a block list after sending spam email"
+title: "Removing a user from the restricted users portal after sending spam email"
 ms.author: tracyp
 author: MSFTTracyP
 manager: laurawi
-ms.date: 11/01/2018
+ms.date: 03/12/2019
 ms.audience: ITPro
 ms.topic: article
 f1_keywords:
-- 'ms.exch.eac.ActionCenter'
+- 'ms.exch.eac.ActionCenter.Restricted.Users.RestrictedUsers'
 ms.service: O365-seccomp
 ms.custom: TN2DMC
 localization_priority: Normal
@@ -16,16 +16,14 @@ search.appverid:
 ms.assetid: 712cfcc1-31e8-4e51-8561-b64258a8f1e5
 ms.collection:
 - M365-security-compliance
-description: "If a user continuously sends email messages from Office 365 that is classified as spam, they will be blocked from sending any more messages."
+description: "If a user continuously sends emails from Office 365 that are classified as spam, they will be restricted from sending any more messages."
 ---
 
-# Removing a user, domain, or IP address from a block list after sending spam email
+# Removing a user from the restricted users portal after sending spam email
 
-If a user continuously sends email messages from Office 365 that is classified as spam, they will be blocked from sending any more messages. The user will be listed in the service as a bad outbound sender and will receive a Non-Delivery Report (NDR) that states:
+If a user continuously sends emails from Office 365 that are classified as spam, they will be restricted from sending any more messages outbound. The user will be listed in the service as a bad outbound sender and will receive a Non-Delivery Report (NDR) that states:
 
-- Your message couldn't be delivered because you weren't recognized as a valid sender. The most common reason for this is that your email address is suspected of sending spam and it's no longer allowed to send messages outside of your organization. Contact your email admin for assistance.  Remote Server returned '550 5.1.8 Access denied, bad outbound sender'
-
-The tenant admins will also receive an alert stating that the user has been restricted from sending any more outbound messages.
+- Your message couldn't be delivered because you weren't recognized as a valid sender. The most common reason for this is that your email address is suspected of sending spam and it's no longer allowed to send messages outside of your organization. Contact your email admin for assistance. Remote Server returned '550 5.1.8 Access denied, bad outbound sender'
 
 ## What do you need to know before you begin?
 <a name="sectionSection0"> </a>
@@ -43,31 +41,29 @@ You complete this task in the Office 365 Security & Compliance Center (SCC). [Go
 1. Using a work or school account that has Office 365 global administrator privileges, sign into the Office 365 Security and Compliance Center and in the list on the left, expand **Threat Management**, choose **Review**, and then choose **Restricted Users**.
     
     > [!TIP]
-    > To go directly to the **Restricted Users** page (formerly known as the Action Center) in the Security &amp; Compliance Center, use this URL: > [https://protection.office.com/?hash=/restrictedusers](https://protection.office.com/?hash=/restrictedusers)
+    > To go directly to the **Restricted Users** page (formerly known as the Action Center) in the Security &amp; Compliance Center, use this URL: > [https://protection.office.com/#/restrictedusers](https://protection.office.com/?hash=/restrictedusers)
 
 2. This page will contain the list of users that have been blocked from sending mail to outside of your organization.  Find the user you wish to remove restrictions on and then click on **Unblock**.
 
-3. Click **Yes** to confirm the change. 
-    
-> [!NOTE]
-> There's a limit to the number of times that an account can be unblocked by the tenant admin. If the limit for a user has been exceeded, an error message appears. You will then need to contact Support to unblock the user.<br/><br/> It may take up to 1 hour before the user is unblocked.
-  
-## Third-party block lists
+3. A fly-out will go into the details about the account whose sending is restricted. You should go through the recommendations to ensure you're taking the proper actions in case the account is actually compromised. Click **Next** when done.
 
-Exchange Online Protection also uses third-party block lists to help make decisions in spam filtering. Users, websites, domains, and IP addresses can be added to block lists just for appearing in a spam message. As the Office 365 admin, you should try to get these objects removed from the third-party list providers if they belong to you.
+4. The next screen has recommendations to help prevent future compromise. Enabling multi-factor authentication (MFA) and changing the passwords are a good defense. Click **Unblock user** when done.
 
-> [!NOTE]
-> If someone outside Office 365 cannot send messages to your Office 365 account, their account may be on the external blocked senders list. Users outside Office 365 can try to remove themselves by using the [self-service delisting portal](https://docs.microsoft.com/en-us/office365/SecurityCompliance/use-the-delist-portal-to-remove-yourself-from-the-office-365-blocked-senders-lis). 
+5. Click **Yes** to confirm the change.
+
+    > [!NOTE]
+    > It may take up to 30 minutes before restrictions are removed. 
+
+## Making sure admins are alerted when this happens
+
+The tenant admins will also receive an alert stating that the user has been restricted from sending any more outbound messages. It is a default alert that is provided for all tenants and is listed in the SCC Alert policies page, titled "User restricted from sending email". Go to [Alert policies in the Office 365 Security & Compliance Center](https://docs.microsoft.com/en-us/office365/securitycompliance/alert-policies) for more information on the alert.
 
 ## For more information
 
 [Responding to a compromised email account](responding-to-a-compromised-email-account.md)
 
-[Configure the outbound spam policy](configure-the-outbound-spam-policy.md)
-  
+[Understanding the User restricted from sending email alert](https://docs.microsoft.com/en-us/office365/securitycompliance/alert-policies)
+
 [High-risk delivery pool for outbound messages](high-risk-delivery-pool-for-outbound-messages.md)
 
 [Permissions in the Office 365 Security & Compliance Center](permissions-in-the-security-and-compliance-center.md)
-
-  
-
