@@ -145,7 +145,7 @@ In this example scenario, we define an information barriers policy that prevents
 
     `Get-InformationBarrierPoliciesApplicationStatus -All -ResearchIBPolicy`
 
-8. After you have defined your information barrier policy, wait at least 24 hours for the policy to work its way through your data center and services. Then, validate the Information Barriers status for a specific user by using the **Get-InformationBarrierRecipientStatus** cmdlet in the Office 365 Security & Compliance Center.
+8. After you have defined your information barrier policy, wait at least 24 hours for the policy to work its way through your data center and services. Then, validate the information barrier status for a specific user by using the **Get-InformationBarrierRecipientStatus** cmdlet in the Office 365 Security & Compliance Center.
 
     `Get-InformationBarrierRecipientStatus`
 
@@ -154,7 +154,7 @@ In this example scenario, we define an information barriers policy that prevents
 
 ## Scenario 2: Allow one group to communicate with only one other group
 
-In this example scenario, we define an information barriers policy that allows people in one group (Products) to communicate with only one other group (Research). With this policy in place, people in the Products group will not be able to call or chat with anyone except people in the Research group.
+In this example scenario, we define an information barrier policy that allows people in one group (Products) to communicate with only one other group (Research). With this policy in place, people in the Products group will not be able to call or chat with anyone except people in the Research group.
 
 > [!IMPORTANT]
 > Before you begin the following procedure, make sure you have completed the steps in the section, [Prepare your environment for Information Barriers](#prepare-your-environment-for-information-barriers). 
@@ -183,7 +183,7 @@ In this example scenario, we define an information barriers policy that allows p
 
     `Get-InformationBarrierPoliciesApplicationStatus -ProductsResearchIBPolicy`
 
-6. After you have defined your information barrier policy, **wait at least 24 hours for the policy to work its way through your data center and services**. Then, validate the Information Barriers status for a specific user by running the **Get-InformationBarrierRecipientStatus** cmdlet in the Office 365 Security & Compliance Center:
+6. After you have defined your information barrier policy, **wait at least 24 hours for the policy to work its way through your data center and services**. Then, validate the information barrier status for a specific user by running the **Get-InformationBarrierRecipientStatus** cmdlet in the Office 365 Security & Compliance Center:
 
     `Get-InformationBarrierRecipientStatus`
 
@@ -225,18 +225,18 @@ In this scenario, we define an information barriers policy that prevents people 
 
     `Get-InformationBarrierPoliciesApplicationStatus -InvestorsResearchSalesIBPolicy`
 
-6. After you have defined your Information Barriers policy, **wait at least 24 hours for the policy to work its way through your data center and services**. Then, validate the Information Barriers status for a specific user by running the following cmdlet in the Office 365 Security & Compliance Center:
+6. After you have defined your Information Barriers policy, **wait at least 24 hours for the policy to work its way through your data center and services**. Then, validate the information barrier status for a specific user by running the following cmdlet in the Office 365 Security & Compliance Center:
 
     `Get-InformationBarrierRecipientStatus`
 
 > [!TIP]
-> We recommend testing with a few users who are included in Information Barrier policies, as well as with a few users who are not included in those policies.
+> We recommend testing with a few users who are included in information barrier policies, as well as with a few users who are not included in those policies.
 
 ## What if I want to edit or remove a policy?
 
-If you want to edit or remove an information barriers policy, you should first set the policy to inactive status. 
+If you want to edit or remove an information barrier policy, you should first set the policy to inactive status. 
 
-### To set an information barriers policy to inactive status
+### To set an information barrier policy to inactive status
 
 1. As a global administrator or compliance administrator, connect to PowerShell for Exchange Online, and connect to PowerShell for the Office 365 Security & Compliance Center.  
 
@@ -246,7 +246,7 @@ If you want to edit or remove an information barriers policy, you should first s
 
     (Depending on the changes you want to make, some cmdlets must be run for Exchange Online, and others for the Office 365 Security & Compliance Center.)
 
-2. View a list of current Information Barrier policies by running the following PowerShell cmdlet in the Office 365 Security & Compliance Center:
+2. View a list of current information barrier policies by running the following PowerShell cmdlet in the Office 365 Security & Compliance Center:
 
     `Get-InformationBarrierPolicy`
 
@@ -262,10 +262,10 @@ If you want to edit or remove an information barriers policy, you should first s
     
 6. (This is optional) If the process is taking a long time to finish, you can update recipients in Azure Active Directory and wait 30 minutes for FwdSync to occur. See [New address lists that you create in Exchange Online don't contain all the expected recipients](https://support.microsoft.com/help/2955640/new-address-lists-that-you-create-in-exchange-online-don-t-contain-all).
 
-At this point, your Information Barriers policy is set to inactive. You can leave it as is, edit it, or remove it altogether.
+At this point, your information barrier policy is set to inactive. You can leave it as is, edit it, or remove it altogether.
 
 ## Related articles
 
-[Get an overview of Information Barriers](information-barriers.md)
+[Get an overview of information barriers](information-barriers.md)
 
-[Learn more Information Barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams)
+[Learn more about information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams)
