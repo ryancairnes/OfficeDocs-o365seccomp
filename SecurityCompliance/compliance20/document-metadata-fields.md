@@ -22,7 +22,7 @@ description: ""
 
 |**Field name** </br>|**Searchable and viewable in working set** |**File metadata panel** |**Exports** |
 |:-------------------------- |:---------------------------------------- |:------------------------|:------------------|
-|Case tags                  | Yes                                             |                         | Yes         |
+|Case tags                  | Yes (tags)                                      |                         | Yes         |
 |Compliance labels          |                                                 |                         | Yes         |
 |Compound path              |                                                 |                         | Yes         |
 |Container ID               |                                                 |                         | Yes         |
@@ -33,11 +33,11 @@ description: ""
 |Deduped compound path      |                                                 |                         | Yes         |
 |Deduped custodians         |                                                 |                         | Yes         |
 |Deduped file IDs           |                                                 |                         | Yes         |
-|Doc authors                |                                                 |                         | Yes         |
+|Doc authors                | Yes (author)*                                   |                         | Yes         |
 |Doc comments               |                                                 |                         | Yes         |
 |Doc company                |                                                 |                         | Yes         |
-|Doc date created           |                                                 |                         | Yes         |
-|Doc date modified          |                                                 |                         | Yes         |
+|Doc date created           | Yes (createdTime)*                              |                         | Yes         |
+|Doc date modified          | Yes (lastModifiedDate)*                         |                         | Yes         |
 |Doc keywords               |                                                 |                         | Yes         |
 |Doc last saved by          |                                                 |                         | Yes         |
 |Doc modified by            |                                                 |                         | Yes         |
@@ -99,10 +99,10 @@ description: ""
 |ND ET sort excl attach     |                                                 |                         | Yes         |
 |ND ET sort incl attach     |                                                 |                         | Yes         |
 |ND set                     |                                                 |                         | Yes         |
-|O365 authors               |                                                 |                         | Yes         |
+|O365 authors               | Yes (author)*                                   |                         | Yes         |
 |O365 created by            |                                                 |                         | Yes         |
-|O365 date created          |                                                 |                         | Yes         |
-|O365 date modified         |                                                 |                         | Yes         |
+|O365 date created          | Yes (createdTime)*                              |                         | Yes         |
+|O365 date modified         | Yes (lastModifiedDate)*                         |                         | Yes         |
 |O365 modified by           |                                                 |                         | Yes         |
 |Parent node                |                                                 |                         | Yes         |
 |Pivot ID                   | Yes (pivotId)                                   |                         | Yes         |
@@ -113,3 +113,8 @@ description: ""
 |Similarity percent         |                                                 |                         | Yes         |
 |Themes list                | Yes (themesList)                                |                         | Yes         |
 |Word count                 | Yes (wordCount)                                 |                         | Yes         |
+|Relevance score (issue)    | Yes (relevanceScore_issueNum)                   |                         |             |
+|Read percentile (issue)    | Yes (readPercentile_issueNum)                   |                         |             |
+|Relevance tag (issue)      | Yes (relevanceTag_issueNum)                     |                         |             |
+
+  \* For these fields, if there are embedded values within the documents, search will prioritize those values; otherwise, it will try to surface values from O365.

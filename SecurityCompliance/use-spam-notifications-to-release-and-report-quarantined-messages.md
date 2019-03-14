@@ -3,7 +3,7 @@ title: "Use user spam notifications to release and report quarantined messages i
 ms.author: tracyp
 author: MSFTTracyP
 manager: laurawi
-ms.date: 5/12/2018
+ms.date: 03/14/2019
 ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
@@ -35,12 +35,20 @@ The message you receive includes the number of spam-quarantined messages you hav
     
 - **Size** The size of the message, in kilobytes (KBs). 
     
-Currently, there are two actions you can take with a quarantined message:
-  
-- **Release to Inbox** Choose this to send the message to your inbox, where you can view it. 
-    
-- **Report as Not Junk** Choose this to send a copy of the message to Microsoft for analysis. The spam team evaluates and analyzes the message, and, depending on the results of the analysis, adjusts the anti-spam filter rules to allow the message through. 
-    
+These are the actions that you can take with a quarantined message:
+
+- **Preview** the message if you would like to preview the content or header prior to taking action.
+
+- **Download** the message if you would like to review the message and attachments (if any) on your device prior to taking action.
+
+- **Release** if the message isn’t spam and you want Office 365 to send the message to your mailbox.
+
+- **Release & Allow Sender** if the message isn’t spam and you want Office 365 to add the sender to your safe senders and recipients list for future emails. Keep in mind that your admin may have other organization wide allow/block configurations that override your safe sender list.
+
+- **Release & Report**, if the message isn’t spam and you want to send the message to your mailbox and report it to Microsoft for analysis.
+
+- **Block** if you want Office 365 to add the sender to your blocked senders list.
+
 Be aware of the following:
   
 - Messages that are quarantined because they matched a mail flow rule are not included in user quarantined messages. Only spam-quarantined messages are listed.

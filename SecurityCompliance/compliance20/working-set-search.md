@@ -27,7 +27,7 @@ In order to create and run a query within your working set, click on "New Query"
 
 ## Building your query
 
-You can build your query using a combination of condition cards and query language in the Keywords condition card.
+You can build your query using a combination of condition cards and query language in the Keywords condition card. You can group condition cards together as a block to craft a more complex query.
 
 ### Condition card
 
@@ -36,9 +36,15 @@ Every searchable field in a working set has a corresponding condition card that 
 There are multiple types of condition cards:
 - Freetext: freetext condition card is used for text fields such as subject. You can list multiple search terms by separating them out with a comma.
 - Date: date condition card is used for date fields such as last modified date.
-- Search options: search options condition card will provide a list of possible values for the particular field in your working set. This is used for fields such as sender, where there is a finite number of possible values in your working set.
+- Search options: search options condition card will provide a list of possible values for the particular field in your working set. This is used for fields, such as sender, where there is a finite number of possible values in your working set.
 - Keyword: keyword condition card is a specific instance of freetext condition card that you can use to search for terms, or use KQL-like query language in. See below for more detail.
 
 ### Query language
 
 In addition to condition cards, you can use a KQL-like query language in the Keywords card to craft your query. The query language supports standard KQL syntax like AND, OR, NOT, and NEAR(n). It also supports single-character wildcard (?) and multi-character wildcard (*).
+
+## Filter
+
+In addition to queries that you can save, you can overlay additional conditions on the fly to your query results using filters. Filters differ from queries in a few significant ways:
+- Filters are transient (i.e. they do not persist over different sessions), whereas queries are saved to the working set.
+- Filters are always additive; filters will apply on top of the query you have in effect at the moment, whereas applying a query will replace the query in effect.
