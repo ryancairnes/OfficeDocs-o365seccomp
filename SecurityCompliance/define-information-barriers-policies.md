@@ -30,7 +30,7 @@ This article describes how to define information barrier policies.
 
 - Potentially, everyone included in an information barrier policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barrier policies are part of the same team or group chat, they might be removed from those chat sessions. To learn more, see [Learn more information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
 
-- Avoid bulk moves when information barrier policies are in effect. Ask admins not to move users between segments who cannot talk to each other. Either temporarily grant access to each other and disable it later, after all users are moved, or create an intermediate segment who can talk to each of the initial segments. Do not move users in bulk between entities who cannot communicate.
+- Avoid bulk moves when information barrier policies are in effect. Ask admins not to move users between segments who cannot talk to each other. Either temporarily grant communication access and disable it later, after all users are moved, or create an intermediate segment who can talk to each of the initial segments. In any case, do not move users in bulk between entities who cannot communicate.
 
 - In cases where a global administrator or compliance administrator determines that two teams (we'll call them Group A and Group B) should no longer talk to each other, we recommend the following:
     1. Define and apply a policy that prevents Group A from talking to Group B. 
