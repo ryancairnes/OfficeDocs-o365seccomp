@@ -1,7 +1,7 @@
 ---
 title: "Create a custom sensitive information type"
-ms.author: stephow
-author: stephow-MSFT
+ms.author: deniseb
+author: denisebmsft
 manager: laurawi
 ms.audience: Admin
 ms.topic: article

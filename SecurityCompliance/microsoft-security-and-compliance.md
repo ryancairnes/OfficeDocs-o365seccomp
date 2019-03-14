@@ -3,7 +3,7 @@ title: "Get ready for Microsoft 365 security and compliance"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 01/23/2019
+ms.date: 03/14/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -67,7 +67,11 @@ After this update is rolled out, if your organization has Microsoft 365 Enterpri
 
 ## Required licenses and permissions
 
-To get the new Microsoft 365 security center and Microsoft 365 compliance center, your organization must have a subscription to Microsoft 365 E3 or E5, or a Volume Licensing equivalent (which consists of Office 365 Enterprise E3 or E5, Enterprise Mobility + Security E3 or E5, and Windows 10 Enterprise E3/E5).
+### Licenses
+
+To get the new Microsoft 365 security center and Microsoft 365 compliance center, your organization must have a subscription to Microsoft 365 E3 or E5, or a Volume Licensing equivalent (which consists of Office 365 Enterprise E3 or E5, Enterprise Mobility + Security E3 or E5, and Windows 10 Enterprise E3/E5). To learn more about these plans, see [Discover the Microsoft 365 Enterprise solution that’s right for you](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans).
+
+### Roles and permissions
 
 Users must be assigned the Global Administrator, Compliance Administrator, Security Administrator, or Security Reader role in Azure Active Directory to access the new Microsoft 365 security center or Microsoft 365 compliance center.
 
@@ -91,7 +95,7 @@ The following table summarizes who can access various portals across Azure, Offi
 |[Azure Information Protection](https://docs.microsoft.com/azure/information-protection) |Yes |Yes |No |
 |[Azure Security Center](https://docs.microsoft.com/azure/security-center/)  |Yes |Yes |No |
 |[Azure Advanced Threat Protection](https://docs.microsoft.com/azure-advanced-threat-protection/what-is-atp)  |Yes |Yes |No |
-|[Windows Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection?ocid=tia-260153000#windows-defender-atp) and  [Endpoint detection and response](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/overview-endpoint-detection-response)     |Yes |Yes |No |
+|[Windows Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection?ocid=tia-260153000#windows-defender-atp) |Yes |Yes |No |
 |[Identity Protection](https://docs.microsoft.com/azure/active-directory/identity-protection)     |Yes |Yes |No |
 |[Privileged Identity Management](https://docs.microsoft.com/azure/active-directory/privileged-identity-management)     |Yes |Yes |No |
 |[Intune](https://docs.microsoft.com/intune)     |Yes |Yes |Yes |

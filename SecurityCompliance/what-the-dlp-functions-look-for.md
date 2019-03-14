@@ -1,7 +1,7 @@
 ---
 title: "What the DLP functions look for"
-ms.author: stephow
-author: stephow-MSFT
+ms.author: deniseb
+author: denisebmsft
 manager: laurawi
 ms.date: 6/18/2016
 ms.audience: Admin

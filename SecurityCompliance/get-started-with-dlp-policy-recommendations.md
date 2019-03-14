@@ -1,7 +1,7 @@
 ---
 title: "Get started with DLP policy recommendations"
-ms.author: stephow
-author: stephow-MSFT
+ms.author: deniseb
+author: denisebmsft
 manager: laurawi
 ms.date: 8/7/2017
 ms.audience: Admin

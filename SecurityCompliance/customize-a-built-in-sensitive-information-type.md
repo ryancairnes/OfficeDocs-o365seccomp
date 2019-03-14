@@ -1,7 +1,7 @@
 ---
 title: "Customize a built-in sensitive information type"
-ms.author: stephow
-author: stephow-MSFT
+ms.author: deniseb
+author: denisebmsft
 manager: laurawi
 ms.date: 6/25/2018
 ms.audience: Admin

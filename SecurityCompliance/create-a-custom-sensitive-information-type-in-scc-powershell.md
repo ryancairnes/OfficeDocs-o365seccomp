@@ -1,7 +1,7 @@
 ---
 title: "Create a custom sensitive information type in Office 365 Security & Compliance Center PowerShell"
-ms.author: stephow
-author: stephow-MSFT
+ms.author: deniseb
+author: denisebmsft
 manager: laurawi
 ms.audience: Admin
 ms.topic: article
