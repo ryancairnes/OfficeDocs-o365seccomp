@@ -1,5 +1,5 @@
 ---
-title: "Removing a user from the restricted users portal after sending spam email"
+title: "Removing a user from the Restricted Users portal after sending spam email"
 ms.author: tracyp
 author: MSFTTracyP
 manager: laurawi
@@ -19,7 +19,7 @@ ms.collection:
 description: "If a user continuously sends emails from Office 365 that are classified as spam, they will be restricted from sending any more messages."
 ---
 
-# Removing a user from the restricted users portal after sending spam email
+# Removing a user from the Restricted Users portal after sending spam email
 
 If a user continuously sends emails from Office 365 that are classified as spam, they will be restricted from sending any more messages outbound. The user will be listed in the service as a bad outbound sender and will receive a Non-Delivery Report (NDR) that states:
 
