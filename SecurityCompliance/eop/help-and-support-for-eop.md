@@ -33,7 +33,7 @@ Upon logging in, the Office 365 portal provides information about the status of 
   
 ## Assisted support from Microsoft
 
-You can get help from Microsoft by starting a new service request within the Office 365 admin center or by calling on the phone. Premier support subscribers have extra support options.
+You can get help from Microsoft by starting a new service request within the Microsoft 365 admin center or by calling on the phone. Premier support subscribers have extra support options.
   
 ### Support for Microsoft Premier Support Subscribers
 
@@ -43,7 +43,7 @@ For more information about how Premier Support can help your organization maximi
   
 ### Ask for help on the web
 
-1. Login to the Office 365 admin center.
+1. Login to the Microsoft 365 admin center.
     
 2. Go to **Support** \> **Ask for Customer Support** \> **New Service Request**
     
@@ -51,7 +51,7 @@ For more information about how Premier Support can help your organization maximi
     
 ### Ask for help on the telephone
 
-1. Login to the Office 365 admin center.
+1. Login to the Microsoft 365 admin center.
     
 2. For general product issues go to **Support** \> **Ask for Customer Support** \> **Call technical support**.
     

@@ -35,11 +35,11 @@ This topic explains how to set up Microsoft Exchange Online Protection (EOP). If
   
 ## How do you do this?
 
-### Step 1: Use the Office 365 admin center to add and verify your domain
+### Step 1: Use the Microsoft 365 admin center to add and verify your domain
 
-1. In the Office 365 admin center, navigate to **Setup** to add your domain to the service. 
+1. In the Microsoft 365 admin center, navigate to **Setup** to add your domain to the service. 
     
-    Not sure where to find the Office 365 admin center? Learn more at [About the Office 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=521888).
+    Not sure where to find the Microsoft 365 admin center? Learn more at [About the Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=521888).
     
 2. Follow the steps to add the applicable DNS records to your DNS-hosting provider in order to verify domain ownership.
     
@@ -71,7 +71,7 @@ To ensure that spam (junk) email is routed correctly to each user's Junk Email f
   
 If you don't want to move messages to each user's Junk Email folder, you may choose another action by editing your content filter policies in the Exchange admin center. For more information, see [Configure your spam filter policies](../configure-your-spam-filter-policies.md).
   
-### Step 6: Use the Office 365 admin center to point your MX record to EOP
+### Step 6: Use the Microsoft 365 admin center to point your MX record to EOP
 
 Follow the Office 365 domain configuration steps to update your MX record for your domain, so that your inbound email flows through EOP. Be sure to point your MX record directly to EOP as opposed to having a third-party filtering service relay email to EOP. For more information, you can again reference [Create DNS records for Office 365](https://go.microsoft.com/fwlink/p/?LinkId=304219).
   

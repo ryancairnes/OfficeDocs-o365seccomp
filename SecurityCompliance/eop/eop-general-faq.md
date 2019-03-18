@@ -59,7 +59,7 @@ A. Office 365 is the name given to a collection of products and services that ma
   
  **Q. Does EOP have a communication portal where I can find out about known issues and expected resolutions? What about new features?**
   
-A. The Office 365 admin center will have some of this information. If you are impacted by a Service Level Event then you should see a communication alert (typically accompanied by a bell icon) after signing in to the Office 365 admin center. We recommend that you read and act on any items as appropriate.
+A. The Microsoft 365 admin center will have some of this information. If you are impacted by a Service Level Event then you should see a communication alert (typically accompanied by a bell icon) after signing in to the Microsoft 365 admin center. We recommend that you read and act on any items as appropriate.
   
 Regarding new EOP features, the [Office 365 for business roadmap](https://office.microsoft.com/en-us/products/office-365-roadmap-FX104343353.aspx) is a good resource for finding out information about upcoming new features. We'll also be posting blog articles about new features to the [Office Blogs](https://go.microsoft.com/fwlink/p/?LinkId=392724) website. 
   

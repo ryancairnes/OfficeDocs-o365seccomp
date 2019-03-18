@@ -67,7 +67,7 @@ If you want to disable ZAP for your Office 365 tenant, or a set of users, use th
     
 In the following example, ZAP is disabled for a content filter policy named "Test".
     
-```
+```Powershell
   Set-HostedContentFilterPolicy -Identity Test -ZapEnabled $false
 ```
 
@@ -75,7 +75,7 @@ In the following example, ZAP is disabled for a content filter policy named "Tes
 
 ### What happens if a legitimate message is moved to the junk mail folder?
   
-You should follow the normal reporting process for false-positives. The only reason the message would be moved from the inbox to the junk mail folder would be because the service has determined that the message was spam or malicious.
+You should follow the normal reporting process for [false-positives](prevent-email-from-being-marked-as-spam.md). The only reason the message would be moved from the inbox to the junk mail folder would be because the service has determined that the message was spam or malicious.
   
 ### What if I use the Office 365 quarantine instead of the junk mail folder?
   
@@ -83,7 +83,7 @@ ZAP doesn't move messages into quarantine from the Inbox at this time.
   
 ### What If I have a custom mail flow rule (Block/ Allow Rule)?
   
-Rules created by admins (mail flow rules) or Block and Allow rules take precedence. Such messages are excluded from the feature criteria.
+Rules created by admins (mail flow rules) or Block and Allow rules take precedence. Such messages are excluded from the feature criteria so the mail flow will follow the rule action (Block/Allow Rule).
   
 ## Related Topics
 

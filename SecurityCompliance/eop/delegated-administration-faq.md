@@ -19,7 +19,7 @@ This topic provides frequently asked questions and answers for Microsoft partner
   
  **Q. I'm a reseller and I need to manage my customer's tenants; how does this work?**
   
-A. If you are a Microsoft partner or reseller, and you've signed up to be a Microsoft advisor, you can request permission to administer their tenant within the Office 365 admin center. This is known as delegated administration, and it allows you to manage their Office 365 tenant (including EOP settings) as if you were an administrator within their organization. The steps for performing delegated administration are as follows:
+A. If you are a Microsoft partner or reseller, and you've signed up to be a Microsoft advisor, you can request permission to administer their tenant within the admin center. This is known as delegated administration, and it allows you to manage their Office 365 tenant (including EOP settings) as if you were an administrator within their organization. The steps for performing delegated administration are as follows:
   
 1. Sign up to be a [Microsoft Office 365 Advisor](https://aka.ms/cloudbenefits).
     
@@ -39,6 +39,6 @@ A. Office 365 does not currently have this capability.
   
  **Q. Can I get consolidated reporting across all of my sub-tenants?**
   
-A. Consolidated reporting across the companies you manage is not available for the Office 365 admin center reports at this time. However, this can be done via remote Windows PowerShell or the [reporting web service](https://go.microsoft.com/fwlink/?LinkId=279926). 
+A. Consolidated reporting across the companies you manage is not available for the Micrsoft 365 admin center reports at this time. However, this can be done via remote Windows PowerShell or the [reporting web service](https://go.microsoft.com/fwlink/?LinkId=279926). 
   
 

@@ -93,7 +93,7 @@ To run the script:
 
 1. Save the following text to a Windows PowerShell script file by using a filename suffix of .ps1; for example, `CreateSearches.ps1`. Save the file to the same folder where you saved the other files.
     
-  ```
+  ```Powershell
   # Get the Search Group ID and the location of the CSV input file
   $searchGroup = Read-Host 'Search Group ID'
   $csvFile = Read-Host 'Source CSV file'
@@ -170,7 +170,7 @@ To run the script:
 
 2. In Windows PowerShell, go to the folder where you saved the script in the previous step, and then run the script; for example:
     
-    ```
+    ```Powershell
     .\CreateSearches.ps1
     ```
 
@@ -190,7 +190,7 @@ After you create the searches, the next step is to run a script that displays a 
   
 1. Save the following text to a Windows PowerShell script file by using a filename suffix of .ps1; for example, `SearchReport.ps1`. Save the file to the same folder where you saved the other files.
     
-  ```
+  ```Powershell
   $searchGroup = Read-Host 'Search Group ID'
   $outputFile = Read-Host 'Enter a file name or file path to save the report to a .csv file. Leave blank to only display the report'
   $searches = Get-ComplianceSearch | ?{$_.Name -clike $searchGroup + "_*"}
@@ -245,7 +245,7 @@ After you create the searches, the next step is to run a script that displays a 
 
 2. In Windows PowerShell, go to the folder where you saved the script in the previous step, and then run the script; for example:
     
-    ```
+    ```Powershell
     .\SearchReport.ps1
     ```
 
@@ -268,7 +268,7 @@ Because you might be creating a lot of searches, this last script just makes it 
   
 1. Save the following text to a Windows PowerShell script file by using a filename suffix of .ps1; for example, `DeleteSearches.ps1`. Save the file to the same folder where you saved the other files.
     
-  ```
+  ```Powershell
   # Delete all searches in a search group
   $searchGroup = Read-Host 'Search Group ID'
   Get-ComplianceSearch |
@@ -284,7 +284,7 @@ Because you might be creating a lot of searches, this last script just makes it 
 
 2. In Windows PowerShell, go to the folder where you saved the script in the previous step, and then run the script; for example:
     
-    ```
+    ```Powershell
     .\DeleteSearches.ps1
     ```
 

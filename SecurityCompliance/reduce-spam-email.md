@@ -51,6 +51,9 @@ In order to protect you from getting too much spam, Exchange Online Protection (
 - **Immediately block a sender** In the case where you need to immediately block a sender, you can block by email address, domain, or IP address. See [Use the EAC to create a mail flow rule that blocks messages sent from a domain or user](create-organization-wide-safe-sender-or-blocked-sender-lists-in-office-365.md#use-the-eac-to-create-a-mail-flow-rule-that-blocks-messages-sent-from-a-domain-or-user). An entry in an end-user allow list can override a block set by the administrator.
     
 - **Turn on the report message add-in for users** We strongly recommend that you [enable the report message add-in for you users](enable-the-report-message-add-in.md). As an administrator, you may also be able to view the feedback your users are sending and use any patterns to adjust any settings that may be causing problems.
+- **Enable [DKIM](use-dkim-to-validate-outbound-email.md)** to sign all your outbound messages to increase the security in your domain and tenant.
+ > [!TIP]
+> After you enable DKIM you must enable [DMARC](use-dkim-to-validate-outbound-email.md) since this record will validate if DKIM and SPF are working correctly and, generally, spoofing emails don't have the signature, since O365 manages your private and public symmetric key.
     
 ### For users
 

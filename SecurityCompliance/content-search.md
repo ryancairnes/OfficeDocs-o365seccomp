@@ -147,7 +147,7 @@ After a search is successfully run, you can export the search results to a local
   
 To export search results:
   
-1. On the **Content search** page in the Security &amp; Compliance Center, click **Open** and then click the search that you want to export the search results for. 
+1. On the **Content search** page in the Security &amp; Compliance Center, click the search that you want to export the search results for. 
     
 2. On the fly out page, click ![Export search results icon](media/47205c65-babd-4b3a-bd7b-98dfd92883ba.png) **More**, and then click **Export results**. Note that you can also export a search results report.
     

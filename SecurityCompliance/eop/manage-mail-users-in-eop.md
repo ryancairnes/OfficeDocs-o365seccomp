@@ -24,7 +24,7 @@ Defining mail users is an important part of managing the Exchange Online Protect
 - Use remote Windows PowerShell to manage mail users: Add and manage mail users by running remote Windows PowerShell. This method is useful for adding multiple records and creating scripts.
     
 > [!NOTE]
-> You can add users in the Office 365 admin center, however these users can't be used as mail recipients. 
+> You can add users in the Microsoft 365 admin center, however these users can't be used as mail recipients. 
   
 ## Before you begin
 
@@ -40,7 +40,7 @@ Defining mail users is an important part of managing the Exchange Online Protect
 This section provides information about managing email users by using directory synchronization.
   
 > [!IMPORTANT]
-> If you use directory synchronization to manage your recipients, you can still add and manage users in the Office 365 admin center, but they will not be synchronized with your on-premises Active Directory. This is because directory synchronization only syncs recipients from your on-premises Active Directory to the cloud. 
+> If you use directory synchronization to manage your recipients, you can still add and manage users in the Microsoft 365 admin center, but they will not be synchronized with your on-premises Active Directory. This is because directory synchronization only syncs recipients from your on-premises Active Directory to the cloud. 
   
 > [!TIP]
 >  Using directory synchronization is recommended for use with the following features: > **Outlook safe sender and blocked sender lists** - When synchronized to the service, these lists will take precedence over spam filtering in the service. This lets users manage their own safe sender and blocked sender lists on a per-user or per-domain basis. > **Directory Based Edge Blocking (DBEB)** - For more information about DBEB, see [Use Directory Based Edge Blocking to Reject Messages Sent to Invalid Recipients](http://technet.microsoft.com/library/ca7b7416-92ed-40ad-abdb-695be46ea2e4.aspx). > **End user spam quarantine** - In order to access the end user spam quarantine, end users must have a valid Office 365 user ID and password. EOP customers protecting on-premises mailboxes must be valid email users. > **Mail flow rules** - When you use directory synchronization, your existing Active Directory users and groups are automatically uploaded to the cloud, and you can then create mail flow rules (also known as transport rules) that target specific users and/or groups without having to manually add them via the the EAC or Exchange Online Protection PowerShell. Note that [dynamic distribution groups](https://go.microsoft.com/fwlink/?LinkId=507569) can't be synchronized via directory synchronization. 
@@ -128,7 +128,7 @@ This example uses the [New-EOPMailUser](http://technet.microsoft.com/library/052
     
 - The password is Pa$$word1.
     
-```
+```Powershell
 New-EOPMailUser -LastName Zeng -FirstName Jeffrey -DisplayName "Jeffrey Zeng" -Name Jeffrey -Alias jeffreyz -MicrosoftOnlineServicesID jeffreyz@contoso.onmicrosoft.com -ExternalEmailAddress jeffreyz@tailspintoys.com -Password (ConvertTo-SecureString -String 'Pa$$word1' -AsPlainText -Force)
 ```
 
@@ -136,7 +136,7 @@ New-EOPMailUser -LastName Zeng -FirstName Jeffrey -DisplayName "Jeffrey Zeng" -N
   
 Run the [Get-User](http://technet.microsoft.com/library/2a33c9e6-33da-438c-912d-28ce3f4c9afb.aspx) cmdlet as follows to display information about new mail user Jeffrey Zeng: 
   
-```
+```Powershell
 Get-User "Jeffrey Zeng"
 
 ```
@@ -147,13 +147,13 @@ Use the [Get-Recipient](http://technet.microsoft.com/library/2ce6250f-0ad3-4b29-
   
 This example sets the external email address for Pilar Pinilla.
   
-```
+```Powershell
 Set-EOPMailUser -Identity "Pilar Pinilla" -EmailAddresses pilarp@tailspintoys.com
 ```
 
 This example sets the Company property for all mail users to Contoso.
   
-```
+```Powershell
 $Recip = Get-Recipient -ResultSize unlimited -Filter {(RecipientTypeDetails -eq 'mailuser')}
 $Recip | foreach {Set-EOPUser -Identity $_.Alias -Company Contoso}
 
@@ -163,14 +163,14 @@ $Recip | foreach {Set-EOPUser -Identity $_.Alias -Company Contoso}
   
 In the previous example where we changed the properties for mail user Pilar Pinella, use the [Get-Recipient](http://technet.microsoft.com/library/2ce6250f-0ad3-4b29-870c-e1d6e1e154bc.aspx) cmdlet to verify the changes. (Note that you can view multiple properties for multiple mail contacts.) 
   
-```
+```Powershell
 Get-Recipient -Identity "Pilar Pinilla" | Format-List 
 
 ```
 
 In the previous example where the Company property was set to Contoso for all mail users, run the following command to verify the changes:
   
-```
+```Powershell
 Get-Recipient -ResultSize unlimited -Filter {(RecipientTypeDetails -eq 'mailuser')} | Format-List Name,Company
 ```
 
@@ -181,7 +181,7 @@ Get-Recipient -ResultSize unlimited -Filter {(RecipientTypeDetails -eq 'mailuser
   
 This example uses the [Remove-EOPMailUser](http://technet.microsoft.com/library/cb91dc26-ed22-4d3c-9f64-df9df1754edb.aspx) cmdlet to delete user Jeffrey Zeng: 
   
-```
+```Powershell
 Remove-EOPMailUser -Identity Jeffrey
 ```
 
@@ -189,7 +189,7 @@ Remove-EOPMailUser -Identity Jeffrey
   
 Run the [Get-Recipient](http://technet.microsoft.com/library/2ce6250f-0ad3-4b29-870c-e1d6e1e154bc.aspx) cmdlet as follows. You should get an error message since the user no longer exists. 
   
-```
+```Powershell
 Get-Recipient Jeffrey | fl
 ```
 

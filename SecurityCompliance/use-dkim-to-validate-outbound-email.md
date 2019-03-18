@@ -132,9 +132,9 @@ TTL:				3600
 ### Enable DKIM signing for your custom domain in Office 365
 <a name="EnableDKIMinO365"> </a>
 
-Once you have published the CNAME records in DNS, you are ready to enable DKIM signing through Office 365. You can do this either through the Office 365 admin center or by using PowerShell.
+Once you have published the CNAME records in DNS, you are ready to enable DKIM signing through Office 365. You can do this either through the Microsoft 365 admin center or by using PowerShell.
   
-#### To enable DKIM signing for your custom domain through the Office 365 admin center
+#### To enable DKIM signing for your custom domain through the admin center
 
 1. [Sign in to Office 365](https://support.office.microsoft.com/article/e9eb7d51-5430-4929-91ab-6157c5a050b4) with your work or school account. 
     

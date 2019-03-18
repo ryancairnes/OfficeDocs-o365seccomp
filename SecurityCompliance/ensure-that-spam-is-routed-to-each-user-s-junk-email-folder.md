@@ -30,7 +30,7 @@ The default anti-spam action for EOP customers is to move spam messages to the r
     
 2. Run the following command to route content-filtered spam messages to the Junk Email folder:
     
-  ```
+  ```Powershell
   New-TransportRule "NameForRule" -HeaderContainsMessageHeader "X-Forefront-Antispam-Report" -HeaderContainsWords "SFV:SPM" -SetSCL 6
   ```
 
@@ -38,7 +38,7 @@ The default anti-spam action for EOP customers is to move spam messages to the r
     
 3. Run the following command to route messages marked as spam prior to reaching the content filter to the Junk Email folder:
     
-  ```
+  ```Powershell
   New-TransportRule "NameForRule" -HeaderContainsMessageHeader "X-Forefront-Antispam-Report" -HeaderContainsWords "SFV:SKS" -SetSCL 6
   ```
 
@@ -46,7 +46,7 @@ The default anti-spam action for EOP customers is to move spam messages to the r
     
 4. Run the following command to ensure that messages from senders in a block list in the spam filter policy, such as the **Sender block** list, are routed to the Junk Email folder: 
     
-  ```
+  ```Powershell
   New-TransportRule "NameForRule" -HeaderContainsMessageHeader "X-Forefront-Antispam-Report" -HeaderContainsWords "SFV:SKB" -SetSCL 6
   ```
 
@@ -54,6 +54,10 @@ The default anti-spam action for EOP customers is to move spam messages to the r
     
 If you do not want to use the **Move message to Junk Email folder** action, you can choose another action in your content filter policies in the Exchange admin center. For more information, see [Configure your spam filter policies](configure-your-spam-filter-policies.md). For more information about these fields in the message header, see [Anti-spam message headers](anti-spam-message-headers.md).
   
+
+> [!TIP]
+> If you don't want to use the **Move message to Junk Email folder** action, you can choose another action in your content filter policies in the Exchange admin center. For more information, see [Configure your spam filter policies](configure-your-spam-filter-policies.md). For more information about these fields in the message header, see [Anti-spam message headers](anti-spam-message-headers.md).
+> 
 ## See also
 
 [New-TransportRule cmdlet](https://technet.microsoft.com/library/bb125138%28v=exchg.160%29.aspx)

@@ -26,9 +26,9 @@ description: "Even if you plan to host some or all of your mailboxes on-premises
   
 Even if you plan to host some or all of your mailboxes on-premises, you can still protect the mailboxes with Exchange Online Protection (EOP). To configure connectors, your account must be an Office 365 Global Admin, or an Exchange Company Administrator (the Organization Management role group). For information about how Office 365 permissions relate to Exchange permissions, see [Assigning admin roles in Office 365 operated by 21Vianet](https://support.office.com/article/d58b8089-cbfd-41ec-b64c-9cfcbef495ac). If all of your Exchange mailboxes are on-premise, follow these steps to set up your EOP service. 
   
-## Step 1: Use the Office 365 admin center to add and verify your domain
+## Step 1: Use the Microsoft 365 admin center to add and verify your domain
 
-1. In the Office 365 admin center, navigate to Setup to add your domain to the service.
+1. In the Microsoft 365 admin center, navigate to Setup to add your domain to the service.
     
 2.  Follow the steps in the portal to add the applicable DNS records to your DNS-hosting provider in order to verify domain ownership. 
     
@@ -58,7 +58,7 @@ After you configured connectors, wait 72 hours to allow propagation of your DNS-
 
 To ensure that spam (junk) email is routed correctly to each user's Junk Email folder, you must perform a couple of configuration steps. The steps are provided in [Ensure that spam is routed to each user's Junk Email folder](https://go.microsoft.com/fwlink/?LinkId=506804). If you don't want to move messages to each user's Junk Email folder, you may choose another action by editing your content filter policies in the Exchange admin center. For more information, see [Configure Content Filter Policies](https://go.microsoft.com/fwlink/?LinkId=506805). 
   
-## Step 6: Use the Office 365 admin center to point your MX record to EOP
+## Step 6: Use the Microsoft 365 admin center to point your MX record to EOP
 
 Follow the Office 365 domain configuration steps to update your MX record for your domain, so that your inbound email flows through EOP. For more information, you can again reference [Create DNS records for Office 365 when you manage your DNS records](https://support.office.com/article/0669bf14-414d-4f51-8231-6b710ce7980b).
   

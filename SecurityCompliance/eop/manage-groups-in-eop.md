@@ -88,7 +88,7 @@ This section provides information about creating groups and changing their prope
   
 This example uses the [New-EOPDistributionGroup](http://technet.microsoft.com/library/4610dfe5-fca8-4ba8-be3c-535d1753e0f4.aspx) cmdlet to create a distribution group with an alias of itadmin and the name IT Administrators. It also adds users as members of the group. 
   
-```
+```Powershell
 New-EOPDistributionGroup -Type "Distribution" -Name "IT Administrators" -Alias itadmin -Members @("Member1","Member2","Member3") -ManagedBy "Member1"
 
 ```
@@ -97,21 +97,21 @@ To create a security group instead of a distribution group, specify  `-Type "Sec
   
 To verify that you've successfully created the IT Administrators group, run the [Get-Recipient](http://technet.microsoft.com/library/2ce6250f-0ad3-4b29-870c-e1d6e1e154bc.aspx) cmdlet to display information about the new group: 
   
-```
+```Powershell
 Get-Recipient "IT Administrators" | Format-List
 
 ```
 
 To get a list of members in the group, run the [Get-DistributionGroupMember](http://technet.microsoft.com/library/15c71bc5-4246-44ac-8b34-8ccd585294b5.aspx) cmdlet as follows: 
   
-```
+```Powershell
 Get-DistributionGroupMember "IT Administrators"
 
 ```
 
 To get a full list of all your groups, run the [Get-Recipient](http://technet.microsoft.com/library/2ce6250f-0ad3-4b29-870c-e1d6e1e154bc.aspx) cmdlet as follows: 
   
-```
+```Powershell
 Get-Recipient -RecipientType "MailUniversalDistributionGroup" | FT | more
 
 ```
@@ -124,28 +124,28 @@ Here are some examples of using remote Windows PowerShell to change group proper
   
 This example uses the [Set-EOPDistributionGroup](http://technet.microsoft.com/library/689a66c5-a524-4870-88f3-091fd6eae3b7.aspx) cmdlet to change the primary SMTP address (also called the reply address) for the Seattle Employees group to sea.employees@contoso.com. 
   
-```
+```Powershell
 Set-EOPDistributionGroup "Seattle Employees" -PrimarysmptAddress "sea.employees@contoso.com"
 
 ```
 
 To verify that you've successfully changed the properties for a group, use the [Get-Recipient](http://technet.microsoft.com/library/2ce6250f-0ad3-4b29-870c-e1d6e1e154bc.aspx) cmdlet to verify the changes. One advantage of using remote PowerShell is that you can view multiple properties for multiple groups. In the previous example where the primary SMTP address group was changed, run the following command to verify the new value: 
   
-```
+```Powershell
 Get-Recipient "Seattle Employees" | FL "PrimarySmtpAddress"
 
 ```
 
 This example uses the [Update-EOPDistributionGroupMember](http://technet.microsoft.com/library/a6d4f790-1b94-42f8-af6f-fa79c504d8ec.aspx) cmdlet to update all the members of the Seattle Employees group. Use a comma to separate all members. 
   
-```
+```Powershell
 Update-EOPDistributionGroupMember -Identity "Seattle Employees" -Members @("Member1","Member2","Member3","Member4","Member5")
 
 ```
 
 To get the list of all the members in the group Seattle Employees, use the [Get-DistributionGroupMember](http://technet.microsoft.com/library/15c71bc5-4246-44ac-8b34-8ccd585294b5.aspx) cmdlet as follows: 
   
-```
+```Powershell
 Get-DistributionGroupMember "Seattle Employees"
 
 ```
@@ -154,14 +154,14 @@ Get-DistributionGroupMember "Seattle Employees"
   
 This example uses the [Remove-EOPDistributionGroup](http://technet.microsoft.com/library/a17b1307-3187-40b0-a438-c7b35a34c002.aspx) cmdlet to remove a distribution group named IT Administrators. 
   
-```
+```Powershell
 Remove-EOPDistributionGroup -Identity "IT Administrators" 
 
 ```
 
 To verify that the group was removed, run the [Get-Recipient](http://technet.microsoft.com/library/2ce6250f-0ad3-4b29-870c-e1d6e1e154bc.aspx) cmdlet as follows, and confirm that the group (in this case "It Administrators") was deleted. 
   
-```
+```Powershell
 Get-Recipient -RecipientType "MailUniversalDistributionGroup"
 
 ```
