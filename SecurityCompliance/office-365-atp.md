@@ -29,7 +29,7 @@ Office 365 Advanced Threat Protection (ATP) safeguards your organization against
 
 - [Reports](#view-atp-reports): View real-time reports to monitor ATP performance in your organization. 
 
-- [Threat investigation and response capabilities](#utilize-threat-intelligence-capabilities): Utilize leading-edge tools to investigate, understand, simulate, and prevent threats. 
+- [Threat investigation and response capabilities](#use-threat-investigation-and-response-capabilities): Use leading-edge tools to investigate, understand, simulate, and prevent threats. 
  
 
 ## Configure ATP policies
@@ -56,7 +56,7 @@ Reports update in real-time, providing you with the latest insights. These repor
 
 ## Use threat investigation and response capabilities
 
-Office 365 ATP includes best-of-class [threat investigation and response tools](office-365-ti.md) that enable your organization's security team to anticipate, understand, and prevent malicious attacks. 
+Office 365 ATP Plan 2 includes best-of-class [threat investigation and response tools](office-365-ti.md) that enable your organization's security team to anticipate, understand, and prevent malicious attacks. 
 
 - [Threat trackers](threat-trackers.md) provide the latest intelligence on prevailing cybersecurity issues. For example, you can view information about the latest malware, and take countermeasures before it becomes an actual threat to your organization. Available trackers include [Noteworthy trackers](threat-trackers.md#noteworthy-trackers), [Trending trackers](threat-trackers.md#trending-trackers), [Tracked queries](threat-trackers.md#tracked-queries), and [Saved queries](threat-trackers.md#saved-queries).
 
@@ -74,7 +74,8 @@ To access ATP features in the Security & Compliance Center, you must be assigned
 |Security Administrator |[Administrator role permissions in Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles)|
 |Exchange Online Organization Management |[Permissions in Exchange Online](https://docs.microsoft.com/en-us/exchange/permissions-exo/permissions-exo) <br>and<br> [Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell?view=exchange-ps)|
 
-See also:
+For more information, see:
+
 - [Permissions in the Office 365 Security & Compliance Center](permissions-in-the-security-and-compliance-center.md) 
 
 - [Give users access to the Office 365 Security & Compliance Center](grant-access-to-the-security-and-compliance-center.md)

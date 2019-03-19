@@ -9,7 +9,6 @@ ms.topic: article
 f1_keywords:
 - 'ms.exch.eac.ActionCenter.Restricted.Users.RestrictedUsers'
 ms.service: O365-seccomp
-ms.custom: TN2DMC
 localization_priority: Normal
 search.appverid:
 - MET150

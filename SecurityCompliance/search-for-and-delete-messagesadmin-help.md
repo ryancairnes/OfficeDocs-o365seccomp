@@ -8,7 +8,6 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 ms.collection: M365-security-compliance
-ms.custom: TN2DMC
 localization_priority: Normal
 search.appverid:
 - MET150

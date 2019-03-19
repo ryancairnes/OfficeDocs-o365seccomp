@@ -37,8 +37,6 @@ Here's a quick-start guide you can use as a checklist to make sure Office 365 Ad
 
     (See [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md).)
 
-- Sign in to the Office 365 Security & Compliance Center ([https://protection.office.com](https://protection.office.com)).
-
 ## Part 1 - Anti-malware
 
 1. In the [Office 365 Security & Compliance Center](https://protection.office.com), choose **Threat management** > **Policy** > **Anti-malware**.
