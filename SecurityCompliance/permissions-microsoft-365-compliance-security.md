@@ -5,7 +5,7 @@ author: stephow-MSFT
 manager: laurawi
 ms.date: 6/22/2018
 ms.audience: Admin
-ms.topic: conceptual
+ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Priority
 ms.collection: 
@@ -13,16 +13,16 @@ ms.collection:
 search.appverid: 
 - MOE150
 - MET150
-description: "Retention labels in Office 365 can help you take the right actions on the right content. With retention labels, you can classify data across your organization for governance, and enforce retention rules based on that classification. You can also use retention labels to implement records management across Office 365."
+description: "By using the Microsoft 365 security center or Microsoft 365 compliance center, you can manage permissions centrally for all tasks related to security or compliance."
 ---
 
 # Permissions in the Microsoft 365 compliance center and Microsoft 365 security center
 
 Your organization needs to manage security and compliance scenarios that span all the Microsoft 365 services. And you need the flexibility to give the right admin permissions to the right people in your organization’s IT group. By using the Microsoft 365 security center or Microsoft 365 compliance center, you can manage permissions centrally for all tasks related to security or compliance.
 
-After the global administrator assigns these permissions by adding members to the admin roles, these admins have access to features and data that span all services in Microsoft 365, such as the Microsoft 365 security center, Microsoft 365 compliance center, Azure, Office 365, and Enterprise Mobility + Security.
+After the global administrator assigns these admin roles, the admins have access to features and data that span all services in Microsoft 365, such as the Microsoft 365 security center, Microsoft 365 compliance center, Azure, Office 365, and Enterprise Mobility + Security.
 
-IMAGE
+![Permissions page in Microsoft 365 security center](media/m365-security-permissions-page.png)
 
 ## What the Microsoft 365 roles are
 
@@ -78,7 +78,7 @@ Users with this role have permissions to manage security-related features in the
 |:-----|:-----|
 |[**Microsoft 365 security center**](https://security.microsoft.com/) <br/> |Monitor security-related policies across Microsoft 365 services. <br/> Manage security threats and alerts. <br/> View reports. <br/> Manage sensitivity labels. <br/>  |
 |**Identity Protection Center** <br/> |Do everything the Security Reader role can, plus  perform all Identity Protection Center operations, except for reset passwords.  <br/> |
-|[**Privileged Identity Management**](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure) <br/> |Do everything the Security Reader role can.  <br/>**Cannot** manage Azure AD role memberships or settings. <br/> |
+|[**Privileged Identity Management**](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure) <br/> |Do everything the Security Reader role can.  <br/>**Cannot** manage Azure AD role assignments or settings. <br/> |
 |[**Office 365 Security & Compliance Center**](https://support.office.com/article/About-Office-365-admin-roles-da585eea-f576-4f55-a1e0-87090b6aaa9d) <br/> |Manage security policies. <br/>View, investigate, and respond to security threats  <br/>View reports. <br/>Manage sensitivity labels. <br/> |
 |**Azure Advanced Threat Protection** <br/> |Monitor and respond to suspicious security activity.  <br/> |
 |**Windows Defender ATP and EDR** <br/> |Assign roles. <br/>Manage machine groups. <br/>Configure endpoint threat detection and automated remediation. <br/>View, investigate, and respond to alerts.  <br/> |
@@ -120,21 +120,27 @@ Users with this role have global read-only access on security-related feature, i
 
 ## Global administrators can manage roles in Azure Active Directory
 
-In the Microsoft 365 compliance center and Microsoft 365 security center, when you select a role, you can view its members. But to manage those members, you need to go to the Azure Active Directory.
+In the Microsoft 365 compliance center and Microsoft 365 security center, when you select a role, you can view its assignments. But to manage those assignments, you need to go to the Azure Active Directory.
 
 For more information, see [View and assign administrator roles in Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-manage-roles-portal).
 
-ART
+![Link to manage permissions in Azure Active Directory](media/permissions-manage-in-azure-ad-link.png)
+
+## Managing roles in a service instead of Azure Active Directory
+
+The roles that appear in the Microsoft 365 compliance center and Microsoft 365 security center also appear in the services where they have permissions. For example, you can see these roles in the Office 365 Security & Compliance Center.
+
+![Roles in Office 365 Security & Compliance Center](media/m365-roles-in-o365-scc.png)
 
 ### Breaking inheritance
 
-It’s important to understand that you when you manage these roles in Azure Active Directory, you’re doing so centrally for **all** Microsoft 365 services. However, when you manage a role in a specific service, such as the Office 365 Security & Compliance Center, you’re managing the role for **only** that specific service. The memberships and permissions for a role in a service override any permissions granted to the Azure Active Directory role.
+It’s important to understand that you when you manage these roles in Azure Active Directory, you’re doing so centrally for **all** Microsoft 365 services. However, when you manage a role in a specific service, such as the Office 365 Security & Compliance Center, you’re managing the role for **only** that specific service. The assignments and permissions for a role in a service override any permissions granted to the Azure Active Directory role.
 
 This can be useful – for example, if a person is assigned to the Security administrator role, they don’t have permissions to manage incidents. But you can use the permissions in Windows Defender Advanced Threat Protection to give them the specific permission for incident management in that service.
 
 ## Where to find role information for each Microsoft 365 service
 
-By adding a member to one of the Microsoft 365 compliance or security admin roles, you give that user permissions to a range of Microsoft 365 services. Use the links below to find more specific information about the permissions for a role in each service.
+By assigning a user to one of the Microsoft 365 compliance or security admin roles, you give that user permissions to a range of Microsoft 365 services. Use the links below to find more specific information about the permissions for a role in each service.
 
 |**Microsoft 365 service**|**Role info**|
 |:-----|:-----|
