@@ -98,7 +98,7 @@ Users with this role can manage alerts and have global read-only access on secur
 |[**Privileged Identity Management**](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure) <br/> |Do everything the Security Reader role can. <br/> |
 |[**Office 365 Security & Compliance Center**](https://support.office.com/article/About-Office-365-admin-roles-da585eea-f576-4f55-a1e0-87090b6aaa9d) <br/> |Do everything the Security Reader role can. <br/>View, investigate, and respond to security threats  <br/> |
 |**Windows Defender ATP and EDR** <br/> |Assign roles. <br/>Manage machine groups. <br/>Configure endpoint threat detection and automated remediation. <br/>View, investigate, and respond to alerts.  <br/> |
-|[**Intune**](https://docs.microsoft.com/intune/role-based-access-control) <br/> |Do everything the Security Reader role can. <br/> |
+|[**Intune**](https://docs.microsoft.com/intune/role-based-access-control) <br/> |Views user, device, enrollment, configuration, and application information. <br/>**Cannot** make changes to Intune. <br/> |
 |[**Cloud App Security**](https://docs.microsoft.com/cloud-app-security/manage-admins) <br/> |Do everything the Security Reader role can, plus view and dismiss alerts. <br/> |
 |[**Office 365 service health**](https://docs.microsoft.com/office365/enterprise/view-service-health) <br/> |View the health of Office 365 services.  <br/> |
 
