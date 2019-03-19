@@ -88,6 +88,7 @@
 ### [Watch videos from the Microsoft Data Governance team](https://go.microsoft.com/fwlink/?linkid=867039)
 
 # [Protect against threats](protect-against-threats.md)
+## [Quick Start Guide: Set up Office 365 Advanced Threat Protection](checklist-atp-setup.md)
 ## [Anti-spam and anti-malware protection](anti-spam-and-anti-malware-protection.md)
 ### [Overview of EOP](videos-for-getting-started-with-protecting-your-email.md)
 ### [Office 365 email anti-spam protection](anti-spam-protection.md)
