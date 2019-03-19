@@ -126,17 +126,38 @@ For more information, see [View and assign administrator roles in Azure Active D
 
 ART
 
+### Breaking inheritance
 
+It’s important to understand that you when you manage these roles in Azure Active Directory, you’re doing so centrally for **all** Microsoft 365 services. However, when you manage a role in a specific service, such as the Office 365 Security & Compliance Center, you’re managing the role for **only** that specific service. The memberships and permissions for a role in a service override any permissions granted to the Azure Active Directory role.
 
+This can be useful – for example, if a person is assigned to the Security administrator role, they don’t have permissions to manage incidents. But you can use the permissions in Windows Defender Advanced Threat Protection to give them the specific permission for incident management in that service.
 
+## Where to find role information for each Microsoft 365 service
 
+By adding a member to one of the Microsoft 365 compliance or security admin roles, you give that user permissions to a range of Microsoft 365 services. Use the links below to find more specific information about the permissions for a role in each service.
 
+|**Microsoft 365 service**|**Role info**|
+|:-----|:-----|
+|Admin roles in Office 365 and Microsoft 365 business plans <br/> |[Office 365 admin roles](https://docs.microsoft.com/office365/admin/add-users/about-admin-roles?view=o365-worldwide) <br/>  |
+|Azure Active Directory (Azure AD) and Azure AD Identity Protection <br/> |[Azure AD admin roles](https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles) <br/>  |
+|Azure Advanced Threat Protection <br/> |[Azure ATP role groups](https://docs.microsoft.com/azure-advanced-threat-protection/atp-role-groups) <br/>  |
+|Azure Information Protection <br/> |[Azure AD admin roles](https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles) <br/>  |
+|Compliance Manager <br/> |[Compliance Manager roles](https://docs.microsoft.com/office365/securitycompliance/meet-data-protection-and-regulatory-reqs-using-microsoft-cloud#permissions-and-role-based-access-control) <br/>  |
+|Exchange Online <br/> |[Exchange role-based access control](https://docs.microsoft.com/exchange/understanding-role-based-access-control-exchange-2013-help) <br/>  |
+|Intune <br/> |[Intune role-based access control](https://docs.microsoft.com/intune/role-based-access-control) <br/>  |
+|Managed Desktop <br/> |[Azure AD admin roles](https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles) <br/>  |
+|Microsoft Cloud App Security <br/> |[Role-based access control](https://docs.microsoft.com/cloud-app-security/manage-admins) <br/>  |
+|Office 365 Security & Compliance Center <br/> |[Office 365 admin roles](https://docs.microsoft.com/office365/SecurityCompliance/permissions-in-the-security-and-compliance-center) <br/>  |
+|Privileged Identity Management <br/> |[Azure AD admin roles](https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles) <br/>  |
+|Secure Score <br/> |[Azure AD admin roles](https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles) <br/>  |
+|SharePoint Online <br/> |[Azure AD admin roles](https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles) <br/>[About the SharePoint admin role in Office 365](https://docs.microsoft.com/sharepoint/sharepoint-admin-role) <br/>  |
+|Teams/Skype for Business <br/> |[Azure AD admin roles](https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles) <br/>  |
+|Windows Defender Advanced Threat Protection <br/> |[Windows Defender ATP role-based access control](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/rbac-windows-defender-advanced-threat-protection) <br/>  |
 
+## What is coming soon
 
+We’re still working on permissions in the Microsoft 365 compliance center and Microsoft 365 security center. For example, we’re currently working on support for the ability to:
 
-
-
-
-
-
-
+- Manage roles in the Microsoft 365 compliance center and Microsoft 365 security center, instead of going to Azure Active Directory.
+- Customize roles by adding or removing specific permissions.
+- Create custom roles with permissions that you choose.
