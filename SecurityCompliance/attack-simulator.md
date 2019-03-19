@@ -19,7 +19,7 @@ description: "As an Office 365 global administrator, you can use Attack Simulato
 
 # Attack Simulator in Office 365
 
-**Summary** If you are an Office 365 global administrator and your organization has [Office 365 Threat Investigation and Response capabilties](office-365-ti.md), you can use Attack Simulator to run realistic attack scenarios in your organization. This can help you identify and find vulnerable users before a real attack impacts your bottom line. Read this article to learn more.
+**Summary** If you are an Office 365 global administrator and your organization has [Office 365 Threat Investigation and Response capabilities](office-365-ti.md), you can use Attack Simulator to run realistic attack scenarios in your organization. This can help you identify and find vulnerable users before a real attack impacts your bottom line. Read this article to learn more.
 
 > [!IMPORTANT]
 > Office 365 Advanced Threat Protection and Threat Investigation and Response (formerly known as Threat Intelligence) are now part of Office 365 Advanced Threat Protection Plan 2, with additional threat protection capabilities. To learn more, see [Office 365 Advanced Threat Protection plans and pricing](https://products.office.com/exchange/advance-threat-protection) and the [Office 365 Advanced Threat Protection Service Description](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description).
@@ -51,7 +51,7 @@ Make sure that you and your organization meet the following requirements for Att
     
 - **[Multi-factor authentication](https://docs.microsoft.com/office365/admin/security-and-compliance/set-up-multi-factor-authentication?view=o365-worldwide) (MFA) is turned on, for at least the Office 365 global administrator account**. (Ideally, MFA is turned on for all users in your organization.)
  
-- **Your organization has [Office 365 Threat Intelligence](office-365-ti.md)**, with Attack Simulator visible in the Security &amp; Compliance Center (go to **Threat management** \> **Attack simulator**)<br/>![Threat management - Attack Simulator](media/ThreatMgmt-AttackSimulator.png)
+- **Your organization has [Office 365 Advanced Threat Protection Plan 2](office-365-ti.md)**, with Attack Simulator visible in the Security &amp; Compliance Center (go to **Threat management** \> **Attack simulator**)<br/>![Threat management - Attack Simulator](media/ThreatMgmt-AttackSimulator.png)
 
     
 ## Display name spear-phishing attack
