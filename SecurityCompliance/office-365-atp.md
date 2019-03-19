@@ -3,7 +3,7 @@ title: "Office 365 Advanced Threat Protection"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 02/20/2019
+ms.date: 03/19/2019
 ms.audience: Admin
 ms.topic: hub-page
 ms.service: O365-seccomp
@@ -29,7 +29,7 @@ Office 365 Advanced Threat Protection (ATP) safeguards your organization against
 
 - [Reports](#view-atp-reports): View real-time reports to monitor ATP performance in your organization. 
 
-- [Threat intelligence capabilities](#utilize-threat-intelligence-capabilities): Utilize leading-edge tools to investigate, understand, simulate, and prevent threats. 
+- [Threat investigation and response capabilities](#utilize-threat-intelligence-capabilities): Utilize leading-edge tools to investigate, understand, simulate, and prevent threats. 
  
 
 ## Configure ATP policies
@@ -54,9 +54,9 @@ Office 365 ATP includes an advanced [reporting dashboard](view-reports-for-atp.m
 
 Reports update in real-time, providing you with the latest insights. These reports also provide recommendations and alert you to imminent threats. Predefined reports include the [Threat Protection Status report](view-reports-for-atp.md#threat-protection-status-report), [ATP File Types report](view-reports-for-atp.md#atp-file-types-report), [ATP Message Disposition report](view-reports-for-atp.md#atp-message-disposition-report) and more. 
 
-## Utilize threat intelligence capabilities
+## Use threat investigation and response capabilities
 
-Office 365 ATP includes best-of-class [threat intelligence tools](office-365-ti.md) that enable your organization's security team to anticipate, understand, and prevent malicious attacks. 
+Office 365 ATP includes best-of-class [threat investigation and response tools](office-365-ti.md) that enable your organization's security team to anticipate, understand, and prevent malicious attacks. 
 
 - [Threat trackers](threat-trackers.md) provide the latest intelligence on prevailing cybersecurity issues. For example, you can view information about the latest malware, and take countermeasures before it becomes an actual threat to your organization. Available trackers include [Noteworthy trackers](threat-trackers.md#noteworthy-trackers), [Trending trackers](threat-trackers.md#trending-trackers), [Tracked queries](threat-trackers.md#tracked-queries), and [Saved queries](threat-trackers.md#saved-queries).
 

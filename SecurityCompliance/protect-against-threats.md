@@ -67,7 +67,7 @@ Configure policies to manage spoofing, protect against phishing attacks, and cat
   
 - [Learn about Office 365 ATP](office-365-atp.md)
 
-- [Get an overview of Office 365 Threat Intelligence](office-365-ti.md)
+- [Get an overview of Office 365 ATP Plan 2](office-365-ti.md)
     
 - [Set up anti-phishing policies](set-up-anti-phishing-policies.md)
     

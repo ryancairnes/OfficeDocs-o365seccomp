@@ -48,7 +48,7 @@ Visit these reports and dashboards to learn more about the health of your enviro
   
 |****Dashboard****|****Description****|
 |:-----|:-----|
-|Threat management dashboard  <br/> |In the Threat management section of Security &amp; Compliance center, use this dashboard to see threats that have already been handled, and as a handy tool for reporting out to business decision makers on what Threat Intelligence has already done to secure your business.  <br/> |
+|Threat management dashboard  <br/> |In the Threat management section of Security &amp; Compliance center, use this dashboard to see threats that have already been handled, and as a handy tool for reporting out to business decision makers on what threat investigation and response capabilities have already done to secure your business.  <br/> |
 |Threat explorer  <br/> |This is also in the Threat management section of Security &amp; Compliance center. If you are investigating or experiencing an attack against your Office 365 tenant, use the threat explorer to analyze threats. Threat explorer shows you the volume of attacks over time, and you can analyze this data by threat families, attacker infrastructure, and more. You can also mark any suspicious email for the Incidents list.  <br/> |
 |Reports — Dashboard  <br/> |In the Reports section of Security &amp; Compliance center, view audit reports for your SharePoint Online and Exchange Online organizations. You can also access Azure Active Directory (AD) user sign-in reports, user activity reports, and the Azure AD audit log from the View reports page.  <br/> |
    

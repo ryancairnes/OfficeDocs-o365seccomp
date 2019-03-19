@@ -35,9 +35,9 @@ Here's a quick-start guide you can use as a checklist to make sure Office 365 Ad
     |Security Administrator |[Administrator role permissions in Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles)|
     |Exchange Online Organization Management |[Permissions in Exchange Online](https://docs.microsoft.com/en-us/exchange/permissions-exo/permissions-exo) <br>and<br> [Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell?view=exchange-ps)|
 
-- Sign in to the Office 365 Security & Compliance Center ([https://protection.office.com](https://protection.office.com)).
+    (See [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md).)
 
-## 1 - Anti-malware
+## Part 1 - Anti-malware
 
 1. In the [Office 365 Security & Compliance Center](https://protection.office.com), choose **Threat management** > **Policy** > **Anti-malware**.
 2. Double-click the **Default** policy, and then choose **settings**.
@@ -48,7 +48,7 @@ Here's a quick-start guide you can use as a checklist to make sure Office 365 Ad
 
 To learn more about anti-malware policy options, see [Configure anti-malware policies](configure-anti-malware-policies.md).
 
-## 2 - Zero-day protection
+## Part 2 - Zero-day protection
 
 Zero-day protection is set up through policies, such as ATP Safe Links and Safe Attachments policies.
 
@@ -87,7 +87,7 @@ To set up ATP Safe Links, review your default policy and add a policy.
 
 To learn more, see [Set up Office 365 ATP Safe Links policies](set-up-atp-safe-links-policies.md). 
 
-## 3 - Anti-phishing 
+## Part 3 - Anti-phishing 
 
 1. In the [Office 365 Security & Compliance Center](https://protection.office.com), choose **Threat management** > **Policy** > **ATP anti-phishing**.
 2. Click **Default policy**.
@@ -105,7 +105,7 @@ To learn more, see [Set up Office 365 ATP Safe Links policies](set-up-atp-safe-l
 
 To learn more about your anti-phishing policy options, see [Set up Office 365 ATP anti-phishing and anti-phishing policies](set-up-anti-phishing-policies.md).
 
-## 4 - Anti-spam
+## Part 4 - Anti-spam
 
 1. In the [Office 365 Security & Compliance Center](https://protection.office.com), choose **Threat management** > **Policy** > **Anti-spam**.
 2. On the **Custom** tab, turn **Custom settings** on.
@@ -116,7 +116,7 @@ To learn more about your anti-phishing policy options, see [Set up Office 365 AT
 
 To learn more about your anti-spam policy options, see [Configure the anti-spam policies](configure-the-anti-spam-policies.md).
 
-## 5 - Service-wide settings
+## Part 5 - Service-wide settings
 
 ### Zero-hour auto purge
 
