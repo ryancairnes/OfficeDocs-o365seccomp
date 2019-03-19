@@ -6,8 +6,7 @@ manager: laurawi
 ms.date: 03/13/2019
 ms.audience: ITPro
 ms.topic: article
-ms.service: o365-administration
-ms.collection:
+ms.service: O365-seccompms.collection:
 - M365-security-compliance
 localization_priority: None
 description: "Learn how to define policies for information barriers in Microsoft Teams."
