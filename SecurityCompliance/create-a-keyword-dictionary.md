@@ -3,11 +3,10 @@ title: "Create a keyword dictionary"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 6/29/2018
 ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
-localization_priority: Priority
+localization_priority: Normal
 ms.collection: 
 - M365-security-compliance
 search.appverid: 
@@ -22,17 +21,32 @@ Data loss prevention (DLP) in Office 365 can identify, monitor, and protect your
   
 ## Basic steps to creating a keyword dictionary
 
-The keywords for your dictionary could come from a variety of sources, most commonly from a file (such as a .csv or .txt list), from a list you enter directly in the cmdlet, or from an existing dictionary. When you create a keyword dictionary, you follow the same core steps:
+The keywords for your dictionary could come from a variety of sources, most commonly from a file (such as a .csv or .txt list) imported in the service or by PowerShell cmdlet, from a list you enter directly in the PowerShell cmdlet, or from an existing dictionary. When you create a keyword dictionary, you follow the same core steps:
   
-1. **Connect to Security &amp; Compliance Center PowerShell** - see [this topic](https://docs.microsoft.com/en-us/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
+1. Use the **Security & Compliance center** or connect to the **Security &amp; Compliance Center PowerShell**.
     
-2. **Define or load your keywords from your intended source** - the cmdlet to create a keyword dictionary accepts a comma-separated list of keywords, so this step will vary slightly depending on where your keywords come from. 
+2. **Define or load your keywords from your intended source** - the wizard and the cmdlet both accept a comma-separated list of keywords to create a custom keyword dictionary, so this step will vary slightly depending on where your keywords come from. Once loaded, they're encoded and converted to a byte array before they're imported.
     
-3. **Encode your keywords** - once loaded, they're converted to a byte array before they're imported. 
+3. **Create your dictionary** - choose a name and description and create your dictionary.
+
+## Create a keyword dictionary using the Security & Compliance center
+
+Use the following steps to create and import keywords for a custom dictionary:
+
+1. Connect to the [Security & Compliance center](https://protection.office.com).
+2. Navigate to **Classifications > Sensitive info types**.
+3. Select **Create** and enter a **Name** and **Description** for your sensitive info type, then select **Next**
+4. Select **Add an element**, then select **Dictionary (Large keywords)** in the **Detect content containing** drop-down list.
+5. Select **Add a dictionary**
+6. Under the Search control, select **You can create new keyword dictionaries here**.
+7. Enter a **Name** for your custom dictionary.
+8. Select **Import**, and select either **From text** or **From csv** depending on your keyword file type.
+9. In the file dialog, select the keyword file from your local PC or network file share, then select **Open**.
+10. Select **Save**, then select your custom dictionary from the **Keyword dictionaries** list.
+11. Select **Add**, then select **Next**.
+12. Review and finalize your sensitive info type selections, then select **Finish**.
     
-4. **Create your dictionary** - choose a name and description and create your dictionary. 
-    
-## Create a keyword dictionary from a file
+## Create a keyword dictionary from a file using PowerShell
 
 Often when you need to create a large dictionary, it's to use keywords from a file or a list exported from some other source. In this case, you'll create a keyword dictionary containing a list of inappropriate language to screen in external email. You need to first [Connect to Office 365 Security &amp; Compliance Center PowerShell](https://docs.microsoft.com/en-us/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
   
@@ -54,7 +68,9 @@ Often when you need to create a large dictionary, it's to use keywords from a fi
 
 ## Modifying an existing keyword dictionary
 
-You might need to modify keywords in one of your keyword dictionaries, or modify one of the built-in dictionaries. In this example, we'll modify some terms in PowerShell, save the terms locally where you can modify them in an editor, and then update the previous terms in place. First, retrieve the dictionary object:
+You might need to modify keywords in one of your keyword dictionaries, or modify one of the built-in dictionaries. Currently, your can only update a custom keyword dictionary using PowerShell. 
+
+In this example, we'll modify some terms in PowerShell, save the terms locally where you can modify them in an editor, and then update the previous terms in place. First, retrieve the dictionary object:
   
 ```
 $dict = Get-DlpKeywordDictionary -Name "Diseases"

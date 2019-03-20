@@ -107,43 +107,26 @@ For more information about role groups and permissions, see [Permissions in the 
 
 <a name="sensitiveinfo"> </a>
   
-## Step 3 - Create custom sensitive information types or custom keyword dictionaries (optional)
+## Step 3 - Create custom sensitive information types and custom keyword dictionaries (optional)
 
 In order to pick from existing custom sensitive information types or custom keyword dictionaries in the supervision policy wizard, you first need to create these items if needed.
 
+### Create custom keyword dictionary/lexicon (optional)
+
+Using a text editor (like Notepad), create a new file that includes the keyword terms you'd like to monitor in a supervision policy. Make sure each term is on a separate line and save the file in the **Unicode/UTF-16 (Little Endian)** format.
+
 ### Create custom sensitive information types
 
-1. Create a new sensitive information type in the Office 365 Security & Compliance Center. Navigate to **Classifications** \> **Sensitive info types** and follow the steps in the **New sensitive info type wizard**. Here you will:
+1. Create a new sensitive information type and add your custom dictionary in the Office 365 Security & Compliance Center. Navigate to **Classifications** \> **Sensitive info types** and follow the steps in the **New sensitive info type wizard**. Here you will:
 
     - Define a name and description for the sensitive info type
     - Define the proximity, confidence level, and primary pattern elements
+    - Import your custom dictionary as a requirement for the matching element
     - Review your selections and create the sensitive info type
 
-    For more detailed information, see [Create a custom sensitive information type](create-a-custom-sensitive-information-type.md).
-
-### Create custom keyword dictionary/lexicon
-
-1. Using a text editor (like Notepad), create a new file that includes the keyword terms you'd like to monitor in a supervision policy. Make sure each term is on a separate line and save the file in the **Unicode/UTF-16 (Little Endian)** format.
-2. Import the keyword file into your Office 365 tenant using PowerShell. To connect to Office 365 with PowerShell, see [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
-
-    After you've connected to Office 365 with PowerShell, run the following commands to import your keyword dictionary:
-
-    ```
-    $fileData = Get-Content "your keyword path and file name" -Encoding Byte -ReadCount 0
-
-    New-DlpKeywordDictionary -Name "Name for your keyword dictionary" -Description "optional description for your keyword dictionary" -FileData $fileData
-    ```
-    For more detailed information, see [Create a keyword dictionary](create-a-keyword-dictionary.md).
-
-3. Create a new sensitive information type in the Office 365 Security & Compliance Center. Navigate to **Classifications** \> **Sensitive info types** and follow the steps in the **New sensitive info type wizard**. Here you will:
-
-    - Define a name and description for the sensitive info type
-    - Add your custom dictionary as a requirement for the matching element
-    - Review your selections and create the sensitive info type
+    For more detailed information, see [Create a custom sensitive information type](create-a-custom-sensitive-information-type.md) and [Create a keyword dictionary](create-a-keyword-dictionary.md)
 
     After the custom dictionary/lexicon is created, you can view the configured keywords using the [Get-DlpKeywordDictionary](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/get-dlpkeyworddictionary) cmdlet or add and remove terms using the [Set-DlpKeywordDictionary](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/set-dlpkeyworddictionary) cmdlet.
-
-    For more detailed information, see [Create a custom sensitive information type](create-a-custom-sensitive-information-type.md).
 
 <a name="setupsuper"> </a>
 

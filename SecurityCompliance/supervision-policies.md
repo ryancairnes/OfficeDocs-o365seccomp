@@ -1,5 +1,5 @@
 ---
-title: "Supervision Policies in Office 365"
+title: "Supervision policies in Office 365"
 ms.author: robmazz
 author: robmazz
 manager: laurawi
