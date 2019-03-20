@@ -6,7 +6,8 @@ manager: laurawi
 ms.date: 6/4/2018
 ms.audience: ITPro
 ms.topic: article
-ms.service: O365-seccomplocalization_priority: Normal
+ms.service: O365-seccomp
+localization_priority: Normal
 search.appverid:
 - MET150
 - MOE150

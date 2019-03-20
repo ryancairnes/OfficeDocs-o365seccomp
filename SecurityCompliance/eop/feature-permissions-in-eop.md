@@ -7,7 +7,6 @@ ms.date: 1/30/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
-ms.custom: TN2DMC
 localization_priority: Normal
 ms.assetid: 34674847-a6b7-4a7e-9eaa-b64f22bc150d
 description: "The permissions required to perform tasks to manage Microsoft Exchange Online Protection (EOP) vary depending on the feature you are managing."
