@@ -20,3 +20,7 @@ A mail loop is bad because it wastes system resources, consumes your organizatio
 You can click **View details** to see the details in a flyout pane. We also identify the most common loop scenarios and provide the recommended actions (if available) to fix the loop.
 
 ![Flyout pane after clicking View details in a mal loop insight in the mail flow dashboard](media/f7e21300-c62f-41ec-853f-4a2775cd8aa7.png)
+
+## See also
+
+For more information about other mail flow insights in the mail flow dashboard, see [Mail flow insights in the Security & Compliance Center](mail-flow-insights.md).

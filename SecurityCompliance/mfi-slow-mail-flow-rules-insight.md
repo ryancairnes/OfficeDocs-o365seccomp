@@ -29,3 +29,7 @@ The insight will help you to identify and fine-tune mail flow rules to help redu
 When you click **View details**, a flyout pane appears where you can review the rule. In the flyout pane, can also click **view sample messages** to see what kind of messages are impacted by the rule.
 
 ![Flyout pane after clicking View details in a slow mail flow rules insight in the mail flow dashboard](media/2cbd43b7-1f21-4338-a70c-7b50de5c69cd.png)
+
+## See also
+
+For more information about other mail flow insights in the mail flow dashboard, see [Mail flow insights in the Security & Compliance Center](mail-flow-insights.md).

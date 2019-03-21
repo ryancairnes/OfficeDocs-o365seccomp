@@ -64,3 +64,7 @@ Even if the queued message volume hasn't exceeded the threshold, you can still u
 When you click the number of queued messages in **Queues**, the queue details and guidance for how to fix the issue will appear in a flyout pane (the same flyout that appears after you click **View queue** in the details of a queue alert).
 
 ![Queue details](media/4eb088fe-5dd9-4bf4-b959-c1bb2545c515.png)
+
+## See also
+
+For more information about other mail flow insights in the mail flow dashboard, see [Mail flow insights in the Security & Compliance Center](mail-flow-insights.md).

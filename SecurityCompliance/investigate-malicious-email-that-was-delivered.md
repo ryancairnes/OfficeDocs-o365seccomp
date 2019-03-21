@@ -1,5 +1,5 @@
 ---
-title: "Find and investigate malicious email that was delivered (Office 365 Threat Intelligence)"
+title: "Find and investigate malicious email that was delivered (Office 365 Threat investigation and response"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
@@ -32,7 +32,7 @@ Make sure that the following requirements are met:
     
 - [Office 365 audit logging](turn-audit-log-search-on-or-off.md) is turned on for your organization. 
     
-- Your organization has policies defined for anti-spam, anti-malware, anti-phishing, and so on. See [Threat management in the Office 365 Security &amp; Compliance Center](threat-management.md).
+- Your organization has policies defined for anti-spam, anti-malware, anti-phishing, and so on. See [Office 365 Advanced Threat Protection](office-365-atp.md).
     
 - You are an Office 365 global administrator, or you have either the Security Administrator or the Search and Purge role assigned in the Security &amp; Compliance Center. See [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md).
     
