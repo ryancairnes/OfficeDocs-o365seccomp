@@ -8,6 +8,7 @@ ms.topic: article
 ms.collection: 
 - o365_security_incident_response
 - M365-security-compliance
+ms.custom: TopSMBIssues
 ms.service: O365-seccomp
 localization_priority: Priority
 search.appverid:

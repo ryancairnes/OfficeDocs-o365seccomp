@@ -3,7 +3,7 @@ title: "Secure SharePoint Online sites and files"
 ms.author: bcarter
 author: brendacarter
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 
 ms.audience: ITPro
 ms.topic: conceptual
 ms.service: O365-seccomp
@@ -42,11 +42,9 @@ For more information about these tiers and capabilities recommended for each tie
     
 ## Capability overview
 
-Recommendations for SharePoint Online team sites draw on a variety of Office 365 capabilities. For highly confidential sites, Azure Information Protection is recommended. This is included in Enterprise Mobility + Security (EMS). 
-  
-The following illustration shows the recommended configurations for four SharePoint Online team sites.
+Recommendations for SharePoint Online team sites draw on a variety of Microsoft 365 capabilities. The following illustration shows the recommended configurations for four SharePoint Online team sites.
 
-![Recommended configuration for SharePoint sites](Media/SharePoint-site-configuration-v2.png)
+![Recommended configuration for SharePoint sites](media/SharePoint-site-configurations.png)
 
 As illustrated:
   
@@ -54,11 +52,11 @@ As illustrated:
     
 - Sites for sensitive and highly confidential protection are private sites with access limited only to members of specific groups.
     
-- Office 365 labels provide a way to classify data with a needed protection level. Each of the SharePoint Online team sites are configured to automatically label files in document libraries with a default label for the site. Corresponding to the four site configurations, the labels in this example are Internal Public, Private, Sensitive, and Highly Confidential. Users can change the labels, but this configuration ensures all files receive a default label.
+- [Retention labels](labels.md) provide a way to classify files within the sites. Each of the SharePoint Online team sites are configured to automatically label files in document libraries with a default retention label for the site. Corresponding to the four site configurations, the labels in this example are Internal Public, Private, Sensitive, and Highly Confidential. Users can change the labels, but this configuration ensures all files receive a default label.
     
-- Data loss prevention (DLP) policies are configured for the Sensitive and Highly Confidential Office 365 labels to either warn or prevent users when they attempt to send these types of files outside the organization.
+- [Data loss prevention](data-loss-prevention-policies.md) (DLP) policies are configured for the Sensitive and Highly Confidential retention labels to either warn or prevent users when they attempt to send these types of files outside the organization.
     
-- If needed for your scenario, you can use Azure Information Protection to encrypt and grants permissions to files that are highly confidential. This is not recommended for all customers.
+- If needed for your scenario, you can use [sensitivity labels](sensitivity-labels.md) to protect highly confidential files with encryption and permissions. For Azure Information Protection customers, you can use your Azure Information Protection labels in the Microsoft 365 compliance center, and your labels will be synced with the Azure portal in case you choose to perform additional or advanced configuration. Azure Information Protection labels and Office 365 sensitivity labels are fully compatible with each other. This means, for example, if you have content labeled by Azure Information Protection, you won’t need to reclassify or relabel your content.Not all customers need this level of protection. 
     
 ## Tenant-wide settings for SharePoint Online and OneDrive for Business
 
@@ -98,9 +96,9 @@ If you don't allow external sharing, users with a business need will find altern
   
 ### Device access settings
 
-Device access settings for SharePoint Online and OneDrive for Business let you determine whether access is limited to browser only (files can't be downloaded) or if access is blocked. These settings are currently in First Release and apply tenant-wide. Coming soon is the ability to configure device access policies at the site level. For this solution, we recommend not using device access settings that apply tenant-wide.
-  
-To use device access settings while these are in first release: [Set up the Standard or First Release Options in Office 365](https://support.office.com/article/Set-up-the-Standard-or-First-Release-options-in-Office-365-3B3ADFA4-1777-4FF0-B606-FB8732101F47).
+Device access settings for SharePoint Online and OneDrive for Business let you determine whether access is limited to browser only (files can't be downloaded) or if access is blocked. For more information, see [Control access from unmanaged devices](https://docs.microsoft.com/en-us/sharepoint/control-access-from-unmanaged-devices). 
+
+To use device access settings with recommended conditional access policies in Azure Active Directory, see [Policy recommendations for securing SharePoint sites and files](https://docs.microsoft.com/en-us/microsoft-365/enterprise/sharepoint-file-access-policies).
   
 ### OneDrive for Business
 
@@ -118,27 +116,27 @@ The following table summarizes the configuration for each of the team sites desc
 |Who has access?  <br/> |Everybody in the organization, including B2B users and guest users.  <br/> |Members of the site only. Others can request access.  <br/> |Members of the site only. Others can request access.  <br/> |Members only. Others cannot request access.  <br/> |
 |Site-level sharing controls  <br/> |Sharing allowed with anybody. Default settings.  <br/> |Sharing allowed with anybody. Default settings.  <br/> |Members cannot share access to the site.  <br/> Non-members can request access to the site, but these requests need to be addressed by a site administrator.  <br/> |Members cannot share access to the site.  <br/> Non-members cannot request access to the site or contents.  <br/> |
 |Site-level device access controls  <br/> |No additional controls.  <br/> |No additional controls.  <br/> |Site-level controls are coming soon, which prevents users from downloading files to non-compliant or non-domain joined devices. This allows browser-only access from all other devices.  <br/> |Site-level controls are coming soon, which blocks downloading of files to non-compliant or non-domain joined devices.  <br/> |
-|Office 365 labels  <br/> |Internal Public  <br/> |Private  <br/> |Sensitive  <br/> |Highly Confidential  <br/> |
+|Retention labels  <br/> |Internal Public  <br/> |Private  <br/> |Sensitive  <br/> |Highly Confidential  <br/> |
 |DLP policies  <br/> |||Warn users when sending files that are labeled as Sensitive outside the organization.  <br/> To block external sharing of sensitive data types, such as credit card numbers or other personal data, you can configure additional DLP policies for these data types (including custom data types you configure).  <br/> |Block users from sending files that are labeled as highly confidential outside organization. Allow users to override this by providing justification, including who they are sharing the file with.  <br/> |
-|Azure Information Protection  <br/> ||||Use Azure Information Protection to automatically encrypt and grant permissions to files. This protection travels with the files in case they are leaked.  <br/> Office 365 cannot read files encrypted with Azure Information Protection. Additionally, DLP policies can only work with the metadata (including labels) but not the contents of these files (such as credit card numbers within files).  <br/> |
+|Sensitivity labels  <br/> ||||Use sensitivity labels to automatically encrypt and grant permissions to files. Sensitivity labels use Azure Information Protection to encrypt files. This protection travels with the files in case they are leaked.  <br/> Office 365 cannot read files encrypted with Azure Information Protection. Additionally, DLP policies can only work with the metadata (including labels) but not the contents of these files (such as credit card numbers within files).  <br/> |
    
 For the steps to deploy the four different types of SharePoint Online team sites in this solution, see [Deploy SharePoint Online sites for three tiers of protection](deploy-sharepoint-online-sites-for-three-tiers-of-protection.md). For the steps to create a dev/test environment, see [Secure SharePoint Online sites in a dev/test environment](secure-sharepoint-online-sites-in-a-dev-test-environment.md). 
   
-## Office 365 classification and labels
+## Office 365 retention labels
 
-Using Office 365 labels is recommended for environments with sensitive data. After you configure and publish Office 365 labels:
+Using retention labels is recommended for environments with sensitive data. After you configure and publish retention labels:
   
 - You can apply a default label to a document library in a SharePoint Online team site, so that all documents in that library get the default label. 
     
 - You can apply labels to content automatically if it matches specific conditions.
     
-- You can apply DLP policies that are based on Office 365 labels.
+- You can apply DLP policies that are based on retention labels.
     
 - People in your organization can apply a label manually to content in Outlook on the web, Outlook 2010 and later, OneDrive for Business, SharePoint Online, and Office 365 groups. Users often know best what type of content they're working with, so they can classify it and have the appropriate DLP policy applied.
     
 ![Recommended configuration for SharePoint sites](media/7fed0126-ab4a-4480-922c-681970642339.png)
   
-As illustrated, this solution includes creating the following labels:
+As illustrated, this solution includes creating the following retention labels:
   
 - Highly Confidential
     
@@ -150,21 +148,16 @@ As illustrated, this solution includes creating the following labels:
     
 These labels are mapped to the recommended sites in the illustrations and charts earlier in this article. This solution recommends configuring DLP policies to help prevent the leakage of files labeled as Sensitive and Highly Confidential.
   
-For the steps to configure Office 365 labels and DLP policies in this solution, see [Protect SharePoint Online files with Office 365 labels and DLP](protect-sharepoint-online-files-with-office-365-labels-and-dlp.md).
+For the steps to configure retention labels and DLP policies in this solution, see [Protect SharePoint Online files with retention labels and DLP](protect-sharepoint-online-files-with-office-365-labels-and-dlp.md).
   
-## Azure Information Protection
+## Sensitivity labels 
 
-If warranted for your security scenario, you can use Azure Information Protection to apply labels and protections that follow the files wherever they go. Azure Information Protection labels are different than Office 365 labels. For this solution, we recommend you use a scoped Azure Information Protection policy and a sub-label of the Highly Confidential label to encrypt and grant permissions to files that need to be protected with the highest level of security. 
+If warranted for your security scenario, you can use sensitivity labels to apply protections that follow the files wherever they go. Sensitivity labels in the Microsoft 365 compliance center and Azure Information Protection labels are the same. For this solution, we recommend you use a scoped Azure Information Protection policy and a sub-label of the Highly Confidential label to encrypt and grant permissions to files that need to be protected with the highest level of security. 
   
-Be aware that when Azure Information Protection encryption is applied to files stored in Office 365, the service cannot process the contents of these files. Co-authoring, eDiscovery, search, Delve, and other collaborative features do not work. DLP policies can only work with the metadata (including Office 365 labels) but not the contents of these files (such as credit card numbers within files).
-  
-![Azure Information Protection is configured in Azure and labels show up in the client toolbar](media/1266a7a0-5078-49ab-bbf1-b0cf41451f62.png)
-  
-As illustrated:
-  
-- You configure Azure Information Protection policies and labels in the Microsoft Azure portal. Configuring a sub-label of a scoped Azure Information Protection policy is recommended.
-    
-- Azure Information Protection labels show up as an **Information protection** bar in Office applications.
+Be aware that when Azure Information Protection encryption is applied to files stored in Office 365, the service cannot process the contents of these files. Co-authoring, eDiscovery, search, Delve, and other collaborative features do not work. DLP policies can only work with the metadata (including retention labels) but not the contents of these files (such as credit card numbers within files).
+
+For more information, see [Overview of sensitivity labels](sensitivity-labels.md).
+
     
 ### Adding permissions for external users
 

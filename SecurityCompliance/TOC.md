@@ -3,13 +3,15 @@
 ## [Configure your Office 365 tenant for increased security](tenant-wide-setup-for-increased-security.md)
 ## [Go to the Security & Compliance Center](go-to-the-securitycompliance-center.md)
 ## [Get ready for the new Microsoft 365 security center and Microsoft 365 compliance center](microsoft-security-and-compliance.md)
+## [Microsoft 365 security center](overview-security-center.md)
+### [Microsoft Secure Score](microsoft-secure-score.md)
 ## [Office 365 Secure Score](office-365-secure-score.md)
-## [Microsoft Secure Score](microsoft-secure-score.md)
 ## [Permissions in the Security & Compliance Center](permissions-in-the-security-and-compliance-center.md)
 ## [Give users access to the Security & Compliance Center](grant-access-to-the-security-and-compliance-center.md)
 ## [Security Dashboard overview](security-dashboard.md)
 ## [Use your free Azure Active Directory subscription](use-your-free-azure-ad-subscription-in-office-365.md)
 ## [Plan for security and compliance in Office 365](plan-for-security-and-compliance.md)
+
 # Protect access to data and services
 ## [Protect access to data and services in Office 365](protect-access-to-data-and-services.md)
 
@@ -88,6 +90,8 @@
 ### [Watch videos from the Microsoft Data Governance team](https://go.microsoft.com/fwlink/?linkid=867039)
 
 # [Protect against threats](protect-against-threats.md)
+## [Hunt in Microsoft 365](hunting.md)
+## [Understand latest attack campaigns with threat analytics](latest-attack-campaigns.md)
 ## [Quick Start Guide: Set up Office 365 Advanced Threat Protection](checklist-atp-setup.md)
 ## [Anti-spam and anti-malware protection](anti-spam-and-anti-malware-protection.md)
 ### [Overview of EOP](videos-for-getting-started-with-protecting-your-email.md)
@@ -322,6 +326,7 @@
 #### [Limits in Advanced eDiscovery (Preview)](compliance20/limits-ediscovery20.md)
 #### [Supported file types](compliance20/supported-filetypes-ediscovery20.md)
 #### [Document metadata fields](compliance20/document-metadata-fields.md)
+#### [Troubleshoot AzCopy](compliance20/troubleshooting-azcopy.md)
 
 ## [Office 365 Advanced eDiscovery](office-365-advanced-ediscovery.md)
 ### [Getting started in Advanced eDiscovery](quick-setup-for-advanced-ediscovery.md)
@@ -379,6 +384,11 @@
 ## [Search for eDiscovery activities in the audit log](search-for-ediscovery-activities-in-the-audit-log.md)
 
 # Monitor security and compliance
+## [Microsoft 365 security center monitoring and reporting](monitoring-and-reporting.md)
+### [Monitor and report identities in Microsoft 365 security](monitor-and-report-identities.md)
+### [Monitor data in Microsoft 365 security](monitor-data.md)
+### [Monitor devices in Microsoft 365 security](monitor-devices.md)
+### [Monitor apps in Microsoft 365 security](monitor-apps.md)
 ## [Alert policies](alert-policies.md)
 ## [Smart reports and insights in the Security & Compliance Center](reports-and-insights-in-security-and-compliance.md)
 ### [View email security reports in the Security & Compliance Center](view-email-security-reports.md)

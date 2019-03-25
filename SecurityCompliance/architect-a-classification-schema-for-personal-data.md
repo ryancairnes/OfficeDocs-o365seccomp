@@ -3,7 +3,7 @@ title: "Architect a classification schema for personal data"
 ms.author: bcarter
 author: brendacarter
 manager: laurawi
-ms.date: 2/7/2018
+ms.date: 
 ms.audience: ITPro
 ms.topic: overview
 ms.collection: 
@@ -39,13 +39,13 @@ Choose one of the following options.
 
 -   In the future these will work with Cloud App Security so you can detect sensitive information in other SaaS apps.
 
-### Option 2: Use sensitive information types + Office labels
+### Option 2: Use sensitive information types + retention labels
 
 -   You’ll need sensitive information types to automatically apply labels to personal data that is subject to GDPR, so these are a prerequisite.
 
--   Using Office labels allows you to include personal data that is subject to GDPR into a broader data governance plan for your organization.
+-   Using retention labels allows you to include personal data that is subject to GDPR into a broader data governance plan for your organization.
 
--   Later, Office labels will converge with Azure Information Protection labels into a unified classification and labeling engine.
+
 
 ## Develop a label schema that includes personal data
 

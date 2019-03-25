@@ -35,6 +35,14 @@ Using the upload Non-Office 365 feature as described in this procedure requires 
 
 - All the files for uploading gathered into folders where there is one folder per custodian and the folders' name is in this format *alias@domainname* . The *alias@domainname* must be users Office 365 alias and domain. You can collect all the *alias@domainname* folders into a root folder. The root folder can only contain the *alias@domainname* folders, there must be no loose files in the root folder.
 
+   The folder structure for the non-Office 365 data you plan to upload should look something like the following:
+
+   - c:\nonO365\abraham.mcmahon@contoso.com
+   - c:\nonO365\jewell.gordon@contoso.com
+   - c:\nonO365\staci.gonzalez@contoso.com
+
+   Where abraham.mcmahon@contoso.com, jewell.gordon@contoso.com, and staci.gonzalez@contoso.com are SMTP addresses of custodians in the case.
+
 - An account that is either an eDiscovery Manager or eDiscovery Administrator
 Microsoft Azure Storage Tools installed on a computer that has access to the non-Office 365 content folder structure.
 
@@ -62,6 +70,9 @@ Microsoft Azure Storage Tools installed on a computer that has access to the non
 ![Non-Office 365 Import - Upload files](../media/3ea53b5d-7f9b-4dfc-ba63-90a38c14d41a.png)
 
 ![Non-Office 365 Import - AzCopy](../media/504e2dbe-f36f-4f36-9b08-04aea85d8250.png)
+
+> [!NOTE]
+> If the supplied AzCopy command fails, refer to [Troubleshoot AzCopy in Advanced eDiscovery (Preview)](troubleshooting-azcopy.md)
 
 6. Finally, return back to the Security & Compliance and click the **Next: Process files** button.  This will initiate processing, text extraction and indexing of the uploaded files.  You can track the progress of processing here or in the **Jobs** tab.  Once completed, the new files will be available in the working set.  Once processing is complete, you can dismiss the wizard.
 
