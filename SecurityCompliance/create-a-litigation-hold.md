@@ -1,5 +1,5 @@
 ---
-title: "Create a Litigation Hold in Office 365"
+title: "Create a Litigation Hold"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -12,7 +12,7 @@ search.appverid: MET150
 ms.assetid: 39db1659-0b12-4243-a21c-2614512dcb44
 ---
 
-# Create a Litigation Hold in Office 365
+# Create a Litigation Hold
 
 You can place a mailbox on Litigation Hold to retain all mailbox content, including deleted items and the original versions of modified items. When you place a user mailbox on Litigation Hold, content in the user's archive mailbox (if it's enabled) is also retained. When you create a hold, you can specify a hold duration (also called a *time-based hold*) so that deleted and modified items are retained for a specified period and then permanently deleted from the mailbox. Or you can just retain content indefinitely (called an *infinite hold*) or until the Litigation Hold is removed. If you do specify a hold duration period, it's calculated from the date a message is received or a mailbox item is created. 
   
@@ -31,28 +31,56 @@ Here's what happens when you create a Litigation Hold.
 - To place an Exchange Online mailbox on Litigation Hold, it must be assigned an Exchange Online Plan 2 license. If a mailbox is assigned an Exchange Online Plan 1 license, you would have to assign it a separate Exchange Online Archiving license to place it on hold.
     
 
-## Place a mailbox on Litigation Hold in the Office 365 admin center
+## Place a mailbox on Litigation Hold
 
-Here are the steps to place a maibox on Litigation Hold using the Office 365 admin center.
+Here are the steps to place a mailbox on Litigation Hold using the Exchange admin center.
 
-1. Go to https://portal.office.com/adminportal/home and sign in using your global administrator account.
-2. Click **Users** > **Active users** in the left navigation pane.
-3. Select the user whose mailbox you want to place on Litigation Hold.
-4. On the fly-out page, click **Mail settings**, and then click **Edit** next to **Litigation hold**.
-5. On the **Litigation hold** page, click the toggle to turn on Litigation Hold and complete the following optional settings that are displayed:
- 
-    ![O365_LitigationHold1.png](media/O365-LitigationHold1.png)
+1. Go to [https://outlook.office.com/ecp](https://outlook.office.com/ecp) and sign in using your global administrator account.
 
-    a. **Hold duration (days)** - Use this box to create a time-based hold and specify how long mailbox items are held when the mailbox is placed on Litigation Hold. The duration is calculated from the date a mailbox item is received or created. If you leave this box blank, items are held indefinitely or until the hold is removed. Use days to specify the duration.
+2. Click **Recipients > Mailboxes** in the left navigation pane.
+
+3. Select the mailbox that you want to place on Litigation Hold, and then click **Edit**.
+
+4. On the mailbox properties page, click **Mailbox features**.
     
-    b. **Note** - Use this box to inform the user their mailbox is on Litigation Hold. The note will appear on the Account Information page in the user's mailbox if they're using Outlook 2010 or later. To access this page, users can click **File** in Outlook.
-     
-    c. **Web page** - Use this box to direct the user to a website for more information about Litigation Hold. This URL appears on the Account Information page in the user's mailbox if they are using Outlook 2010 or later. To access this page, users can click **File** in Outlook.
- 
-6. Click **Save** to create the Litigation Hold.
+5. Under **Litigation hold: Disabled**, click **Enable** to place the mailbox on Litigation Hold.
+    
+6. On the **Litigation hold** page, enter the following optional information: 
+    
+    - **Litigation hold duration (days)** - Use this box to create a time-based hold and specify how long mailbox items are held when the mailbox is placed on Litigation Hold. The duration is calculated from the date a mailbox item is received or created. When the hold duration expires for a specific item, that item will no longer be preserved. If you leave this box blank, items are preserved indefinitely or until the hold is removed. Use days to specify the duration.
+    
+    - **Note** - Use this box to inform the user their mailbox is on Litigation Hold. The note will appear on the Account Information page in the user's mailbox if they're using Outlook 2010 or later. To access this page, users can click **File** in Outlook.
+    
+    - **URL** - Use this box to direct the user to a website for more information about Litigation Hold. This URL appears on the Account Information page in the user's mailbox if they are using Outlook 2010 or later. To access this page, users can click **File** in Outlook..
 
-After you create the hold, the mail settings on the fly-out page shows that Litigation Hold is turned on for the selected user.
+7. Click **Save** on the **Litigation hold** page, and then click **Save** on the mailbox properties page.
 
-![O365_LitigationHold2.png](media/O365-LitigationHold2.png)
+### Create a Litigation Hold using PowerShell
 
-For more information about creating and managing Litigation Holds and using Exchange Online PowerShell to bulk-create Litigation Holds, see [Place a mailbox on Litigation Hold](https://docs.microsoft.com/office365/SecurityCompliance/place-a-mailbox-on-litigation-hold).
+You can also create a Litigation Hold by running the following command in [Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell):
+
+```
+Set-Mailbox <username> -LitigationHoldEnabled $true
+```
+
+The previous command preserves items indefinitely because the hold duration isn't specified. To created a time-based hold, using the following command:
+
+```
+Set-Mailbox <username> -LitigationHoldEnabled $true -LitigationHoldDuration <number of days>
+```
+
+For more information, see [Set-Mailbox](https://docs.microsoft.com/en-us/powershell/module/exchange/mailboxes/set-mailbox).
+
+## How does Litigation Hold work?
+
+In the normal deleted item workflow, a mailbox item is moved to the Deletions subfolder in the Recoverable Items folder when a user permanently deletes it (Shift + Delete) or deletes it from the Deleted Items folder. A deletion policy (which is a retention tag configured with a Delete retention action) also moves items to the Deletions subfolder when the retention period expires. When a user purges an item in the Recoverable Items folder or when the deleted item retention period expires for an item, it's moved to the Purges subfolder in the Recoverable Items folder and marked for permanent deletion. It will be purged from Exchange the next time the mailbox is processed by the Managed Folder Assistant (MFA).
+
+When a mailbox is placed on Litigation Hold, items in the Purges subfolder are preserved for the hold duration specified by the Litigation Hold. The hold duration is calculated from the original date an item was received or created, and defines how long items in the Purges subfolder are held. When the hold duration expires for an item in the Purges subfolder, the item is marked for permanent deletion and will be purged from Exchange the next time the mailbox is processed by the MFA. If an indefinite hold is placed on a mailbox, items will never be purged from the Purges subfolder.
+
+The following illustration shows the subfolders in the Recoverable Items folders and the hold workflow process.
+
+![Litigation Hold life cycle](media/LitigationHoldLifeCycle.png)
+
+> [!NOTE]
+> If a hold associated with an eDiscovery case is placed on a mailbox, purged items are moved from the Deletions subfolder to the DiscoveryHolds subfolder and are preserved until the mailbox is released from the eDiscovery hold.
+  

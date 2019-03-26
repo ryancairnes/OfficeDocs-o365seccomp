@@ -30,7 +30,10 @@ You can use the Alerts page in Office 365 Cloud App Security to view potential i
 1. Go to the Cloud App Security portal ([https://portal.cloudappsecurity.com](https://portal.cloudappsecurity.com)) and sign in.
   
 2. In the navigation bar across the top of the screen, choose **Alerts**.<br/>![On the Alerts page, you can see alerts that were triggered and any actions taken.](media/3b53d4c9-4b13-435d-8547-8c0f9ae6b914.png)
-  
+ 
+> [!NOTE]
+> Cloud App Security alerts are also visible in the Office 365 Security & Compliance Center (go to **Alerts** > **View alerts**. Currently, however, you must resolve these alerts in both the Cloud App Security portal and the Office 365 Security & Compliance Center. To learn more, see [Viewing Cloud App Security alerts](alert-policies.md#viewing-cloud-app-security-alerts).) 
+ 
 ## Review and handle alerts
 
 Alerts help you identify activities in your Office 365 cloud environment that you might want to investigate further. You might also decide to create new policies or edit existing policies based on the alerts you see. For example, if you see an administrator logging on from a strange location, you may decide to set up a policy that prevents administrators from signing in to Office 365 from certain locations.

@@ -522,8 +522,8 @@
 ### [Reporting and message trace](eop/reporting-and-message-trace-in-exchange-online-protection.md)
 ### [Search for and delete messages](search-for-and-delete-messagesadmin-help.md)
 ### [Mail flow intelligence in Office 365](mail-flow-intelligence-in-office-365.md)
-## [Mailbox holds](place-a-mailbox-on-litigation-hold.md)
-### [Place a mailbox on Litigation Hold](place-a-mailbox-on-litigation-hold.md)
+## Mailbox holds
+### [Create a Litigation Hold](create-a-litigation-hold.md)
 ### [Preserve Bcc and expanded distribution group recipients for eDiscovery](preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery.md)
 ### [Put an In-Place Hold on a soft-deleted mailbox](put-an-in-place-hold-on-a-soft-deleted-mailbox.md)
 ## [Quarantine](quarantine.md)

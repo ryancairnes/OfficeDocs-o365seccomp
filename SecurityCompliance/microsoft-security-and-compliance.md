@@ -3,7 +3,7 @@ title: "Get ready for Microsoft 365 security and compliance"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 03/14/2019
+ms.date: 03/26/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -15,7 +15,7 @@ description: "Get ready for the all-new Microsoft 365 security center and compli
 
 # Get ready for the new Microsoft 365 security center and Microsoft 365 compliance center
 
-**We are pleased to announce the all-new [Microsoft 365 security center](#microsoft-365-security-center) and [Microsoft 365 compliance center](#microsoft-365-compliance-center), rolling out starting at the end of January 2019 and through March 2019**. Read this article to get an overview of what's coming, [what to expect](#what-to-expect), and [required licenses and permissions needed](#required-licenses-and-permissions).
+**We are pleased to announce the all-new [Microsoft 365 security center](#microsoft-365-security-center) and [Microsoft 365 compliance center](#microsoft-365-compliance-center)**. Read this article to get an overview of what's coming, [what to expect](#what-to-expect), and [required licenses and permissions needed](#required-licenses-and-permissions).
 
 ## Microsoft 365 security center
 
@@ -45,9 +45,9 @@ Once the Microsoft 365 compliance center is enabled for your tenant, you will be
 
 ## What to expect
 
-### Coming soon!
+### Rolling out now!
 
-The new Microsoft 365 security center and the new Microsoft 365 compliance center are rolling out beginning late January and through March 2019. You should have access to the new Microsoft 365 security center and Microsoft 365 compliance center within this timeframe.
+The new Microsoft 365 security center and the new Microsoft 365 compliance center began rolling out earlier this year. If you don't have this already, you should have access to the new Microsoft 365 security center and Microsoft 365 compliance center very soon.
 
 ### Easy access!
 
