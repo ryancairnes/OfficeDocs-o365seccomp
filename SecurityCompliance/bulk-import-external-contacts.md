@@ -29,9 +29,9 @@ Does your company have lots of existing business contacts that you want to inclu
 
 After you complete these steps to import contacts, you can perform these additional tasks:
   
-- [Add more external contacts](bulk-import-external-contacts.md#AddMore)
+- [Add more external contacts](#add-more-external-contacts)
   
-- [Hide external contacts from the shared address book](bulk-import-external-contacts.md#Hide)
+- [Hide external contacts from the shared address book](#hide-external-contacts-from-the-shared-address-book)
   
 ## Step 1: Create a CSV file that contains information about the external contacts
 

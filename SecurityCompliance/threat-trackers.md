@@ -33,7 +33,7 @@ Most tracker pages include trending numbers that are updated periodically, widge
   
 ![Example of campaign information in Explorer](media/e426f220-fdcb-4dd9-99a2-db97dbcf71d5.png)
   
-Trackers are just a few of the many great features you get with [Office 365 Advanced Threat Protection Plan 2](office-365-ti.md). Threat Trackers include [Noteworthy trackers](threat-trackers.md#notey), [Trending trackers](threat-trackers.md#trending), [Tracked queries](threat-trackers.md#trackedq), and [Saved queries](threat-trackers.md#savedq).
+Trackers are just a few of the many great features you get with [Office 365 Advanced Threat Protection Plan 2](office-365-ti.md). Threat Trackers include [Noteworth trackers](#noteworthy-trackers), [Trending trackers](#trending-trackers), [Tracked queries](#tracked-queries), and [Saved queries](#saved-queries).
   
 To view and use your Threat Trackers for your organization, go to the Security &amp; Compliance Center ([https://protection.office.com](https://protection.office.com)) and choose **Threat management** \> **Threat tracker**.
   

@@ -32,7 +32,7 @@ Threat investigation and response capabilities help drive insights into threats 
   
 ## Get acquainted with the Threat dashboard, Explorer, and Incidents
 
-These threat investigation and response capabilities surface in the Security &amp; Compliance Center, as a set of tools and response workflows, including the [Threat dashboard](get-started-with-ti.md#dashboard), [Threat Explorer](get-started-with-ti.md#explorer), [Incidents](get-started-with-ti.md#incidents), [Attack Simulator](attack-simulator.md), and Automated Investigations & Response.
+These threat investigation and response capabilities surface in the Security &amp; Compliance Center, as a set of tools and response workflows, including the [threat dashboard](#threat-dashboard), [Threat Explorer](#threat-explorer), [Incidents](get-started-with-ti.md#incidents), [Attack Simulator](attack-simulator.md), and Automated Investigations & Response.
   
 ### Threat dashboard
 

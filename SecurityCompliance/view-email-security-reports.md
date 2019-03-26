@@ -24,24 +24,15 @@ A variety of reports are available in the [Security &amp; Compliance Center](htt
 ![Dashboard where you see how Advanced Threat Protection is working](media/6b213d34-adbb-44af-8549-be9a7e2db087.png)
   
 Your email security reports include the following:
-
 - [Encryption report](#encryption-report) (NEW!)
-  
-- [Threat Protection Status report](view-email-security-reports.md#tps) 
-    
-- [Malware Detections report](view-email-security-reports.md#maldet)
-    
+- [Threat Protection Status report](#threat-protection-status-report) 
+- [Malware Detections report](#malware-detections-report)    
 - [Top Malware report](#top-malware-report)
-    
-- [Top Senders and Recipients report](view-email-security-reports.md#topsenders)
-    
-- [Spoof Mail report](#spoof-mail-report)
-    
+- [Top Senders and Recipients report](#top-senders-and-recipients-report)
+- [Spoof Detections report](#spoof-detections-report)
 - [Spam Detections report](#spam-detections-report)
-    
-- [Sent and received email report](view-email-security-reports.md#sentreceivedemail)
-
-- [User-reported messages report](view-email-security-reports.md#userreported)
+- [Sent and received email report](#sent-and-received-email-report)
+- [User-reported messages report](#user-reported-messages-report)
     
 ## Encryption report
 

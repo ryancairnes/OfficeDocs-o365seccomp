@@ -95,7 +95,7 @@ The conditions now available can determine if:
   
 - Content contains a type of sensitive information.
     
-- Content contains a label. For more information, see the below section [Using a label as a condition in a DLP policy](data-loss-prevention-policies.md#label).
+- Content contains a label. For more information, see the below section [Using a label as a condition in a DLP policy](#using-a-label-as-a-condition-in-a-dlp-policy).
     
 - Content is shared with people outside or inside your organization.
     
