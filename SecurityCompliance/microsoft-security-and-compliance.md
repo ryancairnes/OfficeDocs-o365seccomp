@@ -1,9 +1,9 @@
 ---
-title: "Get ready for Microsoft 365 security and compliance"
+title: "The new Microsoft 365 security center and Microsoft 365 compliance center are now generally available"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 03/26/2019
+ms.date: 03/27/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -13,41 +13,43 @@ localization_priority: Normal
 description: "Get ready for the all-new Microsoft 365 security center and compliance center"
 ---
 
-# Get ready for the new Microsoft 365 security center and Microsoft 365 compliance center
+# The new Microsoft 365 security center and Microsoft 365 compliance center are now generally available
 
-**We are pleased to announce the all-new [Microsoft 365 security center](#microsoft-365-security-center) and [Microsoft 365 compliance center](#microsoft-365-compliance-center)**. Read this article to get an overview of what's coming, [what to expect](#what-to-expect), and [required licenses and permissions needed](#required-licenses-and-permissions).
+**We are pleased to announce that the all-new [Microsoft 365 security center](#microsoft-365-security-center) and [Microsoft 365 compliance center](#microsoft-365-compliance-center)**, are now generally available. Read this article to get an overview of what's new, [what to expect](#what-to-expect), and [required licenses and permissions](#required-licenses-and-permissions).
 
 ## Microsoft 365 security center
 
-Your new Microsoft 365 security center includes a dashboard to help you manage and monitor security across your identities, data, devices, apps, and infrastructure. You will also have easy access to your all-new Microsoft Secure Score, new device threat reports, new identity threat reports, and your Cloud App Security reports. 
+Your new [Microsoft 365 security center](overview-security-center.md) includes a dashboard to help you manage and monitor security across your identities, data, devices, apps, and infrastructure. You will also have easy access to your all-new [Microsoft Secure Score](microsoft-secure-score.md), new device threat reports, new identity threat reports, and your Cloud App Security reports. 
 
-![New Microsoft 365 security center](media/m365-security-center.png)
+[![New Microsoft 365 security center](media/m365-security-center.png)](overview-security-center.md)
 
-When you use the Microsoft 365 security center for the first time, you'll see information across the top of the screen to help you get started. You'll also see how to navigate easily to the security features you're most interested in exploring.
+When you use the Microsoft 365 security center for the first time, you'll see information across the top of the screen to help you get started. You'll also see how to navigate easily to the security features you're most interested in exploring. To learn more, see [Overview of the Microsoft 365 security center](overview-security-center.md).
 
-Once the Microsoft 365 security center is enabled for your tenant, you will be able to access it at [https://security.microsoft.com](https://security.microsoft.com). 
+You will be able to access the Microsoft 365 security center at [https://security.microsoft.com](https://security.microsoft.com). 
 
 > [!NOTE]
 > You must be assigned a valid Azure Active Directory role to access the Microsoft 365 security center. To learn more, see the [Required licenses and permissions](#required-licenses-and-permissions) section (in this article).
 
 ## Microsoft 365 compliance center
 
-Your new Microsoft 365 compliance center provides you with visibility into Microsoft Compliance Manager, which reflects your overall compliance posture and gives you recommended actions to help you configure settings to meet complex compliance obligations. You’ll have easy access to sensitivity and retention labels and policies, data loss prevention (DLP), data governance, eDiscovery, data subject requests (DSRs), case management, and Cloud App Security. Additionally, you can gain actionable insights and leverage intelligent automation to reduce your compliance risks and safeguard your digital estate. 
+Your new [Microsoft 365 compliance center](microsoft-365-compliance-center.md) provides you with visibility into Microsoft Compliance Manager, which reflects your overall compliance posture and gives you recommended actions to help you configure settings to meet complex compliance obligations. 
 
-![Microsoft 365 compliance center](media/m365-compliance-center.png)
+You’ll have easy access to sensitivity and retention labels and policies, data loss prevention (DLP), data governance, eDiscovery, data subject requests (DSRs), case management, and Cloud App Security. Additionally, you can gain actionable insights and leverage intelligent automation to reduce your compliance risks and safeguard your digital estate. 
 
-When you use the Microsoft 365 compliance center for the first time, you'll see information across the top of the screen to help you get started. You'll see how to navigate easily to the compliance features you're most interested in exploring.
+[![Microsoft 365 compliance center](media/m365-compliance-center.png)](microsoft-365-compliance-center.md)
 
-Once the Microsoft 365 compliance center is enabled for your tenant, you will be to access it at [https://compliance.microsoft.com](https://compliance.microsoft.com).  
+When you use the Microsoft 365 compliance center for the first time, you'll see information across the top of the screen to help you get started. You'll see how to navigate easily to the compliance features you're most interested in exploring. To learn more, see [Welcome to your all-new Microsoft 365 compliance center](microsoft-365-compliance-center.md).
+
+You will be to access the Microsoft 365 compliance center at [https://compliance.microsoft.com](https://compliance.microsoft.com).  
 
 > [!NOTE]
 > You must be assigned a valid Azure Active Directory role to access the Microsoft 365 compliance center. To learn more, see the [Required licenses and permissions](#required-licenses-and-permissions) section (in this article).
 
 ## What to expect
 
-### Rolling out now!
+### General availability!
 
-The new Microsoft 365 security center and the new Microsoft 365 compliance center began rolling out earlier this year. If you don't have this already, you should have access to the new Microsoft 365 security center and Microsoft 365 compliance center very soon.
+The new Microsoft 365 security center and the new Microsoft 365 compliance center are now generally available at the end of March 2019. If you don't have this already, you should have access to the new Microsoft 365 security center and Microsoft 365 compliance center very soon.
 
 ### Easy access!
 
@@ -73,20 +75,17 @@ To get the new Microsoft 365 security center and Microsoft 365 compliance center
 
 ### Roles and permissions
 
-Users must be assigned the Global Administrator, Compliance Administrator, Security Administrator, or Security Reader role in Azure Active Directory to access the new Microsoft 365 security center or Microsoft 365 compliance center.
+Users must be assigned the Global Administrator, Compliance Administrator, Compliance Data Administrator, Security Administrator, Security Operator, or Security Reader role in Azure Active Directory to access the new Microsoft 365 security center or Microsoft 365 compliance center.
 
 - Global Administrators can access both the security center and the compliance center
 
-- Compliance Administrators can access the compliance center
+- Compliance Administrators and Compliance Data Administrators can access the compliance center
 
-- Security Administrators or Security Readers can access the security center
-
-> [!NOTE]
-> Additional roles, including Security Operator and Compliance Data Administrator, are coming soon.
+- Security Administrators, Security Operators, and Security Readers can access the security center
 
 The following table summarizes who can access various portals across Azure, Office 365, and Windows:
 
-|Portal  |Global<br/>Administrator  |Security <br/>Administrator<br>or<br>Security<br>Reader |Compliance<br/>Administrator  |
+|Portal |Global Administrator |Security Administrator, Security Operator, or Security Reader|Compliance  Administrator or Compliance Data Administrator |
 |---------|---------|---------|---------|
 |[Office 365 Security & Compliance Center](https://protection.office.com) |Yes |Yes  |Yes |
 |[Microsoft 365 security center](https://security.microsoft.com) |Yes  | Yes  | No        |

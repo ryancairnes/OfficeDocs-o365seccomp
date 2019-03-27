@@ -19,6 +19,8 @@ description: "Use the Office 365 Security & Compliance Center to search the unif
 
 # Search the audit log in the Office 365 Security & Compliance Center
 
+## Introduction
+
 Need to find if a user viewed a specific document or purged an item from their mailbox? If so, you can use the Office 365 Security &amp; Compliance Center to search the unified audit log to view user and administrator activity in your Office 365 organization. Why a unified audit log? Because you can search for the following types of user and admin activity in Office 365:
   
 - User activity in SharePoint Online and OneDrive for Business
@@ -52,7 +54,7 @@ Need to find if a user viewed a specific document or purged an item from their m
 
 - Analyst and admin activity in Microsoft Workplace Analytics
 
-- User and admin activity in PowerApps
+- User and admin activity in Microsoft PowerApps
     
    
 ## Before you begin
@@ -291,12 +293,11 @@ Click one of the following links to go to a specific table.
 |:-----|:-----|:-----|
 |[File and page activities](#file-and-page-activities)<br/> |[Folder activities](#folder-activities)<br/> |[Sharing and access request activities](#sharing-and-access-request-activities)<br/> |
 |[Synchronization activities](#synchronization-activities)<br/> |[Site administration activities](#site-administration-activities)<br/> |[Exchange mailbox activities](#exchange-mailbox-activities)<br/> |
-|[Retention policy and label activities](#retention-policy-and-label-activities) <br/>|[Sway activities](#sway-activities) <br/> |[User administration activities](#user-administration-activities) <br/> 
-|[Azure AD group administration activities](#azure-ad-group-administration-activities) <br/> |[Application administration activities](#application-administration-activities) <br/> |[Role administration activities](#role-administration-activities) <br/> |
-|[Directory administration activities](#directory-administration-activities) <br/> |[eDiscovery activities](#ediscovery-activities) <br/> |[Power BI activities](#power-bi-activities) <br/> |
-|[Microsoft Workplace Analytics](#microsoft-workplace-analytics-activities)<br/>|[Microsoft Teams activities](#microsoft-teams-activities) <br/> |[Yammer activities](#yammer-activities) <br/> |
-[Microsoft Flow](#microsoft-flow) <br/> |[Microsoft PowerApps](#microsoft-powerapps)<br/>|[Microsoft Stream](#microsoft-stream) <br/>|
-|[Exchange admin activities](#exchange-admin-audit-log)<br/>
+|[Sway activities](#sway-activities) <br/> |[User administration activities](#user-administration-activities) <br/> |[Azure AD group administration activities](#azure-ad-group-administration-activities) <br/> 
+|[Application administration activities](#application-administration-activities) <br/> |[Role administration activities](#role-administration-activities) <br/> |[Directory administration activities](#directory-administration-activities) <br/>| 
+|[eDiscovery activities](#ediscovery-activities) <br/> |[Power BI activities](#power-bi-activities) <br/> |[Microsoft Workplace Analytics](#microsoft-workplace-analytics-activities)<br/>|
+|[Microsoft Teams activities](#microsoft-teams-activities) <br/> |[Yammer activities](#yammer-activities) <br/> |[Microsoft Flow activities](#microsoft-flow-activities) <br/>|
+|[Microsoft PowerApps activities](#microsoft-powerapps)<br/>|[Microsoft Stream activities](#microsoft-stream-activities) <br/>|[Exchange admin activities](#exchange-admin-audit-log)<br/>|
 ||||
    
   
@@ -463,28 +464,6 @@ The following table lists the activities that can be logged by mailbox audit log
 |Updated message  <br/> |Update  <br/> |A message or its properties was changed.  <br/> |
 |User signed in to mailbox  <br/> |MailboxLogin  <br/> |The user signed in to their mailbox.  <br/> |
 |(none)  <br/> |UpdateInboxRules  <br/> |An inbox rule has been added, removed, or changed. Inbox rules are used to process messages in the user's Inbox based on the specified conditions and take actions when the conditions of a rule are met, such as moving a message to a specified folder or deleting a message.  <br/> To return entries for inbox rule activities, you have to select **Show results for all activities** in the **Activities** list. Use the date range boxes and the **Users** list to narrow the search results.  <br/> |
-||||
-  
-### Retention policy and label activities
-
-The following table describes the activities related to retention policies and retention labels in the Security & Compliance Center. For more information, see:
-
-- [Overview of retention policies](retention-policies.md)
-- [Overview of retention labels](labels.md)
-<br/>
-
-|**Activity**|**Operation**|**Description**|
-|:-----|:-----|:-----|
-| Created retention configuration for a retention policy<br/> |NewRetentionComplianceRule<br/> |Administrator configures the retention settings for a new retention policy. Retention settings include how long items are retained, and what happens to items when the retention period expires (such as deleting items, retaining items, or retaining and then deleting them). This activity also corresponds to running the [New-RetentionComplianceRule](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/new-retentioncompliancerule) cmdlet.<br/>|
-| Created retention label <br/> |NewComplianceTag<br/>  |Administrator creates a new retention label.<br/> |
-| Created retention policy<br/> |NewRetentionCompliancePolicy<br/> |Administrator creates a new retention policy.<br/>  |
-| Deleted retention configuration for a retention policy<br/> | RemoveRetentionComplianceRule<br/>| Administrator deletes the configuration settings of a retention policy. Most likely, this activity is logged when an administrator deletes a retention policy or runs the **Remove-RetentionComplianceRule** cmdlet.<br/> |
-| Deleted retention label <br/> |RemoveComplianceTag<br/>  | Administrator deletes a retention label.<br/>|
-| Deleted retention policy<br/> |RemoveRetentionCompliancePolicy<br/> |Administrator deletes a retention policy. <br/>  |
-| Enable regulatory compliance features<br/> |SetRestrictiveRetentionUI<br/> |Administrator enables regulatory compliance features by running the **Set-RegulatoryComplianceUI** cmdlet. After this cmdlet is run, administrators can lock a retention policy and specify a retention label as a regulatory record by using the Security & Compliance Center UI. Until an organization uses the **Set-RegulatoryComplianceUI** cmdlet to enable these features, locking a retention policy and creating an regulatory retention label can only be accomplished by using PowerShell. <br/>|
-| Updated retention configuration for a retention policy<br/> | SetRetentionComplianceRule<br/>| Administrator changes the retention settings for an existing retention policy. Retention settings include how long items are retained, and what happens to items when the retention period expires (such as deleting items, retaining items, or retaining and then deleting them). This activity also corresponds to running the [Set-RetentionComplianceRule](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/set-retentioncompliancerule) cmdlet. <br/>|
-| Updated retention label <br/> |SetComplianceTag<br/>  | Administrator updates an existing retention label.<br/>|
-| Updated retention policy<br/> |SetRetentionCompliancePolicy <br/>|Administrator updates an existing a retention policy. Updates that trigger this event include adding or excluding content locations that the retention policy is applied to.<br/>|
 ||||
 
 ### Sway activities
@@ -718,9 +697,9 @@ Here are some tips for searching for activity in the Exchange admin audit log:
 
 For more information about the auditing and reporting features available in Office 365, see [Auditing and Reporting in Office 365](office-365-auditing-and-reporting-overview.md). 
 
-**What are different Office 365 Services that are currently audited?**
+**What are different Office 365 services that are currently audited?**
 
-The most used Office 365 Services like Exchange Online, SharePoint, OneDrive, Azure Active Directory, Microsoft Teams, CRM, Advanced Threat Protection, and Data Loss Prevention are audited. See the [Intro](#search-the-audit-log-in-the-office-365-security-amp-compliance-center) section in this article for a complete list.
+The most used Office 365 services like Exchange Online, SharePoint Online, OneDrive for Business, Azure Active Directory, Microsoft Teams, Dynamics 365, Advanced Threat Protection, and Power BI are audited. See the [beginning of this article](search-the-audit-log-in-security-and-compliance.md) for a list of services that are audited.
 
 **What activities are audited by auditing service in Office 365?**
 
@@ -766,15 +745,3 @@ No. We currently have auditing pipeline deployments in the NA (North America), E
 **Is auditing data encrypted?**
 
 Auditing data is stored in Exchange mailboxes (data at rest) in the same region where the auditing pipeline is deployed. This data is not encrypted. However, data in transit is always encrypted. 
-
-
-
-
-
-
-
-
-
-
-
-

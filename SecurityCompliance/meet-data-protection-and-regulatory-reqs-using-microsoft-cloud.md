@@ -380,7 +380,7 @@ Certain regulations require that an organization must be able to delete user his
   
 - [Search for a user](#search-for-a-user)
 
-- [Export a report of account data history](#export-report-of-account-data-history)
+- [Export a report of account data history](#export-a-report-of-account-data-history)
 
 - [Reassign action items](#reassign-action-items)
 
@@ -506,9 +506,9 @@ To add an Assessment to Compliance Manager:
   
 1. In the Compliance Manager dashboard, click ![Add Icon](media/ITPro-EAC-AddIcon.gif) **Add Assessment**. 
     
-2. In the **Add an Assessment** window, you can create a new group to add the Assessment to or you can add it to an existing group (the built-in group is named "Initial Group".) Depending on the option you choose, either type the name of a new group or select an existing group from the drop-down list. For more information, see [Grouping Assessments](meet-data-protection-and-regulatory-reqs-using-microsoft-cloud.md#grouping).
+2. In the **Add an Assessment** window, you can create a new group to add the Assessment to or you can add it to an existing group (the built-in group is named "Initial Group".) Depending on the option you choose, either type the name of a new group or select an existing group from the drop-down list. For more information, see [Grouping Assessments](#grouping-assessments).
     
-    If you create a new group, you also have the option to copy information from an existing group to the new Assessment. That means any information that was added to the Implementation Details and Test Plan and Management Response fields of customer managed controls from Assessments in the group that you're copying from are copied to the same (or related) customer managed controls in the new Assessment. If you're adding a new Assessment to an existing group, common information from Assessments in that group will be copied to the new Assessment. For more information, see [Copying information from existing Assessments](meet-data-protection-and-regulatory-reqs-using-microsoft-cloud.md#copying).
+    If you create a new group, you also have the option to copy information from an existing group to the new Assessment. That means any information that was added to the Implementation Details and Test Plan and Management Response fields of customer managed controls from Assessments in the group that you're copying from are copied to the same (or related) customer managed controls in the new Assessment. If you're adding a new Assessment to an existing group, common information from Assessments in that group will be copied to the new Assessment. For more information, see [Copying information from existing Assessments](#copying-information-from-existing-assessments).
     
 3. Click **Next**, and do the following:
     
@@ -548,7 +548,7 @@ Similarly, information from shared customer managed controls within the same Ass
   
 1. This section shows the Assessment summary information, including the name of the Assessment Grouping, Product, Assessment name, number of Assess controls
     
-2. This section shows the Assessment Filter controls. For a more detailed explanation of how to use the Assessment Filter controls see the [Managing the assessment process](meet-data-protection-and-regulatory-reqs-using-microsoft-cloud.md#managecomplianceprocess_1) section. 
+2. This section shows the Assessment Filter controls. For a more detailed explanation of how to use the Assessment Filter controls see the [Managing the assessment process](#managing-the-assessment-process) section. 
     
 3. This section shows the individual cloud services that are in-scope for the assessment.
     
@@ -556,7 +556,7 @@ Similarly, information from shared customer managed controls within the same Ass
     
 5. This section contains customer managed controls, which are also organized by control family. Click a control family to expand it and display individual controls.
     
-6. Displays the total number of controls in the control family, and how many of those controls have been assessed. A key capability of Compliance Manager is tracking your organization's progress on assessing the customer managed controls. For more information, see the [Understanding the Compliance Score](meet-data-protection-and-regulatory-reqs-using-microsoft-cloud.md#compliancescore) section. 
+6. Displays the total number of controls in the control family, and how many of those controls have been assessed. A key capability of Compliance Manager is tracking your organization's progress on assessing the customer managed controls. For more information, see the [Understanding the Compliance Score](#understanding-the-compliance-score) section. 
 
 ## Managing the assessment process
 

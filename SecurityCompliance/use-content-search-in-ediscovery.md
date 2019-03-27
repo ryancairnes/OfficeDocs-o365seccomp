@@ -21,7 +21,7 @@ This topic includes a script that you can run to create an In-Place eDiscovery s
   
 [Step 1: Create a Content Search to search all mailboxes in your organization](#step-1-create-a-content-search-to-search-all-mailboxes-in-your-organization)
 
-[Step 2: Connect to the Security &amp; Compliance Center and Exchange Online in a single remote PowerShell session](#step-2-connect-to-the-security-amp-compliance-center-and-exchange-online-in-a-single-remote-powershell-session)
+[Step 2: Connect to the Security \& Compliance Center and Exchange Online in a single remote PowerShell session](#step-2-connect-to-the-security--compliance-center-and-exchange-online-in-a-single-remote-powershell-session)
   
 [Step 3: Run the script to create an In-Place eDiscovery search from the Content Search](#step-3-run-the-script-to-create-an-in-place-ediscovery-search-from-the-content-search)
 
@@ -118,7 +118,7 @@ To help you create a Content Search with no more than 1,000 source mailboxes, fo
     
 If there are more than 1,000 source mailboxes, try creating two (or more) Content Searches. For example, search half of your organization's mailboxes in one Content Search and the other half in another Content Search. You could also change the search criteria to reduce the number of mailboxes that contain search results. For example, you could include a date range or refine the keyword query.
   
-## Step 2: Connect to the Security &amp; Compliance Center and Exchange Online in a single remote PowerShell session
+## Step 2: Connect to the Security \& Compliance Center and Exchange Online in a single remote PowerShell session
 
 The next step is to connect Windows PowerShell to both the Security &amp; Compliance Center and to your Exchange Online organization. This is necessary because the script that you run in Step 3 requires access to the Content Search cmdlets in the Security &amp; Compliance Center and the In-Place eDiscovery cmdlets in Exchange Online.
   

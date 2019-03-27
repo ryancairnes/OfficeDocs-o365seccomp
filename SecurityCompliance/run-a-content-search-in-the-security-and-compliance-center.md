@@ -254,23 +254,23 @@ If a search returns any errors, you don't have to re-search all of the content l
 
 Here's more information about Content Searches.
   
-[Limits and performance](run-a-content-search-in-the-security-and-compliance-center.md#limits)
+[Limits and performance](#limits-and-performance)
   
-[Unindexed items](run-a-content-search-in-the-security-and-compliance-center.md#unindexeditems)
+[Unindexed items](#unindexed-items) 
+ 
+[Microsoft Teams and Office 365 Groups](#microsoft-teams-and-office-365-groups)
   
-[Microsoft Teams and Office 365 Groups](run-a-content-search-in-the-security-and-compliance-center.md#teams)
+[OneDrive for Business](#onedrive-for-business)
   
-[OneDrive for Business](run-a-content-search-in-the-security-and-compliance-center.md#onedrive)
+[Search queries](#search-queries)
   
-[Search queries](run-a-content-search-in-the-security-and-compliance-center.md#queries)
+[Searching inactive mailboxes](#searching-inactive-mailboxes)
   
-[Searching inactive mailboxes](run-a-content-search-in-the-security-and-compliance-center.md#inactivemailboxes)
+[Miscellaneous](#miscellaneous)
   
-[Miscellaneous](run-a-content-search-in-the-security-and-compliance-center.md#misc)
+[Return to top](#before-you-begin)
   
-[(Return to top)](run-a-content-search-in-the-security-and-compliance-center.md#top)
-  
- **Limits and performance**
+### Limits and performance
   
 - For a description of the limits that are applied to the Content Search feature, see [Limits for Search in the Office 365 Security &amp; Compliance Center](limits-for-content-search.md).
     
@@ -285,15 +285,14 @@ Here's more information about Content Searches.
 |50,000  <br/> |20 minutes  <br/> |
 |100,000  <br/> |25 minutes  <br/> |
    
-
   
- **Unindexed items**
+### Unindexed items
   
 - As previously explained, unindexed items in content locations that are searched are included in the estimated search results. If an unindexed item matches the search query (because other message or document properties meet the search criteria), it won't be included in the estimated number of unindexed items. If an unindexed item is excluded by the search criteria, it also won't be included in the estimated number of unindexed items. For more information, see [Unindexed items in Content Search](https://go.microsoft.com/fwlink/p/?LinkId=780739).
     
 
   
- **Microsoft Teams and Office 365 Groups**
+### Microsoft Teams and Office 365 Groups
   
 - Microsoft Teams are built on Office 365 Groups. Therefore, searching them is very similar. Keep the following things in mind when searching for content in Microsoft Teams and Office 365 Groups.
     
@@ -338,15 +337,12 @@ Here's more information about Content Searches.
     > [!NOTE]
     > The capability to search the Wiki for a Microsoft Team or Channel (when you search the team's SharePoint site) was released on June 22, 2017. Wiki pages that were saved or updated on that date or after are available to be searched. Wiki pages last saved or updated before that date aren't available for search. 
   
-
-  
- **OneDrive for Business **
+### OneDrive for Business
   
 - To collect a list of the URLs for the OneDrive for Business sites in your organization, see [Create a list of all OneDrive locations in your organization](https://support.office.com/article/8e200cb2-c768-49cb-88ec-53493e8ad80a). The script in this article creates a text file that contains a list of all OneDrive for Business sites. To run this script, you'll have to install and use the SharePoint Online Management Shell. Be sure to append the URL for your organization's MySite domain to each OneDrive for Business site that you want to search. This is the domain that contains all your OneDrive for Business; for example,  `https://contoso-my.sharepoint.com`. Here's an example of a URL for a user's OneDrive for Business site:  `https://contoso-my.sharepoint.com/personal/sarad_contoso_onmicrosoft.com`.
     
 
-  
- **Search queries**
+### Search queries
   
 - Keeping the following things in mind when using the keyword list to create a search query.
     
@@ -379,8 +375,7 @@ Here's more information about Content Searches.
     For example, to change the language setting to Chinese, you would use  `zh-CN` for the culture code value. After you change the language setting, you'll have to re-run the search. For a list of possible culture code values, see [CultureInfo Class](https://go.microsoft.com/fwlink/p/?LinkID=184859). For content searches, we recommend that you use two-part culture codes for the value of the language setting; for example,  `ja-JP` and not  `ja`.
     
 
-  
- **Searching inactive mailboxes**
+### Searching inactive mailboxes
   
 As previously stated, you can search inactive mailboxes in a content search. Here are a few things to keep in mind when searching inactive mailboxes.
   
@@ -396,9 +391,7 @@ As previously stated, you can search inactive mailboxes in a content search. Her
     
   - [Delete an inactive mailbox in Office 365](delete-an-inactive-mailbox.md)
     
-
-  
- **Miscellaneous**
+### Miscellaneous
   
 - Content searches created on the **Content search** page in the Security &amp; Compliance Center aren't displayed on the **In-Place eDiscovery &amp; Hold** page in the Exchange admin center. This is because the Content Search architecture and the search objects created in the Security &amp; Compliance Center are completely different than the In-Place eDiscovery feature in Exchange Online. 
     

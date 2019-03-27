@@ -73,8 +73,6 @@ If you've already purchased EOP, see [Set up your EOP service](set-up-your-eop-s
 
 [EOP features](eop-features.md)
   
-[Videos for getting started with EOP](videos-for-getting-started-with-eop.md)
-  
 [EOP general FAQ](eop-general-faq.md)
   
 [EOP queued, deferred, and bounced messages FAQ](eop-queued-deferred-and-bounced-messages-faq.md)

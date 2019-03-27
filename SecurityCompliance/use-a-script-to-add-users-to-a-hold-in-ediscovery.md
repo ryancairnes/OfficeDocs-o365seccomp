@@ -24,7 +24,7 @@ The script prompts you for the name of your organization's MySite domain (for ex
   
 Here are the steps to make this happen:
   
-[Step 1: Install the SharePoint Online Management Shell](use-a-script-to-add-users-to-a-hold-in-ediscovery.md#step1)
+[Step 1: Install the SharePoint Online Management Shell](#step-1-install-the-sharepoint-online-management-shell)
   
 [Step 2: Generate a list of users](use-a-script-to-add-users-to-a-hold-in-ediscovery.md#step2)
   

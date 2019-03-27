@@ -3,7 +3,7 @@ title: "Overview of event-driven retention"
 ms.author: stephow
 author: stephow-MSFT
 manager: laurawi
-ms.date: 5/22/2018
+ms.date: 
 ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp

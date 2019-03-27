@@ -186,7 +186,7 @@ After you create the custom retention tags, the next step is to create a new ret
     
     A list of the retention tags in your organization is displayed. Note the custom tags that you created in Step 2 are displayed.
     
-5. Add the 9 retention tags that are highlighted in the following screenshot (these tags are described in more detail in the [More information](set-up-an-archive-and-deletion-policy-for-mailboxes.md#moreinfo) section). To add a retention tag, select it and then click **Add**. 
+5. Add the 9 retention tags that are highlighted in the following screenshot (these tags are described in more detail in the [More information](#more-information) section). To add a retention tag, select it and then click **Add**. 
     
     ![Add retention tags to the new retention policy](media/d8e87176-0716-4238-9e6a-7c4af35541dc.png)
   

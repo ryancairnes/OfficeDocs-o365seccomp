@@ -89,9 +89,9 @@ After you've created a PST import job, follow these steps to filter the data bef
   
     You can configure these filters:
     
-      - **Age** - Select an age so only items that are newer than the specified age will be imported. See the [More information](filter-data-when-importing-pst-files.md#moreinfo) section for a description about how Office 365 determines the age buckets for the **Age** filter. 
+      - **Age** - Select an age so only items that are newer than the specified age will be imported. See the [More information](#more-information) section for a description about how Office 365 determines the age buckets for the **Age** filter. 
     
-      - **Type** - This section shows all the message types that were found in the PST files for the import job. You can uncheck a box next to a message type that you want to exclude. Note that you can't exclude the Other message type. See the [More information](filter-data-when-importing-pst-files.md#moreinfo) section for a list of mailbox items that are included in the Other category. 
+      - **Type** - This section shows all the message types that were found in the PST files for the import job. You can uncheck a box next to a message type that you want to exclude. Note that you can't exclude the Other message type. See the [More information](#more-information) section for a list of mailbox items that are included in the Other category. 
     
       - **Users** - You can exclude messages that are sent or received by specific people. To exclude people who appear in the From: field, To: field, or the Cc: field of messages, click **Exclude users** next to that recipient type. Type the email address (SMTP address) of the person, click **Add**![New icon](media/457cd93f-22c2-4571-9f83-1b129bcfb58e.gif) to add them to the list of excluded users for that recipient type, and then click **Save** to save the list of excluded users. 
     

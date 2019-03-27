@@ -87,11 +87,11 @@ PST Import uses the encryption functionality provided by the Azure Rights Manage
   
 Configuring Azure RMS for PST Import consists of three steps:
   
-- [Activating Azure RMS](#activate-azure-rms)
+- [Activating Azure RMS](#activating-azure-rms)
     
-- [Configuring RMS in Exchange Online](#configure-rms-in-exchange-online)
+- [Configuring RMS in Exchange Online](#configuring-rms-in-exchange-online)
     
-- [Installing the Active Directory RMS Client](#install-the-active-directory-rms-client)
+- [Installing the Active Directory RMS Client](#installing-the-active-directory-rms-client)
     
 ### Activating Azure RMS
 

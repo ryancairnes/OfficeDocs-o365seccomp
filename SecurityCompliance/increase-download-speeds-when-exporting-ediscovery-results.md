@@ -47,7 +47,7 @@ Perform the following procedure on the computer that you'll use to download sear
 6. You can repeat steps 2 - 5 to change the value for the  `DownloadConcurrency` registry setting. 
     
     > [!IMPORTANT]
-    > After you create or change the  `DownloadConcurrency` registry setting, be sure to create a new export job or restart an existing export job for the search results or data that you want to download. See the [More information](increase-download-speeds-when-exporting-ediscovery-results.md#moreinfo) section for more details. 
+    > After you create or change the  `DownloadConcurrency` registry setting, be sure to create a new export job or restart an existing export job for the search results or data that you want to download. See the [More information](#more-information) section for more details. 
   
 ## More information
 

@@ -66,6 +66,34 @@ Use the following chart to help you configure groups in your organization for su
 |Supervised users | Distribution groups <br> Office 365 groups | Dynamic distribution groups |
 | Reviewers | Mail-enabled security groups  | Distribution groups <br> Dynamic distribution groups |
   
+To manage supervised users in large enterprise organizations, you may need to monitor all users across a very large group. You can use PowerShell to configure a distribution group for a global supervision policy for the assigned group. This can help you to monitor thousands of users with a single policy and keep the supervision policy updated as new employees join your organization.
+
+1. Create a dedicated [distribution group](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/new-distributiongroup?view=exchange-ps) for your global supervision policy with the following properties. Make sure that this distribution group isn't used for other purposes or other Office 365 services.
+
+    - **MemberDepartRestriction = Closed**. This ensures that users cannot remove themselves from the distribution group.
+    - **MemberJoinRestriction = Closed**. This ensures that users cannot add themselves to the distribution group.
+    - **ModerationEnabled = True**. This ensures that all messages sent to this group need to be approved and that the group is not being used to communicate outside of the supervision policy configuration.
+
+    ```
+    New-DistributionGroup -Name <your group name> -Alias <your group alias> -MemberDepartRestriction 'Closed' -MemberJoinRestriction 'Closed' -ModerationEnabled $true
+    ```
+2. Select an unused [Exchange custom attribute](https://docs.microsoft.com/Exchange/recipients/mailbox-custom-attributes?view=exchserver-2019&viewFallbackFrom=exchonline-ww) to use for tracking which users have been added to the supervision policy in your organization.
+
+3. Run the following PowerShell script on a recurring schedule to add users to the supervision policy:
+
+    ```
+    $Mbx = (Get-Mailbox -RecipientTypeDetails UserMailbox -ResultSize Unlimited -Filter {CustomAttribute9 -eq $Null})
+    $i = 0
+    ForEach ($M in $Mbx) 
+    {
+      Write-Host "Adding" $M.DisplayName
+      Add-DistributionGroupMember -Identity <your group name> -Member $M.DistinguishedName -ErrorAction SilentlyContinue
+      Set-Mailbox -Identity $M.Alias -<your custom attribute name> SRAdded 
+      $i++
+    }
+    Write-Host $i "Mailboxes added to supervisory review distribution group."
+    ```
+
 For more information about setting up groups, see:
 - [Create and manage distribution groups](https://docs.microsoft.com/Exchange/recipients-in-exchange-online/manage-distribution-groups/manage-distribution-groups)
 - [Manage mail-enabled security groups](https://docs.microsoft.com/Exchange/recipients-in-exchange-online/manage-mail-enabled-security-groups)

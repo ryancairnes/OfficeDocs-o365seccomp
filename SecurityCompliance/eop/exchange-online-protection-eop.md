@@ -18,7 +18,7 @@ Welcome to the Microsoft Exchange Online Protection (EOP) hosted email filtering
   
 - To learn more about EOP, check out the [Exchange Online Protection Service Description](https://go.microsoft.com/fwlink/p/?LinkId=320619). Other useful resources are [Exchange Online Protection overview](exchange-online-protection-overview.md), [EOP general FAQ](eop-general-faq.md), and [EOP features](eop-features.md), as well as the [Exchange Online Protection home page](https://go.microsoft.com/fwlink/?LinkId=279912).
     
-- To get started with EOP, new customers should head for [Set up your EOP service](set-up-your-eop-service.md). This topic provides steps that'll help you get EOP up and running. You may also want to view the series of introductory videos shown on [Videos for getting started with EOP](videos-for-getting-started-with-eop.md).
+- To get started with EOP, new customers should head for [Set up your EOP service](set-up-your-eop-service.md). This topic provides steps that'll help you get EOP up and running. 
     
 - If you need more help or want to share ideas, the [EOP forum](https://go.microsoft.com/fwlink/?LinkId=285351) is a great place to start. 
     
@@ -31,8 +31,6 @@ The Help content for EOP administrators consists of the following top-level cate
 - [Exchange Online Protection overview](exchange-online-protection-overview.md) Introduces how EOP works and provides links to additional information. 
     
 - [EOP features](eop-features.md) Provides a list of features that are available in EOP. 
-    
-- [Videos for getting started with EOP](videos-for-getting-started-with-eop.md) Introduces EOP with a series of videos that detail common set up tasks. 
     
 - [Set up your EOP service](set-up-your-eop-service.md) Provides steps for setting up your EOP service, and links to additional information. 
     

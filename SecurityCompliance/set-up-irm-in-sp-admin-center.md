@@ -17,6 +17,8 @@ description: "Learn how to use SharePoint Online IRM through Microsoft Azure Act
 
 # Set up Information Rights Management (IRM) in SharePoint admin center
 
+## Introduction
+
 Within SharePoint Online, IRM protection is applied to files at the list and library level. Before your organization can use IRM protection, you must first set up Rights Management. IRM relies on the Azure Rights Management service from Azure Information Protection to encrypt and assign usage restrictions. Some Office 365 plans include Azure Rights Management, but not all. To learn more, read [How Office applications and services support Azure Rights Management](https://docs.microsoft.com/azure/information-protection/understand-explore/office-apps-services-support).
   
 ## Turn on IRM service using SharePoint admin center
@@ -65,6 +67,5 @@ Once you've enabled IRM for SharePoint Online, you can start applying rights man
   
 The new OneDrive sync client for Windows now supports synchronizing IRM-protected SharePoint document libraries and OneDrive locations (as long as the IRM setting for the library isn't set to expire document access rights). For more information, or to get started deploying the new sync client, see [Deploy the new OneDrive sync client for Windows](https://support.office.com/article/3f3a511c-30c6-404a-98bf-76f95c519668).
   
-[Top of Page](set-up-irm-in-sp-admin-center.md#__top)
-  
+[Top of page](#introduction)  
 
