@@ -114,7 +114,7 @@ The Results.csv and Manifest.xml files contain additional information about the 
     
   - The name of the document (which is located in the Subject column in the result log).
     
-- **Manifest.xml** A manifest file (in XML format) that contains information about each item included in the search results. The information in this report is the same as the Results.csv report, but it's in the format specified by the Electronic Discovery Reference Model (EDRM). For more information about EDRM, go to﻿ [https://www.edrm.net](https://www.edrm.net).
+- **Manifest.xml** A manifest file (in XML format) that contains information about each item included in the search results. The information in this report is the same as the Results.csv report, but it's in the format specified by the Electronic Discovery Reference Model (EDRM). For more information about EDRM, go to [https://www.edrm.net](https://www.edrm.net).
     
  **When should I disable exporting these reports?**
   

@@ -3,7 +3,7 @@ title: "Welcome to your all-new new Microsoft 365 compliance center"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 03/27/2019
+ms.date: 03/28/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-seccomp
@@ -15,7 +15,9 @@ description: "Learn about the new Microsoft 365 compliance center, including wha
 
 ## Overview
 
-If you're interested in your organization's compliance posture, you're going to love the new [Microsoft 365 compliance center](https://compliance.microsoft.com). The Microsoft 365 compliance center provides easy access to the data and tools you need to manage to your organization's compliance needs. Read this article to get acquainted with the Microsoft 365 compliance center, how to get it, and your next steps.
+If you're interested in your organization's compliance posture, you're going to love the new [Microsoft 365 compliance center](https://compliance.microsoft.com). The Microsoft 365 compliance center provides easy access to the data and tools you need to manage to your organization's compliance needs. 
+
+Read this article to get acquainted with the Microsoft 365 compliance center, [how to get it](#how-do-i-get-this), [frequently asked questions](#frequently-asked-questions), and your [next steps](#next-steps).
 
 [![Microsoft 365 compliance center](media/m365-compliance-center.png)](https://compliance.microsoft.com)
 
@@ -29,7 +31,7 @@ The welcome banner gives you some pointers on how to get started, with next step
 
 ## The Assess section
 
-The **Assess** section on the home page shows you at a glance how your organization is doing with respect to data protection and compliance.
+The **Assess** section on the home page shows you at a glance how your organization is doing with respect to [data protection and compliance](protect-access-to-data-and-services.md).
 
 ![Assess section in Microsoft 365 compliance center](media/m365-compliance-center-assess.png)
 
@@ -39,7 +41,7 @@ You'll see additional cards, such as one showing your organization's cloud app c
 
 ## The Protect section
 
-The **Protect** section on the home page contains cards that provide you with high-level information about labels, data loss prevention (DLP), third-party apps in use, shared files, shadow IT apps, and so on. 
+The **Protect** section on the home page contains cards that provide you with high-level information about [labels](labels.md), [data loss prevention (DLP)](data-loss-prevention-policies.md), third-party apps in use, shared files, shadow IT apps, and so on. 
 
 ![Protect section in the Microsoft 365 compliance center](media/m365-compliance-center-protect.png)
 
@@ -47,26 +49,26 @@ Each card has a link to a report or additional information where you can learn m
 
 ## The Respond section
 
-The **Respond** section on the home page surfaces alerts and pending dispositions that you'll want to review and potentially act upon.
+The **Respond** section on the home page surfaces [alerts](alerts.md) and [pending dispositions](disposition-reviews.md) that you'll want to review and potentially act upon.
 
 ![Respond section in the Microsoft 365 compliance center](media/m365-compliance-center-respond.png)
 
-Cards, such as the Active alerts card, include a link to a page where you can view more detailed information, such as Severity, Status, Category, and more.
+Cards, such as the [Active alerts](alerts.md) card, include a link to a page where you can view more detailed information, such as Severity, Status, Category, and more.
 
 ![Active alerts details](media/m365-compliance-center-alerts-details.png) 
 
 ## Easy navigation to more compliance features and capabilities
 
-In addition to links in cards on the home page, you'll find a navigation pane on the left side of the screen that gives you easy access to your alerts, reports, policies, compliance solutions, and more. 
+In addition to links in cards on the home page, you'll find a navigation pane on the left side of the screen that gives you easy access to your [alerts](alerts.md), [reports](reports-in-security-and-compliance.md), [policies](alert-policies.md), compliance solutions, and more. 
 
 |  |  |
 |---------|---------|
-|![Navigation in the Microsoft 365 compliance center](media/m365-compliance-center-leftnav.png)  |<br/><br/> Go to **Alerts** to view and resolve [alerts](alerts.md)<br/><br/>Visit **Monitoring & reports** to view data about [label usage and retention](sensitivity-labels.md), [DLP policy matches and overrides](view-the-dlp-reports.md), [shared files](https://docs.microsoft.com/cloud-app-security/file-filters), [third-party apps in use](https://docs.microsoft.com/cloud-app-security/discovered-apps), and more.<br/><br/>Expand the **Classification** section to access your [labels](labels.md), [label policies](sensitivity-labels.md#what-label-policies-can-do), [sensitive information types](what-the-sensitive-information-types-look-for.md), and [label analytics](view-label-activity-for-documents.md).<br/><br/>Go to **Policies** to view [alerts](alerts.md) and to access your [DLP](data-loss-prevention-policies.md) and [retention](retention-policies.md) policies.<br/><br/> Use the links in the **Solutions** section to access your organization's compliance solutions. These include [eDiscovery](ediscovery.md), [Supervision](supervision-policies.md), [Data investigations](compliance20/data-investigations-release-notes.md), and [Data subject requests](manage-gdpr-data-subject-requests-with-the-dsr-case-tool.md).        |
+|![Navigation in the Microsoft 365 compliance center](media/m365-compliance-center-leftnav.png)  |<br/><br/> Go to **Alerts** to view and resolve [alerts](alerts.md)<br/><br/>Visit **Monitoring & reports** to view data about [label usage and retention](sensitivity-labels.md), [DLP policy matches and overrides](view-the-dlp-reports.md), [shared files](https://docs.microsoft.com/cloud-app-security/file-filters), [third-party apps in use](https://docs.microsoft.com/cloud-app-security/discovered-apps), and more.<br/><br/>Expand the **Classification** section to access your [labels](labels.md), [label policies](sensitivity-labels.md#what-label-policies-can-do), [sensitive information types](what-the-sensitive-information-types-look-for.md), and [label analytics](view-label-activity-for-documents.md).<br/><br/>Go to **Policies** to view [alerts](alerts.md) and to access your [DLP](data-loss-prevention-policies.md) and [retention](retention-policies.md) policies.<br/><br/> Use the links in the **Solutions** section to access your organization's compliance solutions. These include: <br/>[Data governance > Dispositions](disposition-reviews.md)<br/>[eDiscovery (preview)](compliance20/overview-ediscovery-20.md)<br/>[Supervision](supervision-policies.md)<br/>[Data investigations](compliance20/manage-data-spillage-incidents.md)<br/>[Data subject requests](manage-gdpr-data-subject-requests-with-the-dsr-case-tool.md)        |
 
 
 ## How do I get this?
 
-- If you don't have the new Microsoft 365 compliance center already, you will have it soon. The [new Microsoft 365 compliance center](microsoft-security-and-compliance.md#microsoft-365-compliance-center) will be generally available by the end of March 2019!
+- If you don't have the new Microsoft 365 compliance center already, you will have it soon. The [new Microsoft 365 compliance center](microsoft-security-and-compliance.md#microsoft-365-compliance-center) will be generally available now.
 
 - To visit the Microsoft 365 compliance center, as a global administrator or compliance administrator, go to [https://compliance.microsoft.com](https://compliance.microsoft.com) and sign in. 
 
@@ -74,9 +76,9 @@ In addition to links in cards on the home page, you'll find a navigation pane on
 
 ## Frequently asked questions
 
-### Why am I taken to the former Security & Compliance Center to perform some tasks, such as defining certain policies?
+### Why am I taken to the Office 365 Security & Compliance Center to perform some tasks, such as defining certain policies?
 
-We are still developing the Microsoft 365 compliance center, and we'll be adding more functionality and solutions over the coming months. In the meantime, there are some tasks that must be performed in the Security & Compliance Center. In those cases, you'll be directed automatically to the location where you can perform the task at hand, such as creating or editing a supervision policy.
+We are still developing the Microsoft 365 compliance center, and we'll be adding more functionality and solutions over the coming months. In the meantime, there are some tasks that must be performed in the Office 365 Security & Compliance Center. In those cases, you'll be directed automatically to the location where you can perform the task at hand, such as creating or editing a supervision policy.
 
 ### Why don't I see the new Microsoft 365 compliance center yet?
 

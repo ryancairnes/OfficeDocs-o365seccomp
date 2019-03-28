@@ -79,7 +79,7 @@ The availability key is a root key that is provisioned when you create a data en
 ## Can I assign a data encryption policy before migrating a mailbox to the cloud?
 <a name="DiffCustomerKeyandBYOKAzureIP"> </a>
 
-Yes. You can use the Windows PowerShell cmdlet Set-MailUser to assign a data encryption policy (DEP) to the user prior to migrating the mailbox to Office 365. When you do this, the contents of the mailbox will be encrypted using the assigned DEP as the content is migrated. This can be more efficient than assigning a DEP after the mailbox has already been migrated and then waiting for encryption to take place, which can take hours or possibly days.﻿ 
+Yes. You can use the Windows PowerShell cmdlet Set-MailUser to assign a data encryption policy (DEP) to the user prior to migrating the mailbox to Office 365. When you do this, the contents of the mailbox will be encrypted using the assigned DEP as the content is migrated. This can be more efficient than assigning a DEP after the mailbox has already been migrated and then waiting for encryption to take place, which can take hours or possibly days. 
   
 ## How do I verify that encryption with Customer Key is activated and Office 365 has finished encrypting with Customer Key?
 <a name="DiffCustomerKeyandBYOKAzureIP"> </a>
@@ -127,9 +127,9 @@ There are three ways that the availability key is used with Exchange Online:
   
 - Service availability - in the event that Azure Key Vault keys are unreachable.
     
-- Actions initiated by Office 365 service code - such as search index creation or mailbox moves﻿.
+- Actions initiated by Office 365 service code - such as search index creation or mailbox moves.
     
-- Recover from key loss - such as the loss ﻿of both Azure Key Vault keys associated with a single DEP.
+- Recover from key loss - such as the loss of both Azure Key Vault keys associated with a single DEP.
     
  **Using the availability key for service availability in the event Azure Key Vault keys are unreachable.**
   
@@ -157,7 +157,7 @@ Office 365 follows this process in response to user-initiated actions to determi
     
     When this happens, the customer is made aware that service is impacted, and the condition of Customer Key is unhealthy. For example, if a customer is using a single DEP for all mailboxes in the organization, the customer may experience a widespread failure where users can't access their mailboxes. This ensures that when both customer keys are unhealthy, the customer is made aware of the need to correct the situation and restore the service to a healthy state.
     
- **Using the availability key for actions initiated by Office 365 service code﻿.**
+ **Using the availability key for actions initiated by Office 365 service code.**
   
 Office 365 service code always has a valid login token and can't be blocked. Therefore, until the availability key has been deleted, it can be used for actions initiated by, or internal to, Office 365 service code, such as search index creation or moving mailboxes.
   

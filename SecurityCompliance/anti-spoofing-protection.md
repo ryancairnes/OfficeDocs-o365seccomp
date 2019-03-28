@@ -123,7 +123,7 @@ From: sender @ foo.fabrikam.com
   
 To: recipient @ bar.fabrikam.com
   
-T﻿he following sender and recipient domains are different (microsoft.com and bing.com), but they belong to the same organization (that is, both are part of the organization's Accepted Domains):
+The following sender and recipient domains are different (microsoft.com and bing.com), but they belong to the same organization (that is, both are part of the organization's Accepted Domains):
   
 From: sender @ microsoft.com
   

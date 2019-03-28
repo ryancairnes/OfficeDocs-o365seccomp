@@ -1,5 +1,5 @@
 ---
-title: "What is Exchange Online Protection (EOP)?"
+title: "What is EOP"
 ms.author: tracyp
 author: msfttracyp
 ms.reviewer: andypunt

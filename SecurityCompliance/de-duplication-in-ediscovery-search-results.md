@@ -34,7 +34,7 @@ Office 365 eDiscovery tools use a combination of the following email properties 
     
 During the eDiscovery export process, these three properties are compared for every message that matches the search criteria. If these properties are identical for two (or more) messages, those messages are determined to be duplicates and the result is that only one copy of the message will be exported if de-duplication is enabled. The message that is exported is known as the "source item". Information about duplicate messages is included in the **Results.csv** and **Manifest.xml** reports that are included with the exported search results. In the **Results.csv** file, a duplicate message is identified by having a value in the **Duplicate to Item** column. The value in this column matches the value in the **Item Identity** column for the message that was exported. 
   
-The following graphics show how duplicate messages are displayed in the **Results.csv** and **Manifest.xml** reports that are exported with the search results. These reports don't include the email properties previously described, which are used in the de-duplication algorithm. Instead, the reports include the **Item Identity** property that is assigned to items by the ﻿Exchange store. 
+The following graphics show how duplicate messages are displayed in the **Results.csv** and **Manifest.xml** reports that are exported with the search results. These reports don't include the email properties previously described, which are used in the de-duplication algorithm. Instead, the reports include the **Item Identity** property that is assigned to items by the Exchange store. 
   
  ### Results.csv report (viewed in Excel)
   

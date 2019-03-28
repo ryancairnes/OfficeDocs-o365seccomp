@@ -127,7 +127,7 @@ Currently encrypted messages are not supported for a Shared Mailbox.
 
 ## Can I customize encrypted messages with my company branding?
 
-Yes! For information on customizing email messages and the OME portal, see Add your organization's brand to your encrypted messages. See [Add your organization's brand to your encrypted messages.](add-your-organization-brand-to-encrypted-messages.md)﻿
+Yes! For information on customizing email messages and the OME portal, see Add your organization's brand to your encrypted messages. See [Add your organization's brand to your encrypted messages.](add-your-organization-brand-to-encrypted-messages.md)
   
 ## Are there any reporting capabilities or insights for encrypted emails?
 

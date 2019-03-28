@@ -11,7 +11,7 @@ ms.collection: Strat_O365_IP
 description: "Learn more about security principles, established best practices, and emerging best practices for modernizing your organization."
 ---
 
-# Chief Information Security Officer (CISO) Workshop
+# Chief Information Security Officer (CISO) Workshop Training
 
 This Chief Information Security Office (CISO) workshop contains a collection of security learnings, principles, established best practices, and emerging best practices for modernizing security in your organization for the cloud age. This workshop is built on a combination of experience from Microsoft’s security teams and learnings from our customers.
 
@@ -20,13 +20,14 @@ The CISO workshop can help your organization meet the dual security challenges o
 - Increasingly sophisticated attacks
 - Protecting assets on a hybrid enterprise that now includes cloud platforms
 
-The CISO workshop video and PowerPoint content is designed to be modular so you can jump to any section of interest or simply start at the beginning and go all the way through. The slides are available here with a creative commons (with attribution) license so that they may be re-used to help your organization build effective security strategies.
+The CISO workshop videos and PDF/PowerPoint download content is designed to be modular so you can jump to any section of interest or simply start at the beginning and go all the way through. The slides are available here with a creative commons (with attribution) license so that they may be re-used to help your organization build effective security strategies.
 
 ## Module 1 – Microsoft Cybersecurity Briefing
 
 This module covers overviews on critical security hygiene, Microsoft cybersecurity reference architecture, cybersecurity resilience, Internet of Things (IoT), and operational tech.
 
-Download module PDF: [Module 1 – Microsoft Cybersecurity Briefing](media/ciso-workshop-1-cybersecurity-briefing.pdf)
+- Download PDF summary: [Module 1 – Microsoft Cybersecurity Briefing](media/ciso-workshop-1-cybersecurity-briefing.pdf)
+- Download PowerPoint summary: [Module 1 – Microsoft Cybersecurity Briefing](https://docs.microsoft.com/office365/securitycompliance/media/ciso-workshop-1-cybersecurity-briefing.pptx)
 
 ### Part 1 – Course Introduction and Overview
 
@@ -84,7 +85,8 @@ Download module PDF: [Module 1 – Microsoft Cybersecurity Briefing](media/ciso-
 
 Learn how to increase visibility and control over your hybrid enterprise estate with integrated guidance, automated policy enforcement, and monitoring in this seven part series.
 
-Download module PDF: [Module 2 – Security Management](media/ciso-workshop-2-security-management.pdf)
+- Download PDF summary: [Module 2 – Security Management](media/ciso-workshop-2-security-management.pdf)
+- Download PowerPoint summary: [Module 2 – Security Management](https://docs.microsoft.com/office365/securitycompliance/media/ciso-workshop-2-security-management.pptx)
 
 ### Introduction - Security Management
 
@@ -122,7 +124,8 @@ Download module PDF: [Module 2 – Security Management](media/ciso-workshop-2-se
 
 Because most modern attacks involve compromising user identities, learn how to build a new identity security perimeter to protect assets outside your corporate network.
 
-Download module PDF: [Module 3 – Identity and Access Management](media/ciso-workshop-3-identity-protection.pdf)
+- Download PDF summary: [Module 3 – Identity and Access Management](media/ciso-workshop-3-identity-protection.pdf)
+- Download PowerPoint summary: [Module 3 – Identity and Access Management](https://docs.microsoft.com/office365/securitycompliance/media/ciso-workshop-3-identity-protection.pptx)
 
 ### Introduction – Identity and Access Management
 
@@ -152,7 +155,8 @@ Download module PDF: [Module 3 – Identity and Access Management](media/ciso-wo
 
 Explore our key learnings about threat protection, security evolution, strategies, and security road maps.
 
-Download module PDF: [Module 4a – Threat Protection Strategy](media/ciso-workshop-4a-threat-protection.pdf)
+- Download PDF summary: [Module 4a – Threat Protection Strategy](media/ciso-workshop-4a-threat-protection.pdf)
+- Download PowerPoint summary: [Module 4a – Threat Protection Strategy](https://docs.microsoft.com/office365/securitycompliance/media/ciso-workshop-4a-threat-protection.pptx)
 
 ### Introduction – Threat Protection Strategy (Identify-Protect)
 
@@ -210,7 +214,8 @@ Download module PDF: [Module 4a – Threat Protection Strategy](media/ciso-works
 
 This module reviews the evolution and trajectory of our Security Operations Centers (SOC), powered by the trillions of signals in our intelligent security graph.
 
-Download module PDF: [Module 4b – Threat Protection Strategy](media/ciso-workshop-4b-threat-protection-strategy.pdf)
+- Download PDF summary: [Module 4b – Threat Protection Strategy](media/ciso-workshop-4b-threat-protection-strategy.pdf)
+- Download PowerPoint summary: [Module 4b – Threat Protection Strategy](https://docs.microsoft.com/office365/securitycompliance/media/ciso-workshop-4b-threat-protection-strategy.pptx)
 
 ### Introduction – Threat Protection Strategy (Detect-Respond-Recover)
 
@@ -260,7 +265,8 @@ Download module PDF: [Module 4b – Threat Protection Strategy](media/ciso-works
 
 Learn how to protect sensitive information wherever it goes with automatic classification, persistent encryption across devices, and continuous monitoring of data across mobile devices, cloud services, and other corporate assets.
 
-Download module PDF: [Module 5 – Information Protection](media/ciso-workshop-5-information-protection-strategy.pdf)
+- Download PDF summary: [Module 5 – Information Protection](media/ciso-workshop-5-information-protection-strategy.pdf)
+- Download PowerPoint summary: [Module 5 – Information Protection](https://docs.microsoft.com/office365/securitycompliance/media/ciso-workshop-5-information-protection-strategy.pptx)
 
 ### Introduction – Information Protection
 
