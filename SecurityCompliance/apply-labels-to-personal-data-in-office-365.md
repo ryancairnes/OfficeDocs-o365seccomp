@@ -162,7 +162,7 @@ Be sure your plan for implementing labels includes:
 
 ## Create labels and auto-apply label policies
 
-Create labels and policies in the Security & Compliance Center.
+Create labels and policies in the scurity center or the compliance center.
 
 <table>
 <thead>
@@ -174,16 +174,16 @@ Create labels and policies in the Security & Compliance Center.
 <tbody>
 <tr class="odd">
 <td align="left"><p>Give permissions to members of your compliance team.</p></td>
-<td align="left"><p>Members of your compliance team who will create labels need permissions to use the Security &amp; Compliance Center. Go to Permissions in Security and Compliance Center and modify the members of the Compliance Administrator group.</p>
-<p>See <a href="https://support.office.com/en-ie/article/Give-users-access-to-the-Office-365-Security-Compliance-Center-2cfce2c8-20c5-47f9-afc4-24b059c1bd76">Give users access to the Office 365 Security &amp; Compliance Center</a>.</p></td>
+<td align="left"><p>Members of your compliance team who will create labels need permissions to use the security center and/or the compliance center. Go to Permissions in the security center or the compliance center and modify the members of the Compliance Administrator group.</p>
+<p>See <a href="https://support.office.com/en-ie/article/Give-users-access-to-the-Office-365-Security-Compliance-Center-2cfce2c8-20c5-47f9-afc4-24b059c1bd76">Give users access to the security center and/or the compliance center</a>.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Create retention labels.</p></td>
-<td align="left">Go to Classifications in Security and Compliance Center, choose Retention labels, and create the labels for your environment.</td>
+<td align="left">Go to Classifications in the Security center or the Compliance center, choose Retention labels, and create the labels for your environment.</td>
 </tr>
 <tr class="odd">
 <td align="left"><p>Create auto-apply policies for labels.</p></td>
-<td align="left">Go to Classification in Security and Compliance Center, choose Label policies, and create the policies for auto-applying labels. Be sure to create these policies in the prioritized order.</td>
+<td align="left">Go to Classification in security center or the compliance center, choose Label policies, and create the policies for auto-applying labels. Be sure to create these policies in the prioritized order.</td>
 </tr>
 </tbody>
 </table>

@@ -3,7 +3,7 @@ title: "Office 365 Advanced Threat Protection"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 03/19/2019
+ms.date: 03/28/2019
 ms.audience: Admin
 ms.topic: hub-page
 ms.service: O365-seccomp
@@ -19,7 +19,7 @@ description: "Office 365 Advanced Threat Protection includes safe attachments, s
 # Office 365 Advanced Threat Protection
 
 > [!IMPORTANT]
-> This article is intended for Office 365 Enterprise customers. If you are using Outlook.com, Office 365 Home, or Office 365 Personal, and you're looking for information about Safe Links in Outlook, see [Advanced Outlook.com security](https://support.office.com/article/advanced-outlook-com-security-for-office-365-subscribers-882d2243-eab9-4545-a58a-b36fee4a46e2).
+> This article is intended for Office 365 Enterprise and Microsoft 365 Enterprise customers. If you are using Outlook.com, Office 365 Home, or Office 365 Personal, and you're looking for information about Safe Links in Outlook, see [Advanced Outlook.com security](https://support.office.com/article/advanced-outlook-com-security-for-office-365-subscribers-882d2243-eab9-4545-a58a-b36fee4a46e2).
 
 ## Overview
 
@@ -30,13 +30,14 @@ Office 365 Advanced Threat Protection (ATP) safeguards your organization against
 - [Reports](#view-atp-reports): View real-time reports to monitor ATP performance in your organization. 
 
 - [Threat investigation and response capabilities](#use-threat-investigation-and-response-capabilities): Use leading-edge tools to investigate, understand, simulate, and prevent threats. 
- 
+
+- Automated investigation and response capabilities
 
 ## Configure ATP policies
 
 Office 365 ATP provides numerous tools to set an appropriate level of protection for your organization. 
 
-Your organization's security team must define policies for each ATP tool in the Office 365 Security & Compliance Center. Go to **Threat management** > **Policy** to access policy options. 
+Your organization's security team must define policies for each ATP tool in the Office 365 Security & Compliance Center. Go to **Threat management** > **Policy** to access policy options. (To get some help with this, see [Quick Start Guide: Set up Office 365 Advanced Threat Protection](checklist-atp-setup.md).)
 
 The policies that are defined for your organization determine the behavior and protection level for predefined threats. Policy options are extremely flexible. For example, your organization's security team can set fine-grained threat protection at the user, organization, recipient, and domain level. It is important to review your policies regularly because new threats and challenges emerge daily.  
 
@@ -52,7 +53,7 @@ The policies that are defined for your organization determine the behavior and p
 
 Office 365 ATP includes an advanced [reporting dashboard](view-reports-for-atp.md) to monitor your ATP performance. You can access it at **Reports > Dashboard** in the Security & Compliance Center. 
 
-Reports update in real-time, providing you with the latest insights. These reports also provide recommendations and alert you to imminent threats. Predefined reports include the [Threat Protection Status report](view-reports-for-atp.md#threat-protection-status-report), [ATP File Types report](view-reports-for-atp.md#atp-file-types-report), [ATP Message Disposition report](view-reports-for-atp.md#atp-message-disposition-report) and more. 
+Reports update in real-time, providing you with the latest insights. These reports also provide recommendations and alert you to imminent threats. Predefined reports include [Threat Explorer](use-explorer-in-security-and-compliance.md), the [Threat Protection Status report](view-reports-for-atp.md#threat-protection-status-report), the [ATP File Types report](view-reports-for-atp.md#atp-file-types-report), the [ATP Message Disposition report](view-reports-for-atp.md#atp-message-disposition-report) and more. 
 
 ## Use threat investigation and response capabilities
 
@@ -64,6 +65,12 @@ Office 365 ATP Plan 2 includes best-of-class [threat investigation and response 
 
 - [Attack Simulator](attack-simulator.md) allows you to run realistic attack scenarios in your organization to identify vulnerabilites. Simulations of current types of attacks are available, including a [display name spear-phishing attack](attack-simulator.md#display-name-spear-phishing-attack), a [password-spray attack](attack-simulator.md#password-spray-attack), a [brute-force password attack](attack-simulator.md#brute-force-password-attack), and more.
     
+## Save time with automated investigation and response
+
+(**NEW!**) When you are investigating a potential cyber attack, time is of the essence. The sooner you can identify and mitigate threats, the better off your organization will be. Office 365 ATP Plan 2 will now include [automated investigation and response (AIR)](automated-investigation-response-office.md) capabilities. (If you don't have these capabilities yet, you'll have them soon with ATP Plan 2.)
+
+AIR includes a set of security playbooks that can be launched automatically, such as when an alert is triggered, or manually, such as from a view in Threat Explorer. AIR can save your security operations team time and effort in mitigating threats, effectively and efficiently. To learn more, see [Automated Investigation and Response (AIR) with Office 365](automated-investigation-response-office.md).
+
 ## Permissions required to use ATP features
 
 To access ATP features in the Security & Compliance Center, you must be assigned an appropriate role. The following table includes some examples:
@@ -82,7 +89,7 @@ For more information, see:
 
 ## Get Office 365 ATP
 
-Office 365 ATP is included in Office 365 Enterprise E5, Office 365 Education A5, and Microsoft 365 Business. If your subscription does not include Office 365 ATP, you can potentially purchase ATP as an add-on. To learn more, see the following resources:
+Office 365 ATP Plan 2 is included in Office 365 Enterprise E5, Office 365 Education A5, and Microsoft 365 Business. If your subscription does not include Office 365 ATP, you can potentially purchase ATP as an add-on. To learn more, see the following resources:
 
 - See [Office 365 Advanced Threat Protection (ATP) availability](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#office-365-advanced-threat-protection-atp-availability) for a list of subscriptions that include ATP plans.
 

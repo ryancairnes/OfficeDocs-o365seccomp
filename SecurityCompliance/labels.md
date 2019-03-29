@@ -379,11 +379,13 @@ A retention label can enforce retention actions on content. In addition, you can
   
 For more information, see [Using a label as a condition in a DLP policy](data-loss-prevention-policies.md#using-a-label-as-a-condition-in-a-dlp-policy).
   
-## Using the Label Activity Explorer and the data governance reports
+## Monitor retention labels
 
 After you publish or auto-apply your retention labels, you'll want to verify that they're being applied to content as you intended. To monitor your retention labels, you can use the:
   
 - **Label Activity Explorer**. With the explorer (shown below), you can quickly search and view retention label activity for all content across SharePoint and OneDrive for Business over the past 30 days. For more information, see [View label activity for documents](view-label-activity-for-documents.md).
+
+- **Label analytics** page. In the Microsoft 365 compliance center and Microsoft 365 security center, you can quickly view your top labels and where they're applied. You can also view all content with a specific label. For more information, see [View label usage with label analytics](label-analytics.md).
     
 - **Data governance reports**. With these reports, you can quickly view retention label trends and activity for all content across Exchange, SharePoint, and OneDrive for Business over the past 90 days. For more information, see [View the data governance reports](view-the-data-governance-reports.md).
     

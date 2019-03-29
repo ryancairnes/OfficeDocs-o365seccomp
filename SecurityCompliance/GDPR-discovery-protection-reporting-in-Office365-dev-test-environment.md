@@ -171,7 +171,7 @@ Contoso always refers to customers by using a CCN in internal correspondence, ex
 
 ## Phase 5: Demonstrate data protection
 
-Protection of personal information in Office 365 includes using data loss prevention (DLP) capabilities.  With DLP policies in the Office 365 Security & Compliance Center, you can automatically protect sensitive information across Office 365.
+Protection of personal information in Office 365 includes using data loss prevention (DLP) capabilities.  With DLP policies, you can automatically protect sensitive information across Office 365.
 
 There are multiple ways you can apply the protection. Educating and raising awareness to where EU resident data is stored in your environment and how your employees are permitted to handle it represents one level of information protection using Office 365 DLP.
 
