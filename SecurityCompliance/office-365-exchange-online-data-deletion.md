@@ -3,11 +3,10 @@ title: "Office 365 Exchange Online Data Deletion"
 ms.author: robmazz
 author: robmazz
 manager: laurawi
-ms.date: 8/21/2018
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
-localization_priority: None
+localization_priority: Normal
 search.appverid:
 - MET150
 ms.collection:
@@ -20,7 +19,7 @@ description: "How soft and hard data deletions are handled within Exchange Onlin
 Within Exchange Online, there are two kinds of deletions: soft deletions and hard deletions. This applies to both mailboxes and items within a mailbox.
 
 ## Soft-Deleted and Hard-Deleted Mailboxes
-A soft-deleted user mailbox is a mailbox that has been deleted using the Office 365 admin center or the Remove-Mailbox cmdlet and has still been in the Azure Active Directory recycle bin for less than 30 days. A mailbox can become soft-deleted in any of the following ways:
+A soft-deleted user mailbox is a mailbox that has been deleted using the Microsoft 365 admin center or the Remove-Mailbox cmdlet and has still been in the Azure Active Directory recycle bin for less than 30 days. A mailbox can become soft-deleted in any of the following ways:
 - The user mailbox's associated Azure Active Directory user account is soft-deleted (the user object is out of scope or in the recycle bin container).
 - The user mailbox's associated Azure Active Directory user account has been hard-deleted but the Exchange Online mailbox is under a litigation hold or eDiscovery hold.
 - The user mailbox's associated Azure Active Directory user account has been purged within the last 30 days; which is the maximum retention length Exchange Online will keep the mailbox in a soft-deleted state before it is permanently purged and unrecoverable.

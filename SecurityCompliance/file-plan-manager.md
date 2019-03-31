@@ -3,7 +3,7 @@ title: "Overview of file plan manager"
 ms.author: stephow
 author: stephow-MSFT
 manager: laurawi
-ms.date: 9/25/2018
+ms.date: 
 ms.audience: Admin
 ms.topic: conceptual
 ms.service: O365-seccomp

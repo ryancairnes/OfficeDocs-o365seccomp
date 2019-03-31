@@ -32,7 +32,7 @@ You can use the Alerts page in Office 365 Cloud App Security to view potential i
 2. In the navigation bar across the top of the screen, choose **Alerts**.<br/>![On the Alerts page, you can see alerts that were triggered and any actions taken.](media/3b53d4c9-4b13-435d-8547-8c0f9ae6b914.png)
  
 > [!NOTE]
-> Cloud App Security alerts are also visible in the Office 365 Security & Compliance Center (go to **Alerts** > **View alerts**. Currently, however, you must resolve these alerts in both the Cloud App Security portal and the Office 365 Security & Compliance Center. To learn more, see [Viewing Cloud App Security alerts](alert-policies.md#viewing-cloud-app-security-alerts).) 
+> Cloud App Security alerts are also visible in the Security & Compliance Center (go to **Alerts** > **View alerts**. Currently, however, you must resolve these alerts in both the Cloud App Security portal and the Security & Compliance Center. To learn more, see [Viewing Cloud App Security alerts](alert-policies.md#viewing-cloud-app-security-alerts).) 
  
 ## Review and handle alerts
 

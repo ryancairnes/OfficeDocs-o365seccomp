@@ -83,9 +83,9 @@ To access ATP features in the Security & Compliance Center, you must be assigned
 
 For more information, see:
 
-- [Permissions in the Office 365 Security & Compliance Center](permissions-in-the-security-and-compliance-center.md) 
+- [Permissions in the Security & Compliance Center](permissions-in-the-security-and-compliance-center.md) 
 
-- [Give users access to the Office 365 Security & Compliance Center](grant-access-to-the-security-and-compliance-center.md)
+- [Give users access to the Security & Compliance Center](grant-access-to-the-security-and-compliance-center.md)
 
 ## Get Office 365 ATP
 

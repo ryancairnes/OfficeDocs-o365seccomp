@@ -12,16 +12,16 @@ search.appverid:
 - SPO160
 - MOE150
 ms.assetid: 1d463dda-a3b5-4675-95d4-83db19c9c4a3
-description: "Learn how to automate Content Search tasks like creating searches and running reports via PowerShell scripts in the Office 365 Security &amp; Compliance Center."
+description: "Learn how to automate Content Search tasks like creating searches and running reports via PowerShell scripts in the Security & Compliance Center in Office 365."
 ---
 
 # Create, report on, and delete multiple Content Searches
 
- Quickly creating and reporting discovery searches is often an important step in eDiscovery and investigations when you're trying to learn about the underlying data, and the richness and quality of your searches. To help you do this, the Security &amp; Compliance Center offers a set of Windows PowerShell cmdlets to automate time-consuming Content Search tasks. These scripts provide a quick and easy way to create a number of searches, and then run reports of the estimated search results that can help you determine the quantity of data in question. You can also use the scripts to create different versions of searches to compare the results each one produces. These scripts can help you to quickly and efficiently identify and cull your data. 
+ Quickly creating and reporting discovery searches is often an important step in eDiscovery and investigations when you're trying to learn about the underlying data, and the richness and quality of your searches. To help you do this, the Security & Compliance Center PowerShell offers a set of cmdlets to automate time-consuming Content Search tasks. These scripts provide a quick and easy way to create a number of searches, and then run reports of the estimated search results that can help you determine the quantity of data in question. You can also use the scripts to create different versions of searches to compare the results each one produces. These scripts can help you to quickly and efficiently identify and cull your data. 
   
 ## Before you begin
 
-- You have to be a member of the eDiscovery Manager role group in the Security &amp; Compliance Center to run the scripts that are described in this topic. 
+- You have to be a member of the eDiscovery Manager role group in the Security & Compliance Center to run the scripts that are described in this topic. 
     
 - To collect a list of the URLs for the OneDrive for Business sites in your organization that you can add to the CSV file in Step 1, see [Create a list of all OneDrive locations in your organization](https://support.office.com/article/Create-a-list-of-all-OneDrive-locations-in-your-organization-8e200cb2-c768-49cb-88ec-53493e8ad80a). 
     
@@ -63,7 +63,7 @@ The comma separated value (CSV) file that you create in this step contains a row
   
 ## Step 2: Connect to Security & Compliance Center PowerShell
 
-The next step is to connect Windows PowerShell to the Security &amp; Compliance Center for your organization.
+The next step is to connect to the Security & Compliance Center PowerShell for your organization.
   
 1. Save the following text to a Windows PowerShell script file by using a filename suffix of .ps1; for example, `ConnectSCC.ps1`. Save the file to the same folder that you saved the CSV file to in Step 1.
     
@@ -72,7 +72,7 @@ The next step is to connect Windows PowerShell to the Security &amp; Compliance 
     $UserCredential = Get-Credential 
     $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.compliance.protection.outlook.com/powershell-liveid -Credential $UserCredential -Authentication Basic -AllowRedirection 
     Import-PSSession $Session -AllowClobber -DisableNameChecking 
-    $Host.UI.RawUI.WindowTitle = $UserCredential.UserName + " (Office 365 Security &amp; Compliance Center)" 
+    $Host.UI.RawUI.WindowTitle = $UserCredential.UserName + " (Security & Compliance Center)" 
     ```
 
 2. On your local computer, open Windows PowerShell, go to the folder where the script that you created in the previous step is located, and then run the script; for example:

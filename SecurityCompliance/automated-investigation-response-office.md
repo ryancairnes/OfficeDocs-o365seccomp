@@ -34,9 +34,9 @@ In the initial release of AIR in April 2019, alerts generated from following sin
 
 ***Note**: These alerts have been assigned an "Informational" severity in the respective alert policies within the Security & Compliance Center with email notifications turned off. These can be turned on through the Alert policy configuration.
 
-To view alerts, in the Office 365 Security & Compliance Center, choose **Alerts** > **View alerts**. Select an alert to view its details, and from there, use the **View investigation** link to go to the corresponding [investigation](#investigation-graph). Note that informational alerts are hidden in the alert view by default. To see them, you need to change the alert filtering to include informational alerts.
+To view alerts, in the Security & Compliance Center, choose **Alerts** > **View alerts**. Select an alert to view its details, and from there, use the **View investigation** link to go to the corresponding [investigation](#investigation-graph). Note that informational alerts are hidden in the alert view by default. To see them, you need to change the alert filtering to include informational alerts.
 
-If your organization manages your security alerts through a alert management system, service management system, or Security Information and Event Management (SIEM) system, you can send Office 365 alerts to that system via either email notification or via the [Office 365 Management Activity API](https://docs.microsoft.com/office/office-365-management-api/office-365-management-activity-api-reference). The investigation alert notifications via email or API will include links to access the alerts in the Office 365 Security & Compliance Center, enabling the assigned security administrator to navigate quickly to the investigation.
+If your organization manages your security alerts through a alert management system, service management system, or Security Information and Event Management (SIEM) system, you can send Office 365 alerts to that system via either email notification or via the [Office 365 Management Activity API](https://docs.microsoft.com/office/office-365-management-api/office-365-management-activity-api-reference). The investigation alert notifications via email or API will include links to access the alerts in the Security & Compliance Center, enabling the assigned security administrator to navigate quickly to the investigation.
 
 ![Alerts that link to investigations](media/air-alerts-page-details.png) 
 
@@ -116,7 +116,7 @@ Similar to playbooks triggered by an alert, automatic investigations that are tr
 
 ## Get started
 
-To access your investigations, as an Office 365 global administrator, security administrator, or security reader, go to the Office 365 Security & Compliance Center ([https://protection.office.com](https://protection.office.com)) and sign in. Then, do one of the following:
+To access your investigations, as an Office 365 global administrator, security administrator, or security reader, go to the Security & Compliance Center ([https://protection.office.com](https://protection.office.com)) and sign in. Then, do one of the following:
 
 - In the left navigation, go to **Alerts** > **View alerts**, open one of the investigation related alerts, then click the **View investigation** link at the bottom of the alert flyout. 
 

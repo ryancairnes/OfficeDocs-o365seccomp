@@ -15,8 +15,6 @@ ms.topic: article
 
 # Monitor and report security status in Microsoft 365 security center
 
-[!include[Prerelease�information](prerelease.md)]
-
 The Microsoft 365 security center provides at a glance summary of protection and security status across your Microsoft 365 environment.
 
 The security center includes a **Monitoring & reports** section which features a host of cards covering a variety of areas that security analysts and administrators track as part of their day-to-day operations. On drill-down, cards provide detailed reports and, in some cases, management options.

@@ -45,7 +45,7 @@ Supervision policies can assist monitoring communications in your organization i
 
 ### Supervision policy
 
-You'll create supervision policies in the Security & Compliance Center. These policies define which communications and users are subject to review in your organization, define custom conditions that the communications must meet, and specifies who should perform reviews. Users included in the Supervisory Review role group can set up policies and anyone who has this role assigned can access the Supervision page under Data Governance in the Office 365 Security & Compliance Center.
+You'll create supervision policies in the Compliance center. These policies define which communications and users are subject to review in your organization, define custom conditions that the communications must meet, and specifies who should perform reviews. Users included in the Supervisory Review role group can set up policies and anyone who has this role assigned can access the Supervision page in the Compliance center.
 
 ### Supervised users
 
@@ -142,7 +142,7 @@ Monitoring the results of your supervision policies and applying a resolution ta
 
 ### Supervision policy dashboard
 
-The easiest way to manage supervision policy results and to resolve outstanding items is to use the supervision policy dashboard. This dashboard allows reviewers to quickly see the items that need to be reviewed, take action on an item, and review the results of previously reviewed and resolved items for each supervision policy. You can access the supervision policy dashboard in the Office 365 Security & Compliance Center at **Supervision** > *Your Custom Policy* > **Open**.
+The easiest way to manage supervision policy results and to resolve outstanding items is to use the supervision policy dashboard. This dashboard allows reviewers to quickly see the items that need to be reviewed, take action on an item, and review the results of previously reviewed and resolved items for each supervision policy. You can access the supervision policy dashboard in the Compliance center at **Supervision** > *Your Custom Policy* > **Open**.
 
 #### Dashboard Home
 
@@ -206,7 +206,7 @@ Use the supervision reports to see the review activity at the policy and reviewe
 
 ### View the Supervision report
 
-1. Sign into the [Security & Compliance Center](https://protection.office.com/) using the credentials for an admin account in your Office 365 organization that has permissions to view supervision reports.
+1. Sign into the [Compliance center](https://compliance.microsoft.com) using the credentials for an admin account in your organization that has permissions to view supervision reports.
 2. Go to either **Reports** \> **Dashboard** or **Supervision**. You'll see a supervision reporting widget with a summary of current supervision policy activity.
 3. Select the **Supervision** widget to open the detailed report page.
 

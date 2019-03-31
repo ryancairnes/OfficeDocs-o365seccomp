@@ -64,7 +64,7 @@ Use the **New-Mailbox** cmdlet with the  *InactiveMailbox*  parameter to recover
 
     The primary SMTP address for the recovered inactive mailbox will have the same value as the one specified by the  *MicrosoftOnlineServicesID*  parameter. 
     
-After you recover an inactive mailbox, a new Office 365 user account is also created. You have to activate this user account by assigning a license. To assign a license in the Office 365 admin center, see [Assign or unassign licenses for Office 365 for business](https://go.microsoft.com/fwlink/p/?LinkId=276798).
+After you recover an inactive mailbox, a new Office 365 user account is also created. You have to activate this user account by assigning a license. To assign a license in the Microsoft 365 admin center, see [Assign or unassign licenses for Office 365 for business](https://go.microsoft.com/fwlink/p/?LinkId=276798).
   
 ## More information
 

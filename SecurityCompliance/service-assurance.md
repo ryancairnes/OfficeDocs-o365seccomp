@@ -1,5 +1,5 @@
 ---
-title: "Service assurance in the Office 365 Security &amp; Compliance Center"
+title: "Service assurance in the Security & Compliance Center"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -15,9 +15,9 @@ ms.assetid: 47e8b964-4b09-44f7-a2d7-b8a06e8e389c
 description: "Download third-party audits, find out how Microsoft keeps customer data safe, and know how you can comply with ISO, HIPAA, FINRA, and FedRAMP when you use Office 365."
 ---
 
-# Service assurance in the Office 365 Security &amp; Compliance Center
+# Service assurance in the Security & Compliance Center
 
-Use Service assurance in the Office 365 Security &amp; Compliance Center to access documents that describe a variety of topics, including: 
+Use Service assurance in the Security & Compliance Center to access documents that describe a variety of topics, including: 
   
 - Microsoft security practices for customer data that is stored in Office 365. 
     
@@ -42,20 +42,20 @@ You can also find out how Office 365 can help customers comply with standards, l
  **O365 Subscription Members** can access the Service assurance section in the Office365 Protection Center by default if Service assurance roles-based access has not been implemented in your subscription. Service assurance provides reports and documents that describe Microsoft's security practices for customer data that's stored in Office 365. It also provides independent third-party audit reports on Office 365. 
   
 > [!NOTE]
-> Note: If your company has implemented Service Assurance Roles-Based Access in your Office 365 Subscription (which could be if your organization has been provided access to custom reports), and you need access to Service assurance but it is not included in the left pane of the Security &amp; Compliance Center, ask your Office 365 administrator to add you to the Service Assurance User role group on the **Permissions** page. For more information, see Onboard other Service assurance users or groups. 
+> Note: If your company has implemented Service Assurance Roles-Based Access in your Office 365 Subscription (which could be if your organization has been provided access to custom reports), and you need access to Service assurance but it is not included in the left pane of the Security & Compliance Center, ask your Office 365 administrator to add you to the Service Assurance User role group on the **Permissions** page. For more information, see Onboard other Service assurance users or groups. 
   
  **Service assurance roles-based access-provisioned users** If your company has implemented Service assurance roles-based access, you can provide Service assurance access to all security and compliance personnel including information security, risk management, compliance, and audit teams and personnel within your organization. For details, see [Onboard other Service assurance users or groups](service-assurance.md#addother).
   
-Service assurance is accessible by using the Security &amp; Compliance Center. Here's how to get to there.
+Service assurance is accessible by using the Security & Compliance Center. Here's how to get to there.
   
-1. Go to [https://protection.office.com](https://protection.office.com).
+1. Go to [https://compliance.microsoft.com](https://compliance.microsoft.com).
     
 2. Sign in to Office 365 using your work or school account. 
     
 3. In the left pane, select **Service assurance**. Next, [Choose your industry and regional settings](service-assurance.md#Chooseyourindustryregional) and [Onboard other Service assurance users or groups](service-assurance.md#addother).
     
     > [!NOTE]
-    > If you need access to Service assurance, and it's not included in the left pane of the Security &amp; Compliance Center, ask your Office 365 administrator to add you to the Service Assurance User role group on the **Permissions** page. 
+    > If you need access to Service assurance, and it's not included in the left pane of the Security & Compliance Center, ask your Office 365 administrator to add you to the Service Assurance User role group on the **Permissions** page. 
   
 ## Choose your industry and regional settings
 <a name="Chooseyourindustryregional"> </a>
@@ -107,7 +107,7 @@ Depending on your specific set-up, options included in your view might have some
 
 For accessing default reports that are generally available across all Microsoft Cloud subscriptions, you don't need to implement the Service Assurance roles-based access model and you can skip this step. However, if your organization has been provided access to custom reports then please add other users or groups to the Service Assurance roles. To add other users or groups:
   
-1. In the Security &amp; Compliance Center, select **Permissions** in the left pane as shown in the following screenshot. 
+1. In the Security & Compliance Center, select **Permissions** in the left pane as shown in the following screenshot. 
     
     ![Security &amp; Compliance Permissions menu](media/8b479ad4-5c91-4e4c-a1db-372d50526db6.png)
   
@@ -119,7 +119,7 @@ For accessing default reports that are generally available across all Microsoft 
     
     ![Service Assurance User - Choose user](media/33f13ef6-1e10-4d49-af06-8e1ad5ffbfba.png)
   
-4. Every user or group that you added to the Service Assurance User role can now find Service assurance and download reports and other documents in the Security &amp; Compliance Center.
+4. Every user or group that you added to the Service Assurance User role can now find Service assurance and download reports and other documents in the Security & Compliance Center.
     
 Return to the **Permissions** page at any time to add more users, or remove existing ones. 
   

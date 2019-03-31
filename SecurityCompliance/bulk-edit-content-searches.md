@@ -1,5 +1,5 @@
 ---
-title: "Bulk edit Content Searches in the Office 365 Security &amp; Compliance Center"
+title: "Bulk edit Content Searches"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -10,18 +10,18 @@ ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid: MOE150
 ms.assetid: 39e4654a-9588-41f6-892b-c33ab57bfbe2
-description: "Use the Bulk Search Editor in the Office 365 Security &amp; Compliance Center to quickly change the query and content locations for one or more Content Searches."
+description: "Use the Bulk Search Editor in the security and compliance center in Office 365 or Microsoft 365 to quickly change the query and content locations for one or more Content Searches."
 ---
 
-# Bulk edit Content Searches in the Office 365 Security &amp; Compliance Center
+# Bulk edit Content Searches
 
-You can use the Bulk Search Editor in the Office 365 Security &amp; Compliance Center to edit multiple Content Searches at the same time. Using this tool lets you quickly change the query and content locations for one or more searches. Then you can re-run the searches and get new estimated search results for the revised searches. The editor also lets you copy and paste queries and content locations from a Microsoft Excel file or text file. This means you can use the Search Statistics tool to view the statistics of one or more searches, export the statistics to a CSV file where you can edit the queries and content locations in Excel. Then you use the Bulk Search Editor to add the revised queries and content locations to the searches. After you've revised one or more searches, you can re-start them and get new estimated search results.
+You can use the Bulk Search Editor in the Content Search tool to edit multiple searches at the same time. Using this tool lets you quickly change the query and content locations for one or more searches. Then you can re-run the searches and get new estimated search results for the revised searches. The editor also lets you copy and paste queries and content locations from a Microsoft Excel file or text file. This means you can use the Search Statistics tool to view the statistics of one or more searches, export the statistics to a CSV file where you can edit the queries and content locations in Excel. Then you use the Bulk Search Editor to add the revised queries and content locations to the searches. After you've revised one or more searches, you can re-start them and get new estimated search results.
   
 For more information about using the Search Statistics tool, see [View keyword statistics for Content Search results](view-keyword-statistics-for-content-search.md).
   
 ## Use the Bulk Search Editor to change queries
 
-1. In the Security &amp; Compliance Center, go to **Search &amp; investigation** \> **Content search**.
+1. Go to [https://compliance.microsoft.com](https://compliance.microsoft.com), and then click **Search** \> **Content search**.
     
 2. In the list of searches, select one or more searches, and then click **Bulk Search Editor** ![Bulk Search Editor button](media/1ddb3d18-2f00-4a7b-98a6-817ca5ec7014.png).
     

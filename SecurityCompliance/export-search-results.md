@@ -1,5 +1,5 @@
 ---
-title: "Export Content Search results from the Office 365 Security & Compliance Center"
+title: "Export Content Search results"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,10 +17,10 @@ search.appverid:
 - MED150
 - MET150
 ms.assetid: ed48d448-3714-4c42-85f5-10f75f6a4278
-description: "Export the search results from a Content Search in the Office 365 Security & Compliance Center to a local computer. Email results are exported as PST files. Content from SharePoint and OneDrive for Business sites are exported as native Office documents. "
+description: "Export the search results from a Content Search in the Security & Compliance Center to a local computer. Email results are exported as PST files. Content from SharePoint and OneDrive for Business sites are exported as native Office documents. "
 ---
 
-# Export Content Search results from the Office 365 Security & Compliance Center
+# Export Content Search results
 
 After a Content Search is successfully run, you can export the search results to a local computer. When you export email results, they're downloaded to your computer as PST files. When you export content from SharePoint and OneDrive for Business sites, copies of native Office documents are exported. There are additional documents and reports that are included with the exported search results.
   
@@ -30,7 +30,7 @@ Exporting the results of a Content Search involves preparing the results, and th
   
 ## Before you begin
 
-- To export search results, you have to be assigned the Export management role in the Office 365 Security &amp; Compliance Center. This role is assigned to the built-in eDiscovery Manager role group. It isn't assigned by default to the Organization Management role group. For more information, see [Assign eDiscovery permissions in the Office 365 Security &amp; Compliance Center](assign-ediscovery-permissions.md).
+- To export search results, you have to be assigned the Export management role in the Security & Compliance Center. This role is assigned to the built-in eDiscovery Manager role group. It isn't assigned by default to the Organization Management role group. For more information, see [Assign eDiscovery permissions](assign-ediscovery-permissions.md).
     
 - The computer you use to export the search results has to meet the following system requirements:
     
@@ -75,11 +75,11 @@ Exporting the results of a Content Search involves preparing the results, and th
 
 The first step is to prepare the search results for exporting. When you prepare results, they are uploaded to an Azure storage location in the Microsoft cloud. Note that content from mailboxes and sites is uploaded at a maximum rate of 2 GB per hour.
   
-1. Go to [https://protection.office.com](https://protection.office.com).
+1. Go to [https://compliance.microsoft.com](https://compliance.microsoft.com).
     
 2. Sign in to Office 365 using your work or school account.
     
-3. In the left pane of the Security &amp; Compliance Center, click **Search &amp; investigation** \> **Content search**.
+3. In the left pane of the Security & Compliance Center, click **Search** \> **Content search**.
     
 4. On the **Content search** page, select a search. 
     
@@ -185,7 +185,7 @@ Here's more information about exporting search results.
   
  ### Export limits
   
-- Exporting search results from the Security &amp; Compliance Center has the following limits:
+- Exporting search results from the Security & Compliance Center has the following limits:
     
   - You can export a maximum of 2 TB of data from a single Content Search. If the search results are larger than 2 TB, consider using date ranges or other types of filters to decrease the total size of the search results.
     
@@ -249,7 +249,7 @@ Here's more information about exporting search results.
   
 - If you're exporting mailbox items from a content search that returns all mailbox items in the search results (because no keywords where included in the search query), partially indexed items won't be copied to the PST file that contains the unindexed items. This is because all items, including any partially indexed items, are automatically included in the regular search results. This means that partially indexed items will be included in a PST file (or as individual messages) that contains the other, indexed items.
     
-    Additionally, if you export both the indexed and partially indexed items or if you export only the indexed items from a content search that returns all items, the same number of items will be downloaded. This happens even though the estimated search results for the content search (displayed in the search statistics in the Security &amp; Compliance Center) will still include a separate estimate for the number of partially indexed items. For example, let's say that the estimate for a search that includes all items (no keywords in the search query) shows that 1,000 items were found and that 200 partially indexed items were also found. In this case, the 1,000 items include the partially indexed items because the search returns all items. In other words, there are 1,000 total items returned by the search, and not 1,200 items (as you might expect). If you export the results of this search and choose to export indexed and partially indexed items (or just indexed items), then 1,000 items will be downloaded. Again, that's because partially indexed items are included with the regular (indexed) results when you use a blank search query to return all items. In this same example, if you choose to export only partially indexed items, then only the 200 unindexed items would be downloaded.
+    Additionally, if you export both the indexed and partially indexed items or if you export only the indexed items from a content search that returns all items, the same number of items will be downloaded. This happens even though the estimated search results for the content search (displayed in the search statistics in the Security & Compliance Center) will still include a separate estimate for the number of partially indexed items. For example, let's say that the estimate for a search that includes all items (no keywords in the search query) shows that 1,000 items were found and that 200 partially indexed items were also found. In this case, the 1,000 items include the partially indexed items because the search returns all items. In other words, there are 1,000 total items returned by the search, and not 1,200 items (as you might expect). If you export the results of this search and choose to export indexed and partially indexed items (or just indexed items), then 1,000 items will be downloaded. Again, that's because partially indexed items are included with the regular (indexed) results when you use a blank search query to return all items. In this same example, if you choose to export only partially indexed items, then only the 200 unindexed items would be downloaded.
     
     Also note that in the previous example (when you export indexed and partially indexed items or you export only indexed items) , the **Export Summary** report included with the exported search results would list 1,000 items estimated items and 1,000 downloaded items for the same reasons as previously described. 
     

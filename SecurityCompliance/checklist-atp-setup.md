@@ -39,7 +39,7 @@ Here's a quick-start guide you can use as a checklist to make sure Office 365 Ad
 
 ## Part 1 - Anti-malware
 
-1. In the [Office 365 Security & Compliance Center](https://protection.office.com), choose **Threat management** > **Policy** > **Anti-malware**.
+1. In the [Security & Compliance Center](https://protection.office.com), choose **Threat management** > **Policy** > **Anti-malware**.
 2. Double-click the **Default** policy, and then choose **settings**.
 3. Specify the following settings:
     - In the **Malware Detection Response** section, keep the default setting of **No**.
@@ -54,7 +54,7 @@ Zero-day protection is set up through policies, such as ATP Safe Links and Safe 
 
 ### ATP Safe Attachments policies
 
-1. In the [Office 365 Security & Compliance Center](https://protection.office.com), choose **Threat management** > **Policy** > **ATP safe attachments**.
+1. In the [Security & Compliance Center](https://protection.office.com), choose **Threat management** > **Policy** > **ATP safe attachments**.
 2. Select the option **Turn on ATP for SharePoint, OneDrive, and Microsoft Teams**.
 3. In the **Protect email attachments** section, click the plus sign (**+**).
 4. Specify the following settings:
@@ -71,7 +71,7 @@ To learn more, see [Set up Office 365 ATP Safe Attachments policies](set-up-atp-
 
 To set up ATP Safe Links, review your default policy and add a policy.
 
-1. In the [Office 365 Security & Compliance Center](https://protection.office.com), choose **Threat management** > **Policy** > **ATP Safe Links**.
+1. In the [Security & Compliance Center](https://protection.office.com), choose **Threat management** > **Policy** > **ATP Safe Links**.
 2. Double-click the **Default** policy.
 3. In the **Use safe links in** section, select the option **Office 365 ProPlus, Office for iOS and Android**, and then click **Save**.
 4. In the **Policies that apply to specific recipients** section, click the plus sign (**+**).
@@ -89,7 +89,7 @@ To learn more, see [Set up Office 365 ATP Safe Links policies](set-up-atp-safe-l
 
 ## Part 3 - Anti-phishing 
 
-1. In the [Office 365 Security & Compliance Center](https://protection.office.com), choose **Threat management** > **Policy** > **ATP anti-phishing**.
+1. In the [Security & Compliance Center](https://protection.office.com), choose **Threat management** > **Policy** > **ATP anti-phishing**.
 2. Click **Default policy**.
 3. In the **Impersonation** section, click **Edit**, and then specify the following settings:
     -  On the **Add users to protect** tab, turn protection on. Then add users, such as your organization's board members, your CEO, CFO, and other senior leaders. (You can type an individual email address, or click to display a list.)
@@ -107,7 +107,7 @@ To learn more about your anti-phishing policy options, see [Set up Office 365 AT
 
 ## Part 4 - Anti-spam
 
-1. In the [Office 365 Security & Compliance Center](https://protection.office.com), choose **Threat management** > **Policy** > **Anti-spam**.
+1. In the [Security & Compliance Center](https://protection.office.com), choose **Threat management** > **Policy** > **Anti-spam**.
 2. On the **Custom** tab, turn **Custom settings** on.
 3. Expand **Default spam filter policy**, click **Edit policy**, and then specify the following settings:
     - In the **Spam and bulk actions** section, set the threshold to a value of 5 or 6.

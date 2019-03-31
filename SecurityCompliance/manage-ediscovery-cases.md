@@ -1,5 +1,5 @@
 ---
-title: "Manage eDiscovery cases in the Office 365 Security &amp; Compliance Center"
+title: "Manage eDiscovery cases in the Security & Compliance Center"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -9,16 +9,16 @@ ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
 ms.assetid: 9a00b9ea-33fd-4772-8ea6-9d3c65e829e6
-description: "Use the Office 365 Security &amp; Compliance Center to create eDiscovery holds, and to access, and manage eDiscovery cases in your organization."
+description: "Use the Security & Compliance Center to create eDiscovery holds, and to access, and manage eDiscovery cases in your organization."
 ---
 
-# Manage eDiscovery cases in the Office 365 Security &amp; Compliance Center
+# Manage eDiscovery cases in the Security & Compliance Center
 
-You can use eDiscovery cases in the Office 365 Security &amp; Compliance Center to control who can create, access, and manage eDiscovery cases in your organization. If your organization has an Office 365 E5 subscription, you can also use eDiscovery cases to analyze search results by using Office 365 Advanced eDiscovery.
+You can use eDiscovery cases in the Security & Compliance Center to control who can create, access, and manage eDiscovery cases in your organization. If your organization has an Office 365 E5 subscription, you can also use eDiscovery cases to analyze search results by using Office 365 Advanced eDiscovery.
   
 An eDiscovery case allows you to add members to a case, control what types of actions that specific case members can perform, place a hold on content locations relevant to a legal case, and associate multiple Content Searches with a single case. You can also export the results of any Content Search that is associated with a case or prepare search results for analysis in Advanced eDiscovery. eDiscovery cases are a good way to limit who has access to Content Searches and search results for a specific legal case in your organization.
   
-Use the following workflow to set up and use eDiscovery cases in the Security &amp; Compliance Center and Advanced eDiscovery.
+Use the following workflow to set up and use eDiscovery cases in the Security & Compliance Center and Advanced eDiscovery.
   
 [Step 1: Assign eDiscovery permissions to potential case members](manage-ediscovery-cases.md#step1_1)
   
@@ -45,13 +45,13 @@ Use the following workflow to set up and use eDiscovery cases in the Security &a
 ## Step 1: Assign eDiscovery permissions to potential case members
 <a name="step1_1"> </a>
 
-The first step is to assign the appropriate eDiscovery-related permissions to people so you can add them to an eDiscovery case in Step 2. You have to be a member of the Organization Management role group (or be assigned the Role Management role) in the Office 365 Security &amp; Compliance Center to assign eDiscovery permissions. The following list describes the eDiscovery-related role groups in the Security &amp; Compliance Center.
+The first step is to assign the appropriate eDiscovery-related permissions to people so you can add them to an eDiscovery case in Step 2. You have to be a member of the Organization Management role group (or be assigned the Role Management role) in the Security & Compliance Center to assign eDiscovery permissions. The following list describes the eDiscovery-related role groups in the Security & Compliance Center.
   
-- **Reviewer**This role group has the most restrictive eDiscovery-related permissions. Members of this group can only see and open the list of the cases on the **eDiscovery** page in the Security &amp; Compliance Center that they are members of. They can't create cases, add members to a case, create holds, create searches, export search results, or prepare results for Advanced eDiscovery. However, members can access cases in Advanced eDiscovery to perform analysis tasks. 
+- **Reviewer**This role group has the most restrictive eDiscovery-related permissions. Members of this group can only see and open the list of the cases on the **eDiscovery** page in the Security & Compliance Center that they are members of. They can't create cases, add members to a case, create holds, create searches, export search results, or prepare results for Advanced eDiscovery. However, members can access cases in Advanced eDiscovery to perform analysis tasks. 
     
 - **eDiscovery Manager**Members of this role group can create and manage eDiscovery cases. They can add and remove members, place content locations on hold, create and edit Content Searches associated with a case, export the results of a Content Search, and prepare search results for analysis in Advanced eDiscovery. There are two sub-groups in this role group. The difference between these subgroups is based on scope.
     
-  - **eDiscovery Manager**Can view and manage the eDiscovery cases they create or are a member of. If another eDiscovery Manager creates a case but doesn't add a second eDiscovery Manager as a member of that case, the second eDiscovery Manager won't be able to view or open the case on the **eDiscovery** page in the Security &amp; Compliance Center. eDiscovery Managers can also access their cases in Advanced eDiscovery to perform analysis tasks. 
+  - **eDiscovery Manager**Can view and manage the eDiscovery cases they create or are a member of. If another eDiscovery Manager creates a case but doesn't add a second eDiscovery Manager as a member of that case, the second eDiscovery Manager won't be able to view or open the case on the **eDiscovery** page in the Security & Compliance Center. eDiscovery Managers can also access their cases in Advanced eDiscovery to perform analysis tasks. 
     
   - **eDiscovery Administrator**Can perform all case management tasks that an eDiscovery Manager can do. Additionally, an eDiscovery Administrator can:
     
@@ -59,7 +59,7 @@ The first step is to assign the appropriate eDiscovery-related permissions to pe
     
   - Manage any eDiscovery case in the organization after they add themself as a member of the case.
     
-  - Perform administrative tasks in Advanced eDiscovery, such as processing case data for analysis, configuring case settings, and exporting data from Advanced eDiscovery. This is because a person who is an eDiscovery Administrator in the Security &amp; Compliance Center is automatically added as an administrator in Advanced eDiscovery.
+  - Perform administrative tasks in Advanced eDiscovery, such as processing case data for analysis, configuring case settings, and exporting data from Advanced eDiscovery. This is because a person who is an eDiscovery Administrator in the Security & Compliance Center is automatically added as an administrator in Advanced eDiscovery.
     
     See the [More information](manage-ediscovery-cases.md#moreinfo_1) section for reasons why you may want an eDiscovery Administrator in your organization. 
     
@@ -68,11 +68,11 @@ The first step is to assign the appropriate eDiscovery-related permissions to pe
   
  **To assign eDiscovery permissions:**
   
-1. Go to [https://protection.office.com](https://protection.office.com).
+1. Go to [https://compliance.microsoft.com](https://compliance.microsoft.com).
     
 2. Sign in to Office 365 using your work or school account.
     
-3. In the Security &amp; Compliance Center, click **Permissions**, and then do one of the following based on the eDiscovery permissions that you want to assign.
+3. In the Security & Compliance Center, click **Permissions**, and then do one of the following based on the eDiscovery permissions that you want to assign.
     
   - To assign Reviewer permissions, select the **Reviewer** role group, and then next to **Members** click **Edit**. Click **Choose members**, click ![Add Icon](media/ITPro-EAC-AddIcon.gif) **Add** select the user that you want to add to the Reviewer role group, and then click **Add**.
     
@@ -87,13 +87,13 @@ The first step is to assign the appropriate eDiscovery-related permissions to pe
 ## Step 2: Create a new case
 <a name="step2_1"> </a>
 
-The next step is to create a new eDiscovery case. You must be a member of the eDiscovery Managers role group to create eDiscovery cases. As previously explained, after you create a new case in the Security &amp; Compliance Center, you (and other case members) will be able to access that same case in Advanced eDiscovery if you're organization has an Office 365 E5 subscription.
+The next step is to create a new eDiscovery case. You must be a member of the eDiscovery Managers role group to create eDiscovery cases. As previously explained, after you create a new case in the Security & Compliance Center, you (and other case members) will be able to access that same case in Advanced eDiscovery if you're organization has an Office 365 E5 subscription.
   
-1. Go to [https://protection.office.com](https://protection.office.com).
+1. Go to [https://compliance.microsoft.com](https://compliance.microsoft.com).
     
 2. Sign in to Office 365 using your work or school account.
     
-3. In the Security &amp; Compliance Center, click **Search &amp; investigation** \> **eDiscovery**, and then click ![Add Icon](media/ITPro-EAC-AddIcon.gif) **Create a case**.
+3. In the Security & Compliance Center, click **eDiscovery** \> **eDiscovery**, and then click ![Add Icon](media/ITPro-EAC-AddIcon.gif) **Create a case**.
     
 4. On the **New Case** page, give the case a name, type an optional description, and then click **Save**. Note that the case name must be unique in your organization.
     
@@ -109,7 +109,7 @@ The next step is to create a new eDiscovery case. You must be a member of the eD
 
 After you create a new case, the next step is to add members to the case. As previous explained, only users that are members of the Reviewer or eDiscovery Manager role groups can be added as a member of the case. Note that the eDiscovery Manager who created the case is automatically added as a member.
   
-1. In the Security &amp; Compliance Center, click **Search &amp; investigation** \> **eDiscovery** to display the list of cases in your organization. 
+1. In the Security & Compliance Center, click **eDiscovery** \> **eDiscovery** to display the list of cases in your organization. 
     
 2. Click the name of the case that you want to add members to.
     
@@ -146,7 +146,7 @@ When you create a hold, you have the following options to scope the content that
   
 To create a hold for an eDiscovery case:
   
-1. In the Security &amp; Compliance Center, click **Search &amp; investigation** \> **eDiscovery** to display the list of cases in your organization. 
+1. In the Security & Compliance Center, click **eDiscovery** \> **eDiscovery** to display the list of cases in your organization. 
     
 2. Click **Open** next to the case that you want to create the holds in. 
     
@@ -209,9 +209,9 @@ Keep the following things in mind about hold statistics:
 ## Step 5: Create and run a Content Search associated with a case
 <a name="step4_1"> </a>
 
-After an eDiscovery case is created and any custodians related to the case are placed on hold, you can create and run one or more Content Searches that are associated with the case. Content Searches associated with a case aren't listed on the **Search** page in the Security &amp; Compliance Center. This means that Content Searches associated with a case can only be accessed by case members who are also members of the eDiscovery Manager role group. 
+After an eDiscovery case is created and any custodians related to the case are placed on hold, you can create and run one or more Content Searches that are associated with the case. Content Searches associated with a case aren't listed on the **Search** page in the Security & Compliance Center. This means that Content Searches associated with a case can only be accessed by case members who are also members of the eDiscovery Manager role group. 
   
-1. In the Security &amp; Compliance Center, click **Search &amp; investigation** \> **eDiscovery** to display the list of cases in your organization. 
+1. In the Security & Compliance Center, click **eDiscovery** \> **eDiscovery** to display the list of cases in your organization. 
     
 2. Click **Open** next to the case that you want to create a Content Search in. 
     
@@ -285,7 +285,7 @@ You can export the results of a [Export the results of a single search associate
 ### Export the results of a single search associated with a case
 <a name="singlesearch_1"> </a>
 
-1. In the Security &amp; Compliance Center, click **Search &amp; investigation** \> **eDiscovery** to display the list of cases in your organization. 
+1. In the Security & Compliance Center, click **eDiscovery** \> **eDiscovery** to display the list of cases in your organization. 
     
 2. Click **Open** next to the case that you want to export search from. 
     
@@ -293,7 +293,7 @@ You can export the results of a [Export the results of a single search associate
     
 4. In the list of searches for the case, click the search that you want to export search results from, click **Export**![Export search results icon](media/47205c65-babd-4b3a-bd7b-98dfd92883ba.png), and then click **Export the results**.
     
-    The **Export search results** page is displayed. The workflow to export the results from a Content Search associated with a case is that same as exporting the search results for a search on the **Content search** page. For step-by-step instructions, see [Export search results from the Office 365 Security &amp; Compliance Center](export-search-results.md).
+    The **Export search results** page is displayed. The workflow to export the results from a Content Search associated with a case is that same as exporting the search results for a search on the **Content search** page. For step-by-step instructions, see [Export search results from the Security & Compliance Center](export-search-results.md).
     
     > [!NOTE]
     > When you export search results, you have the option to enable de-duplication so that only one copy of an email message is exported even though multiple instances of the same message might have been found in the mailboxes that were searched. For more information about de-duplication and how duplicate items are identified, see [De-duplication in eDiscovery search results](de-duplication-in-ediscovery-search-results.md). 
@@ -306,7 +306,7 @@ You can export the results of a [Export the results of a single search associate
     
 6. Click the export job that you just created to display status information in the details pane. This information includes the percentage of items that have been transferred to an Azure storage area in the Microsoft cloud.
     
-    After all items have been transferred, click **Download exported results** to download the search results to your local computer. For more information, see Step 2 in [Export search results from the Office 365 Security &amp; Compliance Center](export-search-results.md)
+    After all items have been transferred, click **Download exported results** to download the search results to your local computer. For more information, see Step 2 in [Export search results from the Security & Compliance Center](export-search-results.md)
     
 ### Export the results of multiple searches associated with a case
 <a name="multiplesearches_1"> </a>
@@ -314,9 +314,9 @@ You can export the results of a [Export the results of a single search associate
 As an alternative to exporting the results of a single Content Search associated with a case, you can export the results of multiple searches from the same case in a single export. Exporting the results of multiple searches is faster and easier than exporting the results one search at a time.
   
 > [!NOTE]
-> You can't export the results of multiple searches if one of those searches was configured to search all case content. only export the results of multiple searches for searches that are associated with an eDiscovery case. You can't export the results of multiple searches listed on the **Content search** page in the Security &amp; Compliance Center. 
+> You can't export the results of multiple searches if one of those searches was configured to search all case content. only export the results of multiple searches for searches that are associated with an eDiscovery case. You can't export the results of multiple searches listed on the **Content search** page in the Security & Compliance Center. 
   
-1. In the Security &amp; Compliance Center, click **Search &amp; investigation** \> **eDiscovery** to display the list of cases in your organization. 
+1. In the Security & Compliance Center, click **eDiscovery** \> **eDiscovery** to display the list of cases in your organization. 
     
 2. Click **Open** next to the case that you want to export search from. 
     
@@ -331,7 +331,7 @@ As an alternative to exporting the results of a single Content Search associated
     
 6. The **Export the search results for  *n*  searches ** page is displayed, where  *n*  is the number of searches that you're exporting results for. Note that you'll have to give the export job a name. 
     
-    The workflow to export the results from multiple content searches associated with a case is the same as exporting the search results for a single search. For step-by-step instructions, see [Export search results from the Office 365 Security &amp; Compliance Center](export-search-results.md).
+    The workflow to export the results from multiple content searches associated with a case is the same as exporting the search results for a single search. For step-by-step instructions, see [Export search results from the Security & Compliance Center](export-search-results.md).
     
     > [!NOTE]
     > When you export search results from multiple searches associated with a case, you also have the option to enable de-duplication so that only one copy of an email message is exported even though multiple instances of the same message might have been found in the mailboxes that were searched in one or more of the searches. For more information about de-duplication and how duplicate items are identified, see [De-duplication in eDiscovery search results](de-duplication-in-ediscovery-search-results.md). 
@@ -344,7 +344,7 @@ As an alternative to exporting the results of a single Content Search associated
     
 8. Click the export job that you just created to display status information in the details pane. This information includes the percentage of items that have been transferred to an Azure storage area in the Microsoft cloud.
     
-9. After all items have been transferred, click **Download exported results** to download the search results to your local computer. For more information, see Step 2 in [Export search results from the Office 365 Security &amp; Compliance Center](export-search-results.md)
+9. After all items have been transferred, click **Download exported results** to download the search results to your local computer. For more information, see Step 2 in [Export search results from the Security & Compliance Center](export-search-results.md)
     
 #### More information about exporting the results of multiple searches
 
@@ -374,7 +374,7 @@ When you prepare search results for Advanced eDiscovery, optical character recog
 > [!NOTE]
 > To analyze a user's data using Advanced eDiscovery, the user (the custodian of the data) must be assigned an Office 365 E5 license. Alternatively, users with an Office 365 E1 or E3 license can be assigned an Advanced eDiscovery standalone license. Administrators and compliance officers who are assigned to cases and use Advanced eDiscovery to analyze data don't need an E5 license. 
   
-1. In the Security &amp; Compliance Center, click **Search &amp; investigation** \> **eDiscovery** to display the list of cases in your organization. 
+1. In the Security & Compliance Center, click **eDiscovery** \> **eDiscovery** to display the list of cases in your organization. 
     
 2. Click **Open** next to the case that you want to prepare search results for analysis in Advanced eDiscovery. 
     
@@ -399,11 +399,11 @@ When you prepare search results for Advanced eDiscovery, optical character recog
 ## Step 8: Go to the case in Advanced eDiscovery
 <a name="gotoAeD_1"> </a>
 
-After you create a case in the Security &amp; Compliance Center, you can go to the same case in Advanced eDiscovery.
+After you create a case in the Security & Compliance Center, you can go to the same case in Advanced eDiscovery.
   
 To go to a case in Advanced eDiscovery:
   
-1. In the Security &amp; Compliance Center, click **Search &amp; investigation** \> **eDiscovery** to display the list of cases in your organization. 
+1. In the Security & Compliance Center, click **eDiscovery** \> **eDiscovery** to display the list of cases in your organization. 
     
 2. Click **Open** next to the case that you want to go to in Advanced eDiscovery. 
     
@@ -415,14 +415,14 @@ To go to a case in Advanced eDiscovery:
     
     ![The case is displayed in Advanced eDiscovery](media/8036e152-70dc-4bb7-9379-61c1ed8326b4.png)
   
-    These containers represent the search results that you prepared for analysis in Advanced eDiscovery in Step 7. Note that the name of the container has the same name as Content Search in the case in the Security &amp; Compliance Center. The containers in the list are the ones that you prepared. If a different user prepared search results for Advanced eDiscovery, the corresponding containers won't be included in the list.
+    These containers represent the search results that you prepared for analysis in Advanced eDiscovery in Step 7. Note that the name of the container has the same name as Content Search in the case in the Security & Compliance Center. The containers in the list are the ones that you prepared. If a different user prepared search results for Advanced eDiscovery, the corresponding containers won't be included in the list.
     
 4. To load the search result data from a container to the case in Advanced eDiscovery, select a container and click **Process**.
     
     For information about how to process containers, see [Run the Process module and load data in Office 365 Advanced eDiscovery](run-the-process-module-and-load-data-in-advanced-ediscovery.md).
     
 > [!TIP]
-> Click **Switch to eDiscovery** to go back to the same case in the Security &amp; Compliance Center. 
+> Click **Switch to eDiscovery** to go back to the same case in the Security & Compliance Center. 
   
 ## (Optional) Step 9: Close a case
 <a name="closecase_1"> </a>
@@ -433,13 +433,13 @@ When the legal case or investigation supported by an eDiscovery case is complete
     
 - Closing a case only turns off the holds that are associated with that case. If other holds are place on a content location (such as a Litigation Hold. a Preservation Policy, or a hold from a different eDiscovery case) those holds will still be maintained.
     
-- The case is still listed on the eDiscovery page in the Security &amp; Compliance Center. The details, holds, searches, and members of a closed case are retained.
+- The case is still listed on the eDiscovery page in the Security & Compliance Center. The details, holds, searches, and members of a closed case are retained.
     
 - You can edit a case after it's closed. For example, you can add or removing members, create searches, export search results, and prepare search result for analysis in Advanced eDiscovery. The primary difference between active and closed cases is that holds are turned off when a case is closed.
     
 To close a case:
   
-1. In the Security &amp; Compliance Center, click **Search &amp; investigation** \> **eDiscovery** to display the list of cases in your organization. 
+1. In the Security & Compliance Center, click **eDiscovery** \> **eDiscovery** to display the list of cases in your organization. 
     
 2. Click the name of the case that you want to close.
     
@@ -466,7 +466,7 @@ To close a case:
 
 When you re-open a case, any holds that were in place when the case was closed won't be automatically reinstated. After the case is re-opened, you'll have to go to the **Hold** page and turn on the previous holds. To turn a hold on, select it and click **Turn it on** in the details pane. 
   
-1. In the Security &amp; Compliance Center, click **Search &amp; investigation** \> **eDiscovery** to display the list of cases in your organization. 
+1. In the Security & Compliance Center, click **eDiscovery** \> **eDiscovery** to display the list of cases in your organization. 
     
 2. Click the name of the case that you want to re-open.
     
@@ -498,15 +498,15 @@ When you re-open a case, any holds that were in place when the case was closed w
 |Maximum number of mailboxes in a single case hold  <br/> |1,000  <br/> |
 |Maximum number of SharePoint and OneDrive for Business sites in a single case hold  <br/> |100  <br/> |
    
-- **What about cases that were created on the case management page in Advanced eDiscovery?**You can access a list of older Advanced eDiscovery cases by clicking the link at the bottom on the **eDiscovery** page in the Security &amp; Compliance Center. However, to do any work in an older case, you have to contact Office 365 Support and request that the case be moved to a new eDiscovery case in the Security &amp; Compliance Center. 
+- **What about cases that were created on the case management page in Advanced eDiscovery?**You can access a list of older Advanced eDiscovery cases by clicking the link at the bottom on the **eDiscovery** page in the Security & Compliance Center. However, to do any work in an older case, you have to contact Office 365 Support and request that the case be moved to a new eDiscovery case in the Security & Compliance Center. 
     
 - **Why create an eDiscovery Administrator?**As previously explained, an eDiscovery Administrator is member of the eDiscovery Manager role group who can view and access all eDiscovery cases in your organization. This ability to access all the eDiscovery cases has two important purposes:
     
-  - If a person who is the only member of an eDiscovery case leaves your organization, no one (including members of the Organization Management role group or another member of the eDiscovery Manager role group) can access that eDiscovery case because they aren't a member of a case. In this situation, there would be no way to access the data in the case. But because an eDiscovery Administrator can access all eDiscovery cases in the organization, they can view the case in the Security &amp; Compliance Center and add themselves or another eDiscovery manager as a member of the case.
+  - If a person who is the only member of an eDiscovery case leaves your organization, no one (including members of the Organization Management role group or another member of the eDiscovery Manager role group) can access that eDiscovery case because they aren't a member of a case. In this situation, there would be no way to access the data in the case. But because an eDiscovery Administrator can access all eDiscovery cases in the organization, they can view the case in the Security & Compliance Center and add themselves or another eDiscovery manager as a member of the case.
     
   - Because an eDiscovery Administrator can view and access all eDiscovery cases, they can audit and oversee all cases and associated Content Searches. This can help to prevent any misuse of Content Searches or eDiscovery cases. And because eDiscovery Administrators can access potentially sensitive information in the results of a Content Search, you should limit the number of people who are eDiscovery Administrators.
     
-    Finally, as previous explained, eDiscovery Administrators in the Security &amp; Compliance Center are automatically added as administrators in Advanced eDiscovery. That means a person who is an eDiscovery Administrator can perform administrative tasks in Advanced eDiscovery, such as setting up users, creating cases, and adding data to cases.
+    Finally, as previous explained, eDiscovery Administrators in the Security & Compliance Center are automatically added as administrators in Advanced eDiscovery. That means a person who is an eDiscovery Administrator can perform administrative tasks in Advanced eDiscovery, such as setting up users, creating cases, and adding data to cases.
     
 - **What are the licensing requirements to place content locations on hold?**In general, organizations require an Office 365 E3 subscription or higher to place content locations on hold. To place mailboxes on hold, an Exchange Online Plan 2 license is required. For more information, see this [FAQ](https://support.office.com/article/9d1a29ae-b7b4-4a27-9c8c-84289023dcae.aspx#Q5).
 
@@ -544,7 +544,7 @@ When you re-open a case, any holds that were in place when the case was closed w
   
   - When a user's mailbox is searched, any Office 365 Group or Microsoft Team that the user is a member of won't be searched. Similarly, when you place an Office 365 Group or Microsoft Team hold, only the group mailbox and group site are placed on hold; the mailboxes and OneDrive for Business sites of group members aren't placed on hold unless you explicitly add them to the hold. Therefore, if you the need to place an Office 365 Group or Microsoft Team on hold for a legal reasons, consider adding the mailboxes and OneDrive for Business sites for group and team members on the same hold.
     
-  - To get a list of the members of a Office 365 Group or Microsoft Team, you can view the properties on the **Home \> Groups** page in the Office 365 admin center. Alternatively, you can run the following command in Exchange Online PowerShell: 
+  - To get a list of the members of a Office 365 Group or Microsoft Team, you can view the properties on the **Home \> Groups** page in the Microsoft 365 admin center. Alternatively, you can run the following command in Exchange Online PowerShell: 
     
   ```
   Get-UnifiedGroupLinks <group or team name> -LinkType Members | FL DisplayName,PrimarySmtpAddress 

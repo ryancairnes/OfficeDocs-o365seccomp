@@ -15,7 +15,6 @@ ms.topic: article
 
 # Monitor and report app status in Microsoft 365 security
 
-[!include[Prerelease�information](prerelease.md)]
 
 These reports provide more insight into how cloud apps are being used in your organization, including what kinds of apps, their level of risk, and alerts.
 

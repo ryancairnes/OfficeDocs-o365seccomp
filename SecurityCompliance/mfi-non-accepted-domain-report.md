@@ -8,7 +8,7 @@ ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
 ms.assetid: 
-description: "Admins can learn about the non-accepted domain report in the mail flow dashboard in the Office 365 Security & Compliance Center."
+description: "Admins can learn about the non-accepted domain report in the mail flow dashboard in the Security & Compliance Center."
 ROBOTS: NOINDEX, NOFOLLOW
 ---
 
@@ -21,7 +21,7 @@ Similar to the **Sender domain** insight, the **Non-accepted domain** insight id
 
 Office 365 might throttle these messages if we have data to prove that the intent of these messages is malicious. Therefore, it's important for you to understand what's happening and to fix the issue.
 
-![The Non-accepted domain report in the mail flow dashboard in the Office 365 Security & Compliance Center](media/non-accepted-domain-report-selected.png)
+![The Non-accepted domain report in the mail flow dashboard in the Security & Compliance Center](media/non-accepted-domain-report-selected.png)
 
 When you click on the widget, you're taken to the full report. In the full report, where you can click **View details** to view the information in a table as shown in the following diagram:
 

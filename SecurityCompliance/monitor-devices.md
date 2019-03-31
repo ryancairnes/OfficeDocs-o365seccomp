@@ -15,8 +15,6 @@ ms.topic: article
 
 # Monitor devices in Microsoft 365 security
 
-[!include[Prerelease�information](prerelease.md)]
-
 Keep your devices secure, up-to-date, and spot potential threats in the Microsoft 365 security center.
 
 ## View device alerts

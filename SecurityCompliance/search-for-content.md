@@ -10,12 +10,12 @@ ms.service: O365-seccomp
 localization_priority: Normal
 ROBOTS: NOINDEX, NOFOLLOW
 ms.assetid: df2d1e0f-b476-42c9-aade-4a260b24f193
-description: "Use the Content Search eDiscovery tool in the Office 365 Security &amp; Compliance Center to quickly find email in Exchange mailboxes, documents in SharePoint sites and OneDrive locations, and instant messaging conversations in Skype for Business."
+description: "Use the Content Search eDiscovery tool in the Security & Compliance Center to quickly find email in Exchange mailboxes, documents in SharePoint sites and OneDrive locations, and instant messaging conversations in Skype for Business."
 ---
 
 # Search for content in Office 365
 
-Use the Content Search tool in the Security &amp; Compliance Center to quickly find email in Exchange mailboxes, documents in SharePoint sites and OneDrive locations, and instant messaging conversations in Skype for Business. You can use the content search tool to search for email, documents, and instant messaging conversations in Office 365 collaboration tools such as Microsoft Teams and Office 365 Groups.
+Use the Content Search tool in the Security & Compliance Center to quickly find email in Exchange mailboxes, documents in SharePoint sites and OneDrive locations, and instant messaging conversations in Skype for Business. You can use the content search tool to search for email, documents, and instant messaging conversations in Office 365 collaboration tools such as Microsoft Teams and Office 365 Groups.
   
 ## Search for content
 
@@ -67,7 +67,7 @@ Content Search is easy to use, but it's also a powerful tool. Behind-the-scenes,
     
 ## Use scripts for advanced scenarios
 
-Sometimes you have to perform more advanced, complex, and repetitive content search tasks. In these cases, it's easier and fast to use PowerShell commands in the Security &amp; Compliance Center. To help make this easier, we've created a number of Security &amp; Compliance Center PowerShell scripts to help you complete complex content search-related tasks.
+Sometimes you have to perform more advanced, complex, and repetitive content search tasks. In these cases, it's easier and fast to use PowerShell commands in the Security & Compliance Center. To help make this easier, we've created a number of Security & Compliance Center PowerShell scripts to help you complete complex content search-related tasks.
   
 - [Search specific mailbox and site folders](use-content-search-for-targeted-collections.md) (called a  *targeted collection*  ) when you're confident that items responsive to a case are located in that folder 
     

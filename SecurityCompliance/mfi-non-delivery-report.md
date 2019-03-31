@@ -8,7 +8,7 @@ ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
 ms.assetid: 
-description: "Admins can learn about the non-delivery report in the mail flow dashboard in the Office 365 Security & Compliance Center."
+description: "Admins can learn about the non-delivery report in the mail flow dashboard in the Security & Compliance Center."
 ROBOTS: NOINDEX, NOFOLLOW
 ---
 
@@ -19,7 +19,7 @@ ROBOTS: NOINDEX, NOFOLLOW
 
 The **Non-delivery report** shows the most-encountered error codes in non-delivery reports (also known as NDRs or bounce messages) for users in your organization. This report is intended to show the details of NDRs, so you can troubleshoot problems.
 
-![The Non-delivery report in the mail flow dashboard in the Office 365 Security & Compliance Center](media/non-delivery-report-selected.png)
+![The Non-delivery report in the mail flow dashboard in the Security & Compliance Center](media/non-delivery-report-selected.png)
 
 You can show information for all NDR codes or a specific code by clicking **Show data for**. You can also click **View details table** to see a more detailed view as shown in the following diagram:
 
