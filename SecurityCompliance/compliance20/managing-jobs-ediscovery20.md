@@ -37,3 +37,15 @@ Here's a list of the jobs (which are typically long-running processes) that are 
 |Running analytics | A user analyzes data in a working set by running Advanced eDiscovery analytics tools such as near duplicate detection, email threading analysis, and themes analysis. For more information, see [Analyze data in a working set](analyzing-data-in-working-set.md). | 
 |Tagging documents | This job is triggered when a user clicks **Start tagging job** in the **Tagging panel** when reviewing documents in a working set. A user can start this job after tagging documents in a working set and then bulk-selecting them in the view document panel. For more information, see [Tag documents in a working set](tagging-documents.md). | 
 |||
+
+
+## Job Status'
+| Status           | Description     |
+| :----------------- | :----------     |
+| Created | Time when the job was created |
+| Submitted | Time when the job was submitted |
+| Submission Failed | The job submission failed.  You should attempt to re-run the action that created the job |
+| In progress | The job in in progress, you can monitor the progress of the job in the Jobs tab |
+| Successful | The job was successfully completed |
+| Partially Successful | The job was partially successful |
+| Failed | The job failed.  You should attempt to re-run the action that created the job |
