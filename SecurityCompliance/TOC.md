@@ -311,6 +311,7 @@
 
 ### [Review case data](compliance20/reviewing-data-in-working-set.md)
 #### [Manage working sets](compliance20/managing-working-sets.md)
+#### [Add data to another working set](compliance20/add-data-to-working-set-from-another-working-set.md)
 #### [Manage load sets](compliance20/manage-load-sets.md)
 #### [Load non-Office 365 data into a working set](compliance20/load-non-office365-data.md)
 #### [Query the data in a working set](compliance20/working-set-search.md)
