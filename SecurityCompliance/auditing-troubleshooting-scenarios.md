@@ -27,7 +27,7 @@ This article describes how to use the Office 365 audit log search tool to help y
 
 ## Using the Office 365 audit log search tool
 
-Each of the troubleshooting scenarios described in this article are based on using the audit log search tool in the Office 365 Security & Compliance Center. This section lists the permissions required to search the audit log and describes the steps to access and run audit log searches. Each scenario section provides specific guidance about how to configure an audit log search query and what to look for in the detailed information in the audit records that match the search criteria.
+Each of the troubleshooting scenarios described in this article are based on using the audit log search tool in the Office 365 security and compliance center. This section lists the permissions required to search the audit log and describes the steps to access and run audit log searches. Each scenario section provides specific guidance about how to configure an audit log search query and what to look for in the detailed information in the audit records that match the search criteria.
 
 ### Permissions required to use the audit log search tool
 
@@ -35,13 +35,13 @@ You have to be assigned the View-Only Audit Logs or Audit Logs role in Exchange 
 
 ### Running audit log searches
 
-This section describes the basics for creating and running audit log searches. Use these instructions as a starting point for each troubleshooting scenario in this article. For more detailed step-by-step instructions, see [Search the audit log in the Office 365 Security & Compliance Center ](search-the-audit-log-in-security-and-compliance.md#step-1-run-an-audit-log-search).
+This section describes the basics for creating and running audit log searches. Use these instructions as a starting point for each troubleshooting scenario in this article. For more detailed step-by-step instructions, see [Search the audit log](search-the-audit-log-in-security-and-compliance.md#step-1-run-an-audit-log-search).
 
-1. Go to [https://protection.office.com](https://protection.office.com).
+1. Go to [https://compliance.microsoft.com](https://compliance.microsoft.com).
   
 2. Sign in to Office 365 using your work or school account.
 
-3. In the left pane of the Security & Compliance Center, click **Search & investigation** > **Audit log search**.
+3. In the left pane of the security and compliance center, click **Search** > **Audit log search**.
     
     The **Audit log search** page is displayed. 
     
@@ -126,7 +126,9 @@ See the [Set-Mailbox](https://docs.microsoft.com/powershell/module/exchange/mail
 
 ## Determining if a user deleted email items
 
-Before audit log records about deleted email items are saved to the Office 365 audit log, mailbox auditing has to be enabled for each user mailbox in your organization. Additionally, the SoftDelete and HardDelete mailbox actions have to be enabled for auditing. For instructions, see [Enable mailbox auditing in Office 365](enable-mailbox-auditing.md). If mailbox auditing is already enabled for users, use the following steps to search the audit log for events related to deleted email items.
+Starting in January 2019, Microsoft is turning on mailbox audit logging by default for all Office 365 and Microsoft organizations. This means that certain actions performed by mailbox owners are automatically logged, and the corresponding mailbox audit records will be available when you search for them in the mailbox audit log. Before mailbox auditing was turned on by default, you had to manually enable it for every user mailbox in your organization. 
+
+The mailbox actions logged by default include the SoftDelete and HardDelete mailbox actions performed by mailbox owners. This means you can use the use the following steps to search the audit log for events related to deleted email items. For for more information about mailbox auditing on by default, see [Manage mailbox auditing](enable-mailbox-auditing.md).
 
 Here's how to configure an audit log search query for this scenario:
 
@@ -134,7 +136,7 @@ Here's how to configure an audit log search query for this scenario:
 
 - **Deleted messages from Deleted Items folder** -  This activity corresponds to the **SoftDelete** mailbox auditing action. This activity is also logged when a user permanently deletes an item by selecting it and pressing **Shift+Delete**. After an item is permanently deleted, the user can recover it until the deleted item retention period expires.
 
-- **Purged messages from mailbox** - This activity corresponds to the **HardDelete** mailbox auditing action. This is logged when a user purges an item from the Recoverable Items folder. Admins can use the Content Search tool in the Office 365 Security & Compliance Center to search for and recover purged items until the deleted item retention period expires or longer if the user's mailbox is on hold.
+- **Purged messages from mailbox** - This activity corresponds to the **HardDelete** mailbox auditing action. This is logged when a user purges an item from the Recoverable Items folder. Admins can use the Content Search tool in the security and compliance center to search for and recover purged items until the deleted item retention period expires or longer if the user's mailbox is on hold.
 
 **Start date** and **End date** - Select a date range that's applicable to your investigation.
 

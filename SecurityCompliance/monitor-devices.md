@@ -11,11 +11,10 @@ manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance  
 ms.topic: article
+search.appverid: met150
 ---
 
 # Monitor devices in Microsoft 365 security
-
-[!include[Prerelease�information](prerelease.md)]
 
 Keep your devices secure, up-to-date, and spot potential threats in the Microsoft 365 security center.
 

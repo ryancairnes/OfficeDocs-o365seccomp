@@ -13,12 +13,12 @@ ms.collection:
 search.appverid: 
 - MOE150
 - MET150
-description: "With labels in Office 365, you can base a retention period on when a specific type of event occurs. The event triggers the start of the retention period, and all content with a label applied for that type of event get the label's retention actions enforced on them. Event-driven retention is typically used as part of a records-management process."
+description: "With retention labels in Office 365, you can base a retention period on when a specific type of event occurs. The event triggers the start of the retention period, and all content with a retention label applied for that type of event get the label's retention actions enforced on them. Event-driven retention is typically used as part of a records-management process."
 ---
 
 # Overview of event-driven retention
 
-When you retain content, the retention period is often based on the age of the content - for example, you might retain documents for seven years after they're created and then delete them. But with labels in Office 365, you can also base a retention period on when a specific type of event occurs. The event triggers the start of the retention period, and all content with a label applied for that type of event get the label's retention actions enforced on them.
+When you retain content, the retention period is often based on the age of the content - for example, you might retain documents for seven years after they're created and then delete them. But with retention labels in Office 365, you can also base a retention period on when a specific type of event occurs. The event triggers the start of the retention period, and all content with a retention label applied for that type of event get the label's retention actions enforced on them.
   
 For example, you can use labels with event-driven retention for:
   
@@ -72,7 +72,7 @@ Here's the high-level workflow for event-driven retention. More detailed steps f
   
 ### Step 1: Create a label whose retention period is based on an event
 
-In the Security &amp; Compliance Center, in the left navigation, under **Classifications**, choose **Labels** \> **Create a label**.
+In the Microsoft 365 compliance center, Microsoft 365 security center, or Office 365 Security &amp; Compliance Center, in the left navigation, choose **Classifications** > **Labels** > **Retention labels** tab > **Create a label**.
   
 When you create the label, turn on retention, and then choose the option shown below to retain or delete the content based on an event. This means that the retention settings won't go into effect until Step 5, when you create an event on the **Events** page. 
   
@@ -98,7 +98,7 @@ Note that once you choose an event type and create the label, the event type can
   
 ### Step 3: Publish or auto-apply the label
 
-Just like any label, you need to publish or auto-apply an event-based label, so that it's manually or automatically applied to content. Do this on the **Labels** page. Note that labels that classify content as a record can only be published and manually applied to content; they can't be auto-applied to content. 
+Just like any label, you need to publish or auto-apply an event-based label, so that it's manually or automatically applied to content. You can do this on the **Labels** or **Label policies** page. Note that labels that classify content as a record can only be published and manually applied to content. 
   
 ![Options to publish or auto-apply a label](media/c9232c54-bbc0-40d2-abc2-122d5d1e70af.png)
   
@@ -144,7 +144,7 @@ Finally, choose the date when the event occurred; this date is used as the start
   
 ## Use Content Search to find all content with a specific label or asset ID
 
-After labels are assigned to content, you can use content search in the Security &amp; Compliance Center to find all content that's classified with a specific label or that contains a specific asset ID.
+After labels are assigned to content, you can use content search to find all content that's classified with a specific label or that contains a specific asset ID.
   
 When you create a content search:
   
@@ -162,11 +162,9 @@ For more information, see [Give users access to the Office 365 Security &amp; Co
   
 ## Automate events by using PowerShell
 
-In the Office 365 Security &amp; Compliance Center, you can only create events manually; it's not possible to automatically trigger an event when it occurs. However, you can use a PowerShell script to automate event-based retention from your business applications.
-  
-We are currently working on APIs, so that you can connect your business applications (such as HR, CRM, or financial applications) to event-driven retention. For example, you'll be able to connect your HR system to event-driven retention, so that when an employee leaves the organization, and event of that event type is automatically triggered.
-  
-Until then, here are the PowerShell cmdlets available for event-driven retention:
+In the admin center, you can only create events manually; it's not possible to automatically trigger an event when it occurs. However, you can use a Rest API to trigger events automatically; for more information, see [Automate event-based retention](automate-event-driven-retention.md).
+
+You can also use a PowerShell script to automate event-based retention from your business applications. Here are the PowerShell cmdlets available for event-driven retention:
   
 - [Get-ComplianceRetentionEventType](https://go.microsoft.com/fwlink/?linkid=873002)
     

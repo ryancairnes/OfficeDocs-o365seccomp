@@ -18,9 +18,11 @@ description: "When Exchange Online Protection scans an inbound email message it 
 # Anti-spam message headers
 
 When Exchange Online Protection scans an inbound email message it inserts the **X-Forefront-Antispam-Report** header into each message. The fields in this header can help provide administrators with information about the message and about how it was processed. The fields in the **X-Microsoft-Antispam** header provide additional information about bulk mail and phishing. In addition to these two headers, Exchange Online Protection also inserts email authentication results for each message it processes in the **Authentication-results** header.
+
+For information about how to view an email message header in various email clients, see [Message Header Analyzer](https://go.microsoft.com/fwlink/p/?LinkId=306583). 
   
 > [!TIP]
-> For information about how to view an email message header in various email clients, see [Message Header Analyzer](https://go.microsoft.com/fwlink/p/?LinkId=306583). You can copy and paste the contents of the message header into the [Message Header Analyzer](https://testconnectivity.microsoft.com/?tabid=mha) tool. When you select a message in the quarantine in the Exchange admin center, the **View message header** link also easily lets you copy and paste the message header text into the tool. Once in the Message Header Analyzer tool, click **Analyze headers** in order to retrieve information about the header.
+>  You can copy and paste the contents of the message header into the [Message Analyzer](https://testconnectivity.microsoft.com/?tabid=mha) tool. This tool helps parse the headers and puts it into a more readible format.
   
 ## X-Forefront-Antispam-Report message header fields
 

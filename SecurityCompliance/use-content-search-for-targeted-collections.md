@@ -11,7 +11,7 @@ ms.collection: M365-security-compliance
 localization_priority: Normal
 search.appverid: MOE150
 ms.assetid: e3cbc79c-5e97-43d3-8371-9fbc398cd92e
-description: "Use Content Search in the Office 365 Security &amp; Compliance Center to perform targeted collections. A targeted collection means that you're confident that items responsive to a case or privileged items are located in a specific mailbox or site folder. Use the script in this article to obtain the folder ID or path for the specific mailbox or site folders that you want to search."
+description: "Use Content Search in the Security & Compliance Center to perform targeted collections. A targeted collection means that you're confident that items responsive to a case or privileged items are located in a specific mailbox or site folder. Use the script in this article to obtain the folder ID or path for the specific mailbox or site folders that you want to search."
 ---
 
 # Use Content Search in Office 365 for targeted collections
@@ -51,7 +51,7 @@ The script that you run in this first step will return a list of mailbox folders
     
   - **OneDrive for Business** - https://contoso-my.sharepoint.com/personal/stacig_contoso_onmicrosoft_com 
     
-- **Your user credentials** - The script will use your credentials to connect to Exchange Online and the Security &amp; Compliance Center with remote PowerShell. As previously explained, you have to assigned the appropriate permissions to successfully run this script.
+- **Your user credentials** - The script will use your credentials to connect to Exchange Online and the Security & Compliance Center with remote PowerShell. As previously explained, you have to assigned the appropriate permissions to successfully run this script.
     
 To display a list of mailbox folders or site documentlink (path) names:
   
@@ -61,7 +61,7 @@ To display a list of mailbox folders or site documentlink (path) names:
   #########################################################################################################
   # This PowerShell script will prompt you for:								#
   #    * Admin credentials for a user who can run the Get-MailboxFolderStatistics cmdlet in Exchange	#
-  #      Online and who is an eDiscovery Manager in the Security &amp; Compliance Center.			#
+  #      Online and who is an eDiscovery Manager in the Security & Compliance Center.			#
   # The script will then:											#
   #    * If an email address is supplied: list the folders for the target mailbox.			#
   #    * If a SharePoint or OneDrive for Business site is supplied: list the documentlinks (folder paths) #
@@ -78,7 +78,7 @@ To display a list of mailbox folders or site documentlink (path) names:
   #########################################################################################################
   # Collect the target email address or SharePoint Url
   $addressOrSite = Read-Host "Enter an email address or a URL for a SharePoint or OneDrive for Business site"
-  # Authenticate with Exchange Online and the Security &amp; Compliance Center (Exchange Online Protection - EOP)
+  # Authenticate with Exchange Online and the Security & Compliance Center (Exchange Online Protection - EOP)
   if (!$credentials)
   {
       $credentials = Get-Credential
@@ -120,7 +120,7 @@ To display a list of mailbox folders or site documentlink (path) names:
       $searchActionName = "SPFoldersSearch_Preview"
       # List the folders for the SharePoint or OneDrive for Business Site
       $siteUrl = $addressOrSite
-      # Authenticate with the Security &amp; Compliance Center
+      # Authenticate with the Security & Compliance Center
       if (!$SccSession)
       {
           $SccSession = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.compliance.protection.outlook.com/powershell-liveid -Credential $credentials -Authentication Basic -AllowRedirection

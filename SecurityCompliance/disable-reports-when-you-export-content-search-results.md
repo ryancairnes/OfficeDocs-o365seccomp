@@ -1,5 +1,5 @@
 ---
-title: "Disable reports when you export Content Search results in the Office 365 Security &amp; Compliance Center"
+title: "Disable reports when you export Content Search results"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -10,12 +10,12 @@ ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid: MOE150
 ms.assetid: c9b0ff0c-282b-4a44-b43f-cfc5b96557f9
-description: "Edit the Windows Registry on your local computer to disable reports when you export the results of a Content Search from the Office 365 Security &amp; Comliance Center. Disabling these reports can speed up the download time and save disk space."
+description: "Edit the Windows Registry on your local computer to disable reports when you export the results of a Content Search from the Security & Compliance Center in Office 365. Disabling these reports can speed up the download time and save disk space."
 ---
 
-# Disable reports when you export Content Search results in the Office 365 Security &amp; Compliance Center
+# Disable reports when you export Content Search results
 
-When you use the Office 365 eDiscovery Export tool to export the results of a Content Search in the Security &amp; Compliance Center, the tool automatically creates and exports two reports that contain additional information about the exported content. These reports are the Results.csv file and the Manifest.xml file (see the [Frequently asked questions about disabling export reports](#frequently-asked-questions-about-disabling-export-reports) section in this topic for detailed descriptions of these reports). Because these files can be very large, you can speed up the download time and save disk space by preventing these files from being exported. You can do this by changing the Windows Registry on the computer that you use to export the search results. If you want to include the reports at a later time, you can edit the registry setting. 
+When you use the Office 365 eDiscovery Export tool to export the results of a Content Search in the Security & Compliance Center, the tool automatically creates and exports two reports that contain additional information about the exported content. These reports are the Results.csv file and the Manifest.xml file (see the [Frequently asked questions about disabling export reports](#frequently-asked-questions-about-disabling-export-reports) section in this topic for detailed descriptions of these reports). Because these files can be very large, you can speed up the download time and save disk space by preventing these files from being exported. You can do this by changing the Windows Registry on the computer that you use to export the search results. If you want to include the reports at a later time, you can edit the registry setting. 
   
 ## Create registry settings to disable the export reports
 

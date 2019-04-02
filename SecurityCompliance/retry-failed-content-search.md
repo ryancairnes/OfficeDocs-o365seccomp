@@ -17,7 +17,7 @@ description: "Use the Retry button for resolve Content Searches that have conten
 
 # Retry a Content Search to resolve a content location error
 
-When you use Content Search in the Office 365 Security & Compliance Center to search a very large number of mailboxes (for example, searching 100,000 mailboxes or more in a single Content Search), you may get search errors that are similar to the following:
+When you use Content Search in the security and compliance center to search a very large number of mailboxes (for example, searching 100,000 mailboxes or more in a single Content Search), you may get search errors that are similar to the following:
 
 ```
 Error

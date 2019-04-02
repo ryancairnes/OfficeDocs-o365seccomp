@@ -31,7 +31,7 @@ First, follow the instructions in **Phase 2** of the [Office 365 dev/test enviro
   
 Next, sign up for the EMS E5 trial subscription and add it to the same organization as your Office 365 trial subscription.
   
-1. If needed, sign in to the Office 365 portal with the credentials of the global administrator account of your trial subscription. For help, see [Where to sign in to Office 365](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4).
+1. If needed, sign in to the admin center with the credentials of the global administrator account of your trial subscription. For help, see [Where to sign in to Office 365](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4).
     
 2. Click the **Admin** tile.
     
@@ -45,7 +45,7 @@ Next, sign up for the EMS E5 trial subscription and add it to the same organizat
     
 Next, enable the EMS E5 license for your global administrator account.
   
-1. On the **Office 365 Admin center** tab in your browser, in the left navigation, click **Users > Active users**.
+1. On the **Microsoft 365 admin center** tab in your browser, in the left navigation, click **Users > Active users**.
     
 2. Click your global administrator account, and then click **Edit** for **Product licenses**.
     

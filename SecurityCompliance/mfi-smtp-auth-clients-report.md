@@ -8,7 +8,7 @@ ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
 ms.assetid: 
-description: "Admins can learn about the SMTP Auth clients report in the mail flow dashboard in the Office 365 Security & Compliance Center."
+description: "Admins can learn about the SMTP Auth clients report in the mail flow dashboard in the Security & Compliance Center."
 ROBOTS: NOINDEX, NOFOLLOW
 ---
 
@@ -21,7 +21,7 @@ The **SMTP Auth clients** report highlights the use of the SMTP Auth client subm
 
 The widget that's shown in the Mail Flow dashboard indicates the number of users or service accounts that have used the SMTP Auth protocol in the last 7 days.
 
-![The SMTP Auth clients report in the mail flow dashboard in the Office 365 Security & Compliance Center](media/smtp-auth-clients-report-selected.png)
+![The SMTP Auth clients report in the mail flow dashboard in the Security & Compliance Center](media/smtp-auth-clients-report-selected.png)
 
 Clicking on the widget opens a flyout that provides an aggregated view of the TLS usage and volumes for the last week.
 

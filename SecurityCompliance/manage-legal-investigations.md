@@ -12,12 +12,12 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 2e5fbe9f-ee4d-4178-8ff8-4356bc1b168e
-description: "Use eDiscovery cases in the Office 365 Security &amp; Compliance Center to manage your organization's legal investigation. If you have an E5 subscription, you can further analyze case data by using the text analytics, machine learning, and predictive coding capabilities of Advanced eDiscovery."
+description: "Use eDiscovery cases in the Security & Compliance Center in Office 365 to manage your organization's legal investigation. If you have an E5 subscription, you can further analyze case data by using the text analytics, machine learning, and predictive coding capabilities of Advanced eDiscovery."
 ---
 
 # Manage legal investigations in Office 365
 
-Organizations have many reasons to respond to a legal case involving certain executives or other employees in your organization. This might involve quickly finding and retaining for further investigation specific information in email, documents, instant messaging conversations, and other content locations used by people in their day-to-day work tasks. You can perform these and many other similar activities by using the eDiscovery case tools in the Office 365 Security &amp; Compliance Center.
+Organizations have many reasons to respond to a legal case involving certain executives or other employees in your organization. This might involve quickly finding and retaining for further investigation specific information in email, documents, instant messaging conversations, and other content locations used by people in their day-to-day work tasks. You can perform these and many other similar activities by using the eDiscovery case tools in the Security & Compliance Center.
   
 [Manage legal investigations with eDiscovery cases](#manage-legal-investigations-with-ediscovery-cases)
   
@@ -41,7 +41,7 @@ eDiscovery cases let you control who can create, access, and manage eDiscovery c
     
 ### Use scripts for advanced scenarios
 
-Like the previous section that listed scripts for content search scenarios, we've also created some Security &amp; Compliance Center PowerShell scripts to help you manage eDiscovery cases.
+Like the previous section that listed scripts for content search scenarios, we've also created some Security & Compliance Center PowerShell scripts to help you manage eDiscovery cases.
   
 - [Create a eDiscovery hold report](create-a-report-on-holds-in-ediscovery-cases.md) that contains information about all holds associated with eDiscovery cases in your organization 
     
@@ -49,18 +49,18 @@ Like the previous section that listed scripts for content search scenarios, we'v
   
 ## Analyze case data using Office 365 Advanced eDiscovery
 
-Office 365 Advanced eDiscovery builds on the content search and eDiscovery capabilities described in the previous sections. After you create an eDiscovery case, place custodian locations on hold, and collect data that might be responsive to the case, you can then further analyze the data by using the text analytics, machine learning, and the predictive coding capabilities of Advanced eDiscovery. This can help your organization quickly process thousands of email messages, documents, and other kinds of data to find those items that are most likely relevant to a specific case. And, we've unified case management and Advanced eDiscovery so that you can seamlessly manage the same case within the Security &amp; Compliance Center.
+Office 365 Advanced eDiscovery builds on the content search and eDiscovery capabilities described in the previous sections. After you create an eDiscovery case, place custodian locations on hold, and collect data that might be responsive to the case, you can then further analyze the data by using the text analytics, machine learning, and the predictive coding capabilities of Advanced eDiscovery. This can help your organization quickly process thousands of email messages, documents, and other kinds of data to find those items that are most likely relevant to a specific case. And, we've unified case management and Advanced eDiscovery so that you can seamlessly manage the same case within the Security & Compliance Center.
   
 > [!NOTE]
 > To analyze a user's data using Advanced eDiscovery, the user (the custodian of the data) must be assigned an Office 365 E5 license. Alternatively, users with an Office 365 E1 or E3 license can be assigned an Advanced eDiscovery standalone license. Administrators and compliance officers who are assigned to cases and use Advanced eDiscovery to analyze data don't need an E5 license. 
   
 ### Get started
 
-The quickest way to get started with Advanced eDiscovery is to create a case and prepare search results in Security &amp; Compliance Center, load those results in Advanced eDiscovery, and then run Express analysis to analyze that case data and then export the results for external review.
+The quickest way to get started with Advanced eDiscovery is to create a case and prepare search results in Security & Compliance Center, load those results in Advanced eDiscovery, and then run Express analysis to analyze that case data and then export the results for external review.
   
 - [Get a quick overview](quick-setup-for-advanced-ediscovery.md) of the Advanced eDiscovery workflow 
     
-- [Set up users and cases](set-up-users-and-cases-in-advanced-ediscovery.md) for Advanced eDiscovery by creating a case, assigning eDiscovery permissions, and adding case members, all by using the Security &amp; Compliance Center 
+- [Set up users and cases](set-up-users-and-cases-in-advanced-ediscovery.md) for Advanced eDiscovery by creating a case, assigning eDiscovery permissions, and adding case members, all by using the Security & Compliance Center 
     
 - [Prepare and load search data](prepare-data-for-advanced-ediscovery.md) in to the case in Advanced eDiscovery 
     

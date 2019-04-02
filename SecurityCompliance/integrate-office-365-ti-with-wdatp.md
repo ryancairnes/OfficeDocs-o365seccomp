@@ -37,7 +37,7 @@ In this example, you can see that the recipients of the email message have four 
     
 ## To integrate Office 365 Advanced Threat Protection with Windows Defender ATP
 
-Integrating Office 365 Advanced Threat Protection with Windows Defender Advanced Threat Protection is set up by using both the Office 365 Security & Compliance Center AND the Windows Defender Advanced Threat Protection portal.
+Integrating Office 365 Advanced Threat Protection with Windows Defender Advanced Threat Protection is set up by using both the Security & Compliance Center AND the Windows Defender Advanced Threat Protection portal.
   
 1. As an Office 365 global administrator or a security administrator, go to [https://protection.office.com](https://protection.office.com) and sign in with your work or school account for Office 365. 
     

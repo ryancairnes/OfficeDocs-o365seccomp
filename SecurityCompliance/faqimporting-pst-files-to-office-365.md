@@ -30,7 +30,7 @@ For step-by-step instructions, see [Use network upload to import PST files to Of
   
 You have to be assigned the Mailbox Import Export role in Exchange Online to import PST files to Office 365 mailboxes. By default, this role isn't assigned to any role group in Exchange Online. You can add the Mailbox Import Export role to the Organization Management role group. Or you can create a new role group, assign the Mailbox Import Export role, and then add yourself or other users as a member. For more information, see the "Add a role to a role group" or the "Create a role group" sections in [Manage role groups in Exchange Online](https://go.microsoft.com/fwlink/p/?LinkId=730688).
   
-Additionally, to create import jobs in the Office 365 Security &amp; Compliance Center, one of the following must be true:
+Additionally, to create import jobs in the Security & Compliance Center, one of the following must be true:
   
 - You have to be assigned the Mail Recipients role in Exchange Online. By default, this role is assigned to the Organization Management and Recipient Management roles groups.
     
@@ -49,7 +49,7 @@ Network upload is currently available in the United States, Canada, Brazil, the 
   
 Using network upload to import PST files is free.
   
-This also means that after PST files are deleted from the Azure storage area, they're no longer displayed in the list of files for a completed import job in the Office 365 admin center. Although an import job might still be listed on the **Import data to Office 365** page, the list of PST files might be empty when you view the details of older import jobs. 
+This also means that after PST files are deleted from the Azure storage area, they're no longer displayed in the list of files for a completed import job in the Microsoft 365 admin center. Although an import job might still be listed on the **Import data to Office 365** page, the list of PST files might be empty when you view the details of older import jobs. 
   
  **What version of the PST file format is supported for importing to Office 365?**
   
@@ -59,9 +59,9 @@ Additionally, PST files from Outlook 2007 and later versions can be imported to 
   
  **After I upload my PST files to the Azure storage area, how long are they kept in Azure before they're deleted?**
   
-When you use the network upload method to import PST files, you upload them to an Azure blob container named **ingestiondata**. If there are no import jobs in progress on the **Import** page in the Security &amp; Compliance Center), then all PST files in the **ingestiondata** container in Azure are deleted 30 days after the most recent import job was created in the Security &amp; Compliance Center. That also means you have to create a new import job in the Security &amp; Compliance Center (described in Step 5 in the network upload instructions) within 30 days of uploading PST files to Azure. 
+When you use the network upload method to import PST files, you upload them to an Azure blob container named **ingestiondata**. If there are no import jobs in progress on the **Import** page in the Security & Compliance Center), then all PST files in the **ingestiondata** container in Azure are deleted 30 days after the most recent import job was created in the Security & Compliance Center. That also means you have to create a new import job in the Security & Compliance Center (described in Step 5 in the network upload instructions) within 30 days of uploading PST files to Azure. 
   
-This also means that after PST files are deleted from the Azure storage area, they're no longer displayed in the list of files for a completed import job in the Security &amp; Compliance Center. Although an import job might still be listed on the **Import** page in the Security &amp; Compliance Center, the list of PST files might be empty when you view the details of older import jobs. 
+This also means that after PST files are deleted from the Azure storage area, they're no longer displayed in the list of files for a completed import job in the Security & Compliance Center. Although an import job might still be listed on the **Import** page in the Security & Compliance Center, the list of PST files might be empty when you view the details of older import jobs. 
   
  **How long does it take to import a PST file to a mailbox?**
   
@@ -101,7 +101,7 @@ For step-by-step instructions, see [Use drive shipping to import PST files to Of
   
 You have to be assigned the Mailbox Import Export role to import PST files to Office 365 mailboxes. By default, this role isn't assigned to any role group in Exchange Online. You can add the Mailbox Import Export role to the Organization Management role group. Or you can create a new role group, assign the Mailbox Import Export role, and then add yourself or other users as a member. For more information, see the "Add a role to a role group" or the "Create a role group" sections in [Manage role groups in Exchange Online](https://go.microsoft.com/fwlink/p/?LinkId=730688).
   
-Additionally, to create import jobs in the Office 365 Security &amp; Compliance Center, one of the following must be true:
+Additionally, to create import jobs in the Security & Compliance Center, one of the following must be true:
   
 - You have to be assigned the Mail Recipients role in Exchange Online. By default, this role is assigned to the Organization Management and Recipient Management roles groups.
     
@@ -151,9 +151,9 @@ If different PST files are imported to different target mailboxes, the import pr
   
  **After Microsoft uploads my PST files to Azure, how long are they kept in Azure before they're deleted?**
   
-All PST files in the Azure storage location for your organization (in blob container named **ingestiondata** ), are deleted 30 days after the most recent import job was created on the **Import** page in the Security &amp; Compliance Center. 
+All PST files in the Azure storage location for your organization (in blob container named **ingestiondata** ), are deleted 30 days after the most recent import job was created on the **Import** page in the Security & Compliance Center. 
   
-This also means that after PST files are deleted from the Azure storage area, they're no longer displayed in the list of files for a completed import job in the Security &amp; Compliance Center. Although an import job might still be listed on the **Import** page in the Security &amp; Compliance Center, the list of PST files might be empty when you view the details of older import jobs. 
+This also means that after PST files are deleted from the Azure storage area, they're no longer displayed in the list of files for a completed import job in the Security & Compliance Center. Although an import job might still be listed on the **Import** page in the Security & Compliance Center, the list of PST files might be empty when you view the details of older import jobs. 
   
  **What version of the PST file format is supported for importing to Office 365?**
   

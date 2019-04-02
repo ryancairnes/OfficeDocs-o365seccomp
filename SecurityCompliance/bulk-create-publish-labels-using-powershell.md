@@ -2,7 +2,7 @@
 title: "Bulk create and publish retention labels by using PowerShell"
 ms.author: stephow
 author: stephow-msft
-ms.date: 1/17/2018
+ms.date: 
 ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp

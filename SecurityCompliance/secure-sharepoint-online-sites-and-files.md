@@ -120,7 +120,7 @@ The following table summarizes the configuration for each of the team sites desc
 |DLP policies  <br/> |||Warn users when sending files that are labeled as Sensitive outside the organization.  <br/> To block external sharing of sensitive data types, such as credit card numbers or other personal data, you can configure additional DLP policies for these data types (including custom data types you configure).  <br/> |Block users from sending files that are labeled as highly confidential outside organization. Allow users to override this by providing justification, including who they are sharing the file with.  <br/> |
 |Sensitivity labels  <br/> ||||Use sensitivity labels to automatically encrypt and grant permissions to files. Sensitivity labels use Azure Information Protection to encrypt files. This protection travels with the files in case they are leaked.  <br/> Office 365 cannot read files encrypted with Azure Information Protection. Additionally, DLP policies can only work with the metadata (including labels) but not the contents of these files (such as credit card numbers within files).  <br/> |
    
-For the steps to deploy the four different types of SharePoint Online team sites in this solution, see [Deploy SharePoint Online sites for three tiers of protection](deploy-sharepoint-online-sites-for-three-tiers-of-protection.md). For the steps to create a dev/test environment, see [Secure SharePoint Online sites in a dev/test environment](secure-sharepoint-online-sites-in-a-dev-test-environment.md). 
+For the steps to deploy the four different types of SharePoint Online team sites in this solution, see [Deploy SharePoint Online sites for three tiers of protection](deploy-sharepoint-online-sites-for-three-tiers-of-protection.md). 
   
 ## Office 365 retention labels
 
@@ -181,7 +181,3 @@ For the steps to configure Azure Information Protection in this solution, see [P
   
 [Cloud adoption and hybrid solutions](https://docs.microsoft.com/office365/enterprise/cloud-adoption-and-hybrid-solutions)
   
-[Secure SharePoint Online sites in a dev/test environment](secure-sharepoint-online-sites-in-a-dev-test-environment.md)
-
-
-

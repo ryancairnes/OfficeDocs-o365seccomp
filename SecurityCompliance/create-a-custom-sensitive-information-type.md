@@ -12,7 +12,7 @@ ms.collection:
 search.appverid: 
 - MOE150
 - MET150
-description: "Learn how to create, modify, remove, and test custom sensitive information types for DLP in the graphical user interface in Office 365 Security & Compliance Center."
+description: "Learn how to create, modify, remove, and test custom sensitive information types for DLP in the graphical user interface in Security & Compliance Center."
 ---
 
 # Create a custom sensitive information type
@@ -37,11 +37,11 @@ The fundamental parts of a custom sensitive information type are:
 
     ![Instance count and match accuracy options](media/11d0b51e-7c3f-4cc6-96d8-b29bcdae1aeb.png)
 
-To create custom sensitive information types in the Office 365 Security & Compliance Center, you have the following options:
+To create custom sensitive information types in the Security & Compliance Center, you have the following options:
 
 - **Use the UI**: This method is easier and faster, but you have less configuration options than PowerShell. The rest of this topic describes these procedures.
 
-- **Use PowerShell**: This method requires that you first create an XML file (called a _rule package_) that contains one or more sensitive information types, and then you use PowerShell to import the rule package (importing the rule package is trivial compared to creating the rule package. This method is much more complex than the UI, but you have more configuration options. For instructions, see [Create a custom sensitive information type in Office 365 Security & Compliance Center PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md).
+- **Use PowerShell**: This method requires that you first create an XML file (called a _rule package_) that contains one or more sensitive information types, and then you use PowerShell to import the rule package (importing the rule package is trivial compared to creating the rule package. This method is much more complex than the UI, but you have more configuration options. For instructions, see [Create a custom sensitive information type in Security & Compliance Center PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md).
 
 The key differences are described in the following table:
 
@@ -55,7 +55,7 @@ The key differences are described in the following table:
 
 ## What do you need to know before you begin?
 
-- To open the Security & Compliance Center, see [Go to the Office 365 Security & Compliance Center](go-to-the-securitycompliance-center.md).
+- To open the Security & Compliance Center, see [Go to the Security & Compliance Center](go-to-the-securitycompliance-center.md).
 
 - Custom sensitive information types require familiarity with regular expressions (RegEx). For more information about the Boost.RegEx (formerly known as RegEx++) engine that's used for processing the text, see [Boost.Regex 5.1.3](https://www.boost.org/doc/libs/1_68_0/libs/regex/doc/html/).
 

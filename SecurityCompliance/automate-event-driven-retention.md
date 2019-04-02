@@ -47,16 +47,16 @@ Identify the different roles in an organization that perform Record Management t
 
   | **Persona**| **Role**|
   | - | - |
-  | Security & Compliance Center admin | Creates Retention Event types, Retention labels and Record repositories in SharePoint |
+  | Admin | Creates Retention Event types, Retention labels and Record repositories in SharePoint |
   | Records Manager                                  | Provides Retention Policies and Retention Schedules guidance and compliance details   |
   | System Admin (business)                          | Sets up and manages external systems to work with Microsoft 365                       |
   | Information Worker                               | Manages the lifecycle of their business process (HR, Finance, IT etc)                 |
 
 ### Set up the Security & Compliance Center
   
-1. Compliance admin creates an event type – for example, Employee Termination or Contract Expiration or End of Product Manufacturing (Please refer to step by step process in [Event retention article](https://docs.microsoft.com/en-us/office365/securitycompliance/event-driven-retention)
+1. Compliance admin creates an event type – for example, Employee Termination or Contract Expiration or End of Product Manufacturing (Please refer to step by step process in [Event-driven retention](https://docs.microsoft.com/en-us/office365/securitycompliance/event-driven-retention).
     
-1. Compliance admin creates a retention label based on an event and associates the label with an event type
+1. Compliance admin creates a retention label based on an event and associates the label with an event type.
     
 1. There are 4 types of triggers for retention labels:
             
@@ -68,7 +68,7 @@ Identify the different roles in an organization that perform Record Management t
                 
     1. Event-based
     
-1. Compliance admin publishes the label
+1. Compliance admin publishes the retention label.
 
 ### Set up SharePoint
    
@@ -88,7 +88,7 @@ To create a records repository, the compliance admin:
 
 There are two ways in which event-based retention can be triggered:
 
-- **Using Security & Compliance Center UI** This is a process that can be used to retain less content at a time or the frequency to trigger retention is not often, such as monthly or yearly. For more information on this method, see [Overview of event-driven retention](event-driven-retention.md). However, this way to trigger retention can be time-consuming and prone to error, thus stunting scalability. Therefore, an automated, seamless solution to trigger retention can enhance the security and compliance of data.
+- **Using the admin center UI** This is a process that can be used to retain less content at a time or the frequency to trigger retention is not often, such as monthly or yearly. For more information on this method, see [Overview of event-driven retention](event-driven-retention.md). However, this way to trigger retention can be time-consuming and prone to error, thus stunting scalability. Therefore, an automated, seamless solution to trigger retention can enhance the security and compliance of data.
 
 - **Using a M365 REST API** This process can be used when large amounts of content are to be retained at a time and/or the frequency to trigger retention is often such as daily or weekly. The flow detects when an event occurs in your line-of-business system, and then automatically creates a related event in the Security & Compliance Center. You don't need to manually create an event in the UI each time one occurs.
 
@@ -130,11 +130,11 @@ Hence an automated process to trigger these different retention clocks for multi
 
   - SCC Admin l
 
-  - ogs into the Security & Compliance Center
+  - Logs into the Security & Compliance Center
 
-  - SCC Admin creates employee related events types such as “Employee Termination”, “Employee Hire” events in Security and Compliance Center.
+  - SCC Admin creates employee related events types such as “Employee Termination”, “Employee Hire” events.
 
-  - SCC Admin creates “Employee Retention” label in Security and Compliance Center.
+  - SCC Admin creates “Employee Retention” label.
 
   - This “Employee Retention” label is published and applied manually or automatically to the employee files in SharePoint
 
@@ -428,9 +428,9 @@ A Customer Relationship Management (CRM) system can work with Microsoft 365 and 
 
   - SCC Admin logs into the Security & Compliance Center
 
-  - SCC Admin creates contract related events types such as “Contract Creation”, “Contract Expiration” events in Security and Compliance Center.
+  - SCC Admin creates contract related events types such as “Contract Creation”, “Contract Expiration” events.
 
-  - SCC Admin creates “Contract Expiration” label in Security and Compliance Center.
+  - SCC Admin creates “Contract Expiration” label.
 
   - This “ Contract Expiration” label is published and applied manually or automatically to the contract files in SharePoint
 
@@ -456,9 +456,9 @@ An Enterprise Resource Planning (ERP) system can work with Microsoft 365 and Mic
 
   - SCC Admin logs into the Security & Compliance Center
 
-  - SCC Admin creates employee related events types such as “Start of Product Manufacturing”, “End of Product Manufacturing” events in Security and Compliance Center.
+  - SCC Admin creates employee related events types such as “Start of Product Manufacturing”, “End of Product Manufacturing” events.
 
-  - SCC Admin creates “End of Product Manufacturing” label in Security and Compliance Center.
+  - SCC Admin creates “End of Product Manufacturing” label.
 
   - This “ End of Product Manufacturing” label is published and applied manually or automatically to the product files in SharePoint
 

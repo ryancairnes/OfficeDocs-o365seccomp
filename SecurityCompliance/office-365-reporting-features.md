@@ -3,11 +3,10 @@ title: "Office 365 Reporting Features"
 ms.author: robmazz
 author: robmazz
 manager: laurawi
-ms.date: 8/21/2018
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
-localization_priority: None
+localization_priority: Normal
 search.appverid:
 - MET150
 ms.collection:
@@ -22,7 +21,7 @@ description: "An explanation of reporting features within Office 365."
 The Reports feature in Office 365 provides a variety of audit reports for Azure Active Directory (AD), Exchange Online, device management, supervisory review, and data loss prevention (DLP). These are different and separate from the Office 365 Activity Reports.
 
 ## Office 365 Reports Dashboard
-The Reports dashboard in the Office 365 Admin center preview displays usage activity across Office 365. Office 365 global administrators, or an Exchange Online, SharePoint Online, or Skype for Business administrator, can get granular insight into the usage of that service. Reports can provide insights such as the number of users consuming a particular Office 365 service, the number of users that have activated Office Professional Plus, and how much mail is flowing through the organization. Reports are available for the last 7, 30, 90, and 180 days.
+The Reports dashboard in the Microsoft 365 admin center preview displays usage activity across Office 365. Office 365 global administrators, or an Exchange Online, SharePoint Online, or Skype for Business administrator, can get granular insight into the usage of that service. Reports can provide insights such as the number of users consuming a particular Office 365 service, the number of users that have activated Office Professional Plus, and how much mail is flowing through the organization. Reports are available for the last 7, 30, 90, and 180 days.
 
 The following reports are available:
 - [Email activity report](https://support.office.com/article/Office-365-Reports-in-the-admin-center-preview--Email-activity-1cbe2c00-ca65-4fb9-9663-1bbfa58ebe44)
@@ -35,7 +34,7 @@ The following reports are available:
 - [Skype for Business Conference Organizer report](https://docs.microsoft.com/SkypeForBusiness/skype-for-business-online-reporting/conference-organizer-activity-report)
 - [Skype for Business Conference Participant activity report](https://docs.microsoft.com/SkypeForBusiness/skype-for-business-online-reporting/conference-participant-activity-report)
 
-For more information, see [Activity Reports in the Office 365 Admin Center](https://support.office.com/article/activity-reports-in-the-office-365-admin-center-0d6dfb17-8582-4172-a9a9-aed798150263).
+For more information, see [Activity Reports in the Microsoft 365 admin center](https://support.office.com/article/activity-reports-in-the-office-365-admin-center-0d6dfb17-8582-4172-a9a9-aed798150263).
 
 
 ## Azure Active Directory Reports
@@ -67,7 +66,7 @@ MDM compliance reports provide an overview of policies that have been set up by 
 ## Data Loss Prevention
 DLP policies help manage the security and flow of information in an organization. You can set up policies to block access to content, encrypt data, or notify users of policy and policy violations using in-application DLP Policy Tips. DLP reports provide insight into the number of policy and rule matches, overrides, and false positives.
 
-You can use the Office 365 admin center to view information about the number of messages that are detected by your DLP policies in either graphical chart or table format. Specifically, DLP policy matches for sent and received mail, and DLP rule matches for sent and received mail. You can also view the number of matches, overrides, and false positives for each policy within the past 24 hours using the Exchange admin center. However, this data is not available as a chart. If you download a report for use in Excel, you can view even more detail, such as who sent which message, on what day, and what policy matches were triggered. For more information, see [View reports about DLP policy detections](https://technet.microsoft.com/en-us/library/jj889415(v=exchg.150).aspx).
+You can use the Microsoft 365 admin center to view information about the number of messages that are detected by your DLP policies in either graphical chart or table format. Specifically, DLP policy matches for sent and received mail, and DLP rule matches for sent and received mail. You can also view the number of matches, overrides, and false positives for each policy within the past 24 hours using the Exchange admin center. However, this data is not available as a chart. If you download a report for use in Excel, you can view even more detail, such as who sent which message, on what day, and what policy matches were triggered. For more information, see [View reports about DLP policy detections](https://technet.microsoft.com/en-us/library/jj889415(v=exchg.150).aspx).
 
 ## Auditing in Yammer Enterprise
 Yammer Enterprise provides administrators with the ability to export user activity data from their Yammer network(s) via the [Yammer Data Export API](https://support.office.com/article/export-data-from-yammer-enterprise-b303d8f3-007d-4ad4-81f8-54fb1ecfb3f2), or manually via the Yammer network admin page. The ability to export logs is restricted to Network Administrators in Yammer. (All Office 365 global administrators are Yammer Network Administrators.)

@@ -1,5 +1,5 @@
 ---
-title: "Manage GDPR data subject requests with the DSR case tool in the Office 365 Security &amp; Compliance Center"
+title: "Manage GDPR data subject requests with the DSR case tool in the Security & Compliance Center"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -14,14 +14,14 @@ ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
 ms.assetid: ce9eb942-3589-42cb-88fd-1576ecb09c5c
-description: "The GDPR gives EU citizens (called data subjects) specific rights to their personal data; these rights include obtaining copies of it, requesting changes to it, restricting the processing of it, deleting it, or receiving it in an electronic format. A formal request by a data subject to take an action on their personal data is called a Data Subject Request or DSR. You can use DSR Cases in the Office 365 Security &amp; Compliance Center to manage your organization's DSR investigations."
+description: "The GDPR gives EU citizens (called data subjects) specific rights to their personal data; these rights include obtaining copies of it, requesting changes to it, restricting the processing of it, deleting it, or receiving it in an electronic format. A formal request by a data subject to take an action on their personal data is called a Data Subject Request or DSR. You can use DSR Cases in the compliance center in Office 365 and Microsoft 365 to manage your organization's DSR investigations."
 ---
 
-# Manage GDPR data subject requests with the DSR case tool in the Office 365 Security &amp; Compliance Center
+# Manage GDPR data subject requests with the DSR case tool in the Security & Compliance Center
 
 The EU General Data Protection Regulation (GDPR) is about protecting and enabling individuals' privacy rights inside the European Union (EU). The GDPR gives individuals in the European Union (known as data subjects) the right to access, retrieve, correct, erase, and restrict processing of their personal data. Under the GDPR, personal data means any information relating to an identified or identifiable natural person. A formal request by a person to their organization to take an action on their personal data is called a Data Subject Request or DSR. For detailed information about responding to DSRs for data in Office 365, see [Office 365 Data Subject Request Guide](https://go.microsoft.com/fwlink/?linkid=871169 ).
   
-To manage investigations in response to a DSR submitted by a person in your organization, you can use the DSR case tool in the Office 365 Security &amp; Compliance Center to find content stored in:
+To manage investigations in response to a DSR submitted by a person in your organization, you can use the DSR case tool in the Security & Compliance Center to find content stored in:
   
 - Any user mailbox in your organization. This includes Skype for Business conversations and one-to-one chats in Microsoft Teams
     
@@ -37,7 +37,7 @@ Using the DSR case tool you can:
   
 - Create a separate case for each DSR investigation.
     
-- Control who has access to the DSR case by adding people as members of the case; only members can access the case and can only see their cases in the list of cases on the **DSR cases** page in the Security &amp; Compliance Center. Additionally, you can assign different permissions to different members of the same case. For example, you can allow some members to only view the case and search results and allow other members to create searches and export search results. 
+- Control who has access to the DSR case by adding people as members of the case; only members can access the case and can only see their cases in the list of cases on the **DSR cases** page in the Security & Compliance Center. Additionally, you can assign different permissions to different members of the same case. For example, you can allow some members to only view the case and search results and allow other members to create searches and export search results. 
     
 - Use the built-in search to search for all content created or uploaded by a specific data subject.
     
@@ -68,20 +68,20 @@ Here's the high-level process for using the DSR case tool to manage DSR investig
   
 ## Step 1: Assign eDiscovery permissions to potential case members
 
-By default, an Office 365 global administrator can access the DSR case tool in the Security &amp; Compliance Center. By design, other users such as a data privacy officer, a human resources manager, or other people involved in DSR investigations don't have access to the DSR case tool and will have to be assigned the appropriate permissions to access the tool. The easiest way to do this is to go to the **Permissions** page in the Security &amp; Compliance Center and add users to the eDiscovery Manager role group. Note that you also have to assign these permissions so you can add them as members of the DSR case that you create in Step 2. 
+By default, an Office 365 global administrator can access the DSR case tool in the Security & Compliance Center. By design, other users such as a data privacy officer, a human resources manager, or other people involved in DSR investigations don't have access to the DSR case tool and will have to be assigned the appropriate permissions to access the tool. The easiest way to do this is to go to the **Permissions** page in the Security & Compliance Center and add users to the eDiscovery Manager role group. Note that you also have to assign these permissions so you can add them as members of the DSR case that you create in Step 2. 
   
-For step-by-step instructions, see [Assign eDiscovery permissions in the Office‍ 365 Security &amp; Compliance Center](assign-ediscovery-permissions.md).
+For step-by-step instructions, see [Assign eDiscovery permissions in the Office‍ 365 Security & Compliance Center](assign-ediscovery-permissions.md).
   
 > [!NOTE]
-> By default, an Office 365 global administrator (or other members of the Organization Management role group in the Security &amp; Compliance Center don't have the necessary permissions to export Content Search results (see Step 4 in this article). To address this, an admin can add themselves as a member of the eDiscovery Manager role group. 
+> By default, an Office 365 global administrator (or other members of the Organization Management role group in the Security & Compliance Center don't have the necessary permissions to export Content Search results (see Step 4 in this article). To address this, an admin can add themselves as a member of the eDiscovery Manager role group. 
   
 ## Step 2: Create a DSR case and add members
 
 The next step is to create a DSR case. When you create a case, you can choose to start the built-in search or you can create the case without starting the search. The following procedure will instruct you to create the case without starting the search and then show you how to add members to the case.
   
-1. Go to [https://protection.office.com](https://protection.office.com) and sign in to Office 365 using your work or school account. 
+1. Go to [https://compliance.microsoft.com](https://compliance.microsoft.com) and sign in to Office 365 using your work or school account. 
     
-2. In the Security &amp; Compliance Center, click **Data privacy** \> **Data subject requests**, and then click ![Add Icon](media/ITPro-EAC-AddIcon.gif) **New DSR case**.
+2. In the Security & Compliance Center, click **Data privacy** \> **Data subject requests**, and then click ![Add Icon](media/ITPro-EAC-AddIcon.gif) **New DSR case**.
     
 3. On the **New DSR case** flyout page, give the case a name, type an optional description, and then click **Next**. Note that the name of the case must be unique in your organization.
     
@@ -140,7 +140,7 @@ participants:"ina@contoso.com" OR author:"Ina Leonte" OR createdby:"Ina Leonte"
 
  **To run the built-in search for a DSR case:**
   
-1. In the Security &amp; Compliance Center, click **Data privacy** \> **Data subject requests**, and then click **Open** next to the DSR case that you created in Step 2. 
+1. In the Security & Compliance Center, click **Data privacy** \> **Data subject requests**, and then click **Open** next to the DSR case that you created in Step 2. 
     
     Click the **Search** tab at the top of the page, and then click the checkbox next to the built-in search that was created when you created the new DSR case. Note the search has the same name as the DSR case. 
     
@@ -159,10 +159,10 @@ You can edit the built-in search query, change the content locations that are se
 
 After you run the built-in search, you can export the search results. Alternatively, before you export the data, you may want to revise the query to reduce the number of search results. See Step 5 for more information about narrowing the search results.
   
-When you export search results, mailbox items can be downloaded in PST files or as individual messages. When you export content from SharePoint and OneDrive accounts, copies of native Office documents and other documents are exported. A results file that contains information about every item that is exported is also included with the search results. For more detailed information about exporting, see [Export Content Search results from the Office 365 Security &amp; Compliance Center](export-search-results.md).
+When you export search results, mailbox items can be downloaded in PST files or as individual messages. When you export content from SharePoint and OneDrive accounts, copies of native Office documents and other documents are exported. A results file that contains information about every item that is exported is also included with the search results. For more detailed information about exporting, see [Export Content Search results](export-search-results.md).
   
 > [!NOTE]
-> By default, an Office 365 global administrator (or other members of the Organization Management role group in the Security &amp; Compliance Center) don't have the necessary permissions to export Content Search results. To address this, an admin can add themselves as a member of the eDiscovery Manager role group. 
+> By default, an Office 365 global administrator (or other members of the Organization Management role group in the Security & Compliance Center) don't have the necessary permissions to export Content Search results. To address this, an admin can add themselves as a member of the eDiscovery Manager role group. 
   
 The computer you use to export data has to meet the following system requirements:
   
@@ -183,7 +183,7 @@ The computer you use to export data has to meet the following system requirement
   
  **To export data from the built-in search in a DSR case:**
   
-1. In the Security &amp; Compliance Center, click **Data privacy** \> **Data subject requests**, and then click **Open** next to the DSR case that you want to export data from. 
+1. In the Security & Compliance Center, click **Data privacy** \> **Data subject requests**, and then click **Open** next to the DSR case that you want to export data from. 
     
 2. Click the **Search** tab at the top of the page, and then click the checkbox next to the built-in search that was created when you created the DSR case. Or click another search to export data from that search. 
     
@@ -224,7 +224,7 @@ The computer you use to export data has to meet the following system requirement
   
 13. Click **Start** to download the search results to your computer. 
     
-    The **eDiscovery Export Tool** displays status information about the export process, including an estimate of the number (and size) of the remaining items to be downloaded. When the export process is complete, you can access the files in the location where they were downloaded. For more information about the reports that included when you download Content Search results, see the [More information](export-search-results.md#more-information) section in "Export Content Search results from the Office 365 Security &amp; Compliance Center". 
+    The **eDiscovery Export Tool** displays status information about the export process, including an estimate of the number (and size) of the remaining items to be downloaded. When the export process is complete, you can access the files in the location where they were downloaded. For more information about the reports that included when you download Content Search results, see the [More information](export-search-results.md#more-information) section in "Export Content Search results". 
     
 After the data is exported, the search results and export reports are located in a folder that has the same name as the DSR case. The PST files that contain mailbox items are located in a subfolder named **Exchange**. Documents and other items from sites are located in a subfolder named **SharePoint**. 
   
@@ -299,7 +299,7 @@ When you export data from MyAnalytics and the Office Roaming Service, the data i
    
  **To search for and export MyAnalytics and Office Roaming Service data:**
   
-1. In the Security &amp; Compliance Center, click **Data privacy** \> **Data subject requests**, and then click **Open** next to the DSR case for the data subject that you want to export usage data for. 
+1. In the Security & Compliance Center, click **Data privacy** \> **Data subject requests**, and then click **Open** next to the DSR case for the data subject that you want to export usage data for. 
     
 2. Click the **Search** tab at the top of the page, and then click ![Add Icon](media/ITPro-EAC-AddIcon.gif) **Guided search**.
     
