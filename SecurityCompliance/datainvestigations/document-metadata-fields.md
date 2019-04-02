@@ -115,7 +115,7 @@ The following table lists the metadata fields for documents in a evidence set in
 |Set ID                     |                                                 |                         | Yes         |
 |Set order inclusives first |                                                 |                         | Yes         |
 |Similarity percent         |                                                 |                         | Yes         |
-|Themes list                | Yes (themesList)                                |                         | Yes         |
+|Themes list                | Yes (themesList)                                | Yes (Themes list)       | Yes         |
 |Word count                 | Yes (wordCount)                                 |                         | Yes         |
 |Relevance score (issue)    | Yes (relevanceScore_issueNum)                   |                         |             |
 |Read percentile (issue)    | Yes (readPercentile_issueNum)                   |                         |             |
