@@ -11,6 +11,7 @@ manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance  
 ms.topic: article
+search.appverid: met150
 ---
 
 # Understand the latest attack campaigns and techniques with threat analytics

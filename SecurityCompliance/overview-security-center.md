@@ -11,6 +11,7 @@ manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance  
 ms.topic: article
+search.appverid: met150
 ---
 
 # Overview of the Microsoft 365 security center
