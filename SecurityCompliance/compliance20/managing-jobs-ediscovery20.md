@@ -39,13 +39,15 @@ Here's a list of the jobs (which are typically long-running processes) that are 
 |||
 
 
-## Job Status'
+## Job status
+
+The following table describes the different status states for jobs.
+
 | Status           | Description     |
 | :----------------- | :----------     |
-| Created | Time when the job was created |
-| Submitted | Time when the job was submitted |
-| Submission Failed | The job submission failed.  You should attempt to re-run the action that created the job |
-| In progress | The job in in progress, you can monitor the progress of the job in the Jobs tab |
-| Successful | The job was successfully completed |
-| Partially Successful | The job was partially successful |
-| Failed | The job failed.  You should attempt to re-run the action that created the job |
+| Submitted | A new job was created.  The date and time that the job was submitted is displayed in the **Created** column on the **Jobs** tab. |
+| Submission failed | The job submission failed.  You should attempt to re-run the action that triggered the job. |
+| In progress | The job is in progress, you can monitor the progress of the job in the **Jobs** tab. |
+| Successful | The job was successfully completed. The date and time that the job completed is displayed in the **Completed** column on the **Jobs** tab. |
+| Partially successful | The job was partially successful. |
+| Failed | The job failed.  You should attempt to re-run the action that triggered the job. If the job fails a second time, we recommend that you contact Microsoft Support and provide the support information from the job. |
