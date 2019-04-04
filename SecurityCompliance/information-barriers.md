@@ -3,7 +3,7 @@ title: "Information barriers overview"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 03/13/2019
+ms.date: 04/04/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccompms.collection:
@@ -79,7 +79,7 @@ You must be familiar with PowerShell cmdlets in order to define, validate, or ed
 
 ## Next steps
 
-- [Learn more about the user experience of information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
+- [Learn more about the user experience of information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams)
 
-- [Define policies for information barriers in Microsoft Teams](define-information-barriers-policies.md). 
+- [Define policies for information barriers in Microsoft Teams](define-information-barriers-policies.md) 
 
