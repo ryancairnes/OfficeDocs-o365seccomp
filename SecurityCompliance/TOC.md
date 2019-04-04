@@ -61,7 +61,7 @@
 ### [Use drive shipping to import PST files](use-drive-shipping-to-import-pst-files-to-office-365.md)
 ### [Use the PST Collection tool to find, copy, and delete PST files](find-copy-and-delete-pst-files-in-your-organization.md)
 ### [Filter data when importing PST files](filter-data-when-importing-pst-files.md)
-### [Use network upload to import RMS-encrypted PST files](use-network-upload-to-import-pst-files.md)
+### [Use network upload to import RMS-encrypted PST files](use-network-upload-to-import-rms-encrypted-pst-files.md)
 ### [FAQ about importing PST files](faqimporting-pst-files-to-office-365.md)
 ### [Archiving third-party data in Office 365](archiving-third-party-data.md)
 ## Store data
