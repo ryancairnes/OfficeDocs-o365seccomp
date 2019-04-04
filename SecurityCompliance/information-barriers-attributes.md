@@ -37,7 +37,11 @@ description: "Use this article as a reference for various attributes you can use
 |ExtensionAttribute13 |CustomAttribute13 |String |
 |ExtensionAttribute14 |CustomAttribute14 |String |
 |ExtensionAttribute15 |CustomAttribute15 |String |
-|ExtensionAttribute1 |CustomAttribute1 |String |
+|MSExchExtensionCustomAttribute1 |ExtensionCustomAttribute1 |String |
+|MSExchExtensionCustomAttribute2 |ExtensionCustomAttribute2 |String |
+|MSExchExtensionCustomAttribute3 |ExtensionCustomAttribute3 |String |
+|MSExchExtensionCustomAttribute4 |ExtensionCustomAttribute4 |String |
+|MSExchExtensionCustomAttribute5 |ExtensionCustomAttribute5 |String |
 | | | |
 | | | |
 | | | |
