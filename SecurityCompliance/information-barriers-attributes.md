@@ -3,7 +3,7 @@ title: "Attributes for information barrier policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 03/19/2019
+ms.date: 04/04/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccompms.collection:
@@ -14,7 +14,7 @@ description: "Use this article as a reference for various attributes you can use
 
 # Attributes for information barrier policies (Preview)
 
-[Information barrier](information-barriers.md) policies are defined with attributes in Azure Active Directory. The following table summarizes attributes that can be used for [information barrier policies](define-information-barriers-policies.md).
+[Information barriers](information-barriers.md) can be defined using certain attributes in Azure Active Directory. Use the following table as a reference of attributes for [information barrier policies](define-information-barriers-policies.md).
 
 
 |Azure Active Directory property name (LDAP display name)  |Exchange property name  |Value type  |
@@ -49,6 +49,12 @@ description: "Use this article as a reference for various attributes you can use
 |StreetAddress |StreetAddress |String |
 |TargetAddress |ExternalEmailAddress |String |
 |UsageLocation |UsageLocation |A valid two-letter country/region ISO 3166 value, or the corresponding display name (for example, US or UnitedStates). For more information, see [Country Codes - ISO 3166](https://go.microsoft.com/fwlink/p/?linkid=213779). |
+|UserPrincipalName	|UserPrincipalName	|String |
+|Mail	|WindowsEmailAddress	|String |
+|Description	|Description	|String |
+|MemberOf	|MemberOfGroup	|String (can be DistinguishedName, ExternalDirectoryObjectId or ProxyAddress)|
+
+
 
 
 

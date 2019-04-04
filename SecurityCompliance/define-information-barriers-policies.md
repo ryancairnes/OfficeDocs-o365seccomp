@@ -18,17 +18,6 @@ description: "Learn how to define policies for information barriers in Microsoft
 
 This article describes how to define information barrier policies. 
 
-> [!IMPORTANT]
-> Before you define a policy, make sure to review the information in the [important considerations](#important-considerations-and-best-practices), [prerequisites](#prerequisites), and [prepare your environment](#prepare-your-environment-for-information-barriers) sections.
-
-## Important considerations and best practices
-
-- Information barrier policies do not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
-
-- Potentially, everyone included in an information barrier policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barrier policies are part of the same team or group chat, they might be removed from those chat sessions. To learn more, see [Learn more information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
-
-- Avoid bulk moves when information barrier policies are in effect. Ask admins not to move users between segments who cannot talk to each other. Either temporarily grant communication access and disable it later, after all users are moved, or create an intermediate segment who can talk to each of the initial segments. In any case, do not move users in bulk between entities who cannot communicate.
-
 ## Prerequisites
 
 ### Licenses & subscriptions
@@ -59,15 +48,34 @@ To define or edit information barrier policies, you must be assigned one of the 
 
 You must have enough data in your directory to be able to segment users. You could use attributes, such as group membership, department name, etc. as configured in Azure Active Directory (or your on-premises directory solution).
 
+### Scoped directory search
+
+**Before you define your organization's first information barrier policy, you must [enable scoped directory search in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-scoped-directory-search)**. Wait at least 24 hours after enabling scoped directory search before you set up or define information barrier policies.
+
+
 ### PowerShell
 
 Currently, information barrier policies are defined and managed in Office 365 by using PowerShell cmdlets. Although several scenarios and examples are provided in this article, you'll need to be familiar with PowerShell cmdlets and parameters.
 
+
+## Lifecycle of an information barrier policy
+
+Here's the overall process for defining and managing an information barrier policy:
+
+1. Plan your policies.
+    1. Determine which groups you want restrict (or allow) communications in Microsoft Teams (chats and phone calls).
+    2. Segment all users according to Azure Active Directory attributes. Refer to [Attributes for information barrier policies (Preview)](information-barriers-attributes.md).
+
+2. Define your policies.
+
+3. Apply the policies. (Note that you cannot edit a policy while it is being applied.)
+
+4. Verify the status of your policies, and view results.
+
+5. If necessary, edit or remove a policy.
+
+
 ## Prepare your environment for information barriers
-
-**Before you define your organization's first information barrier policy, you must [enable scoped directory search in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-scoped-directory-search)**. Wait at least 24 hours after enabling scoped directory search before you set up or define information barrier policies.
-
-Then, follow these steps:
 
 1. As a global administrator or compliance administrator, connect to PowerShell for Exchange Online, and connect to PowerShell for the Office 365 Security & Compliance Center.  
 
@@ -262,6 +270,14 @@ If you want to edit or remove an information barrier policy, you should first se
 6. (This is optional) If the process is taking a long time to finish, you can update recipients in Azure Active Directory and wait 30 minutes for FwdSync to occur. See [New address lists that you create in Exchange Online don't contain all the expected recipients](https://support.microsoft.com/help/2955640/new-address-lists-that-you-create-in-exchange-online-don-t-contain-all).
 
 At this point, your information barrier policy is set to inactive. You can leave it as is, edit it, or remove it altogether.
+
+## Important considerations and best practices
+
+- Information barrier policies do not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
+
+- Potentially, everyone included in an information barrier policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barrier policies are part of the same team or group chat, they might be removed from those chat sessions. To learn more, see [Learn more information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
+
+- Avoid bulk moves when information barrier policies are in effect. Ask admins not to move users between segments who cannot talk to each other. Either temporarily grant communication access and disable it later, after all users are moved, or create an intermediate segment who can talk to each of the initial segments. In any case, do not move users in bulk between entities who cannot communicate.
 
 ## Related articles
 
