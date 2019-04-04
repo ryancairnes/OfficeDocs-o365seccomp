@@ -14,4 +14,35 @@ description: "Use this article as a reference for various attributes you can use
 
 # Attributes for information barrier policies (Preview)
 
-content coming soon
+[Information barrier](information-barriers.md) policies are defined with attributes in Azure Active Directory. The following table summarizes attributes that can be used for [information barrier policies](define-information-barriers-policies.md).
+
+
+|Azure Active Directory property name (LDAP display name)  |Exchange property name  |Value type  |
+|---------|---------|---------|
+|Co       | Co        | String        |
+|Company     |Company         |String         |
+|Department     |Department         |String         |
+|ExtensionAttribute1 |CustomAttribute1 |String |
+|ExtensionAttribute2 |CustomAttribute2 |String |
+|ExtensionAttribute3 |CustomAttribute3 |String |
+|ExtensionAttribute4 |CustomAttribute4 |String |
+|ExtensionAttribute5 |CustomAttribute5 |String |
+|ExtensionAttribute6 |CustomAttribute6 |String |
+|ExtensionAttribute7 |CustomAttribute7 |String |
+|ExtensionAttribute8 |CustomAttribute8 |String |
+|ExtensionAttribute9 |CustomAttribute9 |String |
+|ExtensionAttribute10 |CustomAttribute10 |String |
+|ExtensionAttribute11 |CustomAttribute11 |String |
+|ExtensionAttribute12 |CustomAttribute12 |String |
+|ExtensionAttribute13 |CustomAttribute13 |String |
+|ExtensionAttribute14 |CustomAttribute14 |String |
+|ExtensionAttribute15 |CustomAttribute15 |String |
+|ExtensionAttribute1 |CustomAttribute1 |String |
+| | | |
+| | | |
+| | | |
+| | | |
+| | | |
+
+
+
