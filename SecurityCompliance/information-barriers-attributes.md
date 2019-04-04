@@ -42,11 +42,13 @@ description: "Use this article as a reference for various attributes you can use
 |MSExchExtensionCustomAttribute3 |ExtensionCustomAttribute3 |String |
 |MSExchExtensionCustomAttribute4 |ExtensionCustomAttribute4 |String |
 |MSExchExtensionCustomAttribute5 |ExtensionCustomAttribute5 |String |
-| | | |
-| | | |
-| | | |
-| | | |
-| | | |
+|MailNickname |Alias |String |
+|PhysicalDeliveryOfficeName |Office |String |
+|PostalCode |PostalCode |String |
+|ProxyAddresses |EmailAddresses |String |
+|StreetAddress |StreetAddress |String |
+|TargetAddress |ExternalEmailAddress |String |
+|UsageLocation |UsageLocation |A valid two-letter country/region ISO 3166 value, or the corresponding display name (for example, US or UnitedStates). For more information, see [Country Codes - ISO 3166](https://go.microsoft.com/fwlink/p/?linkid=213779). |
 
 
 
