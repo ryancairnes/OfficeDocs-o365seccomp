@@ -29,19 +29,19 @@ ZAP is available with the default Exchange Online Protection that is included wi
 
 ZAP is turned on by default, but the following conditions must be met:
   
-- **Spam action** is set to **Move message to Junk Email folder**. <br/>You can also create a new spam filter policy that applies only to a set of users if you don't want all mailboxes to be screened by ZAP.
+- **Spam action** is set to **Move message to Junk Email folder**. You can also create a new spam filter policy that applies only to a set of users if you don't want all mailboxes to be screened by ZAP.
 
 - Users have kept their default junk mail settings, and have not turned off junk email protection. (See [Change the level of protection in the Junk Email Filter](https://support.office.com/article/change-the-level-of-protection-in-the-junk-email-filter-e89c12d8-9d61-4320-8c57-d982c8d52f6b) for details about user options in Outlook.) 
   
-## How does ZAP work?
+## How ZAP works
 
-Office 365 updates anti-spam engine and malware signatures in real-time on a daily basis. However, your users might still get malicious messages delivered to their inboxes for a variety of reasons, including if content is weaponized after being delivered to users. ZAP addresses this by continually monitoring updates to the Office 365 spam and malware signatures. ZAP can find and remove previously delivered messages that are already in users' inboxes. 
+Office 365 updates anti-spam engine and malware signatures in real-time on a daily basis. However, your users might still get malicious messages delivered to their inboxes for a variety of reasons, including if content is weaponized after being delivered to users. ZAP addresses this by continually monitoring updates to the Office 365 spam and malware signatures. ZAP can find and remove previously delivered messages that are already in users' inboxes.
 
-- For mail that is identified as spam, ZAP moves unread messages to users' Junk mail folder. 
+- For mail that is identified as spam, ZAP moves unread messages to users' Junk mail folder.
 
 - For mail that is identified as phish, ZAP moves messages to users' Junk mail folder, regardless of whether the email has been read.
 
-- For newly detected malware, ZAP removes attachments from email messages, regardless of whether the email has been read. 
+- For newly detected malware, ZAP removes attachments from email messages, regardless of whether the email has been read.
   
 The ZAP action is seamless for the mailbox user; they are not notified if an email message is moved.
   
@@ -53,20 +53,20 @@ Allow lists, [mail flow rules](https://go.microsoft.com/fwlink/p/?LinkId=722755)
 
 2. Under **Threat management**, choose **Anti-spam**.
 
-3. Review the standard settings. 
+3. Review the standard settings.
 
-4. If you want to customize your settings, select the **Custom** tab, and turn on **Custom settings**. Edit your settings and if you want, choose **+ Create a policy** to add a new policy. 
-    
+4. If you want to customize your settings, select the **Custom** tab, and turn on **Custom settings**. Edit your settings and if you want, choose **+ Create a policy** to add a new policy.
+
 ## To see if ZAP moved your message
 
 If you want to see if ZAP moved your message, you can use either the [Threat Protection Status report](view-email-security-reports.md#threat-protection-status-report) (or [Threat Explorer](use-explorer-in-security-and-compliance.md)).
-    
+
 ## To disable ZAP
   
 If you want to disable ZAP for your Office 365 tenant, or a set of users, use the **ZapEnabled** parameter of [Set-HostedContentFilterPolicy](https://go.microsoft.com/fwlink/p/?LinkId=722758), an EOP cmdlet.
-    
+
 In the following example, ZAP is disabled for a content filter policy named "Test".
-    
+
 ```Powershell
   Set-HostedContentFilterPolicy -Identity Test -ZapEnabled $false
 ```
@@ -90,5 +90,3 @@ Rules created by admins (mail flow rules) or Block and Allow rules take preceden
 [Office 365 Email Anti-Spam Protection](anti-spam-protection.md)
   
 [Block email spam with the Office 365 spam filter to prevent false negative issues](reduce-spam-email.md)
-  
-

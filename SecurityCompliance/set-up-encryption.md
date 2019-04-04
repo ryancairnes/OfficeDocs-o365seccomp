@@ -17,10 +17,10 @@ description: "With Office 365, some encryption capabilities are turned on by def
 
 # Set up encryption in Office 365 Enterprise
 
-Encryption can protect your content from being read by unauthorized users. Because [encryption in Office 365](encryption.md) can be done using various technologies and methods, there isn't one single place where you turn on or set up encryption. This article provides information about various ways you can set up or configure encryption as part of your information protection strategy. 
+Encryption can protect your content from being read by unauthorized users. Because [encryption in Office 365](encryption.md) can be done using various technologies and methods, there isn't one single place where you turn on or set up encryption. This article provides information about various ways you can set up or configure encryption as part of your information protection strategy.
   
 > [!TIP]
-> If you are looking for more technical details about encryption, see [Technical reference details about encryption in Office 365](technical-reference-details-about-encryption.md). 
+> If you are looking for more technical details about encryption, see [Technical reference details about encryption in Office 365](technical-reference-details-about-encryption.md).
   
 With Office 365, several encryption capabilities are available by default. Additional encryption capabilities can be configured to meet certain compliance or legal requirements. The following table describes several encryption methods for different scenarios.
   
@@ -32,9 +32,7 @@ With Office 365, several encryption capabilities are available by default. Addit
 |People are communicating via email (Exchange Online)  <br/> | As an Exchange Online administrator, you have several options for configuring email encryption. These include:  <br/>  Using [Office 365 message encryption (OME)](set-up-new-message-encryption-capabilities.md) with Azure Rights Management (Azure RMS) to enable people to send encrypted messages inside or outside your organization  <br/>  Using [S/MIME for message signing and encryption](https://aka.ms/c6dozg) to encrypt and digitally sign email messages  <br/>  Using TLS to [set up connectors for secure mail flow with another organization](https://aka.ms/hs809p) <br/>  See [Email encryption in Office 365](https://aka.ms/hic3f7).  <br/> |
 |Files are accessed from team sites or document libraries (OneDrive for Business or SharePoint Online)  <br/> |When people are working with files saved to OneDrive for Business or SharePoint Online, TLS connections are used. This is built into Office 365 automatically. See [Data Encryption in OneDrive for Business and SharePoint Online](https://go.microsoft.com/fwlink/?linkid=526379).  <br/> |
 |Files are shared in online meetings and IM conversations (Skype for Business Online)  <br/> |When people are working with files using Skype for Business Online, TLS is used for the connection. This is built into Office 365 automatically. See [Security and Archiving (Skype for Business Online)](https://aka.ms/nuq4ws).  <br/> |
-   
+
 ## Additional information
 
 To learn more about file protection solutions that include encryption options, see [File Protection Solutions in Office 365](https://www.microsoft.com/en-us/download/details.aspx?id=55523).
-  
-
