@@ -20,7 +20,7 @@ description: ""
 
 A mailbox in Exchange Online is primarily used to store email-related items such as messages, calendar items, tasks, and notes. But that's changing as more Office 365 apps also store their data in a user's cloud-based Exchange mailbox. One advantage of storing data in a mailbox is that Microsoft compliance tools such as eDiscovery, archiving, and retention policies can used to find, store, and retain data from these other apps in the Microsoft cloud.
 
- The following table lists the Office 365 apps that store data in a mailbox. The table also describe the type of content that each app stores in a mailbox.
+ The following table lists the Office 365 apps that store data in a mailbox. The table also describes the type of content that each app stores in a mailbox.
 
 |Office 365 app  |Description  |
 |:---------|:---------|
