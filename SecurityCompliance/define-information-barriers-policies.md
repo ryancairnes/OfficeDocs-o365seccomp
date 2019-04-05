@@ -100,6 +100,18 @@ To segment users, consider using an attribute in Azure Active Directory. To lear
 
 ## Define information barrier policies
 
+1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
+
+2. Run the following PowerShell cmdlets, one at a time:<br>
+
+    `Login-AzureRmAccount`  
+
+    `$appId="__TODO__"` 
+
+    `New-AzureRmADServicePrincipal -ApplicationId $appId` 
+
+3. When prompted, sign in using your work or school account for Office 365.
+
 ## Apply information barrier policies
 
 ## Verify status of information barrier policies
