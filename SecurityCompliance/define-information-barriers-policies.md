@@ -186,6 +186,10 @@ If you want to edit or remove an information barrier policy, you should first se
 
 8. Run the `Start-InformationBarrierPoliciesApplication` cmdlet.
 
+9. If the process is taking a long time to finish, you can update recipients in Azure Active Directory and wait 30 minutes for FwdSync to occur. See [New address lists that you create in Exchange Online don't contain all the expected recipients](https://support.microsoft.com/help/2955640/new-address-lists-that-you-create-in-exchange-online-don-t-contain-all).
+
+At this point, your information barrier policy is set to inactive. You can leave it as is, edit it, or remove it altogether.
+
 ## Related articles
 
 [Get an overview of information barriers](information-barriers.md)
