@@ -132,7 +132,8 @@ To verify status for a specific user, run the `Get-InformationBarrierRecipientSt
 
 ## Edit or remove an information barrier policy
 
-CONTENT COMING
+If you want to edit or remove an information barrier policy, you should first set the policy to inactive status. 
+
 
 ## Related articles
 
