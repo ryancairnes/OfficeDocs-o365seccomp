@@ -23,6 +23,10 @@ A data spill occurs when a document containing confidential, sensitive, or malic
 
 This article describes using the capabilities in the new Data Investigations (Preview) tool to address a data spillage scenario.
 
+## Permissions
+
+To access and conduct a data investigation, you need be a member of the Data investigator role group. For more information, see [Assign permissions for Data Investigations](permissions.md).
+
 ## Data Investigations (Preview) workflow 
 
 The following sections describe each step in the built-in workflow in Data Investigations (Preview). The following screenshot shows the **Home** tab of an investigation named *High Risk: Finance Documents Leakage*. 
