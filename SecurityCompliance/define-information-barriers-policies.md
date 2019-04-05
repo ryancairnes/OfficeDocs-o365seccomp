@@ -20,17 +20,17 @@ description: "Learn how to define policies for information barriers in Microsoft
 
 Here's a high-level overview of the life cycle of an information barrier policy:
 
-1. Plan your policies.
+1. [Plan your policies](#plan-your-information-barrier-policies).
 
-2. Segment users in your organization.
+2. [Segment users in your organization](#segment-users).
 
-3. Define information barrier policies.
+3. [Define your information barrier policies](#define-information-barrier-policies).
 
-4. Apply information barrier policies.
+4. [Apply information barrier policies](#apply-information-barrier-policies).
 
-5. Verify the status of your policies, and view results.
+5. [Verify the status of information barrier policies](#verify-status-of-information-barrier-policies).
 
-6. If necessary, edit or remove a policy.
+6. If necessary, [edit or remove a policy](#edit-or-remove-an-information-barrier-policy).
 
 ## Prerequisites
 
