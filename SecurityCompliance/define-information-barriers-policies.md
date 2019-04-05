@@ -114,13 +114,20 @@ To segment users, consider using an attribute in Azure Active Directory. To lear
 
 4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
 
-5. DEFINE POLICY STEPS
+5. Depending on how you want the policy to work, run a cmdlet similar to an example in the following table:
+
+
+|Example cmdlet  |Description  |
+|---------|---------|
+|`New-InformationBarrierPolicy -Name "InvestorsIBPolicy" -AssigneeFilterName "Investors" -AssigneeFilter $investorsFilter -CommunicationAllowedFilterName "NotResearch" -CommunicationAllowedFilter $researchFilter`  |Defines a policy called "InvestorsIBPolicy" that prevents people in a group called "Investors" from communicating with people in a group called "Research." |
+|`New-InformationBarrierPolicy -Name "ProductsResearchIBPolicy" -AssigneeFilterName "Products" -AssigneeFilter $productsFilter -CommunicationAllowedFilterName "Research" -CommunicationAllowedFilter $productsFilter or $researchFilter`  |Defines a policy called "ProductsResearchIBPolicy" that allows people in a group called "Products" to communicate with only people in a group called "Research."   |
+|`New-InformationBarrierPolicy -Name "InvestorsResearchSalesIBPolicy"  -AssigneeFilterName "Investors" -AssigneeFilter $investorFilter -CommunicationAllowedFilterName "NotResearchAndSales"  -CommunicationFilter $researchFilter and $salesFilter` |Defines a policy called "InvestorsResearchSalesIBPolicy" that prevents people in one group called "Investors" from communicating with people in two other groups ("Research" and "Sales").         |
+
+Finish defining your policies, and then proceed to apply those policies.
 
 ## Apply information barrier policies
 
 Information barrier policies are not in effect until they are applied. 
-
-Do to this, follow these steps:
 
 1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
@@ -138,7 +145,7 @@ Do to this, follow these steps:
 
 5. Run the `Start-InformationBarrierPoliciesApplication`  cmdlet in the Office 365 Security & Compliance Center.
 
-**Wait at least 24 hours for the policy to work its way through your data center and services**. 
+6. Wait at least 24 hours for the policy to work its way through your data center and services. 
 
 ## Verify status of information barrier policies
 
@@ -162,7 +169,7 @@ Do to this, follow these steps:
 
 ## Edit or remove an information barrier policy
 
-If you want to edit or remove an information barrier policy, you should first set the policy to inactive status. 
+If you want to edit or remove an information barrier policy, you must set the policy to inactive status. 
 
 1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
