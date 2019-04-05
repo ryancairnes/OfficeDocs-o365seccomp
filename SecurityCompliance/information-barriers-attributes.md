@@ -3,7 +3,7 @@ title: "Attributes for information barrier policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 04/04/2019
+ms.date: 04/05/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccompms.collection:
