@@ -66,7 +66,6 @@ You must have enough data in your directory to be able to segment users. You cou
 
 **Before you define your organization's first information barrier policy, you must [enable scoped directory search in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-scoped-directory-search)**. Wait at least 24 hours after enabling scoped directory search before you set up or define information barrier policies.
 
-
 ### PowerShell
 
 Currently, information barrier policies are defined and managed in Office 365 by using PowerShell cmdlets. Although several scenarios and examples are provided in this article, you'll need to be familiar with PowerShell cmdlets and parameters.
@@ -87,6 +86,8 @@ As you create your plan for information barriers, keep the following points in m
 - Avoid bulk moves when information barrier policies are in effect. Ask admins not to move users between segments who cannot talk to each other. Either temporarily grant communication access and disable it later, after all users are moved, or create an intermediate segment who can talk to each of the initial segments. In any case, do not move users in bulk between entities who cannot communicate.
 
 ## Segment users
+
+To segment users, consider using an attribute in Azure Active Directory.
 
 ## Define information barrier policies
 
