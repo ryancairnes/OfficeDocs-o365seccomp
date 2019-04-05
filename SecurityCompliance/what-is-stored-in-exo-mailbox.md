@@ -13,14 +13,14 @@ search.appverid:
 - MED150
 - MET150
 ms.assetid: 
-description: ""
+description: "Data produced by cloud-based apps in Office 365 is stored in a user's Exchange Online mailbox in the Microsoft cloud."
 ---
 
 # Content stored in Exchange Online mailboxes
 
-A mailbox in Exchange Online is primarily used to store email-related items such as messages, calendar items, tasks, and notes. But that's changing as more Office 365 apps also store their data in a user's cloud-based Exchange mailbox. One advantage of storing data in a mailbox is that Microsoft compliance tools such as eDiscovery, archiving, and retention policies can used to find, store, and retain data from these other apps in the Microsoft cloud. Data from some of these other apps is stored in hidden folders located in a non-interpersonal message (non-IPM) subtree in the mailbox.
+A mailbox in Exchange Online is primarily used to store email-related items such as messages, calendar items, tasks, and notes. But that's changing as more cloud-based Office 365 apps also store their data in a user's mailbox. One advantage of storing data in a mailbox is that you can use the search tools in Content Search, eDiscovery, Advanced eDiscovery, and Data Investigations to find, view, and export the data from these cloud-based apps. Note that the data from some of these apps is stored in hidden folders located in a non-interpersonal message (non-IPM) subtree in the mailbox. This means the data is hidden from the user's view when they use Outlook or other mail clients to access their mailbox.
 
-The following table lists the Office 365 apps that store data in a mailbox. The table also describes the type of content that each app stores.
+The following table lists the Office 365 apps that store data in a cloud-based mailbox. The table also describes the type of content that each app stores.
 
 |Office 365 app  |Description  |
 |:---------|:---------|
@@ -36,3 +36,6 @@ The following table lists the Office 365 apps that store data in a mailbox. The 
 |Teams    <br/>  |Conversations that are part of a Teams channel are stored in the mailbox that's associated with the Team. Conversations that are part of the Chat list in Teams (also called *1 x N chats*) are stored in the mailbox of the users who participate in the chat. Additionally, summary information for meetings and calls in a Teams channel are stored in the mailboxes of users who dialed into the meeting or call. <br/> | 
 |To-Do  <br/> | Tasks (called *to-dos*, which are saved in to-do lists) in the To-Do app are stored in a user's mailbox.        <br/> |
 ||||
+
+> [!NOTE]
+> Currently, if a hold is placed on a custodian mailbox in Advanced eDiscovery (Preview), content from Forms and Sway will not be preserved by the hold. 
