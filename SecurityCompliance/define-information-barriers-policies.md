@@ -114,15 +114,21 @@ To segment users, consider using an attribute in Azure Active Directory. To lear
 
 4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
 
-5. MORE TO COME 
+5. 
 
 ## Apply information barrier policies
 
-CONTENT COMING
+Information barrier policies are not in effect until they are applied. 
+
+Do to this, run the `Start-InformationBarrierPoliciesApplication`  cmdlet in the Office 365 Security & Compliance Center.
+
+**Wait at least 24 hours for the policy to work its way through your data center and services**. 
 
 ## Verify status of information barrier policies
 
-CONTENT COMING
+To verify status for an information barrier policy, run the the `Get-InformationBarrierPoliciesApplicationStatus` cmdlet in the Office 365 Security & Compliance Center.
+
+To verify status for a specific user, run the `Get-InformationBarrierRecipientStatus` cmdlet in the Office 365 Security & Compliance Center.
 
 ## Edit or remove an information barrier policy
 
