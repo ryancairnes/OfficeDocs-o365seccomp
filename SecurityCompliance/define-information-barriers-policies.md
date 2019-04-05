@@ -180,9 +180,11 @@ If you want to edit or remove an information barrier policy, you should first se
 
 5. To view a list of current information barrier policies, run the `Get-InformationBarrierPolicy` cmdlet.
 
-6. In the list of results, identify the policy that you want to change (or remove). Make note of the policy's name.
+6. In the list of results, identify the policy that you want to change (or remove). Note the policy's name.
 
 7. To set the policy's status to inactive, run the `Set-InformationBarrierPolicy` cmdlet.
+
+8. Run the `Start-InformationBarrierPoliciesApplication` cmdlet.
 
 ## Related articles
 
