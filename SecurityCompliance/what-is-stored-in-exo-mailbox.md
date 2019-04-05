@@ -12,7 +12,8 @@ search.appverid:
 - MOE150
 - MED150
 - MET150
-ms.assetid: 
+ms.assetid:
+ROBOTS: NOINDEX, NOFOLLOW 
 description: "Data produced by cloud-based apps in Office 365 is stored in a user's Exchange Online mailbox in the Microsoft cloud."
 ---
 
