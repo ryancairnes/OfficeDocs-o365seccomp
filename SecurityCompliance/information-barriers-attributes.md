@@ -54,7 +54,11 @@ description: "Use this article as a reference for various attributes you can use
 |Description	|Description	|String |
 |MemberOf	|MemberOfGroup	|String (can be DistinguishedName, ExternalDirectoryObjectId or ProxyAddress)|
 
+## Related topics
 
+[Define policies for information barriers in Microsoft Teams (Preview)](define-information-barriers-policies.md)
+
+[Information barriers (Preview)](information-barriers.md)
 
 
 

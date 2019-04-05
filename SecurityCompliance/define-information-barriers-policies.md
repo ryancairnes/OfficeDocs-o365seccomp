@@ -77,7 +77,6 @@ Determine which groups of users for whom you want to prevent (or allow) communic
 - Block communications between two groups
 - Allow one group to communicate with only one other group
 - Prevent one group from communicating with two other groups
-- and so on. 
 
 As you create your plan for information barriers, keep the following points in mind:
 
