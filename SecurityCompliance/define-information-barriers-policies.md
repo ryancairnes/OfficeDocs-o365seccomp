@@ -116,12 +116,11 @@ To segment users, consider using an attribute in Azure Active Directory. To lear
 
 5. Depending on how you want the policy to work, run a cmdlet similar to an example in the following table:
 
-
-|Example cmdlet  |Description  |
-|---------|---------|
-|`New-InformationBarrierPolicy -Name "InvestorsIBPolicy" -AssigneeFilterName "Investors" -AssigneeFilter $investorsFilter -CommunicationAllowedFilterName "NotResearch" -CommunicationAllowedFilter $researchFilter`  |Defines a policy called "InvestorsIBPolicy" that prevents people in a group called "Investors" from communicating with people in a group called "Research." |
-|`New-InformationBarrierPolicy -Name "ProductsResearchIBPolicy" -AssigneeFilterName "Products" -AssigneeFilter $productsFilter -CommunicationAllowedFilterName "Research" -CommunicationAllowedFilter $productsFilter or $researchFilter`  |Defines a policy called "ProductsResearchIBPolicy" that allows people in a group called "Products" to communicate with only people in a group called "Research."   |
-|`New-InformationBarrierPolicy -Name "InvestorsResearchSalesIBPolicy"  -AssigneeFilterName "Investors" -AssigneeFilter $investorFilter -CommunicationAllowedFilterName "NotResearchAndSales"  -CommunicationFilter $researchFilter and $salesFilter` |Defines a policy called "InvestorsResearchSalesIBPolicy" that prevents people in one group called "Investors" from communicating with people in two other groups ("Research" and "Sales").         |
+    |Example cmdlet  |Description  |
+    |---------|---------|
+    |`New-InformationBarrierPolicy -Name "InvestorsIBPolicy" -AssigneeFilterName "Investors" -AssigneeFilter $investorsFilter -CommunicationAllowedFilterName "NotResearch" -CommunicationAllowedFilter $researchFilter`  |Defines a policy called "InvestorsIBPolicy" that prevents people in a group called "Investors" from communicating with people in a group called "Research." |
+    |`New-InformationBarrierPolicy -Name "ProductsResearchIBPolicy" -AssigneeFilterName "Products" -AssigneeFilter $productsFilter -CommunicationAllowedFilterName "Research" -CommunicationAllowedFilter $productsFilter or $researchFilter`  |Defines a policy called "ProductsResearchIBPolicy" that allows people in a group called "Products" to communicate with only people in a group called "Research."   |
+    |`New-InformationBarrierPolicy -Name "InvestorsResearchSalesIBPolicy"  -AssigneeFilterName "Investors" -AssigneeFilter $investorFilter -CommunicationAllowedFilterName "NotResearchAndSales"  -CommunicationFilter $researchFilter and $salesFilter` |Defines a policy called "InvestorsResearchSalesIBPolicy" that prevents people in one group called "Investors" from communicating with people in two other groups ("Research" and "Sales").         |
 
 Finish defining your policies, and then proceed to apply those policies.
 
@@ -129,71 +128,29 @@ Finish defining your policies, and then proceed to apply those policies.
 
 Information barrier policies are not in effect until they are applied. 
 
-1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
+1. Run the `Start-InformationBarrierPoliciesApplication`  cmdlet in the Office 365 Security & Compliance Center.
 
-2. Run the following PowerShell cmdlets, one at a time:<br>
-
-    `Login-AzureRmAccount`  
-
-    `$appId="__TODO__"` 
-
-    `New-AzureRmADServicePrincipal -ApplicationId $appId` 
-
-3. When prompted, sign in using your work or school account for Office 365.
-
-4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
-
-5. Run the `Start-InformationBarrierPoliciesApplication`  cmdlet in the Office 365 Security & Compliance Center.
-
-6. Wait at least 24 hours for the policy to work its way through your data center and services. 
+2. Wait at least 24 hours for the policy to work its way through your data center and services. 
 
 ## Verify status of information barrier policies
 
-1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
+1. To verify status for an information barrier policy, run the the `Get-InformationBarrierPoliciesApplicationStatus` cmdlet.
 
-2. Run the following PowerShell cmdlets, one at a time:<br>
-
-    `Login-AzureRmAccount`  
-
-    `$appId="__TODO__"` 
-
-    `New-AzureRmADServicePrincipal -ApplicationId $appId` 
-
-3. When prompted, sign in using your work or school account for Office 365.
-
-4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
-
-5. To verify status for an information barrier policy, run the the `Get-InformationBarrierPoliciesApplicationStatus` cmdlet.
-
-6. To verify status for a specific user, run the `Get-InformationBarrierRecipientStatus` cmdlet.
+2. To verify status for a specific user, run the `Get-InformationBarrierRecipientStatus` cmdlet.
 
 ## Edit or remove an information barrier policy
 
 If you want to edit or remove an information barrier policy, you must set the policy to inactive status. 
 
-1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
+1. To view a list of current information barrier policies, run the `Get-InformationBarrierPolicy` cmdlet.
 
-2. Run the following PowerShell cmdlets, one at a time:<br>
+2. In the list of results, identify the policy that you want to change (or remove). Note the policy's name.
 
-    `Login-AzureRmAccount`  
+3. To set the policy's status to inactive, run the `Set-InformationBarrierPolicy` cmdlet.
 
-    `$appId="__TODO__"` 
+4. Run the `Start-InformationBarrierPoliciesApplication` cmdlet.
 
-    `New-AzureRmADServicePrincipal -ApplicationId $appId` 
-
-3. When prompted, sign in using your work or school account for Office 365.
-
-4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
-
-5. To view a list of current information barrier policies, run the `Get-InformationBarrierPolicy` cmdlet.
-
-6. In the list of results, identify the policy that you want to change (or remove). Note the policy's name.
-
-7. To set the policy's status to inactive, run the `Set-InformationBarrierPolicy` cmdlet.
-
-8. Run the `Start-InformationBarrierPoliciesApplication` cmdlet.
-
-9. If the process is taking a long time to finish, you can update recipients in Azure Active Directory and wait 30 minutes for FwdSync to occur. See [New address lists that you create in Exchange Online don't contain all the expected recipients](https://support.microsoft.com/help/2955640/new-address-lists-that-you-create-in-exchange-online-don-t-contain-all).
+5. If the process is taking a long time to finish, you can update recipients in Azure Active Directory and wait 30 minutes for FwdSync to occur. See [New address lists that you create in Exchange Online don't contain all the expected recipients](https://support.microsoft.com/help/2955640/new-address-lists-that-you-create-in-exchange-online-don-t-contain-all).
 
 At this point, your information barrier policy is set to inactive. You can leave it as is, edit it, or remove it altogether.
 
