@@ -112,11 +112,21 @@ To segment users, consider using an attribute in Azure Active Directory. To lear
 
 3. When prompted, sign in using your work or school account for Office 365.
 
+4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
+
+5. MORE TO COME 
+
 ## Apply information barrier policies
+
+CONTENT COMING
 
 ## Verify status of information barrier policies
 
+CONTENT COMING
+
 ## Edit or remove an information barrier policy
+
+CONTENT COMING
 
 ## Related articles
 
