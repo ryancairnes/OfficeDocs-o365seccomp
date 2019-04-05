@@ -72,10 +72,11 @@ Currently, information barrier policies are defined and managed in Office 365 by
 
 ## Plan your information barrier policies
 
-Determine which groups of users for whom you want to prevent (or allow) communications to occur in Microsoft Teams (chat sessions and calls). You can use information barrier policies to:
-- Block communications between two groups
-- Allow one group to communicate with only one other group
-- Prevent one group from communicating with two other groups
+Determine which groups of users for whom you want to prevent (or allow) communications to occur in Microsoft Teams (chat sessions and calls). For example, you can use information barrier policies to:
+- Block communications between two groups;
+- Allow one group to communicate with only one other group;
+- Prevent one group from communicating with two other groups;
+- ...and more.
 
 As you create your plan for information barriers, keep the following points in mind:
 
