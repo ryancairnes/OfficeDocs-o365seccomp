@@ -93,10 +93,10 @@ To segment users, consider using an attribute in Azure Active Directory. To lear
 
 |Resource  |Description  |
 |---------|---------|
+|[Attributes for information barrier policies (Preview)](information-barriers-attributes.md) |Use this article as a reference for various attributes you can use in information barrier policies |
 |[Create a basic group and add members using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) |You can create a basic group using the Azure Active Directory (Azure AD) portal. |
-|[Create a dynamic group and check status](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-create-rule)     |In Azure Active Directory (Azure AD), you can use rules to determine group membership based on user or device properties. |
+|[Create a dynamic group and check status](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-create-rule)     |In Azure Active Directory, you can use rules to determine group membership based on user or device properties. |
 |[Azure AD cmdlets for working with extension attributes](https://docs.microsoft.com/powershell/azure/active-directory/using-extension-attributes-sample?view=azureadps-2.0)     | Extension attributes offer a convenient way to extend your Azure AD directory with new attributes that you can use to store attribute values for objects in your directory.  |
-
 
 ## Define information barrier policies
 
