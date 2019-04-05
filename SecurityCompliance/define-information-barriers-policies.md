@@ -114,26 +114,75 @@ To segment users, consider using an attribute in Azure Active Directory. To lear
 
 4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
 
-5. 
+5. DEFINE POLICY STEPS
 
 ## Apply information barrier policies
 
 Information barrier policies are not in effect until they are applied. 
 
-Do to this, run the `Start-InformationBarrierPoliciesApplication`  cmdlet in the Office 365 Security & Compliance Center.
+Do to this, follow these steps:
+
+1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
+
+2. Run the following PowerShell cmdlets, one at a time:<br>
+
+    `Login-AzureRmAccount`  
+
+    `$appId="__TODO__"` 
+
+    `New-AzureRmADServicePrincipal -ApplicationId $appId` 
+
+3. When prompted, sign in using your work or school account for Office 365.
+
+4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
+
+5. Run the `Start-InformationBarrierPoliciesApplication`  cmdlet in the Office 365 Security & Compliance Center.
 
 **Wait at least 24 hours for the policy to work its way through your data center and services**. 
 
 ## Verify status of information barrier policies
 
-To verify status for an information barrier policy, run the the `Get-InformationBarrierPoliciesApplicationStatus` cmdlet in the Office 365 Security & Compliance Center.
+1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
-To verify status for a specific user, run the `Get-InformationBarrierRecipientStatus` cmdlet in the Office 365 Security & Compliance Center.
+2. Run the following PowerShell cmdlets, one at a time:<br>
+
+    `Login-AzureRmAccount`  
+
+    `$appId="__TODO__"` 
+
+    `New-AzureRmADServicePrincipal -ApplicationId $appId` 
+
+3. When prompted, sign in using your work or school account for Office 365.
+
+4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
+
+5. To verify status for an information barrier policy, run the the `Get-InformationBarrierPoliciesApplicationStatus` cmdlet.
+
+6. To verify status for a specific user, run the `Get-InformationBarrierRecipientStatus` cmdlet.
 
 ## Edit or remove an information barrier policy
 
 If you want to edit or remove an information barrier policy, you should first set the policy to inactive status. 
 
+1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
+
+2. Run the following PowerShell cmdlets, one at a time:<br>
+
+    `Login-AzureRmAccount`  
+
+    `$appId="__TODO__"` 
+
+    `New-AzureRmADServicePrincipal -ApplicationId $appId` 
+
+3. When prompted, sign in using your work or school account for Office 365.
+
+4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
+
+5. To view a list of current information barrier policies, run the `Get-InformationBarrierPolicy` cmdlet.
+
+6. In the list of results, identify the policy that you want to change (or remove). Make note of the policy's name.
+
+7. To set the policy's status to inactive, run the `Set-InformationBarrierPolicy` cmdlet.
 
 ## Related articles
 
