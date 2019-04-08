@@ -78,11 +78,11 @@ In addition to links in cards on the home page, you'll find a navigation pane on
 
 ### Why am I taken to the Office 365 Security & Compliance Center to perform some tasks, such as defining certain policies?
 
-We are still developing the Microsoft 365 compliance center, and we'll be adding more functionality and solutions over the coming months. In the meantime, there are some tasks that must be performed in the Security & Compliance Center. In those cases, you'll be directed automatically to the location where you can perform the task at hand, such as creating or editing a supervision policy.
+We are still developing the Microsoft 365 compliance center, and we'll be adding more functionality and solutions over the coming months. In the meantime, there are some tasks that must be performed in the Office 365 Security & Compliance Center ([https://protection.office.com](https://protection.office.com)). In those cases, you'll be directed automatically to the location where you can perform the task at hand, such as creating or editing a supervision policy.
 
 ### Why don't I see the new Microsoft 365 compliance center yet?
 
-First, make sure you have the appropriate [licenses and permissions](microsoft-security-and-compliance.md#required-licenses-and-permissions). Then, sign in at [https://compliance.microsoft.com](https://compliance.microsoft.com). If you don't see the new compliance center yet, you will have it very soon.
+First, make sure you have the appropriate [licenses and permissions](microsoft-security-and-compliance.md#required-licenses-and-permissions). Then, sign in at [https://compliance.microsoft.com](https://compliance.microsoft.com). If you don't see the new compliance center yet, you will have it soon.
 
 ### I can't find some of my compliance settings. What do I do?
 
