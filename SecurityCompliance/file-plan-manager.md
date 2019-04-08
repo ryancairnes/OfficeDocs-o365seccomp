@@ -3,13 +3,13 @@ title: "Overview of file plan manager"
 ms.author: stephow
 author: stephow-MSFT
 manager: laurawi
-ms.date: 
+ms.date:
 ms.audience: Admin
 ms.topic: conceptual
 ms.service: O365-seccomp
 localization_priority: Priority
 ms.collection: M365-security-compliance
-search.appverid: 
+search.appverid:
 - MOE150
 - MET150
 ms.assetid: af398293-c69d-465e-a249-d74561552d30
@@ -26,9 +26,13 @@ File plan manager provides advanced management capabilities for retention labels
 
 There are two requirements to access file plan manager, they are:
 - An Office 365 Enterprise E5 subscription.
-- The user has been in assigned one of the following roles of the Security &amp; Compliance Center: 
+- The user has been in assigned one of the following roles of the Security &amp; Compliance Center:
     - Retention Manager
     - View-only Retention Manager
+
+[!NOTE]
+If you have no labels present inside of the compliance center when you click on File Plan it will create a policy called Default Data Governance Publishing Policy with three labels called Operational procedure, Business general, and Contract agreement. This policy will be published to the organization and can be disabled and or removed. If you review the audit log you can determine who opened File Plan and kicked off the first run experience by looking for the Activities Created retention policy and Created retention configuration for a retention policy.
+
 
 ## Navigating your file plan
 
@@ -39,8 +43,8 @@ Note that retention labels created outside of the file plan will be available in
 On the **file plan labels** tab, the following additional information and capabilities are available:
 
 ### Label settings columns
- 
-- **Based on** identifies the type of trigger that will start the retention period. Valid values are: 
+
+- **Based on** identifies the type of trigger that will start the retention period. Valid values are:
     - Event
     - When created
     - When last modified
@@ -53,7 +57,7 @@ On the **file plan labels** tab, the following additional information and capabi
     - Keep
     - Keep and delete
     - Delete
-- **Disposition** identifies what will happen to the content at the end of the retention period. Valid values are: 
+- **Disposition** identifies what will happen to the content at the end of the retention period. Valid values are:
     - null
     - No action
     - Auto-delete
