@@ -1,9 +1,9 @@
 ---
-title: "Welcome to your all-new new Microsoft 365 compliance center"
+title: "Overview of the new Microsoft 365 compliance center"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 03/28/2019
+ms.date: 04/09/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-seccomp
@@ -11,7 +11,7 @@ localization_priority: Normal
 description: "Learn about the new Microsoft 365 compliance center, including what it contains, how to get it, and your next steps."
 ---
 
-# Welcome to your all-new Microsoft 365 compliance center
+# Overview of the all-new Microsoft 365 compliance center
 
 ## Overview
 
@@ -83,6 +83,10 @@ We are still developing the Microsoft 365 compliance center, and we'll be adding
 ### Why don't I see the new Microsoft 365 compliance center yet?
 
 First, make sure you have the appropriate [licenses and permissions](microsoft-security-and-compliance.md#required-licenses-and-permissions). Then, sign in at [https://compliance.microsoft.com](https://compliance.microsoft.com). If you don't see the new compliance center yet, you will have it very soon.
+
+### I can't find some of my compliance settings. What do I do?
+
+We are still adding functionality to the Microsoft 365 compliance center. If you can't find something, such as audit log search, try navigating to the Office 365 Security & Compliance Center ([https://protection.office.com](https://protection.office.com)). Your configurations will be saved in both the existing Office 365 Security & Compliance Center and in the new Microsoft 365 compliance center automatically.
 
 ## Next steps
 
