@@ -1,5 +1,5 @@
 ---
-title: "Document metadata fields"
+title: "Document metadata fields in Advanced eDiscovery (Preview)"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,42 +17,46 @@ ms.assetid:
 description: ""
 ---
 
-# Document metadata fields
+# Document metadata fields in Advanced eDiscovery (Preview)
 
+The following table lists the metadata fields for documents in a working set in a case in Advanced eDiscovery (Preview). The table indicates the name of the metadata field, whether the field can be searched when running a query in a working set, whether the field is present when viewing the file metadata of a selected document in a working set, and whether the field is included when documents are exported. 
 
-|**Field name** </br>|**Searchable and viewable in working set** |**File metadata panel** |**Exports** |
+> [!NOTE]
+> The values in parentheses in the **Searchable in working set** column is the name of the property that you can search for. The values in parentheses in the **Viewable in file metadata** column is the actual label the name of the property when you're viewing the file metadata.
+
+|**Field name** </br>|**Searchable in working set** |**Viewable in file metadata** |**Exported** |
 |:-------------------------- |:---------------------------------------- |:------------------------|:------------------|
 |Case tags                  | Yes (tags)                                      |                         | Yes         |
 |Compliance labels          |                                                 |                         | Yes         |
 |Compound path              |                                                 |                         | Yes         |
 |Container ID               |                                                 |                         | Yes         |
 |Conversation index         |                                                 |                         | Yes         |
-|Custodian                  | Yes (custodian)                                 |                         | Yes         |
-|Data source                | Yes (source)                                    |                         | Yes         |
-|Date                       | Yes (date)                                      |                         | Yes         |
+|Custodian                  | Yes (custodian)                                 |   Yes (Custodian)       | Yes         |
+|Data source                | Yes (source)                                    |   Yes (Workload)          | Yes         |
+|Date                       | Yes (date)                                      |   Yes (Date UTC)        | Yes         |
 |Deduped compound path      |                                                 |                         | Yes         |
 |Deduped custodians         |                                                 |                         | Yes         |
 |Deduped file IDs           |                                                 |                         | Yes         |
-|Doc authors                | Yes (author)*                                   |                         | Yes         |
-|Doc comments               |                                                 |                         | Yes         |
+|Doc authors                | Yes (author)*                                   |    Yes (Author)         | Yes         |
+|Doc comments               | Yes (comments)                                  |                         | Yes         |
 |Doc company                |                                                 |                         | Yes         |
-|Doc date created           | Yes (createdTime)*                              |                         | Yes         |
+|Doc date created           | Yes (createdTime)*                              |    Yes (Created Time)   | Yes         |
 |Doc date modified          | Yes (lastModifiedDate)*                         |                         | Yes         |
 |Doc keywords               |                                                 |                         | Yes         |
 |Doc last saved by          |                                                 |                         | Yes         |
 |Doc modified by            |                                                 |                         | Yes         |
-|Doc subject                |                                                 |                         | Yes         |
+|Doc subject                |                                                 |  Yes (Subject/Title)    | Yes         |
 |Doc template               |                                                 |                         | Yes         |
-|Doc title                  | Yes (title)                                     |                         | Yes         |
+|Doc title                  | Yes (title)                                     |  Yes (Title)            | Yes         |
 |Doc version                |                                                 |                         | Yes         |
-|Dominant theme             | Yes (dominantTheme)                             |                         | Yes         |
+|Dominant theme             | Yes (dominantTheme)                             |  Yes (Dominant theme)   | Yes         |
 |Duplicate subset           |                                                 |                         | Yes         |
 |Email action               |                                                 |                         | Yes         |
 |Email bcc                  | Yes (bcc)                                       |                         | Yes         |
 |Email cc                   | Yes (cc)                                        |                         | Yes         |
 |Email conversation ID      |                                                 |                         | Yes         |
-|Email date received        | Yes (received)                                  |                         | Yes         |
-|Email date sent            | Yes (sent)                                      |                         | Yes         |
+|Email date received        | Yes (received)                                  |   Yes (Received)        | Yes         |
+|Email date sent            | Yes (sent)                                      |   Yes (Sent)            | Yes         |
 |Email has attachment       |                                                 |                         | Yes         |
 |Email importance           |                                                 |                         | Yes         |
 |Email internet headers     |                                                 |                         | Yes         |
@@ -63,49 +67,49 @@ description: ""
 |Email recipient domains    | Yes (recipientDomains)                          |                         | Yes         |
 |Email recipients           | Yes (recipients)                                |                         | Yes         |
 |Email security             |                                                 |                         | Yes         |
-|Email sender               | Yes (sender)                                    |                         | Yes         |
+|Email sender               | Yes (sender)                                    |   Yes (Sender)          | Yes         |
 |Email sender domain        | Yes (senderDomain)                              |                         | Yes         |
 |Email sensitivity          |                                                 |                         | Yes         |
-|Email set                  | Yes (emailSetId)                                |                         | Yes         |
-|Email subject              | Yes (subject)                                   |                         | Yes         |
+|Email set                  | Yes (emailSetId)                                |   Yes (EmailSetID)      | Yes         |
+|Email subject              | Yes (subject)                                   |   Yes (Subject/Title)   | Yes         |
 |Email thread               |                                                 |                         | Yes         |
 |Email to                   | Yes (to)                                        |                         | Yes         |
 |Error code                 | Yes (processingStatus)                          |                         | Yes         |
 |Export native path         |                                                 |                         | Yes         |
 |Extracted text length      |                                                 |                         | Yes         |
 |Extracted text path        |                                                 |                         | Yes         |
-|Family ID                  | Yes (familyId)                                  |                         | Yes         |
+|Family ID                  | Yes (familyId)                                  |   Yes (FamilyId)        | Yes         |
 |Family size                |                                                 |                         | Yes         |
-|File class                 | Yes (fileClass)                                 |                         | Yes         |
-|File ID                    | Yes (fileId)                                    |                         | Yes         |
+|File class                 | Yes (fileClass)                                 |   Yes (File class)      | Yes         |
+|File ID                    | Yes (fileId)                                    |   Yes (Id)              | Yes         |
 |Has text                   |                                                 |                         | Yes         |
-|Inclusive type             | Yes (inclusiveType)                             |                         | Yes         |
+|Inclusive type             | Yes (inclusiveType)                             |   Yes (Inclusive type)  | Yes         |
 |Input date modified        |                                                 |                         | Yes         |
 |Input file ID              |                                                 |                         | Yes         |
 |Input path                 |                                                 |                         | Yes         |
 |Internet Message ID        |                                                 |                         | Yes         |
-|Is representative          | Yes (markAsRepresntative)                       |                         | Yes         |
+|Is representative          | Yes (markAsRepresentative)                      |                         | Yes         |
 |Item class                 |                                                 |                         | Yes         |
 |Load ID                    | Yes (loadId)                                    |                         | Yes         |
 |Location name              |                                                 |                         | Yes         |
-|Marked as pivot            | Yes (markAsPivot)                               |                         | Yes         |
+|Marked as pivot            | Yes (markAsPivot)                               |   Yes (Marked as Pivot) | Yes         |
 |Message kind               | Yes (messageKind)                               |                         | Yes         |
 |Native extension           |                                                 |                         | Yes         |
-|Native file name           |                                                 |                         | Yes         |
+|Native file name           |                                                 |    Yes (FileName)      | Yes         |
 |Native MD5                 |                                                 |                         | Yes         |
 |Native SHA 256             |                                                 |                         | Yes         |
-|Native size                | Yes (size)                                      |                         | Yes         |
-|Native type                | Yes (fileType)                                  |                         | Yes         |
+|Native size                | Yes (size)                                      |   Yes (NativeSize)     | Yes         |
+|Native type                | Yes (fileType)                                  |   Yes (File type)       | Yes         |
 |ND ET sort excl attach     |                                                 |                         | Yes         |
 |ND ET sort incl attach     |                                                 |                         | Yes         |
 |ND set                     |                                                 |                         | Yes         |
-|O365 authors               | Yes (author)*                                   |                         | Yes         |
+|O365 authors               | Yes (author)*                                   |   Yes (Sender/Author)   | Yes         |
 |O365 created by            |                                                 |                         | Yes         |
 |O365 date created          | Yes (createdTime)*                              |                         | Yes         |
-|O365 date modified         | Yes (lastModifiedDate)*                         |                         | Yes         |
+|O365 date modified         | Yes (lastModifiedDate)*                         |   Yes (Last Modified Date) | Yes      |
 |O365 modified by           |                                                 |                         | Yes         |
 |Parent node                |                                                 |                         | Yes         |
-|Pivot ID                   | Yes (pivotId)                                   |                         | Yes         |
+|Pivot ID                   | Yes (pivotId)                                   |  Yes (PivotID)          | Yes         |
 |Recipient count            |                                                 |                         | Yes         |
 |Row number                 |                                                 |                         | Yes         |
 |Set ID                     |                                                 |                         | Yes         |
@@ -116,5 +120,6 @@ description: ""
 |Relevance score (issue)    | Yes (relevanceScore_issueNum)                   |                         |             |
 |Read percentile (issue)    | Yes (readPercentile_issueNum)                   |                         |             |
 |Relevance tag (issue)      | Yes (relevanceTag_issueNum)                     |                         |             |
+|||||
 
-  \* For these fields, if there are embedded values within the documents, search will prioritize those values; otherwise, it will try to surface values from O365.
+  \* For these fields, if there are embedded values within a document, search will prioritize those values; otherwise, it will try to display the value from Office 365.
