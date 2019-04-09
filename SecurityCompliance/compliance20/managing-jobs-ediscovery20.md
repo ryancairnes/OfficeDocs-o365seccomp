@@ -37,3 +37,17 @@ Here's a list of the jobs (which are typically long-running processes) that are 
 |Running analytics | A user analyzes data in a working set by running Advanced eDiscovery analytics tools such as near duplicate detection, email threading analysis, and themes analysis. For more information, see [Analyze data in a working set](analyzing-data-in-working-set.md). | 
 |Tagging documents | This job is triggered when a user clicks **Start tagging job** in the **Tagging panel** when reviewing documents in a working set. A user can start this job after tagging documents in a working set and then bulk-selecting them in the view document panel. For more information, see [Tag documents in a working set](tagging-documents.md). | 
 |||
+
+
+## Job status
+
+The following table describes the different status states for jobs.
+
+| Status           | Description     |
+| :----------------- | :----------     |
+| Submitted | A new job was created.  The date and time that the job was submitted is displayed in the **Created** column on the **Jobs** tab. |
+| Submission failed | The job submission failed.  You should attempt to re-run the action that triggered the job. |
+| In progress | The job is in progress, you can monitor the progress of the job in the **Jobs** tab. |
+| Successful | The job was successfully completed. The date and time that the job completed is displayed in the **Completed** column on the **Jobs** tab. |
+| Partially successful | The job was partially successful. |
+| Failed | The job failed.  You should attempt to re-run the action that triggered the job. If the job fails a second time, we recommend that you contact Microsoft Support and provide the support information from the job. |
