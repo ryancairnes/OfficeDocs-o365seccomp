@@ -1,8 +1,8 @@
 ---
 title: "Manage mailbox auditing"
-ms.author: markjjo
-author: markjjo
-manager: laurawi
+ms.author: chrisda
+author: chrisda
+manager: serdars
 ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
