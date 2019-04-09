@@ -3,7 +3,7 @@ title: "Secure SharePoint Online sites in a dev/test environment"
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/12/2018
+ms.date: 04/09/2019
 ms.audience: ITPro
 ms.topic: article
 ms.collection: 
@@ -29,23 +29,21 @@ Use this dev/test environment to experiment with the information protection beha
   
 ## Phase 1: Create your dev/test environment
 
-In this phase, you obtain trial subscriptions for Office 365 and Enterprise Mobility + Security for a fictional organization.
+In this phase, you obtain trial subscriptions for Office 365 and Enterprise Mobility + Security (EMS) for a fictional organization.
   
 First, follow the instructions in **Phase 2** of the [Office 365 dev/test environment](https://docs.microsoft.com/office365/enterprise/office-365-dev-test-environment).
   
 Next, sign up for the EMS trial subscription and add it to the same organization as your Office 365 trial subscription.
   
-1. If needed, sign in to the admin center with the credentials of the global administrator account of your trial subscription. For help, see [Where to sign in to Office 365](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4).
+1. If needed, sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with the credentials of the global administrator account of your trial subscription.
     
-2. Click the **Admin** tile.
+2. In the left navigation, click **Billing > Purchase services**.
     
-3. On the **Office Admin center** tab in your browser, in the left navigation, click **Billing > Purchase services**.
+3. On the **Purchase services** page, find the **Enterprise Mobility + Security E5** item. Hover your mouse pointer over it and click **Start free trial**.
     
-4. On the **Purchase services** page, find the **Enterprise Mobility + Security E5** item. Hover your mouse pointer over it and click **Start free trial**.
+4. On the **Confirm your order** page, click **Try now**.
     
-5. On the **Confirm your order** page, click **Try now**.
-    
-6. On the **Order receipt** page, click **Continue**.
+5. On the **Order receipt** page, click **Continue**.
     
 Next, enable the Enterprise Mobility + Security E5 license for your global administrator account.
   
@@ -117,7 +115,8 @@ Next, you configure automatic licensing so that members of your groups are autom
     
 6. Close the Azure portal tab in your browser.
     
-Next, you [Connect with the Azure Active Directory V2 PowerShell module](https://go.microsoft.com/fwlink/?linkid=842218).
+Next, you [Connect with the Azure Active Directory PowerShell for Graph module
+](https://docs.microsoft.com/office365/enterprise/powershell/connect-to-office-365-powershell#connect-with-the-azure-active-directory-powershell-for-graph-module).
   
 Fill in your organization name, your location, and a common password, and then run these commands from the PowerShell command prompt or Integrated Script Environment (ISE) to create user accounts and add them to their groups:
   
@@ -174,7 +173,7 @@ Add-AzureADGroupMember -RefObjectId (Get-AzureADUser | Where { $_.DisplayName -e
 ```
 
 > [!NOTE]
-> The use of a common password here is for automation and ease of configuration for a dev/test environment. This is not recommended for production subscriptions. 
+> The use of a common password here is for automation and ease of configuration for a dev/test environment. Obviously, this is highly discouraged for production subscriptions. 
   
 Use these steps to verify that group-based licensing is working correctly.
   
@@ -186,34 +185,35 @@ Use these steps to verify that group-based licensing is working correctly.
     
 4. In the pane that lists the properties of the **CEO** user account, verify that it has been assigned the **Enterprise Mobility + Security E5** and **Office 365 Enterprise E5** licenses (in **Product licenses**).
     
-## Phase 3: Create Office 365 labels
+## Phase 3: Create Office 365 retention labels
 
-In this phase, you create the labels for the different levels of security for SharePoint Online team site documents folders.
-  
-1. If needed, use a private instance of your Internet browser and sign in to the admin center with the global administrator account of your Office 365 E5 trial subscription. For help, see [Where to sign in to Office 365](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4).
+In this phase, you create the retention labels for the different levels of security for SharePoint Online team site documents folders.
+
+
+1. Sign in to the [Microsoft 365 compliance portal](https://compliance.microsoft.com) with your global admin account.
     
-2. From the **Microsoft Office Home** tab, click the **Admin** tile.
+2. From the **Home - Microsoft 365 compliance** tab of your browser, click **Classifications > Labels**.
     
-3. From the new **Office Admin center** tab of your browser, click **Admin centers > Security &amp; Compliance**.
+3. Click **Retention labels > Create a label**.
     
-4. From the new **Home - Security &amp; Compliance** tab of your browser, click **Classifications > Labels**.
+4. On the **Name your label** pane, type **Internal Public** in **Name your label**, and then click **Next**.
+
+5. On the **File plan descriptors** pane, click **Next**.
     
-5. From the **Home > Labels** pane, click the **Retention** tab, and then click **Create a label**.
+6. On the **Label settings** pane, if needed, set **Retention** to **On**, and then click **Next**.
     
-6. On the **Name your label** pane, type **Internal Public**, and then click **Next**.
+7. On the **Review your settings** pane, click **Create the label**.
     
-7. On the **Label settings** pane, click **Next**.
-    
-8. On the **Review your settings** pane, click **Create this label**, and then click **Close**.
-    
-9. Repeat steps 5-8 for these additional labels:
+8. For your additional labels, click **Create a label**, and then repeat steps 3-7.
+
+9. Repeat steps 3-8 for additional labels with these names:
     
   - Private
     
   - Sensitive
     
   - Highly Confidential
-    
+  
 10. From the **Home > Labels** pane, click **Publish labels**.
     
 11. On the **Choose labels to publish** pane, click **Choose labels to publish**.
@@ -238,7 +238,7 @@ In this phase, you create and configure the four types of SharePoint Online team
 
 To create a baseline public SharePoint Online team site, do the following:
   
-1. If needed, use a browser on your local computer and sign in to the admin center using your global administrator account. For help, see [Where to sign in to Office 365](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4).
+1. If needed, sign in to the [Office 365 portal](https://portal.office.com) with the credentials of the global administrator account of your trial subscription.
     
 2. In the list of tiles, click **SharePoint**.
     
@@ -264,15 +264,11 @@ Next, configure the documents folder of the Organization wide team site for the 
     
 4. In **Settings-Apply Label**, select **Internal Public**, and then click **Save**.
     
-Here is your resulting configuration.
-  
-![Baseline-level protection for the Organization wide public SharePoint Online team site.](media/25c86847-a38d-49ad-bb5f-c7c04206b6dc.png)
-  
 ### Project 1 team site
 
 To create a baseline private SharePoint Online team site for a project within the organization, do the following:
   
-1. If needed, use a browser on your local computer and sign in to the admin center using your global administrator account. For help, see [Where to sign in to Office 365](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4).
+1. If needed, sign in to the [Office 365 portal](https://portal.office.com) with the credentials of the global administrator account of your trial subscription.
     
 2. In the list of tiles, click **SharePoint**.
     
@@ -298,15 +294,12 @@ Next, configure the documents folder of the Project 1 team site for the Private 
     
 4. In **Settings-Apply Label**, select **Private**, and then click **Save**.
     
-Here is your resulting configuration.
-  
-![Baseline-level protection for the Project1 private SharePoint Online team site.](media/ecd96376-b5dc-4042-9cbd-b3765507ace7.png)
-  
 ### Marketing campaigns team site
 
 To create a sensitive-level isolated SharePoint Online team site for marketing campaign resources, do the following:
-  
-1. Using a browser on your local computer, sign in to the admin center using your global administrator account. For help, see [Where to sign in to Office 365](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4).
+
+ 
+1. If needed, sign in to the [Office 365 portal](https://portal.office.com) with the credentials of the global administrator account of your trial subscription.
     
 2. In the list of tiles, click **SharePoint**.
     
@@ -373,12 +366,12 @@ Next, configure the documents folder of the Marketing campaigns team site for th
 4. In **Settings-Apply Label**, select **Sensitive**, and then click **Save**.
     
 Next, configure a data loss prevention (DLP) policy that notifies users when they share a document on a SharePoint Online team site with the Sensitive label, which includes the Marketing campaigns site, outside the organization.
-  
-1. From the **Microsoft Office Home** tab in your browser, click the **Security &amp; Compliance** tile.
+
+1. Sign in to the [Microsoft 365 compliance portal](https://compliance.microsoft.com/) with your global admin account.
     
-2. On the new **Security &amp; Compliance** tab in your browser, click **Data loss prevention > Policy**.
+2. On the new **Microsoft 365 compliance** tab in your browser, click **Policies > Data loss prevention**.
     
-3. In the **Data loss prevention** pane, click **+ Create a policy**.
+3. In the **Home > Data loss prevention** pane, click **Create a policy**.
     
 4. In the **Start with a template or create a custom policy** pane, click **Custom**, and then click **Next**.
     
@@ -386,43 +379,39 @@ Next, configure a data loss prevention (DLP) policy that notifies users when the
     
 6. In the **Choose locations** pane, click **Let me choose specific locations**, and then click **Next**.
     
-7. In the list of locations, disable the **Exchange email** and **OneDrive accounts** locations, and then click **Next**.
+7. In the list of locations, disable the **Exchange email**, **OneDrive accounts**, and **Teams chat and channel messages** locations, and then click **Next**.
     
-8. In the **Customize the types of sensitive info you want to protect** pane, click **Edit**.
+8. In the **Customize the type of content you want to protect** pane, click **Edit**.
     
-9. In the **Choose the types of content to protect** pane, click **Add** in the drop-down box, and then click **Labels**.
+9. In the **Choose the types of content to protect** pane, click **Add** in the drop-down box, and then click **Retention labels**.
     
-10. In the **Labels** pane, click **+ Add**, select the **Sensitive** label, click **Add**, and then click **Done**.
+10. In the **Retention labels** pane, click **Add**, select the **Sensitive** label, click **Add**, and then click **Done**.
     
 11. In the **Choose the types of content to protect** pane, click **Save**.
     
-12. In the **Customize the types of sensitive info you want to protect** pane, click **Next**.
-    
+12. In the **Customize the type of content you want to protect** pane, click **Next**.
+
 13. In the **What do you want to do if we detect sensitive info?** pane, click **Customize the tip and email**.
     
 14. In the **Customize policy tips and email notifications** pane, click **Customize the policy tip text**.
     
-15. In the text box, type or paste in the following:
+15. In the text box, type or paste in one of the following tips, depending on if you implemented Azure Information Protection to protect highly confidential files:
     
   - To share with a user outside the organization, download the file and then open it. Click File, then Protect Document, and then Encrypt with Password, and then specify a strong password. Send the password in a separate email or other means of communication.
     
 16. Click **OK**.
     
-17. In the **What do you want to do if we detect sensitive info?** pane, clear the **Block people from sharing, and restrict access to shared content** check box, and then click **Next**.
+17. In the **What do you want to do if we detect sensitive info?** pane, click **Next**.
     
 18. In the **Do you want to turn on the policy or test things out first?** pane, click **Yes, turn it on right away**, and then click **Next**.
     
 19. In the **Review your settings** pane, click **Create**, and then click **Close**.
-    
-Here is your resulting configuration.
-  
-![Sensitive-level protection for the Marketing campaigns isolated SharePoint Online team site.](media/33992bd5-96ee-4bfb-9ecf-c8a6736dd100.png)
   
 ### Company strategy team site
 
 To create an isolated SharePoint Online team site at the highly confidential level for strategic company resources of the chief executives of the organization, do the following:
   
-1. If needed, use a browser on your local computer and sign in to the admin center using your global administrator account. For help, see [Where to sign in to Office 365](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4).
+1. If needed, sign in to the [Office 365 portal](https://portal.office.com) with the credentials of the global administrator account of your trial subscription.
     
 2. In the list of tiles, click **SharePoint**.
     
@@ -486,53 +475,52 @@ Next, configure the documents folder of the Company strategy team site for the H
     
 Next, configure a DLP policy that blocks users when they share a document on a SharePoint Online team site with the Highly Confidential label, which includes the Company strategy site, outside the organization.
   
-1. If needed, use a browser on your local computer and sign in to the admin center with an account that has the Security Administrator or Company Administrator role. For help, see [Where to sign in to Office 365](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4).
+1. Sign in to the [Microsoft 365 compliance portal](https://compliance.microsoft.com/) with your global admin.
     
-2. From the **Microsoft Office Home** tab in your browser, click the **Security &amp; Compliance** tile.
+2. On the new **Microsoft 365 compliance** tab in your browser, click **Policies > Data loss prevention**.
     
-3. On the new **Security &amp; Compliance** tab in your browser, click **Data loss prevention > Policy**.
+3. In the **Home > Data loss prevention** pane, click **Create a policy**.
     
-4. In the **Data loss prevention** pane, click **+ Create a policy**.
+4. In the **Start with a template or create a custom policy** pane, click **Custom**, and then click **Next**.
     
-5. In the **Start with a template or create a custom policy** pane, click **Custom**, and then click **Next**.
+5. In the **Name your policy** pane, type **Highly Confidential label SharePoint Online team sites** in **Name**, and then click **Next**.
     
-6. In the **Name your policy** pane, type **Highly Confidential label SharePoint Online team sites** in **Name**, and then click **Next**.
+6. In the **Choose locations** pane, click **Let me choose specific locations**, and then click **Next**.
     
-7. In the **Choose locations** pane, click **Let me choose specific locations**, and then click **Next**.
+7. In the list of locations, disable the **Exchange email**, **OneDrive accounts**, and **Teams chat and channel messages** locations, and then click **Next**.
     
-8. In the list of locations, disable the **Exchange email** and **OneDrive accounts** locations, and then click **Next**.
+8. In the **Customize the type of content you want to protect** pane, click **Edit**.
     
-9. In the **Customize the types of sensitive info you want to protect** pane, click **Edit**.
+9. In the **Choose the types of content to protect** pane, click **Add** in the drop-down box, and then click **Retention labels**.
     
-10. In the **Choose the types of content to protect** pane, click **Add** in the drop-down box, and then click **Labels**.
+10. In the **Retention labels** pane, click **Add**, select the **Highly Confidential** label, click **Add**, and then click **Done**.
     
-11. In the **Labels** pane, click **+ Add**, select the **Highly Confidential** label, click **Add**, and then click **Done**.
+11. In the **Choose the types of content to protect** pane, click **Save**.
     
-12. In the **Choose the types of content to protect** pane, click **Save**.
+12. In the **Customize the type of content you want to protect** pane, click **Next**.
+
+13. In the **What do you want to do if we detect sensitive info?** pane, click **Customize the tip and email**.
     
-13. In the **Customize the types of sensitive info you want to protect** pane, click **Next**.
+14. In the **Customize policy tips and email notifications** pane, click **Customize the policy tip text**.
     
-14. In the **What do you want to do if we detect sensitive info?** pane, click **Customize the tip and email**.
-    
-15. In the **Customize policy tips and email notifications** pane, click **Customize the policy tip text**.
-    
-16. In the text box, type or paste in the following:
+15. In the text box, type or paste in one of the following tips, depending on if you implemented Azure Information Protection to protect highly confidential files:
     
   - To share with a user outside the organization, download the file and then open it. Click File, then Protect Document, and then Encrypt with Password, and then specify a strong password. Send the password in a separate email or other means of communication.
     
-17. Click **OK**.
+16. Click **OK**.
     
-18. In the **What do you want to do if we detect sensitive info?** pane, click **Next**.
+17. In the **What do you want to do if we detect sensitive info?** pane, click **Next**.
     
-19. In the **Do you want to turn on the policy or test things out first?** pane, click **Yes, turn it on right away**, and then click **Next**.
+18. In the **Do you want to turn on the policy or test things out first?** pane, click **Yes, turn it on right away**, and then click **Next**.
     
-20. In the **Review your settings** pane, click **Create**, and then click **Close**.
+19. In the **Review your settings** pane, click **Create**, and then click **Close**.
+   
     
 Next, follow the instructions in [Activate Azure RMS with the Microsoft 365 admin center](https://docs.microsoft.com/information-protection/deploy-use/activate-office365).
   
 Next, configure Azure Information Protection with a new policy and sub-label scoped for the C-Suite group for protection and permissions with the following steps:
   
-1. Sign in to the admin center with an account that has the Security Administrator or Company Administrator role. For help, see [Where to sign in to Office 365](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4).
+1. If needed, sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with your global admin account.
     
 2. In a separate tab of your browser, go to the Azure portal ([https://portal.azure.com](https://portal.azure.com)).
     
@@ -575,10 +563,6 @@ Next, configure Azure Information Protection with a new policy and sub-label sco
 21. Click **Save**, and then click **OK**.
     
 To protect a document with Azure Information Protection and this new label, you must [install the Azure Information Protection client](https://docs.microsoft.com/information-protection/rms-client/install-client-app) on a test machine, install Office from the admin center, and then sign in from Microsoft Word with an account in the **C-Suite** group of your trial subscription.
-  
-Here is your resulting configuration.
-  
-![Highly confidential-level protection for the Company strategy isolated SharePoint Online team site.](media/c22695f9-50a1-4abf-a0dd-344b0c92cf94.png)
   
 You are now ready to create documents in these four sites and test access to them with various user accounts in your trial subscription.
   
