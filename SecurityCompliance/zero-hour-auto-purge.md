@@ -43,7 +43,7 @@ Office 365 updates anti-spam engine and malware signatures in real-time on a dai
 
 - For newly detected malware, ZAP removes attachments from email messages, regardless of whether the email has been read.
   
-The ZAP action is seamless for the mailbox user; they are not notified if an email message is moved.
+The ZAP action is seamless for the mailbox user; they are not notified if an email message is moved. Message must not be older than 2 days.
   
 Allow lists, [mail flow rules](https://go.microsoft.com/fwlink/p/?LinkId=722755), and end user rules or additional filters take precedence over ZAP.
   
@@ -81,10 +81,13 @@ You should follow the normal reporting process for [false-positives](prevent-ema
   
 ZAP doesn't move messages into quarantine from the Inbox at this time.
   
-### What If I have a custom mail flow rule (Block/ Allow Rule)?
+### What if I have a custom mail flow rule (Block/ Allow Rule)?
   
 Rules created by admins (mail flow rules) or Block and Allow rules take precedence. Such messages are excluded from the feature criteria so the mail flow will follow the rule action (Block/Allow Rule).
-  
+
+### What if a message is moved to another folder (e.g. Inbox rule)?
+ZAP still works in this case, unless the message has been deleted or is in Junk.
+
 ## Related Topics
 
 [Office 365 Email Anti-Spam Protection](anti-spam-protection.md)
