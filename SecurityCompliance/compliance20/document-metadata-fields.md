@@ -19,6 +19,7 @@ description: ""
 
 # Document metadata fields in Advanced eDiscovery (Preview)
 
+The following table lists the metadata fields for documents in a working set in a case in Advanced eDiscovery (Preview). The table indicates the name of the metadata field, whether the field can be searched when running a query in a working set, whether the field is present when viewing the file metadata of a selected document in a working set, and whether the field is included when documents are exported. 
 
 The following table lists the metadata fields for documents in a working set in a case in Advanced eDiscovery (Preview). The table indicates the name of the metadata field, whether the field can be searched when running a query in a working set, whether the field is present when viewing the file metadata of a selected document in a working set, and whether the field is included when documents are exported. 
 
