@@ -51,9 +51,9 @@ In this phase, you determine the names of your retention labels for the four lev
 
 In this phase, you create and then publish your determined labels for the different levels of information protection.
   
-1. Sign in to the [Microsoft 365 security portal](https://security.microsoft.com) with an account that has the Security Administrator or Company Administrator role.
+1. Sign in to the [Microsoft 365 compliance portal](https://compliance.microsoft.com) with an account that has the Security Administrator or Company Administrator role.
     
-2. From the **Home - Microsoft 365 Security** tab of your browser, click **Classifications > Labels**.
+2. From the **Home - Microsoft 365 compliance** tab of your browser, click **Classifications > Labels**.
     
 3. Click **Retention labels > Create a label**.
     
@@ -65,7 +65,7 @@ In this phase, you create and then publish your determined labels for the differ
     
 7. On the **Review your settings** pane, click **Create the label**.
     
-8. For your additional labels, click **Create a label**, and then repeat steps 4-7..
+8. For your additional labels, click **Create a label**, and then repeat steps 3-7 as needed.
     
 
 ### Publish your new labels
