@@ -21,8 +21,10 @@ description: ""
 
 The following table lists the metadata fields for documents in a working set in a case in Advanced eDiscovery (Preview). The table indicates the name of the metadata field, whether the field can be searched when running a query in a working set, whether the field is present when viewing the file metadata of a selected document in a working set, and whether the field is included when documents are exported. 
 
+The following table lists the metadata fields for documents in a working set in a case in Advanced eDiscovery (Preview). The table indicates the name of the metadata field, whether the field can be searched when running a query in a working set, whether the field is present when viewing the file metadata of a selected document in a working set, and whether the field is included when documents are exported. 
+
 > [!NOTE]
-> The values in parentheses in the **Searchable in working set** column is the name of the property that you can search for. The values in parentheses in the **Viewable in file metadata** column is the actual label the name of the property when you're viewing the file metadata.
+> The values in parentheses in the **Searchable in working set** column is the name of the property that you can search for. The values in parentheses in the **Viewable in file metadata** column is the name of the property that's displayed when you're viewing the file metadata.
 
 |**Field name** </br>|**Searchable in working set** |**Viewable in file metadata** |**Exported** |
 |:-------------------------- |:---------------------------------------- |:------------------------|:------------------|
@@ -115,11 +117,11 @@ The following table lists the metadata fields for documents in a working set in 
 |Set ID                     |                                                 |                         | Yes         |
 |Set order inclusives first |                                                 |                         | Yes         |
 |Similarity percent         |                                                 |                         | Yes         |
-|Themes list                | Yes (themesList)                                |                         | Yes         |
+|Themes list                | Yes (themesList)                                | Yes (Themes list)       | Yes         |
 |Word count                 | Yes (wordCount)                                 |                         | Yes         |
-|Relevance score (issue)    | Yes (relevanceScore_issueNum)                   |                         |             |
-|Read percentile (issue)    | Yes (readPercentile_issueNum)                   |                         |             |
-|Relevance tag (issue)      | Yes (relevanceTag_issueNum)                     |                         |             |
+|Relevance score (issue)    | Yes (relevanceScore_issueNum)                   |                         | Yes           |
+|Read percentile (issue)    | Yes (readPercentile_issueNum)                   |                         | Yes          |
+|Relevance tag (issue)      | Yes (relevanceTag_issueNum)                     |                         | Yes           |
 |||||
 
   \* For these fields, if there are embedded values within a document, search will prioritize those values; otherwise, it will try to display the value from Office 365.
