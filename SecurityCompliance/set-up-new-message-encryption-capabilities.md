@@ -110,7 +110,7 @@ To update existing rules to use the new OME capabilities:
 
 1. In the Office 365 admin center, go to **Admin centers > Exchange**.
 
-2. In the Exchange admin center, go to **Mail flow > Rules**. 
+2. In the Exchange admin center, go to **Mail flow > Rules**.
 3. For each rule, in **Do the following**:
     - Select **Modify the message security**.
     - Select **Apply Office 365 Message Encryption and rights protection**.
