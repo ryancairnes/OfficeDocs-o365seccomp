@@ -61,7 +61,7 @@
 ### [Use drive shipping to import PST files](use-drive-shipping-to-import-pst-files-to-office-365.md)
 ### [Use the PST Collection tool to find, copy, and delete PST files](find-copy-and-delete-pst-files-in-your-organization.md)
 ### [Filter data when importing PST files](filter-data-when-importing-pst-files.md)
-### [Use network upload to import RMS-encrypted PST files](use-network-upload-to-import-pst-files.md)
+### [Use network upload to import RMS-encrypted PST files](use-network-upload-to-import-rms-encrypted-pst-files.md)
 ### [FAQ about importing PST files](faqimporting-pst-files-to-office-365.md)
 ### [Archiving third-party data in Office 365](archiving-third-party-data.md)
 ## Store data
@@ -473,6 +473,7 @@
 ### [Deploy SharePoint Online sites for three tiers of protection](deploy-sharepoint-online-sites-for-three-tiers-of-protection.md)
 ### [Protect SharePoint Online files with retention labels and DLP](protect-sharepoint-online-files-with-office-365-labels-and-dlp.md)
 ### [Protect SharePoint Online files with Azure Information Protection](protect-sharepoint-online-files-with-azure-information-protection.md)
+### [Secure SharePoint Online sites in a dev/test environment](secure-sharepoint-online-sites-in-a-dev-test-environment.md)
 ## [Isolated SharePoint Online team sites](isolated-sharepoint-online-team-sites.md)
 ### [Design an isolated SharePoint Online team site](design-an-isolated-sharepoint-online-team-site.md)
 ### [Deploy an isolated SharePoint Online team site](deploy-an-isolated-sharepoint-online-team-site.md)
