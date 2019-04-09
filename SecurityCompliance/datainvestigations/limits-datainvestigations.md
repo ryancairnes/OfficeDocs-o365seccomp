@@ -34,7 +34,7 @@ The following table lists the limits for investigations in Data Investigations (
   |Maximum number of characters extracted from a single file.  <br/> |10 million <sup>1</sup> <br/> |
   |Depth of embedded items in a single file.  <br/> |25 <sup>1</sup> <br/> |
 |||
-> [!NOTES]
+> [!NOTE]
 ><sup>1</sup>  Any items that exceed a single file limit will show up as processing errors.
 
 ## Indexing limits
