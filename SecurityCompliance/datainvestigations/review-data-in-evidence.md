@@ -23,7 +23,7 @@ The data in an evidence set in a data investigation is a snapshot of the search 
 
 For time-sensitive investigations, this allows you to quickly contain the environment by deleting the actual spilled or malicious data located in the at original data source, while at the same time allowing you to investigate the re-created evidence in a quarantined environment, which in this case is the data copied to the evidence set). After the evidence is collected and added to the evidence set, you can review individual documents in their native format, text format, or a near-native format that you can use to annotate and redact documents. Additionally, you can run queries to narrow the data set by time range, file types, data owners, and many other properties and search conditions. For example, by using the Author, Sender, or Recipient conditions, you can quickly identify the people are involved in the incident and if any data from your organization has been shared with external users. For more information about searching through data in an evidence set, see [Query the data in evidence](evidence-query.md).
 
-To group documents and get more assistance for your review, select an evidence set on the **Evidence** tab, and then click **Manage evidence**. In the **Analytics** tile, click **Rebuild analytics for the whole set**. This will run advanced analytics such as duplicate detection, email threading, and theme analysis. Afterwards, you can see the general themes of the data and also organize documents by email threads, near duplicates, and exact duplicates and to help your investigation. For more information, see [Run analytics to investigate faster](run-analytics-to-investigate-faster.md).
+To group documents and get more assistance for your review, select an evidence set on the **Evidence** tab, and then click **Manage evidence**. In the **Analytics** tile, click **Rebuild analytics for the whole set**. This will run advanced analytics such as duplicate detection, email threading, and theme analysis. Afterwards, you can see the general themes of the data and also organize documents by email threads, near duplicates, and exact duplicates to help your investigation. For more information, see [Run analytics to investigate faster](run-analytics-to-investigate-faster.md).
 
 ## View documents in evidence
 
@@ -38,7 +38,7 @@ To access any of these viewers, just select a document in an evidence set.
 
 ## File metadata
 
-This view displays various metadata associated with the selected document. You can toggle this view on and off by clicking **File metadata**. Although the search results grid can be customized to display specific metadata, there are instances where scrolling horizontally can be difficult while reviewing documnts. The **File metadata** view allows you change between the different viewers when reviewing a document.
+This view displays various metadata properties associated with the selected document. You can toggle this view on and off by clicking **File metadata**. When reviewing a document, you can view the file metadata and still change between the different viewers.
 
 Here's an example of the file metadata for a document. For more information about the metadata fields, see [Document metadata fields in Data Investigations (Preview)](document-metadata-fields.md).
 
@@ -46,55 +46,56 @@ Here's an example of the file metadata for a document. For more information abou
 
 ## Native view
 
-The Native viewer displays the richest view of a document. It supports hundreds of file types and is meant to display documents in the truest native experience possible. For Microsoft Office files, the Native viewer uses Office Online. This allows you to view content such as document comments, formulas and hidden rows/columns in Excel, and PowerPoint notes.
+The Native viewer displays the most accurate view of a document in it's native format. Native view is supported for hundreds of file types and is meant to display documents in the truest native experience possible. For Microsoft Office files, the Native viewer uses Office Online. This allows you to view content such as comments in different Office documents, formulas and hidden rows/columns in Excel, and the Notes view in PowerPoint.
 
 ![Native view
 ](../media/Reviewimage3.png)
 
 ## Text view
 
-The Text viewer provides a view of the extracted text of a file. It ignores any embedded images and formatting but it's very useful if you're trying to quickly review and understand the content in a document. Text view also includes these features:
+The Text viewer provides a view of the extracted text of a file. It ignores any embedded images and formatting, but this view is very useful if you're trying to quickly review and understand the content in a document. Text view also includes these features:
 
-  - A line counter makes it easier to reference specific portions of a document.
+  - A line counter, which makes it easier to reference specific portions of a document.
 
-  - Search hit highlighting will highlight terms in the document as well as on the scrollbar
+  - Search hit highlighting that highlight terms in the document as well as on the scrollbar
 
-  - A diff view provides a comparison view that highlights the textual differences when viewing documents using the Near duplicates panel.
+  - A diff view provides a comparison view that highlights the text differences when viewing documents using the **Near duplicates** panel.
+
+**Example of line counter and search hit highlighting in text and scrollbar**
 
 ![Text view
 ](../media/Reviewimage4.png)
+
+**Example of the diff view**
 
 ![Diff view
 ](../media/Reviewimage5.png)
 
 ## Annotate view
 
-The Annotate view provides features that allow you to apply markup on a document during investigation including:
+The Annotate view provides features that allow you to apply markup on a document during the review process; this  includes these tools:
 
-  - Area redactions – users can draw a box on the document in order to hide sensitive content
+  - **Area redactions** – You can draw an opaque box on the document that hides sensitive content.
 
-  - Pencil – users can free-hand draw on a document in order to bring attention to certain portions of a document
+  - **Pencil** – You can free-hand draw on a document to bring attention to certain portions of the content
 
-  - Select annotations - users can select annotations on a document in order to delete
+  - **Select annotations** - You can select and delete annotations in a document.
 
-  - Toggle annotation transparency – makes annotations semi-transparent in order to view the content behind the annotation
+  - **Toggle annotation transparency** – You can toggle the transparency of annotations (between opaque and semi-transparent)so you can view the content behind the annotation. This includes toggling the transparency of pencil annotations and redactions.
 
-  - Previous page – navigates to previous page
+The Annotate view also provides the following navigation functionality:
 
-  - Next page – navigates to the next page
+  - **Previous page**, **Next page**, and **Go to page** - Navigation controls to use for multi-page documents.
 
-  - Go to page – user can enter a specific page number to navigate to
+  - **Zoom** – Increases or decreases the size of documents in Annotate view.
 
-  - Zoom – set zoom level for annotate view
+  - **Rotate** – Rotate documents clockwise.
 
-  - Rotate – user can rotate document clockwise
+  - **Search** – Search for keywords in a document, and then use Previous and Next controls to view the hits (which are highlighted) within the document.
 
-  - Search – user can search within a document and navigate to the various hits within the document
-    
-    ![Annotate view
-    ](../media/Reviewimage1.png)
+**Example of Annotate view**
 
-Note that these annotations are on data collected as evidence, not at its original location in live system. 
+![Annotate view](../media/Reviewimage1.png)
 
-
-  
+> [!NOTE]
+> Annotations are applied to a copy of the document that was added to the evidence set. The original documents in the live service aren't annotated.
