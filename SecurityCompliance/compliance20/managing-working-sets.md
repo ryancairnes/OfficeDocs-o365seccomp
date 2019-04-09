@@ -21,7 +21,7 @@ description: ""
 
 ## Manage Tags
 
-> The tag panel can be configured to meet the requirements of your case. To configure the tag panel, you will need to navigate to the working set management page
+> The tag panel can be configured to meet the requirements of your case. To configure the tag panel you will need to navigate to the working set management page
 
 1.  Within the working set, select Manage Working Set.
 
