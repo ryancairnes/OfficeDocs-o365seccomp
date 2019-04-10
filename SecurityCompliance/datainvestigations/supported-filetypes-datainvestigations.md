@@ -1,5 +1,5 @@
 ---
-title: "Supported file types in Data Investigations"
+title: "Supported file types in Data Investigations (Preview)"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,10 +17,11 @@ ms.assetid:
 description: ""
 ---
 
-# Supported file types in Data Investigations
+# Supported file types in Data Investigations (Preview)
 
+Data Investigations (Preview) supports many file types in several different ways, which are described in the following table. This list isn't finalized, and we'll add new file types as we continue our validation testing. The table also indicates if a file type can be viewed in the available viewers when you're reviewing evidence.
 
-| Mime Type | File Class (i.e. Image, Archive, Email, Office Doc, etc.) | Native Viewer | Text | Annotate Viewer | Container Extraction | Possible Extensions |
+| Mime type | File class | Native viewer | Text viewer | Annotate viewer | Container extraction | Extensions |
 | :- | :- | :- | :- | :- | :- | :- |
 | application/msword | Document | Yes | Yes | Yes | No | .doc; .dat |
 | application/pdf | Document | Yes | Yes | Yes | No | .pdf |
@@ -63,3 +64,4 @@ description: ""
 | text/html | Document | Yes | Yes | Yes | No | .html;.shtml; .htm |
 | text/plain | Document | Yes | Yes | Yes | No | .txt; .css;.con; .pl; .csv; .dat |
 | text/vcard-contact | Document | Yes | Yes | Yes | No | .vcf |
+||||||||

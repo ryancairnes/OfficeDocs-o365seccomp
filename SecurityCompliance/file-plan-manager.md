@@ -3,13 +3,13 @@ title: "Overview of file plan manager"
 ms.author: stephow
 author: stephow-MSFT
 manager: laurawi
-ms.date: 
+ms.date:
 ms.audience: Admin
 ms.topic: conceptual
 ms.service: O365-seccomp
 localization_priority: Priority
 ms.collection: M365-security-compliance
-search.appverid: 
+search.appverid:
 - MOE150
 - MET150
 ms.assetid: af398293-c69d-465e-a249-d74561552d30
@@ -26,9 +26,12 @@ File plan manager provides advanced management capabilities for retention labels
 
 There are two requirements to access file plan manager, they are:
 - An Office 365 Enterprise E5 subscription.
-- The user has been in assigned one of the following roles of the Security &amp; Compliance Center: 
+- The user has been in assigned one of the following roles of the Security &amp; Compliance Center:
     - Retention Manager
     - View-only Retention Manager
+
+> [!NOTE]
+> If there are no retention labels in the Security & Compliance Center, the first time you choose **File plan** in the left nav, this creates a label policy called **Default Data Governance Publishing Policy**. This label policy contains three retention labels named **Operational procedure**, **Business general**, and **Contract agreement**. These retention labels are configured only to retain content, not delete content. This label policy will be published to the entire organization and can be disabled or removed. You can determine who opened file plan manager and kicked off the first-run experience by reviewing the audit log for the activities **Created retention policy** and **Created retention configuration for a retention policy**.
 
 ## Navigating your file plan
 
@@ -39,8 +42,8 @@ Note that retention labels created outside of the file plan will be available in
 On the **file plan labels** tab, the following additional information and capabilities are available:
 
 ### Label settings columns
- 
-- **Based on** identifies the type of trigger that will start the retention period. Valid values are: 
+
+- **Based on** identifies the type of trigger that will start the retention period. Valid values are:
     - Event
     - When created
     - When last modified
@@ -53,7 +56,7 @@ On the **file plan labels** tab, the following additional information and capabi
     - Keep
     - Keep and delete
     - Delete
-- **Disposition** identifies what will happen to the content at the end of the retention period. Valid values are: 
+- **Disposition** identifies what will happen to the content at the end of the retention period. Valid values are:
     - null
     - No action
     - Auto-delete
