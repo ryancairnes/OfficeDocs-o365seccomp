@@ -6,6 +6,7 @@ manager: laurawi
 ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
+ms.date: 04/11/2019
 localization_priority: Normal
 ms.collection: 
 - M365-security-compliance
@@ -25,15 +26,15 @@ The keywords for your dictionary could come from a variety of sources, most comm
   
 1. Use the **Security & Compliance center** or connect to the **Security &amp; Compliance Center PowerShell**.
     
-2. **Define or load your keywords from your intended source** - the wizard and the cmdlet both accept a comma-separated list of keywords to create a custom keyword dictionary, so this step will vary slightly depending on where your keywords come from. Once loaded, they're encoded and converted to a byte array before they're imported.
+2. **Define or load your keywords from your intended source**. The wizard and the cmdlet both accept a comma-separated list of keywords to create a custom keyword dictionary, so this step will vary slightly depending on where your keywords come from. Once loaded, they're encoded and converted to a byte array before they're imported.
     
-3. **Create your dictionary** - choose a name and description and create your dictionary.
+3. **Create your dictionary**. Choose a name and description and create your dictionary.
 
 ## Create a keyword dictionary using the Security & Compliance center
 
 Use the following steps to create and import keywords for a custom dictionary:
 
-1. Connect to the [Security & Compliance center](https://protection.office.com).
+1. Connect to the Security & Compliance Center ([https://protection.office.com](https://protection.office.com)).
 
 2. Navigate to **Classifications > Sensitive info types**.
 
@@ -59,7 +60,7 @@ Use the following steps to create and import keywords for a custom dictionary:
     
 ## Create a keyword dictionary from a file using PowerShell
 
-Often when you need to create a large dictionary, it's to use keywords from a file or a list exported from some other source. In this case, you'll create a keyword dictionary containing a list of inappropriate language to screen in external email. You need to first [Connect to Office 365 Security &amp; Compliance Center PowerShell](https://docs.microsoft.com/en-us/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
+Often when you need to create a large dictionary, it's to use keywords from a file or a list exported from some other source. In this case, you'll create a keyword dictionary containing a list of inappropriate language to screen in external email. You need to first [Connect to Office 365 Security &amp; Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
   
 1. Copy the keywords into a text file and make sure that each keyword is on a separate line.
     
@@ -67,15 +68,15 @@ Often when you need to create a large dictionary, it's to use keywords from a fi
     
 3. Read the file into a variable by running this cmdlet:
     
-  ```
-  $fileData = Get-Content <filename> -Encoding Byte -ReadCount 0
-  ```
+    ```
+    $fileData = Get-Content <filename> -Encoding Byte -ReadCount 0
+    ```
 
 4. Create the dictionary by running this cmdlet:
     
-  ```
-  New-DlpKeywordDictionary -Name <name> -Description <description> -FileData $fileData
-  ```
+    ```
+    New-DlpKeywordDictionary -Name <name> -Description <description> -FileData $fileData
+    ```
 
 ## Modifying an existing keyword dictionary
 
