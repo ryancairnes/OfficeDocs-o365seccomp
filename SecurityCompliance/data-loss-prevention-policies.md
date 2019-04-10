@@ -3,7 +3,7 @@ title: "Overview of data loss prevention policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 3/29/2019
+ms.date: 04/11/2019
 ms.audience: ITPro
 ms.topic: conceptual
 f1_keywords:
@@ -207,10 +207,14 @@ For example, the built-in **U.S. HIPAA** policy has a rule that uses an **AND** 
   
 ## The priority by which rules are processed
 
-When you create rules in a policy, each rule is assigned a priority in the order in which it's created - meaning, the rule created first has first priority, the rule created second has second priority, and so on. After you create a rule, its priority can't be changed, except by deleting and re-creating it.
+When you create rules in a policy, each rule is assigned a priority in the order in which it's created - meaning, the rule created first has first priority, the rule created second has second priority, and so on. 
   
 ![Rules in priority order](media/f7dc06bf-bc6f-485c-bcdb-606edbcf6565.png)
   
+You can change the priority of a policy. To do that, select a policy, edit it, and use the Priority list to specify the priority.
+
+![Set priority for a policy](media/dlp-set-policy-priority.png)
+
 When content is evaluated against rules, the rules are processed in priority order. If content matches multiple rules, the rules are processed in priority order and the most restrictive action is enforced. For example, if content matches all of the following rules, Rule 3 is enforced because it's the highest priority, most restrictive rule:
   
 - Rule 1: only notifies users
