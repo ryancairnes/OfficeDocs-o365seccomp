@@ -93,12 +93,14 @@ To segment users, consider using an attribute in Azure Active Directory. For exa
 
 |Resource  |Description  |
 |---------|---------|
-|[Attributes for information barrier policies (Preview)](information-barriers-attributes.md) |Use this article as a reference for various attributes you can use in information barrier policies |
-|[Create a basic group and add members using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) |You can create a basic group using the Azure Active Directory (Azure AD) portal. |
-|[Create a dynamic group and check status](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-create-rule)     |In Azure Active Directory, you can use rules to determine group membership based on user or device properties. |
-|[Azure AD cmdlets for working with extension attributes](https://docs.microsoft.com/powershell/azure/active-directory/using-extension-attributes-sample?view=azureadps-2.0)     | Extension attributes offer a convenient way to extend your Azure AD directory with new attributes that you can use to store attribute values for objects in your directory.  |
+|[Attributes for information barrier policies (Preview)](information-barriers-attributes.md) |Use this article as a reference for attributes you can use in information barrier policies |
+|[Create a basic group and add members using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) |Read this article to learn how to create a basic group in the Azure Active Directory (Azure AD) portal. |
+|[Create a dynamic group and check status](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-create-rule)     |Read this article to learn how to determine group membership by using rules in Azure Active Directory. Group membership can be based on user or device properties. |
+|[Azure AD cmdlets for working with extension attributes](https://docs.microsoft.com/powershell/azure/active-directory/using-extension-attributes-sample?view=azureadps-2.0)     | Read this article to learn about extension attributes and how you can extend your Azure AD directory with new attributes.  |
 
 ## Define information barrier policies
+
+When you have a list of user segments and the information barrier policies you want to define, follow these steps:
 
 1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
@@ -114,7 +116,7 @@ To segment users, consider using an attribute in Azure Active Directory. For exa
 
 4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
 
-5. Depending on how you want the policy to work, run a cmdlet similar to an example in the following table:
+5. Define policies by using PowerShell cmdlets, such as the examples in the following table:
 
     |Example cmdlet  |Description  |
     |---------|---------|
@@ -122,21 +124,35 @@ To segment users, consider using an attribute in Azure Active Directory. For exa
     |`New-InformationBarrierPolicy -Name "ProductsResearchIBPolicy" -AssigneeFilterName "Products" -AssigneeFilter $productsFilter -CommunicationAllowedFilterName "Research" -CommunicationAllowedFilter $productsFilter or $researchFilter`  |Defines a policy called "ProductsResearchIBPolicy" that allows people in a group called "Products" to communicate with only people in a group called "Research."   |
     |`New-InformationBarrierPolicy -Name "InvestorsResearchSalesIBPolicy"  -AssigneeFilterName "Investors" -AssigneeFilter $investorFilter -CommunicationAllowedFilterName "NotResearchAndSales"  -CommunicationFilter $researchFilter and $salesFilter` |Defines a policy called "InvestorsResearchSalesIBPolicy" that prevents people in one group called "Investors" from communicating with people in two other groups ("Research" and "Sales").         |
 
-Finish defining your policies, and then proceed to apply those policies.
+    Repeat this step for each information barrier policy you want to define.
 
 ## Apply information barrier policies
 
-Information barrier policies are not in effect until they are applied. 
+Information barrier policies are not in effect until they are applied. When you have finished defining information barrier policies, run the `Start-InformationBarrierPoliciesApplication` cmdlet in the Office 365 Security & Compliance Center.
 
-1. Run the `Start-InformationBarrierPoliciesApplication`  cmdlet in the Office 365 Security & Compliance Center.
-
-2. Wait at least 24 hours for the policy to work its way through your data center and services. 
+Policies are applied, user by user, for your organization. This can take 24 hours for this process to complete.
 
 ## Verify status of information barrier policies
 
-1. To verify status for an information barrier policy, run the the `Get-InformationBarrierPoliciesApplicationStatus` cmdlet.
+After you have defined and applied information barrier policies, follow these steps to verify status:
 
-2. To verify status for a specific user, run the `Get-InformationBarrierRecipientStatus` cmdlet.
+1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
+
+2. Run the following PowerShell cmdlets, one at a time:<br>
+
+    `Login-AzureRmAccount`  
+
+    `$appId="__TODO__"` 
+
+    `New-AzureRmADServicePrincipal -ApplicationId $appId` 
+
+3. When prompted, sign in using your work or school account for Office 365.
+
+4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
+
+5. To verify status for an information barrier policy, run the the `Get-InformationBarrierPoliciesApplicationStatus` cmdlet.
+
+6. To verify status for a specific user, run the `Get-InformationBarrierRecipientStatus` cmdlet.
 
 ## Edit or remove an information barrier policy
 
@@ -146,7 +162,7 @@ If you want to edit or remove an information barrier policy, you must set the po
 
 2. In the list of results, identify the policy that you want to change (or remove). Note the policy's name.
 
-3. To set the policy's status to inactive, run the `Set-InformationBarrierPolicy` cmdlet.
+3. To set the policy's status to inactive, use the `Set-InformationBarrierPolicy` cmdlet.
 
 4. Run the `Start-InformationBarrierPoliciesApplication` cmdlet.
 
