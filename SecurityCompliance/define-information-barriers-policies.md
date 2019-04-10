@@ -3,7 +3,7 @@ title: "Define information barrier policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 04/05/2019
+ms.date: 04/10/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccompms.collection:
@@ -76,19 +76,19 @@ Determine which groups of users for whom you want to prevent (or allow) communic
 - Block communications between two groups;
 - Allow one group to communicate with only one other group;
 - Prevent one group from communicating with two other groups;
-- ...and more.
+- ...and so on.
 
-As you create your plan for information barriers, keep the following points in mind:
+Make a list of all the policies you'll want to implement. As you plan your information barrier policies, keep the following points in mind:
 
 - Information barrier policies do not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
 
-- Potentially, everyone included in an information barrier policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barrier policies are part of the same team or group chat, they might be removed from those chat sessions. To learn more, see [Learn more information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
+- Potentially, everyone included in an information barrier policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barrier policies are part of the same team or group chat, they might be removed from those chat sessions. [Learn more information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
 
-- Avoid bulk moves when information barrier policies are in effect. Ask admins not to move users between segments who cannot talk to each other. Either temporarily grant communication access and disable it later, after all users are moved, or create an intermediate segment who can talk to each of the initial segments. In any case, do not move users in bulk between entities who cannot communicate.
+- Avoid bulk moves when information barrier policies are in effect. Ask your tenant admins not to move users between segments who cannot talk to each other. Either temporarily grant communication access and disable it later, after all users are moved, or create an intermediate segment who can talk to each of the initial segments. In any case, do not move users in bulk between entities who cannot communicate.
 
 ## Segment users
 
-To segment users, consider using an attribute in Azure Active Directory. To learn more, see the following resources:
+To segment users, consider using an attribute in Azure Active Directory. For example, you might use Department, assuming no single employee is assigned to more than one department. To learn more, see the following resources:
 
 
 |Resource  |Description  |
