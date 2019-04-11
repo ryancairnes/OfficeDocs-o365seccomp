@@ -25,13 +25,13 @@ Here's a high-level overview of the life cycle of an information barrier policy:
 
 2. [Segment users in your organization](#segment-users). You can use attributes in Azure Active Directory for this. Make sure that each user belongs to only one segment. For example, if you use Department, make sure no single employee is assigned to two departments.  
 
-3. [Define your information barrier policies](#define-information-barrier-policies).
+3. [Define your information barrier policies](#define-information-barrier-policies). During this phase, you define policies. Note that the policies are neither active nor applied during this phase.
 
-4. [Apply information barrier policies](#apply-information-barrier-policies). 
+4. [Apply information barrier policies](#apply-information-barrier-policies). During this phase, you set policies to active status, and then start the policy application to apply your policies. Note that if your organization is very large, it can take 24 hours for the policies to go into effect.
 
-5. [Verify the status of information barrier policies](#verify-status-of-information-barrier-policies).
+5. [Verify the status of information barrier policies](#verify-status-of-information-barrier-policies). You can verify status individual policies and users.
 
-6. If necessary, [edit or remove a policy](#edit-or-remove-an-information-barrier-policy).
+6. If necessary, [edit or remove a policy](#edit-or-remove-an-information-barrier-policy). 
 
 ## Prerequisites
 
