@@ -142,15 +142,15 @@ Information barrier policies are not in effect until they are set to active stat
 
     b. Run the following PowerShell cmdlets, one at a time:<br>
 
-       `Login-AzureRmAccount`  
+      `Login-AzureRmAccount`  
     
-       `$appId="bcf62038-e005-436d-b970-2a472f8c1982"` 
+      `$appId="bcf62038-e005-436d-b970-2a472f8c1982"` 
     
-       `$sp=Get-AzureRmADServicePrincipal -ServicePrincipalName $appId` 
+      `$sp=Get-AzureRmADServicePrincipal -ServicePrincipalName $appId` 
     
-       `if ($sp -eq $null) { New-AzureRmADServicePrincipal -ApplicationId $appId }`
+      `if ($sp -eq $null) { New-AzureRmADServicePrincipal -ApplicationId $appId }`
     
-       `Start-Process  "https://login.microsoftonline.com/common/adminconsent?client_id=$appId"`
+      `Start-Process  "https://login.microsoftonline.com/common/adminconsent?client_id=$appId"`
 
     c. When prompted, sign in using your work or school account for Office 365.
 
@@ -184,15 +184,15 @@ After you have applied information barrier policies, follow these steps to verif
 
     b. Run the following PowerShell cmdlets, one at a time:<br>
 
-       `Login-AzureRmAccount`  
+      `Login-AzureRmAccount`  
     
-       `$appId="bcf62038-e005-436d-b970-2a472f8c1982"` 
+      `$appId="bcf62038-e005-436d-b970-2a472f8c1982"` 
     
-       `$sp=Get-AzureRmADServicePrincipal -ServicePrincipalName $appId` 
+      `$sp=Get-AzureRmADServicePrincipal -ServicePrincipalName $appId` 
     
-       `if ($sp -eq $null) { New-AzureRmADServicePrincipal -ApplicationId $appId }`
+      `if ($sp -eq $null) { New-AzureRmADServicePrincipal -ApplicationId $appId }`
     
-       `Start-Process  "https://login.microsoftonline.com/common/adminconsent?client_id=$appId"`
+      `Start-Process  "https://login.microsoftonline.com/common/adminconsent?client_id=$appId"`
 
     c. When prompted, sign in using your work or school account for Office 365.
 
@@ -216,15 +216,15 @@ If you want to edit or remove an information barrier policy, you must first set 
 
     b. Run the following PowerShell cmdlets, one at a time:<br>
 
-       `Login-AzureRmAccount`  
+      `Login-AzureRmAccount`  
     
-       `$appId="bcf62038-e005-436d-b970-2a472f8c1982"` 
+      `$appId="bcf62038-e005-436d-b970-2a472f8c1982"` 
     
-       `$sp=Get-AzureRmADServicePrincipal -ServicePrincipalName $appId` 
+      `$sp=Get-AzureRmADServicePrincipal -ServicePrincipalName $appId` 
     
-       `if ($sp -eq $null) { New-AzureRmADServicePrincipal -ApplicationId $appId }`
+      `if ($sp -eq $null) { New-AzureRmADServicePrincipal -ApplicationId $appId }`
     
-       `Start-Process  "https://login.microsoftonline.com/common/adminconsent?client_id=$appId"`
+      `Start-Process  "https://login.microsoftonline.com/common/adminconsent?client_id=$appId"`
 
     c. When prompted, sign in using your work or school account for Office 365.
 
