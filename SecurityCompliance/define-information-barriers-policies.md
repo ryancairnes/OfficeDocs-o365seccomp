@@ -3,7 +3,7 @@ title: "Define information barrier policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 04/10/2019
+ms.date: 04/11/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccompms.collection:
@@ -20,13 +20,13 @@ description: "Learn how to define policies for information barriers in Microsoft
 
 Here's a high-level overview of the life cycle of an information barrier policy:
 
-1. [Plan your policies](#plan-your-information-barrier-policies).
+1. [Plan your policies](#plan-your-information-barrier-policies). Create a plan for the policies you need and how you want the policies to work. 
 
-2. [Segment users in your organization](#segment-users).
+2. [Segment users in your organization](#segment-users). You can use attributes in Azure Active Directory for this. Make sure that each user belongs to only one segment. For example, if you use Department, make sure no single employee is assigned to two departments.  
 
 3. [Define your information barrier policies](#define-information-barrier-policies).
 
-4. [Apply information barrier policies](#apply-information-barrier-policies).
+4. [Apply information barrier policies](#apply-information-barrier-policies). 
 
 5. [Verify the status of information barrier policies](#verify-status-of-information-barrier-policies).
 
@@ -90,7 +90,6 @@ Make a list of all the policies you'll want to implement. As you plan your infor
 
 To segment users, consider using an attribute in Azure Active Directory. For example, you might use Department, assuming no single employee is assigned to more than one department. To learn more, see the following resources:
 
-
 |Resource  |Description  |
 |---------|---------|
 |[Attributes for information barrier policies (Preview)](information-barriers-attributes.md) |Use this article as a reference for attributes you can use in information barrier policies |
@@ -126,15 +125,11 @@ When you have a list of user segments and the information barrier policies you w
 
     Repeat this step for each information barrier policy you want to define.
 
+Keep in mind that by default, your information barrier policies are inactive until they are explicitly set to active status and applied. After you have defined your policies, proceed to the next section.
+
 ## Apply information barrier policies
 
-Information barrier policies are not in effect until they are applied. When you have finished defining information barrier policies, run the `Start-InformationBarrierPoliciesApplication` cmdlet in the Office 365 Security & Compliance Center.
-
-Policies are applied, user by user, for your organization. This can take 24 hours for this process to complete.
-
-## Verify status of information barrier policies
-
-After you have defined and applied information barrier policies, follow these steps to verify status:
+Information barrier policies are not in effect until they are set to active status and then applied. 
 
 1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
@@ -150,19 +145,66 @@ After you have defined and applied information barrier policies, follow these st
 
 4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
 
-5. To verify status for an information barrier policy, run the the `Get-InformationBarrierPoliciesApplicationStatus` cmdlet.
+5. Run the `Get-InformationBarrierPolicy` cmdlet to see a list of policies that have been defined. Note the status of each policy.
+
+6. To set a policy to active status, use the `Get-InformationBarrierPolicy` cmdlet with the State parameter set to Active, such as shown in the following example:
+
+    
+    ```powershell
+    $identity  = | Get-InformationBarrierPolicy -Name "ResearchIBPolicy" | select Identity
+    Set-InformationBarrierPolicy -Identity $identity -State Active
+    ```
+    
+    In this example, we are setting an information barrier policy called ResearchIBPolicy to active status.
+
+    Repeat this step as appropriate.
+
+7. When you have finished setting your information barrier policies to active status, run the `Start-InformationBarrierPoliciesApplication` cmdlet in the Office 365 Security & Compliance Center.
+
+    Policies are applied, user by user, for your organization. If your organization is large, it can take 24 hours for this process to complete.
+
+## Verify status of information barrier policies
+
+After you have applied information barrier policies, follow these steps to verify status:
+
+1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
+
+2. Run the following PowerShell cmdlets, one at a time:<br>
+
+    `Login-AzureRmAccount`  
+
+    `$appId="__TODO__"` 
+
+    `New-AzureRmADServicePrincipal -ApplicationId $appId` 
+
+3. When prompted, sign in using your work or school account for Office 365.
+
+4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
+
+5. To verify status for an information barrier policy, use the `Get-InformationBarrierPoliciesApplicationStatus` cmdlet.
+
+    If you want to view a list of all information barrier policy applications, run the following cmdlet:
+
+    `Get-InformationBarrierPoliciesApplicationStatus -All`
 
 6. To verify status for a specific user, run the `Get-InformationBarrierRecipientStatus` cmdlet.
 
 ## Edit or remove an information barrier policy
 
-If you want to edit or remove an information barrier policy, you must set the policy to inactive status. 
+If you want to edit or remove an information barrier policy, you must first set that policy to inactive status. 
 
 1. To view a list of current information barrier policies, run the `Get-InformationBarrierPolicy` cmdlet.
 
 2. In the list of results, identify the policy that you want to change (or remove). Note the policy's name.
 
-3. To set the policy's status to inactive, use the `Set-InformationBarrierPolicy` cmdlet.
+3. To set the policy's status to inactive, use the `Set-InformationBarrierPolicy` cmdlet with the State parameter set to Inactive, as shown in the following example:
+
+
+    ```powershell
+    $identity  = | Get-InformationBarrierPolicy -Name "ResearchIBPolicy" | select Identity
+    Set-InformationBarrierPolicy -Identity $identity -State Inactive
+    ```
+    In this example, we are setting an information barrier policy called ResearchIBPolicy to an inactive status.
 
 4. Run the `Start-InformationBarrierPoliciesApplication` cmdlet.
 
