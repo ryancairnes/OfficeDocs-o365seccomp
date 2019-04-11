@@ -35,7 +35,7 @@
 ### [View the DLP reports](view-the-dlp-reports.md)
 ### [Form a query to find sensitive data stored on sites](form-a-query-to-find-sensitive-data-stored-on-sites.md)
 ### [How DLP works between the Security & Compliance Center and Exchange admin center](how-dlp-works-between-admin-centers.md)
-## Use the sensitive information types
+## [Use the sensitive information types](custom-sensitive-info-types.md)
 ### [What the sensitive information types look for](what-the-sensitive-information-types-look-for.md)
 ### [What the DLP functions look for](what-the-dlp-functions-look-for.md)
 ### [Watch an extended overview of customizing DLP](https://go.microsoft.com/fwlink/?linkid=852306)
