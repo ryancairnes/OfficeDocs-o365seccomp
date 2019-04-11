@@ -70,7 +70,7 @@ A common requirement for administrators is creating a list of all resources that
 
 The first step is to search the Office 365 audit log for sharing events. For more details (including the required permissions) about searching the audit log, see [Search the audit log in the Security & Compliance Center](search-the-audit-log-in-security-and-compliance.md).
   
-1. Go to [https://compliance.microsoft.com](https://compliance.microsoft.com).
+1. Go to [https://protection.office.com](https://protection.office.com).
     
 2. Sign in to Office 365 using your work or school account.
     
