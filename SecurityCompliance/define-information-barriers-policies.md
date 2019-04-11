@@ -31,7 +31,7 @@ Here's a high-level overview of the life cycle of an information barrier policy:
 
 5. [Verify the status of information barrier policies](#verify-status-of-information-barrier-policies). You can verify status individual policies and users.
 
-6. If necessary, [edit or remove a policy](#edit-or-remove-an-information-barrier-policy). 
+6. If necessary, [edit or remove a policy](#edit-or-remove-an-information-barrier-policy). To do this, you must first set the policy you want to change or remove to inactive status, and then start the policy application to put that inactive status into effect.
 
 ## Prerequisites
 
