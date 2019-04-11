@@ -1,5 +1,5 @@
 ---
-title: "Create a custom sensitive information type"
+title: "Create a custom sensitive information type in the Security & Compliance Center"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
@@ -15,23 +15,19 @@ search.appverid:
 description: "Learn how to create, modify, remove, and test custom sensitive information types for DLP in the graphical user interface in Security & Compliance Center."
 ---
 
-# Create a custom sensitive information type
+# Create a custom sensitive information type in the Security & Compliance Center
 
+## Summary
 
+Read this article to create a [custom sensitive information type](custom-sensitive-info-types.md) in the Security & Compliance Center ([https://protection.office.com](https://protection.office.com)). The custom sensitive information types that you create by using this method are added to the rule package named `Microsoft.SCCManaged.CustomRulePack`.
 
-The key differences are described in the following table:
+You can also create custom sensitive information types by using PowerShell and Exact Data Match capabilities. To learn more about those methods, see:
+- [Create a custom sensitive information type in Security & Compliance Center PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md)
+- [](create-custom-sensitive-info-type-edm.md)
 
-|**Custom sensitive information types in the UI**|**Custom sensitive information types in PowerShell**|
-|:-----|:-----|
-|Name and Description are in one language.|Supports multiple languages for Name and Description.|
-|Supports one pattern.|Supports multiple patterns.|
-|Supporting evidence can be: <br/>• Regular expressions <br/>• Keywords <br/>• Keyword dictionaries|Supporting evidence can be: <br/>• Regular expressions <br/>• Keywords <br/>• Keyword dictionaries <br/>• [Built-in DLP functions](what-the-dlp-functions-look-for.md)|
-|Custom sensitive information types are added to the rule package named Microsoft.SCCManaged.CustomRulePack|You can create up to 10 rule packages that contain custom sensitive information types.|
-|Pattern match requires the detection of the primary pattern and all supporting evidence (the implicit AND operator is used).|Pattern match requires the detection of the primary pattern and a configurable amount of supporting evidence (implicit AND and OR operators can be used).|
+## Before you begin...
 
-## What do you need to know before you begin?
-
-- To open the Security & Compliance Center, see [Go to the Security & Compliance Center](go-to-the-securitycompliance-center.md).
+- Your organization must have a subscription, such as Office 365 Enterprise, that includes Data Loss Prevention (DLP). See [Messaging Policy and Compliance ServiceDescription](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description/messaging-policy-and-compliance-servicedesc). 
 
 - Custom sensitive information types require familiarity with regular expressions (RegEx). For more information about the Boost.RegEx (formerly known as RegEx++) engine that's used for processing the text, see [Boost.Regex 5.1.3](https://www.boost.org/doc/libs/1_68_0/libs/regex/doc/html/).
 
