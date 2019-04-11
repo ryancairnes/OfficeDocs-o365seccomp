@@ -108,9 +108,11 @@ When you have a list of user segments and the information barrier policies you w
 
     `Login-AzureRmAccount`  
 
-    `$appId="__TODO__"` 
+    `$appId="bcf62038-e005-436d-b970-2a472f8c1982"` 
 
-    `New-AzureRmADServicePrincipal -ApplicationId $appId` 
+    `$sp=Get-AzureRmADServicePrincipal -ServicePrincipalName $appId` 
+
+    `if ($sp -eq $null) { New-AzureRmADServicePrincipal -ApplicationId $appId }`
 
 3. When prompted, sign in using your work or school account for Office 365.
 
