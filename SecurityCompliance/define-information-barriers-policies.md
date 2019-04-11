@@ -21,17 +21,17 @@ description: "Learn how to define policies for information barriers in Microsoft
 
 Here's a high-level overview of the life cycle of an information barrier policy:
 
-1. [Plan your policies](#plan-your-information-barrier-policies). Create a plan for the policies you need and how you want the policies to work. 
+1. **[Plan your policies](#part-1-plan-your-information-barrier-policies)**. Create a plan for the policies you need and how you want the policies to work. 
 
-2. [Segment users in your organization](#segment-users). You can use attributes in Azure Active Directory for this. Make sure that each user belongs to only one segment. For example, if you use Department, make sure no single employee is assigned to two departments.  
+2. **[Segment users in your organization](#part-2-segment-users)**. You can use attributes in Azure Active Directory for this. Make sure that each user belongs to only one segment. For example, if you use Department, make sure no single employee is assigned to two departments.  
 
-3. [Define your information barrier policies](#define-information-barrier-policies). During this phase, you define policies. Note that the policies are neither active nor applied during this phase.
+3. **[Define your information barrier policies](#part-3-define-information-barrier-policies)**. During this phase, you define policies. Note that the policies are neither active nor applied during this phase.
 
-4. [Apply information barrier policies](#apply-information-barrier-policies). During this phase, you set policies to active status, and then start the policy application to apply your policies. Note that if your organization is very large, it can take 24 hours for the policies to go into effect.
+4. **[Apply information barrier policies](#part-4-apply-information-barrier-policies)**. During this phase, you set policies to active status, and then start the policy application to apply your policies. Note that if your organization is very large, it can take 24 hours for the policies to go into effect.
 
-5. [Verify the status of information barrier policies](#verify-status-of-information-barrier-policies). You can verify status individual policies and users.
+5. **[Verify the status of information barrier policies](#part-5-verify-status-of-information-barrier-policies)**. You can verify status individual policies and users.
 
-6. If necessary, [edit or remove a policy](#edit-or-remove-an-information-barrier-policy). To do this, you must first set the policy you want to change or remove to inactive status, and then start the policy application to put that inactive status into effect.
+6. If necessary, **[edit or remove a policy](#edit-or-remove-an-information-barrier-policy)**. To do this, you must first set the policy you want to change or remove to inactive status, and then start the policy application to put that inactive status into effect.
 
 ## Prerequisites
 
@@ -71,7 +71,7 @@ You must have enough data in your directory to be able to segment users. You cou
 
 Currently, information barrier policies are defined and managed in Office 365 by using PowerShell cmdlets. Although several scenarios and examples are provided in this article, you'll need to be familiar with PowerShell cmdlets and parameters.
 
-## Plan your information barrier policies
+## Part 1: Plan your information barrier policies
 
 Determine which groups of users for whom you want to prevent (or allow) communications to occur in Microsoft Teams (chat sessions and calls). For example, you can use information barrier policies to:
 - Block communications between two groups;
@@ -87,7 +87,7 @@ Make a list of all the policies you'll want to implement. As you plan your infor
 
 - Avoid bulk moves when information barrier policies are in effect. Ask your tenant admins not to move users between segments who cannot talk to each other. Either temporarily grant communication access and disable it later, after all users are moved, or create an intermediate segment who can talk to each of the initial segments. In any case, do not move users in bulk between entities who cannot communicate.
 
-## Segment users
+## Part 2: Segment users
 
 To segment users, consider using an attribute in Azure Active Directory. For example, you might use Department, assuming no single employee is assigned to more than one department. To learn more, see the following resources:
 
@@ -98,7 +98,7 @@ To segment users, consider using an attribute in Azure Active Directory. For exa
 |[Create a dynamic group and check status](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-create-rule)     |Read this article to learn how to determine group membership by using rules in Azure Active Directory. Group membership can be based on user or device properties. |
 |[Azure AD cmdlets for working with extension attributes](https://docs.microsoft.com/powershell/azure/active-directory/using-extension-attributes-sample?view=azureadps-2.0)     | Read this article to learn about extension attributes and how you can extend your Azure AD directory with new attributes.  |
 
-## Define information barrier policies
+## Part 3: Define information barrier policies
 
 When you have a list of user segments and the information barrier policies you want to define, follow these steps:
 
@@ -128,7 +128,7 @@ When you have a list of user segments and the information barrier policies you w
 
 Keep in mind that by default, your information barrier policies are inactive until they are explicitly set to active status and applied. After you have defined your policies, proceed to the next section.
 
-## Apply information barrier policies
+## Part 4: Apply information barrier policies
 
 Information barrier policies are not in effect until they are set to active status and then applied. 
 
@@ -164,7 +164,7 @@ Information barrier policies are not in effect until they are set to active stat
 
     Policies are applied, user by user, for your organization. If your organization is large, it can take 24 hours for this process to complete.
 
-## Verify status of information barrier policies
+## Part 5: Verify status of information barrier policies
 
 After you have applied information barrier policies, follow these steps to verify status:
 
