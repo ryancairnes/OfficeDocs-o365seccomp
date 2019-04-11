@@ -50,6 +50,8 @@ Controls are compliance process containers in Compliance Manager that define how
 - **Microsoft-managed Controls**: For each cloud service, Microsoft implements and manages a set of *controls* as part of Microsoft's compliance with various standards and regulations.
 - **Customer-managed Controls**: This is the collection of controls that are managed by your organization. Your organization is responsible for implementing these 
 
+Learn more about working with Controls in Compliance Manager.
+
 ### Actions
 
 Actions are included in customer-managed controls as part of the built-in workflow management functionality that you can use to manage and track your organization's progress towards completing an assessment. 
@@ -57,6 +59,8 @@ Actions are included in customer-managed controls as part of the built-in workfl
 The people involved in the assessment process in your organization can use Compliance Manager to review the customer managed controls from all Assessments for which they are users. When a user signs in to Compliance Manager and opens the **Action Items** dashboard, a list of Action Items assigned to them is displayed. Depending on the Compliance Manager role assigned to the user, they can provide implementation or test details, update the Status, or assign Action Items. 
 
 As certification controls are generally implemented by one person and tested by another, the control action item can be initially assigned to one person for implementation, and once that is complete, that person can reassign the control action item to the next person for control testing and uploading of evidence. This assignment/reassignment of control actions can be performed by any users who have a Compliance Manager role with sufficient permissions, allowing for central management of control assignments, or decentralized routing of control action items, from implementer to tester as appropriate.
+
+Learn more about working with Actions in Compliance Manager.
 
 ## Permissions
 
@@ -86,15 +90,20 @@ The Compliance Score, like the Microsoft Secure Score, is similar to other behav
 > [!NOTE]
 > The Compliance Score does not express an absolute measure of organizational compliance with any particular standard or regulation. It expresses the extent to which you have adopted controls which can reduce the risks to personal data and individual privacy. No service can guarantee that you are compliant with a standard or regulation, and the Compliance Score should not be interpreted as a guarantee in any way. 
 
+Learn more about how the [Compliance Score is calculated](compliance-score-methodology.md) in Compliance Manager.
+
 ## Secure Score integration
 
-## Change log for Customer Managed Controls
+## Updates for customer-managed controls
 
-Compliance Manager is designed to be regularly updated to keep pace with changes in regulatory requirements, as well as changes in our cloud services. These updates include changes to the Customer Managed Controls. A Change Log is provided to help you understand the impact of these changes, including the details of the content being added or changed, and guidance as to what effect the changes have on existing Assessments. Generally, there are two types of changes:
+Compliance Manager is regularly updated to keep pace with changes in regulatory requirements and changes in our cloud services. These updates include changes to the customer-managed controls and a change log is provided to help you understand the impact of these changes. This log includes the details of the content being added or changed, and guidance as to what effect the changes have on existing Assessments. 
+
+Generally, there are two types of changes:
   
-- A **Major** change is a significant change to a Customer Action, such as the addition or removal of a control or specific numbered steps, or a change in the guidance around responsibilities, recommendations, or evidence. For Major changes, we recommend that you re-evaluate your implementation and/or assessment of the affected control.
-    
-- A **Minor** change is an insignificant change to a Customer Actions, such as fixing a typo or formatting issues, or updating or correcting hyperlinks. Minor changes generally do not require the control to be re-evaluated; however, we do recommend that you review the updated Customer Action.
+- A **major** change is a significant change to a Customer Action, such as the addition or removal of a control or specific numbered steps, or a change in the guidance around responsibilities, recommendations, or evidence. For major changes, we recommend that you re-evaluate your implementation and/or assessment of the affected control.
+- A **minor** change is an insignificant change to a Customer Actions, such as fixing a typo or formatting issues, or updating or correcting hyperlinks. Minor changes generally do not require the control to be re-evaluated. However, we do recommend that you review the updated Customer Action for minor changes.
+
+Visit the [change log](need url) to view updates to Compliance Manager.
 
 ## Ready to get started?
 
@@ -103,4 +112,3 @@ Compliance Manager is designed to be regularly updated to keep pace with changes
 - [Compliance Manager Interactive guide](https://content.cloudguides.com/guides/Compliance%20Manager)
 - [Announcing Compliance Manager general availability](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-Compliance-Manager-general-availability/ba-p/161922)
 - [Microsoft 365 provides an information protection strategy to help with the GDPR](https://blogs.office.com/en-us/2018/02/22/microsoft-365-provides-an-information-protection-strategy-to-help-with-the-gdpr)
-
