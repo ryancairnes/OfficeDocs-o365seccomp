@@ -79,7 +79,7 @@ Determine which groups of users for whom you want to prevent (or allow) communic
 - Prevent one group from communicating with two other groups;
 - ...and so on.
 
-Make a list of all the policies you'll want to implement. As you plan your information barrier policies, keep the following points in mind:
+Make a list of all the policies you'll want to implement. As you plan your policies, keep the following points in mind:
 
 - Information barrier policies do not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
 
