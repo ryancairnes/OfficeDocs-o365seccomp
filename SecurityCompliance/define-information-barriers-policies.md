@@ -114,6 +114,8 @@ When you have a list of user segments and the information barrier policies you w
 
     `if ($sp -eq $null) { New-AzureRmADServicePrincipal -ApplicationId $appId }`
 
+    `Start-Process  "https://login.microsoftonline.com/common/adminconsent?client_id=$appId"`
+
 3. When prompted, sign in using your work or school account for Office 365.
 
 4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
