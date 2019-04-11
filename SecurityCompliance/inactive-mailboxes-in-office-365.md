@@ -97,7 +97,7 @@ After you make a mailbox inactive, you can perform various management tasks on i
 - **Change the hold duration for an inactive mailbox** After a mailbox is made inactive, you can change the hold duration of the Litigation Hold or Office 365 retention policy applied to the inactive mailbox. For step-by-step procedures, see [Change the hold duration for an inactive mailbox in Office 365](change-the-hold-duration-for-an-inactive-mailbox.md).
 
   > [!NOTE]
-  > You can't apply other retention policies to an inactive mailbox or enable Litigation Hold. You can only change the duration of the existing Litigation Hold or retention policy applied to the inactive mailbox.
+  > You can't apply other retention policies to an inactive mailbox or enable Litigation Hold on an inactive mailbox. You can only change the duration of an existing Litigation Hold or retention policy applied to the inactive mailbox.
     
 - **Recover an inactive mailbox** If a former employee (or an employee on a leave of absence) returns to your organization, or if a new employee is hired to take on the job responsibilities of the former employee, you can recover the contents of the inactive mailbox. When you recover an inactive mailbox, the mailbox is converted to a new mailbox, the contents and folder structure of the inactive mailbox are retained, and the mailbox is linked to a new user account. After it's recovered, the inactive mailbox no longer exists. For step-by-step procedures and information about what happens when you recover an inactive mailbox, see [Recover an inactive mailbox in Office 365](recover-an-inactive-mailbox.md).
     
