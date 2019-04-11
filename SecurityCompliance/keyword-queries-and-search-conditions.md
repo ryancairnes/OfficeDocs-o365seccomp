@@ -401,4 +401,6 @@ kind:im AND subject:conversation AND (received=startdate..enddate)
     
 - To exclude content marked with a certain property value from your search results, place a minus sign (-) before the name of the property. For example, `-from:"Sara Davis"` will exclude any messages sent by Sara Davis.
 
+- Some special characters are not included in the search index and therefore are not searchable, these include the operators for search (+ - = :) and the following characters that are either replaced by a $null or can cause errors if searched for ! @ # % ^ & ; _ / ?
+
 - You can export items based on message type. For example, to export Skype conversations and chats in Microsoft Teams, use the syntax `kind:im`. To return only email messages, you would use `kind:email`. To return chats, meetings, and calls in Microsoft Teams, use `kind:microsoftteams`.
