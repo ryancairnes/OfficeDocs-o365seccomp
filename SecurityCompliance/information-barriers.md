@@ -6,7 +6,8 @@ manager: laurawi
 ms.date: 04/05/2019
 ms.audience: ITPro
 ms.topic: article
-ms.service: O365-seccompms.collection:
+ms.service: O365-seccomp
+ms.collection:
 - M365-security-compliance
 localization_priority: None
 description: "Use information barriers to ensure communication compliance using Microsoft Teams within your organization."
