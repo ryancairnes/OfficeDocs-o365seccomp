@@ -29,7 +29,7 @@ If you are using labels for protection of personal data in Office 365, Microsoft
 
 Cloud App Security doesn't currently support retention labels, but you can use Office 365 sensitive information types with Cloud App Security to monitor personal data that resides in other SaaS apps.
 
-[Sensitivity labels](sensitivity-labels.md) are currently recommended for applying labels to files on premises and in other cloud services and providers. These are also recommended for files in Office 365 that require Azure Information Protection (AIP) encryption for data protection, such as trade secret files.
+[Sensitivity labels](sensitivity-labels.md) are currently recommended for applying labels to files on premises and in other cloud services and providers. These are also recommended for files in Office 365 that require Azure Information Protection encryption for data protection, such as trade secret files.
 
 At this time, using Azure Information Protection to apply encryption is not recommended for files in Office 365 with data that is subject to the GDPR. Office 365 services currently cannot read into AIP-encrypted files. Therefore, the service can’t find sensitive data in these files.
 
