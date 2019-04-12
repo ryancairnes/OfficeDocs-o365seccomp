@@ -78,7 +78,7 @@ Even though both versions of OME can coexist, we highly recommend that you edit 
 
 ## Get started with OME
 
-Typically, the new OME capabilities are automatically enabled for your Office 365 organization. To get started using the new OME capabilities within your organization, see [Set up new Office 365 Message Encryption capabilities](set-up-new-message-encryption-capabilities.md).
+Typically, the new OME capabilities are automatically enabled for your Office 365 organization. For more information about the new OME capabilities within your organization, see [Set up new Office 365 Message Encryption capabilities](set-up-new-message-encryption-capabilities.md).
 
 The legacy version of OME is automatically enabled for your Office 365 organization if you have enabled Azure Information Protection. In the past, legacy OME worked even if Azure Information Protection wasn’t enabled. This is no longer the case.
 

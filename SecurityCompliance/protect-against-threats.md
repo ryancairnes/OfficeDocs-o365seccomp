@@ -18,22 +18,22 @@ description: "Use this article as a guide to configure your threat protection fe
 
 # Protect against threats in Office 365
 
-Here's a quick-start guide you can use as a checklist to make sure threat protection features are set up for your organization. If you're new to threat protection features in Office 365, or you're just not sure where to begin, use the following guidance as a starting point. 
+Office 365 includes a variety of threat protection features. Here's a quick-start guide you can use as a checklist to make sure your threat protection features are set up for your organization. If you're new to threat protection features in Office 365, or you're just not sure where to begin, use the following guidance as a starting point. 
 
 > [!IMPORTANT]
 > **Initial recommended settings are included for each kind of policy; however, many options are available, and you can adjust your settings to meet your specific organization's needs**. Allow approximately 30 minutes for your policies or changes to work their way through your datacenter.
 
 ## Prerequisites
 
-- You must be assigned an appropriate role to configure policies in the [Security & Compliance Center](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-securitycompliance-center). The following table includes some examples: 
+You must be assigned an appropriate role to configure policies in the [Security & Compliance Center](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-securitycompliance-center). The following table includes some examples: 
 
-    |Role or role group  |Where to learn more  |
-    |---------|---------|
-    |Office 365 Global Administrator |[About Office 365 admin roles](https://docs.microsoft.com/office365/admin/add-users/about-admin-roles)|
-    |Security Administrator |[Administrator role permissions in Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles)|
-    |Exchange Online Organization Management |[Permissions in Exchange Online](https://docs.microsoft.com/en-us/exchange/permissions-exo/permissions-exo) <br>and<br> [Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell?view=exchange-ps)|
+|Role or role group  |Where to learn more  |
+|---------|---------|
+|Office 365 Global Administrator |[About Office 365 admin roles](https://docs.microsoft.com/office365/admin/add-users/about-admin-roles)|
+|Security Administrator |[Administrator role permissions in Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles)|
+|Exchange Online Organization Management |[Permissions in Exchange Online](https://docs.microsoft.com/en-us/exchange/permissions-exo/permissions-exo) <br>and<br> [Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell?view=exchange-ps)|
 
-    (To learn more, see [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md).)
+To learn more, see [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md).
 
 ## Part 1 - Anti-malware
 
