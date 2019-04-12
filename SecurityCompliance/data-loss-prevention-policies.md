@@ -3,7 +3,7 @@ title: "Overview of data loss prevention policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 3/29/2019
+ms.date: 04/11/2019
 ms.audience: ITPro
 ms.topic: conceptual
 f1_keywords:
@@ -51,13 +51,13 @@ You create and manage DLP policies on the Data loss prevention page in the Offic
 
 A DLP policy contains a few basic things:
   
-- Where to protect the content - **locations** such as Exchange Online, SharePoint Online, and OneDrive for Business sites, as well as Microsoft Teams chats and channels. 
+- Where to protect the content: **locations** such as Exchange Online, SharePoint Online, and OneDrive for Business sites, as well as Microsoft Teams chats and channels. 
     
 - When and how to protect the content by enforcing **rules** comprised of: 
     
-  - **Conditions** the content must match before the rule is enforced -- for example, look only for content containing Social Security numbers that's been shared with people outside your organization. 
+  - **Conditions** the content must match before the rule is enforced. For example, a rule might be configured to look only for content containing Social Security numbers that's been shared with people outside your organization. 
     
-  - **Actions** that you want the rule to take automatically when content matching the conditions is found -- for example, block access to the document and send both the user and compliance officer an email notification. 
+  - **Actions** that you want the rule to take automatically when content matching the conditions is found. For example, a rule might be configured to block access to a document and send both the user and compliance officer an email notification. 
     
 You can use a rule to meet a specific protection requirement, and then use a DLP policy to group together common protection requirements, such as all of the rules needed to comply with a specific regulation.
   
@@ -207,10 +207,14 @@ For example, the built-in **U.S. HIPAA** policy has a rule that uses an **AND** 
   
 ## The priority by which rules are processed
 
-When you create rules in a policy, each rule is assigned a priority in the order in which it's created - meaning, the rule created first has first priority, the rule created second has second priority, and so on. After you create a rule, its priority can't be changed, except by deleting and re-creating it.
+When you create rules in a policy, each rule is assigned a priority in the order in which it's created - meaning, the rule created first has first priority, the rule created second has second priority, and so on. 
   
 ![Rules in priority order](media/f7dc06bf-bc6f-485c-bcdb-606edbcf6565.png)
   
+After you have set up more than one DLP policy, you can change the priority of one or more policies. To do that, select a policy, choose **Edit policy**, and use the **Priority** list to specify its priority.
+
+![Set priority for a policy](media/dlp-set-policy-priority.png)
+
 When content is evaluated against rules, the rules are processed in priority order. If content matches multiple rules, the rules are processed in priority order and the most restrictive action is enforced. For example, if content matches all of the following rules, Rule 3 is enforced because it's the highest priority, most restrictive rule:
   
 - Rule 1: only notifies users
@@ -239,7 +243,7 @@ After people create and turn on their DLP policies, they sometimes run into thes
   
 - Too much content that **is not** sensitive information matches the rules - in other words, too many false positives. 
     
-- Too little content that **is** sensitive information matches the rules - in other words, the protective actions aren't being enforced on the sensitive information. 
+- Too little content that **is** sensitive information matches the rules. In other words, the protective actions aren't being enforced on the sensitive information. 
     
 To address these issues, you can tune your rules by adjusting the instance count and match accuracy to make it harder or easier for content to match the rules. Each sensitive information type used in a rule has both an instance count and match accuracy.
   
@@ -398,6 +402,10 @@ If you're creating DLP policies with a large potential impact, we recommend foll
 You can turn off a DLP policy at any time, which affects all rules in the policy. However, each rule can also be turned off individually by toggling its status in the rule editor.
   
 ![Options for turning off a rule in a policy](media/f7b258ff-1b8b-4127-b580-83c6492f2bef.png)
+
+You can also change the priority of multiple rules in a policy. To do that, open a policy for editing. In a row for a rule, choose the ellipses (**...**), and then choose an option, such as **Move down** or **Bring to last**.
+
+![Set rule priority](media/dlp-set-rule-priority.png)
   
 ## DLP reports
 

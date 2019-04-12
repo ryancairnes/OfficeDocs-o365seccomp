@@ -42,7 +42,7 @@ Here's a quick overview of how alert policies work and the alerts that are trigg
 
 An alert policy consists of a set of rules and conditions that define the user or admin activity that will generate an alert, a list of users who will trigger the alert if they perform the activity, and threshold that defines how many times the activity has to occur before an alert is triggered. You also categorize the policy and assign it a severity level. These two settings help you manage alert policies (and the alerts that are triggered when the policy conditions are matched) because you can filter on these settings when managing policies and viewing alerts in the security and compliance center. For example, you can view alerts that match the conditions from the same category or view alerts with the same severity level.
   
-To view and create alert policies, go to [https://compliance.microsoft.com](https://compliance.microsoft.com) and then click **Alerts** \> **Alert policies**. 
+To view and create alert policies, go to [https://protection.office.com](https://protection.office.com) and then click **Alerts** \> **Alert policies**. 
   
 ![In the security and compliance center, click Alerts, then click Alert policies to view and create alert policies](media/09ebd451-8e84-44e1-aefc-63e70bba4d97.png)
   
@@ -121,7 +121,7 @@ Note that the unusual activity monitored by some of the built-in policies is bas
 
 When an activity performed by users in your organization match the settings of an alert policy, an alert is generated and displayed on the **View alerts** page in the security and compliance center Depending on the settings of an alert policy, an email notification is also sent to a list of specified users when an alert is triggered. For each alert, the dashboard on the **View alerts** page displays the name of the corresponding alert policy, the severity and category for the alert (defined in the alert policy) and the number of times an activity has occurred that resulted in the alert being generated; this value is based on the threshold setting of the alert policy. The dashboard also shows the status for each alert. See the [Managing alerts](#managing-alerts) section for more information about using the status property to manage alerts. 
   
-To view alerts, go to [https://compliance.microsoft.com](https://compliance.microsoft.com) and then click **Alerts** \> **View alerts**. 
+To view alerts, go to [https://protection.office.com](https://protection.office.com) and then click **Alerts** \> **View alerts**. 
   
 ![In the security and compliance, click Alerts, then click View alerts to view alerts](media/ec5ea59b-bf61-459f-8b65-970ab4bb8bcc.png)
   

@@ -30,8 +30,22 @@ There are two requirements to access file plan manager, they are:
     - Retention Manager
     - View-only Retention Manager
 
+## Default retention labels and label policy
+
+If there are no retention labels in the Security & Compliance Center, the first time you choose **File plan** in the left nav, this creates a label policy called **Default Data Governance Publishing Policy**. 
+
+This label policy contains three retention labels:
+
+- **Operational procedure**
+- **Business general**
+- **Contract agreement**
+
+These retention labels are configured only to retain content, not delete content. This label policy will be published to the entire organization and can be disabled or removed. 
+
+You can determine who opened file plan manager and kicked off the first-run experience by reviewing the audit log for the activities **Created retention policy** and **Created retention configuration for a retention policy**.
+
 > [!NOTE]
-> If there are no retention labels in the Security & Compliance Center, the first time you choose **File plan** in the left nav, this creates a retention policy called **Default Data Governance Publishing Policy**. This retention policy contains three retention labels named **Operational procedure**, **Business general**, and **Contract agreement**. This retention policy will be published to the entire organization and can be disabled or removed. You can determine who opened file plan manager and kicked off the first-run experience by reviewing the audit log for the activities **Created retention policy** and **Created retention configuration for a retention policy**.
+> Due to customer feedback, we have removed this feature that creates the default retention labels and label policy mentioned above. You will only see this policy and labels if you used file plan manager before April 11, 2019.
 
 ## Navigating your file plan
 
