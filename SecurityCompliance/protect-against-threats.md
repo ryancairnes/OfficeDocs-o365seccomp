@@ -37,7 +37,7 @@ Here's a quick-start guide you can use as a checklist to make sure threat protec
 
 ## Part 1 - Anti-malware
 
-Anti-malware protection is available in subscriptions that include [Exchange Online Protection](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description). 
+Anti-malware protection is available in subscriptions that include [Exchange Online Protection](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description) (EOP). 
 
 1. In the [Security & Compliance Center](https://protection.office.com), choose **Threat management** > **Policy** > **Anti-malware**.
 2. Double-click the **Default** policy, and then choose **settings**.
@@ -50,7 +50,7 @@ To learn more about anti-malware policy options, see [Configure anti-malware pol
 
 ## Part 2 - Zero-day protection
 
-Zero-day protection is available in subscriptions that include [Office 365 Advanced Threat Protection](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description) (ATP), and is set up through s[ATP Safe Links](atp-safe-links.md) and [ATP Safe Attachments](atp-safe-attachments.md) policies.
+Zero-day protection is available in subscriptions that include [Office 365 Advanced Threat Protection](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description) (ATP), and is set up through [ATP Safe Links](atp-safe-links.md) and [ATP Safe Attachments](atp-safe-attachments.md) policies.
 
 ### ATP Safe Attachments policies
 
