@@ -84,7 +84,7 @@ The first step is to download and install the Azure AzCopy tool, which is the to
 > [!IMPORTANT]
 > To import PST files using the network upload method, we recommend that you use the version of Azure AzCopy that can be downloaded in step 6b in the following procedure.
   
-1. Go to [https://protection.office.com](https://protection.office.com) and sign in using the credentials for an administrator account in your Office 365 organization. 
+1. Go to [https://compliance.microsoft.com](https://compliance.microsoft.com) and sign in using the credentials for an administrator account in your Office 365 organization. 
     
 2. In the left pane of the Security & Compliance Center, click **Data governance** \> **Import**.
     
@@ -233,7 +233,7 @@ After the PST files have been uploaded to the Azure storage location for your Of
 
 The next step is to create the PST Import job in the Import service in Office 365. As previously explained, you will submit the PST Import mapping file that you created in Step 4. After you create the new job, Office 365 analyzes the data in the PST files and then gives you an opportunity to filter the data that actually gets imported to the mailboxes specified in the PST import mapping file (see [Step 6](#step-6-filter-data-and-start-the-pst-import-job)).
   
-1. Go to [https://protection.office.com](https://protection.office.com) and sign in using the credentials for an administrator account in your Office 365 organization. 
+1. Go to [https://compliance.microsoft.com](https://compliance.microsoft.com) and sign in using the credentials for an administrator account in your Office 365 organization. 
     
 2. In the left pane of the Security & Compliance Center, click **Data governance** and then click **Import**.
     
