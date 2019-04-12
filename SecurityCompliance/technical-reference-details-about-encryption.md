@@ -3,7 +3,7 @@ title: "Technical reference details about encryption in Office 365"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.date: 1/15/2019
+ms.date: 03/29/2019
 ms.audience: ITPro
 ms.topic: reference
 ms.service: O365-seccomp
@@ -50,7 +50,7 @@ Transport Layer Security (TLS), and SSL that came before TLS, are cryptographic 
 ## Deprecating support for TLS 1.0 and 1.1 and what this means for you
 <a name="TLS11and12deprecation"> </a>
 
-As of October 31, 2018, Office 365 will no longer support TLS 1.0 and 1.1. This means that Microsoft will not fix new issues that are found in clients, devices, or services that connect to Office 365 by using TLS 1.0 and 1.1.
+Since October 31, 2018, Office 365 no longer supports TLS 1.0 and 1.1. This means that Microsoft will not fix new issues that are found in clients, devices, or services that connect to Office 365 by using TLS 1.0 and 1.1.
 
 Note This doesn't mean Office 365 will block TLS 1.0 and 1.1 connections. There is no official date for disabling or removing TLS 1.0 and 1.1 in the TLS service for customer connections. The eventual deprecation date will be determined by customer telemetry and is not yet known. After a decision is made, there will be an announcement six months in advance unless we become aware of a known compromise, in which case we may have to act in less than six months to protect customers who use the services.
 
@@ -59,26 +59,12 @@ You should make sure that all client-server and browser-server combinations use 
 ## Deprecating support for 3DES
 <a name="TLS11and12deprecation"> </a>
 
-As of October 31, 2018, Office 365 will no longer support the use of 3DES cipher suites for communication to Office 365. More specifically, Office 365 will no longer support the TLS_RSA_WITH_3DES_EDE_CBC_SHA cipher suite. Clients and servers communicating with O365 after this date must support at least one of the more secure ciphers listed in this topic (see [TLS cipher suites supported by Office 365](technical-reference-details-about-encryption.md#TLSCipherSuites)).
+Since October 31, 2018, Office 365 no longer supports the use of 3DES cipher suites for communication to Office 365. More specifically, Office 365 no longer supports the TLS_RSA_WITH_3DES_EDE_CBC_SHA cipher suite. Since February 28, 2019, this cipher suite is being disabled in Office 365. Clients and servers communicating with O365 after this date must support at least one of the more secure ciphers listed in this topic (see [TLS cipher suites supported by Office 365](technical-reference-details-about-encryption.md#TLSCipherSuites)).
   
 ## Deprecating SHA-1 certificate support in Office 365
 <a name="TLS11and12deprecation"> </a>
 
 As of June 2016, Office 365 no longer accepts a SHA-1 certificate for outbound or inbound connections. If you are currently using a certificate with SHA-1 in the certificate chain, you will need to update the chain to use SHA-2 (Secure Hash Algorithm 2) or a stronger hashing algorithm.
-  
-## Deprecating RC4 support in Office 365
-<a name="TLS11and12deprecation"> </a>
-
-In July 2015, support for the following RC4 cipher suites was discontinued:
-  
-- TLS_RSA_WITH_RC4_128_SHA
-    
-- TLS_RSA_WITH_RC4_128_MD5
-    
-## Deprecating Secure Sockets Layer (SSL) 3.0 support in Office 365
-<a name="TLS11and12deprecation"> </a>
-
-Starting December 1, 2014, Office 365 began disabling support for Secure Sockets Layer (SSL) 3.0, the predecessor to TLS. For more information, see [Security advisory 3009008](https://technet.microsoft.com/library/security/3009008.aspx). For instructions on how to ensure clients are using TLS 1.0 or higher and to disable SSL 3.0, see [Protecting SSL 3.0 vulnerability](http://blogs.office.com/2014/10/29/protecting-ssl-3-0-vulnerability/).
   
 ## TLS cipher suites supported by Office 365
 <a name="TLSCipherSuites"> </a>

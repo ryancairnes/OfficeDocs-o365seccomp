@@ -11,11 +11,10 @@ manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance  
 ms.topic: article
+search.appverid: met150
 ---
 
 # Monitor and report identities in Microsoft 365 security
-
-[!include[Prerelease�information](prerelease.md)]
 
 You can monitor the identities in your organization and keep track of suspicious or risky behaviors. In the **Identities** category of **Monitoring & reports**, you can track:
 

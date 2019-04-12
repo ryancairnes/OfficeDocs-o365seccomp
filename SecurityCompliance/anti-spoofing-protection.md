@@ -3,7 +3,7 @@ title: "Anti-spoofing protection in Office 365"
 ms.author: tracyp
 author: MSFTtracyp
 manager: laurawi
-ms.date: 3/6/2019
+ms.date: 03/29/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -405,34 +405,6 @@ This feature is currently under development. As more details are defined, this p
   
 ![Possible UX for allowing a spoofed sender](media/53f9f73e-fb01-47f3-9a6d-850c1aef5efe.jpg)
   
-### Understanding how spam, phishing, and advanced phishing detections are combined
-
-Organizations that use Exchange Online, with or without ATP, can specify which actions to take when the service identifies messages as malware, spam, high confidence spam, phishing, and bulk. With the ATP Anti-phishing policies for ATP customers, and the Anti-phishing policies for EOP customers, and the fact that a message may hit multiple detection types (for example, malware, phishing, and user-impersonation), there may be some confusion as to which policy applies.
-  
-In general, the policy applied to a message is identified in the X-Forefront-Antispam-Report header in the CAT (Category) property.
-  
-|**Priority**|**Policy**|**Category**|**Where managed?**|**Applies to**|
-|:-----|:-----|:-----|:-----|:-----|
-|1  <br/> |Malware  <br/> |MALW  <br/> |[Malware policy](configure-anti-malware-policies.md) <br/> |All organizations  <br/> |
-|2  <br/> |Phishing  <br/> |PHSH  <br/> |[Configure your spam filter policies](configure-your-spam-filter-policies.md) <br/> |All organizations  <br/> |
-|3  <br/> |High confidence spam  <br/> |HSPM  <br/> |[Configure your spam filter policies](configure-your-spam-filter-policies.md) <br/> |All organizations  <br/> |
-|4  <br/> |Spoofing  <br/> |SPOOF  <br/> |[Anti-phishing policy](https://go.microsoft.com/fwlink/?linkid=864553), [Spoof intelligence](learn-about-spoof-intelligence.md) <br/> |All organizations  <br/> |
-|5  <br/> |Spam  <br/> |SPM  <br/> |[Configure your spam filter policies](configure-your-spam-filter-policies.md) <br/> |All organizations  <br/> |
-|6  <br/> |Bulk  <br/> |BULK  <br/> |[Configure your spam filter policies](configure-your-spam-filter-policies.md) <br/> |All organizations  <br/> |
-|7  <br/> |Domain Impersonation  <br/> |DIMP  <br/> |[Set up Office 365 ATP anti-phishing and anti-phishing policies](set-up-anti-phishing-policies.md) <br/> |Organizations with ATP only  <br/> |
-|8  <br/> |User Impersonation  <br/> |UIMP  <br/> |[Set up Office 365 ATP anti-phishing and anti-phishing policies](set-up-anti-phishing-policies.md) <br/> |Organizations with ATP only <br/> |
-
-If you have multiple different Anti-phishing policies, the one at the highest priority will apply. For example, suppose you have two policies:
-
-|**Policy**|**Priority**|**User/Domain Impersonation**|**Anti-spoofing**|
-|:-----|:-----|:-----|:-----|
-|A  <br/> |1  <br/> |On  <br/> |Off  <br/> |
-|B  <br/> |2  <br/> |Off  <br/> |On  <br/> |
-
-If a message comes in and is identified as both spoofing and user impersonation, and the same set of users is scoped to Policy A and Policy B, then the message is treated as a spoof but no action is applied since Anti-spoofing is turned off, and SPOOF runs at a higher priority (4) than User Impersonation (8).
-  
-To make other types of phishing policy apply, you will need to adjust the settings of who the various policies are applied to.
-  
 ### Legitimate scenarios to disable anti-spoofing
 
 Anti-spoofing better protects customers from phishing attacks, and therefore disabling anti-spoofing protection is strongly discouraged. By disabling it, you may resolve some short-term false positives, but long term you will be exposed to more risk. The cost for setting up authentication on the sender side, or making adjustments in the phishing policies, are usually one-time events or require only minimal, periodic maintenance. However, the cost to recover from a phishing attack where data has been exposed, or assets have been compromised is much higher.
@@ -644,7 +616,7 @@ Once you've gotten started with an SPF record with a fallback policy of ?all, yo
   
 ### What if you are the owner of a mailing list?
 
-See the section [Common scenario #2 - Discussion lists](#common-scenario-2---discussion-lists).
+See the section [Common scenario #1 - Discussion lists](#common-scenario-1---discussion-lists).
   
 ### What if you are an infrastructure provider such as an Internet Service Provider (ISP), Email Service Provider (ESP), or cloud hosting service?
 

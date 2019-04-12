@@ -86,7 +86,7 @@ The next step is to use the CSV file that you created in Step 1 and PowerShell t
     The imported contacts will appear in the shared address book in Outlook and Outlook on the web.
     
     > [!NOTE]
-    > You can also view the contacts in the Office 365 admin center by going to **Users** \> **Contacts**. 
+    > You can also view the contacts in the Microsoft 365 admin center by going to **Users** \> **Contacts**. 
 
 ## Step 3: Add information to the properties of the external contacts
 

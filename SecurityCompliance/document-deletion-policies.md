@@ -3,7 +3,7 @@ title: "Overview of document deletion policies"
 ms.author: stephow
 author: stephow-MSFT
 manager: laurawi
-ms.date: 6/12/2017
+ms.date: 
 ms.audience: Admin
 ms.topic: overview
 ms.service: O365-seccomp
@@ -17,7 +17,7 @@ description: "Your organization may be required to retain documents for a period
 # Overview of document deletion policies
 
 > [!IMPORTANT]
-> Moving forward, we recommend that you use a retention policy or labels created in the Security &amp; Compliance Center instead of a document deletion policy. Document deletion policies will continue to work side by side with retention policies, but if you need to retain or delete content anywhere in Office 365, we recommend that you use a retention policy. For more information, see [Use a retention policy instead of these features](retention-policies.md#use-a-retention-policy-instead-of-these-features).
+> Moving forward, we recommend that you use a retention policy or labels created in the Microsoft 365 compliance center, Microsoft 365 security center, or Office 365 Security &amp; Compliance Center instead of a document deletion policy. Document deletion policies will continue to work side by side with retention policies, but if you need to retain or delete content anywhere in Office 365, we recommend that you use a retention policy. For more information, see [Use a retention policy instead of these features](retention-policies.md#use-a-retention-policy-instead-of-these-features).
   
 Your organization may be required to retain documents for a period of time because of compliance, legal, or other business requirements. However, if your organization keeps documents longer than required, you create unnecessary legal risk. With a document deletion policy, you can proactively reduce risk by deleting documents in a site after a specific period of time—for example, you can delete documents in users' OneDrive for Business sites five years after the documents were created.
   
@@ -31,7 +31,7 @@ Document deletion policies are powerful yet flexible—for example, you can:
     
 - Create a policy that includes several deletion rules that a site owner can choose from.
     
-You create and manage document deletion policies by using the Document Deletion Policy Center, which you can find under **Retention** in the Office 365 Security &amp; Compliance Center. Alternatively, you can create the policy center manually by [creating the site collection](https://go.microsoft.com/fwlink/p/?LinkID=404342) and choosing **Compliance Policy Center** on the **Enterprise** tab. Each tenant can have only one Document Deletion Policy Center, and it'll be created automatically if you start from the Security &amp; Compliance Center. 
+You create and manage document deletion policies by using the Document Deletion Policy Center. Alternatively, you can create the policy center manually by [creating the site collection](https://go.microsoft.com/fwlink/p/?LinkID=404342) and choosing **Compliance Policy Center** on the **Enterprise** tab. Each tenant can have only one Document Deletion Policy Center. 
   
 ![Home page of Document Deletion Policy Center](media/IP-Document-Deletion-Policy-Center-home-page.png)
   

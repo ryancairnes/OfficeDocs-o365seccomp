@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 localization_priority: Normal
 search.appverid: MOE150
 ms.assetid: 67cc7f42-a53d-4751-b929-6005c80798f7
-description: "Learn how to search the Office 365 audit log for events that are logged when compliance administrators perform Content Search and eDiscovery case tasks in the Security &amp; Compliance Center."
+description: "Learn how to search the Office 365 audit log for events that are logged when compliance administrators perform Content Search and eDiscovery case tasks in the Security & Compliance Center."
 ---
 
 # Search for eDiscovery activities in the Office 365 audit log
 
-Content Search and eDiscovery-related activities that are performed in Office 365 Security &amp; Compliance Center or by running the corresponding Windows PowerShell cmdlets are logged in the Office 365 audit log. Events are logged when administrators or compliance administrators (or any user that's assigned eDiscovery permissions) perform the following Content Search and eDiscovery-related tasks in the Office 365 Security &amp; Compliance Center:
+Content Search and eDiscovery-related activities that are performed in Security & Compliance Center or by running the corresponding Windows PowerShell cmdlets are logged in the Office 365 audit log. Events are logged when administrators or compliance administrators (or any user that's assigned eDiscovery permissions) perform the following Content Search and eDiscovery-related tasks in the Security & Compliance Center:
   
 - Creating and managing eDiscovery cases
     
@@ -29,19 +29,19 @@ Content Search and eDiscovery-related activities that are performed in Office 36
 - Managing the eDiscovery Administrator role
     
 > [!IMPORTANT]
-> The activities described in this article are only the result of eDiscovery tasks performed by using the Security &amp; Compliance Center. eDiscovery tasks that were performed by using the In-Place eDiscovery tool in Exchange Online or the eDiscovery Center in SharePoint Online aren't included. 
+> The activities described in this article are only the result of eDiscovery tasks performed by using the Security & Compliance Center. eDiscovery tasks that were performed by using the In-Place eDiscovery tool in Exchange Online or the eDiscovery Center in SharePoint Online aren't included. 
   
-For more information about searching the Office 365 audit log, the permissions that are required, and exporting search results, see [Search the audit log in the Office 365 Security &amp; Compliance Center](search-the-audit-log-in-security-and-compliance.md).
+For more information about searching the Office 365 audit log, the permissions that are required, and exporting search results, see [Search the audit log in the Security & Compliance Center](search-the-audit-log-in-security-and-compliance.md).
   
 ## How to search for and view eDiscovery activities
 
 Currently, you have to do a few specific things to view eDiscovery activities in the Office 365 audit log. Here's how.
   
-1. Go to [https://protection.office.com](https://protection.office.com).
+1. Go to [https://compliance.microsoft.com](https://compliance.microsoft.com).
     
 2. Sign in to Office 365 using your work or school account.
     
-3. In the left pane, click **Search &amp; investigation**, and then click **Audit log search**.
+3. In the left pane, click **Search**, and then click **Audit log search**.
     
 4. In the **Activities** drop-down list, under **eDiscovery activities**, click one or more activities to search for. Or you can click **eDiscovery activities** to search for all eDiscovery-related activities. 
     
@@ -63,7 +63,7 @@ Currently, you have to do a few specific things to view eDiscovery activities in
   
 ## eDiscovery activities
 
-The following table describes the Content Search and eDiscovery-related activities that are logged when an administrator or user performs an eDiscovery-related activity by using the Security &amp; Compliance Center or by running the corresponding cmdlet in remote PowerShell that's connected to your organization's Security &amp; Compliance Center. 
+The following table describes the Content Search and eDiscovery-related activities that are logged when an administrator or user performs an eDiscovery-related activity by using the Security & Compliance Center or by running the corresponding cmdlet in remote PowerShell that's connected to your organization's Security & Compliance Center. 
   
 > [!NOTE]
 > The eDiscovery activities described in this section provide similar information to the eDiscovery cmdlet activities described in the next section. We recommend that you use the eDiscovery activities described in this section because they will appear in the audit log search results within 30 minutes. It takes up to 24 hours for the eDiscovery cmdlet activities to appear in audit log search results. 
@@ -100,14 +100,14 @@ The following table describes the Content Search and eDiscovery-related activiti
 |Removed purge action performed on content search  <br/> |RemovedSearchResultsPurged  <br/> |Remove-ComplianceSearchAction  <br/> |A content search purge action was deleted.  <br/> |
 |Removed search report  <br/> |SearchReportRemoved  <br/> |Remove-ComplianceSearchAction  <br/> |A content search export report action was deleted.  <br/> |
 |Started analysis of content search  <br/> |SearchResultsSentToZoom  <br/> |New-ComplianceSearchAction  <br/> |The results of a content search were prepared for analysis in Advanced eDiscovery.  <br/> |
-|Started content search  <br/> |SearchStarted  <br/> |Start-ComplianceSearch  <br/> |A content search was started. When you create or change a content search by using the Security &amp; Compliance Center GUI, the search is automatically started. If you create or change a search by using the **New-ComplianceSearch** or **Set-ComplianceSearch** cmdlet, you have to run the **Start-ComplianceSearch** cmdlet to start the search.  <br/> |
+|Started content search  <br/> |SearchStarted  <br/> |Start-ComplianceSearch  <br/> |A content search was started. When you create or change a content search by using the Security & Compliance Center GUI, the search is automatically started. If you create or change a search by using the **New-ComplianceSearch** or **Set-ComplianceSearch** cmdlet, you have to run the **Start-ComplianceSearch** cmdlet to start the search.  <br/> |
 |Started export of content search  <br/> |SearchExported  <br/> |New-ComplianceSearchAction  <br/> |A user exported the results of a content search.  <br/> |
 |Started export report  <br/> |SearchReport  <br/> |New-ComplianceSearchAction  <br/> |A user exported a content search report.  <br/> |
 |Stopped content search  <br/> |SearchStopped  <br/> |Stop-ComplianceSearch  <br/> |A user stopped a content search.  <br/> |
   
 ## eDiscovery cmdlet activities
 
-The following table lists the cmdlet audit log records that are logged when an administrator or user performs an eDiscovery-related activity by using the Security &amp; Compliance Center or by running the corresponding cmdlet in remote PowerShell that's connected to your organization's Security &amp; Compliance Center. Note that the detailed information in the audit log record is different for the cmdlet activities listed in this table and the eDiscovery activities described in the previous section. 
+The following table lists the cmdlet audit log records that are logged when an administrator or user performs an eDiscovery-related activity by using the Security & Compliance Center or by running the corresponding cmdlet in remote PowerShell that's connected to your organization's Security & Compliance Center. Note that the detailed information in the audit log record is different for the cmdlet activities listed in this table and the eDiscovery activities described in the previous section. 
   
 As previously stated, it takes up to 24 hours for eDiscovery cmdlet activities to appear in the audit log search results.
   
@@ -131,7 +131,7 @@ As previously stated, it takes up to 24 hours for eDiscovery cmdlet activities t
 |Created content search  <br/> |[New-ComplianceSearch](https://go.microsoft.com/fwlink/p/?LinkId=517935) <br/> |A new content search was created.  <br/> |
 |Deleted content search  <br/> |[Remove-ComplianceSearch](https://go.microsoft.com/fwlink/p/?LinkId=517936) <br/> |An existing content search was deleted.  <br/> |
 |Changed content search  <br/> |[Set-ComplianceSearch](https://go.microsoft.com/fwlink/p/?LinkId=517937) <br/> |An existing content search was changed. Changes can include adding or removing content locations that are searched and editing the search query.  <br/> |
-|Started content search  <br/> |[Start-ComplianceSearch](https://go.microsoft.com/fwlink/p/?LinkId=517938) <br/> |A content search was started. When you create or change a content search by using the Security &amp; Compliance Center GUI, the search is automatically started. If you create or change a search by using the **New-ComplianceSearch** or **Set-ComplianceSearch** cmdlet, you have to run the **Start-ComplianceSearch** cmdlet to start the search.  <br/> |
+|Started content search  <br/> |[Start-ComplianceSearch](https://go.microsoft.com/fwlink/p/?LinkId=517938) <br/> |A content search was started. When you create or change a content search by using the Security & Compliance Center GUI, the search is automatically started. If you create or change a search by using the **New-ComplianceSearch** or **Set-ComplianceSearch** cmdlet, you have to run the **Start-ComplianceSearch** cmdlet to start the search.  <br/> |
 |Stopped content search  <br/> |[Stop-ComplianceSearch](https://go.microsoft.com/fwlink/p/?LinkId=517939) <br/> |A content search that was running was stopped.  <br/> |
 |Created content search action  <br/> |[New-ComplianceSearchAction](https://go.microsoft.com/fwlink/p/?LinkId=527971) <br/> |A content search action was created. Content search actions include previewing search results, exporting search results, preparing search results for analysis in Office 365 Advanced eDiscovery, and permanently deleting items that match the search criteria of a content search.  <br/> |
 |Deleted content search action  <br/> |[Remove-ComplianceSearchAction](https://go.microsoft.com/fwlink/p/?LinkId=824027) <br/> |A content search action was deleted.  <br/> |
@@ -147,15 +147,15 @@ As previously stated, it takes up to 24 hours for eDiscovery cmdlet activities t
 The following table describes the properties that are included when you click **More information** on the **Details** page for an eDiscovery activity listed in the search results. These properties are also included in the CSV file when you export the audit log search results. Note that an audit log record for an eDiscovery activity won't include every detailed property listed below. 
   
 > [!TIP]
-> When you export the search results, the CSV file contains a column named **Detail**, which contains the detailed properties described in the following table in a multi-value property. You can use the Power Query feature in Excel to split this column into multiple columns so that each property will have its own column. This will let you sort and filter on one or more of these properties. For more information, see the "Export the search results to a file" section in [Search the audit log in the Office 365 Security & Compliance Center ](search-the-audit-log-in-security-and-compliance.md#step-4-export-the-search-results-to-a-file). 
+> When you export the search results, the CSV file contains a column named **Detail**, which contains the detailed properties described in the following table in a multi-value property. You can use the Power Query feature in Excel to split this column into multiple columns so that each property will have its own column. This will let you sort and filter on one or more of these properties. For more information, see the "Export the search results to a file" section in [Search the audit log](search-the-audit-log-in-security-and-compliance.md#step-4-export-the-search-results-to-a-file). 
   
 |**Property**|**Description**|
 |:-----|:-----|
 |Case  <br/> |The identity (GUID) of the eDiscovery case that was created, changed, or deleted.  <br/> |
-|ClientApplication  <br/> |eDiscovery cmdlet activities have a value of **EMC** for this property. This indicates the activity was performed by using the Security &amp; Compliance Center GUI or running the cmdlet in PowerShell.  <br/> |
+|ClientApplication  <br/> |eDiscovery cmdlet activities have a value of **EMC** for this property. This indicates the activity was performed by using the Security & Compliance Center GUI or running the cmdlet in PowerShell.  <br/> |
 |ClientIP  <br/> |The IP address of the device that was used when the activity was logged. The IP address is displayed in either an IPv4 or IPv6 address format.  <br/> |
 |ClientRequestId  <br/> | For eDiscovery activities, this property is typically blank.  <br/> |
-|CmdletVersion  <br/> |The build number for the version of the Security &amp; Compliance Center running in your organization.  <br/> |
+|CmdletVersion  <br/> |The build number for the version of the Security & Compliance Center running in your organization.  <br/> |
 |CreationTime  <br/> |The date and time in Coordinated Universal Time (UTC) when the eDiscovery activity was completed.  <br/> |
 |EffectiveOrganization  <br/> |The name of the your Office 365 organization.  <br/> |
 |ExchangeLocations  <br/> |The Exchange Online mailboxes that are included in a content search or placed on hold in an eDiscovery case.  <br/> |
@@ -172,7 +172,7 @@ The following table describes the properties that are included when you click **
 |Query  <br/> |The search query associated with the activity, such as a content search or a query-based hold.  <br/> |
 |RecordType  <br/> |The type of operation indicated by the record. The value of **18** indicates an event related to an activity listed in the [eDiscovery cmdlet activities](#ediscovery-cmdlet-activities) section. A value of **24** indicates an event related to an activity listed in the [How to search for and view eDiscovery activities](#how-to-search-for-and-view-ediscovery-activities) section.  <br/> |
 |ResultStatus  <br/> |Indicates whether the action (specified in the Operation property) was successful or not.  <br/> |
-|SecurityComplianceCenterEventType  <br/> |Indicates that the activity was a Security &amp; Compliance Center event. All eDiscovery activities will have a value of **0** for this property.  <br/> |
+|SecurityComplianceCenterEventType  <br/> |Indicates that the activity was a Security & Compliance Center event. All eDiscovery activities will have a value of **0** for this property.  <br/> |
 |SharepointLocations  <br/> |The SharePoint Online sites that are included in a content search or placed on hold in an eDiscovery case.  <br/> |
 |StartTime  <br/> |The date and time in Coordinated Universal Time (UTC) when the eDiscovery activity was started.  <br/> |
 |UserId  <br/> |The user who performed the activity (specified in the Operation property) that resulted in the record being logged. Note that records for eDiscovery activity performed by system accounts (such as NT AUTHORITY\SYSTEM) are also included in the audit log.  <br/> |

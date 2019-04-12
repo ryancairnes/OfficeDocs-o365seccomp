@@ -1,5 +1,5 @@
 ---
-title: "Limits for Content Search in the Office 365 Security &amp; Compliance Center"
+title: "Limits for Content Search in the Security & Compliance Center"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -14,19 +14,19 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 78fe3147-1979-4c41-83bb-aeccf244368d
-description: "Learn about the limits in effect for the Content Search feature in the Office 365 Security &amp; Compliance Center, such as the maximum number of simultaneous searches. "
+description: "Learn about the limits in effect for the Content Search feature in the Security & Compliance Center in Office 365, such as the maximum number of simultaneous searches. "
 ---
 
-# Limits for Content Search in the Office 365 Security &amp; Compliance Center
+# Limits for Content Search in the Security & Compliance Center
 
 > [!NOTE]
 > The limits in this topic are different from the current limits for In-Place eDiscovery in Exchange Online and for the eDiscovery Center in SharePoint Online. 
   
-Various limits are applied to the Content Search feature in the Office 365 Security &amp; Compliance Center. This include searches run on the **Content search** page and searches that are associated with an eDiscovery case. These limits help to maintain the health and quality of services provided to Office 365 organizations. There are also limits related to the indexing of email messages in Exchange Online for search. You can't modify the Content Search or email indexing limits, but you should be aware of them so that you can take these limits into consideration when planning, running, and troubleshooting Content Searches. 
+Various limits are applied to the Content Search feature in the Security & Compliance Center. This include searches run on the **Content search** page and searches that are associated with an eDiscovery case. These limits help to maintain the health and quality of services provided to Office 365 organizations. There are also limits related to the indexing of email messages in Exchange Online for search. You can't modify the Content Search or email indexing limits, but you should be aware of them so that you can take these limits into consideration when planning, running, and troubleshooting Content Searches. 
   
 ## Content Search limits
 
-The following table lists the search limits in the Security &amp; Compliance Center.
+The following table lists the search limits in the Security & Compliance Center.
   
 |**Description of limit**|**Limit**|
 |:-----|:-----|

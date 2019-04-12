@@ -1,9 +1,9 @@
 ---
-title: "Protect SharePoint Online files with Office 365 labels and DLP"
+title: "Protect SharePoint Online files with retention labels and DLP"
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/12/2018
+ms.date: 03/29/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -16,29 +16,29 @@ ms.collection:
 ms.custom:
 - Ent_Solutions
 ms.assetid: c9f837af-8d71-4df1-a285-dedb1c5618b3
-description: "Summary: Apply Office 365 labels and data loss prevention (DLP) policies for SharePoint Online team sites with various levels of information protection."
+description: "Summary: Apply retention labels and data loss prevention (DLP) policies for SharePoint Online team sites with various levels of information protection."
 ---
 
-# Protect SharePoint Online files with Office 365 labels and DLP
+# Protect SharePoint Online files with retention labels and DLP
 
- **Summary:** Apply Office 365 labels and data loss prevention (DLP) policies for SharePoint Online team sites with various levels of information protection.
+ **Summary:** Apply retention labels and data loss prevention (DLP) policies for SharePoint Online team sites with various levels of information protection.
   
-Use the steps in this article to design and deploy Office 365 labels and DLP policies for baseline, sensitive, and highly confidential SharePoint Online team sites. For more information about these three tiers of protection, see [Secure SharePoint Online sites and files](secure-sharepoint-online-sites-and-files.md).
+Use the steps in this article to design and deploy retention labels and DLP policies for baseline, sensitive, and highly confidential SharePoint Online team sites. For more information about these three tiers of protection, see [Secure SharePoint Online sites and files](secure-sharepoint-online-sites-and-files.md).
   
 ## How this works
-1. Create the desired labels and publish these. It can take up to 12 hours for these to be published.
-2. For the desired SharePoint sites, edit the document library settings to apply a label to items in the library.
-3. Create DLP policies to take action based on the labels.
+1. Create the desired retention labels and publish these. It can take up to 12 hours for these to be published.
+2. For the desired SharePoint sites, edit the document library settings to apply the desired retention labels to items in the library.
+3. Create DLP policies to take action based on the retention labels.
 
-When users add a document to the library, the document will receive the assigned label by default. Users can change the label, if needed. When a user shares a document outside the organization, DLP will check to see if a label is assigned and take action if a DLP policy matches the label. DLP will look for other policy matches as well, such as protecting files with credit card numbers if this type of policy is configured. 
+When users add a document to the library, the document will receive the assigned retention label by default. Users can change the label, if needed. When a user shares a document outside the organization, DLP will check to see if a label is assigned and take action if a DLP policy matches the label. DLP will look for other policy matches as well, such as protecting files with credit card numbers if this type of policy is configured. 
 
-## Office 365 labels for your SharePoint Online sites
+## Retention labels for your SharePoint Online sites
 
-There are three phases to creating and then assigning Office 365 labels to SharePoint Online team sites.
+There are three phases to creating and then assigning retention labels to SharePoint Online team sites.
   
-### Phase 1: Determine the Office 365 label names
+### Phase 1: Determine the retention label names
 
-In this phase, you determine the names of your Office 365 labels for the four levels of information protection applied to SharePoint Online team sites. The following table lists the recommended names for each level.
+In this phase, you determine the names of your retention labels for the four levels of information protection applied to SharePoint Online team sites. The following table lists the recommended names for each level.
   
 |**SharePoint Online team site protection level**|**Label name**|
 |:-----|:-----|
@@ -47,52 +47,36 @@ In this phase, you determine the names of your Office 365 labels for the four le
 |Sensitive  <br/> |Sensitive  <br/> |
 |Highly Confidential  <br/> |Highly Confidential  <br/> |
    
-### Phase 2: Create the Office 365 labels
+### Phase 2: Create the retention labels
 
 In this phase, you create and then publish your determined labels for the different levels of information protection.
   
-To create the labels, you can use the Office 365 Admin center or Microsoft PowerShell.
-  
-### Create Office 365 labels with the Office 365 Admin center
+1. Sign in to the [Microsoft 365 security portal](https://security.microsoft.com) with an account that has the Security Administrator or Company Administrator role.
+    
+2. From the **Home - Microsoft 365 Security** tab of your browser, click **Classifications > Labels**.
+    
+3. Click **Retention labels > Create a label**.
+    
+4. On the **Name your label** pane, type the name of the label and a description for admins and users, and then click **Next**.
 
-1. Sign in to the Office 365 portal with an account that has the Security Administrator or Company Administrator role. For help, see [Where to sign in to Office 365](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4).
+5. On the **File plan descriptors** pane, fill in as needed, and then click **Next**.
     
-2. From the **Microsoft Office Home** tab, click the **Admin** tile.
+6. On the **Label settings** pane, if needed, set **Retention** to **On** and configure retention settings. Click **Next**.
     
-3. From the new **Office Admin center** tab of your browser, click **Admin centers > Security &amp; Compliance**.
+7. On the **Review your settings** pane, click **Create the label**.
     
-4. From the new **Home - Security &amp; Compliance** tab of your browser, click **Classifications > Labels**.
+8. For your additional labels, click **Create a label**, and then repeat steps 4-7..
     
-5. From the **Home > Labels** pane, click the **Retention** tab, and then click **Create a label**.
-    
-6. On the **Name your label** pane, type the name of the label and a description for admins and users, and then click **Next**.
-
-7. On the **Label settings** pane, click **Next**.
-    
-8. On the **Review your settings** pane, click **Create**, and then click **Close**.
-    
-9. Repeat steps 5-8 for your additional labels.
-    
-### Create Office 365 labels with PowerShell
-
-1. [Connect to the Office 365 Security &amp; Compliance Center using remote PowerShell](http://go.microsoft.com/fwlink/?LinkID=799771&amp;clcid=0x409) and specify the credentials of an account that has the Security Administrator or Company Administrator role.
-    
-2. Fill out the list of label names, and then run these commands at the PowerShell command prompt:
-    
-  ```
-  $labelNames=@(<list of label names, each enclosed in quotes and separated by commas>)
-ForEach ($element in $labelNames){ New-ComplianceTag -Name $element }
-  ```
 
 ### Publish your new labels
 
-Next, use these steps to publish the new Office 365 labels.
+Next, use these steps to publish the new retention labels.
   
-1. From the **Home > Labels** pane of the Security &amp; Compliance Center, click the **Retention** tab, and then click **Publish labels**.
+1. From the **Labels** pane, click the **Retention labels** tab, and then click **Publish labels**.
     
 2. On the **Choose labels to publish** pane, click **Choose labels to publish**.
     
-3. On the **Choose labels** pane, click **Add** and select all four labels.
+3. On the **Choose labels** pane, click **Add**, select all four labels, click **Add**.
     
 4. Click **Done**.
     
@@ -105,13 +89,13 @@ Next, use these steps to publish the new Office 365 labels.
 8. On the **Review your settings** pane, click **Publish labels**, and then click **Close**.
 
     
-### Phase 3: Apply the Office 365 labels to your SharePoint Online sites
+### Phase 3: Apply the retention labels to your SharePoint Online sites
 
-Use these steps to apply the Office 365 labels to the documents folders of your SharePoint Online team sites.
+Use these steps to apply the retention labels to the documents folders of your SharePoint Online team sites.
   
-1. From the **Microsoft Office Home** tab of your browser, click the **SharePoint** tile.
+1. Sign in to the [Office 365 portal](https://www.office.com), click the **SharePoint** app.
     
-2. On the new **SharePoint** tab in your browser, click a site that needs an Office 365 label assigned.
+2. On the new **SharePoint** tab in your browser, click a site that needs a retention label assigned.
     
 3. In the new SharePoint site tab of your browser, click **Documents**.
     
@@ -119,41 +103,39 @@ Use these steps to apply the Office 365 labels to the documents folders of your 
     
 5. Under **Permissions and Management**, click **Apply label to items in this library**.
     
-6. In **Settings-Apply Label**, select the appropriate label, and then click **Save**.
+6. In **Settings-Apply Label**, select the appropriate retention label, and then click **Save**.
     
 7. Close the tab for the SharePoint Online site.
     
-8. Repeat steps 3-8 to assign Office 365 labels to your additional SharePoint Online sites.
+8. Repeat steps 2-8 to assign retention labels to your additional SharePoint Online sites.
     
 Here is your resulting configuration.
   
-![Office 365 labels for the four types of SharePoint Online team sites.](media/e0a4fdd2-1c30-4d93-8af4-a6f0c6c29966.png)
+![retention labels for the four types of SharePoint Online team sites.](media/e0a4fdd2-1c30-4d93-8af4-a6f0c6c29966.png)
   
 ## DLP policies for your SharePoint Online sites
 
 Use these steps to configure a DLP policy that notifies users when they share a document on a SharePoint Online sensitive team site outside the organization.
 
-1. From the **Microsoft Office Home** tab, click the **Admin** tile.
+1. Sign in to the [Microsoft 365 compliance portal](https://compliance.microsoft.com/) with an account that has the Security Administrator or Company Administrator role.
     
-2. From the new **Office Admin center** tab of your browser, click **Admin centers > Security &amp; Compliance**.
+2. On the new **Microsoft 365 compliance** tab in your browser, click **Policies > Data loss prevention**.
     
-3. On the new **Security &amp; Compliance** tab in your browser, click **Data loss prevention > Policy**.
+3. In the **Home > Data loss prevention** pane, click **Create a policy**.
     
-4. In the **Data loss prevention** pane, click **+ Create a policy**.
-    
-5. In the **Start with a template or create a custom policy** pane, click **Custom**, and then click **Next**.
+4. In the **Start with a template or create a custom policy** pane, click **Custom**, and then click **Next**.
     
 5. In the **Name your policy** pane, type the name for the sensitive level DLP policy in **Name**, and then click **Next**.
     
 6. In the **Choose locations** pane, click **Let me choose specific locations**, and then click **Next**.
     
-7. In the list of locations, disable the **Exchange email** and **OneDrive accounts** locations, and then click **Next**.
+7. In the list of locations, disable the **Exchange email**, **OneDrive accounts**, and **Teams chat and channel messages** locations, and then click **Next**.
     
 8. In the **Customize the type of content you want to protect** pane, click **Edit**.
     
-9. In the **Choose the types of content to protect** pane, click **Add** in the drop-down box, and then click **Labels**.
+9. In the **Choose the types of content to protect** pane, click **Add** in the drop-down box, and then click **Retention labels**.
     
-10. In the **Labels** pane, click **+ Add**, select the **Sensitive** label, click **Add**, and then click **Done**.
+10. In the **Retention labels** pane, click **Add**, select the **Sensitive** label, click **Add**, and then click **Done**.
     
 11. In the **Choose the types of content to protect** pane, click **Save**.
     
@@ -180,31 +162,29 @@ Use these steps to configure a DLP policy that notifies users when they share a 
     
 Here is your resulting configuration for sensitive SharePoint Online team sites.
   
-![DLP policy for an isolated SharePoint Online team site using the Sensitive Office 365 label.](media/2ff4cc53-87a8-43e3-b637-3068d88409f3.png)
+![DLP policy for an isolated SharePoint Online team site using the Sensitive retention label.](media/2ff4cc53-87a8-43e3-b637-3068d88409f3.png)
   
 Next, use these steps to configure a DLP policy that blocks users when they share a document on a SharePoint Online highly confidential team site outside the organization.
   
-1. From the **Microsoft Office Home** tab in your browser, click the **Security &amp; Compliance** tile.
+1. On the new **Microsoft 365 compliance** tab in your browser, click **Policies > Data loss prevention**.
     
-2. On the new **Security &amp; Compliance** tab in your browser, click **Data loss prevention > Policy**.
+2. In the **Data loss prevention** pane, click **Create a policy**.
     
-3. In the **Data loss prevention** pane, click **+ Create a policy**.
+3. In the **Start with a template or create a custom policy** pane, click **Custom**, and then click **Next**.
     
-4. In the **Start with a template or create a custom policy** pane, click **Custom**, and then click **Next**.
+4. In the **Name your policy** pane, type the name for the highly sensitive level DLP policy in **Name**, and then click **Next**.
     
-5. In the **Name your policy** pane, type the name for the highly sensitive level DLP policy in **Name**, and then click **Next**.
+5. In the **Choose locations** pane, click **Let me choose specific locations**, and then click **Next**.
     
-6. In the **Choose locations** pane, click **Let me choose specific locations**, and then click **Next**.
+6. In the list of locations, disable the **Exchange email**, **OneDrive accounts**, and **Teams chat and channel messages** locations, and then click **Next**.
     
-7. In the list of locations, disable the **Exchange email** and **OneDrive accounts** locations, and then click **Next**.
+7. In the **Customize the types of sensitive info you want to protect** pane, click **Edit**.
     
-8. In the **Customize the types of sensitive info you want to protect** pane, click **Edit**.
+8. In the **Choose the types of content to protect** pane, click **Add** in the drop-down box, and then click **Retention labels**.
     
-9. In the **Choose the types of content to protect** pane, click **Add** in the drop-down box, and then click **Labels**.
+9. In the **Retention labels** pane, click **Add**, select the **Highly Confidential** label, click **Add**, and then click **Done**.
     
-10. In the **Labels** pane, click **+ Add**, select the **Highly Confidential** label, click **Add**, and then click **Done**.
-    
-11. In the **Choose the types of content to protect** pane, click **Save**.
+10. In the **Choose the types of content to protect** pane, click **Save**.
     
 12. In the **Customize the types of sensitive info you want to protect** pane, click **Next**.
     
@@ -228,7 +208,7 @@ Next, use these steps to configure a DLP policy that blocks users when they shar
     
 Here is your resulting configuration for high confidentiality SharePoint Online team sites.
   
-![DLP policy for an isolated SharePoint Online team site using the Highly Confidential Office 365 label.](media/f705d3d0-23c9-4333-8b70-ad3b91f835ea.png)
+![DLP policy for an isolated SharePoint Online team site using the Highly Confidential retention label.](media/f705d3d0-23c9-4333-8b70-ad3b91f835ea.png)
   
 ## Next step
 
@@ -237,8 +217,6 @@ Here is your resulting configuration for high confidentiality SharePoint Online 
 ## See Also
 
 [Secure SharePoint Online sites and files](secure-sharepoint-online-sites-and-files.md)
-  
-[Secure SharePoint Online sites in a dev/test environment](secure-sharepoint-online-sites-in-a-dev-test-environment.md)
   
 [Microsoft Security Guidance for Political Campaigns, Nonprofits, and Other Agile Organizations](microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-o.md)
   

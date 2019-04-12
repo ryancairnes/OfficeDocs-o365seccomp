@@ -11,11 +11,10 @@ manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance  
 ms.topic: article
+search.appverid: met150
 ---
 
 # Monitor and report data in Microsoft 365 security
-
-[!include[Prerelease�information](prerelease.md)]
 
 The **Data** category helps track user activity that could lead to unauthorized data disclosure. These are the rework of existing Office 365 DLP policy reports plus a 3rd party DLP policy match report.
 

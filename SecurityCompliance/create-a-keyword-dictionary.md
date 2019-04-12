@@ -34,16 +34,27 @@ The keywords for your dictionary could come from a variety of sources, most comm
 Use the following steps to create and import keywords for a custom dictionary:
 
 1. Connect to the [Security & Compliance center](https://protection.office.com).
+
 2. Navigate to **Classifications > Sensitive info types**.
+
 3. Select **Create** and enter a **Name** and **Description** for your sensitive info type, then select **Next**
+
 4. Select **Add an element**, then select **Dictionary (Large keywords)** in the **Detect content containing** drop-down list.
+
 5. Select **Add a dictionary**
+
 6. Under the Search control, select **You can create new keyword dictionaries here**.
+
 7. Enter a **Name** for your custom dictionary.
+
 8. Select **Import**, and select either **From text** or **From csv** depending on your keyword file type.
+
 9. In the file dialog, select the keyword file from your local PC or network file share, then select **Open**.
+
 10. Select **Save**, then select your custom dictionary from the **Keyword dictionaries** list.
+
 11. Select **Add**, then select **Next**.
+
 12. Review and finalize your sensitive info type selections, then select **Finish**.
     
 ## Create a keyword dictionary from a file using PowerShell
@@ -160,7 +171,7 @@ Now the dictionary has been updated in place. Note that the  `Identity` field ta
   
 ## Using keyword dictionaries in custom sensitive information types and DLP policies
 
-Keyword dictionaries can be used as part of the match requirements for a custom sensitive information type, or as a sensitive information type themselves. Both require [Create a custom sensitive information type in Office 365 Security & Compliance Center PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md). Follow the instructions in the linked article to create a sensitive information type. Once you have the XML, you'll need the GUID identifier for the dictionary to use it.
+Keyword dictionaries can be used as part of the match requirements for a custom sensitive information type, or as a sensitive information type themselves. Both require [Create a custom sensitive information type in Security & Compliance Center PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md). Follow the instructions in the linked article to create a sensitive information type. Once you have the XML, you'll need the GUID identifier for the dictionary to use it.
   
 ```
 <Entity id="9e5382d0-1b6a-42fd-820e-44e0d3b15b6e" patternsProximity="300" recommendedConfidence="75">

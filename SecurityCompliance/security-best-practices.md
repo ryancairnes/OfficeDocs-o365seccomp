@@ -16,7 +16,6 @@ search.appverid:
 - MET150
 ms.assetid: 9295e396-e53d-49b9-ae9b-0b5828cdedc3
 ms.collection:
-- Strat_O365_IP
 - M365-security-compliance
 - Strat_O365_IP
 description: "Minimize the potential of a data breach or a compromised account by following these recommended best practices."

@@ -35,7 +35,7 @@ The following procedure can also be performed via remote PowerShell. Use the Get
 
 ## Remove restrictions for a blocked Office 365 email account
 
-You complete this task in the Office 365 Security & Compliance Center (SCC). [Go to the Office 365 Security & Compliance Center](go-to-the-securitycompliance-center.md) for more details about SCC. You need to be in the **Organization Management** or the **Security Administrator** role group in order to perform these functions. [Go to Permissions in the Office 365 Security & Compliance Center](permissions-in-the-security-and-compliance-center.md) for more details about SCC role groups.
+You complete this task in the Security & Compliance Center (SCC). [Go to the Security & Compliance Center](go-to-the-securitycompliance-center.md) for more details about SCC. You need to be in the **Organization Management** or the **Security Administrator** role group in order to perform these functions. [Go to Permissions in the Security & Compliance Center](permissions-in-the-security-and-compliance-center.md) for more details about SCC role groups.
 
 1. Using a work or school account that has Office 365 global administrator privileges, sign into the Office 365 Security and Compliance Center and in the list on the left, expand **Threat Management**, choose **Review**, and then choose **Restricted Users**.
     
@@ -55,7 +55,7 @@ You complete this task in the Office 365 Security & Compliance Center (SCC). [Go
 
 ## Making sure admins are alerted when this happens
 
-The tenant admins will also receive an alert stating that the user has been restricted from sending any more outbound messages. It is a default alert that is provided for all tenants and is listed in the SCC Alert policies page, titled "User restricted from sending email". Go to [Alert policies in the Office 365 Security & Compliance Center](https://docs.microsoft.com/en-us/office365/securitycompliance/alert-policies) for more information on the alert.
+The tenant admins will also receive an alert stating that the user has been restricted from sending any more outbound messages. It is a default alert that is provided for all tenants and is listed in the SCC Alert policies page, titled "User restricted from sending email". Go to [Alert policies in the Security & Compliance Center](https://docs.microsoft.com/en-us/office365/securitycompliance/alert-policies) for more information on the alert.
 
 ## For more information
 
@@ -65,4 +65,4 @@ The tenant admins will also receive an alert stating that the user has been rest
 
 [High-risk delivery pool for outbound messages](high-risk-delivery-pool-for-outbound-messages.md)
 
-[Permissions in the Office 365 Security & Compliance Center](permissions-in-the-security-and-compliance-center.md)
+[Permissions in the Security & Compliance Center](permissions-in-the-security-and-compliance-center.md)

@@ -13,7 +13,7 @@ ms.collection:
 search.appverid: 
 - MOE150
 - MET150
-description: "When you create a retention label that retains content in Office 365, you can choose to trigger a disposition review at the end of the retention period."
+description: "When you create a retention label that retains content in Microsoft 365, you can choose to trigger a disposition review at the end of the retention period."
 ---
 
 # Overview of disposition reviews
@@ -28,7 +28,7 @@ When content reaches the end of its retention period, there are several reasons 
     
 - Return the content to clients or transfer it to another organization.
     
-When you create a retention label in Office 365, you can choose to trigger a disposition review at the end of the retention period. In a disposition review:
+When you create a retention label in the Microsoft 365 compliance center, Microsoft 365 security center, or Office 365 Security & Compliance Center, you can choose to trigger a disposition review at the end of the retention period. In a disposition review:
   
 - The people you choose receive an email notification that they have content to review. These reviewers can be individual users, distribution or security groups, or Office 365 groups. Note that notifications are sent on a weekly basis.
     

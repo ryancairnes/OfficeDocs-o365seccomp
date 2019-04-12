@@ -11,11 +11,10 @@ manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance  
 ms.topic: article
+search.appverid: met150
 ---
 
 # Understand the latest attack campaigns and techniques with threat analytics
-
-[!include[Prerelease�information](prerelease.md)]
 
 Cyber threats are becoming more frequent and sophisticated. It’s critical for organizations to quickly assess their security posture and resilience against specific emerging threats.
 

@@ -31,7 +31,7 @@ Open **Prepare \> Analyze** \> **Setup**. The following window is displayed.
   
  **Near-duplicates and email threads** Check this box if you want to run the analysis. It is selected by default. 
   
- **Document similarity**Enter the Near-duplicates threshold value or accept the default of 65%. 
+ **Document similarity** Enter the Near-duplicates threshold value or accept the default of 65%. 
   
  **Themes**Check this box to process all files and assign themes to them. By default, this check box is not selected. Enter the following options if you want to perform Themes processing.
   
@@ -40,7 +40,7 @@ Open **Prepare \> Analyze** \> **Setup**. The following window is displayed.
     > [!NOTE]
     > Increasing the number of themes affects performance, as well as the ability of a theme to generalize. The higher the number of themes, the more granular they are. For example, if a set of 50 themes include a theme such as "Basketball, Spurs, Clippers, Lakers"; 300 themes may include separate themes: "Spurs", "Clippers", "Lakers". If you had no awareness of the theme "Basketball" and use this feature for ECA, seeing the theme "Basketball" could be useful. But, if the processing had too many themes, you may never see the word "Basketball" and may not know that Spurs and Clippers are good Basketball themes to review, rather than items that go on boots and used for hair. 
   
-- **Suggested themes**You can suggest theme words to control Themes processing. Advanced eDiscovery will focus on these suggested words and try to create one or more relevant themes, based on the "Max number of themes" settings. 
+- **Suggested themes** You can suggest theme words to control Themes processing. Advanced eDiscovery will focus on these suggested words and try to create one or more relevant themes, based on the "Max number of themes" settings. 
     
     For example, if the suggested word is "computer", and you specified "2" as the "Max number of Themes", Advanced eDiscovery will try to generate two themes that relate to the word "computer". The two themes might be "computer software" and "computer hardware", for example. 
     
@@ -48,7 +48,7 @@ Open **Prepare \> Analyze** \> **Setup**. The following window is displayed.
   
 1. To view, add, or edit suggested themes, click **Modify**.
     
-2. In the **Suggested themes** panel, click the **Add**![add icon](media/c2dd8b3a-5a22-412c-a7fa-143f5b2b5612.png) icon to add a theme. In the **Add suggested theme** panel, add the words, separated by commas. 
+2. In the **Suggested themes** panel, click the **Add** ![add icon](media/c2dd8b3a-5a22-412c-a7fa-143f5b2b5612.png) icon to add a theme. In the **Add suggested theme** panel, add the words, separated by commas. 
     
 3. In **Number of themes**, select a value to determine the number of themes Advanced eDiscovery will try to generate for these words (default is 1 theme).
     
