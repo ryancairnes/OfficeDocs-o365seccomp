@@ -100,9 +100,6 @@
 ## [Understand latest attack campaigns with threat analytics](latest-attack-campaigns.md)
 
 ## [Advanced Threat Protection ](office-365-atp.md)
-### [Quick Start Guide: Set up Office 365 ATP](checklist-atp-setup.md)
-#### [Integrate Office 365 ATP with Windows Defender Advanced Threat Protection](integrate-office-365-ti-with-wdatp.md)
-#### [SIEM integration with Office 365 ATP](siem-integration-with-office-365-ti.md)
 ### [ATP Safe Links](atp-safe-links.md)
 #### [Set up ATP Safe Links policies](set-up-atp-safe-links-policies.md)
 #### [Set up a custom "do not rewrite" URLs list](set-up-a-custom-do-not-rewrite-urls-list-with-atp.md)
@@ -124,6 +121,8 @@
 #### [Threat Explorer views](threat-explorer-views.md)
 ### [Threat Trackers](threat-trackers.md)
 ### [Attack Simulator in Office 365](attack-simulator.md)
+### [Integrate Office 365 ATP with Windows Defender Advanced Threat Protection](integrate-office-365-ti-with-wdatp.md)
+### [SIEM integration with Office 365 ATP](siem-integration-with-office-365-ti.md)
 
 ## [Tune anti-phishing protection](tuning-anti-phishing.md)
 
@@ -310,11 +309,12 @@
 #### [Add search results to a working set](compliance20/add-data-to-working-set.md)
 
 ### [Review case data](compliance20/reviewing-data-in-working-set.md)
+#### [View documents in a working set](compliance20/view-documents-in-working-set.md)
+#### [Query the data in a working set](compliance20/working-set-search.md)
 #### [Manage working sets](compliance20/managing-working-sets.md)
+#### [Add data to another working set](compliance20/add-data-to-working-set-from-another-working-set.md)
 #### [Manage load sets](compliance20/manage-load-sets.md)
 #### [Load non-Office 365 data into a working set](compliance20/load-non-office365-data.md)
-#### [Query the data in a working set](compliance20/working-set-search.md)
-#### [View documents in a working set](compliance20/view-documents-in-working-set.md)
 #### [Tag documents in a working set](compliance20/tagging-documents.md)
 
 ### [Analyze case data](compliance20/analyzing-data-in-working-set.md)
@@ -396,7 +396,7 @@
 ### [Build search queries](datainvestigations/build-search-queries.md)
 ### [Search statistics](datainvestigations/search-statistics.md)
 
-## [Review the data in evidence](datainvestigations/review-data-in-evidence.md)
+## [Review data in evidence](datainvestigations/review-data-in-evidence.md)
 ### [Query the data](datainvestigations/evidence-query.md)
 ### [Tag documents](datainvestigations/tag-documents.md)
 ### [Annotate and redact documents](datainvestigations/annotate-and-redact-documents.md)
@@ -472,6 +472,7 @@
 ### [Deploy SharePoint Online sites for three tiers of protection](deploy-sharepoint-online-sites-for-three-tiers-of-protection.md)
 ### [Protect SharePoint Online files with retention labels and DLP](protect-sharepoint-online-files-with-office-365-labels-and-dlp.md)
 ### [Protect SharePoint Online files with Azure Information Protection](protect-sharepoint-online-files-with-azure-information-protection.md)
+### [Secure SharePoint Online sites in a dev/test environment](secure-sharepoint-online-sites-in-a-dev-test-environment.md)
 ## [Isolated SharePoint Online team sites](isolated-sharepoint-online-team-sites.md)
 ### [Design an isolated SharePoint Online team site](design-an-isolated-sharepoint-online-team-site.md)
 ### [Deploy an isolated SharePoint Online team site](deploy-an-isolated-sharepoint-online-team-site.md)

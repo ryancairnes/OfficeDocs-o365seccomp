@@ -17,6 +17,10 @@ ms.assetid:
 description: ""
 ---
 
-# Manage working sets in Advanced eDiscovery (Preview)  
+# Manage working sets in Advanced eDiscovery (Preview)
+Working sets are a static set of documents where you can analyze, search, tag and export documents.  There are three ways to add content to a working set:
+* [Add search results to a working set](add-data-to-working-set.md)
+* [Load non-Office 365 data into a working set](load-non-office365-data.md)
+* [Add data to a working set from another working set](add-data-to-working-set-from-another-working-set.md).
 
-Content coming soon.
+Once you have collected all of the data into your working set
