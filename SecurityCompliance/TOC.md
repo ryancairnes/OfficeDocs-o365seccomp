@@ -100,9 +100,6 @@
 ## [Understand latest attack campaigns with threat analytics](latest-attack-campaigns.md)
 
 ## [Advanced Threat Protection ](office-365-atp.md)
-### [Quick Start Guide: Set up Office 365 ATP](checklist-atp-setup.md)
-#### [Integrate Office 365 ATP with Windows Defender Advanced Threat Protection](integrate-office-365-ti-with-wdatp.md)
-#### [SIEM integration with Office 365 ATP](siem-integration-with-office-365-ti.md)
 ### [ATP Safe Links](atp-safe-links.md)
 #### [Set up ATP Safe Links policies](set-up-atp-safe-links-policies.md)
 #### [Set up a custom "do not rewrite" URLs list](set-up-a-custom-do-not-rewrite-urls-list-with-atp.md)
@@ -124,6 +121,8 @@
 #### [Threat Explorer views](threat-explorer-views.md)
 ### [Threat Trackers](threat-trackers.md)
 ### [Attack Simulator in Office 365](attack-simulator.md)
+### [Integrate Office 365 ATP with Windows Defender Advanced Threat Protection](integrate-office-365-ti-with-wdatp.md)
+### [SIEM integration with Office 365 ATP](siem-integration-with-office-365-ti.md)
 
 ## [Tune anti-phishing protection](tuning-anti-phishing.md)
 
