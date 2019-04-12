@@ -31,53 +31,84 @@ With Compliance Manager, your organization can:
 
 Overview and new component relationship artwork
 
-### Groups
+## Groups
 
-Groups are containers that allow you to logically organize *Assessments* and that share common information and workflow tasks between Assessments that have the same or related customer managed controls. This means that when two different Assessments in the same group share the same customer managed control, then the completion of implementation details, testing information, and status for the control in one Assessment are automatically synchronized to the same control in any other Assessment in the group. This helps unify the assigned customer actions for each control across the group and reduces potential duplicate customer action work. 
+Groups are containers that allow you to logically organize Assessments and that share common information and workflow tasks between Assessments that have the same or related customer managed controls. This means that when two different Assessments in the same group share the same customer managed control, then the completion of implementation details, testing information, and status for the control in one Assessment are automatically synchronized to the same control in any other Assessment in the group. This helps unify the assigned customer actions for each control across the group and reduces potential duplicate customer action work. Additionally, you can organize Assessments into groups organized by year, area, compliance standard, or other groupings to help you organize the compliance work for your organization.
 
-Learn more about working with Groups in Compliance Manager.
+Learn more about [working with Groups](working-with-compliance-manager) in Compliance Manager.
 
-### Assessments
+## Assessments
 
 Assessments are logical structures based on the responsibility that is shared between Microsoft and your organization for assessing security and compliance risks in the Microsoft cloud services and for implementing the data protection safeguards specified by compliance standard and data protection standards, regulations, or laws. They help you discern your organization's data protection and compliance posture against the selected industry standard for the selected Microsoft cloud service. Assessments are completed by the implementation of the controls that map to the certification standard being assessed.
 
-Learn more about working with Assessments in Compliance Manager.
+DEFAULT ASSESSMENTS ASSIGNED??
 
-### Controls
+Assessments include several components:
+  
+- **In-Scope Services**: Each assessment applies to a specific set of Microsoft services, which are listed in the In-Scope Cloud Services section.
+- **Microsoft Managed controls**: For each cloud service, Microsoft implements and manages a set of controls as part of Microsoft's compliance with various standards and regulations.
+- **Customer anaged controls**: This is the collection of controls that are managed by your organization.
+- **Assessment score**: 
 
-Controls are compliance process containers in Compliance Manager that define how you manage compliance activities. As previously mentioned, there are two types of controls in Compliance Manager:
+Learn more about [working with Assessments](working-with-compliance-manager) in Compliance Manager.
 
-- **Microsoft-managed Controls**: For each cloud service, Microsoft implements and manages a set of *controls* as part of Microsoft's compliance with various standards and regulations.
-- **Customer-managed Controls**: This is the collection of controls that are managed by your organization. Your organization is responsible for implementing these 
+## Controls
 
-Learn more about working with Controls in Compliance Manager.
+Controls are compliance process containers in Compliance Manager that define how you manage compliance activities. These controls are organized into control families that align with the structure from the corresponding certification or regulation that Assessments are aligned to. There are two types of controls in Compliance Manager, **Microsoft-managed controls** and **customer-managed controls**.
+
+### Microsoft-managed controls
+For each cloud service, Microsoft implements and manages a set of controls as part of Microsoft's compliance with various standards and regulations. Each provides details about how Microsoft implemented the control, along with how and when that implementation was tested and validated by an independent third-party auditor. Each Microsoft-managed control specifies the following information from the certification or regulation that maps to the control:
+
+- **Control ID**: The section or article number from the certification or regulation that the control maps to.
+- **Title**: The title from the corresponding certification or regulation.
+- **Article ID**: This field is included only for GDPR assessments, as it specifies the corresponding GDPR article number.
+- **Description**: Text of the standard or regulation that maps to the selected Microsoft managed control.
+
+### Customer-managed controls
+ This is the collection of controls that are managed by your organization. Your organization is responsible for implementing these controls as part of your compliance process for a given standard or regulation. Customer managed controls are also organized into control families for the corresponding certification or regulation. Use the customer managed controls to implement the recommended actions suggested by Microsoft as part of your compliance activities. Your organization can use the prescriptive guidance and recommended Customer Actions in each customer managed control to manage the implementation and assessment process for that control.
+
+Customer-managed controls in Assessments also have built-in workflow management functionality that you can use to manage and track your organization's progress towards completing the Assessment. With this workflow functionality, you can:
+
+- Assign tasks for each control
+- Track assigned tasks
+- Upload documentation evidence for the control task
+- Document the testing and validation of the control
+- Mark the control as implemented
+
+For example, a Compliance Officer in your organization can assign an Action to an IT admin who has the responsibility and necessary permissions to perform the actions that are recommended for the control. When that work is complete, the IT admin can upload evidence of their implementation tasks (for example, screen shots of configuration or policy settings) and then assign the Action back to the Compliance Officer to evaluate the collected evidence, test the implementation of the control, and record the implementation date and test results in Compliance Manager.
+
+Learn more about [working with Controls](working-with-compliance-manager) in Compliance Manager.
 
 ### Actions
 
-Actions are included in customer-managed controls as part of the built-in workflow management functionality that you can use to manage and track your organization's progress towards completing an assessment. 
+Actions are included in customer-managed controls as part of the built-in workflow management functionality that you can use to manage and track your organization's progress towards completing an assessment.
 
-The people involved in the assessment process in your organization can use Compliance Manager to review the customer managed controls from all Assessments for which they are users. When a user signs in to Compliance Manager and opens the **Action Items** dashboard, a list of Action Items assigned to them is displayed. Depending on the Compliance Manager role assigned to the user, they can provide implementation or test details, update the Status, or assign Action Items. 
+People involved in the compliance assessment process in your organization can use Compliance Manager to review the customer managed controls from all Assessments for which they are assigned. When a user signs in to Compliance Manager and opens the **Action Items** dashboard, a list of Action Items assigned to them is displayed. Depending on the Compliance Manager role assigned to the user, they can provide implementation or test details, update the Status, or assign Action Items.
 
 As certification controls are generally implemented by one person and tested by another, the control action item can be initially assigned to one person for implementation, and once that is complete, that person can reassign the control action item to the next person for control testing and uploading of evidence. This assignment/reassignment of control actions can be performed by any users who have a Compliance Manager role with sufficient permissions, allowing for central management of control assignments, or decentralized routing of control action items, from implementer to tester as appropriate.
 
-Learn more about working with Actions in Compliance Manager.
+Learn more about [working with Actions](working-with-compliance-manager) in Compliance Manager.
 
 ## Permissions
 
-By default, everyone in your organization with an Office 365 or Azure AD account has access to Compliance Manager and can perform any action in Compliance Manager. To change from default permissions to the role-based access control model, at least one user must be added to each Compliance Manager role (see the following instructions). After a user is added to a role, the permissions to perform the actions assigned to that role are removed from the default set of permissions available to all users, and only users that have been provisioned that role will be able to access Compliance Manager and perform the actions allowed by that role.
-  
-Once role-based access has been implemented, any user that is not assigned to a defined Compliance Manager role will have Guest access.
-  
-> [!NOTE]
-> To fully implement role-based access control to manage who can access and perform actions in Compliance Manager, a user must be added to each role to change the default permissions. For example, if you add a user to the role that lets users manage Assessments, only members of that role can manage Assessments. Similarly, if you don't add a user to the role that lets users read the data in Assessments, then all users in your organization can access Compliance Manager and read data in any Assessment. 
+Compliance Manager uses a role-based access control permission model. By default, everyone in your organization with an Microsoft 365, Office 365, or Azure Active Directory (Azure AD) account has full access and can perform any action in Compliance Manager. Once role-based access has been implemented, any user that is not assigned to a defined Compliance Manager role will have guest access.
+
+To change from default permissions and implement a fully role-based access control model, at least one user must be added to each Compliance Manager role. After a user is added to a role, the permissions to perform the actions assigned to that role are removed from the default set of permissions available to all users, and only users that have been provisioned that role will be able to access Compliance Manager and perform the actions allowed by that role. For example, if you add a user to the role that lets users manage Assessments, only members of that role can manage Assessments. Similarly, if you don't add a user to the role that lets users read the data in Assessments, then all users in your organization can access Compliance Manager and read data in any Assessment.
   
 ### Documents management
 
-Documents related to related to performing implementation tasks and for performing testing and validation tasks in customer-managed controls can be uploaded to Compliance Manager.
+Documents related to related to implementation tasks and for performing testing and validation tasks in customer-managed controls can be uploaded to Compliance Manager. These documents are part of the Assessment that includes the customer-managed control and are available for view, export, and reporting to support auditing activities for the Assessment.
 
-Customer managed controls also have a place to manage documents that are related to performing implementation tasks and for performing testing and validation tasks. Anyone with permissions to edit data in Compliance Manager can upload documents by clicking **Manage Documents**. After a documented has been uploaded, you can click **Manage Documents** to view and download files. 
+SUPPORTED FILE TYPES??
+LIMITS ON STORAGE SPACE??
+ANY RESTRICTIONS BASED ON SERVICE SUBSCRIPTION??
 
 ### Templates
+
+Compliance Manager provides pre-configured templates for Assessments and allows you to create customized templates for customer-managed controls for your organization's compliance needs.
+
+DETAILS ABOUT ASSESSMENT TEMPLATES??
+DETAILS ABOUT CUSTOM CONTROL TEMPLATES??
 
 ### Workflow
 
@@ -87,12 +118,14 @@ The Compliance Score is a core component of the way that Compliance Manager help
 
 The Compliance Score, like the Microsoft Secure Score, is similar to other behavior-based scoring systems; your organization's activity can increase its Compliance Score by performing activities related to data protection, privacy, and security.
   
-> [!NOTE]
-> The Compliance Score does not express an absolute measure of organizational compliance with any particular standard or regulation. It expresses the extent to which you have adopted controls which can reduce the risks to personal data and individual privacy. No service can guarantee that you are compliant with a standard or regulation, and the Compliance Score should not be interpreted as a guarantee in any way. 
+> [!IMPORTANT]
+> The Compliance Score does not express an absolute measure of organizational compliance with any particular standard or regulation. It expresses the extent to which you have adopted controls which can reduce the risks to personal data and individual privacy. No service can guarantee that you are compliant with a standard or regulation, and the Compliance Score should not be interpreted as a guarantee in any way.
 
 Learn more about how the [Compliance Score is calculated](compliance-score-methodology.md) in Compliance Manager.
 
 ## Secure Score integration
+
+NEED DETAILS ABOUT INTEGRATION
 
 ## Updates for customer-managed controls
 

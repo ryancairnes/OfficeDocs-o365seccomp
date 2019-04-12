@@ -72,12 +72,7 @@ Back at the Dashboard, we can see that each assessment has 1 control assessment 
 
 ## Assessments
 
-Assessments include several components:
-  
-- **In-Scope Services**: Each assessment applies to a specific set of Microsoft services, which are listed in the In-Scope Cloud Services section.
-- **Microsoft Managed controls**: For each cloud service, Microsoft implements and manages a set of controls as part of Microsoft's compliance with various standards and regulations.
-- **Customer anaged controls**: This is the collection of controls that are managed by your organization.
-- **Assessment score**: 
+
 
 You can export an Assessment to an Excel file, which can be reviewed by compliance stakeholders in your organization, and provided to auditors and regulators. This assessment report is a snapshot of the assessment as of the date and time that the report is created, and it contains the details of both the Microsoft-managed controls and the customer managed controls for that assessment, including control implementation status, control test date and test results, and provides links to the uploaded evidence documents.
 
