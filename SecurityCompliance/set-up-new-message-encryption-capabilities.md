@@ -3,6 +3,7 @@ title: "Set up new Office 365 Message Encryption capabilities"
 ms.author: krowley
 author: kccross
 manager: laurawi
+ms.date: 4/12/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -22,23 +23,23 @@ The new Office 365 Message Encryption (OME) capabilities allow organizations to 
 
 ||
 |:-----|
-|This article is part of a larger series of articles about Office 365 Message Encryption. This article is intended for administrators and ITPros. If you're just looking for information on sending or receiving an encrypted message, see the list of articles in [Office 365 Message Encryption (OME)](ome.md) and locate the article that best fits your needs. |
+|This article is part of a larger series of articles about Office 365 Message Encryption. This article is intended for administrators and IT Pros. If you're just looking for information on sending or receiving an encrypted message, see the list of articles in [Office 365 Message Encryption (OME)](ome.md) and locate the article that best fits your needs. |
 ||
 
 Follow the steps below to ensure that the New OME capabilities are available in your Office 365 organization.
 
-## Verify Azure Rights Management is active
+## Verify that Azure Rights Management is active
 
 The new OME capabilities leverage the protection features in [Azure Rights Management Services (Azure RMS)](https://docs.microsoft.com/en-us/azure/information-protection/what-is-information-protection), the technology used by [Azure Information Protection](https://docs.microsoft.com/en-us/azure/information-protection/what-is-azure-rms) to protect emails and documents via encryption and access controls.
 
 The only prerequisite for using the new OME capabilities is that [Azure Rights Management](https://docs.microsoft.com/en-us/azure/information-protection/what-is-azure-rms) must be activated in your organization's tenant. If it is, Office 365 activates the new OME capabilities automatically and you don't need to do anything.
 
-Azure RMS is also activated automatically for most eligible plans, so you probably don't have to do anything in this regard either. See [Activating Azure Rights Management](https://docs.microsoft.com/en-gb/azure/information-protection/activate-service) for more.
+Azure RMS is also activated automatically for most eligible plans, so you probably don't have to do anything in this regard either. See [Activating Azure Rights Management](https://docs.microsoft.com/en-gb/azure/information-protection/activate-service) for more information.
 
 >[!IMPORTANT]
 >If you use Active Directory Rights Management service (AD RMS) with Exchange Online, you need to [migrate to Azure Information Protection](https://docs.microsoft.com/en-us/azure/information-protection/migrate-from-ad-rms-to-azure-rms) before you can use the new OME capabilities. OME is not compatible with AD RMS.  
 
-For more, see:
+For more information, see:
 
 - [What subscriptions do I need to use the new OME capabilities?](ome-faq.md#what-subscriptions-do-i-need-to-use-the-new-ome-capabilities) to check whether your subscription plan includes Azure Information Protection (which includes Azure RMS functionality).
 - [Azure Information Protection](https://azure.microsoft.com/en-us/services/information-protection/) for information about purchasing an eligible subscription.  
@@ -62,7 +63,7 @@ You can verify that your Office 365 tenant is properly configured to use the new
   
 1. [Connect to Exchange Online PowerShell](https://docs.microsoft.com/en-us/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell) using an account with global administrator permissions in your Office 365 tenant.
 
-2. Run the Get-IRMConfiguration commandlet.
+2. Run the Get-IRMConfiguration cmdlet.
 
      You should see a value of $True for the AzureRMSEnabled parameter, which indicates that OME is configured in your tenant. If it is not, use Set-IRMConfiguration to set the value of AzureRMSEnabled to $True to enable OME.
 
