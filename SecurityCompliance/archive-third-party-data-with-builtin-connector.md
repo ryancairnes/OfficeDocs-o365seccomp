@@ -10,7 +10,6 @@ ms.service: O365-seccomp
 localization_priority: Normal
 ms.collection: M365-security-compliance
 search.appverid: MOE150
-ms.assetid: 
 description: "Administrators can set up a native connector to import third-party data from data sources such as Facebook Business pages, LinkedIn Company pages, and Instant Bloomberg. This lets you archive data from third-party data sources in Office 365 so you can use compliance features such as legal hold, content search, and retention policies to manage the governance of your organization's third-party data.
 ---
 
