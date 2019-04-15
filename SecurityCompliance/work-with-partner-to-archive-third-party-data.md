@@ -16,21 +16,9 @@ description: "Your organization can work with a Microsoft Partner to set up a cu
 
 # Work with a partner to archive third-party data in Office 365
 
-Office 365 lets administrators import and archive third-party data from social media platforms, instant messaging platforms, and document collaboration platforms, to mailboxes in your Office 365 organization. Examples of third-party data sources that you can import to Office 365 include the following: 
+You can work with a Microsoft Partner to import and archive data from a third-party data source to Office 365. A partner can provide you with an custom connector that is configured to extract items from the third-party data source (on a regular basis) and then import those items to Office 365. The partner connector converts the content of an item from the data source to an email message format and then stores the items in mailboxes in Office 365. After third-party data is imported, you can apply Office 365 compliance features—such as Litigation Hold, Content Search, In-Place Archiving, Auditing, and Office 365 retention policies—to this data.
   
-- **Social** - Twitter, Facebook, Yammer, and LinkedIn 
-    
-- **Instant messaging** - Yahoo Messenger, GoogleTalk, and Cisco Jabber 
-    
-- **Document collaboration** - Box and DropBox 
-    
-- **Vertical industries** - Customer Relationship Management (such as Salesforce Chatter) and Financial Services (such as Bloomberg and Thomson Reuters) 
-    
-- **SMS/text messaging** - BlackBerry 
-    
-After third-party data is imported, you can apply Office 365 compliance features—such as Litigation Hold, Content Search, In-Place Archiving, Auditing, and Office 365 retention policies—to this data. For example, when a mailbox is placed on Litigation Hold, third-party data will be preserved. You can search third-party data by using Content Search. Or you can apply archiving and retention polices to third-party data just like you can for Microsoft data. In short, archiving third-party data in Office 365 can help your organization stay compliant with government and regulatory policies.
-  
-Here's an overview of the process and the steps necessary to import third-party data to Office 365.
+Here's an overview of the process and the steps necessary to work with a Microsoft Partner to import third-party data to Office 365.
 
 [Step 1: Find a third-party data partner](#step-1-find-a-third-party-data-partner)
 
@@ -44,7 +32,7 @@ Here's an overview of the process and the steps necessary to import third-party 
 
 ## How the third-party data import process works
 
-The following illustration and description explain how the third-party data import process works.
+The following illustration and description explain how the third-party data import process works when working with a partner.
   
 ![How the third-party data import process works](media/5d4cf8e9-b4cc-4547-90c8-d12d04a9f0e7.png)
   
