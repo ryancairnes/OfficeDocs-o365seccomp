@@ -1,5 +1,5 @@
 ---
-title: "Archive third-party data in Office 365"
+title: "Work with a partner to archive third-party data in Office 365"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -8,15 +8,13 @@ ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
-ms.collection: 
-- Strat_O365_IP
-- M365-security-compliance
+ms.collection: M365-security-compliance
 search.appverid: MOE150
-ms.assetid: 0ce338d5-3666-4a18-86ab-c6910ff408cc
-description: "Administrators can import third-party data from  social media platforms, instant messaging platforms, and document collaboration platforms to mailboxes in your Office 365 organization. This lets you archive data from Facebook, Twitter, and other third-party data sources in Office 365. Then you can apply Office 365 compliance features (such as legal hold, content search, and retention policies) to third-party data."
+ms.assetid: 
+description: "Your organization can work with a Microsoft Partner to set up a custom connector to import third-party data from  data sources such as Salesforce Chatter, Yahoo Messenger, or Yammer. This lets you archive data from third-party data sources in Office 365 so you can use Office 365 compliance features such as legal hold, content search, and retention policies to manage the governance of your organization's third-party data.
 ---
 
-# Archive third-party data in Office 365
+# Work with a partner to archive third-party data in Office 365
 
 Office 365 lets administrators import and archive third-party data from social media platforms, instant messaging platforms, and document collaboration platforms, to mailboxes in your Office 365 organization. Examples of third-party data sources that you can import to Office 365 include the following: 
   
