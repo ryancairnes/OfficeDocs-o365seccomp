@@ -21,6 +21,10 @@ description: "Microsoft Compliance Manager is a workflow-based risk assessment t
 
 ## Groups
 
+SECURITY PROPERTIES FOR GROUPS
+ONLY CREATED IN ASSESSMENT
+"DEFAULT GROUP" is default
+
 As shown in the example below, you could group Assessments by year, standard, service, team, division, or agencies within your organization to minimize customer actions:
   
 - **GDPR Assessments - 2019**
