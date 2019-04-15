@@ -55,7 +55,15 @@ You complete this task in the Security & Compliance Center (SCC). [Go to the Sec
 
 ## Making sure admins are alerted when this happens
 
-The tenant admins will also receive an alert stating that the user has been restricted from sending any more outbound messages. It is a default alert that is provided for all tenants and is listed in the SCC Alert policies page, titled "User restricted from sending email". Go to [Alert policies in the Security & Compliance Center](https://docs.microsoft.com/en-us/office365/securitycompliance/alert-policies) for more information on the alert.
+A "User restricted from sending email" alert is available as a policy under the Office 365 Security & Compliance Alert policies page. This was formerly the outbound spam policy but is now native to the Office 365 alerting platform. Go to [Alert policies in the Security & Compliance Center](https://docs.microsoft.com/en-us/office365/securitycompliance/alert-policies) for more information on alerts.
+
+The policy is a default one and comes with every Office 365 tenant and does not need to be set up. It is considered a High severity alert and will email the configured TenantAdmins group when the alert is fired whenever a user has been restricted from sending mail. Admins can update the group notified when this alert happens by going to the alert under the SCC portal > Alerts > Alert policies > Users restricted from sending email.
+
+You will be able to Edit the alert to:
+- Turn email notifications On/Off
+- Email the required recipients
+- Limit the notifications you get per day
+  
 
 ## For more information
 
@@ -66,3 +74,5 @@ The tenant admins will also receive an alert stating that the user has been rest
 [High-risk delivery pool for outbound messages](high-risk-delivery-pool-for-outbound-messages.md)
 
 [Permissions in the Security & Compliance Center](permissions-in-the-security-and-compliance-center.md)
+
+[Alert policies in the Security & Compliance Center](https://docs.microsoft.com/en-us/office365/securitycompliance/alert-policies)
