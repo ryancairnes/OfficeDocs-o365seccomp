@@ -33,7 +33,7 @@ You need the following permissions to view reports in the Security & Compliance 
   
  **To open the View reports page in the Security & Compliance Center:**
   
-1. Go to [https://protection.office.com/#/viewreports](https://protection.office.com/#/viewreports).
+1. Go to [https://compliance.microsoft.com/#/viewreports](https://compliance.microsoft.com/#/viewreports).
     
 2. Sign in to Office 365 using the credentials for a user account in your Office 365 organization.
     
