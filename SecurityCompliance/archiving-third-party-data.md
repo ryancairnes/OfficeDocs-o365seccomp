@@ -500,7 +500,7 @@ Here are the steps for creating and configuring a third-party data mailbox for i
     
     - Place the third-party data mailbox on Litigation Hold. You can also apply an Office 365 retention policy in the security and compliance center. Placing this mailbox on hold will retain third-party data items (indefinitely or for a specified duration) and prevent them from being purged from the mailbox. See one of the following topics:
     
-      - [Place a mailbox on Litigation Hold](https://go.microsoft.com/fwlink/p/?LinkId=404420)
+      - [Create a Litigation Hold](create-a-litigation-hold.md)
     
       - [Overview of retention policies in Office 365](retention-policies.md)
     
@@ -516,7 +516,7 @@ The next step is to configure user mailboxes to support third-party data. Comple
     
 2. Place user mailboxes on Litigation Hold or apply an Office 365 retention policy; see one of the following topics: 
     
-    - [Place a mailbox on Litigation Hold](https://go.microsoft.com/fwlink/p/?LinkId=404420)
+    - [Create a Litigation Hold](create-a-litigation-hold.md)
     
     - [Overview of retention policies in Office 365](retention-policies.md)
     
