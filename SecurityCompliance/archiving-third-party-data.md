@@ -3,7 +3,7 @@ title: "Archiving third-party data in Office 365"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 9/5/2017
+ms.date: 
 ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
