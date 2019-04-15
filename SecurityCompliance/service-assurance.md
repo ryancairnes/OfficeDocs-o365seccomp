@@ -48,7 +48,7 @@ You can also find out how Office 365 can help customers comply with standards, l
   
 Service assurance is accessible by using the Security & Compliance Center. Here's how to get to there.
   
-1. Go to [https://protection.office.com](https://protection.office.com).
+1. Go to [https://compliance.microsoft.com](https://compliance.microsoft.com).
     
 2. Sign in to Office 365 using your work or school account. 
     
