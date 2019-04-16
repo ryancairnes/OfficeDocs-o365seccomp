@@ -9,7 +9,7 @@ ms.service: o365-seccomp
 localization_priority: Normal
 ms.collection:
 - M365-security-compliance
-description: "Learn more about security principles, established best practices, and emerging best practices for modernizing your organization."
+description: "Learn more about security principles and recommendations for modernizing security in your organization."
 ---
 
 # CISO Workshop Module 3 – Identity and Access Management 
@@ -31,7 +31,7 @@ Because most modern attacks involve compromising user identities, learn how to b
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtYMf]
 
-## Part 3 – Account Security: Measuring Cost of Attack and going Password-less (13:11)
+## Part 3 – Account Security: Measuring Cost of Attack Password-less Authentication (13:11)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtGm5]
 
