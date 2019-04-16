@@ -9,12 +9,12 @@ ms.service: o365-seccomp
 localization_priority: Normal
 ms.collection:
 - M365-security-compliance
-description: "Learn more about security principles, established best practices, and emerging best practices for modernizing your organization."
+description: "Learn more about security principles and recommendations for modernizing security in your organization."
 ---
 
 # CISO Workshop Module 4a – Threat Protection Strategy
 
-Explore our key learnings about threat protection, security evolution, strategies, and security road maps.
+Explore key learnings about threat protection, security evolution, strategies, and security road maps.
 
 - Download PDF summary: [Module 4a – Threat Protection Strategy](media/ciso-workshop-4a-threat-protection.pdf)
 - Download PowerPoint summary: [Module 4a – Threat Protection Strategy](https://docs.microsoft.com/office365/securitycompliance/media/ciso-workshop-4a-threat-protection.pptx)
@@ -47,7 +47,7 @@ Explore our key learnings about threat protection, security evolution, strategie
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtQLJ]
 
-## Part 7 - Roadmap: Shadow IT Risk from 3rd Party Software as a Service (5:05)
+## Part 7 - Roadmap: Shadow IT Risk from Third Party Software as a Service (5:05)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtYMC]
 
@@ -67,6 +67,6 @@ Explore our key learnings about threat protection, security evolution, strategie
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtLpa]
 
-## Part 12 – Roadmap: (Not)Petya and Critical Security Hygiene (10:28)
+## Part 12 – Roadmap: (Not) Petya and Critical Security Hygiene (10:28)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtLpb]

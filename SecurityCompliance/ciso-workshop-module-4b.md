@@ -9,12 +9,12 @@ ms.service: o365-seccomp
 localization_priority: Normal
 ms.collection:
 - M365-security-compliance
-description: "Learn more about security principles, established best practices, and emerging best practices for modernizing your organization."
+description: "Learn more about security principles and recommendations for modernizing security in your organization."
 ---
 
 # CISO Workshop Module 4b – Threat Protection Strategy 
 
-This module reviews the evolution and trajectory of our Security Operations Centers (SOC), powered by the trillions of signals in our intelligent security graph.
+This module reviews the evolution and trajectory of the Microsoft Security Operations Centers (SOC), powered by the trillions of signals in the Microsoft Intelligent Security Graph.
 
 - Download PDF summary: [Module 4b – Threat Protection Strategy](media/ciso-workshop-4b-threat-protection-strategy.pdf)
 - Download PowerPoint summary: [Module 4b – Threat Protection Strategy](https://docs.microsoft.com/office365/securitycompliance/media/ciso-workshop-4b-threat-protection-strategy.pptx)
