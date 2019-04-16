@@ -1,0 +1,52 @@
+---
+title: "Chief Information Security Officer (CISO) Workshop - Module 2 – Security Management"
+ms.author: robmazz
+author: robmazz
+manager: laurawi
+ms.audience: Admin
+ms.topic: tutorial
+ms.service: o365-seccomp
+localization_priority: Normal
+ms.collection:
+- M365-security-compliance
+description: "Learn more about security principles, established best practices, and emerging best practices for modernizing your organization."
+---
+
+# CISO Workshop Module 2 – Security Management 
+
+Learn how to increase visibility and control over your hybrid enterprise estate with integrated guidance, automated policy enforcement, and monitoring in this seven part series.
+
+- Download PDF summary: [Module 2 – Security Management](media/ciso-workshop-2-security-management.pdf)
+- Download PowerPoint summary: [Module 2 – Security Management](https://docs.microsoft.com/office365/securitycompliance/media/ciso-workshop-2-security-management.pptx)
+
+## Introduction - Security Management
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtT8S]
+
+## Part 1 – Disrupting Attacker Return on Investment (ROI)
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtGm1]
+
+## Part 2 – Meet Productivity and Security goals
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtGm2]
+
+## Part 3 – Assume Compromise
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtLoQ]
+
+## Part 4 – Shared Responsibility
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtYMa]
+
+## Part 5 – Cloud is More Secure
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtITn]
+
+## Part 6 – Security Management: Visibility, Control, Guidance
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtLoR]
+
+## Part 7 – Evolution of Vulnerability Management
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtNNR]

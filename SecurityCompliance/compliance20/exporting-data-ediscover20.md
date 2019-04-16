@@ -19,12 +19,14 @@ description: ""
 
 # Export case data in Advanced eDiscovery (Preview)
 
-Exporting is accomplished within a working set in order to provide full visibility into what is being exported from a tenant. There are three separate methods to export content:
+There are three ways to export data from a working set:
 
-Download – allows a user to download a small set of native files via the browser.
+**Download** – Use to download (by using a browser) a small set of native files. This is the quickest was to export a small set of data.
 
-Export – customize export to include additional content including a metadata file, burned in redacted files and text files.
+**Export** – Use to customize what data is exported, including the export of metadata files, native files, text files, and redacted documents that have been saved to a PDF file. After exported data is uploaded Azure storage location, you have to download it to a local computer. For more information, see: 
 
-Working Set – allows a user to export content from one working set to another working set.
+   - [Export documents from a working set](export-documents-from-working-set.md)
 
-Once export is complete, the content is placed in a Microsoft Azure blob. The content can be reached by using the information in the Exports tab. For more information, see \[link to download export jobs\]
+   - [Download export jobs](download-export-jobs.md)
+
+**Add to another working set** – Use to copy data from one working set to a different working set. For more information, see [Add data from one working set to another working set](add-data-to-working-set-from-another-working-set.md). 
