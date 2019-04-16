@@ -29,8 +29,8 @@ The CISO workshop videos and PDF/PowerPoint download content is designed to be m
 
 - [Module 3 – Identity and Access Management](ciso-workshop-module-3.md): Because most modern attacks involve compromising user identities, learn how to build a new identity security perimeter to protect assets outside your corporate network.
 
-- [Module 4a – Threat Protection Strategy, Part 1](ciso-workshop-module-4a.md): Explore our key learnings about threat protection, security evolution, strategies, and security road maps.
+- [Module 4a – Threat Protection Strategy, Part I](ciso-workshop-module-4a.md): Explore our key learnings about threat protection, security evolution, strategies, and security road maps.
 
-- [Module 4b – Threat Protection Strategy](ciso-workshop-module-4b.md): This module reviews the evolution and trajectory of our Security Operations Centers (SOC), powered by the trillions of signals in our intelligent security graph.
+- [Module 4b – Threat Protection Strategy, Part II](ciso-workshop-module-4b.md): This module reviews the evolution and trajectory of our Security Operations Centers (SOC), powered by the trillions of signals in our intelligent security graph.
 
 - [Module 5 – Information Protection](ciso-workshop-module-5.md): Learn how to protect sensitive information wherever it goes with automatic classification, persistent encryption across devices, and continuous monitoring of data across mobile devices, cloud services, and other corporate assets.
