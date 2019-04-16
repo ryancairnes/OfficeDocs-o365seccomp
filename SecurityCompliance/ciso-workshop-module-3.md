@@ -19,26 +19,26 @@ Because most modern attacks involve compromising user identities, learn how to b
 - Download PDF summary: [Module 3 – Identity and Access Management](media/ciso-workshop-3-identity-protection.pdf)
 - Download PowerPoint summary: [Module 3 – Identity and Access Management](https://docs.microsoft.com/office365/securitycompliance/media/ciso-workshop-3-identity-protection.pptx)
 
-## Introduction – Identity and Access Management
+## Introduction – Identity and Access Management (2:32)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtGm3]
 
-## Part 1 – History and Trends of Identity Security
+## Part 1 – History and Trends of Identity Security (7:45)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtQL7]
 
-## Part 2 – Identity System Security
+## Part 2 – Identity System Security (3:37)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtYMf]
 
-## Part 3 – Account Security: Measuring Cost of Attack and going Password-less
+## Part 3 – Account Security: Measuring Cost of Attack and going Password-less (13:11)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtGm5]
 
-## Part 4 – Building an Identity Perimeter
+## Part 4 – Building an Identity Perimeter (13:57)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtYMg]
 
-## Part 5 – Lowering Risk using business-to-business (B2B) and business-to-customer (B2C)
+## Part 5 – Lowering Risk using business-to-business and business-to-customer (4:47)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtYMi]

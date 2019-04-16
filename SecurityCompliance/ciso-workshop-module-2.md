@@ -19,34 +19,34 @@ Learn how to increase visibility and control over your hybrid enterprise estate 
 - Download PDF summary: [Module 2 – Security Management](media/ciso-workshop-2-security-management.pdf)
 - Download PowerPoint summary: [Module 2 – Security Management](https://docs.microsoft.com/office365/securitycompliance/media/ciso-workshop-2-security-management.pptx)
 
-## Introduction - Security Management
+## Introduction - Security Management (1:25)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtT8S]
 
-## Part 1 – Disrupting Attacker Return on Investment (ROI)
+## Part 1 – Disrupting Attacker Return on Investment (14:31)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtGm1]
 
-## Part 2 – Meet Productivity and Security goals
+## Part 2 – Meet Productivity and Security goals (2:51)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtGm2]
 
-## Part 3 – Assume Compromise
+## Part 3 – Assume Compromise (2:30)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtLoQ]
 
-## Part 4 – Shared Responsibility
+## Part 4 – Shared Responsibility (5:40)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtYMa]
 
-## Part 5 – Cloud is More Secure
+## Part 5 – Cloud is More Secure (9:01)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtITn]
 
-## Part 6 – Security Management: Visibility, Control, Guidance
+## Part 6 – Security Management: Visibility, Control, Guidance (8:07)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtLoR]
 
-## Part 7 – Evolution of Vulnerability Management
+## Part 7 – Evolution of Vulnerability Management (16:12)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtNNR]
