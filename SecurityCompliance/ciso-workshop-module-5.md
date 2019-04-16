@@ -19,18 +19,18 @@ Learn how to protect sensitive information wherever it goes with automatic class
 - Download PDF summary: [Module 5 – Information Protection](media/ciso-workshop-5-information-protection-strategy.pdf)
 - Download PowerPoint summary: [Module 5 – Information Protection](https://docs.microsoft.com/office365/securitycompliance/media/ciso-workshop-5-information-protection-strategy.pptx)
 
-## Introduction – Information Protection
+## Introduction – Information Protection (3:04)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtLoT]
 
-## Part 1 – Information Protection History and Context
+## Part 1 – Information Protection History and Context (8:43)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtVXT]
 
-## Part 2 – Information Protection Strategy
+## Part 2 – Information Protection Strategy (9:11)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtLoS]
 
-## Part 3 – Story of a File: Protecting Information anywhere it goes
+## Part 3 – Story of a File: Protecting Information anywhere it goes (10:23)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtITi]

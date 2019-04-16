@@ -19,54 +19,54 @@ Explore our key learnings about threat protection, security evolution, strategie
 - Download PDF summary: [Module 4a – Threat Protection Strategy](media/ciso-workshop-4a-threat-protection.pdf)
 - Download PowerPoint summary: [Module 4a – Threat Protection Strategy](https://docs.microsoft.com/office365/securitycompliance/media/ciso-workshop-4a-threat-protection.pptx)
 
-## Introduction – Threat Protection Strategy (Identify-Protect)
+## Introduction – Threat Protection Strategy (4:37)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtLoV]
 
-## Part 1 – Learnings about Threat Protection
+## Part 1 – Learnings about Threat Protection (9:11)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtITr]
 
-## Part 2 – Security Evolution: Overview
+## Part 2 – Security Evolution: Overview (3:29)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtQLb]
 
-## Part 3 – Security Evolution: Office 365
+## Part 3 – Security Evolution: Office 365 (7:33)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtITt]
 
-## Part 4 – Security Evolution: Azure
+## Part 4 – Security Evolution: Azure (15:54)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtVXV]
 
-## Part 5 – Strategies and Success Criteria
+## Part 5 – Strategies and Success Criteria (9:09)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtYMm]
 
-## Part 6 – Roadmap: Application Development & Platform as a Service (PaaS)
+## Part 6 – Roadmap: Application Development & Platform as a Service (6:07)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtQLJ]
 
-## Part 7 - Roadmap: Shadow IT Risk from 3rd Party Software as a Service (SaaS)
+## Part 7 - Roadmap: Shadow IT Risk from 3rd Party Software as a Service (5:05)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtYMC]
 
-## Part 8 - Roadmap: Office 365 Security
+## Part 8 - Roadmap: Office 365 Security (16:36)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtQLL]
 
-## Part 9 - Roadmap: Infrastructure as a Service (IaaS) and On-Premises
+## Part 9 - Roadmap: Infrastructure as a Service and On-Premises (24:38)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtQLP]
 
-## Part 10 – Roadmap: Windows 10 Security
+## Part 10 – Roadmap: Windows 10 Security (7:31)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtQLS]
 
-## Part 11 – Roadmap: Securing Privileged Access
+## Part 11 – Roadmap: Securing Privileged Access (12:29)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtLpa]
 
-## Part 12 – Roadmap: (Not)Petya and Critical Security Hygiene
+## Part 12 – Roadmap: (Not)Petya and Critical Security Hygiene (10:28)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtLpb]
