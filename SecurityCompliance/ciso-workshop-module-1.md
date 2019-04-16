@@ -14,7 +14,7 @@ description: "Learn more about security principles, established best practices, 
 
 # CISO Workshop Module 1 – Microsoft Cybersecurity Briefing
 
-This module covers overviews on critical security hygiene, Microsoft cybersecurity reference architecture, cybersecurity resilience, Internet of Things (IoT), and operational.
+This module covers overviews on critical security hygiene, Microsoft cybersecurity reference architecture, cybersecurity resilience, Internet of Things (IoT), and operational tech.
 
 - Download PDF summary: [Module 1 – Microsoft Cybersecurity Briefing](media/ciso-workshop-1-cybersecurity-briefing.pdf)
 - Download PowerPoint summary: [Module 1 – Microsoft Cybersecurity Briefing](https://docs.microsoft.com/office365/securitycompliance/media/ciso-workshop-1-cybersecurity-briefing.pptx)
