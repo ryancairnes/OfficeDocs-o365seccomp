@@ -3,7 +3,7 @@ title: "Define information barrier policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 04/11/2019
+ms.date: 04/16/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -136,25 +136,7 @@ Keep in mind that by default, your information barrier policies are inactive unt
 
 Information barrier policies are not in effect until they are set to active status and then applied. 
 
-1. If you haven't already connected to the Security & Compliance Center PowerShell, then follow these steps to connect and sign in:
-
-    a. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
-
-    b. Run the following PowerShell cmdlets, one at a time:<br>
-
-      `Login-AzureRmAccount`  
-    
-      `$appId="bcf62038-e005-436d-b970-2a472f8c1982"` 
-    
-      `$sp=Get-AzureRmADServicePrincipal -ServicePrincipalName $appId` 
-    
-      `if ($sp -eq $null) { New-AzureRmADServicePrincipal -ApplicationId $appId }`
-    
-      `Start-Process  "https://login.microsoftonline.com/common/adminconsent?client_id=$appId"`
-
-    c. When prompted, sign in using your work or school account for Office 365.
-
-    d. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
+1. If you haven't already done so, as a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
 2. Run the `Get-InformationBarrierPolicy` cmdlet to see a list of policies that have been defined. Note the status of each policy.
 
@@ -178,25 +160,7 @@ Information barrier policies are not in effect until they are set to active stat
 
 After you have applied information barrier policies, follow these steps to verify status:
 
-1. If you haven't already connected to the Security & Compliance Center PowerShell, then follow these steps to connect and sign in:
-
-    a. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
-
-    b. Run the following PowerShell cmdlets, one at a time:<br>
-
-      `Login-AzureRmAccount`  
-    
-      `$appId="bcf62038-e005-436d-b970-2a472f8c1982"` 
-    
-      `$sp=Get-AzureRmADServicePrincipal -ServicePrincipalName $appId` 
-    
-      `if ($sp -eq $null) { New-AzureRmADServicePrincipal -ApplicationId $appId }`
-    
-      `Start-Process  "https://login.microsoftonline.com/common/adminconsent?client_id=$appId"`
-
-    c. When prompted, sign in using your work or school account for Office 365.
-
-    d. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
+1. If you haven't already done so, as a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
 2. To verify status for an information barrier policy, use the `Get-InformationBarrierPoliciesApplicationStatus` cmdlet.
 
@@ -210,25 +174,7 @@ After you have applied information barrier policies, follow these steps to verif
 
 If you want to edit or remove an information barrier policy, you must first set that policy to inactive status. 
 
-1. If you haven't already connected to the Security & Compliance Center PowerShell, then follow these steps to connect and sign in:
-
-    a. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
-
-    b. Run the following PowerShell cmdlets, one at a time:<br>
-
-      `Login-AzureRmAccount`  
-    
-      `$appId="bcf62038-e005-436d-b970-2a472f8c1982"` 
-    
-      `$sp=Get-AzureRmADServicePrincipal -ServicePrincipalName $appId` 
-    
-      `if ($sp -eq $null) { New-AzureRmADServicePrincipal -ApplicationId $appId }`
-    
-      `Start-Process  "https://login.microsoftonline.com/common/adminconsent?client_id=$appId"`
-
-    c. When prompted, sign in using your work or school account for Office 365.
-
-    d. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
+1. If you haven't already done so, as a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
 2. To view a list of current information barrier policies, run the `Get-InformationBarrierPolicy` cmdlet.
 
