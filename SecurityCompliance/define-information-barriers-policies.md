@@ -140,10 +140,8 @@ Information barrier policies are not in effect until they are set to active stat
 3. To set a policy to active status, use the `Get-InformationBarrierPolicy` cmdlet with the State parameter set to Active, such as shown in the following example:
 
     
-    ```powershell
-    $identity  = | Get-InformationBarrierPolicy -Name "ResearchIBPolicy" | select Identity
-    Set-InformationBarrierPolicy -Identity $identity -State Active
-    ```
+    `$identity  = | Get-InformationBarrierPolicy -Name "ResearchIBPolicy" | select Identity
+    Set-InformationBarrierPolicy -Identity $identity -State Active`
     
     In this example, we are setting an information barrier policy called `ResearchIBPolicy` to active status.
 
@@ -180,10 +178,9 @@ If you want to edit or remove an information barrier policy, you must first set 
 4. To set the policy's status to inactive, use the `Set-InformationBarrierPolicy` cmdlet with the State parameter set to Inactive, as shown in the following example:
 
 
-    ```powershell
-    $identity  = | Get-InformationBarrierPolicy -Name "ResearchIBPolicy" | select Identity
+    `$identity  = | Get-InformationBarrierPolicy -Name "ResearchIBPolicy" | select Identity
     Set-InformationBarrierPolicy -Identity $identity -State Inactive
-    ```
+    `
     In this example, we are setting an information barrier policy called ResearchIBPolicy to an inactive status.
 
 5. Run the `Start-InformationBarrierPoliciesApplication` cmdlet.
