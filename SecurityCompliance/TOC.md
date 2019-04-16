@@ -12,7 +12,13 @@
 ## [Security Dashboard overview](security-dashboard.md)
 ## [Use your free Azure Active Directory subscription](use-your-free-azure-ad-subscription-in-office-365.md)
 ## [Plan for security and compliance in Office 365](plan-for-security-and-compliance.md)
-## [Chief Information Security Officer (CISO) workshop training ](ciso-workshop.md)
+## [Chief Information Security Officer (CISO) workshop training](ciso-workshop.md)
+### [Module 1 - Microsoft cybersecurity briefing](ciso-workshop-module-1.md)
+### [Module 2 - Security management](ciso-workshop-module-2.md)
+### [Module 3 - Identity and access management](ciso-workshop-module-3.md)
+### [Module 4a - Threat protection strategy, Part I](ciso-workshop-module-4a.md)
+### [Module 4b - Threat protection strategy, Part II](ciso-workshop-module-4b.md)
+### [Module 5 - Information protection](ciso-workshop-module-5.md)
 
 # Protect access to data and services
 ## [Protect access to data and services in Office 365](protect-access-to-data-and-services.md)
