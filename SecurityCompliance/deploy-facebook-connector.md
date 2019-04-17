@@ -9,7 +9,8 @@ ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
 ms.collection: M365-security-compliance
-description: "Administrators can set up a native connector to import and archive Facebook Business pages to Office 365. After this data is imported to Office 365, you can use compliance features such as legal hold, content search, and retention policies to manage the governance of your organization's Facebook data.
+ROBOTS: NOINDEX, NOFOLLOW
+description: "Administrators can set up a native connector to import and archive Facebook Business pages to Office 365. After this data is imported to Office 365, you can use compliance features such as legal hold, content search, and retention policies to manage the governance of your organization's Facebook data."
 ---
 
 # Deploy a connector to archive Facebook data in Office 365
@@ -72,7 +73,7 @@ description: "Administrators can set up a native connector to import and archive
 
 2.  Deploy the web app in Azure
     
-      - Follow the step as mentioned in [App Service creation](#step-4-create-a-new-web-app-resource)
+      - Follow the steps in [Step 4: Create a new web app resource in Azure](#step-4-create-a-new-web-app-resource-in-azure).
     
       - Note your App Service URL required for Facebook App creation and Connector setup in SCC
 
@@ -90,9 +91,7 @@ description: "Administrators can set up a native connector to import and archive
         
           - \<App Service URL\>/api/FbPageWebhook
 
-4.  Go to SCC portal <https://protection.office.com>
-
-5.  Go to Data Governance \> Import. and follow the onscreen steps. [\[Refer Screenshots here\]](#step-7-set-up-a-customer-connector-in-the-security-compliance-center.)
+4.  Go to Security & Compliance Center <https://protection.office.com> and then go to Data Governance \> Import. Follow the steps in [Step 7: Set up a custom connector in the Security & Compliance Center](#step-7-set-up-a-custom-connector-in-the-security--compliance-center).
 
 
 ## Step 1: Download the package
@@ -300,7 +299,7 @@ Download the prebuilt package from repository’s Release section, <https://gith
 
 4. Click **Save** to save the connector settings.
 
-## Step 7: Set up a customer connector in the Security & Compliance Center
+## Step 7: Set up a custom connector in the Security & Compliance Center
 
 1. Go to <https://protection.office.com> and then click **Data governance \> Import \> Archive third-party data**.
 

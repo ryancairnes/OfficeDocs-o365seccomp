@@ -69,12 +69,11 @@ For step-by-step instructions, see [Create an Azure storage account](deploy-face
 
 During the completion of this step (by following the step-by-step instructions) you'll save the connection string Uri that is generated. You'll use this string when creating a web app resource in Azure in Step 4.
 
-
 ## Step 4: Create a web app resource in Azure
 
 The next step is to create a web app resource in Azure for the Facebook Connector  For step-by-step instructions, see [Create a new web app resource in Azure](deploy-facebook-connector.md#step-4-create-a-new-web-app-resource-in-azure).
 
-During the completion of this step (by following the step-by-step instructions), you'll provide the following information (that you've copied to a text file after completing the previous steps).
+During the completion of this step (by following the step-by-step instructions), you'll provide the following information (that you've copied to a text file after completing the previous steps) when creating the web app resource.
 
 - APISecretKey – The client secret value that you copied after creating the client secret in Step 2. This will be used to configure the connector service.
 
@@ -82,7 +81,9 @@ During the completion of this step (by following the step-by-step instructions),
 
 - tenantId – The tenant ID of your Office 365 organization that you copied after creating the Facebook connector app in Azure Active Directory in Step 2.
 
-Additionally, you will upload the SampleConnector.zip file (that you downloaded in Step 1) in this step to deploy the source code for the connector app.
+Additionally, you will upload the SampleConnector.zip file (that you downloaded in Step 1) in this step to deploy the source code for the Facebook connector app.
+
+After completing this step, be sure to copy the app Service URL (for example, https://facebookconnector.azurewebsites.net ). You'll need to use this to complete Step 5, Step 6, and Step 7).
 
 ## Step 5: Register the web app on Facebook
 
@@ -92,39 +93,35 @@ For step-by-step instructions, see [Register the Facebook app](deploy-facebook-c
 
 During the completion of this step (by following the step-by-step instructions), you'll save the following information to a text file. The values for these will be used to configure the connector app in Step 7.
 
-- Application ID
-- Application secret
-- Webhooks verify token
+- Facebook application ID
+- Facebook application secret
+- Facebook Webhooks verify token
 
-## Step 6: Configure the connector app
+## Step 6: Configure the Facebook connector app
 
+The next step is to add configurations settings to the Facebook connector app that you uploaded when you created the Azure web app resource in Step 4. You'll do this by going to the home page of your connector app and configuring it.
+
+For step-by-step instructions, see [Configure the connector](deploy-facebook-connector.md#step-6-configure-the-connector).
+
+During the completion of this step (by following the step-by-step instructions), you'll provide the following information (that you've copied to a text file after completing the previous steps).
+
+- Facebook application ID (obtained in Step 5)
+- Facebook application secret (obtained in Step 5)
+- Facebook webhooks verify token(obtained in Step 5)
+- Azure Active Directory application ID (obtained in Step 2)
+- Azure Active Directory application secret (the client secret obtained in Step 2)
+- Azure Active Directory application Uri (the Azure app service URL obtained in Step 4; for example, https://facebookconnector.azurewebsites.net)
+- App insights instrumentation key
 
 
 ## Step 7: Set up a custom connector in the Security & Compliance Center
 
-The final step is to set up the custom connector in the Security & Compliance Center that will import data from your Facebook Business pages to a specified mailbox in Office 365.
+The final step is to set up the custom connector in the Security & Compliance Center that will import data from your Facebook Business pages to a specified mailbox in Office 365. After you successfully complete this step, the Office 365 Import service will starting importing data from your Facebook Business pages to Office 365. 
 
+For step-by-step instructions, see [Set up a custom connector in the Security & Compliance Center](deploy-facebook-connector.md#step-7-set-up-a-custom-connector-in-the-security--compliance-center). 
 
+During the completion of this step (by following the step-by-step instructions), you'll provide the following information (that you've copied to a text file after completing the steps).
 
+- Azure app service URL (obtained in Step 4; for example https://facebookconnector.azurewebsites.net)
+- Client secret (obtained in Step 2)
 
-
-## Set up
-
-
-3.  Create AAD app using [Azure portal](https://portal.azure.com)
-
-4.  Create storage account using [Azure portal](https://portal.azure.com)
-
-5.  Create a Facebook developer App on [Facebook developer portal](https://developers.facebook.com/docs/pages/getting-started/).
-
-## Finalize
-
-1.  Download the Zip file of connector code
-
-2.  Deploy it in Azure and bring up the connector service
-
-3.  Configure Login and webhook on Facebook developer portal
-
-4.  Go to SCC portal <https://protection.office.com>
-
-5.  Go to Data Governance \> Import\> Archive third-party data. Click on Add connector button, choose custom and follow the onscreen steps
