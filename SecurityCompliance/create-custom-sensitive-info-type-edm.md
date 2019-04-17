@@ -84,7 +84,7 @@ o	Read access to the file with Lookup data (csv).
 o	Write access to location for storing hashed data. 
 o	Access to Microsoft Azure Service and ability to write to Azure Storage Blob.  <<Could we add more specific pointers here?>> 
 
-1. Go to [https://WHATGOESHERE](https://WHATGOESHERE) and download the EDM Upload Agent (EdmUploadAgent)
+1. Go to [https://WHATGOESHERE](https://WHATGOESHERE) and download the EDM Upload Agent (EdmUploadAgent.exe).
 
 ## Part 3: Hash the sensitive data and upload it
 
