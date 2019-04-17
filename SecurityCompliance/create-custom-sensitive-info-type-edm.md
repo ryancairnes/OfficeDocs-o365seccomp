@@ -41,9 +41,41 @@ Here's the overall process for setting up DLP policies that use EDM:
  
 LIST GOES HERE
 
-## Part 1: Set up EDM data store schema
+## Part 1: Set up your tabular data source and define its schema
 
+During this phase, you structure your sensitive data, create a .xml file to define its schema, and use PowerShell to refer to the schema.
 
+1. Structure the sensitive data you want to use for EDM in a .csv file. Make sure the first row of the .csv file includes the names of the fields you'll use for EDM. For example, you might have field names, such as `id`, `firstname`, `lastname`, and so on.
+
+    - You can include up to one million rows of sensitive data across all data sources.
+    - You can have up to 32 fields per data source.
+    - You can have up to five indexed columns per data source.
+    - Data refresh should not occur more frequently than weekly (during preview).
+
+2. Set up a .xml file that represents the schema for the data in your .csv file. Name this file `edm.xlm`. As an example, the following .xml file defines the schema for our example SampleDataStore database.
+    
+    ```
+    <?xml version="1.0" encoding="utf-8"?>
+    <EdmSchema xmlns="http://schemas.microsoft.com/office/2018/edm">
+      <DataStore name="SampleDataStore" description="Sample Datastore" version="1">
+        <Field name="id" unique="true" searchable="true" />
+        <Field name="firstname" unique="false" searchable="true" />
+        <Field name="lastname" unique="false" searchable="false" />
+        <Field name="title" unique="false" searchable="false" />
+        <Field name="dob" unique="false" searchable="false" />
+        <Field name="creditcard" unique="false" searchable="true" />
+        <Field name="ssn" unique="false" searchable="true" />
+      </DataStore>
+    </EdmSchema>
+    ```
+
+3. [Connect to Exchange Online Protection PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-eop/connect-to-exchange-online-protection-powershell?view=exchange-ps), replacing `https://ps.protection.outlook.com/powershell-liveid` with `https://ps.compliance.protection.outlook.com/powershell-liveid`.
+
+3. Run the following cmdlets, one at a time:
+
+    `$edmSchemaXml=Get-Content .\edm.xml -Encoding Byte -ReadCount 0`
+
+    `New-DlpEdmSchema -FileData $edmSchemaXml`
 
 ## Part 2: Install the EDM Upload agent
 
