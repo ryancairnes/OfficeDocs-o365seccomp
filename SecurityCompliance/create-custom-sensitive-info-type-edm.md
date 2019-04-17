@@ -77,15 +77,27 @@ During this phase, you structure your sensitive data in a .csv (or .tsv) file, c
 
     `New-DlpEdmSchema -FileData $edmSchemaXml`
 
-## Part 2: Install the EDM Upload agent
+## Part 2: Install and authorize the EDM Upload agent
+
+EDM Upload Agent should have
+o	Read access to the file with Lookup data (csv).
+o	Write access to location for storing hashed data. 
+o	Access to Microsoft Azure Service and ability to write to Azure Storage Blob.  <<Could we add more specific pointers here?>> 
+
+1. Go to [https://WHATGOESHERE](https://WHATGOESHERE) and download the EDM Upload Agent (EdmUploadAgent)
+
+## Part 3: Hash the sensitive data and upload it
+
+-	Hash and upload
+o	Hash and upload steps could be separated and deployed in two separate servers.
+o	Enables limiting access for sensitive data server handling hashing.
 
 
 
-## Part 3: Authorize EDM Upload
+## Part 4: List uploaded data and sessions
 
-## Part 4: Hash sensitive data
 
-## Part 5: Upload hashed data
+
 
 ## Part 6: Create a sensitive type
 
@@ -93,6 +105,6 @@ During this phase, you structure your sensitive data in a .csv (or .tsv) file, c
 
 ## Other methods to create a custom sensitive information type
 
-EDM isn't the only way to create custom sensitive information types. You can also use PowerShell and the Security & Compliance Center ([https://protection.office.com](https://protection.office.com)). To learn more about those methods, see:
+EDM isn't the only way to create custom sensitive information types. You can also use PowerShell and the Security & Compliance Center ([https://protection.office.com](https://protection.office.com)). Each method has its advantages and limitations. To learn more, see:
 - [Create a custom sensitive information type in Security & Compliance Center PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md)
 - c[Create a custom sensitive information type in the Security & Compliance Center](create-a-custom-sensitive-information-type.md) 
