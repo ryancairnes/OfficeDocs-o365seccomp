@@ -12,7 +12,13 @@
 ## [Security Dashboard overview](security-dashboard.md)
 ## [Use your free Azure Active Directory subscription](use-your-free-azure-ad-subscription-in-office-365.md)
 ## [Plan for security and compliance in Office 365](plan-for-security-and-compliance.md)
-## [Chief Information Security Officer (CISO) workshop training ](ciso-workshop.md)
+## [Chief Information Security Officer (CISO) workshop training](ciso-workshop.md)
+### [Module 1 - Microsoft cybersecurity briefing](ciso-workshop-module-1.md)
+### [Module 2 - Security management](ciso-workshop-module-2.md)
+### [Module 3 - Identity and access management](ciso-workshop-module-3.md)
+### [Module 4a - Threat protection strategy, Part I](ciso-workshop-module-4a.md)
+### [Module 4b - Threat protection strategy, Part II](ciso-workshop-module-4b.md)
+### [Module 5 - Information protection](ciso-workshop-module-5.md)
 
 # Protect access to data and services
 ## [Protect access to data and services in Office 365](protect-access-to-data-and-services.md)
@@ -248,7 +254,7 @@
 ### [Use Content Search to search third-party data](use-content-search-to-search-third-party-data-that-was-imported.md)
 ### [Use Content Search in your eDiscovery workflow](use-content-search-in-ediscovery.md)
 ### [Check your Content Search query for errors](check-your-content-search-query-for-errors.md)
-### [Preserve Bcc recipients for Content Search](https://docs.microsoft.com/exchange/policy-and-compliance/holds/preserve-bcc-recipients-and-group-members)
+### [Preserve Bcc recipients for Content Search](preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery.md)
 ## Understand Content Search
 ### [Limits for Content Search](limits-for-content-search.md)
 ### [Partially indexed items in Content Search](partially-indexed-items-in-content-search.md)
@@ -280,6 +286,7 @@
 ### [Delete items in the Recoverable Items folder of cloud-based mailboxes on hold](delete-items-in-the-recoverable-items-folder-of-mailboxes-on-hold.md)
 ### [Increase the Recoverable Items quota for mailboxes on hold](increase-the-recoverable-quota-for-mailboxes-on-hold.md)
 ### [How to identify the type of hold placed on an Exchange Online mailbox](identify-a-hold-on-an-exchange-online-mailbox.md)
+### [Preserve Bcc and expanded distribution group recipients](preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery.md)
 
 ## [Advanced eDiscovery (Preview) in Microsoft 365](compliance20/overview-ediscovery-20.md)
 ### [Release notes](compliance20/release-notes-ediscovery20.md)
@@ -573,7 +580,6 @@
 ### [Mail flow intelligence in Office 365](mail-flow-intelligence-in-office-365.md)
 ## Mailbox holds
 ### [Create a Litigation Hold](create-a-litigation-hold.md)
-### [Preserve Bcc and expanded distribution group recipients for eDiscovery](preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery.md)
 ### [Put an In-Place Hold on a soft-deleted mailbox](put-an-in-place-hold-on-a-soft-deleted-mailbox.md)
 ## [Quarantine](quarantine.md)
 ### [Find and release quarantined messages as an administrator](find-and-release-quarantined-messages-as-an-administrator.md)
