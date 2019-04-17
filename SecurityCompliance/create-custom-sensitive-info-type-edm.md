@@ -41,11 +41,11 @@ Here's the overall process for setting up DLP policies that use EDM:
  
 LIST GOES HERE
 
-## Part 1: Set up your tabular data source and define its schema
+## Part 1: Set up your tabular data source for EDM
 
-During this phase, you structure your sensitive data, create a .xml file to define its schema, and use PowerShell to refer to the schema.
+During this phase, you structure your sensitive data in a .csv (or .tsv) file, create a .xml file to define its schema, and use PowerShell to refer to the schema.
 
-1. Structure the sensitive data you want to use for EDM in a .csv file. Make sure the first row of the .csv file includes the names of the fields you'll use for EDM. For example, you might have field names, such as `id`, `firstname`, `lastname`, and so on.
+1. Structure the sensitive data you want to use for EDM in a .csv (or .tsv) file. Make sure the first row of the .csv (or .tsv) file includes the names of the fields you'll use for EDM. For example, you might have field names, such as `id`, `firstname`, `lastname`, and so on.
 
     - You can include up to one million rows of sensitive data across all data sources.
     - You can have up to 32 fields per data source.
@@ -78,6 +78,8 @@ During this phase, you structure your sensitive data, create a .xml file to defi
     `New-DlpEdmSchema -FileData $edmSchemaXml`
 
 ## Part 2: Install the EDM Upload agent
+
+
 
 ## Part 3: Authorize EDM Upload
 
