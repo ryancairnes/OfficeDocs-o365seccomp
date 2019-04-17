@@ -21,7 +21,7 @@ description: "Understanding supervision policies in Office 365"
 
 # Supervision policies in Office 365
 
-Supervision policies in Office 365 allow you to capture employee communications for examination by designated reviewers. You can define specific policies that capture internal and external email, Microsoft Teams, or 3rd-party communications in your organization. Reviewers can then examine the messages to make sure they are compliant with your organization's message standards and resolve them with classification type. These policies can also help you overcome many modern compliance challenges, including monitoring increasing types of communication channels, increasing volume of message data, and regulatory enforcement & the risk of fines.
+Supervision policies in Office 365 allow you to capture employee communications for examination by designated reviewers. You can define specific policies that capture internal and external email, Microsoft Teams, or 3rd-party communications in your organization. Reviewers can then examine the messages to make sure that they are compliant with your organization's message standards and resolve them with classification type. These policies can also help you overcome many modern compliance challenges, including monitoring increasing types of communication channels, increasing volume of message data, and regulatory enforcement & the risk of fines.
 
 In some organizations, there may be a separation of duties between IT support and the compliance management group. Office 365 supports the separation between configuring the tenant with supervision policy support features and the configuration of policies and acting on captured communications. For example, the IT group for an organization may be responsible for setting up role permissions and groups to support supervision policies that are configured and managed by the organization's compliance team.
 
@@ -124,7 +124,7 @@ Each line of words you enter will be applied separately (only one line must appl
   
 ##### Entering multiple conditions
 
-If you enter multiple conditions, Office 365 uses all the conditions together to determine when to apply the policy to communication items. When you set up multiple conditions, they must all be met for the policy to apply, unless you enter an exception. For example, let's say you need to create a policy that should apply if a message contains the word "trade", and is larger than 2MB. However, if the message also contains the words "Approved by Contoso financial", the policy should not apply. Thus, in this case, the three conditions would be as follows:
+If you enter multiple conditions, Office 365 uses all the conditions together to determine when to apply the policy to communication items. When you set up multiple conditions, they must all be met for the policy to apply, unless you enter an exception. For example, let's say you need to create a policy that should apply if a message contains the word "trade", and is larger than 2 MB. However, if the message also contains the words "Approved by Contoso financial", the policy should not apply. Thus, in this case, the three conditions would be as follows:
   
 - **Message contains any of these words**, with the keywords "trade"
 
@@ -134,7 +134,7 @@ If you enter multiple conditions, Office 365 uses all the conditions together to
 
 #### Review percentage
 
-You can specify a percentage of all the communications governed by a supervision policy if you want to reduce the amount of content to review. We'll randomly select that amount of content from the total percentage that matched the conditions you chose. If you want reviewers to review all items, you can enter **100%** in a supervision policy.
+If you want to reduce the amount of content to review, you can specify a percentage of all the communications governed by a supervision policy. We'll randomly select that amount of content from the total percentage that matched the conditions you chose. If you want reviewers to review all items, you can enter **100%** in a supervision policy.
 
 ## Monitoring & managing
 
@@ -176,9 +176,9 @@ If reviewers would prefer not to use the supervision dashboard in Office 365, th
 
 #### Outlook on the web
 
-Users designated as reviewers in a supervision policy can use Outlook on the web to review and resolved supervision items. The Supervision add-in is installed automatically in Outlook on the web for all reviewers you specified in the policy. No extra configuration is needed by your organization for supervision policy shared folders to be available for configured reviewers.
+Users designated as reviewers in a supervision policy can use Outlook on the web to review and resolved supervision items. The Supervision add-in is installed automatically in Outlook on the web for all reviewers you specified in the policy. No extra configuration is needed for supervision policy shared folders to be available for configured reviewers.
 
-Using Outlook on the web, reviewers can:
+With Outlook on the web, reviewers can:
 
 - View filtered items by compliant, non-compliant, questionable, and resolved status
 - Tag a single item as compliant, non-compliant, questionable, or resolved. You can also record a comment with the item to help clarify the tagging action taken.
@@ -189,7 +189,7 @@ Using Outlook on the web, reviewers can:
 
 To review communications identified by a supervision policy, reviewers can also use the Supervision add-in for Microsoft Outlook. However, reviewers must run through some steps to install it in the desktop version of Outlook. For detailed guidance about installing the Supervision add-in for Outlook, see [Configure supervision policies](configure-supervision-policies.md).
 
-Using Outlook, reviewers can:
+With Outlook, reviewers can:
 
 - View filtered items by compliant, non-compliant, questionable, and resolved status
 - Tag a single item as compliant, non-compliant, questionable, or resolved. You can also record a comment with the item to help clarify the tagging action taken.
@@ -201,12 +201,12 @@ Using Outlook, reviewers can:
 Use the supervision reports to see the review activity at the policy and reviewer level. For each policy, you can also view live statistics on the current state of review activity. You can use the supervision reports to:
   
 - Verify that your policies are working as you intended.
-- Find out how many communications are being identified for review.
+- Find out how many communications are identified for review.
 - Find out how many communications aren't compliant and which ones are passing review. This information can help you decide whether to fine-tune your policies or change the number of reviewers.
 
 ### View the Supervision report
 
-1. Sign into the [Compliance center](https://compliance.microsoft.com) using the credentials for an admin account in your organization that has permissions to view supervision reports.
+1. Sign into the [Compliance center](https://compliance.microsoft.com) with the credentials for an admin account in your organization that has permissions to view supervision reports.
 2. Go to either **Reports** \> **Dashboard** or **Supervision**. You'll see a supervision reporting widget with a summary of current supervision policy activity.
 3. Select the **Supervision** widget to open the detailed report page.
 
@@ -215,7 +215,7 @@ Use the supervision reports to see the review activity at the policy and reviewe
   
 ### How to use the report
 
-When a supervision policy identifies a communication message for review, the email is delivered to the reviewer's Supervision folder in Outlook and Outlook on the web (formerly known as Outlook Web App). This report lists each policy's name and the number of communications at each stage in the review process.
+When a supervision policy identifies a communication message for review, the email is delivered to the reviewer's Supervision folder in Outlook and Outlook on the web (formerly known as Outlook Web App). This report lists each policy and the number of communications at each stage in the review process.
   
 Use the report to:
   
@@ -242,9 +242,9 @@ Here's a breakdown of the values you might see in the **Tag type** column.
 
 ## Auditing
 
-In some instances, you'll need to provide information to regulatory or compliance auditors to prove supervision of employee activities and communications. This may be a summary of all supervisory activities associated with a defined policy or anytime a supervision policy was changed or updated. Supervision policies have built-in audit trails for complete readiness for internal or external audits. Proof of supervisory procedures can be demonstrated with a detailed audit history of every action monitored by your supervision policies.
+In some instances, you need to provide information to regulatory or compliance auditors to prove supervision of employee activities and communications. This may be a summary of all supervisory activities associated with a defined policy or anytime a supervision policy was changed or updated. Supervision policies have built-in audit trails for complete readiness for internal or external audits. Proof of supervisory procedures can be demonstrated with a detailed audit history of every action monitored by your supervision policies.
 
-The following supervision policy activities are audited and can be viewed using the unified Office 365 audit logs:
+The following supervision policy activities are audited and available in the unified Office 365 audit logs:
 
 |**Activity**|**Associated commands**|
 |:-----|:-----|
@@ -253,7 +253,7 @@ The following supervision policy activities are audited and can be viewed using 
 | Deleting a policy| [Remove-SupervisoryReviewPolicyV2](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/remove-supervisoryreviewpolicyv2) |
 | Viewing a policy | [Get-SupervisoryReviewPolicyV2](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/get-supervisoryreviewpolicyv2) |
 
-The audits can be retrieved using the unified audit log search function or by using the [Search-UnifiedAuditLog](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/search-unifiedauditlog) PowerShell cmdlet.
+Audit activities are viewed with the unified audit log search function or with the [Search-UnifiedAuditLog](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/search-unifiedauditlog) PowerShell cmdlet.
 
 For example, the following example returns the activities for the all the supervisory review activities (policies and rules) and lists detailed information for each:
 
