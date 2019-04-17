@@ -1,26 +1,20 @@
-**Facebook Connector Deployment**
+---
+title: "Deploy a connector to archive Facebook data in Office 365"
+ms.author: markjjo
+author: markjjo
+manager: laurawi
+ms.date: 
+ms.audience: Admin
+ms.topic: article
+ms.service: O365-seccomp
+localization_priority: Normal
+ms.collection: M365-security-compliance
+description: "Administrators can set up a native connector to import and archive Facebook Business pages to Office 365. After this data is imported to Office 365, you can use compliance features such as legal hold, content search, and retention policies to manage the governance of your organization's Facebook data.
+---
 
-[Prerequisites 2](#prerequisites)
+# Deploy a connector to archive Facebook data in Office 365
 
-[Set up 2](#set-up)
 
-[Finalize 2](#finalize)
-
-[Reference 3](#reference)
-
-[I. Download the package 3](#step-1-download-the-package)
-
-[II. Create AAD App 3](#step-2-create-an-app-in-azure-active-directory)
-
-[III. Storage account creation 8](#step-3-create-an-azure-storage-account)
-
-[IV. App service creation 14](#step-4-create-a-new-web-app-resource)
-
-[V. Facebook App Registration 16](#step-5-register-the-facebook-app)
-
-[VI. Configure Connector 24](#step-6-configure-the-connector)
-
-[VII. Connector Setup in SCC 26](#step-7-set-up-a-customer-connector-in-the-security-compliance-center.)
 
 ## Prerequisites
 
@@ -111,111 +105,109 @@ Download the prebuilt package from repository’s Release section, <https://gith
 
     ![](/media/FBCimage1.png)
 
-#### In the left navigation pane, click **Azure Active Directory**.
+2. In the left navigation pane, click **Azure Active Directory**.
 
-![](/media/FBCimage2.png)
+    ![](/media/FBCimage2.png)
 
-#### In the left navigation pane, click **App registrations (Preview)** and then click New registration**.**
+3. In the left navigation pane, click **App registrations (Preview)** and then click New registration**.**
 
-![](/media/FBCimage3.png)
+    ![](/media/FBCimage3.png)
 
-#### Register the application. Under Redirect URI, select Web in the application type dropdown list and then type <https://portal.azure.com> in the box for the URI.
+4. Register the application. Under Redirect URI, select Web in the application type dropdown list and then type <https://portal.azure.com> in the box for the URI.
 
-![](/media/FBCimage4.png)
+   ![](/media/FBCimage4.png)
 
-#### Copy the **Application (client) ID** and **Directory (tenant) ID** and save them to a text file or other safe location. You’ll use these IDs in later steps.
+5. Copy the **Application (client) ID** and **Directory (tenant) ID** and save them to a text file or other safe location. You’ll use these IDs in later steps.
 
-![](/media/FBCimage5.png)
+   ![](/media/FBCimage5.png)
 
-#### Go to **Certificates & secrets for the new app.**
+6. Go to **Certificates & secrets for the new app.**
 
-![](/media/FBCimage6.png)
+   ![](/media/FBCimage6.png)
 
-#### Click **New client secret**
+7. Click **New client secret**
 
-![](/media/FBCimage7.png)
+   ![](/media/FBCimage7.png)
 
-#### Create new secret
+8. Create new secret
 
-![](/media/FBCimage8.png)
+    ![](/media/FBCimage8.png)
 
-#### Copy the client secret and save it to a text file or other storage location. You’ll use this client secret in a later step.
+9. Copy the client secret and save it to a text file or other storage location. You’ll use this client secret in a later step.
 
-![](/media/FBCimage9.png)
+   ![](/media/FBCimage9.png)
 
-#### Go to **Manifest** and copy the identifierUris (which is also called the app id uri) as highlighted in the following screenshot. Copy the app id url to a text file or other storage location. You’ll use it in a later step.
+10. Go to **Manifest** and copy the identifierUris (which is also called the app id uri) as highlighted in the following screenshot. Copy the app id url to a text file or other storage location. You’ll use it in a later step.
 
-![](/media/FBCimage10.png)
+   ![](/media/FBCimage10.png)
 
 ## Step 3: Create an Azure storage account
 
-#### Go to the Azure home page for your organization.
+1. Go to the Azure home page for your organization.
 
-![](/media/FBCimage11.png)
+    ![](/media/FBCimage11.png)
 
-#### Click **Create a resource** and they type **storage account** in the search box.
+2. Click **Create a resource** and they type **storage account** in the search box.
 
-![](/media/FBCimage12.png)
+    ![](/media/FBCimage12.png)
 
-#### Click **Storage**, and then click **Storage account – blob, file, table, queue**.
+3. Click **Storage**, and then click **Storage account – blob, file, table, queue**.
 
-![](/media/FBCimage13.png)
+    ![](/media/FBCimage13.png)
 
-#### On the **Create storage account** page, select or create a resource group.
+4. On the **Create storage account** page, select or create a resource group.
 
-![](/media/FBCimage14.png)
+    ![](/media/FBCimage14.png)
 
-#### Type a name for the storage account.
+5. Type a name for the storage account.
 
-![](/media/FBCimage15.png)
+    ![](/media/FBCimage15.png)
 
-#### Review and then create the storage account.
+6. Review and then click **Create** to create the storage account.
 
-![](/media/FBCimage16.png)
+    ![](/media/FBCimage16.png)
 
-#### Click **Go to resource** to navigate to the storage account resource.
+7. Click **Go to resource** to navigate to the storage account resource.
 
-![](/media/FBCimage17.png)
+    ![](/media/FBCimage17.png)
 
-#### Click **Access keys** in the left navigation pane.
+8. Click **Access keys** in the left navigation pane.
 
-![](/media/FBCimage18.png)
+    ![](/media/FBCimage18.png)
 
-#### Copy the **Connection string** and save it to a text file or other storage location. You’ll use this to connect to the Azure storage location that you created.
+9. Copy the **Connection string** and save it to a text file or other storage location. You’ll use this when creating a web app resource.
 
-![](/media/FBCimage19.png)
+    ![](/media/FBCimage19.png)
 
-## Step 4: Create a new web app resource
+## Step 4: Create a new web app resource in Azure
 
-#### On the **Home** page in the Azure portal, click **Create a resource \> Everything \> Web app**. On the **Web app** page, click **Create**. 
+1. On the **Home** page in the Azure portal, click **Create a resource \> Everything \> Web app**. On the **Web app** page, click **Create**. 
 
-![](/media/FBCimage20.png)
+   ![](/media/FBCimage20.png)
 
-#### Fill in the details (as shown below) and then create the Web app.
+2. Fill in the details (as shown below) and then create the Web app.
 
-![](/media/FBCimage21.png)
+   ![](/media/FBCimage21.png)
 
-#### Go to the newly created Web App resource and fill all the settings as displayed with the values you noted above
+3. Go to the newly created Web App resource and enter the values (that you copied to the text file) for the following settings: 
 
-Add the below 3 application settings with appropriate values
+    - **APISecretKey** – The is the client secret value that you copied after creating the client secret in Step 2. This will be used to configure the connector service.
 
-  - **APISecretKey** – The is the client secret value that you copied after creating the client secret in Step 2. This will be used to configure the connector service.
+    - **StorageAccountConnectionString** – The connection string Uri that you copied after creating the Azure storage account in Step 3.
 
-  - **StorageAccountConnectionString** –The value that you copied after creating the Azure storage account in Step 3.
+    - **tenantId** – The tenant ID of your Office 365 organization that you copied after creating the Facebook connector app in Azure Active Directory in Step 2.
 
-  - **tenantId** – The tenant ID of your Office 365 organization that you copied after creating the Facebook connector app in Azure Active Directory in Step 2)
+    ![](/media/FBCimage22.png)
 
-![](/media/FBCimage22.png)
+4. On the **Applications settings** page, click **On** next to the **Always On**.
 
-#### On the **Applications settings** page, click **On** next to the **Always On**.
+   ![](/media/FBCimage23.png)
 
-![](/media/FBCimage23.png)
-
-#### Upload the app service bits (zip file downloaded as mentioned above) using the below url
+5. Upload the app service bits (zip file downloaded as mentioned above) using the below url
 
 \<AppService\>.scm.azurewebsites.net/ZipDeployUi
 
-![](/media/FBCimage24.png)
+   ![](/media/FBCimage24.png)
 
 ## Step 5: Register the Facebook app
 
@@ -284,83 +276,90 @@ Add the below 3 application settings with appropriate values
 ![](/media/FBCimage40.png)
 
 ## Step 6: Configure the connector
+1. Configure the app service by clicking on the configure button on the home page of your app.
 
-#### Configure the app service by clicking on the configure button on the home page of your app.
+  \<appservice\>.azurewebsites.net
 
-\<appservice\>.azurewebsites.net
+  ![](/media/FBCimage41.png)
 
-![](/media/FBCimage41.png)
+2. Type your tenant Id and the APISecretKey (that you copied after creating the client secret in Step 2 and added to the application settings in Step 4.) and then click **Set Configuration Settings**.
 
-#### Login using your Tenant Id and the APISecretKey (that you copied after creating the client secret in Step 2 and added to the application settings in Step 4.)
+   ![](/media/FBCimage42.png)
 
-![](/media/FBCimage42.png)
+3. Enter the following configuration setting under **Configuration Details**:
 
-#### Set the configuration settings and click on save.
+   - **Facebook application ID** - 
+   - **Facebook application secret** - 
+   - **Facebook webhooks verify token** - 
+   - **AAD application ID** - 
+   - **AAD application secret** - 
+   - **AAD application Uri** - 
+   - **App insights instrumentation key** - 
 
-![](/media/FBCimage43.png)
+    ![](/media/FBCimage43.png)
 
-## Step 7: Set up a customer connector in the Security & Compliance Center.
+4. Click **Save** to save the connector settings.
 
-#### Go to <https://protection.office.com> and then click **Data governance \> Import \> Archive third-party data**.
+## Step 7: Set up a customer connector in the Security & Compliance Center
 
-![](/media/FBCimage44.png)
+1. Go to <https://protection.office.com> and then click **Data governance \> Import \> Archive third-party data**.
 
-#### Click **Add a connector** and then click **Custom**.
+   ![](/media/FBCimage44.png)
 
-![](/media/FBCimage45.png)
+2.  Click **Add a connector** and then click **Custom**.
 
-#### Provide Connector App details and click Next
+    ![](/media/FBCimage46.png)
 
-![](/media/FBCimage46.png)
+3.  Provide Connector App details and click Next
 
-Fill the name as Facebook
+    ![](/media/FBCimage47.png)
 
-Provide API secret key and connector URL as created in Finalize step 4
+    Fill the name as Facebook
 
-#### Click Login with Connector App
+    Provide API secret key and connector URL as created in Finalize step 4
 
-![](/media/FBCimage47.png)
+4.  Click **Login with Connector App**.
 
-#### Provide secret and click login to connector service
+    ![](/media/FBCimage45.png)
 
-![](/media/FBCimage48.png)
+5. Provide secret and click login to connector service
+
+   ![](/media/FBCimage48.png)
 
 Secret key is same as the one entered in step above
 
-#### Click **Continue with Facebook.**
+6. Click **Continue with Facebook.**
 
-![](/media/FBCimage49.png)
+   ![](/media/FBCimage49.png)
 
-#### On the **Log in to Facebook** page, log in using the credentials for the account for your organization’s Facebook Business pages. Make sure the Facebook account you logged in to is assigned the admin role for your organization’s Business pages
+7. On the **Log in to Facebook** page, log in using the credentials for the account for your organization’s Facebook Business pages. Make sure the Facebook account you logged in to is assigned the admin role for your organization’s Business pages
 
-![](/media/FBCimage50.png)
+   ![](/media/FBCimage50.png)
 
-#### Click **Select Pages** to choose your organization’s business pages that you want to archive in Office 365.
+8. Click **Select Pages** to choose your organization’s business pages that you want to archive in Office 365.
 
-![](/media/FBCimage51.png)
+   ![](/media/FBCimage51.png)
 
-#### A list of Business pages managed by the Facebook account that your logged in to is displayed. Select the pages to archive and then click **Save**.
+9. A list of Business pages managed by the Facebook account that your logged in to is displayed. Select the pages to archive and then click **Save**.
 
-![](/media/FBCimage52.png)
+    ![](/media/FBCimage52.png)
 
-#### Click **Finish** to exit the setup of the connector service app.
+10. Click **Finish** to exit the setup of the connector service app.
 
-![](/media/FBCimage53.png)
+    ![](/media/FBCimage53.png)
 
-#### You can apply a filter to only import items (and archive) that are a certainage. 
+11. You can apply a filter to only import items (and archive) that are a certain age. 
 
-![](/media/FBCimage54.png)
+    ![](/media/FBCimage54.png)
 
-#### Specify the mailbox in Office 365 to import (and archive) the items from the Facebook Business pages that you previously selected.
+12. Specify the mailbox in Office 365 to import (and archive) the items from the Facebook Business pages that you previously selected.
 
-![](/media/FBCimage55.png)
+    ![](/media/FBCimage55.png)
 
-#### Review settings and then click **Finish** to complete the connector setup.
+13. Review settings and then click **Finish** to complete the connector setup.
 
-![](/media/FBCimage56.png)
+    ![](/media/FBCimage56.png)
 
-![](/media/FBCimage57.png)
+14. Go to the **Archive third-party data** page to see the progress of the import process.
 
-#### You can see the progress of the import process on the **Archive third-party data** page.
-
-![](/media/FBCimage58.png)
+    ![](/media/FBCimage58.png)
