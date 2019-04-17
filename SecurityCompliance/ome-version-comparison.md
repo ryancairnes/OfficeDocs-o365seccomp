@@ -9,7 +9,7 @@ ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid:
 - MET150
-description: "Helps explain the differences in the features delivered with different versions of Office 365 Message Encryption and how the two continue to work together."
+description: "Helps explain the differences between the versions of Office 365 Message Encryption and how the two continue to work together."
 ---
 
 # Compare versions of OME
@@ -61,7 +61,7 @@ Recipients inside GCC High receive the same inline reading experience in Outlook
 
 Senders inside GCC High can send encrypted email outside of the GCC High boundary.
 
-All recipients outside GCC High, including commercial Office 365 users, Outlook.com users, and other users of other email providers such as Gmail and Yahoo, receive a wrapper mail that redirects the recipient to the OME Portal where the recipient is able to read and reply to message.
+All recipients outside GCC High, including commercial Office 365 users, Outlook.com users, and other users of other email providers such as Gmail and Yahoo, receive a wrapper mail. This wrapper mail redirects the recipient to the OME Portal where the recipient can read and reply to message.
 
 ## Coexistence of legacy OME and the new capabilities in the same tenant
 
@@ -82,4 +82,4 @@ Typically, the new OME capabilities are automatically enabled for your Office 36
 
 The legacy version of OME is automatically enabled for your Office 365 organization if you have enabled Azure Information Protection. In the past, legacy OME worked even if Azure Information Protection wasn’t enabled. This is no longer the case.
 
-To start using legacy OME, if you have enabled Azure Information Protection, simply configure mail flow rules that use the rule action **Apply the previous version of OME**. For instructions, see [Define mail flow rules to encrypt email messages in Office 365](define-mail-flow-rules-to-encrypt-email.md).
+To start using legacy OME, if you have enabled Azure Information Protection, configure mail flow rules that use the rule action **Apply the previous version of OME**. For instructions, see [Define mail flow rules to encrypt email messages in Office 365](define-mail-flow-rules-to-encrypt-email.md).
