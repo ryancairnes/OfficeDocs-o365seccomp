@@ -99,9 +99,9 @@ o	Enables limiting access for sensitive data server handling hashing.
 
 
 
-## Part 6: Create a sensitive type
+## Part 5: Create a sensitive type
 
-## Part 7: Define rules using EDM
+## Part 6: Define rules using EDM
 
 ## Other methods to create a custom sensitive information type
 
