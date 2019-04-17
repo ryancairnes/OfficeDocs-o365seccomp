@@ -37,9 +37,13 @@ You must be a global admin, compliance administrator, or Exchange Online adminis
 
 ## The work flow at a glance
 
-To set up EDM capabilities, you must set up a data store, install and authorize an EDM Upload agent, 
+Here's the overall process for setting up DLP policies that use EDM:
+ 
+LIST GOES HERE
 
-## Part 1: Create your EDM DataStore
+## Part 1: Set up EDM data store schema
+
+
 
 ## Part 2: Install the EDM Upload agent
 
