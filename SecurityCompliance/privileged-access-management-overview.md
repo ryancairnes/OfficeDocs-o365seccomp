@@ -82,3 +82,11 @@ No, you need the Exchange Role Management role assigned to accounts that manage 
 
 ### How is privileged access management in Office 365 related to Customer Lockbox?
 [Customer Lockbox](https://docs.microsoft.com/office365/admin/manage/customer-lockbox-requests) allows a level of access control for organizations when Microsoft accesses data. Privileged access management in Office 365 allows granular access control within an organization for all Office 365 privileged tasks.
+
+## Ready to get started?
+
+Start [configuring your organization for privileged access management](privileged-access-management-configuration.md).
+
+## Learn more
+
+[Interactive guide: Monitor and control administrator tasks with privileged access management](https://content.cloudguides.com/en-us/guides/Privileged%20Access%20Management)
