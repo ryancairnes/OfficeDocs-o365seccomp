@@ -24,7 +24,7 @@ After third-party data is imported, you can apply Office 365 compliance features
 
 ## Prerequisites for setting up a connector for Facebook Business pages
 
-You must meet the following prerequisites before you can set up and configure the built-in connector in the Security & Compliance Center to import and archive data from Facebook Business pages. 
+You must meet the following prerequisites before you can set up and configure a built-in connector in the Security & Compliance Center to import and archive data from your organization's Facebook Business pages. 
 
 - You need a Facebook account for your organization's business pages (you need to sign in to this account when setting up the connector). Currently, you can only archive data from Facebook Business pages; you can't archive data from individual Facebook profiles.
 
@@ -34,16 +34,58 @@ You must meet the following prerequisites before you can set up and configure th
 
     - [Sign up for a Pay-As-You-Go Azure subscription](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/)
 
-> [!NOTE]
-> The [free Azure Active Directory subscription](use-your-free-azure-ad-subscription-in-office-365.md) that's included with your Office 365 subscription doesn't support the built-in connectors in the Security & Compliance Center.
+    > [!NOTE]
+    > The [free Azure Active Directory subscription](use-your-free-azure-ad-subscription-in-office-365.md) that's included with your Office 365 subscription doesn't support the built-in connectors in the Security & Compliance Center.
+
+- Your organization must consent to allow the Office 365 Import service access mailbox data in your organization. To consent to this request, go to [this page](https://login.microsoftonline.com/common/oauth2/authorize?client_id=570d0bec-d001-4c4e-985e-3ab17fdc3073&response_type=code&redirect_uri=https://portal.azure.com/&nonce=1234&prompt=admin_consent), sign in use the credentials of an Office 365 global admin, and then accept the request.
+
+## Step 1: Create an app in Azure Active Directory
+
+The first step is to register a new app in Azure Active Directory. This app will corresponding to the Facebook connector that you'll implement in Step 5. 
+
+For step-by-step instructions, see 
+
+
+
+## Step 2: Create an Azure storage account
+
+The Facebook Connector will store the items from your Facebook Business pages to the Azure storage location that you create in this step. The connection string for the Azure storage location will be used to configure the connector in Step 6.
+
+For step-by-step instructions, see
+
+
+## Step 3: Create a web app resource in Azure
+
+
+
+## Step 4: Register the web app on Facebook
+
+The next step is to create and configure a new app on Facebook. 
+
+
+## Step 5: Download the pre-built connector app package from Github
+
+The next step is to download the source code for the pre-built Facebook connector app that will use a Facebook API to connect to your Facebook Business pages and extract Facebook data so you can import it to Office 365.
+
+1. Go to [this GitHub site](https://github.com/Microsoft/m365-sample-connector-csharp-aspnet). 
+2. Click **Clone or download** and then click **Download ZIP**.
+3. Save the ZIP file to a location on your local computer.
+4. Extract all files in the ZIP file.
+
+## Step 6: Configure the connector app
+
+
+
+## Step 7: Set up a custom connector in the Security & Compliance Center
+
+The final step is to set up the custom connector in the Security & Compliance Center that will import data from your Facebook Business pages to a specified mailbox in Office 365.
+
+
+
+
 
 ## Set up
 
-1.  Ensure that you have accepted the consent by following the steps in the below link. Tenant admin has to click below link and log in with their credential.
-    
-    -  <https://login.microsoftonline.com/common/oauth2/authorize?client_id=570d0bec-d001-4c4e-985e-3ab17fdc3073&response_type=code&redirect_uri=https://portal.azure.com/&nonce=1234&prompt=admin_consent>
-
-2.  Ensure that you have an active Azure subscription as mentioned in Prerequisites point \#2
 
 3.  Create AAD app using [Azure portal](https://portal.azure.com)
 
