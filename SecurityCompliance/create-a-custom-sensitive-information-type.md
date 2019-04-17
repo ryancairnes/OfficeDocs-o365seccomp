@@ -6,6 +6,7 @@ manager: laurawi
 ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
+ms.date: 04/17/2019
 localization_priority: Priority
 ms.collection: 
 - M365-security-compliance
@@ -23,7 +24,7 @@ Read this article to create a [custom sensitive information type](custom-sensiti
 
 You can also create custom sensitive information types by using PowerShell and Exact Data Match capabilities. To learn more about those methods, see:
 - [Create a custom sensitive information type in Security & Compliance Center PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md)
-- [](create-custom-sensitive-info-type-edm.md)
+- [Create a custom sensitive information type for DLP with Exact Data Match (EDM)](create-custom-sensitive-info-type-edm.md)
 
 ## Before you begin...
 
