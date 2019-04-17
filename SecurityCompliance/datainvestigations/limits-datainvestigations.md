@@ -17,31 +17,39 @@ ms.assetid:
 description: ""
 ---
 
-# Data Investigations limits
+# Data Investigations (Preview) limits
 
-This article describes the limits in Data Investigations.
+This article describes the limits in Data Investigations (Preview).
 
-## Investigatino limits
+## Investigation limits
 
-## Indexing limits
-
-## Search limits
-
-## Incident limits
-
-The following table lists the limits for incidents in Data Investigations.  Any items that exceed the single file maximums will show up as processing errors.
+The following table lists the limits for investigations in Data Investigations (Preview). 
     
   |**Description of limit**|**Limit**|
   |:-----|:-----|
-  |Maximum number of incidents  <br/> |50  <br/> |
-  |Total number of documents that can be ingested into an incident (for all incidents in the investigation)  <br/> |1 million  <br/> |
-  |Total file size per load  <br/> |100 GB  <br/> |
-  |Maximum size of single file   <br/> |100 MB  <br/> |
-  |Maximum number of characters extracted from a single file  <br/> |10 million  <br/> |
-  |Depth of embedded items in a document  <br/> |25  <br/> |
-  
+  |Maximum number of investigations.  <br/> |50  <br/> |
+  |Total number of documents that can be added to an investigation (for all evidence sets in the investigation).  <br/> |1 million  <br/> |
+  |Total file size per load.  <br/> |100 GB  <br/> |
+  |Maximum size of a single file.   <br/> |100 MB <sup>1</sup> <br/> |
+  |Maximum number of characters extracted from a single file.  <br/> |10 million <sup>1</sup> <br/> |
+  |Depth of embedded items in a single file.  <br/> |25 <sup>1</sup> <br/> |
+|||
+> [!NOTE]
+><sup>1</sup>  Any items that exceed a single file limit will show up as processing errors.
+
+## Indexing limits
+
+Content coming soon.
+
+## Search limits
+
+Content coming soon.
 
 ## Export limits
 
+Content coming soon.
+
 ## Download limits
+
+Content coming soon.
 

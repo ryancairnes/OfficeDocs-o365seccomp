@@ -1,5 +1,5 @@
 ---
-title: "Manage evidence sets in Data Investigations"
+title: "Add data from one working set to another working set"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,9 +17,6 @@ ms.assetid:
 description: ""
 ---
 
-# Manage evidence sets in Data Investigations (Preview)  
+# Add data from one working set to another working set
 
 Content coming soon.
-
-  
-
