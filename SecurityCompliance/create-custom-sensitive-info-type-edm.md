@@ -39,7 +39,15 @@ You must be a global admin, compliance administrator, or Exchange Online adminis
 
 The process of setting up EDM consists of five main parts:
  
-LIST GOES HERE
+1. [Set up your tabular data source for EDM](#part-1-set-up-your-tabular-data-source-for-edm)
+
+2. [Install and authorize the EDM Upload agent](#part-2-install-and-authorize-the-edm-upload-agent)
+
+3. [Hash the sensitive data and upload it](#part-3-hash-the-sensitive-data-and-upload-it)
+
+4. [Create a rule package with exact matching](#part-4-create-a-rule-package-with-exact-matching)
+
+5. [Part 5: Apply EDM to a DLP policy](#part-5-apply-edm-to-a-dlp-policy)
 
 ## Part 1: Set up your tabular data source for EDM
 
