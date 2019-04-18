@@ -47,7 +47,7 @@ The first step is to download the source code for the pre-built Facebook connect
 
 1. Go to [this GitHub site](https://github.com/Microsoft/m365-sample-connector-csharp-aspnet/releases). 
 2. Under the latest release, click the **SampleConnector.zip** file.
-3. Save the ZIP file to a location on your local computer. You'll use this zip file to upload the source code for the Facebook connector to Azure in Step 4.
+3. Save the ZIP file to a location on your local computer. You'll upload this zip file to Azure in Step 4.
 
 ## Step 2: Create an app in Azure Active Directory
 

@@ -96,7 +96,7 @@ description: "Administrators can set up a native connector to import and archive
 
 ## Step 1: Download the package
 
-Download the prebuilt package from repository’s Release section, <https://github.com/Microsoft/m365-sample-connector-csharp-aspnet/releases>.
+Download the prebuilt package from repository’s Release section at <https://github.com/Microsoft/m365-sample-connector-csharp-aspnet/releases>. Under the latest release, download the zip file named **SampleConnector.zip**. You will upload this zip file to Azure in Step 4.
 
 ## Step 2: Create an app in Azure Active Directory
 
@@ -108,7 +108,7 @@ Download the prebuilt package from repository’s Release section, <https://gith
 
     ![](media/FBCimage2.png)
 
-3. In the left navigation pane, click **App registrations (Preview)** and then click New registration**.**
+3. In the left navigation pane, click **App registrations (Preview)** and then click **New registration**.
 
     ![](media/FBCimage3.png)
 
@@ -150,11 +150,11 @@ Download the prebuilt package from repository’s Release section, <https://gith
 
     ![](media/FBCimage12.png)
 
-3. Click **Storage**, and then click **Storage account – blob, file, table, queue**.
+3. Click **Storage**, and then click **Storage account**.
 
     ![](media/FBCimage13.png)
 
-4. On the **Create storage account** page, select or create a resource group.
+4. On the **Create storage account** page, in the Subscription box, select **Pay-As-You-Go** or **Free Trial** depending on which type of Azure subscription you have. Then select or create a resource group.
 
     ![](media/FBCimage14.png)
 
@@ -166,7 +166,7 @@ Download the prebuilt package from repository’s Release section, <https://gith
 
     ![](media/FBCimage16.png)
 
-7. Click **Go to resource** to navigate to the storage account resource.
+7. After a few moments, click **Refresh** and then click **Go to resource** to navigate to the storage account.
 
     ![](media/FBCimage17.png)
 
@@ -174,7 +174,7 @@ Download the prebuilt package from repository’s Release section, <https://gith
 
     ![](media/FBCimage18.png)
 
-9. Copy the **Connection string** and save it to a text file or other storage location. You’ll use this when creating a web app resource.
+9. Copy a **Connection string** and save it to a text file or other storage location. You’ll use this when creating a web app resource.
 
     ![](media/FBCimage19.png)
 
@@ -184,11 +184,11 @@ Download the prebuilt package from repository’s Release section, <https://gith
 
    ![](media/FBCimage20.png)
 
-2. Fill in the details (as shown below) and then create the Web app.
+2. Fill in the details (as shown below) and then create the Web app. Note that the name that you enter in the **App name** box will be used to create the Azure app service URL; for example fbconnector.azurewebsites.net.
 
    ![](media/FBCimage21.png)
 
-3. Go to the newly created Web App resource and enter the values (that you copied to the text file) for the following settings: 
+3. Go to the newly created web app resource, click **Application Settings** in the left navigation pane. Under Applicaiton settings, click Add new setting and add the following three settings. Use the values (that you copied to the text file from the previous steps): 
 
     - **APISecretKey** – The is the client secret value that you copied after creating the client secret in Step 2. This will be used to configure the connector service.
 
@@ -198,90 +198,90 @@ Download the prebuilt package from repository’s Release section, <https://gith
 
     ![](media/FBCimage22.png)
 
-4. On the **Applications settings** page, click **On** next to the **Always On**.
+4. Under **General settings**, click **On** next to the **Always On**. Click **Save** at the top of the page to save applicaton settings.
 
    ![](media/FBCimage23.png)
 
-5. Upload the app service bits (zip file downloaded as mentioned above) using the below url
+5. The final step is to upload the connector app source code to Azure that you downloaded in Step 1. In a web browser, go to https://<AzureAppResourceName>.scm.azurewebsites.net/ZipDeployUi. For example, if the name of your Azure app resource (which you named in step 2 in this section) is **fbconnector**, then you would go to https://fbconnector.scm.azurewebsites.net/ZipDeployUi. 
 
-\<AppService\>.scm.azurewebsites.net/ZipDeployUi
+6. Drag and drop the SampleConnector.zip (that you downloaded in Step 1) to this page. After the files are uploaded and the deployment is successful, the page will look similar to the following screenshot.
 
    ![](media/FBCimage24.png)
 
 ## Step 5: Register the Facebook app
 
-#### Go to <https://developers.facebook.com> , log in using the credentials for the account for your organization’s Facebook Business pages, and then click **Add New App**.
+1. Go to <https://developers.facebook.com> , log in using the credentials for the account for your organization’s Facebook Business pages, and then click **Add New App**.
 
-![](media/FBCimage25.png)
+   ![](media/FBCimage25.png)
 
-#### Create a new app ID.
+2. Create a new app ID.
 
-![](media/FBCimage26.png)
+   ![](media/FBCimage26.png)
 
-#### In the left navigation pane, click **Add Products** and then click **Set Up** in the **Facebook Login** tile**.**
+3. In the left navigation pane, click **Add Products** and then click **Set Up** in the **Facebook Login** tile**.**
 
-![](media/FBCimage27.png)
+   ![](media/FBCimage27.png)
 
-#### On the Integrate Facebook Login page, click **Web**.
+4. On the Integrate Facebook Login page, click **Web**.
 
-![](media/FBCimage28.png)
+   ![](media/FBCimage28.png)
 
-#### Add the hosted site URL. 
+5. Add the hosted site URL. 
 
-![](media/FBCimage29.png)
+   ![](media/FBCimage29.png)
 
-#### Complete the QuickStart section of the Facebook Login setup.
+6. Complete the QuickStart section of the Facebook Login setup.
 
-![](media/FBCimage30.png)
+   ![](media/FBCimage30.png)
 
-#### In the left navigation pane under **Facebook Login**, click **Settings**, and add the OAuth redirect URI in the **Valid OAuth Redirect URIs** box; use the format **\<connectorserviceuri\>/Views/FacebookOAuth,** where the value for connectorserviceuri is the tenantID for your organization.
+7. In the left navigation pane under **Facebook Login**, click **Settings**, and add the OAuth redirect URI in the **Valid OAuth Redirect URIs** box; use the format **\<connectorserviceuri\>/Views/FacebookOAuth,** where the value for connectorserviceuri is the tenantID for your organization.
 
-![](media/FBCimage31.png)
+   ![](media/FBCimage31.png)
 
-#### In the left navigation pane, click **Add Products** and then click **Webhooks.** In the **Page** pull-down menu, click **Page**. 
+8. In the left navigation pane, click **Add Products** and then click **Webhooks.** In the **Page** pull-down menu, click **Page**. 
 
-![](media/FBCimage32.png)
+   ![](media/FBCimage32.png)
 
-#### Add Webhooks Callback URL and add a verify token.
+9. Add Webhooks Callback URL and add a verify token.
 
-![](media/FBCimage33.png)
+     ![](media/FBCimage33.png)
 
-#### Test and subscribe to the endpoint for feed.
+10. Test and subscribe to the endpoint for feed.
 
-![](media/FBCimage34.png)
+    ![](media/FBCimage34.png)
 
-#### Add a privacy URL, app icon, and business use.
+11. Add a privacy URL, app icon, and business use.
 
-![](media/FBCimage35.png)
+    ![](media/FBCimage35.png)
 
-#### Make the app public.
+12. Make the app public.
 
-![](media/FBCimage36.png)
+    ![](media/FBCimage36.png)
 
-#### Add user to the admin or tester role.
+13. Add user to the admin or tester role.
 
-![](media/FBCimage37.png)
+    ![](media/FBCimage37.png)
 
-#### Add the **Page Public Content Access** permission.
+14. Add the **Page Public Content Access** permission.
 
-![](media/FBCimage38.png)
+    ![](media/FBCimage38.png)
 
-#### Add Manage Pages permission.
+15. Add Manage Pages permission.
 
-![](media/FBCimage39.png)
+    ![](media/FBCimage39.png)
 
-#### Get the application reviewed by Facebook.
+16. Get the application reviewed by Facebook.
 
-![](media/FBCimage40.png)
+    ![](media/FBCimage40.png)
 
-## Step 6: Configure the connector
-1. Configure the app service by clicking on the configure button on the home page of your app.
+## Step 6: Configure the connector app
 
-  \<appservice\>.azurewebsites.net
+1. Go to https://<AzureAppResourceName>.azurewebsites.net (when AzureAppResourceName is the name of your Azure app resource that you named in Step 4) For example, if the name is **fbconnector**, go to https://fbconnector.azurewebsites.net. The home page of the app will look like the following sceenshot.
+
 
   ![](media/FBCimage41.png)
 
-2. Type your tenant Id and the APISecretKey (that you copied after creating the client secret in Step 2 and added to the application settings in Step 4.) and then click **Set Configuration Settings**.
+2. Click **Configure**, type your tenant Id and the APISecretKey (that you copied after creating the app in Azure Active Directory in Step 2), and then click **Set Configuration Settings**.
 
    ![](media/FBCimage42.png)
 
@@ -315,7 +315,7 @@ Download the prebuilt package from repository’s Release section, <https://gith
 
     Fill the name as Facebook
 
-    Provide API secret key and connector URL as created in Finalize step 4
+    Provide API secret key and Azure app service URL that you created (and saved to the text file) in Step 4.
 
 4.  Click **Login with Connector App**.
 
