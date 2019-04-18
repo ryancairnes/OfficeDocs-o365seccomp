@@ -117,7 +117,7 @@ During the completion of this step (by following the step-by-step instructions),
 
 ## Step 7: Set up a custom connector in the Security & Compliance Center
 
-The final step is to set up the custom connector in the Security & Compliance Center that will import data from your Facebook Business pages to a specified mailbox in Office 365. After you successfully complete this step, the Office 365 Import service will starting importing data from your Facebook Business pages to Office 365. 
+The final step is to set up the custom connector in the Security & Compliance Center that will import data from your Facebook Business pages to a specified mailbox in Office 365. After you successfully complete this step, the Office 365 Import service will start the process of importing data from your Facebook Business pages to Office 365. 
 
 For step-by-step instructions, see [Set up a custom connector in the Security & Compliance Center](deploy-facebook-connector.md#step-7-set-up-a-custom-connector-in-the-security--compliance-center). 
 
