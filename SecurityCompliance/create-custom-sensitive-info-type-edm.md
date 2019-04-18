@@ -79,10 +79,7 @@ During this phase, you structure your sensitive data in a .csv (or .tsv) file, c
 
 ## Part 2: Install and authorize the EDM Upload agent
 
-When you install and authorize the EDM Upload Agent, you should  should have
-o	Read access to the file with Lookup data (csv).
-o	Write access to location for storing hashed data. 
-o	Access to Microsoft Azure Service and ability to write to Azure Storage Blob.  <<Could we add more specific pointers here?>> 
+During this phase, you'll set up a dedicated user account for Office 365, download and install the EDM Upload Agent, and authorize the tool.
 
 1. Set up a user account with minimal permissions for the EDM Upload Agent. (See [Add users to Office 365](https://docs.microsoft.com/office365/admin/add-users/add-users?view=o365-worldwide).) The user account you create should have:
 
