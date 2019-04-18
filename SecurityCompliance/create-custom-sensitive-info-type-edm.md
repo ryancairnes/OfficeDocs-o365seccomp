@@ -50,7 +50,7 @@ During this phase, you structure your sensitive data in a .csv (or .tsv) file, c
     - The data file can include up to one million rows of sensitive data across all data sources.
     - The data file can include up to 32 fields per data source.
     - The data file can include up to five indexed columns per data source.
-    - Data refresh can occur weekly (during preview).
+    - Data refresh can occur weekly (but not more often during preview).
 
 2. Set up a .xml file that represents the schema for the data in your .csv file. Name this file `edm.xlm`. As an example, the following .xml file defines the schema for our example SampleDataStore database.
     
@@ -79,12 +79,16 @@ During this phase, you structure your sensitive data in a .csv (or .tsv) file, c
 
 ## Part 2: Install and authorize the EDM Upload agent
 
-EDM Upload Agent should have
+When you install and authorize the EDM Upload Agent, you should  should have
 o	Read access to the file with Lookup data (csv).
 o	Write access to location for storing hashed data. 
 o	Access to Microsoft Azure Service and ability to write to Azure Storage Blob.  <<Could we add more specific pointers here?>> 
 
-1. Set up a user account with minimal permissions for the EDM Upload Agent. (See [Add users to Office 365](https://docs.microsoft.com/office365/admin/add-users/add-users?view=o365-worldwide).)
+1. Set up a user account with minimal permissions for the EDM Upload Agent. (See [Add users to Office 365](https://docs.microsoft.com/office365/admin/add-users/add-users?view=o365-worldwide).) The user account you create should have:
+
+    - Read access to the data file (.csv or .tsv created in Part 1)
+    - Write access to the location you'll use for storing hashed data
+    - Write access to Microsoft Azure Service for Azure Blob storage
 
 2. [Download the EDM Upload Agent](http://download.microsoft.com/download/C/6/2/C62C41B6-8585-4655-9D93-EAC61042AC51/EdmUploadAgent.msi) (EdmUploadAgent.exe) and install it.
 
