@@ -46,8 +46,9 @@
 ### [What the DLP functions look for](what-the-dlp-functions-look-for.md)
 ### [Watch an extended overview of customizing DLP](https://go.microsoft.com/fwlink/?linkid=852306)
 ### [Customize a built-in sensitive information type](customize-a-built-in-sensitive-information-type.md)
-### [Create a custom sensitive information type](create-a-custom-sensitive-information-type.md)
-### [Create a custom sensitive information type in Office 365 Security & Compliance Center PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md)
+### [Create a custom sensitive information type in the Security & Compliance Center](create-a-custom-sensitive-information-type.md)
+### [Create a custom sensitive information type using PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md)
+### [Create a custom sensitive information type with Exact Data Match (EDM) (Preview)](create-custom-sensitive-info-type-edm.md)
 ### [Create a keyword dictionary](create-a-keyword-dictionary.md)
 ### [Document Fingerprinting](document-fingerprinting.md)
 
