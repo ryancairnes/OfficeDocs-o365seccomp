@@ -148,8 +148,6 @@ To permanently delete a document from a SharePoint site or OneDrive account, you
 
 Alternatively, you can delete an entire site collection that might contained spilled data. For instructions, see [Delete a site collection](https://docs.microsoft.com/sharepoint/delete-site-collection).
 
-For more detailed delete instructions, see [How to delete content to remediate a data spill](delete-data.md). 
-
 ## Step 5: Close or delete the investigation
 
 After you delete documents in the source content locations (mailboxes or sites) in the live service, you will still have copies of these documents that you added to evidence as part of your investigation. To avoid further data spillage, you should consider deleting the investigation itself.
