@@ -97,12 +97,17 @@ During this phase, you'll set up a dedicated user account for Office 365, downlo
 
 4. When prompted, log in using the account credentials you created in step 1. 
 
+5. Proceed to Part 3.
+
 > [!TIP]
 > If you get any error messages, repeat steps 3 and 4.
 
 ## Part 3: Hash the sensitive data and upload it
 
-During this phase, you hash and upload the data. The following procedure describes how to upload the data to a single server; however, you could use multiple servers.
+During this phase, you hash the sensitive data, and upload the hashed data using the EDMUploadAgent. 
+
+> [!NOTE]
+> The following procedure describes how to upload the data to a single server; however, you could use multiple servers.
 
 1. To hash the data, run the following PowerShell cmdlet in Exchange Online Protection:
 
@@ -120,7 +125,7 @@ During this phase, you hash and upload the data. The following procedure describ
 
     `EdmUploadAgent.exe /GetDataStore`
 
-    You'll see a list of data stores and when they were last updated. Example:
+    You'll see a list of data stores and when they were last updated. Here's an example:
 
     ![Example of GetDataStore cmdlet and results](media/EDM-GetDataStore-example.png)
 
