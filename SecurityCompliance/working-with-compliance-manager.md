@@ -21,69 +21,31 @@ description: "Microsoft Compliance Manager is a workflow-based risk assessment t
 
 ## Groups
 
-SECURITY PROPERTIES FOR GROUPS
-ONLY CREATED IN ASSESSMENT
-"DEFAULT GROUP" is default
+SECURITY PROPERTIES FOR GROUPS - NONE
 
-As shown in the example below, you could group Assessments by year, standard, service, team, division, or agencies within your organization to minimize customer actions:
+Groups are containers that allow you to logically organize Assessments and that share common information and workflow tasks between Assessments that have the same or related customer managed controls. You can group Assessments by year, standard, service, team, division, or agencies within your organization to help minimize customer-managed Actions:
   
 - **GDPR Assessments - 2019**
   - Office 365 + GDPR
-  - Azure + GDPR
   - Dynamics + GDPR
-- **Azure Assessments - 2019**
-  - Azure + GDPR
-  - Azure + ISO 27001:2013
-  - Azure + ISO 27018:2014
 - **Data Security and Privacy Assessments**
-  - Office 365 + ISO 27001:2013
-  - Office 365 + ISO 27018:2014
-  - Azure + ISO 27001:2013
-  - Azure + ISO 27018:2014
-  - 
+  - Office 365 + ISO 27001:2018
+  - Office 365 + ISO 27018:2019
+  - Azure + ISO 27001:2018
+  - Azure + ISO 27018:2019
 
-When you create a new Assessment, you're prompted to create a new group to assign the Assessment to or assign the Assessment to an existing group. However, it's recommend that your determine a grouping strategy for your organization *before* adding new assessments.
+When you create a new Assessment, you must create a new group for the Assessment or assign the Assessment to an existing group. It's recommended that you determine a grouping strategy for your organization *before* adding new assessments. By default, a Group named "Default Group" is available for your initial Assessments.
 
-When working with groups, remember that:
+When working with groups, remember:
   
+- Related assessment controls in different assessments within the same Group automatically update when completed.
+- New groups have the option to copy information from an existing group when you create a new Assessment. Any information that was added to the Implementation Details and Test Plan and Management Response fields of customer-managed controls from Assessments in the group that you're copying from are copied to the same (or related) customer managed controls in the new Assessment. If you're adding a new Assessment to an existing group, common information from Assessments in that group will be copied to the new Assessment.
 - Group names (also called *Group IDs*) must be unique within your organization.
-- Groups can contain Assessments for the same certification/regulation, but each group can only contain one Assessment for a specific cloud service/certification pair. For example, a group can't contain two Assessments for Office 365 and GDPR. Similarly, a group can contain multiple Assessments for the same cloud service as long as the corresponding certification/regulation for each one is different.
-- Once an assessment has been added to an assessment grouping, the grouping cannot be changed. You can rename the assessment group, which changes the name of the assessment grouping for all of the assessments associated with that group. You can create a new assessment and a new assessment group and copy information from an existing assessment, which effectively creates a duplicate of that assessment in a different assessment group. Archiving an assessment breaks the relationship between that assessment and the assessment group; any further updates to other related assessments are no longer reflected in the archived assessment.
-
-### Groups example
-
-As an example of this, consider these two related assessment controls, each having to do with encryption of data on public networks, control 6.10.1.2 in the Office 365 - GDPR assessment, and control SC-13 in the Office 365 - NIST 800-53 assessment. These are related assessment controls, in two different assessments, both in the Default Group; initially, neither assessment has completed any customer control assessments, as is displayed on the Compliance Manager Dashboard that shows these two Assessments.
-  
-![Compliance Manager Dashboard - grouped assessments - before](media/dc0126a3-415c-4fbe-a020-1806dd1caebd.png)
-  
-By clicking the **Office 365 - GDPR** assessment, and using the filter controls to view GDPR control 6.10.1.2, we see that NIST 800-53 control SC-13 is listed as a related control.
-  
-![Compliance Manager Assessment - shared controls](media/aafb106e-0abc-4918-8038-de11cf326dfe.png)
-  
- Here we show the completion of the implementation and testing of GDPR control 6.10.1.2. 
-  
-![Compliance Manager Assessment control GDPR 6.10.1.2 - passed](media/ee9e83b6-9d51-4b3b-85eb-96bec0fef2e1.png)
-  
-By navigating to the related control in the grouped assessment, we see that NIST 800-53 SC-13 has also been marked as completed with the same date and time, with no additional implementation or testing effort.
-  
-![Compliance Manager assessment - NIST 800-53 SC(13) completed](media/b5933592-db5a-4fdd-9be2-bba777646a88.png)
-  
-Back at the Dashboard, we can see that each assessment has 1 control assessment completed and that the total Compliance Score for each assessment has increased by 8 (the compliance score value of that shared control).
-  
-![Compliance Manager Dashboard - grouped assessment progress synchronization](media/727f1203-b98d-4a03-a7af-e9236f4c5534.png)
-
-
+- Groups can contain Assessments for the same certification/regulation, but each group can only contain one Assessment for a specific cloud service/certification pair. For example, a group can't contain two Assessments for Office 365 and GDPR. A group can contain multiple Assessments for the same cloud service as long as the corresponding certification/regulation for each one is different.
+- Once an assessment has been added to an assessment group, the grouping cannot be changed. You can rename the assessment group, which changes the name of the assessment grouping for all of the assessments associated with that group. You can create a new assessment and a new assessment group and copy information from an existing assessment, which effectively creates a duplicate of that assessment in a different assessment group. 
+- Archiving an assessment breaks the relationship between that assessment and the assessment group; any further updates to other related assessments are no longer reflected in the archived assessment.
 
 ## Assessments
-
-
-
-You can export an Assessment to an Excel file, which can be reviewed by compliance stakeholders in your organization, and provided to auditors and regulators. This assessment report is a snapshot of the assessment as of the date and time that the report is created, and it contains the details of both the Microsoft-managed controls and the customer managed controls for that assessment, including control implementation status, control test date and test results, and provides links to the uploaded evidence documents.
-
-When you have completed an Assessment and no longer need it for compliance purposes, you can archive it. When an Assessment is archived, it is removed from Assessments dashboard.
-  
-> [!NOTE]
-> When an Assessment is archived, it cannot be 'unarchived' or restored to a read-write in progress state. Please note that archived Assessments do not retain their links to uploaded evidence documents, so it is highly recommended that you perform an Export of the Assessment before archiving it, as the exported assessment report will contain links to the evidence documents, enabling you to continue to access them.
 
 ### Managing the assessment process
 
@@ -127,31 +89,32 @@ Here's a list of tasks that you can perform using the workflow features of Compl
     
 7. **Enter test date and test result** - The person with the Compliance Manager Assessor role can verify that proper testing performed, review the implementation details, test plan, test results, and any uploaded evidence, and then set the Test Date and Test Result. Available test result values are **Passed**, **Failed-Low Risk**, **Failed-Medium Ris** **k**, and **Failed-High Risk**. 
 
-### Adding an Assessment
+### Add an Assessment
 
 To add an Assessment to Compliance Manager:
   
-1. In the Compliance Manager dashboard, click ![Add Icon](media/ITPro-EAC-AddIcon.gif) **Add Assessment**. 
+1. In the Compliance Manager dashboard, select **Add Assessment**.
     
-2. In the **Add an Assessment** window, you can create a new group to add the Assessment to or you can add it to an existing group (the built-in group is named "Initial Group".) Depending on the option you choose, either type the name of a new group or select an existing group from the drop-down list. For more information, see [Grouping Assessments](#grouping-assessments).
-    
-    If you create a new group, you also have the option to copy information from an existing group to the new Assessment. That means any information that was added to the Implementation Details and Test Plan and Management Response fields of customer managed controls from Assessments in the group that you're copying from are copied to the same (or related) customer managed controls in the new Assessment. If you're adding a new Assessment to an existing group, common information from Assessments in that group will be copied to the new Assessment. For more information, see [Copying information from existing Assessments](#copying-information-from-existing-assessments).
-    
-3. Click **Next**, and do the following:
-    
-    a. Choose a Microsoft cloud service to assess for compliance from the **Select a product** drop down list. 
-    
-    b. Choose a certification to assess the selected cloud service against from the **Select a certification** drop down list. 
-    
-4. Click **Add to Dashboard** to create the Assessment; the assessment will be added to the Compliance Manager dashboard as a new tile at the end of the list of existing tiles. 
-    
-    The **Assessment Tile** on the Compliance Manager dashboard, displays the assessment grouping, the name of the assessment (automatically created as a combination of the Service name and the certification selected), the date it was created and when it was last modified, the Total Compliance Score (which is the sum of all of the assigned control risk values that have been implemented, tested and passed), and progress indicators along the bottom that show the number of controls that have been assessed. 
-    
-5. Click the Assessment name to open it, and view the details of the Assessment.
-    
-6. Click on the **Actions** menu to view your assigned action items, rename the assessment group, export the assessment report, or archive the assessment. 
-    
-    ![Compliance Manager - Assessment Tile](media/abf35c11-9757-45c1-aa14-91178f67a18c.png)
+2. In the **Add an Assessment** window, complete the following information
+
+    - **Title (required):** Enter a title for your Assessment
+    - **Select a template (required):** Select a standard or custom template
+    - **Select a group or add a new group (required):** Select an existing group or create and add the Assessment to a new group
+    - **Copy data from an existing group (optional):** Toggle the control to enable group copy
+    - **Select a group (optional):** If group copy is enabled, select the group to copy from
+    - **Implementation Details (optional):** Select to copy implementation details to the new group
+    - **Test plan & additional information (optional):** Select to copy test plan and additional information details to the new group
+    - **Documents (optional):** Select to copy documents to the new group
+
+3. Select **Save** to create the Assessment.
+
+ The new Assessment is automatically added as an Assessment tile on the Compliance Manager dashboard. This tile displays:
+
+- The title of the Assessment.
+- The dimensions of the Assessment, including certification, environment, and product applied to the Assessment.
+- The date it was created and date when it was last modified.
+- The Assessment Score (the sum of all of the assigned control risk values that have been implemented, tested and passed).
+- Progress indicators along the bottom that show the number of Microsoft-managed and customer-manged controls that have been assessed.
 
 ### Copying information from existing Assessments
 
@@ -185,21 +148,19 @@ Similarly, information from shared customer managed controls within the same Ass
     
 6. Displays the total number of controls in the control family, and how many of those controls have been assessed. A key capability of Compliance Manager is tracking your organization's progress on assessing the customer managed controls. For more information, see the [Understanding the Compliance Score](#understanding-the-compliance-score) section. 
 
-### Exporting information from an Assessment
+### Export an Assessment
 
-You can export an Assessment to an Excel file, which can be reviewed by compliance stakeholders in your organization, and provided to auditors and regulators. This assessment report is a snapshot of the assessment as of the date and time that the report is created, and it contains the details of both the Microsoft-managed controls and the customer managed controls for that assessment, including control implementation status, control test date and test results, and provides links to the uploaded evidence documents. It is recommended that you export the assessment report prior to archiving an assessment, as archived assessments do not retain their links to uploaded documents.
+You can export an Assessment to an Excel file for compliance stakeholders in your organization or for external auditors and regulators. The report is a snapshot of the Assessment as of the date and time that the report is created. The report contains the details for all Microsoft and customer-managed controls for the Assessment, control implementation status, control test date, test results, and provides links to uploaded evidence documents. You should export the Assessment report prior to archiving an assessment because archived assessments do not retain links to uploaded documents.
   
 To export an Assessment report:
   
-- On the Compliance Manager dashboard, click **Actions** on the tile of the assessment you wish to export, and then choose **Export to Excel**
+1. On the Compliance Manager dashboard, select **Controls Info** tab.
+2. Select the **Group** and **Assessment** in the drop down menus for the Assessment you want to export.
+3. Select the **Export** button.
 
-  Or
-    
-- If you are viewing the Assessment details page, click on the **Export to Excel** button, which is located in the upper right hand corner of the page above the assessment's Compliance Score.
-    
-The assessment report will be downloaded in your browser session. If you don't see a popup informing you of this, you may wish to check your browser's downloads folder.
+The assessment report is downloaded as an Excel file in your browser session. The files name for the Excel file defaults to the title of the Assessment.
 
-### Archiving an Assessment
+### Archive an Assessment
 
 When you have completed an Assessment and no longer need it for compliance purposes, you can archive it. When an Assessment is archived, it is removed from Assessments dashboard.
   
@@ -208,27 +169,31 @@ When you have completed an Assessment and no longer need it for compliance purpo
   
 To archive an assessment:
   
-1. On the dashboard tile of the desired assessment, click **Actions**. 
+1. On the dashboard tile of the desired assessment, select the **Archive Assessments** control or **Archive** from the actions control.
     
-2. Select **Archive Assessment**. 
- 
-    The **Archive Assessments** dialog is displayed, asking you to confirm that you want to archive the assessment.
+2. The **Archive Assessments** dialog is displayed, asking you to confirm that you want to archive the assessment.
     
-4. To continue with archiving, click **Archive**, or else click **Cancel**. 
+3. To continue with archiving, select **Archive**. To cancel archiving the Assessment, select **Cancel**. 
     
-To view archived Assessments:
+### View archived Assessments
   
-1. On the Compliance Manager dashboard, check the **Show Archived** checkbox. 
+1. On the Compliance Manager dashboard, select the **Show Archived** checkbox.
     
-    The archived assessments will appear in a newly visible section below the rest of the active assessments under a bar titled **Archived Assessments**.
+2. The archived assessments will appear a new **Archived Assessments** section below the active assessments.
     
-3. Click the name of the assessment you wish to view.
+3. Select the name of the assessment you wish to view.
     
-When viewing an archived assessment, none of the normally editable controls (i.e. Implementation, Test Results) will be active, and the **Managed Documents** button will be absent.
+Archived Assessment information includes in-scope services, Microsoft and customer-managed control details. When viewing an archived assessment, none of the normally editable controls (i.e. Implementation, Test Results) will be active and the **Managed Documents** button will be absent.
+
+### Activate an archived Assessment
+
+???
 
 ## Controls
 
 ## Actions
+
+Actions are the assigned tasks for implementing the requirements of a standard or regulation, or to test, verify, and document your organization's implementation requirements. When your organization has completed your implementation steps, the implementation date can be recorded and the status can be changed to Implemented. When the status and implementation date is changed, the implementation notes, implementation date, and status information are updated in the Assessments dashboard where your organization's test team can proceed with testing and validating the implementation, and marking the item as assessed by entering Test Plan, Test Date, and Test Result information.
 
 ### Assigning action items
   
@@ -277,7 +242,9 @@ To view your action items:
 ## Permissions
 
 The following table describes each Compliance Manager permission and what it allows the user do. The table also indicates the role that each permission is assigned to.
-  
+
+ADD ACCESS TO RESTRICTED DOCUMENTS ROLE?? - SCOTT WILL CONFIRM
+ 
 ||**Compliance Manager Reader**|**Compliance Manager Contributor**|**Compliance Manager Assessor**|**Compliance Manager Administrator**|**Portal Admin**|
 |:-----|:-----|:-----|:-----|:-----|:-----|
 |**Read data** - Users can read but not edit data.  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |
