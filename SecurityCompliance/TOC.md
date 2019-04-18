@@ -147,11 +147,9 @@
 ### [How Threat Investigation and Response works](get-started-with-ti.md)
 ### [How Automated Investigation and Response works](automated-investigation-response-office.mc)
 <!--End ATP-->
-#
 ## [Tune anti-phishing protection](tuning-anti-phishing.md)
 ### Manage your security for specific workloads
 #### [View information about malicious files](malicious-files-detected-in-spo-odb-or-teams.md)
-
 ## [Anti-spam and anti-malware protection](anti-spam-and-anti-malware-protection.md)
 ### [What is EOP?](eop/what-is-eop.md)
 ### [Office 365 email anti-spam protection](anti-spam-protection.md)
