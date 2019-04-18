@@ -184,6 +184,8 @@ While file exclusions for attack surface reduction rules are managed on Microsof
 
 To start analyzing detections and collecting files for exclusion, go to the **Add exclusions** tab in the **Attack surface reduction rules** report page.
 
+**Note:** The tool analyzes detections by all attack surface reduction rules, but exclusions will prevent only detections by rules that specifically support exclusions. [View rules and exclusion support](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules)
+
 ![Add exclusions tab](./media/security-docs/add-exclusions-tab.png)
 
 The table lists all the file names detected by your attack surface reduction rules. Once you select a file or multiple files, you can review the impact of adding those files to your exceptions:
