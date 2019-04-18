@@ -44,23 +44,20 @@ Finally, you can mitigate the impact of inadvertent lack of administrative acces
 ## Step 3: Configure recommended identity and device access policies
 Multi-factor authentication (MFA) and conditional access policies are powerful tools for mitigating against compromised accounts and unauthorized access. We recommend implementing a set of policies that have been tested together. For more information, including deployment steps, see [Identity and device access configurations](https://docs.microsoft.com/en-us/microsoft-365/enterprise/microsoft-365-policies-configurations).
 
- These policies include implementing the following:
+ These policies implement the following capabilities:
 - Mult-factor authentication
 - Conditional access
 - Intune app protection (app and data protection for devices)
 - Intune device compliance
 - Azure AD Identity Protection
 
+Implemetning Intune device compliance requires device enrollment. Managing devices allows you to ensure that they are healthy and compliant before allowing them access to resources in your environment. See [Enroll devices for management in Intune](https://docs.microsoft.com/intune-classic/deploy-use/enroll-devices-in-microsoft-intune)
+
 ## Step 4: Configure SharePoint device access policies
 
-Microsoft recommends you protect content in SharePoint sites with sensitive and highly-regulated content with device access controls. For more information, see [Policy recommendations for securing SharePoint sites and files](https://docs.microsoft.com/en-us/microsoft-365/enterprise/sharepoint-file-access-policies)
+Microsoft recommends you protect content in SharePoint sites with sensitive and highly-regulated content with device access controls. For more information, see [Policy recommendations for securing SharePoint sites and files](https://docs.microsoft.com/en-us/microsoft-365/enterprise/sharepoint-file-access-policies).
 
 
-    
-## Step 7: Manage devices with Intune
 
-Managing devices allows you to ensure that they are healthy and compliant before allowing them access to resources in your environment. Device based conditional access rules help ensure attackers can't gain access to your resources from unmanaged devices.
-  
-- [Enroll devices for management in Intune](https://docs.microsoft.com/intune-classic/deploy-use/enroll-devices-in-microsoft-intune)
     
 
