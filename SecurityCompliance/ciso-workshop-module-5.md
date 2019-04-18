@@ -1,5 +1,5 @@
 ---
-title: "Chief Information Security Officer (CISO) Workshop - Module 5 – Information Protection"
+title: "Chief Information Security Officer (CISO) Workshop, Module 5: Information Protection"
 ms.author: robmazz
 author: robmazz
 manager: laurawi
@@ -12,25 +12,25 @@ ms.collection:
 description: "Learn more about security principles and recommendations for modernizing security in your organization."
 ---
 
-# CISO Workshop Module 5 – Information Protection
+# CISO Workshop Module 5: Information Protection
 
 Learn how to protect sensitive information wherever it goes with automatic classification, persistent encryption across devices, and continuous monitoring of data across mobile devices, cloud services, and other corporate assets.
 
-- Download PDF summary: [Module 5 – Information Protection](media/ciso-workshop-5-information-protection-strategy.pdf)
-- Download PowerPoint summary: [Module 5 – Information Protection](https://docs.microsoft.com/office365/securitycompliance/media/ciso-workshop-5-information-protection-strategy.pptx)
+- Download PDF summary: [Module 5: Information Protection](media/ciso-workshop-5-information-protection-strategy.pdf)
+- Download PowerPoint summary: [Module 5: Information Protection](https://docs.microsoft.com/office365/securitycompliance/media/ciso-workshop-5-information-protection-strategy.pptx)
 
-## Introduction – Information Protection (3:04)
+## Introduction: Information Protection (3:04)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtLoT]
 
-## Part 1 – Information Protection History and Context (8:43)
+## Part 1: Information Protection History and Context (8:43)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtVXT]
 
-## Part 2 – Information Protection Strategy (9:11)
+## Part 2: Information Protection Strategy (9:11)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtLoS]
 
-## Part 3 – Story of a File: Protecting Information anywhere it goes (10:23)
+## Part 3: Story of a File and Protecting Information Anywhere (10:23)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtITi]
