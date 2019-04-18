@@ -84,7 +84,18 @@ o	Read access to the file with Lookup data (csv).
 o	Write access to location for storing hashed data. 
 o	Access to Microsoft Azure Service and ability to write to Azure Storage Blob.  <<Could we add more specific pointers here?>> 
 
-1. Go to [https://WHATGOESHERE](https://WHATGOESHERE) and download the EDM Upload Agent (EdmUploadAgent.exe).
+1. Set up a user account with minimal permissions for the EDM Upload Agent. (See [Add users to Office 365](https://docs.microsoft.com/office365/admin/add-users/add-users?view=o365-worldwide).)
+
+2. [Download the EDM Upload Agent](http://download.microsoft.com/download/C/6/2/C62C41B6-8585-4655-9D93-EAC61042AC51/EdmUploadAgent.msi) (EdmUploadAgent.exe) and install it.
+
+3. To authorize the EDM Upload Agent, run the following PowerShell cmdlet in Exchange Online Protection:
+
+    `EdmUploadAgent.exe /Authorize`
+
+4. When prompted, log in using the account credentials you created in step 1. 
+
+> [!TIP]
+> If you get any error messages, repeat steps 3 and 4.
 
 ## Part 3: Hash the sensitive data and upload it
 
