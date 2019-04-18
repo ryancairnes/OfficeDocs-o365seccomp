@@ -59,7 +59,8 @@ During the completion of this step (by following the step-by-step instructions),
 
 - Application ID
 - Tenant ID
-- Client secret
+- APISecretKey secret
+- App insights instrumentation key
 
 ## Step 3: Create an Azure storage account
 
@@ -75,7 +76,7 @@ The next step is to create a web app resource in Azure for the Facebook Connecto
 
 During the completion of this step (by following the step-by-step instructions), you'll provide the following information (that you've copied to a text file after completing the previous steps) when creating the web app resource.
 
-- APISecretKey – The client secret value that you copied after creating the client secret in Step 2. This will be used to configure the connector service.
+- APISecretKey – The client secret value that you copied after creating the client secret in Step 2.
 
 - StorageAccountConnectionString – The connection string Uri that you copied after creating the Azure storage account in Step 3.
 
@@ -83,7 +84,7 @@ During the completion of this step (by following the step-by-step instructions),
 
 Additionally, you will upload the SampleConnector.zip file (that you downloaded in Step 1) in this step to deploy the source code for the Facebook connector app.
 
-After completing this step, be sure to copy the app Service URL (for example, https://facebookconnector.azurewebsites.net ). You'll need to use this to complete Step 5, Step 6, and Step 7).
+After completing this step, be sure to copy the app Service URL (for example, https://fbconnector.azurewebsites.net). You'll need to use this to complete Step 5, Step 6, and Step 7).
 
 ## Step 5: Register the web app on Facebook
 
@@ -95,23 +96,23 @@ During the completion of this step (by following the step-by-step instructions),
 
 - Facebook application ID
 - Facebook application secret
-- Facebook Webhooks verify token
+- Facebook webhooks verify token
 
 ## Step 6: Configure the Facebook connector app
 
 The next step is to add configurations settings to the Facebook connector app that you uploaded when you created the Azure web app resource in Step 4. You'll do this by going to the home page of your connector app and configuring it.
 
-For step-by-step instructions, see [Configure the connector](deploy-facebook-connector.md#step-6-configure-the-connector).
+For step-by-step instructions, see [Configure the connector app](deploy-facebook-connector.md#step-6-configure-the-connector-app).
 
 During the completion of this step (by following the step-by-step instructions), you'll provide the following information (that you've copied to a text file after completing the previous steps).
 
 - Facebook application ID (obtained in Step 5)
 - Facebook application secret (obtained in Step 5)
-- Facebook webhooks verify token(obtained in Step 5)
+- Facebook webhooks verify token (obtained in Step 5)
 - Azure Active Directory application ID (obtained in Step 2)
 - Azure Active Directory application secret (the client secret obtained in Step 2)
-- Azure Active Directory application Uri (the Azure app service URL obtained in Step 4; for example, https://facebookconnector.azurewebsites.net)
-- App insights instrumentation key
+- Azure Active Directory application Uri (the Azure app service URL obtained in Step 4; for example, https://fbconnector.azurewebsites.net)
+- App insights instrumentation key ()
 
 
 ## Step 7: Set up a custom connector in the Security & Compliance Center
@@ -122,6 +123,6 @@ For step-by-step instructions, see [Set up a custom connector in the Security & 
 
 During the completion of this step (by following the step-by-step instructions), you'll provide the following information (that you've copied to a text file after completing the steps).
 
-- Azure app service URL (obtained in Step 4; for example https://facebookconnector.azurewebsites.net)
+- Azure app service URL (obtained in Step 4; for example https://fbconnector.azurewebsites.net)
 - Client secret (obtained in Step 2)
 

@@ -128,11 +128,11 @@ Download the prebuilt package from repository’s Release section at <https://gi
 
    ![](media/FBCimage7.png)
 
-8. Create new secret
+8. Create a new secret. In the description box, type **APISecretKey** and then choose an expiration period.
 
     ![](media/FBCimage8.png)
 
-9. Copy the client secret and save it to a text file or other storage location. You’ll use this client secret in a later step.
+9. Copy the value of the APISecretKey secret and save it to a text file or other storage location. You’ll use this secret in later steps.
 
    ![](media/FBCimage9.png)
 
@@ -190,11 +190,13 @@ Download the prebuilt package from repository’s Release section at <https://gi
 
 3. Go to the newly created web app resource, click **Application Settings** in the left navigation pane. Under Applicaiton settings, click Add new setting and add the following three settings. Use the values (that you copied to the text file from the previous steps): 
 
-    - **APISecretKey** – The is the client secret value that you copied after creating the client secret in Step 2. This will be used to configure the connector service.
+    - **APISecretKey** – The is the client secret value that you copied after creating the APISecretKey secret in Step 2.
 
     - **StorageAccountConnectionString** – The connection string Uri that you copied after creating the Azure storage account in Step 3.
 
     - **tenantId** – The tenant ID of your Office 365 organization that you copied after creating the Facebook connector app in Azure Active Directory in Step 2.
+
+Additionally, copy the value in the App insights instrumentation key setting (APPINSIGHTS_INSTRUMENTATIONKEY) to a text file or other storage location.
 
     ![](media/FBCimage22.png)
 
@@ -218,7 +220,7 @@ Download the prebuilt package from repository’s Release section at <https://gi
 
    ![](media/FBCimage26.png)
 
-3. In the left navigation pane, click **Add Products** and then click **Set Up** in the **Facebook Login** tile**.**
+3. In the left navigation pane, click **Add Products** and then click **Set Up** in the **Facebook Login** tile.
 
    ![](media/FBCimage27.png)
 
@@ -226,7 +228,7 @@ Download the prebuilt package from repository’s Release section at <https://gi
 
    ![](media/FBCimage28.png)
 
-5. Add the hosted site URL. 
+5. Add the Azure app service URL; for example https://fbconnector.azurewebsites.net.
 
    ![](media/FBCimage29.png)
 
@@ -234,7 +236,7 @@ Download the prebuilt package from repository’s Release section at <https://gi
 
    ![](media/FBCimage30.png)
 
-7. In the left navigation pane under **Facebook Login**, click **Settings**, and add the OAuth redirect URI in the **Valid OAuth Redirect URIs** box; use the format **\<connectorserviceuri\>/Views/FacebookOAuth,** where the value for connectorserviceuri is the tenantID for your organization.
+7. In the left navigation pane under **Facebook Login**, click **Settings**, and add the OAuth redirect URI in the **Valid OAuth Redirect URIs** box; use the format **\<connectorserviceuri>/Views/FacebookOAuth,** where the value for connectorserviceuri is the Azure app service URL for your organization; for example https://fbconnector.azurewebsites.net.
 
    ![](media/FBCimage31.png)
 
@@ -242,7 +244,7 @@ Download the prebuilt package from repository’s Release section at <https://gi
 
    ![](media/FBCimage32.png)
 
-9. Add Webhooks Callback URL and add a verify token.
+9. Add Webhooks Callback URL and add a verify token. The verify token should similar to a strong password. Copy the verify token to a text file or other storage location.
 
      ![](media/FBCimage33.png)
 
@@ -250,7 +252,7 @@ Download the prebuilt package from repository’s Release section at <https://gi
 
     ![](media/FBCimage34.png)
 
-11. Add a privacy URL, app icon, and business use.
+11. Add a privacy URL, app icon, and business use. Also, copy the app ID and app secret to a text file or other storage location.
 
     ![](media/FBCimage35.png)
 
