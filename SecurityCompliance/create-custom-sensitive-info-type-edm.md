@@ -37,7 +37,7 @@ You must be a global admin, compliance administrator, or Exchange Online adminis
 
 ## The work flow at a glance
 
-Here's the overall process for setting up DLP policies that use EDM:
+The process of setting up EDM consists of five main parts:
  
 LIST GOES HERE
 
@@ -52,7 +52,7 @@ During this phase, you structure your sensitive data in a .csv (or .tsv) file, c
     - The data file can include up to five indexed columns per data source.
     - Data refresh for each data source can occur weekly (but not more often during preview).
 
-2. Set up a .xml file that represents the schema for the data in your .csv file. Name this file `edm.xlm`. As an example, the following .xml file defines the schema for our example *SampleDataStore* database.
+2. Set up a .xml file that represents the schema for your data file. Name this schema file `edm.xlm`. As an example, the following .xml file defines the schema for our example *SampleDataStore* database.
     
     ```
     <?xml version="1.0" encoding="utf-8"?>
@@ -128,9 +128,11 @@ During this phase, you hash and upload the data. The following procedure describ
 
     For example, the cmdlet `EdmUploadAgent.exe /GetSession /DataStoreName patient` displays a list of upload sessions for the *Patient* data store.
 
-## Part 4: Create a sensitive type
+## Part 4: Configure exact matching for a DLP policy
 
-## Part 5: Define rules using EDM
+During this phase, you configure exact matching
+
+## Part 5: Apply EDM to a DLP policy
 
 ## Other methods to create a custom sensitive information type
 
