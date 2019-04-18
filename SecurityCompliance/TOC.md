@@ -1,4 +1,5 @@
 # Get started
+<!--sample comment: comment goes here-->
 ## [Office 365 security roadmap](security-roadmap.md)
 ## [Configure your Office 365 tenant for increased security](tenant-wide-setup-for-increased-security.md)
 ## [The new Microsoft 365 security center and Microsoft 365 compliance center](microsoft-security-and-compliance.md)
@@ -98,39 +99,58 @@
 ### [View the data governance reports](view-the-data-governance-reports.md)
 ## More information about data governance
 ### [Watch videos from the Microsoft Data Governance team](https://go.microsoft.com/fwlink/?linkid=867039)
-
+<!--TOC/Area owner: tracyp and deniseb-->
 # [Protect against threats](protect-against-threats.md)
-
-## [Hunt in Microsoft 365](hunting.md)
-
-## [Understand latest attack campaigns with threat analytics](latest-attack-campaigns.md)
-
-## [Advanced Threat Protection ](office-365-atp.md)
-### [ATP Safe Links](atp-safe-links.md)
+## [The threat landscape and common attack campaigns]
+### [Advanced Threat Protection ](office-365-atp.md)
+<!--Actions for GAs (generally) 1-time setup-->
+<!--Admin audience-->
+## [ATP setup tasks for admins]
+### [Global Administrator setup tasks]
 #### [Set up ATP Safe Links policies](set-up-atp-safe-links-policies.md)
+#### [Set up ATP Safe Attachments policies](set-up-atp-safe-attachments-policies.md)
 #### [Set up a custom "do not rewrite" URLs list](set-up-a-custom-do-not-rewrite-urls-list-with-atp.md)
 #### [Set up a custom blocked URLs list](set-up-a-custom-blocked-urls-list-wtih-atp.md)
-#### [ATP Safe Links warning pages](atp-safe-links-warning-pages.md)
-### [ATP Safe Attachments](atp-safe-attachments.md)
-#### [Set up ATP Safe Attachments policies](set-up-atp-safe-attachments-policies.md)
-#### [Dynamic Delivery and previewing](dynamic-delivery-and-previewing.md)
-### [ATP for SharePoint, OneDrive, and Microsoft Teams](atp-for-spo-odb-and-teams.md)
+<!--Actions for workload Admins only, setup-->
+<!--Admin audience-->
+### [Role Administrator setup tasks]
 #### [Turn on ATP for SharePoint, OneDrive, and Microsoft Teams](turn-on-atp-for-spo-odb-and-teams.md)
-#### [View information about malicious files](malicious-files-detected-in-spo-odb-or-teams.md)
-### [View ATP reports](view-reports-for-atp.md)
-### [Threat investigation and response](office-365-ti.md)
-#### [Get started](get-started-with-ti.md)
+### [ATP for SharePoint, OneDrive, and Microsoft Teams](atp-for-spo-odb-and-teams.md)
+<!--I've set it up. The real value is in using it.-->
+<!--Manage-->
+## [Manage your security - ATP post-setup]
+<!--Story: Where is ATP in the M365 security scheme / why ATP-->
+### The scoop re. ATP 
+<!--InfoSec audience: Step 1 - List threats-->
+#### [Understanding latest attack campaigns with threat analytics](latest-attack-campaigns.md)
+<!--InfoSec audience: Step 2 - Take action. Daily tasks / how to run sims and read reports successfully-->
+### [Hunting in Microsoft 365 ATP](hunting.md)
+#### [View and read your ATP reports](view-reports-for-atp.md)
+#### [What ATP Safe Links warning pages mean](atp-safe-links-warning-pages.md)
+<!--###Where are the safe Attachment reports?-->
+#### [Use Threat Trackers](threat-trackers.md)
+#### [Use Attack Simulator in Office 365](attack-simulator.md)
 #### [Keep users safe with threat investigation and response](keep-users-safe-with-office-365-ti.md)
 #### [Find and investigate malicious email that was delivered](investigate-malicious-email-that-was-delivered.md)
-### [Automated investigation and response](automated-investigation-response-office.md)
-### [Threat Explorer](use-explorer-in-security-and-compliance.md)
-#### [Threat Explorer views](threat-explorer-views.md)
-### [Threat Trackers](threat-trackers.md)
-### [Attack Simulator in Office 365](attack-simulator.md)
+#### [Use Threat Explorer](use-explorer-in-security-and-compliance.md)
+##### [Threat Explorer views](threat-explorer-views.md)
+<!--SecInfo audience: Integrate with Microsoft or other techs-->
+## [Integration for greater Security]
 ### [Integrate Office 365 ATP with Windows Defender Advanced Threat Protection](integrate-office-365-ti-with-wdatp.md)
 ### [SIEM integration with Office 365 ATP](siem-integration-with-office-365-ti.md)
-
+<!--SecInfo audience: How ATP Works-->
+## [How ATP works]
+### [How ATP Safe Links works](atp-safe-links.md)
+#### [Dynamic Delivery and previewing details](dynamic-delivery-and-previewing.md)
+### [How ATP Safe Attachments works](atp-safe-attachments.md)
+### [About Threat investigation and response](office-365-ti.md)
+### [How Threat Investigation and Response works](get-started-with-ti.md)
+### [How Automated Investigation and Response works](automated-investigation-response-office.mc)
+<!--End ATP-->
+#
 ## [Tune anti-phishing protection](tuning-anti-phishing.md)
+### Manage your security for specific workloads
+#### [View information about malicious files](malicious-files-detected-in-spo-odb-or-teams.md)
 
 ## [Anti-spam and anti-malware protection](anti-spam-and-anti-malware-protection.md)
 ### [What is EOP?](eop/what-is-eop.md)
