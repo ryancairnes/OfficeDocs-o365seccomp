@@ -50,7 +50,7 @@ During this phase, you structure your sensitive data in a .csv (or .tsv) file, c
     - The data file can include up to one million rows of sensitive data across all data sources.
     - The data file can include up to 32 fields per data source.
     - The data file can include up to five indexed columns per data source.
-    - Data refresh can occur weekly (but not more often during preview).
+    - Data refresh for each data source can occur weekly (but not more often during preview).
 
 2. Set up a .xml file that represents the schema for the data in your .csv file. Name this file `edm.xlm`. As an example, the following .xml file defines the schema for our example SampleDataStore database.
     
@@ -83,7 +83,7 @@ During this phase, you'll set up a dedicated user account for Office 365, downlo
 
 1. Set up a user account with minimal permissions for the EDM Upload Agent. (See [Add users to Office 365](https://docs.microsoft.com/office365/admin/add-users/add-users?view=o365-worldwide).) The user account you create should have:
 
-    - Read access to the data file (.csv or .tsv created in Part 1)
+    - Read access to the data file (this is the .csv or .tsv you created in Part 1)
     - Write access to the location you'll use for storing hashed data
     - Write access to Microsoft Azure Service for Azure Blob storage
 
