@@ -45,8 +45,6 @@ LIST GOES HERE
 
 During this phase, you structure your sensitive data in a .csv (or .tsv) file, create a .xml file to define the data file schema, and then configure Exchange Online Protection to refer to the schema.
 
-When you create your data file, 
-
 1. Structure the sensitive data you want to use for EDM in a .csv (or .tsv) file. Make sure the first row of the .csv (or .tsv) file includes the names of the fields you'll use for EDM. For example, you might have field names, such as `id`, `firstname`, `lastname`, and so on. Keep the following limits in mind:
 
     - The data file can include up to one million rows of sensitive data across all data sources.
