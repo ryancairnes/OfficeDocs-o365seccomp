@@ -52,7 +52,7 @@ During this phase, you structure your sensitive data in a .csv (or .tsv) file, c
     - The data file can include up to five indexed columns per data source.
     - Data refresh for each data source can occur weekly (but not more often during preview).
 
-2. Set up a .xml file that represents the schema for the data in your .csv file. Name this file `edm.xlm`. As an example, the following .xml file defines the schema for our example SampleDataStore database.
+2. Set up a .xml file that represents the schema for the data in your .csv file. Name this file `edm.xlm`. As an example, the following .xml file defines the schema for our example *SampleDataStore* database.
     
     ```
     <?xml version="1.0" encoding="utf-8"?>
@@ -83,7 +83,7 @@ During this phase, you'll set up a dedicated user account for Office 365, downlo
 
 1. Set up a user account with minimal permissions for the EDM Upload Agent. (See [Add users to Office 365](https://docs.microsoft.com/office365/admin/add-users/add-users?view=o365-worldwide).) The user account you create should have:
 
-    - Read access to the data file (this is the .csv or .tsv you created in Part 1)
+    - Read access to the data file (This is the .csv or .tsv you created in [Part 1](#part-1-set-up-your-tabular-data-source-for-edm).)
     - Write access to the location you'll use for storing hashed data
     - Write access to Microsoft Azure Service for Azure Blob storage
 
@@ -100,11 +100,17 @@ During this phase, you'll set up a dedicated user account for Office 365, downlo
 
 ## Part 3: Hash the sensitive data and upload it
 
--	Hash and upload
-o	Hash and upload steps could be separated and deployed in two separate servers.
-o	Enables limiting access for sensitive data server handling hashing.
+During this phase, you hash and upload the data. The following procedure describes how to upload the data to a single server; however, you could use multiple servers.
 
+1. To hash the data, run the following PowerShell cmdlet in Exchange Online Protection:
 
+    `EdmUploadAgent.exe /CreateHash /DataStoreName <DataStoreName> /DataFile <DataFilePath> /HashLocation <HashedFileLocation>`
+
+    For example, the cmdlet `EdmUploadAgent.exe /CreateHash /DataStoreName EmployeeDB /DataFile C:\Edm\Data\EmployeeData.csv /HashLocation C:\Edm\Hash` hashes employee data in the data store called *EmployeeDB*, using a data file called *EmployeeData.csv*, and then saves the hashed data to a folder on the local drive.
+
+2. To upload the hashed data, run the following PowerShell cmdlet in Exchange Online Protection:
+
+    `EdmUploadAgent.exe /UploadHash /DataStoreName <DataStoreName> /HashFile <HashedSourceFilePath>`
 
 ## Part 4: List uploaded data and sessions
 
