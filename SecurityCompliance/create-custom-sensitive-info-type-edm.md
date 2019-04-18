@@ -45,14 +45,14 @@ LIST GOES HERE
 
 During this phase, you structure your sensitive data in a .csv (or .tsv) file, create a .xml file to define the data file schema, and then configure Exchange Online Protection to refer to the schema.
 
-When you create your data file, keep the following limits in mind:
+When you create your data file, 
 
-  - The data file can include up to one million rows of sensitive data across all data sources.
-  - The data file can include up to 32 fields per data source.
-  - The data file can include up to five indexed columns per data source.
-  - Data refresh can occur weekly (during preview).
+1. Structure the sensitive data you want to use for EDM in a .csv (or .tsv) file. Make sure the first row of the .csv (or .tsv) file includes the names of the fields you'll use for EDM. For example, you might have field names, such as `id`, `firstname`, `lastname`, and so on. Keep the following limits in mind:
 
-1. Structure the sensitive data you want to use for EDM in a .csv (or .tsv) file. Make sure the first row of the .csv (or .tsv) file includes the names of the fields you'll use for EDM. For example, you might have field names, such as `id`, `firstname`, `lastname`, and so on.
+    - The data file can include up to one million rows of sensitive data across all data sources.
+    - The data file can include up to 32 fields per data source.
+    - The data file can include up to five indexed columns per data source.
+    - Data refresh can occur weekly (during preview).
 
 2. Set up a .xml file that represents the schema for the data in your .csv file. Name this file `edm.xlm`. As an example, the following .xml file defines the schema for our example SampleDataStore database.
     
