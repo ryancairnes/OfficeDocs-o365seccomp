@@ -6,7 +6,7 @@ manager: laurawi
 ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
-ms.date: 04/11/2019
+ms.date: 04/18/2019
 localization_priority: Priority
 ms.collection: 
 - M365-security-compliance
