@@ -6,7 +6,7 @@ manager: laurawi
 ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
-ms.date: 04/17/2019
+ms.date: 04/18/2019
 localization_priority: Priority
 ms.collection: 
 - M365-security-compliance
@@ -197,7 +197,7 @@ During this phase, you configure exact matching and classification.
 
 ## Part 5: Apply EDM to a DLP policy
 
-EDM can be used with Office 365 DLP policies and Microsoft Cloud App Security DLP policies. The following procedure describes how to use EDM with a DLP policy that you create in the Security & Compliance Center.
+EDM can be used with [Office 365 DLP policies](data-loss-prevention-policies.md) and [Microsoft Cloud App Security file policies](https://docs.microsoft.com/cloud-app-security/data-protection-policies). The following procedure describes how to use EDM with a DLP policy that you create in the Office 365 Security & Compliance Center.
 
 ### To create a new DLP policy with EDM
 
@@ -229,7 +229,7 @@ EDM can be used with Office 365 DLP policies and Microsoft Cloud App Security DL
 
 13. On the **Review your settings** tab, review your policy. Make any needed changes. When you're ready, choose **Create**.
 
-14. Allow approximately 30 minutes for your new DLP policy to work its way through your data center.
+Allow approximately 30 minutes for your new DLP policy to work its way through your data center.
 
 ## Related articles
 
