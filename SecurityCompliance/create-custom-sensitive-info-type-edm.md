@@ -71,21 +71,23 @@ During this phase, you structure your sensitive data in a .csv (or .tsv) file, c
 
 3. [Connect to Exchange Online Protection PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-eop/connect-to-exchange-online-protection-powershell?view=exchange-ps), replacing `https://ps.protection.outlook.com/powershell-liveid` with `https://ps.compliance.protection.outlook.com/powershell-liveid`.
 
-3. Run the following cmdlets, one at a time:
+4. Run the following cmdlets, one at a time:
 
     `$edmSchemaXml=Get-Content .\edm.xml -Encoding Byte -ReadCount 0`
 
     `New-DlpEdmSchema -FileData $edmSchemaXml`
 
+5. Proceed to Part 2.
+
 ## Part 2: Install and authorize the EDM Upload agent
 
 During this phase, you'll set up a dedicated user account for Office 365, download and install the EDM Upload Agent, and authorize the tool.
 
-1. Set up a user account with minimal permissions for the EDM Upload Agent. (See [Add users to Office 365](https://docs.microsoft.com/office365/admin/add-users/add-users?view=o365-worldwide).) The user account you create should have:
+1. Set up a user account with limited permissions for the EDM Upload Agent. (See [Add users to Office 365](https://docs.microsoft.com/office365/admin/add-users/add-users?view=o365-worldwide).) The user account you create should have:
 
-    - Read access to the data file (This is the .csv or .tsv you created in [Part 1](#part-1-set-up-your-tabular-data-source-for-edm).)
-    - Write access to the location you'll use for storing hashed data
-    - Write access to Microsoft Azure Service for Azure Blob storage
+    - Read access to your data file (This is the .csv or .tsv you created in [Part 1](#part-1-set-up-your-tabular-data-source-for-edm).)
+    - Write access to the location you'll use for storing hashed data (this can be a folder on a local drive)
+    - Write access to Microsoft Azure Service for [Azure Blob storage](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)
 
 2. [Download the EDM Upload Agent](http://download.microsoft.com/download/C/6/2/C62C41B6-8585-4655-9D93-EAC61042AC51/EdmUploadAgent.msi) (EdmUploadAgent.exe) and install it.
 
@@ -129,6 +131,10 @@ During this phase, you hash and upload the data. The following procedure describ
     `EdmUploadAgent.exe /GetSession /DataStoreName <DataStoreName>`
 
     For example, the cmdlet `EdmUploadAgent.exe /GetSession /DataStoreName patient` displays a list of upload sessions for the *Patient* data store.
+
+    ![Example of EDM upload sessions for Patient data store](media/EDM-GetDataStore-sessionsexample.png)
+
+
 
 ## Part 4: Configure exact matching for a DLP policy
 
