@@ -14,12 +14,12 @@ description: "Administrators can set up a native connector to import third-party
 
 # Use a built-in connector to archive third-party data in Office 365
 
-Use a built-in connector in the Security & Compliance Center in Office 365 to import and archive data from a third-party data source such as Facebook, LinkedIn, Twitter, and Bloomberg. After you set up and configure a built-in connector, it connects to the third-party data source (on a scheduled basis), converts the content of an item to an email message format, and then imports those items to a mailbox in Office 365.
+Use a built-in connector in the Security & Compliance Center in Office 365 to import and archive data from a third-party data sources such as Facebook, LinkedIn, Twitter, and Bloomberg. After you set up and configure a built-in connector, it connects to the third-party data source (on a scheduled basis), converts the content of an item to an email message format, and then imports those items to a mailbox in Office 365.
 
-After third-party data is imported, you can apply Office 365 compliance features such as Litigation Hold, Content Search, In-Place Archiving, Auditing, Supervision, and Office 365 retention policies to this data. For example, when a mailbox is placed on Litigation Hold or assigned to a retention policy, the third-party data will be retained. You can search third-party data using Content Search or associate it with a custodian in an Advanced eDiscovery case. Using built-in connectors to import and archive third-party data in Office 365 can help your organization stay compliant with government and regulatory policies.
+After third-party data is imported, you can apply Office 365 compliance features such as Litigation Hold, Content Search, In-Place Archiving, Auditing, Supervision, and Office 365 retention policies to the third-party data. For example, when a mailbox is placed on Litigation Hold or assigned to a retention policy, the third-party data will be retained. You can search third-party data using Content Search or associate it with a custodian in an Advanced eDiscovery case. Using built-in connectors to import and archive third-party data in Office 365 can help your organization stay compliant with government and regulatory policies.
 
 > [!NOTE]
-> Currently, only the built-in connector for Facebook Business pages is available. More built-in connectors are coming soon.
+> Currently, only the built-in connector for Facebook Business pages is available. More connectors are coming soon.
 
 
 ## Prerequisites for setting up a connector for Facebook Business pages
@@ -39,7 +39,7 @@ You must complete the following prerequisites before you can set up and configur
 
 - Your organization must consent to allow the Office 365 Import service to access mailbox data in your organization. To consent to this request, go to [this page](https://login.microsoftonline.com/common/oauth2/authorize?client_id=570d0bec-d001-4c4e-985e-3ab17fdc3073&response_type=code&redirect_uri=https://portal.azure.com/&nonce=1234&prompt=admin_consent), sign in with the credentials of an Office 365 global admin, and then accept the request.
 
-- The user who sets up the customer connector in the Security & Compliance (in Step 7) must be assigned the Mailbox Import Export role in Exchange Online. By default, this role isn't assigned to any role group in Exchange Online. You can add the Mailbox Import Export role to the Organization Management role group in Exchange Online. Or you can create a new role group, assign the Mailbox Import Export role, and then add the appropriate users as members. For more information, see the  [Create role groups](https://docs.microsoft.com/Exchange/permissions-exo/role-groups#create-role-groups) or [Modify role groups](https://docs.microsoft.com/Exchange/permissions-exo/role-groups#modify-role-groups) sections in the article "Manage role groups in Exchange Online".
+- The user who sets up the custom connector in the Security & Compliance (in Step 7) must be assigned the Mailbox Import Export role in Exchange Online. By default, this role isn't assigned to any role group in Exchange Online. You can add the Mailbox Import Export role to the Organization Management role group in Exchange Online. Or you can create a new role group, assign the Mailbox Import Export role, and then add the appropriate users as members. For more information, see the  [Create role groups](https://docs.microsoft.com/Exchange/permissions-exo/role-groups#create-role-groups) or [Modify role groups](https://docs.microsoft.com/Exchange/permissions-exo/role-groups#modify-role-groups) sections in the article "Manage role groups in Exchange Online".
 
 ## Step 1: Download the pre-built connector app package from Github
 
@@ -51,11 +51,11 @@ The first step is to download the source code for the pre-built Facebook connect
 
 ## Step 2: Create an app in Azure Active Directory
 
-The next step is to register a new app in Azure Active Directory. This app will correspond to the Facebook connector that you'll implement in Step 4. 
+The next step is to register a new app in Azure Active Directory. This app will correspond to the web app resource that you'll implement in Step 4 for the Facebook connector. 
 
 For step-by-step instructions, see [Create an app in Azure Active Directory](deploy-facebook-connector.md#step-2-create-an-app-in-azure-active-directory).
 
-During the completion of this step (by following the step-by-step instructions), you'll save the following information to a text file. The values for these will be used in later steps of the deployment process.
+During the completion of this step (by following the step-by-step instructions), you'll save the following information to a text file. The values for these will be used in later steps in the deployment process.
 
 - Application ID
 - Tenant ID
@@ -64,7 +64,7 @@ During the completion of this step (by following the step-by-step instructions),
 
 ## Step 3: Create an Azure storage account
 
-The Facebook Connector that you deploy for your organization will store the items from your Facebook Business pages to the Azure storage location that you create in this step. After you create a custom connector in the Security & Compliance Center (in Step 7), the Office 365 Import service will copy the Facebook data from the Azure storage location to a mailbox in Office 365. As previous explained in the [Prerequisites](#prerequisites-for-setting-up-a-connector-for-facebook-business-pages) section, you must have a valid Azure subscription to create an Azure storage account.
+The Facebook Connector that you deploy for your organization will upload the items from your Facebook Business pages to the Azure storage location that you create in this step. After you create a custom connector in the Security & Compliance Center (in Step 7), the Office 365 Import service will copy the Facebook data from the Azure storage location to a mailbox in Office 365. As previous explained in the [Prerequisites](#prerequisites-for-setting-up-a-connector-for-facebook-business-pages) section, you must have a valid Azure subscription to create an Azure storage account.
 
 For step-by-step instructions, see [Create an Azure storage account](deploy-facebook-connector.md#step-3-create-an-azure-storage-account).
 
@@ -72,14 +72,14 @@ During the completion of this step (by following the step-by-step instructions) 
 
 ## Step 4: Create a web app resource in Azure
 
-The next step is to create a web app resource in Azure for the Facebook Connector  For step-by-step instructions, see [Create a new web app resource in Azure](deploy-facebook-connector.md#step-4-create-a-new-web-app-resource-in-azure).
+The next step is to create a web app resource in Azure for the Facebook Connector. 
+
+For step-by-step instructions, see [Create a new web app resource in Azure](deploy-facebook-connector.md#step-4-create-a-new-web-app-resource-in-azure).
 
 During the completion of this step (by following the step-by-step instructions), you'll provide the following information (that you've copied to a text file after completing the previous steps) when creating the web app resource.
 
 - APISecretKey – The client secret value that you copied after creating the client secret in Step 2.
-
 - StorageAccountConnectionString – The connection string Uri that you copied after creating the Azure storage account in Step 3.
-
 - tenantId – The tenant ID of your Office 365 organization that you copied after creating the Facebook connector app in Azure Active Directory in Step 2.
 
 Additionally, you will upload the SampleConnector.zip file (that you downloaded in Step 1) in this step to deploy the source code for the Facebook connector app.
@@ -92,7 +92,7 @@ The next step is to create and configure a new app on Facebook. The custom conne
 
 For step-by-step instructions, see [Register the Facebook app](deploy-facebook-connector.md#step-5-register-the-facebook-app).
 
-During the completion of this step (by following the step-by-step instructions), you'll save the following information to a text file. The values for these will be used to configure the connector app in Step 7.
+During the completion of this step (by following the step-by-step instructions), you'll save the following information to a text file. The values for these will be used to configure the Facebook connector app in Step 6.
 
 - Facebook application ID
 - Facebook application secret
@@ -104,7 +104,7 @@ The next step is to add configurations settings to the Facebook connector app th
 
 For step-by-step instructions, see [Configure the connector app](deploy-facebook-connector.md#step-6-configure-the-connector-app).
 
-During the completion of this step (by following the step-by-step instructions), you'll provide the following information (that you've copied to a text file after completing the previous steps).
+During the completion of this step (by following the step-by-step instructions), you'll provide the following information (that you've copied to a text file after completing the previous steps):
 
 - Facebook application ID (obtained in Step 5)
 - Facebook application secret (obtained in Step 5)
