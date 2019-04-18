@@ -213,12 +213,27 @@ EDM can be used with Office 365 DLP policies and Microsoft Cloud App Security DL
 
     ![EDM policy with Exchange only](media/EDM-DLPpolicy-ExchangeOnly.png)
 
-6. On the **Policy settings** tab, choose **Find content that contains**, and then click **Edit** to select a classification type.
+6. On the **Policy settings** tab, choose **Use advanced settings**, and then choose **Next**.
 
-7. Choose + New rule
+7. Choose **+ New rule**.
 
-## Other methods to create a custom sensitive information type
+8. In the **Name** section, specify a name and description for the rule.
 
-EDM isn't the only way to create custom sensitive information types. You can also use PowerShell and the Security & Compliance Center ([https://protection.office.com](https://protection.office.com)). Each method has its advantages and limitations. To learn more, see:
-- [Create a custom sensitive information type in Security & Compliance Center PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md)
-- c[Create a custom sensitive information type in the Security & Compliance Center](create-a-custom-sensitive-information-type.md) 
+9. In the **Conditions** section, in the **+ Add a condition** list, choose **Content contains EDM sensitive information type**.
+
+10. Finish selecting options for the rule, and then choose **Save**.
+
+11. On the **Policy settings** tab, review your rule(s), and then choose **Next**.
+
+12. Specify whether to turn on the policy right away, test it out, or keep it turned off. Then choose **Next**.
+
+13. On the **Review your settings** tab, review your policy. Make any needed changes. When you're ready, choose **Create**.
+
+14. Allow approximately 30 minutes for your new DLP policy to work its way through your data center.
+
+## Related articles
+
+[Use PowerShell to create a custom sensitive information type in Security & Compliance Center](create-a-custom-sensitive-information-type-in-scc-powershell.md)
+
+[Create a custom sensitive information type in the Security & Compliance Center](create-a-custom-sensitive-information-type.md) 
+
