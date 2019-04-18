@@ -11,11 +11,10 @@ manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance  
 ms.topic: article
+search.appverid: met150
 ---
 
 # Monitor and report security status in Microsoft 365 security center
-
-[!include[Prerelease�information](prerelease.md)]
 
 The Microsoft 365 security center provides at a glance summary of protection and security status across your Microsoft 365 environment.
 

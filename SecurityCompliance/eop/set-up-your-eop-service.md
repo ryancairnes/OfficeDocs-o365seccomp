@@ -72,7 +72,7 @@ If you don't want to move messages to each user's Junk Email folder, you may cho
   
 ### Step 6: Use the Microsoft 365 admin center to point your MX record to EOP
 
-Follow the Office 365 domain configuration steps to update your MX record for your domain, so that your inbound email flows through EOP. Be sure to point your MX record directly to EOP as opposed to having a third-party filtering service relay email to EOP. For more information, you can again reference [Create DNS records for Office 365](https://go.microsoft.com/fwlink/p/?LinkId=304219).
+Follow the Office 365 domain configuration steps to update your MX record for your domain, so that your inbound email flows through EOP. Be sure to point your MX record directly to EOP as opposed to having a third-party filtering service relay email to EOP. For more information, you can again reference [Create DNS records for Office 365](https://docs.microsoft.com/office365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider).
   
 #### How do you know this task worked?
 

@@ -1,5 +1,5 @@
 ---
-title: "Create a custom sensitive information type in Office 365 Security & Compliance Center PowerShell"
+title: "Create a custom sensitive information type in Security & Compliance Center PowerShell"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
@@ -12,10 +12,10 @@ ms.collection:
 search.appverid: 
 - MOE150
 - MET150
-description: "Learn how to create and import a custom sensitive information type for DLP in the Office 365 Security & Compliance Center."
+description: "Learn how to create and import a custom sensitive information type for DLP in the Security & Compliance Center."
 ---
 
-# Create a custom sensitive information type in Office 365 Security & Compliance Center PowerShell
+# Create a custom sensitive information type in Security & Compliance Center PowerShell
 
 Data loss prevention (DLP) in Office 365 includes many built-in [sensitive information types](what-the-sensitive-information-types-look-for.md) that are ready for you to use in your DLP policies. These built-in types can help identify and protect credit card numbers, bank account numbers, passport numbers, and more. 
   
@@ -324,7 +324,7 @@ To upload your rule package, do the following steps:
   
 1. Save it as an .xml file with Unicode encoding.
     
-2. [Connect to Office 365 Security & Compliance Center PowerShell](http://go.microsoft.com/fwlink/p/?LinkID=799771)
+2. [Connect to Security & Compliance Center PowerShell](http://go.microsoft.com/fwlink/p/?LinkID=799771)
     
 3. Use the following syntax:
 
@@ -414,7 +414,7 @@ In Security & Compliance Center PowerShell, there are two methods to remove cust
 
 - **Remove a custom rule package and all custom sensitive information types that it contains**: This method is documented in this section.
 
-1. [Connect to Office 365 Security & Compliance Center PowerShell](http://go.microsoft.com/fwlink/p/?LinkID=799771)
+1. [Connect to Security & Compliance Center PowerShell](http://go.microsoft.com/fwlink/p/?LinkID=799771)
 
 2. To remove a custom rule package, use the following syntax:
 
@@ -464,7 +464,7 @@ In Security & Compliance Center PowerShell, modifying a custom sensitive informa
 
 3. Import the updated XML file back into the existing rule package.
 
-To connect to Security & Compliance Center PowerShell, see [Connect to Office 365 Security & Compliance Center PowerShell](http://go.microsoft.com/fwlink/p/?LinkID=799771).
+To connect to Security & Compliance Center PowerShell, see [Connect to Security & Compliance Center PowerShell](http://go.microsoft.com/fwlink/p/?LinkID=799771).
 
 #### Step 1: Export the existing rule package to an XML file
 

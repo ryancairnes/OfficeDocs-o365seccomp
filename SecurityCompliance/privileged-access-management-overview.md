@@ -40,23 +40,23 @@ Privileged access management in Office 365 can be defined and scoped at the **ta
 
 ## Privileged access management architecture and process flow
 
-Each of the following process flows outline the architecture of priveleged access and how it interacts with the Office 365 substrate, Office 365 auditing, and the Exchange Management runspace.
+Each of the following process flows outline the architecture of privileged access and how it interacts with the Office 365 substrate, Office 365 auditing, and the Exchange Management runspace.
 
 ### Step 1: Configuring a privileged access policy
 
-When configuring a privileged access policy using either the Office 365 Admin Center or Exchange Management PowerShell, you create and define the policy and the privileged access feature processes the policy attributes in the Office 365 substrate and logs the activity in the Office 365 Security and Compliance Center. The policy is now enabled and ready to handle incoming requests for approvals.
+When configuring a privileged access policy using either the [Microsoft 365 admin center](https://admin.microsoft.com) or Exchange Management PowerShell, you create and define the policy and the privileged access feature processes the policy attributes in the Office 365 substrate and logs the activity in the Office 365 Security and Compliance Center. The policy is now enabled and ready to handle incoming requests for approvals.
 
 ![Step 1 - Policy creation](media/pam-step1-policy-creation.jpg)
 
 ### Step 2: Access request
 
-Using the Office 365 Admin Center or Exchange Management PowerShell, users can request access to elevated or privileged tasks. The privileged access feature sends the request to the Office 365 substrate for processing against the configured privilege access policy and records the sctivity in the Office 365 Security and Compliance Center logs.
+Using the [Microsoft 365 admin center](https://admin.microsoft.com) or Exchange Management PowerShell, users can request access to elevated or privileged tasks. The privileged access feature sends the request to the Office 365 substrate for processing against the configured privilege access policy and records the Activity in the Office 365 Security and Compliance Center logs.
 
 ![Step 2 - Access request](media/pam-step2-access-request.jpg)
 
 ### Step 3: Access approval
 
-An approval request is generated and the approval group is notified by email of the pending request. If approval is granted, the privileged access request is processed as an approval and the task is ready to be completed. If the request is denied, task is blocked and no access is granted to the reqeustor. The requestor will be notified of the request approval or denial via email message.
+An approval request is generated and the approval group is notified by email of the pending request. If approval is granted, the privileged access request is processed as an approval and the task is ready to be completed. If the request is denied, task is blocked and no access is granted to the requestor. The requestor will be notified of the request approval or denial via email message.
 
 ![Step 3 - Access approval](media/pam-step3-access-approval.jpg)
 
@@ -79,7 +79,7 @@ We plan to offer this feature in other Office 365 workloads soon. When we’re r
 We're planning to increase the current limit of 30 privileged access policies per Office 365 organization soon.
 
 ### Do I need to be a Global Admin to manage privileged access in Office 365?
-No, you need to have the Exchange Role Management role assigned to accounts that will manage privileged access in Office 365. However, the Global Administrator role includes this role by default and can be used to manage privileged access if you don’t want to configure the Role Management role as a stand-alone account permission. Users who are included in an approvers’ group don't need to be a Global Admin or have the Role Management role assigned to review and approve requests. 
+No, you need to have the Exchange Role Management role assigned to accounts that will manage privileged access in Office 365. However, the Global Administrator role includes this role by default and can be used to manage privileged access if you don’t want to configure the Role Management role as a stand-alone account permission. Users who are included in an approvers’ group don't need to be a Global Admin or have the Role Management role assigned to review and approve requests.
 
 ### How is privileged access management in Office 365 related to Customer Lockbox?
 [Customer Lockbox](https://docs.microsoft.com/office365/admin/manage/customer-lockbox-requests) allows a level of access control for organizations for access to to data by their service provider, i.e. Microsoft. Privileged access management in Office 365 allows granular access control within an organization for all Office 365 privileged tasks.

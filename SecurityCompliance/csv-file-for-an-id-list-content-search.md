@@ -20,11 +20,11 @@ You can search for specific mailbox email messages and other mailbox items using
   
 Here's a quick overview of the process for creating an ID list search.
   
-1. Create and run a new or guided Content Search in the Security &amp; Compliance Center.
+1. Create and run a new or guided Content Search in the Security & Compliance Center.
     
 2. Export the content search results or export the content search report. For more information, see:
     
-    - [Export Content Search results from the Office 365 Security &amp; Compliance Center](export-search-results.md)
+    - [Export Content Search results](export-search-results.md)
     
     - [Export a Content Search report](export-a-content-search-report.md)
     
@@ -71,7 +71,7 @@ The next step is to create a new ID list Content Search and submit the CSV file 
 > [!IMPORTANT]
 > You should create an ID list search no more than 2 days after exporting the results or report from a Content Search. If the search results or report where exported more than 2 days ago, you should re-export the search results or report to generate updated CSV files. Then you can prepare one of the updated CSV files and use it to create an ID list search. 
   
-1. In the Security &amp; Compliance Center, go to **Search &amp; investigation** \> **Content search**.
+1. In the Security & Compliance Center, go to **Search** \> **Content search**.
     
 2. On the **Search** page, click the arrow next to ![Add icon](media/8ee52980-254b-440b-99a2-18d068de62d3.gif) **New search**, and then click **Search by ID List**.
     

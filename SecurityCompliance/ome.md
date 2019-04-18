@@ -38,22 +38,32 @@ This article is part of a larger series of articles about Office 365 Message Enc
 |[Add your organization's brand to your encrypted messages](add-your-organization-brand-to-encrypted-messages.md) <br/> |An Office 365 or Exchange Online Protection administrator who wants to apply your company branding to customize the look of your organization's Office 365 Message Encryption email messages and the contents of the OME portal.  <br/> |
 |[Office 365 Message Encryption email revocation](revoke-ome-encrypted-mail.md) <br/> |An Office 365 or Exchange Online Protection administrator who wants to revoke an email that was encrypted using Office 365 Message Encryption.  <br/> |
 |Office 365 Message Encryption in the [Message Policy and Compliance service description](https://technet.microsoft.com/en-us/library/5c43c8eb-f8f7-4b5a-a743-b1dab7dc2fc8#bkmk_O365_MessageEncryption) <br/> |Looking for a detailed description of the Office 365 Message Encryption feature, including supported SKUs, available from Office 365.  <br/> |
-|[Legacy information for Office 365 Message Encryption](legacy-information-for-message-encryption.md) <br/> |An Office 365 or Exchange Online Protection administrator who has already set up Office 365 Message Encryption and you want information about how OME worked before the release of the new capabilities. While you cannot set up a new deployment using OME without the new capabilities, Microsoft continues to support existing deployments.  <br/> |
+|[Legacy information for Office 365 Message Encryption](legacy-information-for-message-encryption.md) <br/> |An Office 365 or Exchange Online Protection administrator who has already set up Office 365 Message Encryption and you want information about how OME worked before the release of the new capabilities. While you cannot set up a new deployment using OME without the new capabilities, Microsoft continues to support existing deployments. <br/> |
 ||
 
 The rest of this article applies to the new OME capabilities.
   
 ## How Office 365 Message Encryption works
 
-Office 365 Message Encryption is an online service that's built on Microsoft Azure Rights Management (Azure RMS) which is part of Azure Information Protection. Office 365 administrators can define mail flow rules to determine the conditions for encryption. For example, a rule can require the encryption of all messages addressed to a specific recipient.
+Office 365 Message Encryption is an online service that's built on Microsoft Azure Rights Management (Azure RMS) which is part of Azure Information Protection. This includes encryption, identity, and authorization policies to help secure your email. You can encrypt messages by using rights management templates, the [Do Not Forward option](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#do-not-forward-option-for-emails), and the [encrypt-only option](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#encrypt-only-option-for-emails).
+
+Users can then encrypt email messages and a variety of Office 365 attachments by using these options. For a full list of supported attachment types, see ["File types covered by IRM policies when they are attached to messages" in Introduction to IRM for email messages](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM).
+
+As an administrator, you can also define mail flow rules to apply this protection. For example, you can create a rule that requires the encryption of all messages addressed to a specific recipient, or that contains specific words in the subject line, and also specify that recipients can't copy or print the contents of the message.
+
+Unlike the previous version of OME, the new capabilities provide a unified sender experience whether you're sending mail inside your organization or to recipients outside of Office 365. In addition, recipients who receive a protected email message sent to an Office 365 account in Outlook 2016 or Outlook on the web, don't have to take any additional action to view the message. It works seamlessly. Recipients using other email clients and email service providers also have an improved experience. For information, see [Learn about protected messages in Office 365](https://support.office.com/article/Learn-about-protected-messages-in-Office-365-2baf3ac7-12db-40a4-8af7-1852204b4b67) and [How do I open a protected message](https://support.office.com/article/How-do-I-open-a-protected-message-1157a286-8ecc-4b1e-ac43-2a608fbf3098).
+
+For a detailed list of the differences between the previous version of OME and the new OME capabilities, see [Compare versions of OME](ome-version-comparison.md).
+
+When someone sends an email message that matches an encryption mail flow rule, the message is encrypted before it's sent. All Office 365 end-users that use Outlook clients to read mail receive native, first-class reading experiences for encrypted and rights-protected mail even if they're not in the same organization as the sender. Supported Outlook clients include Outlook desktop, Outlook Mac, Outlook mobile on iOS and Android, and Outlook on the web (formerly known as Outlook Web App).
   
-When someone sends an email message in Exchange Online that matches an encryption mail flow rule, the message is encrypted before it's sent. All Office 365 end-users that use Outlook clients to read mail receive native, first-class reading experiences for encrypted and rights-protected mail even if they're not in the same organization as the sender. Supported Outlook clients include Outlook desktop, Outlook Mac, Outlook mobile on iOS and Android, and Outlook on the web (formerly known as Outlook Web App).
-  
-Recipients of encrypted messages who receive encrypted or rights-protected mail sent to their Outlook.com, Gmail, and Yahoo accounts can easily authenticate to the OME portal using their Microsoft account, or Gmail or Yahoo credentials.
+Recipients of encrypted messages who receive encrypted or rights-protected mail sent to their Outlook.com, Gmail, and Yahoo accounts receive a wrapper mail that directs them to the OME Portal where they can easily authenticate using a Microsoft account, Gmail, or Yahoo credentials.
   
 End-users that read encrypted or rights-protected mail on clients other than Outlook also use the OME portal to view encrypted and rights-protected messages that they receive.
+
+In addition, if the sender of the protected mail is in GCC High and the recipient is outside of GCC High, including commercial Office 365 users, Outlook.com users, and users of other email providers such as Gmail, the recipient receives a wrapper mail that redirects to the OME Portal where the recipient is able to read and reply to the message. Otherwise, if the sender and recipient are both in the GCC High environment, then recipients that use Outlook clients to read mail receive native, first-class reading experiences for encrypted and rights-protected mail even if they're not in the same organization as the sender.
   
-We've increased the size limits for messages and attachments that you can encrypt using Office 365 Message Encryption. For more information about limits, see [Exchange Online Limits.](https://technet.microsoft.com/en-us/library/exchange-online-limits.aspx)
+We've increased the size limits for messages and attachments that you can encrypt using OME. For more information about limits, see [Exchange Online Limits](https://technet.microsoft.com/en-us/library/exchange-online-limits.aspx).
   
 ## Defining rules for Office 365 Message Encryption
 

@@ -21,12 +21,13 @@ description: "Understand why estimated and actual search results may vary in sea
 
 # Differences between estimated and actual eDiscovery search results in Office 365
 
-This topic applies to searches that you can run using one of the following Microsoft eDiscovery tools:  <br/>  
-- Content Search in the Office 365 Security &amp; Compliance Center  <br/>  
+This topic applies to searches that you can run using one of the following Microsoft eDiscovery tools: 
+
+- Content Search in the Security & Compliance Center  <br/>  
 - In-Place eDiscovery in the Exchange admin center (EAC)  <br/>  
 - The eDiscovery Center in SharePoint Online  <br/> 
    
-When you run an eDiscovery search, the tool you're using will return an estimate of the number of items (and their total size) that meet the search criteria. For example, when you run a search in the Security &amp; Compliance Center, the estimated search results are displayed in the details pane for the selected search.
+When you run an eDiscovery search, the tool you're using will return an estimate of the number of items (and their total size) that meet the search criteria. For example, when you run a search in the Security & Compliance Center, the estimated search results are displayed in the details pane for the selected search.
   
 ![Estimate of results displayed in details pane of selected search](media/74e4ce83-40be-41a9-b60f-5ad447e79fe4.png)
   
@@ -52,7 +53,7 @@ Here are some reasons for these differences:
     
 - **Unindexed items** - Items that are unindexed for search can cause differences between estimated and actual search results. For example, In-Place eDiscovery in Exchange and the eDiscovery Center in SharePoint don't include unindexed items (that don't meet the search criteria) when you run a search to estimate the search results. But you can include unindexed items when you export the search results. If you include unindexed items when exporting search results, there might be more items that are exported. This will cause a difference between the estimated and exported search results. 
     
-    When using the Content Search tool in the Security &amp; Compliance Center, you have the option to include unindexed items in the search estimate. The number of unindexed items returned by the search is listed in the details pane together with the other estimated search results. Any unindexed items would also be included in the total size of the estimated search results. When you export search results, you have the option to include or not include unindexed items. How you configure these options might result in differences between estimated and the actual search results that are downloaded. 
+    When using the Content Search tool in the Security & Compliance Center, you have the option to include unindexed items in the search estimate. The number of unindexed items returned by the search is listed in the details pane together with the other estimated search results. Any unindexed items would also be included in the total size of the estimated search results. When you export search results, you have the option to include or not include unindexed items. How you configure these options might result in differences between estimated and the actual search results that are downloaded. 
     
 - **Exporting the results of a Content Search that includes all content locations** - If the search that you're exporting results from was a search of all content locations in your organization, then only the unindexed items from content locations that contain items that match the search criteria will be exported. In other words, if no search results are found in a mailbox or site, then any unindexed items in that mailbox or site won't be exported. However, unindexed items from all content locations (even those that don't contain items that match the search query) will be included in the estimated search results. 
     

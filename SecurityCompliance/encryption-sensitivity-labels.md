@@ -3,7 +3,7 @@ title: "Restrict access to content by using encryption in sensitivity labels"
 ms.author: stephow
 author: stephow-MSFT
 manager: laurawi
-ms.date: 10/22/2018
+ms.date: 
 ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
@@ -31,7 +31,7 @@ When a document or email is encrypted, access to the content is restricted, so t
 - Remains encrypted no matter where it resides, inside or outside your organization, even if the file’s renamed.
 - Is encrypted both at rest (for example, in a OneDrive account) and in transit (for example, a sent email).
 
-The encryption settings are available in the Office 365 Security & Compliance Center > **Labels** page > **Sensitivity** tab > **Create a label**.
+The encryption settings are available when you create a sensitivity label in the Microsoft 365 compliance center, Microsoft 365 security center, or Office 365 Security & Compliance Center.
 
 ## How encryption works
 

@@ -8,7 +8,7 @@ ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
 ms.assetid: 
-description: "Admins can learn about the fix sender domain insight in the mail flow dashboard in the Office 365 Security & Compliance Center."
+description: "Admins can learn about the fix sender domain insight in the mail flow dashboard in the Security & Compliance Center."
 ROBOTS: NOINDEX, NOFOLLOW
 ---
 
@@ -33,7 +33,7 @@ Messages that don't meet the criteria will not be attributed to the organization
 
 The **Fix sender domain** insight shows you email from your on-premises environment that doesn't meet the criteria, helps you to identify potentially compromised machines and user accounts in your on-premises email environment, and helps you to take remediation actions.
 
-![The Fix sender domain insight in the mail flow dashboard in the Office 365 Security & Compliance Center](media/sender-domain-insight-selected.png)
+![The Fix sender domain insight in the mail flow dashboard in the Security & Compliance Center](media/sender-domain-insight-selected.png)
 
 When you click **View details**, you are taken to another widget with more details as shown in the following diagram:
 

@@ -1,5 +1,5 @@
 ---
-title: "Add data to a working set from another working set"
+title: "Add data from one working set to another working set"
 ms.author: markjjo
 author: markjjo
 manager: laurawi

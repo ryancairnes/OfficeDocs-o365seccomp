@@ -45,7 +45,7 @@ You first need to upload a document with the property that you want to reference
   
 ### Step 2: Create a managed property
 
-1. Sign in to the Office 365 admin center.
+1. Sign in to the Microsoft 365 admin center.
     
 2. In the left navigation, choose **Admin centers** \> **SharePoint**. You're now in the SharePoint admin center.
     

@@ -30,3 +30,15 @@ You can then choose to add to an existing working set or a *New working set*.  I
 ![Select a working set](../media/e8c6ab51-da8d-4c39-9b21-26bfdf453fb9.png)
 
 Adding data to a working set is a long running process, you can either track the progress in the Jobs tab or in the *Working set status* column in the *Searches* tab.  The process includes gathering items from Office 365 and finally Ingestion & Indexing.  Once working set processing is completed, you can navigate to the working set by clicking on the *Working Sets* tab and then clicking on the working set.  You can then move on to searching, reviewing, tagging and exporting any relevant data.
+
+## Adding a sample to a working set
+
+If you would like to validate your search results more thorougly before collecting all documents that were retrieved by your search, you can add a random sample of the search results to a working set instead of adding everything.
+
+To add a sample to a working set, start by selecting a search, in the search results flyout, click *Sample* button.
+
+You can then choose the parameter of your sampling. There are two options:
+- Confidence level and interval: sample size will be chosen to satisfy the given statistical parameters.
+- Percentage: sample size will be determined based on the number of items that was returned by the search, and the chosen parameter.
+
+Finally, choose the working set to add the sample to. From there, you can check the status of the process just as you would for adding a whole search into a working set. 

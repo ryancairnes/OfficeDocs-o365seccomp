@@ -3,7 +3,7 @@ title: "Archiving third-party data in Office 365"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 9/5/2017
+ms.date: 
 ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
@@ -13,7 +13,7 @@ ms.collection:
 - M365-security-compliance
 search.appverid: MOE150
 ms.assetid: 0ce338d5-3666-4a18-86ab-c6910ff408cc
-description: "Administrators can import third-party data from  social media platforms, instant messaging platforms, and document collaboration platforms to mailboxes in your Office 365 organization. This lets you archive data from Facebook, Twitter and data sources in Office 365. Then you can appply Office 365 compliance features (such as legal hold, content search, and retention policies) to third-party data."
+description: "Administrators can import third-party data from  social media platforms, instant messaging platforms, and document collaboration platforms to mailboxes in your Office 365 organization. This lets you archive data from Facebook, Twitter, and data sources in Office 365. Then you can apply Office 365 compliance features (such as legal hold, content search, and retention policies) to third-party data."
 ---
 
 # Archiving third-party data in Office 365
@@ -26,7 +26,7 @@ Office 365 lets administrators import and archive third-party data from social m
     
 - **Document collaboration** - Box and DropBox 
     
-- **Vertical industries** - Customer Relationship Management (such as Salesforce Chatter) and Financials (such as Thomson Reuters and Bloomberg) 
+- **Vertical industries** - Customer Relationship Management (such as Salesforce Chatter) and Financial Services (such as Thomson Reuters and Bloomberg) 
     
 - **SMS/text messaging** - BlackBerry 
     
@@ -44,7 +44,7 @@ Here's an overview of the process and the steps necessary to import third-party 
 
 [Step 5: Register the third-party data connector in Azure Active Directory](#step-5-register-the-third-party-data-connector-in-azure-active-directory)
 
-## How the third-party data import process works>
+## How the third-party data import process works
 
 The following illustration and description explain how the third-party data import process works.
   
@@ -475,7 +475,7 @@ The following sections list the Microsoft partners—and the third-party data so
 
 Here are the steps for creating and configuring a third-party data mailbox for importing data to Office 365. As previous explained, items are imported to this mailbox if the partner connector can't map the user ID of the item to an Office 365 user account.
   
- **Complete these tasks in the Office 365 admin center**
+ **Complete these tasks in the Microsoft 365 admin center**
   
 1. Create a new user account in Office 365 and assign it an Exchange Online Plan 2 license; see [Add users to Office 365](https://go.microsoft.com/fwlink/p/?LinkId=692098). A Plan 2 license is required to place the mailbox on Litigation Hold or enable an archive mailbox that has an unlimited storage quota.
     
@@ -496,11 +496,11 @@ Here are the steps for creating and configuring a third-party data mailbox for i
     
 3. Enable the following compliance-related Office 365 features for the third-party data mailbox:
     
-    - Enable the archive mailbox; see [Enable archive mailboxes in the Office 365 Security &amp; Compliance Center](enable-archive-mailboxes.md) and [Enable unlimited archiving in Office 365](enable-unlimited-archiving.md). This will let you free-up storage space in the primary mailbox by setting up an archive policy that moves third-party data items to the archive mailbox. This will provide you with unlimited storage for third-party data.
+    - Enable the archive mailbox; see [Enable archive mailboxes](enable-archive-mailboxes.md) and [Enable unlimited archiving](enable-unlimited-archiving.md). This will let you free-up storage space in the primary mailbox by setting up an archive policy that moves third-party data items to the archive mailbox. This will provide you with unlimited storage for third-party data.
     
-    - Place the third-party data mailbox on Litigation Hold. You can also apply an Office 365 retention policy in the Office 365 Security &amp; Compliance Center. Placing this mailbox on hold will retain third-party data items (indefinitely or for a specified duration) and prevent them from being purged from the mailbox. See one of the following topics:
+    - Place the third-party data mailbox on Litigation Hold. You can also apply an Office 365 retention policy in the security and compliance center. Placing this mailbox on hold will retain third-party data items (indefinitely or for a specified duration) and prevent them from being purged from the mailbox. See one of the following topics:
     
-      - [Place a mailbox on Litigation Hold](https://go.microsoft.com/fwlink/p/?LinkId=404420)
+      - [Create a Litigation Hold](create-a-litigation-hold.md)
     
       - [Overview of retention policies in Office 365](retention-policies.md)
     
@@ -512,11 +512,11 @@ Here are the steps for creating and configuring a third-party data mailbox for i
 
 The next step is to configure user mailboxes to support third-party data. Complete these tasks by using the Exchange admin center or by using the corresponding Windows PowerShell cmdlets.
   
-1. Enable the archive mailbox for each user; see [Enable archive mailboxes in the Office 365 Security &amp; Compliance Center](enable-archive-mailboxes.md) and [Enable unlimited archiving in Office 365](enable-unlimited-archiving.md).
+1. Enable the archive mailbox for each user; see [Enable archive mailboxes](enable-archive-mailboxes.md) and [Enable unlimited archiving](enable-unlimited-archiving.md).
     
 2. Place user mailboxes on Litigation Hold or apply an Office 365 retention policy; see one of the following topics: 
     
-    - [Place a mailbox on Litigation Hold](https://go.microsoft.com/fwlink/p/?LinkId=404420)
+    - [Create a Litigation Hold](create-a-litigation-hold.md)
     
     - [Overview of retention policies in Office 365](retention-policies.md)
     
@@ -582,7 +582,7 @@ To revoke consent for a third-party data connector, you can delete the applicati
     Date: Tue, 02 Feb 2016 22:55:33 GMT 
     ```
  
-- You can use the Content Search tool in the Office 365 Security &amp; Compliance Center to search for items that were imported to mailboxes in Office 365 from a third-party data source. To search specifically for these imported items, you can use the following message property-value pairs in the keyword box for a Content Search. . 
+- You can use the Content Search tool in the security and compliance center to search for items that were imported to mailboxes in Office 365 from a third-party data source. To search specifically for these imported items, you can use the following message property-value pairs in the keyword box for a Content Search.
     
   - **`kind:externaldata`** - Use this property-value pair to search all third-party data types. For example, to search for items that were imported from a third-party data source and contained the word "contoso" in the Subject property of the imported item, you would use the keyword query  `kind:externaldata AND subject:contoso`.
     

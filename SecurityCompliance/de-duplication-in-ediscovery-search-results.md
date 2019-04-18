@@ -61,7 +61,7 @@ Note that unique messages can also be marked as duplicates when the Copy-on-Writ
 
 - The information in this article is applicable when exporting search results using one of the following eDiscovery tools:
     
-  - Content search in the Office 365 Security &amp; Compliance Center
+  - Content search in compliance center in Office 365
     
   - In-Place eDiscovery in Exchange Online
     
@@ -69,9 +69,9 @@ Note that unique messages can also be marked as duplicates when the Copy-on-Writ
     
 - For more information about exporting search results, see:
     
-  - [Export search results from the Office 365 Security &amp; Compliance Center](export-search-results.md)
+  - [Export Content Search](export-search-results.md)
     
-  - [Export a Content Search report from the Office 365 Security &amp; Compliance Center](export-a-content-search-report.md)
+  - [Export a Content Search report](export-a-content-search-report.md)
     
   - [Export In-Place eDiscovery search results to a PST file](https://go.microsoft.com/fwlink/p/?linkid=832671)
     

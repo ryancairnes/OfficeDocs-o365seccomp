@@ -3,7 +3,7 @@ title: "Overview of retention labels"
 ms.author: stephow
 author: stephow-MSFT
 manager: laurawi
-ms.date: 6/22/2018
+ms.date: 
 ms.audience: Admin
 ms.topic: conceptual
 ms.service: O365-seccomp
@@ -55,10 +55,9 @@ With retention labels, you can:
     
 - **Implement records management across Office 365**, including both email and documents. You can use a retention label to classify content as a record. When this happens, the label can't be changed or removed, and the content can't be edited or deleted. 
     
-You create and manage retention labels on the **Retention** tab on the **Labels** page in the Office 365 Security &amp; Compliance Center. 
+You create and manage retention labels on the **Labels** page > **Retention** tab in the Microsoft 365 compliance center, Microsoft 365 security center, or Office 365 Security &amp; Compliance Center. 
   
-![Retention tab on Labels page](media/Retention_tab_on_Labels_page.png)
- 
+
 ## How retention labels work with label policies
 
 Making retention labels available to people in your organization so that they can classify content is a two-step process: first you create the labels, and then you publish them to the locations you choose. When you publish retention labels, a label policy gets created.
@@ -93,7 +92,7 @@ All of the information in this section applies only to retention labels. Note th
 
 When you publish or auto-apply retention labels, they don't take effect immediately:
   
-1. First the label policy needs to be synced from the Security &amp; Compliance Center to the locations in the policy.
+1. First the label policy needs to be synced from the admin center to the locations in the policy.
     
 2. Then the location may require time to make manual labels available to end users or auto-apply labels to content. How long this takes depends on the location and type of label.
     
@@ -105,7 +104,7 @@ If you publish retention labels to SharePoint or OneDrive, it can take one day f
   
 ### Auto-apply retention labels
 
-If you auto-apply retention labels to content matching specific conditions, it can take seven days for the retention labels to be applied to all content that matches the conditions.
+If you auto-apply retention labels to content matching specific conditions, it can take seven days for the retention labels to be applied to all existing content that matches the conditions. But note that after your retention labels are deployed, they are applied to new content quickly, typically in 15 minutes or less.
   
 ![Diagram of when auto-apply labels take effect](media/b8c00657-477a-4ade-b914-e643ef97a10d.png)
   
@@ -393,9 +392,7 @@ After you publish or auto-apply your retention labels, you'll want to verify tha
   
 ## Using Content Search to find all content with a specific retention label applied to it
 
-After retention labels are assigned to content, either by users or auto-applied, you can use content search in the Security &amp; Compliance Center to find all content that's classified with a specific retention label.
-  
-![Content search page](media/564d5dfe-285a-4a7e-800e-907b12a1b273.png)
+After retention labels are assigned to content, either by users or auto-applied, you can use content search to find all content that's classified with a specific retention label.
   
 When you create a content search, choose the **Compliance Tag** condition, and then enter the complete label name or part of the label name and use a wildcard. For more information, see [Keyword queries and search conditions for Content Search](keyword-queries-and-search-conditions.md).
   
@@ -429,7 +426,7 @@ Finally, a retention policy or label cannot permanently delete any content that'
 
 Retention labels can easily be made available to an entire organization and its content across Office 365, including Exchange, SharePoint, OneDrive, and Office 365 groups. If you need to classify content or manage records anywhere in Office 365, we recommend that you use retention labels.
   
-There are several other features that have previously been used to classify content or manage records in Office 365. These are listed below. These features will continue to work side by side with retention labels created in the Security &amp; Compliance Center. Note that while there are instances where the implementation of retention labels differs from previous features, the evolution of retention labels will drive the future of records management across Office 365. Therefore, moving forward, for data governance, we recommend that you use retention labels instead of these features.
+There are several other features that have previously been used to classify content or manage records in Office 365. These are listed below. These features will continue to work side by side with retention labels. Note that while there are instances where the implementation of retention labels differs from previous features, the evolution of retention labels will drive the future of records management across Office 365. Therefore, moving forward, for data governance, we recommend that you use retention labels instead of these features.
   
 ### Exchange Online
 

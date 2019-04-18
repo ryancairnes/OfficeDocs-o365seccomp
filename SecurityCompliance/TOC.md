@@ -61,7 +61,7 @@
 ### [Use drive shipping to import PST files](use-drive-shipping-to-import-pst-files-to-office-365.md)
 ### [Use the PST Collection tool to find, copy, and delete PST files](find-copy-and-delete-pst-files-in-your-organization.md)
 ### [Filter data when importing PST files](filter-data-when-importing-pst-files.md)
-### [Use network upload to import RMS-encrypted PST files](use-network-upload-to-import-pst-files.md)
+### [Use network upload to import RMS-encrypted PST files](use-network-upload-to-import-rms-encrypted-pst-files.md)
 ### [FAQ about importing PST files](faqimporting-pst-files-to-office-365.md)
 ### [Archiving third-party data in Office 365](archiving-third-party-data.md)
 ## Store data
@@ -100,9 +100,6 @@
 ## [Understand latest attack campaigns with threat analytics](latest-attack-campaigns.md)
 
 ## [Advanced Threat Protection ](office-365-atp.md)
-### [Quick Start Guide: Set up Office 365 ATP](checklist-atp-setup.md)
-#### [Integrate Office 365 ATP with Windows Defender Advanced Threat Protection](integrate-office-365-ti-with-wdatp.md)
-#### [SIEM integration with Office 365 ATP](siem-integration-with-office-365-ti.md)
 ### [ATP Safe Links](atp-safe-links.md)
 #### [Set up ATP Safe Links policies](set-up-atp-safe-links-policies.md)
 #### [Set up a custom "do not rewrite" URLs list](set-up-a-custom-do-not-rewrite-urls-list-with-atp.md)
@@ -124,6 +121,8 @@
 #### [Threat Explorer views](threat-explorer-views.md)
 ### [Threat Trackers](threat-trackers.md)
 ### [Attack Simulator in Office 365](attack-simulator.md)
+### [Integrate Office 365 ATP with Windows Defender Advanced Threat Protection](integrate-office-365-ti-with-wdatp.md)
+### [SIEM integration with Office 365 ATP](siem-integration-with-office-365-ti.md)
 
 ## [Tune anti-phishing protection](tuning-anti-phishing.md)
 
@@ -310,12 +309,12 @@
 #### [Add search results to a working set](compliance20/add-data-to-working-set.md)
 
 ### [Review case data](compliance20/reviewing-data-in-working-set.md)
+#### [View documents in a working set](compliance20/view-documents-in-working-set.md)
+#### [Query the data in a working set](compliance20/working-set-search.md)
 #### [Manage working sets](compliance20/managing-working-sets.md)
 #### [Add data to another working set](compliance20/add-data-to-working-set-from-another-working-set.md)
 #### [Manage load sets](compliance20/manage-load-sets.md)
 #### [Load non-Office 365 data into a working set](compliance20/load-non-office365-data.md)
-#### [Query the data in a working set](compliance20/working-set-search.md)
-#### [View documents in a working set](compliance20/view-documents-in-working-set.md)
 #### [Tag documents in a working set](compliance20/tagging-documents.md)
 
 ### [Analyze case data](compliance20/analyzing-data-in-working-set.md)
@@ -388,6 +387,47 @@
 #### [Use Advanced eDiscovery utilities](use-advanced-ediscovery-utilities.md)
 #### [Run reports](run-reports-in-advanced-ediscovery.md)
 
+# [Manage data investigations](datainvestigations/overview-data-investigations.md)
+## [Release notes](datainvestigations/data-investigations-release-notes.md)
+## [Manage a data spillage incident](datainvestigations/manage-data-spillage-incidents.md)
+## [Create a new investigation](datainvestigations/create-new-investigation.md)
+ 
+## [Search for data in an investigation](datainvestigations/search-for-data.md)
+### [Build search queries](datainvestigations/build-search-queries.md)
+### [Search statistics](datainvestigations/search-statistics.md)
+
+## [Review data in evidence](datainvestigations/review-data-in-evidence.md)
+### [Query the data](datainvestigations/evidence-query.md)
+### [Tag documents](datainvestigations/tag-documents.md)
+### [Annotate and redact documents](datainvestigations/annotate-and-redact-documents.md)
+### [Load non-Office 365 data](datainvestigations/load-non-office365-data.md)
+### [Error remediation when processing data](datainvestigations/error-remediation.md)
+
+## [Run analytics to investigate faster](datainvestigations/run-analytics-to-investigate-faster.md)
+### [Email threading](datainvestigations/email-threading.md)
+### [Near duplicate detection](datainvestigations/near-duplicates.md)
+### [Themes](datainvestigations/themes.md)
+### [Use the Relevance module](datainvestigations/use-relevance-module.md)
+
+## [Manage people of interest in an investigation](datainvestigations/manage-people-of-interest.md)
+### [Index the data of people in an investigation](datainvestigations/index-data-people-of-interest.md)
+### [View the audit activity of people in an investigation](datainvestigations/view-people-of-interest-activity.md)
+
+## [Export data from an investigation](datainvestigations/export-data.md)
+### [Export documents from evidence](datainvestigations/export-documents-from-incident.md)
+### [Download export jobs](datainvestigations/download-export-jobs.md)
+
+## [Configure settings for data investigations](datainvestigations/configure-settings-datainvestigations.md)
+### [Add or remove members from an investigation](datainvestigations/add-remove-members.md)
+### [Configure search and analytics settings](datainvestigations/configure-search-analytics-settings.md)
+### [Close or delete an investigation](datainvestigations/close-or-delete-investigation.md)
+
+## Data Investigations reference
+### [Limits in Data Investigations](datainvestigations/limits-datainvestigations.md)
+### [Supported file types](datainvestigations/supported-filetypes-datainvestigations.md)
+### [Document metadata fields](datainvestigations/document-metadata-fields.md)
+### [Manage jobs](datainvestigations/manage-jobs.md)
+
 # [Search the audit log](search-the-audit-log-in-security-and-compliance.md)
 ## [Turn audit log search on or off](turn-audit-log-search-on-or-off.md)
 ## [Manage mailbox auditing](enable-mailbox-auditing.md)
@@ -430,8 +470,9 @@
 ### [Create team sites in a political campaign dev/test environment](create-team-sites-in-a-political-campaign-dev-test-environment.md)
 ## [Secure SharePoint Online sites and files](secure-sharepoint-online-sites-and-files.md)
 ### [Deploy SharePoint Online sites for three tiers of protection](deploy-sharepoint-online-sites-for-three-tiers-of-protection.md)
-### [Protect SharePoint Online files with Office 365 labels and DLP](protect-sharepoint-online-files-with-office-365-labels-and-dlp.md)
+### [Protect SharePoint Online files with retention labels and DLP](protect-sharepoint-online-files-with-office-365-labels-and-dlp.md)
 ### [Protect SharePoint Online files with Azure Information Protection](protect-sharepoint-online-files-with-azure-information-protection.md)
+### [Secure SharePoint Online sites in a dev/test environment](secure-sharepoint-online-sites-in-a-dev-test-environment.md)
 ## [Isolated SharePoint Online team sites](isolated-sharepoint-online-team-sites.md)
 ### [Design an isolated SharePoint Online team site](design-an-isolated-sharepoint-online-team-site.md)
 ### [Deploy an isolated SharePoint Online team site](deploy-an-isolated-sharepoint-online-team-site.md)
