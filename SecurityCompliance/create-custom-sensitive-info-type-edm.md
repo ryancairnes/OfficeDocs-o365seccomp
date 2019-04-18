@@ -89,6 +89,8 @@ During this phase, you'll set up a dedicated user account for Office 365, downlo
 
 2. [Download the EDM Upload Agent](http://download.microsoft.com/download/C/6/2/C62C41B6-8585-4655-9D93-EAC61042AC51/EdmUploadAgent.msi) (EdmUploadAgent.exe) and install it.
 
+    QUESTION: ARE THERE ANY CONFIGURATION OPTIONS I NEED TO CALL OUT HERE?
+
 3. To authorize the EDM Upload Agent, run the following PowerShell cmdlet in Exchange Online Protection:
 
     `EdmUploadAgent.exe /Authorize`
