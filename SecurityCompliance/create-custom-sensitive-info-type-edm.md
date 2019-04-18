@@ -213,7 +213,9 @@ EDM can be used with Office 365 DLP policies and Microsoft Cloud App Security DL
 
     ![EDM policy with Exchange only](media/EDM-DLPpolicy-ExchangeOnly.png)
 
-6. On the **Policy settings** tab, choose **Use advanced settings**, and then choose **Next**.
+6. On the **Policy settings** tab, choose **Find content that contains**, and then click **Edit** to select a classification type.
+
+7. Choose + New rule
 
 ## Other methods to create a custom sensitive information type
 
