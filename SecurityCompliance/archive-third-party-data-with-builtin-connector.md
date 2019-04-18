@@ -112,7 +112,7 @@ During the completion of this step (by following the step-by-step instructions),
 - Azure Active Directory application ID (obtained in Step 2)
 - Azure Active Directory application secret (the client secret obtained in Step 2)
 - Azure Active Directory application Uri (the Azure app service URL obtained in Step 4; for example, https://fbconnector.azurewebsites.net)
-- App insights instrumentation key ()
+- App insights instrumentation key (obtained in Step 4)
 
 
 ## Step 7: Set up a custom connector in the Security & Compliance Center
@@ -124,5 +124,4 @@ For step-by-step instructions, see [Set up a custom connector in the Security & 
 During the completion of this step (by following the step-by-step instructions), you'll provide the following information (that you've copied to a text file after completing the steps).
 
 - Azure app service URL (obtained in Step 4; for example https://fbconnector.azurewebsites.net)
-- Client secret (obtained in Step 2)
-
+- APISecretKey (obtained in Step 2)

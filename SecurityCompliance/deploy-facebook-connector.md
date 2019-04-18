@@ -15,83 +15,8 @@ description: "Administrators can set up a native connector to import and archive
 
 # Deploy a connector to archive Facebook data in Office 365
 
+This article contains the step-by-step process to deploy a connector that uses the Office 365 Import service to import data from Facebook Business pages to Office 365. For a high-level overview of this process and a list of prerequisites required to deploy a Facebook connector, see [Use a built-in connector to archive third-party data in Office 365](archive-third-party-data-with-builtin-connector.md). 
 
-
-## Prerequisites
-
-1.  You need to have a Facebook account for your company pages. (This sample connector currently only allows importing data on your company’s Facebook business pages and not individual Facebook profiles.
-
-2.  You should have a valid Azure Subscription
-    
-    1.  If you don’t have an existing Azure Subscription, you can either get
-        
-        1.  Free subscription (valid for 1 year) [here](https://azure.microsoft.com/en-us/free/)
-        
-        2.  Pay as you go subscription [here](https://azure.microsoft.com/en-us/pricing/purchase-options/pay-as-you-go/)
-
-## Set up
-
-1.  Make sure the user who is setting up connector has Mailbox Import Export role.
-
-> For more information see the "Add a role in a role group" or the "Create a role group" sections in [Manage role groups](https://docs.microsoft.com/en-us/exchange/manage-role-groups-exchange-2013-help)
-
-2.  Ensure that you have accepted the consent by following the steps in the below link. Tenant admin has to click below link and log in with their credential.
-    
-    1.  [<span class="underline">https://login.microsoftonline.com/common/oauth2/authorize?client\_id=570d0bec-d001-4c4e-985e-3ab17fdc3073\&response\_type=code\&redirect\_uri=https://portal.azure.com/\&nonce=1234\&prompt=admin\_consent</span>](https://login.microsoftonline.com/common/oauth2/authorize?client_id=570d0bec-d001-4c4e-985e-3ab17fdc3073&response_type=code&redirect_uri=https://portal.azure.com/&nonce=1234&prompt=admin_consent)
-
-3.  Ensure that you have an active Azure subscription as mentioned in Prerequisites point \#2
-
-4.  Create AAD app using [Azure portal](https://portal.azure.com). Follow the below steps or refer [Create AAD App](#step-2-create-an-app-in-azure-active-directory) with screen shots
-    
-    2.  Azure Active Directory -\> App Registrations -\> New Application Registration Name of App : - i.e. FacebookConnector or any preferable name
-
-> Application type : - Web app / API
-> 
-> Sign on URL : - [<span class="underline">https://portal.azure.com</span>](https://portal.azure.com)
-
-3.  Register App and note **AAD APP ID **
-
-4.  Go to app -\> Settings -\> Keys -\> Fill Passwords details -\> Save keys -\> Copy **Password** value and save it to your secret location. This will be used when configuring the Connector.
-
-<!-- end list -->
-
-5.  Create storage account using [Azure portal](https://portal.azure.com). Follow the below steps or refer [Storage account creation](#step-3-create-an-azure-storage-account) with screen shots
-    
-    5.  Create a new Storage Account (Create a resource -\> Storage -\> Storage Account) -\> Fill details -\> Review & Create -\>It will take some time)
-    
-    6.  Go to Storage account created above -\> Copy primary **connection string** and save it to a secret location. This will be used during deployment.
-
-6.  Create a Facebook developer App
-    
-    7.  Refer screenshot [Facebook App Registration](#step-5-register-the-facebook-app) or follow documentation on [Facebook developer portal](https://developers.facebook.com/docs/pages/getting-started/).
-
-## Finalize
-
-1.  Download the builds of connector code and unzip it. It would have a single file
-    
-      - SampleConnector.zip
-
-2.  Deploy the web app in Azure
-    
-      - Follow the steps in [Step 4: Create a new web app resource in Azure](#step-4-create-a-new-web-app-resource-in-azure).
-    
-      - Note your App Service URL required for Facebook App creation and Connector setup in SCC
-
-3.  Configure Login and Webhook products on Facebook developer portal
-    
-      - LoginUrl
-        
-          - \<App Service URL\>
-    
-      - RedirectUrl in Settings of Login product should be
-        
-          - \<App Service URL\>/Views/FacebookOAuth
-    
-      - SubscriptionUrl while setting up Webhooks product should be
-        
-          - \<App Service URL\>/api/FbPageWebhook
-
-4.  Go to Security & Compliance Center <https://protection.office.com> and then go to Data Governance \> Import. Follow the steps in [Step 7: Set up a custom connector in the Security & Compliance Center](#step-7-set-up-a-custom-connector-in-the-security--compliance-center).
 
 
 ## Step 1: Download the package
@@ -196,7 +121,7 @@ Download the prebuilt package from repository’s Release section at <https://gi
 
     - **tenantId** – The tenant ID of your Office 365 organization that you copied after creating the Facebook connector app in Azure Active Directory in Step 2.
 
-Additionally, copy the value in the App insights instrumentation key setting (APPINSIGHTS_INSTRUMENTATIONKEY) to a text file or other storage location.
+   Additionally, copy the value in the App insights instrumentation key setting (APPINSIGHTS_INSTRUMENTATIONKEY) to a text file or other storage location.
 
     ![](media/FBCimage22.png)
 
@@ -236,7 +161,7 @@ Additionally, copy the value in the App insights instrumentation key setting (AP
 
    ![](media/FBCimage30.png)
 
-7. In the left navigation pane under **Facebook Login**, click **Settings**, and add the OAuth redirect URI in the **Valid OAuth Redirect URIs** box; use the format **\<connectorserviceuri>/Views/FacebookOAuth,** where the value for connectorserviceuri is the Azure app service URL for your organization; for example https://fbconnector.azurewebsites.net.
+7. In the left navigation pane under **Facebook Login**, click **Settings**, and add the OAuth redirect URI in the **Valid OAuth Redirect URIs** box; use the format **\<connectorserviceuri>/Views/FacebookOAuth**, where the value for connectorserviceuri is the Azure app service URL for your organization; for example https://fbconnector.azurewebsites.net.
 
    ![](media/FBCimage31.png)
 
@@ -244,7 +169,9 @@ Additionally, copy the value in the App insights instrumentation key setting (AP
 
    ![](media/FBCimage32.png)
 
-9. Add Webhooks Callback URL and add a verify token. The verify token should similar to a strong password. Copy the verify token to a text file or other storage location.
+9. Add Webhooks Callback URL and add a verify token. The format of the callback URL, use the format **<connectorserviceuri>/api/FbPageWebhook**, where the value for connectorserviceuri is the Azure app service URL for your organization; for example https://fbconnector.azurewebsites.net. 
+
+    The verify token should similar to a strong password. Copy the verify token to a text file or other storage location.
 
      ![](media/FBCimage33.png)
 
@@ -278,28 +205,33 @@ Additionally, copy the value in the App insights instrumentation key setting (AP
 
 ## Step 6: Configure the connector app
 
-1. Go to https://<AzureAppResourceName>.azurewebsites.net (when AzureAppResourceName is the name of your Azure app resource that you named in Step 4) For example, if the name is **fbconnector**, go to https://fbconnector.azurewebsites.net. The home page of the app will look like the following sceenshot.
+1. Go to https://\<AzureAppResourceName>.azurewebsites.net (where AzureAppResourceName is the name of your Azure app resource that you named in Step 4) For example, if the name is **fbconnector**, go to https://fbconnector.azurewebsites.net. The home page of the app will look like the following screenshot.
 
 
   ![](media/FBCimage41.png)
 
-2. Click **Configure**, type your tenant Id and the APISecretKey (that you copied after creating the app in Azure Active Directory in Step 2), and then click **Set Configuration Settings**.
-
+2. Click **Configure** to display a sign in page.
+ 
    ![](media/FBCimage42.png)
 
-3. Enter the following configuration setting under **Configuration Details**:
-
-   - **Facebook application ID** - 
-   - **Facebook application secret** - 
-   - **Facebook webhooks verify token** - 
-   - **AAD application ID** - 
-   - **AAD application secret** - 
-   - **AAD application Uri** - 
-   - **App insights instrumentation key** - 
+3. In the Tenant Id box, type or paste your tenant Id (that you obtained in Step 2). In the password box, type or paste the APISecretKey (that you obtained in Step 2), and then click **Set Configuration Settings** to display the **Configuration Details** page.
 
     ![](media/FBCimage43.png)
 
-4. Click **Save** to save the connector settings.
+
+4. Under **Configuration Details**, enter the following configuration settings 
+
+   - **Facebook application ID** - The app ID for the Facebook application that you obtained in Step 5.
+   - **Facebook application secret** - The app secret for the Facebook application that you obtained in Step 5.
+   - **Facebook webhooks verify token** - The verify token that you created in Step 5.
+   - **AAD application ID** - The application ID for the Azure Active Directory app that you created in Step 2
+   - **AAD application secret** - The value for the APISecretKey secret that you obtained in Step 2.
+   - **AAD application Uri** - The Azure app service URL for Facebook connector app; for example https://fbconnector.azurewebsites.net.
+   - **App insights instrumentation key** - The APPINSIGHTS_INSTRUMENTATIONKEY setting that you obtained in Step 4.
+
+
+
+5. Click **Save** to save the connector settings.
 
 ## Step 7: Set up a custom connector in the Security & Compliance Center
 
@@ -311,29 +243,28 @@ Additionally, copy the value in the App insights instrumentation key setting (AP
 
     ![](media/FBCimage46.png)
 
-3.  Provide Connector App details and click Next
+3.  On the **Add Connector App** page, enter the following information and then click **Next**.
 
+    - In the first box, type a name for the connector, such as **Facebook**.
+    - In the second box, type or paste the value of the APISecretKey that you obtained in Step 2.
+    - In the third box, type of paste the Azure app service URL; for example **https://fbconnector.azurewebsites.net**.
+    
     ![](media/FBCimage47.png)
-
-    Fill the name as Facebook
-
-    Provide API secret key and Azure app service URL that you created (and saved to the text file) in Step 4.
 
 4.  Click **Login with Connector App**.
 
     ![](media/FBCimage45.png)
 
-5. Provide secret and click login to connector service
+5. Type or paste the APISecretKey again and then click  **Login to Connector Service**.
 
    ![](media/FBCimage48.png)
 
-Secret key is same as the one entered in step above
 
 6. Click **Continue with Facebook.**
 
    ![](media/FBCimage49.png)
 
-7. On the **Log in to Facebook** page, log in using the credentials for the account for your organization’s Facebook Business pages. Make sure the Facebook account you logged in to is assigned the admin role for your organization’s Business pages
+7. On the **Log in to Facebook** page, log in using the credentials for the account for your organization’s Facebook Business pages. Make sure the Facebook account you logged in to is assigned the admin role for your organization’s Facebook Business pages
 
    ![](media/FBCimage50.png)
 
@@ -341,7 +272,7 @@ Secret key is same as the one entered in step above
 
    ![](media/FBCimage51.png)
 
-9. A list of Business pages managed by the Facebook account that your logged in to is displayed. Select the pages to archive and then click **Save**.
+9. A list of the Business pages managed by the Facebook account that you logged in to is displayed. Select the pages to archive and then click **Save**.
 
     ![](media/FBCimage52.png)
 
@@ -349,15 +280,15 @@ Secret key is same as the one entered in step above
 
     ![](media/FBCimage53.png)
 
-11. You can apply a filter to only import items (and archive) that are a certain age. 
+11. On the **Set Filters** page, you can apply a filter to import (and archive) items that are a certain age. Click **Next**.
 
     ![](media/FBCimage54.png)
 
-12. Specify the mailbox in Office 365 to import (and archive) the items from the Facebook Business pages that you previously selected.
+12. On the **Set Storage Account** page, select the Office 365 mailbox that the items from the Facebook Business pages that you previously selected will be imported to.
 
     ![](media/FBCimage55.png)
 
-13. Review settings and then click **Finish** to complete the connector setup.
+13. Review your settings and then click **Finish** to complete the connector setup in the Security & Compliance Center.
 
     ![](media/FBCimage56.png)
 
