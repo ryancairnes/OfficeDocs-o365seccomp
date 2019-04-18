@@ -16,9 +16,13 @@ ms.collection:
 description: "If your organization sends a lot of bulk mail that's marked as spam, you could get blocked from sending email with Office 365. Read this article to learn more about why this happens and what you can do about it."
 ---
 
+
 # Controlling outbound spam in Office 365
 
-We take managing outbound spam seriously because ours is a shared service.  There are many customers behind a shared pool of resources, where if one customer sends outbound spam, it can degrade the outbound IP reputation of the service and affects the successful deliverability of email for other customers. It is unfair to Customer A if Customer B spams and various 3rd party IP blocklists list the IP address that it uses.
+We take managing outbound spam seriously because ours is a shared service.  There are many customers behind a shared pool of resources, where if one customer sends outbound spam, it can degrade the outbound IP reputation of the service and affects the successful deliverability of email for other customers.
+
+> [!IMPORTANT]
+> The notification for when a sender is restricted is now part of the Security & Compliance Center (SCC) alerting platform. Instead of using methods outlined below to send notification, the list of users to alert can be found in the "User restricted from sending email" alert. Please start using the [alert policies page](https://sip.protection.office.com/alertpolicies) in the Security & Compliance Center to configure the alert, since the prior method will be removed in the future. Read about the new [Restricted Users experience](https://docs.microsoft.com/en-us/Office365/SecurityCompliance/removing-user-from-restricted-users-portal-after-spam).”
 
 ## What admins can do to control outbound spam
 
