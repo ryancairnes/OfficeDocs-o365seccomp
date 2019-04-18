@@ -139,9 +139,61 @@ During this phase, you hash the sensitive data, and upload the hashed data using
 
 
 
-## Part 4: Configure exact matching for a DLP policy
+## Part 4: Create a rule package with exact matching
 
-During this phase, you configure exact matching
+During this phase, you configure exact matching and classification.
+
+1. Create a rule package in .xml format (with Unicode encoding), similar to the follownig example:
+
+    ```
+    <?xml version="1.0" encoding="utf-8"?>
+    <RulePackage xmlns="http://schemas.microsoft.com/office/2018/edm">
+      <RulePack id="fd098e03-1796-41a5-8ab6-198c93c62b11">
+        <Version build="0" major="2" minor="0" revision="0" />
+        <Publisher id="eb553734-8306-44b4-9ad5-c388ad970528" />
+        <Details defaultLangCode="en-us">
+          <LocalizedDetails langcode="en-us">
+            <PublisherName>Microsoft EDM</PublisherName>
+            <Name>Health care EDM Rulepack</Name>
+            <Description> This rule package contains the EDM sensitive types for health care.</Description>
+          </LocalizedDetails>
+        </Details>
+      </RulePack>
+      <Rules>
+        <ExactMatch id = "E1CC861E-3FE9-4A58-82DF-4BD259EAB371" patternsProximity = "300" dataStore ="SampleSchema" recommendedConfidence = "65" >
+          <Pattern confidenceLevel="65">
+            <idMatch matches="MRN" classification="MRN" />
+            <match matches="LastName" />
+          </Pattern>
+        </ExactMatch>
+        <ExactMatch id = "E1CC861E-3FE9-4A58-82DF-4BD259EAB372" patternsProximity = "300" dataStore ="SampleSchema" recommendedConfidence = "65" >
+          <Pattern confidenceLevel="65">
+            <idMatch matches="SSN" classification="U.S. Social Security Number (SSN)" />
+          </Pattern>
+        </ExactMatch>
+        <LocalizedStrings>
+          <Resource idRef="E1CC861E-3FE9-4A58-82DF-4BD259EAB371">
+            <Name default="true" langcode="en-us">Patient MRN exact match</Name>
+            <Description default="true" langcode="en-us">EDM Sensitive type for detecting Patient MRN.</Description>
+          </Resource>
+          <Resource idRef="E1CC861E-3FE9-4A58-82DF-4BD259EAB372">
+            <Name default="true" langcode="en-us">Patient SSN Exact Match.</Name>
+            <Description default="true" langcode="en-us">EDM Sensitive type for detecting Patient SSN.</Description>
+          </Resource>
+        </LocalizedStrings>
+      </Rules>
+    </RulePackage>
+    ```
+    
+    Note that column names in the data file are case-sensitive.
+
+2. Upload the rule package by running the following PowerShell cmdlets, one at a time:
+
+    `$rulepack=Get-Content .\rulepack.xml -Encoding Byte -ReadCount 0`
+
+    `New-DlpSensitiveInformationTypeRulePackage -FileData $rulepack`
+
+    To learn more about uploading a rule package, see [Upload your rule package](create-a-custom-sensitive-information-type-in-scc-powershell.md#upload-your-rule-package).
 
 ## Part 5: Apply EDM to a DLP policy
 
