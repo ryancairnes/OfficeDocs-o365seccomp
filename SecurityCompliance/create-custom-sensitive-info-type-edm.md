@@ -106,11 +106,13 @@ During this phase, you hash and upload the data. The following procedure describ
 
     `EdmUploadAgent.exe /CreateHash /DataStoreName <DataStoreName> /DataFile <DataFilePath> /HashLocation <HashedFileLocation>`
 
-    For example, the cmdlet `EdmUploadAgent.exe /CreateHash /DataStoreName EmployeeDB /DataFile C:\Edm\Data\EmployeeData.csv /HashLocation C:\Edm\Hash` hashes employee data in the data store called *EmployeeDB*, using a data file called *EmployeeData.csv*, and then saves the hashed data to a folder on the local drive.
+    Example: `EdmUploadAgent.exe /CreateHash /DataStoreName EmployeeDB /DataFile C:\Edm\Data\EmployeeData.csv /HashLocation C:\Edm\Hash` 
 
 2. To upload the hashed data, run the following PowerShell cmdlet in Exchange Online Protection:
 
     `EdmUploadAgent.exe /UploadHash /DataStoreName <DataStoreName> /HashFile <HashedSourceFilePath>`
+
+    Example: `EdmUploadAgent.exe /UploadHash /DataStoreName EmployeeDB /HashFile C:\Edm\Hash\EmployeeData.EdmHash` 
 
 ## Part 4: List uploaded data and sessions
 
