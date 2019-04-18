@@ -114,13 +114,19 @@ During this phase, you hash and upload the data. The following procedure describ
 
     Example: `EdmUploadAgent.exe /UploadHash /DataStoreName EmployeeDB /HashFile C:\Edm\Hash\EmployeeData.EdmHash` 
 
-3. To see a list of uploaded data, run the following PowerShell cmdlet in Exchange Online Protection:
+3. To see a list of uploaded data stores, run the following PowerShell cmdlet in Exchange Online Protection:
 
     `EdmUploadAgent.exe /GetDataStore`
 
-    Example:
+    You'll see a list of data stores and when they were last updated. Example:
 
-    
+    ![Example of GetDataStore cmdlet and results](media/EDM-GetDataStore-example.png)
+
+4. To see a list of upload sessions for a single data store, run the following PowerShell cmdlet in Exchange Online Protection:
+
+    `EdmUploadAgent.exe /GetSession /DataStoreName <DataStoreName>`
+
+    For example, the cmdlet `EdmUploadAgent.exe /GetSession /DataStoreName patient` displays a list of upload sessions for the *Patient* data store.
 
 ## Part 4: Create a sensitive type
 
