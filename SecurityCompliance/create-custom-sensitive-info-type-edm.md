@@ -197,6 +197,22 @@ During this phase, you configure exact matching and classification.
 
 ## Part 5: Apply EDM to a DLP policy
 
+EDM can be used with Office 365 DLP policies and Microsoft Cloud App Security DLP policies. The following procedure describes how to use EDM with a DLP policy that you create in the Security & Compliance Center.
+
+### To create a new DLP policy with EDM
+
+1. Go to the Security & Compliance Center ([https://protection.office.com](https://protection.office.com)).
+
+2. Choose **Data loss prevention** > **Policy**.
+
+3. Choose **Create a policy** > **Custom** > **Next**.
+
+4. On the **Name your policy** tab, specify a name and description, adn then choose **Next**.
+
+5. On the **Choose locations** tab, select **Let me choose specific locations**, and then choose **Next**.
+
+6. 
+
 ## Other methods to create a custom sensitive information type
 
 EDM isn't the only way to create custom sensitive information types. You can also use PowerShell and the Security & Compliance Center ([https://protection.office.com](https://protection.office.com)). Each method has its advantages and limitations. To learn more, see:
