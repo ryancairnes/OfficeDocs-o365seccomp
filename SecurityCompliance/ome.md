@@ -63,7 +63,7 @@ End-users that read encrypted or rights-protected mail on clients other than Out
 
 In addition, if the sender of the protected mail is in GCC High and the recipient is outside of GCC High, including commercial Office 365 users, Outlook.com users, and users of other email providers such as Gmail, the recipient receives a wrapper mail that redirects to the OME Portal where the recipient is able to read and reply to the message. Otherwise, if the sender and recipient are both in the GCC High environment, then recipients that use Outlook clients to read mail receive native, first-class reading experiences for encrypted and rights-protected mail even if they're not in the same organization as the sender.
   
-We've increased the size limits for messages and attachments that you can encrypt using Office 365 Message Encryption. For more information about limits, see [Exchange Online Limits](https://technet.microsoft.com/en-us/library/exchange-online-limits.aspx).
+We've increased the size limits for messages and attachments that you can encrypt using OME. For more information about limits, see [Exchange Online Limits](https://technet.microsoft.com/en-us/library/exchange-online-limits.aspx).
   
 ## Defining rules for Office 365 Message Encryption
 

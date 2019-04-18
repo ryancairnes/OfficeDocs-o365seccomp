@@ -3,7 +3,7 @@ title: "Archiving third-party data in Office 365"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 9/5/2017
+ms.date: 
 ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
@@ -13,7 +13,7 @@ ms.collection:
 - M365-security-compliance
 search.appverid: MOE150
 ms.assetid: 0ce338d5-3666-4a18-86ab-c6910ff408cc
-description: "Administrators can import third-party data from  social media platforms, instant messaging platforms, and document collaboration platforms to mailboxes in your Office 365 organization. This lets you archive data from Facebook, Twitter and data sources in Office 365. Then you can appply Office 365 compliance features (such as legal hold, content search, and retention policies) to third-party data."
+description: "Administrators can import third-party data from  social media platforms, instant messaging platforms, and document collaboration platforms to mailboxes in your Office 365 organization. This lets you archive data from Facebook, Twitter, and data sources in Office 365. Then you can apply Office 365 compliance features (such as legal hold, content search, and retention policies) to third-party data."
 ---
 
 # Archiving third-party data in Office 365
@@ -26,7 +26,7 @@ Office 365 lets administrators import and archive third-party data from social m
     
 - **Document collaboration** - Box and DropBox 
     
-- **Vertical industries** - Customer Relationship Management (such as Salesforce Chatter) and Financials (such as Thomson Reuters and Bloomberg) 
+- **Vertical industries** - Customer Relationship Management (such as Salesforce Chatter) and Financial Services (such as Thomson Reuters and Bloomberg) 
     
 - **SMS/text messaging** - BlackBerry 
     
@@ -44,7 +44,7 @@ Here's an overview of the process and the steps necessary to import third-party 
 
 [Step 5: Register the third-party data connector in Azure Active Directory](#step-5-register-the-third-party-data-connector-in-azure-active-directory)
 
-## How the third-party data import process works>
+## How the third-party data import process works
 
 The following illustration and description explain how the third-party data import process works.
   
@@ -500,7 +500,7 @@ Here are the steps for creating and configuring a third-party data mailbox for i
     
     - Place the third-party data mailbox on Litigation Hold. You can also apply an Office 365 retention policy in the security and compliance center. Placing this mailbox on hold will retain third-party data items (indefinitely or for a specified duration) and prevent them from being purged from the mailbox. See one of the following topics:
     
-      - [Place a mailbox on Litigation Hold](https://go.microsoft.com/fwlink/p/?LinkId=404420)
+      - [Create a Litigation Hold](create-a-litigation-hold.md)
     
       - [Overview of retention policies in Office 365](retention-policies.md)
     
@@ -516,7 +516,7 @@ The next step is to configure user mailboxes to support third-party data. Comple
     
 2. Place user mailboxes on Litigation Hold or apply an Office 365 retention policy; see one of the following topics: 
     
-    - [Place a mailbox on Litigation Hold](https://go.microsoft.com/fwlink/p/?LinkId=404420)
+    - [Create a Litigation Hold](create-a-litigation-hold.md)
     
     - [Overview of retention policies in Office 365](retention-policies.md)
     
