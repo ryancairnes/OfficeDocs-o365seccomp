@@ -20,8 +20,7 @@
 ### [Module 4b - Threat protection strategy, Part II](ciso-workshop-module-4b.md)
 ### [Module 5 - Information protection](ciso-workshop-module-5.md)
 
-# Protect user and device access
-## [Protect access to data and services in Office 365](protect-access-to-data-and-services.md)
+# [Protect user and device access](protect-access-to-data-and-services.md)
 ## [Privileged access management](privileged-access-management-overview.md)
 ### [Configure privileged access management](privileged-access-management-configuration.md)
 
