@@ -57,7 +57,7 @@ If you don't have an existing Enterprise E5 plan and want to try supervision, yo
 
 ### Reviewers
 
-When you create a supervision policy, you'll also determine who will perform the reviews of the messages of the supervised users. In the policy, you'll use user email addresses to identify individuals or groups of people to review supervised communications.
+When you create a supervision policy, you'll also determine who will perform the reviews of the messages of the supervised users. In the policy, you'll use user email addresses to identify individuals or groups of people to review supervised communications. All reviewers must have mailboxes hosted on Exchange Online.
 
 ### Groups for supervised users and reviewers
 
