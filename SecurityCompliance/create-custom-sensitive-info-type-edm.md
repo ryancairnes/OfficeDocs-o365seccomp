@@ -114,14 +114,17 @@ During this phase, you hash and upload the data. The following procedure describ
 
     Example: `EdmUploadAgent.exe /UploadHash /DataStoreName EmployeeDB /HashFile C:\Edm\Hash\EmployeeData.EdmHash` 
 
-## Part 4: List uploaded data and sessions
+3. To see a list of uploaded data, run the following PowerShell cmdlet in Exchange Online Protection:
 
+    `EdmUploadAgent.exe /GetDataStore`
 
+    Example:
 
+    
 
-## Part 5: Create a sensitive type
+## Part 4: Create a sensitive type
 
-## Part 6: Define rules using EDM
+## Part 5: Define rules using EDM
 
 ## Other methods to create a custom sensitive information type
 
