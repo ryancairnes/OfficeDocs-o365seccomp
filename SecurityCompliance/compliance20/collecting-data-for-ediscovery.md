@@ -44,4 +44,4 @@ Once preview is completed, the **Preview** button will be active. Click it to pr
 
 ## Adding search results to a working set
 
-When you are ready to collect and process the entire results of a search, you can do so by adding it to a working set. For details, see [Add data to a working set](add-data-to-working-set.md). 
+When you are ready to collect and process the entire results of a search, you can do so by adding it to a working set. For details, see [Add data to a working set](add-data-to-review-set.md). 

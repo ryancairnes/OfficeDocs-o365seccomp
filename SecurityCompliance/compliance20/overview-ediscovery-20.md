@@ -77,8 +77,8 @@ Use the **Searches** tab to create searches to search the in-place custodial and
 
 Use the **Working sets** tab to review and analyze the content that you've collected from the live system and added to a working set. A *working set* is a static collection of that data (in other words, an offline copy of data) of custodial data (and if applicable, non-custodial data ) that you collected in the previous phase of the eDiscovery workflow. When you add search results to a working set, a process is triggered that extracts files from containers, extracts metadata, and extracts text. When this process is complete, the system builds a new index of all the data that was collected from custodians and added to the working set. After the data is added to the working set, you can run additional queries to narrow the case data, view data as text or in the native file format, and annotate, redact, and tag documents in the working set. Additionally, you can perform advanced analytics such as identify document duplication, email threading, and themes. After you've culled the data to only what is relevant to the case, you can either download documents directly or export them along with file metadata, annotations, and any tags. For more information, see:
 
-  - [Review case data in Advanced eDiscovery (Preview)](reviewing-data-in-working-set.md)
-  - [Analyze data in a working set in Advanced eDiscovery (Preview)](analyzing-data-in-working-set.md)
+  - [Review case data in Advanced eDiscovery (Preview)](reviewing-data-in-review-set.md)
+  - [Analyze data in a working set in Advanced eDiscovery (Preview)](analyzing-data-in-review-set.md)
 
 ## Exporting data for review and presentation
 

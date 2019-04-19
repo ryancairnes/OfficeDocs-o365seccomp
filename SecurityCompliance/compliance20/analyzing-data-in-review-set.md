@@ -34,7 +34,7 @@ To analyze data in a working set:
 
 You can check the progress of analysis in the Jobs tab in your case.
 
- Once analysis is completed, you can view analytics report, run queries within your working set on outputs of the analysis (for more information see [Query within your working set](working-set-search.md)), and see related documents of a given document (for more information see [Reviewing data in working set](reviewing-data-in-working-set.md)).
+ Once analysis is completed, you can view analytics report, run queries within your working set on outputs of the analysis (for more information see [Query within your working set](working-set-search.md)), and see related documents of a given document (for more information see [Reviewing data in working set](reviewing-data-in-review-set.md)).
 
 ## Analytics report
 

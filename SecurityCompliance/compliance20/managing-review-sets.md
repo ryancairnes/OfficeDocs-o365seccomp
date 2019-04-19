@@ -30,8 +30,8 @@ After clicking the *+ Add Working Set* button, a flyout will appear.  Simply nam
 ![Add working set flyout](../media/5e5c99f8-42ca-4c2f-960f-f1a5709569d1.png)
 
 There are three ways to add content to a working set:
-1) [Add search results to a working set](add-data-to-working-set.md)
+1) [Add search results to a working set](add-data-to-review-set.md)
 2) [Load non-Office 365 data into a working set](load-non-office365-data.md)
-3) [Add data to a working set from another working set](add-data-to-working-set-from-another-working-set.md).
+3) [Add data to a working set from another working set](add-data-to-review-set-from-another-review-set.md).
 
 ![Working sets](../media/1f1f4efd-c03b-4255-bc3d-df358e56549c.png)
