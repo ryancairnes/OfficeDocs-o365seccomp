@@ -28,7 +28,9 @@
 ### [Restrict access to content by using encryption in sensitivity labels](encryption-sensitivity-labels.md)
 ### [Apply a sensitivity label to content automatically](apply_sensitivity_label_automatically.md)
 ### [View label usage with label analytics](label-analytics.md)
+
 ## [Prevent data loss (DLP)](data-loss-prevention-policies.md)
+### [DLP and Microsoft Teams](dlp-microsoft-teams.md)
 ### [Watch an extended overview of DLP](https://channel9.msdn.com/events/ignite/microsoft-ignite-orlando-2017/brk3111)
 ## Set up DLP
 ### [Get started with DLP policy recommendations](get-started-with-dlp-policy-recommendations.md)
