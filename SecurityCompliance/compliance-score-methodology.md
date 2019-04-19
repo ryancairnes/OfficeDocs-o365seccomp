@@ -19,52 +19,16 @@ description: "Microsoft Compliance Manager is a free workflow-based risk assessm
 > [!NOTE]
 > The Compliance Score does not express an absolute measure of organizational compliance with any particular standard or regulation. It expresses the extent to which you have adopted controls which can reduce the risks to personal data and individual privacy. No service can guarantee that you are compliant with a standard or regulation, and the Compliance Score should not be interpreted as a guarantee in any way.
 
-The Compliance Manager dashboard displays a total compliance score for Assessments in each Assessment tile. This is the overall Compliance Score for the Assessment and is the accumulation of points received for each implemented and tested control in the Assessment. After adding a new Assessment, the Compliance Score has an initial value for the Microsoft managed controls that have been implemented by Microsoft and tested by independent third parties are already applied.
+The Compliance Manager dashboard displays a total compliance score for Assessments in each Assessment tile. This is the overall Compliance Score for the Assessment and is the accumulation of points received for each implemented and tested control in the Assessment. After adding a new Assessment, the Compliance Score has an initial value for the included Microsoft-managed controls tested by independent third parties.
 
 
 
 
+Every Assessment in Compliance Manager comes pre-loaded with information that provides details about the Actions taken by Microsoft to satisfy the requirements of the controls for which Microsoft is responsible. This information includes details about how Microsoft has implemented each control and how and when Microsoft's implementation was assessed and verified by a third-party auditor. For this reason, the Microsoft Managed Controls for each Assessment are marked as Assessed, and the Compliance Score for the Assessment reflects this.
 
-
-
-
-
-
-
-
-
-  
-
-  
 Assessments in Compliance Manager are based on the shared responsibility model for cloud computing. In the shared responsibility model, Microsoft and each customer share responsibility for the protection of the customer's data when that data is stored in our cloud.
   
-As shown in the Office 365 GDPR Assessment below, Microsoft and customers are each responsible for performing a variety of Actions that are designed to satisfy the requirements of the standard or regulation being assessed. To rationalize and understand the required Actions across a variety of standards and regulations, Compliance Manager treats all standards and regulations as if they were control frameworks. Thus, the Actions performed by Microsoft and by customers for each Assessment involve the implementation and validation of various controls.
-  
-![Compliance Manager - GDPR Assessment](media/123f8126-85b8-4baa-9c4e-c6295cf4a5ca.png)
-  
-Here's the basic workflow for a typical Action:
-  
-1. The Compliance, Risk, Privacy, and/or Data Protection Officer of an organization assigns the task to someone in the organization to implement a control. That person could be:
-
-    - A business policy owner
-    
-    - An IT implementer
-    
-    - Another individual in the organization who has responsibility for performing the task
-    
-2. That individual performs the tasks necessary to implement the control, uploads evidence of implementation into Compliance Manager, and marks the control(s) tied to the Action as implemented. Once these tasks are completed, they assign the Action to an Assessor for validation. Assessors can be:
-    
-    - Internal assessors that perform validation of controls within an organization
-    
-    - External assessors that examine, verify, and certify compliance, such as the third-party independent organizations that audit Microsoft's cloud services
-    
-3. The Assessor validates the control and examines the evidence and marks the control(s) as assessed and the results of the assessment (e.g., passed).
-    
-Once all the controls associated with an Assessment have been assessed, the Assessment is considered completed.
-  
-Every Assessment in Compliance Manager comes pre-loaded with information that provides details about the Actions taken by Microsoft to satisfy the requirements of the controls for which Microsoft is responsible. This information includes details about how Microsoft has implemented each control and how and when Microsoft's implementation was assessed and verified by a third-party auditor. For this reason, the Microsoft Managed Controls for each Assessment are marked as Assessed, and the Compliance Score for the Assessment reflects this.
-  
-Each Assessment includes a total Compliance Score based on the shared responsibility model. Microsoft's implementation and testing of controls for Office 365 contributes a portion of the total possible points associated with a GDPR assessment. As the customer implements and tests each of the customer Actions, the Compliance Score for the Assessment will increase by the value assigned to the control. 
+Each Assessment includes a total Compliance Score based on the shared responsibility model. Microsoft's implementation and testing of controls for Office 365 contributes a portion of the total possible points associated with a GDPR assessment. As the customer implements and tests each of the customer Actions, the Compliance Score for the Assessment will increase by the value assigned to the control.
   
  ### Risk-based scoring methodology
   
@@ -146,11 +110,50 @@ Based on the control's severity ranking, the control is assigned its compliance 
 By prioritizing assessment controls with the highest compliance score values, the organization will be concentrating on the highest risk items and receive proportionally higher positive feedback in the form of more points added to the total compliance score for the assessment for each control assessment completed.
 
 
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+As shown in the Office 365 GDPR Assessment below, Microsoft and customers are each responsible for performing a variety of Actions that are designed to satisfy the requirements of the standard or regulation being assessed. To rationalize and understand the required Actions across a variety of standards and regulations, Compliance Manager treats all standards and regulations as if they were control frameworks. Thus, the Actions performed by Microsoft and by customers for each Assessment involve the implementation and validation of various controls.
+  
+![Compliance Manager - GDPR Assessment](media/123f8126-85b8-4baa-9c4e-c6295cf4a5ca.png)
+  
+Here's the basic workflow for a typical Action:
+  
+1. The Compliance, Risk, Privacy, and/or Data Protection Officer of an organization assigns the task to someone in the organization to implement a control. That person could be:
+
+    - A business policy owner
+    
+    - An IT implementer
+    
+    - Another individual in the organization who has responsibility for performing the task
+    
+2. That individual performs the tasks necessary to implement the control, uploads evidence of implementation into Compliance Manager, and marks the control(s) tied to the Action as implemented. Once these tasks are completed, they assign the Action to an Assessor for validation. Assessors can be:
+    
+    - Internal assessors that perform validation of controls within an organization
+    
+    - External assessors that examine, verify, and certify compliance, such as the third-party independent organizations that audit Microsoft's cloud services
+    
+3. The Assessor validates the control and examines the evidence and marks the control(s) as assessed and the results of the assessment (e.g., passed).
+    
+Once all the controls associated with an Assessment have been assessed, the Assessment is considered completed.
+  
+
+
 ## Understanding the Compliance Score
 
-On the Dashboard, Compliance Manager displays a total score for Office 365 assessments in the upper right hand corner of the tile. This is the overall total Compliance Score for the Assessment, and is the accumulation of points received for each control assessment that has been marked as Implemented and Tested in the Assessment. When adding an Assessment, you will see that the Compliance Score is already on the way towards completion because the points for the Microsoft managed controls that have been implemented by Microsoft and tested by independent third parties are already applied.
-  
-![Compliance Manager Dashboard - Total Compliance Score](media/756091aa-1afd-4aff-93ab-c6f6824f2add.png)
+
   
 The remaining points come from the successful customer control assessment, from the implementation and testing of the customer-managed controls, each of which has a specific value that contributes to the overall compliance score. 
   
