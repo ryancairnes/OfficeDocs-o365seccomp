@@ -104,13 +104,10 @@
 <!--Protect, detect, investigate, respond-->
 # [Protect against threats](protect-against-threats.md)
 ## [The threat landscape and common attack campaigns]
-
-
-
 ## [Advanced Threat Protection ](office-365-atp.md)
 <!--Actions for GAs (generally) 1-time setup-->
 <!--Admin audience-->
-#### [ATP setup tasks for admins]
+#### ATP setup tasks for admins
 #### [Global Administrator setup tasks]
 ##### [Set up ATP Safe Links policies](set-up-atp-safe-links-policies.md)
 ##### [Set up ATP Safe Attachments policies](set-up-atp-safe-attachments-policies.md)
