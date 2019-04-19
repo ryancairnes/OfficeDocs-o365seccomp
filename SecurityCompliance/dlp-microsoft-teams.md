@@ -27,7 +27,7 @@ Recently, [data loss prevention](data-loss-prevention-policies.md) (DLP) capabil
 
 ## Policy tips help educate users
 
-Similar to how DLP works in Exchange, SharePoint, OneDrive, and Office desktop clients, policy tips appear when an action conflicts with a DLP policy. In Microsoft Teams, policy tips notify senders about why their messages were blocked or revoked. 
+Similar to how DLP works in Exchange, SharePoint, OneDrive, and Office desktop clients, [policy tips](use-notifications-and-policy-tips.md) appear when an action conflicts with a DLP policy. In Microsoft Teams, policy tips notify senders about why their messages were blocked or revoked. 
 
 For example, a sender might be told that their message contains personally identifiable information (PII) that is not allowed to be shared with anyone, or that a document that contains PII cannot be shared with people outside their organization. The sender can then edit their message to be compliant with DLP policies.
 
@@ -71,4 +71,6 @@ To perform this task, you must be assigned a role that has permissions to edit D
 
 6. On the **Policy settings** tab, under **Customize the type of content you want to protect**, keep the default simple settings, or choose **Use advanced settings**, and then choose **Next**.<br/>If you choose advanced settings, create or edit rules for your policy. (To get help with this, see [Simple settings vs. advanced settings](data-loss-prevention-policies.md#simple-settings-vs-advanced-settings).)
 
-7.  On the **Policy settings** tab, under **What do you want to do if we detect sensitive info?**, review the settings. (Here's where you can choose to keep default policy tips and email settings, or customize them.)<br/>
+7.  On the **Policy settings** tab, under **What do you want to do if we detect sensitive info?**, review the settings. (Here's where you can choose to keep default [policy tips and email notifications](use-notifications-and-policy-tips.md), or customize them.)<br/>![DLP policy settings with tips and notifications](media/dlp-teams-policysettings-tipsemails.png)<br/>When you're finished reviewing or editing settings, choose **Next**.
+
+8. 
