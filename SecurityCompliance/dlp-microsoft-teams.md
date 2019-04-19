@@ -25,10 +25,12 @@ Recently, DLP capabilities were extended to include Microsoft Teams as a locatio
 
 - **Example 2: Protecting sensitive information in documents that are shared in channels and chats**. Suppose that someone attempts to share a document with guests, and the document contains sensitive information. If you have a DLP policy defined to prevent this, the document won't open for those users. Note that in this case, you must have a policy that includes SharePoint and OneDrive in order for protection to be in place.
 
-## Policy tips for senders
+## Policy tips help educate users
 
-Similar to how DLP works in Exchange, SharePoint, OneDrive, and Office desktop clients, policy tips appear when an action conflicts with a DLP policy. In Microsoft Teams, policy tips notify senders about why their messages were blocked or revoked. For example, a sender might be told that their message contains personally identifiable information (PII) that is not allowed to be shared with anyone, or that a document that contains PII cannot be shared with people outside their organization. The sender can then edit their message to be compliant with DLP policies.
+Similar to how DLP works in Exchange, SharePoint, OneDrive, and Office desktop clients, policy tips appear when an action conflicts with a DLP policy. In Microsoft Teams, policy tips notify senders about why their messages were blocked or revoked. 
 
-When you configure your DLP policies, 
+For example, a sender might be told that their message contains personally identifiable information (PII) that is not allowed to be shared with anyone, or that a document that contains PII cannot be shared with people outside their organization. The sender can then edit their message to be compliant with DLP policies.
+
+When you configure your DLP policies, you can use the default policy tips, or customize policy tips for your organization.
 
 ## 
