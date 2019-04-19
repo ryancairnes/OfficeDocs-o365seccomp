@@ -87,7 +87,7 @@ During this phase, you structure your sensitive data in a .csv (or .tsv) file, c
 
 5. Proceed to the next section.
 
-## Part 2: Install and authorize the EDM Upload agent
+## Part 2: Install and authorize the EDM Upload Agent
 
 During this phase, you'll set up a dedicated user account for Office 365, download and install the EDM Upload Agent, and authorize the tool.
 
@@ -97,7 +97,7 @@ During this phase, you'll set up a dedicated user account for Office 365, downlo
     - Write access to the location you'll use for storing hashed data (this can be a folder on a local drive)
     - Write access to Microsoft Azure Service for [Azure Blob storage](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)
 
-2. Download the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639), and install it.
+2. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639).
 
 3. To authorize the EDM Upload Agent, run the following PowerShell cmdlet in Exchange Online Protection:
 
