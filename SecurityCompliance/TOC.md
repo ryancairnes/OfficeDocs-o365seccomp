@@ -107,7 +107,7 @@
 ## [Advanced Threat Protection ](office-365-atp.md)
 <!--Actions for GAs (generally) 1-time setup-->
 <!--Admin audience-->
-#### ATP setup tasks for admins
+### ATP setup tasks for admins
 #### [Global Administrator setup tasks]
 ##### [Set up ATP Safe Links policies](set-up-atp-safe-links-policies.md)
 ##### [Set up ATP Safe Attachments policies](set-up-atp-safe-attachments-policies.md)
@@ -124,18 +124,17 @@
 <!--Story: Where is ATP in the M365 security scheme / why ATP-->
 #### The scoop re. ATP 
 <!--InfoSec audience: Step 1 - List threats-->
-##### [Understanding latest attack campaigns with threat analytics](latest-attack-campaigns.md)
+### [Understanding latest attack campaigns with threat analytics](latest-attack-campaigns.md)
 <!--InfoSec audience: Step 2 - Take action. Daily tasks / how to run sims and read reports successfully-->
-#### [Hunting in Microsoft 365 ATP](hunting.md)
-##### [View and read your ATP reports](view-reports-for-atp.md)
-##### [What ATP Safe Links warning pages mean](atp-safe-links-warning-pages.md)
-<!--###Where are the safe Attachment reports?-->
-##### [Use Threat Trackers](threat-trackers.md)
-##### [Use Attack Simulator in Office 365](attack-simulator.md)
-##### [Keep users safe with threat investigation and response](keep-users-safe-with-office-365-ti.md)
-##### [Find and investigate malicious email that was delivered](investigate-malicious-email-that-was-delivered.md)
-##### [Use Threat Explorer](use-explorer-in-security-and-compliance.md)
-###### [Threat Explorer views](threat-explorer-views.md)
+### [Hunting in Microsoft 365 ATP](hunting.md)
+#### [View and read your ATP reports](view-reports-for-atp.md)
+#### [What ATP Safe Links warning pages mean](atp-safe-links-warning-pages.md)
+#### [Use Threat Trackers](threat-trackers.md)
+#### [Use Attack Simulator in Office 365](attack-simulator.md)
+#### [Keep users safe with threat investigation and response](keep-users-safe-with-office-365-ti.md)
+#### [Find and investigate malicious email that was delivered](investigate-malicious-email-that-was-delivered.md)
+#### [Use Threat Explorer](use-explorer-in-security-and-compliance.md)
+#### [Threat Explorer views](threat-explorer-views.md)
 <!--SecInfo audience: Integrate with Microsoft or other techs-->
 ### [Integration for greater Security]
 #### [Integrate Office 365 ATP with Windows Defender Advanced Threat Protection](integrate-office-365-ti-with-wdatp.md)
