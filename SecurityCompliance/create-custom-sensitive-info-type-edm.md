@@ -85,7 +85,7 @@ During this phase, you structure your sensitive data in a .csv (or .tsv) file, c
 
     `New-DlpEdmSchema -FileData $edmSchemaXml`
 
-5. Proceed to Part 2.
+5. Proceed to the next section.
 
 ## Part 2: Install and authorize the EDM Upload agent
 
@@ -97,15 +97,15 @@ During this phase, you'll set up a dedicated user account for Office 365, downlo
     - Write access to the location you'll use for storing hashed data (this can be a folder on a local drive)
     - Write access to Microsoft Azure Service for [Azure Blob storage](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)
 
-2. [Download the EDM Upload Agent](http://download.microsoft.com/download/C/6/2/C62C41B6-8585-4655-9D93-EAC61042AC51/EdmUploadAgent.msi) (EdmUploadAgent.exe) and install it.
+2. [Download the EDM Upload Agent](https://go.microsoft.com/fwlink/?linkid=2088639) and install it.
 
 3. To authorize the EDM Upload Agent, run the following PowerShell cmdlet in Exchange Online Protection:
 
     `EdmUploadAgent.exe /Authorize`
 
-4. When prompted, log in using the account credentials you created in step 1. 
+4. When prompted, log in using the account credentials you created in step 1 of this procedure. 
 
-5. Proceed to Part 3.
+5. Proceed to the next section.
 
 > [!TIP]
 > If you get any error messages, repeat steps 3 and 4.
@@ -145,7 +145,7 @@ During this phase, you hash the sensitive data, and upload the hashed data using
 
     ![Example of EDM upload sessions for Patient data store](media/EDM-GetDataStore-sessionsexample.png)
 
-
+5. Proceed to the next section.
 
 ## Part 4: Create a rule package with exact matching
 
@@ -202,6 +202,8 @@ During this phase, you configure exact matching and classification.
     `New-DlpSensitiveInformationTypeRulePackage -FileData $rulepack`
 
     To learn more about uploading a rule package, see [Upload your rule package](create-a-custom-sensitive-information-type-in-scc-powershell.md#upload-your-rule-package).
+
+3. Proceed to the next section.
 
 ## Part 5: Apply EDM to a DLP policy
 
