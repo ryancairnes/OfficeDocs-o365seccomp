@@ -33,6 +33,8 @@ Using the upload Non-Office 365 feature as described in this procedure requires 
 
 - An existing eDiscovery case.
 
+- Custodians must be added to the case before you upload data attributed to them.
+
 - All the files for uploading gathered into folders where there is one folder per custodian and the folders' name is in this format *alias@domainname* . The *alias@domainname* must be users Office 365 alias and domain. You can collect all the *alias@domainname* folders into a root folder. The root folder can only contain the *alias@domainname* folders, there must be no loose files in the root folder.
 
    The folder structure for the non-Office 365 data you plan to upload should look something like the following:
