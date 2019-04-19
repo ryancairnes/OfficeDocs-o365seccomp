@@ -19,11 +19,11 @@ description: "You can now apply DLP policies to Microsoft Teams chats and channe
 
 ## Overview
 
-Recently, DLP capabilities were extended to include Microsoft Teams as a location. Now, if your organization has DLP, you can set policies to prevent people from sharing sensitive information in a Microsoft Teams channel or chat session. DLP policies that include Microsoft Teams as a location can help protect sensitive information from being shared. Here are some examples:
+Recently, [data loss prevention](data-loss-prevention-policies.md) (DLP) capabilities were extended to include Microsoft Teams. If your organization has DLP, you can define policies that prevent people from sharing sensitive information in a Microsoft Teams channel or chat session. Here are some examples of how this protection works:
 
-- **Example 1: Protecting sensitive information in messages in channels and chats**. Suppose that someone attempts to share sensitive information in a Teams chat or channel with guests (external users). If you have a DLP policy defined to prevent this, messages with sensitive information that are sent to external users are deleted. This happens automatically, and within seconds, according to how your DLP policy is configured.
+- **Example 1: Protecting sensitive information in messages**. Suppose that someone attempts to share sensitive information in a Teams chat or channel with guests (external users). If you have a DLP policy defined to prevent this, messages with sensitive information that are sent to external users are deleted. This happens automatically, and within seconds, according to how your DLP policy is configured.
 
-- **Example 2: Protecting sensitive information in documents that are shared in channels and chats**. Suppose that someone attempts to share a document with guests, and the document contains sensitive information. If you have a DLP policy defined to prevent this, the document won't open for those users. Note that in this case, you must have a policy that includes SharePoint and OneDrive in order for protection to be in place.
+- **Example 2: Protecting sensitive information in documents**. Suppose that someone attempts to share a document with guests in a Microsoft Teams channel or chat, and the document contains sensitive information. If you have a DLP policy defined to prevent this, the document won't open for those users. Note that in this case, your DLP policy must include SharePoint and OneDrive in order for protection to be in place.
 
 ## Policy tips help educate users
 
@@ -33,4 +33,33 @@ For example, a sender might be told that their message contains personally ident
 
 When you configure your DLP policies, you can use the default policy tips, or customize policy tips for your organization.
 
-## 
+### To customize policy tips
+
+1. Step 1 
+2. Step 2
+3. Step 3
+
+## Add Microsoft Teams as a location to existing DLP policies
+
+To perform this task, you must be assigned a role that has permissions to edit DLP policies. To learn more, see [Permissions](data-loss-prevention-policies.md#permissions).
+
+1. Go to the Office 365 Security & Compliance Center ([https://protection.office.com](https://protection.office.com)) and sign in.
+
+2. Choose **Data loss prevention** > **Policy**. 
+
+3. Select a policy, and look at the values under **Locations**. If you see **Teams chat and channel messages**, you're all set. If you don't, click **Edit**.<br/>![Locations for existing policy](media/dlp-teams-editexistingpolicy.png)<br/>
+
+4. In the **Status** column, turn the policy on for **Teams chat and channel messages**.<br/>![DLP for Teams chats and channels](media/dlp-teams-addteamschatschannels.png)<br/>
+
+5. Keep the default settings of all accounts, or specify which accounts to include or exclude.
+
+6. Click **Save**.
+
+## Define a new DLP policy for Microsoft Teams
+
+To perform this task, you must be assigned a role that has permissions to edit DLP policies. To learn more, see [Permissions](data-loss-prevention-policies.md#permissions).
+
+1. Go to the Office 365 Security & Compliance Center ([https://protection.office.com](https://protection.office.com)) and sign in.
+
+2. Choose **Data loss prevention** > **Policy**. 
+
