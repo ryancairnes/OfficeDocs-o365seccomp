@@ -11,7 +11,7 @@ ms.collection: M365-security-compliance
 search.appverid: 
 - MOE150
 - MET150
-description: "Microsoft Compliance Manager is a workflow-based risk assessment tool in the Microsoft Service Trust Portal that enables you to track, assign, and verify your organization's regulatory compliance activities related to Microsoft Professional Services and Microsoft cloud services, such as Microsoft Office 365, Microsoft Dynamics 365, and Microsoft Azure."
+description: "Microsoft Compliance Manager is a free workflow-based risk assessment tool in the Microsoft Service Trust Portal. Compliance Manager enables you to track, assign, and verify regulatory compliance activities related to Microsoft cloud services."
 ---
 
 # Microsoft Compliance Manager
@@ -19,32 +19,32 @@ description: "Microsoft Compliance Manager is a workflow-based risk assessment t
 > [!IMPORTANT]
 > Compliance Manager isn't available in Office 365 operated by 21Vianet, Office 365 Germany, Office 365 U.S. Government Community High (GCC High), or Office 365 Department of Defense.
 
-[Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) is a dashboard and management tool that provides a summary of your data protection and compliance stature and recommendations to improve data protection and compliance. Included as a part of your Microsoft 365, Office 365, or Azure Active Directory subscription, it provides a workflow-based risk assessment tool designed to help you manage regulatory compliance within the shared responsibility model for Microsoft cloud services. It offers a centralized dashboard for viewing standards, regulations, and assessments that outline Microsoft's control implementation details and test results, as well as tools allowing you to manage custom control implementations and compliance tracking for your organization.
+[Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) is a free workflow-based risk assessment tool that lets you track, assign, and verify regulatory compliance activities related to Microsoft cloud services. Part of your Microsoft 365, Office 365, or Azure Active Directory subscription, Compliance Manager helps you manage regulatory compliance within the shared responsibility model for Microsoft cloud services. It offers a centralized dashboard for viewing standards, regulations, and assessments that outline control implementation details and test results for Microsoft services. It also includes tools allowing you to manage custom control implementations and compliance tracking specific to your organization.
 
 With Compliance Manager, your organization can:
   
-- Combine detailed compliance information Microsoft has provided to auditors and regulators about its cloud services with your own self-assessment of your organization's compliance with standards and regulations. These include standards and regulations outlined by the International Organization for Standardization (ISO), the National Institute of Standards and Technology (NIST), the Health Insurance Portability and Accountability Act (HIPAA), the General Data Protection Regulation (GDPR), and many others.
+- Combine detailed compliance information Microsoft has provided to auditors and regulators about its cloud services with your compliance self-assessment for standards and regulations applicable for your organization. These include standards and regulations outlined by the International Organization for Standardization (ISO), the National Institute of Standards and Technology (NIST), the Health Insurance Portability and Accountability Act (HIPAA), the General Data Protection Regulation (GDPR), and many others.
 - Enables you to assign, track, and record compliance and assessment-related activities, which can help your organization cross team barriers to achieve your organization's compliance goals.
-- Provides a Compliance Score to help you track your progress and prioritize the auditing controls that will help reduce your organization's exposure to risk.
+- Provides a Compliance Score to help you track your progress and prioritize the auditing controls that helps reduce your organization's exposure to risk.
 - Provides a secure repository for you to upload and manage evidence and other artifacts related to your compliance activities.
-- Produces richly detailed reports in Microsoft Excel that document the compliance activities performed by Microsoft and your organization, which can be provided to auditors, regulators, and other compliance stakeholders.
+- Produces richly detailed Microsoft Excel reports that document compliance activities performed by Microsoft and your organization for auditors, regulators, and other compliance stakeholders.
 
 > [!NOTE]
 > The customer actions provided in Compliance Manager are recommendations; it is up to your organization to evaluate the effectiveness of these recommendations in their respective regulatory environment prior to implementation. Recommendations found in Compliance Manager should not be interpreted as a guarantee of compliance.
 
 ## Compliance Manager relationships
 
-Compliance Manager uses several components help you with your compliance management activities. These components work together to enable a complete management work flow and to make compliance reporting for audits easier and hassle-free. The chart below shows the relationship between the main components and the details for each are covered in following sections.
+Compliance Manager uses several components help you with your compliance management activities. These components work together to provide a complete management work flow and hassle-free compliance reports for auditors.
 
 RELATIONSHIP ARTWORK
 
 ## Groups
 
-[Groups](working-with-compliance-manager) are containers that allow you to logically organize Assessments and that share common information and workflow tasks between Assessments that have the same or related customer-managed controls. This means that when two different Assessments in the same group share the same customer-managed control, then the completion of implementation details, testing information, and status for the control in one Assessment are automatically synchronized to the same control in any other Assessment in the group. This helps unify the assigned customer actions for each control across the group and reduce duplicating work for customer-managed Actions. Additionally, you can choose to use groups to organize. Assessments by year, area, compliance standard, or other groupings to help organize your compliance work.
+[Groups](working-with-compliance-manager) are containers that allow you to organize Assessments and share common information and workflow tasks between Assessments that have the same or related customer-managed controls. When two different Assessments in the same group share customer-managed control, then the completion of implementation details, testing information, and status for the control are automatically synchronized to the same control in any other Assessment in the group. This helps unify the assigned Action Items for each control across the group and reduce duplicating work. You can also choose to use groups to organize. Assessments by year, area, compliance standard, or other groupings to help organize your compliance work.
 
 ## Assessments
 
-[Assessments](working-with-compliance-manager) are containers that allow you to logically organize Controls based on the responsibility that is shared between Microsoft and your organization for assessing security and compliance risks in the Microsoft cloud services. Assessments help you implement data protection safeguards specified by a compliance standard and applicable data protection standards, regulations, or laws. They help you discern your organization's data protection and compliance posture against the selected industry standard for the selected Microsoft cloud service. Assessments are completed by the implementation of the controls included in the Assessment and that map to the certification standard being assessed. 
+[Assessments](working-with-compliance-manager) are containers that allow you to organize Controls based on the responsibility shared between Microsoft and your organization for assessing security and compliance risks in the Microsoft cloud services. Assessments help you implement data protection safeguards specified by a compliance standard and applicable data protection standards, regulations, or laws. They help you discern your organization's data protection and compliance posture against the selected industry standard for the selected Microsoft cloud service. Assessments are completed by the implementation of controls included in the Assessment that map to the certification standard being assessed.
 
 By default, Compliance Manager creates the following Assessments for your organization:
 
@@ -76,7 +76,7 @@ For each cloud service, Microsoft implements and manages a set of controls as pa
 
 ### Customer-managed controls
 
-This is the collection of controls that are managed by your organization. Your organization is responsible for implementing these controls as part of your compliance process for a given standard or regulation. Customer-managed controls are also organized into control families for the corresponding certification or regulation. Use the customer-managed controls to implement the recommended actions suggested by Microsoft as part of your compliance activities. Your organization can use the prescriptive guidance and recommended Customer Actions in each customer-managed control to manage the implementation and assessment process for that control.
+This is the collection of controls that are managed by your organization. Your organization is responsible for implementing these controls as part of your compliance process for a given standard or regulation. Customer-managed controls are also organized into control families for the corresponding certification or regulation. Use the customer-managed controls to implement the recommended actions suggested by Microsoft as part of your compliance activities. Your organization can use the prescriptive guidance and recommended customer actions in each customer-managed control to manage the implementation and assessment process for that control.
 
 Customer-managed controls in Assessments also have built-in workflow management functionality that you can use to manage and track your organization's progress towards completing the Assessment. With this workflow functionality, you can:
 
@@ -98,11 +98,11 @@ A shared control refers to any control where Microsoft and customers both share 
 
 People involved in the compliance assessment process in your organization can use Compliance Manager to review the customer-managed controls from all Assessments for which they are assigned. When a user signs in to Compliance Manager and opens the **Action Items** dashboard, a list of Action Items assigned to them is displayed. Depending on the Compliance Manager role assigned to the user, they can provide implementation or test details, update the Status, or assign Action Items.
 
-As certification controls are generally implemented by one person and tested by another, the Action Item can be initially assigned to one person for implementation, and once that is complete, that person can reassign the Action Item to the next person for testing and uploading of evidence. This assignment/reassignment of Action Items can be performed by any users who have a Compliance Manager role with sufficient permissions, allowing for central management of control assignments, or decentralized routing of Action Items, from implementer to tester as appropriate.
+Certification controls are usually implemented by one person and tested by another. Action Items initially assigned to one person for implementation, and once that is complete, that person can reassign the Action Item to the next person for testing and uploading of evidence. This assignment/reassignment of Action Items can be performed by any users who have a Compliance Manager role with sufficient permissions, allowing for central management of control assignments, or decentralized routing of Action Items, from implementer to tester as appropriate.
 
 ## Permissions
 
-Compliance Manager uses a role-based access control permission model. By default, everyone in your organization with Azure Active Directory (Azure AD) account has full access and can perform any action in Compliance Manager. Once role-based access control has been implemented by your organization, any user not assigned to a defined Compliance Manager role will have guest access.
+Compliance Manager uses a role-based access control permission model. By default, everyone in your organization with Azure Active Directory (Azure AD) account has full access and can perform any action in Compliance Manager. Once role-based access control has been implemented by your organization, any user not assigned to a defined Compliance Manager role are assigned guest access.
 
 To change from default permissions and implement a fully role-based access control model, at least one user must be added to each Compliance Manager role. After a user is added to a role, the permissions to perform the actions assigned to that role are removed from the default set of permissions available to all users, and only users that have been provisioned that role will be able to access Compliance Manager and perform the actions allowed by that role.
 
@@ -110,13 +110,11 @@ For example, if you add a user to the role that lets users manage Assessments, o
   
 ## Manage evidence
 
-Compliance Manager can store evidence of your implementation tasks for performing testing and validation of customer-managed controls. Evidence includes documents, files, screenshots, images, scripts, script output files, etc.
-
-In addition to customer uploaded evidence, for Action Items that are integrated with Secure Score, Compliance Manager automatically receives telemetry and creates an evidence record for you.
+Compliance Manager can store evidence of your implementation tasks for performing testing and validation of customer-managed controls. Evidence includes documents, files, screenshots, images, scripts, script output files, etc. Compliance Manager also automatically receives telemetry and creates an evidence record for Action Items that are integrated with Secure Score.
 
 ## Templates
 
-Compliance Manager provides pre-configured templates for Assessments and allows you to create customized templates for customer-managed controls for your organization's compliance needs. New templates can be created by importing controls information from an Excel file, or you can create a new template from a copy of an existing template.
+Compliance Manager provides pre-configured templates for Assessments and allows you to create customized templates for customer-managed controls for your organization's compliance needs. New templates can be created by importing controls information from an Excel file, or you can create a template from a copy of an existing template.
 
 The pre-configured templates included with Compliance Manager are:
  
@@ -133,9 +131,7 @@ The pre-configured templates included with Compliance Manager are:
 
 ## Compliance Score
 
-The [Compliance Score](compliance-score-methodology.md) is a core component of the way that Compliance Manager helps your organization understand and manage compliance. The Compliance Score for an assessment is an expression of the company's compliance with a given standard or regulation as a number, where the higher the score (up to the maximum number of points allocated for the Assessment), the better the company's compliance posture. Understanding the compliance scoring methodology in which assessment controls are assigned risk severity values between 1- 10 (low to high), and how completed control assessments add to the total compliance score is crucial to organizations for prioritizing their actions.
-
-The Compliance Score, like the Microsoft Secure Score, is similar to other behavior-based scoring systems; your organization's activity can increase its Compliance Score by performing activities related to data protection, privacy, and security.
+The [Compliance Score](compliance-score-methodology.md) is a core component of Compliance Manager that helps your organization understand and manage compliance. Like the [Microsoft Secure Score](microsoft-secure-score.md), the Compliance Score is a behavior-based scoring system for activities related to data protection, privacy, and security in your organization. The Compliance Score for an Assessment is an expression of compliance with a given standard or regulation. The higher the numeric score, the better the compliance posture for the Assessment. Understanding the compliance scoring methodology is crucial for prioritizing required customer-managed control actions.
   
 > [!IMPORTANT]
 > The Compliance Score does not express an absolute measure of organizational compliance with any particular standard or regulation. It expresses the extent to which you have adopted controls which can reduce the risks to personal data and individual privacy. No service can guarantee that you are compliant with a standard or regulation, and the Compliance Score should not be interpreted as a guarantee in any way.
@@ -146,7 +142,7 @@ Compliance Manager is integrated with Microsoft Secure Score to automatically ap
 
 ## Ready to get started?
 
-Start [working with Compliance Manager](working-with-compliance-manager.md) to manage your organization's regulatory compliance activities.
+Start [working with Compliance Manager](working-with-compliance-manager.md) to manage regulatory compliance activities for your organization.
 
 ## Resources
 
