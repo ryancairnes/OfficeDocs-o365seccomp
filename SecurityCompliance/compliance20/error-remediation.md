@@ -77,7 +77,7 @@ Use the following workflow to remediate files with errors in Advanced eDiscovery
 
 11. Finally, return to Advanced eDiscovery (Preview) and click **Next: Process files**.
 
-12. When processing is complete.  You can return to the working set and see the remediated file.
+12. When processing is complete.  You can return to the review set and see the remediated file.
 
 ## What happens when files are remediated
 

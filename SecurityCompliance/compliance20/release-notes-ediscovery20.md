@@ -59,13 +59,13 @@ The Public Preview program for Advanced eDiscovery is the way to get early acces
 
 - **Improvements to search** – Create a search by identifying custodians and/or locations.
 
-- **Working sets** – Manage, track, and audit static sets of documents.
+- **review sets** – Manage, track, and audit static sets of documents.
 
-- **Review** – Use a native, text, and near-native view to review documents added to your working set.
+- **Review** – Use a native, text, and near-native view to review documents added to your review set.
 
 - **Redact, tag, and annotate** – Redact text, apply tags, and make annotations as you review documents.
   
-- **Analytics-powered review**– Leverage eDiscovery analytics to find, search, and cull results within a working set.
+- **Analytics-powered review**– Leverage eDiscovery analytics to find, search, and cull results within a review set.
 
 - **Jobs** – Track status of long-running processes.
 

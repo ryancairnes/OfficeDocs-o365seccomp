@@ -1,5 +1,5 @@
 ---
-title: "Load non-Office 365 data into a working set"
+title: "Load non-Office 365 data into a review set"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,9 +17,9 @@ ms.assetid:
 description: ""
 ---
 
-# Load non-Office 365 data into a working set
+# Load non-Office 365 data into a review set
 
-Not all documents that you may need to analyze with Office 365 Advanced eDiscovery will live in Office 365. With the Non-Office 365 content import feature in Advanced eDiscovery you can upload documents that don't live in Office 365 into a working set so it is analyzed with Advanced eDiscovery. This procedure shows you how to bring your non-Office 365 documents into Advanced eDiscovery for analysis.
+Not all documents that you may need to analyze with Office 365 Advanced eDiscovery will live in Office 365. With the Non-Office 365 content import feature in Advanced eDiscovery you can upload documents that don't live in Office 365 into a review set so it is analyzed with Advanced eDiscovery. This procedure shows you how to bring your non-Office 365 documents into Advanced eDiscovery for analysis.
 
 >[!Note]
 >Advanced eDiscovery requires an Office 365 E3 with the Advanced Compliance add-on or an E5 subscription for your organization. If you don't have that plan and want to try Advanced eDiscovery, you can sign up for a trial of Office 365 Enterprise E5.
@@ -56,7 +56,7 @@ Using the upload Non-Office 365 feature as described in this article requires th
 
 ## Upload non-Office 365 content into Advanced eDiscovery
 
-1. As an eDiscovery Manager or eDiscovery Administrator, open Advanced eDiscovery, then the case that the non-Office 365 data will be uploaded to.  Click the **Working sets** tab, then select the working set you wish to load the Non-Office 365 data to.  If you have not already created a working set, you can do so now.  Finally, click **Manage workings set** then **View uploads** in the Non-Office 365 data section.
+1. As an eDiscovery Manager or eDiscovery Administrator, open Advanced eDiscovery, then the case that the non-Office 365 data will be uploaded to.  Click the **review sets** tab, then select the review set you wish to load the Non-Office 365 data to.  If you have not already created a review set, you can do so now.  Finally, click **Manage review set** and then click **View uploads** in the **Non-Office 365 data tile.
 
 2. Click the **Upload files** button to start the Non-Office 365 data import wizard.
 
@@ -80,7 +80,7 @@ Using the upload Non-Office 365 feature as described in this article requires th
    > [!NOTE]
    > If the supplied AzCopy command fails, refer to [Troubleshoot AzCopy in Advanced eDiscovery (Preview)](troubleshooting-azcopy.md)
 
-6. Finally, return back to the Security & Compliance and click the **Next: Process files** button.  This will initiate processing, text extraction and indexing of the uploaded files.  You can track the progress of processing here or in the **Jobs** tab.  Once completed, the new files will be available in the working set.  Once processing is complete, you can dismiss the wizard.
+6. Finally, return back to the Security & Compliance and click the **Next: Process files** button.  This will initiate processing, text extraction and indexing of the uploaded files.  You can track the progress of processing here or in the **Jobs** tab.  Once completed, the new files will be available in the review set.  Once processing is complete, you can dismiss the wizard.
 
    ![Non-Office 365 Import - Process files](../media/218b1545-416a-4a9f-9b25-3b70e8508f67.png)
 
