@@ -27,7 +27,7 @@ Recently, [data loss prevention](data-loss-prevention-policies.md) (DLP) capabil
 
 ## Policy tips help educate users
 
-Similar to how DLP works in Exchange, SharePoint, OneDrive, and Office desktop clients, [policy tips](use-notifications-and-policy-tips.md) appear when an action conflicts with a DLP policy. In Microsoft Teams, policy tips notify senders about why their messages were blocked or revoked. 
+Similar to how DLP works in [Exchange, Outlook, and Outlook on the web](data-loss-prevention-policies.md#policy-evaluation-in-exchange-online-outlook-and-outlook-on-the-web), [SharePoint and OneDrive for Business sites](data-loss-prevention-policies.md#policy-evaluation-in-onedrive-for-business-and-sharepoint-online-sites), and [Office desktop clients](data-loss-prevention-policies.md#policy-evaluation-in-the-office-desktop-programs), [policy tips](use-notifications-and-policy-tips.md) appear when an action conflicts with a DLP policy. In Microsoft Teams, policy tips notify senders about why their messages were blocked or revoked. 
 
 For example, a sender might be told that their message contains personally identifiable information (PII) that is not allowed to be shared with anyone, or that a document that contains PII cannot be shared with people outside their organization. The sender can then edit their message to be compliant with DLP policies.
 
@@ -79,9 +79,9 @@ To perform this task, you must be assigned a role that has permissions to edit D
 
 2. Choose **Data loss prevention** > **Policy** > **+ Create a policy**. 
 
-3. Choose a template, and then choose **Next**.<br/>In our example, we chose the U.S. Personally Identifiable Information Data template.<br/>![Privacy template for DLP policy](media/dlp-teams-createnewpolicy-template.png)<br/>
+3. Choose a [template](data-loss-prevention-policies.md#dlp-policy-templates), and then choose **Next**.<br/>In our example, we chose the U.S. Personally Identifiable Information Data template.<br/>![Privacy template for DLP policy](media/dlp-teams-createnewpolicy-template.png)<br/>
 
-4. On the **Name your policy** tab, specify a name and description for the policy, and then choose Next. 
+4. On the **Name your policy** tab, specify a name and description for the policy, and then choose **Next**. 
 
 5. On the **Choose locations** tab, keep the default setting of all locations, or select **Let me choose specific locations**, and then choose **Next**.<br/>If you opted to choose specific locations, select the locations for your DLP policy, and then choose **Next**.<br/>![DLP policy locations](media/dlp-teams-selectlocationsnewpolicy.png)<br/>
 
@@ -89,8 +89,14 @@ To perform this task, you must be assigned a role that has permissions to edit D
 
 7.  On the **Policy settings** tab, under **What do you want to do if we detect sensitive info?**, review the settings. (Here's where you can choose to keep default [policy tips and email notifications](use-notifications-and-policy-tips.md), or customize them.)<br/>![DLP policy settings with tips and notifications](media/dlp-teams-policysettings-tipsemails.png)<br/>When you're finished reviewing or editing settings, choose **Next**.
 
-8. On the **Policy settings** tab, under **Do you want to turn on the policy or test things out first?**, choose whether to turn the policy on, test it first, or keep it off, and then choose **Next**.<br/>![Specify whether to turn the policy on](media/dlp-teams-policysettings-turnonnow.png)<br/>
+8. On the **Policy settings** tab, under **Do you want to turn on the policy or test things out first?**, choose whether to turn the policy on, [test it first](data-loss-prevention-policies.md#roll-out-dlp-policies-gradually-with-test-mode), or keep it turned off for now, and then choose **Next**.<br/>![Specify whether to turn the policy on](media/dlp-teams-policysettings-turnonnow.png)<br/>
 
 9. On the **Review your settings** tab, review the settings for your new policy. Choose **Edit** to make changes. When you're finished, choose **Create**. 
 
 Allow approximately one hour for your new policy to work its way through your data center and sync to user accounts.
+
+## Related articles
+
+[Create, test, and tune a DLP policy](create-test-tune-dlp-policy.md)
+
+[Send email notifications and show policy tips for DLP policies](use-notifications-and-policy-tips.md)
