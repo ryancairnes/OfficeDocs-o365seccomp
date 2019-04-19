@@ -61,5 +61,5 @@ To perform this task, you must be assigned a role that has permissions to edit D
 
 1. Go to the Office 365 Security & Compliance Center ([https://protection.office.com](https://protection.office.com)) and sign in.
 
-2. Choose **Data loss prevention** > **Policy**. 
+2. Choose **Data loss prevention** > **Policy** > **+ Create a policy**. 
 
