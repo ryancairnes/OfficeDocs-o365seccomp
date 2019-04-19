@@ -25,7 +25,7 @@ With Compliance Manager, your organization can:
   
 - Combine detailed compliance information Microsoft has provided to auditors and regulators about its cloud services with your compliance self-assessment for standards and regulations applicable for your organization. These include standards and regulations outlined by the International Organization for Standardization (ISO), the National Institute of Standards and Technology (NIST), the Health Insurance Portability and Accountability Act (HIPAA), the General Data Protection Regulation (GDPR), and many others.
 - Enables you to assign, track, and record compliance and assessment-related activities, which can help your organization cross team barriers to achieve your organization's compliance goals.
-- Provides a Compliance Score to help you track your progress and prioritize the auditing controls that helps reduce your organization's exposure to risk.
+- Provides a Compliance Score to help you track your progress and prioritize auditing controls that help reduce your organization's exposure to risk.
 - Provides a secure repository for you to upload and manage evidence and other artifacts related to your compliance activities.
 - Produces richly detailed Microsoft Excel reports that document compliance activities performed by Microsoft and your organization for auditors, regulators, and other compliance stakeholders.
 
