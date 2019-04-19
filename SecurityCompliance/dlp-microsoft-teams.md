@@ -63,3 +63,6 @@ To perform this task, you must be assigned a role that has permissions to edit D
 
 2. Choose **Data loss prevention** > **Policy** > **+ Create a policy**. 
 
+3. Choose a template, and then choose Next.
+
+4.  
