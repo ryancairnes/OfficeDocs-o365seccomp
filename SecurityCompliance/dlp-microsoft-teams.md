@@ -17,7 +17,7 @@ description: "You can now apply DLP policies to Microsoft Teams chats and channe
 
 # Data loss prevention and Microsoft Teams
 
-## Overview
+## Overview of DLP for Microsoft Teams
 
 Recently, [data loss prevention](data-loss-prevention-policies.md) (DLP) capabilities were extended to include Microsoft Teams. If your organization has DLP, you can define policies that prevent people from sharing sensitive information in a Microsoft Teams channel or chat session. Here are some examples of how this protection works:
 
@@ -35,10 +35,24 @@ When you configure your DLP policies, you can use the default policy tips, or cu
 
 ### To customize policy tips
 
-1. Step 1 
-2. Step 2
-3. Step 3
+To perform this task, you must be assigned a role that has permissions to edit DLP policies. To learn more, see [Permissions](data-loss-prevention-policies.md#permissions).
 
+1. Go to the Office 365 Security & Compliance Center ([https://protection.office.com](https://protection.office.com)) and sign in.
+
+2. Choose **Data loss prevention** > **Policy**. 
+
+3. Select a policy, and next to **Policy settings**, choose **Edit**.
+
+4. Either create a new rule, or edit an existing rule for the policy.<br/>![Editing a rule for a policy](media/dlp-teams-editrule.png)<br/>
+
+5. On the **User notifications** tab, select **Customize the email text** and/or **Customize the policy tip text** options.<br/>![Customize user notifications and policy tips](media/dlp-teams-editrule-usernotifications.png)<br/>  
+
+6. Specify the text you want to use for email notifications and/or policy tips, and then choose **Save**. 
+
+7. On the **Policy settings** tab, choose **Save**.
+
+Allow approximately one hour for your changes to work their way through your data center and sync to user accounts.
+ 
 ## Add Microsoft Teams as a location to existing DLP policies
 
 To perform this task, you must be assigned a role that has permissions to edit DLP policies. To learn more, see [Permissions](data-loss-prevention-policies.md#permissions).
@@ -55,6 +69,8 @@ To perform this task, you must be assigned a role that has permissions to edit D
 
 6. Click **Save**.
 
+Allow approximately one hour for your changes to work their way through your data center and sync to user accounts.
+
 ## Define a new DLP policy for Microsoft Teams
 
 To perform this task, you must be assigned a role that has permissions to edit DLP policies. To learn more, see [Permissions](data-loss-prevention-policies.md#permissions).
@@ -69,8 +85,12 @@ To perform this task, you must be assigned a role that has permissions to edit D
 
 5. On the **Choose locations** tab, keep the default setting of all locations, or select **Let me choose specific locations**, and then choose **Next**.<br/>If you opted to choose specific locations, select the locations for your DLP policy, and then choose **Next**.<br/>![DLP policy locations](media/dlp-teams-selectlocationsnewpolicy.png)<br/>
 
-6. On the **Policy settings** tab, under **Customize the type of content you want to protect**, keep the default simple settings, or choose **Use advanced settings**, and then choose **Next**.<br/>If you choose advanced settings, create or edit rules for your policy. (To get help with this, see [Simple settings vs. advanced settings](data-loss-prevention-policies.md#simple-settings-vs-advanced-settings).)
+6. On the **Policy settings** tab, under **Customize the type of content you want to protect**, keep the default simple settings, or choose **Use advanced settings**, and then choose **Next**. If you choose advanced settings, you can create or edit rules for your policy. (To get help with this, see [Simple settings vs. advanced settings](data-loss-prevention-policies.md#simple-settings-vs-advanced-settings).)
 
 7.  On the **Policy settings** tab, under **What do you want to do if we detect sensitive info?**, review the settings. (Here's where you can choose to keep default [policy tips and email notifications](use-notifications-and-policy-tips.md), or customize them.)<br/>![DLP policy settings with tips and notifications](media/dlp-teams-policysettings-tipsemails.png)<br/>When you're finished reviewing or editing settings, choose **Next**.
 
-8. 
+8. On the **Policy settings** tab, under **Do you want to turn on the policy or test things out first?**, choose whether to turn the policy on, test it first, or keep it off, and then choose **Next**.<br/>![Specify whether to turn the policy on](media/dlp-teams-policysettings-turnonnow.png)<br/>
+
+9. On the **Review your settings** tab, review the settings for your new policy. Choose **Edit** to make changes. When you're finished, choose **Create**. 
+
+Allow approximately one hour for your new policy to work its way through your data center and sync to user accounts.
