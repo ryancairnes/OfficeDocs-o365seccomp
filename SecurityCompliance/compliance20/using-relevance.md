@@ -19,9 +19,9 @@ description: ""
 
 # Use the Relevance module to analyze data in Advanced eDiscovery (Preview)
 
-In Advanced eDiscovery (Preview), the Relevance module includes the Relevance training and review of files related to a case. In order to use the Relevance workflow, go to Manage Working Set within a working set and click on Show Relevance. There are a couple of steps you need to complete before you can start the workflow:
+In Advanced eDiscovery (Preview), the Relevance module includes the Relevance training and review of files related to a case. In order to use the Relevance workflow, go to Manage review set within a review set and click on Show Relevance. There are a couple of steps you need to complete before you can start the workflow:
 
-- Process: each load set added to the working set will show up as a "container" here. You need to process these documents before you can add them to Relevance module; this is also where you can mark them as seed or pre-tagged for a specific issue.
+- Process: each load set added to the review set will show up as a "container" here. You need to process these documents before you can add them to Relevance module; this is also where you can mark them as seed or pre-tagged for a specific issue.
 
 - Add to Relevance: Under Relevance \> Loads, you can add documents that have been processed to Relevance to make them available for training.
 
@@ -47,7 +47,7 @@ The Relevance workflow is shown and described as follows:
     
 - **Test**: Results can be tested to verify the validity and effectiveness of the Advanced eDiscovery (Preview) processing.
 
-- **Search**: Once the Relevance workflow is complete, you can use the output such as read percentile of a document for your issue when you run a query within your working set.
+- **Search**: Once the Relevance workflow is complete, you can use the output such as read percentile of a document for your issue when you run a query within your review set.
     
 ## Guidelines for Relevance training and review
 
@@ -142,4 +142,4 @@ It is possible to accept or override Advanced eDiscovery Next step processing ch
   
 [Testing Relevance analysis](../test-relevance-analysis-in-advanced-ediscovery.md)
 
-[Query the data in a working set](review-set-search.md)
+[Query the data in a review set](review-set-search.md)

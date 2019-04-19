@@ -1,5 +1,5 @@
 ---
-title: "Manage working sets in Advanced eDiscovery (Preview)"
+title: "Manage review sets in Advanced eDiscovery (Preview)"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,25 +17,36 @@ ms.assetid:
 description: ""
 ---
 
-# Manage working sets in Advanced eDiscovery (Preview)
+# Manage review sets in Advanced eDiscovery (Preview)
 
-Working sets are a static set of documents where you can [analyze](https://docs.microsoft.com/en-us/office365/securitycompliance/compliance20/analyzing-data-in-working-set), [query](https://docs.microsoft.com/en-us/office365/securitycompliance/compliance20/working-set-search), [view](https://docs.microsoft.com/en-us/office365/securitycompliance/compliance20/view-documents-in-working-set), [tag](https://docs.microsoft.com/en-us/Office365/SecurityCompliance/compliance20/tagging-documents) and [export](https://docs.microsoft.com/en-us/office365/securitycompliance/compliance20/exporting-data-ediscover20) content.
+Review sets are a static set of documents where you can analyze, query, view, tag, and export data in a case. For more information about performing these tasks, see:
 
-## Create a working set
+- [Analyze data in a review set](analyzing-data-in-review-set.md)
 
-Working sets can be created on the *Working Sets* tab by clicking on the *+ Add Working Set* button.
+- [Query the data in a review set](review-set-search.md)
 
-![Add working set](../media/f45c51d9-585d-47d1-b7fb-0288715e0b6a.png)
+- [View documents in a review set](view-documents-in-review-set.md)
 
-After clicking the *+ Add Working Set* button, a flyout will appear.  Simply name the working set can click the Save button.  The working set will appear in the *Working Sets* tab.
+- [Tag documents in a review set](tagging-documents.md)
 
-![Add working set flyout](../media/5e5c99f8-42ca-4c2f-960f-f1a5709569d1.png)
+- [Export case data](exporting-data-ediscover20.md)
 
-There are three ways to add content to a working set:
-1. [Add search results to a working set](add-data-to-review-set.md)
+## Create a review set
 
-2. [Load non-Office 365 data into a working set](load-non-office365-data.md)
+Review sets can be created on the **Review sets** tab by clicking **+ Add review set**.
 
-3. [Add data to a working set from another working set](add-data-to-review-set-from-another-review-set.md).
+![Add review set](../media/f45c51d9-585d-47d1-b7fb-0288715e0b6a.png)
 
-![Working sets](../media/1f1f4efd-c03b-4255-bc3d-df358e56549c.png)
+A flyout is displayed.  Simply name the review set can click the **Save**.  The new review set is displayed on the **Review sets** tab.
+
+![Add review set flyout](../media/5e5c99f8-42ca-4c2f-960f-f1a5709569d1.png)
+
+There are three ways to add content to a review set:
+
+1. [Add search results to a review set](add-data-to-review-set.md)
+
+2. [Load non-Office 365 data into a review set](load-non-office365-data.md)
+
+3. [Add data to a review set from another review set](add-data-to-review-set-from-another-review-set.md).
+
+![review sets](../media/1f1f4efd-c03b-4255-bc3d-df358e56549c.png)
