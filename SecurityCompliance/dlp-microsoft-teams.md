@@ -3,7 +3,7 @@ title: "Data loss prevention and Microsoft Teams"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 04/18/2019
+ms.date: 04/19/2019
 ms.audience: ITPro
 ms.topic: conceptual
 ms.service: O365-seccomp
@@ -27,11 +27,11 @@ Recently, [data loss prevention](data-loss-prevention-policies.md) (DLP) capabil
 
 ## Policy tips help educate users
 
-Similar to how DLP works in [Exchange, Outlook, and Outlook on the web](data-loss-prevention-policies.md#policy-evaluation-in-exchange-online-outlook-and-outlook-on-the-web), [SharePoint and OneDrive for Business sites](data-loss-prevention-policies.md#policy-evaluation-in-onedrive-for-business-and-sharepoint-online-sites), and [Office desktop clients](data-loss-prevention-policies.md#policy-evaluation-in-the-office-desktop-programs), [policy tips](use-notifications-and-policy-tips.md) appear when an action conflicts with a DLP policy. In Microsoft Teams, policy tips notify senders about why their messages were blocked or revoked. 
+Similar to how DLP works in [Exchange, Outlook, and Outlook on the web](data-loss-prevention-policies.md#policy-evaluation-in-exchange-online-outlook-and-outlook-on-the-web), [SharePoint and OneDrive for Business sites](data-loss-prevention-policies.md#policy-evaluation-in-onedrive-for-business-and-sharepoint-online-sites), and [Office desktop clients](data-loss-prevention-policies.md#policy-evaluation-in-the-office-desktop-programs), policy tips appear when an action conflicts with a DLP policy. In Microsoft Teams, policy tips notify senders about why their messages were blocked or revoked.
 
 For example, a sender might be told that their message contains personally identifiable information (PII) that is not allowed to be shared with anyone, or that a document that contains PII cannot be shared with people outside their organization. The sender can then edit their message to be compliant with DLP policies.
 
-When you configure your DLP policies, you can use the default policy tips, or customize policy tips for your organization.
+When you configure your DLP policies, you can use the default policy tips, or customize policy tips for your organization. To learn more, see [Use email notifications and policy tips](use-notifications-and-policy-tips.md).
 
 ### To customize policy tips
 
