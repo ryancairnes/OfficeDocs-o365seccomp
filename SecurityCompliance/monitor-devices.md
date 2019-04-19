@@ -195,9 +195,10 @@ The table lists all the file names detected by your attack surface reduction rul
 
 To get a list of the selected files with their full paths for exclusion, select **Get exclusion paths**.
 
-**Note:** Logs for the ASR rule **Block credential stealing from the Windows local security authority subsystem (lsass.exe)** capture the source app **lsass.exe**, a normal system file, as the detected file. As a result, the generated list of exclusion paths will include this file. To except the file that triggered this rule instead of **lsass.exe**, use the path to the source app instead of the detected file.
+[!NOTE] 
+>Logs for the ASR rule **Block credential stealing from the Windows local security authority subsystem (lsass.exe)** capture the source app **lsass.exe**, a normal system file, as the detected file. As a result, the generated list of exclusion paths will include this file. To except the file that triggered this rule instead of **lsass.exe**, use the path to the source app instead of the detected file.
 
-To locate the source app, run the following [advanced hunting query](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-atp/advanced-hunting-windows-defender-advanced-threat-protection) for this specific rule (identified by rule ID 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2): 
+>To locate the source app, run the following [advanced hunting query](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-atp/advanced-hunting-windows-defender-advanced-threat-protection) for this specific rule (identified by rule ID 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2): 
 
 ```MiscEvents
 | where EventTime > ago(7d)
@@ -208,7 +209,7 @@ To locate the source app, run the following [advanced hunting query](https://doc
 
 For more information about exclusions and detailed instructions about how to add them, read [troubleshoot attack surface reduction rules](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/troubleshoot-asr).
 
-### Check files for exclusion
+#### Check files for exclusion
 Before excluding a file from ASR, we recommend that you inspect the file to determine if it is indeed not malicious.
 
 To review a file, use the [file information page](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-atp/investigate-files-windows-defender-advanced-threat-protection) on Windows Defender Security Center. The page provides prevalence information as well as the VirusTotal antivirus detection ratio. You can also use the page to submit the file for deep analysis.
