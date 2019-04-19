@@ -20,7 +20,9 @@ description: ""
 # Use the Relevance module to analyze data in Advanced eDiscovery (Preview)
 
 In Advanced eDiscovery (Preview), the Relevance module includes the Relevance training and review of files related to a case. In order to use the Relevance workflow, go to Manage Working Set within a working set and click on Show Relevance. There are a couple of steps you need to complete before you can start the workflow:
+
 - Process: each load set added to the working set will show up as a "container" here. You need to process these documents before you can add them to Relevance module; this is also where you can mark them as seed or pre-tagged for a specific issue.
+
 - Add to Relevance: Under Relevance \> Loads, you can add documents that have been processed to Relevance to make them available for training.
 
 The Relevance workflow is shown and described as follows:
@@ -140,4 +142,4 @@ It is possible to accept or override Advanced eDiscovery Next step processing ch
   
 [Testing Relevance analysis](../test-relevance-analysis-in-advanced-ediscovery.md)
 
-[Query within working set](working-set-search.md)
+[Query the data in a working set](review-set-search.md)
