@@ -3,7 +3,7 @@ title: "Dynamic Delivery and previewing with Office 365 ATP Safe Attachments"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 03/12/2019
+ms.date: 04/19/2019
 ms.audience: Admin
 ms.topic: overview
 ms.service: O365-seccomp
@@ -76,4 +76,4 @@ There are certain scenarios in which Dynamic Delivery is not supported. These in
 
 - Messages encrypted with [Secure/Multipurpose Internet Mail Extensions (S/MIME)](s-mime-for-message-signing-and-encryption.md))
 
-In cases where Dynamic Delivery is not supported, ATP Safe Attachments will not scan email messages. However, depending on how your [ATP Safe Links policies](set-up-atp-safe-links-policies.md) are configured, URLs in email messages (and Office files) will be checked.
+- In cases where Dynamic Delivery is not supported, ATP Safe Attachments will not scan email messages. However, delivering email messages with attachments that contain URLs will be checked, depending on how your [ATP Safe Links policies](set-up-atp-safe-links-policies.md) are configured. In these cases, URLs in email messages and Office files are checked.
