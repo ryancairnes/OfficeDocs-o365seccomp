@@ -41,7 +41,7 @@ The process of setting up EDM consists of five main parts:
  
 1. [Set up your tabular data source for EDM](#part-1-set-up-your-tabular-data-source-for-edm)
 
-2. [Install and authorize the EDM Upload agent](#part-2-install-and-authorize-the-edm-upload-agent)
+2. [Install and authorize the EDM Upload Agent](#part-2-install-and-authorize-the-edm-upload-agent)
 
 3. [Hash the sensitive data and upload it](#part-3-hash-the-sensitive-data-and-upload-it)
 
