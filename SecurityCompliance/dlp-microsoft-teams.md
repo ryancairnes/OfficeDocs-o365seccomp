@@ -63,6 +63,8 @@ To perform this task, you must be assigned a role that has permissions to edit D
 
 2. Choose **Data loss prevention** > **Policy** > **+ Create a policy**. 
 
-3. Choose a template, and then choose Next.
+3. Choose a template, and then choose **Next**.<br/>In our example, we chose the U.S. Personally Identifiable Information Data template.<br/>![Privacy template for DLP policy](media/dlp-teams-createnewpolicy-template.png)<br/>
 
-4.  
+4. On the **Name your policy** tab, specify a name and description for the policy, and then choose Next. 
+
+5. On the **Choose locations** tab, keep the default setting of all locations, or select **Let me choose specific locations**, and then choose **Next**.<br/>If you opted to choose specific locations, select the locations for your DLP policy, and then choose Next.<br/><br/>
