@@ -254,7 +254,7 @@
 ### [Use Content Search to search third-party data](use-content-search-to-search-third-party-data-that-was-imported.md)
 ### [Use Content Search in your eDiscovery workflow](use-content-search-in-ediscovery.md)
 ### [Check your Content Search query for errors](check-your-content-search-query-for-errors.md)
-### [Preserve Bcc recipients for Content Search](https://docs.microsoft.com/exchange/policy-and-compliance/holds/preserve-bcc-recipients-and-group-members)
+### [Preserve Bcc recipients for Content Search](preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery.md)
 ## Understand Content Search
 ### [Limits for Content Search](limits-for-content-search.md)
 ### [Partially indexed items in Content Search](partially-indexed-items-in-content-search.md)
@@ -286,6 +286,7 @@
 ### [Delete items in the Recoverable Items folder of cloud-based mailboxes on hold](delete-items-in-the-recoverable-items-folder-of-mailboxes-on-hold.md)
 ### [Increase the Recoverable Items quota for mailboxes on hold](increase-the-recoverable-quota-for-mailboxes-on-hold.md)
 ### [How to identify the type of hold placed on an Exchange Online mailbox](identify-a-hold-on-an-exchange-online-mailbox.md)
+### [Preserve Bcc and expanded distribution group recipients](preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery.md)
 
 ## [Advanced eDiscovery (Preview) in Microsoft 365](compliance20/overview-ediscovery-20.md)
 ### [Release notes](compliance20/release-notes-ediscovery20.md)
@@ -314,13 +315,14 @@
 #### [Search statistics](compliance20/search-statistics.md)
 #### [Add search results to a working set](compliance20/add-data-to-working-set.md)
 
+### [Manage working sets](compliance20/managing-working-sets.md)
+#### [Load non-Office 365 data into a working set](compliance20/load-non-office365-data.md)
+#### [Add data to another working set](compliance20/add-data-to-working-set-from-another-working-set.md)
+#### [Manage load sets](compliance20/manage-load-sets.md)
+
 ### [Review case data](compliance20/reviewing-data-in-working-set.md)
 #### [View documents in a working set](compliance20/view-documents-in-working-set.md)
 #### [Query the data in a working set](compliance20/working-set-search.md)
-#### [Manage working sets](compliance20/managing-working-sets.md)
-#### [Add data to another working set](compliance20/add-data-to-working-set-from-another-working-set.md)
-#### [Manage load sets](compliance20/manage-load-sets.md)
-#### [Load non-Office 365 data into a working set](compliance20/load-non-office365-data.md)
 #### [Tag documents in a working set](compliance20/tagging-documents.md)
 
 ### [Analyze case data](compliance20/analyzing-data-in-working-set.md)
@@ -583,7 +585,6 @@
 ### [Mail flow intelligence in Office 365](mail-flow-intelligence-in-office-365.md)
 ## Mailbox holds
 ### [Create a Litigation Hold](create-a-litigation-hold.md)
-### [Preserve Bcc and expanded distribution group recipients for eDiscovery](preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery.md)
 ### [Put an In-Place Hold on a soft-deleted mailbox](put-an-in-place-hold-on-a-soft-deleted-mailbox.md)
 ## [Quarantine](quarantine.md)
 ### [Find and release quarantined messages as an administrator](find-and-release-quarantined-messages-as-an-administrator.md)
