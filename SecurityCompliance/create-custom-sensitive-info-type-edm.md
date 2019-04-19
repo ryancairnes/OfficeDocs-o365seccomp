@@ -105,10 +105,11 @@ During this phase, you'll set up a dedicated user account for Office 365, downlo
 
 4. When prompted, log in using the account credentials you created in step 1 of this procedure. 
 
+    > [!TIP]
+    > If you get any error messages, repeat steps 3 and 4.
+
 5. Proceed to the next section.
 
-> [!TIP]
-> If you get any error messages, repeat steps 3 and 4.
 
 ## Part 3: Hash the sensitive data and upload it
 
