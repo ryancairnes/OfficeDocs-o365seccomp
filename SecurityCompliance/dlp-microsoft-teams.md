@@ -84,6 +84,9 @@ To perform this task, you must be assigned a role that has permissions to edit D
 4. On the **Name your policy** tab, specify a name and description for the policy, and then choose **Next**. 
 
 5. On the **Choose locations** tab, keep the default setting of all locations, or select **Let me choose specific locations**, and then choose **Next**.<br/>If you opted to choose specific locations, select the locations for your DLP policy, and then choose **Next**.<br/>![DLP policy locations](media/dlp-teams-selectlocationsnewpolicy.png)<br/>
+    > [!NOTE]
+    > If you want to make sure documents that contain sensitive information are not shared inappropriately, make sure **SharePoint sites** and **OneDrive accounts** are turned on, along with **Teams chat and channel messages**.
+<br/>
 
 6. On the **Policy settings** tab, under **Customize the type of content you want to protect**, keep the default simple settings, or choose **Use advanced settings**, and then choose **Next**. If you choose advanced settings, you can create or edit rules for your policy. (To get help with this, see [Simple settings vs. advanced settings](data-loss-prevention-policies.md#simple-settings-vs-advanced-settings).)
 
