@@ -97,7 +97,7 @@ During this phase, you'll set up a dedicated user account for Office 365, downlo
     - Write access to the location you'll use for storing hashed data (this can be a folder on a local drive)
     - Write access to Microsoft Azure Service for [Azure Blob storage](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)
 
-2. [Download the EDM Upload Agent](https://go.microsoft.com/fwlink/?linkid=2088639) and install it.
+2. Download the EDM Upload Agent here: [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639), and install it.
 
 3. To authorize the EDM Upload Agent, run the following PowerShell cmdlet in Exchange Online Protection:
 
