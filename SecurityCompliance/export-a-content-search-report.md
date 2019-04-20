@@ -61,7 +61,7 @@ The steps to generate and download a Content Search report are very similar to a
 
 The first step is to prepare the report for downloading to your computer exporting. When you the report, the report documents are uploaded to an Azure storage area in the Microsoft cloud.
   
-1. Go to [https://compliance.microsoft.com](https://compliance.microsoft.com).
+1. Go to [https://protection.office.com](https://protection.office.com).
     
 2. Sign in to Office 365 using your work or school account.
     
