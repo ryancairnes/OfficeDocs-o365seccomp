@@ -27,9 +27,9 @@ Office 365 includes a variety of threat protection features. Here's a quick-star
 
 ### Licenses
 
-Threat protection features are included in all Office 365 subscriptions; however, some subscriptions include more advanced features, such as those in Office 365 Advanced Threat Protection. 
+Threat protection features are included in all Office 365 subscriptions; however, some subscriptions include more advanced features, such as those in Office 365 Advanced Threat Protection. In this article we include subscription requirements for each protection area.
 
-To learn more, see the following resources:
+To learn more about threat protection features and subsriptions, see the following resources:
 - [Office 365 Advanced Threat Protection Service Description](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)
 - [Exchange Online Protection Service Description](https://docs.microsoft.com/en-us/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-service-description)
 - [Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-securitycompliance-center)
@@ -48,7 +48,7 @@ To learn more, see [Permissions in the Office 365 Security &amp; Compliance Cent
 
 ## Part 1 - Anti-malware
 
-Anti-malware protection is available in subscriptions that include [Exchange Online Protection](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description) (EOP). 
+[Anti-malware protection](anti-malware-protection.md) is available in subscriptions that include [Exchange Online Protection](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description) (EOP). 
 
 1. In the [Security & Compliance Center](https://protection.office.com), choose **Threat management** > **Policy** > **Anti-malware**.
 2. Double-click the **Default** policy, and then choose **settings**.
@@ -61,9 +61,11 @@ To learn more about anti-malware policy options, see [Configure anti-malware pol
 
 ## Part 2 - Zero-day protection
 
-Zero-day protection is available in subscriptions that include [Office 365 Advanced Threat Protection](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description) (ATP), and is set up through [ATP Safe Links](atp-safe-links.md) and [ATP Safe Attachments](atp-safe-attachments.md) policies.
+Zero-day protection is available in subscriptions that include [Office 365 Advanced Threat Protection](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description) (ATP), and is set up through [ATP Safe Attachments](atp-safe-attachments.md) and [ATP Safe Links](atp-safe-links.md) policies.
 
 ### ATP Safe Attachments policies
+
+To set up [ATP Safe Attachments](atp-safe-attachments.md), you must define at least one ATP Safe Attachments policy. 
 
 1. In the [Security & Compliance Center](https://protection.office.com), choose **Threat management** > **Policy** > **ATP safe attachments**.
 2. Select the option **Turn on ATP for SharePoint, OneDrive, and Microsoft Teams**.
@@ -82,7 +84,7 @@ To learn more, see:
 
 ### ATP Safe Links policies
 
-To set up ATP Safe Links, review your default policy and add a policy.
+To set up [ATP Safe Links](atp-safe-links.md), review and edit your default policy, and add a policy for specific users.
 
 1. In the [Security & Compliance Center](https://protection.office.com), choose **Threat management** > **Policy** > **ATP Safe Links**.
 2. Double-click the **Default** policy.
@@ -102,7 +104,7 @@ To learn more, see [Set up Office 365 ATP Safe Links policies](set-up-atp-safe-l
 
 ## Part 3 - Anti-phishing 
 
-Anti-phishing protection is available in subscriptions that include [EOP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description). Advanced anti-phishing protection is available in [ATP](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description). The following procedure describes how to configure an ATP anti-phishing policy. The steps are similar for configuring an anti-phishing policy (without ATP).
+[Anti-phishing protection](anti-phishing-protection.md) is available in subscriptions that include [EOP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description). Advanced anti-phishing protection is available in [ATP](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description). The following procedure describes how to configure an ATP anti-phishing policy. The steps are similar for configuring an anti-phishing policy (without ATP).
 
 1. In the [Security & Compliance Center](https://protection.office.com), choose **Threat management** > **Policy** > **ATP anti-phishing**.
 2. Click **Default policy**.
@@ -122,7 +124,7 @@ To learn more about your anti-phishing policy options, see [Set up anti-phishing
 
 ## Part 4 - Anti-spam
 
-Anti-spam protection is available in subscriptions that include [EOP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description).
+[Anti-spam protection](anti-spam-protection.md) is available in subscriptions that include [EOP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description).
 
 1. In the [Security & Compliance Center](https://protection.office.com), choose **Threat management** > **Policy** > **Anti-spam**.
 2. On the **Custom** tab, turn **Custom settings** on.
@@ -137,9 +139,9 @@ To learn more about your anti-spam policy options, see [Configure the anti-spam 
 
 ### Zero-hour auto purge
 
-Zero-hour auto purge (ZAP) is available in subscriptions that include [EOP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description). This protection is turned on by default; however, the following conditions must be met for protection to be in effect:
-- Spam actions are set to **Move message to Junk Email folder** in anti-spam policies.
-- Users have kept their default junk email settings, and have not turned off junk email protection.
+[Zero-hour auto purge](zero-hour-auto-purge.md) (ZAP) is available in subscriptions that include [EOP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description). This protection is turned on by default; however, the following conditions must be met for protection to be in effect:
+- Spam actions are set to **Move message to Junk Email folder** in [anti-spam policies](anti-spam-protection.md).
+- Users have kept their default [junk email settings](ensure-that-spam-is-routed-to-each-user-s-junk-email-folder.md), and have not turned off junk email protection.
 
 To learn more, see [Zero-hour auto purge - protection against spam and malware](zero-hour-auto-purge.md).
 
