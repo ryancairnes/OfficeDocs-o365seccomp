@@ -20,8 +20,9 @@
 ### [Module 4b - Threat protection strategy, Part II](ciso-workshop-module-4b.md)
 ### [Module 5 - Information protection](ciso-workshop-module-5.md)
 
-# Protect access to data and services
-## [Protect access to data and services in Office 365](protect-access-to-data-and-services.md)
+# [Protect user and device access](protect-access-to-data-and-services.md)
+## [Privileged access management](privileged-access-management-overview.md)
+### [Configure privileged access management](privileged-access-management-configuration.md)
 
 # Protect information
 ## [Sensitivity labels](sensitivity-labels.md)
@@ -238,8 +239,7 @@
 ### [Find and release quarantined messages as a user](find-and-release-quarantined-messages-as-a-user.md)
 ### [Quarantine FAQ for Office 365](quarantine-faq.md)
 ### [Use user spam notifications to release and report quarantined messages in Office 365](use-spam-notifications-to-release-and-report-quarantined-messages.md)
-## [Privileged access management](privileged-access-management-overview.md)
-### [Configure privileged access management](privileged-access-management-configuration.md)
+
 
 # [Search for content](search-for-content.md)
 ## [Use Content Search](content-search.md)
@@ -315,13 +315,14 @@
 #### [Search statistics](compliance20/search-statistics.md)
 #### [Add search results to a working set](compliance20/add-data-to-working-set.md)
 
+### [Manage working sets](compliance20/managing-working-sets.md)
+#### [Load non-Office 365 data into a working set](compliance20/load-non-office365-data.md)
+#### [Add data to another working set](compliance20/add-data-to-working-set-from-another-working-set.md)
+#### [Manage load sets](compliance20/manage-load-sets.md)
+
 ### [Review case data](compliance20/reviewing-data-in-working-set.md)
 #### [View documents in a working set](compliance20/view-documents-in-working-set.md)
 #### [Query the data in a working set](compliance20/working-set-search.md)
-#### [Manage working sets](compliance20/managing-working-sets.md)
-#### [Add data to another working set](compliance20/add-data-to-working-set-from-another-working-set.md)
-#### [Manage load sets](compliance20/manage-load-sets.md)
-#### [Load non-Office 365 data into a working set](compliance20/load-non-office365-data.md)
 #### [Tag documents in a working set](compliance20/tagging-documents.md)
 
 ### [Analyze case data](compliance20/analyzing-data-in-working-set.md)
