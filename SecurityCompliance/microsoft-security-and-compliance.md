@@ -113,5 +113,4 @@ The following table summarizes who can access various portals across Azure, Offi
 
 [Office 365 Security & Compliance Center Service Description](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-securitycompliance-center)
 
-
-To give us feedback about Microsoft 365 security center and Microsoft 365 compliance center, such as ideas for new features, please visit [Uservoice](https://office365.uservoice.com)
+To provide feedback about Microsoft 365 security center and Microsoft 365 compliance center, such as ideas for new features, please visit [Customer Feedback for Microsoft Office 365](https://office365.uservoice.com)
