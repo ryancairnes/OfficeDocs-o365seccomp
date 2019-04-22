@@ -142,7 +142,7 @@ Here's the process for searching the audit log in Office 365.
   
 ### Step 1: Run an audit log search
 
-1. Go to [https://compliance.microsoft.com](https://compliance.microsoft.com).
+1. Go to [https://protection.office.com](https://protection.office.com).
     
     > [!TIP]
     > Use a private browsing session (not a regular session) to access the Security & Compliance Center because this will prevent the credential that you are currently logged on with from being used. To open an InPrivate Browsing session in Internet Explorer or Microsoft Edge, just press CTRL+SHIFT+P. To open a private browsing session in Google Chrome (called an incognito window), press CTRL+SHIFT+N. 

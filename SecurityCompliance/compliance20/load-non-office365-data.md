@@ -43,6 +43,8 @@ Using the upload Non-Office 365 feature as described in this procedure requires 
 
    Where abraham.mcmahon@contoso.com, jewell.gordon@contoso.com, and staci.gonzalez@contoso.com are SMTP addresses of custodians in the case.
 
+![Non-Office 365 data upload folder structure](../media/3f2dde84-294e-48ea-b44b-7437bd25284c.png)
+
 - An account that is either an eDiscovery Manager or eDiscovery Administrator
 Microsoft Azure Storage Tools installed on a computer that has access to the non-Office 365 content folder structure.
 
@@ -50,13 +52,13 @@ Microsoft Azure Storage Tools installed on a computer that has access to the non
 
 ## Upload non-Office 365 content into Advanced eDiscovery
 
-1. As an eDiscovery Manager or eDiscovery Administrator, open Advanced eDiscovery, then the case that the non-Office 365 data will be uploaded to.  Click the **Working sets** tab, then select the working set you wish to load the Non-Office 365 data to.  If you have not already created a working set, you can do so now.  Finally, click **Manage workings set** then **View uploads** in the Non-Office 365 data section
+1. As an eDiscovery Manager or eDiscovery Administrator, open Advanced eDiscovery, then the case that the non-Office 365 data will be uploaded to.  Click the **Working sets** tab, then select the working set you wish to load the Non-Office 365 data to.  If you have not already created a working set, you can do so now.  Finally, click **Manage workings set** then **View uploads** in the Non-Office 365 data section.
 
 2. Click the **Upload files** button to start the Non-Office 365 data import wizard.
 
 ![Upload files](../media/574f4059-4146-4058-9df3-ec97cf28d7c7.png)
 
-3. The first step in the wizard simply prepares a secure Azure blob for the files to be uploaded.  Once preparation is compelted, click the **Next: Upload files** button.
+3. The first step in the wizard simply prepares a secure Azure blob for the files to be uploaded.  Once preparation is completed, click the **Next: Upload files** button.
 
 ![Non-Office 365 Import - Prepare](../media/0670a347-a578-454a-9b3d-e70ef47aec57.png)
  
