@@ -6,7 +6,7 @@ manager: laurawi
 ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
-ms.date: 04/19/2019
+ms.date: 04/22/2019
 localization_priority: Priority
 ms.collection: 
 - M365-security-compliance
@@ -47,7 +47,7 @@ The process of setting up EDM consists of five main parts:
 
 4. [Create a rule package with exact matching](#part-4-create-a-rule-package-with-exact-matching)
 
-5. [Part 5: Apply EDM to a DLP policy](#part-5-apply-edm-to-a-dlp-policy)
+5. [Apply EDM to a DLP policy](#part-5-apply-edm-to-a-dlp-policy)
 
 ## Part 1: Set up your tabular data source for EDM
 
