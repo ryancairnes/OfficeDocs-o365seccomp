@@ -27,9 +27,9 @@ EDM looks for exact matches, and not just patterns or proximity.
 > [!NOTE]
 > This feature is currently in preview, and is supported for [Outlook on the web](https://support.office.com/article/Compare-Outlook-for-PC-Outlook-on-the-web-and-Outlook-for-iOS-Android-b26a7bf5-0ac7-48ba-97af-984e0645dde5) only. 
 
-## Requiremens
+## Required licenses and permissions
 
-### Required licenses
+### Licenses
 
 During the preview program, you can try EDM if your organization has a subscription that includes DLP, such as Office 365 Enterprise E3 or Office 365 Enterprise E5. To learn more about DLP and subscriptions, see the following resources:
 - [Get the latest advanced features with Office 365](https://products.office.com/business/compare-more-office-365-for-business-plans)
@@ -37,7 +37,7 @@ During the preview program, you can try EDM if your organization has a subscript
 
 When EDM is released, your organization must have Office 365 Enterprise E5. To learn more about DLP new features, see [Microsoft 365 Roadmap (search for DLP)](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=dlp).
 
-### Required permissions
+### Permissions
 
 You must be a global admin, compliance administrator, or Exchange Online administrator to perform the tasks described in this article. To learn more about DLP permissions, see [Permissions](data-loss-prevention-policies.md#permissions).
 
