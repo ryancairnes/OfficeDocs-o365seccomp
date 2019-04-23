@@ -19,7 +19,7 @@ description: "Microsoft Compliance Manager is a workflow-based risk assessment t
 > [!IMPORTANT]
 > Microsoft Compliance Manager is a dashboard and management tool that provides a summary of your data protection and compliance stature and recommendations to improve data protection and compliance. The customer actions provided in Compliance Manager are recommendations; it is up to your organization to evaluate the effectiveness of these recommendations in their respective regulatory environment prior to implementation. Recommendations found in Compliance Manager should not be interpreted as a guarantee of compliance.
 
-## Access
+## Step 1: Access
 
 You access Compliance Manager from the Service Trust Portal. Anyone with a Microsoft account or Azure Active Directory organizational account can access Compliance Manager.
   
@@ -27,9 +27,9 @@ You access Compliance Manager from the Service Trust Portal. Anyone with a Micro
   
 1. Go to [https://servicetrust.microsoft.com](https://servicetrust.microsoft.com/).
     
-2. Sign in with your Azure Active Directory (Azure AD) user account.
+2. Sign in with your Microsoft service account. This is your Office 365, Microsoft 365, or Azure Active Directory (Azure AD) user account.
     
-3. In the Service Trust Portal, click **Compliance Manager**. 
+3. In the Service Trust Portal, select **Compliance Manager**.
     
 4. When the Non-Disclosure Agreement is displayed, read it, and then click **Agree** to continue. You'll only have to do this once, and then the Compliance Manager dashboard is displayed. 
 

@@ -61,7 +61,7 @@ Assessments include several components:
 
 ## Controls
 
-[Controls]((working-with-compliance-manager) are compliance process containers in Compliance Manager that define how you manage compliance activities. These controls are organized into control families that align with the Assessment structure for corresponding certifications or regulations.
+[Controls](working-with-compliance-manager) are compliance process containers in Compliance Manager that define how you manage compliance activities. These controls are organized into control families that align with the Assessment structure for corresponding certifications or regulations.
 
 - **Control ID**: The name of the selected control from the corresponding certification or regulation.
 - **Control Title**: The title for the Control ID from the corresponding certification or regulation.
@@ -123,8 +123,8 @@ The pre-configured templates included with Compliance Manager are:
 - [NIST 800-53](https://csrc.nist.gov/publications/detail/sp/800-53/rev-4/final)
 - [NIST 800-171](https://csrc.nist.gov/publications/detail/sp/800-171/rev-1/final)
 - [NIST Cybersecurity Framework (CSF)](https://www.nist.gov/cyberframework)
-- [Cloud Security Alliance (CSA) Cloud Control Matrix  (CCM) 3.0.1](https://cloudsecurityalliance.org/working-groups/cloud-controls-matrix/#_overview)
-- [Federal (FFIEC) Information Security Booklet](https://ithandbook.ffiec.gov/it-booklets/information-security.aspx) 
+- [Cloud Security Alliance (CSA) Cloud Control Matrix (CCM) 3.0.1](https://cloudsecurityalliance.org/working-groups/cloud-controls-matrix/#_overview)
+- [Federal Financial Institutions Examination Council (FFIEC) Information Security Booklet](https://ithandbook.ffiec.gov/it-booklets/information-security.aspx) 
 - [HIPAA](https://www.hhs.gov/hipaa/for-professionals/index.html / [HITECH](https://www.hhs.gov/hipaa/for-professionals/special-topics/hitech-act-enforcement-interim-final-rule/index.html)
 - [FedRAMP Moderate](https://www.fedramp.gov/documents/)
 - [European Union GDPR](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&from=EN)
