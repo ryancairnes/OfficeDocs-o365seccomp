@@ -135,7 +135,7 @@ During this phase, you hash the sensitive data, and upload the hashed data using
 
     Example: `EdmUploadAgent.exe /UploadHash /DataStoreName EmployeeDB /HashFile C:\Edm\Hash\EmployeeData.EdmHash` 
 
-3. To see a list of uploaded data stores, run the following PowerShell cmdlet in Exchange Online Protection:
+3. To see a list of uploaded data stores, run the following command in Windows Command Prompt:
 
     `EdmUploadAgent.exe /GetDataStore`
 
@@ -143,7 +143,7 @@ During this phase, you hash the sensitive data, and upload the hashed data using
 
     ![Example of GetDataStore cmdlet and results](media/EDM-GetDataStore-example.png)
 
-4. To see a list of upload sessions for a single data store, run the following PowerShell cmdlet in Exchange Online Protection:
+4. To see a list of upload sessions for a single data store, run the following command in Windows Command Prompt:
 
     `EdmUploadAgent.exe /GetSession /DataStoreName <DataStoreName>`
 
@@ -157,7 +157,7 @@ During this phase, you hash the sensitive data, and upload the hashed data using
 
 During this phase, you configure exact matching and classification.
 
-1. Create a rule package in .xml format (with Unicode encoding), similar to the follownig example:
+1. Create a rule package in .xml format (with Unicode encoding), similar to the following example:
 
     ```
     <?xml version="1.0" encoding="utf-8"?>
