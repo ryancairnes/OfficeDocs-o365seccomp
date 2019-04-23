@@ -123,7 +123,6 @@
 ## [Stub: The threat landscape and common attacks]
 <!--Begin Security Basics-->
 <!--E3 and E5 - Protect & Detect-->
-### [Tune anti-phishing protection](tuning-anti-phishing.md)
 ### [Anti-spam and anti-malware protection](anti-spam-and-anti-malware-protection.md)
 #### [Office 365 email anti-spam protection](anti-spam-protection.md)
 #### [How to prevent real email from being marked as spam in Office 365](prevent-email-from-being-marked-as-spam.md)
@@ -148,6 +147,7 @@
 ##### [Use the delist portal to remove yourself from the Office 365 blocked senders list](use-the-delist-portal-to-remove-yourself-from-the-office-365-blocked-senders-lis.md)
 ##### [Anti-spam message headers](anti-spam-message-headers.md)
 ### [Anti-phishing protection in Office 365](anti-phishing-protection.md)
+#### [Tune anti-phishing protection](tuning-anti-phishing.md)
 #### [ATP anti-phishing capabilities in Office 365](atp-anti-phishing.md)
 #### [Set up anti-phishing and ATP anti-phishing policies](set-up-anti-phishing-policies.md)
 #### [How Office 365 validates the From: address to prevent phishing](how-office-365-validates-the-from-address.md)
