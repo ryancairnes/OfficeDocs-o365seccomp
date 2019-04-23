@@ -237,7 +237,7 @@ EDM can be used with [Office 365 DLP policies](data-loss-prevention-policies.md)
 
 11. Search for the sensitive information type you created when you defined a rule package in [Part 4](#part-4-create-a-rule-package-with-exact-matching), and then choose **+ Add**.<br/>![Find the sensitive info type](media/edm-dlp-newrulefindsensitiverulepack.png)<br/>Then choose **Done**.
 
-12. Finish selecting options for the rule, such as **User notifications**, **User overrides**, **Incident reports**, and so on, and then choose **Save**.
+12. Finish selecting options for your rule, such as **User notifications**, **User overrides**, **Incident reports**, and so on, and then choose **Save**.
 
 13. On the **Policy settings** tab, review your rule(s), and then choose **Next**.
 
