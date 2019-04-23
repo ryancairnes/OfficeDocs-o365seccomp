@@ -223,7 +223,7 @@ EDM can be used with [Office 365 DLP policies](data-loss-prevention-policies.md)
 
 3. Choose **Create a policy** > **Custom** > **Next**.
 
-4. On the **Name your policy** tab, specify a name and description, adn then choose **Next**.
+4. On the **Name your policy** tab, specify a name and description, and then choose **Next**.
 
 5. On the **Choose locations** tab, select **Let me choose specific locations**, and then choose **Next**.
 
@@ -235,7 +235,7 @@ EDM can be used with [Office 365 DLP policies](data-loss-prevention-policies.md)
 
 8. In the **Name** section, specify a name and description for the rule.
 
-9. In the **Conditions** section, in the **+ Add a condition** list, choose **Content contains EDM sensitive information type**.
+9. In the **Conditions** section, in the **+ Add a condition** list, choose **Content contains sensitive type**.
 
 10. Finish selecting options for the rule, and then choose **Save**.
 
