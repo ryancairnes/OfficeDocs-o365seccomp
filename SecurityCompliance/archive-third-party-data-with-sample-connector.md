@@ -1,5 +1,5 @@
 ---
-title: "Use sample connectors to archive third-party data in Office 365"
+title: "Use sample connectors to archive third-party data in Office 365 (Preview)"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -12,10 +12,9 @@ ms.collection: M365-security-compliance
 description: "Administrators can set up a native connector to import third-party data from data sources such as Facebook Business pages, LinkedIn Company pages, and Instant Bloomberg. This lets you archive data from third-party data sources in Office 365 so you can use compliance features such as legal hold, content search, and retention policies to manage the governance of your organization's third-party data."
 ---
 
-# Use sample connectors to archive third-party data in Office 365
+# Use sample connectors to archive third-party data in Office 365 (Preview)
 
-> [!NOTE]
-> Using sample connectors to archive third-party data is in Preview.
+Using sample connectors to archive third-party data is in Preview.
 
 Use a sample connector in the Security & Compliance Center in Office 365 to import and archive data from a third-party data sources such as Facebook, LinkedIn, Twitter, and Bloomberg. After you set up and configure a sample connector, it connects to the third-party data source (on a scheduled basis), converts the content of an item to an email message format, and then imports those items to a mailbox in Office 365.
 
