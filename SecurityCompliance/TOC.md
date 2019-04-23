@@ -169,11 +169,10 @@
 #### [Support for validation of DKIM signed messages](support-for-validation-of-dkim-signed-messages.md)
 #### [Use DMARC to validate email](use-dmarc-to-validate-email.md)
 <!--/Protect-->
+## [Stub: M365 and edge filtering]
 <!--Investigate-->
 ### [View information about malicious files](malicious-files-detected-in-spo-odb-or-teams.md)
-
 <!--/Investigate-->
-## [Stub: M365 and edge filtering]
 <!--E5 ATP - Investigate and Respond-->
 ## [Advanced Threat Protection ](office-365-atp.md)
 <!--Actions for GAs (generally) 1-time setup-->
