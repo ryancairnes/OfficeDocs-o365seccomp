@@ -225,19 +225,19 @@ EDM can be used with [Office 365 DLP policies](data-loss-prevention-policies.md)
 
 4. On the **Name your policy** tab, specify a name and description, and then choose **Next**.
 
-5. On the **Choose locations** tab, select **Let me choose specific locations**, and then choose **Next**.
+5. On the **Choose locations** tab, select **Let me choose specific locations**, and then choose **Next**.<br/>![Choose locations option](media/DLP-EDM-newpolicy-chooselocations.png)<br/>
 
-    ![EDM policy with Exchange only](media/EDM-DLPpolicy-ExchangeOnly.png)
+6. In the **Status** column, select **Exchange email** only, and then choose **Next**. <br/>![EDM policy with Exchange only](media/EDM-DLPpolicy-ExchangeOnly.png)<br/>
 
-6. On the **Policy settings** tab, choose **Use advanced settings**, and then choose **Next**.
+7. On the **Policy settings** tab, choose **Use advanced settings**, and then choose **Next**.
 
-7. Choose **+ New rule**.
+8. Choose **+ New rule**.
 
-8. In the **Name** section, specify a name and description for the rule.
+9. In the **Name** section, specify a name and description for the rule.
 
-9. In the **Conditions** section, in the **+ Add a condition** list, choose **Content contains sensitive type**.
+10. In the **Conditions** section, in the **+ Add a condition** list, choose **Content contains sensitive type**.
 
-10. Finish selecting options for the rule, and then choose **Save**.
+11. Finish selecting options for the rule, and then choose **Save**.
 
 11. On the **Policy settings** tab, review your rule(s), and then choose **Next**.
 
