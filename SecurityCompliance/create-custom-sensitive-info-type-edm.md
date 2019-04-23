@@ -25,7 +25,7 @@ Read this article to create a [custom sensitive information type](custom-sensiti
 EDM looks for exact matches, and not just patterns or proximity.    
 
 > [!NOTE]
-> This feature is currently in preview, and is supported for [Outlook on the web](https://support.office.com/article/Compare-Outlook-for-PC-Outlook-on-the-web-and-Outlook-for-iOS-Android-b26a7bf5-0ac7-48ba-97af-984e0645dde5) only. 
+> This feature is currently in preview. While in preview, EDM is supported for Exchange and [Outlook on the web](https://support.office.com/article/Compare-Outlook-for-PC-Outlook-on-the-web-and-Outlook-for-iOS-Android-b26a7bf5-0ac7-48ba-97af-984e0645dde5) only. 
 
 ## Required licenses and permissions
 
@@ -101,9 +101,8 @@ During this phase, you'll set up a dedicated user account for Office 365, downlo
 
     - Read access to your data file (This is the .csv or .tsv you created in [Part 1](#part-1-set-up-your-tabular-data-source-for-edm).)
     - Write access to the location you'll use for storing hashed data (this can be a folder on a local drive)
-    - Write access to Microsoft Azure Service for [Azure Blob storage](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)
 
-2. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639).
+2. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639). Make sure to note the installation location (such as `C:\`). 
 
 3. To authorize the EDM Upload Agent, run the following PowerShell cmdlet in Exchange Online Protection:
 
