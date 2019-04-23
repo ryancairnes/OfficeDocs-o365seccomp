@@ -165,7 +165,7 @@
 #### [Use DMARC to validate email](use-dmarc-to-validate-email.md)
 <!--/Protect-->
 <!--Investigate-->
-#### [View information about malicious files](malicious-files-detected-in-spo-odb-or-teams.md)
+### [View information about malicious files](malicious-files-detected-in-spo-odb-or-teams.md)
 
 <!--/Investigate-->
 ## [Stub: M365 and edge filtering]
