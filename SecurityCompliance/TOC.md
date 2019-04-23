@@ -156,6 +156,11 @@
 ### Manage your security for specific workloads
 ### [What is EOP?](eop/what-is-eop.md)
 #### [Support for anonymous inbound email messages over IPv6](support-for-anonymous-inbound-email-messages-over-ipv6.md)
+## [Quarantine email messages in Office 365](quarantine-email-messages.md)
+### [Manage quarantined messages and files as an administrator](manage-quarantined-messages-and-files.md)
+### [Find and release quarantined messages as a user](find-and-release-quarantined-messages-as-a-user.md)
+### [Quarantine FAQ for Office 365](quarantine-faq.md)
+### [Use user spam notifications to release and report quarantined messages in Office 365](use-spam-notifications-to-release-and-report-quarantined-messages.md)
 <!--SPF, DKIM, DMARC-->
 ### Email validation and authentication
 #### [How Office 365 uses SPF to prevent spoofing](how-office-365-uses-spf-to-prevent-spoofing.md)
@@ -216,6 +221,7 @@
 <!--End E5 ATP-->
 <!--TOC/Area owner: tracyp and deniseb-->
 <!--/Cyber Threat-->
+<!--Enc-->
 ## [Encryption in Office 365](encryption.md)
 ### [Set up encryption in Office 365 Enterprise](set-up-encryption.md)
 ### [Email encryption in Office 365](email-encryption.md)
@@ -254,9 +260,9 @@
 #### [BitLocker and Distributed Key Manager (DKM) for Encryption](office-365-bitlocker-and-distributed-key-manager-for-encryption.md)
 #### [Encryption in Microsoft Dynamics 365](office-365-encryption-in-microsoft-dynamics-365.md)
 #### [Encryption in Azure](office-365-azure-encryption.md)
+<!--/Enc-->
 
-
-
+<!--Cloud App Sec-->
 ## [Monitor and manage data access with Office 365 Cloud App Security](office-365-cas-overview.md)
 ### [See what's new in Cloud App Security](new-in-office-365-cas.md)
 #### [Updates during 2018](new-in-office-365-cas-2018.md)
@@ -279,11 +285,7 @@
 #### [Suspend or restore a user account in Office 365 Cloud App Security](suspend-or-restore-an-account-in-ocas.md)
 ### [Create app discovery reports using Office 365 Cloud App Security](create-app-discovery-reports-in-ocas.md)
 ### [Review app discovery findings in Office 365 Cloud App Security](review-app-discovery-findings-in-ocas.md)
-## [Quarantine email messages in Office 365](quarantine-email-messages.md)
-### [Manage quarantined messages and files as an administrator](manage-quarantined-messages-and-files.md)
-### [Find and release quarantined messages as a user](find-and-release-quarantined-messages-as-a-user.md)
-### [Quarantine FAQ for Office 365](quarantine-faq.md)
-### [Use user spam notifications to release and report quarantined messages in Office 365](use-spam-notifications-to-release-and-report-quarantined-messages.md)
+<!--/Cloud App Sec?-->
 ## [Privileged access management](privileged-access-management-overview.md)
 ### [Configure privileged access management](privileged-access-management-configuration.md)
 
