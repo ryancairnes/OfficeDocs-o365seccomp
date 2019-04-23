@@ -15,8 +15,7 @@ description: "Administrators can set up a native connector to import and archive
 
 # Deploy a connector to archive Facebook data in Office 365
 
-This article contains the step-by-step process to deploy a connector that uses the Office 365 Import service to import data from Facebook Business pages to Office 365. For a high-level overview of this process and a list of prerequisites required to deploy a Facebook connector, see [Use a built-in connector to archive third-party data in Office 365](archive-third-party-data-with-builtin-connector.md). 
-
+This article contains the step-by-step process to deploy a connector that uses the Office 365 Import service to import data from Facebook Business pages to Office 365. For a high-level overview of this process and a list of prerequisites required to deploy a Facebook connector, see [Use sample connectors to archive third-party data in Office 365](archive-third-party-data-with-builtin-connector.md). 
 
 
 ## Step 1: Download the package
@@ -53,15 +52,15 @@ Download the prebuilt package from repository’s Release section at <https://gi
 
    ![](media/FBCimage7.png)
 
-8. Create a new secret. In the description box, type **APISecretKey** and then choose an expiration period.
+8. Create a new secret. In the description box, type the secret and then choose an expiration period. 
 
     ![](media/FBCimage8.png)
 
-9. Copy the value of the APISecretKey secret and save it to a text file or other storage location. You’ll use this secret in later steps.
+9. Copy the value of the secret and save it to a text file or other storage location. This is the AAD application secret that you will use in later steps.
 
    ![](media/FBCimage9.png)
 
-10. Go to **Manifest** and copy the identifierUris (which is also called the app id uri) as highlighted in the following screenshot. Copy the app id url to a text file or other storage location. You’ll use it in a later step.
+10. Go to **Manifest** and copy the identifierUris (which is also called the AAD application Uri) as highlighted in the following screenshot. Copy the AAD application Uri to a text file or other storage location. You’ll use it in Step 6.
 
    ![](media/FBCimage10.png)
 
@@ -113,15 +112,13 @@ Download the prebuilt package from repository’s Release section at <https://gi
 
    ![](media/FBCimage21.png)
 
-3. Go to the newly created web app resource, click **Application Settings** in the left navigation pane. Under Applicaiton settings, click Add new setting and add the following three settings. Use the values (that you copied to the text file from the previous steps): 
+3. Go to the newly created web app resource, click **Application Settings** in the left navigation pane. Under Application settings, click Add new setting and add the following three settings. Use the values (that you copied to the text file from the previous steps): 
 
-    - **APISecretKey** – The is the client secret value that you copied after creating the APISecretKey secret in Step 2.
+    - **APISecretKey** – You can type any value as the secret. This will be used to access the connector web app in Step 7.
 
     - **StorageAccountConnectionString** – The connection string Uri that you copied after creating the Azure storage account in Step 3.
 
     - **tenantId** – The tenant ID of your Office 365 organization that you copied after creating the Facebook connector app in Azure Active Directory in Step 2.
-
-   Additionally, copy the value in the App insights instrumentation key setting (APPINSIGHTS_INSTRUMENTATIONKEY) to a text file or other storage location.
 
     ![](media/FBCimage22.png)
 
@@ -203,7 +200,7 @@ Download the prebuilt package from repository’s Release section at <https://gi
 
     ![](media/FBCimage40.png)
 
-## Step 6: Configure the connector app
+## Step 6: Configure the connector web app
 
 1. Go to https://\<AzureAppResourceName>.azurewebsites.net (where AzureAppResourceName is the name of your Azure app resource that you named in Step 4) For example, if the name is **fbconnector**, go to https://fbconnector.azurewebsites.net. The home page of the app will look like the following screenshot.
 
@@ -225,11 +222,9 @@ Download the prebuilt package from repository’s Release section at <https://gi
    - **Facebook application secret** - The app secret for the Facebook application that you obtained in Step 5.
    - **Facebook webhooks verify token** - The verify token that you created in Step 5.
    - **AAD application ID** - The application ID for the Azure Active Directory app that you created in Step 2
-   - **AAD application secret** - The value for the APISecretKey secret that you obtained in Step 2.
-   - **AAD application Uri** - The Azure app service URL for Facebook connector app; for example https://fbconnector.azurewebsites.net.
-   - **App insights instrumentation key** - The APPINSIGHTS_INSTRUMENTATIONKEY setting that you obtained in Step 4.
-
-
+   - **AAD application secret** - The value for the APISecretKey secret that you created in Step 4.
+   - **AAD application Uri** - The AAD application Uri obtained in Step 2; for example, https://microsoft.onmicrosoft.com/2688yu6n-12q3-23we-e3ee-121111123213.
+   - **App insights instrumentation key** - Leave this box blank.
 
 5. Click **Save** to save the connector settings.
 
@@ -246,7 +241,7 @@ Download the prebuilt package from repository’s Release section at <https://gi
 3.  On the **Add Connector App** page, enter the following information and then click **Next**.
 
     - In the first box, type a name for the connector, such as **Facebook**.
-    - In the second box, type or paste the value of the APISecretKey that you obtained in Step 2.
+    - In the second box, type or paste the value of the APISecretKey that you added in Step 4.
     - In the third box, type of paste the Azure app service URL; for example **https://fbconnector.azurewebsites.net**.
     
     ![](media/FBCimage47.png)
@@ -260,7 +255,7 @@ Download the prebuilt package from repository’s Release section at <https://gi
    ![](media/FBCimage48.png)
 
 
-6. Click **Continue with Facebook.**
+6. Click **Login with Facebook.**
 
    ![](media/FBCimage49.png)
 
@@ -272,7 +267,7 @@ Download the prebuilt package from repository’s Release section at <https://gi
 
    ![](media/FBCimage51.png)
 
-9. A list of the Business pages managed by the Facebook account that you logged in to is displayed. Select the pages to archive and then click **Save**.
+9. A list of the Business pages managed by the Facebook account that you logged in to is displayed. Select the page to archive and then click **Save**.
 
     ![](media/FBCimage52.png)
 

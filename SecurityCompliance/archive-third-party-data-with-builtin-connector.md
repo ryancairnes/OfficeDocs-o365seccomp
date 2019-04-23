@@ -1,5 +1,5 @@
 ---
-title: "Use built-in connector to archive third-party data in Office 365"
+title: "Use sample connectors to archive third-party data in Office 365"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -12,19 +12,22 @@ ms.collection: M365-security-compliance
 description: "Administrators can set up a native connector to import third-party data from data sources such as Facebook Business pages, LinkedIn Company pages, and Instant Bloomberg. This lets you archive data from third-party data sources in Office 365 so you can use compliance features such as legal hold, content search, and retention policies to manage the governance of your organization's third-party data."
 ---
 
-# Use a built-in connector to archive third-party data in Office 365
-
-Use a built-in connector in the Security & Compliance Center in Office 365 to import and archive data from a third-party data sources such as Facebook, LinkedIn, Twitter, and Bloomberg. After you set up and configure a built-in connector, it connects to the third-party data source (on a scheduled basis), converts the content of an item to an email message format, and then imports those items to a mailbox in Office 365.
-
-After third-party data is imported, you can apply Office 365 compliance features such as Litigation Hold, Content Search, In-Place Archiving, Auditing, Supervision, and Office 365 retention policies to the third-party data. For example, when a mailbox is placed on Litigation Hold or assigned to a retention policy, the third-party data will be retained. You can search third-party data using Content Search or associate it with a custodian in an Advanced eDiscovery case. Using built-in connectors to import and archive third-party data in Office 365 can help your organization stay compliant with government and regulatory policies.
+# Use sample connectors to archive third-party data in Office 365
 
 > [!NOTE]
-> Currently, only the built-in connector for Facebook Business pages is available. More connectors are coming soon.
+> Using sample connectors to archive third-party data is in Preview.
+
+Use a sample connector in the Security & Compliance Center in Office 365 to import and archive data from a third-party data sources such as Facebook, LinkedIn, Twitter, and Bloomberg. After you set up and configure a sample connector, it connects to the third-party data source (on a scheduled basis), converts the content of an item to an email message format, and then imports those items to a mailbox in Office 365.
+
+After third-party data is imported, you can apply Office 365 compliance features such as Litigation Hold, Content Search, In-Place Archiving, Auditing, Supervision, and Office 365 retention policies to the third-party data. For example, when a mailbox is placed on Litigation Hold or assigned to a retention policy, the third-party data will be retained. You can search third-party data using Content Search or associate it with a custodian in an Advanced eDiscovery case. Using sample connectors to import and archive third-party data in Office 365 can help your organization stay compliant with government and regulatory policies.
+
+> [!NOTE]
+> Currently, only the sample connector for Facebook Business pages is available for Preview. More sample connectors are coming soon.
 
 
 ## Prerequisites for setting up a connector for Facebook Business pages
 
-You must complete the following prerequisites before you can set up and configure a built-in connector in the Security & Compliance Center to import and archive data from your organization's Facebook Business pages. 
+You must complete the following prerequisites before you can set up and configure a sample connector in the Security & Compliance Center to import and archive data from your organization's Facebook Business pages. 
 
 - You need a Facebook account for your organization's business pages (you need to sign in to this account when setting up the connector). Currently, you can only archive data from Facebook Business pages; you can't archive data from individual Facebook profiles.
 
@@ -35,7 +38,7 @@ You must complete the following prerequisites before you can set up and configur
     - [Sign up for a Pay-As-You-Go Azure subscription](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/)
 
     > [!NOTE]
-    > The [free Azure Active Directory subscription](use-your-free-azure-ad-subscription-in-office-365.md) that's included with your Office 365 subscription doesn't support the built-in connectors in the Security & Compliance Center.
+    > The [free Azure Active Directory subscription](use-your-free-azure-ad-subscription-in-office-365.md) that's included with your Office 365 subscription doesn't support the sample connectors in the Security & Compliance Center.
 
 - Your organization must consent to allow the Office 365 Import service to access mailbox data in your organization. To consent to this request, go to [this page](https://login.microsoftonline.com/common/oauth2/authorize?client_id=570d0bec-d001-4c4e-985e-3ab17fdc3073&response_type=code&redirect_uri=https://portal.azure.com/&nonce=1234&prompt=admin_consent), sign in with the credentials of an Office 365 global admin, and then accept the request.
 
@@ -51,16 +54,16 @@ The first step is to download the source code for the pre-built Facebook connect
 
 ## Step 2: Create an app in Azure Active Directory
 
-The next step is to register a new app in Azure Active Directory. This app will correspond to the web app resource that you'll implement in Step 4 for the Facebook connector. 
+The next step is to register a new app in Azure Active Directory (AAD). This app will correspond to the web app resource that you'll implement in Step 4 for the Facebook connector. 
 
 For step-by-step instructions, see [Create an app in Azure Active Directory](deploy-facebook-connector.md#step-2-create-an-app-in-azure-active-directory).
 
 During the completion of this step (by following the step-by-step instructions), you'll save the following information to a text file. The values for these will be used in later steps in the deployment process.
 
-- Application ID
-- Tenant ID
-- APISecretKey secret
-- App insights instrumentation key
+- AAD application ID
+- AAD application secret
+- AAD application Uri
+- Tenant Id
 
 ## Step 3: Create an Azure storage account
 
@@ -78,7 +81,7 @@ For step-by-step instructions, see [Create a new web app resource in Azure](depl
 
 During the completion of this step (by following the step-by-step instructions), you'll provide the following information (that you've copied to a text file after completing the previous steps) when creating the web app resource.
 
-- APISecretKey – The client secret value that you copied after creating the client secret in Step 2.
+- APISecretKey – You will create this secret during the completion of this step; it will be used in Step 7.
 - StorageAccountConnectionString – The connection string Uri that you copied after creating the Azure storage account in Step 3.
 - tenantId – The tenant ID of your Office 365 organization that you copied after creating the Facebook connector app in Azure Active Directory in Step 2.
 
@@ -109,11 +112,9 @@ During the completion of this step (by following the step-by-step instructions),
 - Facebook application ID (obtained in Step 5)
 - Facebook application secret (obtained in Step 5)
 - Facebook webhooks verify token (obtained in Step 5)
-- Azure Active Directory application ID (obtained in Step 2)
-- Azure Active Directory application secret (the client secret obtained in Step 2)
-- Azure Active Directory application Uri (the Azure app service URL obtained in Step 4; for example, https://fbconnector.azurewebsites.net)
-- App insights instrumentation key (obtained in Step 4)
-
+- Azure Active Directory application ID (the AAD application ID obtained in Step 2)
+- Azure Active Directory application secret (the AAD application secret obtained in Step 2)
+- Azure Active Directory application Uri (the AAD application Uri obtained in Step 2; for example, https://microsoft.onmicrosoft.com/2688yu6n-12q3-23we-e3ee-121111123213)
 
 ## Step 7: Set up a custom connector in the Security & Compliance Center
 
@@ -124,4 +125,4 @@ For step-by-step instructions, see [Set up a custom connector in the Security & 
 During the completion of this step (by following the step-by-step instructions), you'll provide the following information (that you've copied to a text file after completing the steps).
 
 - Azure app service URL (obtained in Step 4; for example https://fbconnector.azurewebsites.net)
-- APISecretKey (obtained in Step 2)
+- APISecretKey (that you created in Step 4)
