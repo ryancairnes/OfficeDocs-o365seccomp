@@ -123,13 +123,13 @@ During this phase, you hash the sensitive data, and upload the hashed data using
 > [!NOTE]
 > The following procedure describes how to upload the data to a single server; however, you could use multiple servers.
 
-1. To hash the data, run the following PowerShell cmdlet in Exchange Online Protection:
+1. To hash the data, run the following command in Windows Command Prompt:
 
     `EdmUploadAgent.exe /CreateHash /DataStoreName <DataStoreName> /DataFile <DataFilePath> /HashLocation <HashedFileLocation>`
 
     Example: `EdmUploadAgent.exe /CreateHash /DataStoreName EmployeeDB /DataFile C:\Edm\Data\EmployeeData.csv /HashLocation C:\Edm\Hash` 
 
-2. To upload the hashed data, run the following PowerShell cmdlet in Exchange Online Protection:
+2. To upload the hashed data, run the following command in Windows Command Prompt:
 
     `EdmUploadAgent.exe /UploadHash /DataStoreName <DataStoreName> /HashFile <HashedSourceFilePath>`
 
