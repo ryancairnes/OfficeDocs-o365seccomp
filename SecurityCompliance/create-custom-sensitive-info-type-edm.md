@@ -245,7 +245,8 @@ EDM can be used with [Office 365 DLP policies](data-loss-prevention-policies.md)
 
 15. On the **Review your settings** tab, review your policy. Make any needed changes. When you're ready, choose **Create**.
 
-Allow approximately one hour for your new DLP policy to work its way through your data center.
+> [!TIP]
+> Allow approximately one hour for your new DLP policy to work its way through your data center.
 
 ## Related articles
 
