@@ -90,6 +90,8 @@ Here's an illustration and description of the complete PST import process. The i
   - Use [eDiscovery cases](ediscovery-cases.md) to mange your organization's legal investigations 
     
   - Use [retention policies](retention-policies.md) in the Security & Compliance Center to control how long mailbox content is retained, and then delete content after the retention period expires. 
+
+  - Use [Supervision Policies](supervision-policies.md) to examine messages to make sure they are compliant with message standards and add a classification type.
     
 - Importing data to Office 365 helps protect against data loss. Email data that's imported to Office 365 inherits the high availability features of Exchange Online.
     
