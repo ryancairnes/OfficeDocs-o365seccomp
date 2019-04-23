@@ -15,7 +15,6 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.assetid: d14ae7c3-fcb0-4a03-967b-cbed861bb086
 description: "Set up supervisory review policies to capture employee communications for review."
 ---
 
