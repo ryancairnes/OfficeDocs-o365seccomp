@@ -21,8 +21,6 @@ description: "Microsoft Compliance Manager is a free workflow-based risk assessm
 
 ## Groups
 
-SECURITY PROPERTIES FOR GROUPS - NONE
-
 Groups are containers that allow you to logically organize Assessments and that share common information and workflow tasks between Assessments that have the same or related customer managed controls. You can group Assessments by year, standard, service, team, division, or agencies within your organization to help minimize customer-managed Actions:
   
 - **GDPR Assessments - 2019**
@@ -34,7 +32,7 @@ Groups are containers that allow you to logically organize Assessments and that 
   - Azure + ISO 27001:2018
   - Azure + ISO 27018:2019
 
-When you create a new Assessment, you must create a new group for the Assessment or assign the Assessment to an existing group. It's recommended that you determine a grouping strategy for your organization *before* adding new assessments. By default, a Group named "Default Group" is available for your initial Assessments.
+When you create a new Assessment, you must create a new group for the Assessment or assign the Assessment to an existing group. Groups can not be created as stand-alone entities. It's recommended that you determine a grouping strategy for your organization *before* adding new assessments. By default, a Group named "Default Group" is available for your initial Assessments. Groups do not have any security properties, all permissions are associated with Assessments.
 
 When working with groups, remember:
   
@@ -49,7 +47,7 @@ When working with groups, remember:
 
 ### Managing the assessment process
 
-The creator of an Assessment is initially the only Assessment User. For each customer managed control, you can assign an Action Item to a person in your organization so that person becomes an Assessment User who can perform the recommended Customer Actions, and gather and upload evidence. When you assign an Action Item, you can choose to send an email to the person that contains details including the recommended Customer Actions and the Action Item priority. The email notification includes a link to the **Action Items** dashboard, which lists all Action Items assigned to that person. 
+The creator of an Assessment is initially the only Assessment User. For each customer managed control, you can assign an Action Item to a person in your organization so that person becomes an Assessment User who can perform the recommended customer actions and gather and upload evidence. When you assign an Action Item, you can choose to send an email to the person that contains details including the recommended Customer Actions and the Action Item priority. The email notification includes a link to the **Action Items** dashboard, which lists all Action Items assigned to that person. 
   
 Here's a list of tasks that you can perform using the workflow features of Compliance Manager.
   
@@ -118,23 +116,44 @@ To add an Assessment to Compliance Manager:
 
 ### Copying information from existing Assessments
 
-As previously explained, when you create a new assessment group, you have the option to copy information from Assessments in an existing group to the new Assessment in the new group. This allows you to apply the assessment and testing work that's been completed to the same customer managed controls in the new Assessment. For example, if you have a group for all GDPR-related Assessments in your organization, you can copy common information from existing assessment work when add a new Assessment to the group.
+When you create a new Assessment, you have the option to copy information from Assessments in an existing group to the new Assessment. This allows you to apply the completed assessment and testing work to the same customer managed controls in the new Assessment. For example, if you have a group for all GDPR-related Assessments in your organization, you can copy common information from existing assessment work when adding a new Assessment to the group.
   
 You can copy the following information from customer to a new Assessment:
   
 - Assessment Users. An Assessment user is a user who the control is assigned to.
-    
 - Status, Test Date, and Test Results.
-    
 - Implementation details and test plan information.
-    
+
 Similarly, information from shared customer managed controls within the same Assessment group is synchronized. And information in related customer managed controls within the same Assessment is also synchronized.
+
+To copy information from an existing Assessment to a new Assessment:
+  
+1. In the Compliance Manager dashboard, select **Add Assessment**.
+    
+2. In the **Add an Assessment** window, complete the following information
+
+    - **Title (required):** Enter a title for your Assessment
+    - **Select a template (required):** Select a standard or custom template
+    - **Select a group or add a new group (required):** Select an existing group or create and add the Assessment to a new group
+    - **Copy data from an existing group (required for copying Assessment data):** Toggle the control to enable group copy
+    - **Select a group (required for copying Assessment data):** If group copy is enabled, select the group to copy from
+    - **Implementation Details (select as needed):** Select to copy implementation details to the new group
+    - **Test plan & additional information (select as needed):** Select to copy test plan and additional information details to the new group
+    - **Documents (select as needed):** Select to copy documents to the new group
+
+3. Select **Save** to create the Assessment.
 
 ### Viewing Assessments
 
-1. Locate the Assessment Tile corresponding to the assessment you wish to view, then click the assessment name to open it and view the Microsoft and customer managed controls associated with the Assessment, along with a list of the cloud services that are in-scope for the Assessment. Here's an example of the Assessment for Office 365 and GDPR.
-    
-    ![Compliance Manager Assessment View - fullscreen with callouts](media/169a02eb-e805-412d-b9e7-89561aa7ad1d.png)
+Assessment information is viewed....
+
+To view Assessment details:
+  
+1. In the Compliance Manager dashboard, navigate to the Assessment Tile corresponding to the assessment you wish to view, Select the assessment name to open it and view the Action Items and the Microsoft and customer-managed controls associated with the Assessment.
+
+Here's an example of the Assessment for Office 365 and GDPR.
+
+![Compliance Manager Assessment View - fullscreen with callouts](media/169a02eb-e805-412d-b9e7-89561aa7ad1d.png)
   
 1. This section shows the Assessment summary information, including the name of the Assessment Grouping, Product, Assessment name, number of Assess controls
     
@@ -162,32 +181,44 @@ The assessment report is downloaded as an Excel file in your browser session. Th
 
 ### Archive an Assessment
 
-When you have completed an Assessment and no longer need it for compliance purposes, you can archive it. When an Assessment is archived, it is removed from Assessments dashboard.
+When you have completed an Assessment and no longer need it for compliance purposes, you can archive it. When an Assessment is archived, it is removed from the default Assessments view on the Compliance Manager dashboard.
   
-> [!NOTE]
-> When an Assessment is Archived, it cannot be 'unarchived' or restored to a read-write in progress state. Please note that Archived Assessments do not retain their links to uploaded evidence documents, so it is highly recommended that you perform an Export of the Assessment before archiving it, as the exported assessment report will contain links to the evidence documents, enabling you to continue to access them. 
+> [!IMPORTANT]
+> Archived Assessments do not retain their links to uploaded evidence documents. It is highly recommended that you export the Assessment before archiving to retain links to the evidence documents in the report. 
   
-To archive an assessment:
-  
-1. On the dashboard tile of the desired assessment, select the **Archive Assessments** control or **Archive** from the actions control.
-    
-2. The **Archive Assessments** dialog is displayed, asking you to confirm that you want to archive the assessment.
-    
-3. To continue with archiving, select **Archive**. To cancel archiving the Assessment, select **Cancel**. 
-    
+To archive an Assessment:
+
+1. On the Compliance Manager dashboard, navigate to the dashboard tile for the Assessment you want to archive
+
+2. Select the **Archive Assessments** control or **Archive** from the actions control.
+
+3. The **Archive Assessments** dialog is displayed, asking you to confirm that you want to archive the assessment.
+
+4. To continue with archiving, select **Archive**. To cancel archiving the Assessment, select **Cancel**.
+
 ### View archived Assessments
   
-1. On the Compliance Manager dashboard, select the **Show Archived** checkbox.
-    
+1. On the Compliance Manager dashboard, select the **Assessments** tab and select the **Show Archived** checkbox.
+
 2. The archived assessments will appear a new **Archived Assessments** section below the active assessments.
-    
+
 3. Select the name of the assessment you wish to view.
-    
+
 Archived Assessment information includes in-scope services, Microsoft and customer-managed control details. When viewing an archived assessment, none of the normally editable controls (i.e. Implementation, Test Results) will be active and the **Managed Documents** button will be absent.
 
 ### Activate an archived Assessment
 
-???
+1. On the Compliance Manager dashboard, select the **Assessments** tab and select the **Show Archived** checkbox.
+
+2. The archived assessments will appear a new **Archived Assessments** section below the active assessments.
+
+3. Select the **Activate archived Assessment** control of the assessment you wish to activate.
+
+4. The **Active Archived Assessments** dialog is displayed, asking you to confirm that you want to activate the assessment.
+
+5. To continue with activation, select **Activate**. To cancel activation of the Assessment, select **Cancel**.
+
+The Assessment is now activated and the tile for the Assessment appears in the dashboard.
 
 ## Controls
 
