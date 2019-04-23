@@ -71,7 +71,7 @@
 ### [Use network upload to import RMS-encrypted PST files](use-network-upload-to-import-rms-encrypted-pst-files.md)
 ### [FAQ about importing PST files](faqimporting-pst-files-to-office-365.md)
 ### [Archive third-party data in Office 365](archiving-third-party-data.md)
-#### [Use a built-in connector to archive third-party data](archive-third-party-data-with-builtin-connector.md)
+#### [Use a built-in connector to archive third-party data](archive-third-party-data-with-sample-connector.md)
 #### [Work with a partner to archive third-party data](work-with-partner-to-archive-third-party-data.md)
 ## Store data
 ### [Enable archive mailboxes](enable-archive-mailboxes.md)
