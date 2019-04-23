@@ -61,7 +61,7 @@ During this phase, you structure your sensitive data in a .csv file, create a .x
 
 1. Structure the sensitive data you want to use for EDM in a .csv file. Make sure the first row of the .csv file includes the names of the fields you'll use for EDM. For example, you might have field names, such as `id`, `firstname`, `lastname`, and so on. Keep the following limits in mind:
 
-    - The data file can include up to one million rows of sensitive data across all data sources.
+    - The data file can include up to ten million rows of sensitive data across all data sources.
     - The data file can include up to 32 fields per data source.
     - The data file can include up to five indexed columns per data source.
     - Data refresh for each data source can occur weekly (but not more often during preview).
