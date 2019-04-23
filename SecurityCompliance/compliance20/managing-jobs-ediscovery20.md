@@ -23,7 +23,7 @@ Here's a list of the jobs (which are typically long-running processes) that are 
 
 | Job type           | Description     |
 | :----------------- | :----------     |
-|Adding data to a review set | A user adds the results of a search to a review set.  For more information, see [Add search results to a review set](add-data-to-review-set.md). |
+|Adding data to a review set | A user adds the results of a search to a review set. This job consist of two sub jobs: </br> </br>• **GatheringItems** - A list of items that match the search query (and the Office 365 data source that they're located in) is generated. </br>• **Ingestion & Indexing** - The items that match the search query are copied to an Azure storage location (in a process called *ingestion*) and then those items in the Azure storage location are re-indexed. This new index is used when querying and analyzing items in the data set. </br></br>For more information, see [Add search results to a review set](add-data-to-review-set.md). |
 |Adding data to another review set | A user adds documents from one review set to a different review set in the same case.|
 |Adding non-Office 365 data to a review set | A user uploads non-Office 365 data to a review set. The data is also indexed during this process. For example, files from an on-premises file server or a client computer are uploaded to a review set. For more information, see [Load non-Office 365 data into a review set](load-non-office365-data.md).| 
 |Adding remediated data to a review set | Data with processing errors is remediated and loaded back into a review set. For more information, see [Error remediation when processing data](error-remediation.md). | 
