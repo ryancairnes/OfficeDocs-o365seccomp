@@ -135,7 +135,7 @@ In order to pick from existing custom sensitive information types or custom keyw
 
 ### Create custom keyword dictionary/lexicon (optional)
 
-Use a text editor (like Notepad), to create a new file that includes the keyword terms you'd like to monitor in a supervision policy. Make sure that each term is on a separate line and save the file in the **Unicode/UTF-16 (Little Endian)** format.
+Use a text editor (like Notepad), to create a file that includes the keyword terms you'd like to monitor in a supervision policy. Make sure that each term is on a separate line and save the file in the **Unicode/UTF-16 (Little Endian)** format.
 
 ### Create custom sensitive information types
 
@@ -156,7 +156,7 @@ Use a text editor (like Notepad), to create a new file that includes the keyword
 
 2. In the Compliance Center, select **Supervision**.
   
-3. Select **Create** and then follow the wizard to set up the following pages of the policy. Using the wizard, you will:
+3. Select **Create** and follow the wizard to set up the policy configuration. Using the wizard, you will:
 
     - Give the policy a name and description.
     - Choose the users or groups to supervise, including choosing users or groups you'd like to exclude.
@@ -172,7 +172,7 @@ Use a text editor (like Notepad), to create a new file that includes the keyword
 After you create a supervision policy, it's a good idea to test to make sure that the conditions you defined are being properly enforced by the policy. You may also want to [test your data loss prevention (DLP) policies](create-test-tune-dlp-policy.md) if your supervision policies include sensitive information types. Follow these steps to test your supervision policy:
 
 1. Open an email client or Microsoft Teams logged in as a supervised user defined in the policy you want to test.
-2. Send an email or Microsoft Teams chat that meets the criteria you've defined in the supervision policy. This can be a keyword, attachment size, domain, etc. Make sure you determine if your configured conditional settings in the policy are too restrictive or too lenient.
+2. Send an email or Microsoft Teams chat that meets the criteria you've defined in the supervision policy. This can be a keyword, attachment size, domain, etc. Make sure that you determine if your configured conditional settings in the policy are too restrictive or too lenient.
 
     > [!Note]
     > Emails subject to defined policies are processed in near real-time and can be tested immediately after the policy is configured. Chats in Microsoft Teams can take up to 24 hours to fully process in a policy. 
@@ -237,7 +237,7 @@ For the final step, reviewers need to create an Outlook profile to connect to th
   
 8. When prompted, enter your Office 365 credentials.
 
-9. If successful, you'll see the **Supervision — \<policy name\>** folder listed in the Folder List view in Outlook.
+9. If successful, the **Supervision — \<policy name\>** folder is listed in the Folder List view in Outlook.
 
 ## PowerShell reference
 
