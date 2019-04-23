@@ -199,8 +199,6 @@ During this phase, you configure exact matching and classification.
     </RulePackage>
     ```
     
-    Note that column names in the data file are case-sensitive.
-
 2. Upload the rule package by running the following PowerShell cmdlets, one at a time:
 
     `$rulepack=Get-Content .\rulepack.xml -Encoding Byte -ReadCount 0`
