@@ -105,7 +105,7 @@ During the completion of this step (by following the step-by-step instructions),
 
 The next step is to add configurations settings to the Facebook connector app that you uploaded when you created the Azure web app resource in Step 4. You'll do this by going to the home page of your connector app and configuring it.
 
-For step-by-step instructions, see [Configure the connector app](deploy-facebook-connector.md#step-6-configure-the-connector-app).
+For step-by-step instructions, see [Step 6: Configure the connector web app](deploy-facebook-connector.md#step-6-configure-the-connector-web-app).
 
 During the completion of this step (by following the step-by-step instructions), you'll provide the following information (that you've copied to a text file after completing the previous steps):
 
