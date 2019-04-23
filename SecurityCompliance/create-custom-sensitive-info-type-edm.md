@@ -57,9 +57,9 @@ The process of setting up EDM consists of five main parts:
 
 ## Part 1: Set up your tabular data source for EDM
 
-During this phase, you structure your sensitive data in a .csv (or .tsv) file, create a .xml file to define the data file schema, and then configure Exchange Online Protection to refer to the schema.
+During this phase, you structure your sensitive data in a .csv file, create a .xml file to define the data file schema, and then configure Exchange Online Protection to refer to the schema.
 
-1. Structure the sensitive data you want to use for EDM in a .csv (or .tsv) file. Make sure the first row of the .csv (or .tsv) file includes the names of the fields you'll use for EDM. For example, you might have field names, such as `id`, `firstname`, `lastname`, and so on. Keep the following limits in mind:
+1. Structure the sensitive data you want to use for EDM in a .csv file. Make sure the first row of the .csv file includes the names of the fields you'll use for EDM. For example, you might have field names, such as `id`, `firstname`, `lastname`, and so on. Keep the following limits in mind:
 
     - The data file can include up to one million rows of sensitive data across all data sources.
     - The data file can include up to 32 fields per data source.
