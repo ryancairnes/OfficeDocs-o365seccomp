@@ -490,7 +490,9 @@
 
 # Compliance solutions
 ## [Microsoft Service Trust Portal](get-started-with-service-trust-portal.md)
-## [Microsoft Compliance Manager](compliance-manager-overview.md)
+## [Compliance Manager (Legacy)](meet-data-protection-and-regulatory-reqs-using-microsoft-cloud.md)
+## [Compliance Manager (Preview)](compliance-manager-overview.md)
+### [What's new](compliance-manager-release-notes.md)
 ### [Get started with Compliance Manager](get-started-with-compliance-manager.md)
 ### [Working with Compliance Manager](working-with-compliance-manager.md)
 ### [Compliance score methodology](compliance-score-methodology.md)
