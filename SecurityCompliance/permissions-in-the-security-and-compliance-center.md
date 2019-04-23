@@ -104,7 +104,7 @@ Note that the following roles aren't assigned to the Organization Management rol
 |**Manage Alerts**|View and edit settings and reports for alerts.|Compliance Administrator <br/><br/> Compliance Data Administrator <br/><br/> Organization Management <br/><br/> Security Administrator <br/><br/> Security Operator|
 |**Organization Configuration**|Run, view, and export audit reports and manage compliance policies for DLP, devices, and preservation.|Compliance Administrator <br/><br/> Compliance Data Administrator <br/><br/> Organization Management|
 |**Preview**|View a list of items that are returned from content searches, and open each item from the list to view its contents.|eDiscovery Manager|
-|**RecordManagement**|Allow viewing and editing configuration and reports for the Record Management feature.|Compliance Administrator <br/><br/> Compliance Data Administrator <br/><br/> Organization Management <br/><br/> Records Management|
+|**RecordManagement**|View and edit the configuration and reports for the Record Management feature.|Compliance Administrator <br/><br/> Compliance Data Administrator <br/><br/> Organization Management <br/><br/> Records Management|
 |**Retention Management**|Manage retention policies.|Records Management <br/><br/> Compliance Administrator <br/><br/> Compliance Data Administrator <br/><br/> Organization Management|
 |**Review**|Use Office 365 Advanced eDiscovery to track, tag, analyze, and test documents that are assigned to them.|eDiscovery Manager <br/><br/> Reviewer|
 |**RMS Decrypt**|Decrypt RMS-protected content when exporting search results.|eDiscovery Manager|
