@@ -168,7 +168,7 @@ During this phase, you configure exact matching and classification.
         <Details defaultLangCode="en-us">
           <LocalizedDetails langcode="en-us">
             <PublisherName>Microsoft EDM</PublisherName>
-            <Name>Health care EDM Rulepack</Name>
+            <Name>Example EDM Rulepack</Name>
             <Description> This rule package contains the EDM sensitive types for health care.</Description>
           </LocalizedDetails>
         </Details>
