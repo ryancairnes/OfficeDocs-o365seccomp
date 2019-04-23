@@ -20,8 +20,9 @@
 ### [Module 4b - Threat protection strategy, Part II](ciso-workshop-module-4b.md)
 ### [Module 5 - Information protection](ciso-workshop-module-5.md)
 
-# Protect access to data and services
-## [Protect access to data and services in Office 365](protect-access-to-data-and-services.md)
+# [Protect user and device access](protect-access-to-data-and-services.md)
+## [Privileged access management](privileged-access-management-overview.md)
+### [Configure privileged access management](privileged-access-management-configuration.md)
 
 # Protect information
 ## [Sensitivity labels](sensitivity-labels.md)
@@ -238,8 +239,7 @@
 ### [Find and release quarantined messages as a user](find-and-release-quarantined-messages-as-a-user.md)
 ### [Quarantine FAQ for Office 365](quarantine-faq.md)
 ### [Use user spam notifications to release and report quarantined messages in Office 365](use-spam-notifications-to-release-and-report-quarantined-messages.md)
-## [Privileged access management](privileged-access-management-overview.md)
-### [Configure privileged access management](privileged-access-management-configuration.md)
+
 
 # [Search for content](search-for-content.md)
 ## [Use Content Search](content-search.md)
