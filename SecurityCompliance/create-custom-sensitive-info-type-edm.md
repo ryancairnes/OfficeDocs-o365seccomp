@@ -159,7 +159,6 @@ During this phase, you configure exact matching and classification.
 
 1. Create a rule package in .xml format (with Unicode encoding), similar to the following example:
 
-
     ```
     <?xml version="1.0" encoding="utf-8"?>
     <RulePackage xmlns="http://schemas.microsoft.com/office/2018/edm">
@@ -199,8 +198,6 @@ During this phase, you configure exact matching and classification.
       </Rules>
     </RulePackage>
     ```
-
-
     
 2. Upload the rule package by running the following PowerShell cmdlets, one at a time:
 
@@ -236,15 +233,17 @@ EDM can be used with [Office 365 DLP policies](data-loss-prevention-policies.md)
 
 9. In the **Name** section, specify a name and description for the rule.<br/>![New rule fields](media/edm-dlp-newruleform.png)<br/>
 
-10. In the **Conditions** section, in the **+ Add a condition** list, choose **Content contains sensitive type**.
+10. In the **Conditions** section, in the **+ Add a condition** list, choose **Content contains sensitive type**.<br/>![Content contains sensitive info types](media/edm-dlp-newrule-conditions.png)<br/>
 
-11. Finish selecting options for the rule, and then choose **Save**.
+11. Search for the sensitive information type you created when you defined a rule package in Part 4, and then choose **+ Add**.<br/>![Find the sensitive info type](media/edm-dlp-newrulefindsensitiverulepack.png)<br/>Then choose **Done**.
 
-11. On the **Policy settings** tab, review your rule(s), and then choose **Next**.
+12. Finish selecting options for the rule, such as **User notifications**, **User overrides**, **Incident reports**, and so on, and then choose **Save**.
 
-12. Specify whether to turn on the policy right away, test it out, or keep it turned off. Then choose **Next**.
+13. On the **Policy settings** tab, review your rule(s), and then choose **Next**.
 
-13. On the **Review your settings** tab, review your policy. Make any needed changes. When you're ready, choose **Create**.
+14. Specify whether to turn on the policy right away, test it out, or keep it turned off. Then choose **Next**.
+
+15. On the **Review your settings** tab, review your policy. Make any needed changes. When you're ready, choose **Create**.
 
 Allow approximately one hour for your new DLP policy to work its way through your data center.
 
