@@ -1,5 +1,5 @@
 ---
-title: "Create custom sensitive information types for DLP with Exact Data Match"
+title: "Create custom sensitive information types with Exact Data Match"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
@@ -13,10 +13,10 @@ ms.collection:
 search.appverid: 
 - MOE150
 - MET150
-description: "Create custom sensitive information types for DLP with Exact Data Match."
+description: "Create custom sensitive information types with Exact Data Match."
 ---
 
-# Create a custom sensitive information type for DLP with Exact Data Match (EDM) (Preview)
+# Create custom sensitive information types with Exact Data Match (EDM) (Preview)
 
 ## Overview
 
