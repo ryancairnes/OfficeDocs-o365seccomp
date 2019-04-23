@@ -113,10 +113,63 @@
 ### [Watch videos from the Microsoft Data Governance team](https://go.microsoft.com/fwlink/?linkid=867039)
 <!--/Data gov-->
 <!--TOC/Area owner: tracyp and deniseb-->
+<!--Cyber Threat-->
 # [Security in Microsoft 365]
 <!--Protect, detect, investigate, respond-->
+<!--Landing Page-->
 # [Protect against threats](protect-against-threats.md)
-## [The threat landscape and common attack campaigns]
+<!--/Landing Page-->
+<!--Edge filtering and antispam policy-->
+## [Stub: The threat landscape and common attacks]
+<!--Begin Security Basics-->
+<!--E3 and E5 - Protect & Detect-->
+### [Tune anti-phishing protection](tuning-anti-phishing.md)
+### [Anti-spam and anti-malware protection](anti-spam-and-anti-malware-protection.md)
+#### [Office 365 email anti-spam protection](anti-spam-protection.md)
+#### [How to prevent real email from being marked as spam in Office 365](prevent-email-from-being-marked-as-spam.md)
+#### [How to reduce spam email in Office 365](reduce-spam-email.md)
+#### [Controlling outbound spam in Office 365](outbound-spam-controls.md)
+#### [Block email spam with the Office 365 spam filter to prevent false negative issues](reduce-spam-email.md)
+#### [Zero-hour auto purge - protection against spam and malware](zero-hour-auto-purge.md)
+#### [Ensure that spam is routed to each user's Junk Email folder](ensure-that-spam-is-routed-to-each-user-s-junk-email-folder.md)
+#### [Report junk email messages to Microsoft](report-junk-email-messages-to-microsoft.md)
+#### [Manage safe sender lists for bulk mailers](manage-safe-sender-lists-for-bulk-mailers.md)
+#### [Configure anti-malware policies](configure-anti-malware-policies.md)
+#### [Configure the anti-spam policies](configure-the-anti-spam-policies.md)
+#### [Create organization-wide safe sender or blocked sender lists in Office 365](create-organization-wide-safe-sender-or-blocked-sender-lists-in-office-365.md)
+#### [Configure your spam filter policies](configure-your-spam-filter-policies.md)
+#### [Configure the connection filter policy](configure-the-connection-filter-policy.md)
+#### [Configure the outbound spam policy](configure-the-outbound-spam-policy.md)
+#### [Removing a user from the Restricted Users portal after sending spam email](removing-user-from-restricted-users-portal-after-spam.md)
+#### [Spam confidence levels](spam-confidence-levels.md)
+##### [Use mail flow rules to set the spam confidence level (SCL) in messages](use-mail-flow-rules-to-set-the-spam-confidence-level-scl-in-messages.md)
+##### [Submit spam, non-spam, and phishing scam messages to Microsoft for analysis](submit-spam-non-spam-and-phishing-scam-messages-to-microsoft-for-analysis.md)
+##### [Submitting malware and non-malware to Microsoft for analysis](submitting-malware-and-non-malware-to-microsoft-for-analysis.md)
+##### [Use the delist portal to remove yourself from the Office 365 blocked senders list](use-the-delist-portal-to-remove-yourself-from-the-office-365-blocked-senders-lis.md)
+##### [Anti-spam message headers](anti-spam-message-headers.md)
+### [Anti-phishing protection in Office 365](anti-phishing-protection.md)
+#### [ATP anti-phishing capabilities in Office 365](atp-anti-phishing.md)
+#### [Set up anti-phishing and ATP anti-phishing policies](set-up-anti-phishing-policies.md)
+#### [How Office 365 validates the From: address to prevent phishing](how-office-365-validates-the-from-address.md)
+### [Anti-spoofing protection in Office 365](anti-spoofing-protection.md)
+#### [Learn more about spoof intelligence](learn-about-spoof-intelligence.md)
+### Manage your security for specific workloads
+### [What is EOP?](eop/what-is-eop.md)
+#### [Support for anonymous inbound email messages over IPv6](support-for-anonymous-inbound-email-messages-over-ipv6.md)
+<!--SPF, DKIM, DMARC-->
+### Email validation and authentication
+#### [How Office 365 uses SPF to prevent spoofing](how-office-365-uses-spf-to-prevent-spoofing.md)
+#### [Set up SPF in Office 365 to help prevent spoofing](set-up-spf-in-office-365-to-help-prevent-spoofing.md)
+#### [Use DKIM to validate outbound email](use-dkim-to-validate-outbound-email.md)
+#### [Support for validation of DKIM signed messages](support-for-validation-of-dkim-signed-messages.md)
+#### [Use DMARC to validate email](use-dmarc-to-validate-email.md)
+<!--/Protect-->
+<!--Investigate-->
+#### [View information about malicious files](malicious-files-detected-in-spo-odb-or-teams.md)
+
+<!--/Investigate-->
+## [Stub: M365 and edge filtering]
+<!--E5 ATP - Investigate and Respond-->
 ## [Advanced Threat Protection ](office-365-atp.md)
 <!--Actions for GAs (generally) 1-time setup-->
 <!--Admin audience-->
@@ -160,49 +213,9 @@
 #### [About Threat investigation and response](office-365-ti.md)
 #### [How Threat Investigation and Response works](get-started-with-ti.md)
 #### [How Automated Investigation and Response works](automated-investigation-response-office.mc)
-<!--End ATP-->
-<!--Begin Security Basics-->
-## [Tune anti-phishing protection](tuning-anti-phishing.md)
-### Manage your security for specific workloads
-#### [View information about malicious files](malicious-files-detected-in-spo-odb-or-teams.md)
-## [Anti-spam and anti-malware protection](anti-spam-and-anti-malware-protection.md)
-### [What is EOP?](eop/what-is-eop.md)
-### [Office 365 email anti-spam protection](anti-spam-protection.md)
-### [How to prevent real email from being marked as spam in Office 365](prevent-email-from-being-marked-as-spam.md)
-### [How to reduce spam email in Office 365](reduce-spam-email.md)
-### [Controlling outbound spam in Office 365](outbound-spam-controls.md)
-### [Block email spam with the Office 365 spam filter to prevent false negative issues](reduce-spam-email.md)
-### [Zero-hour auto purge - protection against spam and malware](zero-hour-auto-purge.md)
-### [Ensure that spam is routed to each user's Junk Email folder](ensure-that-spam-is-routed-to-each-user-s-junk-email-folder.md)
-### [Report junk email messages to Microsoft](report-junk-email-messages-to-microsoft.md)
-### [Manage safe sender lists for bulk mailers](manage-safe-sender-lists-for-bulk-mailers.md)
-### [Configure anti-malware policies](configure-anti-malware-policies.md)
-### [Configure the anti-spam policies](configure-the-anti-spam-policies.md)
-### [Create organization-wide safe sender or blocked sender lists in Office 365](create-organization-wide-safe-sender-or-blocked-sender-lists-in-office-365.md)
-### [Configure your spam filter policies](configure-your-spam-filter-policies.md)
-### [Configure the connection filter policy](configure-the-connection-filter-policy.md)
-### [Configure the outbound spam policy](configure-the-outbound-spam-policy.md)
-### [Removing a user from the Restricted Users portal after sending spam email](removing-user-from-restricted-users-portal-after-spam.md)
-### [Spam confidence levels](spam-confidence-levels.md)
-#### [Use mail flow rules to set the spam confidence level (SCL) in messages](use-mail-flow-rules-to-set-the-spam-confidence-level-scl-in-messages.md)
-#### [Submit spam, non-spam, and phishing scam messages to Microsoft for analysis](submit-spam-non-spam-and-phishing-scam-messages-to-microsoft-for-analysis.md)
-#### [Submitting malware and non-malware to Microsoft for analysis](submitting-malware-and-non-malware-to-microsoft-for-analysis.md)
-#### [Use the delist portal to remove yourself from the Office 365 blocked senders list](use-the-delist-portal-to-remove-yourself-from-the-office-365-blocked-senders-lis.md)
-#### [Anti-spam message headers](anti-spam-message-headers.md)
-### Email validation and authentication
-#### [How Office 365 uses SPF to prevent spoofing](how-office-365-uses-spf-to-prevent-spoofing.md)
-#### [Set up SPF in Office 365 to help prevent spoofing](set-up-spf-in-office-365-to-help-prevent-spoofing.md)
-#### [Use DKIM to validate outbound email](use-dkim-to-validate-outbound-email.md)
-#### [Support for validation of DKIM signed messages](support-for-validation-of-dkim-signed-messages.md)
-#### [Support for anonymous inbound email messages over IPv6](support-for-anonymous-inbound-email-messages-over-ipv6.md)
-#### [Use DMARC to validate email](use-dmarc-to-validate-email.md)
-### [Anti-phishing protection in Office 365](anti-phishing-protection.md)
-#### [ATP anti-phishing capabilities in Office 365](atp-anti-phishing.md)
-#### [Set up anti-phishing and ATP anti-phishing policies](set-up-anti-phishing-policies.md)
-#### [How Office 365 validates the From: address to prevent phishing](how-office-365-validates-the-from-address.md)
-### [Anti-spoofing protection in Office 365](anti-spoofing-protection.md)
-#### [Learn more about spoof intelligence](learn-about-spoof-intelligence.md)
-
+<!--End E5 ATP-->
+<!--TOC/Area owner: tracyp and deniseb-->
+<!--/Cyber Threat-->
 ## [Encryption in Office 365](encryption.md)
 ### [Set up encryption in Office 365 Enterprise](set-up-encryption.md)
 ### [Email encryption in Office 365](email-encryption.md)
