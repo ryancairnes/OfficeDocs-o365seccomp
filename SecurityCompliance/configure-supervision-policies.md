@@ -162,7 +162,7 @@ Use a text editor (like Notepad), to create a new file that includes the keyword
     - Choose the users or groups to supervise, including choosing users or groups you'd like to exclude.
     - Define the supervision policy conditions.
     - Choose if you'd like to include sensitive information types. This is where you can select default and custom sensitive info types.
-    - Choose if you'd like to enable offensive language machine learning. This detects inappropriate language sent or received in the body of email messages.
+    - Choose if you'd like to enable the offensive language model. This detects inappropriate language sent or received in the body of email messages.
     - Define the percentage of communications to review.
     - Choose the reviewers for the policy. Reviewers can be individual users or [mail-enabled security groups](https://docs.microsoft.com/Exchange/recipients-in-exchange-online/manage-mail-enabled-security-groups#create-a-mail-enabled-security-group). All reviewers must have mailboxes hosted on Exchange Online.
     - Review your policy selections and create the policy.
