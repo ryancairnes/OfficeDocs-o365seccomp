@@ -66,7 +66,7 @@ During this phase, you structure your sensitive data in a .csv file, create a .x
     - The data file can include up to five indexed columns per data source.
     - Data refresh for each data source can occur weekly (but not more often during preview).
 
-2. Set up a .xml file that represents the schema for your data file. Name this schema file `edm.xlm`. As an example, the following .xml file defines the schema for our example *SampleDataStore* database.
+2. Set up a .xml file that represents the schema for your data file. Name this schema file `edm.xml`. As an example, the following .xml file defines the schema for our example *SampleDataStore* database.
     
     ```
     <?xml version="1.0" encoding="utf-8"?>
@@ -104,7 +104,7 @@ During this phase, you'll set up a dedicated user account for Office 365, downlo
 
 2. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639). Make sure to note the installation location (such as `C:\`). 
 
-3. To authorize the EDM Upload Agent, run the following PowerShell cmdlet in Exchange Online Protection:
+3. To authorize the EDM Upload Agent, run the following command in Windows Command Prompt:
 
     `EdmUploadAgent.exe /Authorize`
 
