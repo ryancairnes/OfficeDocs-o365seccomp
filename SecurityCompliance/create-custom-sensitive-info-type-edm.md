@@ -159,6 +159,7 @@ During this phase, you configure exact matching and classification.
 
 1. Create a rule package in .xml format (with Unicode encoding), similar to the following example:
 
+
     ```
     <?xml version="1.0" encoding="utf-8"?>
     <RulePackage xmlns="http://schemas.microsoft.com/office/2018/edm">
@@ -168,8 +169,8 @@ During this phase, you configure exact matching and classification.
         <Details defaultLangCode="en-us">
           <LocalizedDetails langcode="en-us">
             <PublisherName>Microsoft EDM</PublisherName>
-            <Name>Example EDM Rulepack</Name>
-            <Description> This rule package contains the EDM sensitive types as an example.</Description>
+            <Name>Health care EDM Rulepack</Name>
+            <Description> This rule package contains the EDM sensitive types for health care.</Description>
           </LocalizedDetails>
         </Details>
       </RulePack>
@@ -198,6 +199,8 @@ During this phase, you configure exact matching and classification.
       </Rules>
     </RulePackage>
     ```
+
+
     
 2. Upload the rule package by running the following PowerShell cmdlets, one at a time:
 
