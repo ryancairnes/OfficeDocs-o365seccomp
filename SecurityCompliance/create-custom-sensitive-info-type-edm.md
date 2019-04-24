@@ -20,18 +20,12 @@ description: "Create custom sensitive information types with Exact Data Match."
 
 ## Overview
 
-With Office 365 for business, you can define [custom sensitive information types](custom-sensitive-info-types.md). This is helpful if you want to create a custom sensitive information type that is static. 
+With Office 365 for business, you can define [custom sensitive information types](custom-sensitive-info-types.md) that you can use to help prevent people from inadvertently or inappropriately sharing sensitive data within your organization. Now in preview, you can create custom sensitive information types that use Exact Data Match (EDM) classification. With this method, you can create a dynamic sensitive information type that works with secure, refreshable data. 
 
-Now in preview, define data loss prevention (DLP) policies to prevent people from inadvertently or inappropriately sharing sensitive data within your organization. 
-
-Now, you can use Exact Data Match (EDM) classification capabilities to  
-
-Read this article to create a [custom sensitive information type](custom-sensitive-info-types.md) using Exact Data Match (EDM) classification. With EDM capabilities, you can define DLP policies that detect sensitive information, such as credit card numbers, employee identification numbers, patient record details, and more, by looking for specific data values in a database. Then, when people in your organization attempt to send sensitive information that matches information in the designated database, they'll be warned or prevented from sending the email (according to how your DLP policies are configured).
-
-EDM looks for exact matches, and not just patterns or proximity.    
+EDM looks for exact matches, not just patterns or proximity.     
 
 > [!NOTE]
-> This feature is currently in preview. While in preview, EDM is supported for Exchange and [Outlook on the web](https://support.office.com/article/Compare-Outlook-for-PC-Outlook-on-the-web-and-Outlook-for-iOS-Android-b26a7bf5-0ac7-48ba-97af-984e0645dde5) only. 
+> This feature is currently in preview. While in preview, EDM is supported for Exchange Online. 
 
 ## Required licenses and permissions
 
