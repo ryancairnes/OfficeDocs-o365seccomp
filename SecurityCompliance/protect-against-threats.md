@@ -37,7 +37,7 @@ The following table summarizes the protection features included in this article 
 |Anti-malware protection    | [Exchange Online Protection](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description) (EOP)        |
 |Protection from malicious URLs and files in email and Office documents    | [Office 365 ATP](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)        |
 |Anti-phishing protection    | [EOP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description)      |
-|Advanced anti-phishing protection    | [Office 365 ATP](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)        |
+|Advanced anti-phishing protection    | [Office 365 ATP](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)   |
 |Anti-spam protection     | [EOP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description)       |
 |Zero-hour auto purge (for email)    | [EOP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description) (EOP)        |
 |Audit logging (this is used for reporting purposes)    | [Exchange Online](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description)        |
@@ -105,9 +105,7 @@ To set up [ATP Safe Attachments](atp-safe-attachments.md), you must define at le
 
 6. (**Recommended additional step**) As a global administrator or a SharePoint Online administrator run the **[Set-SPOTenant](https://docs.microsoft.com/powershell/module/sharepoint-online/Set-SPOTenant?view=sharepoint-ps)** cmdlet with the **DisallowInfectedFileDownload** parameter set to  *true* for your Office 365 environment. (This prevents people from opening, moving, copying, or sharing files that are detected as malicious.)  
 
-To learn more, see: 
-- [Set up Office 365 ATP Safe Attachments policies](set-up-atp-safe-attachments-policies.md)
-- [Turn on Office 365 ATP for SharePoint, OneDrive, and Microsoft Teams](turn-on-atp-for-spo-odb-and-teams.md)
+To learn more, see [Set up Office 365 ATP Safe Attachments policies](set-up-atp-safe-attachments-policies.md) and [Turn on Office 365 ATP for SharePoint, OneDrive, and Microsoft Teams](turn-on-atp-for-spo-odb-and-teams.md).
 
 ### ATP Safe Links policies
 
