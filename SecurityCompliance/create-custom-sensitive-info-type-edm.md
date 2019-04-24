@@ -29,13 +29,9 @@ What if you wanted to create a custom sensitive information type that is dynamic
 
 ## Required licenses and permissions
 
-### Licenses
+- During the preview program, if your organization has [DLP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description/messaging-policy-and-compliance-servicedesc#data-loss-prevention-dlp), you can try EDM. 
 
-**During the preview program, you can try EDM if your organization has a subscription that includes [DLP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description/messaging-policy-and-compliance-servicedesc#data-loss-prevention-dlp)**. 
-
-### Permissions
-
-You must be a global admin, compliance administrator, or Exchange Online administrator to perform the tasks described in this article. To learn more about DLP permissions, see [Permissions](data-loss-prevention-policies.md#permissions).
+- You must be a global admin, compliance administrator, or Exchange Online administrator to perform the tasks described in this article. To learn more about DLP permissions, see [Permissions](data-loss-prevention-policies.md#permissions).
 
 ## The work flow at a glance
 
@@ -58,6 +54,8 @@ During this phase, you structure your sensitive data in a .csv file, create a .x
     - The data file can include up to 32 fields per data source.
     - The data file can include up to five indexed columns per data source.
     - Data refresh for each data source can occur weekly (but not more often during preview).
+    
+    For our example, we use a database called SampleDataStore.csv. This database includes columns, such as id, firstname, lastname, title, and so on.
 
 2. Set up a file in .xml format that represents the schema for your data file. Name this schema file `edm.xml`. As an example, the following .xml file defines the schema for our example *SampleDataStore* database.
     
