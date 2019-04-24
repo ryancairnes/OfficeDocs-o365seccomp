@@ -166,12 +166,21 @@ During this phase, you set up a dedicated user account for Office 365, install t
 
     Example: `EdmUploadAgent.exe /CreateHash /DataStoreName EmployeeDB /DataFile C:\Edm\Data\EmployeeData.csv /HashLocation C:\Edm\Hash` 
 
-6. To upload the hashed data, run the following command in Windows Command Prompt:
+6. To upload the indexed data, run the following command in Windows Command Prompt:
 
     `EdmUploadAgent.exe /UploadHash /DataStoreName <DataStoreName> /HashFile <HashedSourceFilePath>`
 
     Example: `EdmUploadAgent.exe /UploadHash /DataStoreName EmployeeDB /HashFile C:\Edm\Hash\EmployeeData.EdmHash` 
 
+7. To verify your sensitive data has been uploaded, run the following command in Windows Command Prompt:
+
+    `EdmUploadAgent.exe /GetDataStore`
+
+    You'll see a list of data stores and when they were last updated. Here's an example:
+
+    ![Example of GetDataStore cmdlet and results](media/EDM-GetDataStore-example.png)
+
+Now that you have set up your custom sensitive information type with EDM, you can use it with your Microsoft cloud services. 
 
 ## Part 3: Use EDM classification with your Microsoft cloud services (Example: DLP policy)
 
