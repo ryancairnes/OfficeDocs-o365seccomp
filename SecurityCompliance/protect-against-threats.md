@@ -25,14 +25,19 @@ Office 365 includes a variety of threat protection features. Here's a quick-star
 
 ## Requirements
 
-### Licenses
+### Subscriptions
 
-Threat protection features are included in all Office 365 subscriptions; however, some subscriptions include more advanced features, such as those in Office 365 Advanced Threat Protection. In this article we include subscription requirements for each protection area.
+Threat protection features are included in all Office 365 subscriptions; however, some subscriptions include more advanced features. The following table lists the protection features included in this article together with the minimum subscription requirements.<br/>
 
-To learn more about threat protection features and subsriptions, see the following resources:
-- [Office 365 Advanced Threat Protection Service Description](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)
-- [Exchange Online Protection Service Description](https://docs.microsoft.com/en-us/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-service-description)
-- [Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-securitycompliance-center)
+|Protection type  |Subscription requirement  |
+|---------|---------|
+|Anti-malware protection    | [Exchange Online Protection](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description) (EOP)        |
+|Protection from malicious URLs and files in email and Office documents    | [Office 365 ATP](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)        |
+|Anti-phishing protection    | [EOP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description)      |
+|Advanced anti-phishing protection    | [Office 365 Advanced Threat Protection](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)   |
+|Anti-spam protection     | [EOP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description)       |
+|Zero-hour auto purge (for email)    | [EOP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description) (EOP)        |
+|Audit logging (this is used for reporting purposes)    | [Exchange Online](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description)        |
 
 ### Roles and permissions
 
@@ -46,9 +51,9 @@ You must be assigned an appropriate role to configure policies in the [Security 
 
 To learn more, see [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md).
 
-## Part 1 - Anti-malware
+## Part 1 - Anti-malware protection
 
-[Anti-malware protection](anti-malware-protection.md) is available in subscriptions that include [Exchange Online Protection](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description) (EOP). 
+[Anti-malware protection](anti-malware-protection.md) is available in subscriptions that include [EOP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description) (EOP). 
 
 1. In the [Security & Compliance Center](https://protection.office.com), choose **Threat management** > **Policy** > **Anti-malware**.
 
@@ -64,9 +69,9 @@ To learn more, see [Permissions in the Office 365 Security &amp; Compliance Cent
 
 To learn more about anti-malware policy options, see [Configure anti-malware policies](configure-anti-malware-policies.md).
 
-## Part 2 - Zero-day protection
+## Part 2 - Protection from malicious URLs and files
 
-Zero-day protection is available in subscriptions that include [Office 365 Advanced Threat Protection](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description) (ATP), and is set up through [ATP Safe Attachments](atp-safe-attachments.md) and [ATP Safe Links](atp-safe-links.md) policies.
+Time-of-click protection from malicious URLs and files is available in subscriptions that include [Office 365 ATP](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description) (ATP), and is set up through [ATP Safe Attachments](atp-safe-attachments.md) and [ATP Safe Links](atp-safe-links.md) policies.
 
 ### ATP Safe Attachments policies
 
@@ -92,9 +97,7 @@ To set up [ATP Safe Attachments](atp-safe-attachments.md), you must define at le
 
 6. (**Recommended additional step**) As a global administrator or a SharePoint Online administrator run the **[Set-SPOTenant](https://docs.microsoft.com/powershell/module/sharepoint-online/Set-SPOTenant?view=sharepoint-ps)** cmdlet with the **DisallowInfectedFileDownload** parameter set to  *true* for your Office 365 environment. (This prevents people from opening, moving, copying, or sharing files that are detected as malicious.)  
 
-To learn more, see: 
-- [Set up Office 365 ATP Safe Attachments policies](set-up-atp-safe-attachments-policies.md)
-- [Turn on Office 365 ATP for SharePoint, OneDrive, and Microsoft Teams](turn-on-atp-for-spo-odb-and-teams.md)
+To learn more, see [Set up Office 365 ATP Safe Attachments policies](set-up-atp-safe-attachments-policies.md) and [Turn on Office 365 ATP for SharePoint, OneDrive, and Microsoft Teams](turn-on-atp-for-spo-odb-and-teams.md).
 
 ### ATP Safe Links policies
 
@@ -128,7 +131,7 @@ To set up [ATP Safe Links](atp-safe-links.md), review and edit your default poli
 
 To learn more, see [Set up Office 365 ATP Safe Links policies](set-up-atp-safe-links-policies.md). 
 
-## Part 3 - Anti-phishing 
+## Part 3 - Anti-phishing protection
 
 [Anti-phishing protection](anti-phishing-protection.md) is available in subscriptions that include [EOP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description). Advanced anti-phishing protection is available in [ATP](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description). The following procedure describes how to configure an ATP anti-phishing policy. The steps are similar for configuring an anti-phishing policy (without ATP).
 
@@ -160,7 +163,7 @@ To learn more, see [Set up Office 365 ATP Safe Links policies](set-up-atp-safe-l
 
 To learn more about your anti-phishing policy options, see [Set up anti-phishing policies](set-up-anti-phishing-policies.md).
 
-## Part 4 - Anti-spam
+## Part 4 - Anti-spam protection
 
 [Anti-spam protection](anti-spam-protection.md) is available in subscriptions that include [EOP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description).
 
@@ -178,9 +181,11 @@ To learn more about your anti-phishing policy options, see [Set up anti-phishing
 
 To learn more about your anti-spam policy options, see [Configure the anti-spam policies](configure-the-anti-spam-policies.md).
 
-## Part 5 - Service-wide settings
+## Part 5 - Additional settings to configure
 
-### Zero-hour auto purge
+In addition to configuring protection from malware, malicious URLs and files, phishing, and spam, we recommend that you configure your zero-hour auto purge and audit logging settings.
+
+### Zero-hour auto purge for email
 
 [Zero-hour auto purge](zero-hour-auto-purge.md) (ZAP) is available in subscriptions that include [EOP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description). This protection is turned on by default; however, the following conditions must be met for protection to be in effect:
 
@@ -190,35 +195,18 @@ To learn more about your anti-spam policy options, see [Configure the anti-spam 
 
 To learn more, see [Zero-hour auto purge - protection against spam and malware](zero-hour-auto-purge.md).
 
-### Audit logging
+### Audit logging for reporting and investigation
 
 Audit logging is available in subscriptions that include [Exchange Online](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description). In order to view data in threat protection reports, such as the [Security Dashboard](security-dashboard.md), [email security reports](view-email-security-reports.md), and [Explorer](use-explorer-in-security-and-compliance.md), audit logging must be turned on for your organization. To learn more, see [Turn Office 365 audit log search on or off](turn-audit-log-search-on-or-off.md).
 
 ## Post-setup tasks
 
-### Watch for new features and service updates
+After you have configured your threat protection features, make sure to monitor how those features are working, review and revise your policies as needed, and watch for new features and service updates.
 
-- [Set up the Standard or Targeted release options](https://docs.microsoft.com/office365/admin/manage/release-options-in-office-365?view=o365-worldwide)
+|What to do  |Resources to learn more  |
+|---------|---------|
+|See how threat protection features are working for your organization by viewing reports    |[Security dashboard](security-dashboard.md)<br/>[Email security reports](view-email-security-reports.md)<br/>[Reports for Office 365 ATP](view-reports-for-atp.md)<br/>[Threat Explorer](use-explorer-in-security-and-compliance.md)    |
+|Periodically review and revise your threat protection policies as needed    |[Secure Score](microsoft-secure-score.md)<br/>[Smart reports and insights](reports-and-insights-in-security-and-compliance.md)<br/>[Office 365 threat investigation and response features](keep-users-safe-with-office-365-ti.md)          |
+|Watch for new features and service updates     |[Standard and Targeted release options](https://docs.microsoft.com/office365/admin/manage/release-options-in-office-365?view=o365-worldwide)<br/>[Message Center](https://docs.microsoft.com/office365/admin/manage/message-center?view=o365-worldwide)<br/>[Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=advanced%2Cthreat%2Cprotection)<br/>[Service Descriptions](https://docs.microsoft.com/office365/servicedescriptions/office-365-service-descriptions-technet-library)         |
 
-- [Go to your Message center to view feature announcements](https://docs.microsoft.com/office365/admin/manage/message-center?view=o365-worldwide) 
 
-- [Visit the Microsoft 365 Roadmap to see status of new features](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=advanced%2Cthreat%2Cprotection)
-
-- [Review the Office 365 Service Descriptions](https://docs.microsoft.com/office365/servicedescriptions/office-365-service-descriptions-technet-library)
-
-### See how threat protection features are working for your organization
-
-- [Visit your security dashboard](security-dashboard.md)
-
-- [View the reports for Office 365 ATP](view-reports-for-atp.md), including [Explorer](use-explorer-in-security-and-compliance.md)
-
-- [View your email security reports](view-email-security-reports.md)
-
-### Periodically review and revise your threat protection policies
-
-- [Review your Secure Score](microsoft-secure-score.md)
-
-- [Use your smart reports and insights in the Security &amp; Compliance Center](reports-and-insights-in-security-and-compliance.md) 
-
-- [Keep users safe with Office 365 threat investigation and response features](keep-users-safe-with-office-365-ti.md) 
- 
