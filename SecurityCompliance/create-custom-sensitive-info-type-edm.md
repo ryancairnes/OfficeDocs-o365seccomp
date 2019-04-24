@@ -20,8 +20,7 @@ description: "Create custom sensitive information types with Exact Data Match."
 
 ## Overview
 
-
-With Office 365 for business, you can define [custom sensitive information types](custom-sensitive-info-types.md) in the Office 365 Security & Compliance Center or by using PowerShell. This is helpful if you want to create a custom sensitive information type that is static. 
+With Office 365 for business, you can define [custom sensitive information types](custom-sensitive-info-types.md). This is helpful if you want to create a custom sensitive information type that is static. 
 
 Now in preview, define data loss prevention (DLP) policies to prevent people from inadvertently or inappropriately sharing sensitive data within your organization. 
 
