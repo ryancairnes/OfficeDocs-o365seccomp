@@ -29,11 +29,7 @@ With Office 365 for business, you can define [custom sensitive information types
 
 ### Licenses
 
-**During the preview program, you can try EDM if your organization has a subscription that includes DLP**, such as Office 365 Enterprise E3 or Office 365 Enterprise E5. To learn more about DLP and subscriptions, see the following resources:
-- [Get the latest advanced features with Office 365](https://products.office.com/business/compare-more-office-365-for-business-plans)
-- [Data loss prevention (Messaging Policy and Compliance)](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description/messaging-policy-and-compliance-servicedesc#data-loss-prevention-dlp)
-
-**When EDM is released, your organization must have Office 365 Enterprise E5**. To learn more about DLP new features, see [Microsoft 365 Roadmap (search for DLP)](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=dlp).
+**During the preview program, you can try EDM if your organization has a subscription that includes [DLP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description/messaging-policy-and-compliance-servicedesc#data-loss-prevention-dlp)**. 
 
 ### Permissions
 
@@ -41,19 +37,16 @@ You must be a global admin, compliance administrator, or Exchange Online adminis
 
 ## The work flow at a glance
 
-The process of setting up EDM consists of five main parts:
- 
-1. [Set up your tabular data source for EDM](#part-1-set-up-your-tabular-data-source-for-edm)
+The process of working with EDM consists of these main phases: 
 
-2. [Install and authorize the EDM Upload Agent](#part-2-install-and-authorize-the-edm-upload-agent)
+1. 
 
-3. [Hash the sensitive data and upload it](#part-3-hash-the-sensitive-data-and-upload-it)
 
-4. [Create a rule package with exact matching](#part-4-create-a-rule-package-with-exact-matching)
+## Set up your sensitive information database and rule package for EDM
 
-5. [Apply EDM to a DLP policy](#part-5-apply-edm-to-a-dlp-policy)
+Setting up and configuring EDM involves first setting up a secure, refreshable database that contains the sensitive information you'll use for EDM classification, and then creating a rule package that will be used with an upload agent and with policies, such as data loss prevention (DLP) policies.
 
-## Part 1: Set up your tabular data source for EDM
+### Set up your secure database of sensitive information
 
 During this phase, you structure your sensitive data in a .csv file, create a .xml file to define the data file schema, and then configure Exchange Online Protection to refer to the schema.
 
@@ -64,7 +57,7 @@ During this phase, you structure your sensitive data in a .csv file, create a .x
     - The data file can include up to five indexed columns per data source.
     - Data refresh for each data source can occur weekly (but not more often during preview).
 
-2. Set up a .xml file that represents the schema for your data file. Name this schema file `edm.xml`. As an example, the following .xml file defines the schema for our example *SampleDataStore* database.
+2. Set up a file in .xml format that represents the schema for your data file. Name this schema file `edm.xml`. As an example, the following .xml file defines the schema for our example *SampleDataStore* database.
     
     ```
     <?xml version="1.0" encoding="utf-8"?>
@@ -89,73 +82,13 @@ During this phase, you structure your sensitive data in a .csv file, create a .x
 
     `New-DlpEdmSchema -FileData $edmSchemaXml`
 
-5. Proceed to the next section.
+Now that your database is set up, the next step is to set up a rule package for EDM.
 
-## Part 2: Install and authorize the EDM Upload Agent
+### Set up a rule package to enable EDM usage
 
-During this phase, you'll set up a dedicated user account for Office 365, download and install the EDM Upload Agent, and authorize the tool.
+During this phase, you set up a rule package that will be used to determine which columns in your database will be used for EDM classification. 
 
-1. Set up a user account with limited permissions for the EDM Upload Agent. (See [Add users to Office 365](https://docs.microsoft.com/office365/admin/add-users/add-users?view=o365-worldwide).) The user account you create should have:
-
-    - Read access to your data file (This is the .csv or .tsv you created in [Part 1](#part-1-set-up-your-tabular-data-source-for-edm).)
-    - Write access to the location you'll use for storing hashed data (this can be a folder on a local drive)
-
-2. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639). Make sure to note the installation location (such as `C:\`). 
-
-3. To authorize the EDM Upload Agent, run the following command in Windows Command Prompt:
-
-    `EdmUploadAgent.exe /Authorize`
-
-4. When prompted, log in using the account credentials you created in step 1 of this procedure. 
-
-    > [!TIP]
-    > If you get any error messages, repeat steps 3 and 4.
-
-5. Proceed to the next section.
-
-
-## Part 3: Hash the sensitive data and upload it
-
-During this phase, you hash the sensitive data, and upload the hashed data using the EDMUploadAgent. 
-
-> [!NOTE]
-> The following procedure describes how to upload the data to a single server; however, you could use multiple servers.
-
-1. To hash the data, run the following command in Windows Command Prompt:
-
-    `EdmUploadAgent.exe /CreateHash /DataStoreName <DataStoreName> /DataFile <DataFilePath> /HashLocation <HashedFileLocation>`
-
-    Example: `EdmUploadAgent.exe /CreateHash /DataStoreName EmployeeDB /DataFile C:\Edm\Data\EmployeeData.csv /HashLocation C:\Edm\Hash` 
-
-2. To upload the hashed data, run the following command in Windows Command Prompt:
-
-    `EdmUploadAgent.exe /UploadHash /DataStoreName <DataStoreName> /HashFile <HashedSourceFilePath>`
-
-    Example: `EdmUploadAgent.exe /UploadHash /DataStoreName EmployeeDB /HashFile C:\Edm\Hash\EmployeeData.EdmHash` 
-
-3. To see a list of uploaded data stores, run the following command in Windows Command Prompt:
-
-    `EdmUploadAgent.exe /GetDataStore`
-
-    You'll see a list of data stores and when they were last updated. Here's an example:
-
-    ![Example of GetDataStore cmdlet and results](media/EDM-GetDataStore-example.png)
-
-4. To see a list of upload sessions for a single data store, run the following command in Windows Command Prompt:
-
-    `EdmUploadAgent.exe /GetSession /DataStoreName <DataStoreName>`
-
-    For example, the cmdlet `EdmUploadAgent.exe /GetSession /DataStoreName patient` displays a list of upload sessions for the *Patient* data store.
-
-    ![Example of EDM upload sessions for Patient data store](media/EDM-GetDataStore-sessionsexample.png)
-
-5. Proceed to the next section.
-
-## Part 4: Create a rule package with exact matching
-
-During this phase, you configure exact matching and classification.
-
-1. Create a rule package in .xml format (with Unicode encoding), similar to the following example:
+1. Create a rule package in .xml format (with Unicode encoding), similar to the following example. (You can copy and modify our code to suit your organization's needs.)
 
     ```
     <?xml version="1.0" encoding="utf-8"?>
@@ -204,6 +137,72 @@ During this phase, you configure exact matching and classification.
     `New-DlpSensitiveInformationTypeRulePackage -FileData $rulepack`
 
     To learn more about uploading a rule package, see [Upload your rule package](create-a-custom-sensitive-information-type-in-scc-powershell.md#upload-your-rule-package).
+
+
+
+## Part 2: Install and authorize the EDM Upload Agent
+
+During this phase, you'll set up a dedicated user account for Office 365, download and install the EDM Upload Agent, and authorize the tool.
+
+1. Set up a user account with limited permissions for the EDM Upload Agent. (See [Add users to Office 365](https://docs.microsoft.com/office365/admin/add-users/add-users?view=o365-worldwide).) The user account you create should have:
+
+    - Read access to your data file (This is the .csv or .tsv you created in [Part 1](#part-1-set-up-your-tabular-data-source-for-edm).)
+    - Write access to the location you'll use for storing hashed data (this can be a folder on a local drive)
+
+2. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639). Make sure to note the installation location (such as `C:\`). 
+
+3. To authorize the EDM Upload Agent, run the following command in Windows Command Prompt:
+
+    `EdmUploadAgent.exe /Authorize`
+
+4. When prompted, log in using the account credentials you created in step 1 of this procedure. 
+
+    > [!TIP]
+    > If you get any error messages, repeat steps 3 and 4.
+
+5. Proceed to the next section.
+
+
+
+## Part 3: Hash the sensitive data and upload it
+
+During this phase, you hash the sensitive data, and upload the hashed data using the EDMUploadAgent. 
+
+> [!NOTE]
+> The following procedure describes how to upload the data to a single server; however, you could use multiple servers.
+
+1. To hash the data, run the following command in Windows Command Prompt:
+
+    `EdmUploadAgent.exe /CreateHash /DataStoreName <DataStoreName> /DataFile <DataFilePath> /HashLocation <HashedFileLocation>`
+
+    Example: `EdmUploadAgent.exe /CreateHash /DataStoreName EmployeeDB /DataFile C:\Edm\Data\EmployeeData.csv /HashLocation C:\Edm\Hash` 
+
+2. To upload the hashed data, run the following command in Windows Command Prompt:
+
+    `EdmUploadAgent.exe /UploadHash /DataStoreName <DataStoreName> /HashFile <HashedSourceFilePath>`
+
+    Example: `EdmUploadAgent.exe /UploadHash /DataStoreName EmployeeDB /HashFile C:\Edm\Hash\EmployeeData.EdmHash` 
+
+3. To see a list of uploaded data stores, run the following command in Windows Command Prompt:
+
+    `EdmUploadAgent.exe /GetDataStore`
+
+    You'll see a list of data stores and when they were last updated. Here's an example:
+
+    ![Example of GetDataStore cmdlet and results](media/EDM-GetDataStore-example.png)
+
+4. To see a list of upload sessions for a single data store, run the following command in Windows Command Prompt:
+
+    `EdmUploadAgent.exe /GetSession /DataStoreName <DataStoreName>`
+
+    For example, the cmdlet `EdmUploadAgent.exe /GetSession /DataStoreName patient` displays a list of upload sessions for the *Patient* data store.
+
+    ![Example of EDM upload sessions for Patient data store](media/EDM-GetDataStore-sessionsexample.png)
+
+5. Proceed to the next section.
+
+## Part 4: Create a rule package with exact matching
+
 
 3. Proceed to the next section.
 
