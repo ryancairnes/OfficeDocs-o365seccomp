@@ -35,10 +35,11 @@ The following table summarizes the protection features described in this article
 |Protection  |Subscription requirement  |
 |---------|---------|
 |Anti-malware protection    | [Exchange Online Protection](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description) (EOP)        |
-|Protection from malicious URLs and files     | [Office 365 Advanced Threat Protection](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)        |
+|Protection from malicious URLs and files in email and Office documents    | [Office 365 Advanced Threat Protection](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)        |
 |Anti-phishing protection    | EOP        |
 |Anti-spam protection     | EOP        |
-|Zero-hour auto purge     | EOP        |
+|Zero-hour auto purge (for email)    | EOP        |
+|Audit logging (for reporting)    | [Exchange Online](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description)        |
 
 To learn more about threat protection features and subscriptions, see the following resources:
 - [Office 365 Advanced Threat Protection Service Description](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)
@@ -193,7 +194,7 @@ To learn more about your anti-spam policy options, see [Configure the anti-spam 
 
 In addition to configuring protection from malware, malicious URLs and files, phishing, and spam, we recommend that you configure zero-hour auto purge and audit logging.
 
-### Zero-hour auto purge
+### Zero-hour auto purge for email
 
 [Zero-hour auto purge](zero-hour-auto-purge.md) (ZAP) is available in subscriptions that include [EOP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description). This protection is turned on by default; however, the following conditions must be met for protection to be in effect:
 
@@ -203,7 +204,7 @@ In addition to configuring protection from malware, malicious URLs and files, ph
 
 To learn more, see [Zero-hour auto purge - protection against spam and malware](zero-hour-auto-purge.md).
 
-### Audit logging
+### Audit logging for reporting and investigation
 
 Audit logging is available in subscriptions that include [Exchange Online](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description). In order to view data in threat protection reports, such as the [Security Dashboard](security-dashboard.md), [email security reports](view-email-security-reports.md), and [Explorer](use-explorer-in-security-and-compliance.md), audit logging must be turned on for your organization. To learn more, see [Turn Office 365 audit log search on or off](turn-audit-log-search-on-or-off.md).
 
