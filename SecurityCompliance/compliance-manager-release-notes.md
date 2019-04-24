@@ -41,3 +41,35 @@ You can use the updated [Compliance Manager (Version 3 Preview)](https://service
     - Ownership
     - Dimensions
     - Microsoft
+
+## Known issues
+
+For general information about Compliance Manager v3 Public Preview, LINK TO MAIN TOPIC
+
+The following sections cover known issues that are intended to be resolved in an upcoming release of Compliance Manager v3.
+
+### Compliance Score
+
+When Actions are marked as Not in Scope, the score assigned to the Action is not excluded from the Compliance Score calculation. Actions marked Not in Scope should not increase your Compliance Score.
+
+### Customization
+
+Adding custom Controls enables you to add a new control to an existing control family, but it does not allow you to add a new Control Family.
+
+The Public Preview release does not support linking Actions or adding Actions or Controls to an Assessment.
+
+### Filters
+
+Filtering on Action Items or Controls does not consistently produce correct results.
+
+### Locking and Archiving
+
+Archived Templates can be edited, and they should not be editable. Similarly, locked Templates allow for Assessment creation when they should not. Locking a Template is meant to prevent it from being used to create Assessments.
+
+### Exporting
+
+Exporting a Template to JSON fails when the Template’s status is set to Imported or Pending Approval.
+
+### Supported Browsers
+
+The latest versions of Microsoft Edge, Chrome, and Safari are supported. The preview version of Microsoft Edge is not supported but has no known issues. Internet Explorer is not supported in Compliance Manager Public Preview. Note that there may be instances where updated data does not appear until your browser is refreshed.

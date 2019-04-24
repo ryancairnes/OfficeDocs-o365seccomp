@@ -19,6 +19,61 @@ description: "Microsoft Compliance Manager is a free workflow-based risk assessm
 > [!IMPORTANT]
 > Microsoft Compliance Manager is a dashboard and management tool that provides a summary of your data protection and compliance stature and recommendations to improve data protection and compliance. The customer actions provided in Compliance Manager are recommendations; it is up to your organization to evaluate the effectiveness of these recommendations in their respective regulatory environment prior to implementation. Recommendations found in Compliance Manager should not be interpreted as a guarantee of compliance.
 
+## Getting started
+
+## Step 1: Access
+
+You access Compliance Manager from the Service Trust Portal. Anyone with a Microsoft account or Azure Active Directory organizational account can access Compliance Manager.
+  
+![Compliance Manager - Accessing Compliance Manager from STP menu](media/14be4cac-2380-49bc-9b36-210da8cafdfa.png)
+  
+1. Go to [https://servicetrust.microsoft.com](https://servicetrust.microsoft.com/).
+    
+2. Sign in with your Microsoft service account. This is your Office 365, Microsoft 365, or Azure Active Directory (Azure AD) user account.
+    
+3. In the Service Trust Portal, select **Compliance Manager**.
+    
+4. When the Non-Disclosure Agreement is displayed, read it, and then click **Agree** to continue. You'll only have to do this once, and then the Compliance Manager dashboard is displayed. 
+
+    To get you started, we've added the following Assessments by default:
+    
+    ![The default Assessments in Compliance Manager](media/8c59b45a-706a-4362-a7ba-2cb782931bf7.png)
+    
+5. Click ![Help icon in Compliance Manager](media/c1b3092f-6ac7-43ab-b1c4-63a54598450c.png) **Help** to take a short tour of Compliance Manager. 
+
+## Administration
+
+There are specific administrative functions that are only available to the tenant administrator account, and will only be visible when logged in as a global administrator.
+  
+> [!NOTE]
+> The Access to Restricted Documents permission in the drop-down list will allow administrators to give users access to restricted documents that Microsoft shares on the Service Trust Portal. The Restricted Documents feature isn't available, but is coming soon. 
+  
+### Assigning Compliance Manager roles to users
+
+Each Compliance Manager role has slightly different permissions. You can view the permissions assigned to each role, see which users are in which roles, and add or remove users from that role through the Service Trust Portal by selecting the **Admin** menu item, and then choosing **Settings**. 
+  
+![STP Admin menu - Settings selected](media/65a82b1b-d462-452f-988b-7e4263bd638e.png)
+  
+To add or remove users from Compliance Manager roles.
+  
+1. Go to [https://servicetrust.microsoft.com](https://servicetrust.microsoft.com).
+    
+2. Sign in with your Azure Active Directory global administrator account.
+    
+3. On the Service Trust Portal top menu bar, click **Admin** and then choose **Settings**. 
+    
+4. In the **Select Role** drop-down list, click the role that you want to manage. 
+    
+5. Users added to the each role are listed on the **Select Role** page. 
+    
+6. To add users to this role, click **Add**. In the **Add Users** dialog, click the user field. You can scroll through the list of available users or begin typing the user name to filter the list based on your search term. Click the user to add that account to the **Add Users** list to be provisioned with that role. If you would like to add multiple users concurrently, begin typing a user name to filter the list, and then click the user to add to the list. Click **Save** to provision the selected role to these users. 
+    
+    ![Compliance Manager - provision roles - add users](media/2f386f82-2bf8-4e95-ab41-1724b752b508.png)
+  
+7. To remove users from this role, select the user(s) and click **Delete**. 
+    
+    ![Compliance Manager - Provision Roles - remove user](media/17004def-604f-471d-a54d-f678fcc01c1e.png)
+
 ## Groups
 
 Groups are containers that allow you to logically organize Assessments and that share common information and workflow tasks between Assessments that have the same or related customer managed controls. You can group Assessments by year, standard, service, team, division, or agencies within your organization to help minimize customer-managed Actions:
@@ -247,6 +302,37 @@ Actions are the assigned tasks for implementing the requirements of a standard o
     The user will receive notification of their action item assignment and any notes you have provided.
     
 The notes that are associated with the action item are persisted in the notes section, available for the next time the action item is assigned. These notes are not read-only, can be edited, replaced or removed by the person assigning the action item.
+
+### Reassign action items
+
+This function enables an organization to remove any active or outstanding dependencies on the user account by reassigning all action item ownership (which includes both active and completed action items) from the returned user account to a new user selected below. This action does not change document upload history for the returned user account. 
+  
+ To reassign action items to another user:
+  
+1. Click the input box to browse for and select another user within the organization to whom the returned user's action items should be assigned.
+    
+2. Select **Replace** to reassign all control action items from the returned user to the newly selected user. 
+    
+3. A confirmation dialog box appear stating "This will reassign all control action items from the current user to the selected user. This action cannot be undone. Are you sure you want to continue?"
+    
+4. To continue click **OK**,, otherwise click **Cancel**. 
+    
+> [!NOTE]
+> All action items (both active and completed) will be assigned to the newly selected user. However, this action does not affect the document upload history; any documents uploaded by the previously assigned user will still show the date/time and name of the previously assigned user. 
+  
+Changing the document upload history to remove the previously assigned user will have to be done as a manual process. In that case, the administrator will need to:
+  
+1. Open the previously downloaded Export report.
+  
+2. Identify and navigate to the desired control action item.
+  
+3. Click **Manage Documents** to navigate to the evidence repository for that control. 
+  
+4. Download the document.
+  
+5. Delete the document in the evidence repository.
+  
+6. Re-upload the document. The document will now have a new upload date, time and Uploaded By username. 
 
 ### Viewing action items
 
