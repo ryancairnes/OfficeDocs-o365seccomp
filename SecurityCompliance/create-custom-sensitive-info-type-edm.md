@@ -24,8 +24,15 @@ With Office 365 for business, you can define [custom sensitive information types
 
 What if you wanted to create a custom sensitive information type that is more dynamic, and more scalable? And what if you wanted a custom sensitive information type that uses specific data values, instead of patterns and proximity? With Exact Data Match (EDM) classification, you can create custom sensitive information types that refer to specific values in a secure database. The database can be refreshed weekly, and it can contain up to ten million rows of data. So as employees, patients, or clients come and go, and records change, your custom sensitive information types remain current and applicable. And, you can use EDM classification with policies, such as [data loss prevention policies](data-loss-prevention-policies.md) or [Microsoft Cloud App Security file policies](https://docs.microsoft.com/cloud-app-security/data-protection-policies).
 
+With EDM classification, you have a custom sensitive information type that:
+- is dynamic (refreshable weekly);
+- results in fewer false-positives;
+- is more scalable;
+- handles sensitive information more securely; and
+- can be used with several Microsoft cloud capabilities.
+
 > [!NOTE]
-> **EDM features are currently in preview** and are supported for Exchange Online. 
+> **EDM classification features are currently in preview**. These features are currently supported for Exchange Online and Microsoft Cloud App Security. 
 
 ## Required licenses and permissions
 
