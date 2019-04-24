@@ -3,7 +3,7 @@ title: "Search for content in Office 365"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 4/4/2018
+ms.date: 
 ms.audience: Admin
 ms.topic: hub-page
 ms.service: O365-seccomp
