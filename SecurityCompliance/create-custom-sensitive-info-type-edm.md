@@ -55,7 +55,7 @@ During this phase, you structure your sensitive data in a .csv file, create a .x
     - The data file can include up to five indexed columns per data source.
     - Data refresh for each data source can occur weekly (but not more often during preview).
     
-    For our example, we use a database called SampleDataStore.csv. This database includes columns, such as id, firstname, lastname, title, and so on.
+    As an example, we use a database called *SampleDataStore.csv*. This database includes columns, such as *id*, *firstname*, *lastname*, *title*, and so on.
 
 2. Set up a file in .xml format that represents the schema for your data file. Name this schema file `edm.xml`. As an example, the following .xml file defines the schema for our example *SampleDataStore* database.
     
@@ -73,6 +73,7 @@ During this phase, you structure your sensitive data in a .csv file, create a .x
       </DataStore>
     </EdmSchema>
     ```
+    For each column in the database, you indicate its field name, whether that column will contain unique values, and whether that column should be searchable (a value of *true* indicates it should be searchable). Select up to five columns per database to be searchable. These are the columns that will be used with EDM classification.
 
 3. [Connect to Exchange Online Protection PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-eop/connect-to-exchange-online-protection-powershell?view=exchange-ps), replacing `https://ps.protection.outlook.com/powershell-liveid` with `https://ps.compliance.protection.outlook.com/powershell-liveid`.
 
