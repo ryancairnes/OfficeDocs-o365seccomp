@@ -22,7 +22,7 @@ description: "Create custom sensitive information types with Exact Data Match."
 
 With Office 365 for business, you can define [custom sensitive information types](custom-sensitive-info-types.md) that you can use to help prevent people from inadvertently or inappropriately sharing sensitive data within your organization. For example, you can use the Security & Compliance Center or PowerShell to define a custom sensitive information type based on patterns, evidence (evidence includes keywords like *employee*, *badge*, *ID*, and so on), character proximity (how close evidence is to characters in a particular pattern), and confidence levels. While these methods meet compliance needs for many organizations, they are static in nature and have certain limitations. (To learn more, see [Create a custom sensitive information type in the Security & Compliance Center](create-a-custom-sensitive-information-type.md).)
 
-What if you wanted to create a custom sensitive information type that is dynamic, and more scalable? And what if you wanted a custom sensitive information type that uses specific data values, rather than patterns and proximity? With Exact Data Match (EDM) classification (now in preview!) you can create custom sensitive information types that refer to specific values in a secure database. The database can be refreshed weekly, and it can contain up to ten million rows of data. So as employees, patients, or clients come and go, and records change, your custom sensitive information types remain current and applicable. And, you can use EDM classification with policies, such as [data loss prevention policies](data-loss-prevention-policies.md) or Microsoft Cloud services, such as [Microsoft Cloud App Security](https://docs.microsoft.com/cloud-app-security).
+What if you wanted to create a custom sensitive information type that is dynamic, and more scalable? And what if you wanted a custom sensitive information type that uses specific data values, rather than patterns and proximity? With Exact Data Match (EDM) classification (now in preview!) you can create custom sensitive information types that refer to specific values in a secure database. The database can be refreshed weekly, and it can contain up to ten million rows of data. So as employees, patients, or clients come and go, and records change, your custom sensitive information types remain current and applicable. And, you can use EDM classification with policies, such as [data loss prevention policies](data-loss-prevention-policies.md) or [Microsoft Cloud App Security file policies](https://docs.microsoft.com/cloud-app-security/data-protection-policies).
 
 > [!NOTE]
 > **EDM features are currently in preview** and are supported for Exchange Online. 
@@ -141,15 +141,14 @@ During this phase, you set up a rule package that will be used to determine whic
     To learn more about uploading a rule package, see [Upload your rule package](create-a-custom-sensitive-information-type-in-scc-powershell.md#upload-your-rule-package).
 
 
+## Install and use the EDM Upload Agent tool
 
-## Part 2: Install and authorize the EDM Upload Agent
-
-During this phase, you'll set up a dedicated user account for Office 365, download and install the EDM Upload Agent, and authorize the tool.
+During this phase, you set up a dedicated user account for Office 365, install the EDM Upload Agent tool, use the tool to index your sensitive data, and then upload the indexed data.
 
 1. Set up a user account with limited permissions for the EDM Upload Agent. (See [Add users to Office 365](https://docs.microsoft.com/office365/admin/add-users/add-users?view=o365-worldwide).) The user account you create should have:
 
-    - Read access to your data file (This is the .csv or .tsv you created in [Part 1](#part-1-set-up-your-tabular-data-source-for-edm).)
-    - Write access to the location you'll use for storing hashed data (this can be a folder on a local drive)
+    - Read access to your data file (This is the .csv you created in [Part 1](#part-1-set-up-your-tabular-data-source-for-edm).)
+    - Write access to the location you'll use for storing hashed data (this can be a folder on a local drive of the user's machine)
 
 2. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639). Make sure to note the installation location (such as `C:\`). 
 
@@ -159,58 +158,25 @@ During this phase, you'll set up a dedicated user account for Office 365, downlo
 
 4. When prompted, log in using the account credentials you created in step 1 of this procedure. 
 
-    > [!TIP]
-    > If you get any error messages, repeat steps 3 and 4.
-
-5. Proceed to the next section.
-
-
-
-## Part 3: Hash the sensitive data and upload it
-
-During this phase, you hash the sensitive data, and upload the hashed data using the EDMUploadAgent. 
-
-> [!NOTE]
-> The following procedure describes how to upload the data to a single server; however, you could use multiple servers.
-
-1. To hash the data, run the following command in Windows Command Prompt:
+5. To index your sensitive data, run the following command in Windows Command Prompt:
 
     `EdmUploadAgent.exe /CreateHash /DataStoreName <DataStoreName> /DataFile <DataFilePath> /HashLocation <HashedFileLocation>`
 
     Example: `EdmUploadAgent.exe /CreateHash /DataStoreName EmployeeDB /DataFile C:\Edm\Data\EmployeeData.csv /HashLocation C:\Edm\Hash` 
 
-2. To upload the hashed data, run the following command in Windows Command Prompt:
+6. To upload the hashed data, run the following command in Windows Command Prompt:
 
     `EdmUploadAgent.exe /UploadHash /DataStoreName <DataStoreName> /HashFile <HashedSourceFilePath>`
 
     Example: `EdmUploadAgent.exe /UploadHash /DataStoreName EmployeeDB /HashFile C:\Edm\Hash\EmployeeData.EdmHash` 
 
-3. To see a list of uploaded data stores, run the following command in Windows Command Prompt:
-
-    `EdmUploadAgent.exe /GetDataStore`
-
-    You'll see a list of data stores and when they were last updated. Here's an example:
-
-    ![Example of GetDataStore cmdlet and results](media/EDM-GetDataStore-example.png)
-
-4. To see a list of upload sessions for a single data store, run the following command in Windows Command Prompt:
-
-    `EdmUploadAgent.exe /GetSession /DataStoreName <DataStoreName>`
-
-    For example, the cmdlet `EdmUploadAgent.exe /GetSession /DataStoreName patient` displays a list of upload sessions for the *Patient* data store.
-
-    ![Example of EDM upload sessions for Patient data store](media/EDM-GetDataStore-sessionsexample.png)
-
-5. Proceed to the next section.
-
-## Part 4: Create a rule package with exact matching
 
 
-3. Proceed to the next section.
 
-## Part 5: Apply EDM to a DLP policy
 
-EDM can be used with [Office 365 DLP policies](data-loss-prevention-policies.md) and [Microsoft Cloud App Security file policies](https://docs.microsoft.com/cloud-app-security/data-protection-policies). The following procedure describes how to use EDM with a DLP policy that you create in the Office 365 Security & Compliance Center.
+## Use EDM classification (Example: DLP policy)
+
+EDM can be used with [Office 365 DLP policies](data-loss-prevention-policies.md) and [Microsoft Cloud App Security file policies](https://docs.microsoft.com/cloud-app-security/data-protection-policies). The following procedure describes how to use EDM with a DLP policy that is created in the Office 365 Security & Compliance Center.
 
 ### To create a new DLP policy with EDM
 
