@@ -20,12 +20,12 @@ description: "Create custom sensitive information types with Exact Data Match."
 
 ## Overview
 
-With Office 365 for business, you can define [custom sensitive information types](custom-sensitive-info-types.md) that you can use to help prevent people from inadvertently or inappropriately sharing sensitive data within your organization. For example, you can use the Security & Compliance Center or PowerShell to define a custom sensitive information type based on patterns
+With Office 365 for business, you can define [custom sensitive information types](custom-sensitive-info-types.md) that you can use to help prevent people from inadvertently or inappropriately sharing sensitive data within your organization. For example, you can use the Security & Compliance Center or PowerShell to define a custom sensitive information type based on patterns, evidence (evidence includes keywords like *employee*, *badge*, *ID*, and so on), character proximity (how close evidence is to characters in a particular pattern), and confidence levels. While these methods meet compliance needs for many organizations, they are static in nature and have certain limitations. (To learn more, see [Create a custom sensitive information type in the Security & Compliance Center](create-a-custom-sensitive-information-type.md).)
 
-**Now in preview, you can create custom sensitive information types that use Exact Data Match (EDM) classification**. With this method, you can create a dynamic sensitive information type that works with secure, refreshable data. EDM looks for exact matches, not just patterns or proximity.     
+What if you wanted to create a custom sensitive information type that is dynamic, and more scalable? And what if you wanted a custom sensitive information type that uses specific data values, rather than patterns and proximity? With Exact Data Match (EDM) classification (now in preview!) you can create custom sensitive information types that refer to specific values in a secure database. The database can be refreshed weekly, and it can contain up to ten million rows of data. So as employees, patients, or clients come and go, and records change, your custom sensitive information types remain current and applicable. And, you can use EDM classification with policies, such as [data loss prevention policies](data-loss-prevention-policies.md) or Microsoft Cloud services, such as [Microsoft Cloud App Security](https://docs.microsoft.com/cloud-app-security).
 
 > [!NOTE]
-> This feature is currently in preview. While in preview, EDM is supported for Exchange Online. 
+> **EDM features are currently in preview** and are supported for Exchange Online. 
 
 ## Required licenses and permissions
 
