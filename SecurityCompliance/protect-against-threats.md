@@ -191,7 +191,7 @@ To learn more about your anti-spam policy options, see [Configure the anti-spam 
 
 ## Part 5 - Additional settings to configure
 
-In addition to configuring protection from malware, malicious URLs and files, phishing, and spam, we recommend that you configure zero-hour auto purge and audit logging.
+In addition to configuring protection from malware, malicious URLs and files, phishing, and spam, we recommend that you configure your zero-hour auto purge and audit logging settings.
 
 ### Zero-hour auto purge for email
 
