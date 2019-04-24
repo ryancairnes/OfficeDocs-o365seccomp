@@ -166,7 +166,6 @@ During this phase, you set up a dedicated user account for Office 365, install t
     Example: `EdmUploadAgent.exe /UploadHash /DataStoreName EmployeeDB /HashFile C:\Edm\Hash\EmployeeData.EdmHash` 
 
 
-
 ## Use EDM classification with your Microsoft cloud services (Example: DLP policy)
 
 EDM can be used with information protection features, such as [Office 365 DLP policies](data-loss-prevention-policies.md) and [Microsoft Cloud App Security file policies](https://docs.microsoft.com/cloud-app-security/data-protection-policies). As an example, the following procedure describes how to use EDM with a DLP policy that is created in the Office 365 Security & Compliance Center.
@@ -205,6 +204,10 @@ EDM can be used with information protection features, such as [Office 365 DLP po
 
 > [!TIP]
 > Allow approximately one hour for your new DLP policy to work its way through your data center.
+
+## Refreshing the sensitive information database
+
+
 
 ## Related articles
 
