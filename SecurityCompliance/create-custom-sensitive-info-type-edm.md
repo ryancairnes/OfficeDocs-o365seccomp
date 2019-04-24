@@ -20,6 +20,13 @@ description: "Create custom sensitive information types with Exact Data Match."
 
 ## Overview
 
+
+With Office 365 for business, you can define [custom sensitive information types](custom-sensitive-info-types.md) in the Office 365 Security & Compliance Center or by using PowerShell. This is helpful if you want to create a custom sensitive information type that is static. 
+
+Now in preview, define data loss prevention (DLP) policies to prevent people from inadvertently or inappropriately sharing sensitive data within your organization. 
+
+Now, you can use Exact Data Match (EDM) classification capabilities to  
+
 Read this article to create a [custom sensitive information type](custom-sensitive-info-types.md) using Exact Data Match (EDM) classification. With EDM capabilities, you can define DLP policies that detect sensitive information, such as credit card numbers, employee identification numbers, patient record details, and more, by looking for specific data values in a database. Then, when people in your organization attempt to send sensitive information that matches information in the designated database, they'll be warned or prevented from sending the email (according to how your DLP policies are configured).
 
 EDM looks for exact matches, and not just patterns or proximity.    
