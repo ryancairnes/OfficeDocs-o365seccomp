@@ -46,8 +46,6 @@ Setting up and configuring EDM involves first setting up a secure, refreshable d
 
 ### Set up your secure database of sensitive information
 
-During this phase, you structure your sensitive data in a .csv file, create a .xml file to define the data file schema, and then configure Exchange Online Protection to refer to the schema.
-
 1. Structure the sensitive data you want to use for EDM in a .csv file. Make sure the first row of the .csv file includes the names of the fields you'll use for EDM. For example, you might have field names, such as `id`, `firstname`, `lastname`, and so on. Keep the following limits in mind:
 
     - The data file can include up to ten million rows of sensitive data across all data sources.
@@ -85,9 +83,7 @@ During this phase, you structure your sensitive data in a .csv file, create a .x
 
 Now that your database is set up, the next step is to set up a rule package for EDM.
 
-### Set up a rule package to enable EDM usage
-
-During this phase, you set up a rule package that will be used to determine which columns in your database will be used for EDM classification. 
+### Set up a rule package for EDM
 
 1. Create a rule package in .xml format (with Unicode encoding), similar to the following example. (You can copy and modify our code to suit your organization's needs.)
 
@@ -171,11 +167,9 @@ During this phase, you set up a dedicated user account for Office 365, install t
 
 
 
+## Use EDM classification with your Microsoft cloud services (Example: DLP policy)
 
-
-## Use EDM classification (Example: DLP policy)
-
-EDM can be used with [Office 365 DLP policies](data-loss-prevention-policies.md) and [Microsoft Cloud App Security file policies](https://docs.microsoft.com/cloud-app-security/data-protection-policies). The following procedure describes how to use EDM with a DLP policy that is created in the Office 365 Security & Compliance Center.
+EDM can be used with information protection features, such as [Office 365 DLP policies](data-loss-prevention-policies.md) and [Microsoft Cloud App Security file policies](https://docs.microsoft.com/cloud-app-security/data-protection-policies). As an example, the following procedure describes how to use EDM with a DLP policy that is created in the Office 365 Security & Compliance Center.
 
 ### To create a new DLP policy with EDM
 
