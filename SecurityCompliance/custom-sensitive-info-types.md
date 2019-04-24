@@ -6,7 +6,7 @@ manager: laurawi
 ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
-ms.date: 04/18/2019
+ms.date: 04/23/2019
 localization_priority: Priority
 ms.collection: 
 - M365-security-compliance
@@ -20,9 +20,9 @@ description: "Get an overview of custom sensitive information types for DLP."
 
 ## Overview of custom sensitive information types
 
-Data loss prevention (DLP) in Office 365 includes many built-in sensitive information types that are ready for you to use in your DLP policies. These built-in types can help identify and protect credit card numbers, bank account numbers, passport numbers, and more. 
+Office 365 includes many built-in sensitive information types that are ready for you to use in your organization, such as for [data loss prevention](data-loss-prevention-policies.md) (DLP), or with [Microsoft Cloud App Security](https://docs.microsoft.com/cloud-app-security). Built-in sensitive information types can help identify and protect credit card numbers, bank account numbers, passport numbers, and more, based on patterns that are defined by a regular expression (regex) or a function. (See [What the sensitive information types look for](what-the-sensitive-information-types-look-for.md).)
 
-But if you need to identify and protect a different type of sensitive information (for example, employee IDs or project numbers that uses a format specific to your organization) you can create a custom sensitive information type.
+But what if you need to identify and protect a different type of sensitive information, such as employee IDs or project numbers that uses a format specific to your organization? To do this, you can create a custom sensitive information type.
 
 The fundamental parts of a custom sensitive information type are:
 
@@ -48,5 +48,5 @@ To create custom sensitive information types in the Security & Compliance Center
 
 - **Use PowerShell** You can set up custom sensitive information types using PowerShell. Although this method is more complex than using the UI, you have more configuration options. See [Create a custom sensitive information type in Security & Compliance Center PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md).
 
-- **Use EDM** (NEW!) You can set up custom sensitive information types using Exact Data Match (EDM) capabilities. This method enables you to create a sensitive information type using a tabular data source. See [Create a custom sensitive information type for DLP with Exact Data Match (EDM)](create-custom-sensitive-info-type-edm.md).
+- **Use EDM** (NEW!) You can set up custom sensitive information types using Exact Data Match (EDM) capabilities. This method enables you to create a dynamic sensitive information type using secure, refreshable data. See [Create a custom sensitive information type for DLP with Exact Data Match (EDM)](create-custom-sensitive-info-type-edm.md).
 
