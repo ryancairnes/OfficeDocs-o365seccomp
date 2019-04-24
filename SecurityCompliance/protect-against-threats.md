@@ -27,23 +27,24 @@ Office 365 includes a variety of threat protection features. Here's a quick-star
 
 ### Subscriptions
 
-Threat protection features are included in all Office 365 subscriptions; however, some subscriptions include more advanced features. For example, Office 365 Advanced Threat Protection includes ATP Safe Links and ATP Safe Attachments. 
+Threat protection features are included in all Office 365 subscriptions; however, some subscriptions include more advanced features. For example, Office 365 Advanced Threat Protection (ATP) includes ATP Safe Links and ATP Safe Attachments. 
 
-The following table summarizes the protection features described in this article together with subscription requirements:
+The following table summarizes the protection features included in this article together with the minimum subscription requirements:
 
 
-|Protection  |Subscription requirement  |
+|Protection type  |Subscription requirement  |
 |---------|---------|
 |Anti-malware protection    | [Exchange Online Protection](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description) (EOP)        |
-|Protection from malicious URLs and files in email and Office documents    | [Office 365 Advanced Threat Protection](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)        |
-|Anti-phishing protection    | EOP        |
-|Anti-spam protection     | EOP        |
-|Zero-hour auto purge (for email)    | EOP        |
-|Audit logging (for reporting)    | [Exchange Online](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description)        |
+|Protection from malicious URLs and files in email and Office documents    | [Office 365 ATP](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)        |
+|Anti-phishing protection    | [EOP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description)      |
+|Advanced anti-phishing protection    | [Office 365 ATP](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)        |
+|Anti-spam protection     | [EOP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description)       |
+|Zero-hour auto purge (for email)    | [EOP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description) (EOP)        |
+|Audit logging (this is used for reporting purposes)    | [Exchange Online](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description)        |
 
 To learn more about threat protection features and subscriptions, see the following resources:
-- [Office 365 Advanced Threat Protection Service Description](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)
-- [Exchange Online Protection Service Description](https://docs.microsoft.com/en-us/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-service-description)
+- [Office 365 ATP Service Description](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)
+- [EOP Service Description](https://docs.microsoft.com/en-us/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-service-description)
 - [Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-securitycompliance-center)
 
 ### Roles and permissions
@@ -60,7 +61,7 @@ To learn more, see [Permissions in the Office 365 Security &amp; Compliance Cent
 
 ## Part 1 - Anti-malware protection
 
-[Anti-malware protection](anti-malware-protection.md) is available in subscriptions that include [Exchange Online Protection](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description) (EOP). 
+[Anti-malware protection](anti-malware-protection.md) is available in subscriptions that include [EOP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description) (EOP). 
 
 1. In the [Security & Compliance Center](https://protection.office.com), choose **Threat management** > **Policy** > **Anti-malware**.
 
@@ -78,7 +79,7 @@ To learn more about anti-malware policy options, see [Configure anti-malware pol
 
 ## Part 2 - Protection from malicious URLs and files
 
-Time-of-click protection from malicious URLs and files is available in subscriptions that include [Office 365 Advanced Threat Protection](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description) (ATP), and is set up through [ATP Safe Attachments](atp-safe-attachments.md) and [ATP Safe Links](atp-safe-links.md) policies.
+Time-of-click protection from malicious URLs and files is available in subscriptions that include [Office 365 ATP](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description) (ATP), and is set up through [ATP Safe Attachments](atp-safe-attachments.md) and [ATP Safe Links](atp-safe-links.md) policies.
 
 ### ATP Safe Attachments policies
 
