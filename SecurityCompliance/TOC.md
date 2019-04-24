@@ -44,14 +44,14 @@
 ### [How DLP works between the Security & Compliance Center and Exchange admin center](how-dlp-works-between-admin-centers.md)
 ## [Use the sensitive information types](custom-sensitive-info-types.md)
 ### [Built-in sensitive information types](what-the-sensitive-information-types-look-for.md)
-### [DLP functions for sensitive information](what-the-dlp-functions-look-for.md)
 ### [Customize a built-in sensitive information type](customize-a-built-in-sensitive-information-type.md)
+### [DLP functions for sensitive information](what-the-dlp-functions-look-for.md)
+### [Create a custom sensitive information type with Exact Data Match](create-custom-sensitive-info-type-edm.md)
 ### [Create a custom sensitive information type in the Security & Compliance Center](create-a-custom-sensitive-information-type.md)
 ### [Create a custom sensitive information type using PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md)
-### [Create a custom sensitive information type with Exact Data Match (EDM) (Preview)](create-custom-sensitive-info-type-edm.md)
-### [Watch an extended overview of customizing DLP](https://go.microsoft.com/fwlink/?linkid=852306)
 ### [Create a keyword dictionary](create-a-keyword-dictionary.md)
 ### [Document Fingerprinting](document-fingerprinting.md)
+### [Watch an extended overview of customizing DLP](https://go.microsoft.com/fwlink/?linkid=852306)
 
 # Records management
 ## [Retention policies](retention-policies.md)
