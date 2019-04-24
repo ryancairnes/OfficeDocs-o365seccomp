@@ -6,7 +6,7 @@ manager: laurawi
 ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
-ms.date: 04/23/2019
+ms.date: 04/24/2019
 localization_priority: Priority
 ms.collection: 
 - M365-security-compliance
@@ -20,7 +20,9 @@ description: "Create custom sensitive information types with Exact Data Match."
 
 ## Overview
 
-With Office 365 for business, you can define [custom sensitive information types](custom-sensitive-info-types.md) that you can use to help prevent people from inadvertently or inappropriately sharing sensitive data within your organization. Now in preview, you can create custom sensitive information types that use Exact Data Match (EDM) classification. With this method, you can create a dynamic sensitive information type that works with secure, refreshable data. EDM looks for exact matches, not just patterns or proximity.     
+With Office 365 for business, you can define [custom sensitive information types](custom-sensitive-info-types.md) that you can use to help prevent people from inadvertently or inappropriately sharing sensitive data within your organization. For example, you can use the Security & Compliance Center or PowerShell to define a custom sensitive information type based on patterns
+
+**Now in preview, you can create custom sensitive information types that use Exact Data Match (EDM) classification**. With this method, you can create a dynamic sensitive information type that works with secure, refreshable data. EDM looks for exact matches, not just patterns or proximity.     
 
 > [!NOTE]
 > This feature is currently in preview. While in preview, EDM is supported for Exchange Online. 
