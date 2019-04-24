@@ -201,29 +201,12 @@ Audit logging is available in subscriptions that include [Exchange Online](https
 
 ## Post-setup tasks
 
-### Watch for new features and service updates
+After you have configured your threat protection features, make sure to monitor how those features are working, review and revise your policies as needed, and watch for new features and service updates.
 
-- [Set up the Standard or Targeted release options](https://docs.microsoft.com/office365/admin/manage/release-options-in-office-365?view=o365-worldwide)
+|What to do  |Resources to learn more  |
+|---------|---------|
+|See how threat protection features are working for your organization by viewing reports    |[Security dashboard](security-dashboard.md)<br/>[Email security reports](view-email-security-reports.md)<br/>[Reports for Office 365 ATP](view-reports-for-atp.md)<br/>[Threat Explorer](use-explorer-in-security-and-compliance.md)    |
+|Periodically review and revise your threat protection policies as needed    |[Secure Score](microsoft-secure-score.md)<br/>[Smart reports and insights](reports-and-insights-in-security-and-compliance.md)<br/>[Office 365 threat investigation and response features](keep-users-safe-with-office-365-ti.md)          |
+|Watch for new features and service updates     |[Standard and Targeted release options](https://docs.microsoft.com/office365/admin/manage/release-options-in-office-365?view=o365-worldwide)<br/>[Message Center](https://docs.microsoft.com/office365/admin/manage/message-center?view=o365-worldwide)<br/>[Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=advanced%2Cthreat%2Cprotection)<br/>[Service Descriptions](https://docs.microsoft.com/office365/servicedescriptions/office-365-service-descriptions-technet-library)         |
 
-- [Go to your Message center to view feature announcements](https://docs.microsoft.com/office365/admin/manage/message-center?view=o365-worldwide) 
 
-- [Visit the Microsoft 365 Roadmap to see status of new features](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=advanced%2Cthreat%2Cprotection)
-
-- [Review the Office 365 Service Descriptions](https://docs.microsoft.com/office365/servicedescriptions/office-365-service-descriptions-technet-library)
-
-### See how threat protection features are working for your organization
-
-- [Visit your security dashboard](security-dashboard.md)
-
-- [View the reports for Office 365 ATP](view-reports-for-atp.md), including [Explorer](use-explorer-in-security-and-compliance.md)
-
-- [View your email security reports](view-email-security-reports.md)
-
-### Periodically review and revise your threat protection policies
-
-- [Review your Secure Score](microsoft-secure-score.md)
-
-- [Use your smart reports and insights in the Security &amp; Compliance Center](reports-and-insights-in-security-and-compliance.md) 
-
-- [Keep users safe with Office 365 threat investigation and response features](keep-users-safe-with-office-365-ti.md) 
- 
