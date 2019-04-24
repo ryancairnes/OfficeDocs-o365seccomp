@@ -40,7 +40,7 @@ The process of working with EDM consists of these main phases:
 1. 
 
 
-## Set up your sensitive information database and rule package for EDM
+## Part 1: Set up your sensitive information database and rule package for EDM
 
 Setting up and configuring EDM involves first setting up a secure, refreshable database that contains the sensitive information you'll use for EDM classification, and then creating a rule package that will be used with an upload agent and with policies, such as data loss prevention (DLP) policies.
 
@@ -136,7 +136,7 @@ Now that your database is set up, the next step is to set up a rule package for 
     To learn more about uploading a rule package, see [Upload your rule package](create-a-custom-sensitive-information-type-in-scc-powershell.md#upload-your-rule-package).
 
 
-## Install and use the EDM Upload Agent tool
+## Part 2: Install and use the EDM Upload Agent tool
 
 During this phase, you set up a dedicated user account for Office 365, install the EDM Upload Agent tool, use the tool to index your sensitive data, and then upload the indexed data.
 
@@ -166,7 +166,7 @@ During this phase, you set up a dedicated user account for Office 365, install t
     Example: `EdmUploadAgent.exe /UploadHash /DataStoreName EmployeeDB /HashFile C:\Edm\Hash\EmployeeData.EdmHash` 
 
 
-## Use EDM classification with your Microsoft cloud services (Example: DLP policy)
+## Part 3: Use EDM classification with your Microsoft cloud services (Example: DLP policy)
 
 EDM can be used with information protection features, such as [Office 365 DLP policies](data-loss-prevention-policies.md) and [Microsoft Cloud App Security file policies](https://docs.microsoft.com/cloud-app-security/data-protection-policies). As an example, the following procedure describes how to use EDM with a DLP policy that is created in the Office 365 Security & Compliance Center.
 
@@ -205,13 +205,14 @@ EDM can be used with information protection features, such as [Office 365 DLP po
 > [!TIP]
 > Allow approximately one hour for your new DLP policy to work its way through your data center.
 
-## Refreshing the sensitive information database
-
-
+## Refreshing your sensitive information database
 
 ## Related articles
 
-[Use PowerShell to create a custom sensitive information type in Security & Compliance Center](create-a-custom-sensitive-information-type-in-scc-powershell.md)
+[Built-in sensitive information types and what they look for](what-the-sensitive-information-types-look-for.md)
 
-[Create a custom sensitive information type in the Security & Compliance Center](create-a-custom-sensitive-information-type.md) 
+[Custom sensitive information types](custom-sensitive-info-types.md)
 
+[Overview of data loss prevention policies](data-loss-prevention-policies.md)
+
+[https://docs.microsoft.com/cloud-app-security](https://docs.microsoft.com/cloud-app-security)
