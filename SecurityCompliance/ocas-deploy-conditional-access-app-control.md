@@ -67,7 +67,7 @@ To configure an advanced policy, create an [access policy](ocas-access-policies
 
 3. After the certificate is uploaded, you can create access policies and session policies based on **Device tag** and **Valid client certificate**.
 
-![Conditional access app control device ID](media/image2.png)
+![Conditional access app control device ID](media/OCASimage2.png)
 
 > [!NOTE]
 > A certificate is only requested from a user if the session matches a policy that uses the valid client certificate filter.
