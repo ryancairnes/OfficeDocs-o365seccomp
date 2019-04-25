@@ -178,6 +178,7 @@
 #### [How Office 365 validates the From: address to prevent phishing](how-office-365-validates-the-from-address.md)
 ### [Anti-spoofing protection in Office 365](anti-spoofing-protection.md)
 #### [Learn more about spoof intelligence](learn-about-spoof-intelligence.md)
+#### [Identify suspicious messages in Outlook.com and Outlook on the web](unverified-sender-feature.md)
 
 ## [Encryption in Office 365](encryption.md)
 ### [Set up encryption in Office 365 Enterprise](set-up-encryption.md)
