@@ -28,12 +28,11 @@
 ### [Module 4a - Threat protection strategy, Part I](ciso-workshop-module-4a.md)
 ### [Module 4b - Threat protection strategy, Part II](ciso-workshop-module-4b.md)
 ### [Module 5 - Information protection](ciso-workshop-module-5.md)
-<!--/Training-->
-<!--Devices and PAM-->
-# Protect access to data and services
-## [Protect access to data and services in Office 365](protect-access-to-data-and-services.md)
-<!--/Devices and PAM-->
-<!--Sens Labels and DLP-->
+<!--Pam-->
+# [Protect user and device access](protect-access-to-data-and-services.md)
+## [Privileged access management](privileged-access-management-overview.md)
+## [Configure privileged access management](privileged-access-management-configuration.md)
+<!--/Pam-->
 # Protect information
 ## [Sensitivity labels](sensitivity-labels.md)
 ### [Restrict access to content by using encryption in sensitivity labels](encryption-sensitivity-labels.md)
@@ -82,7 +81,9 @@
 ### [Filter data when importing PST files](filter-data-when-importing-pst-files.md)
 ### [Use network upload to import RMS-encrypted PST files](use-network-upload-to-import-rms-encrypted-pst-files.md)
 ### [FAQ about importing PST files](faqimporting-pst-files-to-office-365.md)
-### [Archiving third-party data in Office 365](archiving-third-party-data.md)
+### [Archive third-party data in Office 365](archiving-third-party-data.md)
+#### [Use sample connectors to archive third-party data](archive-third-party-data-with-sample-connector.md)
+#### [Work with a partner to archive third-party data](work-with-partner-to-archive-third-party-data.md)
 ## Store data
 ### [Enable archive mailboxes](enable-archive-mailboxes.md)
 ### [Overview of unlimited archiving](unlimited-archiving.md)
