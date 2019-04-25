@@ -31,6 +31,7 @@
 ### [View label usage with label analytics](label-analytics.md)
 ## [Prevent data loss (DLP)](data-loss-prevention-policies.md)
 ### [Watch an extended overview of DLP](https://channel9.msdn.com/events/ignite/microsoft-ignite-orlando-2017/brk3111)
+
 ## Set up DLP
 ### [Get started with DLP policy recommendations](get-started-with-dlp-policy-recommendations.md)
 ### [Get started with the default DLP policy](get-started-with-the-default-dlp-policy.md)
@@ -42,6 +43,7 @@
 ### [View the DLP reports](view-the-dlp-reports.md)
 ### [Form a query to find sensitive data stored on sites](form-a-query-to-find-sensitive-data-stored-on-sites.md)
 ### [How DLP works between the Security & Compliance Center and Exchange admin center](how-dlp-works-between-admin-centers.md)
+
 ## Use the sensitive information types
 ### [What the sensitive information types look for](what-the-sensitive-information-types-look-for.md)
 ### [What the DLP functions look for](what-the-dlp-functions-look-for.md)
@@ -51,6 +53,19 @@
 ### [Create a custom sensitive information type in Office 365 Security & Compliance Center PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md)
 ### [Create a keyword dictionary](create-a-keyword-dictionary.md)
 ### [Document Fingerprinting](document-fingerprinting.md)
+
+## [Office 365 Message Encryption (OME)](ome.md)
+### [Email encryption in Office 365](email-encryption.md)
+### [Compare versions of OME](ome-version-comparison.md)
+### [Set up new Office 365 Message Encryption capabilities](set-up-new-message-encryption-capabilities.md)
+### [Define mail flow rules to encrypt email messages in Office 365](define-mail-flow-rules-to-encrypt-email.md)
+### [Manage Office 365 Message Encryption](manage-office-365-message-encryption.md)
+### [Office 365 Message Encryption FAQ](ome-faq.md)
+### [Revoke email encrypted by Office 365 Message Encryption](revoke-ome-encrypted-mail.md)
+### [Add your organization's brand to your encrypted messages](add-your-organization-brand-to-encrypted-messages.md)
+### [Legacy information for Office 365 Message Encryption](legacy-information-for-message-encryption.md)
+### [Set up Azure Rights Management for the previous version of Office 365 Message Encryption](set-up-azure-rms-for-previous-version-message-encryption.md)
+#### [Office 365 Protected Message Viewer Portal privacy statement](protected-message-viewer-portal-privacy-statement.md)
 
 # Records management
 ## [Retention policies](retention-policies.md)
@@ -175,27 +190,6 @@
 
 ## [Encryption in Office 365](encryption.md)
 ### [Set up encryption in Office 365 Enterprise](set-up-encryption.md)
-### [Email encryption in Office 365](email-encryption.md)
-### [Office 365 Message Encryption (OME)](ome.md)
-#### [Compare versions of OME](ome-version-comparison.md)
-#### [Set up new Office 365 Message Encryption capabilities](set-up-new-message-encryption-capabilities.md)
-#### [Define mail flow rules to encrypt email messages in Office 365](define-mail-flow-rules-to-encrypt-email.md)
-#### [Manage Office 365 Message Encryption](manage-office-365-message-encryption.md)
-#### [Office 365 Message Encryption FAQ](ome-faq.md)
-#### [Revoke email encrypted by Office 365 Message Encryption](revoke-ome-encrypted-mail.md)
-#### [Add your organization's brand to your encrypted messages](add-your-organization-brand-to-encrypted-messages.md)
-#### [Legacy information for Office 365 Message Encryption](legacy-information-for-message-encryption.md)
-#### [Set up Azure Rights Management for the previous version of Office 365 Message Encryption](set-up-azure-rms-for-previous-version-message-encryption.md)
-#### [Office 365 Protected Message Viewer Portal privacy statement](protected-message-viewer-portal-privacy-statement.md)
-### [Information Rights Management](information-rights-management-in-exchange-online.md)
-#### [Information Rights Management in Exchange Online](information-rights-management-in-exchange-online.md)
-#### [Configure IRM to use an on-premises AD RMS server](configure-irm-to-use-an-on-premises-ad-rms-server.md)
-### [S/MIME](s-mime-for-message-signing-and-encryption.md)
-#### [S/MIME for message signing and encryption](s-mime-for-message-signing-and-encryption.md)
-#### [Configure S/MIME settings for Outlook on the web](configure-s-mime-settings-for-outlook-web-app.md)
-#### [Send and receive S/MIME signed and encrypted email](send-and-receive-s-mime-signed-and-encrypted-email.md)
-#### [Sync user certificates to Office 365 for S/MIME](sync-user-certificates-to-office-365-for-s-mime.md)
-#### [Set up virtual certificate collection to validate S/MIME](set-up-virtual-certificate-collection-to-validate-s-mime.md)
 ### [How Exchange Online secures your email secrets](exchange-online-secures-email-secrets.md)
 ### [Controlling your data in Office 365 using Customer Key](controlling-your-data-using-customer-key.md)
 ### [Service encryption with Customer Key for Office 365 FAQ](service-encryption-with-customer-key-faq.md)
@@ -597,6 +591,17 @@
 #### [Accessibility for people with disabilities](eop/accessibility-for-people-with-disabilities.md)
 #### [Sending mail to Office 365](sending-mail-to-office-365.md)
 #### [Services for non-customers](services-for-non-customers.md)
+
+# Legacy security and compliance capabilities
+## [Information Rights Management in Exchange Online](information-rights-management-in-exchange-online.md)
+### [Configure IRM to use an on-premises AD RMS server](configure-irm-to-use-an-on-premises-ad-rms-server.md)
+## [S/MIME](s-mime-for-message-signing-and-encryption.md)
+### [S/MIME for message signing and encryption](s-mime-for-message-signing-and-encryption.md)
+### [Configure S/MIME settings for Outlook on the web](configure-s-mime-settings-for-outlook-web-app.md)
+### [Send and receive S/MIME signed and encrypted email](send-and-receive-s-mime-signed-and-encrypted-email.md)
+### [Sync user certificates to Office 365 for S/MIME](sync-user-certificates-to-office-365-for-s-mime.md)
+### [Set up virtual certificate collection to validate S/MIME](set-up-virtual-certificate-collection-to-validate-s-mime.md)
+
 # [Office 365 Enterprise](https://docs.microsoft.com/Office365/Enterprise)
 # [Office 365 for Business](https://docs.microsoft.com/office365/admin/admin-home)
 # [Microsoft 365](https://docs.microsoft.com/microsoft-365/)
