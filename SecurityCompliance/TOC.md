@@ -29,22 +29,22 @@
 ### [Restrict access to content by using encryption in sensitivity labels](encryption-sensitivity-labels.md)
 ### [Apply a sensitivity label to content automatically](apply_sensitivity_label_automatically.md)
 ### [View label usage with label analytics](label-analytics.md)
+
 ## [Prevent data loss (DLP)](data-loss-prevention-policies.md)
 ### [Watch an extended overview of DLP](https://channel9.msdn.com/events/ignite/microsoft-ignite-orlando-2017/brk3111)
+### Set up DLP
+#### [Get started with DLP policy recommendations](get-started-with-dlp-policy-recommendations.md)
+#### [Get started with the default DLP policy](get-started-with-the-default-dlp-policy.md)
+#### [Create a DLP policy from a template](create-a-dlp-policy-from-a-template.md)
+#### [Create, test, and tune a DLP policy](create-test-tune-dlp-policy.md)
+#### [Use notifications and policy tips in DLP policies](use-notifications-and-policy-tips.md)
+#### [What the DLP policy templates include](what-the-dlp-policy-templates-include.md)
+#### [Create a DLP policy to protect documents with FCI or other properties](protect-documents-that-have-fci-or-other-properties.md)
+#### [View the DLP reports](view-the-dlp-reports.md)
+#### [Form a query to find sensitive data stored on sites](form-a-query-to-find-sensitive-data-stored-on-sites.md)
+#### [How DLP works between the Security & Compliance Center and Exchange admin center](how-dlp-works-between-admin-centers.md)
 
-## Set up DLP
-### [Get started with DLP policy recommendations](get-started-with-dlp-policy-recommendations.md)
-### [Get started with the default DLP policy](get-started-with-the-default-dlp-policy.md)
-### [Create a DLP policy from a template](create-a-dlp-policy-from-a-template.md)
-### [Create, test, and tune a DLP policy](create-test-tune-dlp-policy.md)
-### [Use notifications and policy tips in DLP policies](use-notifications-and-policy-tips.md)
-### [What the DLP policy templates include](what-the-dlp-policy-templates-include.md)
-### [Create a DLP policy to protect documents with FCI or other properties](protect-documents-that-have-fci-or-other-properties.md)
-### [View the DLP reports](view-the-dlp-reports.md)
-### [Form a query to find sensitive data stored on sites](form-a-query-to-find-sensitive-data-stored-on-sites.md)
-### [How DLP works between the Security & Compliance Center and Exchange admin center](how-dlp-works-between-admin-centers.md)
-
-## Use the sensitive information types
+## Sensitive information types
 ### [What the sensitive information types look for](what-the-sensitive-information-types-look-for.md)
 ### [What the DLP functions look for](what-the-dlp-functions-look-for.md)
 ### [Watch an extended overview of customizing DLP](https://go.microsoft.com/fwlink/?linkid=852306)
