@@ -22,7 +22,7 @@
 
 # [Protect user and device access](protect-access-to-data-and-services.md)
 ## [Privileged access management](privileged-access-management-overview.md)
-### [Configure privileged access management](privileged-access-management-configuration.md)
+## [Configure privileged access management](privileged-access-management-configuration.md)
 
 # Protect information
 ## [Sensitivity labels](sensitivity-labels.md)
@@ -245,6 +245,7 @@
 ### [Use Content Search to search third-party data](use-content-search-to-search-third-party-data-that-was-imported.md)
 ### [Use Content Search in your eDiscovery workflow](use-content-search-in-ediscovery.md)
 ### [Check your Content Search query for errors](check-your-content-search-query-for-errors.md)
+### [Retry a failed Content Search](retry-failed-content-search.md)
 ### [Preserve Bcc recipients for Content Search](preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery.md)
 ## Understand Content Search
 ### [Limits for Content Search](limits-for-content-search.md)
