@@ -24,7 +24,7 @@ The following are the primary ways you can use EOP for messaging protection:
     
 - **In a hybrid deployment** EOP can be configured to protect your messaging environment and control mail routing when you have a mix of on-premises and cloud mailboxes. 
 
-This collection of Exchange Online Protection articles applyies to hybrid and on-premises environments. 
+This collection of Exchange Online Protection articles applies to hybrid and on-premises environments. 
     
 ## How EOP works
 
