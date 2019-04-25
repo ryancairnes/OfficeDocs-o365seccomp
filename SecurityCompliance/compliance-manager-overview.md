@@ -70,6 +70,8 @@ Assessments include several components:
 - **Article ID**: This field is only for GDPR assessments and specifies the corresponding GDPR article number.
 - **Description**: Text of control from the corresponding certification or regulation. Due to copyright restrictions, a link to relevant information is listed for ISO standards.
 
+![Controls in Compliance Manager Version 3](media/compliance-manager-controls.png)
+
 There are three types of controls in Compliance Manager, **Microsoft-managed controls**, **customer-managed controls**, and **Shared management controls**
 
 ### Microsoft-managed controls
