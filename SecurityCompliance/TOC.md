@@ -550,7 +550,9 @@
 
 # Hybrid security capabilities
 ## [Exchange Online mail encryption with AD RMS](information-rights-management-in-exchange-online.md)
-### [Configure IRM to use an on-premises AD RMS server](configure-irm-to-use-an-on-premises-ad-rms-server.md)## [Exchange Online Protection](eop/exchange-online-protection-overview.md)
+### [Configure IRM to use an on-premises AD RMS server](configure-irm-to-use-an-on-premises-ad-rms-server.md)
+
+## [Exchange Online Protection](eop/exchange-online-protection-overview.md)
 ### [EOP features](eop/eop-features.md)
 ### [Feature permissions in EOP](eop/feature-permissions-in-eop.md)
 ### [Exchange admin center in Exchange Online Protection](exchange-admin-center-in-exchange-online-protection-eop.md)
