@@ -13,4 +13,6 @@ To prevent phishing messages from reaching your mailbox, Outlook.com and Outlook
 
 ## How can I identify a suspicious message in my inbox?
 
+Outlook.com and Outlook on the web show indicators when the sender of a message either can't be identified or their identity is different from what you see in the From address.
+
 
