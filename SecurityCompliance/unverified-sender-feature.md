@@ -15,4 +15,8 @@ To prevent phishing messages from reaching your mailbox, Outlook.com and Outlook
 
 Outlook.com and Outlook on the web show indicators when the sender of a message either can't be identified or their identity is different from what you see in the From address.
 
-You see a '?' in the sender image
+### You see a '?' in the sender image
+
+When Outlook.com and Outlook on the web can't verify the identity of the sender using email authentication techniques, they display a '?' in the sender photo.
+
+![Message did not pass verification](media/message-did-not-pass-verification.jpg)
