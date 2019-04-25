@@ -39,11 +39,11 @@ Adding data to a review set is a long-running process. This process includes gat
 
 ## Add a sample to a review set
 
-If you want to validate the results of a search more thoroughly before adding all of them to a review set, you can add a random sample of the search results to a review set instead of adding everything.
+If you want to validate the results of a search more thoroughly before adding all of them to a review set, you can add a sample of the search results to a review set instead of adding everything.
 
 To add a sample to a review set, click a search on the **Searches** tab and click **Sample** on the flyout page. On the **Sampling parameters** page, choose one of the following options:
 
-- **Confidence level %** and **Confidence interval %** - The items added to the review set will be determined by the statistical parameters that you set. If you typically use a confidence level and interval when sampling result, specify them in the drop-down boxes. Otherwise, just use the default settings.
+- **Confidence level %** and **Confidence interval %** - The items added to the review set will be determined by the statistical parameters that you set. If you typically use a confidence level and interval when sampling results, specify them in the drop-down boxes. Otherwise, just use the default settings.
 
 - **Random sample %** - The items added to the review set is based on a random selection of the specified percentage of the total number of items returned by the search.
 
