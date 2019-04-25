@@ -221,6 +221,35 @@
 <!--End E5 ATP-->
 <!--TOC/Area owner: tracyp and deniseb-->
 <!--/Cyber Threat-->
+
+<!--Cloud App Sec-->
+## [Monitor and manage data access with Office 365 Cloud App Security](office-365-cas-overview.md)
+### [See what's new in Cloud App Security](new-in-office-365-cas.md)
+#### [Updates during 2018](new-in-office-365-cas-2018.md)
+#### [Updates during 2017](new-in-office-365-cas-2017.md)
+### [Get ready for Office 365 Cloud App Security](get-ready-for-office-365-cas.md)
+### [Set up Office 365 Cloud App Security](turn-on-office-365-cas.md)
+#### [Activity policies and alerts in Office 365 Cloud App Security](activity-policies-and-alerts.md)
+#### [Anomaly detection policies in Office 365 Cloud App Security](anomaly-detection-policies-in-ocas.md)
+#### [Protect apps with Office 365 Cloud App Security Conditional Access App Control](ocas-conditional-access-app-control.md)
+##### [Deploy Conditional Access App Control for Office 365 apps](ocas-deploy-conditional-access-app-control.md)
+##### [Session policies in Office 365 Cloud App Security](ocas-session-policies.md)
+##### [Access policies in Office 365 Cloud App Security](ocas-access-policies.md)
+#### [Group your IP addresses to simplify management in Office 365 Cloud App Security](group-your-ip-addresses-in-ocas.md)
+#### [Integrate your SIEM server with Office 365 Cloud App Security](integrate-your-siem-server-with-office-365-cas.md)
+### [Utilization activities after rolling out Office 365 Cloud App Security](utilization-activities-for-ocas.md)
+#### [Review and take action on alerts in Office 365 Cloud App Security](review-office-365-cas-alerts.md)
+#### [Investigate an activity in Office 365 Cloud App Security](investigate-an-activity-in-office-365-cas.md)
+#### [Manage OAuth apps using Office 365 Cloud App Security](manage-app-permissions-in-ocas.md)
+#### [Web traffic logs and data sources for Office 365 Cloud App Security](web-traffic-logs-and-data-sources-for-ocas.md)
+#### [Suspend or restore a user account in Office 365 Cloud App Security](suspend-or-restore-an-account-in-ocas.md)
+### [Create app discovery reports using Office 365 Cloud App Security](create-app-discovery-reports-in-ocas.md)
+### [Review app discovery findings in Office 365 Cloud App Security](review-app-discovery-findings-in-ocas.md)
+<!--/Cloud App Sec?-->
+
+## [Privileged access management](privileged-access-management-overview.md)
+### [Configure privileged access management](privileged-access-management-configuration.md)
+
 <!--Enc-->
 ## [Encryption in Office 365](encryption.md)
 ### [Set up encryption in Office 365 Enterprise](set-up-encryption.md)
@@ -261,33 +290,6 @@
 #### [Encryption in Microsoft Dynamics 365](office-365-encryption-in-microsoft-dynamics-365.md)
 #### [Encryption in Azure](office-365-azure-encryption.md)
 <!--/Enc-->
-
-<!--Cloud App Sec-->
-## [Monitor and manage data access with Office 365 Cloud App Security](office-365-cas-overview.md)
-### [See what's new in Cloud App Security](new-in-office-365-cas.md)
-#### [Updates during 2018](new-in-office-365-cas-2018.md)
-#### [Updates during 2017](new-in-office-365-cas-2017.md)
-### [Get ready for Office 365 Cloud App Security](get-ready-for-office-365-cas.md)
-### [Set up Office 365 Cloud App Security](turn-on-office-365-cas.md)
-#### [Activity policies and alerts in Office 365 Cloud App Security](activity-policies-and-alerts.md)
-#### [Anomaly detection policies in Office 365 Cloud App Security](anomaly-detection-policies-in-ocas.md)
-#### [Protect apps with Office 365 Cloud App Security Conditional Access App Control](ocas-conditional-access-app-control.md)
-##### [Deploy Conditional Access App Control for Office 365 apps](ocas-deploy-conditional-access-app-control.md)
-##### [Session policies in Office 365 Cloud App Security](ocas-session-policies.md)
-##### [Access policies in Office 365 Cloud App Security](ocas-access-policies.md)
-#### [Group your IP addresses to simplify management in Office 365 Cloud App Security](group-your-ip-addresses-in-ocas.md)
-#### [Integrate your SIEM server with Office 365 Cloud App Security](integrate-your-siem-server-with-office-365-cas.md)
-### [Utilization activities after rolling out Office 365 Cloud App Security](utilization-activities-for-ocas.md)
-#### [Review and take action on alerts in Office 365 Cloud App Security](review-office-365-cas-alerts.md)
-#### [Investigate an activity in Office 365 Cloud App Security](investigate-an-activity-in-office-365-cas.md)
-#### [Manage OAuth apps using Office 365 Cloud App Security](manage-app-permissions-in-ocas.md)
-#### [Web traffic logs and data sources for Office 365 Cloud App Security](web-traffic-logs-and-data-sources-for-ocas.md)
-#### [Suspend or restore a user account in Office 365 Cloud App Security](suspend-or-restore-an-account-in-ocas.md)
-### [Create app discovery reports using Office 365 Cloud App Security](create-app-discovery-reports-in-ocas.md)
-### [Review app discovery findings in Office 365 Cloud App Security](review-app-discovery-findings-in-ocas.md)
-<!--/Cloud App Sec?-->
-## [Privileged access management](privileged-access-management-overview.md)
-### [Configure privileged access management](privileged-access-management-configuration.md)
 
 # [Search for content](search-for-content.md)
 ## [Use Content Search](content-search.md)
