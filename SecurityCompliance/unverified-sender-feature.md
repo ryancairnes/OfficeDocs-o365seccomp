@@ -1,8 +1,19 @@
---
-title:
+---
+title: "Identify suspicious messages in Outlook.com and Outlook on the web"
 ms.author: tracyp
-author: msfttracyp
---
+author: MSFTTracyP
+manager: laurawi
+ms.date: 04/25/2019
+ms.audience: ITPro
+ms.topic: article
+ms.service: O365-seccomp
+localization_priority: Normal
+search.appverid:
+- MET150
+ms.collection:
+- M365-security-compliance
+description: "To prevent phishing messages from reaching your mailbox, Outlook.com and Outlook on the web verify that the sender is who they say they are and mark suspicious messages as junk email."
+---
 
 # Identify suspicious messages in Outlook.com and Outlook on the web
 
