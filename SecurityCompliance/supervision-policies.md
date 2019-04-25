@@ -24,6 +24,8 @@ Supervision policies in Office 365 allow you to capture employee communications 
 
 In some organizations, there may be a separation of duties between IT support and the compliance management group. Office 365 supports the separation between configuring the tenant with supervision policy support features and the configuration of policies and acting on captured communications. For example, the IT group for an organization may be responsible for setting up role permissions and groups to support supervision policies that are configured and managed by the organization's compliance team.
 
+To learn more about upcoming Supervision feature improvements and availability, see the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap).
+
 ## Scenarios for supervision policies
 
 Supervision policies can assist monitoring communications in your organization in several areas:
@@ -101,11 +103,13 @@ Configure custom keyword dictionaries (or lexicons) to provide simple management
 
 #### Offensive language
 
-Monitor sent or received email messages in your organization for offensive language. Configure the offensive language model for a match accuracy percentage and email messages meeting the keyword criteria are flagged for review. The offensive language model currently supports English keywords and monitors the body of email messages. The offensive language model reviews email for the following types of language:
+Monitor sent or received email messages in your organization for offensive language. Configure the offensive language model for a match accuracy percentage and email messages meeting intent and language criteria are flagged for review. The model uses a combination of machine learning, artificial intelligence, and keywords to identify inappropriate email messages as part of anti-harassment and cyber bullying monitoring requirements. If preventing or blocking offensive language in communications is an additional requirement for your organization, create a [data loss prevention policy](create-test-tune-dlp-policy.md) that uses a [custom keyword dictionary](create-a-keyword-dictionary.md) of offensive terms.
+
+The offensive language model currently supports English keywords and monitors the body of email messages. The offensive language model monitors email for sentiment associated with the following types of language:
 
 |**Type**|**Description**|
 |:-----|:-----|
-| **Crude language** | Expressions that embarrass most people. |
+| **Profanities** | Expressions that are inappropriate and embarrass most people. |
 | **Slurs** | Expressions that attack cultures and ethnicities. |
 | **Taunts** | Expressions that taunt, condemn, and ridicule. |
 | **References to handicaps** | Expressions that target physical or mental handicaps. |
@@ -115,7 +119,7 @@ Monitor sent or received email messages in your organization for offensive langu
 | **Extremism** | Expressions that target religion and political ideologies. |
 | **Disguise** | Expressions for which the meaning or pronunciation is the same as another more offensive term. |
 | **Provocative language** | Expressions that potentially cause anger or violence. |
-| **Taboo** | Expressions that are generally forbidden in polite societal communications. |
+| **Taboo** | Expressions that are generally not appropriate in polite societal communications. |
 | **Unrefined language** | Expressions that lack polite manners and that are potentially harsh and rude. |
 
 #### Conditional settings
