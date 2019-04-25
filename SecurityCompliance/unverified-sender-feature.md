@@ -37,3 +37,5 @@ Not every message with a via tag is suspicious. However, if you don't recognize 
 
 In Outlook.com and the new Outlook on the web, you can hover your cursor over a sender's name or address in the message list to see their email address, without needing to open the message.
 
+![Get started with OneDrive](media/get-started-with-onedrive-message.png)
+
