@@ -56,7 +56,7 @@ For each user account identified, you can generate a report of dependencies link
 
 3. Open the document to review the report data.
 
-> [!NOTE]
+> [!IMPORTANT]
 > This is not a historical report that retains and displays state changes to Action Item assignment history. The generated report is a snapshot of the control Action Items assigned at the time that the report is run (date and time stamp written into the report). For example, any subsequent reassignment of Action Items result in different snapshot report data if this report is generated again for the same user.
   
 ## Delete user data history
