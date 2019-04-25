@@ -42,3 +42,33 @@ In Outlook.com and the new Outlook on the web, you can hover your cursor over a 
 How do you know if you're using the new Outlook on the web? See the following examples:
 
 ![Outlook vs Office 365](media/outlook-vs-outlook365.png)
+
+## Frequently asked questions
+
+### What criteria does Outlook.com and Outlook on the web use to add the '?' and the 'via' properties?
+
+For the '?' in the sender image:  Outlook.com requires that the message pass either SPF or DKIM authentication. For more details, see Set up SPF in Office 365 to help prevent spoofing and Use DKIM to validate outbound email sent from your custom domain in Office 365.
+
+For the via tag: If the domain in the From address is different from the domain in the DKIM signature or the SMTP MAIL FROM, Outlook.com displays the domain in one of those two fields (preferring the DKIM signature).
+
+### Can I override these properties with IP Allows, Exchange Transport Rule Allows, or safe senders?
+
+You can't override these properties.
+
+### How do I remove these properties?
+
+For the '?' in the sender image: As a sender, you should authenticate your message with either SPF or DKIM.
+
+For the via tag: As a sender, you should ensure that either the domain in the DKIM signature or the SMTP MAIL FROM is the same as, or is a subdomain of, the domain in the From address.
+
+### Does Outlook.com and Outlook on the web show this for every message that doesn’t pass authentication?
+
+Not necessarily. Outlook.com and Outlook on the web may have other properties within the message to authenticate the sender.
+
+## Related topics
+
+[Help protect your Outlook.com email account](https://support.office.com/article/a4f20fc5-4307-4ece-8231-6d4d4bd8a9ba)
+
+[Deal with abuse, phishing, or spoofing in Outlook.com](https://support.office.com/article/0d882ea5-eedc-4bed-aebc-079ffa1105a3)
+
+[Filter junk email and spam in Outlook on the web](https://support.office.com/article/db786e79-54e2-40cc-904f-d89d57b7f41d)
