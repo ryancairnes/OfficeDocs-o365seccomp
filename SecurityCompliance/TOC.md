@@ -595,10 +595,6 @@
 #### [Sending mail to Office 365](sending-mail-to-office-365.md)
 #### [Services for non-customers](services-for-non-customers.md)
 
-# [Office 365 Enterprise](https://docs.microsoft.com/Office365/Enterprise)
-# [Office 365 for Business](https://docs.microsoft.com/office365/admin/admin-home)
-# [Microsoft 365](https://docs.microsoft.com/microsoft-365/)
-
 # Legacy security and compliance capabilities
 ## [S/MIME](s-mime-for-message-signing-and-encryption.md)
 ### [S/MIME for message signing and encryption](s-mime-for-message-signing-and-encryption.md)
@@ -606,3 +602,7 @@
 ### [Send and receive S/MIME signed and encrypted email](send-and-receive-s-mime-signed-and-encrypted-email.md)
 ### [Sync user certificates to Office 365 for S/MIME](sync-user-certificates-to-office-365-for-s-mime.md)
 ### [Set up virtual certificate collection to validate S/MIME](set-up-virtual-certificate-collection-to-validate-s-mime.md)
+
+# [Office 365 Enterprise](https://docs.microsoft.com/Office365/Enterprise)
+# [Office 365 for Business](https://docs.microsoft.com/office365/admin/admin-home)
+# [Microsoft 365](https://docs.microsoft.com/microsoft-365/)
