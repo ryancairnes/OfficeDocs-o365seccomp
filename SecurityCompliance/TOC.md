@@ -549,7 +549,8 @@
 ### [Tenant Isolation in the Office Graph and Delve](office-365-isolation-in-graph-and-delve.md)
 
 # Hybrid security capabilities
-## [Exchange Online Protection](eop/exchange-online-protection-overview.md)
+## [Exchange Online mail encryption with AD RMS](information-rights-management-in-exchange-online.md)
+### [Configure IRM to use an on-premises AD RMS server](configure-irm-to-use-an-on-premises-ad-rms-server.md)## [Exchange Online Protection](eop/exchange-online-protection-overview.md)
 ### [EOP features](eop/eop-features.md)
 ### [Feature permissions in EOP](eop/feature-permissions-in-eop.md)
 ### [Exchange admin center in Exchange Online Protection](exchange-admin-center-in-exchange-online-protection-eop.md)
@@ -597,8 +598,6 @@
 # [Microsoft 365](https://docs.microsoft.com/microsoft-365/)
 
 # Legacy security and compliance capabilities
-## [Information Rights Management in Exchange Online](information-rights-management-in-exchange-online.md)
-### [Configure IRM to use an on-premises AD RMS server](configure-irm-to-use-an-on-premises-ad-rms-server.md)
 ## [S/MIME](s-mime-for-message-signing-and-encryption.md)
 ### [S/MIME for message signing and encryption](s-mime-for-message-signing-and-encryption.md)
 ### [Configure S/MIME settings for Outlook on the web](configure-s-mime-settings-for-outlook-web-app.md)
