@@ -15,4 +15,4 @@ To prevent phishing messages from reaching your mailbox, Outlook.com and Outlook
 
 Outlook.com and Outlook on the web show indicators when the sender of a message either can't be identified or their identity is different from what you see in the From address.
 
-
+You see a '?' in the sender image
