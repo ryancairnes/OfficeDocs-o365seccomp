@@ -22,7 +22,7 @@
 
 # [Protect user and device access](protect-access-to-data-and-services.md)
 ## [Privileged access management](privileged-access-management-overview.md)
-### [Configure privileged access management](privileged-access-management-configuration.md)
+## [Configure privileged access management](privileged-access-management-configuration.md)
 
 # Protect information
 ## [Sensitivity labels](sensitivity-labels.md)
