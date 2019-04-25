@@ -20,3 +20,14 @@ Outlook.com and Outlook on the web show indicators when the sender of a message 
 When Outlook.com and Outlook on the web can't verify the identity of the sender using email authentication techniques, they display a '?' in the sender photo.
 
 ![Message did not pass verification](media/message-did-not-pass-verification.jpg)
+
+Not every message that fails to authenticate is malicious. However, you should be careful about interacting with messages that don't authenticate if you don't recognize the sender. Or, if you recognize a sender that normally doesn't have a '?' in the sender image, but you suddenly start seeing it, that could be a sign the sender is being spoofed.
+
+### The sender's address is different than what appears in the From address
+
+Frequently, the email address you see in a message is different than what you see in the From address. Sometimes phishers try to trick you into thinking that the sender is someone other than who they really are.
+
+When Outlook.com and Outlook on the web detect a difference between the sender's actual address and the address on the From address, they show the actual sender using the via tag, which will be underlined.
+
+![unverified sender alt text](media/unverified-sender-feature1.png)
+
