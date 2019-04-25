@@ -45,7 +45,7 @@ Follow these steps to configure Azure AD Office 365 apps to be controlled by Off
 
 6. Add any applicable **Condition assignments** or **Grant controls** (optional).
 
-> ![Azure AD conditional access](media/image1.png)
+> ![Azure AD conditional access](media/OCASimage1.png)
 
 ## Step 2: Sign in with a user scoped to the policy in the apps 
 
