@@ -112,7 +112,7 @@ Conditional Access App Control records the traffic logs of every user session th
 
 1. Go to the settings cog and click **Conditional Access App Control**.
 
-2. On the right side of the table, click the export button.<br>![export button](media/OCASimage3.png)<br>
+2. On the right side of the table, click the export button.<br>![export button](media/image3.png)<br>
 
 3. Select the range of the report and click **Export**. This process may take some time.
 
@@ -120,7 +120,7 @@ Conditional Access App Control records the traffic logs of every user session th
 
 1. After the report is ready, go to **Settings** and then **Exported reports**.
 
-2. In the table, select the relevant report from the list of **Conditional Access App Control traffic logs** and click download.<br>![download button](media/OCASimage4.png)<br>
+2. In the table, select the relevant report from the list of **Conditional Access App Control traffic logs** and click download.<br>![download button](media/image4.png)<br>
 
 ## Block all downloads
 
