@@ -39,3 +39,6 @@ In Outlook.com and the new Outlook on the web, you can hover your cursor over a 
 
 ![Get started with OneDrive](media/get-started-with-onedrive-message.png)
 
+How do you know if you're using the new Outlook on the web? See the following examples:
+
+![Outlook vs Office 365](media/outlook-vs-outlook365.png)
