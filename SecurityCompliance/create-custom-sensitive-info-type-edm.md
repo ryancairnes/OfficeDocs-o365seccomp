@@ -228,7 +228,7 @@ EDM can be used with information protection features, such as [Office 365 DLP po
 
 ## Refreshing your sensitive information database
 
-You can refresh your sensitive information database weekly. When your .csv file is refreshed, make sure to use the EDM Upload Tool to re-index the sensitive data and re-upload the indexed data (steps 5-7 in [Part 2](#part-2-install-and-use-the-edm-upload-agent-tool)). 
+You can refresh your sensitive information database weekly. When your .csv file is refreshed, make sure to use the EDM Upload Tool to re-index the sensitive data and re-upload the indexed data. To get help with this, see steps 5-7 in [Part 2](#part-2-install-and-use-the-edm-upload-agent-tool) (in this article). 
 
 ## Related articles
 
