@@ -238,6 +238,6 @@ You can refresh your sensitive information database weekly. When your .csv file 
 
 [Custom sensitive information types](custom-sensitive-info-types.md)
 
-[Overview of data loss prevention policies](data-loss-prevention-policies.md)
+[Overview of DLP policies](data-loss-prevention-policies.md)
 
-[https://docs.microsoft.com/cloud-app-security](https://docs.microsoft.com/cloud-app-security)
+[Microsoft Cloud App Security](https://docs.microsoft.com/cloud-app-security)
