@@ -1,5 +1,5 @@
 ---
-title: "Revoke email encrypted by Office 365 Message Encryption"
+title: "Revoke email encrypted by Office 365 Advanced Message Encryption"
 ms.author: krowley
 author: kccross
 manager: laurawi
@@ -12,7 +12,9 @@ search.appverid:
 description: "As an Office 365 administrator, you can revoke certain emails that were encrypted with Office 365 Message Encryption."
 ---
 
-# Office 365 Message Encryption email revocation
+# Office 365 Advanced Message Encryption - email revocation
+
+Office 365 Advanced Message Encryption is available additions to Office 365 Message Encryption in certain subscriptions. Advanced Message Encryption is included in [Microsoft 365 Enterprise](https://www.microsoft.com/microsoft-365/enterprise/home), Office 365 Enterprise E5, and Office 365 Education A5. If your organization has an Office 365 subscription that does not include Office 365 Advanced Message Encryption, you can potentially purchase Advanced Message Encryption as an add-on. For more information, see [Carolyn/Samson, I need a page](https://products.office.com/) and the [Office 365 CORRECT Service Description](https://docs.microsoft.com/office365/servicedescriptions/). Make sure your organization is using the latest version of Office 365 ProPlus on Windows or Mac to take full advantage of Advanced Message Encryption.
 
 This article is part of a larger series of articles about [Office 365 Message Encryption](ome.md). Right now, encrypted email revocation is in preview. Expect updates and changes to the feature and the content as we continue to improve our offering.
 

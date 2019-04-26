@@ -18,7 +18,7 @@ description: "With Office 365 Advanced Message Encryption capabilities on top of
 
 Office 365 Advanced Message Encryption is available additions to Office 365 Message Encryption in certain subscriptions. Advanced Message Encryption is included in [Microsoft 365 Enterprise](https://www.microsoft.com/microsoft-365/enterprise/home), Office 365 Enterprise E5, and Office 365 Education A5. If your organization has an Office 365 subscription that does not include Office 365 Advanced Message Encryption, you can potentially purchase Advanced Message Encryption as an add-on. For more information, see [Carolyn/Samson, I need a page](https://products.office.com/) and the [Office 365 CORRECT Service Description](https://docs.microsoft.com/office365/servicedescriptions/). Make sure your organization is using the latest version of Office 365 ProPlus on Windows or Mac to take full advantage of Advanced Message Encryption.
 
-You can use message expiration on emails that your users send to recipients who use the OME Portal to access encrypted emails. **KC clean this pivot up**
+You can use message expiration on emails that your users send to recipients who use the OME Portal to access encrypted emails. Recipients outside of Office 365 are directed to the OME Portal when they receive encrypted email. In addition, you can force recipients in other Office 365 organizations to use the OME portal to view and reply to encrypted emails sent by your organization by using Windows Powershell. For information on how to do this, see ***.
 
 Control encrypted emails accessed externally through a secure web portal by setting an expiration date and revoking access at any time.
 
