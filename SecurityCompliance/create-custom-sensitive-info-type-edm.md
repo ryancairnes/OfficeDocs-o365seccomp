@@ -6,7 +6,7 @@ manager: laurawi
 ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
-ms.date: 04/24/2019
+ms.date: 04/26/2019
 localization_priority: Priority
 ms.collection: 
 - M365-security-compliance
@@ -20,11 +20,13 @@ description: "Create custom sensitive information types with Exact Data Match."
 
 ## Overview
 
-With Office 365 for business, you can define [custom sensitive information types](custom-sensitive-info-types.md) that you can use to help prevent people from inadvertently or inappropriately sharing sensitive data within your organization. For example, you can use the Security & Compliance Center or PowerShell to define a custom sensitive information type based on patterns, evidence (evidence includes keywords like *employee*, *badge*, *ID*, and so on), character proximity (how close evidence is to characters in a particular pattern), and confidence levels. While these methods meet compliance needs for many organizations, they are static in nature and have certain limitations. (To learn more, see [Create a custom sensitive information type in the Security & Compliance Center](create-a-custom-sensitive-information-type.md).)
+With Office 365 for business, you can define [custom sensitive information types](custom-sensitive-info-types.md) that you can use to help prevent people from inadvertently or inappropriately sharing sensitive data within your organization. For example, you can use the Security & Compliance Center or PowerShell to define a custom sensitive information type based on patterns, evidence (evidence includes keywords like *employee*, *badge*, *ID*, and so on), character proximity (how close evidence is to characters in a particular pattern), and confidence levels. 
 
-What if you wanted to create a custom sensitive information type that is more dynamic, and more scalable? And what if you wanted a custom sensitive information type that uses specific data values, instead of patterns and proximity? With Exact Data Match (EDM) classification, you can create custom sensitive information types that refer to specific values in a secure database. The database can be refreshed weekly, and it can contain up to ten million rows of data. So as employees, patients, or clients come and go, and records change, your custom sensitive information types remain current and applicable. And, you can use EDM classification with policies, such as [data loss prevention policies](data-loss-prevention-policies.md) or [Microsoft Cloud App Security file policies](https://docs.microsoft.com/cloud-app-security/data-protection-policies).
+But what if you wanted to create a custom sensitive information type that is more dynamic, and more scalable? And what if you wanted a custom sensitive information type that uses specific data values, instead of patterns and proximity? With Exact Data Match (EDM) classification, you can!
 
-With EDM classification, you have a custom sensitive information type that:
+Now in preview, EDM capabilities enable you to create custom sensitive information types that refer to specific values in a secure database. The database can be refreshed weekly, and it can contain up to ten million rows of data. So as employees, patients, or clients come and go, and records change, your custom sensitive information types remain current and applicable. And, you can use EDM classification with policies, such as [data loss prevention policies](data-loss-prevention-policies.md) or [Microsoft Cloud App Security file policies](https://docs.microsoft.com/cloud-app-security/data-protection-policies).
+
+With EDM classification, you can create a custom sensitive information type that:
 - is dynamic (refreshable weekly);
 - results in fewer false-positives;
 - is more scalable;
@@ -42,9 +44,13 @@ With EDM classification, you have a custom sensitive information type that:
 
 ## The work flow at a glance
 
-The process of working with EDM consists of these main phases: 
 
-1. 
+|Phase  |What's needed  |
+|---------|---------|
+|[Part 1: Set up your sensitive information database and rule package for EDM](#part-1-set-up-your-sensitive-information-database-and-rule-package-for-edm)     |- Access to the sensitive information<br/>- Ability to save the data in .csv format<br/>- Ability to create a rule package in .xml format<br/>- Admin permissions to upload database schema information and a rule package to the Security & Compliance Center (using PowerShell)         |
+|[Part 2: Install and use the EDM Upload Agent tool](#part-2-install-and-use-the-edm-upload-agent-tool)     |         |- Dedicated user account for the tool
+|Row3     |         |
+
 
 
 ## Part 1: Set up your sensitive information database and rule package for EDM
@@ -53,16 +59,18 @@ Setting up and configuring EDM involves first setting up a secure, refreshable d
 
 ### Set up your secure database of sensitive information
 
-1. Structure the sensitive data you want to use for EDM in a .csv file. Make sure the first row of the .csv file includes the names of the fields you'll use for EDM. For example, you might have field names, such as `id`, `firstname`, `lastname`, and so on. Keep the following limits in mind:
+1. Identify the sensitive information you want to use. Export the data to a tool, such as Excel, that can be saved as a .csv file).
+
+2. Structure the sensitive data in the .csv file. Make sure the first row of the .csv file includes the names of the fields you'll use for EDM. For example, you might have field names, such as `id`, `firstname`, `lastname`, and so on. Keep the following limits in mind:
 
     - The data file can include up to ten million rows of sensitive data across all data sources.
     - The data file can include up to 32 fields per data source.
     - The data file can include up to five indexed columns per data source.
     - Data refresh for each data source can occur weekly (but not more often during preview).
     
-    As an example, we use a database called *SampleDataStore.csv*. This database includes columns, such as *id*, *firstname*, *lastname*, *title*, and so on.
+    As an example, we our .csv file is called *SampleDataStore.csv*. It includes columns, such as *id*, *firstname*, *lastname*, *title*, and so on.
 
-2. Set up a file in .xml format that represents the schema for your data file. Name this schema file `edm.xml`. As an example, the following .xml file defines the schema for our example *SampleDataStore* database.
+3. Set up a file in .xml format that represents the schema for your data file. Name this schema file `edm.xml`. As an example, the following .xml file defines the schema for our example *SampleDataStore* database.
     
     ```
     <?xml version="1.0" encoding="utf-8"?>
@@ -80,15 +88,15 @@ Setting up and configuring EDM involves first setting up a secure, refreshable d
     ```
     For each column in the database, you indicate its field name, whether that column will contain unique values, and whether that column should be searchable (a value of *true* indicates it should be searchable). Select up to five columns per database to be searchable. These are the columns that will be used with EDM classification.
 
-3. [Connect to Exchange Online Protection PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-eop/connect-to-exchange-online-protection-powershell?view=exchange-ps), replacing `https://ps.protection.outlook.com/powershell-liveid` with `https://ps.compliance.protection.outlook.com/powershell-liveid`.
+4. [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
-4. Run the following cmdlets, one at a time:
+5. To upload the database schema, run the following cmdlets, one at a time:
 
     `$edmSchemaXml=Get-Content .\edm.xml -Encoding Byte -ReadCount 0`
 
     `New-DlpEdmSchema -FileData $edmSchemaXml`
 
-Now that your database is set up, the next step is to set up a rule package for EDM.
+Now that your sensitive data file is set up, the next step is to set up a rule package for EDM.
 
 ### Set up a rule package for EDM
 
