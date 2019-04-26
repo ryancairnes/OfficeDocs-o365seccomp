@@ -31,6 +31,10 @@ Similar to how DLP works in [Exchange, Outlook, and Outlook on the web](data-los
 
 ![Blocked message notification in Teams](media/dlp-teams-blockedmessage-notification.png)
 
+And here's an example of what the recipient sees:
+
+![Message blocked](media/dlp-teams-blockedmessage-notification-to-user.png)
+
 The **What can I do?** link opens a dialog box that provides options for the sender to resolve the issue. Notice that in this case, the sender can opt to override the policy, or notify an admin to review and resolve it.
 
 ![Options to resolve blocked message](media/dlp-teams-blockedmessage-possibleactions.png)
