@@ -3,7 +3,6 @@ title: "Document Fingerprinting"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 
 ms.audience: ITPro
 ms.topic: article
 search.appverid: MET150

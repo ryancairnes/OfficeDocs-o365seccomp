@@ -3,7 +3,7 @@ title: "The new Microsoft 365 security center and Microsoft 365 compliance cente
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 04/22/2019
+ms.date: 04/26/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -70,7 +70,7 @@ In addition, you can still configure and manage settings in the existing Office 
 
 ### Licenses
 
-To get the new Microsoft 365 security center and Microsoft 365 compliance center, your organization must have a subscription to Microsoft 365 E3 or E5, or a Volume Licensing equivalent (which consists of Office 365 Enterprise E3 or E5, Enterprise Mobility + Security E3 or E5, and Windows 10 Enterprise E3/E5). To learn more about these plans, see [Discover the Microsoft 365 Enterprise solution that’s right for you](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans).
+To get the new Microsoft 365 security center and Microsoft 365 compliance center, your organization must have a subscription to Microsoft 365 E3 or E5, or a Volume Licensing equivalent (which consists of Office 365 E3 or E5, Enterprise Mobility + Security E3 or E5, and Windows 10 Enterprise E3/E5). To learn more about these plans, see [Discover the Microsoft 365 solution that’s right for you](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans).
 
 ### Roles and permissions
 

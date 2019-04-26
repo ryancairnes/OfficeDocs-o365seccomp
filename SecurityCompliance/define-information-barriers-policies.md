@@ -3,7 +3,7 @@ title: "Define information barrier policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 04/16/2019
+ms.date: 04/26/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -39,13 +39,13 @@ Here's a high-level overview of the life cycle of an information barrier policy:
 
 **Currently, the information barrier feature is in preview**. When these features are generally available, they'll be included in subscriptions, such as:
 
-- Microsoft 365 Enterprise E5
+- Microsoft 365 E5
 
-- Office 365 Enterprise E5
+- Office 365 E5
 
 - Office 365 Advanced Compliance
 
-- Information Protection & Compliance
+- Microsoft 365 E5 Compliance
 
 For more details about these plans and compliance features, see [Compliance Solutions](https://products.office.com/business/security-and-compliance/compliance-solutions).
 
