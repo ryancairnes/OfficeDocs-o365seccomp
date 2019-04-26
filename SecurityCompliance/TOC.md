@@ -226,7 +226,7 @@
 #### [How ATP Safe Attachments works](atp-safe-attachments.md)
 #### [About Threat investigation and response](office-365-ti.md)
 #### [How Threat Investigation and Response works](get-started-with-ti.md)
-#### [How Automated Investigation and Response works](automated-investigation-response-office.mc)
+#### [How Automated Investigation and Response works](automated-investigation-response-office.md)
 #### [Identify suspicious messages in Outlook.com and Outlook on the web](unverified-sender-feature.md)
 <!--End E5 ATP-->
 <!--TOC/Area owner: tracyp and deniseb-->
