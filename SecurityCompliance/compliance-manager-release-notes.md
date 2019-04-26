@@ -22,28 +22,15 @@ You can use the updated [Compliance Manager](https://servicetrust.microsoft.com/
 
 ## What’s new in Compliance Manager (Preview)
 
-- **Integration with Microsoft Secure Score**: Compliance Manager supports integration with [Microsoft Secure Score](microsoft-secure-score.md) by mapping customer-managed Actions to almost 100 Secure Score actions. When you complete a mapped action in Secure Score, the corresponding Compliance Manager Action automatically completes.
+- **Integration with Microsoft Secure Score**: Compliance Manager supports integration with [Microsoft Secure Score](microsoft-secure-score.md) by mapping customer-managed Actions to more than 50 Secure Score actions. When you complete a mapped action in Secure Score, the corresponding Compliance Manager Action is automatically updated.
 
-- **Templates**: In addition to the standard Assessment templates available in previous versions, Compliance Manager now supports importing custom templates from Excel workbooks.
+- **Import custom Assessments**: In addition to built-in Assessments, Compliance Manager now supports importing custom Assessments, enabling you to create custom assessments for any product or service and any standard or regulation.
 
-- **Actions Items**: Action Items are now individual items and most include telemetry collection from the Microsoft Secure Score Graph API. Where possible, technical action recommendations now have links to the applicable configuration page in the Office 365 service.
-
-- **Ownership**: A responsible party is defined for Controls and Action Items as an Owner, mirroring the Responsible Party in Microsoft Trust Tools. One or more people or teams are assigned responsibility for Control implementation.
+- **Actions Items**: Action Items are now individual items and many include telemetry collection from the Microsoft Secure Score Graph API. Where possible, technical action recommendations now have links to the applicable configuration page in the Office 365 service.
 
 - **Dimensions**: New metadata for Action Items that allows configuring custom pivots for filters.
 
-- **Compliance Score**: The methodology has changed to support syncing with Microsoft Secure Score. The scoring system removes the Microsoft-managed control credits and focuses solely on the completion of customer-managed controls. Multiple dimensions are used to calculate the score on a per-action basis. Compliance score data is a requirement for each template and Assessment.
-
-- **In-scope Services**: In-scope Services are added to the data schema and are a requirement for each template and Assessment.
-
-- **Separate Excel workbooks**: Each template and Assessment have independent Excel workbooks with six tabs for easier mapping across multiple standards. The new tabs are:
-
-    - Template-Assessment
-    - Controls
-    - Actions
-    - Ownership
-    - Dimensions
-    - Microsoft
+- **Updated Compliance Score**: The methodology has changed to support syncing with Microsoft Secure Score. The scoring system removes the Microsoft-managed control credits and focuses solely on the completion of customer-managed controls.
 
 ## Known issues in Compliance Manager (Preview)
 
@@ -52,6 +39,10 @@ The following sections cover known issues to be resolved in upcoming releases of
 ### Compliance Score
 
 - When Action Items are marked as **Not in Scope**, the score assigned to the Action Item is not excluded from the Compliance Score calculation. Action Items marked **Not in Scope** should not increase your Compliance Score.
+
+### Microsoft-managed Controls
+
+- The test date for Microsoft-managed controls is not appearing in the UI, even when included in the Assessment. To see test date information, you must export the Assessment.
 
 ### Customization
 
@@ -77,3 +68,7 @@ The following sections cover known issues to be resolved in upcoming releases of
 - There may be instances where updated data does not appear until your browser is refreshed.
 - The preview version of Microsoft Edge is not supported but has no known issues.
 - Internet Explorer is not supported.
+
+### Session timeout
+
+- Upon session time out, you may see “Something went wrong” error. Go to [Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) and log in again.

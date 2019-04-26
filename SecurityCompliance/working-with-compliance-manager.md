@@ -25,67 +25,59 @@ description: "Microsoft Compliance Manager is a free workflow-based risk assessm
 
 You access Compliance Manager from the Service Trust Portal. Anyone with a Microsoft account or Azure Active Directory organizational account can access Compliance Manager.
   
-![Compliance Manager - Accessing Compliance Manager from STP menu](media/14be4cac-2380-49bc-9b36-210da8cafdfa.png)
-  
 1. Go to [https://servicetrust.microsoft.com](https://servicetrust.microsoft.com/).
-    
-2. Sign in with your Microsoft service account. This is your Office 365, Microsoft 365, or Azure Active Directory (Azure AD) user account.
-    
-3. In the Service Trust Portal, select **Compliance Manager**.
-    
-4. When the Non-Disclosure Agreement is displayed, read it, and then click **Agree** to continue. You'll only have to do this once, and then the Compliance Manager dashboard is displayed. 
 
-    To get you started, we've added the following Assessments by default:
-    
-    ![The default Assessments in Compliance Manager](media/8c59b45a-706a-4362-a7ba-2cb782931bf7.png)
-    
-5. Click ![Help icon in Compliance Manager](media/c1b3092f-6ac7-43ab-b1c4-63a54598450c.png) **Help** to take a short tour of Compliance Manager. 
+2. Sign in with your Microsoft service account. This is your Office 365, Microsoft 365, or Azure Active Directory (Azure AD) user account.
+
+3. In the Service Trust Portal, select **Compliance Manager**. This is the preview version of Compliance Manager. **Compliance Manager (Classic)** is the link to the previous version of Compliance Manager.
+
+4. When the Non-Disclosure Agreement is displayed, read it, and then click **Agree** to continue. You'll only have to do this once, and then the Compliance Manager dashboard is displayed.
+
+To get you started, an ISO/IEC 27001:2103 Assessment for Office 365 appears by default for your organization.
 
 ## Administration
 
 There are specific administrative functions that are only available to the tenant administrator account, and will only be visible when logged in as a global administrator.
   
 > [!NOTE]
-> The Access to Restricted Documents permission in the drop-down list will allow administrators to give users access to restricted documents that Microsoft shares on the Service Trust Portal. The Restricted Documents feature isn't available, but is coming soon. 
+> The Access to Restricted Documents permission in the drop-down list will allow administrators to give users access to restricted documents that Microsoft shares on the Service Trust Portal. The Restricted Documents feature isn't available, but is coming soon.
   
 ### Assigning Compliance Manager roles to users
 
-Each Compliance Manager role has slightly different permissions. You can view the permissions assigned to each role, see which users are in which roles, and add or remove users from that role through the Service Trust Portal by selecting the **Admin** menu item, and then choosing **Settings**. 
+Each Compliance Manager role has slightly different permissions. You can view the permissions assigned to each role, see which users are in which roles, and add or remove users from that role through the Service Trust Portal by selecting the **Admin** menu item, and then choosing **Settings**.
   
 ![STP Admin menu - Settings selected](media/65a82b1b-d462-452f-988b-7e4263bd638e.png)
   
 To add or remove users from Compliance Manager roles.
   
 1. Go to [https://servicetrust.microsoft.com](https://servicetrust.microsoft.com).
-    
+
 2. Sign in with your Azure Active Directory global administrator account.
-    
-3. On the Service Trust Portal top menu bar, click **Admin** and then choose **Settings**. 
-    
-4. In the **Select Role** drop-down list, click the role that you want to manage. 
-    
-5. Users added to the each role are listed on the **Select Role** page. 
-    
+
+3. On the Service Trust Portal top menu bar, select **Admin** and then choose **Settings**.
+
+4. In the **Select Role** drop-down list, select the role that you want to manage.
+
+5. Users added to each role are listed on the **Select Role** page.
+
 6. To add users to this role, click **Add**. In the **Add Users** dialog, click the user field. You can scroll through the list of available users or begin typing the user name to filter the list based on your search term. Click the user to add that account to the **Add Users** list to be provisioned with that role. If you would like to add multiple users concurrently, begin typing a user name to filter the list, and then click the user to add to the list. Click **Save** to provision the selected role to these users. 
-    
-    ![Compliance Manager - provision roles - add users](media/2f386f82-2bf8-4e95-ab41-1724b752b508.png)
+
+    ![Compliance Manager - add users](media/compliance-manager-add-users.png)
   
-7. To remove users from this role, select the user(s) and click **Delete**. 
-    
-    ![Compliance Manager - Provision Roles - remove user](media/17004def-604f-471d-a54d-f678fcc01c1e.png)
+7. To remove users from this role, select the user(s) and click **Delete**.
+
+    ![Compliance Manager - delete users](media/compliance-manager-delete-users.png)
 
 ## Groups
 
-Groups are containers that allow you to logically organize Assessments and that share common information and workflow tasks between Assessments that have the same or related customer managed controls. You can group Assessments by year, standard, service, team, division, or agencies within your organization to help minimize customer-managed Actions:
+Groups allow you to logically organize Assessments and that share common information and workflow tasks between Assessments that have the same or related customer managed controls. You can group Assessments by year, standard, service, team, division, or agencies within your organization to help minimize customer-managed Actions:
   
-- **GDPR Assessments - 2019**
-  - Office 365 + GDPR
-  - Dynamics + GDPR
+- **FFIEC IS Assessments - 2019**
+  - Office 365 + FFIEC IS
+  - Intune + FFIEC IS
 - **Data Security and Privacy Assessments**
-  - Office 365 + ISO 27001:2018
-  - Office 365 + ISO 27018:2019
-  - Azure + ISO 27001:2018
-  - Azure + ISO 27018:2019
+  - Office 365 + ISO 27001:2013
+  - Office 365 + ISO 27018:2014
 
 When you create a new Assessment, you must create a new group for the Assessment or assign the Assessment to an existing group. Groups can not be created as stand-alone entities. It's recommended that you determine a grouping strategy for your organization *before* adding new assessments. By default, a Group named "Default Group" is available for your initial Assessments. Groups do not have any security properties, all permissions are associated with Assessments.
 
@@ -94,40 +86,34 @@ When working with groups, remember:
 - Related assessment controls in different assessments within the same Group automatically update when completed.
 - New groups have the option to copy information from an existing group when you create a new Assessment. Any information that was added to the Implementation Details and Test Plan and Management Response fields of customer-managed controls from Assessments in the group that you're copying from are copied to the same (or related) customer managed controls in the new Assessment. If you're adding a new Assessment to an existing group, common information from Assessments in that group will be copied to the new Assessment.
 - Group names (also called *Group IDs*) must be unique within your organization.
-- Groups can contain Assessments for the same certification/regulation, but each group can only contain one Assessment for a specific cloud service/certification pair. For example, a group can't contain two Assessments for Office 365 and GDPR. A group can contain multiple Assessments for the same cloud service as long as the corresponding certification/regulation for each one is different.
-- Once an assessment has been added to an assessment group, the grouping cannot be changed. You can rename the assessment group, which changes the name of the assessment grouping for all of the assessments associated with that group. You can create a new assessment and a new assessment group and copy information from an existing assessment, which effectively creates a duplicate of that assessment in a different assessment group. 
+- Groups can contain Assessments for the same certification/regulation, but each group can only contain one Assessment for a specific cloud service/certification pair. For example, a group can't contain two Assessments for Office 365 and NIST CSF. A group can contain multiple Assessments for the same cloud service only if the corresponding certification/regulation for each one is different.
+- Once an assessment has been added to an assessment group, the grouping cannot be changed. You can rename the assessment group, which changes the name of the assessment grouping for all the assessments associated with that group. You can create a new assessment and a new assessment group and copy information from an existing assessment, which effectively creates a duplicate of that assessment in a different assessment group.
 - Archiving an assessment breaks the relationship between that assessment and the assessment group; any further updates to other related assessments are no longer reflected in the archived assessment.
 
 ## Assessments
 
 ### Managing the assessment process
 
-The creator of an Assessment is initially the only Assessment User. For each customer managed control, you can assign an Action Item to a person in your organization so that person becomes an Assessment User who can perform the recommended customer actions and gather and upload evidence. When you assign an Action Item, you can choose to send an email to the person that contains details including the recommended Customer Actions and the Action Item priority. The email notification includes a link to the **Action Items** dashboard, which lists all Action Items assigned to that person. 
+The creator of an Assessment is initially the only Assessment User. For each customer managed control, you can assign an Action Item to a person in your organization so that person becomes an Assessment User who can perform the recommended customer actions and gather and upload evidence. When you assign an Action Item, you can choose to send an email to the person that contains details including the recommended Customer Actions and the Action Item priority. The email notification includes a link to the **Action Items** dashboard, which lists all Action Items assigned to that person.
   
 Here's a list of tasks that you can perform using the workflow features of Compliance Manager.
   
-![Compliance manager assessment workflow with callouts](media/9e5ae34d-b55e-4452-a021-e0e5b10218f5.png)
+1. **Use the Filter Options to find specific assessment controls** - Compliance Manager provides **Filter Options**, giving you highly granular selection criteria for displaying assessment controls, helping you to precisely target specific areas of your compliance efforts.
+
+    Click on the funnel icon on the right hand side of the page to show or hide the **Filter Options** controls. These controls allow you to specify filter criteria, and only the assessment controls that fit those criteria will be displayed below.
   
-1. **Use the Filter Options to find specific assessment controls** - Compliance Manager provides **Filter Options**, giving you highly granular selection criteria for displaying assessment controls, helping you to precisely target specific areas of your compliance efforts. 
-    
-    Click on the funnel icon on the right hand side of the page to show or hide the **Filter Options** controls. These controls allow you to specify filter criteria, and only the assessment controls that fit those criteria will be displayed below. ![Compliance Manager Assessments filter controls](media/d44e1b4b-d928-4778-8a3a-6231edde9ca0.png)
+    - **Articles** - filters on the article name and returns the assessment controls associated to that article. For instance, typing in "Article (5)" returns a selection list of articles whose name includes that string, i.e. Article (5)(1)(a), Article (5)(1)(b), Article (5)(1)(c), etc. Selecting Article (5)(1)(c) will return the controls associated with Article (5)(1)(c). This is multi-select field that uses an OR operator with multiple values -- for instance, if you select Article (5)(1)(a) and then add Article (5)(1)(c), the filter will return controls associated with either Article (5)(1)(a) or Article (5)(1)(c).
   
-    - **Articles** - filters on the article name and returns the assessment controls associated to that article. For instance, typing in "Article (5)" returns a selection list of articles whose name includes that string, i.e. Article (5)(1)(a), Article (5)(1)(b), Article (5)(1)(c), etc. Selecting Article (5)(1)(c) will return the controls associated with Article (5)(1)(c). This is multiselect field that uses an OR operator with multiple values -- for instance, if you select Article (5)(1)(a) and then add Article (5)(1)(c), the filter will return controls associated with either Article (5)(1)(a) or Article (5)(1)(c). 
-    
-      ![Compliance Manager Assessment view - Filter on Article Name](media/8b0507a0-589d-484a-bc60-80a3debe3ddb.png)
+    - **Controls** - returns the list of controls whose names fit the filter, i.e. typing in 7.3 returns a selection list of items like 7.3.1, 7.3.4, 7.3.5, etc. This is multi-select field that uses an OR operator with multiple values -- for instance, if you select 7.3.1 and then add 7.3.4, the filter will return controls associated with either 7.3.1 or 7.3.4.
   
-    - **Controls** - returns the list of controls whose names fit the filter, i.e. typing in 7.3 returns a selection list of items like 7.3.1, 7.3.4, 7.3.5, etc. This is multiselect field that uses an OR operator with multiple values -- for instance, if you select 7.3.1 and then add 7.3.4, the filter will return controls associated with either 7.3.1 or 7.3.4. 
-    
-      ![Compliance Manager Assessment view - filter control multiselect](media/c4fc25e8-2376-4f2d-b605-f9c3d90413bf.png)
-  
-    - **Assigned Users** - returns the list of controls who are assigned to the selected user. 
-    
-    - **Status** - returns the list of controls with the selected status. 
-    
-    - **Test Result** - returns the list of controls with the selected test result. 
-    
+    - **Assigned Users** - returns the list of controls who are assigned to the selected user.
+
+    - **Status** - returns the list of controls with the selected status.
+
+    - **Test Result** - returns the list of controls with the selected test result.
+
     As you apply filter conditions, the view of applicable controls will change to correspond to your filter conditions. Expand the control family sections to show the control details below. 
-    
+
     ![Compliance Manager Assessment view - Filter Article results](media/e6485d45-d47f-4b25-8b1c-b3c2ee4a8328.png)
   
 2. If after selecting the desired filters no results are shown, that means there are no controls that correspond to the specified filter conditions. For instance, if you select a particular **Assigned User** and then choose a **Control** name that does correspond to the control assigned to that user, no assessments will be shown in the page below. 
@@ -198,9 +184,119 @@ To copy information from an existing Assessment to a new Assessment:
 
 3. Select **Save** to create the Assessment.
 
-### Viewing Assessments
+### Import custom Assessments
 
-Assessment information is viewed....
+Compliance Manager supports uploading custom Assessments in Microsoft Excel form only. There is a specific format and schema that must be used for the data or it will not import into Compliance Manager. To make Compliance Manager work, every standard, regulation, etc. is treated as if it were a control framework. Each custom Assessment should be in a separate Excel file.
+
+Each file should contain 5 tabs:
+
+- Template-Assessment
+- ControlFamily
+- Actions
+- Ownership
+- Dimensions
+
+Each of these tabs, and the schema used within each tab, is detailed below.
+
+#### Template-Assessment tab
+
+This tab has a single column:
+
+- **inScopeServices:** comma-delimited list of products or services that are in-scope for the Assessment.
+
+#### ControlFamily tab
+
+This tab includes columns that define the controls that are mapped to the Actions listed on the Actions tab, and includes details like control name, family, title and description.  
+
+The columns for this tab, which must be ordered within Excel in the order listed below, are:
+
+- **controlName:** Control name from certification/standard/regulation, etc.
+- **controlFamily:** Control family from certification/standard, regulation, etc.
+- **controlTitle:** Control title from certification/standard/regulation, etc.
+- **controlDescription:** Control description from certification/standard/regulation, etc.
+- **controlVersion:** Optional control version info.  Example: for NIST 800-53, the current value is Rev 4, so the controlVersion is 4.  For CSA CCM, it is be 3.0.1.
+- **isDisabled:** Use TRUE or FALSE to indicate whether the control has been disabled.
+- **controlType:** Use CM to indicate these are customer-managed controls.
+- **controlComplianceScore:** Sum of the score of all Actions assigned to the Control.
+- **controlActionTitle:** Double semi-colon-delimited list of all actionTitles for this control as listed on the Actions tab. 
+
+#### Actions tab
+
+This tab includes columns that define individual Actions, and it includes details like action title, ownership, and dimensions. 
+
+The columns for this tab, which must be ordered within Excel in the order listed below, are:
+
+- **actionTitle:** Title of the action. Each title must be unique, and we recommend using Pasc:**al case.
+- **actionRelatedODVs:** Double semicolon-delimited list of actionTitles that are parents of the child listed in the actionTitle column. In a parent/child relationship, the parent represents the high watermark. Thus, if you complete a parent action, you also complete all child actions. For example, when you have similar requirements but different standard-defined values, such as password length, where one standard/regulation requires a minimum of 15 characters, and another requires a minimum of 12 or 10. 15 would be the parent in this example, and if you configure a minimum of 15 characters, you also satisfy the actions that recommend 12 or 10 characters in other assessments.
+- **actionDimensionValues:** Double semicolon-delimited list of applicable dimensions from the Dimensions tab, using the following format: Dimension Key::Dimension Value;;Dimension Key::Dimension Value.  For example, Product::Office 365;;Certification::NIST CSF.
+- **actionScore:** Numeric value for each Action, which represents the score for that action. We recommend following the scoring model used by the built-in assessments, which is based on each Action’s purpose and enforcement.
+- **actionOwnership:** Double semicolon-delimited list of Owners. All listed Owners must be included on the Ownership tab.
+- **actionDescription:** Text of each Action, which must be unique. This field supports Markdown Language as described below.
+
+#### Ownership tab
+
+This tab includes columns that define owners for each action.  
+
+The columns for this tab, which must be ordered within Excel in the order listed below, are:
+
+- **ownershipName:** Name of owner/responsible party.  Must be unique.
+- **ownershipDescription:** Description of the owner/responsible party.
+
+#### Dimensions tab
+
+This tab includes columns that define the dimensions that can be associated with an Action.
+
+The columns for this tab, which must be ordered within Excel in the order listed below, are:
+
+- **dimensionKey:** List of Keys used for Dimensions. For example, Product, Certification, etc.
+- **dimensionValue:** Unique value for each dimension key. For example, Office 365, Intune, Azure, Custom Product, etc.
+- **allowMultiSelect:** Use TRUE or FALSE to indicate that multiple dimension values can be selected for a single dimension key. 
+
+#### Using Markdown Language in Description Fields
+
+Assessments support the use of Markdown language for some text elements and formatting.  There are three formatting elements of Markdown language that are used in Compliance Manager:
+
+- Bullets and Numbered lists
+- Hyperlinks
+- Boldface
+
+Bullets are represented as asterisks instead of Word or Excel bullets.  For example:
+
+```
+* Item A
+* Item B
+* Item C
+```
+
+Numbers are represented as numbers, but with spaces for indentation (3 spaces per level) and only numbers used for all sublevels (e.g., no letters).  For example:
+
+   1. Item A
+   2. Item B
+      1. Sub-item A
+      2. Sub-item B
+   3. Item C
+   4. Item D
+      1. Sub-item A
+      2. Sub-item B
+   5. Item E
+
+Hyperlinks are constructed by placing brackets around the hyperlink text and the hyperlink itself in parenthesis immediately next to the close bracket.  For example:
+
+```
+Click [here](https://www.microsoft.com) to go to Microsoft’s home page.
+```
+
+This text will render as follows:  Click [here](https://www.microsoft.com) to go to Microsoft’s home page.
+
+Note that as shown in the above example, Compliance Manager does not render URLs with underlining.
+
+Boldface text is just two asterisks on each side of the text to be bolded. For example:
+
+```
+**This text will render in bold**
+```
+
+### Viewing Assessments
 
 To view Assessment details:
   
