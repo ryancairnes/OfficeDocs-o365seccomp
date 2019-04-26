@@ -14,12 +14,12 @@ search.appverid:
 description: "Microsoft Compliance Manager is a free workflow-based risk assessment tool in the Microsoft Service Trust Portal. Compliance Manager enables you to track, assign, and verify regulatory compliance activities related to Microsoft cloud services."
 ---
 
-# Microsoft Compliance Manager
+# Microsoft Compliance Manager (Preview)
 
 > [!IMPORTANT]
 > Compliance Manager isn't available in Office 365 operated by 21Vianet, Office 365 Germany, Office 365 U.S. Government Community High (GCC High), or Office 365 Department of Defense.
 
-[Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) is a free workflow-based risk assessment tool that lets you track, assign, and verify regulatory compliance activities related to Microsoft cloud services. Part of your Microsoft 365, Office 365, or Azure Active Directory subscription, Compliance Manager helps you manage regulatory compliance within the shared responsibility model for Microsoft cloud services. Compliance Manager offers a centralized dashboard for viewing standards, regulations, and control implementation details and test results for Microsoft service assessments. It also includes tools allowing you to manage custom control implementations and compliance tracking specific to your organization.
+[Microsoft Compliance Manager (Preview)](https://servicetrust.microsoft.com/ComplianceManager) is a free workflow-based risk assessment tool that lets you track, assign, and verify regulatory compliance activities related to Microsoft cloud services. Part of your Microsoft 365, Office 365, or Azure Active Directory subscription, Compliance Manager helps you manage regulatory compliance within the shared responsibility model for Microsoft cloud services. Compliance Manager offers a centralized dashboard for viewing standards, regulations, and control implementation details and test results for Microsoft service assessments. It also includes tools allowing you to manage custom control implementations and compliance tracking specific to your organization.
 
 With Compliance Manager, your organization can:
   

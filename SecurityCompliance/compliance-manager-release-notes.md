@@ -14,13 +14,13 @@ search.appverid:
 description: "Microsoft Compliance Manager is a free workflow-based risk assessment tool in the Microsoft Service Trust Portal. Compliance Manager enables you to track, assign, and verify regulatory compliance activities related to Microsoft cloud services."
 ---
 
-# Release Notes for Compliance Manager Version 3 (Preview)
+# Release Notes for Compliance Manager (Preview)
 
-The Public Preview of Compliance Manager provides you with early access to upcoming functionality and updates.
+The public preview of Compliance Manager provides you with early access to upcoming functionality and updates.
 
-You can use the updated [Compliance Manager Version 3 (Preview)](https://servicetrust.microsoft.com/ComplianceManager) tool on the [Service Trust Portal](https://servicetrust.microsoft.com) to track, assign, and verify regulatory compliance activities related to Microsoft cloud services.
+You can use the updated [Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) tool on the [Service Trust Portal](https://servicetrust.microsoft.com) to track, assign, and verify regulatory compliance activities related to Microsoft cloud services.
 
-## What’s new in Compliance Manager Version 3 (Preview)
+## What’s new in Compliance Manager (Preview)
 
 - **Integration with Microsoft Secure Score**: Compliance Manager supports integration with [Microsoft Secure Score](microsoft-secure-score.md) by mapping customer-managed Actions to almost 100 Secure Score actions. When you complete a mapped action in Secure Score, the corresponding Compliance Manager Action automatically completes.
 
@@ -45,9 +45,9 @@ You can use the updated [Compliance Manager Version 3 (Preview)](https://service
     - Dimensions
     - Microsoft
 
-## Known issues in Compliance Manager Version 3 (Preview)
+## Known issues in Compliance Manager (Preview)
 
-The following sections cover known issues to be resolved in an upcoming release of Compliance Manager Version 3.
+The following sections cover known issues to be resolved in upcoming releases of Compliance Manager.
 
 ### Compliance Score
 

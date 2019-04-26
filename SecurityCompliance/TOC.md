@@ -489,12 +489,11 @@
 
 # Compliance solutions
 ## [Microsoft Service Trust Portal](get-started-with-service-trust-portal.md)
-## [Compliance Manager (Legacy)](meet-data-protection-and-regulatory-reqs-using-microsoft-cloud.md)
+## [Compliance Manager (Classic)](meet-data-protection-and-regulatory-reqs-using-microsoft-cloud.md)
 ## [Compliance Manager (Preview)](compliance-manager-overview.md)
-### [What's new in Compliance Manager](compliance-manager-release-notes.md)
-### [Working with Compliance Manager](working-with-compliance-manager.md)
-### [Compliance score methodology](compliance-score-methodology.md)
-### [Compliance Manager and the GDPR](compliance-manager-and-the-gdpr.md)
+### [What's new in Compliance Manager (Preview)](compliance-manager-release-notes.md)
+### [Working with Compliance Manager (Preview)](working-with-compliance-manager.md)
+### [Compliance score methodology (Preview)](compliance-score-methodology.md)
 ## [GDPR data subject request tool](manage-gdpr-data-subject-requests-with-the-dsr-case-tool.md)
 ## [Office 365 Information Protection for GDPR](office-365-information-protection-for-gdpr.md)
 ### [Overview: Office 365 Protection for GDPR](office-365-info-protection-for-gdpr-overview.md)
