@@ -58,19 +58,19 @@ Currently, information barrier policies are defined and managed in Office 365 by
 
 **Currently, the information barrier feature is in private preview**. When these features are generally available, they'll be included in subscriptions, such as:
 
-- Microsoft 365 Enterprise E5
+- Microsoft 365 E5
 
-- Office 365 Enterprise E5
+- Office 365 E5
 
 - Office 365 Advanced Compliance
 
-- Information Protection & Compliance
+- Microsoft 365 E5 Compliance
 
 For more details, including plans and pricing, see [Compliance Solutions](https://products.office.com/business/security-and-compliance/compliance-solutions).
 
 To [define or edit information barrier policies](define-information-barriers-policies.md), you must be assigned one of the following roles:
 
-- Microsoft 365 Enterprise Global Administrator
+- Microsoft 365 Global Administrator
 
 - Office 365 Global Administrator
 
