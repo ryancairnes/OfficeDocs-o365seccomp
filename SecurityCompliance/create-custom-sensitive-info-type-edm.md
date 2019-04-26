@@ -29,6 +29,8 @@ But what if you wanted to create a custom sensitive information type that is mor
 - handles sensitive information more securely; and
 - can be used with several Microsoft cloud capabilities.
 
+![EDM classification](media/EDMClassification.png)
+
 Now in preview, EDM classification enables you to create custom sensitive information types that refer to specific values in a secure database. The database can be refreshed weekly, and it can contain up to ten million rows of data. So as employees, patients, or clients come and go, and records change, your custom sensitive information types remain current and applicable. And, you can use EDM classification with policies, such as [data loss prevention policies](data-loss-prevention-policies.md) or [Microsoft Cloud App Security file policies](https://docs.microsoft.com/cloud-app-security/data-protection-policies).
 
 > [!NOTE]
