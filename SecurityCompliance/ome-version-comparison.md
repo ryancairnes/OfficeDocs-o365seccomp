@@ -47,9 +47,21 @@ The new capabilities provide the following advantages:
 - Admins can revoke emails encrypted with the new capabilities.
 - The new capabilities provide detailed usage reports through the Security &amp; Compliance Center.
 
+## Office 365 Advanced Message Encryption capabilities
+
+Office 365 Advanced Message Encryption offers additional capabilities on top of the new OME capabilities. You must have the new Office 365 Message Encryption capabilities set up in your organization in order to use the Advanced Message Encryption capabilities. The advanced capabilities  include:
+
+- Message revocation
+
+- Message expiration
+
+- Multiple branding templates
+
 ## Unique characteristics of Office 365 Message Encryption in a GCC High deployment
 
-If you plan to use Office 365 Message Encryption in a GCC High environment, there are some unique characteristics about the recipient experience.
+Office 365 Advanced Message Encryption is not available in a GCC High environment. You can still use a single brand template in a GCC High environment.
+
+In addition, if you plan to use Office 365 Message Encryption in a GCC High environment, there are some unique characteristics about the recipient experience.
 
 ### Encrypted email from GCC High to GCC High recipients
 
