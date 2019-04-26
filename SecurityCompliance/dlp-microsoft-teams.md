@@ -27,19 +27,21 @@ Recently, [data loss prevention](data-loss-prevention-policies.md) (DLP) capabil
 
 ## Policy tips help educate users
 
-Similar to how DLP works in [Exchange, Outlook, and Outlook on the web](data-loss-prevention-policies.md#policy-evaluation-in-exchange-online-outlook-and-outlook-on-the-web), [SharePoint and OneDrive for Business sites](data-loss-prevention-policies.md#policy-evaluation-in-onedrive-for-business-and-sharepoint-online-sites), and [Office desktop clients](data-loss-prevention-policies.md#policy-evaluation-in-the-office-desktop-programs), policy tips appear when an action conflicts with a DLP policy. Here's an example of a policy tip that can appear when someone attempts to share sensitive information in a Microsoft Teams channel or chat:
+Similar to how DLP works in [Exchange, Outlook, and Outlook on the web](data-loss-prevention-policies.md#policy-evaluation-in-exchange-online-outlook-and-outlook-on-the-web), [SharePoint and OneDrive for Business sites](data-loss-prevention-policies.md#policy-evaluation-in-onedrive-for-business-and-sharepoint-online-sites), and [Office desktop clients](data-loss-prevention-policies.md#policy-evaluation-in-the-office-desktop-programs), policy tips appear when an action conflicts with a DLP policy. Here's an example of a policy tip:
 
 ![Blocked message notification in Teams](media/dlp-teams-blockedmessage-notification.png)
 
-And here's an example of what the recipient sees:
-
-![Message blocked](media/dlp-teams-blockedmessage-notification-to-user.png)
-
-The **What can I do?** link opens a dialog box that provides options for the sender to resolve the issue. Notice that in this case, the sender can opt to override the policy, or notify an admin to review and resolve it.
+In this case, the sender attempted to share a social security number in a Microsoft Teams channel. The **What can I do?** link opens a dialog box that provides options for the sender to resolve the issue. Notice that in this case, the sender can opt to override the policy, or notify an admin to review and resolve it.
 
 ![Options to resolve blocked message](media/dlp-teams-blockedmessage-possibleactions.png)
 
-In your organization, you can choose whether to allow users to override a DLP policy, or not. And, when you configure your DLP policies, you can use the default policy tips, or customize policy tips for your organization. To learn more, see [Use email notifications and policy tips](use-notifications-and-policy-tips.md).
+In your organization, you can choose whether to allow users to override a DLP policy, or not. And, when you configure your DLP policies, you can use the default policy tips, or [customize policy tips](#to-customize-policy-tips) for your organization. 
+
+Returning to our example, where a sender shared a social security number in a Teams channel, here's what the recipient saw:
+
+![Message blocked](media/dlp-teams-blockedmessage-notification-to-user.png)
+
+The **What's this?** link opens an [article](data-loss-prevention-policies.md) about DLP policies, which helps explain why the message was blocked.
 
 ### To customize policy tips
 
