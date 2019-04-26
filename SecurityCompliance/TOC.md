@@ -154,7 +154,9 @@
 #### [How Office 365 validates the From: address to prevent phishing](how-office-365-validates-the-from-address.md)
 ### [Anti-spoofing protection in Office 365](anti-spoofing-protection.md)
 #### [Learn more about spoof intelligence](learn-about-spoof-intelligence.md)
+<!--Missing link-->
 ### Manage your security for specific workloads
+<!--/-->
 ### [What is EOP?](eop/what-is-eop.md)
 #### [Support for anonymous inbound email messages over IPv6](support-for-anonymous-inbound-email-messages-over-ipv6.md)
 ## [Quarantine email messages in Office 365](quarantine-email-messages.md)
