@@ -196,14 +196,9 @@
 #### [Learn more about spoof intelligence](learn-about-spoof-intelligence.md)
 #### [Identify suspicious messages in Outlook.com and Outlook on the web](unverified-sender-feature.md)
 
-## [Encryption in Office 365](encryption.md)
-### [Set up encryption in Office 365 Enterprise](set-up-encryption.md)
-### [How Exchange Online secures your email secrets](exchange-online-secures-email-secrets.md)
+## Customer Key
 ### [Controlling your data in Office 365 using Customer Key](controlling-your-data-using-customer-key.md)
 ### [Service encryption with Customer Key for Office 365 FAQ](service-encryption-with-customer-key-faq.md)
-### [Technical reference details about encryption in Office 365](technical-reference-details-about-encryption.md)
-### [How Exchange Online uses TLS to secure email connections in Office 365](exchange-online-uses-tls-to-secure-email-connections.md)
-
 
 ## [Monitor and manage data access with Office 365 Cloud App Security](office-365-cas-overview.md)
 ### [See what's new in Cloud App Security](new-in-office-365-cas.md)
@@ -544,6 +539,9 @@
 ### [Customer-Managed Encryption Features](office-365-customer-managed-encryption-features.md)
 ### [Encryption Risks and Protections](office-365-encryption-risks-and-protections.md)
 ### [Encryption for Skype for Business, OneDrive for Business, SharePoint Online, and Exchange Online](office-365-encryption-for-skype-onedrive-sharepoint-and-exchange.md)
+### [How Exchange Online secures your email secrets](exchange-online-secures-email-secrets.md)
+### [How Exchange Online uses TLS to secure email connections in Office 365](exchange-online-uses-tls-to-secure-email-connections.md)
+### [Technical reference details about encryption in Office 365](technical-reference-details-about-encryption.md)
 ### [BitLocker and Distributed Key Manager (DKM) for Encryption](office-365-bitlocker-and-distributed-key-manager-for-encryption.md)
 ### [Encryption in Microsoft Dynamics 365](office-365-encryption-in-microsoft-dynamics-365.md)
 ### [Encryption in Azure](office-365-azure-encryption.md)
