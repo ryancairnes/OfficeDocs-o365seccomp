@@ -24,7 +24,7 @@
 ## [Privileged access management](privileged-access-management-overview.md)
 ## [Configure privileged access management](privileged-access-management-configuration.md)
 
-# Protect information
+# [Protect information](protect-information.md)
 ## [Sensitivity labels](sensitivity-labels.md)
 ### [Restrict access to content by using encryption in sensitivity labels](encryption-sensitivity-labels.md)
 ### [Apply a sensitivity label to content automatically](apply_sensitivity_label_automatically.md)
