@@ -31,6 +31,7 @@
 ### [View label usage with label analytics](label-analytics.md)
 
 ## [Prevent data loss (DLP)](data-loss-prevention-policies.md)
+### [DLP and Microsoft Teams](dlp-microsoft-teams.md)
 ### [Watch an extended overview of DLP](https://channel9.msdn.com/events/ignite/microsoft-ignite-orlando-2017/brk3111)
 ### Set up DLP
 #### [Get started with DLP policy recommendations](get-started-with-dlp-policy-recommendations.md)
@@ -68,14 +69,20 @@
 #### [Office 365 Protected Message Viewer Portal privacy statement](protected-message-viewer-portal-privacy-statement.md)
 
 # Records management
-## [Retention policies](retention-policies.md)
-## [Retention labels](labels.md)
-## [Use Exchange Online and the Security & Compliance Center to comply with SEC Rule 17a-4](use-exchange-online-to-comply-with-sec-rule-17a-4.md)
-## [Disposition reviews](disposition-reviews.md)
-## [Event-driven retention](event-driven-retention.md)
-## [Automate event-based retention](automate-event-driven-retention.md)
 ## [File plan manager](file-plan-manager.md)
-## [Bulk create and publish retention labels by using PowerShell](https://docs.microsoft.com/en-us/office365/securitycompliance/bulk-create-publish-labels-using-powershell)
+## [Retention labels](labels.md)
+### [Comply with SEC Rule 17a-4](use-exchange-online-to-comply-with-sec-rule-17a-4.md)
+### [Create and publish retention labels by using PowerShell](https://docs.microsoft.com/en-us/office365/securitycompliance/bulk-create-publish-labels-using-powershell)
+## [Event-based retention](event-driven-retention.md)
+### [Automate event-based retention](automate-event-driven-retention.md)
+## [Disposition reviews](disposition-reviews.md)
+## [Retention policies](retention-policies.md)
+## Monitor records management
+### [View the data governance reports](view-the-data-governance-reports.md)
+### [View label activity for documents](view-label-activity-for-documents.md)
+### [View label usage with label analytics](label-analytics.md)
+## More information about records management
+### [Watch videos from the Microsoft Data Governance team](https://go.microsoft.com/fwlink/?linkid=867039)
 
 # Manage data governance
 ## [Import data](importing-pst-files-to-office-365.md)
@@ -95,13 +102,13 @@
 ### [Set up an archive and deletion policy for mailboxes](set-up-an-archive-and-deletion-policy-for-mailboxes.md)
 ## Retain data
 ### [Retention policies](retention-policies.md)
-### [Retention labels](labels.md)
-### [Use Exchange Online and the Security & Compliance Center to comply with SEC Rule 17a-4](use-exchange-online-to-comply-with-sec-rule-17a-4.md)
-### [Disposition reviews](disposition-reviews.md)
-### [Event-driven retention](event-driven-retention.md)
-### [Automate event-based retention](automate-event-driven-retention.md)
 ### [File plan manager](file-plan-manager.md)
-### [Bulk create and publish retention labels by using PowerShell](https://docs.microsoft.com/en-us/office365/securitycompliance/bulk-create-publish-labels-using-powershell)
+### [Retention labels](labels.md)
+### [Comply with SEC Rule 17a-4](use-exchange-online-to-comply-with-sec-rule-17a-4.md)
+### [Create and publish retention labels by using PowerShell](https://docs.microsoft.com/en-us/office365/securitycompliance/bulk-create-publish-labels-using-powershell)
+### [Event-based retention](event-driven-retention.md)
+### [Automate event-based retention](automate-event-driven-retention.md)
+## [Dispose data](disposition-reviews.md)
 ## [Supervise communications](supervision-policies.md)
 ### [Configure supervision policies for your organization](configure-supervision-policies.md)
 ## [Manage inactive mailboxes](inactive-mailboxes-in-office-365.md)
@@ -187,6 +194,7 @@
 #### [How Office 365 validates the From: address to prevent phishing](how-office-365-validates-the-from-address.md)
 ### [Anti-spoofing protection in Office 365](anti-spoofing-protection.md)
 #### [Learn more about spoof intelligence](learn-about-spoof-intelligence.md)
+#### [Identify suspicious messages in Outlook.com and Outlook on the web](unverified-sender-feature.md)
 
 ## [Encryption in Office 365](encryption.md)
 ### [Set up encryption in Office 365 Enterprise](set-up-encryption.md)
