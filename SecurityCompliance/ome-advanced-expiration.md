@@ -11,16 +11,20 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: f87cb016-7876-4317-ae3c-9169b311ff8a
-description: "with Office 365 Advanced Message Encryption capabilities on top of Office 365 Message Encryption, you can extend your email security by setting an expiration date on emails through a custom branded template."
+description: "With Office 365 Advanced Message Encryption capabilities on top of Office 365 Message Encryption (OME), you can extend your email security by setting an expiration date on emails through a custom branded template."
 ---
 
 # Office 365 Advanced Message Encryption - message expiration
 
-Office 365 Advanced Message Encryption is available in Office 365 Message Encryption. Advanced Message Encryption is included in subscriptions, such as [Microsoft 365 Enterprise](https://www.microsoft.com/microsoft-365/enterprise/home), Office 365 Enterprise E5, Office 365 Education A5, etc. If your organization has an Office 365 subscription that does not include Office 365 Advanced Message Encryption, you can potentially purchase Advanced Message Encryption as an add-on. For more information, see [Carolyn/Samson, I need a page](https://products.office.com/TBD) and the [Office 365 CORRECT Service Description](https://docs.microsoft.com/office365/servicedescriptions/TBD). Make sure your organization is using the latest version of Office 365 ProPlus on Windows to take full advantage of Advanced Message Encryption.
+Office 365 Advanced Message Encryption is available additions to Office 365 Message Encryption in certain subscriptions. Advanced Message Encryption is included in [Microsoft 365 Enterprise](https://www.microsoft.com/microsoft-365/enterprise/home), Office 365 Enterprise E5, and Office 365 Education A5. If your organization has an Office 365 subscription that does not include Office 365 Advanced Message Encryption, you can potentially purchase Advanced Message Encryption as an add-on. For more information, see [Carolyn/Samson, I need a page](https://products.office.com/) and the [Office 365 CORRECT Service Description](https://docs.microsoft.com/office365/servicedescriptions/). Make sure your organization is using the latest version of Office 365 ProPlus on Windows or Mac to take full advantage of Advanced Message Encryption.
 
-**I need the M365 equivalent, not EOP or EXO** As an Administrator, when you apply your company branding to customize the look of your organization's Office 365 Message Encryption email messages, you can also specify an expiration for these email messages. You can create multiple templates for encrypted emails originating from your organization. Using these templates, you can control how long recipients have access to mail sent by your users.
+You can use message expiration on emails that your users send to recipients who use the OME Portal to access encrypted emails. **KC clean this pivot up**
 
-When an end user receives mail that has an expiration date set, they will see that expiration date in the wrapper email. If a user tries to open an expired mail, they receive an error in the OME portal. **CAROLYN! SAMSON! what if they are using OMEv2 and have a seamless experience and therefore, NO wrapper mail and no portal?**
+Control encrypted emails accessed externally through a secure web portal by setting an expiration date and revoking access at any time.
+
+As an O365 global administrator, when you apply your company branding to customize the look of your Office 365 organization's email messages, you can also specify an expiration for these email messages. You can create multiple templates for encrypted emails originating from your organization. Using these templates, you can control how long recipients have access to mail sent by your users.
+
+When an end user receives mail that has an expiration date set, they will see that expiration date in the wrapper email. If a user tries to open an expired mail, they receive an error in the OME portal. **SAMSON! What if they are using OMEv2 and have a seamless experience and therefore, NO wrapper mail and no portal?**
 
 ## Create a custom branding template by using PowerShell
 
