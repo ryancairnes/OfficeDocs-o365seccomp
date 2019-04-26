@@ -230,9 +230,7 @@ EDM can be used with information protection features, such as [Office 365 DLP po
 
 ## Refreshing your sensitive information database
 
-You can refresh your sensitive information database weekly. You can either refresh your .csv file manually, or use [Windows Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/task-scheduler-start-page) to schedule a weekly refresh. The following procedure describes how to refresh the data manually.
-
-1.  
+You can refresh your sensitive information database weekly. When your .csv file is refreshed, make sure to use the EDM Upload Tool to re-index the sensitive data and re-upload the indexed data (steps 5-7 in [Part 2](#part-2-install-and-use-the-edm-upload-agent-tool)). 
 
 ## Related articles
 
