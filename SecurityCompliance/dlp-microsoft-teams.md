@@ -3,7 +3,7 @@ title: "Data loss prevention and Microsoft Teams"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 04/22/2019
+ms.date: 04/26/2019
 ms.audience: ITPro
 ms.topic: conceptual
 ms.service: O365-seccomp
