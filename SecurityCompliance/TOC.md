@@ -196,10 +196,6 @@
 #### [Learn more about spoof intelligence](learn-about-spoof-intelligence.md)
 #### [Identify suspicious messages in Outlook.com and Outlook on the web](unverified-sender-feature.md)
 
-## Customer Key
-### [Controlling your data in Office 365 using Customer Key](controlling-your-data-using-customer-key.md)
-### [Service encryption with Customer Key for Office 365 FAQ](service-encryption-with-customer-key-faq.md)
-
 ## [Monitor and manage data access with Office 365 Cloud App Security](office-365-cas-overview.md)
 ### [See what's new in Cloud App Security](new-in-office-365-cas.md)
 #### [Updates during 2018](new-in-office-365-cas-2018.md)
@@ -480,6 +476,9 @@
 # Compliance solutions
 ## [Microsoft Service Trust Portal](get-started-with-service-trust-portal.md)
 ## [Compliance Manager](meet-data-protection-and-regulatory-reqs-using-microsoft-cloud.md)
+## Customer Key
+### [Controlling your data in Office 365 using Customer Key](controlling-your-data-using-customer-key.md)
+### [Service encryption with Customer Key for Office 365 FAQ](service-encryption-with-customer-key-faq.md)
 ## [GDPR data subject request tool](manage-gdpr-data-subject-requests-with-the-dsr-case-tool.md)
 ## [Office 365 Information Protection for GDPR](office-365-information-protection-for-gdpr.md)
 ### [Overview: Office 365 Protection for GDPR](office-365-info-protection-for-gdpr-overview.md)
