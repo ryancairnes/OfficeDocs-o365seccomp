@@ -166,6 +166,32 @@ For more information about how Office 365 implements encryption for emails and e
    Set-IRMConfiguration -DecryptAttachmentFromPortal $false
    ```
 
+## Ensure all external recipients use the OME Portal to read encrypted mail
+
+You can force recipients to read encrypted email in the OME Portal instead of using Outlook or Outlook on the web. You might want to do this if you use Office 365 Advanced Message encryption features such as revocation and expiration which are only supported through the OME Portal.
+
+### To force recipients to use the portal, use the *** cmdlet in Windows Powershell
+
+1. Using a work or school account that has global administrator permissions in your Office 365 organization, start a Windows PowerShell session and connect to Exchange Online. For instructions, see [Connect to Exchange Online PowerShell](https://aka.ms/exopowershell).
+
+2. Run the Set-IRMConfiguration cmdlet with the **??** parameter:
+
+   ```powershell
+   Set-IRMConfiguration -ForcePortal?? <$true|$false>
+   ```
+
+   For example, to configure the service to require external recipients to use the OME Portal:
+
+   ```powershell
+   Set-IRMConfiguration -ForcePortal?? $true
+   ```
+
+   To configure the service not to require external recipients that use Outlook for PC, Outlook for Mac, and Outlook on the web to use the OME Portal:
+
+   ```powershell
+   Set-IRMConfiguration -ForcePortal?? $false
+   ```
+
 ## Customizing the appearance of email messages and the OME portal
 
 For detailed information about how you can customize OME for your organization, see [Add your organization's brand to your encrypted messages](add-your-organization-brand-to-encrypted-messages.md).
