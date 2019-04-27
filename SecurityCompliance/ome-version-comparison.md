@@ -80,6 +80,7 @@ All recipients outside GCC High, including commercial Office 365 users, Outlook.
 You can use both legacy OME and the new capabilities in the same tenant. As an administrator, you do this by choosing which version of OME you want to use when you create your mail flow rules.
 
 - To specify the legacy version of OME, use the Exchange mail flow rule action **Apply the previous version of OME**.
+
 - To specify the new capabilities, use the Exchange mail flow rule action **Apply Office 365 Message Encryption and rights protection**.
 
 Users can manually send mail that is encrypted with the new capabilities from Outlook Desktop, Outlook for Mac, and Outlook on the web.

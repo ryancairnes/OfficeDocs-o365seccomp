@@ -16,15 +16,15 @@ description: "With Office 365 Advanced Message Encryption capabilities on top of
 
 # Office 365 Advanced Message Encryption - message expiration
 
-Office 365 Advanced Message Encryption is available additions to Office 365 Message Encryption in certain subscriptions. Advanced Message Encryption is included in [Microsoft 365 Enterprise](https://www.microsoft.com/microsoft-365/enterprise/home), Office 365 Enterprise E5, and Office 365 Education A5. If your organization has an Office 365 subscription that does not include Office 365 Advanced Message Encryption, you can potentially purchase Advanced Message Encryption as an add-on. For more information, see [Carolyn/Samson, I need a page](https://products.office.com/) and the [Office 365 CORRECT Service Description](https://docs.microsoft.com/office365/servicedescriptions/). Make sure your organization is using the latest version of Office 365 ProPlus on Windows or Mac to take full advantage of Advanced Message Encryption.
+Office 365 Advanced Message Encryption is available additions to Office 365 Message Encryption in certain subscriptions. Advanced Message Encryption is included in [Microsoft 365 Enterprise](https://www.microsoft.com/microsoft-365/enterprise/home), Office 365 Enterprise E5, and Office 365 Education A5. If your organization has an Office 365 subscription that does not include Office 365 Advanced Message Encryption, you can potentially purchase Advanced Message Encryption as an add-on. For more information, see [Carolyn/Samson, I need a page](https://products.office.com/) and the [Message Policy and Compliance](https://docs.microsoft.com/en-us/office365/servicedescriptions/exchange-online-service-description/message-policy-and-compliance). Make sure your organization is using the latest version of Office 365 ProPlus on Windows or Mac to take full advantage of Advanced Message Encryption.
 
-You can use message expiration on emails that your users send to recipients who use the OME Portal to access encrypted emails. Recipients outside of Office 365 are directed to the OME Portal when they receive encrypted email. In addition, you can force recipients in other Office 365 organizations to use the OME portal to view and reply to encrypted emails sent by your organization by using Windows Powershell. For information on how to do this, see .
+You can use message expiration on emails that your users send to recipients who use the OME Portal to access encrypted emails. Recipients outside of Office 365 are directed to the OME Portal when they receive encrypted email. In addition, you can force recipients in other Office 365 organizations to use the OME portal to view and reply to encrypted emails sent by your organization by using Windows Powershell. For information on how to do this, see [Ensure all external recipients use the OME Portal to read encrypted mail](manage-office-365-message-encryption.md#ensure-all-external-recipients-use-the-ome-portal-to-read-encrypted-mail).
 
 Control encrypted emails accessed externally through a secure web portal by setting an expiration date and revoking access at any time.
 
-As an O365 global administrator, when you apply your company branding to customize the look of your Office 365 organization's email messages, you can also specify an expiration for these email messages. You can create multiple templates for encrypted emails originating from your organization. Using these templates, you can control how long recipients have access to mail sent by your users.
+As an O365 global administrator, when you apply your company branding to customize the look of your Office 365 organization's email messages, you can also specify an expiration for these email messages. With Office 365 Advanced Message Encryption, you can create multiple templates for encrypted emails originating from your organization. Using a template, you can control how long recipients have access to mail sent by your users.
 
-When an end user receives mail that has an expiration date set, they will see that expiration date in the wrapper email. If a user tries to open an expired mail, they receive an error in the OME portal. **SAMSON! What if they are using OMEv2 and have a seamless experience and therefore, NO wrapper mail and no portal?**
+When an end user receives mail that has an expiration date set, the user  sees the expiration date in the wrapper email. If a user tries to open an expired mail, an error appears in the OME portal.
 
 ## Create a custom branding template by using PowerShell
 
@@ -44,4 +44,6 @@ Where:
 
 ## More information about Office 365 Advanced Message Encryption
 
+- [Office 365 Advanced Message Encryption capabilities](ome-version-comparison.md#office-365-advanced-message-encryption-capabilities)
+- [Office 365 Advanced Message Encryption - email revocation](revoke-ome-encrypted-mail.md)
 - 
