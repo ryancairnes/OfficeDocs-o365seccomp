@@ -76,7 +76,6 @@
 ## [Event-based retention](event-driven-retention.md)
 ### [Automate event-based retention](automate-event-driven-retention.md)
 ## [Disposition reviews](disposition-reviews.md)
-## [Retention policies](retention-policies.md)
 ## Monitor records management
 ### [View the data governance reports](view-the-data-governance-reports.md)
 ### [View label activity for documents](view-label-activity-for-documents.md)
