@@ -62,7 +62,7 @@ The action on the rule must follow this pattern:
 
 Do not add domains you own, or popular domains (e.g. `microsoft.com`) to the mail flow rule as a condition. This is considered high risk since it creates opportunities for bad actors to send you mail that would otherwise be filtered out.
 
-[Please click for the steps to create an ETR, also known as mail-flow rule](https://docs.microsoft.com/en-us/office365/SecurityCompliance/use-mail-flow-rules-to-set-the-spam-confidence-level-scl-in-messages).
+[Please click for the steps to create an ETR, also known as mail-flow rules](https://docs.microsoft.com/en-us/office365/SecurityCompliance/use-mail-flow-rules-to-set-the-spam-confidence-level-scl-in-messages).
 
 ## Use Outlook Safe Senders (end-user managed)
 
