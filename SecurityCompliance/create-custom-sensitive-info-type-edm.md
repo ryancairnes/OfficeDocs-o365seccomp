@@ -48,20 +48,18 @@ EDM classification enables you to create custom sensitive information types that
 |[Part 2: Install and use the EDM Upload Agent tool](#part-2-install-and-use-the-edm-upload-agent-tool) |- The [EDM Upload Agent](https://go.microsoft.com/fwlink/?linkid=2088639) tool<br/>- Dedicated user account and machine for the tool and indexed data |    |         |
 |[Part 3: Use EDM classification with your Microsoft cloud services (Example: DLP policy)](#part-3-use-edm-classification-with-your-microsoft-cloud-services-example-dlp-policy) |- Office 365 or Microsoft 365 subscription that includes DLP<br/>- EDM classification features (currently in preview) |
 
-## Part 1: Set up your sensitive information database and rule package for EDM
+## Part 1: Define your sensitive data for EDM classification
 
-Setting up and configuring EDM involves first setting up a secure, refreshable database that contains the sensitive information you'll use for EDM classification, and then creating a rule package that will be used with an upload agent and with policies, such as data loss prevention (DLP) policies.
+Setting up and configuring EDM classification involves defining a schema for your database of sensitive information, and then creating a rule package.
 
-### Set up your secure database of sensitive information
+### Define the schema for your database of sensitive information
 
-1. Identify the sensitive information you want to use. Export the data to a tool, such as Excel, that can be saved as a .csv file).
+1. Identify the sensitive information you want to use. Export the data to an app, such as Microsoft Excel, and save the file in .csv format. The data file can include:
+
+    - Up to ten million rows of sensitive data
+    - Up to 32 columns (fields) per data source
 
 2. Structure the sensitive data in the .csv file. Make sure the first row of the .csv file includes the names of the fields you'll use for EDM. For example, you might have field names, such as `id`, `firstname`, `lastname`, and so on. Keep the following limits in mind:
-
-    - The data file can include up to ten million rows of sensitive data across all data sources.
-    - The data file can include up to 32 fields per data source.
-    - The data file can include up to five indexed columns per data source.
-    - Data refresh for each data source can occur weekly (but not more often during preview).
     
     As an example, we our .csv file is called *SampleDataStore.csv*. It includes columns, such as *id*, *firstname*, *lastname*, *title*, and so on.
 
@@ -81,7 +79,11 @@ Setting up and configuring EDM involves first setting up a secure, refreshable d
       </DataStore>
     </EdmSchema>
     ```
-    For each column in the database, indicate its field name, whether that column contains unique values (social security numbers are unique, but dates of birth are not), and whether that column should be searchable (a value of *true* indicates it should be searchable). Select up to five columns per database to be searchable. These are the columns that will be used with EDM classification.
+    For each column in the database, indicate its field name, whether that column contains unique values (social security numbers are unique, but dates of birth are not), and whether that column should be searchable (a value of *true* indicates it should be searchable). 
+    
+    Select up to five columns per database to be searchable. These are the columns that will be used with EDM classification.
+
+    In our example, the `firstname`, `creditcard`, and `ssn` fields will be used for EDM classification.
 
 4. [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
