@@ -27,7 +27,7 @@ The recommended method to configure a safe sender list is to use an Exchange Tra
 
 You should always restrict your Allow lists because they bypass many security measures. You must recheck all Allow lists as a part of your standard maintenance, so that you are aware of who is permitted to bypass. The recomendation is to use restrictive ETRs where possible.
 
-- Exchange Transport Rules (ETRs)
+- Exchange Transport Rules (ETRs also called mail-flow rules)
 - Outlook Safe Senders
 - Anti-spam policy: IP Allow Lists
 - Anti-spam policy: Sender/Domain Allow Lists
@@ -62,7 +62,7 @@ The action on the rule must follow this pattern:
 
 Do not add domains you own, or popular domains (e.g. `microsoft.com`) to the mail flow rule as a condition. This is considered high risk since it creates opportunities for bad actors to send you mail that would otherwise be filtered out.
 
-[Please click for the steps to create an ETR](https://docs.microsoft.com/en-us/office365/SecurityCompliance/use-mail-flow-rules-to-set-the-spam-confidence-level-scl-in-messages).
+[Please click for the steps to create an ETR, also known as mail-flow list](https://docs.microsoft.com/en-us/office365/SecurityCompliance/use-mail-flow-rules-to-set-the-spam-confidence-level-scl-in-messages).
 
 ## Use Outlook Safe Senders (end-user managed)
 
