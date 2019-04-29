@@ -21,7 +21,7 @@ description: "Microsoft Compliance Manager is a free workflow-based risk assessm
 
 ## Getting started
 
-## Step 1: Access
+## Access Compliance Manager
 
 You access Compliance Manager from the Service Trust Portal. Anyone with a Microsoft account or Azure Active Directory organizational account can access Compliance Manager.
   
@@ -37,10 +37,7 @@ To get you started, an ISO/IEC 27001:2103 Assessment for Office 365 appears by d
 
 ## Administration
 
-There are specific administrative functions that are only available to the tenant administrator account, and will only be visible when logged in as a global administrator.
-  
-> [!NOTE]
-> The Access to Restricted Documents permission in the drop-down list will allow administrators to give users access to restricted documents that Microsoft shares on the Service Trust Portal. The Restricted Documents feature isn't available, but is coming soon.
+There are specific administrative functions that are only available to the tenant administrator and will only be visible when logged in using the global administrator account. However, until the administrator assigns Compliance Manager roles to users, data in Compliance Manager will be visible to all users in your organization. We recommend implementing role-based access control to determine who can access and perform actions in Compliance Manager.
   
 ### Assigning Compliance Manager roles to users
 
@@ -88,235 +85,218 @@ When working with groups, remember:
 - Group names (also called *Group IDs*) must be unique within your organization.
 - Groups can contain Assessments for the same certification/regulation, but each group can only contain one Assessment for a specific cloud service/certification pair. For example, a group can't contain two Assessments for Office 365 and NIST CSF. A group can contain multiple Assessments for the same cloud service only if the corresponding certification/regulation for each one is different.
 - Once an assessment has been added to an assessment group, the grouping cannot be changed. You can rename the assessment group, which changes the name of the assessment grouping for all the assessments associated with that group. You can create a new assessment and a new assessment group and copy information from an existing assessment, which effectively creates a duplicate of that assessment in a different assessment group.
-- Archiving an assessment breaks the relationship between that assessment and the assessment group; any further updates to other related assessments are no longer reflected in the archived assessment.
+- Archiving an assessment breaks the relationship between that assessment and the group; any further updates to other related assessments are no longer reflected in the archived assessment.
+
+## Tenant Management
+
+Compliance Manager (Preview) includes a new interface for managing new data elements called **Tenant Management**. This interface enables you to manage tenant-wide settings:
+
+- **Dimensions:** View, add and customize metadata for Templates, Assessments, and Action Items that allow you to create custom pivots for filters.
+- **Owners:** Specify an owner for each Action Item.
+- **Customer Actions:** Manage the complete list of Actions Items included in Compliance Manager (Preview) and enable/disable Secure Score monitoring for Actions that are integrated with Secure Score.
+
+Select **Tenant Management** to open the management interface, and use the following steps to manage **Dimensions**, **Owners**, and **Customer Actions**.
+
+### Dimensions
+
+Dimensions are sets of metadata that provide information about a Template, an Assessment, or an Action Item. Dimensions use the concept of Keys and Values, where the Dimension Key represents a property, and Dimension Value represents valid values for the property. For example, in Compliance Manager there are three types of Actions. They are defined by a Dimension Key of **Action Type** and Dimension Values of **Documentation**, **Operational**, and **Technical**. You can modify existing Dimensions or add your own. Adding Dimensions is often necessary when importing custom Templates.
+
+#### To add a Dimension
+
+1. Open **Tenant Management** and select **Dimensions**.
+2. Select **+ Add Dimension**.
+3. Enter a unique name in the **Key** field.
+4. Optionally enable multiple values to be used concurrently for the same Key, slide the toggle for **Allow multi selection for dimensions** to on.
+5. Select **+ Add** to add a value by providing a unique name and clicking the save icon.
+6. Repeat Step 5 for each value you want to add.
+7. Select **Save** to save the new Dimension.
+
+#### To edit a Dimension
+
+You can rename a Dimension Key, but you can modify the values for custom Dimensions.
+
+1. Open **Tenant Management** and select **Dimensions**.
+2. Locate the Dimension you want to edit, select the ellipses (…) next to it, and select **Edit**.
+3. Select **+ Add** to add a value by providing a unique name and clicking the save icon, or select the value you want to edit or delete, and click **Remove** or **Edit**.
+4. Select **Save** when you have finished making changes.
+
+#### To delete a Dimension
+
+You can delete custom Dimensions if needed.
+
+1. Open **Tenant Management** and select **Dimensions**.
+2. Locate the Dimension you want to delete, select the ellipses (…) next to it, and select **Delete**.
+3. When the confirmation message appears, select **Delete**.
+
+### Owners
+
+Owners are used to identify the responsible party for each control. All built-in controls are owned by Microsoft, by customers, or by both. You can create custom values for Owners that can be used to specify more granular responsibilities within your organization. For example, you could create Owners that represent specific groups, teams, or business units within your organization.
+
+#### To add an Owner
+
+1. Open **Tenant Management** and select **Owners**.
+2. Click **+ Add owner**.
+3. Provide a Name and Description for the Owner and select **Save**. The description is displayed in the Owner column.
+
+#### To edit an Owner
+
+You can’t edit an Owner name, but you can modify the description that is displayed in the Owner column.
+
+1. Open **Tenant Management** and select **Owners**.
+2. Locate the Owner you want to edit, select the ellipses (…) next to it, and select **Edit**.
+3. Modify the Description as needed and select **Save**.
+
+#### To delete an Owner
+
+1. Open **Tenant Management** and select **Owners**.
+2. Locate the Owner you want to delete, select the ellipses (…) next to it, and select **Delete**.
+3. When the confirmation message appears, select **Delete**.
+
+### Customer Actions
+
+The Customer Actions area shows all the customer actions for all Templates and Assessments in Compliance Manager (Preview).
+
+ADD IMAGE
+
+At-a-glance, you can see an Action’s title, owner, category, enforcement, and score, and determine if it is integrated with Secure Score. You can expand an Action and select **Read More** to read the Action’s description and access any links in the description. You can also use this interface to enable and disable Secure Score integration on a per-action basis, and to add custom actions. Actions that have Secure Score integration capabilities have an ellipsis (…) next to them (note that custom actions also have an ellipsis next to them).
+
+#### To enable or disable Secure Score integration
+
+1. Select the ellipses (…) for the Action you want to modify and select **Edit**.
+2. Toggle the switch for Secure Score continuous update to On or Off to enable or disable continuous monitoring through Secure Score.
+3. Select **Save**.
+
+#### To add a customer action
+
+1. Select **+ Add Customer Action**.
+2. Provide a unique title for the Action in the **Title** field.
+3. Provide a Compliance Score for the Action in the **Maximum Compliance Score** field (this can be any number from 1-99).
+4. Use the **Action Type** dropdown to specify the type of Action you are adding. If the Action Type does not exist, you can add it by adding the value to the
+Action Type dimension key.
+5. Use the **Dimensions** dropdown to specify or add dimension keys and values for the Action.
+6. Use the **Owner** dropdown to specify the owner for Action.
+7. Select **+** to add a description and description title for the Action.
+8. Select the **X** to close the Description blade.
+9. Select **Save** to save the Customer Action.
+
+#### To edit a customer action
+
+1. Select the ellipses (…) for the Action you want to modify and select **Edit**.
+2. Edit the Action as desired, and select **Save**.
+
+#### To delete a customer action
+
+1. Select the ellipses (…) for the Action you want to modify and select **Delete**.
+2. When the confirmation message appears, select **Delete**.
 
 ## Assessments
 
-### Managing the assessment process
-
-The creator of an Assessment is initially the only Assessment User. For each customer managed control, you can assign an Action Item to a person in your organization so that person becomes an Assessment User who can perform the recommended customer actions and gather and upload evidence. When you assign an Action Item, you can choose to send an email to the person that contains details including the recommended Customer Actions and the Action Item priority. The email notification includes a link to the **Action Items** dashboard, which lists all Action Items assigned to that person.
+### To add an Assessment to Compliance Manager
   
-Here's a list of tasks that you can perform using the workflow features of Compliance Manager.
-  
-1. **Use the Filter Options to find specific assessment controls** - Compliance Manager provides **Filter Options**, giving you highly granular selection criteria for displaying assessment controls, helping you to precisely target specific areas of your compliance efforts.
+1. In the Assessments dashboard, click **+ Add Assessment**.
 
-    Click on the funnel icon on the right hand side of the page to show or hide the **Filter Options** controls. These controls allow you to specify filter criteria, and only the assessment controls that fit those criteria will be displayed below.
-  
-    - **Articles** - filters on the article name and returns the assessment controls associated to that article. For instance, typing in "Article (5)" returns a selection list of articles whose name includes that string, i.e. Article (5)(1)(a), Article (5)(1)(b), Article (5)(1)(c), etc. Selecting Article (5)(1)(c) will return the controls associated with Article (5)(1)(c). This is multi-select field that uses an OR operator with multiple values -- for instance, if you select Article (5)(1)(a) and then add Article (5)(1)(c), the filter will return controls associated with either Article (5)(1)(a) or Article (5)(1)(c).
-  
-    - **Controls** - returns the list of controls whose names fit the filter, i.e. typing in 7.3 returns a selection list of items like 7.3.1, 7.3.4, 7.3.5, etc. This is multi-select field that uses an OR operator with multiple values -- for instance, if you select 7.3.1 and then add 7.3.4, the filter will return controls associated with either 7.3.1 or 7.3.4.
-  
-    - **Assigned Users** - returns the list of controls who are assigned to the selected user.
-
-    - **Status** - returns the list of controls with the selected status.
-
-    - **Test Result** - returns the list of controls with the selected test result.
-
-    As you apply filter conditions, the view of applicable controls will change to correspond to your filter conditions. Expand the control family sections to show the control details below. 
-
-    ![Compliance Manager Assessment view - Filter Article results](media/e6485d45-d47f-4b25-8b1c-b3c2ee4a8328.png)
-  
-2. If after selecting the desired filters no results are shown, that means there are no controls that correspond to the specified filter conditions. For instance, if you select a particular **Assigned User** and then choose a **Control** name that does correspond to the control assigned to that user, no assessments will be shown in the page below. 
-    
-3. **Assign an Action Item to a user** - You can assign an Action Item to a person to implement the requirements of a certification/regulation, or to test, verify, and document your organization's implementation requirements. When you assign an Action Item, you can choose to send an email to the person that contains details including the recommended Customer Actions and the Action Item priority. You can also unassign or reassign an Action Item to a different person. 
-    
-4. **Manage documents** - Customer managed controls also have a place to manage documents that are related to performing implementation tasks and for performing testing and validation tasks. Anyone with permissions to edit data in Compliance Manager can upload documents by clicking **Manage Documents**. After a documented has been uploaded, you can click **Manage Documents** to view and download files. 
-    
-5. **Provide implementation and testing details** - Every customer managed control has an editable field where users can add implementation details that document the steps taken by your organization to meet the requirements of the certification/regulation, and to validate and document how your organization meets those requirements.
-    
-6. **Set Status** - Set the Status for each item as part of the assessment process. Available status values are **Implemented**, **Alternative Implementation**, **Planned**, and **Not in Scope**. 
-    
-7. **Enter test date and test result** - The person with the Compliance Manager Assessor role can verify that proper testing performed, review the implementation details, test plan, test results, and any uploaded evidence, and then set the Test Date and Test Result. Available test result values are **Passed**, **Failed-Low Risk**, **Failed-Medium Ris** **k**, and **Failed-High Risk**. 
-
-### Add an Assessment
-
-To add an Assessment to Compliance Manager:
-  
-1. In the Compliance Manager dashboard, select **Add Assessment**.
-    
-2. In the **Add an Assessment** window, complete the following information
+2. When the blade opens, enter the following information:
 
     - **Title (required):** Enter a title for your Assessment
-    - **Select a template (required):** Select a standard or custom template
-    - **Select a group or add a new group (required):** Select an existing group or create and add the Assessment to a new group
-    - **Copy data from an existing group (optional):** Toggle the control to enable group copy
-    - **Select a group (optional):** If group copy is enabled, select the group to copy from
-    - **Implementation Details (optional):** Select to copy implementation details to the new group
-    - **Test plan & additional information (optional):** Select to copy test plan and additional information details to the new group
-    - **Documents (optional):** Select to copy documents to the new group
+    - **Please select a template (required):** Select a standard or custom template
+    - **Please select a group or add a new group (required):** Select an existing group or or choose add a new group, and provide a unique group name
+    - **Would you like to copy the data from an existing group? (optional):** Toggle the control to enable group copy and then:
+        - **Select a group (optional):** If group copy is enabled, select the group to copy from
+            - **Implementation Details (optional):** Select to copy implementation details to the new group
+            - **Test plan & additional information (optional):** Select to copy test plan and additional information details to the new group
+            - **Documents (optional):** Select to copy documents to the new group
 
 3. Select **Save** to create the Assessment.
 
- The new Assessment is automatically added as an Assessment tile on the Compliance Manager dashboard. This tile displays:
+ The new Assessment appears on the Assessment dashboard and displays the following information:
 
 - The title of the Assessment.
 - The dimensions of the Assessment, including certification, environment, and product applied to the Assessment.
 - The date it was created and date when it was last modified.
-- The Assessment Score (the sum of all of the assigned control risk values that have been implemented, tested and passed).
-- Progress indicators along the bottom that show the number of Microsoft-managed and customer-manged controls that have been assessed.
+- The Assessment Score shown as a percentage.
+- Progress indicators that show the number of assessed Microsoft-managed and customer-manged controls.
 
 ### Copying information from existing Assessments
 
-When you create a new Assessment, you have the option to copy information from Assessments in an existing group to the new Assessment. This allows you to apply the completed assessment and testing work to the same customer managed controls in the new Assessment. For example, if you have a group for all GDPR-related Assessments in your organization, you can copy common information from existing assessment work when adding a new Assessment to the group.
-  
-You can copy the following information from customer to a new Assessment:
-  
-- Assessment Users. An Assessment user is a user who the control is assigned to.
-- Status, Test Date, and Test Results.
-- Implementation details and test plan information.
+When you create an Assessment, you have the option to copy information from an existing group. This allows you to apply the information entered into the copied assessment to the same controls in the new Assessment. For example, if you have a group for all FFIEC-related Assessments in your organization, you can copy the following information from existing assessments:
 
-Similarly, information from shared customer managed controls within the same Assessment group is synchronized. And information in related customer managed controls within the same Assessment is also synchronized.
+- Implementation Details
+- Test Plan & Additional Information
+- Documents
 
-To copy information from an existing Assessment to a new Assessment:
+#### To copy information from an existing Assessment to a new Assessment
   
-1. In the Compliance Manager dashboard, select **Add Assessment**.
+1. In the Assessment dashboard, select **+ Add Assessment**.
     
 2. In the **Add an Assessment** window, complete the following information
 
     - **Title (required):** Enter a title for your Assessment
-    - **Select a template (required):** Select a standard or custom template
-    - **Select a group or add a new group (required):** Select an existing group or create and add the Assessment to a new group
-    - **Copy data from an existing group (required for copying Assessment data):** Toggle the control to enable group copy
-    - **Select a group (required for copying Assessment data):** If group copy is enabled, select the group to copy from
-    - **Implementation Details (select as needed):** Select to copy implementation details to the new group
-    - **Test plan & additional information (select as needed):** Select to copy test plan and additional information details to the new group
-    - **Documents (select as needed):** Select to copy documents to the new group
+    - **Please select a template (required):** Select a standard or custom template
+    - **Please select a group or add a new group (required):** Choose **Add a new group** and provide a unique group name
+    - **Would you like to copy the data from an existing group? (optional):** Toggle the control to On to enable group copy and then:
+            - **Select a group (optional):** If group copy is enabled, select the group to copy from
+            - **Implementation Details (optional):** Select to copy implementation details to the new group
+            - **Test plan & additional information (optional):** Select to copy test plan and additional information details to the new group
+            - **Documents (optional):** Select to copy documents to the new group
 
 3. Select **Save** to create the Assessment.
 
-### Import custom Assessments
-
-Compliance Manager supports uploading custom Assessments in Microsoft Excel form only. There is a specific format and schema that must be used for the data or it will not import into Compliance Manager. To make Compliance Manager work, every standard, regulation, etc. is treated as if it were a control framework. Each custom Assessment should be in a separate Excel file.
-
-Each file should contain 5 tabs:
-
-- Template-Assessment
-- ControlFamily
-- Actions
-- Ownership
-- Dimensions
-
-Each of these tabs, and the schema used within each tab, is detailed below.
-
-#### Template-Assessment tab
-
-This tab has a single column:
-
-- **inScopeServices:** comma-delimited list of products or services that are in-scope for the Assessment.
-
-#### ControlFamily tab
-
-This tab includes columns that define the controls that are mapped to the Actions listed on the Actions tab, and includes details like control name, family, title and description.  
-
-The columns for this tab, which must be ordered within Excel in the order listed below, are:
-
-- **controlName:** Control name from certification/standard/regulation, etc.
-- **controlFamily:** Control family from certification/standard, regulation, etc.
-- **controlTitle:** Control title from certification/standard/regulation, etc.
-- **controlDescription:** Control description from certification/standard/regulation, etc.
-- **controlVersion:** Optional control version info.  Example: for NIST 800-53, the current value is Rev 4, so the controlVersion is 4.  For CSA CCM, it is be 3.0.1.
-- **isDisabled:** Use TRUE or FALSE to indicate whether the control has been disabled.
-- **controlType:** Use CM to indicate these are customer-managed controls.
-- **controlComplianceScore:** Sum of the score of all Actions assigned to the Control.
-- **controlActionTitle:** Double semi-colon-delimited list of all actionTitles for this control as listed on the Actions tab. 
-
-#### Actions tab
-
-This tab includes columns that define individual Actions, and it includes details like action title, ownership, and dimensions. 
-
-The columns for this tab, which must be ordered within Excel in the order listed below, are:
-
-- **actionTitle:** Title of the action. Each title must be unique, and we recommend using Pasc:**al case.
-- **actionRelatedODVs:** Double semicolon-delimited list of actionTitles that are parents of the child listed in the actionTitle column. In a parent/child relationship, the parent represents the high watermark. Thus, if you complete a parent action, you also complete all child actions. For example, when you have similar requirements but different standard-defined values, such as password length, where one standard/regulation requires a minimum of 15 characters, and another requires a minimum of 12 or 10. 15 would be the parent in this example, and if you configure a minimum of 15 characters, you also satisfy the actions that recommend 12 or 10 characters in other assessments.
-- **actionDimensionValues:** Double semicolon-delimited list of applicable dimensions from the Dimensions tab, using the following format: Dimension Key::Dimension Value;;Dimension Key::Dimension Value.  For example, Product::Office 365;;Certification::NIST CSF.
-- **actionScore:** Numeric value for each Action, which represents the score for that action. We recommend following the scoring model used by the built-in assessments, which is based on each Action’s purpose and enforcement.
-- **actionOwnership:** Double semicolon-delimited list of Owners. All listed Owners must be included on the Ownership tab.
-- **actionDescription:** Text of each Action, which must be unique. This field supports Markdown Language as described below.
-
-#### Ownership tab
-
-This tab includes columns that define owners for each action.  
-
-The columns for this tab, which must be ordered within Excel in the order listed below, are:
-
-- **ownershipName:** Name of owner/responsible party.  Must be unique.
-- **ownershipDescription:** Description of the owner/responsible party.
-
-#### Dimensions tab
-
-This tab includes columns that define the dimensions that can be associated with an Action.
-
-The columns for this tab, which must be ordered within Excel in the order listed below, are:
-
-- **dimensionKey:** List of Keys used for Dimensions. For example, Product, Certification, etc.
-- **dimensionValue:** Unique value for each dimension key. For example, Office 365, Intune, Azure, Custom Product, etc.
-- **allowMultiSelect:** Use TRUE or FALSE to indicate that multiple dimension values can be selected for a single dimension key. 
-
-#### Using Markdown Language in Description Fields
-
-Assessments support the use of Markdown language for some text elements and formatting.  There are three formatting elements of Markdown language that are used in Compliance Manager:
-
-- Bullets and Numbered lists
-- Hyperlinks
-- Boldface
-
-Bullets are represented as asterisks instead of Word or Excel bullets.  For example:
-
-```
-* Item A
-* Item B
-* Item C
-```
-
-Numbers are represented as numbers, but with spaces for indentation (3 spaces per level) and only numbers used for all sublevels (e.g., no letters).  For example:
-
-   1. Item A
-   2. Item B
-      1. Sub-item A
-      2. Sub-item B
-   3. Item C
-   4. Item D
-      1. Sub-item A
-      2. Sub-item B
-   5. Item E
-
-Hyperlinks are constructed by placing brackets around the hyperlink text and the hyperlink itself in parenthesis immediately next to the close bracket.  For example:
-
-```
-Click [here](https://www.microsoft.com) to go to Microsoft’s home page.
-```
-
-This text will render as follows:  Click [here](https://www.microsoft.com) to go to Microsoft’s home page.
-
-Note that as shown in the above example, Compliance Manager does not render URLs with underlining.
-
-Boldface text is just two asterisks on each side of the text to be bolded. For example:
-
-```
-**This text will render in bold**
-```
-
 ### Viewing Assessments
 
-To view Assessment details:
+#### To view an Assessment
   
-1. In the Compliance Manager dashboard, navigate to the Assessment Tile corresponding to the assessment you wish to view, Select the assessment name to open it and view the Action Items and the Microsoft and customer-managed controls associated with the Assessment.
+1. In the Assessments dashboard, select the assessment name to open it and view the Action Items and Controls Info.
 
-Here's an example of the Assessment for Office 365 and GDPR.
+Here's an example of the Assessment for Office 365 and ISO 27001. The first view illustrates the new Action Items view in Compliance Manager (Preview).
+
+NEW IMAGE
 
 ![Compliance Manager Assessment View - fullscreen with callouts](media/169a02eb-e805-412d-b9e7-89561aa7ad1d.png)
-  
-1. This section shows the Assessment summary information, including the name of the Assessment Grouping, Product, Assessment name, number of Assess controls
-    
-2. This section shows the Assessment Filter controls. For a more detailed explanation of how to use the Assessment Filter controls see the [Managing the assessment process](#managing-the-assessment-process) section. 
-    
-3. This section shows the individual cloud services that are in-scope for the assessment.
-    
-4. This section contains Microsoft managed controls. Related controls are organized by control family. Click a control family to expand it and display individual controls.
-    
-5. This section contains customer managed controls, which are also organized by control family. Click a control family to expand it and display individual controls.
-    
-6. Displays the total number of controls in the control family, and how many of those controls have been assessed. A key capability of Compliance Manager is tracking your organization's progress on assessing the customer managed controls. For more information, see the [Understanding the Compliance Score](#understanding-the-compliance-score) section. 
+
+The Actions are listed in alphabetical order, and each Action is assigned a score and an owner.  Click the Read More link to read the details of each Action. 
+
+NEW IMAGE
+
+Select the **Review** link to manage, assign, implement, and test the action. Below is an example Action.
+
+NEW IMAGE
+
+In previous versions of Compliance Manager, the workflow for implementing requirements was performed at the Control level. A compliance officer would assign a control to someone to implement the control. There were two drawbacks to this:
+
+1. Controls often had multiple actions associated with them, and the user to whom a control was assigned, might not be the right person to complete all actions that were required to implement the control; and
+2. Combining separate tasks into a single Action prevented the collection of the signals and telemetry that is used to automatically record tenant configuration changes in Compliance Manager (Preview).
+
+In Compliance Manager (Preview), the workflow process has moved from the Control level to the Action level. When reviewing an Action, the following fields can be used to manage the Action workflow:
+
+- **Assign User:** Select this field to choose or enter the user to whom this Actions should be assigned. You can scroll through the list, or type a name to find it, and then select it.
+- **Manage Documents:** You can upload evidence of implementation in the form of Office documents, image files and screenshots, PowerShell output in CSV or TXT, and PDFs.
+- **Implementation Status:** Used to indicate the Action’s current implementation status. Possible values are Not Implemented, Implemented, Alternative Implementation, Planned, and Not in Scope.
+- **Implementation Date:** The date on which the Action was taken.
+- **Test Result:** Used to indicate the results of implementation validation. Possible values are Not Assessed, Passed, Failed-Low Risk, Failed-Medium Risk, Failed-High Risk, and Not in Scope.
+- **Test Date:** The date on which validation occurred.
+- **Implementation Notes:** Enter implementation details for your organization, along with any notes that you want to include.
+- **Test Plan:** Enter the test plan details for this action, along with any notes that you want to include.
+- **Additional Information:** Enter any additional information about this Action or how it was implemented in your organization, along with any notes you want to include.
+
+Compliance Manager (Preview) also includes the control-based pivot found in previous versions. Select the **Controls Info** dashboard to view it. You can view information for controls at the Assessment and Template level. Below is an example of the Controls Info dashboard for Assessments.
+
+NEW IMAGE
+
+For Assessments, the Controls Info dashboard displays:
+
+- A **Group** dropdown to select which Group to view (when using multiple groups).
+- An **Assessment** dropdown to select which Assessment to view.
+- Metadata about the selected Assessment, including:
+    - A progress indicator for **Assessed Controls** showing the number of assessed controls over the total number of controls.
+    - The current **Compliance Score** for the Assessment, shown as a percentage.
+    - Details about the **Certification** and **Product** used in the Assessment.
+    - The current **Status** of and last **Modified** date for the Assessment.
+- A list of **In Scope Services** for the Assessment.
+- Details of the controls, grouped by Control Family, with links to customer actions and Microsoft implementation details:
+    - **Your Actions** displays the customer actions that you can perform to satisfy some or all the control’s requirements. Many controls have multiple Actions associated with them, and all Actions associated with a control are displayed here. The Actions here have the same UI as those listed in the Actions dashboard.
+    - **Microsoft Actions** displays the list of controls from Microsoft’s internal framework that apply to the selected certification control. For each internal control, select **Implemented** to see Microsoft’s implementation and test details, along with the test result and test date, as shown below.
+
+NEW IMAGE
 
 ### Export an Assessment
 
@@ -330,127 +310,246 @@ To export an Assessment report:
 
 The assessment report is downloaded as an Excel file in your browser session. The files name for the Excel file defaults to the title of the Assessment.
 
-### Archive an Assessment
+### Archive a Template or an Assessment
 
-When you have completed an Assessment and no longer need it for compliance purposes, you can archive it. When an Assessment is archived, it is removed from the default Assessments view on the Compliance Manager dashboard.
+When you are finished with a Template or Assessment and no longer need it for compliance purposes, you can archive it. When a Template or Assessment is archived, it is removed from the default view, and you must check the Show Archived checkbox to display it.
+
+NEW IMAGE
   
 > [!IMPORTANT]
-> Archived Assessments do not retain their links to uploaded evidence documents. It is highly recommended that you export the Assessment before archiving to retain links to the evidence documents in the report. 
+> Archived Assessments do not retain their links to uploaded evidence documents. It is highly recommended that you export the Assessment before archiving to retain links to the evidence documents in the report.
   
-To archive an Assessment:
+#### To archive a Template
 
-1. On the Compliance Manager dashboard, navigate to the dashboard tile for the Assessment you want to archive
+1. Open the **Templates** dashboard.
+2. Locate the Template you want to archive and selecft the archive icon.
+3. When you see the confirmation message, select **Archive**.
 
-2. Select the **Archive Assessments** control or **Archive** from the actions control.
+#### To archive an Assessment
 
-3. The **Archive Assessments** dialog is displayed, asking you to confirm that you want to archive the assessment.
+1. Open the **Assessments** dashboard.
+2. Select the **Group** from the dropdown that contains the Assessment you want to archive.
+3. Locate the Assessment you want to archive and select the archive icon.
+4. When you see the confirmation message, select **Archive**.
 
-4. To continue with archiving, select **Archive**. To cancel archiving the Assessment, select **Cancel**.
-
-### View archived Assessments
+#### View archived Assessments
   
-1. On the Compliance Manager dashboard, select the **Assessments** tab and select the **Show Archived** checkbox.
+1. Open the **Assessments** dashboard tab and check the **Show Archived** checkbox.
+2. The archived assessments appears in the **Archived Assessments** section.
+3. Select the Assessment name to open and view the Assessment.
 
-2. The archived assessments will appear a new **Archived Assessments** section below the active assessments.
+#### Activate an archived Assessment
 
-3. Select the name of the assessment you wish to view.
+1. On the **Assessments** tab and select the **Show Archived** checkbox.
+2. The archived assessments appears in the **Archived Assessments** section.
+3. Locate the Assessment you want to activate and select the activate icon.
+4. When you see the confirmation message, select **Activate**.
 
-Archived Assessment information includes in-scope services, Microsoft and customer-managed control details. When viewing an archived assessment, none of the normally editable controls (i.e. Implementation, Test Results) will be active and the **Managed Documents** button will be absent.
+## Controls and Actions
 
-### Activate an archived Assessment
+Controls and Actions are the primary data pivots used in Compliance Manager (Preview). The Control pivot, which existed in previous versions of Compliance Manager, has been enhanced to show the Microsoft and customer controls in the same control families. This consolidated view makes it easier to see the complete shared responsibility model on a per-control basis. The Action pivot is new in Compliance Manager (Preview) and it is designed to provide a streamlined view of all of actions recommended by Microsoft.
 
-1. On the Compliance Manager dashboard, select the **Assessments** tab and select the **Show Archived** checkbox.
+### Controls
 
-2. The archived assessments will appear a new **Archived Assessments** section below the active assessments.
+Controls can be viewed from the Controls Info dashboard. Controls represent the requirements from a standard, certification, regulation, or framework. To map these requirements across multiple standards, regulations, etc., and to associate them with Actions, everything is treated as if it were a control framework. For example, like a control framework, regulations, such as HIPAA, have been broken down by section, and the HIPAA controls in Compliance Manager use the same numbering scheme as those sections, as shown below:
 
-3. Select the **Activate archived Assessment** control of the assessment you wish to activate.
+NEW IMAGE
 
-4. The **Active Archived Assessments** dialog is displayed, asking you to confirm that you want to activate the assessment.
+There are three types of controls; two are provided by Microsoft in the built-in Templates, and the third is created and managed by customers in custom Templates. The three types are:
 
-5. To continue with activation, select **Activate**. To cancel activation of the Assessment, select **Cancel**.
+1. Microsoft-managed controls (MM) – these are controls for which only Microsoft has responsibility. They appear in the in-box Templates and are added to Compliance Manager by Microsoft.
+2. Customer-managed controls (CM) – these are controls for which only customers have responsibility. They appear in the in-box Templates and are added to Compliance Manager by Microsoft or customers. Customer can also edit or disable Microsoft-provided customer-managed controls.
+3. Shared controls (SM) – these are controls where responsibility is shared between Microsoft and customer. These appear in the in-box Templates and are added to Compliance Manager by Microsoft.
 
-The Assessment is now activated and the tile for the Assessment appears in the dashboard.
 
-## Controls
+### Actions
 
-## Actions
+Actions are the recommended tasks for implementing the requirements of a standard or regulation, or to test, verify, and document your organization's implementation requirements. Actions are associated with one or more Controls; each Control has one or more Action associated with it, and each Action can be associated with one or more Controls. Actions are part of the core workflow in Compliance Manager (Preview), as they are the objects that are assigned, tracked, and validated by your organization.
 
-Actions are the assigned tasks for implementing the requirements of a standard or regulation, or to test, verify, and document your organization's implementation requirements. When your organization has completed your implementation steps, the implementation date can be recorded and the status can be changed to Implemented. When the status and implementation date is changed, the implementation notes, implementation date, and status information are updated in the Assessments dashboard where your organization's test team can proceed with testing and validating the implementation, and marking the item as assessed by entering Test Plan, Test Date, and Test Result information.
-
-### Assigning action items
+#### To assign Action Items
   
-1. On the Compliance Manager dashboard, locate the assessment tile of the assessment you wish to work with and click on the name of the assessment to go to the assessment details page.
-    
-2. You can click **Filter** and use the filter controls to find the specific assessment control you wish to assign, or 
-    
-3. Scroll down to the Customer Managed Controls section, expand the control family, and scroll through the list of control until you have located the assessment control to be assigned
-    
-4. Under the **Assigned User** column, click **Assign**. 
-    
-5. In the Assign Action Item dialog box, click the **Assign To** field to populate the list of users to whom the action can be assigned. You can scroll through the list to find the target user or start typing in the field to search for the username. 
-    
-6. Click the user to assign them this action item.
-    
-7. If you wish to send an email notification to the user notifying them, ensure that the **Send Email Notification** checkbox is checked. 
-    
-8. Type any notes you wish to be displayed to that user and click **Assign**. 
- 
-    The user will receive notification of their action item assignment and any notes you have provided.
-    
-The notes that are associated with the action item are persisted in the notes section, available for the next time the action item is assigned. These notes are not read-only, can be edited, replaced or removed by the person assigning the action item.
+1. On the **Action Items** dashboard, select the **Group** containing the Assessment(s) whose Action you want to assign.
+2. In the **Assessment** dropdown, select the Assessment whose Action you want to assign, or select **All** from the dropdown to see all available Actions.
+3. Locate the Action you want to assign, and in the **Owner** column, select the link for **Review**, **Implemented** or **Test**.
+4. Select the **Assign User** field, and a list of users in your organization will appear. Scroll the list and select user or filter the list to select a user by typing in the user’s name.
+5. In the Implementation Notes field, enter any notes you wish to convey to the assigned user.
+6. Select **Save** to assign the Action.
 
-### Reassign action items
+#### To reassign Action Items
 
-This function enables an organization to remove any active or outstanding dependencies on the user account by reassigning all action item ownership (which includes both active and completed action items) from the returned user account to a new user selected below. This action does not change document upload history for the returned user account. 
-  
- To reassign action items to another user:
-  
-1. Click the input box to browse for and select another user within the organization to whom the returned user's action items should be assigned.
-    
-2. Select **Replace** to reassign all control action items from the returned user to the newly selected user. 
-    
-3. A confirmation dialog box appear stating "This will reassign all control action items from the current user to the selected user. This action cannot be undone. Are you sure you want to continue?"
-    
-4. To continue click **OK**,, otherwise click **Cancel**. 
-    
-> [!NOTE]
-> All action items (both active and completed) will be assigned to the newly selected user. However, this action does not affect the document upload history; any documents uploaded by the previously assigned user will still show the date/time and name of the previously assigned user. 
-  
-Changing the document upload history to remove the previously assigned user will have to be done as a manual process. In that case, the administrator will need to:
-  
-1. Open the previously downloaded Export report.
-  
-2. Identify and navigate to the desired control action item.
-  
-3. Click **Manage Documents** to navigate to the evidence repository for that control. 
-  
-4. Download the document.
-  
-5. Delete the document in the evidence repository.
-  
-6. Re-upload the document. The document will now have a new upload date, time and Uploaded By username. 
+This function enables an organization to remove any active or outstanding dependencies on the user account by reassigning an Action to a new user.
 
-### Viewing action items
-
-Compliance Manager provides a convenient view of all your assigned control assessment action items, enabling you to quickly and easily take action on them. You can view all action items or select the action items that correspond with a specific certification by clicking on the tab associated with that assessment. For instance, in the image below, the GDPR tab has been selected, showing controls that related to the GDPR assessment.
-  
-![Compliance Manager - Action Items list multiple tabs GDPR selected](media/ba960f5c-becb-4d95-a000-d08ec77b7b46.png)
-  
-To view your action items:
-  
-1. Go to the Compliance Manager dashboard
-    
-2. Click the **Action Items** link, and the page will refresh to show the action items that have been assigned to you. 
-    
-    By default, all action items are shown. If you have action items across multiple certifications, the names of the certifications will be listed in tabs across the top of the assessment control. To see the action items for a specific certification, click that tab.
-
-## Documents
+1. On the **Action Items** dashboard, select the **Group** containing the Assessment(s) whose Action you want to reassign.
+2. In the **Assessment** dropdown, select the Assessment whose Action you want to reassign, or select **All** from the dropdown to see all available Actions.
+3. Locate the Action you want to reassign, and in the **Owner** column, select the link for **Review**, **Implemented** or **Test**.
+4. Delete the existing user from the **Assign User** field, and either choose a different user from the list of users or filter the list to select a user by typing in the user’s name.
+5. In the Implementation Notes field, enter any notes you wish to convey to the user.
+6. Select **Save** to reassign the Action.
 
 ## Templates
 
-## Archiving
+A Template is the base object in Compliance Manager (Preview) that is associated with a Product and a Certification (e.g., standard, regulation, control framework, etc.). Templates can be viewed and added from the Templates dashboard.
+
+NEW IMAGE
+ 
+The dashboard displays each Template, along with the Certification and Product associated with the Template, the dates on which the Template was created and last modified, the number of customer and Microsoft-managed controls, the maximum Compliance Score for the Template, and the status of the Template (e.g., Approved, Pending Approval, Imported).
+
+The built-in Templates each have a built-in Assessment associated with them, but you can create additional Assessments based on built-in Templates, and you can import your own Templates, and create custom Assessments based off those.
+
+### Create a Template
+
+You can create a Template by copying an existing Template or by importing a custom Template. There is a specific format and schema that must be used for Template data or it will not import into Compliance Manager. A file with the correct schema and sample data can be downloaded from here.
+Each custom Template should be in a separate Excel workbook (in .xls or .xlsx format) that contains 5 tabs:
+
+1. Template-Assessment
+2. ControlFamily
+3. Actions
+4. Ownership
+5. Dimensions
+
+Each of these tabs, and the schema used within each tab, is detailed below.
+
+#### Template-Assessment tab
+
+This tab has a single column: 
+
+- inScopeServices – Comma-delimited list of products or services that are in-scope for the Template. 
+
+#### ControlFamily tab
+
+This tab includes columns that define the controls that are mapped to the Actions listed on the Actions tab, and includes details like control name, family, title and description.  The columns for this tab, which must be ordered within Excel in the order listed below, are: 
+
+- controlName – Control name from certification/standard/regulation, etc.
+- controlFamily – Control family from certification/standard, regulation, etc.
+- controlTitle – Control title from certification/standard/regulation, etc.
+- controlDescription – Control description from certification/standard/regulation, etc.
+- controlVersion – Optional control version info.  Example: for NIST 800-53, the current value is Rev 4, so the controlVersion is 4.  For CSA CCM, it is be 3.0.1.
+- isDisabled – Use TRUE or FALSE to indicate whether the control has been disabled.
+- controlType – Use CM to indicate these are customer-managed controls.
+- controlComplianceScore – Sum of the score of all Actions assigned to the Control.
+- controlActionTitle – Double semi-colon-delimited list of all actionTitles for this control as listed on the Actions tab. 
+
+#### Actions tab
+
+This tab includes columns that define individual Actions, and it includes details like action title, ownership, and dimensions. The columns for this tab, which must be ordered within Excel in the order listed below, are: 
+
+- actionTitle – Title of the action. Each title must be unique, and we recommend using Pascal case.
+- actionRelatedODVs – Double semicolon-delimited list of actionTitles that are parents of the child listed in the actionTitle column. In a parent/child relationship, the parent represents the high watermark. Thus, if you complete a parent action, you also complete all child actions. For example, when you have similar requirements but different standard-defined values, such as password length, where one standard/regulation requires a minimum of 15 characters, and another requires a minimum of 12 or 10. 15 would be the parent in this example, and if you configure a minimum of 15 characters, you also satisfy the actions that recommend 12 or 10 characters in other assessments.
+
+Note   The actionRelatedODVs column is a required column for the schema; however, the feature (related actions) is not available in Compliance Manager (Preview).  It is scheduled to be added in a later release.
+
+- actionDimensionValues – Double semicolon-delimited list of applicable dimensions from the Dimensions tab, using the following format: Dimension Key::Dimension Value;;Dimension Key::Dimension Value.  For example, Product::Office 365;;Certification::NIST CSF. All Dimensions that are used in a custom Template must be listed on the Dimensions tab of the import file, even if they are already listed on the Dimensions dashboard. If you are adding new Dimension Keys or Values, you must add them first to the Dimensions dashboard.
+- actionScore – Numeric value for each Action, which represents the score for that action. We recommend following the scoring model used by the built-in assessments, which is based on each Action’s purpose and enforcement.
+- actionOwnership – Double semicolon-delimited list of Owners. All listed Owners must be included on the Ownership tab.
+- actionDescription – Text of each Action, which must be unique. This field supports Markdown Language as described below.
+
+#### Ownership tab
+
+This tab includes columns that define owners for each action.  The columns for this tab, which must be ordered within Excel in the order listed below, are: 
+- ownershipName – Name of owner/responsible party.  Must be unique.
+- ownershipDescription – Description of the owner/responsible party. 
+
+#### Dimensions tab
+
+This tab includes columns that define the Dimensions that can be associated with an Action.  The columns for this tab, which must be ordered within Excel in the order listed below, are: 
+
+- dimensionKey – List of Keys used for Dimensions. For example, Product, Certification, etc.
+- dimensionValue – Unique value for each dimension key. For example, Office 365, Intune, Azure, Custom Product, etc.
+- allowMultiSelect – Use TRUE or FALSE to indicate that multiple dimension values can be selected for a single dimension key.
+
+#### Using Markdown Language in Description Fields
+
+Templates and Assessments support the use of Markdown language for some text elements and formatting.  There are three formatting elements of Markdown language that are used in Compliance Manager: 
+
+- Bullets and Numbered lists
+- Hyperlinks
+- Boldface
+
+Bullets are represented as asterisks instead of Word or Excel bullets.  For example: 
+* Item A
+* Item B
+* Item C
+
+Numbers are represented as numbers, but with spaces for indentation (3 spaces per level) and only numbers used for all sublevels (e.g., no letters).  For example: 
+   1. Item A
+   2. Item B
+      1. Sub-item A
+      2. Sub-item B
+   3. Item C
+   4. Item D
+      1. Sub-item A
+      2. Sub-item B
+   5. Item E
+
+Hyperlinks are constructed by placing brackets around the hyperlink text and the hyperlink itself in parenthesis immediately next to the close bracket.  For example:
+Click [here](https://www.microsoft.com) to go to Microsoft’s home page.
+This text will render as follows:  Click here to go to Microsoft’s home page.
+Note that as shown in the above example, Compliance Manager does not render URLs with underlining.
+
+Boldface text is just two asterisks on each side of the text to be bolded.  For example:
+**This text will render in bold**
+
+### Create a Template
+
+You can create a Template by copying an existing Template or by importing Template data from Excel. When importing data from Excel, the Template requires two different Compliance Manager Administrators to publish the data (one to publish, and one to approve).
+
+#### To create a Template by copying an existing Template
+
+1. Open the **Templates** dashboard and select **+ Add Template**.
+2. In the **Enter template name** field, provide a unique name for the Template.
+3. Check the **Copy from an existing template** checkbox and select the template you want to copy from the dropdown.
+4. Optionally add any additional Dimensions.
+5. Click **Add to Dashboard**.
+
+#### To create a Template by importing data
+
+1. Open the **Templates** dashboard and select **+ Add Template**.
+2. In the **Enter template name** field, provide a unique name for the Template.
+3. Add one or more Dimensions. Even if the Dimensions you use are already listed on the Dimensions dashboard, they must still be listed in the import file.
+4. Select **Browse** to navigate to the location of the import file, select it, and select **Open**.
+5. The import file will be validated and indicate the number of controls and control families that were detected. If there are errors, a link will be provided to a modified version of the import file that includes error details. All errors must be resolved before the data will be imported.
+6. Once the data passes validation, click **Add to Dashboard**.
+7. The imported Template will appear on the **Templates** dashboard and it will have a status of **Imported**. Select the ellipses (…) and select **Publish** to publish the Template. When the confirmation message appears, select **Publish**. The Template status will change to **Pending Approval**.
+8. Another user with the Compliance Manager Administrator role must approve the Template in the Templates dashboard. They must select the ellipses (…) and select **Approve**. When the confirmation message appears, select **Approve**. The Template is now ready for use.
+
+### Customize a Template
+
+Templates can be customized through the additional of custom controls. All custom controls are considered customer-managed Controls.
+
+#### To add a custom control to a Template
+
+1. Open the **Template** you want to modify.
+2. Click **+ Add** custom control.
+3. Select a **Control Family** from the dropdown or enter a new control family if it does not already exist.
+4. Provide a unique name or ID for the control in the **Control ID** field.
+5. Provide the control title in the **Title** field.
+6. Provide the requirements and other information for the control in the **Description** field.
+7. Click **Assign Customer** Action.
+8. Locate the Action(s) you want to assign to the control:
+    - Use **Filter by Dimension** to use dimensions assigned to the Action(s) to locate and list them.
+    - Use **Filter by Owner** to use the owner(s) assigned to the Action(s) to locate and list them.
+    - Select an **Action Type** from the dropdown to list Actions by type.
+    - Enter the title of the Action to locate and list it.
+9. Using the criteria in Step 8, a list of **Matching Action(s)** will appear. Select the first Action you want to assign to the control.
+10. The details of the Action will appear. Select the **Description** you want to use and click **Done**.
+11. Repeat Steps 9 and 10 for each additional Action you want to assign.
+12. When all applicable Actions have been selected, click **Assign**.
+13. Click **Save** to save the new control.
+
+### Export a Templates to JSON
+
+Compliance Manager (Preview) also supports exporting Templates to JavaScript Object Notation (JSON) format. This enables you to exchange Compliance Manager data with other systems that support JSON.
 
 ## Reporting
+
+You can export an Assessment to an Excel file for compliance stakeholders in your organization or for external auditors and regulators. The report is a snapshot of the Assessment as of the date and time of the export. The report contains the details for Microsoft and customer-managed controls for the Assessment, control implementation status, control test date, test results, and links to uploaded evidence documents. You should export Assessments prior to archiving them because archived Assessments do not retain links to uploaded documents.
+
+To export an Assessment:
+1. On the Compliance Manager dashboard, select Controls Info tab.
+2. Select the Group and Assessment in the dropdown menus for the Assessment you want to export.
+3. Click  Export. The Assessment export is downloaded as an Excel file.
+
+NEW IMAGE
 
 ## Permissions
 
@@ -460,15 +559,16 @@ ADD ACCESS TO RESTRICTED DOCUMENTS ROLE?? - SCOTT WILL CONFIRM
  
 ||**Compliance Manager Reader**|**Compliance Manager Contributor**|**Compliance Manager Assessor**|**Compliance Manager Administrator**|**Portal Admin**|
 |:-----|:-----|:-----|:-----|:-----|:-----|
-|**Read data** - Users can read but not edit data.  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |
-|**Edit data** - Users can edit all fields, except the Test Result and Test Date fields.  <br/> ||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |
+|**Read data** - Users can read but not edit data (except for Template data and Tenant Management).  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |
+|**Edit data** - Users can edit all fields, except the Test Result and Test Date fields (except for Template data and Tenant Management).  <br/> ||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |
 |**Edit test results** - Users can edit the Test Result and Test Date fields.  <br/> |||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |
 |**Manage assessments** - Users can create, archive, and delete Assessments.  <br/> ||||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |
+|**Manage master data** - Users can view, edit and delete template data and tenant management data.  <br/> ||||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |
 |**Manage users** - Users can add other users in their organization to the Reader, Contributor, Assessor, and Administrator roles. Only those users with the Global Administrator role in your organization can add or remove users from the Portal Admin role.  <br/> |||||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |
    
 ### Guest access
   
-After Compliance Manager access has been configured, any user that does not have a provisioned role is in the **Guest access** role by default (which is also the experience of any non-organization-provisioned accounts like personal Microsoft Accounts). Guest Access users do not have full access to all of the Compliance Manager features and are not able to see any of the organization's compliance assessment data, however they are able to use Compliance Manager to view Microsoft's compliance assessment reports and Service Trust documents. For an illustration of what is and is not accessible, see the images below where accessible features are outlined in blue and inaccessible features are outlined in red. 
+After Compliance Manager access has been configured, any user that does not have a provisioned role is in the **Guest access** role by default (which is also the experience of any non-organization-provisioned accounts like personal Microsoft Accounts). Guest Access users do not have full access to all Compliance Manager features and are not able to see any of the organization's compliance assessment data, however they are able to use Compliance Manager to view Microsoft's compliance assessment reports and Service Trust documents. For an illustration of what is and is not accessible, see the images below where accessible features are outlined in blue and inaccessible features are outlined in red.
   
 ![Compliance Manager Dashboard - guest access experience](media/7c9cb09d-ba13-4633-ad89-129a33e291f7.png)
   
