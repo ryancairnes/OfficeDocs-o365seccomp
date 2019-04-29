@@ -32,14 +32,16 @@ To use this report, in the Security &amp; Compliance Center, go to **Threat mana
 
 ![Go to Threat management \> Explorer](media/cab32fa2-66f1-4ad5-bc1d-2bac4dbeb48c.png)
 
-
 ## See malware detected in email by technology
 
 Suppose you want to see malware that was detected in email, and by what technology in Office 365. To do this, use the [Email > Malware](threat-explorer-views.md#email--malware) view of Explorer.
 
 1. In the Security & Compliance Center ([https://protection.office.com](https://protection.office.com)), choose **Threat management** > **Explorer**.
+
 2. In the **View** menu, choose **Email** > **Malware**.<br/>![View menu for Explorer](media/ExplorerViewEmailMalwareMenu.png)<br/>
+
 3. Click **Sender**, and then choose **Basic** > **Detection technology**.<br/>Your detection technologies are now available as filters for the report.<br/>![Malware detection technologies](media/ExplorerEmailMalwareDetectionTech.png)<br/> 
+
 4. Select an option, and then click the Refresh button to apply that filter.<br/>![Selected detection technology](media/ExplorerEmailMalwareDetectionTechATP.png)<br/> 
 
 The report refreshes to show the results malware detected in email, using the technology option you selected. From here, you can conduct further analysis.
@@ -73,8 +75,11 @@ Select a URL to view more detailed information. Note that in the URL flyout dial
 Suppose you want to see email messages that users in your organization have reported as Junk, Not Junk, or Phishing by using the [Report Message add-in for Outlook and Outlook on the web](enable-the-report-message-add-in.md). To do this, use the [Email > User-reported](threat-explorer-views.md#email--user-reported) view of Explorer.
 
 1. In the Security & Compliance Center ([https://protection.office.com](https://protection.office.com)), choose **Threat management** > **Explorer**.
+
 2. In the **View** menu, choose **Email** > **User-reported**.<br/>![View menu for Explorer](media/ExplorerViewMenuEmailUserReported.png)<br/>
+
 3. Click **Sender**, and then choose **Basic** > **Report type**.
+
 4. Select an option, such as **Phish**, and then click the **Refresh** button. <br/>![User-reported phish](media/EmailUserReportedReportType.png)<br/> 
 
 The report refreshes to show data about email messages that people in your organization have reported as a phishing attempt. You can use this information to conduct further analysis, and if necessary, adjust your [ATP anti-phishing policies](set-up-anti-phishing-policies.md).
@@ -91,6 +96,10 @@ In addition to the scenarios outlined in this article, you have many more report
 - [Find and investigate malicious email that was delivered](investigate-malicious-email-that-was-delivered.md)
 - [View malicious files detected in SharePoint Online, OneDrive, and Microsoft Teams](malicious-files-detected-in-spo-odb-or-teams.md)
 - [Get an overview of the views in Threat Explorer](threat-explorer-views.md)
+
+## Comparing Explorer to the Threat Protection Status report
+
+
 
 ## Required licenses and permissions
 
