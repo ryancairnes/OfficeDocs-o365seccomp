@@ -475,7 +475,11 @@
 
 # Compliance solutions
 ## [Microsoft Service Trust Portal](get-started-with-service-trust-portal.md)
-## [Compliance Manager](meet-data-protection-and-regulatory-reqs-using-microsoft-cloud.md)
+## [Compliance Manager (Classic)](meet-data-protection-and-regulatory-reqs-using-microsoft-cloud.md)
+## [Compliance Manager (Preview)](compliance-manager-overview.md)
+### [What's new in Compliance Manager (Preview)](compliance-manager-release-notes.md)
+### [Working with Compliance Manager (Preview)](working-with-compliance-manager.md)
+### [Compliance score methodology (Preview)](compliance-score-methodology.md)
 ## Customer Key
 ### [Controlling your data in Office 365 using Customer Key](controlling-your-data-using-customer-key.md)
 ### [Service encryption with Customer Key for Office 365 FAQ](service-encryption-with-customer-key-faq.md)
