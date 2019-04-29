@@ -34,7 +34,7 @@ With Compliance Manager, your organization can:
 
 ## Compliance Manager relationships
 
-Compliance Manager uses several components help you with your compliance management activities. These components work together to provide a complete management work flow and hassle-free compliance reports for auditors. 
+Compliance Manager uses several components help you with your compliance management activities. These components work together to provide a complete management work flow and hassle-free compliance reports for auditors.
 
 The diagram shows the relationships between the primary components of Compliance Manager:
 
@@ -46,7 +46,7 @@ The diagram shows the relationships between the primary components of Compliance
 
 ## Assessments
 
-[Assessments](https://docs.microsoft.com/office365/securitycompliance/working-with-compliance-manager#Assessments) are containers that allow you to organize Controls based for responsibilities shared between Microsoft and your organization for assessing cloud service security and compliance risks. Assessments help you implement data protection safeguards specified by a compliance standard and applicable data protection standards, regulations, or laws. They help you discern your data protection and compliance posture against the selected industry standard for the selected Microsoft cloud service. Assessments are completed by the implementation of controls included in the Assessment that map to a certification standard.
+[Assessments](https://docs.microsoft.com/office365/securitycompliance/working-with-compliance-manager#assessments) are containers that allow you to organize Controls based for responsibilities shared between Microsoft and your organization for assessing cloud service security and compliance risks. Assessments help you implement data protection safeguards specified by a compliance standard and applicable data protection standards, regulations, or laws. They help you discern your data protection and compliance posture against the selected industry standard for the selected Microsoft cloud service. Assessments are completed by the implementation of controls included in the Assessment that map to a certification standard.
 
 By default, Compliance Manager creates the following Assessments for your organization:
 
