@@ -99,6 +99,14 @@ In addition to the scenarios outlined in this article, you have many more report
 
 ## Comparing Explorer to the Threat Protection Status report
 
+The Threat Protection Status report looks similar to Explorer, and shows details about detected malware and phishing attempts. However, there are some important differences between these reports, as summarized int he following table:
+
+
+|Threat Protection Status report  |Explorer (or real-time detections)  |
+|---------|---------|
+|Available to customers who have Exchange      |         |
+|Row2     |         |
+|Row3     |         |
 
 
 ## Required licenses and permissions
