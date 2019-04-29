@@ -16,7 +16,7 @@ description: "If you want to be sure that you receive mail from a particular sen
 
 #Create safe sender lists in Office 365
 
-If you want to ensure that users receive emails from a particular sender or senders because you trust them and their messages, there are multiple methods available that you can choose from. These options include Exchange Transport Rules (ETRs), IP Allow Lists, Outlook Safe Senders, Anti-Spam Sender/Domain Allow Lists.
+If you want to ensure that users receive emails from a particular sender or senders because you trust them and their messages, there are multiple methods available that you can choose from. These options include Exchange Transport Rules (ETRs), Outlook Safe Senders, IP Allow Lists, Anti-Spam Sender/Domain Allow Lists.
 
 > [!IMPORTANT]
 > While organization allow lists can be used to address false positives, this should be considered a temporary solution and avoided if possible. Managing false positives by using allow lists is not recommended as it can inadvertently open your organization up to spoofing, impersonation, and other attacks. If you will use an allow list for this purpose, you will need to be vigilant and keep the article for [submitting spam, non-spam, and phishing mails to Microsoft for analysis](https://docs.microsoft.com/en-us/office365/SecurityCompliance/submit-spam-non-spam-and-phishing-scam-messages-to-microsoft-for-analysis), at the ready.
@@ -43,4 +43,29 @@ The action on the rule should be the following:
 
 ![GUI for bypassing spam filtering.](media/1_AllowList_SkipFilteringFromContoso.png)
 
+> [!CAUTION]
+> Do not configure mail flow rules with only the sender domain as a condition to skip spam filtering. This method significantly increases the risk spammers can spoof the sending domain (or even impersonate the full email address) which skips all spam filtering, sender authentication checks, so that the message lands in a user's inbox.
 
+![How to se the SCL to minus-one.](media/2_AllowList_SetsSCLMinus1.png)
+
+Do not add domains you own or popular domains (e.g. microsoft.com) to the mail flow rule as a condition. This is considered high risk since it creates opportunities for bad actors to send you mail that would otherwise be filtered out.
+
+##Use Outlook Safe Senders (end-user managed)
+
+Instead of authorizing an address, domain, or IP address globally end users can also allow sending addresses through Outlook Safe Senders. The steps to set this up differ between [Outlook Web App](https://support.office.com/en-us/article/block-or-allow-junk-email-settings-48c9f6f7-2309-4f95-9a4d-de987e880e46) and the [Outlook client](https://support.office.com/en-us/article/overview-of-the-junk-email-filter-5ae3ea8e-cf41-4fa0-b02a-3b96e21de089). **When messages are successfully authorized due to Safe Senders you will see SFV:SFE in the X-Forefront-Antispam-Report** which indicates that Spam/Spoof/Phish filtering will be bypassed.
+
+##Use Anti-Spam Policy IP Allow lists
+
+When it’s not possible to use ETRs to globally allow a specific sender while validating Sender Authentication, or by tying a domain and IP together, the next best option is to add the sender to the Anti-Spam Policy IP Allow list. [The detailed steps can be found in Configure the connection filter policy document](https://docs.microsoft.com/en-us/office365/securitycompliance/configure-the-connection-filter-policy). It is important to keep the list of allowed IP address on minimum and avoid using IP address ranges. Avoid adding IP address ranges that belong to consumer services or shared infrastructures, and also ensure that you review the list of allowed IP addresses regularly and remove the ones that are no longer needed.
+
+> [!CAUTION]
+> Configuring Anti-Spam polices to Allow based on only sender IP address will result in skipping spam filtering for all messages from that IP address in the allow rule. This creates a high risk of bad actors sending you mail that would otherwise be filtered out. This method also skips all spam filtering, sender authentication checks and the message lands in a user's inbox, increasing risks.
+
+##Use Anti-Spam Policy Sender/Domain Allow lists
+
+The least desirable option is to authorize by sender/domain. This option should be avoided if possible as it bypasses Spam/Spoof/Phish protection completely and does not evaluate sender authentication. This method increases risk. The detailed steps can be found in [Configure your spam filter policies](https://docs.microsoft.com/en-us/office365/securitycompliance/configure-your-spam-filter-policies) document.
+
+> [!CAUTION]
+> Configuring Anti-Spam polices to allow sender/allow domain will result to skip spam filtering for messages from senders in the allow list or any senders from an allowed domain. This method significantly increases the risk spammers can spoof the sending domain (or even impersonate the full email address) which skips all spam filtering, sender authentication checks and the message lands in a user's inbox.
+> 
+> Do not add domains you own or popular domains (e.g. microsoft.com) to the mail flow rule as a condition. This is considered high risk since it creates opportunities for bad actors to send you mail that would otherwise be filtered out.
