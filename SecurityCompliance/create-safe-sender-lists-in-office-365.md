@@ -58,9 +58,11 @@ The action on the rule must follow this pattern:
 > [!CAUTION]
 > Do not configure mail flow rules with only *the sender domain* as a condition to skip spam filtering. This method significantly increases the risk spammers can spoof the sending domain (or impersonate the full email address) skip all spam filtering, sender authentication checks, and the message will arrive in a person's inbox.
 
-![How to se the SCL to minus-one.](media/2_AllowList_SetsSCLMinus1.png)
+![How to set the SCL to minus-one.](media/2_AllowList_SetsSCLMinus1.png)
 
 Do not add domains you own, or popular domains (e.g. `microsoft.com`) to the mail flow rule as a condition. This is considered high risk since it creates opportunities for bad actors to send you mail that would otherwise be filtered out.
+
+[Please click for the steps to create an ETR](https://docs.microsoft.com/en-us/office365/SecurityCompliance/use-mail-flow-rules-to-set-the-spam-confidence-level-scl-in-messages).
 
 ## Use Outlook Safe Senders (end-user managed)
 
