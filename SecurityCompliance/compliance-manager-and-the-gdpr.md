@@ -6,7 +6,8 @@ manager: laurawi
 ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
-localization_priority: Normal
+localization_priority: None
+ROBOTS: NOINDEX, NOFOLLOW
 ms.collection: M365-security-compliance
 search.appverid: 
 - MOE150
@@ -23,11 +24,7 @@ The General Data Protection Regulation (GDPR) enacted by the European Union can 
 Certain regulations require that an organization must be able to delete user history data. Compliance Manager provides **User Privacy Settings** functions that allow administrators to:
   
 - [Search for a user](#search-for-a-user)
-
 - [Export a report of account data history](#export-a-report-of-account-data-history)
-
-- [Reassign Action Items](#reassign-action-items)
-
 - [Delete user data history](#delete-user-data-history)
   
 ## Search for a user
