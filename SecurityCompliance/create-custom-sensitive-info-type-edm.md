@@ -164,7 +164,7 @@ During this phase, you set up a custom security group and user account, install 
 
 1. As an administrator on a Windows machine, create a security group and name it `EDM_DataUploaders`. Then add the EDM_DataUploaders security group to the Administrators group in Windows.
 
-2. Create a new user account for the Windows machine, and add that account to the *EDM_DataUploaders* security group.
+2. Create a new user account for the Windows machine, and add that account to the EDM_DataUploaders security group.
 
 3. Sign out of Windows, and then sign back in using the new user account. 
 
