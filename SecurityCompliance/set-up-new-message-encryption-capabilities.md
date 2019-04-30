@@ -3,7 +3,7 @@ title: "Set up new Office 365 Message Encryption capabilities"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.date: 4/12/2019
+ms.date: 4/30/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
