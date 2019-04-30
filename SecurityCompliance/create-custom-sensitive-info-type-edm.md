@@ -68,7 +68,7 @@ Setting up and configuring EDM classification involves saving sensitive data in 
 
     - Indicate a field's name by using the syntax `Field name="fieldname"`, where *fieldname* is the column name in the .csv file.
     - Indicate whether a field contains unique values by using the syntax `unique="true"` or `unique="false"`. (Social Security numbers, Employee ID numbers, drivers license numbers, etc. are unique, but dates of birth, first names, last names, etc. are not.)
-    - Indicate whether a column should be searchable by using the syntax `searchable="true"` or `searchable="false"`. (A value of *true* indicates it should be searchable). No more than five of the 32 fields per database should be searchable. 
+    - Indicate whether a column should be searchable by using the syntax `searchable="true"` or `searchable="false"`. (A value of *true* indicates it should be searchable). No more than five fields per database should be searchable. 
 
     As an example, the following .xml file defines the schema for our example *SampleDataStore* database. Here, we specified three fields (`firstname`, `creditcard`, and `ssn`) as searchable for EDM classification. (You can copy our example and modify it for your use.)
     
