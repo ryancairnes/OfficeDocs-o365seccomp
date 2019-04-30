@@ -18,17 +18,15 @@ description: "With Office 365 Advanced Message Encryption capabilities on top of
 
 Office 365 Advanced Message Encryption is available on top of Office 365 Message Encryption in certain subscriptions. Advanced Message Encryption is included in [Microsoft 365 Enterprise E5](https://www.microsoft.com/microsoft-365/enterprise/home), Office 365 Enterprise E5, and Office 365 Education A5. If your organization has an Office 365 subscription that does not include Office 365 Advanced Message Encryption, you can purchase Advanced Message Encryption as an add-on with E5 Compliance of the Advanced Compliance SKU.
 
-You can use message expiration on emails that your users send to external recipients who use the OME Portal to access encrypted emails. Recipients outside of Office 365 are directed to the OME Portal when they receive encrypted email. In addition, you can force recipients in other Office 365 organizations to use the OME portal to view and reply to encrypted emails sent by your organization by using a custom branded template in Windows Powershell. For information on how to do this, see [Ensure all external recipients use the OME Portal to read encrypted mail](manage-office-365-message-encryption.md#ensure-all-external-recipients-use-the-ome-portal-to-read-encrypted-mail).
-
-Control encrypted emails accessed externally through a secure web portal by setting an expiration date and revoking access at any time.
+You can use message expiration on emails that your users send to external recipients who use the OME Portal to access encrypted emails. You force recipients to use the OME portal to view and reply to encrypted emails sent by your organization by using a custom branded template that specifies an expiration date in Windows Powershell.
 
 As an O365 global administrator, when you apply your company branding to customize the look of your Office 365 organization's email messages, you can also specify an expiration for these email messages. With Office 365 Advanced Message Encryption, you can create multiple templates for encrypted emails originating from your organization. Using a template, you can control how long recipients have access to mail sent by your users.
 
-When an end user receives mail that has an expiration date set, the user  sees the expiration date in the wrapper email. If a user tries to open an expired mail, an error appears in the OME portal.
+When an end user receives mail that has an expiration date set, the user sees the expiration date in the wrapper email. If a user tries to open an expired mail, an error appears in the OME portal.
 
-Only emails to external recipients are expirable and revocable.
+Only emails to external recipients are expirable.
 
-With Office 365 Advanced Message Encryption, any time you apply custom branding, the Office 365 applies the wrapper to email that fits the mail flow rule to which you apply the template. In addition, expiration can only be used if custom branding is used. You can only revoke messages that are received through the portal.
+With Office 365 Advanced Message Encryption, any time you apply custom branding, the Office 365 applies the wrapper to email that fits the mail flow rule to which you apply the template. In addition, expiration can only be used if custom branding is used.
 
 ## Create a custom branding template to force mail expiration by using PowerShell
 
