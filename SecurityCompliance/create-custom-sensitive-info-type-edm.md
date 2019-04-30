@@ -167,7 +167,7 @@ During this phase, you set up a custom security group and user account, install 
       - Read access to the sensitive data (for exporting to a file in .csv format)
       - Local admin access to a designated machine
 
-2. [Set up a new user account](https://docs.microsoft.com/office365/admin/add-users/add-users?view=o365-worldwide), and add that account to the security group (`EDM_DataUploaders`) you created in the previous step.
+2. [Set up a new user account](https://docs.microsoft.com/office365/admin/add-users/add-users?view=o365-worldwide), and add that account to the security group (EDM_DataUploaders) you created in the previous step.
 
 3. Add the new user account to the machine you'll use to index and upload the sensitive data.
 
