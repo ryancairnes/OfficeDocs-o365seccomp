@@ -58,14 +58,18 @@
 ## [Email encryption in Office 365](email-encryption.md)
 ### [Office 365 Message Encryption (OME)](ome.md)
 ### [Set up new Office 365 Message Encryption capabilities](set-up-new-message-encryption-capabilities.md)
-### [Add your organization's brand to your encrypted messages](add-your-organization-brand-to-encrypted-messages.md)
 ### [Define mail flow rules to encrypt email messages in Office 365](define-mail-flow-rules-to-encrypt-email.md)
+### [Add your organization's brand to your encrypted messages](add-your-organization-brand-to-encrypted-messages.md)
+### [Create a sensitive information type policy for your organization using Office 365 Message Encryption](ome-sensitive-info-types.md)
 ### [Manage Office 365 Message Encryption](manage-office-365-message-encryption.md)
-### [Revoke email encrypted by Office 365 Message Encryption](revoke-ome-encrypted-mail.md)
+### [Office 365 Advanced Message Encryption](ome-advanced-message-encryption.md)
+### [Set an expiration date for email encrypted by Office 365 Advanced Message Encryption](ome-advanced-expiration.md)
+### [Revoke email encrypted by Office 365 Advanced Message Encryption](revoke-ome-encrypted-mail.md)
 ### [Compare versions of OME](ome-version-comparison.md)
 ### [Office 365 Message Encryption FAQ](ome-faq.md)
-### [Legacy information for Office 365 Message Encryption](legacy-information-for-message-encryption.md)
-### [Set up Azure Rights Management for the previous version of Office 365 Message Encryption](set-up-azure-rms-for-previous-version-message-encryption.md)
+### Legacy OME
+#### [Legacy information for Office 365 Message Encryption](legacy-information-for-message-encryption.md)
+#### [Set up Azure Rights Management for the previous version of Office 365 Message Encryption](set-up-azure-rms-for-previous-version-message-encryption.md)
 
 # Records management
 ## [File plan manager](file-plan-manager.md)
