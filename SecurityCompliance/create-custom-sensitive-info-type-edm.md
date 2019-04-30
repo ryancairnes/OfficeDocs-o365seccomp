@@ -37,7 +37,7 @@ EDM classification enables you to create custom sensitive information types that
 
 ## Required licenses and permissions
 
-- During the preview program, if your organization has [DLP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description/messaging-policy-and-compliance-servicedesc#data-loss-prevention-dlp), you can try EDM. [Contact us](https://resources.office.com/us-landing-spe-contactus.html?LCID=EN-US) to get this feature enabled.
+- During the preview program, if your organization has [DLP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description/messaging-policy-and-compliance-servicedesc#data-loss-prevention-dlp), you can try EDM classification. If you don't already have it, [contact us](https://resources.office.com/us-landing-spe-contactus.html?LCID=EN-US) to get this feature enabled.
 
 - You must be a global admin, compliance administrator, or Exchange Online administrator to perform the tasks described in this article. To learn more about DLP permissions, see [Permissions](data-loss-prevention-policies.md#permissions).
 
@@ -45,13 +45,13 @@ EDM classification enables you to create custom sensitive information types that
 
 |Phase  |What's needed  |
 |---------|---------|
-|[Part 1: Set up EDM classification](#part-1-set-up-edm-classification) |- Read permissions to the sensitive data<br/>- Ability to define a database schema in .xml format (this article includes an example)<br/>- Ability to create a rule package in .xml format (this article includes an example)<br/>- Admin permissions to upload the database schema file and rule package file to the Security & Compliance Center (using PowerShell) |
-|[Part 2: Install and use the EDM Upload Agent tool](#part-2-install-and-use-the-edm-upload-agent-tool) |- Security group and dedicated user account to be used with EDM<br/>- Machine for indexing and uploading data using the EDM Upload Agent |    |         |
+|[Part 1: Set up EDM classification](#part-1-set-up-edm-classification) |- Read access to the sensitive data<br/>- Ability to define a database schema in .xml format (this article includes an example)<br/>- Ability to create a rule package in .xml format (this article includes an example)<br/>- Admin permissions to upload the database schema file and rule package file to the Security & Compliance Center (using PowerShell) |
+|[Part 2: Index and upload the sensitive data](#part-2-index-and-upload-the-sensitive-data) |- Security group and dedicated user account to be used with EDM classification<br/>- Windows machine for indexing and uploading data using the EDM Upload Agent |    |         |
 |[Part 3: Use EDM classification with your Microsoft cloud services (Example: DLP policy)](#part-3-use-edm-classification-with-your-microsoft-cloud-services-example-dlp-policy) |- Office 365 or Microsoft 365 subscription that includes DLP<br/>- EDM classification feature enabled (this is currently in preview) |
 
 ## Part 1: Set up EDM classification
 
-Setting up and configuring EDM classification involves defining a schema for your database of sensitive information, and then creating a rule package.
+Setting up and configuring EDM classification involves saving sensitive data in .csv format, defining a schema for your database of sensitive information, creating a rule package, and then uploading the schema and rule package.
 
 ### Define the schema for your database of sensitive information
 
@@ -142,7 +142,7 @@ Now that the schema for your database of sensitive information is defined, the n
       </Rules>
     </RulePackage>
     ```
-    To learn more about .xml files like this, see [Sample XML of a rule package](create-a-custom-sensitive-information-type-in-scc-powershell.md#sample-xml-of-a-rule-package).
+    (To learn more about .xml files like this, see [Sample XML of a rule package](create-a-custom-sensitive-information-type-in-scc-powershell.md#sample-xml-of-a-rule-package).)
     
 2. Upload the rule package by running the following PowerShell cmdlets, one at a time:
 
@@ -152,13 +152,13 @@ Now that the schema for your database of sensitive information is defined, the n
 
     To learn more about uploading rule packages, see [Upload your rule package](create-a-custom-sensitive-information-type-in-scc-powershell.md#upload-your-rule-package).
 
-At this point, you have set up EDM classification by defining a schema and rule package for sensitive data. 
+At this point, you have set up EDM classification. The next step is to index and upload the sensitive data. 
 
 ## Part 2: Index and upload the sensitive data
 
 During this phase, you set up a custom security group and user account, install the EDM Upload Agent tool, index the sensitive data, and then upload the indexed data.
 
-### Set up a security group and user account
+### Set up a security group, user account, and Windows machine
 
 1. As a global administrator, Exchange Online administrator, or compliance administrator, [set up a security group](https://docs.microsoft.com/office365/admin/email/create-edit-or-delete-a-security-group) (you can call this `EDM_DataUploaders`). 
 
@@ -171,14 +171,12 @@ During this phase, you set up a custom security group and user account, install 
 
 3. Add the new user account to the machine you'll use to index and upload the sensitive data.
 
-### Install the EDM Upload Agent
-
-1. Sign into the designated machine with the user account that was created in the previous procedure. 
+4. Sign into the designated machine with the user account that was created in the previous procedure. 
 
 
-2. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639). Make sure to note the installation location (such as `C:\`). 
+5. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639). Make sure to note the installation location (such as `C:\`). 
 
-3. To authorize the EDM Upload Agent, run the following command in Windows Command Prompt, and then sign in:
+6. To authorize the EDM Upload Agent, run the following command in Windows Command Prompt, and then sign in:
 
     `EdmUploadAgent.exe /Authorize`
 
