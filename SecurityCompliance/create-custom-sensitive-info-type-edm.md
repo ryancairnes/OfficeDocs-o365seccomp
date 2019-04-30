@@ -156,7 +156,7 @@ At this point, you have set up EDM classification. The next step is to index and
 
 ## Part 2: Index and upload the sensitive data
 
-During this phase, you set up a custom security group and user account, install the EDM Upload Agent tool, index the sensitive data, and then upload the indexed data.
+During this phase, you set up a custom security group and user account, install the EDM Upload Agent tool on your Windows machine, and then use the tool to index and upload the sensitive data.
 
 ### Set up a security group, user account, and Windows machine
 
@@ -180,11 +180,13 @@ During this phase, you set up a custom security group and user account, install 
 
     `EdmUploadAgent.exe /Authorize`
 
+The next step is to use the EDM Upload Agent to index the sensitive data, and upload the indexed data.
+
 ### Index and upload the sensitive data
 
 1. Save your sensitive data file (recall our example is SampleDataStore.csv) to the local drive on the machine.
 
-    For example, we saved our example SampleDataStore.csv file to `C:\Edm\Data`.
+    For example, we saved our example *SampleDataStore.csv* file to `C:\Edm\Data`.
 
 2. To index the sensitive data, run the following command in Windows Command Prompt:
 
@@ -209,7 +211,7 @@ During this phase, you set up a custom security group and user account, install 
 > [!TIP]
 > We recommend setting up a regular schedule and process for updating the .csv file, and using [Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/task-scheduler-start-page) to automate Steps 2-3. 
 
-Now that you have finished setting EDM classification and have uploaded the sensitive data, you can use EDM classification with your Microsoft cloud services. For example, you can set up a DLP policy using EDM classification. 
+Now you can use EDM classification with your Microsoft cloud services. For example, you can set up a DLP policy using EDM classification. 
 
 ## Part 3: Use EDM classification with your Microsoft cloud services (Example: DLP policy)
 
