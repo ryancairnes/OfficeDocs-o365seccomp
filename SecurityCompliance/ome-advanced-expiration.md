@@ -46,6 +46,8 @@ Where:
 
 ## More information about Office 365 Advanced Message Encryption
 
-- [Office 365 Advanced Message Encryption capabilities](ome-version-comparison.md#office-365-advanced-message-encryption-capabilities)
-- [Office 365 Advanced Message Encryption - email revocation](revoke-ome-encrypted-mail.md)
+- [Office 365 Advanced Message Encryption](ome-advanced-message-encryption.md)
+
+- [Revoke email encrypted by Office 365 Advanced Message Encryption](revoke-ome-encrypted-mail.md)
+
 - [Message policy and compliance service description](https://docs.microsoft.com/en-us/office365/servicedescriptions/exchange-online-service-description/message-policy-and-compliance)
