@@ -30,6 +30,8 @@ But what if you wanted to create a custom sensitive information type that is mor
 - handles sensitive information more securely; and
 - can be used with several Microsoft cloud capabilities.
 
+![EDM classification](media/EDMClassification.png)
+
 EDM classification enables you to create custom sensitive information types that refer to exact values in a database of sensitive information. The database can be refreshed daily or weekly, and it can contain up to ten million rows of data. So as employees, patients, or clients come and go, and records change, your custom sensitive information types remain current and applicable. And, you can use EDM classification with policies, such as [data loss prevention policies](data-loss-prevention-policies.md) (DLP) or [Microsoft Cloud App Security file policies](https://docs.microsoft.com/cloud-app-security/data-protection-policies).
 
 > [!NOTE]
@@ -60,11 +62,11 @@ Setting up and configuring EDM classification involves saving sensitive data in 
     - Up to ten million rows of sensitive data
     - Up to 32 columns (fields) per data source
 
-2. Structure the sensitive data in the .csv file. Make sure the first row of the .csv file includes the names of the fields you'll use for EDM. For example, you might have field names, such as `ssn`, `birthdate`, `firstname`, `lastname`, `employeeid`, and so on. 
+2. Structure the sensitive data in the .csv file. Make sure the first row of the .csv file includes the names of the fields you'll use for EDM classification. For example, you might have field names, such as `ssn`, `birthdate`, `firstname`, `lastname`, `employeeid`, and so on. 
     
     As an example, our .csv file is called *SampleDataStore.csv*. It includes columns, such as *id*, *firstname*, *lastname*, *title*, *creditcard* and so on.
 
-3. Set up a file in .xml format (similar to our example below) that defines the schema for your data file. Name this schema file `edm.xml`, and configure it, such that for each column in the database, you have a line that uses the syntax `<Field name="" unique="" searchable=""/>`. 
+3. Define the schema for the database of sensitive information in .xml format (similar to our example below). Name this schema file `edm.xml`, and configure it such that for each column in the database, you have a line that uses the syntax `<Field name="" unique="" searchable=""/>`. 
 
     - Indicate a field's name by using the syntax `Field name="fieldname"`, where *fieldname* is the column name in the .csv file.
     - Indicate whether a field contains unique values by using the syntax `unique="true"` or `unique="false"`. (Social Security numbers, Employee ID numbers, drivers license numbers, etc. are unique, but dates of birth, first names, last names, etc. are not.)
