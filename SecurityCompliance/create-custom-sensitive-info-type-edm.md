@@ -22,10 +22,11 @@ description: "Create custom sensitive information types with Exact Data Match."
 
 With Office 365 for business, you can define [custom sensitive information types](custom-sensitive-info-types.md) that you can use to help prevent people from inadvertently or inappropriately sharing sensitive data within your organization. For example, you can [use the Security & Compliance Center](create-a-custom-sensitive-information-type.md) or [use PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md) to define a custom sensitive information type based on patterns, evidence (evidence includes keywords like *employee*, *badge*, *ID*, and so on), character proximity (how close evidence is to characters in a particular pattern), and confidence levels. 
 
-But what if you wanted to create a custom sensitive information type that is more dynamic, and more scalable? And what if you wanted a custom sensitive information type that uses exact data values, instead of patterns and proximity? With Exact Data Match (EDM) classification, you can! With EDM classification, you can create a custom sensitive information type that:
+But what if you wanted to create a custom sensitive information type that is more dynamic, and more scalable? And what if you wanted a custom sensitive information type that uses exact data values, instead of patterns and proximity? With Exact Data Match (EDM) classification, you can create a custom sensitive information type that:
 - is dynamic (refreshable daily or weekly);
-- results in fewer false-positives because it works with exact data values;
 - is more scalable;
+- results in fewer false-positives;
+- is based on structured sensitive data;
 - handles sensitive information more securely; and
 - can be used with several Microsoft cloud capabilities.
 
@@ -36,7 +37,7 @@ EDM classification enables you to create custom sensitive information types that
 
 ## Required licenses and permissions
 
-- During the preview program, if your organization has [DLP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description/messaging-policy-and-compliance-servicedesc#data-loss-prevention-dlp), you can try EDM. Contact support or your Microsoft account representative to get this feature enabled.
+- During the preview program, if your organization has [DLP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description/messaging-policy-and-compliance-servicedesc#data-loss-prevention-dlp), you can try EDM. [Contact us](https://resources.office.com/us-landing-spe-contactus.html?LCID=EN-US) to get this feature enabled.
 
 - You must be a global admin, compliance administrator, or Exchange Online administrator to perform the tasks described in this article. To learn more about DLP permissions, see [Permissions](data-loss-prevention-policies.md#permissions).
 
@@ -63,13 +64,11 @@ Setting up and configuring EDM classification involves defining a schema for you
     
     As an example, our .csv file is called *SampleDataStore.csv*. It includes columns, such as *id*, *firstname*, *lastname*, *title*, *creditcard* and so on.
 
-3. Set up a file in .xml format (similar to our example below) that defines the schema for your data file. Name this schema file `edm.xml`, and configure it as follows: 
+3. Set up a file in .xml format (similar to our example below) that defines the schema for your data file. Name this schema file `edm.xml`, and configure such that for each column in the database, you have a line that uses the syntax `<Field name="" unique="" searchable=""/>`. 
 
-    For each column in the database, include a line that uses the syntax `<Field name="" unique="" searchable=""/>`, as follows. 
-
-    - Indicate its field name by using the syntax `Field name="fieldname"`, where "fieldname" is the column name in the .csv file.
-    - Indicate whether the field contains unique values by using the syntax `unique="true"` or `unique="false"`. (Social Security numbers, Employee ID numbers, drivers license numbers, etc. are unique, but dates of birth, first names, last names, etc. are not.)
-    - Indicate whether the column should be searchable by using the syntax `searchable="true"` or `searchable="false"`. (A value of *true* indicates it should be searchable). No more than five of the 32 fields per database should be searchable. 
+    - Indicate a field's name by using the syntax `Field name="fieldname"`, where "fieldname" is the column name in the .csv file.
+    - Indicate whether a field contains unique values by using the syntax `unique="true"` or `unique="false"`. (Social Security numbers, Employee ID numbers, drivers license numbers, etc. are unique, but dates of birth, first names, last names, etc. are not.)
+    - Indicate whether a column should be searchable by using the syntax `searchable="true"` or `searchable="false"`. (A value of *true* indicates it should be searchable). No more than five of the 32 fields per database should be searchable. 
 
     As an example, the following .xml file defines the schema for our example *SampleDataStore* database. Here, we specified three fields (`firstname`, `creditcard`, and `ssn`) as searchable for EDM classification. (You can copy our example and modify it for your use.)
     
