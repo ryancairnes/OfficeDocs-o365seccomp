@@ -66,13 +66,13 @@ Setting up and configuring EDM classification involves saving sensitive data in 
     
     As an example, our .csv file is called *SampleDataStore.csv*. It includes columns, such as *id*, *firstname*, *lastname*, *title*, *creditcard* and so on.
 
-3. Define the schema for the database of sensitive information in .xml format (similar to our example below). Name this schema file `edm.xml`, and configure it such that for each column in the database, you have a line that uses the syntax `<Field name="" unique="" searchable=""/>`. 
+3. Define the schema for the database of sensitive information in .xml format (similar to our example below). Name this schema file `edm.xml`, and configure it such that for each column in the database, there is a line that uses the syntax `<Field name="" unique="" searchable=""/>`. 
 
-    - Indicate a field's name by using the syntax `Field name="fieldname"`, where *fieldname* is the column name in the .csv file.
-    - Indicate whether a field contains unique values by using the syntax `unique="true"` or `unique="false"`. (Social Security numbers, Employee ID numbers, drivers license numbers, etc. are unique, but dates of birth, first names, last names, etc. are not.)
-    - Indicate whether a column should be searchable by using the syntax `searchable="true"` or `searchable="false"`. (A value of *true* indicates it should be searchable). No more than five fields per database should be searchable. 
+    - Use the column's name for the *Field name* value.
+    - Use `unique="true"` for the fields that contain unique values (Social Security numbers, identification numbers, etc.); otherwise, use `unique="false"`.
+    - Use `searchable="true"` for the fields that should be searchable. No more than five fields per database should be searchable. All the rest should have `searchable="false"`.  
 
-    As an example, the following .xml file defines the schema for our example *SampleDataStore* database. Here, we specified three fields (`firstname`, `creditcard`, and `ssn`) as searchable for EDM classification. (You can copy our example and modify it for your use.)
+    As an example, the following .xml file defines the schema for our example *SampleDataStore* database. Here, we specified three fields (*firstname*, *creditcard*, and *ssn*) as searchable for EDM classification. (You can copy our example and modify it for your use.)
     
     ```
     <?xml version="1.0" encoding="utf-8"?>
@@ -103,7 +103,7 @@ Now that the schema for your database of sensitive information is defined, the n
 
 1. Create a rule package in .xml format (with Unicode encoding), similar to the example included below. (You can copy our example and modify it for your use.) 
 
-    Recall from the previous procedure that our SampleDataStore schema defines three fields as searchable for EDM: `firstname`, `creditcard`, and `ssn`. Our example file includes two of those three fields, listed as `ExactMatch` items. 
+    Recall from the previous procedure that our SampleDataStore schema defines three fields as searchable for EDM: *firstname*, *creditcard*, and *ssn*. Our example file includes two of those three fields, listed as *ExactMatch* items. 
 
     ```
         <?xml version="1.0" encoding="utf-8"?>
@@ -169,7 +169,7 @@ During this phase, you set up a custom security group and user account, install 
       - Read access to the sensitive data (for exporting to a file in .csv format)
       - Local admin access to a designated machine
 
-2. [Set up a new user account](https://docs.microsoft.com/office365/admin/add-users/add-users?view=o365-worldwide), and add that account to the security group (EDM_DataUploaders) you created in the previous step.
+2. [Set up a new user account](https://docs.microsoft.com/office365/admin/add-users/add-users?view=o365-worldwide), and add that account to the security group (*EDM_DataUploaders*) you created in the previous step.
 
 3. Add the new user account to the machine you'll use to index and upload the sensitive data.
 
