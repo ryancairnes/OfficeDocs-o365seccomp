@@ -114,8 +114,8 @@ Now that the schema for your database of sensitive information is defined, the n
       <Rules>
         <ExactMatch id = "E1CC861E-3FE9-4A58-82DF-4BD259EAB371" patternsProximity = "300" dataStore ="SampleSchema" recommendedConfidence = "65" >
           <Pattern confidenceLevel="65">
-            <idMatch matches="MRN" classification="MRN" />
-            <match matches="LastName" />
+            <idMatch matches="firstname" classification="firstname" />
+            <match matches="firstname" />
           </Pattern>
         </ExactMatch>
         <ExactMatch id = "E1CC861E-3FE9-4A58-82DF-4BD259EAB372" patternsProximity = "300" dataStore ="SampleSchema" recommendedConfidence = "65" >
