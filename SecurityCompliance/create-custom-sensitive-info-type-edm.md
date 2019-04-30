@@ -183,23 +183,25 @@ During this phase, you set up a custom security group and user account, install 
 
     `EdmUploadAgent.exe /Authorize`
 
-4. Save the sensitive data file (recall our example is SampleDataStore.csv) to the local drive on the machine.
+### Index and upload the sensitive data
+
+1. Save your sensitive data file (recall our example is SampleDataStore.csv) to the local drive on the machine.
 
     For example, we saved our example SampleDataStore.csv file to `C:\Edm\Data`.
 
-5. To index your sensitive data, run the following command in Windows Command Prompt:
+2. To index the sensitive data, run the following command in Windows Command Prompt:
 
     `EdmUploadAgent.exe /CreateHash /DataStoreName <DataStoreName> /DataFile <DataFilePath> /HashLocation <HashedFileLocation>`
 
     Example: `EdmUploadAgent.exe /CreateHash /DataStoreName SampleDataStore /DataFile C:\Edm\Data\SampleDataStore.csv /HashLocation C:\Edm\Hash` 
 
-6. To upload the indexed data, run the following command in Windows Command Prompt:
+3. To upload the indexed data, run the following command in Windows Command Prompt:
 
     `EdmUploadAgent.exe /UploadHash /DataStoreName <DataStoreName> /HashFile <HashedSourceFilePath>`
 
     Example: `EdmUploadAgent.exe /UploadHash /DataStoreName SampleDataStore /HashFile C:\Edm\Hash\SampleDataStore.EdmHash` 
 
-7. To verify your sensitive data has been uploaded, run the following command in Windows Command Prompt:
+4. To verify your sensitive data has been uploaded, run the following command in Windows Command Prompt:
 
     `EdmUploadAgent.exe /GetDataStore`
 
@@ -208,9 +210,9 @@ During this phase, you set up a custom security group and user account, install 
     ![Example of GetDataStore cmdlet and results](media/EDM-GetDataStore-example.png)
 
 > [!TIP]
-> We recommend setting up a regular schedule and process for updating the .csv file, and using [Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/task-scheduler-start-page) to automate Steps 5-6. 
+> We recommend setting up a regular schedule and process for updating the .csv file, and using [Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/task-scheduler-start-page) to automate Steps 2-3. 
 
-Now that you have set up your custom sensitive information type with EDM, you can use it with your Microsoft cloud services. 
+Now that you have finished setting EDM classification and have uploaded the sensitive data, you can use EDM classification with your Microsoft cloud services. For example, you can set up a DLP policy using EDM classification. 
 
 ## Part 3: Use EDM classification with your Microsoft cloud services (Example: DLP policy)
 
@@ -253,7 +255,7 @@ EDM can be used with information protection features, such as [Office 365 DLP po
 
 ## Refreshing your sensitive information database
 
-You can refresh your sensitive information database weekly. When your .csv file is refreshed, make sure to use the EDM Upload Tool to re-index the sensitive data and re-upload the indexed data. To get help with this, see steps 5-7 in [Part 2](#part-2-install-and-use-the-edm-upload-agent-tool) (in this article). 
+You can refresh your sensitive information database daily or weekly. When your .csv file is refreshed, make sure to use the EDM Upload Tool to re-index the sensitive data and then re-upload the indexed data. To get help with this, see [Index and upload the sensitive data](#index-and-upload-the-sensitive-data) (in this article). 
 
 ## Related articles
 
