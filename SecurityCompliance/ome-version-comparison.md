@@ -7,14 +7,18 @@ ms.audience: Admin
 ms.topic: conceptual
 ms.service: O365-seccomp
 localization_priority: Normal
+ms.date: 4/30/2019
+ms.collection: 
+- Strat_O365_IP
+- M365-security-compliance
 search.appverid:
 - MET150
-description: "Helps explain the differences between the versions of Office 365 Message Encryption and how the two continue to work together."
+description: "Helps explain the differences between the versions of Office 365 Message Encryption."
 ---
 
 # Compare versions of OME
 
-This article compares legacy Office 365 Message Encryption (OME) to the new OME capabilities. The new capabilities are a merger and newer version of both OME and Information Rights Management (IRM). Unique characteristics of deploying into GCC High are also outlined. We'll also cover how the two can coexist in your Office 365 organization.
+This article compares legacy Office 365 Message Encryption (OME) to the new OME capabilities and Office 365 Advanced Message Encryption. The new capabilities are a merger and newer version of both OME and Information Rights Management (IRM). Unique characteristics of deploying into GCC High are also outlined. The two can coexist in your Office 365 organization. For information on how the new capabilities work, see [Office 365 Message Encryption (OME)](ome.md).
 
 ||
 |:-----|
@@ -57,11 +61,17 @@ Office 365 Advanced Message Encryption offers additional capabilities on top of 
 
 - Multiple branding templates
 
+Office 365 Advanced Message Encryption is not supported in GCC High.
+
+For information on using Advanced Message Encryption, see [Office 365 Advanced Message Encryption](ome-advanced-message-encryption.md).
+
 ## Unique characteristics of Office 365 Message Encryption in a GCC High deployment
 
 Office 365 Advanced Message Encryption is not available in a GCC High environment. You can still use a single brand template in a GCC High environment.
 
 In addition, if you plan to use Office 365 Message Encryption in a GCC High environment, there are some unique characteristics about the recipient experience.
+
+Office 365 Advanced Message Encryption is not supported in GCC High.
 
 ### Encrypted email from GCC High to GCC High recipients
 

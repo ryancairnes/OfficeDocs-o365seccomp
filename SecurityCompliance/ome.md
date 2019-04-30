@@ -3,11 +3,11 @@ title: "Office 365 Message Encryption"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.date: 6/6/2018
 ms.audience: Admin
 ms.topic: conceptual
 ms.service: O365-seccomp
 localization_priority: Normal
+ms.date: 4/30/2019
 search.appverid:
 - MET150
 ms.assetid: f87cb016-7876-4317-ae3c-9169b311ff8a
@@ -63,10 +63,18 @@ Recipients of encrypted messages who receive encrypted or rights-protected mail 
   
 End-users that read encrypted or rights-protected mail on clients other than Outlook also use the OME portal to view encrypted and rights-protected messages that they receive.
 
-In addition, if the sender of the protected mail is in GCC High and the recipient is outside of GCC High, including commercial Office 365 users, Outlook.com users, and users of other email providers such as Gmail, the recipient receives a wrapper mail that redirects to the OME Portal where the recipient is able to read and reply to the message. Otherwise, if the sender and recipient are both in the GCC High environment, then recipients that use Outlook clients to read mail receive native, first-class reading experiences for encrypted and rights-protected mail even if they're not in the same organization as the sender.
+In addition, if the sender of the protected mail is in GCC High and the recipient is outside of GCC High, including commercial Office 365 users, Outlook.com users, and users of other email providers such as Gmail, the recipient receives a wrapper mail that redirects to the OME Portal where the recipient is able to read and reply to the message. Otherwise, if the sender and recipient are both in the GCC High environment, then recipients that use Outlook clients to read mail receive native, first-class reading experiences for encrypted and rights-protected mail even if they're not in the same organization as the sender. For more information about the different experience in GCC High, see  [Compare versions of OME](ome-version-comparison.md).
   
 We've increased the size limits for messages and attachments that you can encrypt using OME. For more information about limits, see [Exchange Online Limits](https://technet.microsoft.com/en-us/library/exchange-online-limits.aspx).
-  
+
+## How Office 365 Advanced Message Encryption works on top of OME
+
+Office 365 Advanced Message Encryption lets you create multiple branding templates so you can fine-tune control over recipient mail and create custom branding experiences to support a diverse organizational structure.
+
+Advanced Message Encryption in Office 365 helps you meet compliance obligations that require more flexible control over external recipient's access to encrypted emails. With Advanced Message Encryption in Office 365, as an administrator, you can control sensitive emails shared outside the organization with automatic policies that detect sensitive information types (e.g. PII, Financial or Health IDs) or keywords to enhance protection by expiring access through a secure web portal to encrypted emails. Additionally, as an admin you can further control encrypted emails accessed externally through an Office 365 web portal by revoking access to an email any time.
+
+Message revocation and expiration only work for emails that your users send to recipients outside your Office 365 organization. In addition, the recipients must access the email through the web portal. To ensure the recipient uses the portal to receive email, you set up a custom branding template that applies the wrapper. Then, you apply the branding template in a mail flow rule. For more information about Advanced Message Encryption, see [Office 365 Advanced Message Encryption](https://ome-advanced-message-encryption.md).
+
 ## Defining rules for Office 365 Message Encryption
 
 One way to enable the new capabilities for Office 365 Message Encryption is for Exchange Online and Exchange Online Protection administrators to define mail flow rules. These rules determine under what conditions email messages should be encrypted. When an encryption action is set for a rule, any messages that match the rule conditions are encrypted before they're sent.

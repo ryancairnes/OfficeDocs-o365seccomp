@@ -46,12 +46,15 @@ There are multiple ways to find the Message ID of the email that you want to rev
 #### To identify the Message ID of the email you want to revoke by using Message Trace in the Security &amp; Compliance Center
 
 1. Search for the email by sender or recipient using [New Message Trace in Office 365 Security & Compliance Center](https://blogs.technet.microsoft.com/exchange/2018/05/02/new-message-trace-in-office-365-security-compliance-center/).
+
 2. Once you've located the email select it to bring up the **Message trace details** pane. Expand **More Information** to locate the Message ID.
 
 #### To identify the Message ID of the email you want to revoke by using Office Message Encryption reports in the Security &amp; Compliance Center
 
 1. In the Security &amp; Compliance Center, navigate to the **Message Encryption Report**.
+
 2. Choose the **View details** table and identify the message that you want to revoke.
+
 3. Double-click the message to view details that include the Message ID.
 
 ### Step 2. Verify that the mail is revocable
@@ -63,7 +66,7 @@ To verify whether or not you can revoke a particular email message, complete the
 2. Run the Set-OMEMessageStatus cmdlet as follows:
 
      ```powershell
-     Get-OMEMessageStatus -MessageId "<messagieid>" | ft -a  Subject, IsRevocable
+     Get-OMEMessageStatus -MessageId "<message id>" | ft -a  Subject, IsRevocable
      ```
 
    This returns the subject of the message and whether the message is revocable. For example,
@@ -101,5 +104,7 @@ Once you know the Message ID of the email you want to revoke, and you have verif
 ## More information about Office 365 Advanced Message Encryption
 
 - [Office 365 Advanced Message Encryption capabilities](ome-version-comparison.md#office-365-advanced-message-encryption-capabilities)
+
 - [Office 365 Advanced Message Encryption - email revocation](revoke-ome-encrypted-mail.md)
+
 - [Message policy and compliance service description](https://docs.microsoft.com/en-us/office365/servicedescriptions/exchange-online-service-description/message-policy-and-compliance)
