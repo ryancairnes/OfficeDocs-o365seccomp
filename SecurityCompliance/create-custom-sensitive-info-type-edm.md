@@ -162,7 +162,7 @@ During this phase, you set up a custom security group and user account, install 
 
 ### Set up a security group, user account, and Windows machine with the EDM Upload Agent
 
-1. As an administrator on a Windows machine, create a security group (you can call this `EDM_DataUploaders`), and then add the *EDM_DataUploaders* security group to the Administrators group.
+1. As an administrator on a Windows machine, create a security group and name it `EDM_DataUploaders`. Then add the *EDM_DataUploaders* security group to the Administrators group in Windows.
 
 2. Create a new user account for the Windows machine, and add that account to the *EDM_DataUploaders* security group.
 
@@ -207,7 +207,7 @@ The next step is to use the EDM Upload Agent to index the sensitive data, and up
 
 Now you can use EDM classification with your Microsoft cloud services. For example, you can set up a DLP policy using EDM classification. 
 
-## Part 3: Use EDM classification with your Microsoft cloud services (Example: DLP policy)
+## Part 3: Use EDM classification with your Microsoft cloud services
 
 EDM can be used with information protection features, such as [Office 365 DLP policies](data-loss-prevention-policies.md) and [Microsoft Cloud App Security file policies](https://docs.microsoft.com/cloud-app-security/data-protection-policies). As an example, the following procedure describes how to use EDM with a DLP policy that is created in the Office 365 Security & Compliance Center.
 
