@@ -32,8 +32,10 @@ With Office 365 Advanced Message Encryption, any time you apply custom branding,
 
 The following topics describe how you set up and use Advanced Message Encryption.
 
-Prerequisite:
+Your organization must have a subscription that includes Office 365 Advanced Message Encryption. For detailed information about supported subscriptions, see the [Message policy and compliance service description](https://docs.microsoft.com/en-us/office365/servicedescriptions/exchange-online-service-description/message-policy-and-compliance).
 
-Your organization must have a subscription that includes Office 365 Advanced Message Encryption. For detailed information about supported subscriptions, see  the [Message policy and compliance service description](https://docs.microsoft.com/en-us/office365/servicedescriptions/exchange-online-service-description/message-policy-and-compliance).
+Set up the new Office 365 Message Encryption capabilities if they are not already set up to leverage Advanced Message Encryption capabilities which provide added protection on top of encrypted messages shared externally. If you do not have Office 365 Message Encryption set up, see [Set up new Office 365 Message Encryption capabilities](set-up-new-message-encryption-capabilities.md).
 
-Set up the new Office 365 Message Encryption capabilities if they are not already set up to leverage Advanced Message Encryption capabilities which provide added protection on top of encrypted messages shared externally. If you do not have Office 365 Message Encryption set up, see .
+[Set an expiration date for email encrypted by Office 365 Advanced Message Encryption](ome-advanced-expiration.md). Control sensitive emails shared outside the organization with automatic policies that enhance protection by expiring access through a secure web portal to encrypted emails.
+
+[Revoke email encrypted by Office 365 Advanced Message Encryption](revoke-ome-encrypted-mail.md). Control sensitive emails shared outside the organization and enhance protection by revoking access through a secure web portal to encrypted emails.  
