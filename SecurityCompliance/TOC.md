@@ -55,18 +55,17 @@
 ### [Create a keyword dictionary](create-a-keyword-dictionary.md)
 ### [Document Fingerprinting](document-fingerprinting.md)
 
-## [Office 365 Message Encryption (OME)](ome.md)
-### [Email encryption in Office 365](email-encryption.md)
-### [Compare versions of OME](ome-version-comparison.md)
+## [Email encryption in Office 365](email-encryption.md)
+### [Office 365 Message Encryption (OME)](ome.md)
 ### [Set up new Office 365 Message Encryption capabilities](set-up-new-message-encryption-capabilities.md)
+### [Add your organization's brand to your encrypted messages](add-your-organization-brand-to-encrypted-messages.md)
 ### [Define mail flow rules to encrypt email messages in Office 365](define-mail-flow-rules-to-encrypt-email.md)
 ### [Manage Office 365 Message Encryption](manage-office-365-message-encryption.md)
-### [Office 365 Message Encryption FAQ](ome-faq.md)
 ### [Revoke email encrypted by Office 365 Message Encryption](revoke-ome-encrypted-mail.md)
-### [Add your organization's brand to your encrypted messages](add-your-organization-brand-to-encrypted-messages.md)
+### [Compare versions of OME](ome-version-comparison.md)
+### [Office 365 Message Encryption FAQ](ome-faq.md)
 ### [Legacy information for Office 365 Message Encryption](legacy-information-for-message-encryption.md)
 ### [Set up Azure Rights Management for the previous version of Office 365 Message Encryption](set-up-azure-rms-for-previous-version-message-encryption.md)
-#### [Office 365 Protected Message Viewer Portal privacy statement](protected-message-viewer-portal-privacy-statement.md)
 
 # Records management
 ## [File plan manager](file-plan-manager.md)

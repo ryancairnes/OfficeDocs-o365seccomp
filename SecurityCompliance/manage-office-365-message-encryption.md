@@ -21,7 +21,7 @@ Once you've finished setting up Office 365 Message Encryption (OME), you can cus
   
 ||
 |:-----|
-|This article is part of a larger series of articles about Office 365 Message Encryption. This article is intended for administrators and ITPros. If you're just looking for information on sending or receiving an encrypted message, see the list of articles in [Office 365 Message Encryption (OME)](ome.md) and locate the article that best fits your needs. |
+|This article is part of a larger series of articles about Office 365 Message Encryption. This article is intended for administrators and ITPros. If you're just looking for information on sending or receiving an encrypted message, see the list of articles in [Office 365 Message Encryption (OME)](ome.md) and locate the article that best fits your needs. If you're looking for information about managing Office 365 Advanced Message Encryption, see *** LINK ***|
 ||
 
 ## Managing whether Google, Yahoo, and Microsoft Account recipients can use these accounts to sign in to the Office 365 Message Encryption portal
@@ -164,6 +164,40 @@ For more information about how Office 365 implements encryption for emails and e
 
    ```powershell
    Set-IRMConfiguration -DecryptAttachmentFromPortal $false
+   ```
+
+## Ensure all external recipients use the OME Portal to read encrypted mail - Office 365 Advanced Message Encryption only
+
+If you have Office 365 Advanced Message Encryption, you can use custom branding templates to force recipients to receive a wrapper mail that directs them to read encrypted email in the OME Portal instead of using Outlook or Outlook on the web. You might want to do this if you use want greater control over how recipients use the mail they receive. For example, if external recipients view email in the web portal, you can set an expiration date for the email, and you can revoke the email. These features are only supported through the OME Portal.
+
+### Example: Create a custom template to force all external recipients to receive a wrapper email and for that email to expire in 7 days
+
+1. Using a work or school account that has global administrator permissions in your Office 365 organization, start a Windows PowerShell session and connect to Exchange Online. For instructions, see [Connect to Exchange Online PowerShell](https://aka.ms/exopowershell).
+
+2. Run the New-OMEConfiguration cmdlet:
+
+   ```powershell
+   New-OMEConfiguration -Identity "<template name>" -ExternalMailExpiryInDays 7
+   ```
+
+   where `template name` is the name you want to use for the Office 365 Message Encryption custom branding template. For example,
+
+   ```powershell
+   New-OMEConfiguration -Identity "<One week expiration>" -ExternalMailExpiryInDays 7
+   ```
+
+3. Run the New-TransportRule cmdlet:
+
+   ```powershell
+   New-TransportRule -name "<transport rule name>" -FromScope "InOrganization" -ApplyRightsProtectionCustomizationTemplate "<template name>"
+   ```
+
+   where `transport rule name` is the name you want to use for the new transport rule and `template name` is the name you gave the custom branding template.
+
+   For example:
+
+   ```powershell
+   New-TransportRule -name "<All outgoing mail>" -FromScope "InOrganization" -ApplyRightsProtectionCustomizationTemplate "<One week expiration>"
    ```
 
 ## Customizing the appearance of email messages and the OME portal

@@ -7,6 +7,7 @@ ms.audience: Admin
 ms.topic: hub-page
 ms.service: O365-seccomp
 localization_priority: Normal
+ms.date: 4/30/2019
 search.appverid: 
 - MOE150
 - MET150
@@ -60,9 +61,9 @@ To learn more, see [Permissions in the Office 365 Security &amp; Compliance Cent
 2. Double-click the **Default** policy, and then choose **settings**.
 
 3. Specify the following settings:
-    
+
     - In the **Malware Detection Response** section, keep the default setting of **No**.
-   
+
     - In the **Common Attachment Types Filter** section, choose **On**.
 
 4. Click **Save**.
@@ -141,7 +142,7 @@ To learn more, see [Set up Office 365 ATP Safe Links policies](set-up-atp-safe-l
 
 3. In the **Impersonation** section, click **Edit**, and then specify the following settings:
 
-    -  On the **Add users to protect** tab, turn protection on. Then add users, such as your organization's board members, your CEO, CFO, and other senior leaders. (You can type an individual email address, or click to display a list.)
+    - On the **Add users to protect** tab, turn protection on. Then add users, such as your organization's board members, your CEO, CFO, and other senior leaders. (You can type an individual email address, or click to display a list.)
 
     - On the **Add domains to protect** tab, turn on **Automatically include the domains I own**. If you have custom domains, add those as well.
 
@@ -208,5 +209,3 @@ After you have configured your threat protection features, make sure to monitor 
 |See how threat protection features are working for your organization by viewing reports    |[Security dashboard](security-dashboard.md)<br/>[Email security reports](view-email-security-reports.md)<br/>[Reports for Office 365 ATP](view-reports-for-atp.md)<br/>[Threat Explorer](use-explorer-in-security-and-compliance.md)    |
 |Periodically review and revise your threat protection policies as needed    |[Secure Score](microsoft-secure-score.md)<br/>[Smart reports and insights](reports-and-insights-in-security-and-compliance.md)<br/>[Office 365 threat investigation and response features](keep-users-safe-with-office-365-ti.md)          |
 |Watch for new features and service updates     |[Standard and Targeted release options](https://docs.microsoft.com/office365/admin/manage/release-options-in-office-365?view=o365-worldwide)<br/>[Message Center](https://docs.microsoft.com/office365/admin/manage/message-center?view=o365-worldwide)<br/>[Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=advanced%2Cthreat%2Cprotection)<br/>[Service Descriptions](https://docs.microsoft.com/office365/servicedescriptions/office-365-service-descriptions-technet-library)         |
-
-
