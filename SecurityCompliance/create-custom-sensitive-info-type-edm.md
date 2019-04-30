@@ -194,7 +194,8 @@ During this phase, you set up a custom security group and user account, install 
 
     ![Example of GetDataStore cmdlet and results](media/EDM-GetDataStore-example.png)
 
-We recommend using Task Scheduler to automate Steps 5-6
+> [!TIP]
+> We recommend setting up a regular schedule and process for updating the .csv file, and using [Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/task-scheduler-start-page) to automate Steps 5-6. 
 
 Now that you have set up your custom sensitive information type with EDM, you can use it with your Microsoft cloud services. 
 
