@@ -81,9 +81,7 @@ Setting up and configuring EDM classification involves defining a schema for you
     ```
     For each column in the database, indicate its field name, whether that column contains unique values (social security numbers are unique, but dates of birth are not), and whether that column should be searchable (a value of *true* indicates it should be searchable). 
     
-    Select up to five columns per database to be searchable. These are the columns that will be used with EDM classification.
-
-    In our example, the `firstname`, `creditcard`, and `ssn` fields will be used for EDM classification.
+    Select up to five columns per database to be searchable. These are the columns that will be used with EDM classification. In our example, we specified three fields (`firstname`, `creditcard`, and `ssn`) to be used for EDM classification.
 
 4. [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
@@ -93,9 +91,9 @@ Setting up and configuring EDM classification involves defining a schema for you
 
     `New-DlpEdmSchema -FileData $edmSchemaXml`
 
-Now that your sensitive data file is set up, the next step is to set up a rule package for EDM.
+Now that the schema for your database of sensitive information is defined, the next step is to set up a rule package.
 
-### Set up a rule package for EDM
+### Set up a rule package
 
 1. Create a rule package in .xml format (with Unicode encoding), similar to the following example. 
 
@@ -108,16 +106,16 @@ Now that your sensitive data file is set up, the next step is to set up a rule p
         <Details defaultLangCode="en-us">
           <LocalizedDetails langcode="en-us">
             <PublisherName>Microsoft EDM</PublisherName>
-            <Name>Health care EDM Rulepack</Name>
-            <Description> This rule package contains the EDM sensitive types for health care.</Description>
+            <Name>SampleDataStore EDM Rulepack</Name>
+            <Description> This rule package contains the EDM sensitive types for the SampleDataStore.</Description>
           </LocalizedDetails>
         </Details>
       </RulePack>
       <Rules>
         <ExactMatch id = "E1CC861E-3FE9-4A58-82DF-4BD259EAB371" patternsProximity = "300" dataStore ="SampleSchema" recommendedConfidence = "65" >
           <Pattern confidenceLevel="65">
-            <idMatch matches="MRN" classification="MRN" />
-            <match matches="LastName" />
+            <idMatch matches="creditcard" classification="creditcard" />
+            <match matches="creditcard" />
           </Pattern>
         </ExactMatch>
         <ExactMatch id = "E1CC861E-3FE9-4A58-82DF-4BD259EAB372" patternsProximity = "300" dataStore ="SampleSchema" recommendedConfidence = "65" >
@@ -127,12 +125,8 @@ Now that your sensitive data file is set up, the next step is to set up a rule p
         </ExactMatch>
         <LocalizedStrings>
           <Resource idRef="E1CC861E-3FE9-4A58-82DF-4BD259EAB371">
-            <Name default="true" langcode="en-us">Patient MRN exact match</Name>
-            <Description default="true" langcode="en-us">EDM Sensitive type for detecting Patient MRN.</Description>
-          </Resource>
-          <Resource idRef="E1CC861E-3FE9-4A58-82DF-4BD259EAB372">
-            <Name default="true" langcode="en-us">Patient SSN Exact Match.</Name>
-            <Description default="true" langcode="en-us">EDM Sensitive type for detecting Patient SSN.</Description>
+            <Name default="true" langcode="en-us">Patient, employee, or client first name</Name>
+            <Description default="true" langcode="en-us">EDM Sensitive type for detecting patient, client, or employee first.</Description>
           </Resource>
         </LocalizedStrings>
       </Rules>
