@@ -64,7 +64,7 @@ Setting up and configuring EDM classification involves saving sensitive data in 
     
     As an example, our .csv file is called *SampleDataStore.csv*. It includes columns, such as *id*, *firstname*, *lastname*, *title*, *creditcard* and so on.
 
-3. Set up a file in .xml format (similar to our example below) that defines the schema for your data file. Name this schema file `edm.xml`, and configure such that for each column in the database, you have a line that uses the syntax `<Field name="" unique="" searchable=""/>`. 
+3. Set up a file in .xml format (similar to our example below) that defines the schema for your data file. Name this schema file `edm.xml`, and configure it, such that for each column in the database, you have a line that uses the syntax `<Field name="" unique="" searchable=""/>`. 
 
     - Indicate a field's name by using the syntax `Field name="fieldname"`, where *fieldname* is the column name in the .csv file.
     - Indicate whether a field contains unique values by using the syntax `unique="true"` or `unique="false"`. (Social Security numbers, Employee ID numbers, drivers license numbers, etc. are unique, but dates of birth, first names, last names, etc. are not.)
