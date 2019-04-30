@@ -66,7 +66,7 @@ Setting up and configuring EDM classification involves saving sensitive data in 
 
 3. Set up a file in .xml format (similar to our example below) that defines the schema for your data file. Name this schema file `edm.xml`, and configure such that for each column in the database, you have a line that uses the syntax `<Field name="" unique="" searchable=""/>`. 
 
-    - Indicate a field's name by using the syntax `Field name="fieldname"`, where "fieldname" is the column name in the .csv file.
+    - Indicate a field's name by using the syntax `Field name="fieldname"`, where *fieldname* is the column name in the .csv file.
     - Indicate whether a field contains unique values by using the syntax `unique="true"` or `unique="false"`. (Social Security numbers, Employee ID numbers, drivers license numbers, etc. are unique, but dates of birth, first names, last names, etc. are not.)
     - Indicate whether a column should be searchable by using the syntax `searchable="true"` or `searchable="false"`. (A value of *true* indicates it should be searchable). No more than five of the 32 fields per database should be searchable. 
 
