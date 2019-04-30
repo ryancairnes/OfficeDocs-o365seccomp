@@ -61,7 +61,7 @@ Setting up and configuring EDM classification involves defining a schema for you
 
 2. Structure the sensitive data in the .csv file. Make sure the first row of the .csv file includes the names of the fields you'll use for EDM. For example, you might have field names, such as `id`, `firstname`, `lastname`, and so on. Keep the following limits in mind:
     
-    As an example, we our .csv file is called *SampleDataStore.csv*. It includes columns, such as *id*, *firstname*, *lastname*, *title*, and so on.
+    As an example, our .csv file is called *SampleDataStore.csv*. It includes columns, such as *id*, *firstname*, *lastname*, *title*, and so on.
 
 3. Set up a file in .xml format that represents the schema for your data file. Name this schema file `edm.xml`. As an example, the following .xml file defines the schema for our example *SampleDataStore* database.
     
@@ -137,8 +137,7 @@ Now that the schema for your database of sensitive information is defined, the n
     </RulePackage>
     ```
 
-    You can copy and modify our code to suit your organization's needs. Recall from the previous section that our SampleDataStore schema defined three fields as searchable for EDM. This file includes those three fields, represented as ExactMatch items.
-    
+    You can copy and modify our code to suit your organization's needs. Recall from the previous section that our SampleDataStore schema defined three fields as searchable for EDM: `firstname`, `creditcard`, and `ssn`. This file includes two of those three fields, represented as `ExactMatch` items. 
     
     To learn more about .xml files like this, see [Sample XML of a rule package](create-a-custom-sensitive-information-type-in-scc-powershell.md#sample-xml-of-a-rule-package).
     
@@ -150,35 +149,42 @@ Now that the schema for your database of sensitive information is defined, the n
 
     To learn more about uploading rule packages, see [Upload your rule package](create-a-custom-sensitive-information-type-in-scc-powershell.md#upload-your-rule-package).
 
+At this point, you have defined a schema and rule package for sensitive data.
 
 ## Part 2: Install and use the EDM Upload Agent tool
 
-During this phase, you set up a dedicated user account for Office 365, install the EDM Upload Agent tool, use the tool to index your sensitive data, and then upload the indexed data.
+During this phase, you set up a custom security group and user account, install the EDM Upload Agent tool, index the sensitive data, and then upload the indexed data.
 
-1. Set up a user account with limited permissions for the EDM Upload Agent. (See [Add users to Office 365](https://docs.microsoft.com/office365/admin/add-users/add-users?view=o365-worldwide).) The user account you create should have:
+1. As a global administrator, Exchange Online administrator, or compliance administrator, set up a security group (you can call this `EDM_DataUploaders`). Grant permissions to this security group as follows:
 
-    - Read access to your data file (This is the .csv you created in [Part 1](#part-1-set-up-your-tabular-data-source-for-edm).)
-    - Write access to the location you'll use for storing hashed data (this can be a folder on a local drive of the user's machine)
+    - Read access to the sensitive data (for exporting to a file in .csv format)
+    - Local admin access to a designated machine
 
-2. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639). Make sure to note the installation location (such as `C:\`). 
+    Then, set up a new user account, and add that account to the security group (EDM_DataUploaders).
 
-3. To authorize the EDM Upload Agent, run the following command in Windows Command Prompt:
+2. Sign into the designated machine with the user account that was created in the previous step. 
+
+3. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639). Make sure to note the installation location (such as `C:\`). 
+
+4. To authorize the EDM Upload Agent, run the following command in Windows Command Prompt, and then sign in:
 
     `EdmUploadAgent.exe /Authorize`
 
-4. When prompted, log in using the account credentials you created in step 1 of this procedure. 
+5. Save the sensitive data file (recall our example is SampleDataStore.csv) to the local drive on the machine.
 
-5. To index your sensitive data, run the following command in Windows Command Prompt:
+    For example, we saved our example SampleDataStore.csv file to `C:\Edm\Data`.
+
+6. To index your sensitive data, run the following command in Windows Command Prompt:
 
     `EdmUploadAgent.exe /CreateHash /DataStoreName <DataStoreName> /DataFile <DataFilePath> /HashLocation <HashedFileLocation>`
 
-    Example: `EdmUploadAgent.exe /CreateHash /DataStoreName EmployeeDB /DataFile C:\Edm\Data\EmployeeData.csv /HashLocation C:\Edm\Hash` 
+    Example: `EdmUploadAgent.exe /CreateHash /DataStoreName SampleDataStore /DataFile C:\Edm\Data\SampleDataStore.csv /HashLocation C:\Edm\Hash` 
 
 6. To upload the indexed data, run the following command in Windows Command Prompt:
 
     `EdmUploadAgent.exe /UploadHash /DataStoreName <DataStoreName> /HashFile <HashedSourceFilePath>`
 
-    Example: `EdmUploadAgent.exe /UploadHash /DataStoreName EmployeeDB /HashFile C:\Edm\Hash\EmployeeData.EdmHash` 
+    Example: `EdmUploadAgent.exe /UploadHash /DataStoreName SampleDataStore /HashFile C:\Edm\Hash\SampleDataStore.EdmHash` 
 
 7. To verify your sensitive data has been uploaded, run the following command in Windows Command Prompt:
 
