@@ -48,7 +48,7 @@ EDM classification enables you to create custom sensitive information types that
 |Phase  |What's needed  |
 |---------|---------|
 |[Part 1: Set up EDM classification](#part-1-set-up-edm-classification) |- Read access to the sensitive data<br/>- Ability to define a database schema in .xml format (this article includes an example)<br/>- Ability to create a rule package in .xml format (this article includes an example)<br/>- Admin permissions to upload the database schema file and rule package file to the Security & Compliance Center (using PowerShell) |
-|[Part 2: Index and upload the sensitive data](#part-2-index-and-upload-the-sensitive-data) |- Custom security group and user account on a Windows machine<br/>- Ability to use Windows Command Prompt to install and authorize EDM Upload Agent tool|    |         |
+|[Part 2: Index and upload the sensitive data](#part-2-index-and-upload-the-sensitive-data) |- Custom security group and user account on a Windows machine<br/>- Ability to install and authorize the EDM Upload Agent |    |         |
 |[Part 3: Use EDM classification with your Microsoft cloud services (Example: DLP policy)](#part-3-use-edm-classification-with-your-microsoft-cloud-services-example-dlp-policy) |- Office 365 or Microsoft 365 subscription that includes DLP<br/>- EDM classification feature enabled (this is currently in preview) |
 
 ## Part 1: Set up EDM classification
