@@ -155,26 +155,26 @@ At this point, you have defined a schema and rule package for sensitive data.
 
 During this phase, you set up a custom security group and user account, install the EDM Upload Agent tool, index the sensitive data, and then upload the indexed data.
 
-1. As a global administrator, Exchange Online administrator, or compliance administrator, set up a security group (you can call this `EDM_DataUploaders`). Grant permissions to this security group as follows:
+1. As a global administrator, Exchange Online administrator, or compliance administrator, [set up a security group](https://docs.microsoft.com/office365/admin/email/create-edit-or-delete-a-security-group) (you can call this `EDM_DataUploaders`). 
 
-    - Read access to the sensitive data (for exporting to a file in .csv format)
-    - Local admin access to a designated machine
+    Grant permissions to this security group as follows:
 
-    Then, set up a new user account, and add that account to the security group (EDM_DataUploaders).
+      - Read access to the sensitive data (for exporting to a file in .csv format)
+      - Local admin access to a designated machine
 
-2. Sign into the designated machine with the user account that was created in the previous step. 
+    Then, [set up a new user account](https://docs.microsoft.com/office365/admin/add-users/add-users?view=o365-worldwide), and add that account to the security group (`EDM_DataUploaders`).
 
-3. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639). Make sure to note the installation location (such as `C:\`). 
+2. Sign into the designated machine with the user account that was created in the previous step. Then, download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639). Make sure to note the installation location (such as `C:\`). 
 
-4. To authorize the EDM Upload Agent, run the following command in Windows Command Prompt, and then sign in:
+3. To authorize the EDM Upload Agent, run the following command in Windows Command Prompt, and then sign in:
 
     `EdmUploadAgent.exe /Authorize`
 
-5. Save the sensitive data file (recall our example is SampleDataStore.csv) to the local drive on the machine.
+4. Save the sensitive data file (recall our example is SampleDataStore.csv) to the local drive on the machine.
 
     For example, we saved our example SampleDataStore.csv file to `C:\Edm\Data`.
 
-6. To index your sensitive data, run the following command in Windows Command Prompt:
+5. To index your sensitive data, run the following command in Windows Command Prompt:
 
     `EdmUploadAgent.exe /CreateHash /DataStoreName <DataStoreName> /DataFile <DataFilePath> /HashLocation <HashedFileLocation>`
 
@@ -193,6 +193,8 @@ During this phase, you set up a custom security group and user account, install 
     You'll see a list of data stores and when they were last updated. Here's an example:
 
     ![Example of GetDataStore cmdlet and results](media/EDM-GetDataStore-example.png)
+
+We recommend using Task Scheduler to automate Steps 5-6
 
 Now that you have set up your custom sensitive information type with EDM, you can use it with your Microsoft cloud services. 
 
