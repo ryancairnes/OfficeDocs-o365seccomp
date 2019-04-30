@@ -6,7 +6,7 @@ manager: laurawi
 ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
-ms.date: 04/29/2019
+ms.date: 04/30/2019
 localization_priority: Priority
 ms.collection: 
 - M365-security-compliance
@@ -44,11 +44,11 @@ EDM classification enables you to create custom sensitive information types that
 
 |Phase  |What's needed  |
 |---------|---------|
-|[Part 1: Define your sensitive data for EDM classification](#part-1-define-your-sensitive-data-for-edm-classification) |- Access to the sensitive data and ability to save the data in .csv format<br/>- Ability to create a rule package in .xml format<br/>- Admin permissions to upload database schema information and a rule package to the Security & Compliance Center (using PowerShell) |
-|[Part 2: Install and use the EDM Upload Agent tool](#part-2-install-and-use-the-edm-upload-agent-tool) |- Security group and dedicated user account for EDM<br/>- Machine for installing and running the [EDM Upload Agent](https://go.microsoft.com/fwlink/?linkid=2088639) tool |    |         |
-|[Part 3: Use EDM classification with your Microsoft cloud services (Example: DLP policy)](#part-3-use-edm-classification-with-your-microsoft-cloud-services-example-dlp-policy) |- Office 365 or Microsoft 365 subscription that includes DLP<br/>- EDM classification features (currently in preview) |
+|[Part 1: Set up EDM classification](#part-1-set-up-edm-classification) |- Read permissions to the sensitive data<br/>- Ability to create a rule package in .xml format<br/>- Admin permissions to upload database schema information and a rule package to the Security & Compliance Center (using PowerShell) |
+|[Part 2: Install and use the EDM Upload Agent tool](#part-2-install-and-use-the-edm-upload-agent-tool) |- Security group and dedicated user account to be used with EDM<br/>- Machine for indexing and uploading data with [EDM Upload Agent](https://go.microsoft.com/fwlink/?linkid=2088639) installed |    |         |
+|[Part 3: Use EDM classification with your Microsoft cloud services (Example: DLP policy)](#part-3-use-edm-classification-with-your-microsoft-cloud-services-example-dlp-policy) |- Office 365 or Microsoft 365 subscription that includes DLP<br/>- EDM classification feature enabled (this is currently in preview) |
 
-## Part 1: Define your sensitive data for EDM classification
+## Part 1: Set up EDM classification
 
 Setting up and configuring EDM classification involves defining a schema for your database of sensitive information, and then creating a rule package.
 
@@ -59,11 +59,19 @@ Setting up and configuring EDM classification involves defining a schema for you
     - Up to ten million rows of sensitive data
     - Up to 32 columns (fields) per data source
 
-2. Structure the sensitive data in the .csv file. Make sure the first row of the .csv file includes the names of the fields you'll use for EDM. For example, you might have field names, such as `id`, `firstname`, `lastname`, and so on. Keep the following limits in mind:
+2. Structure the sensitive data in the .csv file. Make sure the first row of the .csv file includes the names of the fields you'll use for EDM. For example, you might have field names, such as `ssn`, `birthdate`, `firstname`, `lastname`, `employeeid`, and so on. 
     
-    As an example, our .csv file is called *SampleDataStore.csv*. It includes columns, such as *id*, *firstname*, *lastname*, *title*, and so on.
+    As an example, our .csv file is called *SampleDataStore.csv*. It includes columns, such as *id*, *firstname*, *lastname*, *title*, *creditcard* and so on.
 
-3. Set up a file in .xml format that represents the schema for your data file. Name this schema file `edm.xml`. As an example, the following .xml file defines the schema for our example *SampleDataStore* database.
+3. Set up a file in .xml format (similar to our example below) that defines the schema for your data file. Name this schema file `edm.xml`, and configure it as follows: 
+
+    For each column in the database, include a line that uses the syntax `<Field name="" unique="" searchable=""/>`, as follows. 
+
+    - Indicate its field name by using the syntax `Field name="fieldname"`, where "fieldname" is the column name in the .csv file.
+    - Indicate whether the field contains unique values by using the syntax `unique="true"` or `unique="false"`. (Social Security numbers, Employee ID numbers, drivers license numbers, etc. are unique, but dates of birth, first names, last names, etc. are not.)
+    - Indicate whether the column should be searchable by using the syntax `searchable="true"` or `searchable="false"`. (A value of *true* indicates it should be searchable). No more than five of the 32 fields per database should be searchable. 
+
+    As an example, the following .xml file defines the schema for our example *SampleDataStore* database. Here, we specified three fields (`firstname`, `creditcard`, and `ssn`) as searchable for EDM classification. You can copy our example and modify it for your use.
     
     ```
     <?xml version="1.0" encoding="utf-8"?>
@@ -79,9 +87,6 @@ Setting up and configuring EDM classification involves defining a schema for you
       </DataStore>
     </EdmSchema>
     ```
-    For each column in the database, indicate its field name, whether that column contains unique values (social security numbers are unique, but dates of birth are not), and whether that column should be searchable (a value of *true* indicates it should be searchable). 
-    
-    Select up to five columns per database to be searchable. These are the columns that will be used with EDM classification. In our example, we specified three fields (`firstname`, `creditcard`, and `ssn`) to be used for EDM classification.
 
 4. [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
@@ -151,7 +156,7 @@ Now that the schema for your database of sensitive information is defined, the n
 
 At this point, you have defined a schema and rule package for sensitive data.
 
-## Part 2: Install and use the EDM Upload Agent tool
+## Part 2: Index and upload the sensitive data
 
 During this phase, you set up a custom security group and user account, install the EDM Upload Agent tool, index the sensitive data, and then upload the indexed data.
 
