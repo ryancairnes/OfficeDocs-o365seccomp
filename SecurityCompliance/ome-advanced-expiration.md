@@ -1,5 +1,5 @@
 ---
-title: "Office 365 Advanced Message Encryption - message expiration"
+title: "Set an expiration date for email encrypted by Office 365 Advanced Message Encryption"
 ms.author: krowley
 author: kccross
 manager: laurawi
@@ -14,7 +14,7 @@ ms.assetid: f87cb016-7876-4317-ae3c-9169b311ff8a
 description: "With Office 365 Advanced Message Encryption capabilities on top of Office 365 Message Encryption (OME), you can extend your email security by setting an expiration date on emails through a custom branded template."
 ---
 
-# Office 365 Advanced Message Encryption - message expiration
+# Set an expiration date for email encrypted by Office 365 Advanced Message Encryption
 
 Office 365 Advanced Message Encryption is available on top of Office 365 Message Encryption in certain subscriptions. Advanced Message Encryption is included in [Microsoft 365 Enterprise E5](https://www.microsoft.com/microsoft-365/enterprise/home), Office 365 Enterprise E5, and Office 365 Education A5. If your organization has an Office 365 subscription that does not include Office 365 Advanced Message Encryption, you can purchase Advanced Message Encryption as an add-on with E5 Compliance of the Advanced Compliance SKU.
 
