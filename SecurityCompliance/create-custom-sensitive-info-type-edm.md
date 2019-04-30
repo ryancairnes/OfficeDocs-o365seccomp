@@ -160,21 +160,20 @@ At this point, you have set up EDM classification. The next step is to index and
 
 During this phase, you set up a custom security group and user account, install the EDM Upload Agent tool on your Windows machine, and then use the tool to index and upload the sensitive data.
 
-### Set up a security group, user account, and Windows machine
+### Set up a security group, user account, and Windows machine with the EDM Upload Agent
 
 1. As a global administrator, Exchange Online administrator, or compliance administrator, [set up a security group](https://docs.microsoft.com/office365/admin/email/create-edit-or-delete-a-security-group) (you can call this `EDM_DataUploaders`). 
 
     Grant permissions to this security group as follows:
 
-      - Read access to the sensitive data (for exporting to a file in .csv format)
-      - Local admin access to a designated machine
+      - Read access to the sensitive information file (in .csv format)
+      - Local admin access to a designated Windows machine
 
 2. [Set up a new user account](https://docs.microsoft.com/office365/admin/add-users/add-users?view=o365-worldwide), and add that account to the security group (*EDM_DataUploaders*) you created in the previous step.
 
-3. Add the new user account to the machine you'll use to index and upload the sensitive data.
+3. Add the new security group to the Windows machine you'll use to index and upload the sensitive data. Grant the security group local admin access to the machine.
 
-4. Sign into the designated machine with the user account that was created in the previous procedure. 
-
+4. Sign into the Windows machine with the user account that was created in the previous procedure. 
 
 5. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639). Make sure to note the installation location (such as `C:\`). 
 
