@@ -166,30 +166,38 @@ For more information about how Office 365 implements encryption for emails and e
    Set-IRMConfiguration -DecryptAttachmentFromPortal $false
    ```
 
-## Ensure all external recipients use the OME Portal to read encrypted mail
+## Ensure all external recipients use the OME Portal to read encrypted mail - Office 365 Advanced Message Encryption only
 
-You can force recipients to read encrypted email in the OME Portal instead of using Outlook or Outlook on the web. You might want to do this if you use Office 365 Advanced Message encryption features such as revocation and expiration which are only supported through the OME Portal.
+If you have Office 365 Advanced Message Encryption, you can use custom branding templates to force recipients to receive a wrapper mail that directs them to read encrypted email in the OME Portal instead of using Outlook or Outlook on the web. You might want to do this if you use want greater control over how recipients use the mail they receive. For example, if external recipients view email in the web portal, you can set an expiration date for the email, and you can revoke the email. These features are only supported through the OME Portal.
 
-### To force recipients to use the portal, use the *** cmdlet in Windows Powershell
+### Example: Create a custom template to force all external recipients to receive a wrapper email and for that email to expire in 7 days
 
 1. Using a work or school account that has global administrator permissions in your Office 365 organization, start a Windows PowerShell session and connect to Exchange Online. For instructions, see [Connect to Exchange Online PowerShell](https://aka.ms/exopowershell).
 
-2. Run the Set-IRMConfiguration cmdlet with the **??** parameter:
+2. Run the New-OMEConfiguration cmdlet:
 
    ```powershell
-   Set-IRMConfiguration -ForcePortal?? <$true|$false>
+   New-OMEConfiguration -Identity "<template name>" -ExternalMailExpiryInDays 7
    ```
 
-   For example, to configure the service to require external recipients to use the OME Portal:
+   where `template name` is the name you want to use for the Office 365 Message Encryption custom branding template. For example,
 
    ```powershell
-   Set-IRMConfiguration -ForcePortal?? $true
+   New-OMEConfiguration -Identity "<One week expiration>" -ExternalMailExpiryInDays 7
    ```
 
-   To configure the service not to require external recipients that use Outlook for PC, Outlook for Mac, and Outlook on the web to use the OME Portal:
+3. Run the New-TransportRule cmdlet:
 
    ```powershell
-   Set-IRMConfiguration -ForcePortal?? $false
+   New-TransportRule -name "<transport rule name>" -FromScope "InOrganization" -ApplyRightsProtectionCustomizationTemplate "<template name>"
+   ```
+
+   where `transport rule name` is the name you want to use for the new transport rule and `template name` is the name you gave the custom branding template.
+
+   For example:
+
+   ```powershell
+   New-TransportRule -name "<All outgoing mail>" -FromScope "InOrganization" -ApplyRightsProtectionCustomizationTemplate "<One week expiration>"
    ```
 
 ## Customizing the appearance of email messages and the OME portal
