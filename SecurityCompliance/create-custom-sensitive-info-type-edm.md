@@ -98,7 +98,7 @@ Now that the schema for your database of sensitive information is defined, the n
 1. Create a rule package in .xml format (with Unicode encoding), similar to the following example. 
 
     ```
-    <?xml version="1.0" encoding="utf-8"?>
+        <?xml version="1.0" encoding="utf-8"?>
     <RulePackage xmlns="http://schemas.microsoft.com/office/2018/edm">
       <RulePack id="fd098e03-1796-41a5-8ab6-198c93c62b11">
         <Version build="0" major="2" minor="0" revision="0" />
@@ -107,15 +107,15 @@ Now that the schema for your database of sensitive information is defined, the n
           <LocalizedDetails langcode="en-us">
             <PublisherName>Microsoft EDM</PublisherName>
             <Name>SampleDataStore EDM Rulepack</Name>
-            <Description> This rule package contains the EDM sensitive types for the SampleDataStore.</Description>
+            <Description> This rule package contains the EDM sensitive types for our SampleDataStore.</Description>
           </LocalizedDetails>
         </Details>
       </RulePack>
       <Rules>
         <ExactMatch id = "E1CC861E-3FE9-4A58-82DF-4BD259EAB371" patternsProximity = "300" dataStore ="SampleSchema" recommendedConfidence = "65" >
           <Pattern confidenceLevel="65">
-            <idMatch matches="creditcard" classification="creditcard" />
-            <match matches="creditcard" />
+            <idMatch matches="MRN" classification="MRN" />
+            <match matches="LastName" />
           </Pattern>
         </ExactMatch>
         <ExactMatch id = "E1CC861E-3FE9-4A58-82DF-4BD259EAB372" patternsProximity = "300" dataStore ="SampleSchema" recommendedConfidence = "65" >
@@ -125,15 +125,22 @@ Now that the schema for your database of sensitive information is defined, the n
         </ExactMatch>
         <LocalizedStrings>
           <Resource idRef="E1CC861E-3FE9-4A58-82DF-4BD259EAB371">
-            <Name default="true" langcode="en-us">Patient, employee, or client first name</Name>
-            <Description default="true" langcode="en-us">EDM Sensitive type for detecting patient, client, or employee first.</Description>
+            <Name default="true" langcode="en-us">Patient MRN exact match</Name>
+            <Description default="true" langcode="en-us">EDM Sensitive type for detecting Patient MRN.</Description>
+          </Resource>
+          <Resource idRef="E1CC861E-3FE9-4A58-82DF-4BD259EAB372">
+            <Name default="true" langcode="en-us">Patient SSN Exact Match.</Name>
+            <Description default="true" langcode="en-us">EDM Sensitive type for detecting Patient SSN.</Description>
           </Resource>
         </LocalizedStrings>
       </Rules>
     </RulePackage>
     ```
 
-    You can copy and modify our code to suit your organization's needs. To learn more about .xml files like this, see [Sample XML of a rule package](create-a-custom-sensitive-information-type-in-scc-powershell.md#sample-xml-of-a-rule-package).
+    You can copy and modify our code to suit your organization's needs. Recall from the previous section that our SampleDataStore schema defined three fields as searchable for EDM. This file includes those three fields, represented as ExactMatch items.
+    
+    
+    To learn more about .xml files like this, see [Sample XML of a rule package](create-a-custom-sensitive-information-type-in-scc-powershell.md#sample-xml-of-a-rule-package).
     
 2. Upload the rule package by running the following PowerShell cmdlets, one at a time:
 
