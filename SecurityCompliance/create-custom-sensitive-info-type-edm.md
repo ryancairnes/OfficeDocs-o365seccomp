@@ -71,7 +71,7 @@ Setting up and configuring EDM classification involves defining a schema for you
     - Indicate whether the field contains unique values by using the syntax `unique="true"` or `unique="false"`. (Social Security numbers, Employee ID numbers, drivers license numbers, etc. are unique, but dates of birth, first names, last names, etc. are not.)
     - Indicate whether the column should be searchable by using the syntax `searchable="true"` or `searchable="false"`. (A value of *true* indicates it should be searchable). No more than five of the 32 fields per database should be searchable. 
 
-    As an example, the following .xml file defines the schema for our example *SampleDataStore* database. Here, we specified three fields (`firstname`, `creditcard`, and `ssn`) as searchable for EDM classification. You can copy our example and modify it for your use.
+    As an example, the following .xml file defines the schema for our example *SampleDataStore* database. Here, we specified three fields (`firstname`, `creditcard`, and `ssn`) as searchable for EDM classification. (You can copy our example and modify it for your use.)
     
     ```
     <?xml version="1.0" encoding="utf-8"?>
@@ -100,7 +100,9 @@ Now that the schema for your database of sensitive information is defined, the n
 
 ### Set up a rule package
 
-1. Create a rule package in .xml format (with Unicode encoding), similar to the following example. 
+1. Create a rule package in .xml format (with Unicode encoding), similar to the example included below. (You can copy our example and modify it for your use.) 
+
+    Recall from the previous procedure that our SampleDataStore schema defines three fields as searchable for EDM: `firstname`, `creditcard`, and `ssn`. Our example file includes two of those three fields, listed as `ExactMatch` items. 
 
     ```
         <?xml version="1.0" encoding="utf-8"?>
@@ -141,9 +143,6 @@ Now that the schema for your database of sensitive information is defined, the n
       </Rules>
     </RulePackage>
     ```
-
-    You can copy and modify our code to suit your organization's needs. Recall from the previous section that our SampleDataStore schema defined three fields as searchable for EDM: `firstname`, `creditcard`, and `ssn`. This file includes two of those three fields, represented as `ExactMatch` items. 
-    
     To learn more about .xml files like this, see [Sample XML of a rule package](create-a-custom-sensitive-information-type-in-scc-powershell.md#sample-xml-of-a-rule-package).
     
 2. Upload the rule package by running the following PowerShell cmdlets, one at a time:
@@ -154,11 +153,13 @@ Now that the schema for your database of sensitive information is defined, the n
 
     To learn more about uploading rule packages, see [Upload your rule package](create-a-custom-sensitive-information-type-in-scc-powershell.md#upload-your-rule-package).
 
-At this point, you have defined a schema and rule package for sensitive data.
+At this point, you have set up EDM classification by defining a schema and rule package for sensitive data. 
 
 ## Part 2: Index and upload the sensitive data
 
 During this phase, you set up a custom security group and user account, install the EDM Upload Agent tool, index the sensitive data, and then upload the indexed data.
+
+### Set up a security group and user account
 
 1. As a global administrator, Exchange Online administrator, or compliance administrator, [set up a security group](https://docs.microsoft.com/office365/admin/email/create-edit-or-delete-a-security-group) (you can call this `EDM_DataUploaders`). 
 
@@ -167,9 +168,16 @@ During this phase, you set up a custom security group and user account, install 
       - Read access to the sensitive data (for exporting to a file in .csv format)
       - Local admin access to a designated machine
 
-    Then, [set up a new user account](https://docs.microsoft.com/office365/admin/add-users/add-users?view=o365-worldwide), and add that account to the security group (`EDM_DataUploaders`).
+2. [Set up a new user account](https://docs.microsoft.com/office365/admin/add-users/add-users?view=o365-worldwide), and add that account to the security group (`EDM_DataUploaders`) you created in the previous step.
 
-2. Sign into the designated machine with the user account that was created in the previous step. Then, download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639). Make sure to note the installation location (such as `C:\`). 
+3. Add the new user account to the machine you'll use to index and upload the sensitive data.
+
+### Install the EDM Upload Agent
+
+1. Sign into the designated machine with the user account that was created in the previous procedure. 
+
+
+2. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639). Make sure to note the installation location (such as `C:\`). 
 
 3. To authorize the EDM Upload Agent, run the following command in Windows Command Prompt, and then sign in:
 
