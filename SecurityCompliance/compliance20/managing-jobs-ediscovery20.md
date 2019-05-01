@@ -1,5 +1,5 @@
 ---
-title: "Manage jobs in Advanced eDiscovery (Preview)"
+title: "Manage jobs in Advanced eDiscovery"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,9 +17,9 @@ ms.assetid:
 description: ""
 ---
 
-# Manage jobs in Advanced eDiscovery (Preview)
+# Manage jobs in Advanced eDiscovery
 
-Here's a list of the jobs (which are typically long-running processes) that are tracked on the **Jobs** tab of a case in Advanced eDiscovery (Preview). These jobs are triggered by user actions when using and managing cases.
+Here's a list of the jobs (which are typically long-running processes) that are tracked on the **Jobs** tab of a case in Advanced eDiscovery. These jobs are triggered by user actions when using and managing cases.
 
 | Job type           | Description     |
 | :----------------- | :----------     |

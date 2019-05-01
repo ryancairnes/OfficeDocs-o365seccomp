@@ -31,7 +31,7 @@ When experts, attorneys, or other users review content in a review set, their op
 
 ## Tag types
 
-Advanced eDiscovery (Preview) provides two types of tags:
+Advanced eDiscovery provides two types of tags:
 
 - **Single choice tags** - Restricts users to select a single tag within a group. This can be useful to ensure users don’t select conflicting tags such as “responsive” and “non-responsive”. 
 

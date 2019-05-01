@@ -1,5 +1,5 @@
 ---
-title: "Manage review sets in Advanced eDiscovery (Preview)"
+title: "Manage review sets in Advanced eDiscovery"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,7 +17,7 @@ ms.assetid:
 description: ""
 ---
 
-# Manage review sets in Advanced eDiscovery (Preview)
+# Manage review sets in Advanced eDiscovery
 
 Review sets are a static set of documents where you can analyze, query, view, tag, and export data in a case. For more information about performing these tasks, see:
 

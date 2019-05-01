@@ -1,5 +1,5 @@
 ---
-title: "Advanced eDiscovery (Preview) limits"
+title: "Advanced eDiscovery limits"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -14,13 +14,13 @@ search.appverid:
 description: ""
 ---
 
-# Limits in Advanced eDiscovery (Preview)
+# Limits in Advanced eDiscovery
 
-This article describes the limits in Advanced eDiscovery (Preview).
+This article describes the limits in Advanced eDiscovery.
 
 ## Case limits
 
-The following table lists the limits for cases in Advanced eDiscovery (Preview).
+The following table lists the limits for cases in Advanced eDiscovery.
 
 |**Description of limit**|**Limit**|
   |:-----|:-----|

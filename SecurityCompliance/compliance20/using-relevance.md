@@ -1,5 +1,5 @@
 ---
-title: "Use the Relevance module to analyze data in Advanced eDiscovery (Preview)"
+title: "Use the Relevance module to analyze data in Advanced eDiscovery"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,9 +17,9 @@ ms.assetid:
 description: ""
 ---
 
-# Use the Relevance module to analyze data in Advanced eDiscovery (Preview)
+# Use the Relevance module to analyze data in Advanced eDiscovery
 
-In Advanced eDiscovery (Preview), the Relevance module includes the Relevance training and review of files related to a case. In order to use the Relevance workflow, go to Manage review set within a review set and click on Show Relevance. There are a couple of steps you need to complete before you can start the workflow:
+In Advanced eDiscovery, the Relevance module includes the Relevance training and review of files related to a case. In order to use the Relevance workflow, go to Manage review set within a review set and click on Show Relevance. There are a couple of steps you need to complete before you can start the workflow:
 
 - Process: each load set added to the review set will show up as a "container" here. You need to process these documents before you can add them to Relevance module; this is also where you can mark them as seed or pre-tagged for a specific issue.
 
@@ -37,7 +37,7 @@ The Relevance workflow is shown and described as follows:
     
 - **Cycles of training and tracking**
     
-  - **Tag**: Advanced eDiscovery (Preview) learns Relevance criteria specific to each issue based on the expert's iterative review and tagging of individual files.
+  - **Tag**: Advanced eDiscovery learns Relevance criteria specific to each issue based on the expert's iterative review and tagging of individual files.
     
   - **Track**: Calculate and display interim results of the Relevance training while monitoring statistical validity of the process. 
     
@@ -45,7 +45,7 @@ The Relevance workflow is shown and described as follows:
     
 - **Decide**: The results of the analysis applied to the entire case is displayed after Batch calculation, and data used to make document review decisions is displayed.
     
-- **Test**: Results can be tested to verify the validity and effectiveness of the Advanced eDiscovery (Preview) processing.
+- **Test**: Results can be tested to verify the validity and effectiveness of the Advanced eDiscovery processing.
 
 - **Search**: Once the Relevance workflow is complete, you can use the output such as read percentile of a document for your issue when you run a query within your review set.
     
@@ -65,7 +65,7 @@ Following is an overview of guidelines for Relevance training and review:
      
   - Ignore text applied to Relevance will be removed in the displayed file content in the text view in Relevance. If the values for Ignore text were defined after Relevance training already started, the new ignored text will be applied to sample files created from the point in which it was defined. The Ignore Text feature should be used cautiously, as its use may reduce the performance of file analysis
     
-  - Use the **Skip tagging** option only when necessary. Advanced eDiscovery (Preview) does not train based on skipped files. In assessment, if it's hard to tell whether a file is relevant, it is better to tag as Relevant (R) or Not relevant (NR) whenever possible rather than selecting **Skip**. When Advanced eDiscovery (Preview) evaluates training, it can then be seen how well these types of files were processed.
+  - Use the **Skip tagging** option only when necessary. Advanced eDiscovery does not train based on skipped files. In assessment, if it's hard to tell whether a file is relevant, it is better to tag as Relevant (R) or Not relevant (NR) whenever possible rather than selecting **Skip**. When Advanced eDiscovery evaluates training, it can then be seen how well these types of files were processed.
     
   - Even files with a very small amount of extracted text should be tagged in training as R/NR, rather than as "Skip", when possible. 
     
