@@ -62,9 +62,7 @@ Setting up and configuring EDM classification involves saving sensitive data in 
     - Up to ten million rows of sensitive data
     - Up to 32 columns (fields) per data source
 
-2. Structure the sensitive data in the .csv file. Make sure the first row of the .csv file includes the names of the fields you'll use for EDM classification. For example, you might have field names, such as `ssn`, `birthdate`, `firstname`, `lastname`, `employeeid`, and so on. 
-    
-    As an example, our .csv file is called *SampleDataStore.csv*. It includes columns, such as *id*, *firstname*, *lastname*, *title*, *creditcard* and so on.
+2. Structure the sensitive data in the .csv file. Make sure the first row of the .csv file includes the names of the fields you'll use for EDM classification. For example, you might have field names, such as `ssn`, `birthdate`, `firstname`, `lastname`, `employeeid`, and so on. <br/> As an example, our .csv file is called *SampleDataStore.csv*. It includes columns, such as *id*, *firstname*, *lastname*, *title*, *creditcard* and so on.
 
 3. Define the schema for the database of sensitive information in .xml format (similar to our example below). Name this schema file `edm.xml`, and configure it such that for each column in the database, there is a line that uses the syntax `<Field name="" unique="" searchable=""/>`. 
 
@@ -72,20 +70,22 @@ Setting up and configuring EDM classification involves saving sensitive data in 
     - Use `unique="true"` for the fields that contain unique values (Social Security numbers, identification numbers, etc.); otherwise, use `unique="false"`.
     - Use `searchable="true"` for the fields that should be searchable. No more than five fields per database should be searchable. All the rest should have `searchable="false"`.  
 
-    As an example, the following .xml file defines the schema for our example *SampleDataStore* database. Here, we specified three fields (*firstname*, *creditcard*, and *ssn*) as searchable for EDM classification. (You can copy our example and modify it for your use.)
+    As an example, the following .xml file defines the schema for a patient records database. Here, we specified five fields (*PatientID*, *MRN*, *SSN*, *Phone*, and *DOB*) as searchable for EDM classification. (You can copy our example and modify it for your use.)
     
     ```
-    <?xml version="1.0" encoding="utf-8"?>
+        <?xml version="1.0" encoding="utf-8"?>
     <EdmSchema xmlns="http://schemas.microsoft.com/office/2018/edm">
-      <DataStore name="SampleDataStore" description="Sample Datastore" version="1">
-        <Field name="id" unique="true" searchable="true" />
-        <Field name="firstname" unique="false" searchable="true" />
-        <Field name="lastname" unique="false" searchable="false" />
-        <Field name="title" unique="false" searchable="false" />
-        <Field name="dob" unique="false" searchable="false" />
-        <Field name="creditcard" unique="false" searchable="true" />
-        <Field name="ssn" unique="false" searchable="true" />
-      </DataStore>
+    	<DataStore name="PatientRecords" description="Schema for patient records" version="1">
+    		<Field name="PatientID" unique="true" searchable="true" />
+    		<Field name="MRN" unique="false" searchable="true" />
+    		<Field name="FirstName" unique="false" searchable="false" />
+    		<Field name="LastName" unique="false" searchable="false" />
+    		<Field name="SSN" unique="false" searchable="true" />
+    		<Field name="Phone" unique="false" searchable="true" />
+    		<Field name="DOB" unique="false" searchable="true" />
+    		<Field name="Gender" unique="false" searchable="false" />
+    		<Field name="Address" unique="false" searchable="false" />
+    	</DataStore>
     </EdmSchema>
     ```
 
@@ -95,8 +95,17 @@ Setting up and configuring EDM classification involves saving sensitive data in 
 
     `$edmSchemaXml=Get-Content .\edm.xml -Encoding Byte -ReadCount 0`
 
-    `New-DlpEdmSchema -FileData $edmSchemaXml`
+    `New-DlpEdmSchema -FileData $edm -Confirm:$true`
 
+6. You will be prompted to confirm, as follows:
+
+    ```powershell
+    Confirm
+        Are you sure you want to perform this action?
+        New EDM Schema for the data store 'patientrecords' will be imported.
+        [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [?] Help (default is "Y"):
+    ```
+    
 Now that the schema for your database of sensitive information is defined, the next step is to set up a rule package.
 
 ### Set up a rule package
