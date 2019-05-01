@@ -62,7 +62,7 @@ Setting up and configuring EDM classification involves saving sensitive data in 
     - Up to ten million rows of sensitive data
     - Up to 32 columns (fields) per data source
 
-2. Structure the sensitive data in the .csv file. Make sure the first row of the .csv file includes the names of the fields you'll use for EDM classification. For example, you might have field names, such as `ssn`, `birthdate`, `firstname`, `lastname`, `employeeid`, and so on. <br/> As an example, our .csv file is called *SampleDataStore.csv*. It includes columns, such as *id*, *firstname*, *lastname*, *title*, *creditcard* and so on.
+2. Structure the sensitive data in the .csv file. Make sure the first row of the .csv file includes the names of the fields you'll use for EDM classification. For example, you might have field names, such as `ssn`, `birthdate`, `firstname`, `lastname`, `employeeid`, and so on. <br/> As an example, our .csv file is called *PatientRecords.csv*. It includes columns, such as *PatientID*, *MRN*, *lastname*, *FirstName*, *SSN* and more.
 
 3. Define the schema for the database of sensitive information in .xml format (similar to our example below). Name this schema file `edm.xml`, and configure it such that for each column in the database, there is a line that uses the syntax `<Field name="" unique="" searchable=""/>`. 
 
@@ -112,47 +112,70 @@ Now that the schema for your database of sensitive information is defined, the n
 
 1. Create a rule package in .xml format (with Unicode encoding), similar to the example included below. (You can copy our example and modify it for your use.) 
 
-    Recall from the previous procedure that our SampleDataStore schema defines three fields as searchable for EDM: *firstname*, *creditcard*, and *ssn*. Our example file includes two of those three fields, listed as *ExactMatch* items. 
+    Recall from the previous procedure that our PatientRecords schema defines five fields as searchable for EDM: *PatientID*, *MRN*, *SSN*, *Phone*, and *DOB*. Our example file includes two of those three fields, listed as *ExactMatch* items. 
 
+    
     ```
-        <?xml version="1.0" encoding="utf-8"?>
+    <?xml version="1.0" encoding="utf-8"?>
     <RulePackage xmlns="http://schemas.microsoft.com/office/2018/edm">
       <RulePack id="fd098e03-1796-41a5-8ab6-198c93c62b11">
         <Version build="0" major="2" minor="0" revision="0" />
         <Publisher id="eb553734-8306-44b4-9ad5-c388ad970528" />
         <Details defaultLangCode="en-us">
           <LocalizedDetails langcode="en-us">
-            <PublisherName>Microsoft EDM</PublisherName>
-            <Name>SampleDataStore EDM Rulepack</Name>
-            <Description> This rule package contains the EDM sensitive types for our SampleDataStore.</Description>
+            <PublisherName>IP DLP</PublisherName>
+            <Name>Health Care EDM Rulepack</Name>
+            <Description>This rule package contains the EDM sensitive type for health care sensitive types.</Description>
           </LocalizedDetails>
         </Details>
       </RulePack>
       <Rules>
-        <ExactMatch id = "E1CC861E-3FE9-4A58-82DF-4BD259EAB371" patternsProximity = "300" dataStore ="SampleSchema" recommendedConfidence = "65" >
+        <ExactMatch id = "E1CC861E-3FE9-4A58-82DF-4BD259EAB370" patternsProximity = "300" dataStore ="PatientRecords" recommendedConfidence = "65" >
           <Pattern confidenceLevel="65">
-            <idMatch matches="firstname" classification="firstname" />
-            <match matches="firstname" />
+            <idMatch matches = "PatientID" classification = "Patient ID" />
+    	<match matches="LastName" />
           </Pattern>
         </ExactMatch>
-        <ExactMatch id = "E1CC861E-3FE9-4A58-82DF-4BD259EAB372" patternsProximity = "300" dataStore ="SampleSchema" recommendedConfidence = "65" >
+        <ExactMatch id = "E1CC861E-3FE9-4A58-82DF-4BD259EAB371" patternsProximity = "300" dataStore ="PatientRecords" recommendedConfidence = "65" >
           <Pattern confidenceLevel="65">
-            <idMatch matches="SSN" classification="U.S. Social Security Number (SSN)" />
+            <idMatch matches = "SSN" classification = "U.S. Social Security Number (SSN)" />
+          </Pattern>
+        </ExactMatch>
+        <ExactMatch id = "E1CC861E-3FE9-4A58-82DF-4BD259EAB372" patternsProximity = "300" dataStore ="PatientRecords" recommendedConfidence = "65" >
+          <Pattern confidenceLevel="65">
+            <idMatch matches = "MRN" classification = "MRN" />
+    	<match matches="LastName" />
+          </Pattern>
+        </ExactMatch>
+        <ExactMatch id = "E1CC861E-3FE9-4A58-82DF-4BD259EAB373" patternsProximity = "300" dataStore ="PatientRecords" recommendedConfidence = "65" >
+          <Pattern confidenceLevel="65">
+            <idMatch matches = "Phone" classification = "Phone Number" />
+    	<match matches="LastName" />
           </Pattern>
         </ExactMatch>
         <LocalizedStrings>
-          <Resource idRef="E1CC861E-3FE9-4A58-82DF-4BD259EAB371">
-            <Name default="true" langcode="en-us">Patient MRN exact match</Name>
-            <Description default="true" langcode="en-us">EDM Sensitive type for detecting Patient MRN.</Description>
+          <Resource idRef="E1CC861E-3FE9-4A58-82DF-4BD259EAB370">
+            <Name default="true" langcode="en-us">PatientID Exact Match.</Name>
+            <Description default="true" langcode="en-us">EDM Sensitive type for detecting Patient ID.</Description>
           </Resource>
-          <Resource idRef="E1CC861E-3FE9-4A58-82DF-4BD259EAB372">
+          <Resource idRef="E1CC861E-3FE9-4A58-82DF-4BD259EAB371">
             <Name default="true" langcode="en-us">Patient SSN Exact Match.</Name>
             <Description default="true" langcode="en-us">EDM Sensitive type for detecting Patient SSN.</Description>
+          </Resource>
+          <Resource idRef="E1CC861E-3FE9-4A58-82DF-4BD259EAB372">
+            <Name default="true" langcode="en-us">Patient MRN Exact Match.</Name>
+            <Description default="true" langcode="en-us">EDM Sensitive type for detecting Patient MRN.</Description>
+          </Resource>
+          <Resource idRef="E1CC861E-3FE9-4A58-82DF-4BD259EAB373">
+            <Name default="true" langcode="en-us">Patient Contact Exact Match.</Name>
+            <Description default="true" langcode="en-us">EDM Sensitive type for detecting Patient Contact.</Description>
           </Resource>
         </LocalizedStrings>
       </Rules>
     </RulePackage>
     ```
+    
+    
     (To learn more about .xml files like this, see [Sample XML of a rule package](create-a-custom-sensitive-information-type-in-scc-powershell.md#sample-xml-of-a-rule-package).)
     
 2. Upload the rule package by running the following PowerShell cmdlets, one at a time:
@@ -189,19 +212,19 @@ The next step is to use the EDM Upload Agent to index the sensitive data, and up
 
 ### Index and upload the sensitive data
 
-1. Save the sensitive data file (recall our example is *SampleDataStore.csv*) to the local drive on the machine. (We saved our example *SampleDataStore.csv* file to `C:\Edm\Data`.)
+1. Save the sensitive data file (recall our example is *PatientRecords.csv*) to the local drive on the machine. (We saved our example *PatientRecords.csv* file to `C:\Edm\Data`.)
 
 2. To index the sensitive data, run the following command in Windows Command Prompt:
 
     `EdmUploadAgent.exe /CreateHash /DataStoreName <DataStoreName> /DataFile <DataFilePath> /HashLocation <HashedFileLocation>`
 
-    Example: `EdmUploadAgent.exe /CreateHash /DataStoreName SampleDataStore /DataFile C:\Edm\Data\SampleDataStore.csv /HashLocation C:\Edm\Hash` 
+    Example: `EdmUploadAgent.exe /CreateHash /DataStoreName PatientRecords /DataFile C:\Edm\Data\PatientRecords.csv /HashLocation C:\Edm\Hash` 
 
 3. To upload the indexed data, run the following command in Windows Command Prompt:
 
     `EdmUploadAgent.exe /UploadHash /DataStoreName <DataStoreName> /HashFile <HashedSourceFilePath>`
 
-    Example: `EdmUploadAgent.exe /UploadHash /DataStoreName SampleDataStore /HashFile C:\Edm\Hash\SampleDataStore.EdmHash` 
+    Example: `EdmUploadAgent.exe /UploadHash /DataStoreName PatientRecords /HashFile C:\Edm\Hash\PatientRecords.EdmHash` 
 
 4. To verify your sensitive data has been uploaded, run the following command in Windows Command Prompt:
 
