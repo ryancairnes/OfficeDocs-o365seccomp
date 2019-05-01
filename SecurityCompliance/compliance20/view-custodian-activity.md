@@ -27,17 +27,21 @@ You have to be assigned the View-Only Audit Logs or Audit Logs role in Exchange 
 > [!IMPORTANT]
 > If you assign a user the View-Only Audit Logs or Audit Logs role on the Permissions page in the Security & Compliance Center, they won't be able to search the Office 365 audit log. You have to assign the permissions in Exchange Online. This is because the underlying cmdlet used to search the audit log is an Exchange Online cmdlet.
 
-## Step 1: Create an Advanced eDiscovery (Preview) audit log search
+## Step 1: Search the audit log for activities performed by a custodian
 
-   1. Select an existing case from the **Security & Compliance Center > Advanced eDiscovery (Preview)**.
+1. Go to  **eDiscovery > Advanced eDiscovery (Preview)** and open the case.
+  
+2. Click the **Custodians** tab.
+  
+3. Select a custodian from the list, and then click **View custodian activity** on the flyout page.
+
+    The Custodian activities search page is displayed. Note the custodian you selected in the previous step is displayed in the **Custodian** drop-down box. You can select different custodians in the drop-down box, but you can only search for activities for one custodian at a time.
+
+    ![Custodian activities search page](../media/AeDCustodianActivities1.png)
    
-   2. Navigate to the **Custodians** tab and select a custodian.
-   
-   3. Once you have selected a custodian, click  ![View Custodian Activity](../media/ViewCustodianActivity.PNG)  from the details panel.
-   
-   4. Configure the following search criteria:
+4. Configure the following search criteria:
       
-      a. **Activities** - Click the drop-down list to display the activities that you can search for. After you run the search, only the audit records for the selected activities are displayed. Selecting **Show results for all activities** will display results for all activities that meet the other search criteria.
+   a. **Activities** - Click the drop-down list to display the activities that you can search for. After you run the search, only the audit records for the selected activities are displayed. Selecting **Show results for all activities** will display results for all activities performed by the custodian that match the other search criteria.
 
       ![List of Activities](../media/CustodianActivityAudit.PNG)
       
