@@ -300,7 +300,7 @@ You can schedule tasks using several methods:
 
 #### Example PowerShell script
 
-Here's an example PowerShell script you can use to set up scheduled tasks for indexing data and uploading the indexed data:
+Here's an starter PowerShell script you can use to schedule your tasks for indexing data and uploading the indexed data:
 
 ```powershell
 param([string]$dataStoreName,[string]$fileLocation)
