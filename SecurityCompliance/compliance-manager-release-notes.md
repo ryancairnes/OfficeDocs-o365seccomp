@@ -22,16 +22,16 @@ You can use the updated [Compliance Manager](https://servicetrust.microsoft.com/
 
 ## What’s new in Compliance Manager (Preview)
 
-- **Integration with Microsoft Secure Score:** Compliance Manager supports integration with [Microsoft Secure Score](microsoft-secure-score.md) by mapping customer-managed Actions to more than 50 Secure Score actions. When you complete a mapped action in Secure Score, the corresponding Compliance Manager Action is automatically updated.
+- **Integration with Microsoft Secure Score:** Compliance Manager supports integration with [Microsoft Secure Score](microsoft-secure-score.md) by mapping customer-managed Actions to more than 50 Secure Score actions. When you complete a mapped action in Secure Score, the corresponding Compliance Manager Action automatically updates.
 
-- **Import custom Assessments:** In addition to built-in Assessments, Compliance Manager now supports importing custom Templates, enabling you to create custom Assessments for any product or service and any standard or regulation.
+- **Import custom Assessments:** In addition to built-in Assessments, Compliance Manager now supports importing custom Templates. You can create custom Assessments for any product or service and any standard or regulation.
 
 - **Actions Items:** Action Items are now individual items and many include telemetry collection from the Microsoft Secure Score Graph API. Where possible, technical action recommendations now have links to the applicable configuration page in the Office 365 service.
 
 - **Tenant Management:** New interface for managing new data elements in Compliance Manager (Preview):
     - **Dimensions:** View, add and customize metadata for Templates, Assessments, and Action Items that allow you to create custom pivots for filters.
     - **Owners:** Specify an owner for each Action Item.
-    - **Customer Actions:** Manage the complete list of Actions Items included in Compliance Manager (Preview) and enable/disable Secure Score monitoring for Action Items that are integrated with Secure Score.
+    - **Customer Actions:** Manage the complete list of Actions Items included in Compliance Manager (Preview) and enable/disable Secure Score monitoring for Action Items integrated with Secure Score.
 
 - **Updated Compliance Score**: The methodology has changed to support syncing with Microsoft Secure Score. The scoring system removes the Microsoft-managed control credits and focuses solely on the completion of customer-managed controls.
 
@@ -41,7 +41,12 @@ The following sections cover known issues to be resolved in upcoming releases of
 
 ### Compliance Score
 
-- When Action Items are marked as **Not in Scope**, the score assigned to the Action Item is not excluded from the Compliance Score calculation. Action Items marked **Not in Scope** should not increase your Compliance Score.
+- For Action Items marked as **Not in Scope**, the score assigned to the Action Item is not excluded from the Compliance Score calculation. Action Items marked **Not in Scope** do not increase your Compliance Score.
+
+### Secure Score
+
+- Secure Score results are not available for some Actions Items in certain Microsoft 365 and Office 365 subscriptions. The Secure Score result is 'Could not be detected' in these cases.
+- Sometimes Secure Score results are returned for corresponding policies and Action Items not completed.
 
 ### Microsoft-managed Controls
 
@@ -55,7 +60,7 @@ The following sections cover known issues to be resolved in upcoming releases of
 
 ### Control Families Not Shown in Assessments
 
-- When you import a Template, all Assessments based on that Template will reflect all Control Families that are part of the Template. But if you add new Control Families to the Template, any existing Assessments will not reflect the changes. Only new Assessments created off the updated Template will reflect the changes.
+- When you import a Template, all Assessments based on that Template reflect all Control Families that are part of the Template. But if you add new Control Families to the Template, any existing Assessments will not reflect the changes. Only new Assessments created off the updated Template reflect the changes.
 
 ### Filters
 
@@ -80,3 +85,7 @@ The following sections cover known issues to be resolved in upcoming releases of
 ### Session timeout
 
 - When a session times out, a “Something went wrong” error may appear. To resolve, go to [Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) and log in again.
+ 
+### Language support
+
+- All languages are not supported for all webpages. If your local language is unsupported, view in US English.
