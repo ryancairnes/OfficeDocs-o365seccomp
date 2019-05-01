@@ -291,10 +291,9 @@ We recommend setting up a regular schedule and process for updating the .csv fil
 
 You can schedule tasks using several methods:
 
-
 |Method  |What to do  |
 |---------|---------|
-|Windows PowerShell     |See the [ScheduledTasks](https://docs.microsoft.com/powershell/module/scheduledtasks/?view=win10-ps) documentation |
+|Windows PowerShell     |See the [ScheduledTasks](https://docs.microsoft.com/powershell/module/scheduledtasks/?view=win10-ps) documentation and our [Example PowerShell script](#example-powershell-script)|
 |Task Scheduler API |See the [Using the Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/using-the-task-scheduler) documentation |
 |Windows user interface     |In Windows, click **Start**, and type `Task Scheduler`. Then, in the list of results, right-click **Task Scheduler**, and choose **Run as administrator**.          |
 
