@@ -113,7 +113,7 @@ Now that the schema for your database of sensitive information is defined, the n
 
 #### Editing the schema for EDM 
 
-If you want to make changes to your EDM classification configuration, such as changing which fields are used for EDM, follow these steps:
+If you want to make changes to your edm.xml file, such as changing which fields are used for EDM, follow these steps:
 
 1. Edit your edm.mxl file (this is the file discussed in the [Define the schema](#define-the-schema-for-your-database-of-sensitive-information) section of this article).
 
@@ -139,7 +139,7 @@ If you want to make changes to your EDM classification configuration, such as ch
 
 #### Removing the schema for EDM
 
-If you want to remove a schema you're using for EDM, follow these steps:
+If you want to remove the schema you're using for EDM, follow these steps:
 
 1. [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
@@ -283,10 +283,64 @@ The next step is to use the EDM Upload Agent to index the sensitive data, and up
 
     You'll see a list of data stores and when they were last updated, similar to the following: <br/>![Example of GetDataStore cmdlet and results](media/EDM-GetDataStore-example.png)
 
-> [!TIP]
-> We recommend setting up a regular schedule and process for updating the .csv file, and using [Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/task-scheduler-start-page) to automate Steps 2-3. 
+Now you can use EDM classification with your Microsoft cloud services. For example, you can [set up a DLP policy using EDM classification](#to-create-a-new-dlp-policy-with-edm). 
 
-Now you can use EDM classification with your Microsoft cloud services. For example, you can set up a DLP policy using EDM classification. 
+### Use Task Scheduler to save time
+
+We recommend setting up a regular schedule and process for updating the .csv file, and using [Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/task-scheduler-start-page) to automate the steps of indexing sensitive data and uploading the indexed data.
+
+You can schedule tasks using several methods:
+
+
+|Method  |What to do  |
+|---------|---------|
+|Windows user interface     |Click Start, and type `Task Scheduler`. In the list of results, right-click Task Scheduler, and choose **Run as administrator**.         |
+|Windows PowerShell     |See [ScheduledTasks](https://docs.microsoft.com/powershell/module/scheduledtasks/?view=win10-ps)         |
+|Task Scheduler API |See [Using the Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/using-the-task-scheduler) |
+
+#### Example PowerShell script
+
+Here's an example PowerShell script you can use to set up scheduled tasks for indexing data and uploading the indexed data:
+
+```powershell
+param([string]$dataStoreName,[string]$fileLocation)
+# Assuming current user is also the user context to run the task
+$user = "$env:USERDOMAIN\$env:USERNAME"
+$edminstallpath = 'C:\Program Files\Microsoft\EdmUploadAgent\'
+$edmuploader = $edminstallpath + 'EdmUploadAgent.exe'
+$csvext = '.csv'
+$edmext = '.EdmHash'
+# Assuming CSV file name is same as data store name
+$dataFile = "$fileLocation\$dataStoreName$csvext"
+$hashFile = "$fileLocation\$dataStoreName$edmext"
+# Assuming location to store hash file is same as the location of csv file
+$hashLocation = $fileLocation
+$createHashArgs = '/CreateHash /DataStoreName ' + $dataStoreName + ' /DataFile ' + $dataFile + ' /HashLocation ' + $hashLocation
+$uploadHashArgs = '/UploadHash /DataStoreName ' + $dataStoreName + ' /HashFile ' + $hashFile
+# Set up actions associated with the task
+$actions = @()
+$actions += New-ScheduledTaskAction -Execute $edmuploader -Argument $createHashArgs -WorkingDirectory $edminstallpath
+$actions += New-ScheduledTaskAction -Execute $edmuploader -Argument $uploadHashArgs -WorkingDirectory $edminstallpath
+# Set up trigger for the task
+$trigger = New-ScheduledTaskTrigger -Weekly -DaysOfWeek Sunday -At 2am
+# Set up task settings
+$principal = New-ScheduledTaskPrincipal -UserId $user -LogonType S4U -RunLevel Highest
+$settings = New-ScheduledTaskSettingsSet -RunOnlyIfNetworkAvailable -StartWhenAvailable -WakeToRun
+# Create the scheduled task
+$scheduledTask = New-ScheduledTask -Action $actions -Principal $principal -Trigger $trigger -Settings $settings
+# Get credentials to run the task
+$creds = Get-Credential -UserName $user -Message "Enter credentials to run the task"
+$password=[Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringToBSTR($creds.Password))
+# Register the scheduled task
+$taskName = 'EDMUpload_' + $dataStoreName
+Register-ScheduledTask -TaskName $taskName -InputObject $scheduledTask -User $user -Password $password
+```
+
+
+
+### Refreshing your sensitive information database
+
+You can refresh your sensitive information database daily or weekly. When your .csv file is refreshed, make sure to use the EDM Upload Tool to re-index the sensitive data and then re-upload the indexed data. To get help with this, see [Index and upload the sensitive data](#index-and-upload-the-sensitive-data) (in this article). 
 
 ## Part 3: Use EDM classification with your Microsoft cloud services
 
@@ -326,11 +380,6 @@ EDM can be used with information protection features, such as [Office 365 DLP po
 
 > [!TIP]
 > Allow approximately one hour for your new DLP policy to work its way through your data center.
-
-## Refreshing your sensitive information database
-
-You can refresh your sensitive information database daily or weekly. When your .csv file is refreshed, make sure to use the EDM Upload Tool to re-index the sensitive data and then re-upload the indexed data. To get help with this, see [Index and upload the sensitive data](#index-and-upload-the-sensitive-data) (in this article). 
-
 
 ## Related articles
 
