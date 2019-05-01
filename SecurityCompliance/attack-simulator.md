@@ -28,11 +28,9 @@ description: "As an Office 365 global administrator, you can use Attack Simulato
 
 Three kinds of attack simulations are currently available:
   
-- [Display name spear-phishing attack](attack-simulator.md#spearphish)
-    
-- [Password-spray attack](attack-simulator.md#passwordspray)
-    
-- [Brute-force password attack](attack-simulator.md#bruteforce)
+- [Display name spear-phishing attack](#display-name-spear-phishing-attack)
+- [Password-spray attack](#password-spray-attack)
+- [Brute-force password attack](#brute-force-password-attack)
     
 For an attack to be successfully launched, you use multi-factor authentication on the account you are using to run simulated attacks. In addition, you must be an Office 365 global administrator.
   

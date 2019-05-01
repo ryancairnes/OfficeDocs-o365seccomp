@@ -11,9 +11,10 @@ manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance  
 ms.topic: article
+search.appverid: met150
 ---
 
-# Microsoft Secure Score (Preview)
+# Microsoft Secure Score
 
 With Microsoft Secure Score in the Microsoft 365 security center, you can have increased visibility and control over your organization’s security posture. From a centralized dashboard you can monitor and improve the security for your Microsoft 365 identities, data, apps, devices, and infrastructure.
 

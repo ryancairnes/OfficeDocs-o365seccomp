@@ -3,7 +3,7 @@ title: "Overview of retention policies"
 ms.author: stephow
 author: stephow-MSFT
 manager: laurawi
-ms.date: 11/16/2018
+ms.date: 
 ms.audience: Admin
 ms.topic: conceptual
 ms.service: O365-seccomp
@@ -13,7 +13,7 @@ ms.collection:
 search.appverid: 
 - MOE150
 - MET150
-description: "With a retention policy, you can decide proactively whether to retain content, delete content, or both - retain and then delete the content; apply a single policy to the entire organization or just specific locations or users; and apply a policy to all content or just content meeting certain conditions"
+description: "With a retention policy, you can decide proactively whether to retain content, delete content, or both - retain and then delete the content; apply a single policy to the entire organization or just specific locations or users; and apply a policy to all content or just content meeting certain conditions."
 ---
 
 # Overview of retention policies
@@ -26,7 +26,7 @@ For most organizations, the volume and complexity of their data is increasing da
     
 - **Help your organization to share knowledge effectively and be more agile** by ensuring that your users work only with content that's current and relevant to them. 
     
-A retention policy in Office 365 can help you achieve all of these goals. Managing content commonly requires two actions:
+A retention policy can help you achieve all of these goals. Managing content commonly requires two actions:
   
 - **Retaining** content so that it can't be permanently deleted before the end of the retention period. 
     
@@ -44,10 +44,10 @@ When content is subject to a retention policy, people can continue to edit and w
   
 Finally, some organizations might need to comply with regulations such as Securities and Exchange Commission (SEC) Rule 17a-4, which requires that after a retention policy is turned on, it cannot be turned off or made less restrictive. To meet this requirement, you can use Preservation Lock. After a policy's been locked, no one—including the administrator—can turn off the policy or make it less restrictive.
   
-You create and manage retention policies on the **Retention** page in the Office 365 Security &amp; Compliance Center. 
-  
-![Retention page in Security and Compliance Center](media/107fc33a-6a29-44d1-85e4-0efef0544147.png)
-  
+You create and manage retention policies on the:
+
+- **Policies** page in the Microsoft 365 compliance center.
+- **Retention** page under **Data governance** in the Office 365 Security &amp; Compliance Center.
   
 ## How a retention policy works with content in place
 
@@ -239,7 +239,7 @@ We're still working on retention in Teams, and additional features are coming. I
     
 - **Teams are not included in an org-wide policy** If you create an org-wide policy, Teams are not included because they require a separate retention policy. 
     
-- **Teams doesn't support advanced retention** When you create a retention policy, if you choose the [Advanced settings that apply a policy only to content that meets certain conditions](retention-policies.md#advanced), the Teams location is not available. At this time, retention in Teams applies to all of the chat and channel message content.
+- **Teams doesn't support advanced retention** When you create a retention policy, if you choose the [Advanced settings that apply a policy only to content that meets certain conditions](#advanced-settings-that-apply-a-policy-only-to-content-that-meets-certain-conditions), the Teams location is not available. At this time, retention in Teams applies to all of the chat and channel message content.
     
 - **Teams content must be at least 30 days old to be deleted** At this time, creating a policy to delete Teams content that's less than 30 days old is not supported. If you want this policy to apply to Teams content, specify a retention period that's equal to or greater than 30 days. 
     
@@ -247,7 +247,7 @@ We're still working on retention in Teams, and additional features are coming. I
     
 In a Team, files that are shared in chat are stored in the OneDrive account of the user who shared the file. Files that are uploaded into channels are stored in the SharePoint site for the Team. Therefore, to retain or delete files in a Team, you need to create a retention policy that applies to the SharePoint and OneDrive locations. If you want to apply a policy to the files of just a specific team, you can choose the SharePoint site for the Team and the OneDrive accounts of users in the Team.
   
-A retention policy that applies to Teams can use [Preservation Lock](retention-policies.md#locking).
+A retention policy that applies to Teams can use [Preservation Lock](#locking-a-retention-policy).
   
 ![Teams locations for chat and channel messages](media/127345da-e802-4b3a-afc7-6e354dc3f409.png)
   
@@ -317,7 +317,7 @@ Finally, a retention policy or label cannot permanently delete any content that'
 
 A single retention policy can easily apply to an entire organization and locations across Office 365, including Exchange Online, SharePoint Online, OneDrive for Business, and Office 365 groups. If you need to retain or delete content anywhere in Office 365, we recommend that you use a retention policy. (You can also use labels with retention settings - for more information, see [Overview of labels](labels.md).)
   
-There are several other features that have previously been used to retain or delete content in Office 365. These are listed below. These features will continue to work side by side with retention policies and labels created in the Security &amp; Compliance Center. But moving forward, for data governance, we recommend that you use a retention policy or labels instead of all of these features. A retention policy is the only feature that can both retain and delete content across Office 365.
+There are several other features that have previously been used to retain or delete content in Office 365. These are listed below. These features will continue to work side by side with retention policies and retention labels. But moving forward, for data governance, we recommend that you use a retention policy or labels instead of all of these features. A retention policy is the only feature that can both retain and delete content across Office 365.
   
 ### Exchange Online
 
@@ -341,15 +341,15 @@ There are several other features that have previously been used to retain or del
     
 - [Information management policies](intro-to-info-mgmt-policies.md) (Deletion only) 
     
-Note that if you've previously used any of the eDiscovery holds for the purpose of data governance, you should instead use a retention policy for proactive compliance. You should use a hold created in the Security &amp; Compliance Center only for eDiscovery.
+Note that if you've previously used any of the eDiscovery holds for the purpose of data governance, you should instead use a retention policy for proactive compliance. You should use a hold only for eDiscovery.
   
 ### Retention policies override information management policies
 
-In SharePoint sites, you may be using [information management policies](intro-to-info-mgmt-policies.md) to retain content. If you apply a retention policy created in the Security and Compliance Center to a site that already uses content type policies or information management policies for a list or library, those policies are ignored while the retention policy is in effect. 
+In SharePoint sites, you may be using [information management policies](intro-to-info-mgmt-policies.md) to retain content. If you apply a retention policy to a site that already uses content type policies or information management policies for a list or library, those policies are ignored while the retention policy is in effect. 
   
 ## What happened to preservation policies?
 
-If you were using a preservation policy, that policy has been automatically converted to a retention policy that uses only the retain action - the policy won't delete content. The preservation policy will continue to work and preserve your content without requiring any changes from you. You can find these policies on the **Retention** page in the Security &amp; Compliance Center. You can edit a preservation policy to change the retention period, but you can't make other changes, such as adding or removing locations. 
+If you were using a preservation policy, that policy has been automatically converted to a retention policy that uses only the retain action - the policy won't delete content. The preservation policy will continue to work and preserve your content without requiring any changes from you. You can find these policies on the **Policies** page in the Microsoft 365 compliance center, or on the **Retention** page under **Data governance** in the Security &amp; Compliance Center. You can edit a preservation policy to change the retention period, but you can't make other changes, such as adding or removing locations. 
   
 ## Permissions
 

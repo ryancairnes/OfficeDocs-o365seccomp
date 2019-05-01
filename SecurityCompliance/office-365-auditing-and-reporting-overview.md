@@ -1,33 +1,32 @@
 ---
-title: "Auditing and Reporting in Office 365"
+title: "Auditing and Reporting in Microsoft Cloud Services"
 ms.author: robmazz
 author: robmazz
 manager: laurawi
-ms.date: 12/03/2018
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
-localization_priority: None
+localization_priority: Normal
 search.appverid:
 - MET150
 ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
 - M365-analytics
-description: "An overview of auditing and reporting features within Office 365, as well as Service Assurance."
+description: "An overview of auditing and reporting features within Office 365, Microsoft 365, and Service Assurance."
 ---
 
-# Auditing and Reporting in Office 365
+# Auditing and Reporting in Microsoft Cloud Services
 
 ## Introduction
 Microsoft cloud services includes several auditing and reporting features that customers can use to track user and administrative activity within their tenant, such as changes made to their Exchange Online and SharePoint Online tenant configuration settings, and changes made by users to documents and other items. Customers can use the audit information and reports available in our cloud services to more effectively manage the user experience, mitigate risk, and fulfill compliance obligations.
 
-## Office 365 Security & Compliance Center
-The [Office 365 Security & Compliance Center](https://support.office.com/article/Go-to-the-Office-365-Security-Compliance-Center-7e696a40-b86b-4a20-afcc-559218b7b1b8) is a one-stop portal for protecting your data in Office 365, and it includes many auditing and reporting features. It is an evolution of the Office 365 Compliance Center. The Security & Compliance Center is designed for organizations that have data protection or compliance needs, or that want to audit user and administrator activity. You can use the Security & Compliance Center to manage compliance for all of your organization's Office 365 data. You can access the Security & Compliance Center at [http://protection.office.com](http://protection.office.com/) using your Office 365 admin account.
+## Security & Compliance Centers
+The [Office 365 Security & Compliance Center](https://protection.office.com), the [Microsoft 365 Security Center](https://security.microsoft.com), and the [Microsoft 365 Compliance Center](https://compliance.microsoft.com) are one-stop portals for protecting data in your organization, and they include many auditing and reporting features. These centers are designed for organizations that have data protection or compliance needs, or that want to audit user and administrator activity. You can access these centers using your subscription admin account.
 
-The Security & Compliance Center includes navigation panes that provide you with access to several features:
+These centers include navigation panes that provide you with access to several features:
 - **Alerts** - Enables you to manage alerts, view security-related alerts, and manage advanced alerts using [Office 365 Cloud App Security](https://docs.microsoft.com/en-us/Office365/SecurityCompliance/office-365-cas-overview). 
-- **Permissions** - Enables you to [assign permissions](https://support.office.com/article/Give-users-access-to-the-Office-365-Security-Compliance-Center-2cfce2c8-20c5-47f9-afc4-24b059c1bd76) such as Compliance Administrator, eDiscovery Manager, and others to people in your organization so that they can perform tasks in the Security & Compliance Center. You can assign permissions for most features in the Security & Compliance Center, but other permissions must be configured using the Exchange admin center and SharePoint admin center.
+- **Permissions** - Enables you to [assign permissions](https://support.office.com/article/Give-users-access-to-the-Office-365-Security-Compliance-Center-2cfce2c8-20c5-47f9-afc4-24b059c1bd76) such as Compliance Administrator, eDiscovery Manager, and others to people in your organization so that they can perform tasks in these centers. You can assign permissions for most features in each center, but other permissions must be configured using the Exchange admin center and SharePoint admin center.
 - **Threat management** - Enables you to create and apply device management policies using [Office 365 Mobile Device Management](https://support.office.com/article/Overview-of-Mobile-Device-Management-for-Office-365-faa7d8e5-645d-4d59-839c-c8d4c1869e4a), to set up [Data Loss Prevention](https://support.office.com/article/Overview-of-data-loss-prevention-policies-1966b2a7-d1e2-4d92-ab61-42efbb137f5e) (DLP) policies for your organization, to configure email filtering, anti-malware, DomainKeys Identified Mail (DKIM), safe attachments, safe links, and OAuth apps.
 - **Data governance** - Enables you to [import email or SharePoint data from other systems into Office 365](https://support.office.com/article/Import-PST-files-or-SharePoint-data-to-Office-365-ba688e0a-0fcb-4bd7-8e57-2b669564ea84), [configure archive mailboxes](https://support.office.com/article/Enable-archive-mailboxes-in-the-Office-365-Security-Compliance-Center-268a109e-7843-405b-bb3d-b9393b2342ce), and set [retention policies](https://support.office.com/article/Retention-in-the-Office-365-Security-Compliance-Center-2a0fc432-f18c-45aa-a539-30ab035c608c) for email and other content within your organization.
 - **Search & investigation** - Provides [content search](https://support.office.com/article/Run-a-Content-Search-in-the-Office-365-Security-Compliance-Center-61852fd9-fe8a-4880-a339-cb19ed3bff4a), [audit log](https://support.office.com/article/Search-the-audit-log-in-the-Office-365-Security-Compliance-Center-0d4d0f35-390b-4518-800e-0c7ec95e946c), quarantine, and [eDiscovery case management](https://support.office.com/article/Manage-eDiscovery-cases-in-the-Office-365-Security-Compliance-Center-edea80d6-20a7-40fb-b8c4-5e8c8395f6da) tools to quickly drill into activity across Exchange Online mailboxes, groups and public folders, SharePoint Online, and OneDrive for Business.
@@ -42,7 +41,7 @@ Service Assurance provides transparency of operations and information about how 
 ## OneDrive for Business Admin Center
 The new Microsoft OneDrive admin center helps you quickly and easily manage your organization's OneDrive for Business settings in one place. To use the OneDrive admin center, you must allow access to onedrive.com. You must also be a global admin for your organization, or a custom admin with the SharePoint administrator role. Access the OneDrive for Business admin center preview at [https://admin.onedrive.com](https://admin.onedrive.com/).
 
-Key features include a Compliance area that provides administrators with links to the Office 365 Security and Compliance Center for key scenarios like searching the audit log, working with DLP, retention, eDiscovery, and alerting.
+Key features include a Compliance area that provides administrators with links to the appropriate management center for key scenarios like searching the audit log, working with DLP, retention, eDiscovery, and alerting.
 
 ## Related Links
 - [eDiscovery and Search Features](office-365-ediscovery-and-search-features.md)

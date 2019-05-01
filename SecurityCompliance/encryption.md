@@ -13,7 +13,6 @@ search.appverid:
 - MOE150
 ms.assetid: 0a322724-08ca-43db-b69a-afbfa20484cd
 ms.collection:
-- Strat_O365_IP
 - M365-security-compliance
 - Strat_O365_IP
 description: "With Office 365, your content is encrypted at rest and in transit, using the strongest encryption, protocols, and technologies available. Get an overview of encryption in Office 365."
@@ -76,5 +75,3 @@ See the following resources to learn more:
 [Plan for Office 365 security and information protection capabilities](https://support.office.com/article/3d4ac4a1-3920-4ff9-918f-011f3ce60408)
   
 [Security and Compliance in Office 365 for business - Admin Help](https://support.office.com/article/7fe448f7-49bd-4d3e-919d-0a6d1cf675bb)
-  
-

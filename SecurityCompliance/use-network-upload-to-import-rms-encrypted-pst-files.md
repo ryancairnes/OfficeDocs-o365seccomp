@@ -50,7 +50,7 @@ For more information about importing data to Office 365, see [Overview of import
 
 - You have to be assigned the Mailbox Import Export role in Exchange Online to import PST files to Office 365 mailboxes. By default, this role isn't assigned to any role group in Exchange Online. You can add the Mailbox Import Export role to the Organization Management role group. Or you can create a new role group, assign the Mailbox Import Export role, and then add yourself as a member. For more information, see the "Add a role to a role group" or the "Create a role group" sections in [Manage role groups](https://go.microsoft.com/fwlink/p/?LinkId=730688).
     
-    Additionally, to create import jobs in the Office 365 Security &amp; Compliance Center, one of the following must be true:
+    Additionally, to create import jobs in the Security & Compliance Center, one of the following must be true:
     
   - You have to be assigned the Mail Recipients role in Exchange Online. By default, this role is assigned to the Organization Management and Recipient Management roles groups.
     
@@ -87,11 +87,11 @@ PST Import uses the encryption functionality provided by the Azure Rights Manage
   
 Configuring Azure RMS for PST Import consists of three steps:
   
-- [Activating Azure RMS](#activate-azure-rms)
+- [Activating Azure RMS](#activating-azure-rms)
     
-- [Configuring RMS in Exchange Online](#configure-rms-in-exchange-online)
+- [Configuring RMS in Exchange Online](#configuring-rms-in-exchange-online)
     
-- [Installing the Active Directory RMS Client](#install-the-active-directory-rms-client)
+- [Installing the Active Directory RMS Client](#installing-the-active-directory-rms-client)
     
 ### Activating Azure RMS
 
@@ -455,6 +455,6 @@ The last step is to create the PST Import job in the Import service in Office 36
     
   - After a certain period of time, you can turn off the retention hold by running the  `Set-Mailbox -RetentionHoldEnabled $false` command. For instructions, see [Place a mailbox on retention hold](https://go.microsoft.com/fwlink/p/?LinkId=544749).
     
-  - You can configure the retention hold so that it's turned off on some date in the future. You do this by running the  `Set-Mailbox -EndDateForRetentionHold <date>` command. For example, assuming that today's date is July 1, 2016 and you want the retention hold turned off in 30 days, you would run the following command:  `Set-Mailbox -EndDateForRetentionHold 8/1/2016`. In this scenario, you would leave the  *RentionHoldEnabled*  property set to `True`. For more information, see [Set-Mailbox](https://go.microsoft.com/fwlink/p/?LinkId=150317).
+  - You can configure the retention hold so that it's turned off on some date in the future. You do this by running the  `Set-Mailbox -EndDateForRetentionHold <date>` command. For example, assuming that today's date is June 1, 2016 and you want the retention hold turned off in 30 days, you would run the following command:  `Set-Mailbox -EndDateForRetentionHold 7/1/2016`. In this scenario, you would leave the  *RentionHoldEnabled*  property set to `True`. For more information, see [Set-Mailbox](https://go.microsoft.com/fwlink/p/?LinkId=150317).
     
   - You can change the settings for the retention policy that's assigned to the mailbox so that older items that were imported won't be immediately deleted or moved to the user's archive mailbox. For example, you could lengthen the retention age for a deletion or archive policy that's assigned to the mailbox. In this scenario, you would turn off the retention hold on the mailbox after you changed the settings of the retention policy. For more information, see [Set up an archive and deletion policy for mailboxes in your Office 365 organization](set-up-an-archive-and-deletion-policy-for-mailboxes.md).

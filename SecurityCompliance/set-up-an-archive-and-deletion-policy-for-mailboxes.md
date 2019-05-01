@@ -59,7 +59,7 @@ The first step is to enable the archive mailbox for each user in your organizati
 2. Sign in to Office 365 using your global administrator account.
     
     
-3. In the Security &amp; Compliance Center, go to **Data governance** \> **Archive**.
+3. In the Security & Compliance Center, go to **Data governance** \> **Archive**.
     
     A list of the mailboxes in your organization is displayed and whether the corresponding archive mailbox is enabled or disabled. 
     
@@ -80,7 +80,7 @@ The first step is to enable the archive mailbox for each user in your organizati
     
     ![The list of mailboxes with the archive mailbox enabled](media/61a7cb97-1bed-4808-aa5f-b6b761cfa8de.png)
   
-8. Leave the Security &amp; Compliance Center open. You'll use it in the next step.
+8. Leave the Security & Compliance Center open. You'll use it in the next step.
     
 ## Step 2: Create new retention tags for the archive and deletion policies
 
@@ -94,11 +94,11 @@ In this step, you'll create the three custom retention tags that were previously
     
 To create new retention tags, you'll use the Exchange admin center (EAC) in your Exchange Online organization.
   
-1. In the Security &amp; Compliance Center, click the app launcher  in the upper left corner, and then click the **Admin** tile . 
+1. In the Security & Compliance Center, click the app launcher  in the upper left corner, and then click the **Admin** tile . 
     
-2. In the left navigation pane of the Office 365 admin center, click **Admin centers**, and then click **Exchange**.
+2. In the left navigation pane of the Microsoft 365 admin center, click **Admin centers**, and then click **Exchange**.
     
-    ![Screenshot shows the Office 365 admin center with the Admin centers option expanded and Exchange selected.](media/47399df2-0bc4-42e2-b183-07750a46bc68.png)
+    ![Screenshot shows the Microsoft 365 admin center with the Admin centers option expanded and Exchange selected.](media/47399df2-0bc4-42e2-b183-07750a46bc68.png)
   
 3. In the EAC, go to **Compliance management** \> **Retention tags**
     
@@ -186,7 +186,7 @@ After you create the custom retention tags, the next step is to create a new ret
     
     A list of the retention tags in your organization is displayed. Note the custom tags that you created in Step 2 are displayed.
     
-5. Add the 9 retention tags that are highlighted in the following screenshot (these tags are described in more detail in the [More information](set-up-an-archive-and-deletion-policy-for-mailboxes.md#moreinfo) section). To add a retention tag, select it and then click **Add**. 
+5. Add the 9 retention tags that are highlighted in the following screenshot (these tags are described in more detail in the [More information](#more-information) section). To add a retention tag, select it and then click **Add**. 
     
     ![Add retention tags to the new retention policy](media/d8e87176-0716-4238-9e6a-7c4af35541dc.png)
   

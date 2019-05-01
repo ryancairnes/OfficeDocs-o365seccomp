@@ -67,13 +67,12 @@ If needed, add parameters to the query to reduce false positives:
 </tbody>
 </table>
 
-Coming soon — You'll be able to create and modify sensitive information types in a new user interface in the Security and Compliance Center. You can dynamically see matching results and tune sensitive information types to meet your needs.
 
 ## Search for sensitive information types using Content Search
 
-Begin searching for personal data by using the sensitive information types that are included with Office 365. These are listed in the Security and Compliance Center under Classification.
+Begin searching for personal data by using the sensitive information types that are included with Office 365. These are listed under Classification in the security center and compliance center.
 
-This topic includes a list of current sensitive information types that apply to citizens in the European Union. Use these as a starting point. Check Security and Compliance Center frequently for new additions that can help with GDPR compliance.
+This topic includes a list of some sensitive information types that apply to citizens in the European Union. Check the security center or the compliance center for new additions that can help with GDPR compliance.
 
 Also see this article: [List of sensitive information types and what each one looks for](https://support.office.com/en-us/article/What-the-sensitive-information-types-look-for-fd505979-76be-4d9f-b459-abef3fc9e86b).
 

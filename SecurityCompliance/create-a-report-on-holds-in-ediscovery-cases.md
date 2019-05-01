@@ -11,26 +11,26 @@ localization_priority: Normal
 ms.collection: M365-security-compliance
 search.appverid: MOE150
 ms.assetid: cca08d26-6fbf-4b2c-b102-b226e4cd7381
-description: "Use the script in this article to generate a report that contains information about all the holds that are associated with eDiscovery cases in the Office 365 Security &amp; Compliance Center."
+description: "Use the script in this article to generate a report that contains information about all the holds that are associated with eDiscovery cases in the compliance center in Office 365 or Microsoft 365."
 ---
 
 # Create a report on holds in eDiscovery cases in Office 365
   
-The script in this article lets eDiscovery administrators and eDiscovery managers generate a report that contains information about all holds that are associated with eDiscovery cases in the Office 365 Security &amp; Compliance Center. The report contains information such as the name of the case a hold is associated with, the content locations that are placed on hold, and whether the hold is query-based. If there are cases that don't have any holds, the script will create an additional report with a list of cases without holds.
+The script in this article lets eDiscovery administrators and eDiscovery managers generate a report that contains information about all holds that are associated with eDiscovery cases in the the compliance center in Office 365 or Microsoft 365. The report contains information such as the name of the case a hold is associated with, the content locations that are placed on hold, and whether the hold is query-based. If there are cases that don't have any holds, the script will create an additional report with a list of cases without holds.
 
 See the [More information](#more-information) section for a detailed description of the information included in the report. 
   
 ## Before you begin
 
-- To generate a report on all eDiscovery cases in your organization, you have to be an eDiscovery Administrator in your organization. If you are an eDiscovery Manager, the report will only include information about the cases that you can access. For more information about eDiscovery permissions, see [Assign eDiscovery permissions in the Office‍ 365 Security &amp; Compliance Center](assign-ediscovery-permissions.md).
+- To generate a report on all eDiscovery cases in your organization, you have to be an eDiscovery Administrator in your organization. If you are an eDiscovery Manager, the report will only include information about the cases that you can access. For more information about eDiscovery permissions, see [Assign eDiscovery permissions](assign-ediscovery-permissions.md).
     
 - The script in this article has minimal error handling. The primary purpose is to quickly create report about the holds that are associated with the eDiscovery cases in your organization.
     
 - The sample scripts provided in this topic aren't supported under any Microsoft standard support program or service. The sample scripts are provided AS IS without warranty of any kind. Microsoft further disclaims all implied warranties including, without limitation, any implied warranties of merchantability or of fitness for a particular purpose. The entire risk arising out of the use or performance of the sample scripts and documentation remains with you. In no event shall Microsoft, its authors, or anyone else involved in the creation, production, or delivery of the scripts be liable for any damages whatsoever (including, without limitation, damages for loss of business profits, business interruption, loss of business information, or other pecuniary loss) arising out of the use of or inability to use the sample scripts or documentation, even if Microsoft has been advised of the possibility of such damages.
     
-## Step 1: Connect to the Security &amp; Compliance Center using Remote PowerShell
+## Step 1: Connect to the Security & Compliance Center PowerShell
 
-The first step is to connect Windows PowerShell to the Security &amp; Compliance Center for your organization.
+The first step is to connect to the Security & Compliance Center for your organization.
   
 1. Save the following text to a Windows PowerShell script file by using a filename suffix of .ps1; for example, `ConnectSCC.ps1`. 
     
@@ -39,7 +39,7 @@ The first step is to connect Windows PowerShell to the Security &amp; Compliance
       $UserCredential = Get-Credential 
       $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.compliance.protection.outlook.com/powershell-liveid -Credential $UserCredential -Authentication Basic -AllowRedirection 
       Import-PSSession $Session -AllowClobber -DisableNameChecking 
-      $Host.UI.RawUI.WindowTitle = $UserCredential.UserName + " (Office 365 Security &amp; Compliance Center)" 
+      $Host.UI.RawUI.WindowTitle = $UserCredential.UserName + " (Security & Compliance Center)" 
     ```
 
 2. On your local computer, open Windows PowerShell and go to the folder where you saved the script. 
@@ -54,7 +54,7 @@ The first step is to connect Windows PowerShell to the Security &amp; Compliance
   
 ## Step 2: Run the script to report on holds associated with eDiscovery cases
 
-After you've connected to the Security &amp; Compliance Center with remote PowerShell, the next step is to create and run the script that collects information about the eDiscovery cases in your organization. 
+After you've connected to Security & Compliance Center PowerShell, the next step is to create and run the script that collects information about the eDiscovery cases in your organization. 
   
 1. Save the following text to a Windows PowerShell script file by using a filename suffix of .ps1; for example, CaseHoldsReport.ps1. 
     
@@ -62,7 +62,7 @@ After you've connected to the Security &amp; Compliance Center with remote Power
 #script begin
 " " 
 write-host "***********************************************"
-write-host "   Office 365 Security & Compliance Center   " -foregroundColor yellow -backgroundcolor darkgreen
+write-host "   Security & Compliance Center   " -foregroundColor yellow -backgroundcolor darkgreen
 write-host "        eDiscovery cases - Holds report         " -foregroundColor yellow -backgroundcolor darkgreen 
 write-host "***********************************************"
 " " 
@@ -171,7 +171,7 @@ Write-host "Script complete! Report files saved to this folder: '$Path'"
   
 ## More information
 
-The case holds report that's created when you run the script in this article contains the following information about each hold. As previously explained, you have to be an eDiscovery Administrator to return information for all holds in your organization. For more information about case holds, see [eDiscovery cases in the Office 365 Security &amp; Compliance Center](ediscovery-cases.md).
+The case holds report that's created when you run the script in this article contains the following information about each hold. As previously explained, you have to be an eDiscovery Administrator to return information for all holds in your organization. For more information about case holds, see [eDiscovery cases](ediscovery-cases.md).
   
   - The name of the hold and the name of the eDiscovery case that the hold is associated with.
     

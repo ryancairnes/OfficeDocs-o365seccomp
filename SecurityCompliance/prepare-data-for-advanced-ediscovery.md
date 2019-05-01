@@ -12,7 +12,7 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 2fb94c23-1846-4a0e-994d-da6d02445f15
-description: "Learn how to use the Office 365 Security &amp; Compliance Center to prepare Office 365 data for analysis with Office 365 Advanced eDiscovery.
+description: "Learn how to use the Microsoft 365 Security &amp; Compliance Center to prepare Office 365 data for analysis with Office 365 Advanced eDiscovery.
 "
 ---
 
@@ -25,7 +25,7 @@ This topic describes how to load the results of a Content Search in to a case in
   
 ## Step 1: Prepare Office 365 data for Advanced eDiscovery
 
-To analyze data with Advanced eDiscovery, you can use the results of a Content Search that you run in the Office 365 Security &amp; Compliance Center (listed on the **Content search** page in the Office 365 Security &amp; Compliance Center) or a search associated with an eDiscovery case (listed on the **eDiscovery** page in the Security &amp; Compliance Center). 
+To analyze data with Advanced eDiscovery, you can use the results of a Content Search that you run in the Microsoft 365 Security &amp; Compliance Center (listed on the **Content search** page in the Microsoft 365 Security &amp; Compliance Center) or a search associated with an eDiscovery case (listed on the **eDiscovery** page in the Security &amp; Compliance Center). 
   
 For the detailed steps on preparing search results for analysis in Advanced eDiscovery, see [Prepare search results for Office 365 Advanced eDiscovery](prepare-search-results-for-advanced-ediscovery.md).
   

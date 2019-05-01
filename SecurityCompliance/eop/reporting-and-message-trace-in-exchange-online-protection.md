@@ -33,7 +33,7 @@ See the following resources for more information:
 - [Office 365 Reports in the Admin Center - Email apps usage](https://go.microsoft.com/fwlink/p/?linkid=859707)
 - [Office 365 Reports in the Admin Center - Mailbox usage](https://go.microsoft.com/fwlink/p/?linkid=859708)
 
-## Security &amp; compliance reports in the Office 365 admin center
+## Security &amp; compliance reports in the Microsoft 365 admin center
 
 These enhanced reports provide an interactive reporting experience for EOP admins, which includes summary information, and the ability to drill down for more details.  
 
@@ -45,7 +45,7 @@ These enhanced reports provide an interactive reporting experience for EOP admin
 
 ##Custom reports using Microsoft Graph
 
-Programmatically create reports that are available in the Office 365 admin center by using Microsoft Graph  See the subtopics of [Working with Office 365 usage reports in Microsoft Graph](https://go.microsoft.com/fwlink/p/?linkid=865135) 
+Programmatically create reports that are available in the Microsoft 365 admin center by using Microsoft Graph  See the subtopics of [Working with Office 365 usage reports in Microsoft Graph](https://go.microsoft.com/fwlink/p/?linkid=865135) 
 
 ##Custom reports using reporting web services
 
@@ -78,6 +78,6 @@ The following table describes when EOP reporting and message trace data is avail
 |Message trace data  <br/> |90 days  <br/> |When you run a message trace for messages that are less than 7 days old, the messages should appear within 5-30 minutes.  <br/> When you run a message trace for messages that are greater than 7 days old, results may take up to a few hours.  <br/> |
    
 > [!NOTE]
-> Data availability and latency is the same whether requested via the Office 365 admin center or remote PowerShell. 
+> Data availability and latency is the same whether requested via the Microsoft 365 admin center or remote PowerShell. 
   
 

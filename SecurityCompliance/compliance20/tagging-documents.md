@@ -21,11 +21,11 @@ description: ""
 
 Organizing content in a working set is important to complete various workflows in the eDiscovery process. This includes:
 
--  Culling unnecessary content.
+-  Culling unnecessary content
 
-- Identifying relevant content.
+- Identifying relevant content
  
--  Identifying content that must be reviewed by an expert or an attorney.
+-  Identifying content that must be reviewed by an expert or an attorney
 
 When experts, attorneys, or other users review content in a working set, their opinions related to the content can be captured by using tags. For example, if the intent is to cull unnecessary content, a user can tag documents with a tag such as “non-responsive”. After content has been reviewed and tagged, a working set search can be created to exclude any content tagged as “non-responsive”, which eliminates this content from the next steps in the eDiscovery workflow. The tag panel can be customized for every case so that the tags can support the intended review workflow.
 

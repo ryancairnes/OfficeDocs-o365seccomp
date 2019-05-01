@@ -58,8 +58,8 @@ Use the following workflow to remediate files with errors in Advanced eDiscovery
 
     ![Preparing error remediation](../media/f364ab4d-31c5-4375-b69f-650f694a2f69.png)
 
-     > [!NOTE]
-     > If you have issues running this command, see https://go.microsoft.com/fwlink/?linkid=2038117 for troubleshooting tips.
+    > [!NOTE]
+    > If the supplied AzCopy command fails, see to [Troubleshoot AzCopy in Advanced eDiscovery (Preview)](troubleshooting-azcopy.md)
 
 7. After downloading the files, you can remediate them with an appropriate tool. For password protected files, there are a number of password cracking tools you can use. If you know the passwords for the files, you can open them and remove the password protection.
     > [!NOTE]

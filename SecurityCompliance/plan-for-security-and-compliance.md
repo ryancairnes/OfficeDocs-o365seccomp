@@ -48,7 +48,7 @@ Review and plan for file protection capabilities organized by three levels of pr
   
 [PDF](http://download.microsoft.com/download/7/8/9/789645A5-BD10-4541-BC33-F8D1EFF5E911/MSFT_cloud_architecture_O365%20file%20protection.pdf) | [Visio](http://download.microsoft.com/download/7/8/9/789645A5-BD10-4541-BC33-F8D1EFF5E911/MSFT_cloud_architecture_O365%20file%20protection.vsdx)
   
-## Step 5: Leverage the Office 365 Security &amp; Compliance Center
+## Step 5: Leverage the Microsoft 365 Security &amp; Compliance Center
 
 The Security &amp; Compliance Center gives you a single view into the controls you will use to manage the spectrum of Office 365 security, including threat management, data governance, and search and investigation. 
   
@@ -66,13 +66,13 @@ Use these recommended configurations as a starting point for enterprise scale or
     
 - [Contoso in the Microsoft Cloud](http://aka.ms/cloudarchcontoso)
     
-## Office 365 admin centers and dashboards
+## Microsoft 365 admin centers and dashboards
 
 Configure your security and compliance settings in these admin centers and dashboards to protect your Office 365 environment
   
 |**Subscription**|**Management URL**|**Dashboards and admin centers**|
 |:-----|:-----|:-----|
-|Office 365  <br/> |`https://portal.office.com`  <br/> | Office 365 admin center  <br/>  Security &amp; Compliance Center  <br/>  Exchange admin center  <br/>  SharePoint admin center and OneDrive for Business admin center  <br/> |
+|Office 365  <br/> |`https://admin.microsoft.com`  <br/> | Microsoft 365 admin center  <br/>  Security &amp; Compliance Center  <br/>  Exchange admin center  <br/>  SharePoint admin center and OneDrive for Business admin center  <br/> |
 |Enterprise Mobility + Security  <br/> |`https://portal.azure.com`  <br/> | Azure Active Directory  <br/>  Microsoft Mobile Application Management  <br/>  Microsoft Intune  <br/> |
 |Enterprise Mobility + Security  <br/> |`https://portal.cloudappsecurity.com`  <br/> | Cloud App Security  <br/> |
    

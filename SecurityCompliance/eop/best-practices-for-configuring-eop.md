@@ -98,8 +98,6 @@ Troubleshoot general issues and trends by using the reports in the admin center.
   
 [Help and support for EOP](help-and-support-for-eop.md)
   
-[Videos for getting started with EOP](videos-for-getting-started-with-eop.md)
-  
 [How to help ensure that a message isn't marked as spam](https://go.microsoft.com/fwlink/p/?LinkId=534224)
   
 [Block email spam with the Office 365 spam filter to prevent false negative issues](https://go.microsoft.com/fwlink/p/?LinkId=534225)

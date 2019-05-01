@@ -23,11 +23,11 @@ People regularly send, receive, and share attachments, such as documents, presen
   
 ## What to do 
   
-1. [Review the prerequisites](#review-the-prerequisites)
+1. Review the prerequisites
     
-2. [Set up an ATP Safe Attachments policy](#set-up-an-atp-safe-attachments-policy)
+2. Set up an ATP Safe Attachments policy
     
-3. [Learn about ATP Safe Attachments policy options](#learn-about-atp-safe-attachments-policy-options)
+3. Learn about ATP Safe Attachments policy options
     
 ## Step 1: Review the prerequisites
 
@@ -43,7 +43,7 @@ People regularly send, receive, and share attachments, such as documents, presen
     
     To learn more about roles and permissions, see [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md).
 
-- [Learn about ATP Safe Attachments policy options](#learn-about-atp-safe-attachments-policy-options) (in this article). Some options, such as the Monitor or Replace options, can result in a minor delay of email while attachments are scanned. To avoid message delays, consider using [Dynamic Delivery and previewing](dynamic-delivery-and-previewing.md).
+- [Learn about ATP Safe Attachments policy options](#step-3-learn-about-atp-safe-attachments-policy-options) (in this article). Some options, such as the Monitor or Replace options, can result in a minor delay of email while attachments are scanned. To avoid message delays, consider using [Dynamic Delivery and previewing](dynamic-delivery-and-previewing.md).
     
 - Allow up to 30 minutes for your new or updated policy to spread to all Office 365 datacenters.
     

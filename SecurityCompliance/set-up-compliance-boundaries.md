@@ -29,7 +29,7 @@ In this example, Contoso LTD is an Office 365 organization that consists of two 
   
 - The search permissions filtering functionality in Content Search controls the content locations that eDiscovery managers and investigators can search. This means eDiscovery managers and investigators in the Fourth Coffee agency can only search content locations in the Fourth Coffee subsidiary. The same restriction applies to the Coho Winery subsidiary.
     
-    Role groups control who can see the eDiscovery cases in the Office 365 Security &amp; Compliance Center. This means that eDiscovery managers and investigators can only see the eDiscovery cases in their agency.
+    Role groups control who can see the eDiscovery cases in the Security & Compliance Center. This means that eDiscovery managers and investigators can only see the eDiscovery cases in their agency.
     
 - Role groups also control who can assign members to an eDiscovery case. This means eDiscovery managers and investigators can only assign members to cases that they themselves are a member of.
     
@@ -58,6 +58,8 @@ Here's a list of Azure Active Directory user attributes that you can use for com
 - Department
     
 - Office
+
+- C (Two letter Country Code)
     
 Although more user attributes are available, particularly for Exchange mailboxes, the attributes listed above are the only ones currently supported by OneDrive.
   
@@ -79,9 +81,9 @@ After the engineering change is made and the attribute is synchronized to OneDri
   
 ## Step 3: Create a role group for each agency
 
-The next step is to create the role groups in the Office 365 Security &amp; Compliance Center that will align with your agencies. We recommend that you create a new role group by copying the built-in eDiscovery Managers group, adding the appropriate members, and removing roles that may not be applicable to your needs. For more information about eDiscovery-related roles, see [Assign eDiscovery permissions in the Office‍ 365 Security &amp; Compliance Center](assign-ediscovery-permissions.md).
+The next step is to create the role groups in the Security & Compliance Center that will align with your agencies. We recommend that you create a new role group by copying the built-in eDiscovery Managers group, adding the appropriate members, and removing roles that may not be applicable to your needs. For more information about eDiscovery-related roles, see [Assign eDiscovery permissions in the Office‍ 365 Security & Compliance Center](assign-ediscovery-permissions.md).
   
-To create the role groups, go to the **Permissions** page in the Security &amp; Compliance Center and create a role group for each team in each agency that will use compliance boundaries and eDiscovery cases to manage investigations. 
+To create the role groups, go to the **Permissions** page in the Security & Compliance Center and create a role group for each team in each agency that will use compliance boundaries and eDiscovery cases to manage investigations. 
   
 Using the Contoso compliance boundaries scenario, four role groups need to be created and the appropriate members added to each one.
   
@@ -96,7 +98,6 @@ Using the Contoso compliance boundaries scenario, four role groups need to be cr
 
   
 ## Step 4: Create a search permissions filter to enforce the compliance boundary
-<a name="step4"> </a>
 
 After you've created role groups for each agency, the next step is to create the search permissions filters that associate each role group to its specific agency and defines the compliance boundary itself. You need to create one search permissions filter for each agency. For more information about creating security permissions filters, see [Configure permissions filtering for Content Search](permissions-filtering-for-content-search.md).
   
@@ -140,16 +141,16 @@ New-ComplianceSecurityFilter -FilterName "Coho Winery Security Filter" -Users "C
 
 ## Step 5: Create an eDiscovery case for an intra-agency investigations
 
-The final step is to create a new eDiscovery case in the Security &amp; Compliance Center and then add the role group—that you created in Step 3—as a member of the case. This results in two important characteristics of using compliance boundaries:
+The final step is to create a new eDiscovery case in the Security & Compliance Center and then add the role group—that you created in Step 3—as a member of the case. This results in two important characteristics of using compliance boundaries:
   
-- Only members of the role group added to the case will be able to see and access the case in the Security &amp; Compliance Center. For example, if the Fourth Coffee Investigators role group is the only member of a case, then members of the Fourth Coffee eDiscovery Managers role group (or members of any other role group) won't be able to see or access the case.
+- Only members of the role group added to the case will be able to see and access the case in the Security & Compliance Center. For example, if the Fourth Coffee Investigators role group is the only member of a case, then members of the Fourth Coffee eDiscovery Managers role group (or members of any other role group) won't be able to see or access the case.
     
 - When a member of the role group assigned to a case runs a search associated with the case, they will only be able to search the content locations within their agency (which is defined by the search permissions filter that you created in Step 4.)
 
 
 To create a new case and assign members:
     
-1. Go to the **eDiscovery** page in the Security &amp; Compliance Center and create a new case. 
+1. Go to the **eDiscovery** page in the Security & Compliance Center and create a new case. 
     
 2. In the list of eDiscovery cases, click the name of the case you just created.
     
@@ -175,39 +176,40 @@ Keep the following limitations in mind when managing eDiscovery cases and invest
 
 ## Searching and exporting content in Multi-Geo environments
 
-Search permissions filters also let you control where content is routed for export and which datacenter can be searched when searching SharePoint sites and OneDrive accounts in a [SharePoint Multi-Geo environment](https://go.microsoft.com/fwlink/?linkid=860840):
+Search permissions filters also let you control where content is routed for export and which datacenter can be searched when searching content locations in a [SharePoint Multi-Geo environment](https://go.microsoft.com/fwlink/?linkid=860840).
   
-- Export search results from a specific data center. This means that you can specify the data center location that search results will be exported from.
+- **Export search results** - You can export the search results from Exchange mailboxes, SharePoint sites, and OneDrive accounts from a specific datacenter. This means that you can specify the datacenter location that search results will be exported from.
+
+    Use the **Region** parameter for **New-ComplianceSecurityFilter** or **Set-ComplianceSecurityFilter** cmdlets to create or change which datacenter the export will be routed through.
+  
+    |**Parameter value**|**Datacenter location**|
+    |:-----|:-----|
+    |NAM  <br/> |North American (actual datacenters are in the US)  <br/> |
+    |EUR  <br/> |Europe  <br/> |
+    |APC  <br/> |Asia Pacific  <br/> |
+    |CAN <br/> |Canada
     
-- Route searches of SharePoint sites and OneDrive accounts to a satellite data center. This means you can specify the data center location where searches will be run.
+- **Route content searches** - You can route the content searches of SharePoint sites and OneDrive accounts to a satellite data center. This means you can specify the datacenter location where searches will be run.
     
-Use the **Region** parameter for **New-ComplianceSecurityFilter** or **Set-ComplianceSecurityFilter** cmdlets to create or change which datacenter the export will be routed through.
+    Use the following values for the **Region** parameter values to control which datacenter that Content Searches will run in when searching SharePoint sites and OneDrive locations. Note that the following table also shows which datacenter exports will be routed through. 
   
-|**Parameter value**|**Data center location**|
-|:-----|:-----|
-|NAM  <br/> |North American (actual data centers are in the US)  <br/> |
-|EUR  <br/> |Europe  <br/> |
-|APC  <br/> |Asia Pacific  <br/> |
-|CAN <br/> |Canada
+    |**Parameter value**|**Datacenter routing locations for export**|
+    |:-----|:-----|
+    |NAM  <br/> |US  <br/> |
+    |EUR  <br/> |Europe  <br/> |
+    |APC  <br/> |Asia Pacific  <br/> |
+    |CAN  <br/> |US  <br/> |
+    |AUS  <br/> |Asia Pacific  <br/> |
+    |KOR  <br/> |The organization's default data center  <br/> |
+    |GBR  <br/> |Europe  <br/> |
+    |JPN  <br/> |Asia Pacific  <br/> |
+    |IND  <br/> |Asia Pacific  <br/> |
+    |LAM  <br/> |US  <br/> |
    
-Similarly, you can use the following values for the **Region** parameter values to control which data center that Content Searches will run in when searching SharePoint and OneDrive locations. Note that the following table also shows which data center exports will be routed through. 
+> [!NOTE]
+> If you don't specify the **Region** parameter for a search permissions filter, the organizations default SharePoint region will be searched, then search results are exported to the closest datacenter. 
   
-|**Parameter value**|**Data center routing locations for export﻿**|
-|:-----|:-----|
-|NAM  <br/> |US  <br/> |
-|EUR  <br/> |Europe  <br/> |
-|APC  <br/> |Asia Pacific  <br/> |
-|CAN  <br/> |US  <br/> |
-|AUS  <br/> |Asia Pacific  <br/> |
-|KOR  <br/> |The organization's default data center  <br/> |
-|GBR  <br/> |Europe  <br/> |
-|JPN  <br/> |Asia Pacific  <br/> |
-|IND  <br/> |Asia Pacific  <br/> |
-|LAM  <br/> |US  <br/> |
-   
- **Note:** If you don't specify the Region parameter for a search permissions filter, the organizations default SharePoint region will be searched, then search results are exported to the closest data center. 
-  
-Here are examples of using the **-Region** parameter when creating search permission filters for compliance boundaries. This assumes that the Fourth Coffee subsidiary is located in North America and that Coho Winery is in Europe. 
+Here are examples of using the **Region** parameter when creating search permission filters for compliance boundaries. This assumes that the Fourth Coffee subsidiary is located in North America and that Coho Winery is in Europe. 
   
 ```
 New-ComplianceSecurityFilter -FilterName "Fourth Coffee Security Filter" -Users "Fourth Coffee eDiscovery Managers", "Fourth Coffee Investigators" -Filters "Mailbox_Department -eq 'FourthCoffee'", "Site_Department -eq 'FourthCoffee' -or Site_Path -like 'https://contoso.sharepoint.com/sites/FourthCoffee*'" -Action ALL -Region NAM
@@ -237,7 +239,7 @@ Keep the following things in mind when searching and exporting content in multi-
 
  **Who can create and manage search permissions filters (using New-ComplianceSecurityFilter and Set-ComplianceSecurityFilter cmdlets )?**
   
-To create, view and modify search permissions filters, you have to be a member of the Organization Management role group in the Security &amp; Compliance Center.
+To create, view and modify search permissions filters, you have to be a member of the Organization Management role group in the Security & Compliance Center.
   
  **If an eDiscovery manager is assigned to more than one role group that spans multiple agencies, how do they search for content in one agency or the other?**
   

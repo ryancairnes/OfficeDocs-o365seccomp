@@ -3,7 +3,7 @@ title: "Go to the Office 365 Security &amp; Compliance Center"
 ms.author: stephow
 author: stephow-MSFT
 manager: laurawi
-ms.date: 8/18/2017
+ms.date: 
 ms.audience: Admin
 ms.topic: article
 f1_keywords:
@@ -13,14 +13,10 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: 7e696a40-b86b-4a20-afcc-559218b7b1b8
-description: "The Office 365 Security &amp; Compliance Center is your one-stop portal for protecting your data in Office 365. Use the Office 365 Security &amp; Compliance Center to manage compliance for all of your organization's data across Office 365."
+description: "Before you can use the Security &amp; Compliance Center, you need the right permissions. Your work or school account must either be assigned the Office 365 global administrator role or have been assigned to one or more Security &amp; Compliance Center role groups by a global administrator."
 ---
 
 # Go to the Office 365 Security &amp; Compliance Center
-
-The Office 365 Security &amp; Compliance Center is your one-stop portal for protecting your data in Office 365. Use the Office 365 Security &amp; Compliance Center to manage compliance for all of your organization's data across Office 365.
-  
-## Go to the Office 365 Security &amp; Compliance Center
 
 Before you can use the Security &amp; Compliance Center, you need the right permissions. Your work or school account must either be assigned the Office 365 global administrator role or have been assigned to one or more Security &amp; Compliance Center role groups by a global administrator:
   

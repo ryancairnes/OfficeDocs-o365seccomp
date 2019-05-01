@@ -3,7 +3,7 @@ title: "Enable the Report Message add-in"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 03/05/2019
+ms.date: 03/26/2019
 ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
@@ -62,7 +62,7 @@ After the add-in is installed and enabled, you'll see the following icons:
 ## Get and enable the Report Message add-in for your organization
 
 > [!IMPORTANT]
-> You must be an Office 365 global administrator or an Exchange Online Administrator to complete this task. In addition, Exchange must be configured to use OAuth authentication To learn more, see [Exchange requirements (Centralized Deployment of add-ins)](https://docs.microsoft.com/office365/admin/manage/centralized-deployment-of-add-ins&view=o365-worldwide#exchange-requirements). 
+> You must be an Office 365 global administrator or an Exchange Online Administrator to complete this task. In addition, Exchange must be configured to use OAuth authentication To learn more, see [Exchange requirements (Centralized Deployment of add-ins)](https://docs.microsoft.com/office365/admin/manage/centralized-deployment-of-add-ins). 
 
 1. Go to the [Services & add-ins page](https://admin.microsoft.com/AdminPortal/Home#/Settings/ServicesAndAddIns) in the Microsoft 365 admin center.<br/>![Services and Add-Ins page in the new Microsoft 365 Admin Center](media/ServicesAddInsPageNewM365AdminCenter.png)<br/> 
     

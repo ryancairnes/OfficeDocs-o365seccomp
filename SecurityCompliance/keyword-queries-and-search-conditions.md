@@ -16,13 +16,13 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: c4639c2e-7223-4302-8e0d-b6e10f1c3be3
-description: "Learn about email and file properties that you can search in Exchange Online mailboxes and in SharePoint or OneDrive for Business sites using the Content Search tool in the Office 365 Security &amp; Compliance Center. 
+description: "Learn about email and file properties that you can search in Exchange Online mailboxes and in SharePoint or OneDrive for Business sites using the Content Search tool in the Security & Compliance Center. 
 "
 ---
 
 # Keyword queries and search conditions for Content Search
 
-This topic describes the email and document properties that you can search for in email items in Exchange Online and documents stored on SharePoint and OneDrive for Business sites by using the Content Search feature in the Office 365 Security &amp; Compliance Center. You can also use the **\*-ComplianceSearch** cmdlets in Security &amp; Compliance Center PowerShell to search for these properties. The topic also describes:   
+This topic describes the email and document properties that you can search for in email items in Exchange Online and documents stored on SharePoint and OneDrive for Business sites by using the Content Search feature in the Security & Compliance Center. You can also use the **\*-ComplianceSearch** cmdlets in Security & Compliance Center PowerShell to search for these properties. The topic also describes:   
   
 - Using Boolean search operators, search conditions, and other search query techniques to refine your search results.
     
@@ -34,11 +34,11 @@ For step-by-step instructions on how to create a Content Search, see [Content Se
 
   
 > [!NOTE]
-> Content Search in the Security &amp; Compliance Center and the corresponding **\*-ComplianceSearch** cmdlets in Security &amp; Compliance Center PowerShell use the Keyword Query Language (KQL). For more detailed information, see [Keyword Query Language syntax reference](https://go.microsoft.com/fwlink/?LinkId=269603). 
+> Content Search in the Security & Compliance Center and the corresponding **\*-ComplianceSearch** cmdlets in Security & Compliance Center PowerShell use the Keyword Query Language (KQL). For more detailed information, see [Keyword Query Language syntax reference](https://go.microsoft.com/fwlink/?LinkId=269603). 
   
 ## Searchable email properties
 
-The following table lists email message properties that can be searched by using the Content Search feature in the Security &amp; Compliance Center or by using the **New-ComplianceSearch** or the **Set-ComplianceSearch** cmdlet. The table includes an example of the  _property:value_ syntax for each property and a description of the search results returned by the examples. You can type these  `property:value` pairs in the keywords box for a Content Search. 
+The following table lists email message properties that can be searched by using the Content Search feature in the Security & Compliance Center or by using the **New-ComplianceSearch** or the **Set-ComplianceSearch** cmdlet. The table includes an example of the  _property:value_ syntax for each property and a description of the search results returned by the examples. You can type these  `property:value` pairs in the keywords box for a Content Search. 
   
 |**Property**|**Property description**|**Examples**|**Search results returned by the examples**|
 |:-----|:-----|:-----|:-----|
@@ -66,7 +66,7 @@ The following table lists email message properties that can be searched by using
 
 ## Searchable site properties
 
-The following table lists some of the SharePoint and OneDrive for Business properties that can be searched by using the Content Search feature in the Security &amp; Compliance Center or by using the **New-ComplianceSearch** or the **Set-ComplianceSearch** cmdlet. The table includes an example of the  _property:value_ syntax for each property and a description of the search results returned by the examples. 
+The following table lists some of the SharePoint and OneDrive for Business properties that can be searched by using the Content Search feature in the Security & Compliance Center or by using the **New-ComplianceSearch** or the **Set-ComplianceSearch** cmdlet. The table includes an example of the  _property:value_ syntax for each property and a description of the search results returned by the examples. 
   
 For a complete list of SharePoint properties that can be searched, see [Overview of crawled and managed properties in SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=331599). Properties marked with a **Yes** in the **Queryable** column can be searched. 
   
@@ -83,7 +83,7 @@ For a complete list of SharePoint properties that can be searched, see [Overview
 |LastModifiedTime|The date that an item was last changed.|`lastmodifiedtime>=05/01/2016`  <br/> `lastmodifiedtime>=05/10/2016 AND lastmodifiedtime<=06/1/2016`|The first example returns items that were changed on or after May 1, 2016. The second example returns items changed between May 1, 2016 and June 1, 2016.|
 |ModifiedBy|The person who last changed an item. Be sure to use the user's display name for this property.|`modifiedby:"Garth Fort"`|All items that were last changed by Garth Fort.|
 |Path|The path (URL) of a specific site in a SharePoint or OneDrive for Business site.  <br/> To return items located in folders in the site that you specify for the path property, you have to add /\* to the URL of the specified site; for example,  `path: "https://contoso.sharepoint.com/Shared Documents/*"`  <br/> <br/> **Note:** Using the  `Path` property to search OneDrive locations won't return media files, such as .png, .tiff, or .wav files, in the search results. Use a different site property in your search query to search for media files in OneDrive folders. <br/>|`path:"https://contoso-my.sharepoint.com/personal/garthf_contoso_com/"`  <br/> `path:"https://contoso-my.sharepoint.com/personal/garthf_contoso_com/*" AND filename:confidential`|The first example returns all items in the specified OneDrive for Business site. The second example returns documents in the specified site (and folders in the site) that contain the word "confidential" in the file name.|
-|SharedWithUsersOWSUser|Documents that have been shared with the specified user and displayed on the **Shared with me** page in the user's OneDrive for Business site. These are documents that have been explicitly shared with the specified user by other people in your organization. When you export documents that match a search query that uses the SharedWithUsersOWSUser property, the documents are exported from the original content location of the person who shared the document with the specified user. For more details, see [Searching for site content shared within your organization](keyword-queries-and-search-conditions.md#internal).|`sharedwithusersowsuser:garthf`  <br/> `sharedwithusersowsuser:"garthf@contoso.com"`|Both examples return all internal documents that have been explicitly shared with Garth Fort and that appear on the **Shared with me** page in Garth Fort's OneDrive for Business account.|
+|SharedWithUsersOWSUser|Documents that have been shared with the specified user and displayed on the **Shared with me** page in the user's OneDrive for Business site. These are documents that have been explicitly shared with the specified user by other people in your organization. When you export documents that match a search query that uses the SharedWithUsersOWSUser property, the documents are exported from the original content location of the person who shared the document with the specified user. For more details, see [Searching for site content shared within your organization](#searching-for-site-content-shared-within-your-organization).|`sharedwithusersowsuser:garthf`  <br/> `sharedwithusersowsuser:"garthf@contoso.com"`|Both examples return all internal documents that have been explicitly shared with Garth Fort and that appear on the **Shared with me** page in Garth Fort's OneDrive for Business account.|
 |Site|The URL of a site or group of sites in your organization.|`site:"https://contoso-my.sharepoint.com"`  <br/> `site:"https://contoso.sharepoint.com/sites/teams"`|The first example returns items from the OneDrive for Business sites for all users in the organization. The second example returns items from all team sites.|
 |Size|The size of an item, in bytes.|`size>=1`  <br/> `size:1..10000`|The first example returns items larger than 1 byte. The second example returns items from 1 through 10,000 bytes in size.|
 |Title|The title of the document. The Title property is metadata that's specified in Microsoft Office documents. It's different from the file name of the document.|`title:"communication plan"`|Any document that contains the phrase "communication plan" in the Title metadata property of an Office document.|
@@ -119,9 +119,9 @@ The following table lists the contact properties that are indexed and that you c
 
 ## Searchable sensitive data types
 
-You can use the Content Search feature in the Security & Compliance Center to search for sensitive data, such as credit card numbers or social security numbers, that is stored in documents on SharePoint and OneDrive for Business sites. You can do this by using the  `SensitiveType` property and the name of a sensitive information type in a keyword query. For example, the query  `SensitiveType:"Credit Card Number"` returns documents that contain a credit card number. The query  `SensitiveType:"U.S. Social Security Number (SSN)"` returns documents that contains a U.S. social security number. To see a list of the sensitive data types that you can search for, go to **Classifications** \> **Sensitive information types** in the Security &amp; Compliance Center. Or you can use the **Get-DlpSensitiveInformationType** cmdlet in the Security &amp; Compliance Center PowerShell to display a list of sensitive information types. 
+You can use the Content Search feature in the security and compliance center to search for sensitive data, such as credit card numbers or social security numbers, that is stored in documents on SharePoint and OneDrive for Business sites. You can do this by using the  `SensitiveType` property and the name of a sensitive information type in a keyword query. For example, the query  `SensitiveType:"Credit Card Number"` returns documents that contain a credit card number. The query  `SensitiveType:"U.S. Social Security Number (SSN)"` returns documents that contains a U.S. social security number. To see a list of the sensitive data types that you can search for, go to **Classifications** \> **Sensitive information types** in the Security & Compliance Center. Or you can use the **Get-DlpSensitiveInformationType** cmdlet in the Security & Compliance Center PowerShell to display a list of sensitive information types. 
   
-You can also use the  `SensitiveType` property to search for the name of a custom sensitive information type that you (or another administrator) created for your organization. Note that you can use the **Publisher** column on the **Sensitive information types** page in the Security &amp; Compliance Center (or the **Publisher** property in PowerShell) to differentiate between built-in and custom sensitive information types. For more information, see [Create a custom sensitive information type](create-a-custom-sensitive-information-type.md).
+You can also use the  `SensitiveType` property to search for the name of a custom sensitive information type that you (or another administrator) created for your organization. Note that you can use the **Publisher** column on the **Sensitive information types** page in the Security & Compliance Center (or the **Publisher** property in PowerShell) to differentiate between built-in and custom sensitive information types. For more information, see [Create a custom sensitive information type](create-a-custom-sensitive-information-type.md).
   
 For more information about creating queries using the  `SensitiveType` property, see [Form a query to find sensitive data stored on sites](form-a-query-to-find-sensitive-data-stored-on-sites.md).
 
@@ -316,7 +316,7 @@ This example returns email messages or calendar meetings that were sent between 
   
 ## Searching for site content shared with external users
 
-You can also use the Content Search feature in the Security &amp; Compliance Center to search for documents stored on SharePoint and OneDrive for Business sites that have been shared with people outside of your organization. This can help you identify sensitive or proprietary information that's being shared outside your organization. You can do this by using the  `ViewableByExternalUsers` property in a keyword query. This property will return documents or sites that have been shared with external users by using one of the following sharing methods: 
+You can also use the Content Search feature in the Security & Compliance Center to search for documents stored on SharePoint and OneDrive for Business sites that have been shared with people outside of your organization. This can help you identify sensitive or proprietary information that's being shared outside your organization. You can do this by using the  `ViewableByExternalUsers` property in a keyword query. This property will return documents or sites that have been shared with external users by using one of the following sharing methods: 
   
 - A sharing invitation that requires users to sign in to your organization as an authenticated user.
     
@@ -400,5 +400,7 @@ kind:im AND subject:conversation AND (received=startdate..enddate)
 - When searching a property, use double quotation marks ("  ") if the search value consists of multiple words. For example `subject:budget Q1` returns messages that contain **budget** in the in the subject line and that contain **Q1** anywhere in the message or in any of the message properties. Using `subject:"budget Q1"` returns all messages that contain **budget Q1** anywhere in the subject line. 
     
 - To exclude content marked with a certain property value from your search results, place a minus sign (-) before the name of the property. For example, `-from:"Sara Davis"` will exclude any messages sent by Sara Davis.
+
+- Some special characters are not included in the search index and therefore are not searchable, these include the operators for search (+ - = :) and the following characters that are either replaced by a $null or can cause errors if searched for ! @ # % ^ & ; _ / ?
 
 - You can export items based on message type. For example, to export Skype conversations and chats in Microsoft Teams, use the syntax `kind:im`. To return only email messages, you would use `kind:email`. To return chats, meetings, and calls in Microsoft Teams, use `kind:microsoftteams`.

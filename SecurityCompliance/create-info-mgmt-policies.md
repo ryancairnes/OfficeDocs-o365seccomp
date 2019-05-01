@@ -190,7 +190,7 @@ If **Content Type** appears as the source, click **Change Source**, and then cli
 
 If information management policies have already been created for your site as site collection policies, you can apply one of the policies to a content type. By doing this, you can apply the same policy to multiple content types in a site collection that do not share the same parent content type.
   
- If you want to apply policies to multiple content types in a site collection, and you have a Managed Metadata Service configured, you can use Content Type Publishing to publish out information management polices to multiple site collections. See the section [Apply a policy to content types across site collections](create-info-mgmt-policies.md#__apply_a_policy) for more information. 
+ If you want to apply policies to multiple content types in a site collection, and you have a Managed Metadata Service configured, you can use Content Type Publishing to publish out information management polices to multiple site collections. See the section [Apply a policy across site collections](#apply-a-policy-across-site-collections) for more information. 
   
 1. Navigate to the list or library that contains the content type to which you want to apply a policy.
     
@@ -262,6 +262,13 @@ Importing an information management policy enables you to apply it to multiple c
     
 Your imported policy can now be applied to one or many content types at the site or list level. 
   
-[Information management policies enable your organization to control how long to retain content, to audit what people do with content, and to add barcodes or labels to documents. A policy can help enforce compliance with legal and governmental regulations or internal business processes. As an administrator, you can set up a policy to control how to track documents and how long to retain documents.You can create an information management policy can at three different locations in the site hierarchy, from the broadest to the narrowest:Create a policy to use on multiple content types within a site collection.Create a policy for a site content type.Create a policy for a list or library.For more information, see Introduction to information management policies.](create-info-mgmt-policies.md#__top)
+Information management policies enable your organization to control how long to retain content, to audit what people do with content, and to add barcodes or labels to documents. A policy can help enforce compliance with legal and governmental regulations or internal business processes. As an administrator, you can set up a policy to control how to track documents and how long to retain documents.
+
+You can create an information management policy can at three different locations in the site hierarchy, from the broadest to the narrowest:
+- Create a policy to use on multiple content types within a site collection.
+- Create a policy for a site content type.
+- Create a policy for a list or library.
+
+For more information, see [Introduction to information management policies](intro-to-info-mgmt-policies.md).
   
 

@@ -66,7 +66,7 @@ A. Spam and non-spam messages can be submitted to Microsoft for analysis in seve
   
  **Q. Can I get spam reports?**
   
-A. Yes, for example you can get a spam detection report in the Office 365 admin center. This report shows spam volume as a count of unique messages. For more information about reporting, see the following links:
+A. Yes, for example you can get a spam detection report in the Microsoft 365 admin center. This report shows spam volume as a count of unique messages. For more information about reporting, see the following links:
   
 Exchange Online customers: [Monitoring, Reporting, and Message Tracing in Exchange Online](http://technet.microsoft.com/library/87bdeeae-bd80-4a3b-95c5-62fbaf97c2e8.aspx)
   

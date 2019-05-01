@@ -144,7 +144,7 @@ Figure 1 shows the access groups and their membership.
 
 To create a SharePoint Online team site for ProjectX, do the following:
   
-1. Using a browser on either your local computer (lightweight configuration) or on CLIENT1 (simulated enterprise configuration), sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com)) using your global administrator account.
+1. Using a browser on either your local computer (lightweight configuration) or on CLIENT1 (simulated enterprise configuration), sign in to the Office 365 portal ([https://admin.microsoft.com](https://admin.microsoft.com)) using your global administrator account.
     
 2. In the list of tiles, click **SharePoint**.
     
@@ -212,7 +212,7 @@ Now let's demonstrate access using the Lead Designer user account:
     
 2. Click the name of your global administrator, and then click **Sign out**.
     
-3. Sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com)) using the Lead Designer account name and its password.
+3. Sign in to the Office 365 portal ([https://admin.microsoft.com](https://admin.microsoft.com)) using the Lead Designer account name and its password.
     
 4. In the list of tiles, click **SharePoint**.
     
@@ -242,7 +242,7 @@ Now let's demonstrate access using the Lead Designer user account:
     
 Now let's demonstrate access using the Development VP user account:
   
-1. Sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com)) using the Development VP account name and its password.
+1. Sign in to the Office 365 portal ([https://admin.microsoft.com](https://admin.microsoft.com)) using the Development VP account name and its password.
     
 2. In the list of tiles, click **SharePoint**.
     
@@ -258,7 +258,7 @@ Now let's demonstrate access using the Development VP user account:
     
 Now let's demonstrate access with a user account that has no permissions:
   
-1. Sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com)) using the User 3 account name and its password.
+1. Sign in to the Office 365 portal ([https://admin.microsoft.com](https://admin.microsoft.com)) using the User 3 account name and its password.
     
 2. In the list of tiles, click **SharePoint**.
     

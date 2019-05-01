@@ -20,9 +20,11 @@ The following are the primary ways you can use EOP for messaging protection:
   
 - **In a standalone scenario** EOP provides cloud-based email protection for your on-premises Microsoft Exchange Server 2013 environment, legacy Exchange Server versions, or for any other on-premises SMTP email solution. 
     
-- **As a part of Microsoft Exchange Online** By default, EOP protects Microsoft Exchange Online cloud-hosted mailboxes. 
+- **As a part of Microsoft Exchange Online** By default, EOP protects Microsoft Exchange Online cloud-hosted mailboxes. See [Protect against threats](../protect-against-threats.md) for help configuring these Exchange Online capabilities. 
     
 - **In a hybrid deployment** EOP can be configured to protect your messaging environment and control mail routing when you have a mix of on-premises and cloud mailboxes. 
+
+These Exchange Online Protection articles apply to hybrid and on-premises environments. 
     
 ## How EOP works
 
@@ -72,8 +74,6 @@ If you've already purchased EOP, see [Set up your EOP service](set-up-your-eop-s
 ## For more information
 
 [EOP features](eop-features.md)
-  
-[Videos for getting started with EOP](videos-for-getting-started-with-eop.md)
   
 [EOP general FAQ](eop-general-faq.md)
   
