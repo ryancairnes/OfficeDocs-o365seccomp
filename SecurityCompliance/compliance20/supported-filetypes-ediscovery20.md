@@ -1,5 +1,5 @@
 ---
-title: "Supported file types in Advanced eDiscovery (Preview)"
+title: "Supported file types in Advanced eDiscovery"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,7 +17,7 @@ ms.assetid:
 description: ""
 ---
 
-# Supported file types in Advanced eDiscovery (Preview)
+# Supported file types in Advanced eDiscovery
 
 Advance eDiscovery (Preview) supports many file types to many different levels, which are described in the following table. This list isn't finalized, and we'll add new file types as we continue our validation testing. The table also indicates if a file type can be viewed in the available viewers in Advance eDiscovery (Preview).
 

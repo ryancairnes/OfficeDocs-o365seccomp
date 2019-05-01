@@ -1,5 +1,5 @@
 ---
-title: "Export case data in Advanced eDiscovery (Preview)"
+title: "Export case data in Advanced eDiscovery"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,7 +17,7 @@ ms.assetid:
 description: ""
 ---
 
-# Export case data in Advanced eDiscovery (Preview)
+# Export case data in Advanced eDiscovery
 
 There are three ways to export data from a review set:
 

@@ -1,5 +1,5 @@
 ---
-title: "Analyze data in a review set in Advanced eDiscovery (Preview)"
+title: "Analyze data in a review set in Advanced eDiscovery"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,9 +17,9 @@ ms.assetid:
 description: ""
 ---
 
-# Analyze data in a review set in Advanced eDiscovery (Preview)
+# Analyze data in a review set in Advanced eDiscovery
 
-When the number of collected documents is large, it can be quite difficult to review them all. Advanced eDiscovery (Preview) provides a number of tools to analyze the documents to reduce the volume of documents to be reviewed without any loss in information, and to help you organize the documents in a coherent manner. To learn more about these capabilities, see:
+When the number of collected documents is large, it can be quite difficult to review them all. Advanced eDiscovery provides a number of tools to analyze the documents to reduce the volume of documents to be reviewed without any loss in information, and to help you organize the documents in a coherent manner. To learn more about these capabilities, see:
 
 - [Near duplicate detection](near-duplicates.md)
 

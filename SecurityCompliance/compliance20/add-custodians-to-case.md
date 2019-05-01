@@ -1,5 +1,5 @@
 ---
-title: "Add custodians to an Advanced eDiscovery (Preview) case"
+title: "Add custodians to an Advanced eDiscovery case"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,11 +17,11 @@ ms.assetid:
 description: ""
 ---
 
-# Add custodians to an Advanced eDiscovery (Preview) case
+# Add custodians to an Advanced eDiscovery case
 
-Use the built-in custodian management tool in Advanced eDiscovery (Preview) to coordinate your workflows around managing custodians and identifying relevant, custodial data sources associated with a case. When you add a custodian, the system can automatically identify and place a hold on their Exchange mailbox and OneDrive for Business account. During the discovery process of your investigation, you might also identify additional data sources (such as mailboxes, sites, or Teams) that a custodian accessed or contributed to. In this situation, you can use the custodian management tool to associate those data sources will a specific custodian. After you add custodians to a case and associate other data source with them, you can quickly preserve data and search the custodial data.
+Use the built-in custodian management tool in Advanced eDiscovery to coordinate your workflows around managing custodians and identifying relevant, custodial data sources associated with a case. When you add a custodian, the system can automatically identify and place a hold on their Exchange mailbox and OneDrive for Business account. During the discovery process of your investigation, you might also identify additional data sources (such as mailboxes, sites, or Teams) that a custodian accessed or contributed to. In this situation, you can use the custodian management tool to associate those data sources will a specific custodian. After you add custodians to a case and associate other data source with them, you can quickly preserve data and search the custodial data.
 
-Use the following workflow to add and manage custodians in Advanced eDiscovery (Preview) cases. 
+Use the following workflow to add and manage custodians in Advanced eDiscovery cases. 
 
 ![Custodian Management Tab](../media/CustodianMgtPage.png)
 
@@ -34,7 +34,7 @@ To add custodians to a case, you must be a member of the eDiscovery Manager role
 
 The first step is to identify and add custodians to the case.
 
-1. On the **Advanced eDiscovery (Preview)** home page, click the case the you want to add custodians to. 
+1. On the **Advanced eDiscovery** home page, click the case the you want to add custodians to. 
  
 2. Click the **Custodians** tab and then click **+ Add custodians**.
 

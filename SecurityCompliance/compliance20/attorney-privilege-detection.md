@@ -1,5 +1,5 @@
 ---
-title: "Set up attorney-client privilege detection in Advanced eDiscovery (Preview)"
+title: "Set up attorney-client privilege detection in Advanced eDiscovery"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,6 +17,6 @@ ms.assetid:
 description: ""
 ---
 
-# Set up attorney-client privilege detection in Advanced eDiscovery (Preview)
+# Set up attorney-client privilege detection in Advanced eDiscovery
 
 (add content here)

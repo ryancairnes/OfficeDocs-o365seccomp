@@ -1,5 +1,5 @@
 ---
-title: "Manage custodians in an Advanced eDiscovery (Preview) case"
+title: "Manage custodians in an Advanced eDiscovery case"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -16,9 +16,9 @@ ms.assetid:
 
 description: ""
 ---
-# Manage custodians in an Advanced eDiscovery (Preview) case
+# Manage custodians in an Advanced eDiscovery case
 
-The Custodians tab in Advanced eDiscovery (Preview) contains a list of all custodians that have been added to the case. After you add custodians to a case, details about each custodian are automatically collected from Azure Active Directory and are viewable in Advanced eDiscovery (Preview).
+The Custodians tab in Advanced eDiscovery contains a list of all custodians that have been added to the case. After you add custodians to a case, details about each custodian are automatically collected from Azure Active Directory and are viewable in Advanced eDiscovery.
 
 ![Manage Custodians](../media/CustodianDetails.PNG)
 
@@ -69,7 +69,7 @@ As your case progresses, you may discover that there may be additional data sour
 
 To update the data sources that are associated with a custodian:
 
-1. Go to  **eDiscovery > Advanced eDiscovery (Preview)** and open the case.
+1. Go to  **eDiscovery > Advanced eDiscovery** and open the case.
   
 2. Click the **Custodians** tab.
   
@@ -87,13 +87,13 @@ To update the data sources that are associated with a custodian:
 
 ## Resolve custodian processing errors
 
-In most eDiscovery workflows for legal investigations, a subset of a custodian's data is searched after the custodian is added to a legal case. Because of very large file sizes or possible data corruption, some items in the data sources associated with a custodian may be partially indexed. Using the [advanced indexing](indexing-custodian-data.md) capability in the Advanced eDiscovery (Preview), most partially indexed items can be automatically remediated by re-indexing these items on demand.
+In most eDiscovery workflows for legal investigations, a subset of a custodian's data is searched after the custodian is added to a legal case. Because of very large file sizes or possible data corruption, some items in the data sources associated with a custodian may be partially indexed. Using the [advanced indexing](indexing-custodian-data.md) capability in the Advanced eDiscovery, most partially indexed items can be automatically remediated by re-indexing these items on demand.
 
 When a custodian is added to a case, the data located in the data sources associated with the custodian is automatically re-indexed (by the advanced indexing process). This means you can leave the data in-place instead of having to download and remediate it and then search it offline). However, during the lifecycle of a legal case new data sources might be associated to a custodian. In this case, you re-index the custodian's data by re-running the advanced indexing process to remediate any partially indexed items and update the index for the custodian's data.
 
 To trigger the re-indexing process to address partially indexed items:
 
-1. Go to  **eDiscovery > Advanced eDiscovery (Preview)** and open the case.
+1. Go to  **eDiscovery > Advanced eDiscovery** and open the case.
 
 2. Click to **Custodians tab**, and then select a custodian whose data must be reindexed. 
 
@@ -117,7 +117,7 @@ If you release a custodian after a hold notice was published, a release notice w
 
 To release a custodian: 
 
-1. Go to  **eDiscovery > Advanced eDiscovery (Preview)** and open the case.
+1. Go to  **eDiscovery > Advanced eDiscovery** and open the case.
 
 2.	Go to the **Custodians** tab.
 
@@ -125,7 +125,7 @@ To release a custodian:
 
 4. On the flyout page, click **Release custodian**.
 
-   A warning page is displayed explaining that if a hold is placed on a data source associated with the custodian, the hold will be removed, and that any other hold associated with a different Advanced eDiscovery (Preview) case will still apply. That includes other types of preservation and retention features in Office 365 (such as an Office 365 retention policy).
+   A warning page is displayed explaining that if a hold is placed on a data source associated with the custodian, the hold will be removed, and that any other hold associated with a different Advanced eDiscovery case will still apply. That includes other types of preservation and retention features in Office 365 (such as an Office 365 retention policy).
 
 5. Click **Yes** to confirm that you want to release the custodian. 
 

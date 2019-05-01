@@ -32,7 +32,7 @@ Using the upload Non-Office 365 feature as described in this article requires th
 
 - All custodians whose non-Office 365 content will be uploaded must have E3 with Advanced Compliance add-on or E5 licenses.
 
-- An existing Advanced eDiscovery (Preview) case.
+- An existing Advanced eDiscovery case.
 
 - Custodians must be added to the case before you upload the data that's associated to them.
 
@@ -78,7 +78,7 @@ Using the upload Non-Office 365 feature as described in this article requires th
    ![Non-Office 365 Import - AzCopy](../media/504e2dbe-f36f-4f36-9b08-04aea85d8250.png)
 
    > [!NOTE]
-   > If the supplied AzCopy command fails, refer to [Troubleshoot AzCopy in Advanced eDiscovery (Preview)](troubleshooting-azcopy.md)
+   > If the supplied AzCopy command fails, refer to [Troubleshoot AzCopy in Advanced eDiscovery](troubleshooting-azcopy.md)
 
 6. Finally, return back to the Security & Compliance and click the **Next: Process files** button.  This will initiate processing, text extraction and indexing of the uploaded files.  You can track the progress of processing here or in the **Jobs** tab.  Once completed, the new files will be available in the review set.  Once processing is complete, you can dismiss the wizard.
 

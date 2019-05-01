@@ -16,7 +16,7 @@ description: ""
 
 # View documents in a review set
 
-Advanced eDiscovery (Preview) displays content via several viewers each with different purposes. The various viewers can be used by clicking on any document within a review set. The viewers currently provided are:
+Advanced eDiscovery displays content via several viewers each with different purposes. The various viewers can be used by clicking on any document within a review set. The viewers currently provided are:
 
 - File metadata
 - Native view
