@@ -309,6 +309,17 @@ If you want to make changes to your EDM classification configuration, such as ch
 > [!TIP]
 > If you don't want the confirmation part, in Step 3, use this cmdlet instead: `Set-DlpEdmSchema -FileData $edm`
 
+## Removing the schema for EDM
+
+If you want to remove a schema you're using for EDM, follow these steps:
+
+1. [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
+
+2. Run the following PowerShell cmdlet, substituting the data store name of "patientrecords" with the one you want to remove:
+
+    `Remove-DlpEdmSchema -Identity patientrecords`
+
+
 ## Related articles
 
 [Built-in sensitive information types and what they look for](what-the-sensitive-information-types-look-for.md)
