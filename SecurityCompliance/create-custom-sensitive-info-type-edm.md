@@ -50,7 +50,7 @@ EDM classification enables you to create custom sensitive information types that
 |[Part 1: Set up EDM classification](#part-1-set-up-edm-classification) |- Read access to the sensitive data<br/>- Ability to define a database schema in .xml format (this article includes an example)<br/>- Ability to create a rule package in .xml format (this article includes an example)<br/>- Admin permissions to upload the database schema file and rule package file to the Security & Compliance Center (using PowerShell) |
 |[Part 2: Index and upload the sensitive data](#part-2-index-and-upload-the-sensitive-data) |- Custom security group and user account on a Windows machine<br/>- Ability to install and authorize the EDM Upload Agent<br/>- Work or school account for Office 365 that has admin permissions (global administrator, compliance administrator, or Exchange Online administrator) |    |         |
 |[Part 3: Use EDM classification with your Microsoft cloud services](#part-3-use-edm-classification-with-your-microsoft-cloud-services) |- Office 365 or Microsoft 365 subscription that includes DLP<br/>- EDM classification feature enabled (this is currently in preview) |
-|As needed: Make changes: <br/>- [Edit the schema for EDM](#editing-the-schema-for-edm) <br/>- [Remove the schema for EDM](#removing-the-schema-for-edm)|- Existing edm.xml file (see the [Define the schema](#define-the-schema-for-your-database-of-sensitive-information) section in this article.) <br/>- Admin permissions to re-upload or remove the edm.xml file in the Security & Compliance Center (using PowerShell) |
+|As needed: Updates and changes <br/><br/>- [Edit the schema for EDM](#editing-the-schema-for-edm) <br/>- [Remove the schema for EDM](#removing-the-schema-for-edm)|- Existing edm.xml file (see the [Define the schema](#define-the-schema-for-your-database-of-sensitive-information) section in this article.) <br/>- Admin permissions to re-upload or remove the edm.xml file in the Security & Compliance Center (using PowerShell) |
 
 ## Part 1: Set up EDM classification
 
@@ -287,6 +287,10 @@ The next step is to use the EDM Upload Agent to index the sensitive data, and th
 
 At this point, you are ready to use EDM classification with your Microsoft cloud services. For example, you can [set up a DLP policy using EDM classification](#to-create-a-new-dlp-policy-with-edm). 
 
+### Refreshing your sensitive information database
+
+You can refresh your sensitive information database daily or weekly. When your .csv file is refreshed, use the EDM Upload Tool to re-index the sensitive data and then re-upload the indexed data. To get help with this, see [Index and upload the sensitive data](#index-and-upload-the-sensitive-data) (in this article). 
+
 ### Use Task Scheduler to save time
 
 We recommend setting up a regular schedule and process for updating the .csv file, and using [Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/task-scheduler-start-page) to automate the steps of indexing sensitive data and uploading the indexed data.
@@ -336,10 +340,6 @@ $password=[Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropSer
 $taskName = 'EDMUpload_' + $dataStoreName
 Register-ScheduledTask -TaskName $taskName -InputObject $scheduledTask -User $user -Password $password
 ```
-
-### Refreshing your sensitive information database
-
-You can refresh your sensitive information database daily or weekly. When your .csv file is refreshed, make sure to use the EDM Upload Tool to re-index the sensitive data and then re-upload the indexed data. To get help with this, see [Index and upload the sensitive data](#index-and-upload-the-sensitive-data) (in this article). 
 
 ## Part 3: Use EDM classification with your Microsoft cloud services
 
