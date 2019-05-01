@@ -205,7 +205,7 @@ Download the prebuilt package from repository’s Release section at <https://gi
 1. Go to https://\<AzureAppResourceName>.azurewebsites.net (where AzureAppResourceName is the name of your Azure app resource that you named in Step 4) For example, if the name is **fbconnector**, go to https://fbconnector.azurewebsites.net. The home page of the app will look like the following screenshot.
 
 
-  ![](media/FBCimage41.png)
+   ![](media/FBCimage41.png)
 
 2. Click **Configure** to display a sign in page.
  
@@ -221,7 +221,7 @@ Download the prebuilt package from repository’s Release section at <https://gi
    - **Facebook application ID** - The app ID for the Facebook application that you obtained in Step 5.
    - **Facebook application secret** - The app secret for the Facebook application that you obtained in Step 5.
    - **Facebook webhooks verify token** - The verify token that you created in Step 5.
-   - **AAD application ID** - The application ID for the Azure Active Directory app that you created in Step 2
+   - **AAD application ID** - The application ID for the Azure Active Directory app that you created in Step 2.
    - **AAD application secret** - The value for the APISecretKey secret that you created in Step 4.
    - **AAD application Uri** - The AAD application Uri obtained in Step 2; for example, https://microsoft.onmicrosoft.com/2688yu6n-12q3-23we-e3ee-121111123213.
    - **App insights instrumentation key** - Leave this box blank.

@@ -74,7 +74,7 @@ Download the prebuilt package from repository’s Release section,
 
 To be Added
 
-## Step 2: Create AAD App
+## Step 2: Create an app in Azure Active Directory
 
 1.  Go to Azure portal, portal.azure.com
 
@@ -118,7 +118,7 @@ To be Added
 
 ![](media/TCimage10.png)
 
-## Step 3: Storage account creation
+## Step 3: Create an Azure storage account
 
 1.  Go to Azure home page
 
@@ -160,7 +160,7 @@ To be Added
 
 ![](media/TCimage20.png)
 
-## Step 4: App service creation
+## Step 4: Create a new web app resource in Azure
 
 1.  Create new Web App resource (App Service of type Web App)
 
@@ -170,7 +170,7 @@ To be Added
 
 ![](media/TCimage22.png)
 
-21. Go to the newly created Web App resource and fill all the settings as displayed with the values you noted above
+2. Go to the newly created Web App resource and fill all the settings as displayed with the values you noted above
 
 Add the below 3 application settings with appropriate values
 
@@ -182,66 +182,80 @@ Add the below 3 application settings with appropriate values
 
 ![](media/TCimage23.png)
 
-22. Turn the Enabled setting in Application Settings to Always On
+3. Turn the Enabled setting in Application Settings to Always On
 
 ![](media/TCimage24.png)
 
-23. Upload the app service bits (zip file downloaded as mentioned above) using the below url
+4. Upload the app service bits (zip file downloaded as mentioned above) using the below url
 
 \<AppService\>.scm.azurewebsites.net/ZipDeployUi
 
 ![](media/TCimage25.png)
 
-## Step 5: Twitter App Registration 
+## Step 5: Register the Twitter app
 
-1.  Add new Application
+1. Go to https://developer.twitter.com, log in using the credentials for the developer account for your organization, and then click **Create an app**.
+
+2.  Add new Application
 
 ![](media/TCimage26.png)
 
-24. Add App Details
+3. Add App Details
 
 ![](media/TCimage27.png)
 
-25. Edit Details for App. Click on Details for given app from dashboard <https://developer.twitter.com/en/apps>
+4. Edit Details for App. Click on Details for given app from dashboard <https://developer.twitter.com/en/apps>
 
 ![](media/TCimage28.png)
 
-26. Generate Access Token
+5. Generate Access Token
 
 ![](media/TCimage29.png)
 
-27. Update Permissions
+6. Update Permissions
 
 ![](media/TCimage30.png)
 
-28. Add OAuth redirect URI \<connectorserviceuri/Views/TwitterOAuth\>
+7. Add OAuth redirect URI \<connectorserviceuri/Views/TwitterOAuth\>
 
 ![](media/TCimage31.png)
 
-29. Select Edit Details. Update Callback Url in Callback URLs Section and Save
+8. Select Edit Details. Update Callback Url in Callback URLs Section and Save
 
 ![](media/TCimage32.png)
 
-30. 
+9. 
 Your Developer App is now ready to use
 
-## Step 6: Configure Connector
+## Step 6: Configure the connector web app
 
-1.  Configure the app service by clicking on the configure button on the home page of your app.
+1. Go to https://\<AzureAppResourceName>.azurewebsites.net (where AzureAppResourceName is the name of your Azure app resource that you named in Step 4) For example, if the name is **twitterconnector**, go to https://twitterconnector.azurewebsites.net. The home page of the app will look like the following screenshot.
 
-\<appservice\>.azurewebsites.net
 
-![](media/TCimage33.png)
+   ![](media/FBCimage41.png)
 
-31. Login using Tenant Id and APISecretKey as set in the application settings
+2. Click **Configure** to display a sign in page.
 
-![](media/TCimage34.png)
+    ![](media/FBCimage42.png)
 
-32. Set the configuration settings and click on save.
+3. In the Tenant Id box, type or paste your tenant Id (that you obtained in Step 2). In the password box, type or paste the APISecretKey (that you obtained in Step 2), and then click **Set Configuration Settings** to display the **Configuration Details** page.
 
-![](media/TCimage35.png)
+   ![](media/TCimage35.png)
 
-## Step 7: Connector Setup in SCC
+4. Under **Configuration Details**, enter the following configuration settings 
+
+   - **Twitter application ID** - The app ID for the Facebook application that you obtained in Step 5.
+   - **Twitter application secret** - The app secret for the Facebook application that you obtained in Step 5.
+   - **Twitter client token** - The verify token that you created in Step 5.
+   - **Twitter client token secret** - The application ID for the Azure Active Directory app that you created in Step 2
+   - **AAD application ID** - The application ID for the Azure Active Directory app that you created in Step 2
+   - **AAD application secret** - The value for the APISecretKey secret that you created in Step 4.
+   - **AAD application Uri** - The AAD application Uri obtained in Step 2; for example, https://microsoft.onmicrosoft.com/2688yu6n-12q3-23we-e3ee-121111123213.
+   - **App insights instrumentation key** - Leave this box blank.
+
+5. Click **Save** to save the connector settings.
+
+## Step 7: Set up a custom connector in the Security & Compliance Center
 
 1.  Go to Data Governance \> Import and click Archive third-party data
 
