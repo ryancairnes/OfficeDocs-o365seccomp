@@ -85,3 +85,7 @@ The following sections cover known issues to be resolved in upcoming releases of
 ### Session timeout
 
 - When a session times out, a “Something went wrong” error may appear. To resolve, go to [Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) and log in again.
+ 
+### Language support
+
+- All languages are not supported for all webpages. If your local language is unsupported, view in US English.
