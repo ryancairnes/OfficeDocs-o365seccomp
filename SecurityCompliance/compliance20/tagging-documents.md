@@ -1,5 +1,5 @@
 ---
-title: "Tag documents in a working set"
+title: "Tag documents in a review set"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,9 +17,9 @@ ms.assetid:
 description: ""
 ---
 
-# Tag documents in a working set
+# Tag documents in a review set
 
-Organizing content in a working set is important to complete various workflows in the eDiscovery process. This includes:
+Organizing content in a review set is important to complete various workflows in the eDiscovery process. This includes:
 
 -  Culling unnecessary content
 
@@ -27,11 +27,11 @@ Organizing content in a working set is important to complete various workflows i
  
 -  Identifying content that must be reviewed by an expert or an attorney
 
-When experts, attorneys, or other users review content in a working set, their opinions related to the content can be captured by using tags. For example, if the intent is to cull unnecessary content, a user can tag documents with a tag such as “non-responsive”. After content has been reviewed and tagged, a working set search can be created to exclude any content tagged as “non-responsive”, which eliminates this content from the next steps in the eDiscovery workflow. The tag panel can be customized for every case so that the tags can support the intended review workflow.
+When experts, attorneys, or other users review content in a review set, their opinions related to the content can be captured by using tags. For example, if the intent is to cull unnecessary content, a user can tag documents with a tag such as “non-responsive”. After content has been reviewed and tagged, a review set search can be created to exclude any content tagged as “non-responsive”, which eliminates this content from the next steps in the eDiscovery workflow. The tag panel can be customized for every case so that the tags can support the intended review workflow.
 
 ## Tag types
 
-Advanced eDiscovery (Preview) provides two types of tags:
+Advanced eDiscovery provides two types of tags:
 
 - **Single choice tags** - Restricts users to select a single tag within a group. This can be useful to ensure users don’t select conflicting tags such as “responsive” and “non-responsive”. 
 
@@ -39,7 +39,7 @@ Advanced eDiscovery (Preview) provides two types of tags:
 
 ## Tag structure
 
-In addition to the tag types, the structure of how tags are organization in the tag panel can be used to make tagging documents more intuitive. Tags are grouped by sections. Working set search supports the ability to search by tag and by tag section. This means you can create a working set search to retrieve documents tagged with any tag in a section.
+In addition to the tag types, the structure of how tags are organization in the tag panel can be used to make tagging documents more intuitive. Tags are grouped by sections. review set search supports the ability to search by tag and by tag section. This means you can create a review set search to retrieve documents tagged with any tag in a section.
 
 ![Tag sections in the tag panel](../media/Tagtypes.png)
 
@@ -53,7 +53,7 @@ There are several ways to apply a tag to content.
 
 ### Tagging a single document
 
-When viewing a document in a working set, you can display the tags that a review can use by clicking **Coding panel**.
+When viewing a document in a review set, you can display the tags that a review can use by clicking **Coding panel**.
 
 ![Click Tag panel to display the tag panel](../media/Singledoctag.png)
 
