@@ -107,8 +107,8 @@ Setting up and configuring EDM classification involves saving sensitive data in 
         [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [?] Help (default is "Y"):
     ```
 
-> [!TIP]
-> If you want your changes to occur without confirmation, in Step 5, use this cmdlet instead: `New-DlpEdmSchema -FileData $edm`
+    > [!TIP]
+    > If you want your changes to occur without confirmation, in Step 5, use this cmdlet instead: `New-DlpEdmSchema -FileData $edm`
     
 Now that the schema for your database of sensitive information is defined, the next step is to [set up a rule package](#set-up-a-rule-package).
 
@@ -135,8 +135,8 @@ If you want to make changes to your edm.xml file, such as changing which fields 
         [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [?] Help (default is "Y"):
     ```
 
-> [!TIP]
-> If you want your changes to occur without confirmation, in Step 3, use this cmdlet instead: `Set-DlpEdmSchema -FileData $edm`
+    > [!TIP]
+    > If you want your changes to occur without confirmation, in Step 3, use this cmdlet instead: `Set-DlpEdmSchema -FileData $edm`
 
 #### Removing the schema for EDM
 
@@ -157,8 +157,8 @@ If you want to remove the schema you're using for EDM, follow these steps:
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [?] Help (default is "Y"):
     ```
     
-> [!TIP]
-> If you want your changes to occur without confirmation, in Step 2, use this cmdlet instead: `Remove-DlpEdmSchema -Identity patientrecords -Confirm:$false`
+    > [!TIP]
+    > If you want your changes to occur without confirmation, in Step 2, use this cmdlet instead: `Remove-DlpEdmSchema -Identity patientrecords -Confirm:$false`
 
 ### Set up a rule package
 
