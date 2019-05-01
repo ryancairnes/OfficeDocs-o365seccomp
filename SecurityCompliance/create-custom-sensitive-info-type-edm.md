@@ -112,9 +112,8 @@ Now that the schema for your database of sensitive information is defined, the n
 
 1. Create a rule package in .xml format (with Unicode encoding), similar to the example included below. (You can copy our example and modify it for your use.) 
 
-    Recall from the previous procedure that our PatientRecords schema defines five fields as searchable for EDM: *PatientID*, *MRN*, *SSN*, *Phone*, and *DOB*. Our example file includes two of those three fields, listed as *ExactMatch* items. 
+    Recall from the previous procedure that our PatientRecords schema defines five fields as searchable for EDM: *PatientID*, *MRN*, *SSN*, *Phone*, and *DOB*. Our example file includes those fields, listed as *ExactMatch* items. 
 
-    
     ```
     <?xml version="1.0" encoding="utf-8"?>
     <RulePackage xmlns="http://schemas.microsoft.com/office/2018/edm">
@@ -174,8 +173,7 @@ Now that the schema for your database of sensitive information is defined, the n
       </Rules>
     </RulePackage>
     ```
-    
-    
+       
     (To learn more about .xml files like this, see [Sample XML of a rule package](create-a-custom-sensitive-information-type-in-scc-powershell.md#sample-xml-of-a-rule-package).)
     
 2. Upload the rule package by running the following PowerShell cmdlets, one at a time:
