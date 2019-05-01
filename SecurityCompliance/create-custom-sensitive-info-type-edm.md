@@ -238,8 +238,6 @@ If you want to remove the schema you're using for EDM, follow these steps:
 
 At this point, you have set up EDM classification. The next step is to index and upload the sensitive data. 
 
-
-
 ## Part 2: Index and upload the sensitive data
 
 During this phase, you set up a custom security group and user account, and set up the EDM Upload Agent tool. Then, you use the tool to index the sensitive data, and upload the indexed data.
@@ -284,8 +282,8 @@ The next step is to use the EDM Upload Agent to index the sensitive data, and th
 
     You'll see a list of data stores and when they were last updated, similar to the following: <br/>![Example of GetDataStore cmdlet and results](media/EDM-GetDataStore-example.png)
 
-> [!TIP]
-> [Use Task Scheduler to save time](#use-task-scheduler-to-save-time).
+    > [!TIP]
+    > [Use Task Scheduler to save time](#use-task-scheduler-to-save-time).
 
 At this point, you are ready to use EDM classification with your Microsoft cloud services. For example, you can [set up a DLP policy using EDM classification](#to-create-a-new-dlp-policy-with-edm). 
 
@@ -379,7 +377,7 @@ EDM can be used with information protection features, such as [Office 365 DLP po
 
 15. On the **Review your settings** tab, review your policy. Make any needed changes. When you're ready, choose **Create**.
 
-> [!TIP]
+> [!NOTE]
 > Allow approximately one hour for your new DLP policy to work its way through your data center.
 
 ## Related articles
