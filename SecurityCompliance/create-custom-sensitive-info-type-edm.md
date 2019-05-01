@@ -107,9 +107,60 @@ Setting up and configuring EDM classification involves saving sensitive data in 
     ```
 
 > [!TIP]
-> If you don't want the confirmation part, in Step 5, use this cmdlet instead: `New-DlpEdmSchema -FileData $edm`
+> If you want your changes to occur without confirmation, in Step 5, use this cmdlet instead: `New-DlpEdmSchema -FileData $edm`
     
 Now that the schema for your database of sensitive information is defined, the next step is to set up a rule package.
+
+#### Editing the schema for EDM 
+
+If you want to make changes to your EDM classification configuration, such as changing which fields are used for EDM, follow these steps:
+
+1. Edit your edm.mxl file (this is the file discussed in the [Define the schema](#define-the-schema-for-your-database-of-sensitive-information) section of this article).
+
+2. [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
+
+3. To update your database schema, run the following cmdlets, one at a time:
+
+    `$edm=Get-Content .\edm.xml -Encoding Byte -ReadCount 0`
+
+    `Set-DlpEdmSchema -FileData $edm -Confirm:$true`
+
+    You will be prompted to confirm, as follows:
+
+    ```powershell
+    Confirm
+        Are you sure you want to perform this action?
+        EDM Schema for the data store 'patientrecords' will be updated.
+        [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [?] Help (default is "Y"):
+    ```
+
+> [!TIP]
+> If you want your changes to occur without confirmation, in Step 3, use this cmdlet instead: `Set-DlpEdmSchema -FileData $edm`
+
+You might need to edit your rule package as well. (See the [rule package](#set-up-a-rule-package) section in this article.)
+
+#### Removing the schema for EDM
+
+If you want to remove a schema you're using for EDM, follow these steps:
+
+1. [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
+
+2. Run the following PowerShell cmdlet, substituting the data store name of "patientrecords" with the one you want to remove:
+
+    `Remove-DlpEdmSchema -Identity patientrecords`
+
+     You will be prompted to confirm, as follows:
+    
+    ```powershell
+    Confirm
+    Are you sure you want to perform this action?
+    EDM Schema for the data store 'patientrecords' will be removed.
+    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [?] Help (default is "Y"):
+    ```
+    
+> [!TIP]
+> If you want your changes to occur without confirmation, in Step 2, use this cmdlet instead: `Remove-DlpEdmSchema -Identity patientrecords -Confirm:$false`
+
 
 ### Set up a rule package
 
@@ -188,6 +239,8 @@ Now that the schema for your database of sensitive information is defined, the n
     To learn more about uploading rule packages, see [Upload your rule package](create-a-custom-sensitive-information-type-in-scc-powershell.md#upload-your-rule-package).
 
 At this point, you have set up EDM classification. The next step is to index and upload the sensitive data. 
+
+
 
 ## Part 2: Index and upload the sensitive data
 
@@ -281,55 +334,6 @@ EDM can be used with information protection features, such as [Office 365 DLP po
 
 You can refresh your sensitive information database daily or weekly. When your .csv file is refreshed, make sure to use the EDM Upload Tool to re-index the sensitive data and then re-upload the indexed data. To get help with this, see [Index and upload the sensitive data](#index-and-upload-the-sensitive-data) (in this article). 
 
-## Editing the schema for EDM 
-
-If you want to make changes to your EDM classification configuration, such as changing which fields are used for EDM, follow these steps:
-
-1. Edit your edm.mxl file (this is the file discussed in the [Define the schema](#define-the-schema-for-your-database-of-sensitive-information) section of this article).
-
-2. [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
-
-3. To update your database schema, run the following cmdlets, one at a time:
-
-    `$edm=Get-Content .\edm.xml -Encoding Byte -ReadCount 0`
-
-    `Set-DlpEdmSchema -FileData $edm -Confirm:$true`
-
-    You will be prompted to confirm, as follows:
-
-    ```powershell
-    Confirm
-        Are you sure you want to perform this action?
-        EDM Schema for the data store 'patientrecords' will be updated.
-        [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [?] Help (default is "Y"):
-    ```
-
-> [!TIP]
-> If you don't want the confirmation part, in Step 3, use this cmdlet instead: `Set-DlpEdmSchema -FileData $edm`
-
-You might need to edit your rule package as well. (See the [rule package](#set-up-a-rule-package) section in this article.)
-
-## Removing the schema for EDM
-
-If you want to remove a schema you're using for EDM, follow these steps:
-
-1. [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
-
-2. Run the following PowerShell cmdlet, substituting the data store name of "patientrecords" with the one you want to remove:
-
-    `Remove-DlpEdmSchema -Identity patientrecords`
-
-     You will be prompted to confirm, as follows:
-    
-    ```powershell
-    Confirm
-    Are you sure you want to perform this action?
-    EDM Schema for the data store 'patientrecords' will be removed.
-    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [?] Help (default is "Y"):
-    ```
-    
-> [!TIP]
-> If you don't want the confirmation part, in Step 2, use this cmdlet instead: `Remove-DlpEdmSchema -Identity patientrecords -Confirm:$false`
 
 ## Related articles
 
