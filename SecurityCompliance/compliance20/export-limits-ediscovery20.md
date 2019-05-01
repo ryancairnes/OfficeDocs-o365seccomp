@@ -1,5 +1,5 @@
 ---
-title: "Export limits in Advanced eDiscovery (Preview)"
+title: "Export limits in Advanced eDiscovery"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,6 +17,6 @@ ms.assetid:
 description: ""
 ---
 
-# Export limits in Advanced eDiscovery (Preview)
+# Export limits in Advanced eDiscovery
 
 Content coming soon.

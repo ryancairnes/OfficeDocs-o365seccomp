@@ -1,5 +1,5 @@
 ---
-title: "Export documents from a working set"
+title: "Export documents from a review set"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,15 +17,15 @@ ms.assetid:
 description: ""
 ---
 
-# Export documents from a working set
+# Export documents from a review set
 
-Exporting content from a working set can be accomplished via 3 different methods:
+Exporting content from a review set can be accomplished via 3 different methods:
 
 ## Download
 
-Download offers a simple way to download content from a working set in Native format. It leverages the browser’s data transfer features so a browser prompt will appear once a download is ready. Files downloaded using this method will be zipped into a container file and will be item level files. This means that if you select an attachment, you will automatically receive the email with the attachment included. Similarly, if you select an excel spreadsheet that was embedded in a word document, you will receive the word document with the excel spreadsheet embedded. Downloaded items will preserve the last modified date which can be viewed as a file property.
+Download offers a simple way to download content from a review set in Native format. It leverages the browser’s data transfer features so a browser prompt will appear once a download is ready. Files downloaded using this method will be zipped into a container file and will be item level files. This means that if you select an attachment, you will automatically receive the email with the attachment included. Similarly, if you select an excel spreadsheet that was embedded in a word document, you will receive the word document with the excel spreadsheet embedded. Downloaded items will preserve the last modified date which can be viewed as a file property.
 
-To download content from a working set, start by selecting the files you want to download then select “Download” under the Actions menu.
+To download content from a review set, start by selecting the files you want to download then select “Download” under the Actions menu.
 
 ![A screenshot of a computer
 Description automatically generated](../media/eDiscoDownload.png)
@@ -40,11 +40,11 @@ Export allows users to customize the content that is included in the download pa
 
 ### Tag data
 
-> This content would be added as fields in the metadata file. It contains all of the tag information applied in working sets.
+> This content would be added as fields in the metadata file. It contains all of the tag information applied in review sets.
 
 ### Text files
 
-> Text files can be generated for each file exported from a working set. Often times these files are required by service partners as part of ingesting data into 3<sup>rd</sup> party tools downstream.
+> Text files can be generated for each file exported from a review set. Often times these files are required by service partners as part of ingesting data into 3<sup>rd</sup> party tools downstream.
 
 ### Redacted files
 
@@ -56,7 +56,7 @@ Export allows users to customize the content that is included in the download pa
 
 ## Export Structure
 
-When content is exported from a working set, the content is organized in the following structure.
+When content is exported from a review set, the content is organized in the following structure.
 
   - Root folder – Download ID
     
@@ -74,6 +74,6 @@ When content is exported from a working set, the content is organized in the fol
     
       - Extracted\_text\_files = contains all of the extracted text files generated at processing.
 
-## Working Set
+## review set
 
-Content can be added to another working set.
+Content can be added to another review set.
