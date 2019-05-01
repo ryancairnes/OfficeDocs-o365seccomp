@@ -294,9 +294,9 @@ You can schedule tasks using several methods:
 
 |Method  |What to do  |
 |---------|---------|
-|Windows user interface     |Click Start, and type `Task Scheduler`. In the list of results, right-click Task Scheduler, and choose **Run as administrator**.         |
-|Windows PowerShell     |See [ScheduledTasks](https://docs.microsoft.com/powershell/module/scheduledtasks/?view=win10-ps)         |
-|Task Scheduler API |See [Using the Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/using-the-task-scheduler) |
+|Windows PowerShell     |See the [ScheduledTasks](https://docs.microsoft.com/powershell/module/scheduledtasks/?view=win10-ps) documentation |
+|Task Scheduler API |See the [Using the Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/using-the-task-scheduler) documentation |
+|Windows user interface     |In Windows, click **Start**, and type `Task Scheduler`. Then, in the list of results, right-click **Task Scheduler**, and choose **Run as administrator**.          |
 
 #### Example PowerShell script
 
