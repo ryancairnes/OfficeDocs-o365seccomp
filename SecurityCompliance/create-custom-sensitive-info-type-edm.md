@@ -304,10 +304,10 @@ If you want to make changes to your EDM classification configuration, such as ch
         [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [?] Help (default is "Y"):
     ```
 
-4. Edit your rule package as well. (See the [rule package](#set-up-a-rule-package) section in this article.)
-
 > [!TIP]
 > If you don't want the confirmation part, in Step 3, use this cmdlet instead: `Set-DlpEdmSchema -FileData $edm`
+
+You might need to edit your rule package as well. (See the [rule package](#set-up-a-rule-package) section in this article.)
 
 ## Removing the schema for EDM
 
@@ -319,6 +319,17 @@ If you want to remove a schema you're using for EDM, follow these steps:
 
     `Remove-DlpEdmSchema -Identity patientrecords`
 
+     You will be prompted to confirm, as follows:
+    
+    ```powershell
+    Confirm
+    Are you sure you want to perform this action?
+    EDM Schema for the data store 'patientrecords' will be removed.
+    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [?] Help (default is "Y"):
+    ```
+    
+> [!TIP]
+> If you don't want the confirmation part, in Step 2, use this cmdlet instead: `Remove-DlpEdmSchema -Identity patientrecords -Confirm:$false`
 
 ## Related articles
 
