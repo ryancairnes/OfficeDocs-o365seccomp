@@ -241,9 +241,9 @@ At this point, you have set up EDM classification. The next step is to index and
 
 ## Part 2: Index and upload the sensitive data
 
-During this phase, you set up a custom security group and user account, install the EDM Upload Agent tool on your Windows machine, and then use the tool to index and upload the sensitive data.
+During this phase, you set up a custom security group and user account, and set up the EDM Upload Agent tool. Then, you use the tool to index the sensitive data, and upload the indexed data.
 
-### Set up a security group, user account, and Windows machine with the EDM Upload Agent
+### Set up the EDM Upload Agent
 
 1. As an administrator on a Windows machine, create a security group and name it `EDM_DataUploaders`. Then add the EDM_DataUploaders security group to the Administrators group in Windows.
 
@@ -251,15 +251,15 @@ During this phase, you set up a custom security group and user account, install 
 
 3. Sign out of Windows, and then sign back in using the new user account. 
 
-5. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639). Make sure to note the installation location (such as `C:\`). 
+5. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639).  
 
-6. To authorize the EDM Upload Agent, run the following command in Windows Command Prompt:
+6. To authorize the EDM Upload Agent, open Windows Command Prompt and run the following command:
 
     `EdmUploadAgent.exe /Authorize`
 
-    When prompted, sign in using your work or school account for Office 365 (you must be a global admin, compliance administrator, or Exchange Online administrator).
+    You'll be prompted to sign in. Use your work or school account for Office 365 (you must be a global admin, compliance administrator, or Exchange Online administrator).
 
-The next step is to use the EDM Upload Agent to index the sensitive data, and upload the indexed data.
+The next step is to use the EDM Upload Agent to index the sensitive data, and then upload the indexed data.
 
 ### Index and upload the sensitive data
 
@@ -283,7 +283,10 @@ The next step is to use the EDM Upload Agent to index the sensitive data, and up
 
     You'll see a list of data stores and when they were last updated, similar to the following: <br/>![Example of GetDataStore cmdlet and results](media/EDM-GetDataStore-example.png)
 
-Now you can use EDM classification with your Microsoft cloud services. For example, you can [set up a DLP policy using EDM classification](#to-create-a-new-dlp-policy-with-edm). 
+> [!TIP]
+> [Use Task Scheduler to save time](#use-task-scheduler-to-save-time).
+
+At this point, you are ready to use EDM classification with your Microsoft cloud services. For example, you can [set up a DLP policy using EDM classification](#to-create-a-new-dlp-policy-with-edm). 
 
 ### Use Task Scheduler to save time
 
@@ -293,8 +296,8 @@ You can schedule tasks using several methods:
 
 |Method  |What to do  |
 |---------|---------|
-|Windows PowerShell     |See the [ScheduledTasks](https://docs.microsoft.com/powershell/module/scheduledtasks/?view=win10-ps) documentation and our [Example PowerShell script](#example-powershell-script)|
-|Task Scheduler API |See the [Using the Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/using-the-task-scheduler) documentation |
+|Windows PowerShell     |See the [ScheduledTasks](https://docs.microsoft.com/powershell/module/scheduledtasks/?view=win10-ps) documentation and our [example PowerShell script](#example-powershell-script)|
+|Task Scheduler API |See the [Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/using-the-task-scheduler) documentation |
 |Windows user interface     |In Windows, click **Start**, and type `Task Scheduler`. Then, in the list of results, right-click **Task Scheduler**, and choose **Run as administrator**.          |
 
 #### Example PowerShell script
@@ -334,8 +337,6 @@ $password=[Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropSer
 $taskName = 'EDMUpload_' + $dataStoreName
 Register-ScheduledTask -TaskName $taskName -InputObject $scheduledTask -User $user -Password $password
 ```
-
-
 
 ### Refreshing your sensitive information database
 
