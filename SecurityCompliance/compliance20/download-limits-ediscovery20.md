@@ -1,5 +1,5 @@
 ---
-title: "Download limits in Advanced eDiscovery (Preview)"
+title: "Download limits in Advanced eDiscovery"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,6 +17,6 @@ ms.assetid:
 description: ""
 ---
 
-# Download limits in Advanced eDiscovery (Preview)
+# Download limits in Advanced eDiscovery
 
 Content coming soon.

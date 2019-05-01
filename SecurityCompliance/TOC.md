@@ -24,7 +24,7 @@
 ## [Privileged access management](privileged-access-management-overview.md)
 ## [Configure privileged access management](privileged-access-management-configuration.md)
 
-# Protect information
+# [Protect information](protect-information.md)
 ## [Sensitivity labels](sensitivity-labels.md)
 ### [Restrict access to content by using encryption in sensitivity labels](encryption-sensitivity-labels.md)
 ### [Apply a sensitivity label to content automatically](apply_sensitivity_label_automatically.md)
@@ -33,18 +33,19 @@
 ## [Prevent data loss (DLP)](data-loss-prevention-policies.md)
 ### [DLP and Microsoft Teams](dlp-microsoft-teams.md)
 ### [Watch an extended overview of DLP](https://channel9.msdn.com/events/ignite/microsoft-ignite-orlando-2017/brk3111)
-## Set up DLP
-### [Get started with DLP policy recommendations](get-started-with-dlp-policy-recommendations.md)
-### [Get started with the default DLP policy](get-started-with-the-default-dlp-policy.md)
-### [Create a DLP policy from a template](create-a-dlp-policy-from-a-template.md)
-### [Create, test, and tune a DLP policy](create-test-tune-dlp-policy.md)
-### [Use notifications and policy tips in DLP policies](use-notifications-and-policy-tips.md)
-### [What the DLP policy templates include](what-the-dlp-policy-templates-include.md)
-### [Create a DLP policy to protect documents with FCI or other properties](protect-documents-that-have-fci-or-other-properties.md)
-### [View the DLP reports](view-the-dlp-reports.md)
-### [Form a query to find sensitive data stored on sites](form-a-query-to-find-sensitive-data-stored-on-sites.md)
-### [How DLP works between the Security & Compliance Center and Exchange admin center](how-dlp-works-between-admin-centers.md)
-## Use the sensitive information types
+### Set up DLP
+#### [Get started with DLP policy recommendations](get-started-with-dlp-policy-recommendations.md)
+#### [Get started with the default DLP policy](get-started-with-the-default-dlp-policy.md)
+#### [Create a DLP policy from a template](create-a-dlp-policy-from-a-template.md)
+#### [Create, test, and tune a DLP policy](create-test-tune-dlp-policy.md)
+#### [Use notifications and policy tips in DLP policies](use-notifications-and-policy-tips.md)
+#### [What the DLP policy templates include](what-the-dlp-policy-templates-include.md)
+#### [Create a DLP policy to protect documents with FCI or other properties](protect-documents-that-have-fci-or-other-properties.md)
+#### [View the DLP reports](view-the-dlp-reports.md)
+#### [Form a query to find sensitive data stored on sites](form-a-query-to-find-sensitive-data-stored-on-sites.md)
+#### [How DLP works between the Security & Compliance Center and Exchange admin center](how-dlp-works-between-admin-centers.md)
+
+## Sensitive information types
 ### [What the sensitive information types look for](what-the-sensitive-information-types-look-for.md)
 ### [What the DLP functions look for](what-the-dlp-functions-look-for.md)
 ### [Watch an extended overview of customizing DLP](https://go.microsoft.com/fwlink/?linkid=852306)
@@ -54,6 +55,22 @@
 ### [Create a keyword dictionary](create-a-keyword-dictionary.md)
 ### [Document Fingerprinting](document-fingerprinting.md)
 
+## [Email encryption in Office 365](email-encryption.md)
+### [Office 365 Message Encryption (OME)](ome.md)
+### [Set up new Office 365 Message Encryption capabilities](set-up-new-message-encryption-capabilities.md)
+### [Define mail flow rules to encrypt email messages in Office 365](define-mail-flow-rules-to-encrypt-email.md)
+### [Add your organization's brand to your encrypted messages](add-your-organization-brand-to-encrypted-messages.md)
+### [Create a sensitive information type policy for your organization using Office 365 Message Encryption](ome-sensitive-info-types.md)
+### [Manage Office 365 Message Encryption](manage-office-365-message-encryption.md)
+### [Office 365 Advanced Message Encryption](ome-advanced-message-encryption.md)
+### [Set an expiration date for email encrypted by Office 365 Advanced Message Encryption](ome-advanced-expiration.md)
+### [Revoke email encrypted by Office 365 Advanced Message Encryption](revoke-ome-encrypted-mail.md)
+### [Compare versions of OME](ome-version-comparison.md)
+### [Office 365 Message Encryption FAQ](ome-faq.md)
+### Legacy OME
+#### [Legacy information for Office 365 Message Encryption](legacy-information-for-message-encryption.md)
+#### [Set up Azure Rights Management for the previous version of Office 365 Message Encryption](set-up-azure-rms-for-previous-version-message-encryption.md)
+
 # Records management
 ## [File plan manager](file-plan-manager.md)
 ## [Retention labels](labels.md)
@@ -62,7 +79,6 @@
 ## [Event-based retention](event-driven-retention.md)
 ### [Automate event-based retention](automate-event-driven-retention.md)
 ## [Disposition reviews](disposition-reviews.md)
-## [Retention policies](retention-policies.md)
 ## Monitor records management
 ### [View the data governance reports](view-the-data-governance-reports.md)
 ### [View label activity for documents](view-label-activity-for-documents.md)
@@ -182,36 +198,6 @@
 #### [Learn more about spoof intelligence](learn-about-spoof-intelligence.md)
 #### [Identify suspicious messages in Outlook.com and Outlook on the web](unverified-sender-feature.md)
 
-## [Encryption in Office 365](encryption.md)
-### [Set up encryption in Office 365 Enterprise](set-up-encryption.md)
-### [Email encryption in Office 365](email-encryption.md)
-### [Office 365 Message Encryption (OME)](ome.md)
-#### [Compare versions of OME](ome-version-comparison.md)
-#### [Set up new Office 365 Message Encryption capabilities](set-up-new-message-encryption-capabilities.md)
-#### [Define mail flow rules to encrypt email messages in Office 365](define-mail-flow-rules-to-encrypt-email.md)
-#### [Manage Office 365 Message Encryption](manage-office-365-message-encryption.md)
-#### [Office 365 Message Encryption FAQ](ome-faq.md)
-#### [Revoke email encrypted by Office 365 Message Encryption](revoke-ome-encrypted-mail.md)
-#### [Add your organization's brand to your encrypted messages](add-your-organization-brand-to-encrypted-messages.md)
-#### [Legacy information for Office 365 Message Encryption](legacy-information-for-message-encryption.md)
-#### [Set up Azure Rights Management for the previous version of Office 365 Message Encryption](set-up-azure-rms-for-previous-version-message-encryption.md)
-#### [Office 365 Protected Message Viewer Portal privacy statement](protected-message-viewer-portal-privacy-statement.md)
-### [Information Rights Management](information-rights-management-in-exchange-online.md)
-#### [Information Rights Management in Exchange Online](information-rights-management-in-exchange-online.md)
-#### [Configure IRM to use an on-premises AD RMS server](configure-irm-to-use-an-on-premises-ad-rms-server.md)
-### [S/MIME](s-mime-for-message-signing-and-encryption.md)
-#### [S/MIME for message signing and encryption](s-mime-for-message-signing-and-encryption.md)
-#### [Configure S/MIME settings for Outlook on the web](configure-s-mime-settings-for-outlook-web-app.md)
-#### [Send and receive S/MIME signed and encrypted email](send-and-receive-s-mime-signed-and-encrypted-email.md)
-#### [Sync user certificates to Office 365 for S/MIME](sync-user-certificates-to-office-365-for-s-mime.md)
-#### [Set up virtual certificate collection to validate S/MIME](set-up-virtual-certificate-collection-to-validate-s-mime.md)
-### [How Exchange Online secures your email secrets](exchange-online-secures-email-secrets.md)
-### [Controlling your data in Office 365 using Customer Key](controlling-your-data-using-customer-key.md)
-### [Service encryption with Customer Key for Office 365 FAQ](service-encryption-with-customer-key-faq.md)
-### [Technical reference details about encryption in Office 365](technical-reference-details-about-encryption.md)
-### [How Exchange Online uses TLS to secure email connections in Office 365](exchange-online-uses-tls-to-secure-email-connections.md)
-
-
 ## [Monitor and manage data access with Office 365 Cloud App Security](office-365-cas-overview.md)
 ### [See what's new in Cloud App Security](new-in-office-365-cas.md)
 #### [Updates during 2018](new-in-office-365-cas-2018.md)
@@ -274,22 +260,8 @@
 ### [Clone a Content Search](clone-a-content-search.md)
 
 # [Manage legal investigations](manage-legal-investigations.md)
-## [Create and manage eDiscovery cases](ediscovery-cases.md)
-## [Assign eDiscovery permissions](assign-ediscovery-permissions.md)
-## [Set up compliance boundaries for eDiscovery investigations in Office 365](set-up-compliance-boundaries.md)
-## [eDiscovery solution series - Data spillage scenario - Search and purge](data-spillage-scenariosearch-and-purge.md)
-## [Prepare search results for Advanced eDiscovery](prepare-search-results-for-advanced-ediscovery.md)
-## [Use a script to add users to a hold in an eDiscovery case](use-a-script-to-add-users-to-a-hold-in-ediscovery.md)
-## [Create a report on holds in eDiscovery cases](create-a-report-on-holds-in-ediscovery-cases.md)
-## Manage holds
-### [Create an eDiscovery hold](ediscovery-cases.md#step-4-place-content-locations-on-hold)
-### [Create a Litigation Hold](create-a-litigation-hold.md)
-### [Delete items in the Recoverable Items folder of cloud-based mailboxes on hold](delete-items-in-the-recoverable-items-folder-of-mailboxes-on-hold.md)
-### [Increase the Recoverable Items quota for mailboxes on hold](increase-the-recoverable-quota-for-mailboxes-on-hold.md)
-### [How to identify the type of hold placed on an Exchange Online mailbox](identify-a-hold-on-an-exchange-online-mailbox.md)
-### [Preserve Bcc and expanded distribution group recipients](preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery.md)
 
-## [Advanced eDiscovery (Preview) in Microsoft 365](compliance20/overview-ediscovery-20.md)
+## [Advanced eDiscovery solution in Microsoft 365](compliance20/overview-ediscovery-20.md)
 ### [Release notes](compliance20/release-notes-ediscovery20.md)
 ### [Create a new case](compliance20/create-new-ediscovery-case.md)
 
@@ -314,26 +286,26 @@
 #### [Create a search to collect data](compliance20/create-search-to-collect-data.md)
 #### [Build search queries](compliance20/building-search-queries.md)
 #### [Search statistics](compliance20/search-statistics.md)
-#### [Add search results to a working set](compliance20/add-data-to-working-set.md)
+#### [Add search results to a review set](compliance20/add-data-to-review-set.md)
 
-### [Manage working sets](compliance20/managing-working-sets.md)
-#### [Load non-Office 365 data into a working set](compliance20/load-non-office365-data.md)
-#### [Add data to another working set](compliance20/add-data-to-working-set-from-another-working-set.md)
+### [Manage review sets](compliance20/managing-review-sets.md)
+#### [Load non-Office 365 data into a review set](compliance20/load-non-office365-data.md)
+#### [Add data to another review set](compliance20/add-data-to-review-set-from-another-review-set.md)
 #### [Manage load sets](compliance20/manage-load-sets.md)
 
-### [Review case data](compliance20/reviewing-data-in-working-set.md)
-#### [View documents in a working set](compliance20/view-documents-in-working-set.md)
-#### [Query the data in a working set](compliance20/working-set-search.md)
-#### [Tag documents in a working set](compliance20/tagging-documents.md)
+### [Review case data](compliance20/reviewing-data-in-review-set.md)
+#### [View documents in a review set](compliance20/view-documents-in-review-set.md)
+#### [Query the data in a review set](compliance20/review-set-search.md)
+#### [Tag documents in a review set](compliance20/tagging-documents.md)
 
-### [Analyze case data](compliance20/analyzing-data-in-working-set.md)
+### [Analyze case data](compliance20/analyzing-data-in-review-set.md)
 #### [Near duplicate detection](compliance20/near-duplicates.md)
 #### [Email threading](compliance20/email-threading.md)
 #### [Themes](compliance20/themes.md)
 #### [Use the Relevance module to analyze data](compliance20/using-relevance.md)
 
 ### [Export case data](compliance20/exporting-data-ediscover20.md)
-#### [Export documents from a working set](compliance20/export-documents-from-working-set.md)
+#### [Export documents from a review set](compliance20/export-documents-from-review-set.md)
 #### [Download export jobs](compliance20/download-export-jobs.md)
 
 ### [Manage jobs](compliance20/managing-jobs-ediscovery20.md)
@@ -343,58 +315,76 @@
 #### [Add or remove members from a case](compliance20/add-remove-members.md)
 #### [Configure search and analytics settings](compliance20/configure-search-analytics-settings.md)
 
-### Advanced eDiscovery (Preview) reference
-#### [Limits in Advanced eDiscovery (Preview)](compliance20/limits-ediscovery20.md)
+### Advanced eDiscovery reference
+#### [Limits in Advanced eDiscovery](compliance20/limits-ediscovery20.md)
 #### [Supported file types](compliance20/supported-filetypes-ediscovery20.md)
 #### [Document metadata fields](compliance20/document-metadata-fields.md)
 #### [Troubleshoot AzCopy](compliance20/troubleshooting-azcopy.md)
 
-## [Office 365 Advanced eDiscovery](office-365-advanced-ediscovery.md)
-### [Getting started in Advanced eDiscovery](quick-setup-for-advanced-ediscovery.md)
 
-### [Setting up cases](set-up-users-and-cases-in-advanced-ediscovery.md)
-#### [Defining issues for a case](define-issues-and-assign-users.md)
+## [Manage eDiscovery cases](ediscovery-cases.md)
+### [Office 365 Advanced eDiscovery](office-365-advanced-ediscovery.md)
+#### [Getting started in Advanced eDiscovery](quick-setup-for-advanced-ediscovery.md)
 
-### Collecting case data
-#### [Prepare data for Advanced eDiscovery](prepare-data-for-advanced-ediscovery.md)
-#### [Import non-Office 365 content to a case](import-non-office-365-data-into-advanced-ediscovery.md)
+#### [Setting up cases](set-up-users-and-cases-in-advanced-ediscovery.md)
+##### [Defining issues for a case](define-issues-and-assign-users.md)
 
-### [Processing case data](run-the-process-module-in-advanced-ediscovery.md)
-#### [Run the Process module and load data](run-the-process-module-and-load-data-in-advanced-ediscovery.md)
-#### [View Process module results](view-process-module-results-in-advanced-ediscovery.md)
+#### Collecting case data
+##### [Prepare search results for Advanced eDiscovery](prepare-search-results-for-advanced-ediscovery.md)
+##### [Load data into Advanced eDiscovery](prepare-data-for-advanced-ediscovery.md)
+##### [Import non-Office 365 content to a case](import-non-office-365-data-into-advanced-ediscovery.md)
 
-### Reviewing case data
-#### [Search and tag case data](search-and-tagging.md)
-#### [Making decisions about the review set](decision-based-on-the-results-in-advanced-ediscovery.md)
+#### [Processing case data](run-the-process-module-in-advanced-ediscovery.md)
+##### [Run the Process module and load data](run-the-process-module-and-load-data-in-advanced-ediscovery.md)
+##### [View Process module results](view-process-module-results-in-advanced-ediscovery.md)
 
-### [Analyzing case data](analyze-case-data-with-advanced-ediscovery.md)
-#### [Run Express Analysis](use-express-analysis-in-advanced-ediscovery.md)
-#### [Overview of document similarity (near duplicates)](understand-document-similarity-in-advanced-ediscovery.md)
-#### [View the results of analysis](view-analyze-results-in-advanced-ediscovery.md)
+#### Reviewing case data
+##### [Search and tag case data](search-and-tagging.md)
+##### [Making decisions about the review set](decision-based-on-the-results-in-advanced-ediscovery.md)
 
-### [Using the Relevance module](use-relevance-in-advanced-ediscovery.md)
-#### [Overview of Relevance assessment](assessment-in-relevance-in-advanced-ediscovery.md)
-#### [Perform Relevance assessment and tagging](tagging-and-assessment-in-advanced-ediscovery.md)
-#### [Set up Relevance training](manage-relevance-setup-in-advanced-ediscovery.md)
-#### [Perform Relevance training and tagging](tagging-and-relevance-training-in-advanced-ediscovery.md)
-#### [Track the Relevance training process](track-relevance-analysis-in-advanced-ediscovery.md)
-#### [Test the results of Relevance analysis](test-relevance-analysis-in-advanced-ediscovery.md)
-#### [Load additional data for Relevance training](set-up-loads-to-add-imported-files.md)
+#### [Analyzing case data](analyze-case-data-with-advanced-ediscovery.md)
+##### [Run Express Analysis](use-express-analysis-in-advanced-ediscovery.md)
+##### [Overview of document similarity (near duplicates)](understand-document-similarity-in-advanced-ediscovery.md)
+##### [View the results of analysis](view-analyze-results-in-advanced-ediscovery.md)
 
-### [Exporting case data](export-case-data-in-advanced-ediscovery.md)
-#### [Export data](export-results-in-advanced-ediscovery.md)
-#### [Export report fields](export-report-fields-in-advanced-ediscovery.md)
-#### [View batch history and export past results](view-batch-history-and-export-past-results.md)
+#### [Using the Relevance module](use-relevance-in-advanced-ediscovery.md)
+##### [Overview of Relevance assessment](assessment-in-relevance-in-advanced-ediscovery.md)
+##### [Perform Relevance assessment and tagging](tagging-and-assessment-in-advanced-ediscovery.md)
+##### [Set up Relevance training](manage-relevance-setup-in-advanced-ediscovery.md)
+##### [Perform Relevance training and tagging](tagging-and-relevance-training-in-advanced-ediscovery.md)
+##### [Track the Relevance training process](track-relevance-analysis-in-advanced-ediscovery.md)
+##### [Test the results of Relevance analysis](test-relevance-analysis-in-advanced-ediscovery.md)
+##### [Load additional data for Relevance training](set-up-loads-to-add-imported-files.md)
 
-### Configuring Advanced eDiscovery
-#### [Configure case and organization settings](define-case-and-tenant-settings-in-advanced-ediscovery.md)
-#### [Configure analysis settings](set-analyze-options-in-advanced-ediscovery.md)
-#### [Configure Ignore Text settings](set-ignore-text-in-advanced-ediscovery.md)
-#### [Configure highlighted keywords and other Relevance settings](define-highlighted-keywords-and-advanced-options.md)
+#### [Exporting case data](export-case-data-in-advanced-ediscovery.md)
+##### [Export data](export-results-in-advanced-ediscovery.md)
+##### [Export report fields](export-report-fields-in-advanced-ediscovery.md)
+##### [View batch history and export past results](view-batch-history-and-export-past-results.md)
 
-### Advanced eDiscovery reference
-#### [Use Advanced eDiscovery utilities](use-advanced-ediscovery-utilities.md)
-#### [Run reports](run-reports-in-advanced-ediscovery.md)
+#### Configuring Advanced eDiscovery
+##### [Configure case and organization settings](define-case-and-tenant-settings-in-advanced-ediscovery.md)
+##### [Configure analysis settings](set-analyze-options-in-advanced-ediscovery.md)
+##### [Configure Ignore Text settings](set-ignore-text-in-advanced-ediscovery.md)
+##### [Configure highlighted keywords and other Relevance settings](define-highlighted-keywords-and-advanced-options.md)
+
+#### Advanced eDiscovery reference
+##### [Use Advanced eDiscovery utilities](use-advanced-ediscovery-utilities.md)
+##### [Run reports](run-reports-in-advanced-ediscovery.md)
+
+### [Use a script to add users to a hold in an eDiscovery case](use-a-script-to-add-users-to-a-hold-in-ediscovery.md)
+### [Create a report on holds in eDiscovery cases](create-a-report-on-holds-in-ediscovery-cases.md)
+
+## [Assign eDiscovery permissions](assign-ediscovery-permissions.md)
+## [Set up compliance boundaries for eDiscovery investigations in Office 365](set-up-compliance-boundaries.md)
+## [eDiscovery solution series - Data spillage scenario - Search and purge](data-spillage-scenariosearch-and-purge.md)
+
+## Manage holds
+### [Create an eDiscovery hold](ediscovery-cases.md#step-4-place-content-locations-on-hold)
+### [Create a Litigation Hold](create-a-litigation-hold.md)
+### [Delete items in the Recoverable Items folder of cloud-based mailboxes on hold](delete-items-in-the-recoverable-items-folder-of-mailboxes-on-hold.md)
+### [Increase the Recoverable Items quota for mailboxes on hold](increase-the-recoverable-quota-for-mailboxes-on-hold.md)
+### [How to identify the type of hold placed on an Exchange Online mailbox](identify-a-hold-on-an-exchange-online-mailbox.md)
+### [Preserve Bcc and expanded distribution group recipients](preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery.md)
 
 # [Manage data investigations](datainvestigations/overview-data-investigations.md)
 ## [Release notes](datainvestigations/data-investigations-release-notes.md)
@@ -491,11 +481,18 @@
 
 # Compliance solutions
 ## [Microsoft Service Trust Portal](get-started-with-service-trust-portal.md)
-## [Compliance Manager](meet-data-protection-and-regulatory-reqs-using-microsoft-cloud.md)
+## [Compliance Manager (Classic)](meet-data-protection-and-regulatory-reqs-using-microsoft-cloud.md)
+## [Compliance Manager (Preview)](compliance-manager-overview.md)
+### [What's new in Compliance Manager (Preview)](compliance-manager-release-notes.md)
+### [Working with Compliance Manager (Preview)](working-with-compliance-manager.md)
+### [Compliance score methodology (Preview)](compliance-score-methodology.md)
 ## [Information barriers (Preview)](information-barriers.md)
 ### [Define information barrier policies (Preview)](define-information-barriers-policies.md)
 ### [Attributes for information barrier policies (Preview)](information-barriers-attributes.md)
 ### [How information barriers work in Microsoft Teams (Preview)](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams)
+## Customer Key
+### [Controlling your data in Office 365 using Customer Key](controlling-your-data-using-customer-key.md)
+### [Service encryption with Customer Key for Office 365 FAQ](service-encryption-with-customer-key-faq.md)
 ## [GDPR data subject request tool](manage-gdpr-data-subject-requests-with-the-dsr-case-tool.md)
 ## [Office 365 Information Protection for GDPR](office-365-information-protection-for-gdpr.md)
 ### [Overview: Office 365 Protection for GDPR](office-365-info-protection-for-gdpr-overview.md)
@@ -555,6 +552,9 @@
 ### [Customer-Managed Encryption Features](office-365-customer-managed-encryption-features.md)
 ### [Encryption Risks and Protections](office-365-encryption-risks-and-protections.md)
 ### [Encryption for Skype for Business, OneDrive for Business, SharePoint Online, and Exchange Online](office-365-encryption-for-skype-onedrive-sharepoint-and-exchange.md)
+### [How Exchange Online secures your email secrets](exchange-online-secures-email-secrets.md)
+### [How Exchange Online uses TLS to secure email connections in Office 365](exchange-online-uses-tls-to-secure-email-connections.md)
+### [Technical reference details about encryption in Office 365](technical-reference-details-about-encryption.md)
 ### [BitLocker and Distributed Key Manager (DKM) for Encryption](office-365-bitlocker-and-distributed-key-manager-for-encryption.md)
 ### [Encryption in Microsoft Dynamics 365](office-365-encryption-in-microsoft-dynamics-365.md)
 ### [Encryption in Azure](office-365-azure-encryption.md)
@@ -568,6 +568,9 @@
 ### [Tenant Isolation in the Office Graph and Delve](office-365-isolation-in-graph-and-delve.md)
 
 # Hybrid security capabilities
+## [Exchange Online mail encryption with AD RMS](information-rights-management-in-exchange-online.md)
+### [Configure IRM to use an on-premises AD RMS server](configure-irm-to-use-an-on-premises-ad-rms-server.md)
+
 ## [Exchange Online Protection](eop/exchange-online-protection-overview.md)
 ### [EOP features](eop/eop-features.md)
 ### [Feature permissions in EOP](eop/feature-permissions-in-eop.md)
@@ -610,6 +613,15 @@
 #### [Accessibility for people with disabilities](eop/accessibility-for-people-with-disabilities.md)
 #### [Sending mail to Office 365](sending-mail-to-office-365.md)
 #### [Services for non-customers](services-for-non-customers.md)
+
+# Legacy security and compliance capabilities
+## [S/MIME](s-mime-for-message-signing-and-encryption.md)
+### [S/MIME for message signing and encryption](s-mime-for-message-signing-and-encryption.md)
+### [Configure S/MIME settings for Outlook on the web](configure-s-mime-settings-for-outlook-web-app.md)
+### [Send and receive S/MIME signed and encrypted email](send-and-receive-s-mime-signed-and-encrypted-email.md)
+### [Sync user certificates to Office 365 for S/MIME](sync-user-certificates-to-office-365-for-s-mime.md)
+### [Set up virtual certificate collection to validate S/MIME](set-up-virtual-certificate-collection-to-validate-s-mime.md)
+
 # [Office 365 Enterprise](https://docs.microsoft.com/Office365/Enterprise)
 # [Office 365 for Business](https://docs.microsoft.com/office365/admin/admin-home)
 # [Microsoft 365](https://docs.microsoft.com/microsoft-365/)
