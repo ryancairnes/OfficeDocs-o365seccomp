@@ -109,7 +109,7 @@ Setting up and configuring EDM classification involves saving sensitive data in 
 > [!TIP]
 > If you want your changes to occur without confirmation, in Step 5, use this cmdlet instead: `New-DlpEdmSchema -FileData $edm`
     
-Now that the schema for your database of sensitive information is defined, the next step is to set up a rule package.
+Now that the schema for your database of sensitive information is defined, the next step is to [set up a rule package](#set-up-a-rule-package).
 
 #### Editing the schema for EDM 
 
@@ -137,8 +137,6 @@ If you want to make changes to your EDM classification configuration, such as ch
 > [!TIP]
 > If you want your changes to occur without confirmation, in Step 3, use this cmdlet instead: `Set-DlpEdmSchema -FileData $edm`
 
-You might need to edit your rule package as well. (See the [rule package](#set-up-a-rule-package) section in this article.)
-
 #### Removing the schema for EDM
 
 If you want to remove a schema you're using for EDM, follow these steps:
@@ -160,7 +158,6 @@ If you want to remove a schema you're using for EDM, follow these steps:
     
 > [!TIP]
 > If you want your changes to occur without confirmation, in Step 2, use this cmdlet instead: `Remove-DlpEdmSchema -Identity patientrecords -Confirm:$false`
-
 
 ### Set up a rule package
 
