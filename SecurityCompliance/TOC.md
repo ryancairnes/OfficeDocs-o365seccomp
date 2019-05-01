@@ -327,7 +327,7 @@
 #### [Getting started in Advanced eDiscovery](quick-setup-for-advanced-ediscovery.md)
 
 #### [Setting up cases](set-up-users-and-cases-in-advanced-ediscovery.md)
-###### [Defining issues for a case](define-issues-and-assign-users.md)
+##### [Defining issues for a case](define-issues-and-assign-users.md)
 
 #### Collecting case data
 ##### [Prepare search results for Advanced eDiscovery](prepare-search-results-for-advanced-ediscovery.md)
