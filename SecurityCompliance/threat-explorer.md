@@ -19,14 +19,15 @@ description: "Learn about Explorer (and real-time detections) in the Security &a
 
 # Threat Explorer (and real-time detections)
 
-If your organization has [Office 365 Advanced Threat Protection](office-365-atp.md) (Office 365 ATP), and you have the [necessary permissions](#required-licenses-and-permissions), you have either Threat Explorer (this is also referred to as Explorer) or real-time detections available in the Security & Compliance Center. 
+If your organization has [Office 365 Advanced Threat Protection](office-365-atp.md) (Office 365 ATP), and you have the [necessary permissions](#required-licenses-and-permissions), you have either Explorer or real-time detections available in the Security & Compliance Center (Go to **Threat management** > **Explorer** OR **Real-time detections**). 
 
-
-|ATP Plan 1  |ATP Plan 2  |
+|ATP Plan 2  |ATP Plan 1  |
 |---------|---------|
-|Real-time detections   | Threat Explorer      |
+| Threat Explorer <br/>![Threat explorer](media/threatmgmt-explorer.png)      |Real-time detections <br/>![Real-time detections](media/threatmgmt-realtimedetections.png)         |
 
-This powerful, near real-time tool enables your organization's Security Operations team to investigate and respond to threats effectively and efficiently. Here are some of the things you can do:
+Whether it's Explorer or Real-time detections, this powerful, near real-time tool enables your organization's Security Operations team to investigate and respond to threats effectively and efficiently. 
+
+Here are some of the things you can do:
 - [See malware that was detected by Office 365 security features](#see-malware-detected-in-email-by-technology)
 - [View data about phishing URLs and click verdict](#view-data-about-phishing-urls-and-click-verdict)
 - [Start an automated investigation and response process from a view in Explorer](#start-automated-investigation-and-response) (ATP Plan 2 only)
