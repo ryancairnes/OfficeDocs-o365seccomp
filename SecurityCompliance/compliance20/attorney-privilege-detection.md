@@ -1,5 +1,5 @@
 ---
-title: "Search limits in Advanced eDiscovery"
+title: "Set up attorney-client privilege detection in Advanced eDiscovery"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,6 +17,6 @@ ms.assetid:
 description: ""
 ---
 
-# Search limits in Advanced eDiscovery
+# Set up attorney-client privilege detection in Advanced eDiscovery
 
-Content coming soon.
+(add content here)

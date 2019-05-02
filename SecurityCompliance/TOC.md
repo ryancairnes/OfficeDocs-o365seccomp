@@ -260,22 +260,8 @@
 ### [Clone a Content Search](clone-a-content-search.md)
 
 # [Manage legal investigations](manage-legal-investigations.md)
-## [Create and manage eDiscovery cases](ediscovery-cases.md)
-## [Assign eDiscovery permissions](assign-ediscovery-permissions.md)
-## [Set up compliance boundaries for eDiscovery investigations in Office 365](set-up-compliance-boundaries.md)
-## [eDiscovery solution series - Data spillage scenario - Search and purge](data-spillage-scenariosearch-and-purge.md)
-## [Prepare search results for Advanced eDiscovery](prepare-search-results-for-advanced-ediscovery.md)
-## [Use a script to add users to a hold in an eDiscovery case](use-a-script-to-add-users-to-a-hold-in-ediscovery.md)
-## [Create a report on holds in eDiscovery cases](create-a-report-on-holds-in-ediscovery-cases.md)
-## Manage holds
-### [Create an eDiscovery hold](ediscovery-cases.md#step-4-place-content-locations-on-hold)
-### [Create a Litigation Hold](create-a-litigation-hold.md)
-### [Delete items in the Recoverable Items folder of cloud-based mailboxes on hold](delete-items-in-the-recoverable-items-folder-of-mailboxes-on-hold.md)
-### [Increase the Recoverable Items quota for mailboxes on hold](increase-the-recoverable-quota-for-mailboxes-on-hold.md)
-### [How to identify the type of hold placed on an Exchange Online mailbox](identify-a-hold-on-an-exchange-online-mailbox.md)
-### [Preserve Bcc and expanded distribution group recipients](preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery.md)
 
-## [Advanced eDiscovery (Preview) in Microsoft 365](compliance20/overview-ediscovery-20.md)
+## [Advanced eDiscovery solution in Microsoft 365](compliance20/overview-ediscovery-20.md)
 ### [Release notes](compliance20/release-notes-ediscovery20.md)
 ### [Create a new case](compliance20/create-new-ediscovery-case.md)
 
@@ -300,26 +286,26 @@
 #### [Create a search to collect data](compliance20/create-search-to-collect-data.md)
 #### [Build search queries](compliance20/building-search-queries.md)
 #### [Search statistics](compliance20/search-statistics.md)
-#### [Add search results to a working set](compliance20/add-data-to-working-set.md)
+#### [Add search results to a review set](compliance20/add-data-to-review-set.md)
 
-### [Manage working sets](compliance20/managing-working-sets.md)
-#### [Load non-Office 365 data into a working set](compliance20/load-non-office365-data.md)
-#### [Add data to another working set](compliance20/add-data-to-working-set-from-another-working-set.md)
+### [Manage review sets](compliance20/managing-review-sets.md)
+#### [Load non-Office 365 data into a review set](compliance20/load-non-office365-data.md)
+#### [Add data to another review set](compliance20/add-data-to-review-set-from-another-review-set.md)
 #### [Manage load sets](compliance20/manage-load-sets.md)
 
-### [Review case data](compliance20/reviewing-data-in-working-set.md)
-#### [View documents in a working set](compliance20/view-documents-in-working-set.md)
-#### [Query the data in a working set](compliance20/working-set-search.md)
-#### [Tag documents in a working set](compliance20/tagging-documents.md)
+### [Review case data](compliance20/reviewing-data-in-review-set.md)
+#### [View documents in a review set](compliance20/view-documents-in-review-set.md)
+#### [Query the data in a review set](compliance20/review-set-search.md)
+#### [Tag documents in a review set](compliance20/tagging-documents.md)
 
-### [Analyze case data](compliance20/analyzing-data-in-working-set.md)
+### [Analyze case data](compliance20/analyzing-data-in-review-set.md)
 #### [Near duplicate detection](compliance20/near-duplicates.md)
 #### [Email threading](compliance20/email-threading.md)
 #### [Themes](compliance20/themes.md)
 #### [Use the Relevance module to analyze data](compliance20/using-relevance.md)
 
 ### [Export case data](compliance20/exporting-data-ediscover20.md)
-#### [Export documents from a working set](compliance20/export-documents-from-working-set.md)
+#### [Export documents from a review set](compliance20/export-documents-from-review-set.md)
 #### [Download export jobs](compliance20/download-export-jobs.md)
 
 ### [Manage jobs](compliance20/managing-jobs-ediscovery20.md)
@@ -329,58 +315,76 @@
 #### [Add or remove members from a case](compliance20/add-remove-members.md)
 #### [Configure search and analytics settings](compliance20/configure-search-analytics-settings.md)
 
-### Advanced eDiscovery (Preview) reference
-#### [Limits in Advanced eDiscovery (Preview)](compliance20/limits-ediscovery20.md)
+### Advanced eDiscovery reference
+#### [Limits in Advanced eDiscovery](compliance20/limits-ediscovery20.md)
 #### [Supported file types](compliance20/supported-filetypes-ediscovery20.md)
 #### [Document metadata fields](compliance20/document-metadata-fields.md)
 #### [Troubleshoot AzCopy](compliance20/troubleshooting-azcopy.md)
 
-## [Office 365 Advanced eDiscovery](office-365-advanced-ediscovery.md)
-### [Getting started in Advanced eDiscovery](quick-setup-for-advanced-ediscovery.md)
 
-### [Setting up cases](set-up-users-and-cases-in-advanced-ediscovery.md)
-#### [Defining issues for a case](define-issues-and-assign-users.md)
+## [Manage eDiscovery cases](ediscovery-cases.md)
+### [Office 365 Advanced eDiscovery](office-365-advanced-ediscovery.md)
+#### [Getting started in Advanced eDiscovery](quick-setup-for-advanced-ediscovery.md)
 
-### Collecting case data
-#### [Prepare data for Advanced eDiscovery](prepare-data-for-advanced-ediscovery.md)
-#### [Import non-Office 365 content to a case](import-non-office-365-data-into-advanced-ediscovery.md)
+#### [Setting up cases](set-up-users-and-cases-in-advanced-ediscovery.md)
+##### [Defining issues for a case](define-issues-and-assign-users.md)
 
-### [Processing case data](run-the-process-module-in-advanced-ediscovery.md)
-#### [Run the Process module and load data](run-the-process-module-and-load-data-in-advanced-ediscovery.md)
-#### [View Process module results](view-process-module-results-in-advanced-ediscovery.md)
+#### Collecting case data
+##### [Prepare search results for Advanced eDiscovery](prepare-search-results-for-advanced-ediscovery.md)
+##### [Load data into Advanced eDiscovery](prepare-data-for-advanced-ediscovery.md)
+##### [Import non-Office 365 content to a case](import-non-office-365-data-into-advanced-ediscovery.md)
 
-### Reviewing case data
-#### [Search and tag case data](search-and-tagging.md)
-#### [Making decisions about the review set](decision-based-on-the-results-in-advanced-ediscovery.md)
+#### [Processing case data](run-the-process-module-in-advanced-ediscovery.md)
+##### [Run the Process module and load data](run-the-process-module-and-load-data-in-advanced-ediscovery.md)
+##### [View Process module results](view-process-module-results-in-advanced-ediscovery.md)
 
-### [Analyzing case data](analyze-case-data-with-advanced-ediscovery.md)
-#### [Run Express Analysis](use-express-analysis-in-advanced-ediscovery.md)
-#### [Overview of document similarity (near duplicates)](understand-document-similarity-in-advanced-ediscovery.md)
-#### [View the results of analysis](view-analyze-results-in-advanced-ediscovery.md)
+#### Reviewing case data
+##### [Search and tag case data](search-and-tagging.md)
+##### [Making decisions about the review set](decision-based-on-the-results-in-advanced-ediscovery.md)
 
-### [Using the Relevance module](use-relevance-in-advanced-ediscovery.md)
-#### [Overview of Relevance assessment](assessment-in-relevance-in-advanced-ediscovery.md)
-#### [Perform Relevance assessment and tagging](tagging-and-assessment-in-advanced-ediscovery.md)
-#### [Set up Relevance training](manage-relevance-setup-in-advanced-ediscovery.md)
-#### [Perform Relevance training and tagging](tagging-and-relevance-training-in-advanced-ediscovery.md)
-#### [Track the Relevance training process](track-relevance-analysis-in-advanced-ediscovery.md)
-#### [Test the results of Relevance analysis](test-relevance-analysis-in-advanced-ediscovery.md)
-#### [Load additional data for Relevance training](set-up-loads-to-add-imported-files.md)
+#### [Analyzing case data](analyze-case-data-with-advanced-ediscovery.md)
+##### [Run Express Analysis](use-express-analysis-in-advanced-ediscovery.md)
+##### [Overview of document similarity (near duplicates)](understand-document-similarity-in-advanced-ediscovery.md)
+##### [View the results of analysis](view-analyze-results-in-advanced-ediscovery.md)
 
-### [Exporting case data](export-case-data-in-advanced-ediscovery.md)
-#### [Export data](export-results-in-advanced-ediscovery.md)
-#### [Export report fields](export-report-fields-in-advanced-ediscovery.md)
-#### [View batch history and export past results](view-batch-history-and-export-past-results.md)
+#### [Using the Relevance module](use-relevance-in-advanced-ediscovery.md)
+##### [Overview of Relevance assessment](assessment-in-relevance-in-advanced-ediscovery.md)
+##### [Perform Relevance assessment and tagging](tagging-and-assessment-in-advanced-ediscovery.md)
+##### [Set up Relevance training](manage-relevance-setup-in-advanced-ediscovery.md)
+##### [Perform Relevance training and tagging](tagging-and-relevance-training-in-advanced-ediscovery.md)
+##### [Track the Relevance training process](track-relevance-analysis-in-advanced-ediscovery.md)
+##### [Test the results of Relevance analysis](test-relevance-analysis-in-advanced-ediscovery.md)
+##### [Load additional data for Relevance training](set-up-loads-to-add-imported-files.md)
 
-### Configuring Advanced eDiscovery
-#### [Configure case and organization settings](define-case-and-tenant-settings-in-advanced-ediscovery.md)
-#### [Configure analysis settings](set-analyze-options-in-advanced-ediscovery.md)
-#### [Configure Ignore Text settings](set-ignore-text-in-advanced-ediscovery.md)
-#### [Configure highlighted keywords and other Relevance settings](define-highlighted-keywords-and-advanced-options.md)
+#### [Exporting case data](export-case-data-in-advanced-ediscovery.md)
+##### [Export data](export-results-in-advanced-ediscovery.md)
+##### [Export report fields](export-report-fields-in-advanced-ediscovery.md)
+##### [View batch history and export past results](view-batch-history-and-export-past-results.md)
 
-### Advanced eDiscovery reference
-#### [Use Advanced eDiscovery utilities](use-advanced-ediscovery-utilities.md)
-#### [Run reports](run-reports-in-advanced-ediscovery.md)
+#### Configuring Advanced eDiscovery
+##### [Configure case and organization settings](define-case-and-tenant-settings-in-advanced-ediscovery.md)
+##### [Configure analysis settings](set-analyze-options-in-advanced-ediscovery.md)
+##### [Configure Ignore Text settings](set-ignore-text-in-advanced-ediscovery.md)
+##### [Configure highlighted keywords and other Relevance settings](define-highlighted-keywords-and-advanced-options.md)
+
+#### Advanced eDiscovery reference
+##### [Use Advanced eDiscovery utilities](use-advanced-ediscovery-utilities.md)
+##### [Run reports](run-reports-in-advanced-ediscovery.md)
+
+### [Use a script to add users to a hold in an eDiscovery case](use-a-script-to-add-users-to-a-hold-in-ediscovery.md)
+### [Create a report on holds in eDiscovery cases](create-a-report-on-holds-in-ediscovery-cases.md)
+
+## [Assign eDiscovery permissions](assign-ediscovery-permissions.md)
+## [Set up compliance boundaries for eDiscovery investigations in Office 365](set-up-compliance-boundaries.md)
+## [eDiscovery solution series - Data spillage scenario - Search and purge](data-spillage-scenariosearch-and-purge.md)
+
+## Manage holds
+### [Create an eDiscovery hold](ediscovery-cases.md#step-4-place-content-locations-on-hold)
+### [Create a Litigation Hold](create-a-litigation-hold.md)
+### [Delete items in the Recoverable Items folder of cloud-based mailboxes on hold](delete-items-in-the-recoverable-items-folder-of-mailboxes-on-hold.md)
+### [Increase the Recoverable Items quota for mailboxes on hold](increase-the-recoverable-quota-for-mailboxes-on-hold.md)
+### [How to identify the type of hold placed on an Exchange Online mailbox](identify-a-hold-on-an-exchange-online-mailbox.md)
+### [Preserve Bcc and expanded distribution group recipients](preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery.md)
 
 # [Manage data investigations](datainvestigations/overview-data-investigations.md)
 ## [Release notes](datainvestigations/data-investigations-release-notes.md)

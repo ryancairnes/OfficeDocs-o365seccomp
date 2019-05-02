@@ -1,5 +1,5 @@
 ---
-title: "Advanced eDiscovery (Preview) limits"
+title: "Advanced eDiscovery limits"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -14,18 +14,18 @@ search.appverid:
 description: ""
 ---
 
-# Limits in Advanced eDiscovery (Preview)
+# Limits in Advanced eDiscovery
 
-This article describes the limits in Advanced eDiscovery (Preview).
+This article describes the limits in Advanced eDiscovery.
 
 ## Case limits
 
-The following table lists the limits for cases in Advanced eDiscovery (Preview).
+The following table lists the limits for cases in Advanced eDiscovery.
 
 |**Description of limit**|**Limit**|
   |:-----|:-----|
   |Maximum number of cases.  <br/> |50  <br/> |
-  |Total number of documents that can be added to a case (for all working sets in the case).  <br/> |1 million  <br/> |
+  |Total number of documents that can be added to a case (for all review sets in the case).  <br/> |1 million  <br/> |
   |Total file size per load.  <br/> |100 GB  <br/> |
   |Maximum size of single file.   <br/> |100 MB <sup>1</sup> <br/> |
   |Maximum number of characters extracted from a single file.  <br/> |10 million <sup>1</sup> <br/> |
