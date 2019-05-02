@@ -91,9 +91,9 @@ The report refreshes to show data about email messages that people in your organ
 
 For details on this, see [Example: A security administrator triggers an investigation from Threat Explorer](automated-investigation-response-office.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer).
 
-## More ways to use Explorer
+## More ways to use Explorer (or real-time detections)
 
-In addition to the scenarios outlined in this article, you have many more reporting options available with Explorer. 
+In addition to the scenarios outlined in this article, you have many more reporting options available with Explorer (or real-time detections). 
 - [Find and investigate malicious email that was delivered](investigate-malicious-email-that-was-delivered.md)
 - [View malicious files detected in SharePoint Online, OneDrive, and Microsoft Teams](malicious-files-detected-in-spo-odb-or-teams.md)
 - [Get an overview of the views in Threat Explorer](threat-explorer-views.md)
