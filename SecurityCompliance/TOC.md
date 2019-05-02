@@ -154,7 +154,7 @@
 #### [Keep users safe with threat investigation and response](keep-users-safe-with-office-365-ti.md)
 #### [Find and investigate malicious email that was delivered](investigate-malicious-email-that-was-delivered.md)
 ### [Automated investigation and response](automated-investigation-response-office.md)
-### [Threat Explorer and real-time detections](threat-explorer.md)
+### [Threat Explorer](use-explorer-in-security-and-compliance.md)
 #### [Threat Explorer views](threat-explorer-views.md)
 ### [Threat Trackers](threat-trackers.md)
 ### [Attack Simulator in Office 365](attack-simulator.md)
