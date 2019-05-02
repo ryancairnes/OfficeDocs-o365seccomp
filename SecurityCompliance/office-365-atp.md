@@ -3,7 +3,7 @@ title: "Office 365 Advanced Threat Protection"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 03/28/2019
+ms.date: 05/02/2019
 ms.audience: Admin
 ms.topic: hub-page
 ms.service: O365-seccomp
@@ -33,6 +33,10 @@ Office 365 Advanced Threat Protection (ATP) safeguards your organization against
 
 - [Automated investigation and response capabilities](#save-time-with-automated-investigation-and-response): Save time and effort investigating and mitigating threats.
 
+## Office 365 ATP Plan 1 and Plan 2
+
+ATP is included in Office 365 E5; however, ATP Plan and ATP Plan 2 are each available as an add-on for certain subscriptions. To learn more, see [Feature availability across ATP plans](https://docs.microsoft.com/en-us/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#feature-availability-across-advanced-threat-protection-atp-plans).
+
 ## Configure ATP policies
 
 Office 365 ATP provides numerous tools to set an appropriate level of protection for your organization. 
@@ -53,7 +57,17 @@ The policies that are defined for your organization determine the behavior and p
 
 Office 365 ATP includes an advanced [reporting dashboard](view-reports-for-atp.md) to monitor your ATP performance. You can access it at **Reports > Dashboard** in the Security & Compliance Center. 
 
-Reports update in real-time, providing you with the latest insights. These reports also provide recommendations and alert you to imminent threats. Predefined reports include [Threat Explorer](use-explorer-in-security-and-compliance.md), the [Threat Protection Status report](view-reports-for-atp.md#threat-protection-status-report), the [ATP File Types report](view-reports-for-atp.md#atp-file-types-report), the [ATP Message Disposition report](view-reports-for-atp.md#atp-message-disposition-report) and more. 
+Reports update in real-time, providing you with the latest insights. These reports also provide recommendations and alert you to imminent threats. Predefined reports include the following: 
+
+- [Threat Explorer](use-explorer-in-security-and-compliance.md) (this report is available in ATP Plan 2)
+
+- [Threat Protection Status report](view-reports-for-atp.md#threat-protection-status-report)
+
+- [ATP File Types report](view-reports-for-atp.md#atp-file-types-report)
+
+- [ATP Message Disposition report](view-reports-for-atp.md#atp-message-disposition-report)
+
+- ... and more. 
 
 ## Use threat investigation and response capabilities
 
@@ -89,7 +103,7 @@ For more information, see:
 
 ## Get Office 365 ATP
 
-Office 365 ATP Plan 2 is included in Office 365 Enterprise E5, Office 365 Education A5, and Microsoft 365 Business. If your subscription does not include Office 365 ATP, you can potentially purchase ATP as an add-on. To learn more, see the following resources:
+Office 365 ATP Plan 2 is included in Office 365 Enterprise E5, Office 365 Education A5, and Microsoft 365 Business. If your subscription does not include Office 365 ATP, you can purchase ATP Plan 1 or ATP Plan 2 as an add-on to certain subscriptions. To learn more, see the following resources:
 
 - See [Office 365 Advanced Threat Protection (ATP) availability](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#office-365-advanced-threat-protection-atp-availability) for a list of subscriptions that include ATP plans.
 

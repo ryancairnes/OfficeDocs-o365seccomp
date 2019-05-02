@@ -19,7 +19,7 @@ description: "Learn about Explorer (also called Threat Explorer) in the Security
 
 # Use Threat Explorer in the Security &amp; Compliance Center
 
-If your organization has [Office 365 Advanced Threat Protection](office-365-atp.md) (ATP) Plan 1 or Plan 2, and you have the necessary permissions, you can use Threat Explorer to identify and analyze threats. Also referred to as Explorer or real-time reports (depending on your subscription), this report is a powerful, near real-time tool to help your Security Operations team investigate and respond to threats in the Security &amp; Compliance Center. 
+If your organization has [Office 365 Advanced Threat Protection](office-365-atp.md) (ATP) Plan 2, and you have the necessary permissions, you can use Threat Explorer to identify and analyze threats. Also referred to as Explorer or real-time reports (depending on your subscription), this report is a powerful, near real-time tool to help your Security Operations team investigate and respond to threats in the Security &amp; Compliance Center. 
 
 Here are some of the things you can do:
 - [See malware that was detected by Office 365 security features](#see-malware-detected-in-email-by-technology)
@@ -104,7 +104,7 @@ The Threat Protection Status report looks similar to Explorer, and shows details
 
 |Threat Protection Status report  |Explorer (or real-time detections)  |
 |---------|---------|
-|Available to customers who have Exchange      |         |
+|Available to customers who have Exchange Online Protection or Office 365 Advanced Threat Protection     |         |
 |Row2     |         |
 |Row3     |         |
 
