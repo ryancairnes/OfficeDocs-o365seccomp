@@ -6,7 +6,7 @@ manager: laurawi
 ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
-ms.date: 05/01/2019
+ms.date: 05/02/2019
 localization_priority: Priority
 ms.collection: 
 - M365-security-compliance
@@ -49,11 +49,9 @@ EDM classification enables you to create custom sensitive information types that
 |---------|---------|
 |[Part 1: Set up EDM classification](#part-1-set-up-edm-classification) |- Read access to the sensitive data<br/>- Ability to define a database schema in .xml format (this article includes an example)<br/>- Ability to create a rule package in .xml format (this article includes an example)<br/>- Admin permissions to upload the database schema file and rule package file to the Security & Compliance Center (using PowerShell) |
 |(As needed)<br/>- [Edit the schema for EDM](#editing-the-schema-for-edm) <br/>- [Remove the schema for EDM](#removing-the-schema-for-edm)|- Existing edm.xml file ([defining the schema](#define-the-schema-for-your-database-of-sensitive-information)) <br/>- Admin permissions for the Security & Compliance Center (using PowerShell) |
-|[Part 2: Index and upload the sensitive data](#part-2-index-and-upload-the-sensitive-data) |- Custom security group and user account on a Windows machine<br/>- Ability to install and authorize the EDM Upload Agent<br/>- Work or school account for Office 365 that has admin permissions (global administrator, compliance administrator, or Exchange Online administrator) |
-|(As needed)<br/>[Refresh the database of sensitive information](#refreshing-your-sensitive-information-database) |- Read access to the sensitive data<br/>- Process or schedule for refreshing the data (.csv file)<br/>- Windows machine with EDM Upload Agent installed<br/>- Work or school account for Office 365 that has admin permissions (global administrator, compliance administrator, or Exchange Online administrator)  |
+|[Part 2: Index and upload the sensitive data](#part-2-index-and-upload-the-sensitive-data) |- Custom security group and user account<br/>- Ability to install and authorize the EDM Upload Agent |
+|(As needed)<br/>[Refresh the database of sensitive information](#refreshing-your-sensitive-information-database) |- Read access to the sensitive data<br/>- Process/schedule for refreshing the data<br/>- Windows machine with EDM Upload Agent<br/> |
 |[Part 3: Use EDM classification with your Microsoft cloud services](#part-3-use-edm-classification-with-your-microsoft-cloud-services) |- Office 365 or Microsoft 365 subscription that includes DLP<br/>- EDM classification feature enabled (this is currently in preview) |
-
-
 
 ## Part 1: Set up EDM classification
 
@@ -247,7 +245,7 @@ During this phase, you set up a custom security group and user account, and set 
 
 ### Set up the EDM Upload Agent
 
-1. As an administrator on a Windows machine, create a security group and name it `EDM_DataUploaders`. Then add the EDM_DataUploaders security group to the Administrators group in Windows.
+1. As a global administrator, go to the admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) and create a security group called `EDM_DataUploaders`.
 
 2. Create a new user account for the Windows machine, and add that account to the EDM_DataUploaders security group.
 
