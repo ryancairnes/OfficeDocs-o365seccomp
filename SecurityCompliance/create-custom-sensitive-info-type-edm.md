@@ -288,7 +288,7 @@ At this point, you are ready to use EDM classification with your Microsoft cloud
 
 ### Refreshing your sensitive information database
 
-You can refresh your sensitive information database daily or weekly. When your .csv file is refreshed, use the EDM Upload Tool to re-index the sensitive data and then re-upload the indexed data. To get help with this, see [Index and upload the sensitive data](#index-and-upload-the-sensitive-data) (in this article). 
+You can refresh your sensitive information database daily or weekly. When your .csv file is refreshed, use the EDM Upload Tool to re-index the sensitive data and then re-upload the indexed data (see [Index and upload the sensitive data](#index-and-upload-the-sensitive-data)). 
 
 ### Use Task Scheduler to save time
 
