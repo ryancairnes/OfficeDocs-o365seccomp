@@ -33,7 +33,7 @@ Here are some of the things you can do:
 - [See malware that was detected by Office 365 security features](#see-malware-detected-in-email-by-technology)
 - [View data about phishing URLs and click verdict](#view-data-about-phishing-urls-and-click-verdict)
 - [Start an automated investigation and response process from a view in Explorer](#start-automated-investigation-and-response) (ATP Plan 2 only)
-- ... [and more](#more-ways-to-use-explorer)!
+- ... and [more](#more-ways-to-use-explorer-or-real-time-detections)!
 
 ## See malware detected in email by technology
 
