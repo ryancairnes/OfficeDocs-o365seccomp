@@ -25,17 +25,15 @@ If your organization has [Office 365 Advanced Threat Protection](office-365-atp.
 |---------|---------|
 | Threat Explorer <br/>![Threat explorer](media/threatmgmt-explorer.png)      |Real-time detections <br/>![Real-time detections](media/threatmgmt-realtimedetections.png)         |
 
-Whether it's Explorer or Real-time detections, this powerful, near real-time tool enables your organization's Security Operations team to investigate and respond to threats effectively and efficiently. 
+Whether you have Explorer or Real-time detections, this powerful, near real-time tool enables your organization's Security Operations team to investigate and respond to threats effectively and efficiently. 
+
+![Go to Threat management \> Explorer](media/cab32fa2-66f1-4ad5-bc1d-2bac4dbeb48c.png)
 
 Here are some of the things you can do:
 - [See malware that was detected by Office 365 security features](#see-malware-detected-in-email-by-technology)
 - [View data about phishing URLs and click verdict](#view-data-about-phishing-urls-and-click-verdict)
 - [Start an automated investigation and response process from a view in Explorer](#start-automated-investigation-and-response) (ATP Plan 2 only)
 - ... [and more](#more-ways-to-use-explorer)!
-
-To use this report, in the Security &amp; Compliance Center, go to **Threat management**, and then choose **Explorer** (or **Real-time detections**).
-
-![Go to Threat management \> Explorer](media/cab32fa2-66f1-4ad5-bc1d-2bac4dbeb48c.png)
 
 ## See malware detected in email by technology
 
