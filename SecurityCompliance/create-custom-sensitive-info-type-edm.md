@@ -47,8 +47,8 @@ EDM classification enables you to create custom sensitive information types that
 
 |Phase  |What's needed  |
 |---------|---------|
-|[Part 1: Set up EDM classification](#part-1-set-up-edm-classification)<br/><br/>(As needed)<br/>- [Edit the schema for EDM](#editing-the-schema-for-edm) <br/>- [Remove the schema for EDM](#removing-the-schema-for-edm) |- Read access to the sensitive data<br/>- Database schema in .xml format (an example is included)<br/>- Rule package in .xml format (an example is included)<br/>- Admin permissions to upload the database schema file and rule package file to the Security & Compliance Center (using PowerShell) |
-|[Part 2: Index and upload the sensitive data](#part-2-index-and-upload-the-sensitive-data)<br/><br/>(As needed)<br/>[Refresh the database of sensitive information](#refreshing-your-sensitive-information-database) |- Custom security group and user account<br/>- EDM Upload Agent tool<br/>- Process/schedule for refreshing the data|
+|[Part 1: Set up EDM classification](#part-1-set-up-edm-classification)<br/><br/>(As needed)<br/>- [Edit the schema for EDM](#editing-the-schema-for-edm) <br/>- [Remove the schema for EDM](#removing-the-schema-for-edm) |- Read access to the sensitive data<br/>- Database schema in .xml format (an example is included)<br/>- Rule package in .xml format (an example is included)<br/>- Admin permissions to the Security & Compliance Center (using PowerShell) |
+|[Part 2: Index and upload the sensitive data](#part-2-index-and-upload-the-sensitive-data)<br/><br/>(As needed)<br/>[Refresh the data](#refreshing-your-sensitive-information-database) |- Custom security group and user account<br/>- EDM Upload Agent tool<br/>- Process/schedule for refreshing the data|
 |[Part 3: Use EDM classification with your Microsoft cloud services](#part-3-use-edm-classification-with-your-microsoft-cloud-services) |- Office 365 subscription with DLP<br/>- EDM classification feature enabled (currently in preview) |
 
 ## Part 1: Set up EDM classification
