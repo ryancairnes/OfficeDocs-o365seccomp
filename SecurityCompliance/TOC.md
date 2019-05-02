@@ -232,8 +232,6 @@
 ## More information about data governance
 ### [Watch videos from the Microsoft Data Governance team](https://go.microsoft.com/fwlink/?linkid=867039)
 
-
-
 # [Search for content](search-for-content.md)
 ## [Use Content Search](content-search.md)
 ### [Keyword queries and search conditions for Content Search](keyword-queries-and-search-conditions.md)
@@ -486,7 +484,7 @@
 ### [Isolated SharePoint Online team site dev/test environment](isolated-sharepoint-online-team-site-dev-test-environment.md)
 ## [SIEM server integration](siem-server-integration.md)
 
-# Compliance tools and solutions
+# Regulatory compliance solutions
 ## [Microsoft Service Trust Portal](get-started-with-service-trust-portal.md)
 ## [Compliance Manager (Classic)](meet-data-protection-and-regulatory-reqs-using-microsoft-cloud.md)
 ## [Compliance Manager (Preview)](compliance-manager-overview.md)
