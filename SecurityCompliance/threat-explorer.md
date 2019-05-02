@@ -1,5 +1,5 @@
 ---
-title: "Use Threat Explorer in the Security &amp; Compliance Center"
+title: "Threat Explorer"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
@@ -17,9 +17,11 @@ ms.collection:
 description: "Learn about Explorer (also called Threat Explorer) in the Security &amp; Compliance Center."
 ---
 
-# Use Threat Explorer in the Security &amp; Compliance Center
+# Threat Explorer (Office 365 ATP Plan 2)
 
-If your organization has [Office 365 Advanced Threat Protection](office-365-atp.md) (ATP) Plan 2, and you have the necessary permissions, you can use Threat Explorer to identify and analyze threats. Also referred to as Explorer or real-time reports (depending on your subscription), this report is a powerful, near real-time tool to help your Security Operations team investigate and respond to threats in the Security &amp; Compliance Center. 
+If your organization has [Office 365 Advanced Threat Protection](office-365-atp.md) (ATP) Plan 2, and you have the necessary permissions, you can use Threat Explorer to identify and analyze threats. 
+
+Also referred to as Explorer or real-time reports (depending on your subscription), this report is a powerful, near real-time tool to help your Security Operations team investigate and respond to threats in the Security &amp; Compliance Center. 
 
 Here are some of the things you can do:
 - [See malware that was detected by Office 365 security features](#see-malware-detected-in-email-by-technology)
@@ -96,18 +98,6 @@ In addition to the scenarios outlined in this article, you have many more report
 - [Find and investigate malicious email that was delivered](investigate-malicious-email-that-was-delivered.md)
 - [View malicious files detected in SharePoint Online, OneDrive, and Microsoft Teams](malicious-files-detected-in-spo-odb-or-teams.md)
 - [Get an overview of the views in Threat Explorer](threat-explorer-views.md)
-
-## Comparing Explorer to the Threat Protection Status report
-
-The Threat Protection Status report looks similar to Explorer, and shows details about detected malware and phishing attempts. However, there are some important differences between these reports, as summarized int he following table:
-
-
-|Threat Protection Status report  |Explorer (or real-time detections)  |
-|---------|---------|
-|Available to customers who have Exchange Online Protection or Office 365 Advanced Threat Protection     |         |
-|Row2     |         |
-|Row3     |         |
-
 
 ## Required licenses and permissions
 
