@@ -16,13 +16,16 @@ description: "Learn about the various kinds of views available in Threat Explore
 
 # Views in Threat Explorer and real-time detections
 
-[Threat Explorer](use-explorer-in-security-and-compliance.md) (and real-time detections) is a powerful, near real-time tool to help Security Operations teams investigate and respond to threats in the Security &amp; Compliance Center. Explorer (and real-time detections) displays information about suspected malware and phish in email and files in Office 365, as well as other security threats and risks to your organization. 
+[Threat Explorer](use-explorer-in-security-and-compliance.md) (and the real-time detections report) is a powerful, near real-time tool to help Security Operations teams investigate and respond to threats in the Security &amp; Compliance Center. Explorer (and the real-time detections report) displays information about suspected malware and phish in email and files in Office 365, as well as other security threats and risks to your organization. 
 
-When you first open Explorer, the default view shows email malware detections for the past 7 days. 
+- If you have [Office 365 Advanced Threat Protection](office-365-atp.md) (ATP) Plan 2, then you have Explorer.
+- If you have Office 365 ATP Plan 1, then you have real-time detections.
+
+When you first open Explorer (or the real-time detections report), the default view shows email malware detections for the past 7 days. 
 
 ![Threat Explorer](media/ThreatExplorerFirstOpened.png)
 
-Explorer can also show security protection features in Office 365, including [Safe Links](atp-safe-links.md) and [Safe Attachments](atp-safe-attachments.md) and can be modified to show data for the past 30 days. 
+Explorer (and real-time detections) can also show security protection features in Office 365, including [Safe Links](atp-safe-links.md) and [Safe Attachments](atp-safe-attachments.md) and can be modified to show data for the past 30 days. 
 
 > [!NOTE]
 > If you have a trial subscription for Office 365 Advanced Threat Protection Plan 2 or Office 365 E5, you will only see detections and email data for the past 7 days.
