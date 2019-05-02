@@ -39,7 +39,7 @@ Here are some of the things you can do:
 
 Suppose you want to see malware that was detected in email, and by what technology in Office 365. To do this, use the [Email > Malware](threat-explorer-views.md#email--malware) view of Explorer.
 
-1. In the Security & Compliance Center ([https://protection.office.com](https://protection.office.com)), choose **Threat management** > **Explorer** (or **Real-time detections**).
+1. In the Security & Compliance Center ([https://protection.office.com](https://protection.office.com)), choose **Threat management** > **Explorer** (or **Real-time detections**). (In our example, we use Explorer.)
 
 2. In the **View** menu, choose **Email** > **Malware**.<br/>![View menu for Explorer](media/ExplorerViewEmailMalwareMenu.png)<br/>
 
@@ -53,7 +53,7 @@ The report refreshes to show the results malware detected in email, using the te
 
 Suppose you want to see phishing attempts through URLs in email, including a list of URLs that were allowed, blocked, and overridden.  Identifying URLs that were clicked requires [ATP Safe links](atp-safe-links.md). (Make sure you have set up and applied [ATP Safe Links policies](set-up-atp-safe-links-policies.md) to your users for click-time protection and logging of click verdicts by ATP Safe Links.) To review phish URLs in messages and clicks on URLs in phish messages, use the [Email > Phish](threat-explorer-views.md#email--phish) view of Explorer.
 
-1. In the Security & Compliance Center ([https://protection.office.com](https://protection.office.com)), choose **Threat management** > **Explorer**.
+1. In the Security & Compliance Center ([https://protection.office.com](https://protection.office.com)), choose **Threat management** > **Explorer** (or **Real-time detections**). (In our example, we use Explorer.)
 
 2. In the **View** menu, choose **Email** > **Phish**.<br/>![View menu for Explorer](media/ExplorerViewEmailPhishMenu.png)<br/>
 
@@ -90,11 +90,11 @@ The report refreshes to show data about email messages that people in your organ
 ## Start automated investigation and response
 
 > [!NOTE]
-> Automated investigation and response capabilities are available in Office 365 ATP Plan 2.
+> Automated investigation and response capabilities are available in Office 365 ATP Plan 2 and Office 365 E5.
 
-(NEW!) [Automated investigation and response](automated-investigation-response-office.md), recently added to ATP Plan 2, can save your security operations team a lot of time and effort in investigating and mitigating cyber attacks. In addition to configuring alerts that can trigger a security playbook, you can start an automated investigation and response process from a view in Explorer. 
+(NEW!) [Automated investigation and response](automated-investigation-response-office.md) can save your security operations team a lot of time and effort in investigating and mitigating cyber attacks. In addition to configuring alerts that can trigger a security playbook, you can start an automated investigation and response process from a view in Explorer. 
 
-For details on this, see [Example: A security administrator triggers an investigation from Threat Explorer](automated-investigation-response-office.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer).
+For details on this, see [Example: A security administrator triggers an investigation from Explorer](automated-investigation-response-office.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer).
 
 ## More ways to use Explorer (or real-time detections)
 
