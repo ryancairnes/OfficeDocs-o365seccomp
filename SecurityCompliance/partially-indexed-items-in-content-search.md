@@ -3,7 +3,7 @@ title: "Partially indexed items in Content Search in Office 365"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 5/11/2018
+ms.date: 
 ms.audience: Admin
 ms.topic: conceptual
 f1_keywords:
