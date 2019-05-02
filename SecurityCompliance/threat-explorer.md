@@ -1,5 +1,5 @@
 ---
-title: "Threat Explorer"
+title: "Threat Explorer (and real-time detections)"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
