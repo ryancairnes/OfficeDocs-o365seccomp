@@ -19,18 +19,17 @@ description: "Learn about Explorer (and real-time detections) in the Security &a
 
 # Threat Explorer (and real-time detections)
 
-If your organization has [Office 365 Advanced Threat Protection](office-365-atp.md) (ATP) Plan 2, and you have the necessary permissions, you can use Threat Explorer to identify and analyze threats. 
+If your organization has [Office 365 Advanced Threat Protection](office-365-atp.md) (ATP) Plan 2, and you have the necessary permissions, you can use Threat Explorer to identify and analyze threats. If you have ATP Plan 1, you have real-time detections.
 
-Also referred to as Explorer or real-time reports (depending on your subscription), this report is a powerful, near real-time tool to help your Security Operations team investigate and respond to threats in the Security &amp; Compliance Center. 
+Also referred to as Explorer or real-time detections (depending on your subscription), this report is a powerful, near real-time tool to help your Security Operations team investigate and respond to threats in the Security &amp; Compliance Center. 
 
 Here are some of the things you can do:
 - [See malware that was detected by Office 365 security features](#see-malware-detected-in-email-by-technology)
 - [View data about phishing URLs and click verdict](#view-data-about-phishing-urls-and-click-verdict)
-- [Start an automated investigation and response process from a view in Explorer](#start-automated-investigation-and-response)
+- [Start an automated investigation and response process from a view in Explorer](#start-automated-investigation-and-response) (ATP Plan 2 only)
 - ... [and more](#more-ways-to-use-explorer)!
 
-
-To use this report, in the Security &amp; Compliance Center, go to **Threat management**, and then choose **Explorer**, **Real-time reports**, or **Real-time detections**.
+To use this report, in the Security &amp; Compliance Center, go to **Threat management**, and then choose either **Explorer** or **Real-time detections**.
 
 ![Go to Threat management \> Explorer](media/cab32fa2-66f1-4ad5-bc1d-2bac4dbeb48c.png)
 
@@ -38,13 +37,13 @@ To use this report, in the Security &amp; Compliance Center, go to **Threat mana
 
 Suppose you want to see malware that was detected in email, and by what technology in Office 365. To do this, use the [Email > Malware](threat-explorer-views.md#email--malware) view of Explorer.
 
-1. In the Security & Compliance Center ([https://protection.office.com](https://protection.office.com)), choose **Threat management** > **Explorer**.
+1. In the Security & Compliance Center ([https://protection.office.com](https://protection.office.com)), choose **Threat management** > **Explorer** (or **Real-time detections**).
 
 2. In the **View** menu, choose **Email** > **Malware**.<br/>![View menu for Explorer](media/ExplorerViewEmailMalwareMenu.png)<br/>
 
 3. Click **Sender**, and then choose **Basic** > **Detection technology**.<br/>Your detection technologies are now available as filters for the report.<br/>![Malware detection technologies](media/ExplorerEmailMalwareDetectionTech.png)<br/> 
 
-4. Select an option, and then click the Refresh button to apply that filter.<br/>![Selected detection technology](media/ExplorerEmailMalwareDetectionTechATP.png)<br/> 
+4. Select an option, and then click the **Refresh** button to apply that filter.<br/>![Selected detection technology](media/ExplorerEmailMalwareDetectionTechATP.png)<br/> 
 
 The report refreshes to show the results malware detected in email, using the technology option you selected. From here, you can conduct further analysis.
 
