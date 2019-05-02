@@ -3,7 +3,7 @@ title: "Threat Explorer"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 04/29/2019
+ms.date: 05/02/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -14,10 +14,10 @@ search.appverid:
 ms.assetid: 82ac9922-939c-41be-9c8a-7c75b0a4e27d
 ms.collection: 
 - M365-security-compliance
-description: "Learn about Explorer (also called Threat Explorer) in the Security &amp; Compliance Center."
+description: "Learn about Explorer (and real-time detections) in the Security &amp; Compliance Center."
 ---
 
-# Threat Explorer (Office 365 ATP Plan 2)
+# Threat Explorer (and real-time detections)
 
 If your organization has [Office 365 Advanced Threat Protection](office-365-atp.md) (ATP) Plan 2, and you have the necessary permissions, you can use Threat Explorer to identify and analyze threats. 
 
@@ -101,9 +101,11 @@ In addition to the scenarios outlined in this article, you have many more report
 
 ## Required licenses and permissions
 
-Explorer is included in [Office 365 Advanced Threat Protection](office-365-atp.md) (Plan 1 and Plan 2). 
+Explorer is included in [Office 365 ATP](office-365-atp.md) (Plan 2). 
 
-To view and use Explorer, you must have appropriate permissions, such as those granted to a security administrator or security reader. 
+The real-time detections report is included in [Office 365 ATP](office-365-atp.md) (Plan 1).
+
+To view and use Explorer or real-time detections, you must have appropriate permissions, such as those granted to a security administrator or security reader. 
 
 - For the Security &amp; Compliance Center, you must have one of the following roles assigned:
     - Organization Management
