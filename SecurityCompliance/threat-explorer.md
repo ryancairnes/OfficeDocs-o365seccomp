@@ -19,17 +19,17 @@ description: "Learn about Explorer (and real-time detections) in the Security &a
 
 # Threat Explorer (and real-time detections)
 
-If your organization has [Office 365 Advanced Threat Protection](office-365-atp.md) (ATP) Plan 2, and you have the necessary permissions, you can use Threat Explorer to identify and analyze threats. If you have ATP Plan 1, you have real-time detections.
+If your organization has [Office 365 Advanced Threat Protection](office-365-atp.md) (Office 365 ATP), and you have the [necessary permissions](#required-licenses-and-permissions), you have either Threat Explorer or real-time detections available in the Security & Compliance Center. 
+- If you have Office 365 ATP Plan 2, you have THreat Explorer (this is also referred to as Explorer).
+- If you have Office 365 ATP Plan 1, you have real-time detections.
 
-Also referred to as Explorer or real-time detections (depending on your subscription), this report is a powerful, near real-time tool to help your Security Operations team investigate and respond to threats in the Security &amp; Compliance Center. 
-
-Here are some of the things you can do:
+This powerful, near real-time tool enables your organization's Security Operations team to investigate and respond to threats effectively and efficiently. Here are some of the things you can do:
 - [See malware that was detected by Office 365 security features](#see-malware-detected-in-email-by-technology)
 - [View data about phishing URLs and click verdict](#view-data-about-phishing-urls-and-click-verdict)
 - [Start an automated investigation and response process from a view in Explorer](#start-automated-investigation-and-response) (ATP Plan 2 only)
 - ... [and more](#more-ways-to-use-explorer)!
 
-To use this report, in the Security &amp; Compliance Center, go to **Threat management**, and then choose either **Explorer** or **Real-time detections**.
+To use this report, in the Security &amp; Compliance Center, go to **Threat management**, and then choose **Explorer** (or **Real-time detections**).
 
 ![Go to Threat management \> Explorer](media/cab32fa2-66f1-4ad5-bc1d-2bac4dbeb48c.png)
 
