@@ -29,6 +29,8 @@ ATP reports include:
 - [ATP Message Disposition report](#atp-message-disposition-report)
 - [Explorer](use-explorer-in-security-and-compliance.md) (included in ATP Plan 2)
 - ... [and more](#additional-reports-to-view). 
+
+Read this article to get an overview of ATP reports and how to use them.
   
 ## Threat Protection Status report
 
