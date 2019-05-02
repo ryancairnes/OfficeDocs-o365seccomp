@@ -245,15 +245,13 @@ During this phase, you set up a custom security group and user account, and set 
 
 ### Set up the EDM Upload Agent
 
-1. As a global administrator, go to the admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) and create a security group called `EDM_DataUploaders`.
+1. As a global administrator, go to the admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) and [create a security group](https://docs.microsoft.com/office365/admin/email/create-edit-or-delete-a-security-group?view=o365-worldwide) called `EDM_DataUploaders`.
 
-2. Create a new user account for the Windows machine, and add that account to the EDM_DataUploaders security group.
+2. Add the user(s) who will be indexing and uploading the sensitive data to the EDM_DataUploaders security group.
 
-3. Sign out of Windows, and then sign back in using the new user account. 
+3. As a member of the EDM_DataUploaders security group, download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639).  
 
-5. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639).  
-
-6. To authorize the EDM Upload Agent, open Windows Command Prompt and run the following command:
+4. To authorize the EDM Upload Agent, open Windows Command Prompt and run the following command:
 
     `EdmUploadAgent.exe /Authorize`
 
