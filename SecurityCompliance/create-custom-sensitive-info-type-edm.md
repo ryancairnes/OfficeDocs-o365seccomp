@@ -255,7 +255,7 @@ During this phase, you set up a custom security group and user account, and set 
 
     `EdmUploadAgent.exe /Authorize`
 
-    You'll be prompted to sign in. Use your work or school account for Office 365 (you must be a global admin, compliance administrator, or Exchange Online administrator).
+    You'll be prompted to sign in. Use your work or school account for Office 365.
 
 The next step is to use the EDM Upload Agent to index the sensitive data, and then upload the indexed data.
 
