@@ -21,9 +21,9 @@ description: "Learn about Explorer (and real-time detections) in the Security &a
 
 If your organization has [Office 365 Advanced Threat Protection](office-365-atp.md) (Office 365 ATP), and you have the [necessary permissions](#required-licenses-and-permissions), you have either Explorer or real-time detections available in the Security & Compliance Center (Go to **Threat management** > **Explorer** OR **Real-time detections**). 
 
-|ATP Plan 2  |ATP Plan 1  |
+|With ATP Plan 2, you see:  |With ATP Plan 1, you see:  |
 |---------|---------|
-| Threat Explorer <br/>![Threat explorer](media/threatmgmt-explorer.png)      |Real-time detections <br/>![Real-time detections](media/threatmgmt-realtimedetections.png)         |
+|![Threat explorer](media/threatmgmt-explorer.png)      |![Real-time detections](media/threatmgmt-realtimedetections.png)         |
 
 Whether you have Explorer or Real-time detections, this powerful, near real-time tool enables your organization's Security Operations team to investigate and respond to threats effectively and efficiently. 
 
