@@ -1,9 +1,9 @@
 ---
-title: "Threat Explorer views"
+title: "Views in Threat Explorer and real-time detections"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 03/18/2019
+ms.date: 05/02/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -11,12 +11,12 @@ localization_priority: Normal
 search.appverid:
 ms.collection: 
 - M365-security-compliance
-description: "Learn about the various kinds of views available in Explorer (also called Threat Explorer) as part of Office 365 Advanced Threat Protection Plan 2."
+description: "Learn about the various kinds of views available in Threat Explorer and real-time detections."
 ---
 
-# Threat Explorer views
+# Views in Threat Explorer and real-time detections
 
-[Threat Explorer](use-explorer-in-security-and-compliance.md) is a powerful, near real-time tool to help Security Operations teams investigate and respond to threats in the Security &amp; Compliance Center. Explorer displays information about suspected malware and phish in email and files in Office 365, as well as other security threats and risks to your organization. 
+[Threat Explorer](use-explorer-in-security-and-compliance.md) (and real-time detections) is a powerful, near real-time tool to help Security Operations teams investigate and respond to threats in the Security &amp; Compliance Center. Explorer (and real-time detections) displays information about suspected malware and phish in email and files in Office 365, as well as other security threats and risks to your organization. 
 
 When you first open Explorer, the default view shows email malware detections for the past 7 days. 
 
