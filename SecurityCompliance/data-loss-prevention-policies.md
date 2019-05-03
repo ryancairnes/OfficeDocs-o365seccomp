@@ -66,7 +66,7 @@ You can use a rule to meet a specific protection requirement, and then use a DLP
   
 For example, you might have a DLP policy that helps you detect the presence of information subject to the Health Insurance Portability and Accountability Act (HIPAA). This DLP policy could help protect HIPAA data (the what) across all SharePoint Online sites and all OneDrive for Business sites (the where) by finding any document containing this sensitive information that's shared with people outside your organization (the conditions) and then blocking access to the document and sending a notification (the actions). These requirements are stored as individual rules and grouped together as a DLP policy to simplify management and reporting.
   
-![Diagram shows DLP policy contains locations and rules](media/c006860c-2d00-42cb-aaa4-5b5638d139f7.png)
+![Diagram shows that DLP policy contains locations and rules](media/c006860c-2d00-42cb-aaa4-5b5638d139f7.png)
   
 ### Locations
 
@@ -74,7 +74,7 @@ A DLP policy can find and protect sensitive information across Office 365, wheth
   
 ![Options for locations where a DLP policy can be applied](media/ee50a61a-e867-4571-a150-3eec8d83650f.png)
   
-Note that if you choose to include or exclude specific SharePoint sites or OneDrive accounts, a DLP policy can contain no more than 100 such inclusions and exclusions. Although this limit exists, understand that you can exceed this limit by applying either an org-wide policy or a policy that applies to entire locations.
+If you choose to include or exclude specific SharePoint sites or OneDrive accounts, a DLP policy can contain no more than 100 such inclusions and exclusions. Although this limit exists, you can exceed this limit by applying either an org-wide policy or a policy that applies to entire locations.
   
 ### Rules
 
@@ -88,9 +88,9 @@ Here are the components of a rule, each explained below.
   
 #### Conditions
 
-Conditions are important because they determine what types of information you're looking for, and when to take an action. For example, you might choose to ignore content containing passport numbers unless the content contains more than ten such numbers and is shared with people outside your organization.
+Conditions are important because they determine what types of information you're looking for, and when to take an action. For example, you might choose to ignore content containing passport numbers unless the content contains more than 10 such numbers and is shared with people outside your organization.
   
-Conditions focus on the **content**, such as what types of sensitive information you're looking for, and also on the **context**, such as who the document is shared with. You can use conditions to assign different actions to different risk levels -- for example, sensitive content shared internally might be lower risk and require fewer actions than sensitive content shared with people outside the organization. 
+Conditions focus on the **content**, such as what types of sensitive information you're looking for, and also on the **context**, such as who the document is shared with. You can use conditions to assign different actions to different risk levels. For example, sensitive content shared internally might be lower risk and require fewer actions than sensitive content shared with people outside the organization. 
   
 ![List showing available DLP conditions](media/0fa43f90-d007-4506-ae93-43e8424fe103.png)
   
@@ -128,11 +128,11 @@ When content matches a condition in a rule, you can apply actions to automatical
   
 With the actions now available, you can:
   
-- **Restrict access to the content** For site content, this means that permissions for the document are restricted for everyone except the primary site collection administrator, document owner, and person who last modified the document. These people can remove the sensitive information from the document or take other remedial action. When the document is in compliance, the original permissions will be automatically restored. When access to a document is blocked, the document appears with a special policy tip icon in the library on the site. 
+- **Restrict access to the content** For site content, this means that permissions for the document are restricted for everyone except the primary site collection administrator, document owner, and person who last modified the document. These people can remove the sensitive information from the document or take other remedial action. When the document is in compliance, the original permissions are automatically restored. When access to a document is blocked, the document appears with a special policy tip icon in the library on the site. 
     
     ![Policy tip showing access to document is blocked](media/b6cefed3-d212-43d7-8534-4b92b26ebd50.png)
   
-    For email content, this action blocks the message from being sent. Depending on how the DLP rule is configured, the sender will see an NDR or (if the rule uses a notification) a policy tip and/or email notification.
+    For email content, this action blocks the message from being sent. Depending on how the DLP rule is configured, the sender sees an NDR or (if the rule uses a notification) a policy tip and/or email notification.
     
     ![Warning that unauthorized recipients must be removed from the message](media/302f9994-912d-41e7-861f-8a4539b3c285.png)
   
