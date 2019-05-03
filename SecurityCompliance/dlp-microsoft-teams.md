@@ -3,7 +3,7 @@ title: "Data loss prevention and Microsoft Teams"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 04/26/2019
+ms.date: 05/03/2019
 ms.audience: ITPro
 ms.topic: conceptual
 ms.service: O365-seccomp
@@ -16,6 +16,9 @@ description: "You can now apply DLP policies to Microsoft Teams chats and channe
 ---
 
 # Data loss prevention and Microsoft Teams
+
+> [!NOTE]
+> Data loss prevention capabilities were recently added to Microsoft Teams in Office 365 E5 and Office 365 Advanced Compliance. To learn more about feature availability, see [Office365 Service Descriptions: Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-securitycompliance-center).
 
 ## Overview of DLP for Microsoft Teams
 
