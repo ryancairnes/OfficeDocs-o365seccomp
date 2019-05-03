@@ -34,7 +34,7 @@ Through in-place retention and preservation policy features of archiving in Offi
 In addition, Microsoft has developed add-on features to allow [archiving of data](https://support.office.com/article/Archiving-third-party-data-in-Office-365-0ce338d5-3666-4a18-86ab-c6910ff408cc) from other sources through integration with third-party data capturing and management solutions. After third-party data is imported, you can apply Office 365 compliance features to the data, including:
 
 - [Litigation Hold](create-a-litigation-hold.md)
-- [In-Place eDiscovery and Hold](manage-legal-investigations-with-ediscovery-cases.md)
+- [In-Place eDiscovery and Hold](manage-legal-investigations.md)
 - [Compliance Search](search-for-content.md)
 - [In-Place Archiving](enable-archive-mailboxes.md)
 - [Mailbox auditing](enable-mailbox-auditing.md)
