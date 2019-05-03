@@ -40,7 +40,7 @@ Follow these steps to set up and use supervision in your Office 365 organization
 
     If you need a custom sensitive info type or a custom keyword dictionary for your supervision policy, you need to create it before starting the supervision wizard.
 
-- **Step 4 (required)**: [Set up a supervision policy](#step-4---set-up-a-supervision-policy-required)
+- **Step 4 (required)**: [Set up a supervision policy](#step-4-set-up-a-supervision-policy-required)
 
     You create supervision policies in the Compliance Center. These policies define which communications are subject to review in your organization and specifies who performs reviews. Communications include email and Microsoft Teams communications, and 3rd-party platform communications (such as Facebook, Twitter, etc.)
 
