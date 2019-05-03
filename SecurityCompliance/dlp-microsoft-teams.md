@@ -3,7 +3,7 @@ title: "Data loss prevention and Microsoft Teams"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 04/26/2019
+ms.date: 05/03/2019
 ms.audience: ITPro
 ms.topic: conceptual
 ms.service: O365-seccomp
@@ -16,6 +16,9 @@ description: "You can now apply DLP policies to Microsoft Teams chats and channe
 ---
 
 # Data loss prevention and Microsoft Teams
+
+> [!NOTE]
+> Data loss prevention capabilities are not yet available for Microsoft Teams in Office 365 operated by 21Vianet, Office 365 Germany, Office 365 U.S. Government Community High (GCC High), or Office 365 Department of Defense. To learn more about feature availability, see [Office365 Service Descriptions: Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-securitycompliance-center).
 
 ## Overview of DLP for Microsoft Teams
 
