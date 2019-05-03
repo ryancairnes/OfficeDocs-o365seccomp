@@ -1,5 +1,5 @@
 ---
-title: "View documents in a working set"
+title: "View documents in a review set"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,6 +17,6 @@ ms.assetid:
 description: ""
 ---
 
-# View documents in a working set
+# View documents in a review set
 
 Content coming soon.

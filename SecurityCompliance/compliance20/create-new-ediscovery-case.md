@@ -1,5 +1,5 @@
 ---
-title: "Create a new case in Advanced eDiscovery (Preview)"
+title: "Create a new case in Advanced eDiscovery"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,7 +17,7 @@ ms.assetid:
 description: ""
 ---
 
-# Create a new case in Advanced eDiscovery (Preview)	
+# Create a new case in Advanced eDiscovery	
 
 1. Go to [https://protection.office.com](https://protection.office.com).
     
@@ -25,7 +25,7 @@ description: ""
     
 3. In the Security & Compliance Center, click **eDiscovery > Advanced eDiscovery**.
  
-4. On the **Advanced eDiscovery (Preview)** page, click **Create a case**.
+4. On the **Advanced eDiscovery** page, click **Create a case**.
     
 5. On the **New eDiscovery case** flyout page, give the case a name (required), and then type an optional case number and description. Note that the case name must be unique in your organization.
 
@@ -33,11 +33,11 @@ description: ""
 
     - Click **Yes** to create the case, and display the **Settings** page in the new case. This allows you to add members to the case.
     
-    - Click **No** to just create the case and display it in the list of cases on the **Advanced eDiscovery (Preview)** page. If you choose this option, you will be added as the only member of the case and the default search and analytics settings will be used. You can add members or change settings any time after the case is created.
+    - Click **No** to just create the case and display it in the list of cases on the **Advanced eDiscovery** page. If you choose this option, you will be added as the only member of the case and the default search and analytics settings will be used. You can add members or change settings any time after the case is created.
 
 7. Click **Save** to create the case.
 
-    The new case is displayed in the list of cases on the **Advanced eDiscovery (Preview)** page. 
+    The new case is displayed in the list of cases on the **Advanced eDiscovery** page. 
 
 8. To open a case, click the name of the case. 
 

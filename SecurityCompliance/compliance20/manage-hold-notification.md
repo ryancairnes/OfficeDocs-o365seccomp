@@ -19,7 +19,7 @@ description: ""
 
 # Manage hold notifications
 
-After you have initiated your legal hold notification workflow, you can leverage  Advanced eDiscovery (Preview) to track the status of your communications. The Communications Tab showcases all of the hold notifications within your Advanced eDiscovery (Preview) case. Here, you can see details, such as the number of custodians that have been assigned or have acknowledged the notice.
+After you have initiated your legal hold notification workflow, you can leverage  Advanced eDiscovery to track the status of your communications. The Communications Tab showcases all of the hold notifications within your Advanced eDiscovery case. Here, you can see details, such as the number of custodians that have been assigned or have acknowledged the notice.
 
 ## View communication details
 
@@ -38,7 +38,7 @@ In the communication details flyout, you can preview the details regarding your 
 Occasionally, custodians lose track of their emails in their day-to-day work. Or, for a long-running litigation, a custodian may reach out and ask you to re-send a notice. As you manage your workflow around legal hold notices, you may need to re-send a notice to bring it back to the "top of a user's mailbox".
 
 You can re-send a hold notice to your custodian by:
-1. Navigate to a case within **Security and Compliance > Advanced eDiscovery (Preview)**.
+1. Navigate to a case within **Security and Compliance > Advanced eDiscovery**.
 2. Once you have selected a case, navigate to the **Communications** tab.
 3. To re-send a legal hold notice to a custodian, select the communication and click the **Re-Send** option.
 4. If a custodian has not already acknowledged their hold notification, then the reminder and escalation flow will be restarted. If a custodian has already acknowledged the hold notice, then the custodian will just receive a copy of the initial hold notice.
@@ -54,7 +54,7 @@ As the case progresses, custodians may be required to preserve additional or les
 
 To update the contents of the initial hold notice:
 
-1. Navigate to a case within **Security and Compliance > Advanced eDiscovery (Preview)**.
+1. Navigate to a case within **Security and Compliance > Advanced eDiscovery**.
 2. Once you have selected a case, navigate to the **Communications** tab.
 3. Select the hold notice that you would like to update and click **Edit**.
 4. In the Edit workflow, select **Define Portal Content** and update the contents of your notice. 
