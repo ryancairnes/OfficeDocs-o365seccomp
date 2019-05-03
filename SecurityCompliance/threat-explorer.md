@@ -3,7 +3,7 @@ title: "Threat Explorer (and real-time detections)"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 05/02/2019
+ms.date: 05/03/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -25,7 +25,7 @@ If your organization has [Office 365 Advanced Threat Protection](office-365-atp.
 |---------|---------|
 |![Threat explorer](media/threatmgmt-explorer.png)      |![Real-time detections](media/threatmgmt-realtimedetections.png)         |
 
-Whether you have Explorer or Real-time detections, this powerful, near real-time tool enables your organization's Security Operations team to investigate and respond to threats effectively and efficiently. 
+Whether you have Explorer or Real-time detections, you have a powerful, near real-time tool that enables your organization's Security Operations team to investigate and respond to threats effectively and efficiently. 
 
 ![Go to Threat management \> Explorer](media/cab32fa2-66f1-4ad5-bc1d-2bac4dbeb48c.png)
 
@@ -105,9 +105,9 @@ In addition to the scenarios outlined in this article, you have many more report
 
 ## Required licenses and permissions
 
-Explorer is included in [Office 365 ATP](office-365-atp.md) (Plan 2). 
+Explorer is included in [Office 365 ATP](office-365-atp.md) Plan 2. 
 
-The real-time detections report is included in [Office 365 ATP](office-365-atp.md) (Plan 1).
+The real-time detections report is included in [Office 365 ATP](office-365-atp.md) Plan 1.
 
 To view and use Explorer or real-time detections, you must have appropriate permissions, such as those granted to a security administrator or security reader. 
 
