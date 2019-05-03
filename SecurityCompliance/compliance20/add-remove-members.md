@@ -20,7 +20,7 @@ description: ""
 
 You can add or remove members to manage who can access the case. Note that users who are added to Reviewer or eDiscovery Manager role groups can be added as members of the case. Note that the eDiscovery Manager who created the case is automatically added as a member.
 
-1. From the **Advanced eDiscovery (Preview)** page, go to your case.
+1. From the **Advanced eDiscovery** page, go to your case.
 
 2. Go to **Settings** and select "Access & Permissions".
  
