@@ -9,9 +9,12 @@ ms.author: ellevin
 author: levinec
 manager: dansimp
 audience: ITPro
-ms.collection: M365-security-compliance  
+ms.collection: 
+- M365-security-compliance  
 ms.topic: article
-search.appverid: met150
+search.appverid: 
+- MOE150
+- MET150
 ---
 
 # Microsoft Secure Score
