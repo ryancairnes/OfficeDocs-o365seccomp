@@ -3,7 +3,7 @@ title: "Overview of data loss prevention policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 04/11/2019
+ms.date: 05/03/2019
 ms.audience: ITPro
 ms.topic: conceptual
 f1_keywords:
@@ -18,6 +18,9 @@ description: "With a data loss prevention (DLP) policy in the Office 365 Securit
 ---
 
 # Overview of data loss prevention policies
+
+> [!NOTE]
+> Data loss prevention capabilities were recently added to Microsoft Teams in Office 365 E5 and Office 365 Advanced Compliance. These capabilities are not yet available for Office 365 operated by 21Vianet, Office 365 Germany, Office 365 U.S. Government Community High (GCC High), or Office 365 Department of Defense. To learn more about feature availability, see [Office365 Service Descriptions: Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-securitycompliance-center).
 
 To comply with business standards and industry regulations, organizations need to protect sensitive information and prevent its inadvertent disclosure. Examples of sensitive information that you might want to prevent from leaking outside your organization include financial data or personally identifiable information (PII) such as credit card numbers, social security numbers, or health records. With a data loss prevention (DLP) policy in the Office 365 Security &amp; Compliance Center, you can identify, monitor, and automatically protect sensitive information across Office 365.
   
