@@ -3,7 +3,7 @@ title: "Views in Threat Explorer and real-time detections"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 05/02/2019
+ms.date: 05/03/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -29,11 +29,11 @@ Use the **View** menu to change what information is displayed. Tooltips help you
   
 ![Threat Explorer View menu](media/ThreatExplorerViewMenu.png)
 
-Once you have selected a view, you can apply filters and set up queries to conduct further analysis. The following sections provide a brief overview of the various views available in Explorer.  
+Once you have selected a view, you can apply filters and set up queries to conduct further analysis. The following sections provide a brief overview of the various views available in Explorer (or real-time detections).  
 
 ## Email > Malware
 
-To view this report, in Explorer, choose **View** > **Email** > **Malware**. This view shows information about email messages that were identified as containing malware.  
+To view this report, in Explorer (or real-time detections), choose **View** > **Email** > **Malware**. This view shows information about email messages that were identified as containing malware.  
 
 ![View data about email identified as malware](media/ExplorerEmailMalwareMenu.png) 
 
@@ -49,7 +49,7 @@ Below the chart, view more details about specific messages. When you select an i
 
 ## Email > Phish
 
-To view this report, in Explorer, choose **View** > **Email** > **Phish**. This view shows email messages identified as phishing attempts.  
+To view this report, in Explorer (or real-time detections), choose **View** > **Email** > **Phish**. This view shows email messages identified as phishing attempts.  
 
 ![View data about email identified as phishing attempts](media/ThreatExplorerEmailPhish.png) 
 
@@ -69,7 +69,7 @@ When you select an item in the list, such as a URL that was detected, a fly-out 
 
 ## Email > User-reported
 
-To view this report, in Explorer, choose **View** > **Email** > **User-reported**. This view shows email that users have reported as junk, not junk, or phishing email. 
+To view this report, in Explorer (or real-time detections), choose **View** > **Email** > **User-reported**. This view shows email that users have reported as junk, not junk, or phishing email. 
 
 ![Email messages reported by users](media/ThreatExplorerEmailUserReportedViewOptions.png) 
 
@@ -100,7 +100,7 @@ Below the chart, view more details about specific email messages, such as subjec
 
 ## Content > Malware
 
-To view this report, in Explorer, choose **View** > **Content** > **Malware**. This view shows files that were identified as malicious by [Office 365 Advanced Threat Protection in SharePoint Online, OneDrive for Business, and Microsoft Teams](atp-for-spo-odb-and-teams.md).
+To view this report, in Explorer (or real-time detections), choose **View** > **Content** > **Malware**. This view shows files that were identified as malicious by [Office 365 Advanced Threat Protection in SharePoint Online, OneDrive for Business, and Microsoft Teams](atp-for-spo-odb-and-teams.md).
 
 View information by malware family, detection technology (how the malware was detected), and workload (OneDrive, SharePoint, or Teams). 
 
@@ -110,7 +110,7 @@ Below the chart, view more details about specific files, such as attachment file
   
 ## Click-to-filter capabilities
 
-With Explorer, you can apply a filter in a click. Click an item in the legend, and that item becomes a filter for the report. For example, suppose we are looking at the Malware view in Explorer:
+With Explorer (and real-time detections), you can apply a filter in a click. Click an item in the legend, and that item becomes a filter for the report. For example, suppose we are looking at the Malware view in Explorer:
   
 ![Go to Threat management \> Explorer](media/cab32fa2-66f1-4ad5-bc1d-2bac4dbeb48c.png)
   
@@ -130,7 +130,7 @@ The ability to filter in a click and navigate to specific details can save you a
 
 ## Queries and filters
 
-Explorer has several powerful filters and querying capabilities that enable you to drill into details, such as top targeted users, top malware families, detection technology and more. Each kind of report offers a variety of ways to view and explore data.
+Explorer (and the real-time detections report) has several powerful filters and querying capabilities that enable you to drill into details, such as top targeted users, top malware families, detection technology and more. Each kind of report offers a variety of ways to view and explore data.
 
 > [!IMPORTANT]
-> Do not use wildcard characters, such as an asterisk (*) or a question mark (?), in the query bar for Explorer. When you search on the Subject field for email messages, Explorer will perform partial matching and yield results similar to a wildcard search.
+> Do not use wildcard characters, such as an asterisk (*) or a question mark (?), in the query bar for Explorer (or real-time detections). When you search on the Subject field for email messages, Explorer (or real-time detections) will perform partial matching and yield results similar to a wildcard search.
