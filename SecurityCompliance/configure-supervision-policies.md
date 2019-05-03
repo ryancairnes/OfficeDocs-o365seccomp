@@ -44,11 +44,11 @@ Follow these steps to set up and use supervision in your Office 365 organization
 
     You create supervision policies in the Compliance Center. These policies define which communications are subject to review in your organization and specifies who performs reviews. Communications include email and Microsoft Teams communications, and 3rd-party platform communications (such as Facebook, Twitter, etc.)
 
-- **Step 5 (optional)**: [Test your supervision policy](#step-5---test-your-supervision-policy-optional)
+- **Step 5 (optional)**: [Test your supervision policy](#step-5-test-your-supervision-policy-optional)
 
     Test your supervision policy to make sure it functions as desired. It is important to ensure that your compliance strategy is meeting your standards.
 
-- **Step 6 (optional)**: [Configure Outlook for reviewers who do not want to use Office 365 supervision dashboard or Outlook on the web (formerly known as Outlook Web App) to review supervised communications](#step-6---configure-outlook-for-reviewers-optional)
+- **Step 6 (optional)**: [Configure Outlook for reviewers who do not want to use Office 365 supervision dashboard or Outlook on the web (formerly known as Outlook Web App) to review supervised communications](#step-6-configure-outlook-for-reviewers-optional)
 
     Configure Outlook to give reviewers access to the supervision functionality within the Outlook client so they can assess and categorize each item.
 
