@@ -16,20 +16,15 @@ description: "Learn about the various kinds of views available in Threat Explore
 
 # Views in Threat Explorer and real-time detections
 
+![Threat Explorer](media/ThreatExplorerFirstOpened.png)
+
 [Threat Explorer](use-explorer-in-security-and-compliance.md) (and the real-time detections report) is a powerful, near real-time tool to help Security Operations teams investigate and respond to threats in the Security &amp; Compliance Center. Explorer (and the real-time detections report) displays information about suspected malware and phish in email and files in Office 365, as well as other security threats and risks to your organization. 
 
 - If you have [Office 365 Advanced Threat Protection](office-365-atp.md) (ATP) Plan 2, then you have Explorer.
 - If you have Office 365 ATP Plan 1, then you have real-time detections.
 
-When you first open Explorer (or the real-time detections report), the default view shows email malware detections for the past 7 days. 
+When you first open Explorer (or the real-time detections report), the default view shows email malware detections for the past 7 days. This report can also show ATP detections, such as malicious URLs detected by [Safe Links](atp-safe-links.md), and malicious files detected by [Safe Attachments](atp-safe-attachments.md). This report can be modified to show data for the past 30 days (unless you are using a trial subscription). Trial subscriptions will include data for the past seven days only.
 
-![Threat Explorer](media/ThreatExplorerFirstOpened.png)
-
-Explorer (and real-time detections) can also show security protection features in Office 365, including [Safe Links](atp-safe-links.md) and [Safe Attachments](atp-safe-attachments.md) and can be modified to show data for the past 30 days. 
-
-> [!NOTE]
-> If you have a trial subscription for Office 365 Advanced Threat Protection Plan 2 or Office 365 E5, you will only see detections and email data for the past 7 days.
-  
 Use the **View** menu to change what information is displayed. Tooltips help you determine which view to use.
   
 ![Threat Explorer View menu](media/ThreatExplorerViewMenu.png)
