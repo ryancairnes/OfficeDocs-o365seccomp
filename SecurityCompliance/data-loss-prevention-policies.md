@@ -1,9 +1,9 @@
 ---
-title: "Overview of data loss prevention policies"
+title: "Overview of data loss prevention"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 04/11/2019
+ms.date: 05/03/2019
 ms.audience: ITPro
 ms.topic: conceptual
 f1_keywords:
@@ -14,12 +14,15 @@ ms.collection:
 - M365-security-compliance
 search.appverid: 
 - MET150
-description: "With a data loss prevention (DLP) policy in the Office 365 Security &amp; Compliance Center, you can identify, monitor, and automatically protect sensitive information across Office 365."
+description: "With a data loss prevention (DLP) policy in the Security &amp; Compliance Center, you can identify, monitor, and automatically protect sensitive information across Office 365."
 ---
 
-# Overview of data loss prevention policies
+# Overview of data loss prevention
 
-To comply with business standards and industry regulations, organizations need to protect sensitive information and prevent its inadvertent disclosure. Examples of sensitive information that you might want to prevent from leaking outside your organization include financial data or personally identifiable information (PII) such as credit card numbers, social security numbers, or health records. With a data loss prevention (DLP) policy in the Office 365 Security &amp; Compliance Center, you can identify, monitor, and automatically protect sensitive information across Office 365.
+> [!NOTE]
+> Data loss prevention capabilities were recently added to Microsoft Teams in Office 365 E5 and Office 365 Advanced Compliance. These capabilities are not yet available for Office 365 operated by 21Vianet, Office 365 Germany, Office 365 U.S. Government Community High (GCC High), or Office 365 Department of Defense. To learn more about feature availability, see [Office365 Service Descriptions: Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-securitycompliance-center).
+
+To comply with business standards and industry regulations, organizations must protect sensitive information and prevent its inadvertent disclosure. Sensitive information can include financial data or personally identifiable information (PII) such as credit card numbers, social security numbers, or health records. With a data loss prevention (DLP) policy in the Office 365 Security &amp; Compliance Center, you can identify, monitor, and automatically protect sensitive information across Office 365.
   
 With a DLP policy, you can:
   
@@ -63,7 +66,7 @@ You can use a rule to meet a specific protection requirement, and then use a DLP
   
 For example, you might have a DLP policy that helps you detect the presence of information subject to the Health Insurance Portability and Accountability Act (HIPAA). This DLP policy could help protect HIPAA data (the what) across all SharePoint Online sites and all OneDrive for Business sites (the where) by finding any document containing this sensitive information that's shared with people outside your organization (the conditions) and then blocking access to the document and sending a notification (the actions). These requirements are stored as individual rules and grouped together as a DLP policy to simplify management and reporting.
   
-![Diagram shows DLP policy contains locations and rules](media/c006860c-2d00-42cb-aaa4-5b5638d139f7.png)
+![Diagram shows that DLP policy contains locations and rules](media/c006860c-2d00-42cb-aaa4-5b5638d139f7.png)
   
 ### Locations
 
@@ -71,7 +74,7 @@ A DLP policy can find and protect sensitive information across Office 365, wheth
   
 ![Options for locations where a DLP policy can be applied](media/ee50a61a-e867-4571-a150-3eec8d83650f.png)
   
-Note that if you choose to include or exclude specific SharePoint sites or OneDrive accounts, a DLP policy can contain no more than 100 such inclusions and exclusions. Although this limit exists, understand that you can exceed this limit by applying either an org-wide policy or a policy that applies to entire locations.
+If you choose to include or exclude specific SharePoint sites or OneDrive accounts, a DLP policy can contain no more than 100 such inclusions and exclusions. Although this limit exists, you can exceed this limit by applying either an org-wide policy or a policy that applies to entire locations.
   
 ### Rules
 
@@ -85,9 +88,9 @@ Here are the components of a rule, each explained below.
   
 #### Conditions
 
-Conditions are important because they determine what types of information you're looking for, and when to take an action. For example, you might choose to ignore content containing passport numbers unless the content contains more than ten such numbers and is shared with people outside your organization.
+Conditions are important because they determine what types of information you're looking for, and when to take an action. For example, you might choose to ignore content containing passport numbers unless the content contains more than 10 such numbers and is shared with people outside your organization.
   
-Conditions focus on the **content**, such as what types of sensitive information you're looking for, and also on the **context**, such as who the document is shared with. You can use conditions to assign different actions to different risk levels -- for example, sensitive content shared internally might be lower risk and require fewer actions than sensitive content shared with people outside the organization. 
+Conditions focus on the **content**, such as what types of sensitive information you're looking for, and also on the **context**, such as who the document is shared with. You can use conditions to assign different actions to different risk levels. For example, sensitive content shared internally might be lower risk and require fewer actions than sensitive content shared with people outside the organization. 
   
 ![List showing available DLP conditions](media/0fa43f90-d007-4506-ae93-43e8424fe103.png)
   
@@ -125,11 +128,11 @@ When content matches a condition in a rule, you can apply actions to automatical
   
 With the actions now available, you can:
   
-- **Restrict access to the content** For site content, this means that permissions for the document are restricted for everyone except the primary site collection administrator, document owner, and person who last modified the document. These people can remove the sensitive information from the document or take other remedial action. When the document is in compliance, the original permissions will be automatically restored. When access to a document is blocked, the document appears with a special policy tip icon in the library on the site. 
+- **Restrict access to the content** For site content, this means that permissions for the document are restricted for everyone except the primary site collection administrator, document owner, and person who last modified the document. These people can remove the sensitive information from the document or take other remedial action. When the document is in compliance, the original permissions are automatically restored. When access to a document is blocked, the document appears with a special policy tip icon in the library on the site. 
     
     ![Policy tip showing access to document is blocked](media/b6cefed3-d212-43d7-8534-4b92b26ebd50.png)
   
-    For email content, this action blocks the message from being sent. Depending on how the DLP rule is configured, the sender will see an NDR or (if the rule uses a notification) a policy tip and/or email notification.
+    For email content, this action blocks the message from being sent. Depending on how the DLP rule is configured, the sender sees an NDR or (if the rule uses a notification) a policy tip and/or email notification.
     
     ![Warning that unauthorized recipients must be removed from the message](media/302f9994-912d-41e7-861f-8a4539b3c285.png)
   
@@ -207,7 +210,7 @@ For example, the built-in **U.S. HIPAA** policy has a rule that uses an **AND** 
   
 ## The priority by which rules are processed
 
-When you create rules in a policy, each rule is assigned a priority in the order in which it's created - meaning, the rule created first has first priority, the rule created second has second priority, and so on. 
+When you create rules in a policy, each rule is assigned a priority in the order in which it's created — meaning, the rule created first has first priority, the rule created second has second priority, and so on. 
   
 ![Rules in priority order](media/f7dc06bf-bc6f-485c-bcdb-606edbcf6565.png)
   
@@ -231,7 +234,7 @@ When content is evaluated against rules, the rules are processed in priority ord
     
 In this example, note that matches for all of the rules are recorded in the audit logs and shown in the DLP reports, even though only the most restrictive rule is enforced.
   
-With respect to policy tips, note that:
+Regarding policy tips, note that:
   
 - Only the policy tip from the highest priority, most restrictive rule will be shown. For example, a policy tip from a rule that blocks access to content will be shown over a policy tip from a rule that simply sends a notification. This prevents people from seeing a cascade of policy tips.
     
@@ -241,7 +244,7 @@ With respect to policy tips, note that:
 
 After people create and turn on their DLP policies, they sometimes run into these issues:
   
-- Too much content that **is not** sensitive information matches the rules - in other words, too many false positives. 
+- Too much content that **is not** sensitive information matches the rules — in other words, too many false positives. 
     
 - Too little content that **is** sensitive information matches the rules. In other words, the protective actions aren't being enforced on the sensitive information. 
     
@@ -249,7 +252,7 @@ To address these issues, you can tune your rules by adjusting the instance count
   
 ### Instance count
 
-Instance count means simply how many occurrences of a specific type of sensitive information must be present for content to match the rule. For example, content will match the rule shown below if between 1 and 9 unique U.S. or U.K. passport numbers are identified.
+Instance count means simply how many occurrences of a specific type of sensitive information must be present for content to match the rule. For example, content matches the rule shown below if between 1 and 9 unique U.S. or U.K. passport numbers are identified.
   
 Note that the instance count includes only **unique** matches for sensitive information types and keywords. For example, if an email contains 10 occurrences of the same credit card number, those 10 occurrences count as a single instance of a credit card number. 
   
@@ -289,7 +292,7 @@ It's important to understand that when a specific type of sensitive information,
   
 - If all of the matches are for a single pattern, the confidence level for that pattern is returned.
     
-- If there are matches for more than one pattern (i.e., there are matches with two different confidence levels), a confidence level higher than any of the single patterns alone is returned. This is the tricky part. For example, for a credit card, if both the 65% and 85% patterns are matched, the confidence level returned for that sensitive information type is greater than 90% because more evidence means more confidence.
+- If there are matches for more than one pattern (that is, there are matches with two different confidence levels), a confidence level higher than any of the single patterns alone is returned. This is the tricky part. For example, for a credit card, if both the 65% and 85% patterns are matched, the confidence level returned for that sensitive information type is greater than 90% because more evidence means more confidence.
     
 So if you want to create two mutually exclusive rules for credit cards, one for the 65% match accuracy and one for the 85% match accuracy, the ranges for match accuracy would look like this. The first rule picks up only matches of the 65% pattern. The second rule picks up matches with **at least one** 85% match and **can potentially have** other lower-confidence matches. 
   
@@ -319,7 +322,7 @@ After you create a label, you can then use that label as a condition in your DLP
     
 - You created a label named **Alpine House** for a project of that name, and then applied that label automatically to content containing the keywords "Alpine House". By using this label as a condition in your DLP policy, you can show a policy tip to end users when they're about to share this content with someone outside your organization. 
     
-- You published a label named **Tax record**, so that your records manager can manually apply the label to content that needs to be classified as a record. By using this label as a condition in your DLP policy, you can look for content with this label in conjunction with other types of sensitive information such as ITINs or SSNs; apply protection actions to content labeled **Tax record**; and get detailed activity reports about the DLP policy from the DLP reports and audit log data. 
+- You published a label named **Tax record**, so that your records manager can manually apply the label to content that needs to be classified as a record. By using this label as a condition in your DLP policy, you can look for content with this label along with other types of sensitive information such as ITINs or SSNs; apply protection actions to content labeled **Tax record**; and get detailed activity reports about the DLP policy from the DLP reports and audit log data. 
     
 - You published a label named **Executive Leadership Team - Sensitive** to the Exchange mailboxes and OneDrive accounts of a group of executives. By using this label as a condition in your DLP policy, you can enforce both retention and protection actions on the same subset of content and users. 
     
@@ -329,7 +332,7 @@ By using labels as a condition in your DLP rules, can you selectively enforce pr
 
 ### Support for sensitivity labels is coming
 
-Note that you can currently use only a retention label as a condition, not a [sensitivity label](sensitivity-labels.md). We're currently working on support for using a sensitivity label in this condition.
+You can currently use only a retention label as a condition, not a [sensitivity label](sensitivity-labels.md). We're currently working on support for using a sensitivity label in this condition.
   
 ### How this feature relates to other features
 
@@ -341,7 +344,7 @@ Several features can be applied to content containing sensitive information:
     
 ![Diagram of features that can apply to sensitive information](media/dd410f97-a3a3-455c-a1e9-7ed8ae6893d6.png)
   
-Note that a DLP policy has a richer detection capability than a label or retention policy applied to sensitive information. A DLP policy can enforce protective actions on content containing sensitive information, and if the sensitive information is removed from the content, those protective actions are undone the next time the content's scanned. But if a retention policy or label is applied to content containing sensitive information, that's a one-time action that won't be undone even if the sensitive information's removed.
+Note that a DLP policy has a richer detection capability than a label or retention policy applied to sensitive information. A DLP policy can enforce protective actions on content containing sensitive information, and if the sensitive information is removed from the content, those protective actions are undone the next time the content's scanned. But if a retention policy or label is applied to content containing sensitive information, that's a one-time action that won't be undone even if the sensitive information is removed.
   
 By using a label as a condition in a DLP policy, you can enforce both retention and protection actions on content with that label. You can think of content containing a label exactly like content containing sensitive information - both a label and a sensitive information type are properties used to classify content, so that you can enforce actions on that content.
   
