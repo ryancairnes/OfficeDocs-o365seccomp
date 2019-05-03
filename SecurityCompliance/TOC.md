@@ -5,7 +5,6 @@
 ### [Microsoft 365 compliance center](microsoft-365-compliance-center.md)
 ### [Microsoft 365 security center](overview-security-center.md)
 ### [Microsoft Secure Score](microsoft-secure-score.md)
-### [Office 365 Secure Score](office-365-secure-score.md)
 ## [Go to the Security & Compliance Center](go-to-the-securitycompliance-center.md)
 ### [Permissions in the Security & Compliance Center](permissions-in-the-security-and-compliance-center.md)
 ### [Give users access to the Security & Compliance Center](grant-access-to-the-security-and-compliance-center.md)
