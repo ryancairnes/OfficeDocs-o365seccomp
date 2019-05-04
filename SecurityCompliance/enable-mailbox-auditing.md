@@ -23,7 +23,7 @@ Starting in January 2019, Microsoft is turning on mailbox audit logging by defau
 
 Here are some benefits of mailbox auditing on by default:
 
-- Auditing is automatically enabled when you create a new mailbox. You won't have to manually enable it for new users.
+- Auditing is automatically enabled when you create a new mailbox. You don't need to manually enable it for new users.
 
 - You don't need to manage the mailbox actions that are audited. A predefined set of mailbox actions are audited by default for each logon type (Admin, Delegate, and Owner).
 
@@ -89,9 +89,9 @@ Logon types classify the user that did the audited actions on the mailbox. The f
 
 The following table describes the mailbox actions that are available in mailbox audit logging for user mailboxes and shared mailboxes.
 
-- A check mark ( ![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)) indicates the mailbox action can be logged for the specified logon type (not all actions are available for all logon types).
+- A check mark ( ![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)) indicates the mailbox action can be logged for the logon type (not all actions are available for all logon types).
 
-- An asterisk ( <sup>\*</sup> ) after the check mark indicates the mailbox action is logged by default for the specified logon type.
+- An asterisk ( <sup>\*</sup> ) after the check mark indicates the mailbox action is logged by default for the logon type.
 
 - Remember, an admin with Full Access permission to a mailbox is considered a delegate.
 
@@ -200,12 +200,12 @@ Get-Mailbox -Identity <MailboxIdentity> | Select-Object -ExpandProperty AuditAdm
 
 ## Change or restore mailbox actions logged by default
 
-As previously explained, one of the key benefits of having mailbox auditing on by default is you don't have to manage the mailboxes actions that are audited. Microsoft does this for you and will automatically add new mailbox actions to be audited by default when they are released.
+As previously explained, one of the key benefits of having mailbox auditing on by default is: you don't need to manage the mailboxes actions that are audited. Microsoft does this for you and will automatically add new mailbox actions to be audited by default when they are released.
 
 However, your organization may be required to audit a different set of mailbox actions for user mailboxes and shared mailboxes. The procedures in this section show you how to change the mailbox actions that are audited for each logon type, and how to revert back to the Microsoft-managed default actions.
 
 > [!IMPORTANT]
-> If you use the following procedures to customize the mailbox actions that are logged on user mailboxes or shared mailboxes, any new default mailbox actions released by Microsoft will not be automatically audited on those mailboxes. You'll need to explicitly add the new mailbox action to your customized list of actions.
+> If you use the following procedures to customize the mailbox actions that are logged on user mailboxes or shared mailboxes, any new default mailbox actions released by Microsoft will not be automatically audited on those mailboxes. You'll need to manually add the new mailbox action to your customized list of actions.
 
 ### Change the mailbox actions to audit
 
