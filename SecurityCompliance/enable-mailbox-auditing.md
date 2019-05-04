@@ -57,11 +57,9 @@ The following table shows the mailbox types that are currently supported by mail
 |:---------|:---------:|:---------:|
 |User mailboxes|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)||
 |Shared mailboxes|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)||
-|Office 365 Group mailboxes<sup>\*</sup>|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)||
+|Office 365 Group mailboxes|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)||
 |Resource mailboxes||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
 |Public folder mailboxes||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
-
-<sup>\*</sup>Office 365 groups
 
 ## Logon types and mailbox actions
 
