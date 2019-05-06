@@ -10,7 +10,6 @@
 ### [Microsoft 365 compliance center](microsoft-365-compliance-center.md)
 ### [Microsoft 365 security center](overview-security-center.md)
 ### [Microsoft Secure Score](microsoft-secure-score.md)
-### [Office 365 Secure Score](office-365-secure-score.md)
 ## [Go to the Security & Compliance Center](go-to-the-securitycompliance-center.md)
 ### [Permissions in the Security & Compliance Center](permissions-in-the-security-and-compliance-center.md)
 ### [Give users access to the Security & Compliance Center](grant-access-to-the-security-and-compliance-center.md)
@@ -303,6 +302,66 @@
 ### [Quarantine FAQ for Office 365](quarantine-faq.md)
 ### [Use user spam notifications to release and report quarantined messages in Office 365](use-spam-notifications-to-release-and-report-quarantined-messages.md)
 
+# Security incident management
+## [Office 365 Security Incident Response](office365-security-incident-response-overview.md)
+## [Detect and Remediate Illicit Consent Grants in Office 365](detect-and-remediate-illicit-consent-grants.md)
+## [Detect and Remediate Outlook Rules and Custom Forms Injections Attacks in Office 365](detect-and-remediate-outlook-rules-forms-attack.md)
+## [Responding to a Compromised Email Account in Office 365](responding-to-a-compromised-email-account.md)
+
+# Records management
+## [File plan manager](file-plan-manager.md)
+## [Retention labels](labels.md)
+### [Comply with SEC Rule 17a-4](use-exchange-online-to-comply-with-sec-rule-17a-4.md)
+### [Create and publish retention labels by using PowerShell](https://docs.microsoft.com/en-us/office365/securitycompliance/bulk-create-publish-labels-using-powershell)
+## [Event-based retention](event-driven-retention.md)
+### [Automate event-based retention](automate-event-driven-retention.md)
+## [Disposition reviews](disposition-reviews.md)
+## Monitor records management
+### [View the data governance reports](view-the-data-governance-reports.md)
+### [View label activity for documents](view-label-activity-for-documents.md)
+### [View label usage with label analytics](label-analytics.md)
+## More information about records management
+### [Watch videos from the Microsoft Data Governance team](https://go.microsoft.com/fwlink/?linkid=867039)
+
+# Manage data governance
+## [Import data](importing-pst-files-to-office-365.md)
+### [Use network upload to import PST files](use-network-upload-to-import-pst-files.md)
+### [Use drive shipping to import PST files](use-drive-shipping-to-import-pst-files-to-office-365.md)
+### [Use the PST Collection tool to find, copy, and delete PST files](find-copy-and-delete-pst-files-in-your-organization.md)
+### [Filter data when importing PST files](filter-data-when-importing-pst-files.md)
+### [Use network upload to import RMS-encrypted PST files](use-network-upload-to-import-rms-encrypted-pst-files.md)
+### [FAQ about importing PST files](faqimporting-pst-files-to-office-365.md)
+### [Archive third-party data in Office 365](archiving-third-party-data.md)
+#### [Use sample connectors to archive third-party data](archive-third-party-data-with-sample-connector.md)
+#### [Work with a partner to archive third-party data](work-with-partner-to-archive-third-party-data.md)
+## Store data
+### [Enable archive mailboxes](enable-archive-mailboxes.md)
+### [Overview of unlimited archiving](unlimited-archiving.md)
+### [Enable unlimited archiving](enable-unlimited-archiving.md)
+### [Set up an archive and deletion policy for mailboxes](set-up-an-archive-and-deletion-policy-for-mailboxes.md)
+## Retain data
+### [Retention policies](retention-policies.md)
+### [File plan manager](file-plan-manager.md)
+### [Retention labels](labels.md)
+### [Comply with SEC Rule 17a-4](use-exchange-online-to-comply-with-sec-rule-17a-4.md)
+### [Create and publish retention labels by using PowerShell](https://docs.microsoft.com/en-us/office365/securitycompliance/bulk-create-publish-labels-using-powershell)
+### [Event-based retention](event-driven-retention.md)
+### [Automate event-based retention](automate-event-driven-retention.md)
+## [Dispose data](disposition-reviews.md)
+## [Supervise communications](supervision-policies.md)
+### [Configure supervision policies for your organization](configure-supervision-policies.md)
+## [Manage inactive mailboxes](inactive-mailboxes-in-office-365.md)
+### [Create and manage inactive mailboxes](create-and-manage-inactive-mailboxes.md)
+### [Change the hold duration for an inactive mailbox](change-the-hold-duration-for-an-inactive-mailbox.md)
+### [Recover an inactive mailbox](recover-an-inactive-mailbox.md)
+### [Restore an inactive mailbox](restore-an-inactive-mailbox.md)
+### [Delete an inactive mailbox](delete-an-inactive-mailbox.md)
+## Monitor data governance
+### [View label activity for documents](view-label-activity-for-documents.md)
+### [View label usage with label analytics](label-analytics.md)
+### [View the data governance reports](view-the-data-governance-reports.md)
+## More information about data governance
+### [Watch videos from the Microsoft Data Governance team](https://go.microsoft.com/fwlink/?linkid=867039)
 
 # [Search for content](search-for-content.md)
 ## [Use Content Search](content-search.md)
@@ -556,7 +615,7 @@
 ### [Isolated SharePoint Online team site dev/test environment](isolated-sharepoint-online-team-site-dev-test-environment.md)
 ## [SIEM server integration](siem-server-integration.md)
 
-# Compliance solutions
+# Regulatory compliance solutions
 ## [Microsoft Service Trust Portal](get-started-with-service-trust-portal.md)
 ## [Compliance Manager (Classic)](meet-data-protection-and-regulatory-reqs-using-microsoft-cloud.md)
 ## [Compliance Manager (Preview)](compliance-manager-overview.md)
@@ -583,12 +642,6 @@
 ### [GDPR for Project Server](gdpr-for-project-server.md)
 ### [GDPR for Office Web Apps Server and Office Online Server](gdpr-for-office-online-server.md)
 ### [GDPR for on-premises Windows Server file shares](gdpr-for-on-premises-file-shares.md)
-
-# Security incident management
-## [Office 365 Security Incident Response](office365-security-incident-response-overview.md)
-## [Detect and Remediate Illicit Consent Grants in Office 365](detect-and-remediate-illicit-consent-grants.md)
-## [Detect and Remediate Outlook Rules and Custom Forms Injections Attacks in Office 365](detect-and-remediate-outlook-rules-forms-attack.md)
-## [Responding to a Compromised Email Account in Office 365](responding-to-a-compromised-email-account.md)
 
 # Service assurance
 ## [Service assurance in the Office 365 Security & Compliance Center](service-assurance.md)
