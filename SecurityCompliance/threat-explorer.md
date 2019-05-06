@@ -51,7 +51,7 @@ The report refreshes to show the results malware detected in email, using the te
 
 ## View data about phishing URLs and click verdict
 
-Suppose you want to see phishing attempts through URLs in email, including a list of URLs that were allowed, blocked, and overridden.  Identifying URLs that were clicked requires [ATP Safe links](atp-safe-links.md). Make sure you have set up [ATP Safe Links policies](set-up-atp-safe-links-policies.md) for click-time protection and logging of click verdicts by ATP Safe Links. To review phish URLs in messages and clicks on URLs in phish messages, use the [Email > Phish](threat-explorer-views.md#email--phish) view of Explorer (or real-time detections).
+Suppose you want to see phishing attempts through URLs in email, including a list of URLs that were allowed, blocked, and overridden. Identifying URLs that were clicked requires [ATP Safe links](atp-safe-links.md) to be configured. Make sure you have set up [ATP Safe Links policies](set-up-atp-safe-links-policies.md) for time-of-click protection and logging of click verdicts by ATP Safe Links. To review phish URLs in messages and clicks on URLs in phish messages, use the [Email > Phish](threat-explorer-views.md#email--phish) view of Explorer (or real-time detections).
 
 1. In the Security & Compliance Center ([https://protection.office.com](https://protection.office.com)), choose **Threat management** > **Explorer** (or **Real-time detections**). (In our example, we use Explorer.)
 
@@ -65,9 +65,9 @@ The report refreshes to show two different URL tables on the URL tab below:
 
 1. **Top URLs** are the URLs contained in the messages you have filtered down to, and the email delivery action counts for each URL. In the phish email view, this list typically will contain legitimate URLs. Attackers include a mix of good and bad URLs in their messages to try to get them delivered, but they'll make the malicious links more interesting for the user to click. The table of URLs is sorted by total email count (NOTE: This column is not shown to simplify the view).
 
-2. **Top clicks** are the Safe Links wrapped URLs that were clicked, sorted by total click count (this column is also not shown to simplify the view). Total counts by column indicate the Safe Links click verdict count for each clicked URL. In the phish email view, these will more often be suspicious or malicious links, but could include clean URLs that happen to be in phish messages. URL clicks on unwrapped links will not show up here.
+2. **Top clicks** are the Safe Links wrapped URLs that were clicked, sorted by total click count (this column is also not shown to simplify the view). Total counts by column indicate the Safe Links click verdict count for each clicked URL. In the phish email view, these are more often suspicious or malicious URLs, but could include clean URLs that are in phish messages. URL clicks on unwrapped links will not show up here.
 
-The two URLs tables show top URLs in phishing emails by delivery status, and they show URL clicks that were blocked (or visited despite a warning) so that you can understand what potential bad links were received by users and interacted with by users. From here, you can conduct further analysis. For example, below the chart, you can see the top URLs in emails that were blocked in your organization's environment. 
+The two URLs tables show top URLs in phishing emails by delivery action, and they show URL clicks that were blocked (or visited despite a warning) so that you can understand what potential bad links were received by users and interacted with by users. From here, you can conduct further analysis. For example, below the chart, you can see the top URLs in emails that were blocked in your organization's environment. 
 
 ![Explorer URLs that were blocked](media/ExplorerPhishClickVerdictURLs.png) 
 
@@ -75,7 +75,7 @@ Select a URL to view more detailed information. Note that in the URL flyout dial
 
 ## Review email messages reported by users
 
-Suppose you want to see email messages that users in your organization have reported as Junk, Not Junk, or Phishing by using the [Report Message add-in for Outlook and Outlook on the web](enable-the-report-message-add-in.md). To do this, use the [Email > User-reported](threat-explorer-views.md#email--user-reported) view of Explorer.
+Suppose you want to see email messages that users in your organization have reported as Junk, Not Junk, or Phishing by using the [Report Message add-in for Outlook and Outlook on the web](enable-the-report-message-add-in.md). To do this, use the [Email > User-reported](threat-explorer-views.md#email--user-reported) view of Explorer (or real-time detections).
 
 1. In the Security & Compliance Center ([https://protection.office.com](https://protection.office.com)), choose **Threat management** > **Explorer** (or **Real-time detections**).
 
