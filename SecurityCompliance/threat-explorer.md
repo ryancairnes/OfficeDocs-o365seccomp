@@ -3,7 +3,7 @@ title: "Threat Explorer (and real-time detections)"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 05/03/2019
+ms.date: 05/06/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -37,7 +37,7 @@ Here are some of the things you can do:
 
 ## See malware detected in email by technology
 
-Suppose you want to see malware that was detected in email, and by what technology in Office 365. To do this, use the [Email > Malware](threat-explorer-views.md#email--malware) view of Explorer.
+Suppose you want to see malware that was detected in email, and by what technology in Office 365. To do this, use the [Email > Malware](threat-explorer-views.md#email--malware) view of Explorer (or real-time detections).
 
 1. In the Security & Compliance Center ([https://protection.office.com](https://protection.office.com)), choose **Threat management** > **Explorer** (or **Real-time detections**). (In our example, we use Explorer.)
 
