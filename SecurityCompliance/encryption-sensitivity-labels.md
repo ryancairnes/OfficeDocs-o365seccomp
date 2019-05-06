@@ -121,7 +121,7 @@ The following sections describe what happens to existing encyption when a sensit
 
 ### Do Not Forward option
 
-||**User applies a sensitivity label with encryption turned off**|**User applies a sensitivity label with encryption turned on**|**User applies a label with Remove Protection**<sup>1</sup>|
+|test|**User applies a sensitivity label with encryption turned off**|**User applies a sensitivity label with encryption turned on**|**User applies a label with Remove Protection**<sup>1</sup>|
 |:-----|:-----|:-----|:-----|
 |**Email**|Protection is removed|Label protection is applied|**Do Not Forward** is removed|
 |**Document**|Protection is preserved|Label protection is applied|**Do Not Forward** is removed|
