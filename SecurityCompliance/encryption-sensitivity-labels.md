@@ -119,11 +119,13 @@ Before a sensitivity label is applied to content, it's possible that a user alre
 
 This table describe what happens to existing encyption when a sensitivity label is applied to that content.
 
+
 ||**User applies a sensitivity label with encryption turned off**|**User applies a sensitivity label with encryption turned on**|**User applies a label with Remove Protection**<sup>1</sup>|
 |:-----|:-----|:-----|:-----|
 |**Do Not Forward**|Email - Protection is removed<br/>Document - Protection is preserved|Label protection is applied|**Do Not Forward** is removed|
 |**Custom protection**<sup>1</sup>|Protection is preserved|Label protection is applied|Custom protection is removed|
 |**Azure RMS template**|Protection is preserved|Label protection is applied|Custom protection is removed|
+
 <sup>1</sup>This is supported only in the Azure Information Protection labeling client.
 
 ## Storing encrypted content in OneDrive and SharePoint
