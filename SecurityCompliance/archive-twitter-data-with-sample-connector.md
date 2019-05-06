@@ -14,7 +14,7 @@ description: "Administrators can set up a native connector to import Twitter dat
 
 # Use a sample connector to archive Twitter data in Office 365 (Preview)
 
-The sample connector feature to archive Twitter data and other third-party data in Office 365 is in Preview.
+The sample connector feature to archive Twitter data in Office 365 is in Preview.
 
 Use a sample connector in the Security & Compliance Center in Office 365 to import and archive data from Twitter. After you set up and configure a sample connector, it connects to your organization's Twitter account (on a scheduled basis), converts the content of an item to an email message format, and then imports those items to a mailbox in Office 365.
 
@@ -28,7 +28,7 @@ After Twitter data is imported, you can apply Office 365 compliance features suc
 
 You must complete the following prerequisites before you can set up and configure a sample connector in the Security & Compliance Center to import and archive data from your organization's Twitter account. 
 
-- You need a Facebook account for your organization's business pages (you need to sign in to this account when setting up the connector). Currently, you can only archive data from Facebook Business pages; you can't archive data from individual Facebook profiles.
+- You need a Twitter account for your organization; you'll need to sign in to this account when setting up the connector.
 
 - Your organization must have a valid Azure subscription. If you don't have an existing Azure subscription, you can sign up for one of these options:
 
@@ -45,7 +45,7 @@ You must complete the following prerequisites before you can set up and configur
 
 ## Step 1: Download the pre-built connector app package from Github
 
-The first step is to download the source code for the Twitter sample connector app that will use a Twitter API to connect to your Twitter account and extract Twitter data so you can import it to Office 365.
+The first step is to download the source code for the Twitter sample connector app that will use a Twitter API to connect to your Twitter account and extract data so you can import it to Office 365.
 
 1. Go to [this GitHub site](https://github.com/Microsoft/m365-sample-connector-csharp-aspnet/releases). 
 2. Under the latest release, click the **SampleConnector.zip** file.
@@ -55,7 +55,7 @@ The first step is to download the source code for the Twitter sample connector a
 
 The next step is to register a new app in Azure Active Directory (AAD). This app will correspond to the web app resource that you'll implement in Step 4 for the Twitter connector. 
 
-For step-by-step instructions, see [Create an app in Azure Active Directory](deploy-facebook-connector.md#step-2-create-an-app-in-azure-active-directory).
+For step-by-step instructions, see [Step 2: Create an app in Azure Active Directory](deploy-twitter-connector.md#step-2-create-an-app-in-azure-active-directory).
 
 During the completion of this step (by following the step-by-step instructions), you'll save the following information to a text file. The values for these will be used in later steps in the deployment process.
 
@@ -66,62 +66,62 @@ During the completion of this step (by following the step-by-step instructions),
 
 ## Step 3: Create an Azure storage account
 
-The Facebook Connector that you deploy for your organization will upload the items from your Facebook Business pages to the Azure storage location that you create in this step. After you create a custom connector in the Security & Compliance Center (in Step 7), the Office 365 Import service will copy the Facebook data from the Azure storage location to a mailbox in Office 365. As previous explained in the [Prerequisites](#prerequisites-for-setting-up-a-connector-for-facebook-business-pages) section, you must have a valid Azure subscription to create an Azure storage account.
+The Twitter connector that you deploy for your organization will upload the items from Twitter to the Azure storage location that you create in this step. After you create a custom connector in the Security & Compliance Center (in Step 7), the Office 365 Import service will copy the Twitter data from the Azure storage location to a mailbox in Office 365. As previous explained in the [Prerequisites](#prerequisites-for-setting-up-a-connector-for-twitter) section, you must have a valid Azure subscription to create an Azure storage account.
 
-For step-by-step instructions, see [Create an Azure storage account](deploy-facebook-connector.md#step-3-create-an-azure-storage-account).
+For step-by-step instructions, see [Step 3: Create an Azure storage account](deploy-twitter-connector.md#step-3-create-an-azure-storage-account).
 
 During the completion of this step (by following the step-by-step instructions) you'll save the connection string Uri that is generated. You'll use this string when creating a web app resource in Azure in Step 4.
 
 ## Step 4: Create a web app resource in Azure
 
-The next step is to create a web app resource in Azure for the Facebook Connector. 
+The next step is to create a web app resource in Azure for the Twitter connector. 
 
-For step-by-step instructions, see [Create a new web app resource in Azure](deploy-facebook-connector.md#step-4-create-a-new-web-app-resource-in-azure).
+For step-by-step instructions, see [Step 4: Create a new web app resource in Azure](deploy-twitter-connector.md#step-4-create-a-new-web-app-resource-in-azure).
 
 During the completion of this step (by following the step-by-step instructions), you'll provide the following information (that you've copied to a text file after completing the previous steps) when creating the web app resource.
 
 - APISecretKey – You will create this secret during the completion of this step; it will be used in Step 7.
 - StorageAccountConnectionString – The connection string Uri that you copied after creating the Azure storage account in Step 3.
-- tenantId – The tenant ID of your Office 365 organization that you copied after creating the Facebook connector app in Azure Active Directory in Step 2.
+- tenantId – The tenant ID of your Office 365 organization that you copied after creating the Twitter connector app in Azure Active Directory in Step 2.
 
-Additionally, you will upload the SampleConnector.zip file (that you downloaded in Step 1) in this step to deploy the source code for the Facebook connector app.
+Additionally, you will upload the SampleConnector.zip file (that you downloaded in Step 1) in this step to deploy the source code for the Twitter connector app.
 
-After completing this step, be sure to copy the app Service URL (for example, https://fbconnector.azurewebsites.net). You'll need to use this to complete Step 5, Step 6, and Step 7).
+After completing this step, be sure to copy the app Service URL (for example, https://twitterconnector.azurewebsites.net). You'll need to use this to complete Step 5, Step 6, and Step 7).
 
-## Step 5: Register the web app on Facebook
+## Step 5: Create developer app on Twitter
 
-The next step is to create and configure a new app on Facebook. The custom connector that you create in Step 7 will use the Facebook web app to interact with the Facebook API to obtain data from your organization's Facebook Business pages.
+The next step is to create and configure a developer app on Twitter. The custom connector that you create in Step 7 will use the Twitter app to interact with the Twitter API to obtain data from your organization's Twitter account.
 
-For step-by-step instructions, see [Register the Facebook app](deploy-facebook-connector.md#step-5-register-the-facebook-app).
+For step-by-step instructions, see [Step 5: Create the Twitter app](deploy-twitter-connector.md#step-5-create-the-twitter-app).
 
-During the completion of this step (by following the step-by-step instructions), you'll save the following information to a text file. The values for these will be used to configure the Facebook connector app in Step 6.
+During the completion of this step (by following the step-by-step instructions), you'll save the following information to a text file. The values for these will be used to configure the Twitter connector app in Step 6.
 
-- Facebook application ID
-- Facebook application secret
-- Facebook webhooks verify token
+- Twitter application ID
+- Twitter application secret
+- Twitter webhooks verify token
 
-## Step 6: Configure the Facebook connector app
+## Step 6: Configure the Twitter connector app
 
-The next step is to add configurations settings to the Facebook connector app that you uploaded when you created the Azure web app resource in Step 4. You'll do this by going to the home page of your connector app and configuring it.
+The next step is to add configurations settings to the Twitter connector app that you uploaded when you created the Azure web app resource in Step 4. You'll do this by going to the home page of your connector app and configuring it.
 
-For step-by-step instructions, see [Step 6: Configure the connector web app](deploy-facebook-connector.md#step-6-configure-the-connector-web-app).
+For step-by-step instructions, see [Step 6: Configure the connector web app](deploy-twitter-connector.md#step-6-configure-the-connector-web-app).
 
 During the completion of this step (by following the step-by-step instructions), you'll provide the following information (that you've copied to a text file after completing the previous steps):
 
-- Facebook application ID (obtained in Step 5)
-- Facebook application secret (obtained in Step 5)
-- Facebook webhooks verify token (obtained in Step 5)
+- Twitter application ID (obtained in Step 5)
+- Twitter application secret (obtained in Step 5)
+- Twitter webhooks verify token (obtained in Step 5)
 - Azure Active Directory application ID (the AAD application ID obtained in Step 2)
 - Azure Active Directory application secret (the AAD application secret obtained in Step 2)
 - Azure Active Directory application Uri (the AAD application Uri obtained in Step 2; for example, https://microsoft.onmicrosoft.com/2688yu6n-12q3-23we-e3ee-121111123213)
 
 ## Step 7: Set up a custom connector in the Security & Compliance Center
 
-The final step is to set up the custom connector in the Security & Compliance Center that will import data from your Facebook Business pages to a specified mailbox in Office 365. After you successfully complete this step, the Office 365 Import service will start the process of importing data from your Facebook Business pages to Office 365. 
+The final step is to set up the custom connector in the Security & Compliance Center that will import data from your organization's Twitter account to a specified mailbox in Office 365. After you successfully complete this step, the Office 365 Import service will start the process of importing data from Twitter to Office 365. 
 
-For step-by-step instructions, see [Set up a custom connector in the Security & Compliance Center](deploy-facebook-connector.md#step-7-set-up-a-custom-connector-in-the-security--compliance-center). 
+For step-by-step instructions, see [Step 7: Set up a custom connector in the security and compliance center](deploy-twitter-connector.md#step-7-set-up-a-custom-connector-in-the-security-and-compliance-center). 
 
 During the completion of this step (by following the step-by-step instructions), you'll provide the following information (that you've copied to a text file after completing the steps).
 
-- Azure app service URL (obtained in Step 4; for example https://fbconnector.azurewebsites.net)
+- Azure app service URL (obtained in Step 4; for example https://twitterconnector.azurewebsites.net)
 - APISecretKey (that you created in Step 4)

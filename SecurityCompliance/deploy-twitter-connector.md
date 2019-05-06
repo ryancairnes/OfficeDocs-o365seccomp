@@ -192,7 +192,7 @@ Add the below 3 application settings with appropriate values
 
 ![](media/TCimage25.png)
 
-## Step 5: Register the Twitter app
+## Step 5: Create the Twitter app
 
 1. Go to https://developer.twitter.com, log in using the credentials for the developer account for your organization, and then click **Create an app**.
 
@@ -244,8 +244,8 @@ Your Developer App is now ready to use
 
 4. Under **Configuration Details**, enter the following configuration settings 
 
-   - **Twitter application ID** - The app ID for the Facebook application that you obtained in Step 5.
-   - **Twitter application secret** - The app secret for the Facebook application that you obtained in Step 5.
+   - **Twitter application ID** - The app ID for the Twitter application that you obtained in Step 5.
+   - **Twitter application secret** - The app secret for the Twitter application that you obtained in Step 5.
    - **Twitter client token** - The verify token that you created in Step 5.
    - **Twitter client token secret** - The application ID for the Azure Active Directory app that you created in Step 2
    - **AAD application ID** - The application ID for the Azure Active Directory app that you created in Step 2
@@ -255,12 +255,12 @@ Your Developer App is now ready to use
 
 5. Click **Save** to save the connector settings.
 
-## Step 7: Set up a custom connector in the Security & Compliance Center
+## Step 7: Set up a custom connector in the security and compliance center
 
 1.  Go to Data Governance \> Import and click Archive third-party data
 
 ![](media/TCimage36.png)
-
+T
 33. Click Add connector button and select custom
 
 ![](media/TCimage37.png)
