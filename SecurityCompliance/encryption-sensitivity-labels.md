@@ -109,6 +109,40 @@ The Rights Management issuer is always granted Full Control permissions for the 
 
 For more information, see [Rights Management issuer and Rights Management owner](https://docs.microsoft.com/en-us/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
 
+## What happens to existing encryption when a label's applied
+
+Before a sensitivity label is applied to content, it's possible that a user already encrypted the content by applying some other protection setting. For example, a user might have applied:
+
+- The **Do Not Forward** option.
+- Custom protection by using the Azure Information Protection unified labeling client.
+- An Azure Rights Management Service template that encrypts the content but is not associated with a label.
+
+The following sections describe what happens to existing encyption when a sensitivity label is applied to that content.
+
+### Do Not Forward option
+
+||**User applies a sensitivity label with encryption turned off**|**User applies a sensitivity label with encryption turned on**|**User applies a label with Remove Protection**<sup>1</sup>|
+|:-----|:-----|:-----|:-----|
+|**Email**|Protection is removed<br/>|Label protection is applied<br/>|**Do Not Forward** is removed<br/>|
+|**Document**|Protection is preserved<br/>|Label protection is applied<br/>|**Do Not Forward** is removed<br/>|
+<sup>1</sup>The **Remove Protection** option is supported only in the Azure Information Protection labeling client.
+
+### Custom protection from the Azure Information Protection labeling client
+
+||**User applies a sensitivity label with encryption turned off**|**User applies a sensitivity label with encryption turned on**|**User applies a label with Remove Protection**<sup>1</sup>|
+|:-----|:-----|:-----|:-----|
+|**Email**|Protection is preserved<br/>|Label protection is applied<br/>|Custom protection is removed<br/>|
+|**Document**|Protection is preserved<br/>|Label protection is applied<br/>|Custom protection is removed<br/>|
+<sup>1</sup>The **Remove Protection** option is supported only in the Azure Information Protection labeling client.
+
+### Azure Rights Management Service template not associated with a label
+
+||**User applies a sensitivity label with encryption turned off**|**User applies a sensitivity label with encryption turned on**|**User applies a label with Remove Protection**<sup>1</sup>|
+|:-----|:-----|:-----|:-----|
+|**Email**|Protection is preserved<br/>|Label protection is applied<br/>|Custom protection is removed<br/>|
+|**Document**|Protection is preserved<br/>|Label protection is applied<br/>|Custom protection is removed<br/>|
+<sup>1</sup>The **Remove Protection** option is supported only in the Azure Information Protection labeling client.
+
 ## Storing encrypted content in OneDrive and SharePoint
 
 Be aware that when encryption is applied to files stored in OneDrive and SharePoint, the service cannot process the contents of these files. This means that features such as co-authoring, eDiscovery, search, Delve, and other collaborative features do not work. Also, data loss prevention (DLP) policies can work only with the metadata (including Office 365 labels) but not the contents of encrypted files (such as credit card numbers within files).
