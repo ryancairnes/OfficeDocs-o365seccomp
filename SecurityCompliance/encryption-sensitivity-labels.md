@@ -118,9 +118,10 @@ Before a sensitivity label is applied to content, it's possible that a user alre
 - An Azure Rights Management Service (RMS) template that encrypts the content but is not associated with a label.
 
 This table describe what happens to existing encyption when a sensitivity label is applied to that content.
+<br/>
+<br/>
 
-
-||**User applies a sensitivity label with encryption turned off**|**User applies a sensitivity label with encryption turned on**|**User applies a label with Remove Protection**<sup>1</sup>|
+| |**User applies a sensitivity label with encryption turned off**|**User applies a sensitivity label with encryption turned on**|**User applies a label with Remove Protection**<sup>1</sup>|
 |:-----|:-----|:-----|:-----|
 |**Do Not Forward**|Email - Protection is removed<br/>Document - Protection is preserved|Label protection is applied|**Do Not Forward** is removed|
 |**Custom protection**<sup>1</sup>|Protection is preserved|Label protection is applied|Custom protection is removed|
