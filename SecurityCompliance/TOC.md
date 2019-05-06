@@ -76,7 +76,7 @@
 
 ## [Understand latest attack campaigns with threat analytics](latest-attack-campaigns.md)
 
-## [Advanced Threat Protection ](office-365-atp.md)
+## [Office 365 Advanced Threat Protection ](office-365-atp.md)
 ### [ATP Safe Links](atp-safe-links.md)
 #### [Set up ATP Safe Links policies](set-up-atp-safe-links-policies.md)
 #### [Set up a custom "do not rewrite" URLs list](set-up-a-custom-do-not-rewrite-urls-list-with-atp.md)
