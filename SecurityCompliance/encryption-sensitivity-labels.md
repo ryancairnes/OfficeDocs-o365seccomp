@@ -121,15 +121,15 @@ The following sections describe what happens to existing encyption when a sensit
 
 ### Do Not Forward option
 
-|<br/>|**User applies a sensitivity label with encryption turned off**|**User applies a sensitivity label with encryption turned on**|**User applies a label with Remove Protection**<sup>1</sup>|
+||**User applies a sensitivity label with encryption turned off**|**User applies a sensitivity label with encryption turned on**|**User applies a label with Remove Protection**<sup>1</sup>|
 |:-----|:-----|:-----|:-----|
-|**Email**<br/>|Protection is removed<br/>|Label protection is applied<br/>|**Do Not Forward** is removed<br/>|
-|**Document**<br/>|Protection is preserved<br/>|Label protection is applied<br/>|**Do Not Forward** is removed<br/>|
+|**Email**|Protection is removed|Label protection is applied|**Do Not Forward** is removed|
+|**Document**|Protection is preserved|Label protection is applied|**Do Not Forward** is removed|
 <sup>1</sup>The **Remove Protection** option is supported only in the Azure Information Protection labeling client.
 
 ### Custom protection from the Azure Information Protection labeling client
 
-|<br/>|**User applies a sensitivity label with encryption turned off**|**User applies a sensitivity label with encryption turned on**|**User applies a label with Remove Protection**<sup>1</sup>|
+||**User applies a sensitivity label with encryption turned off**|**User applies a sensitivity label with encryption turned on**|**User applies a label with Remove Protection**<sup>1</sup>|
 |:-----|:-----|:-----|:-----|
 |**Email**<br/>|Protection is preserved<br/>|Label protection is applied<br/>|Custom protection is removed<br/>|
 |**Document**<br/>|Protection is preserved<br/>|Label protection is applied<br/>|Custom protection is removed<br/>|
@@ -137,7 +137,7 @@ The following sections describe what happens to existing encyption when a sensit
 
 ### Azure Rights Management Service template not associated with a label
 
-|<br/>|**User applies a sensitivity label with encryption turned off**|**User applies a sensitivity label with encryption turned on**|**User applies a label with Remove Protection**<sup>1</sup>|
+||**User applies a sensitivity label with encryption turned off**|**User applies a sensitivity label with encryption turned on**|**User applies a label with Remove Protection**<sup>1</sup>|
 |:-----|:-----|:-----|:-----|
 |**Email**<br/>|Protection is preserved<br/>|Label protection is applied<br/>|Custom protection is removed<br/>|
 |**Document**<br/>|Protection is preserved<br/>|Label protection is applied<br/>|Custom protection is removed<br/>|
