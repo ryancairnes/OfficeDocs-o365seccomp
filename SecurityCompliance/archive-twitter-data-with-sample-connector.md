@@ -21,7 +21,7 @@ Use a sample connector in the Security & Compliance Center in Office 365 to impo
 After Twitter data is imported, you can apply Office 365 compliance features such as Litigation Hold, Content Search, In-Place Archiving, Auditing, Supervision, and Office 365 retention policies to the data stored in the mailbox. For example,you can search third-party data using Content Search or associate it with a custodian in an Advanced eDiscovery case. Using sample connectors to import and archive Twitter data in Office 365 can help your organization stay compliant with government and regulatory policies.
 
 > [!NOTE]
-> Currently, only the sample connectors for Twitter and [Facebook Business pages](archive-third-party-data-with-sample-connector.md) are available for Preview. More sample connectors are coming soon.
+> Currently, only the sample connectors for Twitter and [Facebook Business pages](archive-facebook-data-with-sample-connector.md) are available for Preview. More sample connectors are coming soon.
 
 
 ## Prerequisites for setting up a connector for Twitter
