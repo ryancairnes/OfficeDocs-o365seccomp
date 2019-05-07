@@ -36,19 +36,19 @@ EDM-based classification enables you to create custom sensitive information type
 
 ## Required licenses and permissions
 
-- During the preview program, if your organization has [DLP capabilities](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description/messaging-policy-and-compliance-servicedesc#data-loss-prevention-dlp), you can try EDM classification. If you are not already participating in the preview, [contact us](https://resources.office.com/us-landing-spe-contactus.html?LCID=EN-US) to get started.
+- When generally available, EDM-based classification will be included in subscriptions, such as Office 365 E3 or E5, Microsoft 365 E3 or E5, Microsoft 365 Information Protection and Compliance, or Office 365 Advanced Compliance.
 
 - You must be a global admin, compliance administrator, or Exchange Online administrator to perform the tasks described in this article. To learn more about DLP permissions, see [Permissions](data-loss-prevention-policies.md#permissions).
 
 > [!NOTE]
-> **EDM classification is currently in preview**, and is currently supported for Office 365 DLP and Microsoft Cloud App Security, across Exchange Online and Microsoft Teams. To participate in the preview, must have Office 365 E3, Office 365 E5, or Office 365 Advanced Compliance as an add-on. 
+> **EDM classification is currently in preview** for Office 365 DLP and Microsoft Cloud App Security (Exchange Online and Microsoft Teams). if your organization has [DLP capabilities](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description/messaging-policy-and-compliance-servicedesc#data-loss-prevention-dlp), you can try EDM classification If you are not already participating in the preview, [contact us](https://resources.office.com/us-landing-spe-contactus.html?LCID=EN-US) to get started. 
 
 ## The work flow at a glance
 
 |Phase  |What's needed  |
 |---------|---------|
 |[Part 1: Set up EDM classification](#part-1-set-up-edm-classification)<br/><br/>(As needed)<br/>- [Edit the schema for EDM](#editing-the-schema-for-edm) <br/>- [Remove the schema for EDM](#removing-the-schema-for-edm) |- Read access to the sensitive data<br/>- Database schema in .xml format (an example is included)<br/>- Rule package in .xml format (an example is included)<br/>- Admin permissions to the Security & Compliance Center (using PowerShell) |
-|[Part 2: Index and upload the sensitive data](#part-2-index-and-upload-the-sensitive-data)<br/><br/>(As needed)<br/>[Refresh the data](#refreshing-your-sensitive-information-database) |- Custom security group and user account<br/>- EDM Upload Agent tool<br/>- Process/schedule for refreshing the data|
+|[Part 2: Index and upload the sensitive data](#part-2-index-and-upload-the-sensitive-data)<br/><br/>(As needed)<br/>[Refresh the data](#refreshing-your-sensitive-information-database) |- Custom security group and user account<br/>- EDM Upload Agent tool<br/>- Read access to the sensitive data<br/>- Process and schedule for refreshing the data|
 |[Part 3: Use EDM classification with your Microsoft cloud services](#part-3-use-edm-classification-with-your-microsoft-cloud-services) |- Office 365 subscription with DLP<br/>- EDM classification feature enabled (in preview) |
 
 ## Part 1: Set up EDM classification
