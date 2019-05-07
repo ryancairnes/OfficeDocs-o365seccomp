@@ -12,9 +12,10 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 7a29260d-2959-42aa-8916-feceff6ee51d
-ms.collection:
+ms.collection: 
+- Strat_O365_IP
 - M365-security-compliance
-description: "As an Exchange administrator, you can apply your organization's branding to  your organization's encrypted email messages and the contents of the encryption portal."
+description: "As an Office 365 global administrator, you can apply your organization's branding to  your organization's encrypted email messages and to the contents of the encryption portal."
 ---
 
 # Add your organization's brand to your encrypted messages
@@ -45,7 +46,7 @@ You can also revert back to the default look and feel at any time.
 
 - Whether or not you want emails sent to external recipients to expire after a specified number of days.
 
-Once you've created the templates, you can apply them to encrypted emails by using Exchange mail flow rules. All mails that are branded by using these templates can be revoked.
+Once you've created the templates, you can apply them to encrypted emails by using Exchange mail flow rules. If you have Office 365 Advanced Message Encryption, you can revoke any email that you've branded by using these templates.
   
 ||
 |:-----|
