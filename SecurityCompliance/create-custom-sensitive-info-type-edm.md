@@ -6,23 +6,23 @@ manager: laurawi
 ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
-ms.date: 05/02/2019
+ms.date: 05/07/2019
 localization_priority: Priority
 ms.collection: 
 - M365-security-compliance
 search.appverid: 
 - MOE150
 - MET150
-description: "Create custom sensitive information types with Exact Data Match."
+description: "Create custom sensitive information types with Exact Data Match based classification."
 ---
 
-# Create custom sensitive information types with Exact Data Match (EDM) (Preview)
+# Create custom sensitive information types with Exact Data Match based classification (Preview)
 
 ## Overview
 
 With Office 365 for business, you can define [custom sensitive information types](custom-sensitive-info-types.md) that you can use to help prevent people from inadvertently or inappropriately sharing sensitive data within your organization. You can [use the Security & Compliance Center](create-a-custom-sensitive-information-type.md) or [use PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md) to define a custom sensitive information type based on patterns, evidence (evidence includes keywords like *employee*, *badge*, *ID*, and so on), character proximity (how close evidence is to characters in a particular pattern), and confidence levels. 
 
-But what if you wanted a custom sensitive information type that uses exact data values, instead of patterns and proximity? With Exact Data Match (EDM) classification, you can create a custom sensitive information type that:
+But what if you wanted a custom sensitive information type that uses exact data values, instead of patterns and proximity? With Exact Data Match (EDM) based classification, you can create a custom sensitive information type that:
 - is dynamic (refreshable daily or weekly);
 - is more scalable;
 - results in fewer false-positives;
@@ -32,16 +32,16 @@ But what if you wanted a custom sensitive information type that uses exact data 
 
 ![EDM classification](media/EDMClassification.png)
 
-EDM classification enables you to create custom sensitive information types that refer to exact values in a database of sensitive information. The database can be refreshed daily or weekly, and it can contain up to ten million rows of data. So as employees, patients, or clients come and go, and records change, your custom sensitive information types remain current and applicable. And, you can use EDM classification with policies, such as [data loss prevention policies](data-loss-prevention-policies.md) (DLP) or [Microsoft Cloud App Security file policies](https://docs.microsoft.com/cloud-app-security/data-protection-policies).
-
-> [!NOTE]
-> **EDM classification is currently in preview**, and is currently supported for Office 365 DLP and Microsoft Cloud App Security, across Exchange Online and Microsoft Teams. To participate in the preview, must have Office 365 E3, Office 365 E5, or Office 365 Advanced Compliance as an add-on. 
+EDM-based classification enables you to create custom sensitive information types that refer to exact values in a database of sensitive information. The database can be refreshed daily or weekly, and it can contain up to ten million rows of data. So as employees, patients, or clients come and go, and records change, your custom sensitive information types remain current and applicable. And, you can use EDM classification with policies, such as [data loss prevention policies](data-loss-prevention-policies.md) (DLP) or [Microsoft Cloud App Security file policies](https://docs.microsoft.com/cloud-app-security/data-protection-policies).
 
 ## Required licenses and permissions
 
 - During the preview program, if your organization has [DLP capabilities](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description/messaging-policy-and-compliance-servicedesc#data-loss-prevention-dlp), you can try EDM classification. If you are not already participating in the preview, [contact us](https://resources.office.com/us-landing-spe-contactus.html?LCID=EN-US) to get started.
 
 - You must be a global admin, compliance administrator, or Exchange Online administrator to perform the tasks described in this article. To learn more about DLP permissions, see [Permissions](data-loss-prevention-policies.md#permissions).
+
+> [!NOTE]
+> **EDM classification is currently in preview**, and is currently supported for Office 365 DLP and Microsoft Cloud App Security, across Exchange Online and Microsoft Teams. To participate in the preview, must have Office 365 E3, Office 365 E5, or Office 365 Advanced Compliance as an add-on. 
 
 ## The work flow at a glance
 
