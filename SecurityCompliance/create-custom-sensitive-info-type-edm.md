@@ -30,9 +30,9 @@ But what if you wanted a custom sensitive information type that uses exact data 
 - handles sensitive information more securely; and
 - can be leveraged with several Microsoft cloud services.
 
-![EDM classification](media/EDMClassification.png)
+![EDM-based classification](media/EDMClassification.png)
 
-EDM-based classification enables you to create custom sensitive information types that refer to exact values in a database of sensitive information. The database can be refreshed daily or weekly, and it can contain up to ten million rows of data. So as employees, patients, or clients come and go, and records change, your custom sensitive information types remain current and applicable. And, you can use EDM classification with policies, such as [data loss prevention policies](data-loss-prevention-policies.md) (DLP) or [Microsoft Cloud App Security file policies](https://docs.microsoft.com/cloud-app-security/data-protection-policies).
+EDM-based classification enables you to create custom sensitive information types that refer to exact values in a database of sensitive information. The database can be refreshed daily or weekly, and it can contain up to ten million rows of data. So as employees, patients, or clients come and go, and records change, your custom sensitive information types remain current and applicable. And, you can use EDM-based classification with policies, such as [data loss prevention policies](data-loss-prevention-policies.md) (DLP) or [Microsoft Cloud App Security file policies](https://docs.microsoft.com/cloud-app-security/data-protection-policies).
 
 ## Required licenses and permissions
 
@@ -41,19 +41,19 @@ EDM-based classification enables you to create custom sensitive information type
 - You must be a global admin, compliance administrator, or Exchange Online administrator to perform the tasks described in this article. To learn more about DLP permissions, see [Permissions](data-loss-prevention-policies.md#permissions).
 
 > [!NOTE]
-> **EDM classification is currently in preview** for Office 365 DLP and Microsoft Cloud App Security (Exchange Online and Microsoft Teams). if your organization has [DLP capabilities](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description/messaging-policy-and-compliance-servicedesc#data-loss-prevention-dlp), you can try EDM classification If you are not already participating in the preview, [contact us](https://resources.office.com/us-landing-spe-contactus.html?LCID=EN-US) to get started. 
+> **EDM-based classification is currently in preview** for Office 365 DLP and Microsoft Cloud App Security (Exchange Online and Microsoft Teams). if your organization has [DLP capabilities](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description/messaging-policy-and-compliance-servicedesc#data-loss-prevention-dlp), you can try EDM-based classification If you are not already participating in the preview, [contact us](https://resources.office.com/us-landing-spe-contactus.html?LCID=EN-US) to get started. 
 
 ## The work flow at a glance
 
 |Phase  |What's needed  |
 |---------|---------|
-|[Part 1: Set up EDM classification](#part-1-set-up-edm-classification)<br/><br/>(As needed)<br/>- [Edit the schema for EDM](#editing-the-schema-for-edm) <br/>- [Remove the schema for EDM](#removing-the-schema-for-edm) |- Read access to the sensitive data<br/>- Database schema in .xml format (an example is included)<br/>- Rule package in .xml format (an example is included)<br/>- Admin permissions to the Security & Compliance Center (using PowerShell) |
+|[Part 1: Set up EDM-based classification](#part-1-set-up-edm-classification)<br/><br/>(As needed)<br/>- [Edit the schema for EDM](#editing-the-schema-for-edm) <br/>- [Remove the schema for EDM](#removing-the-schema-for-edm) |- Read access to the sensitive data<br/>- Database schema in .xml format (an example is included)<br/>- Rule package in .xml format (an example is included)<br/>- Admin permissions to the Security & Compliance Center (using PowerShell) |
 |[Part 2: Index and upload the sensitive data](#part-2-index-and-upload-the-sensitive-data)<br/><br/>(As needed)<br/>[Refresh the data](#refreshing-your-sensitive-information-database) |- Custom security group and user account<br/>- EDM Upload Agent tool<br/>- Read access to the sensitive data<br/>- Process and schedule for refreshing the data|
-|[Part 3: Use EDM classification with your Microsoft cloud services](#part-3-use-edm-classification-with-your-microsoft-cloud-services) |- Office 365 subscription with DLP<br/>- EDM classification feature enabled (in preview) |
+|[Part 3: Use EDM-based classification with your Microsoft cloud services](#part-3-use-edm-classification-with-your-microsoft-cloud-services) |- Office 365 subscription with DLP<br/>- EDM-based classification feature enabled (in preview) |
 
-## Part 1: Set up EDM classification
+## Part 1: Set up EDM-based classification
 
-Setting up and configuring EDM classification involves saving sensitive data in .csv format, defining a schema for your database of sensitive information, creating a rule package, and then uploading the schema and rule package.
+Setting up and configuring EDM-based classification involves saving sensitive data in .csv format, defining a schema for your database of sensitive information, creating a rule package, and then uploading the schema and rule package.
 
 ### Define the schema for your database of sensitive information
 
@@ -62,7 +62,7 @@ Setting up and configuring EDM classification involves saving sensitive data in 
     - Up to ten million rows of sensitive data
     - Up to 32 columns (fields) per data source
 
-2. Structure the sensitive data in the .csv file such that the first row includes the names of the fields you'll use for EDM classification. In your .csv file, you might have field names, such as "ssn", "birthdate", "firstname", "lastname", and so on. <br/>As an example, our .csv file is called *PatientRecords.csv*. It includes columns, such as *PatientID*, *MRN*, *lastname*, *FirstName*, *SSN* and more.
+2. Structure the sensitive data in the .csv file such that the first row includes the names of the fields you'll use for EDM-based classification. In your .csv file, you might have field names, such as "ssn", "birthdate", "firstname", "lastname", and so on. <br/>As an example, our .csv file is called *PatientRecords.csv*. It includes columns, such as *PatientID*, *MRN*, *lastname*, *FirstName*, *SSN* and more.
 
 3. Define the schema for the database of sensitive information in .xml format (similar to our example below). Name this schema file `edm.xml`, and configure it such that for each column in the database, there is a line that uses the syntax `<Field name="" unique="" searchable=""/>`. 
 
@@ -70,7 +70,7 @@ Setting up and configuring EDM classification involves saving sensitive data in 
     - Use `unique="true"` for the fields that contain unique values (Social Security numbers, identification numbers, etc.); otherwise, use `unique="false"`.
     - Use `searchable="true"` for the fields that should be searchable. No more than five fields per database should be searchable. All the rest should have `searchable="false"`.  
 
-    As an example, the following .xml file defines the schema for a patient records database. Here, we specified five fields (*PatientID*, *MRN*, *SSN*, *Phone*, and *DOB*) as searchable for EDM classification. (You can copy our example and modify it for your use.)
+    As an example, the following .xml file defines the schema for a patient records database. Here, we specified five fields (*PatientID*, *MRN*, *SSN*, *Phone*, and *DOB*) as searchable for EDM-based classification. (You can copy our example and modify it for your use.)
     
     ```
         <?xml version="1.0" encoding="utf-8"?>
@@ -235,7 +235,7 @@ If you want to remove the schema you're using for EDM, follow these steps:
 
     To learn more about uploading rule packages, see [Upload your rule package](create-a-custom-sensitive-information-type-in-scc-powershell.md#upload-your-rule-package).
 
-At this point, you have set up EDM classification. The next step is to index and upload the sensitive data. 
+At this point, you have set up EDM-based classification. The next step is to index and upload the sensitive data. 
 
 ## Part 2: Index and upload the sensitive data
 
@@ -282,7 +282,7 @@ The next step is to use the EDM Upload Agent to index the sensitive data, and th
     > [!TIP]
     > [Use Task Scheduler to save time](#use-task-scheduler-to-save-time).
 
-At this point, you are ready to use EDM classification with your Microsoft cloud services. For example, you can [set up a DLP policy using EDM classification](#to-create-a-new-dlp-policy-with-edm). 
+At this point, you are ready to use EDM-based classification with your Microsoft cloud services. For example, you can [set up a DLP policy using EDM-based classification](#to-create-a-new-dlp-policy-with-edm). 
 
 ### Refreshing your sensitive information database
 
@@ -338,7 +338,7 @@ $taskName = 'EDMUpload_' + $dataStoreName
 Register-ScheduledTask -TaskName $taskName -InputObject $scheduledTask -User $user -Password $password
 ```
 
-## Part 3: Use EDM classification with your Microsoft cloud services
+## Part 3: Use EDM-based classification with your Microsoft cloud services
 
 EDM can be used with information protection features, such as [Office 365 DLP policies](data-loss-prevention-policies.md) and [Microsoft Cloud App Security file policies](https://docs.microsoft.com/cloud-app-security/data-protection-policies). As an example, the following procedure describes how to use EDM with a DLP policy that is created in the Office 365 Security & Compliance Center.
 
