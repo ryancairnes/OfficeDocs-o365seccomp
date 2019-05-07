@@ -270,58 +270,57 @@ Your Developer App is now ready to use
 
 ## Step 7: Set up a custom connector in the security and compliance center
 
-1.  Go to Data Governance \> Import and click Archive third-party data
+1.  Go to <https://protection.office.com> and then click **Data governance \> Import \> Archive third-party data**.
 
-   ![](media/TCimage36.png)
-T
-33. Click Add connector button and select custom
+    ![](media/TCimage36.png)
+
+2. Click **Add a connector** and then click **Custom**.
 
    ![](media/TCimage37.png)
 
-34. Provide Connector App details and click Next
+3. On the **Add Connector App** page, enter the following information and then click **Next**.
+
+    - In the first box, type a name for the connector, such as **Twitter**.
+    - In the second box, type or paste the value of the APISecretKey that you added in Step 4.
+    - In the third box, type of paste the Azure app service URL; for example **https://twitter.azurewebsites.net**.
 
    ![](media/TCimage38.png)
 
-Fill the name as Twitter
-
-Provide API secret key and connector URL as created in Finalize step 4
-
-35. Click Login with Connector App
+4. Click **Login with Connector App**.
 
    ![](media/TCimage39.png)
 
-36. Provide secret and click login to connector service
+5. Type or paste the APISecretKey again and then click  **Login to Connector Service**.
 
    ![](media/TCimage40.png)
 
-Secret key is same as the one entered in step above
 
-37. *Login with Twitter*
+6. Click **Continue with Twitter**.
 
 >    ![](media/TCimage41.png)
 
-38. Twitter login dialog will open. Provide username, password and log in with Twitter.
+7. In the Twitter sign in page, sign in using the credentials for the account for your organization’s Twitter account.
 
    ![](media/TCimage42.png)
 
-39. Complete Job Setup
+8. Click **Finish** to complete setting up the Twitter connector.
 
    ![](media/TCimage43.png)
 
-40. Apply filters. You can select the duration of data to bring in
+9. On the **Set Filters** page, you can apply a filter to import (and archive) items that are a certain age. Click **Next**.
 
    ![](media/TCimage44.png)
 
-41. Specify user/mailbox to store Twitter data
+10. On the **Set Storage Account** page, select the Office 365 mailbox that the Twitter items will be imported to.
 
-   ![](media/TCimage45.png)
+    ![](media/TCimage45.png)
 
-42. Review settings and finish connector setup
+11. Review your settings and then click **Finish** to complete the connector setup in the Security & Compliance Center.
 
-   ![](media/TCimage46.png)
+    ![](media/TCimage46.png)
 
-   ![](media/TCimage47.png)
+    ![](media/TCimage47.png)
 
-43. You can see the progress of import in the dashboard
+12. o to the **Archive third-party data** page to see the progress of the import process.
 
-   ![](media/TCimage48.png)
+    ![](media/TCimage48.png)
