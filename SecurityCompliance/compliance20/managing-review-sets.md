@@ -37,16 +37,16 @@ Review sets can be created on the **Review sets** tab by clicking **+ Add review
 
 ![Add review set](../media/f45c51d9-585d-47d1-b7fb-0288715e0b6a.png)
 
-A flyout is displayed.  Simply name the review set can click the **Save**.  The new review set is displayed on the **Review sets** tab.
+On the **Add review set** flyout page, type a name for the review set and then click **Save**.  The new review set is displayed in the list on the **Review sets** tab.
 
-![Add review set flyout](../media/5e5c99f8-42ca-4c2f-960f-f1a5709569d1.png)
+![New review set listed on Review set tab](../media/AeDnewreviewset.png)
 
-There are three ways to add content to a review set:
+There are three different ways to add data to a review set in an Advanced eDiscovery case.
+
+![Three ways to add to a review sets](../media/1f1f4efd-c03b-4255-bc3d-df358e56549c.png)
 
 1. [Add search results to a review set](add-data-to-review-set.md)
 
 2. [Load non-Office 365 data into a review set](load-non-office365-data.md)
 
-3. [Add data to a review set from another review set](add-data-to-review-set-from-another-review-set.md).
-
-![review sets](../media/1f1f4efd-c03b-4255-bc3d-df358e56549c.png)
+3. [Add data to a review set from another review set](add-data-to-review-set-from-another-review-set.md)

@@ -76,7 +76,7 @@
 
 ## [Understand latest attack campaigns with threat analytics](latest-attack-campaigns.md)
 
-## [Advanced Threat Protection ](office-365-atp.md)
+## [Office 365 Advanced Threat Protection ](office-365-atp.md)
 ### [ATP Safe Links](atp-safe-links.md)
 #### [Set up ATP Safe Links policies](set-up-atp-safe-links-policies.md)
 #### [Set up a custom "do not rewrite" URLs list](set-up-a-custom-do-not-rewrite-urls-list-with-atp.md)
@@ -495,6 +495,7 @@
 ### [Controlling your data in Office 365 using Customer Key](controlling-your-data-using-customer-key.md)
 ### [Service encryption with Customer Key for Office 365 FAQ](service-encryption-with-customer-key-faq.md)
 ## [GDPR data subject request tool](manage-gdpr-data-subject-requests-with-the-dsr-case-tool.md)
+## [Customer Lockbox](customer-lockbox-requests.md)
 ## [Office 365 Information Protection for GDPR](office-365-information-protection-for-gdpr.md)
 ### [Overview: Office 365 Protection for GDPR](office-365-info-protection-for-gdpr-overview.md)
 ### [Search for and find personal data](search-for-and-find-personal-data.md)
