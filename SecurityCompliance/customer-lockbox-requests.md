@@ -50,7 +50,7 @@ The following steps outline the typical workflow when a Customer Lockbox request
     ![Example of a Customer Lockbox email notification](media/CustomerLockbox1.png)
 
    > [!NOTE]
-   > Anyone who is assigned the [Customer Lockbox access approver](../add-users/about-admin-roles.md) admin role in Microsoft 365 admin center can approve Customer Lockbox requests.
+   > Anyone who is assigned the [Customer Lockbox access approver](https://docs.microsoft.com/office365/admin/add-users/about-admin-roles) admin role in Microsoft 365 admin center can approve Customer Lockbox requests.
 
 7. The approver signs in to the Microsoft 365 admin center and approves the request. This step triggers the creation of an audit record available by searching the Office 365 audit log. For more information, see the [Auditing Customer Lockbox requests](#auditing-customer-lockbox-requests) section.
 
