@@ -48,7 +48,7 @@ EDM-based classification enables you to create custom sensitive information type
 |Phase  |What's needed  |
 |---------|---------|
 |[Part 1: Set up EDM-based classification](#part-1-set-up-edm-classification)<br/><br/>(As needed)<br/>- [Edit the schema for EDM](#editing-the-schema-for-edm) <br/>- [Remove the schema for EDM](#removing-the-schema-for-edm) |- Read access to the sensitive data<br/>- Database schema in .xml format (an example is included)<br/>- Rule package in .xml format (an example is included)<br/>- Admin permissions to the Security & Compliance Center (using PowerShell) |
-|[Part 2: Index and upload the sensitive data](#part-2-index-and-upload-the-sensitive-data)<br/><br/>(As needed)<br/>[Refresh the data](#refreshing-your-sensitive-information-database) |- Custom security group and user account<br/>- EDM Upload Agent tool<br/>- Read access to the sensitive data<br/>- Process and schedule for refreshing the data|
+|[Part 2: Index and upload the sensitive data](#part-2-index-and-upload-the-sensitive-data)<br/><br/>(As needed)<br/>[Refresh the data](#refreshing-your-sensitive-information-database) |- Custom security group and user account<br/>- Local admin access to machine with EDM Upload Agent tool<br/>- Read access to the sensitive data<br/>- Process and schedule for refreshing the data|
 |[Part 3: Use EDM-based classification with your Microsoft cloud services](#part-3-use-edm-classification-with-your-microsoft-cloud-services) |- Office 365 subscription with DLP<br/>- EDM-based classification feature enabled (in preview) |
 
 ## Part 1: Set up EDM-based classification
@@ -99,12 +99,10 @@ Setting up and configuring EDM-based classification involves saving sensitive da
 
     You will be prompted to confirm, as follows:
 
-    ```powershell
-    Confirm
-        Are you sure you want to perform this action?
-        New EDM Schema for the data store 'patientrecords' will be imported.
-        [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [?] Help (default is "Y"):
-    ```
+       Confirm
+       Are you sure you want to perform this action?
+       New EDM Schema for the data store 'patientrecords' will be imported.
+       [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [?] Help (default is "Y"):
 
     > [!TIP]
     > If you want your changes to occur without confirmation, in Step 5, use this cmdlet instead: `New-DlpEdmSchema -FileData $edm`
@@ -113,7 +111,7 @@ Now that the schema for your database of sensitive information is defined, the n
 
 #### Editing the schema for EDM 
 
-If you want to make changes to your edm.xml file, such as changing which fields are used for EDM, follow these steps:
+(As needed) If you want to make changes to your edm.xml file, such as changing which fields are used for EDM, follow these steps:
 
 1. Edit your edm.mxl file (this is the file discussed in the [Define the schema](#define-the-schema-for-your-database-of-sensitive-information) section of this article).
 
@@ -127,12 +125,10 @@ If you want to make changes to your edm.xml file, such as changing which fields 
 
     You will be prompted to confirm, as follows:
 
-    ```powershell
-    Confirm
-        Are you sure you want to perform this action?
-        EDM Schema for the data store 'patientrecords' will be updated.
-        [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [?] Help (default is "Y"):
-    ```
+       Confirm
+       Are you sure you want to perform this action?
+       EDM Schema for the data store 'patientrecords' will be updated.
+       [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [?] Help (default is "Y"):
 
     > [!TIP]
     > If you want your changes to occur without confirmation, in Step 3, use this cmdlet instead: `Set-DlpEdmSchema -FileData $edm`
