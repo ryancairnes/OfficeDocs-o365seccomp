@@ -1,3 +1,23 @@
+---
+title: "Deploy a connector to archive Twitter data in Office 365"
+ms.author: markjjo
+author: markjjo
+manager: laurawi
+ms.date: 
+ms.audience: Admin
+ms.topic: article
+ms.service: O365-seccomp
+localization_priority: Normal
+ms.collection: M365-security-compliance
+ROBOTS: NOINDEX, NOFOLLOW
+description: "Administrators can set up a native connector to import and archive Twitter data to Office 365. After this data is imported to Office 365, you can use compliance features such as legal hold, content search, and retention policies to manage the governance of your organization's Twitter data."
+---
+
+# Deploy a connector to archive Twitter data in Office 365
+
+This article contains the step-by-step process to deploy a connector that uses the Office 365 Import service to import data from your organization's Twitter account to Office 365. For a high-level overview of this process and a list of prerequisites required to deploy a Twitter connector, see [Use a sample connector to archive Twitter data in Office 365 (Preview)](archive-twitter-data-with-sample-connector.md). 
+
+
 # Prerequisites
 
 1.  You need to have a Twitter account. (This sample connector currently allow importing data on your company’s Official Twitter handles
@@ -70,159 +90,152 @@
 
 ## Step 1: Download the package
 
-Download the prebuilt package from repository’s Release section,
-
-To be Added
+Download the prebuilt package from the Release section in the GitHub repository at <TBD>. Under the latest release, download the zip file named **SampleConnector.zip**. You will upload this zip file to Azure in Step 4.
 
 ## Step 2: Create an app in Azure Active Directory
 
-1.  Go to Azure portal, portal.azure.com
+1. Go to <https://portal.azure.com> and sign in using the credentials of an Office 365 global admin account.
 
-![wer](media/TCimage01.png)
+   ![](media/TCimage01.png)
 
-![](media/TCimage01.png)
+2. In the left navigation pane, click **Azure Active Directory**.
 
-3.  Go to Azure Active Directory
+   ![](media/TCimage02.png)
 
-![](media/TCimage02.png)
+3. In the left navigation pane, click **App registrations (Preview)** and then click **New registration**.
 
-4.  Go to App registration
+   ![](media/TCimage03.png)
 
-![](media/TCimage03.png)
+4. Register the application. Under Redirect URI, select Web in the application type dropdown list and then type <https://portal.azure.com> in the box for the URI.
 
-5.  Register an App
+   ![](media/TCimage04.png)
 
-![](media/TCimage04.png)
+5. Copy the **Application (client) ID** and **Directory (tenant) ID** and save them to a text file or other safe location. You’ll use these IDs in later steps.
 
-6.  Make a note of the **AAD App Id**
+    ![](media/TCimage05.png)
 
-![](media/TCimage05.png)
+6. Go to **Certificates & secrets for the new app.**
 
-7.  Go to Certificates and secrets
+   ![](media/TCimage06.png)
 
-![](media/TCimage06.png)
+7. Click **New client secret**
 
-8.  Click new client secret
+   ![](media/TCimage07.png)
 
-![](media/TCimage07.png)
+8. Create a new secret. In the description box, type the secret and then choose an expiration period. 
 
-9.  Create new secret
+   ![](media/TCimage08.png)
 
-![](media/TCimage08.png)
+9. Copy the value of the secret and save it to a text file or other storage location. This is the AAD application secret that you will use in later steps.
 
-10. Make a note of the secret
+   ![](media/TCimage09.png)
 
-![](media/TCimage09.png)
+10. Go to **Manifest** and copy the identifierUris (which is also called the AAD application Uri) as highlighted in the following screenshot. Copy the AAD application Uri to a text file or other storage location. You’ll use it in Step 6.
 
-11. Go to Manifest-\> Make a note of the identifierUris \[Also called app id uri\] as highlighted in the below image
-
-![](media/TCimage10.png)
+   ![](media/TCimage10.png)
 
 ## Step 3: Create an Azure storage account
 
-1.  Go to Azure home page
+1.  Go to the Azure home page for your organization.
 
-![](media/TCimage11.png)
+   ![](media/TCimage11.png)
 
-12. Go to create a resource
+2. Click **Create a resource** and they type **storage account** in the search box.
 
-![](media/TCimage12.png)
+   ![](media/TCimage12.png)
 
-13. Select storage and click storage account
+3. Click **Storage**, and then click **Storage account**.
 
-![](media/TCimage13.png)
+   ![](media/TCimage13.png)
 
-14. Create storage account
+4. On the **Create storage account** page, in the Subscription box, select **Pay-As-You-Go** or **Free Trial** depending on which type of Azure subscription you have. 
 
-![](media/TCimage14.png)
+   ![](media/TCimage14.png)
 
-15. Select or create resource group
+5. Select or create a resource group.
 
-![](media/TCimage15.png)
+   ![](media/TCimage15.png)
 
-16. Provide storage account name
+6. Type a name for the storage account.
 
-![](media/TCimage16.png)
+   ![](media/TCimage16.png)
 
-17. Verify and create resource
+7. Review and then click **Create** to create the storage account.
 
-![](media/TCimage17.png)
+   ![](media/TCimage17.png)
 
-18. Go to the storage account resource
+8. After a few moments, click **Refresh** and then click **Go to resource** to navigate to the storage account.
 
-![](media/TCimage18.png)
+   ![](media/TCimage18.png)
 
-19. Go to access keys
+9. Click **Access keys** in the left navigation pane.
 
-![](media/TCimage19.png)
+   ![](media/TCimage19.png)
 
-20. Make a note of the connection string
+10. Copy a **Connection string** and save it to a text file or other storage location. You’ll use this when creating a web app resource in Step 4.
 
-![](media/TCimage20.png)
+    ![](media/TCimage20.png)
 
 ## Step 4: Create a new web app resource in Azure
 
-1.  Create new Web App resource (App Service of type Web App)
+1. On the **Home** page in the Azure portal, click **Create a resource \> Everything \> Web app**. On the **Web app** page, click **Create**.
 
-![](media/TCimage21.png)
+   ![](media/TCimage21.png)
 
-#### Fill the details as shown below and create Web App
+2. Fill in the details (as shown below) and then create the Web app. Note that the name that you enter in the **App name** box will be used to create the Azure app service URL; for example twitterconnector.azurewebsites.net.
 
-![](media/TCimage22.png)
+   ![](media/TCimage22.png)
 
-2. Go to the newly created Web App resource and fill all the settings as displayed with the values you noted above
+3. Go to the newly created web app resource, click **Application Settings** in the left navigation pane. Under Application settings, click Add new setting and add the following three settings. Use the values (that you copied to the text file from the previous steps): 
 
-Add the below 3 application settings with appropriate values
+    - **APISecretKey** – You can type any value as the secret. This will be used to access the connector web app in Step 7.
 
-  - APISecretKey – the seed password needed to configure the connector service
+    - **StorageAccountConnectionString** – The connection string Uri that you copied after creating the Azure storage account in Step 3.
 
-  - StorageAccountConnectionString – value you have noted after you create storage account
+    - **tenantId** – The tenant ID of your Office 365 organization that you copied after creating the Facebook connector app in Azure Active Directory in Step 2.
 
-  - tenantId – your O365 tenant id
+    ![](media/TCimage23.png)
 
-![](media/TCimage23.png)
+4. Under **General settings**, click **On** next to the **Always On**. Click **Save** at the top of the page to save the application settings.
 
-3. Turn the Enabled setting in Application Settings to Always On
+   ![](media/TCimage24.png)
 
-![](media/TCimage24.png)
+5. The final step is to upload the connector app source code to Azure that you downloaded in Step 1. In a web browser, go to https://<AzureAppResourceName>.scm.azurewebsites.net/ZipDeployUi. For example, if the name of your Azure app resource (which you named in step 2 in this section) is **fbconnector**, then you would go to https://fbconnector.scm.azurewebsites.net/ZipDeployUi.
 
-4. Upload the app service bits (zip file downloaded as mentioned above) using the below url
+6. Drag and drop the SampleConnector.zip (that you downloaded in Step 1) to this page. After the files are uploaded and the deployment is successful, the page will look similar to the following screenshot.
 
-\<AppService\>.scm.azurewebsites.net/ZipDeployUi
-
-![](media/TCimage25.png)
+   ![](media/TCimage25.png)
 
 ## Step 5: Create the Twitter app
 
 1. Go to https://developer.twitter.com, log in using the credentials for the developer account for your organization, and then click **Create an app**.
 
-2.  Add new Application
+2.  Add a new application.
 
-![](media/TCimage26.png)
+   ![](media/TCimage26.png)
 
-3. Add App Details
+3. Under **App details**, add information about the application.
 
-![](media/TCimage27.png)
+   ![](media/TCimage27.png)
 
-4. Edit Details for App. Click on Details for given app from dashboard <https://developer.twitter.com/en/apps>
+4. On the Twitter developer dashboard, click **Details** for the app you just created.
+   ![](media/TCimage28.png)
 
-![](media/TCimage28.png)
+5. On the **Keys and tokens** tab, under **Access token & access token secret**, click **Create** to generate Access Token
 
-5. Generate Access Token
+   ![](media/TCimage29.png)
 
-![](media/TCimage29.png)
+6. On the **Permissions** tab, configure the permissions as shown in the following screenshot. 
 
-6. Update Permissions
-
-![](media/TCimage30.png)
+   ![](media/TCimage30.png)
 
 7. Add OAuth redirect URI \<connectorserviceuri/Views/TwitterOAuth\>
 
-![](media/TCimage31.png)
+   ![](media/TCimage31.png)
 
 8. Select Edit Details. Update Callback Url in Callback URLs Section and Save
 
-![](media/TCimage32.png)
+   ![](media/TCimage32.png)
 
 9. 
 Your Developer App is now ready to use
@@ -232,15 +245,15 @@ Your Developer App is now ready to use
 1. Go to https://\<AzureAppResourceName>.azurewebsites.net (where AzureAppResourceName is the name of your Azure app resource that you named in Step 4) For example, if the name is **twitterconnector**, go to https://twitterconnector.azurewebsites.net. The home page of the app will look like the following screenshot.
 
 
-   ![](media/FBCimage41.png)
+      ![](media/FBCimage41.png)
 
 2. Click **Configure** to display a sign in page.
 
-    ![](media/FBCimage42.png)
+       ![](media/FBCimage42.png)
 
 3. In the Tenant Id box, type or paste your tenant Id (that you obtained in Step 2). In the password box, type or paste the APISecretKey (that you obtained in Step 2), and then click **Set Configuration Settings** to display the **Configuration Details** page.
 
-   ![](media/TCimage35.png)
+      ![](media/TCimage35.png)
 
 4. Under **Configuration Details**, enter the following configuration settings 
 
@@ -259,15 +272,15 @@ Your Developer App is now ready to use
 
 1.  Go to Data Governance \> Import and click Archive third-party data
 
-![](media/TCimage36.png)
+   ![](media/TCimage36.png)
 T
 33. Click Add connector button and select custom
 
-![](media/TCimage37.png)
+   ![](media/TCimage37.png)
 
 34. Provide Connector App details and click Next
 
-![](media/TCimage38.png)
+   ![](media/TCimage38.png)
 
 Fill the name as Twitter
 
@@ -275,40 +288,40 @@ Provide API secret key and connector URL as created in Finalize step 4
 
 35. Click Login with Connector App
 
-![](media/TCimage39.png)
+   ![](media/TCimage39.png)
 
 36. Provide secret and click login to connector service
 
-![](media/TCimage40.png)
+   ![](media/TCimage40.png)
 
 Secret key is same as the one entered in step above
 
 37. *Login with Twitter*
 
-> ![](media/TCimage41.png)
+>    ![](media/TCimage41.png)
 
 38. Twitter login dialog will open. Provide username, password and log in with Twitter.
 
-![](media/TCimage42.png)
+   ![](media/TCimage42.png)
 
 39. Complete Job Setup
 
-![](media/TCimage43.png)
+   ![](media/TCimage43.png)
 
 40. Apply filters. You can select the duration of data to bring in
 
-![](media/TCimage44.png)
+   ![](media/TCimage44.png)
 
 41. Specify user/mailbox to store Twitter data
 
-![](media/TCimage45.png)
+   ![](media/TCimage45.png)
 
 42. Review settings and finish connector setup
 
-![](media/TCimage46.png)
+   ![](media/TCimage46.png)
 
-![](media/TCimage47.png)
+   ![](media/TCimage47.png)
 
 43. You can see the progress of import in the dashboard
 
-![](media/TCimage48.png)
+   ![](media/TCimage48.png)

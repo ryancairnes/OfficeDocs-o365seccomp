@@ -15,12 +15,11 @@ description: "Administrators can set up a native connector to import and archive
 
 # Deploy a connector to archive Facebook data in Office 365
 
-This article contains the step-by-step process to deploy a connector that uses the Office 365 Import service to import data from Facebook Business pages to Office 365. For a high-level overview of this process and a list of prerequisites required to deploy a Facebook connector, see [Use sample connectors to archive third-party data in Office 365](archive-third-party-data-with-sample-connector.md). 
-
+This article contains the step-by-step process to deploy a connector that uses the Office 365 Import service to import data from Facebook Business pages to Office 365. For a high-level overview of this process and a list of prerequisites required to deploy a Facebook connector, see [Use a sample connector to archive Facebook data in Office 365 (Preview)](archive-facebook-data-with-sample-connector.md). 
 
 ## Step 1: Download the package
 
-Download the prebuilt package from repository’s Release section at <https://github.com/Microsoft/m365-sample-connector-csharp-aspnet/releases>. Under the latest release, download the zip file named **SampleConnector.zip**. You will upload this zip file to Azure in Step 4.
+Download the prebuilt package from the Release section in the GitHub repository at at <https://github.com/Microsoft/m365-sample-connector-csharp-aspnet/releases>. Under the latest release, download the zip file named **SampleConnector.zip**. You will upload this zip file to Azure in Step 4.
 
 ## Step 2: Create an app in Azure Active Directory
 
@@ -122,7 +121,7 @@ Download the prebuilt package from repository’s Release section at <https://gi
 
     ![](media/FBCimage22.png)
 
-4. Under **General settings**, click **On** next to the **Always On**. Click **Save** at the top of the page to save applicaton settings.
+4. Under **General settings**, click **On** next to the **Always On**. Click **Save** at the top of the page to save application settings.
 
    ![](media/FBCimage23.png)
 
