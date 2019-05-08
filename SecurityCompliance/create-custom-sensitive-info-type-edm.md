@@ -272,7 +272,7 @@ During this phase, you set up a custom security group and user account, and set 
 
     `EdmUploadAgent.exe /Authorize`
 
-3. Sign in using your work or school account for Office 365.
+3. Sign in with your work or school account for Office 365.
 
 The next step is to use the EDM Upload Agent to index the sensitive data, and then upload the indexed data.
 
@@ -304,11 +304,11 @@ At this point, you are ready to use EDM-based classification with your Microsoft
 
 ### Refreshing your sensitive information database
 
-You can refresh your sensitive information database daily or weekly, and the EDM Upload Tool can re-index the sensitive data and then re-upload the indexed data. 
+You can refresh your sensitive information database daily or weekly, and the EDM Upload Tool can reindex the sensitive data and then reupload the indexed data. 
 
 1. Determine your process and frequency (daily or weekly) for refreshing the database of sensitive information.
 
-2. Re-export the sensitive data to an app, such as Microsoft Excel, and save the file in .csv format, using the same file name and location you used when you followed the steps described in [Index and upload the sensitive data](#index-and-upload-the-sensitive-data).
+2. Re-export the sensitive data to an app, such as Microsoft Excel, and save the file in .csv format, keeping the same file name and location you used when you followed the steps described in [Index and upload the sensitive data](#index-and-upload-the-sensitive-data).
 
     > [!NOTE]
     > If there are no changes to the structure (field names) of the .csv file, you won't need to make any changes to your database schema file when you refresh the data. But if you must make changes, make sure to edit the [database schema](#editing-the-schema-for-edm-based-classification) and your [rule package](#set-up-a-rule-package) accordingly.        
