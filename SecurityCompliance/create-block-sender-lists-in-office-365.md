@@ -24,7 +24,7 @@ The proper method to configure blocked sender lists varies depending on the scop
 
 ## Options from least to broadest scope
 
-When creating a Block list it's important to pick the appropriate method based on the scope of the impact -- that is how many people will be impacted -- and the breadth of the block you're about to configure. The options ranked by scope and breadth are as follows:
+When creating a Block list it's important to pick the appropriate method based on the scope of the impact (how many people will be impacted), so that it matches the breadth of the blocking method. The options listed below are ranked by both scope and breadth. The list goes from narrow to broad, but *read the specifics* for full recommendations.
 
 - Outlook Blocked Senders
 - Anti-Spam policy: Sender/Domain Block lists
@@ -53,9 +53,9 @@ If it's necessary to block messages being sent to specific users or across the e
 
 ## Use Anti-Spam Policy IP Block lists
 
-When it’s not possible to use one of the other options to block a sender, then the Anti-Spam Policy IP Block List can be used. [Detailed steps can be found in the article Configure the connection filter policy](https://docs.microsoft.com/en-us/office365/securitycompliance/configure-the-connection-filter-policy). It's important to keep the list of blocked IPs to a *minimum* and using IP address ranges here is *not* recommended. 
+When it’s not possible to use one of the other options to block a sender, *then* the Anti-Spam Policy IP Block List can be used. [Detailed steps can be found in the article Configure the connection filter policy](https://docs.microsoft.com/en-us/office365/securitycompliance/configure-the-connection-filter-policy). It's important to keep the list of blocked IPs to a *minimum* and using IP address ranges here is *not* recommended.
 
-You should *especially* avoid adding IP address ranges that belong to consumer services or shared infrastructures, and also ensure that you review the list of allowed IP addresses as part of regular maintenance. Because allows-entries can open up routes for attack, you must closely manage this list and regularly remove the allows-entries that are no longer needed. Also, if you will make allows in a Safe-Sender list be sure to read and understand the risks and precautions in *[Create Safe-Sender lists in Office 365](create-safe-sender-lists-in-office-365.md)*.
+You should *especially* avoid adding IP address ranges that belong to consumer services or shared infrastructures, and also ensure that you review the list of allowed IP addresses as part of regular maintenance. **Because allows-entries can open up routes for attack, you must closely manage this list and regularly remove the allows-entries that are no longer needed.** Also, if you will make allows in a Safe-Sender list be sure to read and understand the risks and precautions in *[Create Safe-Sender lists in Office 365](create-safe-sender-lists-in-office-365.md)*.
 
 
 
