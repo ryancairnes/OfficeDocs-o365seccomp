@@ -3,23 +3,23 @@ title: "Office 365 Message Encryption policy for sensitive information"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.date: 1/31/2019
-ROBOTS: NOINDEX, NOFOLLOW
+ms.date: 4/30/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: None
 search.appverid:
 - MET150
-ms.collection: Strat_O365_Enterprise
+ms.collection: 
+- Strat_O365_IP
+- M365-security-compliance
+- Strat_O365_Enterprise
 description: "Summary: Office 365 Message Encryption policy for sensitive information types now available."
 ---
 
 # Office 365 Message Encryption policy for sensitive information
 
-Update (1/30/19): In October 2018, we worked with a small sample of customers to understand if we can simplify protection by automatically encrypting sensitive emails based on certain sensitive information types. Based on positive feedback from this sample, we decided to expand to a more diverse profile of tenants in December 2018. After communicating the next roll-out to select tenants, we listened to your feedback and determined that customers with more complex environments wanted to implement the rules more cautiously, and we are therefore adjusting our plans.
 
-If your organization was selected for the roll-out starting January 15, 2019, we will not roll out the automatic policy. Instead, we are providing instructions in this article on how you can complete the roll-out yourselves. Keep reading to find out how.
 
 ||
 |:-----|

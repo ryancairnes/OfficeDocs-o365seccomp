@@ -3,7 +3,7 @@ title: "Set up new Office 365 Message Encryption capabilities"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.date: 4/12/2019
+ms.date: 4/30/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -65,7 +65,7 @@ You can verify that your Office 365 tenant is properly configured to use the new
 
 2. Run the Get-IRMConfiguration cmdlet.
 
-     You should see a value of $True for the AzureRMSEnabled parameter, which indicates that OME is configured in your tenant. If it is not, use Set-IRMConfiguration to set the value of AzureRMSEnabled to $True to enable OME.
+     You should see a value of $True for the AzureRMSLicensingEnabled parameter, which indicates that OME is configured in your tenant. If it is not, use Set-IRMConfiguration to set the value of AzureRMSLicensingEnabled to $True to enable OME.
 
 3. Run the Test-IRMConfiguration cmdlet using the following syntax:
 
