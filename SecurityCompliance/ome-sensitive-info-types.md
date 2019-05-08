@@ -1,5 +1,5 @@
 ---
-title: "Office 365 Message Encryption policy for sensitive information"
+title: "Create a sensitive information type policy for your organization using Office 365 Message Encryption"
 ms.author: krowley
 author: kccross
 manager: laurawi
@@ -14,21 +14,12 @@ ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
 - Strat_O365_Enterprise
-description: "Summary: Office 365 Message Encryption policy for sensitive information types now available."
+description: "Summary: Office 365 Message Encryption policy for sensitive information types."
 ---
 
-# Office 365 Message Encryption policy for sensitive information
+# Create a sensitive information type policy for your organization using Office 365 Message Encryption
 
-
-
-||
-|:-----|
-|This article is part of a larger series of articles about Office 365 Message Encryption. This article is intended for administrators and ITPros. If you're just looking for information on sending or receiving an encrypted message, see the list of articles in [Office 365 Message Encryption (OME)](ome.md) and locate the article that best fits your needs. |
-||
-
-## How to create the sensitive information type policy for your tenant
-
-You can use either Exchange mail flow rules or Office 365 Data Loss Prevention (DLP) to create the sensitive information type policy. To create an Exchange mail flow rule you can use either the Exchange admin center (EAC) or PowerShell.
+You can use either Exchange mail flow rules or Office 365 Data Loss Prevention (DLP) to create a sensitive information type policy with Office 365 Message Encryption. To create an Exchange mail flow rule you can use either the Exchange admin center (EAC) or PowerShell.
 
 ### To create the policy by using mail flow rules in the EAC
 
