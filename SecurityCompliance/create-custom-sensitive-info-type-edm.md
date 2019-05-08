@@ -236,8 +236,6 @@ Now that the schema for your database of sensitive information is defined, the n
       </Rules>
     </RulePackage>
     ```
-       
-    (To learn more about .xml files like this, see [Sample XML of a rule package](create-a-custom-sensitive-information-type-in-scc-powershell.md#sample-xml-of-a-rule-package).)
     
 2. Upload the rule package by running the following PowerShell cmdlets, one at a time:
 
@@ -245,9 +243,7 @@ Now that the schema for your database of sensitive information is defined, the n
 
     `New-DlpSensitiveInformationTypeRulePackage -FileData $rulepack`
 
-    To learn more about uploading rule packages, see [Upload your rule package](create-a-custom-sensitive-information-type-in-scc-powershell.md#upload-your-rule-package).
-
-At this point, you have set up EDM-based classification. The next step is to index and upload the sensitive data. 
+At this point, you have set up EDM-based classification. The next step is to index the sensitive data, and then upload the indexed data. 
 
 ## Part 2: Index and upload the sensitive data
 
