@@ -45,13 +45,13 @@ EDM-based classification enables you to create custom sensitive information type
     - Office 365 Advanced Compliance
 
 > [!NOTE]
-> **EDM-based classification is currently in preview** for DLP in Office 365 and Cloud App Security (with Exchange Online and Microsoft Teams). if your organization has [DLP capabilities](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description/messaging-policy-and-compliance-servicedesc#data-loss-prevention-dlp), you can try EDM-based classification. If you are not already participating in the preview, [contact Microsoft](https://resources.office.com/us-landing-spe-contactus.html?LCID=EN-US) to get started. 
+> **EDM-based classification is currently in preview** for DLP in Office 365  (with Exchange Online and Microsoft Teams) and Cloud App Security. if your organization has [DLP capabilities](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description/messaging-policy-and-compliance-servicedesc#data-loss-prevention-dlp), you can try EDM-based classification. If you are not already participating in the preview, [contact Microsoft](https://resources.office.com/us-landing-spe-contactus.html?LCID=EN-US) to get started. 
 
 ## The work flow at a glance
 
 |Phase  |What's needed  |
 |---------|---------|
-|[Part 1: Set up EDM-based classification](#part-1-set-up-edm-based-classification)<br/><br/>(As needed)<br/>- [Edit the database schema](#editing-the-schema-for-edm-based-classification) <br/>- [Remove the schema](#removing-the-schema-for-edm-based-classification) |- Read access to the sensitive data<br/>- Database schema in .xml format (an example is included)<br/>- Rule package in .xml format (an example is included)<br/>- Admin permissions to the Security & Compliance Center (using PowerShell) |
+|[Part 1: Set up EDM-based classification](#part-1-set-up-edm-based-classification)<br/><br/>(As needed)<br/>- [Edit the database schema](#editing-the-schema-for-edm-based-classification) <br/>- [Remove the schema](#removing-the-schema-for-edm-based-classification) |- Read access to the sensitive data<br/>- Database schema in .xml format (an example is provided)<br/>- Rule package in .xml format (an example is provided)<br/>- Admin permissions to the Security & Compliance Center (using PowerShell) |
 |[Part 2: Index and upload the sensitive data](#part-2-index-and-upload-the-sensitive-data)<br/><br/>(As needed)<br/>[Refresh the data](#refreshing-your-sensitive-information-database) |- Custom security group and user account with admin permissions<br/>- Local admin access to machine with EDM Upload Agent tool<br/>- Read access to the sensitive data<br/>- Process and schedule for refreshing the data|
 |[Part 3: Use EDM-based classification with your Microsoft cloud services](#part-3-use-edm-classification-with-your-microsoft-cloud-services) |- Office 365 subscription with DLP<br/>- EDM-based classification feature enabled (in preview) |
 
@@ -308,7 +308,7 @@ You can refresh your sensitive information database daily or weekly, and the EDM
 
 1. Determine your process and frequency (daily or weekly) for refreshing the database of sensitive information.
 
-2. Re-export the sensitive data to an app, such as Microsoft Excel, and save the file in .csv format, keeping the same file name and location you used when you followed the steps described in [Index and upload the sensitive data](#index-and-upload-the-sensitive-data).
+2. Re-export the sensitive data to an app, such as Microsoft Excel, and save the file in .csv format. Keep the same file name and location you used when you followed the steps described in [Index and upload the sensitive data](#index-and-upload-the-sensitive-data).
 
     > [!NOTE]
     > If there are no changes to the structure (field names) of the .csv file, you won't need to make any changes to your database schema file when you refresh the data. But if you must make changes, make sure to edit the [database schema](#editing-the-schema-for-edm-based-classification) and your [rule package](#set-up-a-rule-package) accordingly.        
@@ -316,13 +316,13 @@ You can refresh your sensitive information database daily or weekly, and the EDM
     
     |Method  |What to do  |
     |---------|---------|
-    |Windows PowerShell     |See the [ScheduledTasks](https://docs.microsoft.com/powershell/module/scheduledtasks/?view=win10-ps) documentation and our [example PowerShell script](#example-powershell-script) in this article|
+    |Windows PowerShell     |See the [ScheduledTasks](https://docs.microsoft.com/powershell/module/scheduledtasks/?view=win10-ps) documentation and the [example PowerShell script](#example-powershell-script-for-task-scheduler) in this article|
     |Task Scheduler API |See the [Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/using-the-task-scheduler) documentation |
     |Windows user interface     |In Windows, click **Start**, and type `Task Scheduler`. Then, in the list of results, right-click **Task Scheduler**, and choose **Run as administrator**.          |
 
 #### Example PowerShell script for Task Scheduler
 
-Here's an starter PowerShell script you can use to schedule your tasks for indexing data and uploading the indexed data:
+This section includes an example PowerShell script you can use to schedule your tasks for indexing data and uploading the indexed data:
 
 ```powershell
 param([string]$dataStoreName,[string]$fileLocation)
@@ -359,9 +359,9 @@ Register-ScheduledTask -TaskName $taskName -InputObject $scheduledTask -User $us
 ```
 ## Part 3: Use EDM-based classification with your Microsoft cloud services
 
-EDM can be used with information protection features, such as [Office 365 DLP policies](data-loss-prevention-policies.md) and [Microsoft Cloud App Security file policies](https://docs.microsoft.com/cloud-app-security/data-protection-policies). As an example, the following procedure describes how to use EDM with a DLP policy that is created in the Office 365 Security & Compliance Center.
+You can use EDM-based classification with information protection features, such as [Office 365 DLP policies](data-loss-prevention-policies.md) and [Microsoft Cloud App Security file policies](https://docs.microsoft.com/cloud-app-security/data-protection-policies). The following procedure describes how to use EDM with a DLP policy that is created in the Office 365 Security & Compliance Center.
 
-### To create a new DLP policy with EDM
+### To create a DLP policy with EDM
 
 1. Go to the Security & Compliance Center ([https://protection.office.com](https://protection.office.com)).
 
@@ -377,7 +377,7 @@ EDM can be used with information protection features, such as [Office 365 DLP po
 
 7. On the **Policy settings** tab, choose **Use advanced settings**, and then choose **Next**.<br/>![Use advanced settings](media/edm-dlp-policy-advancedsettings.png)<br/>
 
-8. Choose **+ New rule**.<br/>![Create a new rule](media/edm-dlp-newrule.png)<br/>
+8. Choose **+ New rule**.<br/>![Create a rule](media/edm-dlp-newrule.png)<br/>
 
 9. In the **Name** section, specify a name and description for the rule.<br/>![New rule fields](media/edm-dlp-newruleform.png)<br/>
 
@@ -387,7 +387,7 @@ EDM can be used with information protection features, such as [Office 365 DLP po
 
 12. Finish selecting options for your rule, such as **User notifications**, **User overrides**, **Incident reports**, and so on, and then choose **Save**.
 
-13. On the **Policy settings** tab, review your rule(s), and then choose **Next**.
+13. On the **Policy settings** tab, review your rules, and then choose **Next**.
 
 14. Specify whether to turn on the policy right away, test it out, or keep it turned off. Then choose **Next**.
 
