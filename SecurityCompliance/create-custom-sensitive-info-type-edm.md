@@ -255,7 +255,7 @@ During this phase, you set up a custom security group and user account, and set 
 
 ### Set up the security group and user account
 
-1. As a global administrator, go to the admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) and [create a security group](https://docs.microsoft.com/office365/admin/email/create-edit-or-delete-a-security-group?view=o365-worldwide) called `EDM_DataUploaders`, and assign this group compliance administrator or Exchange Online administrator permissions.
+1. As a global administrator, go to the admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) and [create a security group](https://docs.microsoft.com/office365/admin/email/create-edit-or-delete-a-security-group?view=o365-worldwide) called `EDM_DataUploaders`. Assign this group compliance administrator or Exchange Online administrator permissions.
 
 2. Add one or more users to the *EDM_DataUploaders* security group. (These users will manage the database of sensitive information.)
 
