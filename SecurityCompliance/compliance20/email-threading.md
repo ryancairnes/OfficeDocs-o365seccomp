@@ -23,7 +23,7 @@ Consider an email conversation that has been going on for a while. In most cases
 
 ## What does email threading do?
 
-Email threading parses each email and desconstructs it to individual messages; each email is a chain of individual messages. Then, it analyzes all emails in the working set to determine whether an email has unique content or if the chain is wholly contained in a different email. In the end emails are divided into four categories:
+Email threading parses each email and desconstructs it to individual messages; each email is a chain of individual messages. Then, it analyzes all emails in the review set to determine whether an email has unique content or if the chain is wholly contained in a different email. In the end emails are divided into four categories:
 
 - **Inclusive**: the last message in the email has unique content, and the email has all of the attachments that were included in other emails of which the content is wholly contained in this email.
 

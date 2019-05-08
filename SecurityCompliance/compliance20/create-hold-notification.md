@@ -19,7 +19,7 @@ description: ""
 
 # Create a legal hold notice
 
-Using Advanced eDiscovery (Preview) custodian communications, organizations can manage their workflow around communicating with custodians. Through the Communications tool, legal teams can systematically send, collect, and track legal hold notifications. The flexible creation process also allows teams to customize the hold notification workflow and the content in the notices sent to custodians. 
+Using Advanced eDiscovery custodian communications, organizations can manage their workflow around communicating with custodians. Through the Communications tool, legal teams can systematically send, collect, and track legal hold notifications. The flexible creation process also allows teams to customize the hold notification workflow and the content in the notices sent to custodians. 
 
 ![Communications Page](../media/CommunicationPage.PNG)
 
@@ -31,7 +31,7 @@ The first step is to specify the appropriate details for legal hold notices or o
 
 ![Name Communication Page](../media/NameCommunication.PNG)
 
-1. In the Security & Compliance Center, go to **eDiscovery > Advanced eDiscovery (Preview)** to display the list of cases in your organization.
+1. In the Security & Compliance Center, go to **eDiscovery > Advanced eDiscovery** to display the list of cases in your organization.
    
 2. Click the **Communications** tab, and then click **New communication**.
    

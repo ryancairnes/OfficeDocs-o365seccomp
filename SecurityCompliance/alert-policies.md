@@ -30,7 +30,7 @@ Here's a quick overview of how alert policies work and the alerts that are trigg
   
 ![Overview of how alert policies work](media/e02a622d-b429-448b-8107-dd1a4770b4e0.png)
   
-1. An admin in your organization creates, configures, and turns on an alert policy by using the **Alert policies** page in the security and compliance center. You can also create alert policies by using the **New-ProtectionAlert** cmdlet in PowerShell. To create alert policies, you have to be assigned the Organization Configuration role or the Manage Alerts role in the Security & Compliance Center.
+1. An admin in your organization creates, configures, and turns on an alert policy by using the **Alert policies** page in the security and compliance center. You can also create alert policies by using the **New-ProtectionAlert** cmdlet in Security & Compliance Center PowerShell. To create alert policies, you have to be assigned the Manage Alerts role or the Organization Configuration role in the security and compliance center.  
     
 2. A user performs an activity that matches the conditions of an alert policy. In the case of malware attacks, infected email messages sent to users in your organization will trigger an alert.
     
@@ -140,9 +140,6 @@ You can use the following filters to view a subset of all the alerts on the **Vi
 - **Source** - Use this filter to show alerts triggered by alert policies in the security and compliance center or alerts triggered by Office 365 Cloud App Security policies, or both. For more information about Office 365 Cloud App Security alerts, see the [Viewing Cloud App Security alerts](#viewing-cloud-app-security-alerts) section.
 
 ## RBAC permissions required to view alerts
-
-> [!NOTE]
-> The functionality described in this section will roll out to organizations beginning on February 20, 2019, and will be completed worldwide by the end of March 2019.
 
 The Role Bases Access Control (RBAC) permissions assigned to users in your organization determines which alerts a user can see on the **View alerts** page. How is this accomplished? The management roles assigned to users (based on their membership in role groups in the Security & Compliance Center) determine which alert categories a user can see on the **View alerts** page. Here are some examples:
 
