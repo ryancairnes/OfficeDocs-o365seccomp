@@ -97,19 +97,19 @@ The following table describes the mailbox actions that are available in mailbox 
 
 |**Mailbox action**|**Description**|**Admin**|**Delegate**|**Owner**|
 |:---------|:---------|:---------:|:---------:|:---------:|
-|**AddFolderPermissions**||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
-|**ApplyRecord**||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
+|**AddFolderPermissions**|**Note**: Although this value is accepted as a mailbox action, it's already included in the **UpdateFolderPermissions** action and isn't audited separately. In other words, don't use this value.||||
+|**ApplyRecord**|An item is labeled as a record.|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
 |**Copy**|A message was copied to another folder.|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|||
 |**Create**|An item was created in the Calendar, Contacts, Notes, or Tasks folder in the mailbox (for example, a new meeting request is created). Note that creating, sending, or receiving a message isn't audited. Also, creating a mailbox folder is not audited.|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)<sup>\*</sup>|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)<sup>\*</sup>|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
 |**FolderBind**|A mailbox folder was accessed. This action is also logged when the admin or delegate opens the mailbox. <br/><br/> **Note**: Audit records for folder bind actions performed by delegates are consolidated. One audit record is generated for individual folder access within 24 hour period.|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)||
 |**HardDelete**|A message was purged from the Recoverable Items folder.|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)<sup>\*</sup>|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)<sup>\*</sup>|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)<sup>\*</sup>|
 |**MailboxLogin**|The user signed into their mailbox. |||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
-|**MessageBind**|**Note**: The MessageBind action has been deprecated from Exchange Online, and is no longer available to add to the list of mailbox actions for the admin logon type.<br/><br/> A message was viewed in the preview pane or opened.|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|||
-|**ModifyFolderPermissions**||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
+|**MessageBind**|**Note**: This action has been deprecated from Exchange Online, and is no longer available to add to the list of admin mailbox actions.<br/><br/> A message was viewed in the preview pane or opened.|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|||
+|**ModifyFolderPermissions**|**Note**: Although this value is accepted as a mailbox action, it's already included in the **UpdateFolderPermissions** action and isn't audited separately. In other words, don't use this value.||||
 |**Move**|A message was moved to another folder.|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
 |**MoveToDeletedItems**|A message was deleted and moved to the Deleted Items folder.|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)<sup>\*</sup>|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)<sup>\*</sup>|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)<sup>\*</sup>|
-|**RecordDelete**||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
-|**RemoveFolderPermissions**||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
+|**RecordDelete**|An item that's labeled as a record was soft-deleted (moved to the Recoverable Items folder). Items labeled as records can't be permanently deleted (purged from the Recoverable Items folder).|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
+|**RemoveFolderPermissions**|**Note**: Although this value is accepted as a mailbox action, it's already included in the **UpdateFolderPermissions** action and isn't audited separately. In other words, don't use this value.||||
 |**SendAs**|A message was sent using the SendAs permission. This means another user sent the message as though it came from the mailbox owner.|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)<sup>\*</sup>|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)<sup>\*</sup>||
 |**SendOnBehalf**|A message was sent using the SendOnBehalf permission. This means another user sent the message on behalf of the mailbox owner. The message indicates to the recipient who the message was sent on behalf of and who actually sent the message.|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)<sup>\*</sup>|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)<sup>\*</sup>||
 |**SoftDelete**|A message was permanently deleted or deleted from the Deleted Items folder. Soft-deleted items are moved to the Recoverable Items folder.|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)<sup>\*</sup>|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)<sup>\*</sup>|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)<sup>\*</sup>|
@@ -123,7 +123,7 @@ The following table describes the mailbox actions that are available in mailbox 
 
 ### Mailbox actions for Office 365 Group mailboxes
 
-Mailbox auditing on by default brings mailbox audit logging to Office 365 Group mailboxes, but you can't customize what's being logged (you can't add or remove mailbox actions that are logged by any logon type).
+Mailbox auditing on by default brings mailbox audit logging to Office 365 Group mailboxes, but you can't customize what's being logged (you can't add or remove mailbox actions that are logged for any logon type).
 
 The following table describes the mailbox actions that are logged by default on Office 365 Group mailboxes for each logon type.
 
@@ -143,7 +143,7 @@ Remember, an admin with Full Access permission to an Office 365 Group mailbox is
 
 Mailbox auditing on by defaults adds a new *DefaultAuditSet* property to all mailboxes. The value of this property indicates whether the default mailbox actions (managed by Microsoft) are being audited on the mailbox.
 
-To display the value on user mailboxes or shared mailboxes, replace \<MailboxIdentity\> with the name, alias, email address, or the user principal name (username) of the mailbox and run the following command in Exchange Online PowerShell:
+To display the value on user mailboxes or shared mailboxes, replace \<MailboxIdentity\> with the name, alias, email address, or user principal name (username) of the mailbox and run the following command in Exchange Online PowerShell:
 
 ```
 Get-Mailbox -Identity <MailboxIdentity> | Format-List DefaultAuditSet
@@ -159,17 +159,17 @@ The value `Admin, Delegate, Owner` indicates:
 
 - The default mailbox actions for all three logon types are being audited. Note that this is the only value you'll see on Office 365 Group mailboxes.
 
-- An admin *has not* changed the actions for any logon type on a user mailbox or a shared mailbox. Note this is the default state after mailbox auditing on by default is initially turned on in your organization.
+- An admin *has not* changed the audited mailbox actions for any logon type on a user mailbox or a shared mailbox. Note this is the default state after mailbox auditing on by default is initially turned on in your organization.
 
-If an admin has ever changed the mailbox actions that are audited for a logon type (by using the *AuditAdmin*, *AuditDelegate*, or *AuditOwner* parameters on the **Set-Mailbox** cmdlet), the property value will be different. For example:
+If an admin has ever changed the mailbox actions that are audited for a logon type (by using the *AuditAdmin*, *AuditDelegate*, or *AuditOwner* parameters on the **Set-Mailbox** cmdlet), the property value will be different.
 
-- The value `Owner` indicates:
+For example, the value `Owner` for the *DefaultAuditSet* property on a user mailbox or shared mailbox indicates:
 
-  - Only the default mailbox actions on the user mailbox or shared mailbox owner are being audited.
+- The default mailbox actions for the mailbox owner are being audited.
 
-  - The actions for the `Delegate` and `Admin` logon types have been changed for the user mailbox or shared mailbox.
+- The audited mailbox actions for the `Delegate` and `Admin` logon types have been changed from the default actions.
 
-- A blank value indicates the mailbox actions for all three logon types have been changed on a user mailbox or a shared mailbox.
+A blank value for the *DefaultAuditSet* property indicates the mailbox actions for all three logon types have been changed on the user mailbox or a shared mailbox.
 
 For more information, see the [Change or restore mailbox actions logged by default](#change-or-restore-mailbox-actions-logged-by-default) section in this topic
 
@@ -178,7 +178,7 @@ For more information, see the [Change or restore mailbox actions logged by defau
 To see the mailbox actions that are currently being logged on user mailboxes or shared mailboxes, replace \<MailboxIdentity\> with the name, alias, email address, or user principal name (username) of the mailbox, and run one or more of the following commands in Exchange Online PowerShell.
 
 > [!NOTE]
-> Although you can add the `-GroupMailbox` switch to the following **Get-Mailbox** commands for Office 365 Group mailboxes, don't believe the values you see. The mailbox actions that are audited for logon types on Office 365 Group mailboxes are described in the [Mailbox actions for Office 365 Group mailboxes](#mailbox-actions-for-office-365-group-mailboxes) section earlier in this topic.
+> Although you can add the `-GroupMailbox` switch to the following **Get-Mailbox** commands for Office 365 Group mailboxes, don't believe the values you see. The default and static mailbox actions that are audited for Office 365 Group mailboxes are described in the [Mailbox actions for Office 365 Group mailboxes](#mailbox-actions-for-office-365-group-mailboxes) section earlier in this topic.
 
 #### Owner actions
 
@@ -200,12 +200,12 @@ Get-Mailbox -Identity <MailboxIdentity> | Select-Object -ExpandProperty AuditAdm
 
 ## Change or restore mailbox actions logged by default
 
-As previously explained, one of the key benefits of having mailbox auditing on by default is: you don't need to manage the mailboxes actions that are audited. Microsoft does this for you and will automatically add new mailbox actions to be audited by default when they are released.
+As previously explained, one of the key benefits of having mailbox auditing on by default is: you don't need to manage the mailboxes actions that are audited. Microsoft does this for you and we'll automatically add new mailbox actions to be audited by default as they're released.
 
-However, your organization may be required to audit a different set of mailbox actions for user mailboxes and shared mailboxes. The procedures in this section show you how to change the mailbox actions that are audited for each logon type, and how to revert back to the Microsoft-managed default actions.
+However, your organization might be required to audit a different set of mailbox actions for user mailboxes and shared mailboxes. The procedures in this section show you how to change the mailbox actions that are audited for each logon type, and how to revert back to the Microsoft-managed default actions.
 
 > [!IMPORTANT]
-> If you use the following procedures to customize the mailbox actions that are logged on user mailboxes or shared mailboxes, any new default mailbox actions released by Microsoft will not be automatically audited on those mailboxes. You'll need to manually add the new mailbox action to your customized list of actions.
+> If you use the following procedures to customize the mailbox actions that are logged on user mailboxes or shared mailboxes, any new default mailbox actions released by Microsoft will not be automatically audited on those mailboxes. You'll need to manually add any new mailbox actions to your customized list of actions.
 
 ### Change the mailbox actions to audit
 
@@ -243,7 +243,7 @@ Regardless of the method you use, customizing the audited mailbox actions on use
 
 ### Restore the default mailbox actions
 
-If you made changes to the mailbox actions that are audited for a logon type on a shared mailbox or a shared mailbox, you can restore the default mailbox actions for one or all logon types by using this syntax:
+If you customized the mailbox actions that are audited on a user mailbox or a shared mailbox, you can restore the default mailbox actions for one or all logon types by using this syntax:
 
 ```
 Set-Mailbox -Identity <MailboxIdentity> -DefaultAuditSet <Admin | Delegate | Owner>
@@ -251,7 +251,7 @@ Set-Mailbox -Identity <MailboxIdentity> -DefaultAuditSet <Admin | Delegate | Own
 
 You can specify multiple *DefaultAuditSet* values separated by commas
 
-**Note**: The following procedures don't apply to Office 365 Group mailboxes (they're limited to the default actions).
+**Note**: The following procedures don't apply to Office 365 Group mailboxes (they're limited to the default actions as described [here](#mailbox-actions-for-office-365-group-mailboxes)).
 
 This example restores the default audited mailbox actions for all logon types on the mailbox mark@contoso.onmicrosoft.com.
 
@@ -259,7 +259,7 @@ This example restores the default audited mailbox actions for all logon types on
 Set-Mailbox -Identity mark@contoso.onmicrosoft.com -DefaultAuditSet Admin,Delegate,Owner
 ```
 
-This example restores the default audited mailbox actions for the Admin logon type on the mailbox chris@contoso.onmicrosoft.com, but leaves the customized mailbox actions for the Delegate and Owner logon types.
+This example restores the default audited mailbox actions for the Admin logon type on the mailbox chris@contoso.onmicrosoft.com, but leaves the customized audited mailbox actions for the Delegate and Owner logon types.
 
 ```
 Set-Mailbox -Identity chris@contoso.onmicrosoft.com -DefaultAuditSet Admin
@@ -271,7 +271,7 @@ Restoring he default audited mailbox actions for a logon type has the following 
 
 - Any new mailbox actions that are released by Microsoft are automatically added to the list of audited actions for the logon type.
 
-- The *DefaultAuditSet* property value for the mailbox is updated to include the restred logon type.
+- The *DefaultAuditSet* property value for the mailbox is updated to include the restored logon type.
 
 ## Turn off mailbox auditing on by default for your organization
 
@@ -285,7 +285,7 @@ Turning off mailbox auditing on by default has the following results:
 
 - Mailbox auditing is disabled for your organization.
 
-- From the time you disable mailbox auditing on by default, no mailbox actions are audited, even if auditing is enabled on a mailbox (the *AuditEnabled* property on the mailbox is **True**).
+- From the time you disabled mailbox auditing on by default, no mailbox actions are audited, even if auditing is enabled on a mailbox (the *AuditEnabled* property on the mailbox is **True**).
 
 - Mailbox auditing is not enabled for new mailboxes and setting the *AuditEnabled* property on a new or existing mailbox to **True** will be ignored.
 
@@ -353,7 +353,7 @@ The value **True** indicates that mailbox audit logging is bypassed for the user
     - You can run the following command in Exchange Online PowerShell to display the size and number of items in the Audits subfolder in the Recoverable Items folder:
 
       ```
-      Get-MailboxFolderStatistics <MailboxIdentity> -FolderScope RecoverableItems | Where-Object {$_.Name -eq 'Audits'} | Format-List FolderPath,FolderSize,ItemsInFolder
+      Get-MailboxFolderStatistics -Identity <MailboxIdentity> -FolderScope RecoverableItems | Where-Object {$_.Name -eq 'Audits'} | Format-List FolderPath,FolderSize,ItemsInFolder
       ```
 
     - You can't directly access an audit log record in the Recoverable Items folder; instead, you use the **Search-MailboxAuditLog** cmdlet or search the Microsoft 365 audit log to find and view mailbox audit records.
