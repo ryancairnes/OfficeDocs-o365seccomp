@@ -306,6 +306,9 @@ You can refresh your sensitive information database daily or weekly.  use the ED
 
 2. Re-export the sensitive data to an app, such as Microsoft Excel, and save the file in .csv format, using the same file name and location you used when you followed the steps described in [Index and upload the sensitive data](#index-and-upload-the-sensitive-data).
 
+    > [!NOTE]
+    > If there are no changes to the structure (field names) of the .csv file, you won't need to make any changes to your database schema file when you refresh the data. But if you must make changes, make sure to edit the [database schema](#editing-the-schema-for-edm-based-classification) and your [rule package](#set-up-a-rule-package) accordingly.        
+
 3. Use [Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/task-scheduler-start-page) to automate the steps 2 and 3 in [Index and upload the sensitive data](#index-and-upload-the-sensitive-data)).
 
     You can schedule tasks using several methods:
@@ -315,6 +318,9 @@ You can refresh your sensitive information database daily or weekly.  use the ED
     |Windows PowerShell     |See the [ScheduledTasks](https://docs.microsoft.com/powershell/module/scheduledtasks/?view=win10-ps) documentation and our [example PowerShell script](#example-powershell-script) in this article|
     |Task Scheduler API |See the [Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/using-the-task-scheduler) documentation |
     |Windows user interface     |In Windows, click **Start**, and type `Task Scheduler`. Then, in the list of results, right-click **Task Scheduler**, and choose **Run as administrator**.          |
+
+
+
 
 #### Example PowerShell script
 
