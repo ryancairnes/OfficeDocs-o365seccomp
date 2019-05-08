@@ -249,19 +249,25 @@ At this point, you have set up EDM-based classification. The next step is to ind
 
 During this phase, you set up a custom security group and user account, and set up the EDM Upload Agent tool. Then, you use the tool to index the sensitive data, and upload the indexed data.
 
-### Set up the EDM Upload Agent
+### Set up the security group and user account
 
 1. As a global administrator, go to the admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) and [create a security group](https://docs.microsoft.com/office365/admin/email/create-edit-or-delete-a-security-group?view=o365-worldwide) called `EDM_DataUploaders`.
 
-2. Add the user(s) who will be indexing and uploading the sensitive data to the EDM_DataUploaders security group.
+2. Add the user(s) who will be managing the sensitive data to the EDM_DataUploaders security group.
 
-3. As a member of the EDM_DataUploaders security group, download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639).  
+3. Make sure the user(s) who will be managing the sensitive data are local admins on their machines.
 
-4. To authorize the EDM Upload Agent, open Windows Command Prompt and run the following command:
+### Set up the EDM Upload Agent
+
+Before you begin this procedure, make sure that you are a member of the EDM_DataUploaders security group and a local admin on your machine.
+
+1. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639).  
+
+2. To authorize the EDM Upload Agent, open Windows Command Prompt and run the following command:
 
     `EdmUploadAgent.exe /Authorize`
 
-    You'll be prompted to sign in. Use your work or school account for Office 365.
+3. Sign in using your work or school account for Office 365.
 
 The next step is to use the EDM Upload Agent to index the sensitive data, and then upload the indexed data.
 
