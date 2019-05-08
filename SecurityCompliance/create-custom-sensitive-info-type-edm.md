@@ -161,7 +161,7 @@ Now that the schema for your database of sensitive information is defined, the n
 
 ### Set up a rule package
 
-1. Create a rule package in .xml format (with Unicode encoding), similar to the example included below. (You can copy our example and modify it for your use.) 
+1. Create a rule package in .xml format (with Unicode encoding), similar to the following example. (You can copy this example and modify it for your use.) 
 
    Recall from the previous procedure that our PatientRecords schema defines five fields as searchable: *PatientID*, *MRN*, *SSN*, *Phone*, and *DOB*. Our example rule package includes those fields and references the database schema file (edm.xml), with one *ExactMatch* items per searchable field. Consider the following ExactMatch item:
 
@@ -257,7 +257,7 @@ During this phase, you set up a custom security group and user account, and set 
 
 1. As a global administrator, go to the admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) and [create a security group](https://docs.microsoft.com/office365/admin/email/create-edit-or-delete-a-security-group?view=o365-worldwide) called `EDM_DataUploaders`, and assign this group compliance administrator or Exchange Online administrator permissions.
 
-2. Add the user(s) who will be managing the sensitive data to the *EDM_DataUploaders* security group.
+2. Add one or more users to the *EDM_DataUploaders* security group. (These users will manage the database of sensitive information.)
 
 3. Make sure each user who is managing the sensitive data is a local admin on the machine used for the EDM Upload Agent.
 
