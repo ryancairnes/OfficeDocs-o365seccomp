@@ -300,7 +300,7 @@ At this point, you are ready to use EDM-based classification with your Microsoft
 
 ### Refreshing your sensitive information database
 
-You can refresh your sensitive information database daily or weekly.  use the EDM Upload Tool to re-index the sensitive data and then re-upload the indexed data (see [Index and upload the sensitive data](#index-and-upload-the-sensitive-data)). 
+You can refresh your sensitive information database daily or weekly, and the EDM Upload Tool can re-index the sensitive data and then re-upload the indexed data. 
 
 1. Determine your process and frequency (daily or weekly) for refreshing the database of sensitive information.
 
@@ -308,10 +308,7 @@ You can refresh your sensitive information database daily or weekly.  use the ED
 
     > [!NOTE]
     > If there are no changes to the structure (field names) of the .csv file, you won't need to make any changes to your database schema file when you refresh the data. But if you must make changes, make sure to edit the [database schema](#editing-the-schema-for-edm-based-classification) and your [rule package](#set-up-a-rule-package) accordingly.        
-
-3. Use [Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/task-scheduler-start-page) to automate the steps 2 and 3 in [Index and upload the sensitive data](#index-and-upload-the-sensitive-data)).
-
-    You can schedule tasks using several methods:
+3. Use [Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/task-scheduler-start-page) to automate steps 2 and 3 in the [Index and upload the sensitive data](#index-and-upload-the-sensitive-data) procedure. You can schedule tasks using several methods:
     
     |Method  |What to do  |
     |---------|---------|
@@ -319,10 +316,7 @@ You can refresh your sensitive information database daily or weekly.  use the ED
     |Task Scheduler API |See the [Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/using-the-task-scheduler) documentation |
     |Windows user interface     |In Windows, click **Start**, and type `Task Scheduler`. Then, in the list of results, right-click **Task Scheduler**, and choose **Run as administrator**.          |
 
-
-
-
-#### Example PowerShell script
+#### Example PowerShell script for Task Scheduler
 
 Here's an starter PowerShell script you can use to schedule your tasks for indexing data and uploading the indexed data:
 
@@ -359,7 +353,6 @@ $password=[Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropSer
 $taskName = 'EDMUpload_' + $dataStoreName
 Register-ScheduledTask -TaskName $taskName -InputObject $scheduledTask -User $user -Password $password
 ```
-
 ## Part 3: Use EDM-based classification with your Microsoft cloud services
 
 EDM can be used with information protection features, such as [Office 365 DLP policies](data-loss-prevention-policies.md) and [Microsoft Cloud App Security file policies](https://docs.microsoft.com/cloud-app-security/data-protection-policies). As an example, the following procedure describes how to use EDM with a DLP policy that is created in the Office 365 Security & Compliance Center.
