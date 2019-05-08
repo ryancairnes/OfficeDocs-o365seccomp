@@ -36,7 +36,9 @@ Using the upload Non-Office 365 feature as described in this article requires th
 
 - Custodians must be added to the case before you upload the data that's associated to them.
 
-- All the files for uploading gathered into folders where there is one folder per custodian and the folders' name is in this format *alias@domainname*. The *alias@domainname* must be users' Office 365 alias and domain. You can collect all the *alias@domainname* folders into a root folder. The root folder can only contain the *alias@domainname* folders, there must be no loose files in the root folder.
+- Custodians must be added to the case before you upload data attributed to them.
+
+- All the files for uploading gathered into folders where there is one folder per custodian and the folders' name is in this format *alias@domainname* . The *alias@domainname* must be users Office 365 alias and domain. You can collect all the *alias@domainname* folders into a root folder. The root folder can only contain the *alias@domainname* folders, there must be no loose files in the root folder.
 
    For example, the folder structure for the non-Office 365 data that you want to upload would be similiar to the following:
 
