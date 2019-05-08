@@ -189,15 +189,15 @@ If you have Office 365 Advanced Message Encryption, you can use custom branding 
 3. Run the New-TransportRule cmdlet:
 
    ```powershell
-   New-TransportRule -name "<transport rule name>" -FromScope "InOrganization" -ApplyRightsProtectionCustomizationTemplate "<template name>"
+   New-TransportRule -name "<mail flow rule name>" -FromScope "InOrganization" -ApplyRightsProtectionTemplate "Encrypt" -ApplyRightsProtectionCustomizationTemplate "<template name>"
    ```
 
-   where `transport rule name` is the name you want to use for the new transport rule and `template name` is the name you gave the custom branding template.
+   where `mail flow rule name` is the name you want to use for the new mail flow rule and `template name` is the name you gave the custom branding template.
 
-   For example:
+   For example, to encrypt all external email with the "One week expiration" template you created in the previous step,
 
    ```powershell
-   New-TransportRule -name "<All outgoing mail>" -FromScope "InOrganization" -ApplyRightsProtectionCustomizationTemplate "<One week expiration>"
+   New-TransportRule -name "<All outgoing mail>" -FromScope "InOrganization" -ApplyRightsProtectionTemplate "Encrypt" -ApplyRightsProtectionCustomizationTemplate "<One week expiration>"
    ```
 
 ## Customizing the appearance of email messages and the OME portal
