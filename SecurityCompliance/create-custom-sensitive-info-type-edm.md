@@ -109,9 +109,9 @@ Setting up and configuring EDM-based classification involves saving sensitive da
     
 Now that the schema for your database of sensitive information is defined, the next step is to [set up a rule package](#set-up-a-rule-package).
 
-#### Editing the schema for EDM 
+#### Editing the schema for EDM-based classification 
 
-(As needed) If you want to make changes to your edm.xml file, such as changing which fields are used for EDM, follow these steps:
+(As needed) If you want to make changes to your edm.xml file, such as changing which fields are used for EDM-based classification, follow these steps:
 
 1. Edit your edm.mxl file (this is the file discussed in the [Define the schema](#define-the-schema-for-your-database-of-sensitive-information) section of this article).
 
@@ -133,9 +133,9 @@ Now that the schema for your database of sensitive information is defined, the n
     > [!TIP]
     > If you want your changes to occur without confirmation, in Step 3, use this cmdlet instead: `Set-DlpEdmSchema -FileData $edm`
 
-#### Removing the schema for EDM
+#### Removing the schema for EDM-based classification
 
-If you want to remove the schema you're using for EDM, follow these steps:
+(As needed) If you want to remove the schema you're using for EDM-based classification, follow these steps:
 
 1. [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
@@ -145,12 +145,10 @@ If you want to remove the schema you're using for EDM, follow these steps:
 
      You will be prompted to confirm, as follows:
     
-    ```powershell
-    Confirm
-    Are you sure you want to perform this action?
-    EDM Schema for the data store 'patientrecords' will be removed.
-    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [?] Help (default is "Y"):
-    ```
+       Confirm
+       Are you sure you want to perform this action?
+       EDM Schema for the data store 'patientrecords' will be removed.
+       [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [?] Help (default is "Y"):
     
     > [!TIP]
     > If you want your changes to occur without confirmation, in Step 2, use this cmdlet instead: `Remove-DlpEdmSchema -Identity patientrecords -Confirm:$false`
@@ -159,7 +157,23 @@ If you want to remove the schema you're using for EDM, follow these steps:
 
 1. Create a rule package in .xml format (with Unicode encoding), similar to the example included below. (You can copy our example and modify it for your use.) 
 
-    Recall from the previous procedure that our PatientRecords schema defines five fields as searchable for EDM: *PatientID*, *MRN*, *SSN*, *Phone*, and *DOB*. Our example file includes those fields, listed as *ExactMatch* items. 
+   Recall from the previous procedure that our PatientRecords schema defines five fields as searchable for EDM: *PatientID*, *MRN*, *SSN*, *Phone*, and *DOB*. Our example file includes those fields, listed as *ExactMatch* items. Here's an example:
+
+   ```
+    <ExactMatch id = "E1CC861E-3FE9-4A58-82DF-4BD259EAB371" patternsProximity = "300" dataStore ="PatientRecords" recommendedConfidence = "65" >
+      <Pattern confidenceLevel="65">
+        <idMatch matches = "SSN" classification = "U.S. Social Security Number (SSN)" />
+      </Pattern>
+    </ExactMatch>
+   ```
+
+    In this example:
+
+    - The DataStore name (PatientRecords) is referenced by **dataStore = "PatientRecords"**
+    - The idMatch value references a searchable field that is listed in the database schema file: **idMatch matches = "SSN"**.
+    - The classification value is an existing or custom sensitive information type: **classification = "U.S. Social Security Number (SSN)"**. 
+
+    (You can copy our example and modify it for your use.) 
 
     ```
     <?xml version="1.0" encoding="utf-8"?>
