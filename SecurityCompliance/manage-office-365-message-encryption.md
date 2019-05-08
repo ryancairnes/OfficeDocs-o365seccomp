@@ -168,9 +168,9 @@ For more information about how Office 365 implements encryption for emails and e
 
 ## Ensure all external recipients use the OME Portal to read encrypted mail - Office 365 Advanced Message Encryption only
 
-If you have Office 365 Advanced Message Encryption, you can use custom branding templates to force recipients to receive a wrapper mail that directs them to read encrypted email in the OME Portal instead of using Outlook or Outlook on the web. You might want to do this if you use want greater control over how recipients use the mail they receive. For example, if external recipients view email in the web portal, you can set an expiration date for the email, and you can revoke the email. These features are only supported through the OME Portal.
+If you have Office 365 Advanced Message Encryption, you can use custom branding templates to force recipients to receive a wrapper mail that directs them to read encrypted email in the OME Portal instead of using Outlook or Outlook on the web. You might want to do this if you use want greater control over how recipients use the mail they receive. For example, if external recipients view email in the web portal, you can set an expiration date for the email, and you can revoke the email. These features are only supported through the OME Portal. You can use the Encrypt option and the Do Not Forward option when creating the mail flow rules.
 
-### Example: Create a custom template to force all external recipients to receive a wrapper email and for that email to expire in 7 days
+### Create a custom template to force all external recipients to use the OME Portal and for encrypted email to be revocable and expire in 7 days
 
 1. Using a work or school account that has global administrator permissions in your Office 365 organization, start a Windows PowerShell session and connect to Exchange Online. For instructions, see [Connect to Exchange Online PowerShell](https://aka.ms/exopowershell).
 
@@ -189,15 +189,27 @@ If you have Office 365 Advanced Message Encryption, you can use custom branding 
 3. Run the New-TransportRule cmdlet:
 
    ```powershell
-   New-TransportRule -name "<mail flow rule name>" -FromScope "InOrganization" -ApplyRightsProtectionTemplate "Encrypt" -ApplyRightsProtectionCustomizationTemplate "<template name>"
+   New-TransportRule -name "<mail flow rule name>" -FromScope "InOrganization" -ApplyRightsProtectionTemplate "<option name>" -ApplyRightsProtectionCustomizationTemplate "<template name>"
    ```
 
-   where `mail flow rule name` is the name you want to use for the new mail flow rule and `template name` is the name you gave the custom branding template.
+    where:
 
-   For example, to encrypt all external email with the "One week expiration" template you created in the previous step,
+   - `mail flow rule name` is the name you want to use for the new mail flow rule.
+
+   - `option name` is either `Encrypt` or `Do Not Forward`.
+
+   - `template name` is the name you gave the custom branding template, for example `One week expiration`.
+
+   To encrypt all external email with the "One week expiration" template and apply the Encrypt-Only option:
 
    ```powershell
    New-TransportRule -name "<All outgoing mail>" -FromScope "InOrganization" -ApplyRightsProtectionTemplate "Encrypt" -ApplyRightsProtectionCustomizationTemplate "<One week expiration>"
+   ```
+
+   To encrypt all external email with the "One week expiration" template and apply the Do Not Forward option:
+
+   ```powershell
+   New-TransportRule -name "<All outgoing mail>" -FromScope "InOrganization" -ApplyRightsProtectionTemplate "Do Not Forward" -ApplyRightsProtectionCustomizationTemplate "<One week expiration>"
    ```
 
 ## Customizing the appearance of email messages and the OME portal
