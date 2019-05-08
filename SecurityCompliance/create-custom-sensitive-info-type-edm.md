@@ -294,28 +294,27 @@ The next step is to use the EDM Upload Agent to index the sensitive data, and th
 
     You'll see a list of data stores and when they were last updated, similar to the following: <br/>![Example of GetDataStore cmdlet and results](media/EDM-GetDataStore-example.png)
 
-    > [!TIP]
-    > [Use Task Scheduler to save time](#use-task-scheduler-to-save-time).
-
-5. 
+5. Proceed to set up your process and schedule for [Refreshing your sensitive information database](#refreshing-your-sensitive-information-database).
 
 At this point, you are ready to use EDM-based classification with your Microsoft cloud services. For example, you can [set up a DLP policy using EDM-based classification](#to-create-a-new-dlp-policy-with-edm). 
 
 ### Refreshing your sensitive information database
 
-You can refresh your sensitive information database daily or weekly. When your .csv file is refreshed, use the EDM Upload Tool to re-index the sensitive data and then re-upload the indexed data (see [Index and upload the sensitive data](#index-and-upload-the-sensitive-data)). 
+You can refresh your sensitive information database daily or weekly.  use the EDM Upload Tool to re-index the sensitive data and then re-upload the indexed data (see [Index and upload the sensitive data](#index-and-upload-the-sensitive-data)). 
 
-### Use Task Scheduler to save time
+1. Determine your process and frequency (daily or weekly) for refreshing the database of sensitive information.
 
-We recommend setting up a regular schedule and process for updating the .csv file, and using [Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/task-scheduler-start-page) to automate the steps of indexing sensitive data and uploading the indexed data.
+2. Re-export the sensitive data to an app, such as Microsoft Excel, and save the file in .csv format, using the same file name and location you used when you followed the steps described in [Index and upload the sensitive data](#index-and-upload-the-sensitive-data).
 
-You can schedule tasks using several methods:
+3. Use [Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/task-scheduler-start-page) to automate the steps 2 and 3 in [Index and upload the sensitive data](#index-and-upload-the-sensitive-data)).
 
-|Method  |What to do  |
-|---------|---------|
-|Windows PowerShell     |See the [ScheduledTasks](https://docs.microsoft.com/powershell/module/scheduledtasks/?view=win10-ps) documentation and our [example PowerShell script](#example-powershell-script)|
-|Task Scheduler API |See the [Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/using-the-task-scheduler) documentation |
-|Windows user interface     |In Windows, click **Start**, and type `Task Scheduler`. Then, in the list of results, right-click **Task Scheduler**, and choose **Run as administrator**.          |
+    You can schedule tasks using several methods:
+    
+    |Method  |What to do  |
+    |---------|---------|
+    |Windows PowerShell     |See the [ScheduledTasks](https://docs.microsoft.com/powershell/module/scheduledtasks/?view=win10-ps) documentation and our [example PowerShell script](#example-powershell-script) in this article|
+    |Task Scheduler API |See the [Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/using-the-task-scheduler) documentation |
+    |Windows user interface     |In Windows, click **Start**, and type `Task Scheduler`. Then, in the list of results, right-click **Task Scheduler**, and choose **Run as administrator**.          |
 
 #### Example PowerShell script
 
