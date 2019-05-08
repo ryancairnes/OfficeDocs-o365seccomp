@@ -251,15 +251,16 @@ During this phase, you set up a custom security group and user account, and set 
 
 ### Set up the security group and user account
 
-1. As a global administrator, go to the admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) and [create a security group](https://docs.microsoft.com/office365/admin/email/create-edit-or-delete-a-security-group?view=o365-worldwide) called `EDM_DataUploaders`.
+1. As a global administrator, go to the admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) and [create a security group](https://docs.microsoft.com/office365/admin/email/create-edit-or-delete-a-security-group?view=o365-worldwide) called `EDM_DataUploaders`, and assign this group compliance administrator or Exchange Online administrator permissions.
 
-2. Add the user(s) who will be managing the sensitive data to the EDM_DataUploaders security group.
+2. Add the user(s) who will be managing the sensitive data to the *EDM_DataUploaders* security group.
 
-3. Make sure the user(s) who will be managing the sensitive data are local admins on their machines.
+3. Make sure each user who is managing the sensitive data is a local admin on the machine used for the EDM Upload Agent.
 
 ### Set up the EDM Upload Agent
 
-Before you begin this procedure, make sure that you are a member of the EDM_DataUploaders security group and a local admin on your machine.
+> [!NOTE]
+> Before you begin this procedure, make sure that you are a member of the *EDM_DataUploaders* security group and a local admin on your machine.
 
 1. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639).  
 
@@ -295,6 +296,8 @@ The next step is to use the EDM Upload Agent to index the sensitive data, and th
 
     > [!TIP]
     > [Use Task Scheduler to save time](#use-task-scheduler-to-save-time).
+
+5. 
 
 At this point, you are ready to use EDM-based classification with your Microsoft cloud services. For example, you can [set up a DLP policy using EDM-based classification](#to-create-a-new-dlp-policy-with-edm). 
 
