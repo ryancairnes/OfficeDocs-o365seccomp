@@ -23,45 +23,47 @@ Advance eDiscovery (Preview) supports many file types to many different levels, 
 
 | Mime Type | File class | Native viewer | Text viewer | Annotate viewer | Container extraction | Extensions |
 | :- | :- | :- | :- | :- | :- | :- |
-| application/msword | Document | Yes | Yes | Yes | No | .doc; .dat |
-| application/pdf | Document | Yes | Yes | Yes | No | .pdf |
-| application/rtf | Document | Yes | Yes | Yes | No | .rtf;.doc |
-| application/vnd.ms-excel | Document | Yes | Yes | Yes | No | .xls; .dat |
-| application/vnd.ms-excel.sheet.binary.macroenabled.12 | Productivity / Open Document Format | Yes | Yes | No | No | .xlsb |
-| application/vnd.ms-excel.sheet.macroenabled.12 | Document | Yes | Yes | Yes | No | .xlsm |
-| application/vnd.ms-excel.template.macroenabled.12 | Productivity / Open Document Format | No | Yes | No | No | .xltm |
-| application/vnd.ms-outlook | Productivity | No | No | No | No | .msg |
-| application/vnd.ms-outlook-pst | Productivity / Collaboration | No | No | No | Yes | .pst |
-| application/vnd.ms-powerpoint | Document | Yes | Yes | Yes | No | .ppt; .pps;.pot |
-| application/vnd.ms-word.document.macroenabled.12 | Document | Yes | Yes | Yes | No | .docm |
-| application/vnd.ms-word.template.macroenabled.12 | Document | Yes | Yes | Yes | No | .dotm |
-| application/vnd.oasis.opendocument.text | Document | Yes | Yes | Yes | No | .odt;  |
-| application/vnd.openxmlformats-officedocument.presentationml.presentation | Document | Yes | Yes | Yes | No | .pptx |
-| application/vnd.openxmlformats-officedocument.presentationml.slideshow | Productivity / Open Document Format | Yes | Yes | Yes | No | .ppsx |
-| application/vnd.openxmlformats-officedocument.presentationml.template | Document | Yes | Yes | Yes | No | .potx |
-| application/vnd.openxmlformats-officedocument.spreadsheetml.sheet | Document | Yes | Yes | Yes | No | .xlsx |
-| application/vnd.openxmlformats-officedocument.spreadsheetml.template | Document | Yes | Yes | Yes | No | .xltx |
-| application/vnd.openxmlformats-officedocument.wordprocessingml.document | Document | Yes | Yes | Yes | No | .docx |
-| application/vnd.openxmlformats-officedocument.wordprocessingml.template | Document | Yes | Yes | Yes | No | .dotx |
-| application/vnd.visio | Document | Yes | Yes | Yes | No | .vsd |
-| application/x-7z-compressed | Archive / Container | No | No | No | Yes | .7z |
-| application/xhtml+xml | Document | Yes | Yes | Yes | No | .xhtml |
-| application/xml | Document | Yes | Yes | Yes | No | .xml |
-| application/x-msaccess | Document | Yes | Yes | Yes | No | .mdb |
-| application/x-mspublisher | Document | Yes | Yes | Yes | No | .pub |
-| application/x-rar-compressed | Archive / Container | No | No | No | Yes | .rar |
-| application/zip | Archive / Container | No | No | No | Yes | .zip |
-| image/bmp | Image | Yes | Yes | Yes | No | .bmp |
-| image/emf | Image | Yes | Yes | Yes | No | .emf |
-| image/gif | Document | Yes | Yes | Yes | No | .gif |
-| image/jpeg | Image | Yes | Yes | Yes | No | .jpg; .jpeg; .dat;.jpgt |
-| image/png | Image | Yes | Yes | Yes | No | .png |
-| image/tiff | Image | Yes | Yes | Yes | No | .tif |
-| image/vnd.dwg | Document | Yes | Yes | Yes | No | .dwg;.dxf; |
-| image/wmf | Document | Yes | Yes | Yes | No | .wmf |
-| message/rfc822 | Productivity / Collaboration | No | No | No | No | .eml |
-| text/csv | Document | Yes | Yes | Yes | No | .csv |
-| text/html | Document | Yes | Yes | Yes | No | .html;.shtml; .htm |
-| text/plain | Document | Yes | Yes | Yes | No | .txt; .css;.con; .pl; .csv; .dat |
-| text/vcard-contact | Document | Yes | Yes | Yes | No | .vcf |
+| application/mbox | Archive / Container |  |  |  | Yes | .mbox |
+| application/msword | Productivity | Yes | Yes | Yes |  | .doc; .dat |
+| application/pdf | Productivity | Yes | Yes | Yes |  | .pdf |
+| application/rtf | Document | Yes | Yes | Yes |  | .rtf;.doc |
+| application/vnd.ms-excel | Productivity | Yes | Yes | Yes |  | .xls; .dat |
+| application/vnd.ms-excel.sheet.binary.macroenabled.12 | Productivity | Yes | Yes | No |  | .xlsb |
+| application/vnd.ms-excel.sheet.macroenabled.12 | Productivity | Yes | Yes | Yes |  | .xlsm |
+| application/vnd.ms-excel.template.macroenabled.12 | Productivity | No | Yes | No |  | .xltm |
+| application/vnd.ms-outlook | Collaboration | Yes | Yes | Yes |  | .msg |
+| application/vnd.ms-outlook-pst | Archive / Container |  |  |  | Yes | .pst |
+| application/vnd.ms-powerpoint | Productivity | Yes | Yes | Yes |  | .ppt; .pps;.pot |
+| application/vnd.ms-word.document.macroenabled.12 | Productivity | Yes | Yes | Yes |  | .docm |
+| application/vnd.ms-word.template.macroenabled.12 | Productivity | Yes | Yes | Yes |  | .dotm |
+| application/vnd.oasis.opendocument.text | Productivity | Yes | Yes | Yes |  | .odt;  |
+| application/vnd.openxmlformats-officedocument.presentationml.presentation | Productivity | Yes | Yes | Yes |  | .pptx |
+| application/vnd.openxmlformats-officedocument.presentationml.slideshow | Productivity | Yes | Yes | Yes |  | .ppsx |
+| application/vnd.openxmlformats-officedocument.presentationml.template | Productivity | Yes | Yes | Yes |  | .potx |
+| application/vnd.openxmlformats-officedocument.spreadsheetml.sheet | Productivity | Yes | Yes | Yes |  | .xlsx |
+| application/vnd.openxmlformats-officedocument.spreadsheetml.template | Productivity | Yes | Yes | Yes |  | .xltx |
+| application/vnd.openxmlformats-officedocument.wordprocessingml.document | Productivity | Yes | Yes | Yes |  | .docx |
+| application/vnd.openxmlformats-officedocument.wordprocessingml.template | Productivity | Yes | Yes | Yes |  | .dotx |
+| application/vnd.visio | Productivity | Yes | Yes | Yes |  | .vsd |
+| application/x-7z-compressed | Archive / Container |  |  |  | Yes | .7z |
+| application/xhtml+xml | Document | Yes | Yes | Yes |  | .xhtml |
+| application/xml | Document | Yes | Yes | Yes |  | .xml |
+| application/x-msaccess | Productivity | Yes | Yes | Yes |  | .mdb |
+| application/x-mspublisher | Productivity | Yes | Yes | Yes |  | .pub |
+| application/x-rar-compressed | Archive / Container |  |  |  | Yes | .rar |
+| application/x-tar | Archive / Container |  |  |  | Yes | .tar |
+| application/zip | Archive / Container |  |  |  | Yes | .zip |
+| image/bmp | Image | Yes | Yes | Yes |  | .bmp |
+| image/emf | Image | Yes | Yes | Yes |  | .emf |
+| image/gif | Image | Yes | Yes | Yes |  | .gif |
+| image/jpeg | Image | Yes | Yes | Yes |  | .jpg; .jpeg; .dat;.jpgt |
+| image/png | Image | Yes | Yes | Yes |  | .png |
+| image/tiff | Image | Yes | Yes | Yes |  | .tif |
+| image/vnd.dwg | Drawings | Yes | Yes | Yes |  | .dwg;.dxf; |
+| image/wmf | Document | Yes | Yes | Yes |  | .wmf |
+| message/rfc822 | Collaboration | Yes | Yes | Yes |  | .eml |
+| text/csv | Document | Yes | Yes | Yes |  | .csv |
+| text/html | Document | Yes | Yes | Yes |  | .html;.shtml; .htm |
+| text/plain | Document | Yes | Yes | Yes |  | .txt; .css;.con; .pl; .csv; .dat |
+| text/vcard-contact | Collaboration | Yes | Yes | Yes |  | .vcf |
 ||||||||
