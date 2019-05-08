@@ -63,10 +63,10 @@ Setting up and configuring EDM-based classification involves saving sensitive da
 
 1. Identify the sensitive information you want to use. Export the data to an app, such as Microsoft Excel, and save the file in .csv format. The data file can include:
 
-    - Up to ten million rows of sensitive data
+    - Up to 10 million rows of sensitive data
     - Up to 32 columns (fields) per data source
 
-2. Structure the sensitive data in the .csv file such that the first row includes the names of the fields you'll use for EDM-based classification. In your .csv file, you might have field names, such as "ssn", "birthdate", "firstname", "lastname", and so on. As an example, our .csv file is called *PatientRecords.csv*, and its columns include *PatientID*, *MRN*, *lastname*, *FirstName*, *SSN* and more.
+2. Structure the sensitive data in the .csv file such that the first row includes the names of the fields used for EDM-based classification. In your .csv file, you might have field names, such as "ssn", "birthdate", "firstname", "lastname", and so on. As an example, our .csv file is called *PatientRecords.csv*, and its columns include *PatientID*, *MRN*, *lastname*, *FirstName*, *SSN* and more.
 
 3. Define the schema for the database of sensitive information in .xml format (similar to our example below). Name this schema file `edm.xml`, and configure it such that for each column in the database, there is a line that uses the syntax `<Field name="" unique="" searchable=""/>`. 
 
