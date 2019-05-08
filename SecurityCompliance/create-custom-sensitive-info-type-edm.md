@@ -159,7 +159,7 @@ Now that the schema for your database of sensitive information is defined, the n
 
 1. Create a rule package in .xml format (with Unicode encoding), similar to the example included below. (You can copy our example and modify it for your use.) 
 
-   Recall from the previous procedure that our PatientRecords schema defines five fields as searchable for EDM: *PatientID*, *MRN*, *SSN*, *Phone*, and *DOB*. Our example file includes those fields, listed as *ExactMatch* items. Here's an example:
+   Recall from the previous procedure that our PatientRecords schema defines five fields as searchable: *PatientID*, *MRN*, *SSN*, *Phone*, and *DOB*. Our example rule package includes those fields and references the database schema file (edm.xml), with one *ExactMatch* items per searchable field. Consider the following ExactMatch item:
 
    ```
     <ExactMatch id = "E1CC861E-3FE9-4A58-82DF-4BD259EAB371" patternsProximity = "300" dataStore ="PatientRecords" recommendedConfidence = "65" >
@@ -169,13 +169,13 @@ Now that the schema for your database of sensitive information is defined, the n
     </ExactMatch>
    ```
 
-    In this example:
+    In this example, note the following:
 
-    - The DataStore name (PatientRecords) is referenced by **dataStore = "PatientRecords"**
+    - The dataStore name references the .csv file we created earlier: **dataStore = "PatientRecords"**.
     - The idMatch value references a searchable field that is listed in the database schema file: **idMatch matches = "SSN"**.
-    - The classification value is an existing or custom sensitive information type: **classification = "U.S. Social Security Number (SSN)"**. 
+    - The classification value references an existing or custom sensitive information type: **classification = "U.S. Social Security Number (SSN)"**. (In this case, we use the existing sensitive information type of U.S. Social Security Number.)
 
-    (You can copy our example and modify it for your use.) 
+    When you set up your rule package, make sure to correctly reference your .csv file and edm.xml file. (You can copy our example and modify it for your use.) 
 
     ```
     <?xml version="1.0" encoding="utf-8"?>
