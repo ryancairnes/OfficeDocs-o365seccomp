@@ -300,7 +300,7 @@ The next step is to use the EDM Upload Agent to index the sensitive data, and th
 
 5. Proceed to set up your process and schedule for [Refreshing your sensitive information database](#refreshing-your-sensitive-information-database).
 
-At this point, you are ready to use EDM-based classification with your Microsoft cloud services. For example, you can [set up a DLP policy using EDM-based classification](#to-create-a-new-dlp-policy-with-edm). 
+At this point, you are ready to use EDM-based classification with your Microsoft cloud services. For example, you can [set up a DLP policy using EDM-based classification](#to-create-a-dlp-policy-with-edm). 
 
 ### Refreshing your sensitive information database
 
