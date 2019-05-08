@@ -21,7 +21,7 @@ description: ""
 
 Advance eDiscovery (Preview) supports many file types to many different levels, which are described in the following table. This list isn't finalized, and we'll add new file types as we continue our validation testing. The table also indicates if a file type can be viewed in the available viewers in Advance eDiscovery (Preview).
 
-| Mime Type | File class | Native viewer | Text viewer | Annotate viewer | Container extraction | Extensions |
+| Mime type | Description | Native viewer | Text viewer | Annotate viewer | Container extraction | Extensions |
 | :- | :- | :- | :- | :- | :- | :- |
 | application/mbox | Archive / Container |  |  |  | Yes | .mbox |
 | application/msword | Productivity | Yes | Yes | Yes |  | .doc; .dat |
