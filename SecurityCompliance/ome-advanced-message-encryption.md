@@ -22,7 +22,7 @@ Office 365 Advanced Message Encryption is available on top of Office 365 Message
 
 Advanced Message Encryption in Office 365 helps customers meet compliance obligations that require more flexible controls over external recipients and their access to encrypted emails. With Advanced Message Encryption in Office 365, you can control sensitive emails shared outside the organization with automatic policies. You configure these policies to identify sensitive information types such as PII, Financial, or Health IDs, or you can use keywords to enhance protection. Once you've configured the policies, you pair policies with custom branded email templates and then add an expiration date for extra control of emails that fit the policy. Also, admins can further control encrypted emails accessed externally through a secure web portal by revoking access to the mail at any time.
 
-You can only set an expiration for and revoke emails  sent to external recipients.
+You can only revoke and set an expiration date for emails sent to external recipients.
 
 With Office 365 Advanced Message Encryption, anytime you apply a custom branding template, Office 365 applies a wrapper to email that fits the mail flow rule to which you apply the template. You can only revoke messages and apply expiration dates to messages that users receive through the portal. In other words, email that has a custom branding template applied.
 
