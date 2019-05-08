@@ -19,7 +19,7 @@ description: ""
 
 # Supported file types in Advanced eDiscovery
 
-Advanced eDiscovery supports many file types to many different levels, which are described in the following table. This list isn't finalized, and we'll add new file types as we continue our validation testing. The table also indicates if a file type can be viewed in the available viewers in Advanced eDiscovery.
+Advanced eDiscovery supports many file types and supports them at different levels, which are described in the following table. This list isn't finalized yet, and we'll add new file types as we continue our validation testing. The table also indicates if a file type can be viewed in the available viewers in Advanced eDiscovery.
 
 | Mime type | Description | Native viewer | Text viewer | Annotate viewer | Container extraction | Extensions |
 | :- | :- | :- | :- | :- | :- | :- |
