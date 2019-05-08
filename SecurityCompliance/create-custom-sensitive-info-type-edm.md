@@ -6,7 +6,7 @@ manager: laurawi
 ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
-ms.date: 05/07/2019
+ms.date: 05/08/2019
 localization_priority: Priority
 ms.collection: 
 - M365-security-compliance
@@ -20,9 +20,9 @@ description: "Create custom sensitive information types with Exact Data Match ba
 
 ## Overview
 
-With Office 365 for business, you can define [custom sensitive information types](custom-sensitive-info-types.md) that you can use to help prevent people from inadvertently or inappropriately sharing sensitive data within your organization. You can [use the Security & Compliance Center](create-a-custom-sensitive-information-type.md) or [use PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md) to define a custom sensitive information type based on patterns, evidence (evidence includes keywords like *employee*, *badge*, *ID*, and so on), character proximity (how close evidence is to characters in a particular pattern), and confidence levels. 
+With Office 365 for business, you can define [custom sensitive information types](custom-sensitive-info-types.md) that you can use to help prevent people from inadvertently or inappropriately sharing sensitive data within your organization. You can use the [Security & Compliance Center](create-a-custom-sensitive-information-type.md) or [PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md) to define a custom sensitive information type based on patterns, evidence (evidence includes keywords like *employee*, *badge*, *ID*, and so on), character proximity (how close evidence is to characters in a particular pattern), and confidence levels. Such custom sensitive information types meet business needs for many organizations.
 
-But what if you wanted a custom sensitive information type that uses exact data values, instead of patterns and proximity? With Exact Data Match (EDM) based classification, you can create a custom sensitive information type that:
+But what if you wanted a custom sensitive information type that uses exact data values, instead of patterns and proximity? With Exact Data Match (EDM)-based classification, you can create a custom sensitive information type that:
 - is dynamic (refreshable daily or weekly);
 - is more scalable;
 - results in fewer false-positives;
@@ -36,19 +36,19 @@ EDM-based classification enables you to create custom sensitive information type
 
 ## Required licenses and permissions
 
-- When generally available, EDM-based classification will be included in subscriptions, such as Office 365 E3 or E5, Microsoft 365 E3 or E5, Microsoft 365 Information Protection and Compliance, or Office 365 Advanced Compliance.
+- When generally available, EDM-based classifandication will be included in subscriptions, such as Office 365 E3 and E5, Microsoft 365 E3 or E5, Microsoft 365 Information Protection and Compliance, or Office 365 Advanced Compliance.
 
 - You must be a global admin, compliance administrator, or Exchange Online administrator to perform the tasks described in this article. To learn more about DLP permissions, see [Permissions](data-loss-prevention-policies.md#permissions).
 
 > [!NOTE]
-> **EDM-based classification is currently in preview** for Office 365 DLP and Microsoft Cloud App Security (Exchange Online and Microsoft Teams). if your organization has [DLP capabilities](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description/messaging-policy-and-compliance-servicedesc#data-loss-prevention-dlp), you can try EDM-based classification If you are not already participating in the preview, [contact us](https://resources.office.com/us-landing-spe-contactus.html?LCID=EN-US) to get started. 
+> **EDM-based classification is currently in preview** for DLP in Office 365 and Cloud App Security (with Exchange Online and Microsoft Teams). if your organization has [DLP capabilities](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description/messaging-policy-and-compliance-servicedesc#data-loss-prevention-dlp), you can try EDM-based classification. If you are not already participating in the preview, [contact us](https://resources.office.com/us-landing-spe-contactus.html?LCID=EN-US) to get started. 
 
 ## The work flow at a glance
 
 |Phase  |What's needed  |
 |---------|---------|
-|[Part 1: Set up EDM-based classification](#part-1-set-up-edm-classification)<br/><br/>(As needed)<br/>- [Edit the schema for EDM](#editing-the-schema-for-edm) <br/>- [Remove the schema for EDM](#removing-the-schema-for-edm) |- Read access to the sensitive data<br/>- Database schema in .xml format (an example is included)<br/>- Rule package in .xml format (an example is included)<br/>- Admin permissions to the Security & Compliance Center (using PowerShell) |
-|[Part 2: Index and upload the sensitive data](#part-2-index-and-upload-the-sensitive-data)<br/><br/>(As needed)<br/>[Refresh the data](#refreshing-your-sensitive-information-database) |- Custom security group and user account<br/>- Local admin access to machine with EDM Upload Agent tool<br/>- Read access to the sensitive data<br/>- Process and schedule for refreshing the data|
+|[Part 1: Set up EDM-based classification](#part-1-set-up-edm-based-classification)<br/><br/>(As needed)<br/>- [Edit the schema for EDM-based classification](#editing-the-schema-for-edm-based-classification) <br/>- [Remove the schema for EDM-based classification](#removing-the-schema-for-edm-based-classification) |- Read access to the sensitive data<br/>- Database schema in .xml format (an example is included)<br/>- Rule package in .xml format (an example is included)<br/>- Admin permissions to the Security & Compliance Center (using PowerShell) |
+|[Part 2: Index and upload the sensitive data](#part-2-index-and-upload-the-sensitive-data)<br/><br/>(As needed)<br/>[Refresh the data](#refreshing-your-sensitive-information-database) |- Custom security group and user account with admin permissions<br/>- Local admin access to machine with EDM Upload Agent tool<br/>- Read access to the sensitive data<br/>- Process and schedule for refreshing the data|
 |[Part 3: Use EDM-based classification with your Microsoft cloud services](#part-3-use-edm-classification-with-your-microsoft-cloud-services) |- Office 365 subscription with DLP<br/>- EDM-based classification feature enabled (in preview) |
 
 ## Part 1: Set up EDM-based classification
@@ -62,15 +62,17 @@ Setting up and configuring EDM-based classification involves saving sensitive da
     - Up to ten million rows of sensitive data
     - Up to 32 columns (fields) per data source
 
-2. Structure the sensitive data in the .csv file such that the first row includes the names of the fields you'll use for EDM-based classification. In your .csv file, you might have field names, such as "ssn", "birthdate", "firstname", "lastname", and so on. <br/>As an example, our .csv file is called *PatientRecords.csv*. It includes columns, such as *PatientID*, *MRN*, *lastname*, *FirstName*, *SSN* and more.
+2. Structure the sensitive data in the .csv file such that the first row includes the names of the fields you'll use for EDM-based classification. In your .csv file, you might have field names, such as "ssn", "birthdate", "firstname", "lastname", and so on. As an example, our .csv file is called *PatientRecords.csv*, and its columns include *PatientID*, *MRN*, *lastname*, *FirstName*, *SSN* and more.
 
 3. Define the schema for the database of sensitive information in .xml format (similar to our example below). Name this schema file `edm.xml`, and configure it such that for each column in the database, there is a line that uses the syntax `<Field name="" unique="" searchable=""/>`. 
 
     - Use column names for *Field name* values.
-    - Use `unique="true"` for the fields that contain unique values (Social Security numbers, identification numbers, etc.); otherwise, use `unique="false"`.
-    - Use `searchable="true"` for the fields that should be searchable. No more than five fields per database should be searchable. All the rest should have `searchable="false"`.  
+    - Use *unique="true"* for the fields that contain unique values (Social Security numbers, identification numbers, etc.); otherwise, use *unique="false"*.
+    - Use *searchable="true"* for the fields that should be searchable. No more than five fields per database should be searchable. All the rest should have *searchable="false"*.  
 
-    As an example, the following .xml file defines the schema for a patient records database. Here, we specified five fields (*PatientID*, *MRN*, *SSN*, *Phone*, and *DOB*) as searchable for EDM-based classification. (You can copy our example and modify it for your use.)
+    As an example, the following .xml file defines the schema for a patient records database. Here, we specified five fields as searchable for EDM-based classification: *PatientID*, *MRN*, *SSN*, *Phone*, and *DOB*. 
+    
+    (You can copy our example and modify it for your use.)
     
     ```
         <?xml version="1.0" encoding="utf-8"?>
@@ -107,7 +109,7 @@ Setting up and configuring EDM-based classification involves saving sensitive da
     > [!TIP]
     > If you want your changes to occur without confirmation, in Step 5, use this cmdlet instead: `New-DlpEdmSchema -FileData $edm`
     
-Now that the schema for your database of sensitive information is defined, the next step is to [set up a rule package](#set-up-a-rule-package).
+Now that the schema for your database of sensitive information is defined, the next step is to set up a rule package. Proceed to the section [Set up a rule package](#set-up-a-rule-package).
 
 #### Editing the schema for EDM-based classification 
 
