@@ -72,9 +72,9 @@ Setting up and configuring EDM-based classification involves saving sensitive da
 
     - Use column names for *Field name* values.
     - Use *unique="true"* for the fields that contain unique values (Social Security numbers, identification numbers, etc.); otherwise, use *unique="false"*.
-    - Use *searchable="true"* for the fields that should be searchable. No more than five fields per database should be searchable. All the rest should have *searchable="false"*.  
+    - Use *searchable="true"* for the fields that you want to be searchable. Do not specify more than five fields per database to be searchable. All the rest should have *searchable="false"*.  
 
-    As an example, the following .xml file defines the schema for a patient records database. Here, we specified five fields as searchable for EDM-based classification: *PatientID*, *MRN*, *SSN*, *Phone*, and *DOB*. 
+    As an example, the following .xml file defines the schema for a patient records database, with five fields specified as searchable: *PatientID*, *MRN*, *SSN*, *Phone*, and *DOB*. 
     
     (You can copy our example and modify it for your use.)
     
