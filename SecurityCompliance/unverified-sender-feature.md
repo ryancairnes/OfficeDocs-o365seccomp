@@ -26,9 +26,25 @@ To prevent phishing messages from reaching your mailbox, Outlook.com and Outlook
 
 Outlook.com and Outlook on the web show indicators when the sender of a message either can't be identified or their identity is different from what you see in the From address.
 
+## How to manage which messages receive the unverified sender treatment 
+
+If you are an Office 365 customer you can manage this feature through the Security & Compliance Center. 
+
+- In the Office 365 Security & Compliance Center, tenant admins can turn the feature on, or off, through the Anti-spoofing protection under the Anti-Phish policy. Additionally, it can be managed through the ‘Set-AntiPhishPolicy’ cmdlet. For more details, see Anti-phishing protection in Office 365 and Set-AntiPhishPolicy.
+
+    ![Editing unauthenticated senders in the graphic interface.](media/unverified-sender-article-editing-unauthenticated-senders.jpg)
+
+- If an admin has identified a false positive, and a sender should not be receiving the unverified sender treatment they can take one of the following actions to add the sender to the Spoof Intelligence spoof allow list:
+		
+    - Add the domain pair through the Spoof Intelligence Insight. For more details, see Walkthrough: spoof intelligence insight
+        		
+    - Add the domain pair through the PhishFilterPolicy cmdlet. For more details, see Set-PhishFilterPolicy and Anti-spoofing protection in Office 365
+
+Additionally, we do not apply the unverified sender treatment if it was delivered to the inbox via an admin allow list, including Email Transport Rules (ETRs), Safe Domain List (Anti-Spam Policy), Safe Sender List or a user has set this user as a “Safe Sender” in their inbox.
+
 ### You see a '?' in the sender image
 
-When Outlook.com and Outlook on the web can't verify the identity of the sender using email authentication techniques, they display a '?' in the sender photo.
+When Outlook.com and Outlook on the web can't verify the identity of the sender using email authentication techniques, they display a '?' in the sender photo. 
 
 ![Message did not pass verification](media/message-did-not-pass-verification.jpg)
 
