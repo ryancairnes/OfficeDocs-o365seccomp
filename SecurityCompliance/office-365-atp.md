@@ -59,7 +59,7 @@ Office 365 ATP includes an advanced [reporting dashboard](view-reports-for-atp.m
 
 Reports update in real-time, providing you with the latest insights. These reports also provide recommendations and alert you to imminent threats. Predefined reports include the following: 
 
-- [Threat Explorer](use-explorer-in-security-and-compliance.md) (this report is available in ATP Plan 2)
+- [Threat Explorer (or real-time detections)](threat-explorer.md)
 
 - [Threat Protection Status report](view-reports-for-atp.md#threat-protection-status-report)
 
@@ -75,7 +75,7 @@ Office 365 ATP Plan 2 includes best-of-class [threat investigation and response 
 
 - [Threat trackers](threat-trackers.md) provide the latest intelligence on prevailing cybersecurity issues. For example, you can view information about the latest malware, and take countermeasures before it becomes an actual threat to your organization. Available trackers include [Noteworthy trackers](threat-trackers.md#noteworthy-trackers), [Trending trackers](threat-trackers.md#trending-trackers), [Tracked queries](threat-trackers.md#tracked-queries), and [Saved queries](threat-trackers.md#saved-queries).
 
-- [Explorer](use-explorer-in-security-and-compliance.md) (also referred to as Threat Explorer) is a real-time report that allows you to identify and analyze recent threats. You can configure Explorer to show data for custom periods.
+- [Threat Explorer (or real-time detections)](threat-explorer.md) (also referred to as Explorer) is a real-time report that allows you to identify and analyze recent threats. You can configure Explorer to show data for custom periods.
 
 - [Attack Simulator](attack-simulator.md) allows you to run realistic attack scenarios in your organization to identify vulnerabilites. Simulations of current types of attacks are available, including a [display name spear-phishing attack](attack-simulator.md#display-name-spear-phishing-attack), a [password-spray attack](attack-simulator.md#password-spray-attack), a [brute-force password attack](attack-simulator.md#brute-force-password-attack), and more.
     
