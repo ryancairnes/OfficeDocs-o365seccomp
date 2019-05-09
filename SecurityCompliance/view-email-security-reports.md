@@ -3,7 +3,7 @@ title: "View email security reports in the Security &amp; Compliance Center"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 03/19/2019
+ms.date: 05/09/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -14,19 +14,19 @@ search.appverid:
 ms.assetid: 3a137e28-1174-42d5-99af-f18868b43e86
 ms.collection: 
 - M365-security-compliance
-description: "Learn how to find and use email security reports for your organization with Office 365 Enterprise. Email security reports are available in the Security &amp; Compliance Center."
+description: "Learn how to find and use email security reports for your organization. Email security reports are available in the Security &amp; Compliance Center."
 ---
 
 # View email security reports in the Security &amp; Compliance Center
 
-A variety of reports are available in the [Security &amp; Compliance Center](https://protection.office.com) to help you see how  email security features, such as anti-spam, anti-malware, and encryption features in Office 365 are protecting your organization. If you have the [necessary permissions](#what-permissions-are-needed-to-view-these-reports), you can view these reports in the Security &amp; Compliance Center by going to **Reports** \> **Dashboard**.
+A variety of reports are available in the [Security &amp; Compliance Center](https://protection.office.com) to help you see how email security features, such as anti-spam, anti-malware, and encryption features in Office 365 are protecting your organization. If you have the [necessary permissions](#what-permissions-are-needed-to-view-these-reports), you can view these reports in the Security &amp; Compliance Center by going to **Reports** \> **Dashboard**.
   
 ![Dashboard where you see how Advanced Threat Protection is working](media/6b213d34-adbb-44af-8549-be9a7e2db087.png)
   
 Your email security reports include the following:
 - [Encryption report](#encryption-report) (NEW!)
 - [Threat Protection Status report](#threat-protection-status-report) 
-- [Malware Detections report](#malware-detections-report)    
+- [Malware Detections report](#malware-detections-report)
 - [Top Malware report](#top-malware-report)
 - [Top Senders and Recipients report](#top-senders-and-recipients-report)
 - [Spoof Detections report](#spoof-detections-report)
@@ -42,21 +42,21 @@ To view this report, in the Security & Compliance Center, go to **Reports** \> *
 
 ![Encryption report](media/encryptionreport-defaultview.png) 
 
-When the report first opens, you'll see data about encryption methods used on email messages for the past seven (7) days. You can change the date range and details in the report by clicking Filters in the upper right corner of the screen.
+When the report first opens, you'll see data about encryption methods used on email messages for the past seven (7) days. You can change the date range and details in the report by clicking **Filters** in the upper right corner of the screen.
 
 ![Encryption report filters](media/encryptionreport-filters.png)   
 
-You can also use the Break down by menu to view data by encryption template (or method).
+You can also use the **Break down by** menu to view data by encryption template (or method).
 
 ![Encryption method or template](media/encryptionreport-breakdownby.png)
 
-And, you can use the View data by menu to change the view to see counts of encrypted messages to the top five recipient domains.
+And, you can use the **View data by** menu to change the view to see counts of encrypted messages to the top five recipient domains.
 
 ![Encryption report view data by menu](media/encryptionreport-viewdataby.png)
 
 With the flexibility of the new Encryption report, you can view trends and take appropriate actions. For example, if you see a high number of email messages encrypted by users, you might want to add an encryption policy to automate encryption for certain use cases. (To get help with that, see [Define mail flow rules to encrypt email messages in Office 365](define-mail-flow-rules-to-encrypt-email.md).) As another example, if you have a number of encryption templates available but no one is using them, you might explore whether users need training for that feature. 
 
-Use this report enables your organization's security and compliance team to monitor how message encryption is being used, and whether further actions are needed.
+This report enables your organization's security and compliance team to monitor how message encryption is being used, and to determine whether further actions are needed.
 
 ## Threat Protection Status report
 
