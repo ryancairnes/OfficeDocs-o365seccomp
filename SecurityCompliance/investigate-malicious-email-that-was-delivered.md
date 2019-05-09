@@ -19,7 +19,7 @@ description: "Learn how to use threat investigation and response capabilities to
 
 # Find and investigate malicious email that was delivered (Office 365 Advanced Threat Protection Plan 2)
 
-[Office 365 Advanced Threat Protection](office-365-atp.md) enables you to investigate activities that put your users at risk and take action to protect your organization. For example, if you are part of your organization's security team, you can find and investigate suspicious email messages that were delivered to your users. You can do this by using [Threat Explorer (and real-time detections)](threat-explorer.md).
+[Office 365 Advanced Threat Protection](office-365-atp.md) enables you to investigate activities that put your users at risk and take action to protect your organization. For example, if you are part of your organization's security team, you can find and investigate suspicious email messages that were delivered to your users. You can do this by using [Threat Explorer (or real-time detections)](threat-explorer.md).
   
 ## Before you begin...
 

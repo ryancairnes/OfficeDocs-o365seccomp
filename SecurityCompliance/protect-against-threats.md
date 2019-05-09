@@ -7,7 +7,7 @@ ms.audience: Admin
 ms.topic: hub-page
 ms.service: O365-seccomp
 localization_priority: Normal
-ms.date: 4/30/2019
+ms.date: 05/09/2019
 search.appverid: 
 - MOE150
 - MET150
@@ -206,6 +206,6 @@ After you have configured your threat protection features, make sure to monitor 
 
 |What to do  |Resources to learn more  |
 |---------|---------|
-|See how threat protection features are working for your organization by viewing reports    |[Security dashboard](security-dashboard.md)<br/>[Email security reports](view-email-security-reports.md)<br/>[Reports for Office 365 ATP](view-reports-for-atp.md)<br/>[Threat Explorer](use-explorer-in-security-and-compliance.md)    |
-|Periodically review and revise your threat protection policies as needed    |[Secure Score](microsoft-secure-score.md)<br/>[Smart reports and insights](reports-and-insights-in-security-and-compliance.md)<br/>[Office 365 threat investigation and response features](keep-users-safe-with-office-365-ti.md)          |
-|Watch for new features and service updates     |[Standard and Targeted release options](https://docs.microsoft.com/office365/admin/manage/release-options-in-office-365?view=o365-worldwide)<br/>[Message Center](https://docs.microsoft.com/office365/admin/manage/message-center?view=o365-worldwide)<br/>[Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=advanced%2Cthreat%2Cprotection)<br/>[Service Descriptions](https://docs.microsoft.com/office365/servicedescriptions/office-365-service-descriptions-technet-library)         |
+|See how threat protection features are working for your organization by viewing reports    |- [Security dashboard](security-dashboard.md)<br/>- [Email security reports](view-email-security-reports.md)<br/>- [Office 365 ATP reports](view-reports-for-atp.md)<br/>- [Threat Explorer (and real-time detections)](threat-explorer.md)    |
+|Periodically review and revise your threat protection policies as needed    |- [Secure Score](microsoft-secure-score.md)<br/>- [Smart reports and insights](reports-and-insights-in-security-and-compliance.md)<br/>- [Threat investigation and response capabilities](keep-users-safe-with-office-365-ti.md)          |
+|Watch for new features and service updates     |- [Standard and Targeted release options](https://docs.microsoft.com/office365/admin/manage/release-options-in-office-365?view=o365-worldwide)<br/>- [Message Center](https://docs.microsoft.com/office365/admin/manage/message-center?view=o365-worldwide)<br/>- [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=advanced%2Cthreat%2Cprotection)<br/>- [Service Descriptions](https://docs.microsoft.com/office365/servicedescriptions/office-365-service-descriptions-technet-library)         |
