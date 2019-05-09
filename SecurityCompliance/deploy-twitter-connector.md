@@ -208,39 +208,44 @@ Download the prebuilt package from the Release section in the GitHub repository 
 
 ## Step 5: Create the Twitter app
 
-1. Go to https://developer.twitter.com, log in using the credentials for the developer account for your organization, and then click **Create an app**.
+1. Go to https://developer.twitter.com, log in using the credentials for the developer account for your organization, and then click **Apps**.
 
-2.  Add a new application.
-
+   ![TCimage25-5.png](media/TCimage25-5.png)
+2. Click **Create an app**.
+   
    ![](media/TCimage26.png)
 
 3. Under **App details**, add information about the application.
 
    ![](media/TCimage27.png)
 
-4. On the Twitter developer dashboard, click **Details** for the app you just created.
+4. On the Twitter developer dashboard, select the app that you just created and copy the App ID that's displayed  and save it to a text file or other storage location. Then click **Details**.
+   
    ![](media/TCimage28.png)
 
-5. On the **Keys and tokens** tab, under **Access token & access token secret**, click **Create** to generate Access Token
-
+5. On the **Keys and tokens** tab, under **Consumer API keys** copy the API secret key and save it to a text file or other storage location. Then click **Create** to generate an access token and an access token secret, and copy these to a text file or other storage location.
+   
    ![](media/TCimage29.png)
 
-6. On the **Permissions** tab, configure the permissions as shown in the following screenshot. 
+   Then click **Create** to generate an access token and an access token secret, and copy these to a text file or other storage location.
+
+6. Click the **Permissions** tab and configure the permissions as shown in the following screenshot:
 
    ![](media/TCimage30.png)
 
-7. Add OAuth redirect URI \<connectorserviceuri/Views/TwitterOAuth\>
+7. After you save the permission settings, click the **App details** tab, and then click **Edit > Edit details**.
 
    ![](media/TCimage31.png)
 
-8. Select Edit Details. Update Callback Url in Callback URLs Section and Save
+8. Add the OAuth redirect Uri using the following format: \<connectorserviceuri/Views/TwitterOAuth\>, where the value of connectorserviceuri is 
+
+   Also update the Callback URLs and then click **Save**.
 
    ![](media/TCimage32.png)
 
-9. 
-Your Developer App is now ready to use
+The Twitter developer app is now ready to use.
 
-## Step 6: Configure the connector web app
+## Step 6: Configure the connector web app 
 
 1. Go to https://\<AzureAppResourceName>.azurewebsites.net (where AzureAppResourceName is the name of your Azure app resource that you named in Step 4) For example, if the name is **twitterconnector**, go to https://twitterconnector.azurewebsites.net. The home page of the app will look like the following screenshot.
 
@@ -257,10 +262,10 @@ Your Developer App is now ready to use
 
 4. Under **Configuration Details**, enter the following configuration settings 
 
-   - **Twitter application ID** - The app ID for the Twitter application that you obtained in Step 5.
-   - **Twitter application secret** - The app secret for the Twitter application that you obtained in Step 5.
-   - **Twitter client token** - The verify token that you created in Step 5.
-   - **Twitter client token secret** - The application ID for the Azure Active Directory app that you created in Step 2
+   - **Twitter application ID** - The app ID for the Twitter application that you created in Step 5.
+   - **Twitter application secret** - The API secret key for the Twitter application that you created in Step 5.
+   - **Twitter client token** - The access token that you created in Step 5.
+   - **Twitter client token secret** - The access token secret that you created in Step 5.
    - **AAD application ID** - The application ID for the Azure Active Directory app that you created in Step 2
    - **AAD application secret** - The value for the APISecretKey secret that you created in Step 4.
    - **AAD application Uri** - The AAD application Uri obtained in Step 2; for example, https://microsoft.onmicrosoft.com/2688yu6n-12q3-23we-e3ee-121111123213.

@@ -97,8 +97,9 @@ For step-by-step instructions, see [Step 5: Create the Twitter app](deploy-twitt
 During the completion of this step (by following the step-by-step instructions), you'll save the following information to a text file. The values for these will be used to configure the Twitter connector app in Step 6.
 
 - Twitter application ID
-- Twitter application secret
-- Twitter webhooks verify token
+- Twitter application secret (API secret key)
+- Twitter client token
+- Twitter client token secret
 
 ## Step 6: Configure the Twitter connector app
 
@@ -110,7 +111,8 @@ During the completion of this step (by following the step-by-step instructions),
 
 - Twitter application ID (obtained in Step 5)
 - Twitter application secret (obtained in Step 5)
-- Twitter webhooks verify token (obtained in Step 5)
+- Twitter client token (obtained in Step 5)
+- Twitter client token secret (obtained in Step 5)
 - Azure Active Directory application ID (the AAD application ID obtained in Step 2)
 - Azure Active Directory application secret (the AAD application secret obtained in Step 2)
 - Azure Active Directory application Uri (the AAD application Uri obtained in Step 2; for example, https://microsoft.onmicrosoft.com/2688yu6n-12q3-23we-e3ee-121111123213)
