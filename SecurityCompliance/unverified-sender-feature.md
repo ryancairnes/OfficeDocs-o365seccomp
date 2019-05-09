@@ -1,5 +1,5 @@
 ---
-title: "Identify suspicious messages in Outlook.com and Outlook on the web"
+title: "Unverified Sender"
 ms.author: tracyp
 author: MSFTTracyP
 manager: laurawi
@@ -15,7 +15,7 @@ ms.collection:
 description: "To prevent phishing messages from reaching your mailbox, Outlook.com and Outlook on the web verify that the sender is who they say they are and mark suspicious messages as junk email."
 ---
 
-# Identify suspicious messages in Outlook.com and Outlook on the web
+# Unverified Sender
 
 To prevent phishing messages from reaching your mailbox, Outlook.com and Outlook on the web verify that the sender is who they say they are and mark suspicious messages as junk email.
 
