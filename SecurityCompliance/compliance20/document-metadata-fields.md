@@ -19,9 +19,7 @@ description: ""
 
 # Document metadata fields in Advanced eDiscovery
 
-The following table lists the metadata fields for documents in a review set in a case in Advanced eDiscovery. The table indicates the name of the metadata field, whether the field can be searched when running a query in a review set, whether the field is present when viewing the file metadata of a selected document in a review set, and whether the field is included when documents are exported. 
-
-The following table lists the metadata fields for documents in a review set in a case in Advanced eDiscovery. The table indicates the name of the metadata field, whether the field can be searched when running a query in a review set, whether the field is present when viewing the file metadata of a selected document in a review set, and whether the field is included when documents are exported. 
+The table in this article lists the metadata fields for documents in a review set in a case in Advanced eDiscovery. The table indicates the name of the metadata field, whether the field can be searched when running a query in a review set, whether the field is present when viewing the file metadata of a selected document in a review set, and whether the field is included when documents are exported. 
 
 > [!NOTE]
 > The values in parentheses in the **Searchable in review set** column is the name of the property that you can search for. The values in parentheses in the **Viewable in file metadata** column is the name of the property that's displayed when you're viewing the file metadata.
