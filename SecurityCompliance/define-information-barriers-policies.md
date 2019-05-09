@@ -15,56 +15,35 @@ description: "Learn how to define policies for information barriers in Microsoft
 
 # Define policies for information barriers in Microsoft Teams (Preview)
 
-[Information barriers](information-barriers.md) can help limit communications between specific groups of people to help your organization comply with certain industry standards and regulations. Information barriers can also help your organization avoid potential conflicts of interest. Information barriers are implemented through policies that are defined by an Office 365 global administrator or compliance administrator.
+Suppose that you want to prevent one group of users from calling or chatting with another group. Or, suppose that you want to allow one group of users to communicate with only one or two other groups. Where Microsoft 365 enables communication and collaboration across groups and organizations, is there a way to limit communications between specific groups of users?
 
-## Information barrier policy life cycle
+With information barriers for Microsoft Teams, you can! Information barrier policies can be defined to limit communications between specific groups of people. With such policies in place, your organization is better positioned to comply with certain industry standards and regulations. 
 
-Here's a high-level overview of the life cycle of an information barrier policy:
+This article describes how to plan, define, implement, and manage information barrier policies. To learn more about information barriers, see [Information barriers (Preview)](information-barriers.md).
 
-1. **[Plan your policies](#part-1-plan-your-information-barrier-policies)**. Create a plan for the policies you need and how you want the policies to work. 
+## The work flow at a glance
 
-2. **[Segment users in your organization](#part-2-segment-users)**. You can use attributes in Azure Active Directory for this. Make sure that each user belongs to only one segment. For example, if you use Department, make sure no single employee is assigned to two departments.  
 
-3. **[Define your information barrier policies](#part-3-define-information-barrier-policies)**. During this phase, you define policies. Note that the policies are neither active nor applied during this phase.
-
-4. **[Apply information barrier policies](#part-4-apply-information-barrier-policies)**. During this phase, you set policies to active status, and then start the policy application to apply your policies. Note that if your organization is very large, it can take 24 hours for the policies to go into effect.
-
-5. **[Verify the status of information barrier policies](#part-5-verify-status-of-information-barrier-policies)**. You can verify status individual policies and users.
-
-6. If necessary, **[edit or remove a policy](#edit-or-remove-an-information-barrier-policy)**. To do this, you must first set the policy you want to change or remove to inactive status, and then start the policy application to put that inactive status into effect.
+|Phase    |What's involved  |
+|---------|---------|
+|[Prerequisites](#prerequisites)     |- Verify the necessary licenses and permissions are assigned<br/>- Confirm directory data is available<br/>- Enable [scoped directory search in Microsoft Teams](#scoped-directory-search)<br/>- Be acquainted with [PowerShell](#powershell)         |
+|[Part 1: Plan your information barrier policies](#part-1-plan-your-information-barrier-policies)     |Determine what policies are needed         |
+|[Part 2: Segment users](#part-2-segment-users)     |- Define groups of users with [attributes](information-barriers-attributes.md)<br/>- Define the policy filters         |
+|[Part 3: Define information barrier policies](#part-3-define-information-barrier-policies)     |Using PowerShell, define the policies<br/>(Policies are neither active nor applied at this point)         |
+|[Part 4: Apply information barrier policies](#part-4-apply-information-barrier-policies)     |- Set policies to active status<br/>- Start the policy application         |
+|(As needed) [Edit or remove an information barrier policy](#edit-or-remove-an-information-barrier-policy)     |- Set a policy to inactive status<br/>- Edit or remove policy<br/>- Start policy application         |
+|Troubleshooting|Take action when policies are not working as expected, or users are blocked from communicating with others|
 
 ## Prerequisites
 
-### Licenses & subscriptions
 
-**Currently, the information barrier feature is in preview**. When these features are generally available, they'll be included in subscriptions, such as:
-
-- Microsoft 365 E5
-- Office 365 E5
-- Office 365 Advanced Compliance
-- Microsoft 365 Information Protection and Compliance
-
-For more details about these plans and compliance features, see [Compliance Solutions](https://products.office.com/business/security-and-compliance/compliance-solutions).
-
-### Permissions
-
-To define or edit information barrier policies, you must be assigned one of the following roles:
-
-- Microsoft 365 Enterprise Global Administrator
-- Office 365 Global Administrator
-- Compliance Administrator
-
-### Directory data
-
-You must have enough data in your directory to be able to segment users. You could use attributes, such as group membership, department name, etc. as configured in Azure Active Directory (or your on-premises directory solution).
-
-### Scoped directory search
-
-**Before you define your organization's first information barrier policy, you must [enable scoped directory search in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-scoped-directory-search)**. Wait at least 24 hours after enabling scoped directory search before you set up or define information barrier policies.
-
-### PowerShell
-
-Currently, information barrier policies are defined and managed in Office 365 by using PowerShell cmdlets. Although several scenarios and examples are provided in this article, you'll need to be familiar with PowerShell cmdlets and parameters.
+|Requirement  |Details  |
+|---------|---------|
+|Licenses & subscriptions     |**Currently, the information barrier feature is in preview**. When information barrier policies are generally available, they'll be included in the following subscriptions:<br/>- Microsoft 365 E5<br/>- Office 365 E5<br/>- Office 365 Advanced Compliance<br/>- Microsoft 365 Information Protection and Compliance<br/>For more details about these plans and compliance features, see [Compliance Solutions](https://products.office.com/business/security-and-compliance/compliance-solutions).         |
+|Permissions     |To define or edit information barrier policies, you must be assigned an appropriate role, such as one of the following:<br/>- Microsoft 365 Enterprise Global Administrator<br/>- Office 365 Global Administrator<br/>- Compliance Administrator         |
+|Directory data | You must have enough data in your directory to be able to segment users. You could use attributes, such as group membership, department name, etc. as configured in Azure Active Directory (or your on-premises directory solution). To learn more, see [Attributes for information barrier policies (Preview)](information-barriers-attributes.md).|
+Scoped directory search | **Before you define your organization's first information barrier policy, you must [enable scoped directory search in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-scoped-directory-search)**. Wait at least 24 hours after enabling scoped directory search before you set up or define information barrier policies.
+|PowerShell | Currently, information barrier policies are defined and managed in Office 365 by using PowerShell cmdlets. Although several scenarios and examples are provided in this article, you'll need to be familiar with PowerShell cmdlets and parameters.| 
 
 ## Part 1: Plan your information barrier policies
 
