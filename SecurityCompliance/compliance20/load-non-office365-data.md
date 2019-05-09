@@ -30,21 +30,21 @@ Using the upload Non-Office 365 feature as described in this article requires th
 
 - An Office 365 or Microsoft 365 E5 subscription or an E3 subscription with the Advanced Compliance add-on subscription.
 
-- All custodians whose non-Office 365 content will be uploaded must have E3 with Advanced Compliance add-on or E5 licenses.
+- All custodians whose non-Office 365 content will be uploaded must have E3 license with an Advanced Compliance add-on license or have an E5 license.
 
 - An existing Advanced eDiscovery case.
 
-- Custodians must be added to the case before you upload the data that's associated to them.
+- Custodians must be added to the case before you upload the non-Office 365 data that's associated to them.
 
-- All the files for uploading gathered into folders where there is one folder per custodian and the folders' name is in this format *alias@domainname*. The *alias@domainname* must be users' Office 365 alias and domain. You can collect all the *alias@domainname* folders into a root folder. The root folder can only contain the *alias@domainname* folders, there must be no loose files in the root folder.
+- All files that will be uploaded must be located in folders, where each folder is associated with a specific custodian. The names for these folders must use the following naming format: *alias@domainname*. The *alias@domainname* must be the user's Office 365 alias and domain. You can collect all the *alias@domainname* folders into a root folder. The root folder can only contain the *alias@domainname* folders; loose files aren't allowed in the root folder.
 
-   For example, the folder structure for the non-Office 365 data that you want to upload would be similiar to the following:
+   For example, the folder structure for the non-Office 365 data that you want to upload would be similar to the following:
 
    - c:\nonO365\abraham.mcmahon@contoso.com
    - c:\nonO365\jewell.gordon@contoso.com
    - c:\nonO365\staci.gonzalez@contoso.com
 
-   Where abraham.mcmahon@contoso.com, jewell.gordon@contoso.com, and staci.gonzalez@contoso.com are SMTP addresses of custodians in the case.
+   Where abraham.mcmahon@contoso.com, jewell.gordon@contoso.com, and staci.gonzalez@contoso.com are the SMTP addresses of custodians in the case.
 
    ![Non-Office 365 data upload folder structure](../media/3f2dde84-294e-48ea-b44b-7437bd25284c.png)
 

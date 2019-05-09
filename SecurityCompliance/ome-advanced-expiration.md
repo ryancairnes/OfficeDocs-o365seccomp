@@ -10,6 +10,9 @@ ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid:
 - MET150
+ms.collection: 
+- Strat_O365_IP
+- M365-security-compliance
 ms.assetid: f87cb016-7876-4317-ae3c-9169b311ff8a
 description: "With Office 365 Advanced Message Encryption capabilities on top of Office 365 Message Encryption (OME), you can extend your email security by setting an expiration date on emails through a custom branded template."
 ---
