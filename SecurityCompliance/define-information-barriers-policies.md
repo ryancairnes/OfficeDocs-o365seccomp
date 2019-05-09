@@ -84,7 +84,7 @@ Make a list of all the policies you'll want to implement. As you plan your polic
 
 ## Part 2: Segment users
 
-To segment users, consider using an attribute in Azure Active Directory. For example, you might use Department, assuming no single employee is assigned to more than one department. To learn more, see the following resources:
+To segment users, consider using an attribute in Azure Active Directory. Make sure that your segments do not overlap. For example, you might use the Department attribute, assuming no single employee is assigned to more than one department. To learn more, see the following resources:
 
 |Resource  |Description  |
 |---------|---------|
