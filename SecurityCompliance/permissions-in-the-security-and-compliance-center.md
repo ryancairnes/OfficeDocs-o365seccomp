@@ -90,6 +90,7 @@ Note that the following roles aren't assigned to the Organization Management rol
 |:-----|:-----|:-----|
 |**Audit Logs**|Turn on and configure auditing for the Office 365 organization, view the organization's audit reports, and then export these reports to a file.|Organization Management <br/><br/> Records Management <br/><br/> Security Administrator|
 |**Case Management**|Create, edit, delete, and control access to eDiscovery cases.|Compliance Administrator <br/><br/> eDiscovery Manager <br/><br/> Organization Management|
+|**Data Investigator**|Perform searches on mailboxes, SharePoint Online sites, and OneDrive for Business locations.|Export <br/><br/> RMS Decrypt <br/><br/> Custodian <br/><br/> Communication <br/><br/> Review <br/><br/> Preview <br/><br/> Compliance Search <br/><br/> Data Investigation Management|
 |**Communication**|Create, edit, delete, and control access to communication.|eDiscovery Manager|
 |**Compliance Administrator**|View and edit settings and reports for compliance features.|Compliance Administrator <br/><br/> Compliance Data Administrator <br/><br/> Organization Management|
 |**Compliance Search**|Perform searches across mailboxes and get an estimate of the results.|Compliance Administrator <br/><br/> Compliance Data Administrator <br/><br/> eDiscovery Manager <br/><br/> Organization Management <br/><br/> Security Operator|
