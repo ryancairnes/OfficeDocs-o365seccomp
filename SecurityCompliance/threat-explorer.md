@@ -101,7 +101,7 @@ For details on this, see [Example: A security administrator triggers an investig
 In addition to the scenarios outlined in this article, you have many more reporting options available with Explorer (or real-time detections). 
 - [Find and investigate malicious email that was delivered](investigate-malicious-email-that-was-delivered.md)
 - [View malicious files detected in SharePoint Online, OneDrive, and Microsoft Teams](malicious-files-detected-in-spo-odb-or-teams.md)
-- [Get an overview of the views in Threat Explorer](threat-explorer-views.md)
+- [Get an overview of the views in Threat Explorer (and real-time detections)](threat-explorer-views.md)
 
 ## Required licenses and permissions
 

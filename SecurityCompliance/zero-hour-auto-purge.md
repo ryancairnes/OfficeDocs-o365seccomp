@@ -59,7 +59,7 @@ Allow lists, [mail flow rules](https://go.microsoft.com/fwlink/p/?LinkId=722755)
 
 ## To see if ZAP moved your message
 
-If you want to see if ZAP moved your message, you can use either the [Threat Protection Status report](view-email-security-reports.md#threat-protection-status-report) (or [Threat Explorer](use-explorer-in-security-and-compliance.md)).
+If you want to see if ZAP moved your message, you can use either the [Threat Protection Status report](view-email-security-reports.md#threat-protection-status-report) or [Threat Explorer (and real-time detections)](threat-explorer.md).
 
 ## To disable ZAP
   
