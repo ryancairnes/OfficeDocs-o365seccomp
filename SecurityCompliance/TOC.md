@@ -148,6 +148,7 @@
 ### [Anti-spam and anti-malware protection](anti-spam-and-anti-malware-protection.md)
 #### [Office 365 email anti-spam protection](anti-spam-protection.md)
 #### [How to prevent real email from being marked as spam in Office 365](prevent-email-from-being-marked-as-spam.md)
+#### [How policies and protections are combined] (how-policies-and-protections-are-combined.md)
 #### [How to reduce spam email in Office 365](reduce-spam-email.md)
 #### [Controlling outbound spam in Office 365](outbound-spam-controls.md)
 #### [Block email spam with the Office 365 spam filter to prevent false negative issues](reduce-spam-email.md)
