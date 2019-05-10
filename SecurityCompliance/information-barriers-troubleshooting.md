@@ -19,6 +19,17 @@ If you're a global administrator or compliance administrator and you define or m
 
 CONTENT COMING SOON
 
+## My information barrier policy is not working
+
+content coming
+
+## Starting the information barrier application is taking too long
+
+content coming
+
+## I'm getting error messages while defining policies
+
+content coming
 
 ## Related topics
 
