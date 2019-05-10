@@ -61,7 +61,7 @@ When you analyze your review set, attorney-client privilege detection will be ru
 
 ### Step 2: Create a smart tag group with attorney-client privilege detection model
 
-One of the main ways you can consume the results of attorney-client privilege detection in your review process is by using a smart tag group. Smart tag groups take the results of an ML model and show the results of the model in-line next to the tags, so that you can easily consume the results of the model where relevant, and use the tags in your review process as you would any other tags in your tagging panel.
+One of the main ways you can consume the results of attorney-client privilege detection in your review process is by using a smart tag group. Smart tag groups take the results of an ML model and show the results of the model in-line next to the tags, so that you can easily consume the results of the model where relevant, and use the tags in your review process as you would any other tags in your tagging panel. Please refer to [Set up smart tags for ML-assisted review in Advanced eDiscovery](smart-tags.md) for more information.
 
 - In "Manage tags", click on "Add smart tag section".
 
