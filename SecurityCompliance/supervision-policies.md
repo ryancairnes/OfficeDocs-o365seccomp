@@ -82,6 +82,8 @@ With supervision policies, you can choose to monitor messages in one or more of 
 
 - **Third-party sources:** You can supervise communications from third-party sources (like from Facebook or DropBox) for data imported into Office 365 mailboxes in your organization. [Learn how to import 3rd-party data into Office 365](https://docs.microsoft.com/office365/securitycompliance/archiving-third-party-data).
 
+Communications captured across these platforms are retained for seven years for each policy by default, even if users leave your organization and their mailbox is deleted.
+
 ### Policy settings
 
 #### Direction

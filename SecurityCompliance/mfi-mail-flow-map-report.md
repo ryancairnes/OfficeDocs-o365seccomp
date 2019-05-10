@@ -9,13 +9,9 @@ ms.service: O365-seccomp
 localization_priority: Normal
 ms.assetid: 
 description: "Admins can learn about the mail flow map report in the mail flow dashboard in the Security & Compliance Center."
-ROBOTS: NOINDEX, NOFOLLOW
 ---
 
 # Mail flow map report
-
-> [!NOTE]
-> The features described in this topic haven't been deployed to all Office 365 organizations, and are subject to change.
 
 This report gives insights as to how mail flows through your Office 365 organization. You can use this information to learn patterns, identify anomalies, and fix issues as they arise.
 
