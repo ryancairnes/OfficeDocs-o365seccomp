@@ -19,6 +19,10 @@ If you're a global administrator or compliance administrator and you define or m
 
 CONTENT COMING SOON
 
+## People are blocked from communicating in Microsoft Teams
+
+content coming
+
 ## My information barrier policy is not working
 
 content coming
