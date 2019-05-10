@@ -21,47 +21,47 @@ description: ""
 
 The following table lists the metadata fields for documents in a review set in a case in Advanced eDiscovery. The table indicates the name of the metadata field, whether the field can be searched when running a query in a review set, whether the field is present when viewing the file metadata of a selected document in a review set, and whether the field is included when documents are exported.
 
-| Field name | Searchable field name | Export field name | Display field name | Definition |
+| Field name | Searchable field name | Exported field name | Display field name | Description |
 | :- |  :- |  :- |  :- |  :- |
-| Attachment Content Id | AttachmentContentId |  | Attachment Content Id | Attachment content Id of the item |
-| Attachment Names | AttachmentNames | Attachment_Names | Attachment Names | List of names of attachments |
-| Attorney client privilege score | AttorneyClientPrivilegeScore |  | Attorney client privilege score | Attorney-client privilege model content score |
-| Author | Author | Doc_authors | Author | Author from the document metadata |
-| BCC | Bcc | Email_bcc | BCC | Bcc field for for message types.  Format is DisplayName <SmtpAddress> |
-| CC | Cc | Email_cc | CC | Cc field for for message types.  Format is DisplayName <SmtpAddress> |
-| Compliance labels | ComplianceLabels | Compliance_labels | Compliance labels | Compliance labels applied in Office 365 |
+| Attachment Content Id | AttachmentContentId |  | Attachment Content Id | Attachment content Id of the item. |
+| Attachment Names | AttachmentNames | Attachment_Names | Attachment Names | List of names of attachments. |
+| Attorney client privilege score | AttorneyClientPrivilegeScore |  | Attorney client privilege score | Attorney-client privilege model content score. |
+| Author | Author | Doc_authors | Author | Author from the document metadata. |
+| BCC | Bcc | Email_bcc | BCC | Bcc field for for message types.  Format is **DisplayName \<SMTPAddress>**. |
+| CC | Cc | Email_cc | CC | Cc field for for message types.  Format is **DisplayName \<SMTPAddress>**. |
+| Compliance labels | ComplianceLabels | Compliance_labels | Compliance labels | Compliance labels applied in Office 365. |
 | Compound Path | CompoundPath | Compound_path | Compound Path | Human readable path that describes the source of the item. |
-| Content | Content |  |  | Extracted text of the item |
-| Conversation Body | Conversation Body |  | Conversation Body | Conversation body of the item |
-| Conversation Topic | Conversation Topic |  | Conversation Topic | Conversation topic of the item |
-| Conversation ID | ConversationId | Conversation_ID | Conversation ID | Conversation Id from the message |
-| Conversation Index |  | Conversation_index | Conversation Index | Conversation index from the message |
-| Conversation Pdf Time | ConversationPdfTime |  | Conversation Pdf Time | Date when the PDF version of the conversation was created |
-| Conversation Redaction Burn Time | ConversationRedactionBurnTime |  | Conversation Redaction Burn Time | Date when the PDF version of the conversation was created for Chat |
-| Document date created | CreatedTime | Doc_date_created | Document date created | Create date from document metadata |
+| Content | Content |  |  | Extracted text of the item. |
+| Conversation Body | Conversation Body |  | Conversation Body | Conversation body of the item. |
+| Conversation Topic | Conversation Topic |  | Conversation Topic | Conversation topic of the item. |
+| Conversation ID | ConversationId | Conversation_ID | Conversation ID | Conversation Id from the message. |
+| Conversation Index |  | Conversation_index | Conversation Index | Conversation index from the message. |
+| Conversation Pdf Time | ConversationPdfTime |  | Conversation Pdf Time | Date when the PDF version of the conversation was created. |
+| Conversation Redaction Burn Time | ConversationRedactionBurnTime |  | Conversation Redaction Burn Time | Date when the PDF version of the conversation was created for Chat. |
+| Document date created | CreatedTime | Doc_date_created | Document date created | Create date from document metadata. |
 | Custodian | Custodian | Custodian | Custodian | Name of the custodian the item was associated with. |
-| Date | Date | Date | Date | Date is a computed field which depends on the file type.<br />Email: Sent date<br />Email Attachments: Last modified date of the document, if not available, the parent's Sent date<br />Embedded documents: Last modified date of the document, if not available, the parent's last modified date.<br />SPO Documents (includes modern attachments): SharePoint Last modified date, if not available, the documents last modified date<br />Non Office Documents: Last modified date<br />Meetings: Meeting start date<br />VoiceMail: Sent date<br />IM: Sent date |
-| Other paths | Dedupedcompoundpath | Deduped_compound_path | Other paths | List of compound paths of documents that are exact duplicates (email: based on content, documents: based on hash) |
-| Other custodians | DedupedCustodians | Deduped_custodians | Other custodians | List of custodians of documents that are exact duplicates (email: based on content, documents: based on hash) |
-| Other file IDs | DedupedFileIds | Deduped_file_IDs | Other file IDs | List of file IDs of documents that are exact duplicates (email: based on content, documents: based on hash) |
-| Document comments | DocComments | Doc_comments | Document comments | Comments from the document metadata |
-| Document company |  | Doc_company | Document company | Company from the document metadata |
+| Date | Date | Date | Date | Date is a computed field that depends on the file type.<br />**Email**: Sent date<br />**Email attachments**: Last modified date of the document, if not available, the parent's Sent date<br />**Embedded documents**: Last modified date of the document, if not available, the parent's last modified date.<br />**SPO documents (includes modern attachments)**: SharePoint Last modified date, if not available, the documents last modified date<br />**Non Office documents**: Last modified date<br />**Meetings**: Meeting start date<br />**VoiceMail**: Sent date<br />**IM**: Sent date. |
+| Other paths | Dedupedcompoundpath | Deduped_compound_path | Other paths | List of compound paths of documents that are exact duplicates (email: based on content, documents: based on hash). |
+| Other custodians | DedupedCustodians | Deduped_custodians | Other custodians | List of custodians of documents that are exact duplicates (for email: based on content; for documents: based on hash). |
+| Other file IDs | DedupedFileIds | Deduped_file_IDs | Other file IDs | List of file IDs of documents that are exact duplicates (for email: based on content; for documents: based on hash). |
+| Document comments | DocComments | Doc_comments | Document comments | Comments from the document metadata. |
+| Document company |  | Doc_company | Document company | Company from the document metadata. |
 | DocIndex |  |  |  | The index in the family. -1 or 0 means it is the root. |
-| Document keywords |  | Doc_keywords | Document keywords | Keywords from the document metadata |
-| Document modified by |  | Doc_modified_by | Document modified by | Last modified date by from document metadata |
-| Document Revision |  | Doc_revision | Document Revision | Revision from the document metadata |
-| Document subject |  | Doc_subject | Document subject | Subject from the document metadata |
-| Document template |  | Doc_template | Document template | Template from the document metadata |
-| Dominant theme | DominantTheme | Dominant_theme | Dominant theme | Dominant theme as calculated for analytics |
-| Duplicate subset |  | Duplicate_subset | Duplicate subset | Group ID for exact duplicates |
-| EmailAction |  | Email_action |  | None, Reply, Forward based on the subject line of a message |
-| Email Delivery Receipt |  | Email_delivery_receipt | Email Delivery Receipt | Email address supplied in Internet Headers for delivery receipt |
-| Importance | EmailImportance | Email_importance | Importance | Importance of the message: 0: Low, 1: Normal, 2: High |
-| EmailLevel |  | Email_level |  | Indicates a message's level within the email thread it belongs to; attachments inherit its parent message's value |
-| Email Message Id |  | Email_message_ID | Email Message Id | Internet message Id from the message |
-| EmailReadReceipt |  | Email_read_receipt |  | Email address supplied in Internet Headers for read receipt |
-| Email Security | EmailSecurity | Email_security | Email Security | Security setting of the message: 0: None, 1: Signed, 2: Encrypted, 3: Encrypted and Signed |
-| Email Sensitivity | EmailSensitivity | email_sensitivity | Email Sensitivity | Sensitivity setting of the message: 0: None, 1: Personal, 2: Private, 3: CompanyConfidential |
+| Document keywords |  | Doc_keywords | Document keywords | Keywords from the document metadata. |
+| Document modified by |  | Doc_modified_by | Document modified by | Last modified date by from document metadata. |
+| Document Revision |  | Doc_revision | Document Revision | Revision from the document metadata. |
+| Document subject |  | Doc_subject | Document subject | Subject from the document metadata. |
+| Document template |  | Doc_template | Document template | Template from the document metadata. |
+| Dominant theme | DominantTheme | Dominant_theme | Dominant theme | Dominant theme as calculated for analytics. |
+| Duplicate subset |  | Duplicate_subset | Duplicate subset | Group ID for exact duplicates. |
+| EmailAction |  | Email_action |  | None, Reply, Forward based on the subject line of a message. |
+| Email Delivery Receipt |  | Email_delivery_receipt | Email Delivery Receipt | Email address supplied in Internet Headers for delivery receipt. |
+| Importance | EmailImportance | Email_importance | Importance | Importance of the message: **0**: Low; **1**: Normal; **2**: High |
+| EmailLevel |  | Email_level |  | Indicates a message's level within the email thread it belongs to; attachments inherit its parent message's value. |
+| Email Message Id |  | Email_message_ID | Email Message Id | Internet message Id from the message. |
+| EmailReadReceipt |  | Email_read_receipt |  | Email address supplied in Internet Headers for read receipt. |
+| Email Security | EmailSecurity | Email_security | Email Security | Security setting of the message: **0**: None; **1**: Signed; **2**: Encrypted; **3**: Encrypted and signed. |
+| Email Sensitivity | EmailSensitivity | email_sensitivity | Email Sensitivity | Sensitivity setting of the message: 0: None, 1: Personal, 2: Private, 3: CompanyConfidential. |
 | Email set | EmailSet | Email_set | Email set | Group ID for all messages in the same email set |
 | EmailThread |  | Email_thread |  | Position of the message within the email set; consists all node IDs from the root to the current message, period-separated |
 | Extracted content type |  | Extracted_content_type | Extracted content type | Extracted content type - in the form of mime type, e.g. image/jpeg |
