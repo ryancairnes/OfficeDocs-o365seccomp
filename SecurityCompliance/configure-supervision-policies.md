@@ -60,7 +60,7 @@ Use the following chart to help you configure groups in your organization for su
 
 | **Policy Member** | **Supported Groups** | **Unsupported Groups** |
 |:-----|:-----|:-----|
-|Supervised users | Distribution groups <br> Office 365 groups | Dynamic distribution groups |
+|Supervised users <br> Non-supervised users | Distribution groups <br> Office 365 groups | Dynamic distribution groups |
 | Reviewers | Mail-enabled security groups  | Distribution groups <br> Dynamic distribution groups |
   
 To manage supervised users in large enterprise organizations, you may need to monitor all users across large groups. You can use PowerShell to configure a distribution group for a global supervision policy for the assigned group. This enables you to monitor thousands of users with a single policy and keep the supervision policy updated as new employees join your organization.
