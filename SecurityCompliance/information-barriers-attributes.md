@@ -17,7 +17,7 @@ description: "Use this article as a reference for various attributes you can use
 
 If you're a global administrator or compliance administrator and you want to define information barrier policies, you'll use certain attributes in Azure Active Directory. For example, you might use **Department** to define segments of users by department within your organization (assuming no single employee works for two departments at the same time). This article provides an overview of how to use attributes in information barrier policies. To learn more about information barriers, see the following resources:
 - [Information barriers (Preview)](information-barriers.md)
-- [Define policies for information barriers in Microsoft Teams (Preview)](information-barriers-polices.md)
+- [Define policies for information barriers in Microsoft Teams (Preview)](information-barriers-policies.md)
 
 ## How to use attributes in information barrier policies
 
@@ -66,7 +66,7 @@ Use the following table as a reference:
 
 ## Related topics
 
-[Define policies for information barriers in Microsoft Teams (Preview)](information-barriers-polices.md)
+[Define policies for information barriers in Microsoft Teams (Preview)](information-barriers-policies.md)
 
 [Information barriers (Preview)](information-barriers.md)
 

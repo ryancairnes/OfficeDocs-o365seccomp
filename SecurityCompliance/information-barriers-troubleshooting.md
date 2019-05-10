@@ -22,7 +22,7 @@ CONTENT COMING SOON
 
 ## Related topics
 
-[Define policies for information barriers in Microsoft Teams (Preview)](information-barriers-polices.md)
+[Define policies for information barriers in Microsoft Teams (Preview)](information-barriers-policies.md)
 
 [Information barriers (Preview)](information-barriers.md)
 
