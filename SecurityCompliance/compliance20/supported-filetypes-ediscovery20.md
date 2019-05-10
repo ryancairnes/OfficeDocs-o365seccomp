@@ -19,11 +19,11 @@ description: ""
 
 # Supported file types in Advanced eDiscovery
 
-Advanced eDiscovery supports many file types to many different levels, which are described in the following table. This list isn't finalized, and we'll add new file types as we continue our validation testing. The tables indicates if a file type is supported for text extraction (OCR for images), viewable in the native viewer and also support in the Annotate viewer in Advanced eDiscovery.
+Advanced eDiscovery supports many file types in many different ways, which are described in the following tables. This list isn't finalized, and we'll add new file types as we continue our validation testing. These tables indicate if a file type is supported for text extraction (OCR for images), viewable in the Native viewer, available in the Annotate viewer, and the possible extensions for each file type. For container file types (such as PST files and ZIP files), the tables indicate if data in the contain file can be extracted.
 
 ## Archive / Container
 
-| Mime type | Container extraction | Possible Extensions |
+| Mime type | Container extraction | Possible extensions |
 | :- |  :- |  :- | 
 | application/x-7z-compressed | Yes | .7z |
 | application/x-rar-compressed | Yes | .rar |
@@ -33,14 +33,14 @@ Advanced eDiscovery supports many file types to many different levels, which are
 
 ## Database
 
-| Mime type | Text extraction | Native viewer | Annotate viewer | Possible Extensions |
+| Mime type | Text extraction | Native viewer | Annotate viewer | Possible extensions |
 | :- |  :- |  :- |  :- |  :- | 
 | application/x-msaccess | Yes | Yes | Yes | .mdb |
 ||||||
 
 ## Email
 
-| Mime type | Text extraction | Native viewer | Annotate viewer | Possible Extensions |
+| Mime type | Text extraction | Native viewer | Annotate viewer | Possible extensions |
 | :- |  :- |  :- |  :- |  :- | 
 | application/vnd.ms-outlook | Yes | Yes | Yes | .msg |
 | message/rfc822 | Yes | Yes | Yes | .eml |
@@ -49,7 +49,7 @@ Advanced eDiscovery supports many file types to many different levels, which are
 
 ## Email Container
 
-| Mime type | Container extraction | Possible Extensions |
+| Mime type | Container extraction | Possible extensions |
 | :- |  :- |  :- | 
 | application/mbox | Yes | .mbox |
 | application/vnd.ms-outlook-pst | Yes | .pst |
@@ -57,7 +57,7 @@ Advanced eDiscovery supports many file types to many different levels, which are
 
 ## HTML
 
-| Mime type | Text extraction | Native viewer | Annotate viewer | Possible Extensions |
+| Mime type | Text extraction | Native viewer | Annotate viewer | Possible extensions |
 | :- |  :- |  :- |  :- |  :- | 
 | application/xhtml+xml | Yes | Yes | Yes | .xhtml |
 | application/xml | Yes | Yes | Yes | .xml |
@@ -66,7 +66,7 @@ Advanced eDiscovery supports many file types to many different levels, which are
 
 ## Image
 
-| Mime type | OCR Text extraction | Native viewer | Annotate viewer | Possible Extensions |
+| Mime type | OCR Text extraction | Native viewer | Annotate viewer | Possible extensions |
 | :- |  :- |  :- |  :- |  :- | 
 | image/bmp | Yes | Yes | Yes | .bmp |
 | image/emf | Yes | Yes | Yes | .emf |
@@ -80,7 +80,7 @@ Advanced eDiscovery supports many file types to many different levels, which are
 
 ## Microsoft Excel
 
-| Mime type | Text extraction | Native viewer | Annotate viewer | Possible Extensions |
+| Mime type | Text extraction | Native viewer | Annotate viewer | Possible extensions |
 | :- |  :- |  :- |  :- |  :- | 
 | application/vnd.ms-excel | Yes | Yes | Yes | .dat; .xls |
 | application/vnd.ms-excel.sheet.binary.macroenabled.12 | Yes | Yes | No | .xlsb |
@@ -90,28 +90,28 @@ Advanced eDiscovery supports many file types to many different levels, which are
 
 ## Microsoft Powerpoint
 
-| Mime type | Text extraction | Native viewer | Annotate viewer | Possible Extensions |
+| Mime type | Text extraction | Native viewer | Annotate viewer | Possible extensions |
 | :- |  :- |  :- |  :- |  :- | 
 | application/vnd.ms-powerpoint | Yes | Yes | Yes | .pot; .pps; .ppt |
 ||||||
 
 ## Microsoft Publisher
 
-| Mime type | Text extraction | Native viewer | Annotate viewer | Possible Extensions |
+| Mime type | Text extraction | Native viewer | Annotate viewer | Possible extensions |
 | :- |  :- |  :- |  :- |  :- | 
 | application/x-mspublisher | Yes | Yes | Yes | .pub |
 ||||||
 
 ## Microsoft Visio
 
-| Mime type | Text extraction | Native viewer | Annotate viewer | Possible Extensions |
+| Mime type | Text extraction | Native viewer | Annotate viewer | Possible extensions |
 | :- |  :- |  :- |  :- |  :- | 
 | application/vnd.visio | Yes | Yes | Yes | .vsd |
 ||||||
 
 ## Microsoft Word
 
-| Mime type | Text extraction | Native viewer | Annotate viewer | Possible Extensions |
+| Mime type | Text extraction | Native viewer | Annotate viewer | Possible extensions |
 | :- |  :- |  :- |  :- |  :- | 
 | application/msword | Yes | Yes | Yes | .dat; .doc |
 | application/rtf | Yes | Yes | Yes | .doc; .rtf |
@@ -128,14 +128,14 @@ Advanced eDiscovery supports many file types to many different levels, which are
 
 ## Open Document Format
 
-| Mime type | Text extraction | Native viewer | Annotate viewer | Possible Extensions |
+| Mime type | Text extraction | Native viewer | Annotate viewer | Possible extensions |
 | :- |  :- |  :- |  :- |  :- | 
 | application/vnd.oasis.opendocument.text | Yes | Yes | Yes | .odt |
 ||||||
 
 ## Plain Text
 
-| Mime type | Text extraction | Native viewer | Annotate viewer | Possible Extensions |
+| Mime type | Text extraction | Native viewer | Annotate viewer | Possible extensions |
 | :- |  :- |  :- |  :- |  :- | 
 | text/csv | Yes | Yes | Yes | .csv |
 | text/plain | Yes | Yes | Yes | .con; .css; .csv; .dat; .pl; .txt |
@@ -143,7 +143,7 @@ Advanced eDiscovery supports many file types to many different levels, which are
 
 ## Portable Document Format
 
-| Mime type | Text extraction | Native viewer | Annotate viewer | Possible Extensions |
+| Mime type | Text extraction | Native viewer | Annotate viewer | Possible extensions |
 | :- |  :- |  :- |  :- |  :- | 
 | application/pdf | Yes | Yes | Yes | .pdf |
 ||||||
