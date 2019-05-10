@@ -29,7 +29,7 @@ Information barriers help limit communications in Microsoft Teams between specif
 
 - A research team can only call or chat online with a product development team
 
-For all of these example scenarios, information barrier policies can be defined to prevent people from calling or chatting with those they shouldn't be communicating with in Microsoft Teams. Once information barrier policies are in place, when users who are covered by those policies attempt to communicate with others in Microsoft Teams, checks are in place to prevent unauthorized communication. 
+For all of these example scenarios, information barrier policies can be defined to prevent people from calling or chatting with those they shouldn't be communicating with in Microsoft Teams. With information barrier policies in place, when users who are covered by those policies attempt to communicate with others in Microsoft Teams, checks are in place to prevent unauthorized communication. 
 
 Information barrier policies determine and prevent the following kinds of unauthorized communications:
 
@@ -47,7 +47,7 @@ Information barrier policies determine and prevent the following kinds of unauth
 
 - Placing a call
 
-If the people involved are included in an information barrier policy to prevent the activity, they will not be able to proceed. To learn more about the user experience with information barriers, see [information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
+If the people involved are included in an information barrier policy that prevents the activity, they will not be able to proceed. To learn more about the user experience with information barriers, see [information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
 
 > [!IMPORTANT]
 > Potentially, everyone included in an information barrier policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barrier policies are part of the same team or group chat, they might be removed from those chat sessions and further communication with the group might not be allowed. However, information barriers will not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
