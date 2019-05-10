@@ -51,7 +51,7 @@ You complete this task in the Security & Compliance Center (SCC). [Go to the Sec
 5. Click **Yes** to confirm the change.
 
     > [!NOTE]
-    > It may take up to 30 minutes before restrictions are removed. 
+    > It may take 30 minutes or more before restrictions are removed. 
 
 ## Making sure admins are alerted when this happens
 
