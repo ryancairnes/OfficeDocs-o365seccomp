@@ -86,7 +86,7 @@ During the completion of this step (by following the step-by-step instructions),
 
 Additionally, you will upload the SampleConnector.zip file (that you downloaded in Step 1) in this step to deploy the source code for the Twitter connector app.
 
-After completing this step, be sure to copy the app Service URL (for example, https://twitterconnector.azurewebsites.net). You'll need to use this to complete Step 5, Step 6, and Step 7).
+After completing this step, be sure to copy the Azure app service URL (for example, https://twitterconnector.azurewebsites.net). You'll need to use this to complete Step 5, Step 6, and Step 7).
 
 ## Step 5: Create developer app on Twitter
 

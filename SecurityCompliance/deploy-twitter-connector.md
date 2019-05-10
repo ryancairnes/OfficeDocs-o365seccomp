@@ -17,77 +17,6 @@ description: "Administrators can set up a native connector to import and archive
 
 This article contains the step-by-step process to deploy a connector that uses the Office 365 Import service to import data from your organization's Twitter account to Office 365. For a high-level overview of this process and a list of prerequisites required to deploy a Twitter connector, see [Use a sample connector to archive Twitter data in Office 365 (Preview)](archive-twitter-data-with-sample-connector.md). 
 
-
-# Prerequisites
-
-1.  You need to have a Twitter account. (This sample connector currently allow importing data on your company’s Official Twitter handles
-
-2.  You should have a valid Azure Subscription
-    
-    1.  If you don’t have an existing Azure Subscription, you can either get
-        
-        1.  Free subscription (valid for 1 year) [here](https://azure.microsoft.com/en-us/free/)
-        
-        2.  Pay as you go subscription [here](https://azure.microsoft.com/en-us/pricing/purchase-options/pay-as-you-go/)
-
-# Set up
-
-1.  Make sure the user who is setting up connector has Mailbox Import Export role.
-
-> For more information see the "Add a role in a role group" or the "Create a role group" sections in [Manage role groups](https://docs.microsoft.com/en-us/exchange/manage-role-groups-exchange-2013-help)
-
-2.  Ensure that you have accepted the consent by following the steps in the below link. Tenant admin has to click below link and log in with their credential.
-    
-    1.  [<span class="underline">https://login.microsoftonline.com/common/oauth2/authorize?client\_id=570d0bec-d001-4c4e-985e-3ab17fdc3073\&response\_type=code\&redirect\_uri=https://portal.azure.com/\&nonce=1234\&prompt=admin\_consent</span>](https://login.microsoftonline.com/common/oauth2/authorize?client_id=570d0bec-d001-4c4e-985e-3ab17fdc3073&response_type=code&redirect_uri=https://portal.azure.com/&nonce=1234&prompt=admin_consent)
-
-3.  Ensure that you have an active Azure subscription as mentioned in Prerequisites point \#2
-
-4.  Create AAD app using [Azure portal](https://portal.azure.com). Follow the below steps or refer [Create AAD App](#step-2-create-aad-app) with screen shots
-    
-    2.  Azure Active Directory -\> App Registrations -\> New Application Registration Name of App : - i.e. TwitterConnector or any preferable name
-
-> Application type : - Web app / API
-> 
-> Sign on URL : - [<span class="underline">https://portal.azure.com</span>](https://portal.azure.com)
-
-3.  Register App and note **AAD APP ID **
-
-4.  Go to app -\> Settings -\> Keys -\> Fill Passwords details -\> Save keys -\> Copy **Password** value and save it to your secret location. This will be used when configuring the Connector.
-
-<!-- end list -->
-
-5.  Create storage account using [Azure portal](https://portal.azure.com). Follow the below steps or refer [Storage account creation](#step-3-storage-account-creation) with screen shots
-    
-    5.  Create a new Storage Account (Create a resource -\> Storage -\> Storage Account) -\> Fill details -\> Review & Create -\>It will take some time)
-    
-    6.  Go to Storage account created above -\> Copy primary **connection string** and save it to a secret location. This will be used during deployment.
-
-6.  Create a Twitter developer App
-    
-    7.  Refer screenshot [Twitter App Registration](#step-5-twitter-app-registration) or follow documentation on [Twitter developer portal](https://developers.facebook.com/docs/pages/getting-started/).
-
-# Finalize
-
-1.  Download the builds of connector code and unzip it. It would have a single file
-    
-      - SampleConnector.zip
-
-2.  Deploy the web app in Azure
-    
-      - Follow the step as mentioned in [App Service creation](#step-4-app-service-creation)
-    
-      - Note your App Service URL required for Twitter App creation and Connector setup in SCC
-
-3.  Configure Login and Webhook products on Twitter developer portal
-    
-      - RedirectUrl in Settings of Login product should be
-        
-          - \<App Service URL\>/Views/TwitterOAuth
-
-4.  Go to SCC portal <https://protection.office.com>
-
-5.  Go to Data Governance \> Import. and follow the onscreen steps. [\[Refer Screenshots here\]](#step-7-connector-setup-in-scc)
-
 ## Step 1: Download the package
 
 Download the prebuilt package from the Release section in the GitHub repository at <TBD>. Under the latest release, download the zip file named **SampleConnector.zip**. You will upload this zip file to Azure in Step 4.
@@ -118,7 +47,7 @@ Download the prebuilt package from the Release section in the GitHub repository 
 
    ![](media/TCimage06.png)
 
-7. Click **New client secret**
+7. Click **New client secret**.
 
    ![](media/TCimage07.png)
 
@@ -132,13 +61,13 @@ Download the prebuilt package from the Release section in the GitHub repository 
 
 10. Go to **Manifest** and copy the identifierUris (which is also called the AAD application Uri) as highlighted in the following screenshot. Copy the AAD application Uri to a text file or other storage location. You’ll use it in Step 6.
 
-   ![](media/TCimage10.png)
+    ![](media/TCimage10.png)
 
 ## Step 3: Create an Azure storage account
 
 1.  Go to the Azure home page for your organization.
 
-   ![](media/TCimage11.png)
+    ![](media/TCimage11.png)
 
 2. Click **Create a resource** and they type **storage account** in the search box.
 
@@ -237,9 +166,11 @@ Download the prebuilt package from the Release section in the GitHub repository 
 
    ![](media/TCimage31.png)
 
-8. Add the OAuth redirect Uri using the following format: \<connectorserviceuri/Views/TwitterOAuth\>, where the value of connectorserviceuri is 
+8. Do the following tasks:
 
-   Also update the Callback URLs and then click **Save**.
+   - Select the checkbox to allow the connector app to sign in to Twitter.
+   - Add the OAuth redirect Uri using the following format: **\<connectorserviceuri>/Views/TwitterOAuth**, where the value of *connectorserviceuri* is the Azure app service URL for your organization; for example https://fbconnector.azurewebsites.net.
+   - Update the other callback URLs and then save your settings.
 
    ![](media/TCimage32.png)
 
@@ -287,7 +218,7 @@ The Twitter developer app is now ready to use.
 
     - In the first box, type a name for the connector, such as **Twitter**.
     - In the second box, type or paste the value of the APISecretKey that you added in Step 4.
-    - In the third box, type of paste the Azure app service URL; for example **https://twitter.azurewebsites.net**.
+    - In the third box, type of paste the Azure app service URL; for example **https://twitterconnector.azurewebsites.net**.
 
    ![](media/TCimage38.png)
 
