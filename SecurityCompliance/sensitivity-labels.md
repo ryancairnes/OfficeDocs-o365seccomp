@@ -143,6 +143,8 @@ If a user or group in your organization is not seeing the correct set of sensiti
 
 ![Move option on the page for sensitivity label policies](media/sensitivity-label-policy-priority.png)
 
+Note that while priority matters for sensitivity label policies, it does **not** matter for retention label policies. As explained in [The principles of retention, or what takes precedence?](labels.md#the-principles-of-retention-or-what-takes-precedence), content can be subject to multiple retention policies.
+
 ## How to get started
 
 Getting started with sensitivity labels is a quick process:
