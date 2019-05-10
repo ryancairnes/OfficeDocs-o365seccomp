@@ -466,11 +466,17 @@
 # Mail flow
 ## [Enable the Report Message add-in](enable-the-report-message-add-in.md)
 ## [Message trace in the Security & Compliance Center](message-trace-scc.md)
-## [Mail flow insights in the Security & Compliance Center](mail-flow-insights.md)
-### [Auto-forwarded messages report](mfi-auto-forwarded-messages-report.md)
-### [Mail loop insight](mfi-mail-loop-insight.md)
+## [Mail flow insights in the Security & Compliance Center](mail-flow-insights-v2.md)
+### [Mail flow map report](mfi-mail-flow-map-report.md)
+### [Top domain mail flow status insight](mfi-domain-mail-flow-status-insight.md)
+### [SMTP Auth clients report](mfi-smtp-auth-clients-report.md)
+### [Fix sender domain insight](mfi-sender-domain-insight.md)
+### [Non-delivery report](mfi-non-delivery-report.md)
+### [Non-accepted domain report](mfi-non-accepted-domain-report.md)
 ### [Outbound and inbound mail flow](mfi-outbound-and-inbound-mail-flow.md)
 ### [Queue alerts and Queues](mfi-queue-alerts-and-queues.md)
+### [Auto-forwarded messages report](mfi-auto-forwarded-messages-report.md)
+### [Mail loop insight](mfi-mail-loop-insight.md)
 ### [Slow mail flow rules insight](mfi-slow-mail-flow-rules-insight.md)
 
 # Security solutions

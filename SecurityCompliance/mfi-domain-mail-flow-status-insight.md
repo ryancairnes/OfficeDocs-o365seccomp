@@ -9,13 +9,9 @@ ms.service: O365-seccomp
 localization_priority: Normal
 ms.assetid: 
 description: "Admins can learn about the top domain mail flow status insight in the mail flow dashboard in the Security & Compliance Center."
-ROBOTS: NOINDEX, NOFOLLOW
 ---
 
 # Top domain mail flow status insight
-
-> [!NOTE]
-> The features described in this topic haven't been deployed to all Office 365 organizations, and are subject to change.
 
 The **Top domain mail flow status** insight gives you the current status for your organization's domains in terms of mail flow. This insight helps you identify and troubleshoot domains that are experiencing ***mail flow impacting*** issues (for example, unable to receive external email), especially domain expirations or domains with incorrect MX records.
 
