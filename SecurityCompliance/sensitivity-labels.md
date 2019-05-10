@@ -135,7 +135,7 @@ After you create a label policy and assign sensitivity labels to users and group
 
 ### Sensitivity label policy priority (order matters)
 
-You make your sensitivity labels available to users by publishing them in a sensitivity label policy, which appears in a list on the **Sensitivity policies** tab on the **Label policies** page. Just like sensitivity labels (see [the above section](#sensitivity-label-priority-order-matters)), the order of the sensitivity label policies is important because it reflects their priority. 
+You make your sensitivity labels available to users by publishing them in a sensitivity label policy, which appears in a list on the **Sensitivity policies** tab on the **Label policies** page. Just like sensitivity labels (see [the above section](#sensitivity-label-priority-order-matters)), the order of the sensitivity label policies is important because it reflects their priority. The label policy with lowest priority is shown at the **top**, and label policy with the highest priority is shown at the **bottom**.
 
 A user or group can see only the sensitivity labels from a single label policy. Therefore, you want your most specific sensitivity label policy, such as the **Policy for leadership team** shown below, to appear at the **bottom** of the list, and your most general sensitivity label policy, such as the **Policy for everyone** show below, to appear at the **top**. In this case, to re-order the policies so that the most specific policy is at the bottom, choose the ellipsis on the right > **Move down**.
 
