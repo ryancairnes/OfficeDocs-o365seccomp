@@ -64,7 +64,7 @@ Currently, information barrier policies are defined and managed in Office 365 by
 
 - Office 365 Advanced Compliance
 
-- Microsoft 365 E5 Compliance
+- Microsoft 365 E5 Information Protection and Compliance
 
 For more details, including plans and pricing, see [Compliance Solutions](https://products.office.com/business/security-and-compliance/compliance-solutions).
 

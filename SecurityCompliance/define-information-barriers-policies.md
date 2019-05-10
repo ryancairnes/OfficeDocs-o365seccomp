@@ -3,7 +3,7 @@ title: "Define information barrier policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 05/09/2019
+ms.date: 05/10/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -15,9 +15,9 @@ description: "Learn how to define policies for information barriers in Microsoft
 
 # Define policies for information barriers in Microsoft Teams (Preview)
 
-Suppose that you want to prevent one group of users from calling or chatting with another group. Or, suppose that you want to allow one group of users to communicate with only one or two other groups. Where Microsoft 365 enables communication and collaboration across groups and organizations, is there a way to limit communications between specific groups of users?
+Suppose that you want to prevent one group of users from calling or chatting with another group. Or, perhaps you want to allow one group of users to communicate with only one or two other groups. Where Microsoft 365 enables communication and collaboration across groups and organizations, is there a way to restrict communications among specific groups of users?
 
-With information barriers for Microsoft Teams, you can! Information barrier policies can be defined to limit communications between specific groups of people. With such policies in place, your organization is better positioned to comply with certain industry standards and regulations. 
+With information barriers for Microsoft Teams, you can! If you're a compliance administrator, you can define information barrier policies to prevent or allow chats and calls between specific groups of people. With such policies in place, your organization is better positioned to comply with relevant industry standards and regulations, and avoid potential conflicts of interest within your organization.  
 
 This article describes how to plan, define, implement, and manage information barrier policies. To learn more about information barriers, see [Information barriers (Preview)](information-barriers.md).
 
