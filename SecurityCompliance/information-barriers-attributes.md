@@ -3,7 +3,7 @@ title: "Attributes for information barrier policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 04/10/2019
+ms.date: 05/10/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -15,10 +15,17 @@ description: "Use this article as a reference for various attributes you can use
 
 # Attributes for information barrier policies (Preview)
 
-[Information barriers](information-barriers.md) can be defined using certain attributes in Azure Active Directory. For example, you might use **Department** to define segments within your organization. Assuming no single employee works for two departments at the same time, this could work well for information barrier policies that prevent or allow communications between other departments. However, you can use attributes other than Department in your [information barrier policies](define-information-barriers-policies.md).
+If you're a global administrator or compliance administrator and you want to define information barrier policies, you'll use certain attributes in Azure Active Directory. For example, you might use **Department** to define segments of users by department within your organization (assuming no single employee works for two departments at the same time). This article provides an overview of how to use attributes in information barrier policies. To learn more about information barriers, see the following resources:
+- [Information barriers (Preview)](information-barriers.md)
+- [Define policies for information barriers in Microsoft Teams (Preview)](define-information-barriers-policies.md)
+
+## How to use attributes in information barrier policies
+
+CONTENT COMING SOON
+
+## Reference
 
 Use the following table as a reference:
-
 
 |Azure Active Directory property name (LDAP display name)  |Exchange property name  |Value type  |
 |---------|---------|---------|
