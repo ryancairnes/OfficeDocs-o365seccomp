@@ -65,17 +65,17 @@ Currently, information barrier policies are defined and managed in Office 365 by
 
 For more details, including plans and pricing, see [Compliance Solutions](https://products.office.com/business/security-and-compliance/compliance-solutions).
 
-To [define or edit information barrier policies](define-information-barriers-policies.md), you must be assigned one of the following roles:
+To [define or edit information barrier policies](information-barriers-polices.md), you must be assigned one of the following roles:
 
 - Microsoft 365 Global Administrator
 - Office 365 Global Administrator
 - Compliance Administrator
 
-You must be familiar with PowerShell cmdlets in order to define, validate, or edit information barrier policies. Although we provide several examples of PowerShell cmdlets in the [how-to information](define-information-barriers-policies.md), you'll need to know additional details, such as parameters, for your organization.
+You must be familiar with PowerShell cmdlets in order to define, validate, or edit information barrier policies. Although we provide several examples of PowerShell cmdlets in the [how-to information](information-barriers-polices.md), you'll need to know additional details, such as parameters, for your organization.
 
 ## Next steps
 
 - [Learn more about information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams)
 - a[See the attributes that can be used for information barrier policies](information-barriers-attributes.md)
-- [Define policies for information barriers in Microsoft Teams](define-information-barriers-policies.md) 
+- [Define policies for information barriers in Microsoft Teams](information-barriers-polices.md) 
 

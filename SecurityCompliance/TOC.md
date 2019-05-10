@@ -502,8 +502,9 @@
 ### [Working with Compliance Manager (Preview)](working-with-compliance-manager.md)
 ### [Compliance score methodology (Preview)](compliance-score-methodology.md)
 ## [Information barriers (Preview)](information-barriers.md)
-### [Define information barrier policies (Preview)](define-information-barriers-policies.md)
+### [Define information barrier policies (Preview)](information-barriers-polices.md)
 ### [Attributes for information barrier policies (Preview)](information-barriers-attributes.md)
+### [Troubleshooting information barriers (Preview)](information-barriers-troubleshooting.md)
 ### [How information barriers work in Microsoft Teams (Preview)](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams)
 ## Customer Key
 ### [Controlling your data in Office 365 using Customer Key](controlling-your-data-using-customer-key.md)
