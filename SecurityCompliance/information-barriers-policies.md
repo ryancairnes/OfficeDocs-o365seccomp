@@ -32,7 +32,7 @@ This article describes how to plan, define, implement, and manage information ba
 |[Part 3: Define information barrier policies](#part-3-define-information-barrier-policies)     |Using PowerShell, define the policies<br/>(Policies are neither active nor applied at this point)         |
 |[Part 4: Apply information barrier policies](#part-4-apply-information-barrier-policies)     |- Set policies to active status<br/>- Start the policy application         |
 |(As needed) [Edit or remove an information barrier policy](#edit-or-remove-an-information-barrier-policy)     |- Set a policy to inactive status<br/>- Edit or remove policy<br/>- Start policy application         |
-|Troubleshooting|Take action when policies are not working as expected, or users are blocked from communicating with others|
+|(As needed) [Troubleshooting](information-barriers-troubleshooting.md)|Take action when policies are not working as expected, or users are blocked from communicating with others|
 
 ## Prerequisites
 
@@ -56,9 +56,7 @@ Determine which groups of users for whom you want to prevent (or allow) communic
 Make a list of all the policies you'll want to implement. As you plan your policies, keep the following points in mind:
 
 - Information barrier policies do not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
-
 - Potentially, everyone included in an information barrier policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barrier policies are part of the same team or group chat, they might be removed from those chat sessions. [Learn more about information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
-
 - Avoid bulk moves when information barrier policies are in effect. Ask your tenant admins not to move users between segments who cannot talk to each other. Either temporarily grant communication access and disable it later, after all users are moved, or create an intermediate segment who can talk to each of the initial segments. In any case, do not move users in bulk between entities who cannot communicate.
 
 ## Part 2: Segment users
@@ -112,7 +110,6 @@ Information barrier policies are not in effect until they are set to active stat
 2. Run the `Get-InformationBarrierPolicy` cmdlet to see a list of policies that have been defined. Note the status of each policy.
 
 3. To set a policy to active status, use the `Get-InformationBarrierPolicy` cmdlet with the State parameter set to Active, such as shown in the following example:
-
     
     `$identity  = | Get-InformationBarrierPolicy -Name "ResearchIBPolicy" | select Identity
     Set-InformationBarrierPolicy -Identity $identity -State Active`
@@ -151,7 +148,6 @@ If you want to edit or remove an information barrier policy, you must first set 
 
 4. To set the policy's status to inactive, use the `Set-InformationBarrierPolicy` cmdlet with the State parameter set to Inactive, as shown in the following example:
 
-
     `$identity  = | Get-InformationBarrierPolicy -Name "ResearchIBPolicy" | select Identity
     Set-InformationBarrierPolicy -Identity $identity -State Inactive
     `
@@ -170,3 +166,5 @@ At this point, your information barrier policy is set to inactive. You can leave
 [Learn more about information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams)
 
 [Attributes for information barrier policies (Preview)](information-barriers-attributes.md)
+
+[Troubleshooting information barriers (Preview)](information-barriers-troubleshooting.md)

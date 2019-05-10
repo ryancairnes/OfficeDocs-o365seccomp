@@ -68,6 +68,8 @@ Use the following table as a reference:
 
 [Define policies for information barriers in Microsoft Teams (Preview)](information-barriers-policies.md)
 
+[Troubleshooting information barriers (Preview)](information-barriers-troubleshooting.md)
+
 [Information barriers (Preview)](information-barriers.md)
 
 
