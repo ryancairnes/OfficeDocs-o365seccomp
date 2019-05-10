@@ -9,13 +9,9 @@ ms.service: O365-seccomp
 localization_priority: Normal
 ms.assetid: 
 description: "Admins can learn about the fix sender domain insight in the mail flow dashboard in the Security & Compliance Center."
-ROBOTS: NOINDEX, NOFOLLOW
 ---
 
 # Fix sender domain insight
-
-> [!NOTE]
-> The features described in this topic haven't been deployed to all Office 365 organizations, and are subject to change.
 
 Office 365 requires messages sending from internal on-premises email environments to Office 365 to meet certain security criteria:
 
