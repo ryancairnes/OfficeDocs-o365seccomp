@@ -137,7 +137,7 @@ After you create a label policy and assign sensitivity labels to users and group
 
 You make your sensitivity labels available to users by publishing them in a sensitivity label policy, which appears in a list on the **Sensitivity policies** tab on the **Label policies** page. Just like sensitivity labels (see [the above section](#sensitivity-label-priority-order-matters)), the order of the sensitivity label policies is important because it reflects their priority. 
 
-A user or group can see only the sensitivity labels from a single label policy. Therefore, you want your most specific sensitivity label policy, such as the **Policy for leadership team** shown below, to appear at the **bottom** of the list, and your most general sensitivity label policy, such as the **Policy for everyone** show below, to appear at the **top**. In this case, to re-order the policies, for the most specific label policy on the top, choose the ellipsis on the right > **Move down**.
+A user or group can see only the sensitivity labels from a single label policy. Therefore, you want your most specific sensitivity label policy, such as the **Policy for leadership team** shown below, to appear at the **bottom** of the list, and your most general sensitivity label policy, such as the **Policy for everyone** show below, to appear at the **top**. In this case, to re-order the policies so that the most specific policy is at the bottom, choose the ellipsis on the right > **Move down**.
 
 If a user or group in your organization is not seeing the correct set of sensitivity labels in their Office apps, or if they're not seeing a feature of a label policy such as a default or required label, check the order of the sensitivity label policies.
 
