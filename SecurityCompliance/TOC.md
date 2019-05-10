@@ -505,7 +505,7 @@
 ### [Define information barrier policies (Preview)](information-barriers-policies.md)
 ### [Attributes for information barrier policies (Preview)](information-barriers-attributes.md)
 ### [Troubleshooting information barriers (Preview)](information-barriers-troubleshooting.md)
-### [How information barriers work in Microsoft Teams (Preview)](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams)
+
 ## Customer Key
 ### [Controlling your data in Office 365 using Customer Key](controlling-your-data-using-customer-key.md)
 ### [Service encryption with Customer Key for Office 365 FAQ](service-encryption-with-customer-key-faq.md)
