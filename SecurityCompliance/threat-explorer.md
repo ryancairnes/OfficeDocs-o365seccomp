@@ -3,7 +3,7 @@ title: "Threat Explorer (and real-time detections)"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 05/09/2019
+ms.date: 05/13/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -59,19 +59,9 @@ Suppose you want to see phishing attempts through URLs in email, including a lis
 
 3. Click **Sender**, and then choose **URLs** > **Click verdict**.
 
-4. Select one or more options, such as **Blocked** and **Block overridden**, and then click the **Refresh** button to apply that filter.<br/>![URLs and click verdicts](media/ThreatExplorerEmailPhishClickVerdictOptions.png)<br/>
+4. Select one or more options, such as **Blocked** and **Block overridden**, and then click the **Refresh** button that is on the same line as the options to apply that filter. (Don't refresh your browser window.)<br/>![URLs and click verdicts](media/ThreatExplorerEmailPhishClickVerdictOptions.png)<br/>
 
-The report refreshes to show two different URL tables on the URL tab below:
-
-1. **Top URLs** are the URLs contained in the messages you have filtered down to, and the email delivery action counts for each URL. In the phish email view, this list typically will contain legitimate URLs. Attackers include a mix of good and bad URLs in their messages to try to get them delivered, but they'll make the malicious links more interesting for the user to click. The table of URLs is sorted by total email count (NOTE: This column is not shown to simplify the view).
-
-2. **Top clicks** are the Safe Links wrapped URLs that were clicked, sorted by total click count (this column is also not shown to simplify the view). Total counts by column indicate the Safe Links click verdict count for each clicked URL. In the phish email view, these are more often suspicious or malicious URLs, but could include clean URLs that are in phish messages. URL clicks on unwrapped links will not show up here.
-
-The two URLs tables show top URLs in phishing emails by delivery action, and they show URL clicks that were blocked (or visited despite a warning) so that you can understand what potential bad links were received by users and interacted with by users. From here, you can conduct further analysis. For example, below the chart, you can see the top URLs in emails that were blocked in your organization's environment. 
-
-![Explorer URLs that were blocked](media/ExplorerPhishClickVerdictURLs.png) 
-
-Select a URL to view more detailed information. Note that in the URL flyout dialog, the filtering on emails is removed in order to show you the full view of the URL's exposure in your environment. This lets you filter down emails in Explorer to ones you are concerned about, find specific URLs that are potential threats, then expand your understanding of the URL exposure in your environment (via the URL details dialog) without having to add URL filters to the Explorer view itself.
+MORE TO COME HERE
 
 ## Review email messages reported by users
 
