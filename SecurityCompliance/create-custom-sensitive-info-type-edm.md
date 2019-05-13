@@ -6,7 +6,7 @@ manager: laurawi
 ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
-ms.date: 05/08/2019
+ms.date: 05/13/2019
 localization_priority: Priority
 ms.collection: 
 - M365-security-compliance
@@ -78,8 +78,7 @@ Setting up and configuring EDM-based classification involves saving sensitive da
     
     (You can copy our example and modify it for your use.)
     
-    ```
-        <?xml version="1.0" encoding="utf-8"?>
+    ```<?xml version="1.0" encoding="utf-8"?>
     <EdmSchema xmlns="http://schemas.microsoft.com/office/2018/edm">
     	<DataStore name="PatientRecords" description="Schema for patient records" version="1">
     		<Field name="PatientID" unique="true" searchable="true" />
@@ -181,8 +180,7 @@ Now that the schema for your database of sensitive information is defined, the n
 
     When you set up your rule package, make sure to correctly reference your .csv file and edm.xml file. (You can copy our example and modify it for your use.) 
 
-    ```
-    <?xml version="1.0" encoding="utf-8"?>
+    ```<?xml version="1.0" encoding="utf-8"?>
     <RulePackage xmlns="http://schemas.microsoft.com/office/2018/edm">
       <RulePack id="fd098e03-1796-41a5-8ab6-198c93c62b11">
         <Version build="0" major="2" minor="0" revision="0" />
@@ -393,8 +391,8 @@ You can use EDM-based classification with information protection features, such 
 
 15. On the **Review your settings** tab, review your policy. Make any needed changes. When you're ready, choose **Create**.
 
-> [!NOTE]
-> Allow approximately one hour for your new DLP policy to work its way through your data center.
+    > [!NOTE]
+    > Allow approximately one hour for your new DLP policy to work its way through your data center.
 
 ## Related articles
 
