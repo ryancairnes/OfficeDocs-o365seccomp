@@ -37,7 +37,7 @@
     }, 
     { 
         "source_path": "securitycompliance/security-and-compliance.md",
-        "redirect_url": "/securitycompliance/index.md", 
+        "redirect_url": "https://docs.microsoft.com/office365/securitycompliance/index", 
         "redirect_document_id": false
     },                    
     { 
@@ -77,7 +77,7 @@
     },
     { 
         "source_path": "securitycompliance/new-ome-encryption-policy.md",
-        "redirect_url": "/securitycompliance/ome-sensitive-info-types.md", 
+        "redirect_url": "https://docs.microsoft.com/office365/securitycompliance/ome-sensitive-info-types", 
         "redirect_document_id": true
     },                     
     { 
@@ -92,17 +92,17 @@
     },                     
     { 
         "source_path": "securitycompliance/office-365-cas-help.md",
-        "redirect_url": "/SecurityCompliance/office-365-cas-overview.md", 
+        "redirect_url": "https://docs.microsoft.com/office365/securitycompliance/office-365-cas-overview", 
         "redirect_document_id": true
     },
     {
         "source_path": "securitycompliance/prevent-email-from-being-marked-as-spam-0.md",
-        "redirect_url": "/SecurityCompliance/prevent-email-from-being-marked-as-spam.md", 
+        "redirect_url": "https://docs.microsoft.com/office365/securitycompliance/prevent-email-from-being-marked-as-spam", 
         "redirect_document_id": true
     },
     {
         "source_path": "securitycompliance/removing-a-user-domain-or-ip-address-from-a-block-list-after-sending-spam-email.md",
-        "redirect_url": "/SecurityCompliance/removing-user-from-restricted-users-portal-after-spam.md", 
+        "redirect_url": "https://docs.microsoft.com/office365/securitycompliance/removing-user-from-restricted-users-portal-after-spam", 
         "redirect_document_id": true
     },
     {
