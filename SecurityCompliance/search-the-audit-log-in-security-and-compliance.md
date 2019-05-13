@@ -73,7 +73,7 @@ Be sure to read the following items before you start searching the Office 365 au
   
 - When an audited activity is performed by a user or admin, an audit record is generated and stored in the Office 365 audit log for your organization. The length of time that an audit record is retained (and searchable in the audit log) depends on your Office 365 subscription, and specifically the type of the license that is assigned to a specific user.
 
-     - **Office 365 E1/E3** - Audit records are retained for 90 days. That means you can search the audit log for activities that were performed within the last 90 days.
+     - **Office 365 E3** - Audit records are retained for 90 days. That means you can search the audit log for activities that were performed within the last 90 days.
 
      - **Office 365 E5** - Audit records are also retained for 90 days. Retaining audit records for one year may eventually be available for E5 users and users with an E3/Exchange Online Plan 1 license and an Office 365 Advanced Compliance add-on license.
 
