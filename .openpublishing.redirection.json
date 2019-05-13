@@ -22,7 +22,7 @@
     }, 
     { 
         "source_path": "securitycompliance/monitor-security-and-compliance.md",
-        "redirect_url": "/securitycompliance/index.md", 
+        "redirect_url": "https://docs.microsoft.com/office365/securitycompliance/index", 
         "redirect_document_id": false
     }, 
     { 
@@ -42,7 +42,7 @@
     },                    
     { 
         "source_path": "securitycompliance/set-up-atp-anti-phishing-policies.md",
-        "redirect_url": "/securitycompliance/set-up-anti-phishing-policies.md", 
+        "redirect_url": "https://docs.microsoft.com/office365/securitycompliance/set-up-anti-phishing-policies", 
         "redirect_document_id": true
     },                    
     { 
