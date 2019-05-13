@@ -127,7 +127,7 @@
     },
     {
         "source_path": "securitycompliance/checklist-atp-setup.md",
-        "redirect_url": "/securitycompliance/protect-against-threats.md", 
+        "redirect_url": "https://docs.microsoft.com/office365/securitycompliance/protect-against-threats", 
         "redirect_document_id": true
     },
     {
