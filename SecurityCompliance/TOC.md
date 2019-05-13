@@ -182,19 +182,19 @@
 ## [Responding to a Compromised Email Account in Office 365](responding-to-a-compromised-email-account.md)
 
 # Records management
-## [File plan manager](file-plan-manager.md)
-## [Retention labels](labels.md)
-### [Comply with SEC Rule 17a-4](use-exchange-online-to-comply-with-sec-rule-17a-4.md)
+## File plan
+### [File plan manager](file-plan-manager.md)
+### [Retention labels](labels.md)
 ### [Create and publish retention labels by using PowerShell](https://docs.microsoft.com/en-us/office365/securitycompliance/bulk-create-publish-labels-using-powershell)
-## [Event-based retention](event-driven-retention.md)
-### [Automate event-based retention](automate-event-driven-retention.md)
-## [Disposition reviews](disposition-reviews.md)
-## Monitor records management
-### [View the data governance reports](view-the-data-governance-reports.md)
-### [View label activity for documents](view-label-activity-for-documents.md)
 ### [View label usage with label analytics](label-analytics.md)
-## More information about records management
-### [Watch videos from the Microsoft Data Governance team](https://go.microsoft.com/fwlink/?linkid=867039)
+### [View label activity for documents](view-label-activity-for-documents.md)
+### [View the data governance reports](view-the-data-governance-reports.md)
+## Events
+### [Event-based retention](event-driven-retention.md)
+### [Automate event-based retention](automate-event-driven-retention.md)
+## [Disposition](disposition-reviews.md)
+## More about records management
+### [Watch videos about records management](https://go.microsoft.com/fwlink/?linkid=867039)
 
 # Manage data governance
 ## [Import data](importing-pst-files-to-office-365.md)
@@ -465,11 +465,17 @@
 # Mail flow
 ## [Enable the Report Message add-in](enable-the-report-message-add-in.md)
 ## [Message trace in the Security & Compliance Center](message-trace-scc.md)
-## [Mail flow insights in the Security & Compliance Center](mail-flow-insights.md)
-### [Auto-forwarded messages report](mfi-auto-forwarded-messages-report.md)
-### [Mail loop insight](mfi-mail-loop-insight.md)
+## [Mail flow insights in the Security & Compliance Center](mail-flow-insights-v2.md)
+### [Mail flow map report](mfi-mail-flow-map-report.md)
+### [Top domain mail flow status insight](mfi-domain-mail-flow-status-insight.md)
+### [SMTP Auth clients report](mfi-smtp-auth-clients-report.md)
+### [Fix sender domain insight](mfi-sender-domain-insight.md)
+### [Non-delivery report](mfi-non-delivery-report.md)
+### [Non-accepted domain report](mfi-non-accepted-domain-report.md)
 ### [Outbound and inbound mail flow](mfi-outbound-and-inbound-mail-flow.md)
 ### [Queue alerts and Queues](mfi-queue-alerts-and-queues.md)
+### [Auto-forwarded messages report](mfi-auto-forwarded-messages-report.md)
+### [Mail loop insight](mfi-mail-loop-insight.md)
 ### [Slow mail flow rules insight](mfi-slow-mail-flow-rules-insight.md)
 
 # Security solutions
