@@ -149,6 +149,11 @@
         "source_path": "securitycompliance/mail-flow-insights.md",
         "redirect_url": "https://docs.microsoft.com/office365/securitycompliance/mail-flow-insights-v2", 
         "redirect_document_id": true
+    },
+    {
+        "source_path": "securitycompliance/security-best-practices.md",
+        "redirect_url": "https://docs.microsoft.com/office365/securitycompliance/security-roadmap", 
+        "redirect_document_id": true
     }                                
   ] 
 }
