@@ -100,7 +100,7 @@ Setting up and configuring EDM-based classification involves saving sensitive da
 
     `$edmSchemaXml=Get-Content .\edm.xml -Encoding Byte -ReadCount 0`
 
-    `New-DlpEdmSchema -FileData $edm -Confirm:$true`
+    `New-DlpEdmSchema -FileData $edmSchemaXml -Confirm:$true`
 
     You will be prompted to confirm, as follows:
 
@@ -110,7 +110,7 @@ Setting up and configuring EDM-based classification involves saving sensitive da
        [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [?] Help (default is "Y"):
 
     > [!TIP]
-    > If you want your changes to occur without confirmation, in Step 5, use this cmdlet instead: `New-DlpEdmSchema -FileData $edm`
+    > If you want your changes to occur without confirmation, in Step 5, use this cmdlet instead: `New-DlpEdmSchema -FileData $edmSchemaXml`
     
 Now that the schema for your database of sensitive information is defined, the next step is to set up a rule package. Proceed to the section [Set up a rule package](#set-up-a-rule-package).
 
@@ -126,7 +126,7 @@ Now that the schema for your database of sensitive information is defined, the n
 
     `$edm=Get-Content .\edm.xml -Encoding Byte -ReadCount 0`
 
-    `Set-DlpEdmSchema -FileData $edm -Confirm:$true`
+    `Set-DlpEdmSchema -FileData $edmSchemaXml -Confirm:$true`
 
     You will be prompted to confirm, as follows:
 
@@ -136,7 +136,7 @@ Now that the schema for your database of sensitive information is defined, the n
        [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [?] Help (default is "Y"):
 
     > [!TIP]
-    > If you want your changes to occur without confirmation, in Step 3, use this cmdlet instead: `Set-DlpEdmSchema -FileData $edm`
+    > If you want your changes to occur without confirmation, in Step 3, use this cmdlet instead: `Set-DlpEdmSchema -FileData $edmSchemaXml`
 
 #### Removing the schema for EDM-based classification
 
