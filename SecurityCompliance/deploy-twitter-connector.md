@@ -43,23 +43,19 @@ Download the prebuilt package from the Release section in the GitHub repository 
 
     ![](media/TCimage05.png)
 
-6. Go to **Certificates & secrets for the new app.**
+6. Go to **Certificates & secrets for the new app** and under **Client secrets** click **New client secret**.
 
    ![](media/TCimage06.png)
 
-7. Click **New client secret**.
-
-   ![](media/TCimage07.png)
-
-8. Create a new secret. In the description box, type the secret and then choose an expiration period. 
+7. Create a new secret. In the description box, type the secret and then choose an expiration period. 
 
    ![](media/TCimage08.png)
 
-9. Copy the value of the secret and save it to a text file or other storage location. This is the AAD application secret that you will use in later steps.
+8. Copy the value of the secret and save it to a text file or other storage location. This is the AAD application secret that you will use in later steps.
 
    ![](media/TCimage09.png)
 
-10. Go to **Manifest** and copy the identifierUris (which is also called the AAD application Uri) as highlighted in the following screenshot. Copy the AAD application Uri to a text file or other storage location. You’ll use it in Step 6.
+9. Go to **Manifest** and copy the identifierUris (which is also called the AAD application Uri) as highlighted in the following screenshot. Copy the AAD application Uri to a text file or other storage location. You’ll use it in Step 6.
 
     ![](media/TCimage10.png)
 
@@ -121,7 +117,7 @@ Download the prebuilt package from the Release section in the GitHub repository 
 
     - **StorageAccountConnectionString** – The connection string Uri that you copied after creating the Azure storage account in Step 3.
 
-    - **tenantId** – The tenant ID of your Office 365 organization that you copied after creating the Facebook connector app in Azure Active Directory in Step 2.
+    - **tenantId** – The tenant ID of your Office 365 organization that you copied after creating the Twitter connector app in Azure Active Directory in Step 2.
 
     ![](media/TCimage23.png)
 
@@ -129,7 +125,7 @@ Download the prebuilt package from the Release section in the GitHub repository 
 
    ![](media/TCimage24.png)
 
-5. The final step is to upload the connector app source code to Azure that you downloaded in Step 1. In a web browser, go to https://<AzureAppResourceName>.scm.azurewebsites.net/ZipDeployUi. For example, if the name of your Azure app resource (which you named in step 2 in this section) is **fbconnector**, then you would go to https://fbconnector.scm.azurewebsites.net/ZipDeployUi.
+5. The final step is to upload the connector app source code to Azure that you downloaded in Step 1. In a web browser, go to https://<AzureAppResourceName>.scm.azurewebsites.net/ZipDeployUi. For example, if the name of your Azure app resource (which you named in step 2 in this section) is **twitterconnector**, then you would go to https://twitterconnector.scm.azurewebsites.net/ZipDeployUi.
 
 6. Drag and drop the SampleConnector.zip (that you downloaded in Step 1) to this page. After the files are uploaded and the deployment is successful, the page will look similar to the following screenshot.
 
@@ -169,8 +165,8 @@ Download the prebuilt package from the Release section in the GitHub repository 
 8. Do the following tasks:
 
    - Select the checkbox to allow the connector app to sign in to Twitter.
-   - Add the OAuth redirect Uri using the following format: **\<connectorserviceuri>/Views/TwitterOAuth**, where the value of *connectorserviceuri* is the Azure app service URL for your organization; for example https://fbconnector.azurewebsites.net.
-   - Update the other callback URLs and then save your settings.
+   
+   - Add the OAuth redirect Uri using the following format: **\<connectorserviceuri>/Views/TwitterOAuth**, where the value of *connectorserviceuri* is the Azure app service URL for your organization; for example https://twitterconnector.azurewebsites.net/Views/TwitterOAuth.
 
    ![](media/TCimage32.png)
 
@@ -180,16 +176,15 @@ The Twitter developer app is now ready to use.
 
 1. Go to https://\<AzureAppResourceName>.azurewebsites.net (where AzureAppResourceName is the name of your Azure app resource that you named in Step 4) For example, if the name is **twitterconnector**, go to https://twitterconnector.azurewebsites.net. The home page of the app will look like the following screenshot.
 
-
-      ![](media/FBCimage41.png)
+   ![](media/FBCimage41.png)
 
 2. Click **Configure** to display a sign in page.
 
-       ![](media/FBCimage42.png)
+   ![](media/FBCimage42.png)
 
 3. In the Tenant Id box, type or paste your tenant Id (that you obtained in Step 2). In the password box, type or paste the APISecretKey (that you obtained in Step 2), and then click **Set Configuration Settings** to display the **Configuration Details** page.
 
-      ![](media/TCimage35.png)
+   ![](media/TCimage35.png)
 
 4. Under **Configuration Details**, enter the following configuration settings 
 
@@ -233,15 +228,14 @@ The Twitter developer app is now ready to use.
 
 6. Click **Continue with Twitter**.
 
->    ![](media/TCimage41.png)
-
-7. In the Twitter sign in page, sign in using the credentials for the account for your organization’s Twitter account.
+7. On the Twitter sign in page, sign in using the credentials for the account for your organization’s Twitter account.
 
    ![](media/TCimage42.png)
 
+   After you sign in, the Twitter page will display the following message, "Twitter Connector Job Successfully set up."
+
 8. Click **Finish** to complete setting up the Twitter connector.
 
-   ![](media/TCimage43.png)
 
 9. On the **Set Filters** page, you can apply a filter to import (and archive) items that are a certain age. Click **Next**.
 
@@ -257,6 +251,6 @@ The Twitter developer app is now ready to use.
 
     ![](media/TCimage47.png)
 
-12. o to the **Archive third-party data** page to see the progress of the import process.
+12. Go to the **Archive third-party data** page to see the progress of the import process.
 
     ![](media/TCimage48.png)
