@@ -142,18 +142,18 @@
     },
     {
         "source_path": "securitycompliance/office-365-secure-score.md",
-        "redirect_url": "https://docs.microsoft.com/office365/securitycompliance/microsoft-secure-score", 
+        "redirect_url": "/securitycompliance/microsoft-secure-score.md", 
         "redirect_document_id": true
     },
     {
         "source_path": "securitycompliance/mail-flow-insights.md",
-        "redirect_url": "https://docs.microsoft.com/office365/securitycompliance/mail-flow-insights-v2", 
+        "redirect_url": "/securitycompliance/mail-flow-insights-v2.md", 
         "redirect_document_id": true
     },
     {
         "source_path": "securitycompliance/security-best-practices.md",
-        "redirect_url": "https://docs.microsoft.com/office365/securitycompliance/security-roadmap", 
-        "redirect_document_id": true
+        "redirect_url": "/securitycompliance/security-roadmap.md", 
+        "redirect_document_id": false
     }                                
   ] 
 }
