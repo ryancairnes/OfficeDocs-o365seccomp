@@ -47,7 +47,7 @@ You must complete the following prerequisites before you can set up and configur
 
 The first step is to download the source code for the Twitter sample connector app that will use a Twitter API to connect to your Twitter account and extract data so you can import it to Office 365.
 
-1. Go to [this GitHub site](https://github.com/Microsoft/m365-sample-connector-csharp-aspnet/releases). 
+1. Go to [this GitHub site] (). 
 2. Under the latest release, click the **SampleConnector.zip** file.
 3. Save the ZIP file to a location on your local computer. You'll upload this zip file to Azure in Step 4.
 
