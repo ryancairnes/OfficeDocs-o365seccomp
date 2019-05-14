@@ -211,13 +211,13 @@
         "redirect_document_id": false
     },
     {
-        "source_path": "securitycompliance/security-best-practices.md",
-        "redirect_url": "https://docs.microsoft.com/office365/securitycompliance/security-roadmap", 
+        "source_path": "securitycompliance/new-in-office-365-cas-2018.md",
+        "redirect_url": "https://docs.microsoft.com/cloud-app-security/release-note-archive", 
         "redirect_document_id": false
     },
     {
-        "source_path": "securitycompliance/security-best-practices.md",
-        "redirect_url": "https://docs.microsoft.com/office365/securitycompliance/security-roadmap", 
+        "source_path": "securitycompliance/new-in-office-365-cas-2017.md",
+        "redirect_url": "https://docs.microsoft.com/cloud-app-security/release-note-archive", 
         "redirect_document_id": false
     },
     {
