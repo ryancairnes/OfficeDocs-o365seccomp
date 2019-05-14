@@ -181,8 +181,8 @@
         "redirect_document_id": false
     },
     {
-        "source_path": "securitycompliance/.md",
-        "redirect_url": "", 
+        "source_path": "securitycompliance/investigate-an-activity-in-office-365-cas.md",
+        "redirect_url": "https://docs.microsoft.com/cloud-app-security/investigate", 
         "redirect_document_id": false
     },
     {
