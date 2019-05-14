@@ -171,18 +171,18 @@
         "redirect_document_id": false
     },
     {
-        "source_path": "securitycompliance/security-best-practices.md",
-        "redirect_url": "https://docs.microsoft.com/office365/securitycompliance/security-roadmap", 
+        "source_path": "securitycompliance/web-traffic-logs-and-data-sources-for-ocas.md",
+        "redirect_url": "https://docs.microsoft.com/cloud-app-security/set-up-cloud-discovery", 
         "redirect_document_id": false
     },
     {
-        "source_path": "securitycompliance/security-best-practices.md",
-        "redirect_url": "https://docs.microsoft.com/office365/securitycompliance/security-roadmap", 
+        "source_path": "securitycompliance/manage-app-permissions-in-ocas.md",
+        "redirect_url": "https://docs.microsoft.com/cloud-app-security/manage-app-permissions", 
         "redirect_document_id": false
     },
     {
-        "source_path": "securitycompliance/security-best-practices.md",
-        "redirect_url": "https://docs.microsoft.com/office365/securitycompliance/security-roadmap", 
+        "source_path": "securitycompliance/.md",
+        "redirect_url": "", 
         "redirect_document_id": false
     },
     {
