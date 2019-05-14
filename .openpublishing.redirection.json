@@ -221,8 +221,8 @@
         "redirect_document_id": false
     },
     {
-        "source_path": "securitycompliance/security-best-practices.md",
-        "redirect_url": "https://docs.microsoft.com/office365/securitycompliance/security-roadmap", 
+        "source_path": "securitycompliance/get-ready-for-office-365-cas.md",
+        "redirect_url": "https://docs.microsoft.com/cloud-app-security/getting-started-with-cloud-app-security", 
         "redirect_document_id": false
     },
     {
