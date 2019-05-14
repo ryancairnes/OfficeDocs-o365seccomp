@@ -236,13 +236,13 @@
         "redirect_document_id": false
     },
     {
-        "source_path": "securitycompliance/security-best-practices.md",
-        "redirect_url": "https://docs.microsoft.com/office365/securitycompliance/security-roadmap", 
+        "source_path": "securitycompliance/anomaly-detection-policies-in-ocas.md",
+        "redirect_url": "https://docs.microsoft.com/cloud-app-security/anomaly-detection-policy", 
         "redirect_document_id": false
     },
     {
-        "source_path": "securitycompliance/security-best-practices.md",
-        "redirect_url": "https://docs.microsoft.com/office365/securitycompliance/security-roadmap", 
+        "source_path": "securitycompliance/ocas-conditional-access-app-control.md",
+        "redirect_url": "https://docs.microsoft.com/cloud-app-security/proxy-intro-aad", 
         "redirect_document_id": false
     },
     {
