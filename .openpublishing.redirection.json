@@ -166,8 +166,8 @@
         "redirect_document_id": false
     },
     {
-        "source_path": "securitycompliance/security-best-practices.md",
-        "redirect_url": "https://docs.microsoft.com/office365/securitycompliance/security-roadmap", 
+        "source_path": "securitycompliance/suspend-or-restore-an-account-in-ocas.md",
+        "redirect_url": "https://docs.microsoft.com/cloud-app-security/accounts", 
         "redirect_document_id": false
     },
     {
