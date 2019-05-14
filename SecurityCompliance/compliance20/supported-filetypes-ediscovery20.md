@@ -19,49 +19,131 @@ description: ""
 
 # Supported file types in Advanced eDiscovery
 
-Advance eDiscovery (Preview) supports many file types to many different levels, which are described in the following table. This list isn't finalized, and we'll add new file types as we continue our validation testing. The table also indicates if a file type can be viewed in the available viewers in Advance eDiscovery (Preview).
+Advanced eDiscovery supports many file types in many different ways, which are described in the following tables. This list isn't finalized, and we'll add new file types as we continue our validation testing. These tables indicate if a file type is supported for text extraction (OCR for images), viewable in the Native viewer, available in the Annotate viewer, and the possible extensions for each file type. For container file types (such as PST files and ZIP files), the tables indicate if data in the contain file can be extracted.
 
-| Mime Type | File class | Native viewer | Text viewer | Annotate viewer | Container extraction | Extensions |
-| :- | :- | :- | :- | :- | :- | :- |
-| application/msword | Document | Yes | Yes | Yes | No | .doc; .dat |
-| application/pdf | Document | Yes | Yes | Yes | No | .pdf |
-| application/rtf | Document | Yes | Yes | Yes | No | .rtf;.doc |
-| application/vnd.ms-excel | Document | Yes | Yes | Yes | No | .xls; .dat |
-| application/vnd.ms-excel.sheet.binary.macroenabled.12 | Productivity / Open Document Format | Yes | Yes | No | No | .xlsb |
-| application/vnd.ms-excel.sheet.macroenabled.12 | Document | Yes | Yes | Yes | No | .xlsm |
-| application/vnd.ms-excel.template.macroenabled.12 | Productivity / Open Document Format | No | Yes | No | No | .xltm |
-| application/vnd.ms-outlook | Productivity | No | No | No | No | .msg |
-| application/vnd.ms-outlook-pst | Productivity / Collaboration | No | No | No | Yes | .pst |
-| application/vnd.ms-powerpoint | Document | Yes | Yes | Yes | No | .ppt; .pps;.pot |
-| application/vnd.ms-word.document.macroenabled.12 | Document | Yes | Yes | Yes | No | .docm |
-| application/vnd.ms-word.template.macroenabled.12 | Document | Yes | Yes | Yes | No | .dotm |
-| application/vnd.oasis.opendocument.text | Document | Yes | Yes | Yes | No | .odt;  |
-| application/vnd.openxmlformats-officedocument.presentationml.presentation | Document | Yes | Yes | Yes | No | .pptx |
-| application/vnd.openxmlformats-officedocument.presentationml.slideshow | Productivity / Open Document Format | Yes | Yes | Yes | No | .ppsx |
-| application/vnd.openxmlformats-officedocument.presentationml.template | Document | Yes | Yes | Yes | No | .potx |
-| application/vnd.openxmlformats-officedocument.spreadsheetml.sheet | Document | Yes | Yes | Yes | No | .xlsx |
-| application/vnd.openxmlformats-officedocument.spreadsheetml.template | Document | Yes | Yes | Yes | No | .xltx |
-| application/vnd.openxmlformats-officedocument.wordprocessingml.document | Document | Yes | Yes | Yes | No | .docx |
-| application/vnd.openxmlformats-officedocument.wordprocessingml.template | Document | Yes | Yes | Yes | No | .dotx |
-| application/vnd.visio | Document | Yes | Yes | Yes | No | .vsd |
-| application/x-7z-compressed | Archive / Container | No | No | No | Yes | .7z |
-| application/xhtml+xml | Document | Yes | Yes | Yes | No | .xhtml |
-| application/xml | Document | Yes | Yes | Yes | No | .xml |
-| application/x-msaccess | Document | Yes | Yes | Yes | No | .mdb |
-| application/x-mspublisher | Document | Yes | Yes | Yes | No | .pub |
-| application/x-rar-compressed | Archive / Container | No | No | No | Yes | .rar |
-| application/zip | Archive / Container | No | No | No | Yes | .zip |
-| image/bmp | Image | Yes | Yes | Yes | No | .bmp |
-| image/emf | Image | Yes | Yes | Yes | No | .emf |
-| image/gif | Document | Yes | Yes | Yes | No | .gif |
-| image/jpeg | Image | Yes | Yes | Yes | No | .jpg; .jpeg; .dat;.jpgt |
-| image/png | Image | Yes | Yes | Yes | No | .png |
-| image/tiff | Image | Yes | Yes | Yes | No | .tif |
-| image/vnd.dwg | Document | Yes | Yes | Yes | No | .dwg;.dxf; |
-| image/wmf | Document | Yes | Yes | Yes | No | .wmf |
-| message/rfc822 | Productivity / Collaboration | No | No | No | No | .eml |
-| text/csv | Document | Yes | Yes | Yes | No | .csv |
-| text/html | Document | Yes | Yes | Yes | No | .html;.shtml; .htm |
-| text/plain | Document | Yes | Yes | Yes | No | .txt; .css;.con; .pl; .csv; .dat |
-| text/vcard-contact | Document | Yes | Yes | Yes | No | .vcf |
-||||||||
+## Archive / Container
+
+| Mime type | Container extraction | Possible extensions |
+| :- |  :- |  :- | 
+| application/x-7z-compressed | Yes | .7z |
+| application/x-rar-compressed | Yes | .rar |
+| application/x-tar | Yes | .tar |
+| application/zip | Yes | .zip |
+||||||
+
+## Database
+
+| Mime type | Text extraction | Native viewer | Annotate viewer | Possible extensions |
+| :- |  :- |  :- |  :- |  :- | 
+| application/x-msaccess | Yes | Yes | Yes | .mdb |
+||||||
+
+## Email
+
+| Mime type | Text extraction | Native viewer | Annotate viewer | Possible extensions |
+| :- |  :- |  :- |  :- |  :- | 
+| application/vnd.ms-outlook | Yes | Yes | Yes | .msg |
+| message/rfc822 | Yes | Yes | Yes | .eml |
+| text/vcard-contact | Yes | Yes | Yes | .vcf |
+||||||
+
+## Email Container
+
+| Mime type | Container extraction | Possible extensions |
+| :- |  :- |  :- | 
+| application/mbox | Yes | .mbox |
+| application/vnd.ms-outlook-pst | Yes | .pst |
+||||||
+
+## HTML
+
+| Mime type | Text extraction | Native viewer | Annotate viewer | Possible extensions |
+| :- |  :- |  :- |  :- |  :- | 
+| application/xhtml+xml | Yes | Yes | Yes | .xhtml |
+| application/xml | Yes | Yes | Yes | .xml |
+| text/html | Yes | Yes | Yes | .htm; .html; .shtml |
+||||||
+
+## Image
+
+| Mime type | OCR Text extraction | Native viewer | Annotate viewer | Possible extensions |
+| :- |  :- |  :- |  :- |  :- | 
+| image/bmp | Yes | Yes | Yes | .bmp |
+| image/emf | Yes | Yes | Yes | .emf |
+| image/gif | Yes | Yes | Yes | .gif |
+| image/jpeg | Yes | Yes | Yes | .jpeg; .jpg |
+| image/png | Yes | Yes | Yes | .png |
+| image/tiff | Yes | Yes | Yes | .tif |
+| image/vnd.dwg | Yes | Yes | Yes | .dwg; .dxf |
+| image/wmf | Yes | Yes | Yes | .wmf |
+||||||
+
+## Microsoft Excel
+
+| Mime type | Text extraction | Native viewer | Annotate viewer | Possible extensions |
+| :- |  :- |  :- |  :- |  :- | 
+| application/vnd.ms-excel | Yes | Yes | Yes | .dat; .xls |
+| application/vnd.ms-excel.sheet.binary.macroenabled.12 | Yes | Yes | No | .xlsb |
+| application/vnd.ms-excel.sheet.macroenabled.12 | Yes | Yes | Yes | .xlsm |
+| application/vnd.ms-excel.template.macroenabled.12 | Yes | No | No | .xltm |
+||||||
+
+## Microsoft Powerpoint
+
+| Mime type | Text extraction | Native viewer | Annotate viewer | Possible extensions |
+| :- |  :- |  :- |  :- |  :- | 
+| application/vnd.ms-powerpoint | Yes | Yes | Yes | .pot; .pps; .ppt |
+||||||
+
+## Microsoft Publisher
+
+| Mime type | Text extraction | Native viewer | Annotate viewer | Possible extensions |
+| :- |  :- |  :- |  :- |  :- | 
+| application/x-mspublisher | Yes | Yes | Yes | .pub |
+||||||
+
+## Microsoft Visio
+
+| Mime type | Text extraction | Native viewer | Annotate viewer | Possible extensions |
+| :- |  :- |  :- |  :- |  :- | 
+| application/vnd.visio | Yes | Yes | Yes | .vsd |
+||||||
+
+## Microsoft Word
+
+| Mime type | Text extraction | Native viewer | Annotate viewer | Possible extensions |
+| :- |  :- |  :- |  :- |  :- | 
+| application/msword | Yes | Yes | Yes | .dat; .doc |
+| application/rtf | Yes | Yes | Yes | .doc; .rtf |
+| application/vnd.ms-word.document.macroenabled.12 | Yes | Yes | Yes | .docm |
+| application/vnd.ms-word.template.macroenabled.12 | Yes | Yes | Yes | .dotm |
+| application/vnd.openxmlformats-officedocument.presentationml.presentation | Yes | Yes | Yes | .pptx |
+| application/vnd.openxmlformats-officedocument.presentationml.slideshow | Yes | Yes | Yes | .ppsx |
+| application/vnd.openxmlformats-officedocument.presentationml.template | Yes | Yes | Yes | .potx |
+| application/vnd.openxmlformats-officedocument.spreadsheetml.sheet | Yes | Yes | Yes | .xlsx |
+| application/vnd.openxmlformats-officedocument.spreadsheetml.template | Yes | Yes | Yes | .xltx |
+| application/vnd.openxmlformats-officedocument.wordprocessingml.document | Yes | Yes | Yes | .docx |
+| application/vnd.openxmlformats-officedocument.wordprocessingml.template | Yes | Yes | Yes | .dotx |
+||||||
+
+## Open Document Format
+
+| Mime type | Text extraction | Native viewer | Annotate viewer | Possible extensions |
+| :- |  :- |  :- |  :- |  :- | 
+| application/vnd.oasis.opendocument.text | Yes | Yes | Yes | .odt |
+||||||
+
+## Plain Text
+
+| Mime type | Text extraction | Native viewer | Annotate viewer | Possible extensions |
+| :- |  :- |  :- |  :- |  :- | 
+| text/csv | Yes | Yes | Yes | .csv |
+| text/plain | Yes | Yes | Yes | .con; .css; .csv; .dat; .pl; .txt |
+||||||
+
+## Portable Document Format
+
+| Mime type | Text extraction | Native viewer | Annotate viewer | Possible extensions |
+| :- |  :- |  :- |  :- |  :- | 
+| application/pdf | Yes | Yes | Yes | .pdf |
+||||||
