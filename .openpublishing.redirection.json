@@ -186,13 +186,13 @@
         "redirect_document_id": false
     },
     {
-        "source_path": "securitycompliance/security-best-practices.md",
-        "redirect_url": "https://docs.microsoft.com/office365/securitycompliance/security-roadmap", 
+        "source_path": "securitycompliance/review-office-365-cas-alerts.md",
+        "redirect_url": "https://docs.microsoft.com/cloud-app-security/monitor-alerts", 
         "redirect_document_id": false
     },
     {
-        "source_path": "securitycompliance/security-best-practices.md",
-        "redirect_url": "https://docs.microsoft.com/office365/securitycompliance/security-roadmap", 
+        "source_path": "securitycompliance/utilization-activities-for-ocas.md",
+        "redirect_url": "https://docs.microsoft.com/cloud-app-security/control", 
         "redirect_document_id": false
     },
     {
