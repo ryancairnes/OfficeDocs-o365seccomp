@@ -233,15 +233,17 @@ Download the prebuilt package from the Release section in the GitHub repository 
 
    ![](media/FBCimage44.png)
 
-2.  Click **Add a connector** and then click **Custom**.
+2.  Click **Add a connector** and then click **Facebook pages**.
 
     ![](media/FBCimage46.png)
 
-3.  On the **Add Connector App** page, enter the following information and then click **Next**.
+3.  On the **Add Connector App** page, enter the following information and then click **Validate connector**.
 
     - In the first box, type a name for the connector, such as **Facebook**.
     - In the second box, type or paste the value of the APISecretKey that you added in Step 4.
-    - In the third box, type of paste the Azure app service URL; for example **https://fbconnector.azurewebsites.net**.
+    - In the third box, type or paste the Azure app service URL; for example **https://fbconnector.azurewebsites.net**.
+ 
+    After the connector is successfully validated, click **Next**.
     
     ![](media/FBCimage47.png)
 

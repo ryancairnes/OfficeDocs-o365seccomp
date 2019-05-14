@@ -19,7 +19,7 @@ This article contains the step-by-step process to deploy a connector that uses t
 
 ## Step 1: Download the package
 
-Download the prebuilt package from the Release section in the GitHub repository at <TBD>. Under the latest release, download the zip file named **SampleConnector.zip**. You will upload this zip file to Azure in Step 4.
+Download the prebuilt package from the Release section in the GitHub repository at [https://github.com/microsoft/m365-sample-twitter-connector-csharp-aspnet/releases](https://github.com/microsoft/m365-sample-twitter-connector-csharp-aspnet/releases). Under the latest release, download the zip file named **SampleConnector.zip**. You will upload this zip file to Azure in Step 4.
 
 ## Step 2: Create an app in Azure Active Directory
 
@@ -205,15 +205,17 @@ The Twitter developer app is now ready to use.
 
     ![](media/TCimage36.png)
 
-2. Click **Add a connector** and then click **Custom**.
+2. Click **Add a connector** and then click **Twitter**.
 
    ![](media/TCimage37.png)
 
-3. On the **Add Connector App** page, enter the following information and then click **Next**.
+3. On the **Add Connector App** page, enter the following information and then click **Validate connector**.
 
     - In the first box, type a name for the connector, such as **Twitter**.
     - In the second box, type or paste the value of the APISecretKey that you added in Step 4.
-    - In the third box, type of paste the Azure app service URL; for example **https://twitterconnector.azurewebsites.net**.
+    - In the third box, type or paste the Azure app service URL; for example **https://twitterconnector.azurewebsites.net**.
+
+   After the connector is successfully validated, click **Next**.
 
    ![](media/TCimage38.png)
 
