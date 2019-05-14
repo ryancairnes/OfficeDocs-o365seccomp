@@ -264,6 +264,11 @@
         "source_path": "securitycompliance/ocas-deploy-conditional-access-app-control.md",
         "redirect_url": "https://docs.microsoft.com/cloud-app-security/proxy-deployment-aad", 
         "redirect_document_id": false
+    },
+    {
+        "source_path": "securitycompliance/security-policy-reference-information-for-ocas.md",
+        "redirect_url": "https://docs.microsoft.com/cloud-app-security/control",
+        "redirect_document_id": false
     }                                
   ] 
 }
