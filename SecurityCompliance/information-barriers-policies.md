@@ -3,7 +3,7 @@ title: "Define information barrier policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 05/10/2019
+ms.date: 05/14/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -138,7 +138,7 @@ After you have applied information barrier policies, follow these steps to verif
 
     `Get-InformationBarrierPoliciesApplicationStatus -All`
 
-3. To verify status for a specific user, run the `Get-InformationBarrierRecipientStatus` cmdlet.
+3. To verify status for a specific user, run the `Get-InformationBarrierRecipientStatus -user1 username` cmdlet, where *username* refers to the user account in Office 365. (For example, Megan Bowen at Contoso has a user account *meganb*.)
 
 ## Edit or remove an information barrier policy
 
@@ -153,8 +153,8 @@ If you want to edit or remove an information barrier policy, you must first set 
 4. To set the policy's status to inactive, use the `Set-InformationBarrierPolicy` cmdlet with the State parameter set to Inactive, as shown in the following example:
 
     `$identity  = | Get-InformationBarrierPolicy -Name "ResearchIBPolicy" | select Identity
-    Set-InformationBarrierPolicy -Identity $identity -State Inactive
-    `
+    Set-InformationBarrierPolicy -Identity $identity -State Inactive`
+
     In this example, we are setting an information barrier policy called ResearchIBPolicy to an inactive status.
 
 5. Run the `Start-InformationBarrierPoliciesApplication` cmdlet.
