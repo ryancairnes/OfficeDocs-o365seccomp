@@ -204,7 +204,7 @@
 ### [Automate event-based retention](automate-event-driven-retention.md)
 ## [Dispose data](disposition-reviews.md)
 ## Supervise communications
-### Supervision policies(supervision-policies.md)
+### [Supervision policies](supervision-policies.md)
 ### [Configure supervision policies for your organization](configure-supervision-policies.md)
 ## [Manage inactive mailboxes](inactive-mailboxes-in-office-365.md)
 ### [Create and manage inactive mailboxes](create-and-manage-inactive-mailboxes.md)
