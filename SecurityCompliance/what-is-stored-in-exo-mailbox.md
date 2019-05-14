@@ -39,4 +39,4 @@ The following table lists the Office 365 apps that store data in a cloud-based m
 ||||
 
 > [!NOTE]
-> Currently, if a hold is placed on a custodian mailbox in Advanced eDiscovery (Preview), content from Forms and Sway will not be preserved by the hold. 
+> Currently, if a hold is placed on a mailbox (by using holds in eDiscovery and Advanced eDiscovery cases), content from Forms and Sway will not be preserved by the hold. 

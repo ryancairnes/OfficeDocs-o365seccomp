@@ -6,7 +6,7 @@ manager: laurawi
 ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
-ms.date: 05/08/2019
+ms.date: 05/13/2019
 localization_priority: Priority
 ms.collection: 
 - M365-security-compliance
@@ -78,8 +78,7 @@ Setting up and configuring EDM-based classification involves saving sensitive da
     
     (You can copy our example and modify it for your use.)
     
-    ```
-        <?xml version="1.0" encoding="utf-8"?>
+    ```<?xml version="1.0" encoding="utf-8"?>
     <EdmSchema xmlns="http://schemas.microsoft.com/office/2018/edm">
     	<DataStore name="PatientRecords" description="Schema for patient records" version="1">
     		<Field name="PatientID" unique="true" searchable="true" />
@@ -101,7 +100,7 @@ Setting up and configuring EDM-based classification involves saving sensitive da
 
     `$edmSchemaXml=Get-Content .\edm.xml -Encoding Byte -ReadCount 0`
 
-    `New-DlpEdmSchema -FileData $edm -Confirm:$true`
+    `New-DlpEdmSchema -FileData $edmSchemaXml -Confirm:$true`
 
     You will be prompted to confirm, as follows:
 
@@ -111,7 +110,7 @@ Setting up and configuring EDM-based classification involves saving sensitive da
        [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [?] Help (default is "Y"):
 
     > [!TIP]
-    > If you want your changes to occur without confirmation, in Step 5, use this cmdlet instead: `New-DlpEdmSchema -FileData $edm`
+    > If you want your changes to occur without confirmation, in Step 5, use this cmdlet instead: `New-DlpEdmSchema -FileData $edmSchemaXml`
     
 Now that the schema for your database of sensitive information is defined, the next step is to set up a rule package. Proceed to the section [Set up a rule package](#set-up-a-rule-package).
 
@@ -127,7 +126,7 @@ Now that the schema for your database of sensitive information is defined, the n
 
     `$edm=Get-Content .\edm.xml -Encoding Byte -ReadCount 0`
 
-    `Set-DlpEdmSchema -FileData $edm -Confirm:$true`
+    `Set-DlpEdmSchema -FileData $edmSchemaXml -Confirm:$true`
 
     You will be prompted to confirm, as follows:
 
@@ -137,7 +136,7 @@ Now that the schema for your database of sensitive information is defined, the n
        [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [?] Help (default is "Y"):
 
     > [!TIP]
-    > If you want your changes to occur without confirmation, in Step 3, use this cmdlet instead: `Set-DlpEdmSchema -FileData $edm`
+    > If you want your changes to occur without confirmation, in Step 3, use this cmdlet instead: `Set-DlpEdmSchema -FileData $edmSchemaXml`
 
 #### Removing the schema for EDM-based classification
 
@@ -181,8 +180,7 @@ Now that the schema for your database of sensitive information is defined, the n
 
     When you set up your rule package, make sure to correctly reference your .csv file and edm.xml file. (You can copy our example and modify it for your use.) 
 
-    ```
-    <?xml version="1.0" encoding="utf-8"?>
+    ```<?xml version="1.0" encoding="utf-8"?>
     <RulePackage xmlns="http://schemas.microsoft.com/office/2018/edm">
       <RulePack id="fd098e03-1796-41a5-8ab6-198c93c62b11">
         <Version build="0" major="2" minor="0" revision="0" />
@@ -393,8 +391,8 @@ You can use EDM-based classification with information protection features, such 
 
 15. On the **Review your settings** tab, review your policy. Make any needed changes. When you're ready, choose **Create**.
 
-> [!NOTE]
-> Allow approximately one hour for your new DLP policy to work its way through your data center.
+    > [!NOTE]
+    > Allow approximately one hour for your new DLP policy to work its way through your data center.
 
 ## Related articles
 
