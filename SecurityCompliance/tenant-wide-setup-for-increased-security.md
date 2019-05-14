@@ -111,9 +111,9 @@ More information:
   
 - [Deploy Cloud App Security](https://docs.microsoft.com/cloud-app-security/getting-started-with-cloud-app-security)
     
-- [More information about Microsoft Cloud App Security](https://www.microsoft.com/en-us/cloud-platform/cloud-app-security)
+- [More information about Microsoft Cloud App Security](https://www.microsoft.com/cloud-platform/cloud-app-security)
     
-- [Overview of Office 365 Cloud App Security](office-365-cas-overview.md)
+- [What is Cloud App Security?](https://docs.microsoft.com/cloud-app-security/what-is-cloud-app-security)
     
 ![Cloud App Security dashboard](media/1fb2aa65-54b8-4746-9f5e-c187d339e9f5.png)
   
