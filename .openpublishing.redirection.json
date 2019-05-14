@@ -251,18 +251,18 @@
         "redirect_document_id": false
     },
     {
-        "source_path": "securitycompliance/security-best-practices.md",
-        "redirect_url": "https://docs.microsoft.com/office365/securitycompliance/security-roadmap", 
+        "source_path": "securitycompliance/ocas-access-policies.md",
+        "redirect_url": "https://docs.microsoft.com/cloud-app-security/access-policy-aad", 
         "redirect_document_id": false
     },
     {
-        "source_path": "securitycompliance/security-best-practices.md",
-        "redirect_url": "https://docs.microsoft.com/office365/securitycompliance/security-roadmap", 
+        "source_path": "securitycompliance/group-your-ip-addresses-in-ocas.md",
+        "redirect_url": "https://docs.microsoft.com/cloud-app-security/ip-tags", 
         "redirect_document_id": false
     },
     {
-        "source_path": "securitycompliance/security-best-practices.md",
-        "redirect_url": "https://docs.microsoft.com/office365/securitycompliance/security-roadmap", 
+        "source_path": "securitycompliance/ocas-deploy-conditional-access-app-control.md",
+        "redirect_url": "https://docs.microsoft.com/cloud-app-security/proxy-deployment-aad", 
         "redirect_document_id": false
     }                                
   ] 
