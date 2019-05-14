@@ -30,6 +30,8 @@ These policies can also help you overcome many modern compliance challenges, inc
 
 In some organizations, there may be a separation of duties between IT support and the compliance management group. Office 365 supports the separation between supervision policy feature configuration and the configuration of policies for captured communications. For example, the IT group for an organization may be responsible for setting up role permissions and groups to support supervision policies that are configured and managed by the organization's compliance team.
 
+For a quick overview of Supervision policies, see the [Supervision policy video](https://youtu.be/C3Y8WZ7o_dI) on the [Microsoft Mechanics channel](https://www.youtube.com/user/OfficeGarageSeries).
+
 To learn more about upcoming Supervision feature improvements and availability, see the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap).
 
 ## Scenarios for supervision policies
