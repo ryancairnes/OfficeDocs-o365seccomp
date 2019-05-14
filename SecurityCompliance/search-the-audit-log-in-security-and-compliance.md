@@ -75,10 +75,10 @@ Be sure to read the following items before you start searching the Office 365 au
 
      - **Office 365 E3** - Audit records are retained for 90 days. That means you can search the audit log for activities that were performed within the last 90 days.
 
-     - **Office 365 E5** - Audit records are retained for 365 days (one year). That means you can search the audit log for activities that were performed within the last year. Retaining audit records for one year is also available for users that are assigned an E3/Exchange Online Plan 1 license and have an Office 365 Advanced Compliance add-on license.
+     - **Office 365 E5** - Audit records are also retained for 90 days. Retaining audit records for one year may eventually be available for E5 users and users with an E3 license and an Office 365 Advanced Compliance add-on license.
 
         > [!NOTE]
-        > The private preview program for the one-year retention period for audit records for E5 organizations (or E3 organizations that have Advanced Compliance add-on licenses) is closed to new enrollment. This article will be updated when the one-year retention period is available in public preview or released for general availability.
+        > The private preview program for the one-year retention period for audit records for E5 organizations (or for users in E3 organizations that have Advanced Compliance add-on licenses) is closed to new enrollment. This article will be updated when the one-year retention period is available in public preview or released for general availability.
 
 - If you want to turn off audit log search in Office 365 for your organization, you can run the following command in remote PowerShell connected to your Exchange Online organization:
     
@@ -715,12 +715,12 @@ As previously explained, the retention period for audit records depends on your 
 
 - **Office 365 E3** - Audit records are retained for 90 days.
 
-- **Office 365 E5** - Audit records are retained for 365 days (one year). Retaining audit records for one year is also available for organizations that have an E3 subscription and an Office 365 Advanced Compliance add-on subscription.
+- **Office 365 E5** - Audit records are also retained for 90 days. Retaining audit records for one year may eventually be available for E5 users and users with an E3 license and an Office 365 Advanced Compliance add-on license.
 
      > [!NOTE]
      > As previously explained, the private preview program for the one-year retention period for audit records for E5 organizations (or E3 organizations that have Advanced Compliance add-on licenses) is closed to new enrollment. This article will be updated when the one-year retention period is available in public preview or released for general availability.
 
-Also note that the duration of the retention period for audit records is based on per-user licensing. For example, if a user in your organization is assigned an Office 365 E3 license, then the audit records for activities performed by that user are retained for 90 days. If a different user is assigned an Office 365 E5 license, their audit records are retained for one year. 
+Also note that the duration of the retention period for audit records is based on per-user licensing. For example, if a user in your organization is assigned an Office 365 E3 or E5 license, then the audit records for activities performed by that user are retained for 90 days.
 
 **Can I access the auditing data programmatically?**
 
