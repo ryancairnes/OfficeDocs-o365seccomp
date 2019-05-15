@@ -3,7 +3,7 @@ title: "Set up a custom blocked URLs list using Office 365 ATP Safe Links"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.date: 02/06/2019
 ms.service: O365-seccomp
