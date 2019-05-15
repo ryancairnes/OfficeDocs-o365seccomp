@@ -6,7 +6,7 @@ manager: laurawi
 ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
-ms.date: 05/13/2019
+ms.date: 05/15/2019
 localization_priority: Priority
 ms.collection: 
 - M365-security-compliance
@@ -76,7 +76,7 @@ Setting up and configuring EDM-based classification involves saving sensitive da
 
     As an example, the following .xml file defines the schema for a patient records database, with five fields specified as searchable: *PatientID*, *MRN*, *SSN*, *Phone*, and *DOB*. 
     
-    (You can copy our example and modify it for your use.)
+    (You can copy, modify, and use our example.)
     
     ```<?xml version="1.0" encoding="utf-8"?>
     <EdmSchema xmlns="http://schemas.microsoft.com/office/2018/edm">
@@ -160,7 +160,7 @@ Now that the schema for your database of sensitive information is defined, the n
 
 ### Set up a rule package
 
-1. Create a rule package in .xml format (with Unicode encoding), similar to the following example. (You can copy this example and modify it for your use.) 
+1. Create a rule package in .xml format (with Unicode encoding), similar to the following example. (You can copy, modify, and use our example.) 
 
    Recall from the previous procedure that our PatientRecords schema defines five fields as searchable: *PatientID*, *MRN*, *SSN*, *Phone*, and *DOB*. Our example rule package includes those fields and references the database schema file (edm.xml), with one *ExactMatch* items per searchable field. Consider the following ExactMatch item:
 
@@ -178,7 +178,7 @@ Now that the schema for your database of sensitive information is defined, the n
     - The idMatch value references a searchable field that is listed in the database schema file: **idMatch matches = "SSN"**.
     - The classification value references an existing or custom sensitive information type: **classification = "U.S. Social Security Number (SSN)"**. (In this case, we use the existing sensitive information type of U.S. Social Security Number.)
 
-    When you set up your rule package, make sure to correctly reference your .csv file and edm.xml file. (You can copy our example and modify it for your use.) 
+    When you set up your rule package, make sure to correctly reference your .csv file and edm.xml file. (You can copy, modify, and use our example.) 
 
     ```<?xml version="1.0" encoding="utf-8"?>
     <RulePackage xmlns="http://schemas.microsoft.com/office/2018/edm">
