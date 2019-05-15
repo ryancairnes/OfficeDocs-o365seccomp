@@ -113,7 +113,7 @@ Configure custom keyword dictionaries (or lexicons) to provide simple management
 
 #### Offensive language
 
-Monitor sent or received email messages in your organization for offensive language. The model uses a combination of machine learning, artificial intelligence, and keywords to identify inappropriate email messages as part of anti-harassment and cyber bullying monitoring requirements. To prevent or block offensive language in communications for your organization, create a [data loss prevention policy](create-test-tune-dlp-policy.md) that uses a [custom keyword dictionary](create-a-keyword-dictionary.md) of offensive terms.
+Monitor sent or received email messages in your organization for offensive language. The model uses a combination of machine learning, artificial intelligence, and keywords to identify inappropriate email messages as part of anti-harassment and cyber bullying monitoring requirements. To prevent or block offensive language for other communications in your organization, create a [data loss prevention policy](create-test-tune-dlp-policy.md) that uses a [custom keyword dictionary](create-a-keyword-dictionary.md) of offensive terms.
 
 The offensive language model currently supports English keywords and monitors the body of email messages. The offensive language model monitors email for sentiment associated with the following types of language:
 
