@@ -180,8 +180,6 @@ Now that the schema for your database of sensitive information is defined, the n
 
     When you set up your rule package, make sure to correctly reference your .csv file and edm.xml file. (You can copy, modify, and use our example.) 
 
-    
-    
     ```<?xml version="1.0" encoding="utf-8"?>
     <RulePackage xmlns="http://schemas.microsoft.com/office/2018/edm">
       <RulePack id="fd098e03-1796-41a5-8ab6-198c93c62b11">
@@ -221,7 +219,6 @@ Now that the schema for your database of sensitive information is defined, the n
       </Rules>
     </RulePackage>
     ```
-    
     
 2. Upload the rule package by running the following PowerShell cmdlets, one at a time:
 
