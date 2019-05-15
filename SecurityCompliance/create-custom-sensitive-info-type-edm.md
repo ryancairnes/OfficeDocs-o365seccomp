@@ -3,10 +3,10 @@ title: "Create custom sensitive information types with Exact Data Match"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
-ms.date: 05/08/2019
+ms.date: 05/15/2019
 localization_priority: Priority
 ms.collection: 
 - M365-security-compliance
@@ -22,13 +22,13 @@ description: "Create custom sensitive information types with Exact Data Match ba
 
 [Custom sensitive information types](custom-sensitive-info-types.md) are used to help prevent inadvertent or inappropriate sharing of sensitive information. As an administrator, you can use the [Security & Compliance Center](create-a-custom-sensitive-information-type.md) or [PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md) to define a custom sensitive information type based on patterns, evidence (keywords such as *employee*, *badge*, *ID*, and so on), character proximity (how close evidence is to characters in a particular pattern), and confidence levels. Such custom sensitive information types meet business needs for many organizations.
 
-But what if you wanted a custom sensitive information type that uses exact data values, instead of patterns and proximity? With Exact Data Match (EDM)-based classification, you can create a custom sensitive information type that:
-- is dynamic and refreshable;
-- is more scalable;
-- results in fewer false-positives;
-- is based on structured sensitive data;
-- handles sensitive information more securely; and
-- can be used with several Microsoft cloud services.
+But what if you wanted a custom sensitive information type that uses exact data values, instead of patterns and proximity? With Exact Data Match (EDM)-based classification, you can create a custom sensitive information type that is designed to:
+- be dynamic and refreshable;
+- be more scalable;
+- result in fewer false-positives;
+- work with structured sensitive data;
+- handle sensitive information more securely; and
+- be used with several Microsoft cloud services.
 
 ![EDM-based classification](media/EDMClassification.png)
 
@@ -45,7 +45,7 @@ EDM-based classification enables you to create custom sensitive information type
     - Office 365 Advanced Compliance
 
 > [!NOTE]
-> **EDM-based classification is currently in preview** for [DLP in Office 365](data-loss-prevention-policies.md) (with Exchange Online and Microsoft Teams) and [Cloud App Security](https://docs.microsoft.com/cloud-app-security). if your organization has [DLP capabilities](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description/messaging-policy-and-compliance-servicedesc#data-loss-prevention-dlp), you can try EDM-based classification. If you are not already participating in the preview, [contact Microsoft](https://resources.office.com/us-landing-spe-contactus.html?LCID=EN-US) to get started. 
+> **EDM-based classification is currently in preview** for [DLP in Office 365](data-loss-prevention-policies.md) (with Exchange Online and Microsoft Teams) and [Cloud App Security](https://docs.microsoft.com/cloud-app-security). If your organization has [DLP capabilities](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description/messaging-policy-and-compliance-servicedesc#data-loss-prevention-dlp), you can try EDM-based classification. If you are not already participating in the preview, [contact Microsoft](https://resources.office.com/us-landing-spe-contactus.html?LCID=EN-US) to get started. 
 
 ## The work flow at a glance
 
@@ -76,13 +76,12 @@ Setting up and configuring EDM-based classification involves saving sensitive da
 
     As an example, the following .xml file defines the schema for a patient records database, with five fields specified as searchable: *PatientID*, *MRN*, *SSN*, *Phone*, and *DOB*. 
     
-    (You can copy our example and modify it for your use.)
+    (You can copy, modify, and use our example.)
     
-    ```
-        <?xml version="1.0" encoding="utf-8"?>
+    ```<?xml version="1.0" encoding="utf-8"?>
     <EdmSchema xmlns="http://schemas.microsoft.com/office/2018/edm">
     	<DataStore name="PatientRecords" description="Schema for patient records" version="1">
-    		<Field name="PatientID" unique="true" searchable="true" />
+    		<Field name="PatientID" unique="false" searchable="true" />
     		<Field name="MRN" unique="false" searchable="true" />
     		<Field name="FirstName" unique="false" searchable="false" />
     		<Field name="LastName" unique="false" searchable="false" />
@@ -101,7 +100,7 @@ Setting up and configuring EDM-based classification involves saving sensitive da
 
     `$edmSchemaXml=Get-Content .\edm.xml -Encoding Byte -ReadCount 0`
 
-    `New-DlpEdmSchema -FileData $edm -Confirm:$true`
+    `New-DlpEdmSchema -FileData $edmSchemaXml -Confirm:$true`
 
     You will be prompted to confirm, as follows:
 
@@ -111,7 +110,7 @@ Setting up and configuring EDM-based classification involves saving sensitive da
        [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [?] Help (default is "Y"):
 
     > [!TIP]
-    > If you want your changes to occur without confirmation, in Step 5, use this cmdlet instead: `New-DlpEdmSchema -FileData $edm`
+    > If you want your changes to occur without confirmation, in Step 5, use this cmdlet instead: `New-DlpEdmSchema -FileData $edmSchemaXml`
     
 Now that the schema for your database of sensitive information is defined, the next step is to set up a rule package. Proceed to the section [Set up a rule package](#set-up-a-rule-package).
 
@@ -125,9 +124,9 @@ Now that the schema for your database of sensitive information is defined, the n
 
 3. To update your database schema, run the following cmdlets, one at a time:
 
-    `$edm=Get-Content .\edm.xml -Encoding Byte -ReadCount 0`
+    `$edmSchemaXml=Get-Content .\edm.xml -Encoding Byte -ReadCount 0`
 
-    `Set-DlpEdmSchema -FileData $edm -Confirm:$true`
+    `Set-DlpEdmSchema -FileData $edmSchemaXml -Confirm:$true`
 
     You will be prompted to confirm, as follows:
 
@@ -137,7 +136,7 @@ Now that the schema for your database of sensitive information is defined, the n
        [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [?] Help (default is "Y"):
 
     > [!TIP]
-    > If you want your changes to occur without confirmation, in Step 3, use this cmdlet instead: `Set-DlpEdmSchema -FileData $edm`
+    > If you want your changes to occur without confirmation, in Step 3, use this cmdlet instead: `Set-DlpEdmSchema -FileData $edmSchemaXml`
 
 #### Removing the schema for EDM-based classification
 
@@ -161,7 +160,7 @@ Now that the schema for your database of sensitive information is defined, the n
 
 ### Set up a rule package
 
-1. Create a rule package in .xml format (with Unicode encoding), similar to the following example. (You can copy this example and modify it for your use.) 
+1. Create a rule package in .xml format (with Unicode encoding), similar to the following example. (You can copy, modify, and use our example.) 
 
    Recall from the previous procedure that our PatientRecords schema defines five fields as searchable: *PatientID*, *MRN*, *SSN*, *Phone*, and *DOB*. Our example rule package includes those fields and references the database schema file (edm.xml), with one *ExactMatch* items per searchable field. Consider the following ExactMatch item:
 
@@ -179,10 +178,9 @@ Now that the schema for your database of sensitive information is defined, the n
     - The idMatch value references a searchable field that is listed in the database schema file: **idMatch matches = "SSN"**.
     - The classification value references an existing or custom sensitive information type: **classification = "U.S. Social Security Number (SSN)"**. (In this case, we use the existing sensitive information type of U.S. Social Security Number.)
 
-    When you set up your rule package, make sure to correctly reference your .csv file and edm.xml file. (You can copy our example and modify it for your use.) 
+    When you set up your rule package, make sure to correctly reference your .csv file and edm.xml file. (You can copy, modify, and use our example.) 
 
-    ```
-    <?xml version="1.0" encoding="utf-8"?>
+    ```<?xml version="1.0" encoding="utf-8"?>
     <RulePackage xmlns="http://schemas.microsoft.com/office/2018/edm">
       <RulePack id="fd098e03-1796-41a5-8ab6-198c93c62b11">
         <Version build="0" major="2" minor="0" revision="0" />
@@ -196,45 +194,26 @@ Now that the schema for your database of sensitive information is defined, the n
         </Details>
       </RulePack>
       <Rules>
-        <ExactMatch id = "E1CC861E-3FE9-4A58-82DF-4BD259EAB370" patternsProximity = "300" dataStore ="PatientRecords" recommendedConfidence = "65" >
-          <Pattern confidenceLevel="65">
-            <idMatch matches = "PatientID" classification = "Patient ID" />
-    	<match matches="LastName" />
-          </Pattern>
-        </ExactMatch>
         <ExactMatch id = "E1CC861E-3FE9-4A58-82DF-4BD259EAB371" patternsProximity = "300" dataStore ="PatientRecords" recommendedConfidence = "65" >
           <Pattern confidenceLevel="65">
             <idMatch matches = "SSN" classification = "U.S. Social Security Number (SSN)" />
           </Pattern>
-        </ExactMatch>
-        <ExactMatch id = "E1CC861E-3FE9-4A58-82DF-4BD259EAB372" patternsProximity = "300" dataStore ="PatientRecords" recommendedConfidence = "65" >
-          <Pattern confidenceLevel="65">
-            <idMatch matches = "MRN" classification = "MRN" />
-    	<match matches="LastName" />
-          </Pattern>
-        </ExactMatch>
-        <ExactMatch id = "E1CC861E-3FE9-4A58-82DF-4BD259EAB373" patternsProximity = "300" dataStore ="PatientRecords" recommendedConfidence = "65" >
-          <Pattern confidenceLevel="65">
-            <idMatch matches = "Phone" classification = "Phone Number" />
-    	<match matches="LastName" />
+          <Pattern confidenceLevel="75">
+            <idMatch matches = "SSN" classification = "U.S. Social Security Number (SSN)" />
+            <Any minMatches ="3" maxMatches ="100">
+              <match matches="PatientID" />
+              <match matches="MRN"/>
+              <match matches="FirstName"/>
+              <match matches="LastName"/>
+              <match matches="Phone"/>
+              <match matches="DOB"/>
+            </Any>
           </Pattern>
         </ExactMatch>
         <LocalizedStrings>
-          <Resource idRef="E1CC861E-3FE9-4A58-82DF-4BD259EAB370">
-            <Name default="true" langcode="en-us">PatientID Exact Match.</Name>
-            <Description default="true" langcode="en-us">EDM Sensitive type for detecting Patient ID.</Description>
-          </Resource>
           <Resource idRef="E1CC861E-3FE9-4A58-82DF-4BD259EAB371">
             <Name default="true" langcode="en-us">Patient SSN Exact Match.</Name>
             <Description default="true" langcode="en-us">EDM Sensitive type for detecting Patient SSN.</Description>
-          </Resource>
-          <Resource idRef="E1CC861E-3FE9-4A58-82DF-4BD259EAB372">
-            <Name default="true" langcode="en-us">Patient MRN Exact Match.</Name>
-            <Description default="true" langcode="en-us">EDM Sensitive type for detecting Patient MRN.</Description>
-          </Resource>
-          <Resource idRef="E1CC861E-3FE9-4A58-82DF-4BD259EAB373">
-            <Name default="true" langcode="en-us">Patient Contact Exact Match.</Name>
-            <Description default="true" langcode="en-us">EDM Sensitive type for detecting Patient Contact.</Description>
           </Resource>
         </LocalizedStrings>
       </Rules>
@@ -255,7 +234,7 @@ During this phase, you set up a custom security group and user account, and set 
 
 ### Set up the security group and user account
 
-1. As a global administrator, go to the admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) and [create a security group](https://docs.microsoft.com/office365/admin/email/create-edit-or-delete-a-security-group?view=o365-worldwide) called `EDM_DataUploaders`. Assign this group compliance administrator or Exchange Online administrator permissions.
+1. As a global administrator, go to the admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) and [create a security group](https://docs.microsoft.com/office365/admin/email/create-edit-or-delete-a-security-group?view=o365-worldwide) called `EDM_DataUploaders`. 
 
 2. Add one or more users to the *EDM_DataUploaders* security group. (These users will manage the database of sensitive information.)
 
@@ -266,9 +245,9 @@ During this phase, you set up a custom security group and user account, and set 
 > [!NOTE]
 > Before you begin this procedure, make sure that you are a member of the *EDM_DataUploaders* security group and a local admin on your machine.
 
-1. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639).  
+1. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639). By default, the installation location should be `C:\Program Files\Microsoft\EdmUploadAgent`. 
 
-2. To authorize the EDM Upload Agent, open Windows Command Prompt and run the following command:
+2. To authorize the EDM Upload Agent, open Windows Command Prompt (as an administrator), and then run the following command:
 
     `EdmUploadAgent.exe /Authorize`
 
@@ -312,6 +291,7 @@ You can refresh your sensitive information database daily or weekly, and the EDM
 
     > [!NOTE]
     > If there are no changes to the structure (field names) of the .csv file, you won't need to make any changes to your database schema file when you refresh the data. But if you must make changes, make sure to edit the [database schema](#editing-the-schema-for-edm-based-classification) and your [rule package](#set-up-a-rule-package) accordingly.        
+
 3. Use [Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/task-scheduler-start-page) to automate steps 2 and 3 in the [Index and upload the sensitive data](#index-and-upload-the-sensitive-data) procedure. You can schedule tasks using several methods:
     
     |Method  |What to do  |
@@ -393,8 +373,8 @@ You can use EDM-based classification with information protection features, such 
 
 15. On the **Review your settings** tab, review your policy. Make any needed changes. When you're ready, choose **Create**.
 
-> [!NOTE]
-> Allow approximately one hour for your new DLP policy to work its way through your data center.
+    > [!NOTE]
+    > Allow approximately one hour for your new DLP policy to work its way through your data center.
 
 ## Related articles
 

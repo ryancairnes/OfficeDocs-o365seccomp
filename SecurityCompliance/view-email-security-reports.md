@@ -3,8 +3,8 @@ title: "View email security reports in the Security &amp; Compliance Center"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 03/19/2019
-ms.audience: ITPro
+ms.date: 05/13/2019
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -26,7 +26,7 @@ A variety of reports are available in the [Security &amp; Compliance Center](htt
 Your email security reports include the following:
 - [Encryption report](#encryption-report) (NEW!)
 - [Threat Protection Status report](#threat-protection-status-report) 
-- [Malware Detections report](#malware-detections-report)    
+- [Malware Detections report](#malware-detections-report) 
 - [Top Malware report](#top-malware-report)
 - [Top Senders and Recipients report](#top-senders-and-recipients-report)
 - [Spoof Detections report](#spoof-detections-report)
@@ -36,27 +36,27 @@ Your email security reports include the following:
     
 ## Encryption report
 
-(**NEW!**) The **Encryption report** shows information about email messages that were encrypted through policies or by end-user controls. Your organization's security team can use this information to identify patterns and proactively apply or adjust policies for sensitive email messages.
+(**NEW!**) The **Encryption report** shows information about email messages that were encrypted, either through your organization's policies, or through end-user controls. Your organization's security team can use information in this report to identify patterns and proactively apply or adjust policies for sensitive email messages.
 
 To view this report, in the Security & Compliance Center, go to **Reports** \> **Dashboard** \> **Encryption report**.
 
 ![Encryption report](media/encryptionreport-defaultview.png) 
 
-When the report first opens, you'll see data about encryption methods used on email messages for the past seven (7) days. You can change the date range and details in the report by clicking Filters in the upper right corner of the screen.
+When the report first opens, you'll see data about encryption methods used on email messages for the past seven (7) days. You can change the date range and the details that are displayed in the report by clicking **Filters** in the upper right corner of the screen.
 
 ![Encryption report filters](media/encryptionreport-filters.png)   
 
-You can also use the Break down by menu to view data by encryption template (or method).
+You can also use the **Break down by** menu to view data by encryption template (or method).
 
 ![Encryption method or template](media/encryptionreport-breakdownby.png)
 
-And, you can use the View data by menu to change the view to see counts of encrypted messages to the top five recipient domains.
+And, you can use the **View data by** menu to change the view to see counts of encrypted messages to the top five recipient domains.
 
 ![Encryption report view data by menu](media/encryptionreport-viewdataby.png)
 
 With the flexibility of the new Encryption report, you can view trends and take appropriate actions. For example, if you see a high number of email messages encrypted by users, you might want to add an encryption policy to automate encryption for certain use cases. (To get help with that, see [Define mail flow rules to encrypt email messages in Office 365](define-mail-flow-rules-to-encrypt-email.md).) As another example, if you have a number of encryption templates available but no one is using them, you might explore whether users need training for that feature. 
 
-Use this report enables your organization's security and compliance team to monitor how message encryption is being used, and whether further actions are needed.
+Use this report enables your organization's security and compliance team to monitor how message encryption is being used, and whether further actions are needed. To learn more about encryption, see [Email encryption in Office 365](email-encryption.md).
 
 ## Threat Protection Status report
 
@@ -69,7 +69,7 @@ To view this report, in the [Security &amp; Compliance Center](https://protectio
   
 ![Threat Protection Status report](media/0ff86e12-c2b2-4d89-92a5-cefb054dc070.png)
   
-When you first open the Threat Protection Status report, the report shows data for the past seven days by default; however, you can click **Filters** and change the date range for up to 90 days of detail. This report is useful for viewing the effectiveness and impact of your organization's Exchange Online Protection features, and for longer-term trending. 
+When you first open the Threat Protection Status report, the report shows data for the past seven days by default; however, you can click **Filters** and change the date range for up to 90 days of detail. This report is useful for viewing the effectiveness and impact of your organization's [Exchange Online Protection features](eop/eop-features.md), and for longer-term trending. 
   
 ![Threat Protection Status report filters](media/ab6b6b8d-e97a-4c3a-8fb1-c4940dcb7a07.png)
   
@@ -85,11 +85,11 @@ To view this report, in the [Security &amp; Compliance Center](https://protectio
   
 ![Malware Detections Report example](media/a1ba61a3-565a-46d6-b0d5-6a6cff6b31d7.png)
   
-Similar to other reports, like the Threat Protection Status report, the report displays data for the past seven days by default. However, you can choose **Filters** to change the date range. 
+Similar to other reports, like the [Threat Protection Status report](#threat-protection-status-report), the report displays data for the past seven days by default. However, you can choose **Filters** to change the date range. 
   
 ## Top Malware report
 
-The **Top Malware** report shows the various kinds of malware that was detected by Exchange Online. 
+The **Top Malware** report shows the various kinds of malware that was detected by [Exchange Online](eop/eop-features.md). 
   
 To view this report, in the [Security &amp; Compliance Center](https://protection.office.com), go to **Reports** \> **Dashboard** \> **Top Malware**.
   
@@ -115,7 +115,7 @@ When you hover over a wedge in the pie chart, you can see a count of messages se
   
 Click (or tap) the report to open it in a new browser window, where you can get a more detailed view of the report.
   
-Use the **Show data for** list to choose whether to view data for top senders, receivers, spam recipients, and malware recipients. You can also see who received malware that was detected by Advanced Threat Protection. 
+Use the **Show data for** list to choose whether to view data for top senders, receivers, spam recipients, and malware recipients. You can also see who received malware that was detected by [Exchange Online Protection](eop/exchange-online-protection-overview.md). 
   
 ![Use the Show Data For list to view specific information](media/bd91449f-7d42-4749-8666-7b44044049b8.png)
   
@@ -131,7 +131,7 @@ To view this report, in the [Security &amp; Compliance Center](https://protectio
   
 When you hover over a day in the chart, you can see how many spoof mail messages came through.
   
-Click (or tap) the report to open it in a new browser window, where you can get a more detailed view of the report.
+Click (or tap) the report to open it in a new browser window, where you can get a more detailed view of the report. To learn more about anti-spoof protection, see [Anti-spoofing protection in Office 365](anti-spoofing-protection.md).
   
 ## Spam Detections report
 
@@ -147,7 +147,7 @@ Click (or tap) the report to open it in a new browser window, where you can get 
   
 ![The Spam Detections report tells you how many spam messages were blocked or filtered out](media/370ec67d-eb30-4863-bfcf-68a41be02295.png)
   
-Below the chart, you'll see a list of spam items that were detected. Select an item to view additional information, such as whether the spam item was inbound or outbound, its message ID, and its recipient.
+Below the chart, you'll see a list of spam items that were detected. Select an item to view additional information, such as whether the spam item was inbound or outbound, its message ID, and its recipient. To learn more about anti-spam protection, see [Office 365 email anti-spam protection](anti-spam-protection.md).
   
 ## Sent and received email report
 
@@ -168,6 +168,8 @@ You can use the **Break down by** list to view information by type or by directi
 Below the chart, you'll see a list of email categories, such as **GoodMail**, **SpamContentFiltered**, and so on. Select a category to view additional information, such as actions that were taken for malware, and whether email was incoming or outgoing.
   
 ![This report tells you about anti-malware, anti-spam, and other message detections](media/9ea4b606-f27a-46ee-97a7-be018e2b839c.png)
+
+To learn more about email intelligence, see [Mail flow intelligence in Office 365](mail-flow-intelligence-in-office-365.md).
   
 ## User-reported messages report
 
@@ -212,7 +214,7 @@ To learn more, see the following resources:
    
 ## What if the reports aren't showing data?
 
-If you are not seeing data in your reports, double-check that your policies are set up correctly. To learn more, see [Anti-spam and anti-malware protection in Office 365](anti-spam-and-anti-malware-protection.md).
+If you are not seeing data in your reports, double-check that your policies are set up correctly. To learn more, see [Protect against threats in Office 365](protect-against-threats.md).
   
 ## Related topics
 
