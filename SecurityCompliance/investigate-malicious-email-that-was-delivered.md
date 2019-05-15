@@ -3,8 +3,8 @@ title: "Find and investigate malicious email that was delivered (Office 365 Thre
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 05/09/2019
-ms.audience: ITPro
+ms.date: 03/19/2019
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal

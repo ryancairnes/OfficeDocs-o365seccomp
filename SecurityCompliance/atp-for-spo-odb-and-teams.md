@@ -3,7 +3,7 @@ title: "Office 365 ATP for SharePoint, OneDrive, and Microsoft Teams"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.date: 03/19/2019
 ms.topic: article
 ms.service: O365-seccomp

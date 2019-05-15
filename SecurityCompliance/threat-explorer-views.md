@@ -3,8 +3,8 @@ title: "Views in Threat Explorer and real-time detections"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 05/03/2019
-ms.audience: ITPro
+ms.date: 03/18/2019
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal

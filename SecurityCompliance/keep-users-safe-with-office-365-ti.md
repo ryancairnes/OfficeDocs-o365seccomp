@@ -3,8 +3,8 @@ title: "Keep your Office 365 users safe with Office 365 Threat Investigation and
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 05/09/2019
-ms.audience: ITPro
+ms.date: 02/13/2019
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
