@@ -3,7 +3,7 @@ title: "Office 365 ATP Safe Attachments"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.date: 04/04/2019
 ms.topic: overview
 ms.service: O365-seccomp
