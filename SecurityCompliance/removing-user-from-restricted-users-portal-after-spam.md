@@ -20,9 +20,9 @@ description: "If a user continuously sends emails from Office 365 that are class
 
 # Removing a user from the Restricted Users portal after sending spam email
 
-If a user continuously sends emails from Office 365 that are classified as spam, they will be restricted from sending any more messages outbound. The user will be listed in the service as a bad outbound sender and will receive a Non-Delivery Report (NDR) that states:
+If a user continuously sends emails from Office 365 that are classified as spam, they will be restricted from sending email, but will still receive it. The user will be listed in the service as a bad outbound sender and will receive a Non-Delivery Report (NDR) that states:
 
-- Your message couldn't be delivered because you weren't recognized as a valid sender. The most common reason for this is that your email address is suspected of sending spam and it's no longer allowed to send messages outside of your organization. Contact your email admin for assistance. Remote Server returned '550 5.1.8 Access denied, bad outbound sender'
+- Your message couldn't be delivered because you weren't recognized as a valid sender. The most common reason for this is that your email address is suspected of sending spam and it's no longer allowed to send email. Contact your email admin for assistance. Remote Server returned '550 5.1.8 Access denied, bad outbound sender'
 
 ## What do you need to know before you begin?
 <a name="sectionSection0"> </a>
@@ -42,7 +42,7 @@ You complete this task in the Security & Compliance Center (SCC). [Go to the Sec
     > [!TIP]
     > To go directly to the **Restricted Users** page (formerly known as the Action Center) in the Security &amp; Compliance Center, use this URL: > [https://protection.office.com/#/restrictedusers](https://protection.office.com/?hash=/restrictedusers)
 
-2. This page will contain the list of users that have been blocked from sending mail to outside of your organization.  Find the user you wish to remove restrictions on and then click on **Unblock**.
+2. This page will contain the list of users that have been blocked from sending email.  Find the user you wish to remove restrictions on and then click on **Unblock**.
 
 3. A fly-out will go into the details about the account whose sending is restricted. You should go through the recommendations to ensure you're taking the proper actions in case the account is actually compromised. Click **Next** when done.
 
