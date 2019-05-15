@@ -3,7 +3,7 @@ title: "Custom sensitive information types for DLP"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 ms.date: 04/23/2019
