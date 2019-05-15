@@ -4,7 +4,7 @@ ms.author: deniseb
 author: denisebmsft
 manager: laurawi
 ms.date: 6/29/2018
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 f1_keywords:
 - 'ms.o365.cc.UnifiedDLPRuleContentPropertyContainsWords'
