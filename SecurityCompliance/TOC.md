@@ -182,19 +182,19 @@
 ## [Responding to a Compromised Email Account in Office 365](responding-to-a-compromised-email-account.md)
 
 # Records management
-## [File plan manager](file-plan-manager.md)
-## [Retention labels](labels.md)
-### [Comply with SEC Rule 17a-4](use-exchange-online-to-comply-with-sec-rule-17a-4.md)
+## File plan
+### [File plan manager](file-plan-manager.md)
+### [Retention labels](labels.md)
 ### [Create and publish retention labels by using PowerShell](https://docs.microsoft.com/en-us/office365/securitycompliance/bulk-create-publish-labels-using-powershell)
-## [Event-based retention](event-driven-retention.md)
-### [Automate event-based retention](automate-event-driven-retention.md)
-## [Disposition reviews](disposition-reviews.md)
-## Monitor records management
-### [View the data governance reports](view-the-data-governance-reports.md)
-### [View label activity for documents](view-label-activity-for-documents.md)
 ### [View label usage with label analytics](label-analytics.md)
-## More information about records management
-### [Watch videos from the Microsoft Data Governance team](https://go.microsoft.com/fwlink/?linkid=867039)
+### [View label activity for documents](view-label-activity-for-documents.md)
+### [View the data governance reports](view-the-data-governance-reports.md)
+## Events
+### [Event-based retention](event-driven-retention.md)
+### [Automate event-based retention](automate-event-driven-retention.md)
+## [Disposition](disposition-reviews.md)
+## More about records management
+### [Watch videos about records management](https://go.microsoft.com/fwlink/?linkid=867039)
 
 # Manage data governance
 ## [Import data](importing-pst-files-to-office-365.md)
