@@ -81,7 +81,7 @@ Setting up and configuring EDM-based classification involves saving sensitive da
     ```<?xml version="1.0" encoding="utf-8"?>
     <EdmSchema xmlns="http://schemas.microsoft.com/office/2018/edm">
     	<DataStore name="PatientRecords" description="Schema for patient records" version="1">
-    		<Field name="PatientID" unique="true" searchable="true" />
+    		<Field name="PatientID" unique="false" searchable="true" />
     		<Field name="MRN" unique="false" searchable="true" />
     		<Field name="FirstName" unique="false" searchable="false" />
     		<Field name="LastName" unique="false" searchable="false" />
@@ -180,6 +180,8 @@ Now that the schema for your database of sensitive information is defined, the n
 
     When you set up your rule package, make sure to correctly reference your .csv file and edm.xml file. (You can copy, modify, and use our example.) 
 
+    
+    
     ```<?xml version="1.0" encoding="utf-8"?>
     <RulePackage xmlns="http://schemas.microsoft.com/office/2018/edm">
       <RulePack id="fd098e03-1796-41a5-8ab6-198c93c62b11">
@@ -194,50 +196,32 @@ Now that the schema for your database of sensitive information is defined, the n
         </Details>
       </RulePack>
       <Rules>
-        <ExactMatch id = "E1CC861E-3FE9-4A58-82DF-4BD259EAB370" patternsProximity = "300" dataStore ="PatientRecords" recommendedConfidence = "65" >
-          <Pattern confidenceLevel="65">
-            <idMatch matches = "PatientID" classification = "Patient ID" />
-    	<match matches="LastName" />
-          </Pattern>
-        </ExactMatch>
         <ExactMatch id = "E1CC861E-3FE9-4A58-82DF-4BD259EAB371" patternsProximity = "300" dataStore ="PatientRecords" recommendedConfidence = "65" >
           <Pattern confidenceLevel="65">
             <idMatch matches = "SSN" classification = "U.S. Social Security Number (SSN)" />
           </Pattern>
-        </ExactMatch>
-        <ExactMatch id = "E1CC861E-3FE9-4A58-82DF-4BD259EAB372" patternsProximity = "300" dataStore ="PatientRecords" recommendedConfidence = "65" >
-          <Pattern confidenceLevel="65">
-            <idMatch matches = "MRN" classification = "MRN" />
-    	<match matches="LastName" />
-          </Pattern>
-        </ExactMatch>
-        <ExactMatch id = "E1CC861E-3FE9-4A58-82DF-4BD259EAB373" patternsProximity = "300" dataStore ="PatientRecords" recommendedConfidence = "65" >
-          <Pattern confidenceLevel="65">
-            <idMatch matches = "Phone" classification = "Phone Number" />
-    	<match matches="LastName" />
+          <Pattern confidenceLevel="75">
+            <idMatch matches = "SSN" classification = "U.S. Social Security Number (SSN)" />
+            <Any minMatches ="3" maxMatches ="100">
+              <match matches="PatientID" />
+              <match matches="MRN"/>
+              <match matches="FirstName"/>
+              <match matches="LastName"/>
+              <match matches="Phone"/>
+              <match matches="DOB"/>
+            </Any>
           </Pattern>
         </ExactMatch>
         <LocalizedStrings>
-          <Resource idRef="E1CC861E-3FE9-4A58-82DF-4BD259EAB370">
-            <Name default="true" langcode="en-us">PatientID Exact Match.</Name>
-            <Description default="true" langcode="en-us">EDM Sensitive type for detecting Patient ID.</Description>
-          </Resource>
           <Resource idRef="E1CC861E-3FE9-4A58-82DF-4BD259EAB371">
             <Name default="true" langcode="en-us">Patient SSN Exact Match.</Name>
             <Description default="true" langcode="en-us">EDM Sensitive type for detecting Patient SSN.</Description>
-          </Resource>
-          <Resource idRef="E1CC861E-3FE9-4A58-82DF-4BD259EAB372">
-            <Name default="true" langcode="en-us">Patient MRN Exact Match.</Name>
-            <Description default="true" langcode="en-us">EDM Sensitive type for detecting Patient MRN.</Description>
-          </Resource>
-          <Resource idRef="E1CC861E-3FE9-4A58-82DF-4BD259EAB373">
-            <Name default="true" langcode="en-us">Patient Contact Exact Match.</Name>
-            <Description default="true" langcode="en-us">EDM Sensitive type for detecting Patient Contact.</Description>
           </Resource>
         </LocalizedStrings>
       </Rules>
     </RulePackage>
     ```
+    
     
 2. Upload the rule package by running the following PowerShell cmdlets, one at a time:
 
