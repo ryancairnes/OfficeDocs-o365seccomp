@@ -124,7 +124,7 @@ Now that the schema for your database of sensitive information is defined, the n
 
 3. To update your database schema, run the following cmdlets, one at a time:
 
-    `$edm=Get-Content .\edm.xml -Encoding Byte -ReadCount 0`
+    `$edmSchemaXml=Get-Content .\edm.xml -Encoding Byte -ReadCount 0`
 
     `Set-DlpEdmSchema -FileData $edmSchemaXml -Confirm:$true`
 
@@ -234,7 +234,7 @@ During this phase, you set up a custom security group and user account, and set 
 
 ### Set up the security group and user account
 
-1. As a global administrator, go to the admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) and [create a security group](https://docs.microsoft.com/office365/admin/email/create-edit-or-delete-a-security-group?view=o365-worldwide) called `EDM_DataUploaders`. Assign this group compliance administrator or Exchange Online administrator permissions.
+1. As a global administrator, go to the admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) and [create a security group](https://docs.microsoft.com/office365/admin/email/create-edit-or-delete-a-security-group?view=o365-worldwide) called `EDM_DataUploaders`. 
 
 2. Add one or more users to the *EDM_DataUploaders* security group. (These users will manage the database of sensitive information.)
 
@@ -245,9 +245,9 @@ During this phase, you set up a custom security group and user account, and set 
 > [!NOTE]
 > Before you begin this procedure, make sure that you are a member of the *EDM_DataUploaders* security group and a local admin on your machine.
 
-1. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639).  
+1. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639). By default, the installation location should be `C:\Program Files\Microsoft\EdmUploadAgent`. 
 
-2. To authorize the EDM Upload Agent, open Windows Command Prompt and run the following command:
+2. To authorize the EDM Upload Agent, open Windows Command Prompt (as an administrator), and then run the following command:
 
     `EdmUploadAgent.exe /Authorize`
 
@@ -291,6 +291,7 @@ You can refresh your sensitive information database daily or weekly, and the EDM
 
     > [!NOTE]
     > If there are no changes to the structure (field names) of the .csv file, you won't need to make any changes to your database schema file when you refresh the data. But if you must make changes, make sure to edit the [database schema](#editing-the-schema-for-edm-based-classification) and your [rule package](#set-up-a-rule-package) accordingly.        
+
 3. Use [Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/task-scheduler-start-page) to automate steps 2 and 3 in the [Index and upload the sensitive data](#index-and-upload-the-sensitive-data) procedure. You can schedule tasks using several methods:
     
     |Method  |What to do  |
