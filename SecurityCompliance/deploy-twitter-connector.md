@@ -35,7 +35,7 @@ Download the prebuilt package from the Release section in the GitHub repository 
 
    ![](media/TCimage03.png)
 
-4. Register the application. Under Redirect URI, select Web in the application type dropdown list and then type <https://portal.azure.com> in the box for the URI.
+4. Register the application. Under **Redirect URI (optional)**, select Web in the application type dropdown list and then type <https://portal.azure.com> in the box for the URI.
 
    ![](media/TCimage04.png)
 
@@ -111,7 +111,7 @@ Download the prebuilt package from the Release section in the GitHub repository 
 
    ![](media/TCimage22.png)
 
-3. Go to the newly created web app resource, click **Application Settings** in the left navigation pane. Under Application settings, click Add new setting and add the following three settings. Use the values (that you copied to the text file from the previous steps): 
+3. Go to the newly created web app resource, click **Application Settings** in the left navigation pane. Under **Application settings**, click **Add new setting** and add the following three settings. Use the values (that you copied to the text file from the previous steps): 
 
     - **APISecretKey** – You can type any value as the secret. This will be used to access the connector web app in Step 7.
 
@@ -174,7 +174,7 @@ The Twitter developer app is now ready to use.
 
 ## Step 6: Configure the connector web app 
 
-1. Go to https://\<AzureAppResourceName>.azurewebsites.net (where AzureAppResourceName is the name of your Azure app resource that you named in Step 4) For example, if the name is **twitterconnector**, go to https://twitterconnector.azurewebsites.net. The home page of the app will look like the following screenshot.
+1. Go to https://\<AzureAppResourceName>.azurewebsites.net (where **AzureAppResourceName** is the name of your Azure app resource that you named in Step 4) For example, if the name is **twitterconnector**, go to https://twitterconnector.azurewebsites.net. The home page of the app will look like the following screenshot.
 
    ![](media/FBCimage41.png)
 
@@ -237,7 +237,6 @@ The Twitter developer app is now ready to use.
    After you sign in, the Twitter page will display the following message, "Twitter Connector Job Successfully set up."
 
 8. Click **Finish** to complete setting up the Twitter connector.
-
 
 9. On the **Set Filters** page, you can apply a filter to import (and archive) items that are a certain age. Click **Next**.
 

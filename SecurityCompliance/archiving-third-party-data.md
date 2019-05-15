@@ -34,10 +34,10 @@ After third-party data is imported, you can apply Office 365 compliance features
 
 There are two ways to import and archive third-party data in Office 365:
 
-- **Use a third-party data connector in the Security & Compliance Center** - Use a custom data connector that's available in the Security & Compliance Center in Office 365. After you set up and configure the connector, it connects to the third-party data source, converts the content of an item to an email message format, and then imports the item to a mailbox in Office 365. Currently, you can implement sample connectors to import and archive data from Facebook Business pages and Twitter. For the step-by-step process to set up a connector, see:
+- **Use a third-party data connector in the Security & Compliance Center** - Use a custom data connector that's available in the Security & Compliance Center in Office 365. After you set up and configure the connector, it connects to the third-party data source, converts the content of an item to an email message format, and then imports the item to a mailbox in Office 365. Currently, you can implement sample connectors to import and archive data from Facebook Business pages and Twitter. For the step-by-step instructions to set up a connector, see:
    
-   - [Use a sample connector to archive Facebook data in Office 365 (Preview)](archive-facebook-data-with-sample-connector.md)
+   - **Facebook** - [Use a sample connector to archive Facebook data in Office 365 (Preview)](archive-facebook-data-with-sample-connector.md)
   
-   - [Use a sample connector to archive Twitter data in Office 365 (Preview)](archive-twitter-data-with-sample-connector.md)
+   - **Twitter** - [Use a sample connector to archive Twitter data in Office 365 (Preview)](archive-twitter-data-with-sample-connector.md)
 
 - **Work with a Microsoft partner** - Your organization works with a Microsoft Partner who will provide a custom connector that will be configured to extract items from the third-party data source (on a regular basis) and then connect to the Microsoft cloud by a third-party API and import those items to Office 365. The partner connector also converts the content of an item from the third-party data source to an email message and then imports them to a mailbox in Office 365. For a list of partners that you can work with and the step-by-step process for this method, see [Work with a partner to archive third-party data in Office 365](work-with-partner-to-archive-third-party-data.md).
