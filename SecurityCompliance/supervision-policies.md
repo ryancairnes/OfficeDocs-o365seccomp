@@ -26,7 +26,7 @@ These policies can also help you overcome many modern compliance challenges, inc
 
 - Monitoring increasing types of communication channels
 - The increasing volume of message data
-- Regulatory enforcement & the risk of fines.
+- Regulatory enforcement & the risk of fines
 
 In some organizations, there may be a separation of duties between IT support and the compliance management group. Office 365 supports the separation between supervision policy feature configuration and the configuration of policies for captured communications. For example, the IT group for an organization may be responsible for setting up role permissions and groups to support supervision policies that are configured and managed by the organization's compliance team.
 
@@ -161,7 +161,7 @@ If you enter multiple conditions, Office 365 uses all the conditions together to
 
 - **Message size is larger than**, with the value 2 MB
 
-- **Message contains none of these words**, with the keywords "Approved by Contoso financial team".
+- **Message contains none of these words**, with the keywords "Approved by Contoso financial team"
 
 #### Review percentage
 
@@ -182,13 +182,13 @@ The dashboard **Home** page has several sections to help you quickly take action
 - Quickly review the pending and resolved highlights for the week
 - See a list of the supervised users and supervised groups for the selected policy
 - See a list of the reviewers and review teams for the selected policy
-- See which communication platforms have content under supervision for the policy.
+- See which communication platforms have content under supervision for the policy
 
 #### Review tab
 
 The **Review** tab is where reviewers classify and resolve items identified by the selected policy. Here you can:
 
-- Filter by pending, compliant, non-compliant, and questionable items
+- Filter by pending, compliant, non-compliant, and questionable items.
 - Tag a single item as compliant, non-compliant, or questionable. You can also record a comment with the item to help clarify the tagging action taken.
 - Bulk tag multiple items as compliant, non-compliant, or questionable. You can also record a comment with multiple items to help clarify the tagging action taken.
 - View the history of the tagging for a single item. This includes who resolved the item, the date and time of the action, the resolution tag, and any included comments.
@@ -198,7 +198,7 @@ The **Review** tab is where reviewers classify and resolve items identified by t
 
 The **Resolved Items** tab is where reviewers can view all previously resolved items for the selected policy. Here you can:
 
-- Quickly view and sort the subject, sender, and date of resolved items.
+- Quickly view and sort the subject, sender, and date of resolved items
 - View the classification and comment history of any selected item
 
 ## Reports
