@@ -173,7 +173,7 @@ It is easy to monitor the results of your supervision policies and apply a resol
 
 ### Supervision policy dashboard
 
-The easiest way to manage supervision policy results and to resolve outstanding items is to use the supervision policy dashboard. This dashboard allows reviewers to view items that need to be reviewed, take action on an item, and review the results of previously reviewed and resolved items for each supervision policy. You can access the supervision policy dashboard in the Compliance center at **Supervision** > *Your Custom Policy* > **Open**.
+Use the supervision policy dashboard to manage supervision policy results and to resolve outstanding items. This dashboard allows reviewers to view items that need to be reviewed, take action on an item, and review the results of previously reviewed and resolved items for each supervision policy. You can access the supervision policy dashboard in the Compliance center at **Supervision** > *Your Custom Policy* > **Open**.
 
 #### Dashboard Home
 
@@ -201,32 +201,6 @@ The **Resolved Items** tab is where reviewers can view all previously resolved i
 - Quickly view and sort the subject, sender, and date of resolved items.
 - View the classification and comment history of any selected item
 
-### Other ways to review items
-
-If reviewers would prefer not to use the supervision dashboard in Office 365, they also have other options to review and manage items collected by supervision policies.
-
-#### Outlook on the web
-
-Users designated as reviewers in a supervision policy can use Outlook on the web to review and resolved supervision items. The Supervision add-in is installed automatically in Outlook on the web for all reviewers you specified in the policy. Supervision policy shared folders are available for configured reviewers without any extra configuration.
-
-With Outlook on the web, reviewers can:
-
-- View filtered items by compliant, non-compliant, questionable, and resolved status
-- Tag a single item as compliant, non-compliant, questionable, or resolved. You can also record a comment with the item to help clarify the tagging action taken.
-- View the history of the tagging for a single item, including who resolved the item, the date and time of the action, the resolution tag, and any included comments.
-- Reclassify previously reviewed items as compliant, non-compliant, or questionable. You can also record a comment with single items to help clarify the reclassification action taken.
-
-#### Microsoft Outlook
-
-To review communications identified by a supervision policy, reviewers can also use the Supervision add-in for Microsoft Outlook. However, reviewers must run through some steps to install it in the desktop version of Outlook. For detailed guidance about the Supervision add-in for Outlook, see [Configure supervision policies](configure-supervision-policies.md).
-
-With Outlook, reviewers can:
-
-- View filtered items by compliant, non-compliant, questionable, and resolved status
-- Tag a single item as compliant, non-compliant, questionable, or resolved. You can also record a comment with the item to help clarify the tagging action taken.
-- View the history of the tagging for a single item, including who resolved the item, the date and time of the action, the resolution tag, and any included comments.
-- Reclassify previously reviewed items as compliant, non-compliant, or questionable. You can also record a comment with single items to help clarify the reclassification action taken.
-
 ## Reports
 
 Use the supervision reports to see the review activity at the policy and reviewer level. For each policy, you can also view live statistics on the current state of review activity. You can use the supervision reports to:
@@ -246,9 +220,7 @@ Use the supervision reports to see the review activity at the policy and reviewe
   
 ### How to use the report
 
-When a supervision policy identifies a communication message for review, the reviewer's Supervision folder in Outlook and Outlook on the web (formerly known as Outlook Web App) receives an email notification. This report lists each policy and the number of communications at each stage in the review process.
-  
-Use the report to:
+This report lists each policy and the number of communications at each stage in the review process. Use the report to:
   
 - View data for all or specific policies.
 - View data grouped by tag type, reviewer, or message type.
@@ -259,7 +231,7 @@ Here's a breakdown of the values displayed the **Tag type** column.
   
 |**Tag type**|**What it means**|
 |:-----|:-----|
-| **Not Reviewed** | The number of emails not reviewed yet. These emails are awaiting review in the Office 365 supervision dashboard or in the reviewer's supervision folder in Outlook or Outlook on the web.
+| **Not Reviewed** | The number of emails not reviewed yet. These emails are awaiting review in the Office 365 supervision dashboard.
 | **Compliant** | The number of emails reviewed and marked as compliant. These messages still need resolution. |
 | **Questionable** | The number of emails reviewed and marked questionable. This acts as a flag for other reviewers to help check whether an email needs investigation for compliance. These messages still need resolution. |
 | **Non-Compliant (Active)** | The number of non-compliant emails that reviewers are currently investigating. |
