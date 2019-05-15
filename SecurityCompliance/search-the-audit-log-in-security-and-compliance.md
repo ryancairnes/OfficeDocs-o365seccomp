@@ -315,6 +315,7 @@ The following table describes the file and page activities in SharePoint Online 
 |Deleted file  <br/> |FileDeleted  <br/> |User deletes a document from a site.  <br/> |
 |Deleted file from recycle bin  <br/> |FileDeletedFirstStageRecycleBin  <br/> |User deletes a file from the recycle bin of a site.  <br/> |
 |Deleted file from second-stage recycle bin  <br/> |FileDeletedSecondStageRecycleBin  <br/> |User deletes a file from the second-stage recycle bin of a site.  <br/> |
+|Detected document sensitivity mismatch <br/>|DocumentSensitivityMismatchDetected<br/>|A mismatch in document sensitivity was detected. <br/>|
 |Detected malware in file  <br/> |FileMalwareDetected  <br/> |SharePoint anti-virus engine detects malware in a file.  <br/> |
 |Discarded file checkout  <br/> |FileCheckOutDiscarded  <br/> |User discards (or undos) a checked out file. That means any changes they made to the file when it was checked out are discarded, and not saved to the version of the document in the document library.  <br/> |
 |Downloaded file  <br/> |FileDownloaded  <br/> |User downloads a document from a site.  <br/> |
@@ -329,6 +330,8 @@ The following table describes the file and page activities in SharePoint Online 
 |Uploaded file  <br/> |FileUploaded  <br/> |User uploads a document to a folder on a site.  <br/> |
 |Viewed page  <br/> |PageViewed  <br/> |User views a page on a site. This doesn't include using a Web browser to view files located in a document library.  <br/> |
 |(none)  <br/> |PageViewedExtended  <br/> |This is related to the "Viewed page" (PageViewed) activity. A PageViewedExtended event is logged when the same person continually views a web page for an extended period of time (up to 3 hours). The purpose of logging PageViewedExtended events is to reduce the number of PageViewed events that are logged when a page is continually viewed. This helps reduce the noise of multiple PageViewed records for what is essentially the same user activity, and lets you focus on the initial (and more important) PageViewed event.  <br/> |
+|View signaled by client <br/>|ClientViewSignaled<br/>|A user’s client (such as website or mobile app) has signaled that the indicated page has been viewed by the user. This activity is often logged following a PagePrefetched event for a page. <br/><br/>**Note**: Because ClientViewSignaled events are signaled by the client, rather than the server, it's possible the event may not be logged by the server and therefore may not appear in the audit log. It's also possible that information in the audit record may not be trustworthy. However, because the user’s identity is validated by the token used to create the signal, the user’s identity listed in the corresponding audit record is accurate. |
+|(none) <br/>|PagePrefetched<br/>|A user’s client (such as website or mobile app) has requested the indicated page to help improve performance if the user browses to it. This event is logged to indicate the page content has been served to the user’s client; this event isn't a definitive indication that the user actually navigated to the page. When the page content is rendered by the client (as per the user’s request) a ClientViewSignaled event should be generated. Note that not all clients support indicating a pre-fetch, and therefore some pre-fetched activities might instead be logged as PageViewed events.<br/>|
 ||||
   
 ### Folder activities
@@ -348,6 +351,16 @@ The following table describes the folder activities in SharePoint Online and One
 |Restored folder  <br/> |FolderRestored  <br/> |User restores a deleted folder from the recycle bin on a site.  <br/> |
 ||||
   
+### SharePoint list activities
+  
+The following table describes activities related to when users interact with lists and list items in SharePoint Online.
+
+|**Friendly name**|**Operation**|**Description**|
+|:-----|:-----|:-----|
+|<br/> |<br/> |<br/> |
+
+
+
 ### Sharing and access request activities
   
 The following table describes the user sharing and access request activities in SharePoint Online and OneDrive for Business. For sharing events, the **Detail** column under **Results** identifies the name of the user or group the item was shared with and whether that user or group is a member or guest in your organization. For more information, see [Use sharing auditing in the Office 365 audit log](use-sharing-auditing.md).
@@ -428,9 +441,9 @@ The following table lists events that result from site administration tasks in S
   
 |**Friendly name**|**Operation**|**Description**|
 |:-----|:-----|:-----|
-|Added allowed data location|||
+|Added allowed data location<br/>|AllowedDataLocationAdded|<br/>|<br/>|
 |Added exempt user agent  <br/> |ExemptUserAgentSet  <br/> |A SharePoint or global administrator adds a user agent to the list of exempt user agents in the SharePoint admin center.  <br/> |
-|Added geo location admin|||
+|Added geo location admin<br/>|GeoAdminAdded<br/>|<br/>|
 |Allowed user to create groups  <br/> |AllowGroupCreationSet  <br/> |Site administrator or owner adds a permission level to a site that allows a user assigned that permission to create a group for that site.  <br/> |
 |Cancelled site geo move  <br/> |SiteGeoMoveCancelled  <br/> |A SharePoint or global administrator successfully cancels a SharePoint or OneDrive site geo move. The Multi-Geo capability lets an Office 365 organization span multiple Office 365 datacenter geographies, which are called geos. For more information, see [Multi-Geo Capabilities in OneDrive and SharePoint Online in Office 365](https://go.microsoft.com/fwlink/?linkid=860840).  <br/> |
 |Changed a sharing policy  <br/> |SharingPolicyChanged  <br/> |A SharePoint or global administrator changed a SharePoint sharing policy by using the Office 365 admin portal, SharePoint admin portal, or SharePoint Online Management Shell. Any change to the settings in the sharing policy in your organization will be logged. The policy that was changed is identified in the **ModifiedProperties** field in the detailed properties of the event record.  <br/> |
@@ -440,19 +453,24 @@ The following table lists events that result from site administration tasks in S
 |Completed site geo move  <br/> |SiteGeoMoveCompleted  <br/> |A site geo move that was scheduled by a global administrator in your organization was successfully completed. The Multi-Geo capability lets an Office 365 organization span multiple Office 365 datacenter geographies, which are called geos. For more information, see [Multi-Geo Capabilities in OneDrive and SharePoint Online in Office 365](https://go.microsoft.com/fwlink/?linkid=860840).  <br/> |
 |Created Sent To connection  <br/> |SendToConnectionAdded  <br/> |A SharePoint or global administrator creates a new Send To connection on the Records management page in the SharePoint admin center. A Send To connection specifies settings for a document repository or a records center. When you create a Send To connection, a Content Organizer can submit documents to the specified location.  <br/> |
 |Created site collection  <br/> |SiteCollectionCreated  <br/> |A SharePoint or global administrator creates a new site collection in your SharePoint Online organization or a user provisions their OneDrive for Business site.  <br/> |
+|Deleted orphaned hub site<br/>|HubSiteOrphanHubDeleted<br/>|A SharePoint or global administrator deleted an orphan hub site, which is a hub site that doesn't have any sites associated with it. An orphaned hub is likely caused by the deletion of the original hub site. <br/>|
 |Deleted Sent To connection  <br/> |SendToConnectionRemoved  <br/> |A SharePoint or global administrator deletes a Send To connection on the Records management page in the SharePoint admin center.  <br/> |
 |Deleted site  <br/> |SiteDeleted  <br/> |Site administrator deletes a site.  <br/> |
 |Enabled document preview  <br/> |PreviewModeEnabledSet  <br/> |Site administrator enables document preview for a site.  <br/> |
 |Enabled legacy workflow  <br/> |LegacyWorkflowEnabledSet  <br/> |Site administrator or owner adds the SharePoint 2013 Workflow Task content type to the site. Global administrators can also enable work flows for the entire organization in the SharePoint admin center.  <br/> |
 |Enabled Office on Demand  <br/> |OfficeOnDemandSet  <br/> |Site administrator enables Office on Demand, which lets users access the latest version of Office desktop applications. Office on Demand is enabled in the SharePoint admin center and requires an Office 365 subscription that includes full, installed Office applications.  <br/> |
-|Enabled result source for People Searches|||
+|Enabled result source for People Searches<br/>|PeopleResultsScopeSet<br/>|<br/>|
 |Enabled RSS feeds  <br/> |NewsFeedEnabledSet  <br/> |Site administrator or owner enables RSS feeds for a site. Global administrators can enable RSS feeds for the entire organization in the SharePoint admin center.  <br/> |
-|Removed allowed data location||||
-|Removed geo location admin||||
+|Joined site to hub site<br/>|HubSiteJoined<br/>|A site owner associates their site with a hub site.<br/>|
+|Registered hub site<br/>|HubSiteRegistered<br/>|A SharePoint or global administrator creates a hub site. The results is that the site is registered to be a hub site. <br/>|
+|Removed allowed data location<br/>|AllowedDataLocationDeleted<br/>|<br/>|
+|Removed geo location admin<br/>|GeoAdminDeleted<br/>|<br/>|
 |Renamed site  <br/> |SiteRenamed  <br/> |Site administrator or owner renames a site  <br/> |
 |Scheduled site geo move  <br/> |SiteGeoMoveScheduled  <br/> |A SharePoint or global administrator successfully schedules a SharePoint or OneDrive site geo move. The Multi-Geo capability lets an Office 365 organization span multiple Office 365 datacenter geographies, which are called geos. For more information, see [Multi-Geo Capabilities in OneDrive and SharePoint Online in Office 365](https://go.microsoft.com/fwlink/?linkid=860840).  <br/> |
 |Set host site  <br/> |HostSiteSet  <br/> |A SharePoint or global administrator changes the designated site to host personal or OneDrive for Business sites.  <br/> |
-|Set storage quota for geo location  <br/> |<br/> |<br/> |
+|Set storage quota for geo location  <br/> |GeoQuotaAllocated<br/> |<br/> |
+|Unjoined site from hub site<br/>|HubSiteUnjoined<br/>|A site owner disassociates their site from a hub site.<br/>|
+|Unregistered hub site<br/>|HubSiteUnregistered<br/>|A SharePoint or global administrator unregisters a site as a hub site. When a hub site is unregistered, it no longer functions as a hub site. <br/>|
 ||||
   
 ### Exchange mailbox activities
