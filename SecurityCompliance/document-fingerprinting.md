@@ -4,7 +4,7 @@ ms.author: deniseb
 author: denisebmsft
 manager: laurawi
 ms.date: 
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 search.appverid: MET150
 ms.service: exchange-online

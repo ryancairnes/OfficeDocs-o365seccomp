@@ -3,7 +3,7 @@ title: "Create custom sensitive information types with Exact Data Match"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 ms.date: 05/15/2019
