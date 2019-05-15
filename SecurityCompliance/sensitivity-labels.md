@@ -80,7 +80,7 @@ All of these options are available when you create a sensitivity label.
 
 ![Options when creating a sensitivity label](media/Sensitivity_label_create_options.png)
 
-### Sensitivity label priority (order matters)
+### Label priority (order matters)
 
 When you create your sensitivity labels, they appear in a list on the **Sensitivity** tab on the **Labels** page. In this list, the order of the labels is important because it reflects their priority. You want your most restrictive sensitivity label, such as Highly Confidential, to appear at the **bottom** of the list, and your least restrictive sensitivity label, such as Public, to appear at the **top**.
 
@@ -133,13 +133,21 @@ With a label policy, you can:
 
 After you create a label policy and assign sensitivity labels to users and groups, those people will see those labels available in the Office apps in an hour or less.
 
-### Sensitivity label policy priority (order matters)
+### Label policy priority (order matters)
 
 You make your sensitivity labels available to users by publishing them in a sensitivity label policy, which appears in a list on the **Sensitivity policies** tab on the **Label policies** page. Just like sensitivity labels (see [the above section](#sensitivity-label-priority-order-matters)), the order of the sensitivity label policies is important because it reflects their priority. The label policy with lowest priority is shown at the **top**, and label policy with the highest priority is shown at the **bottom**.
 
-A user or group can see only the sensitivity labels from a single label policy. Therefore, you want your most specific sensitivity label policy, such as the **Policy for leadership team** shown below, to appear at the **bottom** of the list, and your most general sensitivity label policy, such as the **Policy for everyone** show below, to appear at the **top**. In this case, to re-order the policies so that the most specific policy is at the bottom, choose the ellipsis on the right > **Move down**.
+A label policy consists of:
 
-If a user or group in your organization is not seeing the correct set of sensitivity labels in their Office apps, or if they're not seeing a feature of a label policy such as a default or required label, check the order of the sensitivity label policies.
+- A set of labels.
+- The scope of the label policy, meaning the users or groups included in the policy.
+- The settings of the label policy described above (default label, justification, mandatory label, and help link).
+
+You can include a user in multiple label policies, and the user will see all of the sensitivity labels from those policies. However, a user will see only the policy settings from the label policy with the highest priority.
+
+Therefore, you typically want your most specific label policy, such as the **Policy for leadership team** shown below, to appear at the **bottom** of the list, and your most general label policy, such as the **Policy for everyone** show below, to appear at the **top**. In this case, to re-order the policies so that the most specific policy is at the bottom, choose the ellipsis on the right > **Move down**.
+
+If a user or group in your organization is not seeing an option in the label policy that you intended, such as a default or mandatory label, check the order of the sensitivity label policies.
 
 ![Move option on the page for sensitivity label policies](media/sensitivity-label-policy-priority.png)
 
