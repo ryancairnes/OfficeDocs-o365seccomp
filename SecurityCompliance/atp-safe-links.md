@@ -3,7 +3,7 @@ title: "Office 365 ATP Safe Links"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.date: 03/05/2019
 ms.topic: overview
 f1_keywords:

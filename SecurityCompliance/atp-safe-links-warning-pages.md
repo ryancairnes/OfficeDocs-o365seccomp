@@ -3,7 +3,7 @@ title: "Office 365 ATP Safe Links warning pages"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.audience: IT Pro
+audience: IT Pro
 ms.topic: overview
 ms.service: O365-seccomp
 localization_priority: Normal

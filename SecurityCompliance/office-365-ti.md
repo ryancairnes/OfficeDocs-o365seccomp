@@ -3,8 +3,8 @@ title: "Office 365 threat investigation and response"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 04/26/2019
-ms.audience: Admin
+ms.date: 03/18/2019
+audience: Admin
 ms.topic: overview
 ms.service: O365-seccomp
 localization_priority: Normal

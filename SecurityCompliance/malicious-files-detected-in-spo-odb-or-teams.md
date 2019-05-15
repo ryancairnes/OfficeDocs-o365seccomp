@@ -3,7 +3,7 @@ title: "View information about malicious files detected in SharePoint, OneDrive,
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal

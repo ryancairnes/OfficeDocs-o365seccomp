@@ -3,7 +3,7 @@ title: "Create a custom sensitive information type in Security & Compliance Cent
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Priority

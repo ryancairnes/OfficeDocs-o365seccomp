@@ -3,8 +3,8 @@ title: "The new Microsoft 365 security center and Microsoft 365 compliance cente
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 04/26/2019
-ms.audience: ITPro
+ms.date: 04/22/2019
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 ms.collection:

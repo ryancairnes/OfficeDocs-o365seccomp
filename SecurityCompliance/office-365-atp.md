@@ -4,7 +4,7 @@ ms.author: deniseb
 author: denisebmsft
 manager: laurawi
 ms.date: 03/28/2019
-ms.audience: Admin
+audience: Admin
 ms.topic: hub-page
 ms.service: O365-seccomp
 localization_priority: Normal

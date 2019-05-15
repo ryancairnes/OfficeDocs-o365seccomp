@@ -3,7 +3,7 @@ title: "Set up Office 365 ATP Safe Links policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.date: 02/26/2019
 ms.service: O365-seccomp
