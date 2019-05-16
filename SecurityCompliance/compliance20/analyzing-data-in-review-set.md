@@ -35,7 +35,7 @@ To analyze data in a review set:
 
 3. Click **Manage review set**.
 
-4. Click **Analyze**.
+4. Click **Run analytics for the review set**.
 
 You can check the progress of analysis on the **Jobs** tab of the case.
 
@@ -43,13 +43,13 @@ You can check the progress of analysis on the **Jobs** tab of the case.
 
 ## Analytics report
 
-To view a analytics report for a review set:
+To view an analytics report for a review set:
 
 1. Open the review set.
 
 2. Click **Manage review set**.
 
-3. Click **Report**.
+3. Click **View report**.
 
 The report has four components from analysis:
 
