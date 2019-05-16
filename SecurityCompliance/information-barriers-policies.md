@@ -81,15 +81,15 @@ To segment users, consider using an attribute in Azure Active Directory. Make su
 
 4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
 
-5. To define an organizational segment, use the `New-OrganizationSegment` cmdlet with the UserGroupFilter parameter that corresponds to the attribute you want to use, such as shown in the following example:
+5. To define an organizational segment, use the `New-OrganizationSegment` cmdlet with the `UserGroupFilter` parameter that corresponds to the attribute you want to use. Make sure that the attribute you use to define your segment is such that no single person belongs to more than one segment. Here's an example:
 
     `New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"`
 
-    In this example, we are defining a segment called HR. The segment includes people who have HR listed as their department.
+    In this example, we are defining a segment called HR. The segment includes people who have HR listed as their department. (In this case, no employees are assigned to more than one department.)
 
-    You will see a list of details about the new segment.
+    After you run the cmdlet, you should see a list of details about the new segment. Details include the segment's type, who created or last modified it, and so on.
 
-6. Repeat step 5 for each segment. Allow 30 minutes for your segment definitions to work their way through your datacenter.
+6. Repeat the previous step for each segment. 
 
 ### View a list of existing segments
 
@@ -97,7 +97,7 @@ To segment users, consider using an attribute in Azure Active Directory. Make su
 
 2. Run the `Get-OrganizationSegment` cmdlet.
 
-    You will see a list of segments and details for each.
+    You will see a list of segments and details for each. Details include each segment's type, who created or last modified it, and so on.
 
 ## Part 3: Define information barrier policies
 
