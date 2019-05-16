@@ -18,30 +18,36 @@ ROBOTS: NOINDEX, NOFOLLOW
 description: ""
 ---
 
-# Set up attorney-client privilege detection (preview) in Advanced eDiscovery
+# Set up attorney-client privilege detection in Advanced eDiscovery
 
-A major and costly aspect of the review portion of any discovery process is reviewing for privileged content. Advanced eDiscovery provides an AI-based detection of privileged content in your case so that you can make this process more efficient. As this feature is currently in beta, an eDiscovery Administrator has to opt into the feature to use it.
+A major and costly aspect of the review phase of any eDiscovery process is reviewing documents for privileged content. Advanced eDiscovery provides machine learning-based detection of privileged content to make this process more efficient. This feature is called *attorney-client privilege detection*.
+
+> [!NOTE]
+> Attorney-client privilege detection in Advanced eDiscovery is in Preview. You must opt-in before you can use it.
 
 ## How does it work?
 
-With the feature turned on, when you analyze a review set within a case, all documents run through the attorney-client privilege detection model. The model looks at two things:
+When attorney-client privilege detection is enabled, all documents in a review set will be processed by the attorney-client privilege detection model when you [ analyze the data](analyzing-data-in-review-set.md) in the review set. The model looks for two things:
 
-- Content: the ML model determines the likelihood of the document's content being legal in nature.
+- **Privileged content** - The model uses machine learning to determines the likelihood that the document contains content that is legal in nature.
 
-- Participants: if there is a user-uploaded list of attorneys for the tenant, the model compares the participants of the document against the list to determine whether the document has at least one attorney participant.
-The model outputs three values for every document, all of which will be searchable within a review set:
+- **Participants** - As part of setting attorney-client privilege detection, you have to submit a list of attorneys for your organization. The model then compares the participants of the document with the attorney list to determine if a document has at least one attorney participant.
 
-- Content score: the likelihood of the document being legal in nature (score between 0 and 1)
+The model outputs the following three values for every document; all of values are searchable within a review set.
 
-- Has Attorney: True if one of the participants is found in the uploaded attorney list, false otherwise, or if there is no attorney list.
+- **Content score** - The likelihood of the document being legal in nature (score between 0 and 1).
 
--  Potentially Privileged: True if content score is above threshold or has an attorney participant, false otherwise.
+- **Has Attorney** - Set to **True** if one of the document participants is listed in the attorney list; otherwise the value is **False**. Note that the value is also **False** if your organization didn't upload an attorney list.
 
-## Opting into Attorney-client privilege detection
+- **Potentially Privileged** - Set to **True** if the **Content score** value is above threshold *or* it the document has an attorney participant; otherwise, the value is set to **False**.
+
+The three previous values are searchable within a review set. For more information, see [Query the data in a review set](review-set-search.md).
+
+## Set up the attorney-client privilege detection model
 
 ### Step 1: Opt into Attorney-client privilege detection (eDiscovery Admin)
 
-Because Attorney-client privilege detection is a preview feature, your eDiscovery Administrator needs to opt in to make the feature available in your cases.
+Because Attorney-client privilege detection is in Preview, your eDiscovery Administrator needs to opt in to make the feature available in your cases.
 
 - Go to "Configure experimental features" from Advanced eDiscovery page
 
