@@ -65,13 +65,39 @@ To segment users, consider using an attribute in Azure Active Directory. Make su
 
 1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
-2. To define an organizational segment, use the `New-OrganizationSegment` cmdlet with the UserGroupFilter parameter that corresponds to the attribute you want to use, such as shown in the following example:
+2. Run the following PowerShell cmdlets, one at a time:<br>
+
+    `Login-AzureRmAccount`  
+
+    `$appId="bcf62038-e005-436d-b970-2a472f8c1982"` 
+
+    `$sp=Get-AzureRmADServicePrincipal -ServicePrincipalName $appId` 
+
+    `if ($sp -eq $null) { New-AzureRmADServicePrincipal -ApplicationId $appId }`
+
+    `Start-Process  "https://login.microsoftonline.com/common/adminconsent?client_id=$appId"`
+
+3. When prompted, sign in using your work or school account for Office 365.
+
+4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
+
+5. To define an organizational segment, use the `New-OrganizationSegment` cmdlet with the UserGroupFilter parameter that corresponds to the attribute you want to use, such as shown in the following example:
 
     `New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"`
 
     In this example, we are defining a segment called HR. The segment includes people who have HR listed as their department.
 
     You will see a list of details about the new segment.
+
+6. Repeat step 5 for each segment. Allow 30 minutes for your segment definitions to work their way through your datacenter.
+
+### View a list of existing segments
+
+1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
+
+2. Run the `Get-OrganizationSegment` cmdlet.
+
+    You will see a list of segments and details for each.
 
 ## Part 3: Define information barrier policies
 
