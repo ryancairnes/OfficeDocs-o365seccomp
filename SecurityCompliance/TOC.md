@@ -1,3 +1,5 @@
+# [Security & Compliance](index.md)
+
 # Get started
 ## [Office 365 security roadmap](security-roadmap.md)
 ## [Configure your Office 365 tenant for increased security](tenant-wide-setup-for-increased-security.md)
@@ -201,7 +203,8 @@
 ### [Event-based retention](event-driven-retention.md)
 ### [Automate event-based retention](automate-event-driven-retention.md)
 ## [Dispose data](disposition-reviews.md)
-## [Supervise communications](supervision-policies.md)
+## Supervise communications
+### [Supervision policies](supervision-policies.md)
 ### [Configure supervision policies for your organization](configure-supervision-policies.md)
 ## [Manage inactive mailboxes](inactive-mailboxes-in-office-365.md)
 ### [Create and manage inactive mailboxes](create-and-manage-inactive-mailboxes.md)
