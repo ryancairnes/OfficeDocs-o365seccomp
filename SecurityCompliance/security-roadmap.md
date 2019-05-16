@@ -82,8 +82,8 @@ These are important security measures that build on previous work.
 |Area  <br/> |Task  <br/> |
 |Security management  <br/> |•    Continue planning next actions by using Secure Score ( [https://securescore.office.com](https://securescore.office.com)).  <br/>  •   Continue to regularly review dashboards and reports in the Microsoft 365 security center, Cloud App Security, and SIEM tools.  <br/>  •   Continue to look for and implement software updates.  <br/>  •   Integrate eDiscovery into your legal and threat response processes.  <br/> |
 |Threat protection  <br/> | •   Implement [Secure Privileged Access](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access) (SPA) for identity components on premises (AD, AD FS).  <br/>  •   Use Cloud App Security to monitor for insider threats.  <br/>  •   Discover shadow IT SaaS usage by using Cloud App Security.  <br/> |
-|Identity and access management  <br/> | •   Refine information protection policies:  <br/>  •   Azure Information Protection and Office 365 data loss prevention (DLP).  <br/>  •   Cloud App Security policies and alerts.  <br/> |
-|Information protection  <br/> | •   Refine policies and operational processes.  <br/>  •   Use Azure AD Identity Protection to identify insider threats.  <br/> |
+|Identity and access management  <br/> | •   Refine policies and operational processes.  <br/>  •   Use Azure AD Identity Protection to identify insider threats.  |
+|Information protection  <br/> | Refine information protection policies:  <br/>  •   Microsoft 365 and Office 365 sensitivity labels and data loss prevention (DLP) or Azure Information Protection.  <br/>  •   Cloud App Security policies and alerts.  <br/> |
    
 Also see: [How to mitigate rapid cyberattacks such as Petya and WannaCrypt](https://cloudblogs.microsoft.com/microsoftsecure/2018/02/21/how-to-mitigate-rapid-cyberattacks-such-as-petya-and-wannacrypt/). 
   
