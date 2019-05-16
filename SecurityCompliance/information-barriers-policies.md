@@ -61,14 +61,17 @@ Make a list of all the policies you'll want to implement. As you plan your polic
 
 ## Part 2: Segment users
 
-To segment users, consider using an attribute in Azure Active Directory. Make sure that your segments do not overlap. For example, you might use the Department attribute, assuming no single employee is assigned to more than one department. To learn more, see the following resources:
+To segment users, consider using an attribute in Azure Active Directory. Make sure that your segments do not overlap. For example, you might use the Department attribute, assuming no single employee is assigned to more than one department. To see a list of supported attributes, refer to [Attributes for information barrier policies (Preview)](information-barriers-attributes.md).
 
-|Resource  |Description  |
-|---------|---------|
-|[Attributes for information barrier policies (Preview)](information-barriers-attributes.md) |Use this article as a reference for attributes you can use in information barrier policies |
-|[Create a basic group and add members using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) |Read this article to learn how to create a basic group in the Azure Active Directory (Azure AD) portal. |
-|[Create a dynamic group and check status](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-create-rule)     |Read this article to learn how to determine group membership by using rules in Azure Active Directory. Group membership can be based on user or device properties. |
-|[Azure AD cmdlets for working with extension attributes](https://docs.microsoft.com/powershell/azure/active-directory/using-extension-attributes-sample?view=azureadps-2.0)     | Read this article to learn about extension attributes and how you can extend your Azure AD directory with new attributes.  |
+1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
+
+2. To define an organizational segment, use the `New-OrganizationSegment` cmdlet with the UserGroupFilter parameter that corresponds to the attribute you want to use, such as shown in the following example:
+
+    `New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"`
+
+    In this example, we are defining a segment called HR. The segment includes people who have HR listed as their department.
+
+    You will see a list of details about the new segment.
 
 ## Part 3: Define information barrier policies
 
