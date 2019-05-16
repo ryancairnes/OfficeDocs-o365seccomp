@@ -43,7 +43,7 @@ This article describes how to plan, define, implement, and manage information ba
 |Permissions     |To define or edit information barrier policies, you must be assigned an appropriate role, such as one of the following:<br/>- Microsoft 365 Enterprise Global Administrator<br/>- Office 365 Global Administrator<br/>- Compliance Administrator<br/>- Information barriers administrator         |
 |Directory data | You must have enough data in your directory to be able to segment users. Consider using attributes, such as group membership, department name, etc. as configured in Azure Active Directory (or Exchange Online). To learn more, see [Attributes for information barrier policies (Preview)](information-barriers-attributes.md).|
 Scoped directory search | **Before you define your organization's first information barrier policy, you must [enable scoped directory search in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-scoped-directory-search)**. Wait at least 24 hours after enabling scoped directory search before you set up or define information barrier policies.
-|PowerShell | Currently, information barrier policies are defined and managed in Office 365 by using PowerShell cmdlets. Although several scenarios and examples are provided in this article, you'll need to be familiar with PowerShell cmdlets and parameters.| 
+|PowerShell | Currently, information barrier policies are defined and managed in the Office 365 Security & Compliance Center with PowerShell cmdlets. Although several scenarios and examples are provided in this article, you'll need to be familiar with PowerShell cmdlets and parameters.| 
 
 ## Part 1: Plan your information barrier policies
 
