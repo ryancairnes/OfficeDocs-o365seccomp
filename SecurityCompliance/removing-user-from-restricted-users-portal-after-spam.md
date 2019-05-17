@@ -42,7 +42,7 @@ You complete this task in the Security & Compliance Center (SCC). [Go to the Sec
     > [!TIP]
     > To go directly to the **Restricted Users** page (formerly known as the Action Center) in the Security &amp; Compliance Center, use this URL: > [https://protection.office.com/#/restrictedusers](https://protection.office.com/?hash=/restrictedusers)
 
-2. This page will contain the list of users that have been blocked from sending email.  Find the user you wish to remove restrictions on and then click on **Unblock**.
+2. This page will contain the list of users that have been blocked from sending email.  Find the user you wish to remove restrictions from, and select **Unblock**.
 
 3. A fly-out will go into the details about the account whose sending is restricted. You should go through the recommendations to ensure you're taking the proper actions in case the account is actually compromised. Click **Next** when done.
 
