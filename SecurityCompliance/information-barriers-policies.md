@@ -132,16 +132,7 @@ When you have a list of user segments and the information barrier policies you w
 
 4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
 
-5. Define policies by using PowerShell cmdlets, such as used in the following examples. Select a scenario, and then run the cmdlets one at a time.
 
-    PER DHANAS, THE CMDLETS AND PROCEDURE IS CHANGING.
-
-     The first two cmdlets identify the users who are affected, the next two define variables for your policy, and the last defines the policy using those variables.<br/>
-    - **Scenario 1: Block communications between two groups**. In this example, we define a policy to prevent people in the Investors department from communicating with people in the Research department.<br/><br/>`$investorsGroup = Get-DistributionGroup -Identity Investors | select Department`<br/><br>`$researchGroup = Get-DistributionGroup -Identity Research | select Department`<br/><br/>`$investorsFilter = "(MemberOfGroup -eq $investorsGroup)"`<br/><br/>`$researchFilter = "(MemberOfGroup -ne $researchGroup)"`<br/><br/> `New-InformationBarrierPolicy -Name "InvestorsIBPolicy" -AssigneeFilterName "Investors" -AssigneeFilter $investorsFilter -CommunicationAllowedFilterName "NotResearch" -CommunicationAllowedFilter $researchFilter`<br/><br/>
-    - **Scenario 2: Allow one group to communicate with only one other group**. In this example, we define a policy to allow people in the Products department to communicate with only people in the Research department. <br/><br/>`$productsGroup = Get-DistributionGroup -Identity Products | select Department`<br/><br/>`$researchGroup = Get-DistributionGroup -Identity Research | select Department`<br/><br/>`$productsFilter = "(MemberOfGroup -eq $productsGroup)"`<br/><br/>`$researchFilter = "(MemberOfGroup -eq $researchGroup)"`<br/><br/>`New-InformationBarrierPolicy -Name "ProductsResearchIBPolicy" -AssigneeFilterName "Products" -AssigneeFilter $productsFilter -CommunicationAllowedFilterName "Research" -CommunicationAllowedFilter $productsFilter or $researchFilter` <br/><br/>
-    - **Scenario 3: Prevent one group from communicating with two other groups**. In this example, we define a policy to prevent people in the Investors department from communicating with people in the Research and Sales departments. <br/><br/>*NOTE: Because this scenario involves three departments, more cmdlets are used. The first three cmdlets identify the users, the next three define variables, and the last cmdlet defines the policy.*  <br/><br/>`$investorsGroup = Get-DistributionGroup -Identity Investors | select Department`<br/><br/>`$researchGroup = Get-DistributionGroup -Identity Research | select Department`<br/><br/>`$salesGroup = Get-DistributionGroup -Identity Sales | select Department`<br/><br/>`$investorsFilter = "(MemberOfGroup -eq $investorsGroup)"`<br/><br/>`$researchFilter = "(MemberOfGroup -ne $researchGroup)"`<br/><br/>`$salesFilter = "(MemberOfGroup -ne $salesGroup"`<br/><br/>`New-InformationBarrierPolicy -Name "InvestorsResearchSalesIBPolicy"  -AssigneeFilterName "Investors" -AssigneeFilter $investorFilter -CommunicationAllowedFilterName "NotResearchAndSales"  -CommunicationFilter $researchFilter and $salesFilter`  <br/><br/>
-
-    Repeat this step for each information barrier policy you want to define.
 
 Keep in mind that by default, your information barrier policies are inactive until they are explicitly set to active status and applied. After you have defined your policies, proceed to the next section.
 
@@ -153,9 +144,9 @@ Information barrier policies are not in effect until they are set to active stat
 
 2. Run the `Get-InformationBarrierPolicy` cmdlet to see a list of policies that have been defined. Note the status of each policy.
 
-3. To set a policy to active status, use the `Get-InformationBarrierPolicy` cmdlet with the State parameter set to Active, such as shown in the following example:
+3. To set a policy to active status, use the `Set-InformationBarrierPolicy` cmdlet with the State parameter set to Active, such as shown in the following example:
     
-    `$identity  = | Get-InformationBarrierPolicy -Name "ResearchIBPolicy" | select Identity
+    `$identity  = | Set-InformationBarrierPolicy -Name "ResearchIBPolicy" | select Identity
     Set-InformationBarrierPolicy -Identity $identity -State Active`
     
     In this example, we are setting an information barrier policy called `ResearchIBPolicy` to active status.
