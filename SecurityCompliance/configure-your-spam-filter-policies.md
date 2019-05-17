@@ -45,7 +45,7 @@ For information about keyboard shortcuts that may apply to the procedures in thi
   
 4. On the **spam and bulk actions** section, under **Spam**, **High confidence spam**, **Phishing email**, and **Bulk email**, select the action to take for incoming junk. The available values are: 
 
-      - **Move message to Junk Email folder:** Sends the message to the Junk Email folder of the specified recipients. This is the default action for spam, high confidence spam, and bulk. <br/><br/>**IMPORTANT**: For Exchange Online Protection (EOP) customers: In order for this action to work with on-premises mailboxes, you must configure two Exchange mail flow rules on your on-premises servers to detect spam headers added by EOP. For details, see [Ensure that spam is routed to each user's Junk Email folder](ensure-that-spam-is-routed-to-each-user-s-junk-email-folder.md).
+      - **Move message to Junk Email folder:** Sends the message to the Junk Email folder of the specified recipients. This is the default action for spam, high confidence spam, and bulk.
 
  **IMPORTANT**: For Exchange Online Protection (EOP) customers: In order for this action to work with on-premises mailboxes, you must configure two Exchange mail flow rules on your on-premises servers to detect spam headers added by EOP. For details, see how to [Ensure that spam is routed to each user's Junk Email folder](ensure-that-spam-is-routed-to-each-user-s-junk-email-folder.md).
  
