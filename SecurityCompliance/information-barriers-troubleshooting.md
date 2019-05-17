@@ -29,13 +29,13 @@ If you're a global administrator or compliance administrator and you define or m
 
 1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
-2. To verify status for the two users in question, run the `Get-InformationBarrierRecipientStatus` cmdlet with the Identity parameter. You can use any identity value that uniquely identifies each recipient, such as Name, Alias, Distinguished name (DN), Canonical DN, Email address, or GUID.
+2. To see if the users in question are included in an information barrier policy, run the `Get-InformationBarrierRecipientStatus` cmdlet with the Identity parameter. You can use any identity value that uniquely identifies each recipient, such as Name, Alias, Distinguished name (DN), Canonical DN, Email address, or GUID.
 
     Example: `Get-InformationBarrierRecipientStatus -User1 meganb -User2 alexw`
 
+    In this example, we are using each user's alias. When we run this cmdlet, if each user is included in an information barrier policy, we will see its GUID listed as ExoPolicyId.
 
-
-, where *username* refers to the user account in Office 365. (For example, Megan Bowen at Contoso has a user account *meganb*.)
+3. 
 
 ## My information barrier policy is not working
 
