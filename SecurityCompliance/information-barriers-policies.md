@@ -152,15 +152,18 @@ When you have a list of user segments and the information barrier policies you w
 
 4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
 
-5. To block communications between groups, define two policies using the `New-InformationBarrierPolicy` cmdlet with the SegmentsBlocked parameter. For example, to prevent communications between Sales and Research, we would use the following cmdlets:
+5. **To block communications between groups**, define policies using the `New-InformationBarrierPolicy` cmdlet with the SegmentsBlocked parameter. For example, to prevent communications between Sales and Research, we would use the following two cmdlets: one to prevent Sales from communicating with Research, and one to prevent Research from communicating with Sales:
 
     `New-InformationBarrierPolicy -Name "Sales-Research" -AssignedSegment "Sales" -SegmentsBlocked "Research" -State Active`
 
-    In this example, the Sales department cannot communicate with the Research department.
-
     `New-InformationBarrierPolicy -Name "Research-Sales" -AssignedSegment "Research" -SegmentsBlocked "Sales" -State Active`
 
-    In this example, the Research department cannot communicate with the Sales department.
+6. **To allow one group to communicate with only one other group**, define a policy using the `New-InformationBarrierPolicy` cmdlet with the SegmentsAllowed parameter. For example, to allow Research to communicate with Engineering only, we would use the following cmdlet:
+ 
+    `New-InformationBarrierPolicy -Name "Research-Engineering" -AssignedSegment "Research" -SegmentsAllowed "Engineering" -State Active`    
+
+    In this case, Research can communicate only with Engineering, but Engineering is not restricted from communicating with other groups.
+
 
 Keep in mind that by default, your information barrier policies are inactive until they are explicitly set to active status and applied. After you have defined your policies, proceed to the next section.
 
