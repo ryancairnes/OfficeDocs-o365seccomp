@@ -3,7 +3,7 @@ title: "Add your organization brand to your encrypted messages"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal

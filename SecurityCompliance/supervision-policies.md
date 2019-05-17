@@ -3,7 +3,7 @@ title: "Supervision policies in Office 365"
 ms.author: robmazz
 author: robmazz
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 f1_keywords:
 - 'ms.o365.cc.SupervisoryReview'
