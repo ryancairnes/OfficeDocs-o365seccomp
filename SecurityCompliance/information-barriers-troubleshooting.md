@@ -53,8 +53,9 @@ Follow these steps to determine whether the users are affected by an information
         SegmentsBlocked      : {Research}
         SegmentAllowedFilter :
     ```
-    In this case, we can see that the policy affects people who are in the Sales and Research segments, and that people in Sales are prevented from communicating with Research.
+    In this case, we can see that the policy affects people who are in the Sales and Research segments, and that people in Sales are prevented from communicating with Research. If this seems correct, then information barriers are working as expected. If something is not correct, proceed to the next step.
 
+4. Make sure your segments are defined correctly. To do this, run the `Get-OrganizationSegment` cmdlet, and review the list of results.
     
 
 ## Issue: The information barrier application process is taking too long
