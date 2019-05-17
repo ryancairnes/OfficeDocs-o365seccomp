@@ -32,7 +32,7 @@ This article describes how to plan, define, implement, and manage information ba
 |[Part 3: Define information barrier policies](#part-3-define-information-barrier-policies)     |- Define the policies<br/>- View (and if needed, edit) the policies<br/>- Policies are neither active nor applied yet         |
 |[Part 4: Apply information barrier policies](#part-4-apply-information-barrier-policies)     |- Set policies to active status<br/>- Run the policy application         |
 |(As needed) [Edit or remove an information barrier policy](#edit-or-remove-an-information-barrier-policy)     |- Set a policy to inactive status<br/>- Edit or remove a policy<br/>- Run the policy application         |
-|(As needed) [Troubleshooting](information-barriers-troubleshooting.md)|- Take action when policies are not working as expected<br/>- Find out what to do if the policy application process appears to be stuck<br/>- [See troubleshooting for information barriers (Preview)](information-barriers-troubleshooting.md)|
+|(As needed) [Troubleshooting](information-barriers-troubleshooting.md)|- Take action when policies are not working as expected<br/>- Take action if policy application appears to be stuck<br/>- [See troubleshooting for information barriers (Preview)](information-barriers-troubleshooting.md)|
 
 ## Prerequisites
 
