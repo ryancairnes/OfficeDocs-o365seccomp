@@ -3,7 +3,7 @@ title: "Supervision policies in Office 365"
 ms.author: robmazz
 author: robmazz
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 f1_keywords:
 - 'ms.o365.cc.SupervisoryReview'
@@ -15,7 +15,7 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-description: "Understanding supervision policies in Office 365"
+description: "Learn about Supervision policies in Office 365"
 ---
 
 # Supervision policies in Office 365
@@ -26,9 +26,11 @@ These policies can also help you overcome many modern compliance challenges, inc
 
 - Monitoring increasing types of communication channels
 - The increasing volume of message data
-- Regulatory enforcement & the risk of fines.
+- Regulatory enforcement & the risk of fines
 
 In some organizations, there may be a separation of duties between IT support and the compliance management group. Office 365 supports the separation between supervision policy feature configuration and the configuration of policies for captured communications. For example, the IT group for an organization may be responsible for setting up role permissions and groups to support supervision policies that are configured and managed by the organization's compliance team.
+
+For a quick overview of Supervision policies, see the [Supervision policy video](https://youtu.be/C3Y8WZ7o_dI) on the [Microsoft Mechanics channel](https://www.youtube.com/user/OfficeGarageSeries).
 
 To learn more about upcoming Supervision feature improvements and availability, see the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap).
 
@@ -111,7 +113,7 @@ Configure custom keyword dictionaries (or lexicons) to provide simple management
 
 #### Offensive language
 
-Monitor sent or received email messages in your organization for offensive language. The model uses a combination of machine learning, artificial intelligence, and keywords to identify inappropriate email messages as part of anti-harassment and cyber bullying monitoring requirements. To prevent or block offensive language in communications for your organization, create a [data loss prevention policy](create-test-tune-dlp-policy.md) that uses a [custom keyword dictionary](create-a-keyword-dictionary.md) of offensive terms.
+Monitor sent or received email messages in your organization for offensive language. The model uses a combination of machine learning, artificial intelligence, and keywords to identify inappropriate email messages as part of anti-harassment and cyber bullying monitoring requirements. To prevent or block offensive language for other communications in your organization, create a [data loss prevention policy](create-test-tune-dlp-policy.md) that uses a [custom keyword dictionary](create-a-keyword-dictionary.md) of offensive terms.
 
 The offensive language model currently supports English keywords and monitors the body of email messages. The offensive language model monitors email for sentiment associated with the following types of language:
 
@@ -159,7 +161,7 @@ If you enter multiple conditions, Office 365 uses all the conditions together to
 
 - **Message size is larger than**, with the value 2 MB
 
-- **Message contains none of these words**, with the keywords "Approved by Contoso financial team".
+- **Message contains none of these words**, with the keywords "Approved by Contoso financial team"
 
 #### Review percentage
 
@@ -171,7 +173,7 @@ It is easy to monitor the results of your supervision policies and apply a resol
 
 ### Supervision policy dashboard
 
-The easiest way to manage supervision policy results and to resolve outstanding items is to use the supervision policy dashboard. This dashboard allows reviewers to view items that need to be reviewed, take action on an item, and review the results of previously reviewed and resolved items for each supervision policy. You can access the supervision policy dashboard in the Compliance center at **Supervision** > *Your Custom Policy* > **Open**.
+Use the supervision policy dashboard to manage supervision policy results and to resolve outstanding items. This dashboard allows reviewers to view items that need to be reviewed, take action on an item, and review the results of previously reviewed and resolved items for each supervision policy. You can access the supervision policy dashboard in the Compliance center at **Supervision** > *Your Custom Policy* > **Open**.
 
 #### Dashboard Home
 
@@ -180,13 +182,13 @@ The dashboard **Home** page has several sections to help you quickly take action
 - Quickly review the pending and resolved highlights for the week
 - See a list of the supervised users and supervised groups for the selected policy
 - See a list of the reviewers and review teams for the selected policy
-- See which communication platforms have content under supervision for the policy.
+- See which communication platforms have content under supervision for the policy
 
 #### Review tab
 
 The **Review** tab is where reviewers classify and resolve items identified by the selected policy. Here you can:
 
-- Filter by pending, compliant, non-compliant, and questionable items
+- Filter by pending, compliant, non-compliant, and questionable items.
 - Tag a single item as compliant, non-compliant, or questionable. You can also record a comment with the item to help clarify the tagging action taken.
 - Bulk tag multiple items as compliant, non-compliant, or questionable. You can also record a comment with multiple items to help clarify the tagging action taken.
 - View the history of the tagging for a single item. This includes who resolved the item, the date and time of the action, the resolution tag, and any included comments.
@@ -196,34 +198,8 @@ The **Review** tab is where reviewers classify and resolve items identified by t
 
 The **Resolved Items** tab is where reviewers can view all previously resolved items for the selected policy. Here you can:
 
-- Quickly view and sort the subject, sender, and date of resolved items.
+- Quickly view and sort the subject, sender, and date of resolved items
 - View the classification and comment history of any selected item
-
-### Other ways to review items
-
-If reviewers would prefer not to use the supervision dashboard in Office 365, they also have other options to review and manage items collected by supervision policies.
-
-#### Outlook on the web
-
-Users designated as reviewers in a supervision policy can use Outlook on the web to review and resolved supervision items. The Supervision add-in is installed automatically in Outlook on the web for all reviewers you specified in the policy. Supervision policy shared folders are available for configured reviewers without any extra configuration.
-
-With Outlook on the web, reviewers can:
-
-- View filtered items by compliant, non-compliant, questionable, and resolved status
-- Tag a single item as compliant, non-compliant, questionable, or resolved. You can also record a comment with the item to help clarify the tagging action taken.
-- View the history of the tagging for a single item, including who resolved the item, the date and time of the action, the resolution tag, and any included comments.
-- Reclassify previously reviewed items as compliant, non-compliant, or questionable. You can also record a comment with single items to help clarify the reclassification action taken.
-
-#### Microsoft Outlook
-
-To review communications identified by a supervision policy, reviewers can also use the Supervision add-in for Microsoft Outlook. However, reviewers must run through some steps to install it in the desktop version of Outlook. For detailed guidance about the Supervision add-in for Outlook, see [Configure supervision policies](configure-supervision-policies.md).
-
-With Outlook, reviewers can:
-
-- View filtered items by compliant, non-compliant, questionable, and resolved status
-- Tag a single item as compliant, non-compliant, questionable, or resolved. You can also record a comment with the item to help clarify the tagging action taken.
-- View the history of the tagging for a single item, including who resolved the item, the date and time of the action, the resolution tag, and any included comments.
-- Reclassify previously reviewed items as compliant, non-compliant, or questionable. You can also record a comment with single items to help clarify the reclassification action taken.
 
 ## Reports
 
@@ -244,9 +220,7 @@ Use the supervision reports to see the review activity at the policy and reviewe
   
 ### How to use the report
 
-When a supervision policy identifies a communication message for review, the reviewer's Supervision folder in Outlook and Outlook on the web (formerly known as Outlook Web App) receives an email notification. This report lists each policy and the number of communications at each stage in the review process.
-  
-Use the report to:
+This report lists each policy and the number of communications at each stage in the review process. Use the report to:
   
 - View data for all or specific policies.
 - View data grouped by tag type, reviewer, or message type.
@@ -257,7 +231,7 @@ Here's a breakdown of the values displayed the **Tag type** column.
   
 |**Tag type**|**What it means**|
 |:-----|:-----|
-| **Not Reviewed** | The number of emails not reviewed yet. These emails are awaiting review in the Office 365 supervision dashboard or in the reviewer's supervision folder in Outlook or Outlook on the web.
+| **Not Reviewed** | The number of emails not reviewed yet. These emails are awaiting review in the Office 365 supervision dashboard.
 | **Compliant** | The number of emails reviewed and marked as compliant. These messages still need resolution. |
 | **Questionable** | The number of emails reviewed and marked questionable. This acts as a flag for other reviewers to help check whether an email needs investigation for compliance. These messages still need resolution. |
 | **Non-Compliant (Active)** | The number of non-compliant emails that reviewers are currently investigating. |

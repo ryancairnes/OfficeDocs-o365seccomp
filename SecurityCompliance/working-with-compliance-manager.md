@@ -3,7 +3,7 @@ title: "Work with Microsoft Compliance Manager (Preview)"
 ms.author: robmazz
 author: robmazz
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal

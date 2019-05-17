@@ -3,7 +3,7 @@ title: "Office 365 Advanced Message Encryption"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: conceptual
 ms.service: O365-seccomp
 localization_priority: Normal

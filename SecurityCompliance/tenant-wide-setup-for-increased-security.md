@@ -4,7 +4,7 @@ ms.author: bcarter
 author: BrendaCarter
 manager: laurawi
 ms.date: 10/11/2018
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal

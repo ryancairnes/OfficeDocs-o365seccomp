@@ -3,7 +3,7 @@ title: "Configure end-user spam notifications in EOP"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal

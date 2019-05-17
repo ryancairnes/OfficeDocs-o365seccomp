@@ -3,7 +3,7 @@ title: "Protect against threats in Office 365"
 ms.author: tracyp
 author: msfttracyp
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: hub-page
 ms.service: O365-seccomp
 localization_priority: Normal

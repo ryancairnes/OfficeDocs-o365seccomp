@@ -3,7 +3,7 @@ title: "Set up an archive and deletion policy for mailboxes in your Office 365 o
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
