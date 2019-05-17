@@ -143,7 +143,7 @@ A label policy consists of:
 - The scope of the label policy, meaning the users and groups included in the policy.
 - The settings of the label policy described above (default label, justification, mandatory label, and help link).
 
-You can include a user in multiple label policies, and the user will see all of the sensitivity labels from those policies. However, a user will see only the policy settings from the label policy with the highest priority.
+You can include a user in multiple label policies, and the user will see all of the sensitivity labels from those policies. However, a user will see the policy settings from only the label policy with the highest priority.
 
 If a user or group in your organization is not seeing an option in the label policy that you intended, such as a default or mandatory label, check the order of the sensitivity label policies. To re-order the label policies, select a sensitivity label policy > choose the ellipsis on the right > **Move down** or **Move up**.
 
