@@ -87,17 +87,28 @@ To segment users, consider using an attribute in Azure Active Directory. Make su
 
     In this example, we are defining a segment called HR. The segment includes people who have HR listed as their department. (In this case, no employees are assigned to more than one department.)
 
-    After you run the cmdlet, you should see a list of details about the new segment. Details include the segment's type, who created or last modified it, and so on.
+    After you run the cmdlet, you should see a list of details about the new segment. Details include the segment's type, who created or last modified it, and so on. 
 
 6. Repeat the previous step for each segment. 
 
-### View a list of existing segments
+### View or edit existing segments
 
-1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
+1. If you haven't already done so, as a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
-2. Run the `Get-OrganizationSegment` cmdlet.
+2. To view a list of existing segments, run the `Get-OrganizationSegment` cmdlet.
 
-    You will see a list of segments and details for each. Details include each segment's type, who created or last modified it, and so on.
+    You will see a list of segments and details for each. Details include each segment's type, who created or last modified it, and so on. 
+
+    > [!TIP]
+    > Print or save your list of segments for reference later. For example, if you want to edit a segment, you will need to know its Identity.
+
+3. To edit a segment, use the `Set-OrganizationSegment` cmdlet with the Identity parameter and relevant details. Here's an example:
+
+    `Set-OrganizationSegment -Identity "FFO.extest.microsoft.com/Microsoft Exchange Hosted Organizations/IBAPCorp04.onmicrosoft.com/Configuration/HR" -UserGroupFilter "Department -eq 'HRDept'"`
+
+    In this example, we are updating the department name from "HR" to "HRDept" for the segment that has the Identity value of `FFO.extest.microsoft.com/Microsoft Exchange Hosted Organizations/IBAPCorp04.onmicrosoft.com/Configuration/HR`.
+
+When you have finished editing your existing segments, proceed to define information barrier policies.
 
 ## Part 3: Define information barrier policies
 
