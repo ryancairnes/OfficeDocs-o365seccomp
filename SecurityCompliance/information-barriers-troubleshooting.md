@@ -61,13 +61,9 @@ Follow these steps to determine whether the users are affected by an information
 
     Example: `Get-OrganizationSegment -Identity "FFO.extest.microsoft.com/Microsoft Exchange Hosted Organizations/IBAPCorp04.onmicrosoft.com/Configuration/Sales"`
 
-    In this example, we used the segment's Identity.
+    Review the details for the segment. If necessary, [edit a segment](information-barriers-policies.md#view-or-edit-existing-segments), wait 30 minutes, and then re-run the `Start-InformationBarrierPoliciesApplication` cmdlet.
 
-    To edit a segment, use the `Set-OrganizationSegment` cmdlet with the Identity parameter and relevant details. Here's an example:
-
-    `Set-OrganizationSegment -Identity "FFO.extest.microsoft.com/Microsoft Exchange Hosted Organizations/IBAPCorp04.onmicrosoft.com/Configuration/HR" -UserGroupFilter "Department -eq 'HRDept'"`
-
-    In this example, we are updating the department name from "HR" to "HRDept" for the segment that has the Identity value of `FFO.extest.microsoft.com/Microsoft Exchange Hosted Organizations/IBAPCorp04.onmicrosoft.com/Configuration/HR`.
+    If you are still having issues with your information barrier policy, contact support.
     
 
 ## Issue: The information barrier application process is taking too long
