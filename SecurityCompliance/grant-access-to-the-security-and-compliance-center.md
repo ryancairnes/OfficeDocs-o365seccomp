@@ -4,7 +4,7 @@ ms.author: stephow
 author: stephow-MSFT
 manager: laurawi
 ms.date: 
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 f1_keywords:
 - 'ms.o365.cc.PermissionsHelp'

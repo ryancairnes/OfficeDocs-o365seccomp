@@ -3,7 +3,7 @@ title: "Detailed properties in the Office 365 audit log"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: reference
 ms.service: O365-seccomp
 localization_priority: Normal

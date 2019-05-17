@@ -3,7 +3,7 @@ title: "Use the PST Collection tool to find, copy, and delete PST files in your 
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal

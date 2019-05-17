@@ -3,7 +3,7 @@ title: "Chief Information Security Officer (CISO) Workshop, Module 3:Identity, a
 ms.author: robmazz
 author: robmazz
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: tutorial
 ms.service: o365-seccomp
 localization_priority: Normal

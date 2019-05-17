@@ -3,7 +3,7 @@ title: "Responding to a Compromised Email Account in Office 365"
 ms.author: chrfox
 author: chrfox
 manager: laurawi
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.collection: 
 - o365_security_incident_response
