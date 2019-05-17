@@ -29,23 +29,23 @@ A major and costly aspect of the review phase of any eDiscovery process is revie
 
 When attorney-client privilege detection is enabled, all documents in a review set will be processed by the attorney-client privilege detection model when you [ analyze the data](analyzing-data-in-review-set.md) in the review set. The model looks for two things:
 
-- **Privileged content** - The model uses machine learning to determines the likelihood that the document contains content that is legal in nature.
+- Privileged content - The model uses machine learning to determines the likelihood that the document contains content that is legal in nature.
 
-- **Participants** - As part of setting up attorney-client privilege detection, you have to submit a list of attorneys for your organization. The model then compares the participants of the document with the attorney list to determine if a document has at least one attorney participant.
+- Participants - As part of setting up attorney-client privilege detection, you have to submit a list of attorneys for your organization. The model then compares the participants of the document with the attorney list to determine if a document has at least one attorney participant.
 
 The model produces the following three properties for every document (and adds these *property:value* pairs to the document metadata):
 
-- **Content score** - The likelihood the document is legal in nature; the values for the score are between **0** and **1**.
+- **AttorneyClientPrivilegeScore** - The likelihood the document is legal in nature; the values for the score are between **0** and **1**.
 
-- **Has Attorney** - This property is set to **True** if one of the document participants is listed in the attorney list; otherwise the value is **False**. The value is also set to **False** if your organization didn't upload an attorney list.
+- **HasAttorney** - This property is set to **true** if one of the document participants is listed in the attorney list; otherwise the value is **false**. The value is also set to **false** if your organization didn't upload an attorney list.
 
-- **Potentially Privileged** - This property is set to **True** if the **Content score** value is above threshold *or* if the document has an attorney participant; otherwise, the value is set to **False**.
+- **IsPrivilege** - This property is set to **true** if the value for **AttorneyClientPrivilegeScore** is above the threshold *or* if the document has an attorney participant; otherwise, the value is set to **false**.
 
 The three previous values are searchable within a review set. For more information, see [Query the data in a review set](review-set-search.md).
 
 ## Set up the attorney-client privilege detection model
 
-To enable the attorney-client privilege detection module, your organization has to opt-in and then upload an attorney list.
+To enable the attorney-client privilege detection model, your organization has to opt-in and then upload an attorney list.
 
 ### Step 1: Opt-in to attorney-client privilege detection
 
@@ -53,19 +53,35 @@ As previously stated, the attorney-client privilege detection model is in Previe
 
 1. In the Security & Compliance Center, go to **eDiscovery > Advanced eDiscovery**.
 
-2. On the **Advanced eDiscovery** home page, click the **Configure experimental features** tile.
+2. On the **Advanced eDiscovery** home page, in the **Settings** tile, click **Configure experimental features**.
 
-3. Click **Manage attorney-client privilege detection**.
+   ![Click "Configure experimental features"](../media/AeDExperimentalFeatures.png)
 
-4. Click the toggle to turn on the feature.
+3. On the **Experimental features** tab, click **Manage attorney-client privilege setting**.
+
+4. On the **Attorney-client privilege** flyout page, click the toggle to turn on the feature and then click **Save**.
 
 ### Step 2: Upload a list of attorneys (optional)
 
-In take full advantage of the attorney-client privilege detection model, we recommend that you provide a list of email addresses for the lawyers and legal personnel who work for your organization. To do this, create a .csv file (without a header row) and then add the email address for each person on a separate line.
+In take full advantage of the attorney-client privilege detection model and use the results of the **Has Attorney** or **Potentially Privileged** detection that was previously describe, we recommend that you upload a list of email addresses for the lawyers and legal personnel who work for your organization. 
 
-## Use the attorney-client privilege detection module
+To upload an attorney list for use by the attorney-client privilege detection model:
 
-Follow the steps in this section use attorney-client privilege detection for documents in a review set.
+1. Create a .csv file (without a header row) and add the email address for each appropriate person on a separate line. Save this file to your local computer.
+
+2. On the **Advanced eDiscovery** home page, in the **Settings** tile, click **Configure experimental features**, and then click **Manage attorney-client privilege setting**.
+
+   The **Attorney-client privilege** page is displayed. Note the **Attorney-client privilege detection** toggle is turned on.
+
+   ![Attorney-client privilege flyout page](../media/AeDUploadAttorneyList.png)
+
+3. Click **Browse** and then find and select the .csv file that you created in step 1.
+
+4. Click **Save** to upload the attorney list.
+
+## Use the attorney-client privilege detection model
+
+Follow the steps in this section to use attorney-client privilege detection for documents in a review set.
 
 ### Step 1: Analyze a review set
 
@@ -79,16 +95,32 @@ One of the primary ways to see the results of attorney-client privilege detectio
  
 2. Under **Tags**, click the pull-down next to **Add group** and then click **Add smart tag group**.
 
+   ![Click "Add smart tag group"](../media/AeDCreateSmartTag.png)
+
 3. On the **Choose a model for your smart tag** page, click **Select** next to **Attorney-client privilege**.
 
-   A tag group named **Attorney-client privilege** is displayed. It contains two child tags named **Positive** and **Negative**, which correspond to the possible results of the model.
+   A tag group named **Attorney-client privilege** is displayed. It contains two child tags named **Positive** and **Negative**, which correspond to the possible results produced by the model.
+
+   ![Attorney-client privilege smart tag group](../media/AeDAttorneyClientSmartTagGroup.png)
 
 3. Rename the tag group and tags as appropriate for your review. For example, you can rename **Positive** to **Privileged** and **Negative** to **Not privileged**.
 
-### Step 3: Use the smart tag group for privilege review
+### Step 3: Use the smart tag group for review of privileged content
 
-When you review a document, if the model has determined that the document is potentially privileged, the corresponding smart tag will expose the result:
+After analyzing the review set and setting up smart tags, the next step is to review the documents. If the model has determined the document is potentially privileged, the corresponding smart tag in the **Tagging panel** will indicate the following results produced by the attorney-client privilege detection:
 
 - If the document has content that may be legal in nature, the label **Legal content** is displayed next to the corresponding smart tag (which in this case is the default **Positive** tag).
 
-- If the document has a participant that is found in your organization's attorney list, the label **Attorney** is displayed next to the corresponding smart tag (which in this case is also the default **Positive** tag).
+- If the document has a participant who is found in your organization's attorney list, the label **Attorney** is displayed next to the corresponding smart tag (which in this case is also the default **Positive** tag).
+
+- If the document has content that may be legal in nature *and* has a participant found in the attorney list, both the **Legal content**  and **Attorney** labels are displayed. 
+
+If the model determines that a document doesn't contain content that is legal in nature or doesn't contain a participant from the attorney list, then neither label is displayed in the tagging panel.
+
+For example, the following screenshots show two documents; the first one contains content that is legal in nature and has a participant found in the the attorney's list; the second contains neither and therefore doesn't display any labels.
+
+![Document with Attorney and Legal content labels](../media/AeDTaggingPanelLegalContentAttorney.png)
+
+![Document without any labels](../media/AeDTaggingPanelNegative.png)
+
+After you review a document and confirm whether or not it contains privileged content, you can tag the document with the appropriate tag.
