@@ -27,6 +27,8 @@ If you're a global administrator or compliance administrator and you define or m
 
 ### What to do
 
+Follow these steps to determine whether the users are affected by an information barrier policy, whether the users are in the correct segments, and whether filters are applied correctly in information barriers.
+
 1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
 2. To see if the users in question are included in an information barrier policy, run the `Get-InformationBarrierRecipientStatus` cmdlet with the Identity parameter. You can use any identity value that uniquely identifies each recipient, such as Name, Alias, Distinguished name (DN), Canonical DN, Email address, or GUID.
@@ -35,7 +37,11 @@ If you're a global administrator or compliance administrator and you define or m
 
     In this example, we are using each user's alias. When we run this cmdlet, if each user is included in an information barrier policy, we will see its GUID listed as ExoPolicyId.
 
-3. 
+    If the users are not included in information barrier policies, contact support. Otherwise, proceed to the next step.
+
+3. To see which segments are affected by an information barrier policy, run the `Get-InformationBarrierPolicy` cmdlet with the Identity parameter. Use the policy GUID (ExoPolicyId) from the previous step.
+
+    Example: `Get-InformationBarrierPolicy -Identity b42c3d0f-49e9-4506-a0a5-bf2853b5df6f`
 
 ## My information barrier policy is not working
 

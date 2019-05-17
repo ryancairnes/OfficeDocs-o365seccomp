@@ -200,7 +200,7 @@ After you have applied information barrier policies, follow these steps to verif
 
     `Get-InformationBarrierPoliciesApplicationStatus -All`
 
-3. To verify status for a specific user, run the `Get-InformationBarrierRecipientStatus -user1 username` cmdlet, where *username* refers to the user account in Office 365. (For example, Megan Bowen at Contoso has a user account *meganb*.)
+3. To verify status for a specific user, run the `Get-InformationBarrierRecipientStatus -user1 username -user2 username` cmdlet, where each *username* refers to a user account in Office 365. (For example, Megan Bowen at Contoso has a user account *meganb*, and Alex Williams has a user account *alexw*.)
 
 ## Edit or remove an information barrier policy
 
