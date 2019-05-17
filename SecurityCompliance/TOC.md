@@ -201,10 +201,15 @@
 #### [Support for validation of DKIM signed messages](support-for-validation-of-dkim-signed-messages.md)
 #### [Use DMARC to validate email](use-dmarc-to-validate-email.md)
 <!--/Protect-->
-## [Stub: M365 and edge filtering]
-<!--Investigate-->
+## [Stub: M365 and Edge filtering]
+<!--Investigate and Respond-->
+### [Smart reports and insights in the Security & Compliance Center](reports-and-insights-in-security-and-compliance.md) 
 ### [View information about malicious files](malicious-files-detected-in-spo-odb-or-teams.md)
-<!--/Investigate-->
+### [View email security reports in the Security & Compliance Center](view-email-security-reports.md)
+### [Walkthrough - From a detailed report to an insight](from-a-detailed-report-to-an-insight.md)
+### [Walkthrough - From an insight to a detailed report](from-an-insight-to-a-detailed-report.md)
+### [Walkthrough - From a dashboard to an insight](from-a-dashboard-to-an-insight.md)
+<!--/Investigate and Respond-->
 <!--E5 ATP - Investigate and Respond-->
 ## [Advanced Threat Protection ](office-365-atp.md)
 <!--Actions for GAs (generally) 1-time setup-->
@@ -235,7 +240,7 @@
 #### [Use Attack Simulator in Office 365](attack-simulator.md)
 #### [Keep users safe with threat investigation and response](keep-users-safe-with-office-365-ti.md)
 #### [Find and investigate malicious email that was delivered](investigate-malicious-email-that-was-delivered.md)
-#### [Use Threat Explorer](use-explorer-in-security-and-compliance.md)
+#### [Threat Explorer (and real-time detections)](threat-explorer.md)
 #### [Threat Explorer views](threat-explorer-views.md)
 <!--SecInfo audience: Integrate with Microsoft or other techs-->
 ### [Integration for greater Security]
@@ -243,9 +248,9 @@
 #### [SIEM integration with Office 365 ATP](siem-integration-with-office-365-ti.md)
 <!--SecInfo audience: How ATP Works-->
 ### [How ATP works]
-#### [How ATP Safe Links works](atp-safe-links.md)
+#### [How ATP Safe Links works](how-atp-safe-links-works.md)
 ##### [Dynamic Delivery and previewing details](dynamic-delivery-and-previewing.md)
-#### [How ATP Safe Attachments works](atp-safe-attachments.md)
+#### [How ATP Safe Attachments works](how-atp-safe-attachments-works.md)
 #### [About Threat investigation and response](office-365-ti.md)
 #### [How Threat Investigation and Response works](get-started-with-ti.md)
 #### [How Automated Investigation and Response works](automated-investigation-response-office.md)
@@ -534,11 +539,6 @@
 ### [Monitor devices in Microsoft 365 security](monitor-devices.md)
 ### [Monitor apps in Microsoft 365 security](monitor-apps.md)
 ## [Alert policies](alert-policies.md)
-## [Smart reports and insights in the Security & Compliance Center](reports-and-insights-in-security-and-compliance.md)
-### [View email security reports in the Security & Compliance Center](view-email-security-reports.md)
-### [Walkthrough - From a detailed report to an insight](from-a-detailed-report-to-an-insight.md)
-### [Walkthrough - From an insight to a detailed report](from-an-insight-to-a-detailed-report.md)
-### [Walkthrough - From a dashboard to an insight](from-a-dashboard-to-an-insight.md)
 ### [Create a schedule for a report](create-a-schedule-for-a-report.md)
 ### [Manage schedules for multiple reports](manage-schedules-for-multiple-reports.md)
 ### [Set up and download a custom report](set-up-and-download-a-custom-report.md)
