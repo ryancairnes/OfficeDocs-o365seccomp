@@ -43,17 +43,21 @@ Follow these steps to determine whether the users are affected by an information
 
     Example: `Get-InformationBarrierPolicy -Identity b42c3d0f-49e9-4506-a0a5-bf2853b5df6f`
 
-## My information barrier policy is not working
 
-content coming
 
-## Starting the information barrier application is taking too long
+## The information barrier application process is taking too long
 
-content coming
+### Issue
 
-## I'm getting error messages while defining policies
+After running the `Start-InformationBarrierPoliciesApplication` cmdlet, the process is taking a really long time to finish.
 
-content coming
+### What to do
+
+1. Keep in mind that when you run the policy application cmdlet, information barrier policies are being applied (or removed), user by user, for all accounts in your organization. If you have a lot of users, it will take a while to process. 
+
+2. If you have waited a long time and the process still isn't finished, you can update a field in the users' profiles in Azure Active Directory, and wait 30 minutes for FwdSync to occur. For more details about how this works, see [New address lists that you create in Exchange Online don't contain all the expected recipients](https://support.microsoft.com/help/2955640/new-address-lists-that-you-create-in-exchange-online-don-t-contain-all).
+
+3. If after step 2 you are still having issues with the process, contact support.
 
 ## Related topics
 
