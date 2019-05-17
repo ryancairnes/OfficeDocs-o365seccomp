@@ -3,7 +3,7 @@ title: "Microsoft Compliance Manager and the GDPR"
 ms.author: robmazz
 author: robmazz
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: None

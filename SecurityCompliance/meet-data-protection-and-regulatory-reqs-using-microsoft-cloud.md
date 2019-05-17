@@ -3,7 +3,7 @@ title: "Use Compliance Manager to help meet data protection and regulatory requi
 ms.author: robmazz
 author: robmazz
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Priority

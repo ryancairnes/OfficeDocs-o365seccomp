@@ -4,7 +4,7 @@ ms.author: chrfox
 author: chrfox
 manager: laurawi
 ms.date: 04/27/2018
-ms.audience: ITPro
+audience: ITPro
 ms.topic: overview
 ms.collection: 
 - o365_security_incident_response

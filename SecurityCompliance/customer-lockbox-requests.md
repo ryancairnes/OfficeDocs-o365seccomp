@@ -3,7 +3,7 @@ title: "Office 365 Customer Lockbox Requests"
 ms.author: robmazz
 author: robmazz
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: troubleshooting
 ms.service: o365-administration
 localization_priority: Normal

@@ -3,7 +3,7 @@ title: "Use mail flow rules to see what your users are reporting to Microsoft"
 ms.author: tracyp
 author: MSFTTracyP
 manager: laurawi
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
