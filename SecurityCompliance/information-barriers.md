@@ -22,11 +22,8 @@ Microsoft cloud services include powerful communication and collaboration capabi
 Information barriers are in preview now, and coming soon to Microsoft Teams. When these features are available for your organization, a compliance administrator or information barriers administrator can define policies to allow or prevent communications between groups of users in Microsoft Teams. Information barrier policies can be used for situations like these:
 
 - A day trader cannot call someone on the marketing team
-
 - Finance personnel working on confidential company information cannot receive calls from people outside their organization
-
 - An internal team with trade secret material cannot call or chat online with people outside their organization
-
 - A research team can only call or chat online with a product development team
 
 For all of these example scenarios (and more), information barrier policies can be defined to prevent or allow communications in Microsoft Teams. Such poliicies can prevent people from calling or chatting with those they shouldn't, or enable people to communicate with specific groups in Microsoft Teams. With information barrier policies in effect, whenever users who are covered by those policies attempt to communicate with others in Microsoft Teams, checks are done to prevent unauthorized communication (or allow authorized communication). 
