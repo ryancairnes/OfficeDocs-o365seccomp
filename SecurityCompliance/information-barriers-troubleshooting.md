@@ -55,7 +55,19 @@ Follow these steps to determine whether the users are affected by an information
     ```
     In this case, we can see that the policy affects people who are in the Sales and Research segments, and that people in Sales are prevented from communicating with Research. If this seems correct, then information barriers are working as expected. If something is not correct, proceed to the next step.
 
-4. Make sure your segments are defined correctly. To do this, run the `Get-OrganizationSegment` cmdlet, and review the list of results.
+4. Make sure your segments are defined correctly. To do this, run the `Get-OrganizationSegment` cmdlet, and review the list of results. 
+
+    To view details for a specific segment, use the `Get-OrganizationSegment` cmdlet with an Identity parameter. 
+
+    Example: `Get-OrganizationSegment -Identity "FFO.extest.microsoft.com/Microsoft Exchange Hosted Organizations/IBAPCorp04.onmicrosoft.com/Configuration/Sales"`
+
+    In this example, we used the segment's Identity.
+
+    To edit a segment, use the `Set-OrganizationSegment` cmdlet with the Identity parameter and relevant details. Here's an example:
+
+    `Set-OrganizationSegment -Identity "FFO.extest.microsoft.com/Microsoft Exchange Hosted Organizations/IBAPCorp04.onmicrosoft.com/Configuration/HR" -UserGroupFilter "Department -eq 'HRDept'"`
+
+    In this example, we are updating the department name from "HR" to "HRDept" for the segment that has the Identity value of `FFO.extest.microsoft.com/Microsoft Exchange Hosted Organizations/IBAPCorp04.onmicrosoft.com/Configuration/HR`.
     
 
 ## Issue: The information barrier application process is taking too long
