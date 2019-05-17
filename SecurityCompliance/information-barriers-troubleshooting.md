@@ -43,6 +43,17 @@ Follow these steps to determine whether the users are affected by an information
 
     Example: `Get-InformationBarrierPolicy -Identity b42c3d0f-49e9-4506-a0a5-bf2853b5df6f`
 
+    In the results, look for AssignedSegment, SegmentsAllowed, SegmentsBlocked, and SegmentAllowedFilter values.
+
+    Example: After running the cmdlet, we saw the following in our list of results:
+
+    ```powershell
+        AssignedSegment      : Sales
+        SegmentsAllowed      : {}
+        SegmentsBlocked      : {Research}
+        SegmentAllowedFilter :
+    ```
+    In this case, we have an information barrier policy such that users in the Sales segment are prevented from communicating with users in the Research segment.
 
 
 ## The information barrier application process is taking too long
