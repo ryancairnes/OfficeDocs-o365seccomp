@@ -152,7 +152,7 @@ When you have a list of user segments and the information barrier policies you w
 
 4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
 
-
+5. To block communications between groups, 
 
 Keep in mind that by default, your information barrier policies are inactive until they are explicitly set to active status and applied. After you have defined your policies, proceed to the next section.
 
