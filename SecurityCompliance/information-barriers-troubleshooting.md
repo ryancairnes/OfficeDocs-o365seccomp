@@ -55,6 +55,7 @@ Follow these steps to determine whether the users are affected by an information
     ```
     In this case, we have an information barrier policy such that users in the Sales segment are prevented from communicating with users in the Research segment.
 
+    
 
 ## The information barrier application process is taking too long
 
