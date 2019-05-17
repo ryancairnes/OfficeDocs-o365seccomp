@@ -4,7 +4,7 @@ ms.author: bcarter
 author: brendacarter
 manager: laurawi
 ms.date: 
-ms.audience: ITPro
+audience: ITPro
 ms.topic: conceptual
 ms.service: O365-seccomp
 localization_priority: Priority
