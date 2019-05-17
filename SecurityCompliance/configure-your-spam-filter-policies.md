@@ -46,7 +46,9 @@ For information about keyboard shortcuts that may apply to the procedures in thi
 4. On the **spam and bulk actions** section, under **Spam**, **High confidence spam**, **Phishing email**, and **Bulk email**, select the action to take for incoming junk. The available values are: 
 
       - **Move message to Junk Email folder:** Sends the message to the Junk Email folder of the specified recipients. This is the default action for spam, high confidence spam, and bulk. <br/><br/>**IMPORTANT**: For Exchange Online Protection (EOP) customers: In order for this action to work with on-premises mailboxes, you must configure two Exchange mail flow rules on your on-premises servers to detect spam headers added by EOP. For details, see [Ensure that spam is routed to each user's Junk Email folder](ensure-that-spam-is-routed-to-each-user-s-junk-email-folder.md).
-  
+
+ **IMPORTANT**: For Exchange Online Protection (EOP) customers: In order for this action to work with on-premises mailboxes, you must configure two Exchange mail flow rules on your on-premises servers to detect spam headers added by EOP. For details, see how to [Ensure that spam is routed to each user's Junk Email folder](ensure-that-spam-is-routed-to-each-user-s-junk-email-folder.md).
+ 
       - **Add X-header:** Sends the message to the specified recipients, but adds X-header text to the message header in order to identify the message as spam. Using this text as an identifier, you can optionally create inbox rules or use a downstream device to act on the message. The default X-header text is **This message appears to be spam**.<br/>You can customize the X-header text by using the **Add this X-header text** input box. If you customize the X-header text, be aware of the following conditions: 
     
       - If you specify only the header in the format \< *header*  \>, where there are no spaces within the \<  *header*  \>, a colon will be appended to the custom text, followed by the default text. For example, if you specify "This-is-my-custom-header," the X-header text will appear as "This-is-my-custom-header: This message appears to be spam." 
