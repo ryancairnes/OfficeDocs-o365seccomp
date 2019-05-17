@@ -3,7 +3,7 @@ title: "Set up and download a custom report in the Security &amp; Compliance Cen
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal

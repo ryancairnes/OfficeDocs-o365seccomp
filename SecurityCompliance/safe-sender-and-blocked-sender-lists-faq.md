@@ -3,7 +3,7 @@ title: "Safe sender and blocked sender lists in Exchange Online"
 ms.author: tracyp
 author: MSFTTracyP
 manager: laurawi
-ms.audience: ITPro
+audience: ITPro
 ms.topic: reference
 ms.service: O365-seccomp
 localization_priority: Normal

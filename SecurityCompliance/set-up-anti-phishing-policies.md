@@ -3,7 +3,7 @@ title: "Set up Office 365 ATP anti-phishing policies"
 ms.author: tracyp
 author: MSFTTracyP
 manager: laurawi
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.date: 02/06/2019
 ms.service: O365-seccomp
@@ -137,8 +137,8 @@ You can delete custom policies that you created by using the Security &amp; Comp
 
 Once your anti-phishing policies are in place, you can see how your threat protection features are working for your organization by viewing reports. See the following resources to learn more:
 
-- [View reports for Office 365 Advanced Threat Protection](view-reports-for-atp.md) or [View email security reports](view-email-security-reports.md)
+- [View reports for Office 365 ATP](view-reports-for-atp.md) or [View email security reports](view-email-security-reports.md)
 
-- [Use Explorer (also referred to as Threat Explorer)](use-explorer-in-security-and-compliance.md)
+- [Use Threat Explorer (or real-time detections)](threat-explorer.md)
 
 Stay on top of new features coming to ATP. visit the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=O365) and learn about [new features that are being added to ATP](office-365-atp.md#new-features-in-office-365-atp).

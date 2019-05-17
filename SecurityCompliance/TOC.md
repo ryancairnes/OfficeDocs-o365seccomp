@@ -1,3 +1,5 @@
+# [Security & Compliance](index.md)
+
 # Get started
 <!--sample comment: comment goes here-->
 <!-- Landing page for Overview of Office 365 security which covers our approach across protect, detect, investigate, respond, user training and education-->
@@ -293,7 +295,8 @@
 ### [Use network upload to import RMS-encrypted PST files](use-network-upload-to-import-rms-encrypted-pst-files.md)
 ### [FAQ about importing PST files](faqimporting-pst-files-to-office-365.md)
 ### [Archive third-party data in Office 365](archiving-third-party-data.md)
-#### [Use sample connectors to archive third-party data](archive-third-party-data-with-sample-connector.md)
+#### [Use a sample connector to archive Facebook data](archive-facebook-data-with-sample-connector.md)
+#### [Use a sample connector to archive Twitter data](archive-twitter-data-with-sample-connector.md)
 #### [Work with a partner to archive third-party data](work-with-partner-to-archive-third-party-data.md)
 ## Store data
 ### [Enable archive mailboxes](enable-archive-mailboxes.md)
@@ -309,7 +312,8 @@
 ### [Event-based retention](event-driven-retention.md)
 ### [Automate event-based retention](automate-event-driven-retention.md)
 ## [Dispose data](disposition-reviews.md)
-## [Supervise communications](supervision-policies.md)
+## Supervise communications
+### [Supervision policies](supervision-policies.md)
 ### [Configure supervision policies for your organization](configure-supervision-policies.md)
 ## [Manage inactive mailboxes](inactive-mailboxes-in-office-365.md)
 ### [Create and manage inactive mailboxes](create-and-manage-inactive-mailboxes.md)

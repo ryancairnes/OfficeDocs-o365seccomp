@@ -4,7 +4,7 @@ ms.author: deniseb
 author: denisebmsft
 manager: laurawi
 ms.date: 03/19/2019
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -44,7 +44,7 @@ To view and use this dashboard, in the Security &amp; Compliance Center, go to *
   
 ### Threat Explorer
 
-Use the Threat Explorer (this is also called Explorer) to analyze threats, see the volume of attacks over time, and analyze data by threat families, attacker infrastructure, and more. Threat Explorer is the starting place for any security analyst's investigation workflow.
+Use the [Threat Explorer (and real-time detections)](threat-explorer.md) to analyze threats, see the volume of attacks over time, and analyze data by threat families, attacker infrastructure, and more. Threat Explorer (also referred to as Explorer) is the starting place for any security analyst's investigation workflow.
   
 ![Threat explorer](media/7a7cecee-17f0-4134-bcb8-7cee3f3c3890.png)
   
@@ -88,7 +88,7 @@ Office 365 Threat Invesigation and Response capabilities are included in Office 
   |**To do this activity...** <br/> |**You must have one of these roles** <br/> |  
   |:-----|:-----|
   |Use the Threat dashboard (or the new [Security dashboard](security-dashboard.md))<br/> View information about recent or current threats  <br/> |Office 365 Global Administrator  <br/> Security Administrator (assigned in the Security &amp; Compliance Center)  <br/> Security Reader (assigned in the Security &amp; Compliance Center)  <br/> |
-  |Use Threat Explorer (also referred to as Explorer)  <br/> Analyze threats  <br/> |Office 365 Global Administrator  <br/> Security Administrator (assigned in the Security &amp; Compliance Center)  <br/> Security Reader (assigned in the Security &amp; Compliance Center)  <br/> |
+  |Use [Threat Explorer (and real-time detections)](threat-explorer.md) to analyze threats  <br/> |Office 365 Global Administrator  <br/> Security Administrator (assigned in the Security &amp; Compliance Center)  <br/> Security Reader (assigned in the Security &amp; Compliance Center)  <br/> |
   |View Incidents (also referred to as Investigations) <br/> Add email messages to an incident  <br/> |Office 365 Global Administrator  <br/> Security Administrator (assigned in the Security &amp; Compliance Center)  <br/> Security Reader (assigned in the Security &amp; Compliance Center)  <br/> |
   |Trigger email actions in an incident  <br/> Find and delete suspicious email messages  <br/> |Office 365 Global Administrator or Security Administrator  <br/> One of the roles above and Search and Purge (assigned in the Security &amp; Compliance Center)  <br/> |
   |Integrate Office 365 Advanced Threat Protection Plan 2 with Windows Defender Advanced Threat Protection  <br/> Integrate Office 365 Advanced Threat Protection Plan 2 with a SIEM server  <br/> |Office 365 Global Administrator  <br/> Security Administrator (assigned in the Security &amp; Compliance Center)  <br/> Appropriate role assigned in additional applications (such as Windows Defender Advanced Threat Protection portal or a SIEM server)  <br/> |

@@ -3,7 +3,7 @@ title: "GDPR discovery, protection, and reporting in the Office 365 dev/test env
 ms.author: bcarter
 author: brendacarter
 manager: laurawi
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.collection: 
 - Ent_O365

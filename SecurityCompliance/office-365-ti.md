@@ -4,7 +4,7 @@ ms.author: deniseb
 author: denisebmsft
 manager: laurawi
 ms.date: 03/18/2019
-ms.audience: Admin
+audience: Admin
 ms.topic: overview
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -56,15 +56,15 @@ Use the following resources to learn more about threat investigation and respons
     
 - [Learn about Threat Trackers - New and Noteworthy](threat-trackers.md)
 
-- [Automated Investigation and Response (AIR) with Office 365 Threat Intelligence](automated-investigation-response-office.md)
+- [Save time and effort with Automated Investigation and Response (AIR) capabilities](automated-investigation-response-office.md)
 
-- [Use Threat Explorer in the Security &amp; Compliance Center](use-explorer-in-security-and-compliance.md)
+- [Use Threat Explorer (or real-time detections) to identify and investigate malicious content in email and files](threat-explorer.md)
     
 - [Find and investigate malicious email that was delivered](investigate-malicious-email-that-was-delivered.md)
     
-- [Use Attack Simulator](attack-simulator.md)
+- [Use Attack Simulator to simulate attacks and increase user awareness](attack-simulator.md)
     
-- [Integrate Threat Investigation and Response with Windows Defender Advanced Threat Protection](integrate-office-365-ti-with-wdatp.md)
+- [Integrate Threat Investigation and Response capabilities with Windows Defender Advanced Threat Protection](integrate-office-365-ti-with-wdatp.md)
     
 ## Related topics
 
