@@ -4,7 +4,7 @@ ms.author: bcarter
 author: brendacarter
 manager: laurawi
 ms.date: 
-ms.audience: ITPro
+audience: ITPro
 ms.topic: overview
 ms.collection: 
 - Strat_O365_Enterprise

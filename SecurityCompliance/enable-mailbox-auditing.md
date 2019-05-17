@@ -3,7 +3,7 @@ title: "Manage mailbox auditing"
 ms.author: chrisda
 author: chrisda
 manager: serdars
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
