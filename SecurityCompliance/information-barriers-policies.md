@@ -58,14 +58,14 @@ As an example, Contoso set up a table to determine which departments can (or can
 |---------|---------|---------|
 |HR     |Everyone         |(no restrictions)         |
 |Sales     |HR, Marketing         |Research         |
-|Marketing     |HR, Product Development, Sales         |Research         |
-|Research     |HR, Product Development         |     |
+|Marketing     |HR, Engineering, Sales         |Research         |
+|Research     |Engineering         |     |
 
 In this case, the list of information barrier policies to define would include the following:
 
 - Prevent Sales from communicating with Research (and vice versa)
 - Prevent Marketing from communicating with Research (and vice versa)
-- Allow Research to communicate with HR and Product Development only 
+- Allow Research to communicate with Engineering only 
 
 ### A few important points to keep in mind
 
@@ -77,7 +77,9 @@ As you plan your information barrier policies, keep the following points in mind
 
 ## Part 2: Segment users
 
-To segment users, consider using an attribute in Azure Active Directory. Make sure that your segments do not overlap. For example, you might use the Department attribute, assuming no single employee is assigned to more than one department. To see a list of supported attributes, refer to [Attributes for information barrier policies (Preview)](information-barriers-attributes.md).
+After you have set up your plan for information barrier policies, the next step is to segment users in your organization. To do this, consider using an attribute in Azure Active Directory. 
+
+**Make sure that your segments do not overlap**. For example, you might use the Department attribute, assuming no single employee is assigned to more than one department. To see a list of supported attributes, refer to [Attributes for information barrier policies (Preview)](information-barriers-attributes.md).
 
 1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
@@ -97,15 +99,17 @@ To segment users, consider using an attribute in Azure Active Directory. Make su
 
 4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
 
-5. To define an organizational segment, use the `New-OrganizationSegment` cmdlet with the `UserGroupFilter` parameter that corresponds to the attribute you want to use. Make sure that the attribute you use to define your segment is such that no single person belongs to more than one segment. Here's an example:
+5. To define an organizational segment, use the `New-OrganizationSegment` cmdlet with the `UserGroupFilter` parameter that corresponds to the attribute you want to use. Make sure that the attribute you use to define your segment is such that no single person belongs to more than one segment. Here are some examples (using the Department attribute):
 
     `New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"`
 
-    In this example, we are defining a segment called HR. The segment includes people who have HR listed as their department. (In this case, no employees are assigned to more than one department.)
+    `New-OrganizationSegment -Name "Sales" -UserGroupFilter "Department -eq 'Sales'"`
 
-    After you run the cmdlet, you should see a list of details about the new segment. Details include the segment's type, who created or last modified it, and so on. 
+    `New-OrganizationSegment -Name "Research" -UserGroupFilter "Department -eq 'Research'"`
 
-6. Repeat the previous step for each segment. 
+    `New-OrganizationSegment -Name "Engineering" -UserGroupFilter "Department -eq 'Engineering'"`
+
+    After you run each cmdlet, you should see a list of details about the new segment. Details include the segment's type, who created or last modified it, and so on. 
 
 ### View or edit existing segments
 
