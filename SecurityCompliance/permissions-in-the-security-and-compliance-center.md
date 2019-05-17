@@ -4,7 +4,7 @@ ms.author: chrisda
 author: chrisda
 manager: chrisda
 ms.date: 
-ms.audience: Admin
+audience: Admin
 ms.topic: conceptual
 f1_keywords:
 - 'ms.o365.cc.AdminRoleGroups'

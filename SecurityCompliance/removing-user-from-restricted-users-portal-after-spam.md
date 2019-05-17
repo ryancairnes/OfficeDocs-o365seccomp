@@ -4,7 +4,7 @@ ms.author: tracyp
 author: MSFTTracyP
 manager: laurawi
 ms.date: 03/12/2019
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 f1_keywords:
 - 'ms.exch.eac.ActionCenter.Restricted.Users.RestrictedUsers'
