@@ -17,8 +17,6 @@ description: "Use this article as a guide for troubleshooting information barrie
 
 If you're a global administrator or compliance administrator and you define or manage your organization's information barrier policies, you can use this guide to get answers to questions or resolve issues that may arise. 
 
-CONTENT COMING SOON
-
 ## People are blocked from communicating in Microsoft Teams
 
 content coming
