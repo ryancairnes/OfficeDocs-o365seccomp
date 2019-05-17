@@ -23,7 +23,7 @@ description: ""
 A major and costly aspect of the review phase of any eDiscovery process is reviewing documents for privileged content. Advanced eDiscovery provides machine learning-based detection of privileged content to make this process more efficient. This feature is called *attorney-client privilege detection*.
 
 > [!NOTE]
-> attorney-client privilege detection in Advanced eDiscovery is in Preview. You must opt-in before you can use it.
+> The attorney-client privilege detection model in Advanced eDiscovery is in Preview. You must opt-in before you can use it.
 
 ## How does it work?
 
@@ -33,7 +33,7 @@ When attorney-client privilege detection is enabled, all documents in a review s
 
 - Participants - As part of setting up attorney-client privilege detection, you have to submit a list of attorneys for your organization. The model then compares the participants of the document with the attorney list to determine if a document has at least one attorney participant.
 
-The model produces the following three properties for every document (and adds these *property:value* pairs to the document metadata):
+The model produces the following three properties for every document:
 
 - **AttorneyClientPrivilegeScore** - The likelihood the document is legal in nature; the values for the score are between **0** and **1**.
 
@@ -41,7 +41,11 @@ The model produces the following three properties for every document (and adds t
 
 - **IsPrivilege** - This property is set to **true** if the value for **AttorneyClientPrivilegeScore** is above the threshold *or* if the document has an attorney participant; otherwise, the value is set to **false**.
 
-The three previous values are searchable within a review set. For more information, see [Query the data in a review set](review-set-search.md).
+These properties (and their corresponding values) are added to the file metadata of the documents in a review set, as shown in the following screenshot:
+
+![Attorney-client privilege properties shown in file metadata](../media/AeDAttorneyClientPrivilegeMetadata.png)
+
+Additionally, these three properties are searchable within a review set. For more information, see [Query the data in a review set](review-set-search.md).
 
 ## Set up the attorney-client privilege detection model
 
@@ -85,7 +89,7 @@ Follow the steps in this section to use attorney-client privilege detection for 
 
 ### Step 1: Analyze a review set
 
-When you analyze the documents in a review set, the attorney-client privilege detection model will also be run. For more information about analyzing data in review set, see [Analyze data in a review set in Advanced eDiscovery](analyzing-data-in-review-set.md).
+When you analyze the documents in a review set, the attorney-client privilege detection model will also be run and the corresponding properties (described in[How does it work?](#how-does-it-work) will be added to every document in the review set. For more information about analyzing data in review set, see [Analyze data in a review set in Advanced eDiscovery](analyzing-data-in-review-set.md).
 
 ### Step 2: Create a smart tag group with attorney-client privilege detection model
 
