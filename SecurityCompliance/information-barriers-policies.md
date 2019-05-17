@@ -26,8 +26,8 @@ This article describes how to plan, define, implement, and manage information ba
 
 |Phase    |What's involved  |
 |---------|---------|
-|[Prerequisites](#prerequisites)     |- Verify the necessary licenses and permissions are assigned<br/>- Confirm directory data is available<br/>- [Enable scoped directory search in Microsoft Teams](#scoped-directory-search)<br/>- Be acquainted with [PowerShell](#powershell)         |
-|[Part 1: Plan your information barrier policies](#part-1-plan-your-information-barrier-policies)     |- Determine what policies are needed<br/>- Make a list of groups (segments) of users who will be affected by information barriers         |
+|[Prerequisites](#prerequisites)     |- Verify that licenses are assigned<br/>- Verify that you have the necessary permissions<br/>- Confirm that directory data is available<br/>- Make sure [scoped directory search is enabled in Microsoft Teams](#scoped-directory-search)<br/>- Be familiar with [PowerShell](#powershell) (Example cmdlets are provided)         |
+|[Part 1: Plan your information barrier policies](#part-1-plan-your-information-barrier-policies)     |- Make a list of groups (segments) who will be affected by information barriers<br/>- Determine which policies are needed|
 |[Part 2: Segment users](#part-2-segment-users)     |- Identify which [attributes](information-barriers-attributes.md) to use<br/>- Define the segments in terms of policy filters<br/>- View (and if needed, edit) the segments         |
 |[Part 3: Define information barrier policies](#part-3-define-information-barrier-policies)     |Define the policies<br/>(Policies are neither active nor applied at this point)         |
 |[Part 4: Apply information barrier policies](#part-4-apply-information-barrier-policies)     |- Set policies to active status<br/>- Run the policy application         |
