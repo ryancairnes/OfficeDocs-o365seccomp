@@ -29,19 +29,21 @@ Follow these steps to determine whether the users are affected by an information
 
 1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
-2. To see if the users in question are included in an information barrier policy, run the `Get-InformationBarrierRecipientStatus` cmdlet with the Identity parameter. You can use any identity value that uniquely identifies each recipient, such as Name, Alias, Distinguished name (DN), Canonical DN, Email address, or GUID.
+2. Check to see if the users who are having trouble communicating in Microsoft Teams are included in an information barrier policy. To do this, run the `Get-InformationBarrierRecipientStatus` cmdlet with the Identity parameter. You can use any identity value that uniquely identifies each recipient, such as Name, Alias, Distinguished name (DN), Canonical DN, Email address, or GUID.
 
     Example: `Get-InformationBarrierRecipientStatus -User1 meganb -User2 alexw`
 
-    In this example, we are using each user's alias. When we run this cmdlet, if each user is included in an information barrier policy, we will see its GUID listed as ExoPolicyId.
+    In this example, we are using each user's alias. When we run this cmdlet, if either user is affected by an information barrier policy, we will see its GUID listed as "ExoPolicyId."
 
     If the users are not included in information barrier policies, contact support. Otherwise, proceed to the next step.
 
-3. To see which segments are affected by an information barrier policy, run the `Get-InformationBarrierPolicy` cmdlet with the Identity parameter. Use the policy GUID (ExoPolicyId) from the previous step.
+3. Check to see which segments are affected by an information barrier policy. To do this, run the `Get-InformationBarrierPolicy` cmdlet with the Identity parameter. Use details, such as the policy GUID (ExoPolicyId) you received during the previous step, as an identity value.
 
     Example: `Get-InformationBarrierPolicy -Identity b42c3d0f-49e9-4506-a0a5-bf2853b5df6f`
 
-    In the results, look for AssignedSegment, SegmentsAllowed, SegmentsBlocked, and SegmentAllowedFilter values.
+    In this example, we are getting detailed information about the information barrier policy that has "ExoPolicyId: b42c3d0f-49e9-4506-a0a5-bf2853b5df6f."
+    
+    After you run the cmdlet, in the results, look for **AssignedSegment**, **SegmentsAllowed**, **SegmentsBlocked**, and **SegmentAllowedFilter** values.
 
     Example: After running the cmdlet, we saw the following in our list of results:
 
@@ -51,7 +53,7 @@ Follow these steps to determine whether the users are affected by an information
         SegmentsBlocked      : {Research}
         SegmentAllowedFilter :
     ```
-    In this case, we have an information barrier policy such that users in the Sales segment are prevented from communicating with users in the Research segment.
+    In this case, we can see that the policy affects people who are in the Sales and Research segments, and that people in Sales are prevented from communicating with Research.
 
     
 
@@ -65,7 +67,7 @@ After running the `Start-InformationBarrierPoliciesApplication` cmdlet, the proc
 
 2. If you have waited a long time and the process still isn't finished, you can update a field in the users' profiles in Azure Active Directory, and wait 30 minutes for FwdSync to occur. For more details about how this works, see [New address lists that you create in Exchange Online don't contain all the expected recipients](https://support.microsoft.com/help/2955640/new-address-lists-that-you-create-in-exchange-online-don-t-contain-all).
 
-3. If after step 2 you are still having issues with the process, contact support.
+3. If after step 2 you are still having issues with the process finishing, contact support.
 
 ## Related topics
 
