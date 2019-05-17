@@ -3,7 +3,7 @@ title: "Export a Content Search report"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 f1_keywords:
 - 'ms.o365.cc.CustomizeExportReport'

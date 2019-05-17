@@ -1,3 +1,5 @@
+# [Security & Compliance](index.md)
+
 # Get started
 ## [Office 365 security roadmap](security-roadmap.md)
 ## [Configure your Office 365 tenant for increased security](tenant-wide-setup-for-increased-security.md)
@@ -49,10 +51,14 @@
 ### [What the DLP functions look for](what-the-dlp-functions-look-for.md)
 ### [Watch an extended overview of customizing DLP](https://go.microsoft.com/fwlink/?linkid=852306)
 ### [Customize a built-in sensitive information type](customize-a-built-in-sensitive-information-type.md)
-### [Create a custom sensitive information type](create-a-custom-sensitive-information-type.md)
-### [Create a custom sensitive information type in Office 365 Security & Compliance Center PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md)
+### [Custom sensitive information types](custom-sensitive-info-types.md)
+### [Create a custom sensitive information type with Exact Data Match (Preview)](create-custom-sensitive-info-type-edm.md)
+### [Create a custom sensitive information type in the Security & Compliance Center](create-a-custom-sensitive-information-type.md)
+### [Create a custom sensitive information type using PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md)
 ### [Create a keyword dictionary](create-a-keyword-dictionary.md)
 ### [Document Fingerprinting](document-fingerprinting.md)
+### [DLP functions for sensitive information](what-the-dlp-functions-look-for.md)
+### [Watch an extended overview of customizing DLP](https://go.microsoft.com/fwlink/?linkid=852306)
 
 ## [Email encryption in Office 365](email-encryption.md)
 ### [Office 365 Message Encryption (OME)](ome.md)
@@ -107,6 +113,7 @@
 ### [What is EOP?](eop/what-is-eop.md)
 ### [Office 365 email anti-spam protection](anti-spam-protection.md)
 ### [How to prevent real email from being marked as spam in Office 365](prevent-email-from-being-marked-as-spam.md)
+### [How policies and protections are combined](how-policies-and-protections-are-combined.md)
 ### [How to reduce spam email in Office 365](reduce-spam-email.md)
 ### [Controlling outbound spam in Office 365](outbound-spam-controls.md)
 ### [Block email spam with the Office 365 spam filter to prevent false negative issues](reduce-spam-email.md)
@@ -142,28 +149,8 @@
 #### [Learn more about spoof intelligence](learn-about-spoof-intelligence.md)
 #### [Identify suspicious messages in Outlook.com and Outlook on the web](unverified-sender-feature.md)
 
-## [Monitor and manage data access with Office 365 Cloud App Security](office-365-cas-overview.md)
-### [See what's new in Cloud App Security](new-in-office-365-cas.md)
-#### [Updates during 2018](new-in-office-365-cas-2018.md)
-#### [Updates during 2017](new-in-office-365-cas-2017.md)
-### [Get ready for Office 365 Cloud App Security](get-ready-for-office-365-cas.md)
-### [Set up Office 365 Cloud App Security](turn-on-office-365-cas.md)
-#### [Activity policies and alerts in Office 365 Cloud App Security](activity-policies-and-alerts.md)
-#### [Anomaly detection policies in Office 365 Cloud App Security](anomaly-detection-policies-in-ocas.md)
-#### [Protect apps with Office 365 Cloud App Security Conditional Access App Control](ocas-conditional-access-app-control.md)
-##### [Deploy Conditional Access App Control for Office 365 apps](ocas-deploy-conditional-access-app-control.md)
-##### [Session policies in Office 365 Cloud App Security](ocas-session-policies.md)
-##### [Access policies in Office 365 Cloud App Security](ocas-access-policies.md)
-#### [Group your IP addresses to simplify management in Office 365 Cloud App Security](group-your-ip-addresses-in-ocas.md)
-#### [Integrate your SIEM server with Office 365 Cloud App Security](integrate-your-siem-server-with-office-365-cas.md)
-### [Utilization activities after rolling out Office 365 Cloud App Security](utilization-activities-for-ocas.md)
-#### [Review and take action on alerts in Office 365 Cloud App Security](review-office-365-cas-alerts.md)
-#### [Investigate an activity in Office 365 Cloud App Security](investigate-an-activity-in-office-365-cas.md)
-#### [Manage OAuth apps using Office 365 Cloud App Security](manage-app-permissions-in-ocas.md)
-#### [Web traffic logs and data sources for Office 365 Cloud App Security](web-traffic-logs-and-data-sources-for-ocas.md)
-#### [Suspend or restore a user account in Office 365 Cloud App Security](suspend-or-restore-an-account-in-ocas.md)
-### [Create app discovery reports using Office 365 Cloud App Security](create-app-discovery-reports-in-ocas.md)
-### [Review app discovery findings in Office 365 Cloud App Security](review-app-discovery-findings-in-ocas.md)
+## [Monitor and manage data access with Cloud App Security](https://docs.microsoft.com/cloud-app-security/what-is-cloud-app-security)
+
 ## [Quarantine email messages in Office 365](quarantine-email-messages.md)
 ### [Manage quarantined messages and files as an administrator](manage-quarantined-messages-and-files.md)
 ### [Find and release quarantined messages as a user](find-and-release-quarantined-messages-as-a-user.md)
@@ -177,19 +164,19 @@
 ## [Responding to a Compromised Email Account in Office 365](responding-to-a-compromised-email-account.md)
 
 # Records management
-## [File plan manager](file-plan-manager.md)
-## [Retention labels](labels.md)
-### [Comply with SEC Rule 17a-4](use-exchange-online-to-comply-with-sec-rule-17a-4.md)
+## File plan
+### [File plan manager](file-plan-manager.md)
+### [Retention labels](labels.md)
 ### [Create and publish retention labels by using PowerShell](https://docs.microsoft.com/en-us/office365/securitycompliance/bulk-create-publish-labels-using-powershell)
-## [Event-based retention](event-driven-retention.md)
-### [Automate event-based retention](automate-event-driven-retention.md)
-## [Disposition reviews](disposition-reviews.md)
-## Monitor records management
-### [View the data governance reports](view-the-data-governance-reports.md)
-### [View label activity for documents](view-label-activity-for-documents.md)
 ### [View label usage with label analytics](label-analytics.md)
-## More information about records management
-### [Watch videos from the Microsoft Data Governance team](https://go.microsoft.com/fwlink/?linkid=867039)
+### [View label activity for documents](view-label-activity-for-documents.md)
+### [View the data governance reports](view-the-data-governance-reports.md)
+## Events
+### [Event-based retention](event-driven-retention.md)
+### [Automate event-based retention](automate-event-driven-retention.md)
+## [Disposition](disposition-reviews.md)
+## More about records management
+### [Watch videos about records management](https://go.microsoft.com/fwlink/?linkid=867039)
 
 # Manage data governance
 ## [Import data](importing-pst-files-to-office-365.md)
@@ -200,7 +187,8 @@
 ### [Use network upload to import RMS-encrypted PST files](use-network-upload-to-import-rms-encrypted-pst-files.md)
 ### [FAQ about importing PST files](faqimporting-pst-files-to-office-365.md)
 ### [Archive third-party data in Office 365](archiving-third-party-data.md)
-#### [Use sample connectors to archive third-party data](archive-third-party-data-with-sample-connector.md)
+#### [Use a sample connector to archive Facebook data](archive-facebook-data-with-sample-connector.md)
+#### [Use a sample connector to archive Twitter data](archive-twitter-data-with-sample-connector.md)
 #### [Work with a partner to archive third-party data](work-with-partner-to-archive-third-party-data.md)
 ## Store data
 ### [Enable archive mailboxes](enable-archive-mailboxes.md)
@@ -216,7 +204,8 @@
 ### [Event-based retention](event-driven-retention.md)
 ### [Automate event-based retention](automate-event-driven-retention.md)
 ## [Dispose data](disposition-reviews.md)
-## [Supervise communications](supervision-policies.md)
+## Supervise communications
+### [Supervision policies](supervision-policies.md)
 ### [Configure supervision policies for your organization](configure-supervision-policies.md)
 ## [Manage inactive mailboxes](inactive-mailboxes-in-office-365.md)
 ### [Create and manage inactive mailboxes](create-and-manage-inactive-mailboxes.md)
@@ -460,11 +449,17 @@
 # Mail flow
 ## [Enable the Report Message add-in](enable-the-report-message-add-in.md)
 ## [Message trace in the Security & Compliance Center](message-trace-scc.md)
-## [Mail flow insights in the Security & Compliance Center](mail-flow-insights.md)
-### [Auto-forwarded messages report](mfi-auto-forwarded-messages-report.md)
-### [Mail loop insight](mfi-mail-loop-insight.md)
+## [Mail flow insights in the Security & Compliance Center](mail-flow-insights-v2.md)
+### [Mail flow map report](mfi-mail-flow-map-report.md)
+### [Top domain mail flow status insight](mfi-domain-mail-flow-status-insight.md)
+### [SMTP Auth clients report](mfi-smtp-auth-clients-report.md)
+### [Fix sender domain insight](mfi-sender-domain-insight.md)
+### [Non-delivery report](mfi-non-delivery-report.md)
+### [Non-accepted domain report](mfi-non-accepted-domain-report.md)
 ### [Outbound and inbound mail flow](mfi-outbound-and-inbound-mail-flow.md)
 ### [Queue alerts and Queues](mfi-queue-alerts-and-queues.md)
+### [Auto-forwarded messages report](mfi-auto-forwarded-messages-report.md)
+### [Mail loop insight](mfi-mail-loop-insight.md)
 ### [Slow mail flow rules insight](mfi-slow-mail-flow-rules-insight.md)
 
 # Security solutions
@@ -494,6 +489,7 @@
 ### [Controlling your data in Office 365 using Customer Key](controlling-your-data-using-customer-key.md)
 ### [Service encryption with Customer Key for Office 365 FAQ](service-encryption-with-customer-key-faq.md)
 ## [GDPR data subject request tool](manage-gdpr-data-subject-requests-with-the-dsr-case-tool.md)
+## [Customer Lockbox](customer-lockbox-requests.md)
 ## [Office 365 Information Protection for GDPR](office-365-information-protection-for-gdpr.md)
 ### [Overview: Office 365 Protection for GDPR](office-365-info-protection-for-gdpr-overview.md)
 ### [Search for and find personal data](search-for-and-find-personal-data.md)

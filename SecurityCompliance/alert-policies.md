@@ -3,7 +3,7 @@ title: "Alert policies in the security and compliance center"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -224,7 +224,8 @@ After alerts have been generated and displayed on the **View alerts** page in th
     
 ## Viewing Cloud App Security alerts
   
-Alerts that are triggered by Office 365 Cloud App Security policies are now displayed on the **View alerts** page in the security and compliance center. This includes alerts that are triggered by activity policies and alerts that are triggered by anomaly detection policies in Office 365 Cloud App Security. This means you can view all alerts in the security and compliance center. Note that Office 365 Cloud App Security is only available for organizations with an Office 365 Enterprise E5 or Office 365 US Government G5 subscription. For more information, see [Overview of Office 365 Cloud App Security](office-365-cas-overview.md).
+Alerts that are triggered by Office 365 Cloud App Security policies are now displayed on the **View alerts** page in the security and compliance center. This includes alerts that are triggered by activity policies and alerts that are triggered by anomaly detection policies in Office 365 Cloud App Security. This means you can view all alerts in the security and compliance center. Note that Office 365 Cloud App Security is only available for organizations with an Office 365 Enterprise E5 or Office 365 US Government G5 subscription. For more information, see [Overview of Cloud App Security](https://docs.microsoft.com/cloud-app-security/what-is-cloud-app-security
+).
 
 Additionally, organizations that have Microsoft Cloud App Security as part of an Enterprise Mobility + Security E5 subscription or as a standalone service can also view Cloud App Security alerts that are related to Office 365 apps and services in the Security & Compliance Center.
 
@@ -232,7 +233,7 @@ To display only Cloud App Security alerts in the security and compliance center,
 
 ![Use the Source filter to display only Cloud App Security alerts](media/FilterCASAlerts.png)
 
-Similar to an alert triggered by a security and compliance center alert policy, you can click a Cloud App Security alert to display a flyout page with details about the alert. The alert includes a link to view the details and manage the alert in the Cloud App Security portal and a link to the corresponding Cloud App Security policy that triggered the alert. See [Review and take action on alerts in Office 365 Cloud App Security](review-office-365-cas-alerts.md).
+Similar to an alert triggered by a security and compliance center alert policy, you can click a Cloud App Security alert to display a flyout page with details about the alert. The alert includes a link to view the details and manage the alert in the Cloud App Security portal and a link to the corresponding Cloud App Security policy that triggered the alert. See [Monitor alerts in Cloud App Security](https://docs.microsoft.com/cloud-app-security/monitor-alerts).
 
 ![Alert details contain links to the Cloud App Security portal](media/CASAlertDetail.png)
 

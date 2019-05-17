@@ -3,7 +3,7 @@ title: "Overview of unlimited archiving in Office 365"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: overview
 ms.service: O365-seccomp
 localization_priority: Normal

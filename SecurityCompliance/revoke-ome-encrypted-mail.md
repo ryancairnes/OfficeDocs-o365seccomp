@@ -3,11 +3,14 @@ title: "Revoke email encrypted by Office 365 Advanced Message Encryption"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: conceptual
 ms.service: O365-seccomp
 localization_priority: Normal
 ms.date: 4/30/2019
+ms.collection: 
+- Strat_O365_IP
+- M365-security-compliance
 search.appverid:
 - MET150
 description: "As an Office 365 administrator, you can revoke certain emails that were encrypted with Office 365 Advanced Message Encryption."

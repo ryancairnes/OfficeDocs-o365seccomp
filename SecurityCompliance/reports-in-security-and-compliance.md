@@ -3,7 +3,7 @@ title: "Reports in the Security & Compliance Center"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: overview
 f1_keywords:
 - 'ms.o365.cc.AuditingHelp'
