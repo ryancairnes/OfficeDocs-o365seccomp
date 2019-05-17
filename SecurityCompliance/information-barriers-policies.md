@@ -59,14 +59,17 @@ As an example, Contoso set up a table to determine which departments can (or can
 |HR     |Everyone         |(no restrictions)         |
 |Sales     |HR, Marketing         |Research         |
 |Marketing     |HR, Product Development, Sales         |Research         |
-|Research     |HR, Product Development         |Sales, Marketing         |
-|Product Development     |Marketing, HR         |Research         |
+|Research     |HR, Product Development         |     |
 
-Using this table, the list of policies to define would include the following:
+In this case, the list of information barrier policies to define would include the following:
 
-- 
+- Prevent Sales from communicating with Research (and vice versa)
+- Prevent Marketing from communicating with Research (and vice versa)
+- Allow Research to communicate with HR and Product Development only 
 
 ### A few important points to keep in mind
+
+As you plan your information barrier policies, keep the following points in mind:
 
 - Currently, information barrier policies do not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
 - Potentially, everyone included in an information barrier policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barrier policies are part of the same team or group chat, they might be removed from those chat sessions. [Learn more about information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
