@@ -17,9 +17,7 @@ description: "Use this article as a guide for troubleshooting information barrie
 
 If you're a global administrator or compliance administrator and you define or manage your organization's information barrier policies, you can use this guide to get answers to questions or resolve issues that may arise with information barriers. 
 
-## People are blocked from communicating in Microsoft Teams
-
-### Issues 
+## Issue: People are blocked from communicating in Microsoft Teams 
 
 - A user is unable to find or communicate with another user in Microsoft Teams.
 - A user cannot see (or select) another user in Microsoft Teams.
@@ -57,9 +55,7 @@ Follow these steps to determine whether the users are affected by an information
 
     
 
-## The information barrier application process is taking too long
-
-### Issue
+## Issue: The information barrier application process is taking too long
 
 After running the `Start-InformationBarrierPoliciesApplication` cmdlet, the process is taking a really long time to finish.
 
