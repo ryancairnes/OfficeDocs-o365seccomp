@@ -52,7 +52,22 @@ Determine the groups of users for whom you want to prevent (or allow) communicat
 - Prevent one group from communicating with two other groups;
 - ...and so on.
 
-Make a list of all the policies you'll want to implement. As you plan your policies, keep the following points in mind:
+As an example, Contoso set up a table to determine which departments can (or cannot) talk to each other, like this:
+
+|Group  |Can talk to  |Cannot talk to  |
+|---------|---------|---------|
+|HR     |Everyone         |(no restrictions)         |
+|Sales     |HR, Marketing         |Research         |
+|Marketing     |HR, Product Development, Sales         |Research         |
+|Research     |HR, Product Development         |Sales, Marketing         |
+|Product Development     |Marketing, HR         |Research         |
+
+Using this table, the list of policies to define would include the following:
+
+- 
+
+### A few important points to keep in mind
+
 - Currently, information barrier policies do not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
 - Potentially, everyone included in an information barrier policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barrier policies are part of the same team or group chat, they might be removed from those chat sessions. [Learn more about information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
 - Avoid bulk moves when information barrier policies are in effect. Ask your tenant admins not to move users between segments who cannot talk to each other. Either temporarily grant communication access and disable it later, after all users are moved, or create an intermediate segment who can talk to each of the initial segments. In any case, do not move users in bulk between entities who cannot communicate.
