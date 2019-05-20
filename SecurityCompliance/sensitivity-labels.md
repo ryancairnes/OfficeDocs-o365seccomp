@@ -88,7 +88,7 @@ A document or email can have only a single sensitivity label applied to it. If y
 
 ![Option to create a sublabel](media/Sensitivity_label_sublabel_options.png)
 
-Note that in addition to label priority, the order of the label policies also matters - see [this section below](#sensitivity-label-priority-order-matters).
+Note that in addition to label priority, the order of the label policies also matters - see [Label policy priority (order matters)](#label-policy-priority-order-matters).
 
 ### Sublabels (grouping labels)
 
@@ -135,7 +135,7 @@ After you create a label policy and assign sensitivity labels to users and group
 
 ### Label policy priority (order matters)
 
-You make your sensitivity labels available to users by publishing them in a sensitivity label policy, which appears in a list on the **Sensitivity policies** tab on the **Label policies** page. Just like sensitivity labels (see [the above section](#sensitivity-label-priority-order-matters)), the order of the sensitivity label policies is important because it reflects their priority. The label policy with lowest priority is shown at the **top**, and label policy with the highest priority is shown at the **bottom**.
+You make your sensitivity labels available to users by publishing them in a sensitivity label policy, which appears in a list on the **Sensitivity policies** tab on the **Label policies** page. Just like sensitivity labels (see [Label policy priority (order matters)](#label-policy-priority-order-matters)), the order of the sensitivity label policies is important because it reflects their priority. The label policy with lowest priority is shown at the **top**, and label policy with the highest priority is shown at the **bottom**.
 
 A label policy consists of:
 
