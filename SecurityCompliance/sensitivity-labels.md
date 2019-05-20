@@ -88,7 +88,7 @@ A document or email can have only a single sensitivity label applied to it. If y
 
 ![Option to create a sublabel](media/Sensitivity_label_sublabel_options.png)
 
-Note that in addition to label priority, the order of the label policies also matters - see [this section below](#sensitivity-label-priority-order-matters).
+Note that in addition to label priority, the order of the label policies also matters - see [Label policy priority (order matters)](#label-policy-priority-order-matters).
 
 ### Sublabels (grouping labels)
 
