@@ -88,6 +88,8 @@ A document or email can have only a single sensitivity label applied to it. If y
 
 ![Option to create a sublabel](media/Sensitivity_label_sublabel_options.png)
 
+Note that in addition to label priority, the order of the label policies also matters - see [Label policy priority (order matters)](#label-policy-priority-order-matters).
+
 ### Sublabels (grouping labels)
 
 With sublabels, you can group one or more labels below a parent label that a user sees in an Office app. For example, under Confidential, your organization might use several different labels for specific types of that classification. In this example, the parent label Confidential is simply a text label with no protection settings, and because it has sublabels, it can’t be applied to content. Instead, users must choose Confidential to view the sublabels, and then they can choose a sublabel to apply to content.
@@ -130,6 +132,24 @@ With a label policy, you can:
     ![Learn more link on Sensitivity button on Ribbon](media/Sensitivity_label_learn_more.png)
 
 After you create a label policy and assign sensitivity labels to users and groups, those people will see those labels available in the Office apps in an hour or less.
+
+### Label policy priority (order matters)
+
+You make your sensitivity labels available to users by publishing them in a sensitivity label policy, which appears in a list on the **Sensitivity policies** tab on the **Label policies** page. Just like sensitivity labels (see [Label policy priority (order matters)](#label-policy-priority-order-matters)), the order of the sensitivity label policies is important because it reflects their priority. The label policy with lowest priority is shown at the **top**, and label policy with the highest priority is shown at the **bottom**.
+
+A label policy consists of:
+
+- A set of labels.
+- The scope of the label policy, meaning the users and groups included in the policy.
+- The settings of the label policy described above (default label, justification, mandatory label, and help link).
+
+You can include a user in multiple label policies, and the user will see all of the sensitivity labels from those policies. However, a user will see the policy settings from only the label policy with the highest priority.
+
+If a user or group in your organization is not seeing an option in the label policy that you intended, such as a default or mandatory label, check the order of the sensitivity label policies. To re-order the label policies, select a sensitivity label policy > choose the ellipsis on the right > **Move down** or **Move up**.
+
+![Move option on the page for sensitivity label policies](media/sensitivity-label-policy-priority.png)
+
+Note that while priority matters for sensitivity label policies, it does **not** matter for retention label policies. As explained in [The principles of retention, or what takes precedence?](labels.md#the-principles-of-retention-or-what-takes-precedence), content can be subject to multiple retention policies.
 
 ## How to get started
 
