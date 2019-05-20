@@ -4,7 +4,7 @@ ms.author: markjjo
 author: markjjo
 manager: laurawi
 ms.date: 
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -15,12 +15,11 @@ description: "Administrators can set up a native connector to import and archive
 
 # Deploy a connector to archive Facebook data in Office 365
 
-This article contains the step-by-step process to deploy a connector that uses the Office 365 Import service to import data from Facebook Business pages to Office 365. For a high-level overview of this process and a list of prerequisites required to deploy a Facebook connector, see [Use sample connectors to archive third-party data in Office 365](archive-third-party-data-with-sample-connector.md). 
-
+This article contains the step-by-step process to deploy a connector that uses the Office 365 Import service to import data from Facebook Business pages to Office 365. For a high-level overview of this process and a list of prerequisites required to deploy a Facebook connector, see [Use a sample connector to archive Facebook data in Office 365 (Preview)](archive-facebook-data-with-sample-connector.md). 
 
 ## Step 1: Download the package
 
-Download the prebuilt package from repository’s Release section at <https://github.com/Microsoft/m365-sample-connector-csharp-aspnet/releases>. Under the latest release, download the zip file named **SampleConnector.zip**. You will upload this zip file to Azure in Step 4.
+Download the prebuilt package from the Release section in the GitHub repository at at <https://github.com/Microsoft/m365-sample-connector-csharp-aspnet/releases>. Under the latest release, download the zip file named **SampleConnector.zip**. You will upload this zip file to Azure in Step 4.
 
 ## Step 2: Create an app in Azure Active Directory
 
@@ -122,7 +121,7 @@ Download the prebuilt package from repository’s Release section at <https://gi
 
     ![](media/FBCimage22.png)
 
-4. Under **General settings**, click **On** next to the **Always On**. Click **Save** at the top of the page to save applicaton settings.
+4. Under **General settings**, click **On** next to the **Always On**. Click **Save** at the top of the page to save application settings.
 
    ![](media/FBCimage23.png)
 
@@ -205,7 +204,7 @@ Download the prebuilt package from repository’s Release section at <https://gi
 1. Go to https://\<AzureAppResourceName>.azurewebsites.net (where AzureAppResourceName is the name of your Azure app resource that you named in Step 4) For example, if the name is **fbconnector**, go to https://fbconnector.azurewebsites.net. The home page of the app will look like the following screenshot.
 
 
-  ![](media/FBCimage41.png)
+   ![](media/FBCimage41.png)
 
 2. Click **Configure** to display a sign in page.
  
@@ -221,7 +220,7 @@ Download the prebuilt package from repository’s Release section at <https://gi
    - **Facebook application ID** - The app ID for the Facebook application that you obtained in Step 5.
    - **Facebook application secret** - The app secret for the Facebook application that you obtained in Step 5.
    - **Facebook webhooks verify token** - The verify token that you created in Step 5.
-   - **AAD application ID** - The application ID for the Azure Active Directory app that you created in Step 2
+   - **AAD application ID** - The application ID for the Azure Active Directory app that you created in Step 2.
    - **AAD application secret** - The value for the APISecretKey secret that you created in Step 4.
    - **AAD application Uri** - The AAD application Uri obtained in Step 2; for example, https://microsoft.onmicrosoft.com/2688yu6n-12q3-23we-e3ee-121111123213.
    - **App insights instrumentation key** - Leave this box blank.
@@ -234,15 +233,17 @@ Download the prebuilt package from repository’s Release section at <https://gi
 
    ![](media/FBCimage44.png)
 
-2.  Click **Add a connector** and then click **Custom**.
+2.  Click **Add a connector** and then click **Facebook pages**.
 
     ![](media/FBCimage46.png)
 
-3.  On the **Add Connector App** page, enter the following information and then click **Next**.
+3.  On the **Add Connector App** page, enter the following information and then click **Validate connector**.
 
     - In the first box, type a name for the connector, such as **Facebook**.
     - In the second box, type or paste the value of the APISecretKey that you added in Step 4.
-    - In the third box, type of paste the Azure app service URL; for example **https://fbconnector.azurewebsites.net**.
+    - In the third box, type or paste the Azure app service URL; for example **https://fbconnector.azurewebsites.net**.
+ 
+    After the connector is successfully validated, click **Next**.
     
     ![](media/FBCimage47.png)
 

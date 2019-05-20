@@ -3,7 +3,7 @@ title: "eDiscovery solution series Data spillage scenario - Search and purge"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal

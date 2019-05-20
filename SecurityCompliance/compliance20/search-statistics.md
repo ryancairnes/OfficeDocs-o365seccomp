@@ -4,7 +4,7 @@ ms.author: markjjo
 author: esclee
 manager: laurawi
 ms.date: 
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
