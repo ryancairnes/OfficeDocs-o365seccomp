@@ -728,7 +728,7 @@ After you've connected to Security &amp; Compliance Center PowerShell, next you 
 
 ## Step 6: View the log file with the results
 
-When you run the script, it generates a log file that records each action it took and whether the action succeeded or failed. The log file includes all metadata about the retention labels created and the retention labels were published. You can find the log file at this location -- note that the digits in the file name vary.
+When you run the script, it generates a log file that records each action it took and whether the action succeeded or failed. The log file includes all metadata about the retention labels created and the retention labels published. You can find the log file at this location -- note that the digits in the file name vary.
   
 ```
 <path>.\Log_Publish_Compliance_Tag_01112018_151239.txt
