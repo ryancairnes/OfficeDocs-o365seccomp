@@ -164,6 +164,7 @@
 ## [Responding to a Compromised Email Account in Office 365](responding-to-a-compromised-email-account.md)
 
 # Records management
+## [Records management](records-management.md)
 ## File plan
 ### [File plan manager](file-plan-manager.md)
 ### [Retention labels](labels.md)
