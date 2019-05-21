@@ -38,3 +38,13 @@ A records management plan typically includes the following elements:
 - **A process and the data to support an auditable and defensible content and records lifecycle** to provide to internal or external audit, legal and/or regulatory authorities for review.
 
 With records management in Microsoft 365, you can incorporate your organization’s retention schedules into the file plan to manage retention, records declaration, and disposition in support of the full content lifecycle.
+
+## Learn more
+
+The key components of records management in Microsoft 365 are: 
+
+   - [File plan](file-plan-manager.md) 
+
+   - [Events](event-driven-retention.md)
+
+   - [Disposition](disposition-reviews.md)
