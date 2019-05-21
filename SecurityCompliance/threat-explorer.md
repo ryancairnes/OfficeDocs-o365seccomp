@@ -19,7 +19,7 @@ description: "Learn about Explorer (and real-time detections) in the Security &a
 
 # Threat Explorer (and real-time detections)
 
-If your organization has [Office 365 Advanced Threat Protection](office-365-atp.md) (Office 365 ATP), and you have the [necessary permissions](#required-licenses-and-permissions), you have either Explorer or real-time detections (new!) available in the Security & Compliance Center (Go to **Threat management** > **Explorer** OR **Real-time detections**). 
+If your organization has [Office 365 Advanced Threat Protection](office-365-atp.md) (Office 365 ATP), and you have the [necessary permissions](#required-licenses-and-permissions), you have either Explorer or real-time detections ([see what's new!](#more-on-whats-new-in-real-time-detections)!) available in the Security & Compliance Center (Go to **Threat management** > **Explorer** OR **Real-time detections**). 
 
 |With ATP Plan 2, you see:  |With ATP Plan 1, you see:  |
 |---------|---------|
@@ -107,16 +107,20 @@ In addition to the scenarios outlined in this article, you have many more report
 
 ## More on what's new in real-time detections
 
-For Office 365 ATP Plan 1 customers, *real-time detections* were previously referred to as *real-time reports*. In addition to changing the name of this powerful report, several new features and enhancements are rolling out.
+For Office 365 ATP Plan 1 customers, *real-time detections* were previously referred to as *real-time reports*. In addition to changing the name of this powerful report, several new features and enhancements are rolling out:
 
 - In the Phish view, you'll see more details about detected URLs through ATP Safe Links. New details and capabilities include:
   - URLs in email messages
   - Filtering based on URL information
   - URL information displayed in data graphs
   - Time-of-click data about clicks in messages
+
 - Whenever there's a change in a URL click verdict, you'll see an alert. URL click verdicts can change when a URL’s reputation changes post-detonation, or when a user who's protected by ATP Safe Links overrides an [ATP Safe Links warning](atp-safe-links-warning-pages.md).  
  
 These enhancements enable your organization's security administrators to view more details than before about URL domains, missed URLs, click verdicts, and so on, and then adjust your Office 365 ATP policies appropriately.
+
+> [!NOTE]
+> While these features are in preview, URL data will be available for a limited number of days. 
 
 ## Required licenses and permissions
 
