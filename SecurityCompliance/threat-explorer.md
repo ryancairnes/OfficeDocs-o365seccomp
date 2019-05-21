@@ -67,7 +67,7 @@ Suppose you want to see phishing attempts through URLs in email, including a lis
 
    2. **Top clicks** are the Safe Links wrapped URLs that were clicked, sorted by total click count (this column is also not shown to simplify the view). Total counts by column indicate the Safe Links click verdict count for each clicked URL. In the phish email view, these are more often suspicious or malicious URLs, but could include clean URLs that are in phish messages. URL clicks on unwrapped links will not show up here.
    
-   The two URLs tables show top URLs in phishing emails by delivery action, and they show URL clicks that were blocked (or visited despite a warning) so that you can understand what potential bad links were received by users and interacted with by users. From here, you can conduct further analysis. For example, below the chart, you can see the top URLs in emails that were blocked in your organization's environment.
+   The two URLs tables show top URLs in phishing emails by delivery action and location, and they show URL clicks that were blocked (or visited despite a warning) so that you can understand what potential bad links were received by users and interacted with by users. From here, you can conduct further analysis. For example, below the chart, you can see the top URLs in emails that were blocked in your organization's environment.
    
    ![Explorer URLs that were blocked](media/ExplorerPhishClickVerdictURLs.png)
    
