@@ -61,17 +61,17 @@ Suppose you want to see phishing attempts through URLs in email, including a lis
 
 4. Select one or more options, such as **Blocked** and **Block overridden**, and then click the **Refresh** button that is on the same line as the options to apply that filter. (Don't refresh your browser window.)<br/>![URLs and click verdicts](media/ThreatExplorerEmailPhishClickVerdictOptions.png)<br/>
 
-The report refreshes to show two different URL tables on the URL tab below:
+    The report refreshes to show two different URL tables on the URL tab below:
 
    1. **Top URLs** are the URLs contained in the messages you have filtered down to, and the email delivery action counts for each URL. In the phish email view, this list typically will contain legitimate URLs. Attackers include a mix of good and bad URLs in their messages to try to get them delivered, but they'll make the malicious links more interesting for the user to click. The table of URLs is sorted by total email count (NOTE: This column is not shown to simplify the view).
 
    2. **Top clicks** are the Safe Links wrapped URLs that were clicked, sorted by total click count (this column is also not shown to simplify the view). Total counts by column indicate the Safe Links click verdict count for each clicked URL. In the phish email view, these are more often suspicious or malicious URLs, but could include clean URLs that are in phish messages. URL clicks on unwrapped links will not show up here.
-
-The two URLs tables show top URLs in phishing emails by delivery action, and they show URL clicks that were blocked (or visited despite a warning) so that you can understand what potential bad links were received by users and interacted with by users. From here, you can conduct further analysis. For example, below the chart, you can see the top URLs in emails that were blocked in your organization's environment. 
-
-![Explorer URLs that were blocked](media/ExplorerPhishClickVerdictURLs.png) 
-
-Select a URL to view more detailed information. Note that in the URL flyout dialog, the filtering on emails is removed in order to show you the full view of the URL's exposure in your environment. This lets you filter down emails in Explorer to ones you are concerned about, find specific URLs that are potential threats, then expand your understanding of the URL exposure in your environment (via the URL details dialog) without having to add URL filters to the Explorer view itself.
+   
+   The two URLs tables show top URLs in phishing emails by delivery action, and they show URL clicks that were blocked (or visited despite a warning) so that you can understand what potential bad links were received by users and interacted with by users. From here, you can conduct further analysis. For example, below the chart, you can see the top URLs in emails that were blocked in your organization's environment.
+   
+   ![Explorer URLs that were blocked](media/ExplorerPhishClickVerdictURLs.png)
+   
+   Select a URL to view more detailed information. Note that in the URL flyout dialog, the filtering on emails is removed in order to show you the full view of the URL's exposure in your environment. This lets you filter down emails in Explorer to ones you are concerned about, find specific URLs that are potential threats, then expand your understanding of the URL exposure in your environment (via the URL details dialog) without having to add URL filters to the Explorer view itself.
 
 ## Review email messages reported by users
 
@@ -105,9 +105,9 @@ In addition to the scenarios outlined in this article, you have many more report
 
 ## Required licenses and permissions
 
-Explorer is included in [Office 365 ATP](office-365-atp.md) Plan 2. 
-
-The real-time detections report is included in [Office 365 ATP](office-365-atp.md) Plan 1.
+You must have [Office 365 ATP](office-365-atp.md) to get Explorer or real-time detections.
+- Explorer is included in Office 365 ATP Plan 2. 
+- The real-time detections report is included in Office 365 ATP Plan 1.
 
 To view and use Explorer or real-time detections, you must have appropriate permissions, such as those granted to a security administrator or security reader. 
 
@@ -125,6 +125,5 @@ To view and use Explorer or real-time detections, you must have appropriate perm
 To learn more about roles and permissions, see the following resources:
 
 - [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md)
-
 - [Feature permissions in Exchange Online](https://docs.microsoft.com/exchange/permissions-exo/feature-permissions)
   
