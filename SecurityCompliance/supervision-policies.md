@@ -3,7 +3,7 @@ title: "Supervision policies in Office 365"
 ms.author: robmazz
 author: robmazz
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 f1_keywords:
 - 'ms.o365.cc.SupervisoryReview'
@@ -15,7 +15,7 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-description: "Understanding supervision policies in Office 365"
+description: "Learn about Supervision policies in Office 365"
 ---
 
 # Supervision policies in Office 365
@@ -26,9 +26,11 @@ These policies can also help you overcome many modern compliance challenges, inc
 
 - Monitoring increasing types of communication channels
 - The increasing volume of message data
-- Regulatory enforcement & the risk of fines.
+- Regulatory enforcement & the risk of fines
 
 In some organizations, there may be a separation of duties between IT support and the compliance management group. Office 365 supports the separation between supervision policy feature configuration and the configuration of policies for captured communications. For example, the IT group for an organization may be responsible for setting up role permissions and groups to support supervision policies that are configured and managed by the organization's compliance team.
+
+For a quick overview of Supervision policies, see the [Supervision policy video](https://youtu.be/C3Y8WZ7o_dI) on the [Microsoft Mechanics channel](https://www.youtube.com/user/OfficeGarageSeries).
 
 To learn more about upcoming Supervision feature improvements and availability, see the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap).
 
@@ -78,7 +80,7 @@ With supervision policies, you can choose to monitor messages in one or more of 
 - **Microsoft Teams:** Chat communications and associated attachments in both public and private Microsoft Teams channels and individual chats can be supervised. Teams chats matching supervision policy conditions are processed once every 24 hours and then are available for monitoring and in supervision reports. Use the following group management configurations to supervise individual user chats and channel communications in Teams:
 
     - **For Teams chat supervision:** Assign individual users or assign a [distribution group](https://support.office.com/article/Distribution-groups-E8BA58A8-FAB2-4AAF-8AA1-2A304052D2DE) to the supervision policy. This is for 1-to-1 or 1-to-many user/chat relationships.
-    - **For Teams Channel communications:** Assign every Microsoft Team channel or Office 365 group you want to monitor that contains a specific user to the supervision policy. If you add the same user to other Microsoft Teams channels or Office 365 groups, be sure to also add these new channels and groups to the supervision policy.
+    - **For Teams Channel communications:** Assign every Microsoft Team channel or Office 365 group you want to monitor that contains a specific user to the supervision policy. If you add the same user to other Microsoft Teams channels or Office 365 groups, be sure to add these new channels and groups to the supervision policy.
 
 - **Third-party sources:** You can supervise communications from third-party sources (like from Facebook or DropBox) for data imported into Office 365 mailboxes in your organization. [Learn how to import 3rd-party data into Office 365](https://docs.microsoft.com/office365/securitycompliance/archiving-third-party-data).
 
@@ -111,7 +113,7 @@ Configure custom keyword dictionaries (or lexicons) to provide simple management
 
 #### Offensive language
 
-Monitor sent or received email messages in your organization for offensive language. The model uses a combination of machine learning, artificial intelligence, and keywords to identify inappropriate email messages as part of anti-harassment and cyber bullying monitoring requirements. To prevent or block offensive language in communications for your organization, create a [data loss prevention policy](create-test-tune-dlp-policy.md) that uses a [custom keyword dictionary](create-a-keyword-dictionary.md) of offensive terms.
+Monitor sent or received email messages in your organization for offensive language. The model uses a combination of machine learning, artificial intelligence, and keywords to identify inappropriate email messages as part of anti-harassment and cyber bullying monitoring requirements. To prevent or block offensive language for other communications in your organization, create a [data loss prevention policy](create-test-tune-dlp-policy.md) that uses a [custom keyword dictionary](create-a-keyword-dictionary.md) of offensive terms.
 
 The offensive language model currently supports English keywords and monitors the body of email messages. The offensive language model monitors email for sentiment associated with the following types of language:
 
@@ -127,7 +129,7 @@ The offensive language model currently supports English keywords and monitors th
 | **Extremism** | Expressions that target religion and political ideologies. |
 | **Disguise** | Expressions for which the meaning or pronunciation is the same as another more offensive term. |
 | **Provocative language** | Expressions that potentially cause anger or violence. |
-| **Taboo** | Expressions that are generally not appropriate in polite societal communications. |
+| **Taboo** | Expressions generally inappropriate in polite societal communications. |
 | **Unrefined language** | Expressions that lack polite manners and that are potentially harsh and rude. |
 
 #### Conditional settings
@@ -143,7 +145,7 @@ The following table explains more about each condition.
 | **Message is classified with any of these labels**  <br><br> **Message is not classified with any of these labels** | To apply the policy when certain retention labels are included or excluded in a message. Retention labels must be configured separately and configured labels are chosen as part of this condition. Each label you choose is applied separately (only one of these labels must apply for the policy to apply to the message). For more information about configuring retention labels, see [Overview of retention labels](https://docs.microsoft.com/office365/securitycompliance/labels).|
 | **Message contains any of these words**  <br><br> **Message contains none of these words** | To apply the policy when certain words or phrases are included or excluded in a message, enter each word or phrase on a separate line. Each line of words you enter are applied separately (only one of these lines must apply for the policy to apply to the message). For more information about entering words or phrases, see the next section [Matching words and phrases to emails or attachments](supervision-policies.md#Matchwords).|
 | **Attachment contains any of these words**  <br><br> **Attachment contains none of these words** | To apply the policy when certain words or phrases are included or excluded in a message attachment (such as a Word document), enter each word or phrase on a separate line. Each line of words you enter are applied separately (only one line must apply for the policy to apply to the attachment). For more information about entering words or phrases, see the next section [Matching words and phrases to emails or attachments](supervision-policies.md#Matchwords).|
-| **Attachment is any of these file types**  <br><br> **Attachment is none of these file types** | To supervise communications that include or exclude specific types of attachments, enter the file extensions (such as .exe or .pdf). If you want to include or exclude multiple file extensions, enter these on separate lines. Only one attachment extension needs to match for the policy to apply.|
+| **Attachment is any of these file types**  <br><br> **Attachment is none of these file types** | To supervise communications that include or exclude specific types of attachments, enter the file extensions (such as .exe or .pdf). If you want to include or exclude multiple file extensions, enter these on separate lines. Only one attachment extension must match for the policy to apply.|
 | **Message size is larger than**  <br><br> **Message size is not larger than** | To review messages based on a certain size, use these conditions to specify the maximum or minimum size a message can be before it is subject to review. For example, if you specify **Message size is larger than** \> **1.0 MB**, all messages that are 1.01 MB and larger are subject to review. You can choose bytes, kilobytes, megabytes, or gigabytes for this condition.|
 | **Attachment is larger than**  <br><br> **Attachment is not larger than** | To review messages based on the size of their attachments, specify the maximum or minimum size an attachment can be before the message and its attachments are subject to review. For example, if you specify **Attachment is larger than** \> **2.0 MB**, all messages with attachments 2.01 MB and over are subject to review. You can choose bytes, kilobytes, megabytes, or gigabytes for this condition.|
    
@@ -153,13 +155,13 @@ Each line of words you enter is applied separately (only one line must apply for
   
 ##### Enter multiple conditions
 
-If you enter multiple conditions, Office 365 uses all the conditions together to determine when to apply the policy to communication items. When you set up multiple conditions, they must all be met for the policy to apply, unless you enter an exception. For example, you need to create a policy that applies if a message contains the word "trade", and is larger than 2 MB. However, if the message also contains the words "Approved by Contoso financial", the policy should not apply. Thus, in this case, the three conditions would be as follows:
+If you enter multiple conditions, Office 365 uses all the conditions together to determine when to apply the policy to communication items. When you set up multiple conditions, all conditions must be met for the policy to apply, unless you enter an exception. For example, you need a policy that applies if a message contains the word "trade", and is larger than 2 MB. However, if the message also contains the words "Approved by Contoso financial", the policy should not apply. Thus, in this case, the three conditions would be as follows:
   
 - **Message contains any of these words**, with the keywords "trade"
 
 - **Message size is larger than**, with the value 2 MB
 
-- **Message contains none of these words**, with the keywords "Approved by Contoso financial team".
+- **Message contains none of these words**, with the keywords "Approved by Contoso financial team"
 
 #### Review percentage
 
@@ -167,26 +169,30 @@ If you want to reduce the amount of content to review, you can specify a percent
 
 ## Monitor & manage
 
-It is easy to monitor the results of your supervision policies and apply a resolution tag. You can quickly see the status of reviewed items, the users and groups under supervision, and the users and groups designated as reviewers.
+It is easy to monitor the results of your supervision policies and apply a resolution tag. You can quickly see:
+
+- The status of reviewed items
+- Users and groups under supervision
+- Users and groups designated as reviewers
 
 ### Supervision policy dashboard
 
-The easiest way to manage supervision policy results and to resolve outstanding items is to use the supervision policy dashboard. This dashboard allows reviewers to view items that need to be reviewed, take action on an item, and review the results of previously reviewed and resolved items for each supervision policy. You can access the supervision policy dashboard in the Compliance center at **Supervision** > *Your Custom Policy* > **Open**.
+Use the supervision policy dashboard to manage supervision policy results and to resolve outstanding items. This dashboard allows reviewers to view items that need to be reviewed, act on an item, and review the results of previously reviewed and resolved items for each supervision policy. You can access the supervision policy dashboard in the Compliance center at **Supervision** > *Your Custom Policy* > **Open**.
 
 #### Dashboard Home
 
-The dashboard **Home** page has several sections to help you quickly take action on your supervision policies. Here you can:
+The dashboard **Home** page has several sections to help you quickly act on your supervision policies. Here you can:
 
 - Quickly review the pending and resolved highlights for the week
 - See a list of the supervised users and supervised groups for the selected policy
 - See a list of the reviewers and review teams for the selected policy
-- See which communication platforms have content under supervision for the policy.
+- See which communication platforms have content under supervision for the policy
 
 #### Review tab
 
 The **Review** tab is where reviewers classify and resolve items identified by the selected policy. Here you can:
 
-- Filter by pending, compliant, non-compliant, and questionable items
+- Filter by pending, compliant, non-compliant, and questionable items.
 - Tag a single item as compliant, non-compliant, or questionable. You can also record a comment with the item to help clarify the tagging action taken.
 - Bulk tag multiple items as compliant, non-compliant, or questionable. You can also record a comment with multiple items to help clarify the tagging action taken.
 - View the history of the tagging for a single item. This includes who resolved the item, the date and time of the action, the resolution tag, and any included comments.
@@ -196,34 +202,8 @@ The **Review** tab is where reviewers classify and resolve items identified by t
 
 The **Resolved Items** tab is where reviewers can view all previously resolved items for the selected policy. Here you can:
 
-- Quickly view and sort the subject, sender, and date of resolved items.
+- Quickly view and sort the subject, sender, and date of resolved items
 - View the classification and comment history of any selected item
-
-### Other ways to review items
-
-If reviewers would prefer not to use the supervision dashboard in Office 365, they also have other options to review and manage items collected by supervision policies.
-
-#### Outlook on the web
-
-Users designated as reviewers in a supervision policy can use Outlook on the web to review and resolved supervision items. The Supervision add-in is installed automatically in Outlook on the web for all reviewers you specified in the policy. Supervision policy shared folders are available for configured reviewers without any extra configuration.
-
-With Outlook on the web, reviewers can:
-
-- View filtered items by compliant, non-compliant, questionable, and resolved status
-- Tag a single item as compliant, non-compliant, questionable, or resolved. You can also record a comment with the item to help clarify the tagging action taken.
-- View the history of the tagging for a single item, including who resolved the item, the date and time of the action, the resolution tag, and any included comments.
-- Reclassify previously reviewed items as compliant, non-compliant, or questionable. You can also record a comment with single items to help clarify the reclassification action taken.
-
-#### Microsoft Outlook
-
-To review communications identified by a supervision policy, reviewers can also use the Supervision add-in for Microsoft Outlook. However, reviewers must run through some steps to install it in the desktop version of Outlook. For detailed guidance about the Supervision add-in for Outlook, see [Configure supervision policies](configure-supervision-policies.md).
-
-With Outlook, reviewers can:
-
-- View filtered items by compliant, non-compliant, questionable, and resolved status
-- Tag a single item as compliant, non-compliant, questionable, or resolved. You can also record a comment with the item to help clarify the tagging action taken.
-- View the history of the tagging for a single item, including who resolved the item, the date and time of the action, the resolution tag, and any included comments.
-- Reclassify previously reviewed items as compliant, non-compliant, or questionable. You can also record a comment with single items to help clarify the reclassification action taken.
 
 ## Reports
 
@@ -235,8 +215,8 @@ Use the supervision reports to see the review activity at the policy and reviewe
 
 ### View the Supervision report
 
-1. Sign into the [Compliance center](https://compliance.microsoft.com) with the credentials for an admin account in your organization that has permissions to view supervision reports.
-2. Go to either **Reports** \> **Dashboard** or **Supervision** to view the supervision reporting widget with a summary of current supervision policy activity.
+1. Sign into the [Compliance center](https://compliance.microsoft.com) with credentials for an admin account with permissions to view supervision reports.
+2. Go to either **Reports** \> **Dashboard** or **Supervision** to view the supervision reporting widget for a summary of current supervision policy activity.
 3. Select the **Supervision** widget to open the detailed report page.
 
 > [!NOTE]
@@ -244,9 +224,7 @@ Use the supervision reports to see the review activity at the policy and reviewe
   
 ### How to use the report
 
-When a supervision policy identifies a communication message for review, the reviewer's Supervision folder in Outlook and Outlook on the web (formerly known as Outlook Web App) receives an email notification. This report lists each policy and the number of communications at each stage in the review process.
-  
-Use the report to:
+This report lists each policy and the number of communications at each stage in the review process. Use the report to:
   
 - View data for all or specific policies.
 - View data grouped by tag type, reviewer, or message type.
@@ -257,7 +235,7 @@ Here's a breakdown of the values displayed the **Tag type** column.
   
 |**Tag type**|**What it means**|
 |:-----|:-----|
-| **Not Reviewed** | The number of emails not reviewed yet. These emails are awaiting review in the Office 365 supervision dashboard or in the reviewer's supervision folder in Outlook or Outlook on the web.
+| **Not Reviewed** | The number of emails not reviewed yet. These emails are awaiting review in the Office 365 supervision dashboard.
 | **Compliant** | The number of emails reviewed and marked as compliant. These messages still need resolution. |
 | **Questionable** | The number of emails reviewed and marked questionable. This acts as a flag for other reviewers to help check whether an email needs investigation for compliance. These messages still need resolution. |
 | **Non-Compliant (Active)** | The number of non-compliant emails that reviewers are currently investigating. |
@@ -280,7 +258,6 @@ The following supervision policy activities are audited and available in the uni
 | **Create a policy** | [New-SupervisoryReviewPolicyV2](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-supervisoryreviewpolicyv2) <br> [New-SupervisoryReviewRule](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-supervisoryreviewrule) |
 | **Edit a policy** | [Set-SupervisoryReviewPolicyV2](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-supervisoryreviewpolicyv2) <br> [Set-SupervisoryReviewRule](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-supervisoryreviewrule) |
 | **Delete a policy** | [Remove-SupervisoryReviewPolicyV2](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/remove-supervisoryreviewpolicyv2) |
-| **View a policy** | [Get-SupervisoryReviewPolicyV2](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/get-supervisoryreviewpolicyv2) |
 
 View audit activities in the unified audit log or with the [Search-UnifiedAuditLog](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/search-unifiedauditlog) PowerShell cmdlet.
 
