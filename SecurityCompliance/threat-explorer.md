@@ -107,14 +107,14 @@ In addition to the scenarios outlined in this article, you have many more report
 
 ## More on what's new in real-time detections
 
-For Office 365 ATP Plan 1 customers, real-time detections were previously referred to as real-time reports. In addition to changing the name of this powerful report, several new features and enhancements are rolling out.
+For Office 365 ATP Plan 1 customers, *real-time detections* were previously referred to as *real-time reports*. In addition to changing the name of this powerful report, several new features and enhancements are rolling out.
 
-- In the Phish view, you'll see more details about detected URLs. New details and capabilities include:
-    - URLs in email messages
-    - Filtering based on URL information
-    - URL information displayed in data graphs
-    - Time-of-click data about clicks in messages (ATP Sae Links)
-- When there's a change in URL verdict, you'll see an alert. URL verdicts can change when a URL’s reputation changes post-detonation, or when a user who's protected by ATP Safe Links overrides an [ATP Safe Links warning](atp-safe-links-warning-pages.md).  
+- In the Phish view, you'll see more details about detected URLs through ATP Safe Links. New details and capabilities include:
+  - URLs in email messages
+  - Filtering based on URL information
+  - URL information displayed in data graphs
+  - Time-of-click data about clicks in messages
+- Whenever there's a change in a URL click verdict, you'll see an alert. URL click verdicts can change when a URL’s reputation changes post-detonation, or when a user who's protected by ATP Safe Links overrides an [ATP Safe Links warning](atp-safe-links-warning-pages.md).  
  
 These enhancements enable your organization's security administrators to view more details than before about URL domains, missed URLs, click verdicts, and so on, and then adjust your Office 365 ATP policies appropriately.
 
