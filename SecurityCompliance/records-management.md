@@ -17,7 +17,7 @@ description: "With records management in Microsoft 365, you can apply your organ
 
 # Records management in Microsoft 365
 
-Organizations of all types require a records-management to solution to manage business, legal, and HR records across their corporate data.  A well-designed records management plan helps protect an organization legally, provides the ability to demonstrate compliance with regulatory obligations, and increases efficiency by promoting the disposition of  items that are no longer of value or no longer required to be retained by the organization. 
+Organizations of all types require a records-management solution to manage business, legal, and HR records across their corporate data.  A well-designed records management plan helps protect an organization legally, provides the ability to demonstrate compliance with regulatory obligations, and increases efficiency by promoting the disposition of  items that are no longer of value or no longer required to be retained by the organization. 
  
 A records management plan typically includes the following elements:
  
