@@ -3,7 +3,7 @@ title: "View email security reports in the Security &amp; Compliance Center"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 05/13/2019
+ms.date: 05/21/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -60,7 +60,7 @@ Use this report enables your organization's security and compliance team to moni
 
 ## Threat Protection Status report
 
-The **Threat Protection Status** report is a smart report that shows malicious email that was detected and blocked by Exchange Online Protection. This report shows information about email identified as malware or a phishing attempt. 
+The **Threat Protection Status** report is a smart report that shows malicious email that was detected and blocked by Exchange Online Protection. This report is useful for viewing email identified as malware or a phishing attempt over time (up to 90 days), and it enables security administrators to identify trends or determine whether policies need adjustments.
 
 > [!NOTE]
 > A Threat Protection Status report is available to customers who have either [Office 365 ATP](office-365-atp.md) or [Exchange Online Protection](eop/exchange-online-protection-eop.md) (EOP); however, the information that is displayed in the Threat Protection Status report for ATP customers will likely contain different data than what EOP customers might see. For example, EOP customers can view information about malware detected in email, but not information about [malicious files detected in SharePoint Online, OneDrive, or Microsoft Teams](atp-for-spo-odb-and-teams.md), an ATP-specific capability. ([Learn more about ATP reports](view-reports-for-atp.md).)
@@ -69,7 +69,9 @@ To view this report, in the [Security &amp; Compliance Center](https://protectio
   
 ![Threat Protection Status report](media/0ff86e12-c2b2-4d89-92a5-cefb054dc070.png)
   
-When you first open the Threat Protection Status report, the report shows data for the past seven days by default; however, you can click **Filters** and change the date range for up to 90 days of detail. This report is useful for viewing the effectiveness and impact of your organization's [Exchange Online Protection features](eop/eop-features.md), and for longer-term trending. 
+When you first open the Threat Protection Status report, the report shows data for the past seven days by default; however, you can click **Filters** and change the date range for up to 90 days of detail. (If you are using a trial subscription, you might be limited to 30 days' of data.)
+
+This report is useful for viewing the effectiveness and impact of your organization's [Exchange Online Protection features](eop/eop-features.md), and for longer-term trending. 
   
 ![Threat Protection Status report filters](media/ab6b6b8d-e97a-4c3a-8fb1-c4940dcb7a07.png)
   
