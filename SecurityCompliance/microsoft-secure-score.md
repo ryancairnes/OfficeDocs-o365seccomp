@@ -78,9 +78,24 @@ You can view a graph of your organization's score over time in the **History** t
 
 The score is calculated once per day (around 1:00 AM PST). If you make a change to a measured action, the score will automatically update the next day. It is also important to note that some other portals show parts of the Microsoft Secure Score (like Windows Defender Security Center). If you complete an improvement action and the score is increased in those portals, it may take up to 24 hours for the updated score to display in Microsoft 365 security center.  
 
-## How controls are scored
+## How Secure Score is calculated
 
-Controls can be scored in two ways. Some are scored in a binary fashion - you get 100% of the score if you have the feature or setting configured based on our recommendation. Other scores are calculated as a percentage of the total configuration. For example, if the improvement recommendation states you’ll get 30 points if you protect all your users with MFA and you only have 5 of 100 total users protected, you would be given a partial score around 2 points (5 protected / 100 total * 30 max pts = 2 pts partial score). 
+At the most simple level, your secure score is calculated based on the number of improvement actions your organization has completed.
+Some improvement actions are scored in a binary fashion - you get 100% of the score if you have the feature or setting configured based on our recommendation. Other scores are calculated as a percentage of the total configuration. For example, if the improvement recommendation states you’ll get 30 points if you protect all your users with multi-factor authentication and you only have 5 of 100 total users protected, you would be given a partial score around 2 points (5 protected / 100 total * 30 max pts = 2 pts partial score).
+
+However, there are factors to take into account when examining your score, including your actual achievable score and changes to the baseline total.  
+
+### Total attack surface vs. achievable score
+
+Microsoft Secure Score takes into account the total attack surface of your environment, and the many ways an unauthorized user can try to access it. That means based on your current licenses and accepted risk, it may not be possible to achieve 100% of the points. In order for you to set manageable and achievable goals, options are provided on the dashboards to view the maximum achievable score that your organization's configuration currently allows.
+
+### When to expect changes to the baseline total
+
+There are two reasons why there may be changes to your organization's Secure Score point baseline:
+
+1. Microsoft will add new improvement actions twice a year, which will increase the total number of possible points.
+
+2. If your organization starts to use a new product, like Skype for Business, new improvement actions based on that product will be added and increase the baseline point total. Improvement actions for products that your organization does not use are not automatically included.
 
 ## Risk awareness
 
