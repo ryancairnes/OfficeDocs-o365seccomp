@@ -84,13 +84,14 @@ The score is calculated once per day (around 1:00 AM PST). If you make a change 
 ## How Secure Score is calculated
 
 At the most simple level, your secure score is calculated based on the number of improvement actions your organization has completed.
+
 Some improvement actions are scored in a binary fashion - you get 100% of the score if you have the feature or setting configured based on our recommendation. Other scores are calculated as a percentage of the total configuration. For example, if the improvement recommendation states you’ll get 30 points if you protect all your users with multi-factor authentication and you only have 5 of 100 total users protected, you would be given a partial score around 2 points (5 protected / 100 total * 30 max pts = 2 pts partial score).
 
 However, there are factors to take into account when examining your score, including your actual achievable score and changes to the baseline total.  
 
 ### Total attack surface vs. achievable score
 
-Microsoft Secure Score takes into account the total attack surface of your environment, and the many ways an unauthorized user can try to access it. That means based on your current licenses and accepted risk, it may not be possible to achieve 100% of the points. In order for you to set manageable and achievable goals, options are provided on the dashboards to view the maximum achievable score that your organization's configuration currently allows.
+Microsoft Secure Score takes into account the total attack surface of your environment, and the many ways an unauthorized user can try to access it. That means based on your current licenses and accepted risk, it may not be possible to achieve 100% of the points. In order for you to set manageable and realistic goals, options are provided on the dashboards to view the maximum achievable score that your organization's configuration currently allows.
 
 ### When to expect changes to the baseline total
 
