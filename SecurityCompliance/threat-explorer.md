@@ -25,7 +25,7 @@ If your organization has [Office 365 Advanced Threat Protection](office-365-atp.
 |---------|---------|
 |![Threat explorer](media/threatmgmt-explorer.png)      |![Real-time detections](media/threatmgmt-realtimedetections.png)         |
 
-Whether you have Explorer or real-time detections, you have a powerful, near real-time report that enables your organization's Security Operations team to investigate and respond to threats effectively and efficiently, and it resembles the following image: 
+With Explorer (or real-time detections), you have a powerful report that enables your Security Operations team to investigate and respond to threats effectively and efficiently, and it resembles the following image: 
 
 ![Go to Threat management \> Explorer](media/cab32fa2-66f1-4ad5-bc1d-2bac4dbeb48c.png)
 
