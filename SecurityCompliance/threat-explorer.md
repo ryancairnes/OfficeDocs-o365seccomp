@@ -3,7 +3,7 @@ title: "Threat Explorer (and real-time detections)"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 05/21/2019
+ms.date: 05/22/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
