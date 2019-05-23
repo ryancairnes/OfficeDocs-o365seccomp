@@ -37,9 +37,9 @@ With this report, you can:
 
 ## New features in real-time detections
 
-For Office 365 ATP Plan 1 customers, *real-time detections* were previously referred to as *real-time reports*. In addition to the name change, several new features and enhancements are rolling out:
+For Office 365 ATP Plan 1 customers, the *real-time detections* report was previously referred to as *real-time reports*. In addition to the name change, several new features and enhancements are rolling out:
 
-- In the Phish view, you'll see more details about detected URLs through ATP Safe Links. New details and capabilities include:
+- In the Phish view, you'll see more details about detected URLs through [ATP Safe Links](atp-safe-links.md). New details and capabilities include:
   - URLs in email messages
   - Filtering based on URL information
   - URL information displayed in data graphs
