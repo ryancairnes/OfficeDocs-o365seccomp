@@ -30,7 +30,7 @@ Whether you have Explorer or real-time detections, you have a powerful, near rea
 ![Go to Threat management \> Explorer](media/cab32fa2-66f1-4ad5-bc1d-2bac4dbeb48c.png)
 
 With this report, you can:
-- [See malware that was detected by Office 365 security features](#see-malware-detected-in-email-by-technology)
+- [See malware detected by Office 365 security features](#see-malware-detected-in-email-by-technology)
 - [View data about phishing URLs and click verdict](#view-data-about-phishing-urls-and-click-verdict)
 - [Start an automated investigation and response process from a view in Explorer](#start-automated-investigation-and-response) (ATP Plan 2 only)
 - ... [Investigate malicious email, and more](#more-ways-to-use-explorer-or-real-time-detections)!
@@ -39,7 +39,7 @@ With this report, you can:
 
 For Office 365 ATP Plan 1 customers, the *real-time detections* report was previously referred to as *real-time reports*. In addition to the name change, several new features and enhancements are rolling out:
 
-- In the Phish view, you'll see more details about detected URLs through [ATP Safe Links](atp-safe-links.md). New details and capabilities include:
+- In the Phish view, you can see more details about detected URLs through [ATP Safe Links](atp-safe-links.md). New details and capabilities include:
   - URLs in email messages
   - Filtering based on URL information
   - URL information displayed in data graphs
