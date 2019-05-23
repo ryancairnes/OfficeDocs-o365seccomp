@@ -90,11 +90,11 @@ To review phish URLs in messages and clicks on URLs in phish messages, use the [
    
    ![Explorer URLs that were blocked](media/ExplorerPhishClickVerdictURLs.png)
    
-   Select a URL to view more detailed information. Note that in the URL flyout dialog, the filtering on emails is removed in order to show you the full view of the URL's exposure in your environment. This lets you filter down emails in Explorer to ones you are concerned about, find specific URLs that are potential threats, then expand your understanding of the URL exposure in your environment (via the URL details dialog) without having to add URL filters to the Explorer view itself.
+   Select a URL to view more detailed information. Note that in the URL flyout dialog, the filtering on emails is removed to show you the full view of the URL's exposure in your environment. This lets you filter down emails in Explorer to ones you are concerned about, find specific URLs that are potential threats, then expand your understanding of the URL exposure in your environment (via the URL details dialog) without having to add URL filters to the Explorer view itself.
 
 ## Review email messages reported by users
 
-Suppose you want to see email messages that users in your organization have reported as Junk, Not Junk, or Phishing by using the [Report Message add-in for Outlook and Outlook on the web](enable-the-report-message-add-in.md). To do this, use the [Email > User-reported](threat-explorer-views.md#email--user-reported) view of Explorer (or real-time detections).
+Suppose that you want to see email messages that users in your organization have reported as Junk, Not Junk, or Phishing by using the [Report Message add-in for Outlook and Outlook on the web](enable-the-report-message-add-in.md). To do this, use the [Email > User-reported](threat-explorer-views.md#email--user-reported) view of Explorer (or real-time detections).
 
 1. In the Security & Compliance Center ([https://protection.office.com](https://protection.office.com)), choose **Threat management** > **Explorer** (or **Real-time detections**). (This example uses Explorer.)
 
@@ -111,7 +111,7 @@ The report refreshes to show data about email messages that people in your organ
 > [!NOTE]
 > Automated investigation and response capabilities are available in **Office 365 ATP Plan 2** and **Office 365 E5**.
 
-(NEW!) [Automated investigation and response](automated-investigation-response-office.md) can save your security operations team a lot of time and effort in investigating and mitigating cyber attacks. In addition to configuring alerts that can trigger a security playbook, you can start an automated investigation and response process from a view in Explorer. 
+(NEW!) [Automated investigation and response](automated-investigation-response-office.md) can save your security operations team much time and effort in investigating and mitigating cyber attacks. In addition to configuring alerts that can trigger a security playbook, you can start an automated investigation and response process from a view in Explorer. 
 
 For details on this, see [Example: A security administrator triggers an investigation from Explorer](automated-investigation-response-office.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer).
 
