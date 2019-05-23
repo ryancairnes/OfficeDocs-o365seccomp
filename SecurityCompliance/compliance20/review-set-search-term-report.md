@@ -38,6 +38,7 @@ Pivots are how the report will be grouped. Consider the following example.
 - doc6, doc7, doc8, doc9, and doc10 have the term "Investigation" in them.
 - doc1, doc3, doc5, doc7, doc9 are from custodian A.
 - doc2, doc4, doc6, doc8, doc10 are from custodian B.
+
 In this case, if you were to generate search term report on the terms "eDiscovery" and "Investigation" and pivot on custodians, what you would see is:
 - "eDiscovery" - custodian A: 4 documents
 - "eDiscovery" - custodian B: 3 documents
