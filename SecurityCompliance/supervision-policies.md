@@ -145,8 +145,8 @@ The following table explains more about each condition.
   
 |**Condition**|**How to use this condition**|
 |:-----|:-----|
-| **Message is received from any of these domains**  <br><br> **Message is not received from any of these domains** | Apply the policy to include or exclude specific domains or email addresses in received messages. Enter each domain or email address and separate multiple domains or email addresses with a comma. Each domain or email address entered is applied separately, only one domain or email address must apply for the policy to apply to the message. If you want to monitor all email from a specific domain but want to exclude messages that do not need review (newsletters, announcements, etc.), you must configure two conditions. One *Message is received from any of these domains* condition that defines the domain ("contoso.com") and one *Message is not received from any of these domains* condition excluding the email address ("newsletter@contoso.com"). |
-| **Message is sent to any of these domains**  <br><br> **Message is not sent to any of these domains** | Apply the policy to include or exclude specific domains or email addresses in sent messages. Enter each domain or email address and separate multiple domains or email addresses with a comma. Each domain or email address is applied separately, only one domain or email address must apply for the policy to apply to the message. If you want to monitor all email sent to a specific domain but want to exclude sent messages that do not need review, you must configure two conditions. One *Message is sent to any of these domains* condition that defines the domain ("contoso.com") and one *Message is not sent to any of these domains* condition excluding the email address ("subscriptions@contoso.com"). |
+| **Message is received from any of these domains**  <br><br> **Message is not received from any of these domains** | Apply the policy to include or exclude specific domains or email addresses in received messages. Enter each domain or email address and separate multiple domains or email addresses with a comma. Each domain or email address entered is applied separately, only one domain or email address must apply for the policy to apply to the message. <br><br> If you want to monitor all email from a specific domain but want to exclude messages that do not need review (newsletters, announcements, etc.), you must configure two conditions: <br> - A *Message is received from any of these domains* condition that defines the domain ("contoso.com"), AND <br> - A *Message is not received from any of these domains* condition that excludes the email address ("newsletter@contoso.com"). |
+| **Message is sent to any of these domains**  <br><br> **Message is not sent to any of these domains** | Apply the policy to include or exclude specific domains or email addresses in sent messages. Enter each domain or email address and separate multiple domains or email addresses with a comma. Each domain or email address is applied separately, only one domain or email address must apply for the policy to apply to the message. <br><br> If you want to monitor all email sent to a specific domain but want to exclude sent messages that do not need review, you must configure two conditions: <br> - A *Message is sent to any of these domains* condition that defines the domain ("contoso.com"), AND <br> - A *Message is not sent to any of these domains* condition that excludes the email address ("subscriptions@contoso.com"). |
 | **Message is classified with any of these labels**  <br><br> **Message is not classified with any of these labels** | To apply the policy when certain retention labels are included or excluded in a message. Retention labels must be configured separately and configured labels are chosen as part of this condition. Each label you choose is applied separately (only one of these labels must apply for the policy to apply to the message). For more information about configuring retention labels, see [Overview of retention labels](https://docs.microsoft.com/office365/securitycompliance/labels).|
 | **Message contains any of these words**  <br><br> **Message contains none of these words** | To apply the policy when certain words or phrases are included or excluded in a message, enter each word or phrase on a separate line. Each line of words you enter are applied separately (only one of these lines must apply for the policy to apply to the message). For more information about entering words or phrases, see the next section [Matching words and phrases to emails or attachments](supervision-policies.md#Matchwords).|
 | **Attachment contains any of these words**  <br><br> **Attachment contains none of these words** | To apply the policy when certain words or phrases are included or excluded in a message attachment (such as a Word document), enter each word or phrase on a separate line. Each line of words you enter are applied separately (only one line must apply for the policy to apply to the attachment). For more information about entering words or phrases, see the next section [Matching words and phrases to emails or attachments](supervision-policies.md#Matchwords).|
@@ -200,7 +200,7 @@ The **Review** tab is where reviewers classify and resolve items identified by t
 - Filter by pending, compliant, non-compliant, and questionable items.
 - Tag a single item as compliant, non-compliant, or questionable. You can also record a comment with the item to help clarify the tagging action taken.
 - Bulk tag multiple items as compliant, non-compliant, or questionable. You can also record a comment with multiple items to help clarify the tagging action taken.
-- View the history of the tagging for a single item. This includes who resolved the item, the date and time of the action, the resolution tag, and any included comments.
+- View the history of the tagging for a single item. Includes who resolved the item, the date and time of the action, the resolution tag, and any included comments.
 - Reclassify previously reviewed items as compliant, non-compliant, or questionable. You can also record a comment with single or multiple items to help clarify the reclassification action taken.
 
 #### Resolved Items tab
@@ -242,7 +242,7 @@ Here's a breakdown of the values displayed the **Tag type** column.
 |:-----|:-----|
 | **Not Reviewed** | The number of emails not reviewed yet. These emails are awaiting review in the Office 365 supervision dashboard.
 | **Compliant** | The number of emails reviewed and marked as compliant. These messages still need resolution. |
-| **Questionable** | The number of emails reviewed and marked questionable. This acts as a flag for other reviewers to help check whether an email needs investigation for compliance. These messages still need resolution. |
+| **Questionable** | The number of emails reviewed and marked questionable. Serves as a flag for other reviewers to help check whether an email needs investigation for compliance. These messages still need resolution. |
 | **Non-Compliant (Active)** | The number of non-compliant emails that reviewers are currently investigating. |
 | **Non-Compliant (Resolved)** | The number of non-compliant emails that reviewers investigated and resolved. |
 | **Hit Policy** | The total number (daily) of messages from Exchange, Teams, and third-party data sources that matched one or more conditions defined in a supervision policy |
@@ -250,7 +250,7 @@ Here's a breakdown of the values displayed the **Tag type** column.
 | **Resolved** | The total number of messages from Exchange, Teams, and third-party data sources classified as **Resolved**|
 
 > [!NOTE]
-> Supervision policies must first be provisioned before they will appear in this report. Additionally, if policies are deleted, historical data is still shown. However, they're indicated as a "Non-existent policy" and the **Export** function isn't available.
+> Supervision policies must be provisioned before they appear in reports. If policies are deleted, historical data is still shown. However, they're indicated as a "Non-existent policy" and the **Export** function isn't available.
 
 ## Audit
 
@@ -276,4 +276,4 @@ In addition to information provided in the supervision reports and logs, you can
 
 ## Ready to get started?
 
-To start configuring supervision policies for your organization, see [Configure supervision policies](configure-supervision-policies.md).
+To configure supervision policies for your organization, see [Configure supervision policies](configure-supervision-policies.md).
