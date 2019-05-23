@@ -19,7 +19,7 @@ description: "Learn about Explorer (and real-time detections) in the Security &a
 
 # Threat Explorer (and real-time detections)
 
-If your organization has [Office 365 Advanced Threat Protection](office-365-atp.md) (Office 365 ATP), and you have the [necessary permissions](#required-licenses-and-permissions), you have either Explorer or real-time reports ([now changing to real-time detections — see what's new](#new-features-in-real-time-detections)!). In the Security & Compliance Center, go to **Threat management**, and then choose **Explorer** OR **Real-time detections**. 
+If your organization has [Office 365 Advanced Threat Protection](office-365-atp.md) (Office 365 ATP), and you have the [necessary permissions](#required-licenses-and-permissions), you have either **Explorer** or **real-time detections** ([formerly real-time reports — see what's new](#new-features-in-real-time-detections)!). In the Security & Compliance Center, go to **Threat management**, and then choose **Explorer** OR **Real-time detections**. 
 
 |With ATP Plan 2, you see:  |With ATP Plan 1, you see:  |
 |---------|---------|
@@ -68,7 +68,7 @@ The report refreshes to show the results malware detected in email, using the te
 
 ## View data about phishing URLs and click verdict
 
-Suppose you want to see phishing attempts through URLs in email, including a list of URLs that were allowed, blocked, and overridden. Identifying URLs that were clicked requires [ATP Safe links](atp-safe-links.md) to be configured. Make sure you have set up [ATP Safe Links policies](set-up-atp-safe-links-policies.md) for time-of-click protection and logging of click verdicts by ATP Safe Links. 
+Suppose that you want to see phishing attempts through URLs in email, including a list of URLs that were allowed, blocked, and overridden. Identifying URLs that were clicked requires [ATP Safe links](atp-safe-links.md) to be configured. Make sure that you have set up [ATP Safe Links policies](set-up-atp-safe-links-policies.md) for time-of-click protection and logging of click verdicts by ATP Safe Links. 
 
 To review phish URLs in messages and clicks on URLs in phish messages, use the [Email > Phish](threat-explorer-views.md#email--phish) view of Explorer (or real-time detections).
 
@@ -80,7 +80,7 @@ To review phish URLs in messages and clicks on URLs in phish messages, use the [
 
 4. Select one or more options, such as **Blocked** and **Block overridden**, and then click the **Refresh** button that is on the same line as the options to apply that filter. (Don't refresh your browser window.)<br/>![URLs and click verdicts](media/ThreatExplorerEmailPhishClickVerdictOptions.png)<br/>
 
-    The report refreshes to show two different URL tables on the URL tab below:
+    The report refreshes to show two different URL tables on the URL tab under the report:
 
    1. **Top URLs** are the URLs contained in the messages you have filtered down to, and the email delivery action counts for each URL. In the phish email view, this list typically will contain legitimate URLs. Attackers include a mix of good and bad URLs in their messages to try to get them delivered, but they'll make the malicious links more interesting for the user to click. The table of URLs is sorted by total email count (NOTE: This column is not shown to simplify the view).
 
