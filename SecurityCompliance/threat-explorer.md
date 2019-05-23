@@ -19,21 +19,21 @@ description: "Learn about Explorer (and real-time detections) in the Security &a
 
 # Threat Explorer (and real-time detections)
 
-If your organization has [Office 365 Advanced Threat Protection](office-365-atp.md) (Office 365 ATP), and you have the [necessary permissions](#required-licenses-and-permissions), you have either Explorer or real-time reports ([now changing to real-time detections - see what's new](#new-features-in-real-time-detections)!) in the Security & Compliance Center (Go to **Threat management** > **Explorer** OR **Real-time detections**). 
+If your organization has [Office 365 Advanced Threat Protection](office-365-atp.md) (Office 365 ATP), and you have the [necessary permissions](#required-licenses-and-permissions), you have either Explorer or real-time reports ([now changing to real-time detections — see what's new](#new-features-in-real-time-detections)!). In the Security & Compliance Center, go to **Threat management**, and then choose **Explorer** OR **Real-time detections**. 
 
 |With ATP Plan 2, you see:  |With ATP Plan 1, you see:  |
 |---------|---------|
 |![Threat explorer](media/threatmgmt-explorer.png)      |![Real-time detections](media/threatmgmt-realtimedetections.png)         |
 
-Whether you have Explorer or real-time detections, you have a powerful, near real-time tool that enables your organization's Security Operations team to investigate and respond to threats effectively and efficiently, and it looks like this: 
+Whether you have Explorer or real-time detections, you have a powerful, near real-time report that enables your organization's Security Operations team to investigate and respond to threats effectively and efficiently, and it resembles the following image: 
 
 ![Go to Threat management \> Explorer](media/cab32fa2-66f1-4ad5-bc1d-2bac4dbeb48c.png)
 
-Here are some of the things you can do with this report:
+With this report, you can:
 - [See malware that was detected by Office 365 security features](#see-malware-detected-in-email-by-technology)
 - [View data about phishing URLs and click verdict](#view-data-about-phishing-urls-and-click-verdict)
 - [Start an automated investigation and response process from a view in Explorer](#start-automated-investigation-and-response) (ATP Plan 2 only)
-- ... [and more](#more-ways-to-use-explorer-or-real-time-detections)!
+- ... [Investigate malicious email, and more](#more-ways-to-use-explorer-or-real-time-detections)!
 
 ## New features in real-time detections
 
