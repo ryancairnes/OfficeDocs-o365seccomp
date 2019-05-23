@@ -47,7 +47,7 @@ For Office 365 ATP Plan 1 customers, the *real-time detections* report was previ
 
 - Whenever there's a change in a URL click verdict, you'll see an alert. URL click verdicts can change when a URL’s reputation changes post-detonation, or when a user who's protected by ATP Safe Links overrides an [ATP Safe Links warning](atp-safe-links-warning-pages.md).  
  
-These enhancements enable your organization's security administrators to view more details than before about URL domains, missed URLs, click verdicts, and so on, and then adjust your Office 365 ATP policies appropriately.
+These enhancements enable your organization's security administrators to view more details than before. Security administrators can view information about URL domains, missed URLs, click verdicts, and more, and then adjust Office 365 ATP policies appropriately.
 
 > [!NOTE]
 > While these features are in preview, URL data will be available for a limited number of days. 
