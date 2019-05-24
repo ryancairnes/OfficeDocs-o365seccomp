@@ -15,15 +15,15 @@ description: "Learn how to define policies for information barriers in Microsoft
 
 # Define policies for information barriers in Microsoft Teams (Preview)
 
-With information barriers, if you meet the [prerequisites](#prerequisites), you can define policies that are designed to prevent certain groups from communicating with each other, or allow specific groups to communicate only with certain other groups. Such policies can help your organization maintain compliance with relevant industry standards and regulations, and avoid potential conflicts of interest.  
+With information barriers, if you meet the [prerequisites](#prerequisites), you can define policies that are designed to prevent certain groups from communicating with each other, or allow specific groups to communicate only with certain other groups. Such policies can help your organization maintain compliance with relevant industry standards and regulations, and avoid potential conflicts of interest. To learn more, see [Information barriers (Preview)](information-barriers.md). 
 
-This article describes how to plan, define, implement, and manage information barrier policies. To learn more about information barriers, see [Information barriers (Preview)](information-barriers.md).
+This article describes how to plan, define, implement, and manage information barrier policies. Because several steps are involved, the work flow is divided into several parts. Make sure to read through the entire process before you begin defining information barrier policies.
 
 ## The work flow at a glance
 
 |Phase    |What's involved  |
 |---------|---------|
-|[Prerequisites](#prerequisites)     |- Confirm that you have a subscription that includes information barriers<br/>- Verify that licenses are assigned and users are mail-enabled<br/>- Verify that you have the necessary permissions to define/edit policies<br/>- Confirm that directory data is available<br/>- Make sure [scoped directory search is enabled in Microsoft Teams](#scoped-directory-search)<br/>- Be familiar with [PowerShell](#powershell) (Example cmdlets are provided)         |
+|[Prerequisites](#prerequisites)     |- Confirm that you have a subscription that includes information barriers<br/>- Verify that licenses are assigned and users are mail-enabled<br/>- Verify that you have the necessary permissions to define/edit policies<br/>- Make sure that your directory data reflects your organization's structure<br/>- Make sure [scoped directory search is enabled in Microsoft Teams](#scoped-directory-search)<br/>- Be familiar with [PowerShell](#powershell) (Example cmdlets are provided)         |
 |[Part 1: Plan your information barrier policies](#part-1-plan-your-information-barrier-policies)     |- Make a list of groups (segments) who will be affected by information barriers<br/>- Determine which policies are needed|
 |[Part 2: Segment users](#part-2-segment-users)     |- Identify which [attributes](information-barriers-attributes.md) to use<br/>- Define the segments in terms of policy filters<br/>- View (and if needed, edit) the segments         |
 |[Part 3: Define information barrier policies](#part-3-define-information-barrier-policies)     |- Define the policies<br/>- View (and if needed, edit) the policies<br/>- Policies are neither active nor applied yet         |
