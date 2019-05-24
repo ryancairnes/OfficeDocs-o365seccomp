@@ -119,7 +119,7 @@ As part of your plan, determine which segments will be included in information b
 > [!IMPORTANT]
 > Although we recommend that you segment all users, you might not include all segments in your information barrier policies. And, no single segment can be included in more than one information barrier policy.
 
-As an example, suppose that Contoso has five departments: HR, Sales, Marketing, Research, and Manufacturing. Contoso has segmented all users by their department. For policy planning purposes, Contoso set up a table to determine which segments can (or cannot) talk to each other, like this:
+As an example, recall that Contoso has five departments: HR, Sales, Marketing, Research, and Manufacturing. Contoso set up a table to illustrate which segments can (or cannot) talk to each other, like this:
 
 |Segment  |Can talk to  |Cannot talk to  |
 |---------|---------|---------|
@@ -129,7 +129,7 @@ As an example, suppose that Contoso has five departments: HR, Sales, Marketing, 
 |Research     |HR (only)        |Sales, Marketing, Manufacturing     |
 |Manufacturing |Everyone |(no restrictions) |
 
-In this case, Contoso would define two policies, as follows:
+In this case, Contoso's plan would include two information barrier policies, as follows:
 
 - A policy designed to prevent Sales and Marketing from communicating with Research
 - A policy designed to allow Research to communicate with HR only 
