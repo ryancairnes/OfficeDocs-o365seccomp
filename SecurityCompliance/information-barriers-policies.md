@@ -42,11 +42,9 @@ With information barriers, if you meet the [prerequisites](#prerequisites), you 
 Scoped directory search | **Before you define your organization's first information barrier policy, you must [enable scoped directory search in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-scoped-directory-search)**. Wait at least 24 hours after enabling scoped directory search before you set up or define information barrier policies.
 |PowerShell | Currently, information barrier policies are defined and managed in the Office 365 Security & Compliance Center using PowerShell cmdlets. Although several scenarios and examples are provided in this article, you'll need to be familiar with PowerShell cmdlets and parameters.| 
 
-In addition to these prerequisites, you must also provide admin consent.
+In addition to these prerequisites, you must also connect to the Security & Compliance Center, and provide admin consent.
 
-### Admin consent
-
-Before you begin defining segments or policies, you must connect to the Security & Compliance Center and then provide admin consent. To do this, follow these steps:
+### Connect to the Security & Compliance Center and provide admin consent
 
 1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
@@ -70,7 +68,7 @@ Before you begin defining segments or policies, you must connect to the Security
 
 When you segment users in your organization, consider using an attribute in Azure Active Directory. For example, you might use the Department attribute, assuming no single employee is assigned to more than one department. To see a list of supported attributes, refer to [Attributes for information barrier policies (Preview)](information-barriers-attributes.md).
 
-**Make sure that your segments do not overlap**. 
+**Make sure that your segments do not overlap**. Each user in your organization should belong to one (and only one) segment. No user should belong to two or more segments. 
 
 To define an organizational segment, use the `New-OrganizationSegment` cmdlet with the `UserGroupFilter` parameter that corresponds to the attribute you want to use. Make sure that the attribute you use to define your segment is such that no single person belongs to more than one segment. Here are some examples (using the Department attribute):
 
@@ -80,7 +78,7 @@ To define an organizational segment, use the `New-OrganizationSegment` cmdlet wi
 
 `New-OrganizationSegment -Name "Research" -UserGroupFilter "Department -eq 'Research'"`
 
-`New-OrganizationSegment -Name "Engineering" -UserGroupFilter "Department -eq 'Engineering'"`
+`New-OrganizationSegment -Name "Marketing" -UserGroupFilter "Department -eq 'Marketing'"`
 
 After you run each cmdlet, you should see a list of details about the new segment. Details include the segment's type, who created or last modified it, and so on. 
 
