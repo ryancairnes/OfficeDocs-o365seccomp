@@ -106,7 +106,7 @@ When you have finished defining or editing your segments, proceed to plan (or de
 
 ## Part 2: Plan your information barrier policies
 
-After you have defined segments for all the users in your organization, your next step is to plan the policies.
+After you have defined segments for all the users in your organization, your next step is to plan the policies. It's important to plan your policies carefully because user
 
 You can use information barrier policies to:
 - Block communications between two segments;
@@ -117,7 +117,7 @@ You can use information barrier policies to:
 As part of your plan, determine which segments will be included in information barrier policies. 
 
 > [!IMPORTANT]
-> Although we recommend that you segment all users, not all segments are named in your information barrier policies, and no single segment can be included in more than one policy.
+> Although we recommend that you segment all users, you might not include all segments in your information barrier policies. And, no single segment can be included in more than one information barrier policy.
 
 As an example, suppose that Contoso has five departments: HR, Sales, Marketing, Research, and Manufacturing. Contoso has segmented all users by their department. For policy planning purposes, Contoso set up a table to determine which segments can (or cannot) talk to each other, like this:
 
