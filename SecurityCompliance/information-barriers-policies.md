@@ -23,7 +23,7 @@ This article describes how to plan, define, implement, and manage information ba
 
 |Phase    |What's involved  |
 |---------|---------|
-|[Prerequisites](#prerequisites)     |- Confirm that you have a subscription that includes information barriers<br/>- Verify that licenses are assigned and users are mail-enabled<br/>- Verify that you have the necessary permissions to define/edit policies<br/>- Make sure that your directory data reflects your organization's structure<br/>- Make sure [scoped directory search is enabled in Microsoft Teams](#scoped-directory-search)<br/>- Be familiar with [PowerShell](#powershell) (Example cmdlets are provided)         |
+|[Prerequisites](#prerequisites)     |- Confirm that you have a subscription that includes information barriers<br/>- Verify that licenses are assigned and users are mail-enabled<br/>- Verify that you have the necessary permissions to define/edit policies<br/>- Make sure that your directory data reflects your organization's structure<br/>- Make sure [scoped directory search is enabled in Microsoft Teams](#scoped-directory-search)<br/>- Be familiar with PowerShell (example cmdlets are provided)<br/>- Provide admin consent (steps are included)          |
 |[Part 1: Plan your information barrier policies](#part-1-plan-your-information-barrier-policies)     |- Make a list of groups (segments) who will be affected by information barriers<br/>- Determine which policies are needed|
 |[Part 2: Segment users](#part-2-segment-users)     |- Identify which [attributes](information-barriers-attributes.md) to use<br/>- Define the segments in terms of policy filters<br/>- View (and if needed, edit) the segments         |
 |[Part 3: Define information barrier policies](#part-3-define-information-barrier-policies)     |- Define the policies<br/>- View (and if needed, edit) the policies<br/>- Policies are neither active nor applied yet         |
@@ -40,6 +40,30 @@ This article describes how to plan, define, implement, and manage information ba
 |Directory data | **Make sure that your organization's structure is reflected in directory data**. To do this, make sure that attributes, such as group membership, department name, etc. are populated correctly in Azure Active Directory (or Exchange Online).<br/> To learn more, see the following resources:<br/>- [Attributes for information barrier policies (Preview)](information-barriers-attributes.md)<br/>- [Add or update a user's profile information using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal).|
 Scoped directory search | **Before you define your organization's first information barrier policy, you must [enable scoped directory search in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-scoped-directory-search)**. Wait at least 24 hours after enabling scoped directory search before you set up or define information barrier policies.
 |PowerShell | Currently, information barrier policies are defined and managed in the Office 365 Security & Compliance Center using PowerShell cmdlets. Although several scenarios and examples are provided in this article, you'll need to be familiar with PowerShell cmdlets and parameters.| 
+
+In addition to these prerequisites, you must also provide admin consent.
+
+### Admin consent
+
+Before you begin defining segments or policies, you must connect to the Security & Compliance Center and provide admin consent. To do this, follow these steps:
+
+1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
+
+2. Run the following PowerShell cmdlets, one at a time:<br>
+
+    `Login-AzureRmAccount`  
+
+    `$appId="bcf62038-e005-436d-b970-2a472f8c1982"` 
+
+    `$sp=Get-AzureRmADServicePrincipal -ServicePrincipalName $appId` 
+
+    `if ($sp -eq $null) { New-AzureRmADServicePrincipal -ApplicationId $appId }`
+
+    `Start-Process  "https://login.microsoftonline.com/common/adminconsent?client_id=$appId"`
+
+3. When prompted, sign in using your work or school account for Office 365.
+
+4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
 
 ## Part 1: Plan your information barrier policies
 
@@ -78,23 +102,7 @@ After you have set up your plan for information barrier policies, the next step 
 
 **Make sure that your segments do not overlap**. For example, you might use the Department attribute, assuming no single employee is assigned to more than one department. To see a list of supported attributes, refer to [Attributes for information barrier policies (Preview)](information-barriers-attributes.md).
 
-1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
-2. Run the following PowerShell cmdlets, one at a time:<br>
-
-    `Login-AzureRmAccount`  
-
-    `$appId="bcf62038-e005-436d-b970-2a472f8c1982"` 
-
-    `$sp=Get-AzureRmADServicePrincipal -ServicePrincipalName $appId` 
-
-    `if ($sp -eq $null) { New-AzureRmADServicePrincipal -ApplicationId $appId }`
-
-    `Start-Process  "https://login.microsoftonline.com/common/adminconsent?client_id=$appId"`
-
-3. When prompted, sign in using your work or school account for Office 365.
-
-4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
 
 5. To define an organizational segment, use the `New-OrganizationSegment` cmdlet with the `UserGroupFilter` parameter that corresponds to the attribute you want to use. Make sure that the attribute you use to define your segment is such that no single person belongs to more than one segment. Here are some examples (using the Department attribute):
 
