@@ -134,7 +134,7 @@ In this case, Contoso's plan would include two information barrier policies, as 
 - A policy designed to prevent Sales and Marketing from communicating with Research
 - A policy designed to allow Research to communicate with HR only 
 
-Manufacturing and HR don't have any other restrictions, and because each segment can be included in only one policy, no additional policies will be defined for Contoso at this time.
+Manufacturing and HR don't have any other restrictions, so Contoso does not need additional information barrier policies at this time.
 
 ### A few important points to keep in mind
 
