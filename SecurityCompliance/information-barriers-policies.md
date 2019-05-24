@@ -15,17 +15,18 @@ description: "Learn how to define policies for information barriers in Microsoft
 
 # Define policies for information barriers in Microsoft Teams (Preview)
 
-With information barriers, if you meet the [prerequisites](#prerequisites), you can define policies that are designed to prevent certain groups from communicating with each other, or allow specific groups to communicate only with certain other groups. Such policies can help your organization maintain compliance with relevant industry standards and regulations, and avoid potential conflicts of interest. To learn more, see [Information barriers (Preview)](information-barriers.md). 
+With information barriers, if you meet the [prerequisites](#prerequisites), you can define policies that are designed to prevent certain segments of users from communicating with each other, or allow specific segments to communicate only with certain other segments. Information barrier policies can help your organization maintain compliance with relevant industry standards and regulations, and avoid potential conflicts of interest. To learn more, see [Information barriers (Preview)](information-barriers.md). 
 
-This article describes how to plan, define, implement, and manage information barrier policies. Because several steps are involved, the work flow is divided into several parts. Make sure to read through the entire process before you begin defining information barrier policies.
+> [!IMPORTANT]
+> This article describes how to plan, define, implement, and manage information barrier policies. Several steps are involved. In this article, the work flow is divided into several parts. Make sure to read through the entire process before you begin defining (or editing) information barrier policies.
 
 ## The work flow at a glance
 
 |Phase    |What's involved  |
 |---------|---------|
-|[Prerequisites](#prerequisites)     |- Confirm that you have a subscription that includes information barriers<br/>- Verify that licenses are assigned and users are mail-enabled<br/>- Verify that you have the necessary permissions to define/edit policies<br/>- Make sure that your directory data reflects your organization's structure<br/>- Make sure [scoped directory search is enabled in Microsoft Teams](#scoped-directory-search)<br/>- Be familiar with PowerShell (example cmdlets are provided)<br/>- Provide admin consent (steps are included)          |
-|[Part 1: Segment users](#part-2-segment-users)     |- Identify which [attributes](information-barriers-attributes.md) to use<br/>- Define the segments in terms of policy filters<br/>- View (and if needed, edit) the segments         |
-|[Part 2: Plan your information barrier policies](#part-1-plan-your-information-barrier-policies)     |- Make a list of groups (segments) who will be affected by information barriers<br/>- Determine which policies are needed|
+|[Make sure prerequisites are met](#prerequisites)     |- Confirm that you have a subscription that includes information barriers<br/>- Verify that licenses are assigned and users are mail-enabled<br/>- Verify that you have the necessary permissions to define/edit policies<br/>- Make sure that your directory data reflects your organization's structure<br/>- Make sure [scoped directory search is enabled in Microsoft Teams](#scoped-directory-search)<br/>- Be familiar with PowerShell (example cmdlets are provided)<br/>- Provide admin consent (steps are included)          |
+|[Part 1: Segment users](#part-1-segment-users)     |- Identify which [attributes](information-barriers-attributes.md) to use<br/>- Define the segments in terms of policy filters<br/>- View (and if needed, edit) the segments         |
+|[Part 2: Plan your policies](#part-2-plan-your-information-barrier-policies)     |- Make a list of the segments who will be affected by information barriers<br/>- Determine what policies are needed|
 |[Part 3: Define information barrier policies](#part-3-define-information-barrier-policies)     |- Define the policies<br/>- View (and if needed, edit) the policies<br/>- Policies are neither active nor applied yet         |
 |[Part 4: Apply information barrier policies](#part-4-apply-information-barrier-policies)     |- Set policies to active status<br/>- Run the policy application         |
 |(As needed) [Edit or remove an information barrier policy](#edit-or-remove-an-information-barrier-policy)     |- Set a policy to inactive status<br/>- Edit or remove a policy<br/>- Run the policy application         |
@@ -118,16 +119,16 @@ As an example, suppose that Contoso has five departments: HR, Sales, Marketing, 
 |---------|---------|---------|
 |HR     |Everyone         |(no restrictions)         |
 |Sales     |HR, Marketing, Manufacturing         |Research         |
-|Marketing     |HR, Engineering, Sales, Manufacturing         |Research         |
-|Research     |HR and Engineering (only)        |Sales, Marketing, Manufacturing     |
+|Marketing     |HR, Sales, Manufacturing         |Research         |
+|Research     |HR (only)        |Sales, Marketing, Manufacturing     |
 |Manufacturing |Everyone |(no restrictions) |
 
-In this case, the list of information barrier policies to define would include the following:
+In this case, Contoso would define two policies, as follows:
 
-- Prevent Sales and Marketing from communicating with Research (and vice versa)
-- Allow Research to communicate with HR and Engineering only 
+- One policy designed to prevent Sales and Marketing from communicating with Research
+- One policy designed to allow Research to communicate with HR only 
 
-Manufacturing and HR don't have any other restrictions, and because each segment can be included in only one policy, no additional policies will be defined at this time.
+Manufacturing and HR don't have any other restrictions, and because each segment can be included in only one policy, no additional policies will be defined for Contoso at this time.
 
 ### A few important points to keep in mind
 
@@ -135,24 +136,36 @@ As you plan your information barrier policies, keep the following points in mind
 
 - Currently, information barrier policies do not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
 - Potentially, everyone included in an information barrier policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barrier policies are part of the same team or group chat, they might be removed from those chat sessions. [Learn more about information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
+- Every user in your organization should belong to a segment, no user should belong to two or more segments. Each segment can be included in only one information barrier policy. You will most likely have some segments that are not included in information barrier policies. 
 - Avoid bulk moves when information barrier policies are in effect. Ask your tenant admins not to move users between segments who cannot talk to each other. Either temporarily grant communication access and disable it later, after all users are moved, or create an intermediate segment who can talk to each of the initial segments. In any case, do not move users in bulk between entities who cannot communicate.
 
 ## Part 3: Define information barrier policies
 
-When you have a list of user segments and the information barrier policies you want to define, follow these steps:
+When you have a list of user segments and the information barrier policies you want to define, select a scenario, and then follow the steps.
 
-5. **To block communications between groups**, define policies using the `New-InformationBarrierPolicy` cmdlet with the SegmentsBlocked parameter. For example, to prevent communications between Sales and Research, we would use the following two cmdlets: one to prevent Sales from communicating with Research, and one to prevent Research from communicating with Sales:
+- [Scenario 1: Block communications between segments](#scenario-1-block-communications-between-segments)
+- [Scenario 2: Allow a segment to communicate only with one other segment](#scenario-2-allow-a-segment-to-communicate-only-with-one-other-segment)
 
-    `New-InformationBarrierPolicy -Name "Sales-Research" -AssignedSegment "Sales" -SegmentsBlocked "Research" -State Active`
+> [!IMPORTANT]
+> As you define information barrier policies, make sure to set those policies to inactive status until you are ready to apply them. 
 
-    `New-InformationBarrierPolicy -Name "Research-Sales" -AssignedSegment "Research" -SegmentsBlocked "Sales" -State Active`
+### Scenario 1: Block communications between segments
 
-6. **To allow one group to communicate with only one other group**, define a policy using the `New-InformationBarrierPolicy` cmdlet with the SegmentsAllowed parameter. For example, to allow Research to communicate with Engineering only, we would use the following cmdlet:
+To block communications between segments, use the `New-InformationBarrierPolicy` cmdlet with the SegmentsBlocked parameter. 
+
+For example, for Contoso, to prevent Sales and Marketing from communicating with Research, we would use the following cmdlet:
+
+`New-InformationBarrierPolicy -Name "SalesMarketingBlockedFromResearch" -AssignedSegment "Sales, Marketing" -SegmentsBlocked "Research" -State Inactive`
+
+In this example, the information barrier policy is called *SalesMarketingBlockedFromResearch*. When this policy is active and applied, it will be assigned to users who are in the Sales and Marketing segments. Everyone in those two segments will be prevented from communicating with users in the Research segment.
+
+### Scenario 2: Allow a segment to communicate only with one other segment
+
+To allow one segment to communicate with only one other segment, use the `New-InformationBarrierPolicy` cmdlet with the SegmentsAllowed parameter. For example, to allow Research to communicate with HR only, we would use the following cmdlet:
  
-    `New-InformationBarrierPolicy -Name "Research-Engineering" -AssignedSegment "Research" -SegmentsAllowed "Engineering" -State Active`    
+`New-InformationBarrierPolicy -Name "Research-Engineering" -AssignedSegment "Research" -SegmentsAllowed "HR" -State Active`    
 
-    In this case, Research can communicate only with Engineering, but Engineering is not restricted from communicating with other groups.
-
+In this case, Research can communicate only with HR, but HR is not restricted from communicating with other segments.
 
 Keep in mind that by default, your information barrier policies are inactive until they are explicitly set to active status and applied. After you have defined your policies, proceed to the next section.
 
