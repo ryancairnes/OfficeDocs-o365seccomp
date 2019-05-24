@@ -141,24 +141,6 @@ As you plan your information barrier policies, keep the following points in mind
 
 When you have a list of user segments and the information barrier policies you want to define, follow these steps:
 
-1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
-
-2. Run the following PowerShell cmdlets, one at a time:<br>
-
-    `Login-AzureRmAccount`  
-
-    `$appId="bcf62038-e005-436d-b970-2a472f8c1982"` 
-
-    `$sp=Get-AzureRmADServicePrincipal -ServicePrincipalName $appId` 
-
-    `if ($sp -eq $null) { New-AzureRmADServicePrincipal -ApplicationId $appId }`
-
-    `Start-Process  "https://login.microsoftonline.com/common/adminconsent?client_id=$appId"`
-
-3. When prompted, sign in using your work or school account for Office 365.
-
-4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
-
 5. **To block communications between groups**, define policies using the `New-InformationBarrierPolicy` cmdlet with the SegmentsBlocked parameter. For example, to prevent communications between Sales and Research, we would use the following two cmdlets: one to prevent Sales from communicating with Research, and one to prevent Research from communicating with Sales:
 
     `New-InformationBarrierPolicy -Name "Sales-Research" -AssignedSegment "Sales" -SegmentsBlocked "Research" -State Active`
