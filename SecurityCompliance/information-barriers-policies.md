@@ -68,17 +68,22 @@ In addition to these prerequisites, you must also connect to the Security & Comp
 
 When you segment users in your organization, consider using an attribute in Azure Active Directory. For example, you might use the Department attribute, assuming no single employee is assigned to more than one department. To see a list of supported attributes, refer to [Attributes for information barrier policies (Preview)](information-barriers-attributes.md).
 
-**Make sure that your segments do not overlap**. Each user in your organization should belong to one (and only one) segment. No user should belong to two or more segments. 
+> [!IMPORTANT]
+> **Make sure that your segments do not overlap**. Each user in your organization should belong to one (and only one) segment. No user should belong to two or more segments. 
 
-To define an organizational segment, use the `New-OrganizationSegment` cmdlet with the `UserGroupFilter` parameter that corresponds to the attribute you want to use. Make sure that the attribute you use to define your segment is such that no single person belongs to more than one segment. Here are some examples (using the Department attribute):
+To define an organizational segment, use the `New-OrganizationSegment` cmdlet with the `UserGroupFilter` parameter that corresponds to the attribute you want to use. 
+
+As an example, suppose that Contoso has five departments: HR, Sales, Marketing, Research, and Manufacturing. Contoso will define segments using the Department attribute in Azure Active Directory, as shown in the following examples:
 
 `New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"`
 
 `New-OrganizationSegment -Name "Sales" -UserGroupFilter "Department -eq 'Sales'"`
 
+`New-OrganizationSegment -Name "Marketing" -UserGroupFilter "Department -eq 'Marketing'"`
+
 `New-OrganizationSegment -Name "Research" -UserGroupFilter "Department -eq 'Research'"`
 
-`New-OrganizationSegment -Name "Marketing" -UserGroupFilter "Department -eq 'Marketing'"`
+`New-OrganizationSegment -Name "Manufacturing" -UserGroupFilter "Department -eq 'Manufacturing'"`
 
 After you run each cmdlet, you should see a list of details about the new segment. Details include the segment's type, who created or last modified it, and so on. 
 
@@ -93,11 +98,11 @@ After you run each cmdlet, you should see a list of details about the new segmen
 
 2. To edit a segment, use the `Set-OrganizationSegment` cmdlet with the Identity parameter and relevant details. Here's an example:
 
-    `Set-OrganizationSegment -Identity "FFO.extest.microsoft.com/Microsoft Exchange Hosted Organizations/IBAPCorp04.onmicrosoft.com/Configuration/HR" -UserGroupFilter "Department -eq 'HRDept'"`
+    `example`
 
-    In this example, we are updating the department name from "HR" to "HRDept" for the segment that has the Identity value of `FFO.extest.microsoft.com/Microsoft Exchange Hosted Organizations/IBAPCorp04.onmicrosoft.com/Configuration/HR`.
+    In this example, we are updating the department name from "HR" to "HRDept" for the segment that has the Identity value of `what`.
 
-When you have finished editing your existing segments, proceed to plan (or define) information barrier policies.
+When you have finished defining or editing your segments, proceed to plan (or define) information barrier policies.
 
 ## Part 2: Plan your information barrier policies
 
@@ -109,7 +114,10 @@ You can use information barrier policies to:
 - Prevent one segment from communicating with two other segments;
 - ...and so on.
 
-As part of your plan, determine which segments will be included in information barrier policies. Not all segments will be included in policies, and no single segment can be included in more than one policy.
+As part of your plan, determine which segments will be included in information barrier policies. 
+
+> [!IMPORTANT]
+> Although we recommend that you segment all users, not all segments are named in your information barrier policies, and no single segment can be included in more than one policy.
 
 As an example, suppose that Contoso has five departments: HR, Sales, Marketing, Research, and Manufacturing. Contoso has segmented all users by their department. For policy planning purposes, Contoso set up a table to determine which segments can (or cannot) talk to each other, like this:
 
@@ -123,8 +131,8 @@ As an example, suppose that Contoso has five departments: HR, Sales, Marketing, 
 
 In this case, Contoso would define two policies, as follows:
 
-- One policy designed to prevent Sales and Marketing from communicating with Research
-- One policy designed to allow Research to communicate with HR only 
+- A policy designed to prevent Sales and Marketing from communicating with Research
+- A policy designed to allow Research to communicate with HR only 
 
 Manufacturing and HR don't have any other restrictions, and because each segment can be included in only one policy, no additional policies will be defined for Contoso at this time.
 
