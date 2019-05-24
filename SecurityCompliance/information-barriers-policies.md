@@ -24,8 +24,8 @@ This article describes how to plan, define, implement, and manage information ba
 |Phase    |What's involved  |
 |---------|---------|
 |[Prerequisites](#prerequisites)     |- Confirm that you have a subscription that includes information barriers<br/>- Verify that licenses are assigned and users are mail-enabled<br/>- Verify that you have the necessary permissions to define/edit policies<br/>- Make sure that your directory data reflects your organization's structure<br/>- Make sure [scoped directory search is enabled in Microsoft Teams](#scoped-directory-search)<br/>- Be familiar with PowerShell (example cmdlets are provided)<br/>- Provide admin consent (steps are included)          |
-|[Part 1: Plan your information barrier policies](#part-1-plan-your-information-barrier-policies)     |- Make a list of groups (segments) who will be affected by information barriers<br/>- Determine which policies are needed|
-|[Part 2: Segment users](#part-2-segment-users)     |- Identify which [attributes](information-barriers-attributes.md) to use<br/>- Define the segments in terms of policy filters<br/>- View (and if needed, edit) the segments         |
+|[Part 1: Segment users](#part-2-segment-users)     |- Identify which [attributes](information-barriers-attributes.md) to use<br/>- Define the segments in terms of policy filters<br/>- View (and if needed, edit) the segments         |
+|[Part 2: Plan your information barrier policies](#part-1-plan-your-information-barrier-policies)     |- Make a list of groups (segments) who will be affected by information barriers<br/>- Determine which policies are needed|
 |[Part 3: Define information barrier policies](#part-3-define-information-barrier-policies)     |- Define the policies<br/>- View (and if needed, edit) the policies<br/>- Policies are neither active nor applied yet         |
 |[Part 4: Apply information barrier policies](#part-4-apply-information-barrier-policies)     |- Set policies to active status<br/>- Run the policy application         |
 |(As needed) [Edit or remove an information barrier policy](#edit-or-remove-an-information-barrier-policy)     |- Set a policy to inactive status<br/>- Edit or remove a policy<br/>- Run the policy application         |
@@ -45,7 +45,7 @@ In addition to these prerequisites, you must also provide admin consent.
 
 ### Admin consent
 
-Before you begin defining segments or policies, you must connect to the Security & Compliance Center and provide admin consent. To do this, follow these steps:
+Before you begin defining segments or policies, you must connect to the Security & Compliance Center and then provide admin consent. To do this, follow these steps:
 
 1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
@@ -65,28 +65,69 @@ Before you begin defining segments or policies, you must connect to the Security
 
 4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
 
-## Part 1: Plan your information barrier policies
+## Part 1: Segment users
 
-Determine the groups of users for whom you want to prevent (or allow) communications to occur in Microsoft Teams (chat sessions and calls). For example, you can use information barrier policies to:
-- Block communications between two groups;
-- Allow one group to communicate with only one other group;
-- Prevent one group from communicating with two other groups;
+When you segment users in your organization, consider using an attribute in Azure Active Directory. For example, you might use the Department attribute, assuming no single employee is assigned to more than one department. To see a list of supported attributes, refer to [Attributes for information barrier policies (Preview)](information-barriers-attributes.md).
+
+**Make sure that your segments do not overlap**. 
+
+To define an organizational segment, use the `New-OrganizationSegment` cmdlet with the `UserGroupFilter` parameter that corresponds to the attribute you want to use. Make sure that the attribute you use to define your segment is such that no single person belongs to more than one segment. Here are some examples (using the Department attribute):
+
+`New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"`
+
+`New-OrganizationSegment -Name "Sales" -UserGroupFilter "Department -eq 'Sales'"`
+
+`New-OrganizationSegment -Name "Research" -UserGroupFilter "Department -eq 'Research'"`
+
+`New-OrganizationSegment -Name "Engineering" -UserGroupFilter "Department -eq 'Engineering'"`
+
+After you run each cmdlet, you should see a list of details about the new segment. Details include the segment's type, who created or last modified it, and so on. 
+
+### View or edit existing segments
+
+1. To view a list of existing segments, run the `Get-OrganizationSegment` cmdlet.
+
+    You will see a list of segments and details for each. Details include each segment's type, who created or last modified it, and so on. 
+
+    > [!TIP]
+    > Print or save your list of segments for reference later. For example, if you want to edit a segment, you will need to know its Identity.
+
+2. To edit a segment, use the `Set-OrganizationSegment` cmdlet with the Identity parameter and relevant details. Here's an example:
+
+    `Set-OrganizationSegment -Identity "FFO.extest.microsoft.com/Microsoft Exchange Hosted Organizations/IBAPCorp04.onmicrosoft.com/Configuration/HR" -UserGroupFilter "Department -eq 'HRDept'"`
+
+    In this example, we are updating the department name from "HR" to "HRDept" for the segment that has the Identity value of `FFO.extest.microsoft.com/Microsoft Exchange Hosted Organizations/IBAPCorp04.onmicrosoft.com/Configuration/HR`.
+
+When you have finished editing your existing segments, proceed to plan (or define) information barrier policies.
+
+## Part 2: Plan your information barrier policies
+
+After you have defined segments for all the users in your organization, your next step is to plan the policies.
+
+You can use information barrier policies to:
+- Block communications between two segments;
+- Allow one segment to communicate with only one other segment;
+- Prevent one segment from communicating with two other segments;
 - ...and so on.
 
-As an example, Contoso set up a table to determine which departments can (or cannot) talk to each other, like this:
+As part of your plan, determine which segments will be included in information barrier policies. Not all segments will be included in policies, and no single segment can be included in more than one policy.
 
-|Group  |Can talk to  |Cannot talk to  |
+As an example, suppose that Contoso has five departments: HR, Sales, Marketing, Research, and Manufacturing. Contoso has segmented all users by their department. For policy planning purposes, Contoso set up a table to determine which segments can (or cannot) talk to each other, like this:
+
+|Segment  |Can talk to  |Cannot talk to  |
 |---------|---------|---------|
 |HR     |Everyone         |(no restrictions)         |
-|Sales     |HR, Marketing         |Research         |
-|Marketing     |HR, Engineering, Sales         |Research         |
-|Research     |Engineering         |     |
+|Sales     |HR, Marketing, Manufacturing         |Research         |
+|Marketing     |HR, Engineering, Sales, Manufacturing         |Research         |
+|Research     |HR and Engineering (only)        |Sales, Marketing, Manufacturing     |
+|Manufacturing |Everyone |(no restrictions) |
 
 In this case, the list of information barrier policies to define would include the following:
 
-- Prevent Sales from communicating with Research (and vice versa)
-- Prevent Marketing from communicating with Research (and vice versa)
-- Allow Research to communicate with Engineering only 
+- Prevent Sales and Marketing from communicating with Research (and vice versa)
+- Allow Research to communicate with HR and Engineering only 
+
+Manufacturing and HR don't have any other restrictions, and because each segment can be included in only one policy, no additional policies will be defined at this time.
 
 ### A few important points to keep in mind
 
@@ -95,45 +136,6 @@ As you plan your information barrier policies, keep the following points in mind
 - Currently, information barrier policies do not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
 - Potentially, everyone included in an information barrier policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barrier policies are part of the same team or group chat, they might be removed from those chat sessions. [Learn more about information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
 - Avoid bulk moves when information barrier policies are in effect. Ask your tenant admins not to move users between segments who cannot talk to each other. Either temporarily grant communication access and disable it later, after all users are moved, or create an intermediate segment who can talk to each of the initial segments. In any case, do not move users in bulk between entities who cannot communicate.
-
-## Part 2: Segment users
-
-After you have set up your plan for information barrier policies, the next step is to segment users in your organization. To do this, consider using an attribute in Azure Active Directory. 
-
-**Make sure that your segments do not overlap**. For example, you might use the Department attribute, assuming no single employee is assigned to more than one department. To see a list of supported attributes, refer to [Attributes for information barrier policies (Preview)](information-barriers-attributes.md).
-
-
-
-5. To define an organizational segment, use the `New-OrganizationSegment` cmdlet with the `UserGroupFilter` parameter that corresponds to the attribute you want to use. Make sure that the attribute you use to define your segment is such that no single person belongs to more than one segment. Here are some examples (using the Department attribute):
-
-    `New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"`
-
-    `New-OrganizationSegment -Name "Sales" -UserGroupFilter "Department -eq 'Sales'"`
-
-    `New-OrganizationSegment -Name "Research" -UserGroupFilter "Department -eq 'Research'"`
-
-    `New-OrganizationSegment -Name "Engineering" -UserGroupFilter "Department -eq 'Engineering'"`
-
-    After you run each cmdlet, you should see a list of details about the new segment. Details include the segment's type, who created or last modified it, and so on. 
-
-### View or edit existing segments
-
-1. If you haven't already done so, as a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
-
-2. To view a list of existing segments, run the `Get-OrganizationSegment` cmdlet.
-
-    You will see a list of segments and details for each. Details include each segment's type, who created or last modified it, and so on. 
-
-    > [!TIP]
-    > Print or save your list of segments for reference later. For example, if you want to edit a segment, you will need to know its Identity.
-
-3. To edit a segment, use the `Set-OrganizationSegment` cmdlet with the Identity parameter and relevant details. Here's an example:
-
-    `Set-OrganizationSegment -Identity "FFO.extest.microsoft.com/Microsoft Exchange Hosted Organizations/IBAPCorp04.onmicrosoft.com/Configuration/HR" -UserGroupFilter "Department -eq 'HRDept'"`
-
-    In this example, we are updating the department name from "HR" to "HRDept" for the segment that has the Identity value of `FFO.extest.microsoft.com/Microsoft Exchange Hosted Organizations/IBAPCorp04.onmicrosoft.com/Configuration/HR`.
-
-When you have finished editing your existing segments, proceed to define information barrier policies.
 
 ## Part 3: Define information barrier policies
 
