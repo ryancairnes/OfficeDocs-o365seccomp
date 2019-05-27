@@ -188,14 +188,14 @@ The Twitter developer app is now ready to use.
 
 4. Under **Configuration Details**, enter the following configuration settings 
 
-   - **Twitter application ID** - The app ID for the Twitter application that you created in Step 5.
-   - **Twitter application secret** - The API secret key for the Twitter application that you created in Step 5.
-   - **Twitter client token** - The access token that you created in Step 5.
-   - **Twitter client token secret** - The access token secret that you created in Step 5.
-   - **AAD application ID** - The application ID for the Azure Active Directory app that you created in Step 2
-   - **AAD application secret** - The value for the APISecretKey secret that you created in Step 4.
-   - **AAD application Uri** - The AAD application Uri obtained in Step 2; for example, https://microsoft.onmicrosoft.com/2688yu6n-12q3-23we-e3ee-121111123213.
-   - **App insights instrumentation key** - Leave this box blank.
+   - **Twitter Api Key** - The app ID for the Twitter application that you created in Step 5.
+   - **Twitter Api Secret Key** - The API secret key for the Twitter application that you created in Step 5.
+   - **Twitter Access Token** - The access token that you created in Step 5.
+   - **Twitter Access Token Secret** - The access token secret that you created in Step 5.
+   - **AAD Application ID** - The application ID for the Azure Active Directory app that you created in Step 2
+   - **AAD Application Secret** - The value for the APISecretKey secret that you created in Step 4.
+   - **AAD Application Uri** - The AAD application Uri obtained in Step 2; for example, https://microsoft.onmicrosoft.com/2688yu6n-12q3-23we-e3ee-121111123213.
+   - **App Insights Instrumentation key** - Leave this box blank.
 
 5. Click **Save** to save the connector settings.
 
