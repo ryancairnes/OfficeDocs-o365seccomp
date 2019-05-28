@@ -148,7 +148,14 @@ Although no information barrier policies will be defined to limit HR or Manufact
 
 To define an organizational segment, use the `New-OrganizationSegment` cmdlet with the `UserGroupFilter` parameter that corresponds to the attribute you want to use. 
 
-As an example, suppose that Contoso has five departments: HR, Sales, Marketing, Research, and Manufacturing. Contoso defines segments using the *Department* attribute in Azure Active Directory, as follows:
+After you run each cmdlet, you should see a list of details about the new segment. Details include the segment's type, who created or last modified it, and so on. 
+
+> [!IMPORTANT]
+> **Make sure that your segments do not overlap**. Each user in your organization should belong to one (and only one) segment. No user should belong to two or more segments. 
+
+#### Contoso's segment definitions
+
+Recall that Contoso has five departments: HR, Sales, Marketing, Research, and Manufacturing. Using the *Department* attribute in Azure Active Directory, Contoso's segments are defined as follows:
 
 `New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"`
 
@@ -159,11 +166,6 @@ As an example, suppose that Contoso has five departments: HR, Sales, Marketing, 
 `New-OrganizationSegment -Name "Research" -UserGroupFilter "Department -eq 'Research'"`
 
 `New-OrganizationSegment -Name "Manufacturing" -UserGroupFilter "Department -eq 'Manufacturing'"`
-
-After you run each cmdlet, you should see a list of details about the new segment. Details include the segment's type, who created or last modified it, and so on. 
-
-> [!IMPORTANT]
-> **Make sure that your segments do not overlap**. Each user in your organization should belong to one (and only one) segment. No user should belong to two or more segments. 
 
 ### View or edit existing segments
 
@@ -196,7 +198,9 @@ When you have a list of user segments and the information barrier policies you w
 
 To block communications between segments, use the `New-InformationBarrierPolicy` cmdlet with the SegmentsBlocked parameter. 
 
-For example, for Contoso, to prevent Sales and Marketing from communicating with Research, we would use the following cmdlet:
+#### Contoso's example: Prevent Sales and Marketing from communicating with Research
+
+To prevent Sales and Marketing from communicating with Research, Contoso uses the following cmdlet:
 
 `New-InformationBarrierPolicy -Name "SalesMarketingBlockedFromResearch" -AssignedSegment "Sales, Marketing" -SegmentsBlocked "Research" -State Inactive`
 
@@ -204,13 +208,17 @@ In this example, the information barrier policy is called *SalesMarketingBlocked
 
 ### Scenario 2: Allow a segment to communicate only with one other segment
 
-To allow one segment to communicate with only one other segment, use the `New-InformationBarrierPolicy` cmdlet with the SegmentsAllowed parameter. For example, to allow Research to communicate with HR only, we would use the following cmdlet:
+To allow one segment to communicate with only one other segment, use the `New-InformationBarrierPolicy` cmdlet with the SegmentsAllowed parameter. 
+
+Keep in mind that by default, your information barrier policies are inactive until they are explicitly set to active status and applied. After you have defined your policies, proceed to the next section.
+
+#### Contoso's example: Allow Research to communicate only with HR
+
+To allow Research to communicate with HR only, Contoso uses the following cmdlet:
  
 `New-InformationBarrierPolicy -Name "Research-Engineering" -AssignedSegment "Research" -SegmentsAllowed "HR" -State Inactive`    
 
 In this case, Research can communicate only with HR, but HR is not restricted from communicating with other segments.
-
-Keep in mind that by default, your information barrier policies are inactive until they are explicitly set to active status and applied. After you have defined your policies, proceed to the next section.
 
 ## Part 3: Apply information barrier policies
 
