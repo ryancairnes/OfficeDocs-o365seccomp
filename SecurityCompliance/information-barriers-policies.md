@@ -116,38 +116,37 @@ The Manufacturing and HR departments don't have any other restrictions, so Conto
 
 In addition to your list of needed policies, make a list of segments for your organization. Every user in your organization should belong to a segment, and no user should belong to two or more segments. Each segment can have only one information barrier policy applied. You will most likely have some segments that are not included in information barrier policies. As a best practice, plan to define segments for all users anyway.  
 
-Referring to our example of Contoso with five departments, our plan includes one policy that will be applied to the Sales and Marketing departments, and another policy that will be applied to Research. Notice that in this example, no policies will be defined to limit HR or Manufacturing. However, the HR and Manufacturing segments will be defined anyway. 
+Referring to our example of Contoso with five departments, our plan includes one policy that will be applied to the Sales and Marketing departments, and another policy that will be applied to Research. Notice that in this example, no policies will be defined to limit HR or Manufacturing. However, the HR and Manufacturing segments will be defined anyway. In this case, Contoso is using the Department attribute in Azure Active Directory.
 
-As part of this planning process, determine which attributes in your organization's directory data you'll use to define segments. We recommend using an attribute, such as *Department* or *MemberOf*, in Azure Active Directory. To see a list of supported attributes, refer to [Attributes for information barrier policies (Preview)](information-barriers-attributes.md).
-
-If your directory data does not have values for attributes you want to use, then the user accounts must be updated to include that information. To get help with this, see the following resources:
-- [Configure user account properties with Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/configure-user-account-properties-with-office-365-powershell)
-- [Add or update a user's profile information using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal)
+Determine which attributes in your organization's directory data you'll use to define segments. Consider using *Department* or *MemberOf*, assuming you have values in those attributes for all users. To see a list of supported attributes, refer to [Attributes for information barrier policies (Preview)](information-barriers-attributes.md).
 
 > [!IMPORTANT]
 > Before you proceed to the next section, make sure your directory data has values for attributes that you can use to define segments.
+
+**If your directory data does not have values for attributes you want to use, then the user accounts must be updated to include that information**. To get help with this, see the following resources:
+- [Configure user account properties with Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/configure-user-account-properties-with-office-365-powershell)
+- [Add or update a user's profile information using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal)
 
 ### Define segments in terms of policy filters
 
 To define an organizational segment, use the `New-OrganizationSegment` cmdlet with the `UserGroupFilter` parameter that corresponds to the attribute you want to use. 
 
-As an example, suppose that Contoso has five departments: HR, Sales, Marketing, Research, and Manufacturing. Contoso will define segments using the Department attribute in Azure Active Directory, as shown in the following examples:
+As an example, suppose that Contoso has five departments: HR, Sales, Marketing, Research, and Manufacturing. Contoso defines segments using the *Department* attribute in Azure Active Directory, as follows:
 
-`New-OrganizationSegment -Name "HRSeg" -UserGroupFilter "Department -eq 'HR'"`
+`New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"`
 
-`New-OrganizationSegment -Name "SalesSeg" -UserGroupFilter "Department -eq 'Sales'"`
+`New-OrganizationSegment -Name "Sales" -UserGroupFilter "Department -eq 'Sales'"`
 
-`New-OrganizationSegment -Name "MarketingSeg" -UserGroupFilter "Department -eq 'Marketing'"`
+`New-OrganizationSegment -Name "Marketing" -UserGroupFilter "Department -eq 'Marketing'"`
 
-`New-OrganizationSegment -Name "ResearchSeg" -UserGroupFilter "Department -eq 'Research'"`
+`New-OrganizationSegment -Name "Research" -UserGroupFilter "Department -eq 'Research'"`
 
-`New-OrganizationSegment -Name "ManufacturingSeg" -UserGroupFilter "Department -eq 'Manufacturing'"`
+`New-OrganizationSegment -Name "Manufacturing" -UserGroupFilter "Department -eq 'Manufacturing'"`
 
 After you run each cmdlet, you should see a list of details about the new segment. Details include the segment's type, who created or last modified it, and so on. 
 
 > [!IMPORTANT]
 > **Make sure that your segments do not overlap**. Each user in your organization should belong to one (and only one) segment. No user should belong to two or more segments. 
-
 
 ### View or edit existing segments
 
@@ -166,16 +165,6 @@ After you run each cmdlet, you should see a list of details about the new segmen
 
 When you have finished defining or editing your segments, proceed to plan (or define) information barrier policies.
 
-
-
-### A few important points to keep in mind
-
-As you plan your information barrier policies, keep the following points in mind:
-
-- Currently, information barrier policies do not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
-- Potentially, everyone included in an information barrier policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barrier policies are part of the same team or group chat, they might be removed from those chat sessions. [Learn more about information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
-- Avoid bulk moves when information barrier policies are in effect. Ask your tenant admins not to move users between segments who cannot talk to each other. Either temporarily grant communication access and disable it later, after all users are moved, or create an intermediate segment who can talk to each of the initial segments. In any case, do not move users in bulk between entities who cannot communicate.
-
 ## Part 2: Define information barrier policies
 
 When you have a list of user segments and the information barrier policies you want to define, select a scenario, and then follow the steps.
@@ -184,7 +173,7 @@ When you have a list of user segments and the information barrier policies you w
 - [Scenario 2: Allow a segment to communicate only with one other segment](#scenario-2-allow-a-segment-to-communicate-only-with-one-other-segment)
 
 > [!IMPORTANT]
-> As you define information barrier policies, make sure to set those policies to inactive status until you are ready to apply them. 
+> As you define information barrier policies, make sure to set those policies to inactive status until you are ready to apply them. Potentially, everyone included in an information barrier policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barrier policies are part of the same team or group chat, they might be removed from those chat sessions. [Learn more about information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams). Keep in mind that currently, information barrier policies do not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
 
 ### Scenario 1: Block communications between segments
 
@@ -200,7 +189,7 @@ In this example, the information barrier policy is called *SalesMarketingBlocked
 
 To allow one segment to communicate with only one other segment, use the `New-InformationBarrierPolicy` cmdlet with the SegmentsAllowed parameter. For example, to allow Research to communicate with HR only, we would use the following cmdlet:
  
-`New-InformationBarrierPolicy -Name "Research-Engineering" -AssignedSegment "Research" -SegmentsAllowed "HR" -State Active`    
+`New-InformationBarrierPolicy -Name "Research-Engineering" -AssignedSegment "Research" -SegmentsAllowed "HR" -State Inactive`    
 
 In this case, Research can communicate only with HR, but HR is not restricted from communicating with other segments.
 
