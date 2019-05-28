@@ -70,6 +70,8 @@ To learn more, see the following resources:
 
 ### Connect to the Security & Compliance Center and provide admin consent
 
+Use the following procedure to provide admin consent when you define (or edit) segments or information barrier policies.
+
 1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
 2. Run the following PowerShell cmdlets, one at a time:<br>
@@ -150,7 +152,7 @@ To define an organizational segment, use the `New-OrganizationSegment` cmdlet wi
 After you run each cmdlet, you should see a list of details about the new segment. Details include the segment's type, who created or last modified it, and so on. 
 
 > [!IMPORTANT]
-> **Make sure that your segments do not overlap**. Each user in your organization should belong to one (and only one) segment. No user should belong to two or more segments. 
+> **Make sure that your segments do not overlap**. Each user in your organization should belong to one (and only one) segment. No user should belong to two or more segments. Segments should be defined for all users in your organization. 
 
 #### Contoso's segment definitions
 
