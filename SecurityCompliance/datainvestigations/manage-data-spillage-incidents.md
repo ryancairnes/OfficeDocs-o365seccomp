@@ -4,7 +4,7 @@ ms.author: markjjo
 author: markjjo
 manager: laurawi
 ms.date: 
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -23,11 +23,17 @@ Data spillage is when a document containing confidential, sensitive or malicious
 
 ## Scope of this article
 
-This article provides a list of instructions on how to delete items from Office 365 mailboxes so they are no longer accessible or recoverable by users or admins. 
+This article provides a list of instructions on how to permanently delete items from Office 365 mailboxes so they are no longer accessible or recoverable by users or admins. 
+
+> [!NOTE]
+> When you delete items located in a SharePoint or OneDrive for Business site, they are retained for 93 days from the time you delete them from their original location.
 
 ## Scenario
 
-You're informed of a data spillage incident where an employee unknowingly shared a highly-confidential document with multiple people through email. You want to quickly assess who received this document, both inside and outside of your organization. After you've investigate the incident, you plan to share your findings with other investigators to review, and then permanently remove the spilled data from Office 365. After the investigation is complete, you want to remove all evidence. 
+You're informed of a data spillage incident where an employee unknowingly shared a highly-confidential document with multiple people through email. You want to quickly assess who received this document, both inside and outside of your organization. After you've investigate the incident, you plan to share your findings with other investigators to review, and then permanently remove the spilled data from your Office 365 organization. After the investigation is complete, you want to remove all evidence. 
+
+> [!IMPORTANT]
+> While you'll be able to permanently remove the spilled data within your own organization, any data spilled outside your organization can't be removed with these capabilities.
 
 ## Workflow
 
@@ -39,21 +45,18 @@ Here's the workflow for using Data Investigations (Preview) to manage a data spi
 
 3.	Review and investigate the evidence.
 
-4.	Delete the spilled data.
+4.	Permanently delete the spilled data.
 
 5.	Close or delete the investigation.
 
 
 ## Before you begin
 
-- You'll use the Data Investigations (Preview) tool in the Security & Compliance Center to create an investigation, search for the spilled data, and review and analyze it. Then you'll use Security & Compliance Center PowerShell and Sharepoint Online Powershell to delete the spilled data from Office 365. 
+- You'll use the Data Investigations (Preview) tool in the Security & Compliance Center to create an investigation, search for the spilled data, and review and analyze it. Then you'll use Security & Compliance Center PowerShell to permanently delete the spilled data from Office 365. 
 
-- To create an investigation, you have to be a member of the Data investigator role group in the Security & Compliance Center.
+- To create an investigation, you have to be a member of the Compliance Administrator role group in the Security & Compliance Center.
 
-- To delete content stored in Exchange Online mailboxes such as email messages, calendar items or chat conversations, you have to be a member of a role group in the Security & Compliance Center that's assigned the Search and Purge role. By default, this role is assigned to the Organization Management role group. For information about adding users to a role group, see [Permissions in the Security & Compliance Center](../permissions-in-the-security-and-compliance-center.md). For more information about what content is stored in Exchange Online mailboxes, see [Content stored in Exchange Online mailboxes](https://docs.microsoft.com/en-us/Office365/SecurityCompliance/what-is-stored-in-exo-mailbox
-)
-
-- To delete content stored in Sharepoint Online such as OneDrive documents, SharePoint sites, or Teams group sites, you have  
+- To delete messages, you have to be a member of a role group in the Security & Compliance Center that's assigned the Search and Purge role. By default, this role is assigned to the Organization Management role group. For information about adding users to a role group, see [Permissions in the Security & Compliance Center](../permissions-in-the-security-and-compliance-center.md). 
 
 - To control which user mailboxes and OneDrive accounts an investigator can search, your organization can set up compliance boundaries. For more information, [Set up compliance boundaries for eDiscovery investigations](../set-up-compliance-boundaries.md). 
 
@@ -103,46 +106,29 @@ To do this, click the search that you want to investigate. On the flyout page, c
 
 ## Step 3: Review and investigate 
 
-In the investigation, go to **Evidence** tab and click on the evidence set that you created in the previous step. After the processing job is completed and the search results are added to the evidence, you can review individual documents in their native format, text format, or a near-native format. You can create additional queries to narrow the list of documents, and tag documents to indicate findings from your investigation. For more information, see [Review data in evidence](review-data-in-evidence.md).
+In the investigation, go to **Evidence** tab and click on the evidence set that you created in the previous step. After the processing job is completed and the search results are added to the evidence, you can review individual documents in their native format, text format, or a near-native format. You can create additional queries to narrow the list of documents, and tag documents to indicate findings from your investigation. For more information, see [Review data in evidence](review-data-in-evidence.md)
 
-To group documents and get more assistance for your review, click **Manage evidence**. In the **Analytics** tile, click **Rebuild analytics for the whole set**. This will run advanced analytics such as duplicate detection, email threading, and theme analysis. For more information, see:
+To group documents and get more assistance for your review, click **Manage evidence**. In the **Analytics** tile, click **Analyze**. This will run advanced analytics such as duplicate detection, email threading, and theme analysis. For more information, see:
 
 - [Run analytics to investigate faster](run-analytics-to-investigate-faster.md)
 - [Near duplicate detection](near-duplicates.md)
 - [Email threading](email-threading.md)
 - [Themes](themes.md)
 
-> [!TIP]
 To determine which users are involved in the data spillage, you can create a new query in the evidence set and then use the Sender/Author and Recipients conditions. This will create a list of all senders, recipients, and authors found in collected data that was added to the evidence. Be sure to examine the list to determine if there are any external users. For more information about using conditions to narrow search results, see [Search conditions](../keyword-queries-and-search-conditions.md#search-conditions).
 
 ## Step 4: Delete the spilled data
 
-### Deleting content stored in Exchange Online mailboxes
+### Deleting mailbox items
 
-After you review and validate that the search results contain only the content that must be deleted, you can delete them by running the **New-ComplianceSearchAction -Purge -PurgeType** command in Security & Compliance Center PowerShell. 
+After you review and validate that the search results contain only the email messages that must be deleted, you can permanently delete them by running the **New-ComplianceSearchAction -Purge -PurgeType HardDelete** command in Security & Compliance Center PowerShell. For instructions, see [Search for and delete email messages](../search-for-and-delete-messages-in-your-organization.md). 
 
-1. Connect to Security & Compliance Center PowerShell following step-by-step instructions on [Connect to Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell). If your Office 365 account uses multi-factor authentication (MFA) or federated authentication, you can't use the instructions in the previous topic on connecting to Security & Compliance Center PowerShell. Instead, see the instructions in the topic [Connect to Security & Compliance Center PowerShell using multi-factor authentication](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/mfa-connect-to-scc-powershell).
-
-2. Run the **New-ComplianceSearchAction** command to delete the message. You can soft- or hard-delete the message. Note that when you run the command, the search specified by the  *SearchName*  parameter is the Content Search that you created in **Step 2: Search for the spilled data**.
-    
-    In the following example, the command will soft-delete the search results returned by a Content Search named "Remove Phishing Message". A soft-deleted message is moved to a user's Recoverable Items folder and retained until the deleted item retention period expires. 
-
-      ```
-      New-ComplianceSearchAction -SearchName "Remove Phishing Message" -Purge -PurgeType SoftDelete
-      ```
-
-    Instead, if you want to mark messages for permanent deletion and removed the next time mailbox is processed, you would run this command:
-    
-    ```
-    New-ComplianceSearchAction -SearchName "Remove Phishing Message" -Purge -PurgeType HardDelete
-    ```
- 
-    For more detailed instructions, see [Search for and delete email messages](../search-for-and-delete-messages-in-your-organization.md). 
+If single item recovery is enabled for mailboxes in your organization, permanently deleted items will be retained in the user's Recoverable items folder (and accessible by admins) until the deleted item retention period ends (the default is 14 days). Additionally, if any mailbox that contains spilled data is on a legal hold or assigned to a retention policy, purged messages will be retained in the Recoverable items folder until the hold duration for the item expires. To hard delete messages immediately, you need to perform addition tasks. For instructions, see [Delete items in the Recoverable Items folder of cloud-based mailboxes on hold](../delete-items-in-the-recoverable-items-folder-of-mailboxes-on-hold.md).  
 
 > [!IMPORTANT]
->If single item recovery is enabled for mailboxes in your organization, permanently deleted items will be retained in the user's Recoverable items folder (and accessible by admins) until the deleted item retention period ends (the default is 14 days). Additionally, if any mailbox that contains spilled data is on a legal hold, purged messages will be retained in the Recoverable items folder until the hold duration for the item expires. To hard delete messages immediately, you need to perform addition tasks. For instructions, see [Delete items in the Recoverable Items folder of cloud-based mailboxes on hold](../delete-items-in-the-recoverable-items-folder-of-mailboxes-on-hold.md).  
+> Check with your records management or legal departments before removing a hold or retention policy. Your organization may have a policy that defines whether a mailbox on hold or a data spillage incident takes priority. 
 
-### Deleting content stored in SharePoint Online
+### Deleting site items
 
 To permanently delete a document from a SharePoint site or OneDrive account, you have to delete the document and then you have to delete from the site Recycle Bin and then delete it from the site collection Recycle Bin. For more information, see [Delete documents in SharePoint and OneDrive](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-office365#deleting-documents-in-sharepoint-online-and-onedrive-for-business).
 
