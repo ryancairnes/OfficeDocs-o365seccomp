@@ -3,7 +3,7 @@ title: "Define information barrier policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 05/24/2019
+ms.date: 05/28/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
