@@ -103,8 +103,6 @@ After you run each cmdlet, you should see a list of details about the new segmen
 
 When you have finished defining or editing your segments, proceed to plan (or define) information barrier policies.
 
-## Part 2: Plan your information barrier policies
-
 After you have defined segments for all the users in your organization, your next step is to plan the policies. It's important to plan your policies carefully because user
 
 You can use information barrier policies to:
@@ -144,7 +142,7 @@ As you plan your information barrier policies, keep the following points in mind
 - Every user in your organization should belong to a segment, no user should belong to two or more segments. Each segment can be included in only one information barrier policy. You will most likely have some segments that are not included in information barrier policies. 
 - Avoid bulk moves when information barrier policies are in effect. Ask your tenant admins not to move users between segments who cannot talk to each other. Either temporarily grant communication access and disable it later, after all users are moved, or create an intermediate segment who can talk to each of the initial segments. In any case, do not move users in bulk between entities who cannot communicate.
 
-## Part 3: Define information barrier policies
+## Part 2: Define information barrier policies
 
 When you have a list of user segments and the information barrier policies you want to define, select a scenario, and then follow the steps.
 
@@ -174,7 +172,7 @@ In this case, Research can communicate only with HR, but HR is not restricted fr
 
 Keep in mind that by default, your information barrier policies are inactive until they are explicitly set to active status and applied. After you have defined your policies, proceed to the next section.
 
-## Part 4: Apply information barrier policies
+## Part 3: Apply information barrier policies
 
 Information barrier policies are not in effect until they are set to active status and then applied. 
 
@@ -195,7 +193,7 @@ Information barrier policies are not in effect until they are set to active stat
 
     Policies are applied, user by user, for your organization. If your organization is large, it can take 24 hours for this process to complete.
 
-## Part 5: Verify status of information barrier policies
+### Verify status of information barrier policies
 
 After you have applied information barrier policies, follow these steps to verify status:
 
