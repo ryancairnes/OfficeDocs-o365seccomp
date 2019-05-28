@@ -87,11 +87,7 @@ To upload an attorney list for use by the attorney-client privilege detection mo
 
 Follow the steps in this section to use attorney-client privilege detection for documents in a review set.
 
-### Step 1: Analyze a review set
-
-When you analyze the documents in a review set, the attorney-client privilege detection model will also be run and the corresponding properties (described in[How does it work?](#how-does-it-work) will be added to every document in the review set. For more information about analyzing data in review set, see [Analyze data in a review set in Advanced eDiscovery](analyzing-data-in-review-set.md).
-
-### Step 2: Create a smart tag group with attorney-client privilege detection model
+### Step 1: Create a smart tag group with attorney-client privilege detection model
 
 One of the primary ways to see the results of attorney-client privilege detection in your review process is by using a smart tag group. A smart tag group indicates the results of the attorney-client privilege detection and shows the results in-line next to the tags in a smart tag group. This lets you quickly identify potentially privileged documents during document review. Additionally, you can also use the tags in the smart tag group to tag documents as privileged or non-privileged. For more information about smart tags, see [Set up smart tags in Advanced eDiscovery](smart-tags.md).
 
@@ -108,6 +104,10 @@ One of the primary ways to see the results of attorney-client privilege detectio
    ![Attorney-client privilege smart tag group](../media/AeDAttorneyClientSmartTagGroup.png)
 
 3. Rename the tag group and tags as appropriate for your review. For example, you can rename **Positive** to **Privileged** and **Negative** to **Not privileged**.
+
+### Step 2: Analyze a review set
+
+When you analyze the documents in a review set, the attorney-client privilege detection model will also be run and the corresponding properties (described in[How does it work?](#how-does-it-work) will be added to every document in the review set. For more information about analyzing data in review set, see [Analyze data in a review set in Advanced eDiscovery](analyzing-data-in-review-set.md).
 
 ### Step 3: Use the smart tag group for review of privileged content
 
