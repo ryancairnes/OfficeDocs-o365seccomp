@@ -3,7 +3,7 @@ title: "Apply a sensitivity label to content automatically"
 ms.author: stephow
 author: stephow-MSFT
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.service: O365-seccomp
 localization_priority: Priority
 ms.collection: 

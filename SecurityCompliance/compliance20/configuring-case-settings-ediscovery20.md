@@ -1,10 +1,10 @@
 ---
-title: "Configure case settings in Advanced eDiscovery (Preview)"
+title: "Configure case settings in Advanced eDiscovery"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
 ms.date: 
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -17,6 +17,6 @@ ms.assetid:
 description: ""
 ---
 
-# Configure case settings in Advanced eDiscovery (Preview)
+# Configure case settings in Advanced eDiscovery
 
 Content coming soon.

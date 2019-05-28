@@ -3,7 +3,7 @@ title: "Set up an archive and deletion policy for mailboxes in your Office 365 o
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -54,7 +54,7 @@ The first step is to enable the archive mailbox for each user in your organizati
 > [!NOTE]
 > You can enable archive mailboxes any time during this process, just as long as they're enabled at some point before you complete the process. If an archive mailbox isn't enabled, no action is taken on any items that have an archive policy assigned to it. 
   
-1. Go to [https://compliance.microsoft.com](https://compliance.microsoft.com).
+1. Go to [https://protection.office.com](https://protection.office.com).
     
 2. Sign in to Office 365 using your global administrator account.
     

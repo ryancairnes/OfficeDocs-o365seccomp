@@ -4,7 +4,7 @@ ms.author: stephow
 author: stephow-MSFT
 manager: laurawi
 ms.date: 
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Priority
@@ -108,6 +108,26 @@ The Rights Management issuer is always granted Full Control permissions for the 
 - The Rights Management issuer can still open a document after it is revoked.
 
 For more information, see [Rights Management issuer and Rights Management owner](https://docs.microsoft.com/en-us/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
+
+## What happens to existing encryption when a label's applied
+
+Before a sensitivity label is applied to content, it's possible that a user already encrypted the content by applying some other protection setting. For example, a user might have applied:
+
+- The **Do Not Forward** option.
+- Custom protection by using the Azure Information Protection unified labeling client.
+- An Azure Rights Management Service (RMS) template that encrypts the content but is not associated with a label.
+
+This table describe what happens to existing encyption when a sensitivity label is applied to that content.
+<br/>
+<br/>
+
+| |**User applies a sensitivity label with encryption turned off**|**User applies a sensitivity label with encryption turned on**|**User applies a label with Remove Protection**<sup>1</sup>|
+|:-----|:-----|:-----|:-----|
+|**Do Not Forward**|Email - Protection is removed<br/>Document - Protection is preserved|Label protection is applied|**Do Not Forward** is removed|
+|**Custom protection**<sup>1</sup>|Protection is preserved|Label protection is applied|Custom protection is removed|
+|**Azure RMS template**|Protection is preserved|Label protection is applied|Custom protection is removed|
+
+<sup>1</sup>This is supported only in the Azure Information Protection labeling client.
 
 ## Storing encrypted content in OneDrive and SharePoint
 

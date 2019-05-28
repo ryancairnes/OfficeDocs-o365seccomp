@@ -4,7 +4,7 @@ ms.author: markjjo
 author: markjjo
 manager: laurawi
 ms.date: 10/24/2017
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -55,7 +55,7 @@ The following graphic shows the Intelligent Import process, and highlights the t
 
 After you've created a PST import job, follow these steps to filter the data before you import it to Office 365.
   
-1. Go to [https://compliance.microsoft.com/](https://compliance.microsoft.com/) and sign in using the credentials for an administrator account in your Office 365 organization. 
+1. Go to [https://protection.office.com/](https://protection.office.com/) and sign in using the credentials for an administrator account in your Office 365 organization. 
     
 2. Click **Data governance** \> **Import**.
     

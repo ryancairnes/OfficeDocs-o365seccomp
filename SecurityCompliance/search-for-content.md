@@ -3,8 +3,8 @@ title: "Search for content in Office 365"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 4/4/2018
-ms.audience: Admin
+ms.date: 
+audience: Admin
 ms.topic: hub-page
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -37,7 +37,10 @@ The first step is to starting using the Content Search tool to choose content lo
     
 - [Bulk edit](bulk-edit-content-searches.md) the query and content locations for multiple searches 
     
+- [Retry a Content Search](retry-failed-content-search.md) to resolve a content location error
+
 - [Preserve Bcc recipients](https://docs.microsoft.com/exchange/policy-and-compliance/holds/preserve-bcc-recipients-and-group-members) so you can search for them 
+
 
 ## Perform actions on content you find
 

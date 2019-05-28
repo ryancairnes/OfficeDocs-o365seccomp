@@ -3,7 +3,7 @@ title: "Use DKIM for email in your custom domain in Office 365"
 ms.author: tracyp
 author: MSFTTracyP
 manager: laurawi
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal

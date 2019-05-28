@@ -1,10 +1,10 @@
 ---
-title: "View documents in a working set"
+title: "View documents in a review set"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
 ms.date: 
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -17,6 +17,6 @@ ms.assetid:
 description: ""
 ---
 
-# View documents in a working set
+# View documents in a review set
 
 Content coming soon.

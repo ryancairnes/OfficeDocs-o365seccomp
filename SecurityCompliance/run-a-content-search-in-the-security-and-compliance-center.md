@@ -4,7 +4,7 @@ ms.author: markjjo
 author: markjjo
 manager: laurawi
 ms.date: 6/26/2018
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 f1_keywords:
 - 'ms.o365.cc.ComplianceSearch'
@@ -69,7 +69,7 @@ Content Search is a new eDiscovery search tool with new and improved scaling and
 ## Create a search
 <a name="create"> </a>
 
-1. Go to [https://compliance.microsoft.com](https://compliance.microsoft.com).
+1. Go to [https://protection.office.com](https://protection.office.com).
     
 2. Sign in to Office 365 using your work or school account.
     

@@ -3,8 +3,8 @@ title: "The new Microsoft 365 security center and Microsoft 365 compliance cente
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 04/09/2019
-ms.audience: ITPro
+ms.date: 04/22/2019
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 ms.collection:
@@ -82,6 +82,8 @@ Users must be assigned the Global Administrator, Compliance Administrator, Compl
 
 - Security Administrators, Security Operators, and Security Readers can access the security center
 
+ To learn more about these roles, see [Permissions in the Office 365 Security & Compliance Center](permissions-in-the-security-and-compliance-center.md).
+ 
 The following table summarizes who can access various portals across Azure, Office 365, and Windows:
 
 |Portal |Global Administrator |Security Administrator, Security Operator, or Security Reader|Compliance  Administrator or Compliance Data Administrator |
@@ -110,3 +112,5 @@ The following table summarizes who can access various portals across Azure, Offi
 [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap)
 
 [Office 365 Security & Compliance Center Service Description](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-securitycompliance-center)
+
+To provide feedback about Microsoft 365 security center and Microsoft 365 compliance center, such as ideas for new features, please visit [Customer Feedback for Microsoft Office 365](https://office365.uservoice.com)

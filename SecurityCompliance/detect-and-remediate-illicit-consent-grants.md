@@ -4,7 +4,7 @@ ms.author: chrfox
 author: chrfox
 manager: laurawi
 ms.date: 4/23/2018
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.collection: 
 - o365_security_incident_response
@@ -30,7 +30,11 @@ You need to search the Office 365 **audit log** to find signs, also called Indic
 3. Create a search (all activities and all users) and filter the results for Consent to application, and Add OAuth2PermissionGrant.
 4. Examine the Extended Properties and check to see if IsAdminContent is set to True.
 
-
+> [!NOTE]
+>  
+   - It can take up to 30 minutes or up to 24 hours after an event occurs for the corresponding audit log entry to be displayed in the search results.
+   - The length of time that an audit record is retained and searchable in the audit log depends on your Office 365 subscription, and specifically the type of the license that is assigned to a specific user. For more information, see [Audit log](search-the-audit-log-in-security-and-compliance.md).
+      
 If this value is true, it indicates that someone with Global Administrator access may have granted broad access to data. If this is unexpected, take steps to [confirm an attack](detect-and-remediate-illicit-consent-grants.md#confirmattack).
 
 <a name="confirmattack"> </a>

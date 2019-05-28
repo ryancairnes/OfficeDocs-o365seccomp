@@ -4,7 +4,7 @@ ms.author: bcarter
 author: BrendaCarter
 manager: laurawi
 ms.date: 10/11/2018
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -23,7 +23,7 @@ This topic walks you through recommended configuration for tenant-wide settings 
   
 ## Check Office 365 Secure Score
 
-Office 365 Secure Score analyzes your Office 365 organization's security based on your regular activities and security settings and assigns a score. Begin by taking note of your current score. Adjusting some tenant-wide settings will increase your score. The goal is not to achieve the max score, but to be aware of opportunities to protect your environment that do not negatively affect productivity for your users. See [Introducing the Office 365 Secure Score](office-365-secure-score.md).
+Office 365 Secure Score analyzes your Office 365 organization's security based on your regular activities and security settings and assigns a score. Begin by taking note of your current score. Adjusting some tenant-wide settings will increase your score. The goal is not to achieve the max score, but to be aware of opportunities to protect your environment that do not negatively affect productivity for your users. See [Microsoft Secure Score](microsoft-secure-score.md).
   
 ## Tune threat management policies in the Microsoft 365 security center
 
@@ -48,9 +48,9 @@ Visit these reports and dashboards to learn more about the health of your enviro
   
 |****Dashboard****|****Description****|
 |:-----|:-----|
-|Threat management dashboard  <br/> |In the Threat management section of the security center, use this dashboard to see threats that have already been handled, and as a handy tool for reporting out to business decision makers on what threat investigation and response capabilities have already done to secure your business.  <br/> |
-|Threat explorer  <br/> |This is also in the Threat management section of the security center. If you are investigating or experiencing an attack against your Office 365 tenant, use the threat explorer to analyze threats. Threat explorer shows you the volume of attacks over time, and you can analyze this data by threat families, attacker infrastructure, and more. You can also mark any suspicious email for the Incidents list.  <br/> |
-|Reports — Dashboard  <br/> |In the Reports section of security center, view audit reports for your SharePoint Online and Exchange Online organizations. You can also access Azure Active Directory (Azure AD) user sign-in reports, user activity reports, and the Azure AD audit log from the View reports page.  <br/> |
+|[Threat management dashboard](security-dashboard.md)  <br/> |In the **Threat management** section of the security center, use this dashboard to see threats that have already been handled, and as a handy tool for reporting out to business decision makers on what threat investigation and response capabilities have already done to secure your business.  <br/> |
+|[Threat Explorer (or real-time detections)](threat-explorer.md)  <br/> |This is also in the **Threat management** section of the security center. If you are investigating or experiencing an attack against your Office 365 tenant, use Explorer (or real-time detections) to analyze threats. Explorer (and the real-time detections report) shows you the volume of attacks over time, and you can analyze this data by threat families, attacker infrastructure, and more. You can also mark any suspicious email for the Incidents list.  <br/> |
+|Reports — Dashboard  <br/> |In the **Reports** section of security center, view audit reports for your SharePoint Online and Exchange Online organizations. You can also access Azure Active Directory (Azure AD) user sign-in reports, user activity reports, and the Azure AD audit log from the **View reports** page.  <br/> |
    
 ![Security center Dashboard](media/870ab776-36d2-49c7-b615-93b2bc42fce5.png)
   
@@ -111,9 +111,9 @@ More information:
   
 - [Deploy Cloud App Security](https://docs.microsoft.com/cloud-app-security/getting-started-with-cloud-app-security)
     
-- [More information about Microsoft Cloud App Security](https://www.microsoft.com/en-us/cloud-platform/cloud-app-security)
+- [More information about Microsoft Cloud App Security](https://www.microsoft.com/cloud-platform/cloud-app-security)
     
-- [Overview of Office 365 Cloud App Security](office-365-cas-overview.md)
+- [What is Cloud App Security?](https://docs.microsoft.com/cloud-app-security/what-is-cloud-app-security)
     
 ![Cloud App Security dashboard](media/1fb2aa65-54b8-4746-9f5e-c187d339e9f5.png)
   

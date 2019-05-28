@@ -3,7 +3,7 @@ title: "Content stored in Exchange Online mailboxes"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -39,4 +39,4 @@ The following table lists the Office 365 apps that store data in a cloud-based m
 ||||
 
 > [!NOTE]
-> Currently, if a hold is placed on a custodian mailbox in Advanced eDiscovery (Preview), content from Forms and Sway will not be preserved by the hold. 
+> Currently, if a hold is placed on a mailbox (by using holds in eDiscovery and Advanced eDiscovery cases), content from Forms and Sway will not be preserved by the hold. 
