@@ -199,7 +199,18 @@ When you have a list of user segments and the information barrier policies you w
 
 ### Scenario 1: Block communications between segments
 
-To block communications between segments, use the `New-InformationBarrierPolicy` cmdlet with the SegmentsBlocked parameter. 
+1. To block communications between segments, use the `New-InformationBarrierPolicy` cmdlet with the **SegmentsBlocked** parameter. 
+
+    Example: `New-InformationBarrierPolicy -Name "Seg1CannotTalkToSeg2" -AssignedSegment "Seg1" -SegmentsBlocked "Seg2" -State Inactive`
+
+    In this case, we are defining a policy called *Seg1CannotTalkToSeg2*. This policy can be applied to users in a segment called *Seg1*. When active and applied, this policy will help prevent people in *Seg1* from communicating with people in a segment called *Seg2*.
+
+2. Do one of the following:
+
+   - Repeat step 1 for each policy you want to define to block communications
+   - Proceed to [Scenario 2: Allow a segment to communicate only with one other segment](#scenario-2-allow-a-segment-to-communicate-only-with-one-other-segment) 
+   - [View or edit an information barrier policy](#edit-or-remove-an-information-barrier-policy)
+   - Proceed to [Part 3: Apply information barrier policies](#part-3-apply-information-barrier-policies)
 
 #### Contoso's example: Prevent Sales and Marketing from communicating with Research
 
@@ -207,11 +218,22 @@ To prevent Sales and Marketing from communicating with Research, Contoso uses th
 
 `New-InformationBarrierPolicy -Name "SalesMarketingBlockedFromResearch" -AssignedSegment "Sales, Marketing" -SegmentsBlocked "Research" -State Inactive`
 
-In this example, the information barrier policy is called *SalesMarketingBlockedFromResearch*. When this policy is active and applied, it is assigned to users who are in the Sales and Marketing segments. Everyone in those two segments are prevented from communicating with users in the Research segment.
+In this example, the information barrier policy is called *SalesMarketingBlockedFromResearch*. When this policy is active and applied, it will help prevent users who are in the Sales and Marketing segments from communicating with users in the Research segment.
 
 ### Scenario 2: Allow a segment to communicate only with one other segment
 
-To allow one segment to communicate with only one other segment, use the `New-InformationBarrierPolicy` cmdlet with the SegmentsAllowed parameter. 
+1. To allow one segment to communicate with only one other segment, use the `New-InformationBarrierPolicy` cmdlet with the **SegmentsAllowed** parameter. 
+
+    Example: `New-InformationBarrierPolicy -Name "Seg3CanOnlyTalkToSeg4" -AssignedSegment "Seg3" -SegmentsAllowed "Seg4" -State Inactive`
+
+    In this case, we are defining a policy called *Seg3CanOnlyTalkToSeg4*. This policy can be applied to users in a segment called *Seg3*. When active and applied, this policy will allow people in *Seg3* to communicate only with people in a segment called *Seg4*. (In this case, Seg3 cannot communicate with users who are not part of Seg4.)
+
+2. Do one of the following:
+
+   - Repeat step 1 for each policy you want to define to allow communications
+   - Go to [Scenario 1: Block communications between segments](#scenario-1-block-communications-between-segments) 
+   - [View or edit an information barrier policy](#edit-or-remove-an-information-barrier-policy)
+   - Proceed to [Part 3: Apply information barrier policies](#part-3-apply-information-barrier-policies)
 
 #### Contoso's example: Allow Research to communicate only with HR
 
