@@ -50,26 +50,6 @@ When Outlook.com and Outlook on the web can't verify the identity of the sender 
 
 Not every message that fails to authenticate is malicious. However, you should be careful about interacting with messages that don't authenticate if you don't recognize the sender. Or, if you recognize a sender that normally doesn't have a '?' in the sender image, but you suddenly start seeing it, that could be a sign the sender is being spoofed.
 
-### The sender's address is different than what appears in the From address
-
-Frequently, the email address you see in a message is different than what you see in the From address. Sometimes phishers try to trick you into thinking that the sender is someone other than who they really are.
-
-When Outlook.com and Outlook on the web detect a difference between the sender's actual address and the address on the From address, they show the actual sender using the via tag, which will be underlined.
-
-![unverified sender alt text](media/unverified-sender-feature1.png)
-
-In this example, the sending domain `suspicious.com` is authenticated, but the sender put `unknown@contoso.com` in the From address.
-
-Not every message with a via tag is suspicious. However, if you don't recognize a message with a via tag, you should be cautious about interacting with it.
-
-In Outlook.com and the new Outlook on the web, you can hover your cursor over a sender's name or address in the message list to see their email address, without needing to open the message.
-
-![Get started with OneDrive](media/get-started-with-onedrive-message.png)
-
-How do you know if you're using the new Outlook on the web? See the following examples:
-
-![Outlook vs Office 365](media/outlook-vs-outlook365.png)
-
 ## Frequently asked questions
 
 ### What criteria does Outlook.com and Outlook on the web use to add the '?' and the 'via' properties?
@@ -78,11 +58,7 @@ For the '?' in the sender image:  Outlook.com requires that the message pass eit
 
 For the via tag: If the domain in the From address is different from the domain in the DKIM signature or the SMTP MAIL FROM, Outlook.com displays the domain in one of those two fields (preferring the DKIM signature).
 
-### Can I override these properties with IP Allows, Exchange Transport Rule Allows, or safe senders?
-
-You can't override these properties.
-
-### How do I remove these properties?
+### How do I remove the '?'
 
 For the '?' in the sender image: As a sender, you should authenticate your message with either SPF or DKIM.
 

@@ -100,7 +100,7 @@
 #### [Keep users safe with threat investigation and response](keep-users-safe-with-office-365-ti.md)
 #### [Find and investigate malicious email that was delivered](investigate-malicious-email-that-was-delivered.md)
 ### [Automated investigation and response](automated-investigation-response-office.md)
-### [Threat Explorer](use-explorer-in-security-and-compliance.md)
+### [Threat Explorer and real-time detections](threat-explorer.md)
 #### [Threat Explorer views](threat-explorer-views.md)
 ### [Threat Trackers](threat-trackers.md)
 ### [Attack Simulator in Office 365](attack-simulator.md)
@@ -164,6 +164,7 @@
 ## [Responding to a Compromised Email Account in Office 365](responding-to-a-compromised-email-account.md)
 
 # Records management
+## [Records management](records-management.md)
 ## File plan
 ### [File plan manager](file-plan-manager.md)
 ### [Retention labels](labels.md)
