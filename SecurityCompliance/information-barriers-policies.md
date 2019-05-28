@@ -29,7 +29,7 @@ With information barriers, you can define policies that are designed to prevent 
 |[Part 2: Define information barrier policies](#part-2-define-information-barrier-policies)     |- Define the policies (do not apply yet)<br/>- (As needed) View/edit policies         |
 |[Part 3: Apply information barrier policies](#part-3-apply-information-barrier-policies)     |- Set policies to active status<br/>- Run the policy application<br/>- Verify policy status         |
 |(As needed) [Edit or remove an information barrier policy](#edit-or-remove-an-information-barrier-policy)     |- Set a policy to inactive status<br/>- Edit or remove a policy<br/>- Run the policy application<br/>- Verify policy status         |
-|(As needed) [Troubleshooting](information-barriers-troubleshooting.md)|- Take action when policies are not working as expected<br/>- Take action if policy application appears to be stuck<br/>- [See troubleshooting for information barriers (Preview)](information-barriers-troubleshooting.md)|
+|(As needed) [Troubleshooting](information-barriers-troubleshooting.md)|- Take action when policies are not working as expected<br/>- [See troubleshooting for information barriers (Preview)](information-barriers-troubleshooting.md)|
 
 ## Prerequisites
 
@@ -37,7 +37,7 @@ With information barriers, you can define policies that are designed to prevent 
 
 **Currently, the information barrier feature is in preview**. When information barrier policies are generally available, they'll be included in the following subscriptions:
 - Microsoft 365 E5
-- Office 365 E5<br/>
+- Office 365 E5
 - Office 365 Advanced Compliance
 - Microsoft 365 Information Protection and Compliance
 
