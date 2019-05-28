@@ -110,17 +110,15 @@ In this case, Contoso's plan would include two information barrier policies, as 
 1. A policy designed to prevent Sales and Marketing from communicating with Research
 2. A policy designed to allow Research to communicate with HR only 
 
-Manufacturing and HR don't have any other restrictions, so Contoso does not need additional information barrier policies at this time. 
+The Manufacturing and HR departments don't have any other restrictions, so Contoso does not need additional information barrier policies at this time. 
 
 ### Make a list of segments to define
 
-In addition to your list of needed policies, make a list of segments for your organization. Every user in your organization should belong to a segment, and no user should belong to two or more segments.  
+In addition to your list of needed policies, make a list of segments for your organization. Every user in your organization should belong to a segment, and no user should belong to two or more segments. Each segment can have only one information barrier policy applied. You will most likely have some segments that are not included in information barrier policies. As a best practice, plan to define segments for all users anyway.  
 
-Referring to our example of Contoso with five departments, our plan includes one policy that will be applied to the Sales and Marketing departments, and another policy that will be applied to Research. Notice that in this example, no policies will be defined to limit HR or Manufacturing. 
+Referring to our example of Contoso with five departments, our plan includes one policy that will be applied to the Sales and Marketing departments, and another policy that will be applied to Research. Notice that in this example, no policies will be defined to limit HR or Manufacturing. However, the HR and Manufacturing segments will be defined anyway. 
 
-Each segment can have only one information barrier policy applied. You will most likely have some segments that are not included in information barrier policies. As a best practice, plan to define segments for all users anyway.  
-
-As part of your list of segments, determine which attributes in your organization's directory data that you'll use when you define the segments. We recommend using an attribute, such as Department or MemberOf, in Azure Active Directory. To see a list of supported attributes, refer to [Attributes for information barrier policies (Preview)](information-barriers-attributes.md).
+As part of this planning process, determine which attributes in your organization's directory data you'll use to define segments. We recommend using an attribute, such as *Department* or *MemberOf*, in Azure Active Directory. To see a list of supported attributes, refer to [Attributes for information barrier policies (Preview)](information-barriers-attributes.md).
 
 If your directory data does not have values for attributes you want to use, update user accounts. To get help with this, see the following resources:
 - [Configure user account properties with Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/configure-user-account-properties-with-office-365-powershell)
