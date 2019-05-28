@@ -93,13 +93,9 @@ Currently, information barrier policies are defined and managed in the Office 36
 
 ### Determine what policies are needed
 
-You can use information barrier policies to:
-- Block communications between two segments;
-- Allow one segment to communicate with only one other segment;
-- Prevent one segment from communicating with two other segments;
-- ...and so on.
+You can use information barrier policies to block communications between segments, or to allow segments to communicate with only certain other segments. As you plan your policies, aim for the minimum number of policies to meet compliance. 
 
-As an example, suppose that Contoso has five departments: HR, Sales, Marketing, Research, and Manufacturing. In order to remain compliant with industry regulations, people in some departments are not supposed to communicate with certain other departments. The following table illustrates the situation:
+As an example, suppose that Contoso has five departments: HR, Sales, Marketing, Research, and Manufacturing. In order to remain compliant with industry regulations, people in some departments are not supposed to communicate with certain other departments, as listed in the following table:
 
 |Segment  |Can talk to  |Cannot talk to  |
 |---------|---------|---------|
@@ -111,24 +107,29 @@ As an example, suppose that Contoso has five departments: HR, Sales, Marketing, 
 
 In this case, Contoso's plan would include two information barrier policies, as follows:
 
-- A policy designed to prevent Sales and Marketing from communicating with Research
-- A policy designed to allow Research to communicate with HR only 
+1. A policy designed to prevent Sales and Marketing from communicating with Research
+2. A policy designed to allow Research to communicate with HR only 
 
-Manufacturing and HR don't have any other restrictions, so Contoso does not need additional information barrier policies at this time.
+Manufacturing and HR don't have any other restrictions, so Contoso does not need additional information barrier policies at this time. 
 
 ### Make a list of segments to define
 
-In addition to your list of needed policies, make a list of segments, and determine which attributes you'll use. We recommend using an attribute in Azure Active Directory. For example, you might use the Department attribute, assuming no single employee is assigned to more than one department. To see a list of supported attributes, refer to [Attributes for information barrier policies (Preview)](information-barriers-attributes.md).
-.
+In addition to your list of needed policies, make a list of segments for your organization. Every user in your organization should belong to a segment, and no user should belong to two or more segments.  
+
+Referring to our example of Contoso with five departments, our plan includes one policy that will be applied to the Sales and Marketing departments, and another policy that will be applied to Research. Notice that in this example, no policies will be defined to limit HR or Manufacturing. 
+
+Each segment can have only one information barrier policy applied. You will most likely have some segments that are not included in information barrier policies. As a best practice, plan to define segments for all users anyway.  
+
+As part of your list of segments, determine which attributes in your organization's directory data that you'll use when you define the segments. We recommend using an attribute, such as Department or MemberOf, in Azure Active Directory. To see a list of supported attributes, refer to [Attributes for information barrier policies (Preview)](information-barriers-attributes.md).
+
+If your directory data does not have values for attributes you want to use, update user accounts. To get help with this, see the following resources:
+- [Configure user account properties with Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/configure-user-account-properties-with-office-365-powershell)
+- [Add or update a user's profile information using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal)
 
 > [!IMPORTANT]
-> Although we recommend that you segment all users, you might not include all segments in your information barrier policies. And, no single segment can be included in more than one information barrier policy.
+> Before you proceed to the next section, make sure your directory data has values for attributes that you can use to define segments.
 
 ### Define segments in terms of policy filters
-
-
-> [!IMPORTANT]
-> **Make sure that your segments do not overlap**. Each user in your organization should belong to one (and only one) segment. No user should belong to two or more segments. 
 
 To define an organizational segment, use the `New-OrganizationSegment` cmdlet with the `UserGroupFilter` parameter that corresponds to the attribute you want to use. 
 
@@ -145,6 +146,10 @@ As an example, suppose that Contoso has five departments: HR, Sales, Marketing, 
 `New-OrganizationSegment -Name "ManufacturingSeg" -UserGroupFilter "Department -eq 'Manufacturing'"`
 
 After you run each cmdlet, you should see a list of details about the new segment. Details include the segment's type, who created or last modified it, and so on. 
+
+> [!IMPORTANT]
+> **Make sure that your segments do not overlap**. Each user in your organization should belong to one (and only one) segment. No user should belong to two or more segments. 
+
 
 ### View or edit existing segments
 
@@ -171,7 +176,6 @@ As you plan your information barrier policies, keep the following points in mind
 
 - Currently, information barrier policies do not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
 - Potentially, everyone included in an information barrier policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barrier policies are part of the same team or group chat, they might be removed from those chat sessions. [Learn more about information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
-- Every user in your organization should belong to a segment, no user should belong to two or more segments. Each segment can be included in only one information barrier policy. You will most likely have some segments that are not included in information barrier policies. 
 - Avoid bulk moves when information barrier policies are in effect. Ask your tenant admins not to move users between segments who cannot talk to each other. Either temporarily grant communication access and disable it later, after all users are moved, or create an intermediate segment who can talk to each of the initial segments. In any case, do not move users in bulk between entities who cannot communicate.
 
 ## Part 2: Define information barrier policies
