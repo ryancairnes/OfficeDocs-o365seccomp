@@ -211,8 +211,6 @@ In this example, the information barrier policy is called *SalesMarketingBlocked
 
 To allow one segment to communicate with only one other segment, use the `New-InformationBarrierPolicy` cmdlet with the SegmentsAllowed parameter. 
 
-Keep in mind that by default, your information barrier policies are inactive until they are explicitly set to active status and applied. After you have defined your policies, proceed to the next section.
-
 #### Contoso's example: Allow Research to communicate only with HR
 
 To allow Research to communicate with HR only, Contoso uses the following cmdlet:
@@ -268,8 +266,6 @@ If you want to edit or remove an information barrier policy, you must first set 
     In this example, we are setting an information barrier policy called ResearchIBPolicy to an inactive status.
 
 4. Run the `Start-InformationBarrierPoliciesApplication` cmdlet.
-
-5. If the process is taking a long time to finish, you can update recipients in Azure Active Directory and wait 30 minutes for FwdSync to occur. For more details about how this works, see [New address lists that you create in Exchange Online don't contain all the expected recipients](https://support.microsoft.com/help/2955640/new-address-lists-that-you-create-in-exchange-online-don-t-contain-all).
 
 At this point, your information barrier policy is set to inactive. You can leave it as is, edit it, or remove it altogether.
 
