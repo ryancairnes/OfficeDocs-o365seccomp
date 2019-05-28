@@ -28,7 +28,7 @@ With information barriers, you can define policies that are designed to prevent 
 |[Part 1: Segment all the users in your organization](#part-1-segment-users)     |- Determine what policies are needed<br/>- Make a list of segments to define<br/>- Identify which [attributes](information-barriers-attributes.md) to use<br/>- Define segments in terms of policy filters<br/>- (As needed) View/edit segments         |
 |[Part 2: Define information barrier policies](#part-2-define-information-barrier-policies)     |- Define the policies (do not apply yet)<br/>- (As needed) View/edit policies         |
 |[Part 3: Apply information barrier policies](#part-3-apply-information-barrier-policies)     |- Set policies to active status<br/>- Run the policy application<br/>- Verify policy status         |
-|(As needed) [Edit or remove an information barrier policy](#edit-or-remove-an-information-barrier-policy)     |- Set a policy to inactive status<br/>- Edit or remove a policy<br/>- Run the policy application         |
+|(As needed) [Edit or remove an information barrier policy](#edit-or-remove-an-information-barrier-policy)     |- Set a policy to inactive status<br/>- Edit or remove a policy<br/>- Run the policy application<br/>- Verify policy status         |
 |(As needed) [Troubleshooting](information-barriers-troubleshooting.md)|- Take action when policies are not working as expected<br/>- Take action if policy application appears to be stuck<br/>- [See troubleshooting for information barriers (Preview)](information-barriers-troubleshooting.md)|
 
 ## Prerequisites
@@ -52,7 +52,6 @@ To define or edit information barrier policies, **you must be assigned an approp
 - Office 365 Global Administrator
 - Compliance Administrator
 - Information barriers administrator (this is a new role!)       
-
 ### Directory data
 
 **Make sure that your organization's structure is reflected in directory data**. To do this, make sure that attributes, such as group membership, department name, etc. are populated correctly in Azure Active Directory (or Exchange Online).
@@ -67,7 +66,7 @@ To learn more, see the following resources:
 
 ### PowerShell
 
-Currently, information barrier policies are defined and managed in the Office 365 Security & Compliance Center using PowerShell cmdlets. Although several scenarios and examples are provided in this article, you'll need to be familiar with PowerShell cmdlets and parameters. 
+Currently, **information barrier policies are defined and managed in the Office 365 Security & Compliance Center using PowerShell cmdlets**. Although several scenarios and examples are provided in this article, you'll need to be familiar with PowerShell cmdlets and parameters. 
 
 ### Connect to the Security & Compliance Center and provide admin consent
 
@@ -93,7 +92,16 @@ Currently, information barrier policies are defined and managed in the Office 36
 
 ### Determine what policies are needed
 
-You can use information barrier policies to block communications between segments, or to allow segments to communicate with only certain other segments. As you plan your policies, aim for the minimum number of policies to meet compliance. 
+Make a list of information barrier policies needed for your organization. You can use information barrier policies to:
+- block communications between certain segments; or 
+- allow communications between certain segments.
+
+Prepare a plan that includes the minimum number of policies you need for compliance. As you plan your information barrier policies, keep the following points in mind:
+- Currently, information barrier policies do not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
+- Potentially, everyone included in an information barrier policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barrier policies are part of the same team or group chat, they might be removed from those chat sessions. [Learn more about information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
+- Avoid bulk moves when information barrier policies are in effect. Ask your tenant admins not to move users between segments who cannot talk to each other. Either temporarily grant communication access and disable it later, after all users are moved, or create an intermediate segment who can talk to each of the initial segments. In any case, do not move users in bulk between entities who cannot communicate.
+
+#### Example: Contoso's list of needed policies
 
 As an example, suppose that Contoso has five departments: HR, Sales, Marketing, Research, and Manufacturing. In order to remain compliant with industry regulations, people in some departments are not supposed to communicate with certain other departments, as listed in the following table:
 
@@ -116,8 +124,6 @@ The Manufacturing and HR departments don't have any other restrictions, so Conto
 
 In addition to your list of needed policies, make a list of segments for your organization. Every user in your organization should belong to a segment, and no user should belong to two or more segments. Each segment can have only one information barrier policy applied. You will most likely have some segments that are not included in information barrier policies. As a best practice, plan to define segments for all users anyway.  
 
-Referring to our example of Contoso with five departments, our plan includes one policy that will be applied to the Sales and Marketing departments, and another policy that will be applied to Research. Notice that in this example, no policies will be defined to limit HR or Manufacturing. However, the HR and Manufacturing segments will be defined anyway. In this case, Contoso is using the Department attribute in Azure Active Directory.
-
 Determine which attributes in your organization's directory data you'll use to define segments. Consider using *Department* or *MemberOf*, assuming you have values in those attributes for all users. To see a list of supported attributes, refer to [Attributes for information barrier policies (Preview)](information-barriers-attributes.md).
 
 > [!IMPORTANT]
@@ -126,6 +132,17 @@ Determine which attributes in your organization's directory data you'll use to d
 **If your directory data does not have values for attributes you want to use, then the user accounts must be updated to include that information**. To get help with this, see the following resources:
 - [Configure user account properties with Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/configure-user-account-properties-with-office-365-powershell)
 - [Add or update a user's profile information using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal)
+
+#### Example: Contoso's segments 
+
+Referring to our example of Contoso with five departments, our list of segments includes the Department attribute in Azure Active Directory:
+- HR
+- Sales
+- Marketing
+- Research
+- Manufacturing
+
+Although no information barrier policies will be defined to limit HR or Manufacturing from communicating, those segments will be defined anyway. 
 
 ### Define segments in terms of policy filters
 
@@ -173,7 +190,7 @@ When you have a list of user segments and the information barrier policies you w
 - [Scenario 2: Allow a segment to communicate only with one other segment](#scenario-2-allow-a-segment-to-communicate-only-with-one-other-segment)
 
 > [!IMPORTANT]
-> As you define information barrier policies, make sure to set those policies to inactive status until you are ready to apply them. Potentially, everyone included in an information barrier policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barrier policies are part of the same team or group chat, they might be removed from those chat sessions. [Learn more about information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams). Keep in mind that currently, information barrier policies do not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
+> As you define information barrier policies, make sure to set those policies to inactive status until you are ready to apply them. 
 
 ### Scenario 1: Block communications between segments
 
@@ -216,7 +233,7 @@ Information barrier policies are not in effect until they are set to active stat
 
     Policies are applied, user by user, for your organization. If your organization is large, it can take 24 hours for this process to complete.
 
-### Verify status of information barrier policies
+## Verify status of information barrier policies
 
 After you have applied information barrier policies, follow these steps to verify status:
 
