@@ -361,9 +361,28 @@ The following table describes activities related to when users interact with lis
 
 |**Friendly name**|**Operation**|**Description**|
 |:-----|:-----|:-----|
-|<br/> |<br/> |<br/> |
-
-
+| Created list              | ListCreated              | A user created a new SharePoint list.|
+| Created list column       | ListColumnCreated        | A user created a new SharePoint list column. A list column is a column that's attached to one or more SharePoint lists. |
+| Created list content type | ListContentTypeCreated   | A user created a new list content type. A list content type is a content type that's attached to one or more SharePoint lists.|
+| Created list item         | ListItemCreated          | A user created a new item in an existing SharePoint list.|
+| Created site column       | SiteColumnCreated        | A user created a new SharePoint site column. A site column is a column that isn't attached to a list. A site column is also a metadata structure that can be used by any list in a given web. |
+| Created site content type | Site ContentType Created | A user created a new site content type. A site content type is a content type that's attached to the parent site.|
+| Deleted list              | ListDeleted              | A user deleted a SharePoint list.                                          |
+| Deleted list column       | List Column Deleted      | A user deleted a SharePoint list column.                                   |
+| Deleted list content type | ListContentTypeDeleted   | A user deleted a list content type.                                        |
+| Deleted list item         | List Item Deleted        | A user deleted a SharePoint list item.                                     |
+| Deleted site column       | SiteColumnDeleted        | A user deleted a SharePoint site column.                                   |
+| Deleted site content type | SiteContentTypeDeleted   | A user deleted a site content type.                                        |
+| Recycled list item        | ListItemRecycled         | A user recycled a SharePoint list item.                                    |
+| Restored list             | ListRestored             | A user restored a deleted SharePoint list from the Recycle Bin.            |
+| Restored list item        | ListItemRestored         | A user restored a deleted SharePoint list item from the Recycle Bin.       |
+| Updated list              | ListUpdated              | A user updated a SharePoint list by modifying one or more properties.      |
+| Updated list column       | ListColumnUpdated        | A user updated a SharePoint list column by modifying one or more properties.|
+| Updated list content type | ListContentTypeUpdated   | A user updated a list content type by modifying one or more properties.     
+| Updated list item         | ListItemUpdated          | A user updated a SharePoint list item by modifying one or more properties.  
+| Updated site column       | SiteColumnUpdated        | A user updated a SharePoint site column by modifying one or more properties.|
+| Updated site content type | SiteContentTypeUpdated   | A user updated a site content type by modifying one or more properties.|
+||||
 
 ### Sharing and access request activities
   
@@ -487,7 +506,7 @@ The following table lists the activities that can be logged by mailbox audit log
 |Classified message as a record  <br/> |ApplyRecordLabel<br/> |A message was classified as a record. This occurs when a retention label that classifies content as a record is manually or automatically applied to a message.<br/> |
 |Copied messages to another folder  <br/> |Copy  <br/> |A message was copied to another folder.  <br/> |
 |Created mailbox item  <br/> |Create  <br/> |An item is created in the Calendar, Contacts, Notes, or Tasks folder in the mailbox; for example, a new meeting request is created. Note that creating, sending, or receiving a message isn't audited. Also, creating a mailbox folder is not audited.  <br/> |
-|Created new inbox rule in Outlook web app  <br/> |NewInboxRule<br/> |<br/> |
+|Created new inbox rule in Outlook web app  <br/> |NewInboxRule<br/> |A user created a new inbox rule in Outlook web app (OWA).<br/> |
 |Deleted messages from Deleted Items folder  <br/> |SoftDelete  <br/> |A message was permanently deleted or deleted from the Deleted Items folder. These items are moved to the Recoverable Items folder. Messages are also moved to the Recoverable Items folder when a user selects it and presses **Shift+Delete**.  <br/> |
 |Moved messages to another folder  <br/> |Move  <br/> |A message was moved to another folder.  <br/> |
 |Moved messages to Deleted Items folder  <br/> |MoveToDeletedItems  <br/> |A message was deleted and moved to the Deleted Items folder.  <br/> |
