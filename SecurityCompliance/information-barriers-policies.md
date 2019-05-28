@@ -113,15 +113,6 @@ After you run each cmdlet, you should see a list of details about the new segmen
 
 When you have finished defining or editing your segments, proceed to plan (or define) information barrier policies.
 
-After you have defined segments for all the users in your organization, your next step is to plan the policies. It's important to plan your policies carefully because user
-
-You can use information barrier policies to:
-- Block communications between two segments;
-- Allow one segment to communicate with only one other segment;
-- Prevent one segment from communicating with two other segments;
-- ...and so on.
-
-As part of your plan, determine which segments will be included in information barrier policies. 
 
 > [!IMPORTANT]
 > Although we recommend that you segment all users, you might not include all segments in your information barrier policies. And, no single segment can be included in more than one information barrier policy.
