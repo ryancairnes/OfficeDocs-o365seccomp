@@ -70,7 +70,7 @@ To learn more, see the following resources:
 
 ### Connect to the Security & Compliance Center and provide admin consent
 
-Use the following procedure to provide admin consent when you define (or edit) segments or information barrier policies.
+Use the following procedure before you define (or edit) segments or information barrier policies.
 
 1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
@@ -145,16 +145,20 @@ Referring to our example of Contoso with five departments, our list of segments 
 
 Although no information barrier policies are defined to limit HR or Manufacturing from communicating, those segments are defined anyway. 
 
-### Define segments in terms of policy filters
+### Define segments with policy filters
 
 To define an organizational segment, use the `New-OrganizationSegment` cmdlet with the `UserGroupFilter` parameter that corresponds to the attribute you want to use. 
+
+Example: `New-OrganizationSegment -Name "Segment1" -UserGroupFilter "Department -eq 'Department1'"`
+
+In this example, a segment called *Segment1* is defined using *Department1*, a value in the Department attribute.
 
 After you run each cmdlet, you should see a list of details about the new segment. Details include the segment's type, who created or last modified it, and so on. 
 
 > [!IMPORTANT]
 > **Make sure that your segments do not overlap**. Each user in your organization should belong to one (and only one) segment. No user should belong to two or more segments. Segments should be defined for all users in your organization. 
 
-#### Contoso's segment definitions
+#### Example: Contoso's segment definitions
 
 Recall that Contoso has five departments: HR, Sales, Marketing, Research, and Manufacturing. Using the *Department* attribute in Azure Active Directory, Contoso's segments are defined as follows:
 
