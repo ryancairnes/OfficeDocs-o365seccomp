@@ -66,7 +66,7 @@ To learn more, see the following resources:
 
 ### PowerShell
 
-Currently, **information barrier policies are defined and managed in the Office 365 Security & Compliance Center using PowerShell cmdlets**. Although several scenarios and examples are provided in this article, you'll need to be familiar with PowerShell cmdlets and parameters. 
+**Currently, information barrier policies are defined and managed in the Office 365 Security & Compliance Center using PowerShell cmdlets**. Although several scenarios and examples are provided in this article, you'll need to be familiar with PowerShell cmdlets and parameters. 
 
 ### Connect to the Security & Compliance Center and provide admin consent
 
@@ -99,11 +99,10 @@ Make a list of information barrier policies needed for your organization. You ca
 Prepare a plan that includes the minimum number of policies you need for compliance. As you plan your information barrier policies, keep the following points in mind:
 - Currently, information barrier policies do not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
 - Potentially, everyone included in an information barrier policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barrier policies are part of the same team or group chat, they might be removed from those chat sessions. [Learn more about information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
-- Avoid bulk moves when information barrier policies are in effect. Ask your tenant admins not to move users between segments who cannot talk to each other. Either temporarily grant communication access and disable it later, after all users are moved, or create an intermediate segment who can talk to each of the initial segments. In any case, do not move users in bulk between entities who cannot communicate.
 
 #### Example: Contoso's list of needed policies
 
-As an example, suppose that Contoso has five departments: HR, Sales, Marketing, Research, and Manufacturing. In order to remain compliant with industry regulations, people in some departments are not supposed to communicate with certain other departments, as listed in the following table:
+Contoso has five departments: HR, Sales, Marketing, Research, and Manufacturing. In order to remain compliant with industry regulations, people in some departments are not supposed to communicate with other departments, as listed in the following table:
 
 |Segment  |Can talk to  |Cannot talk to  |
 |---------|---------|---------|
@@ -113,7 +112,7 @@ As an example, suppose that Contoso has five departments: HR, Sales, Marketing, 
 |Research     |HR (only)        |Sales, Marketing, Manufacturing     |
 |Manufacturing |Everyone |(no restrictions) |
 
-In this case, Contoso's plan would include two information barrier policies, as follows:
+With this in mind, Contoso's plan includes two information barrier policies:
 
 1. A policy designed to prevent Sales and Marketing from communicating with Research
 2. A policy designed to allow Research to communicate with HR only 
