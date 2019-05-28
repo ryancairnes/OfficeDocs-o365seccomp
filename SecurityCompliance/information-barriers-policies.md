@@ -65,7 +65,17 @@ In addition to these prerequisites, you must also connect to the Security & Comp
 
 ## Part 1: Segment users
 
-When you segment users in your organization, consider using an attribute in Azure Active Directory. For example, you might use the Department attribute, assuming no single employee is assigned to more than one department. To see a list of supported attributes, refer to [Attributes for information barrier policies (Preview)](information-barriers-attributes.md).
+### Determine what policies are needed
+
+### Make a list of segments to define
+
+### Identify which attributes to use
+
+Before you segment users in your organization, determine which attributes you'll use. We recommend using an attribute in Azure Active Directory. For example, you might use the Department attribute, assuming no single employee is assigned to more than one department. To see a list of supported attributes, refer to [Attributes for information barrier policies (Preview)](information-barriers-attributes.md).
+
+
+### Define segments in terms of policy filters
+
 
 > [!IMPORTANT]
 > **Make sure that your segments do not overlap**. Each user in your organization should belong to one (and only one) segment. No user should belong to two or more segments. 
