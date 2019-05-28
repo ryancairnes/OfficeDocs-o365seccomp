@@ -130,7 +130,7 @@ Determine which attributes in your organization's directory data you'll use to d
 > [!IMPORTANT]
 > **Before you proceed to the next section, make sure your directory data has values for attributes that you can use to define segments**. If your directory data does not have values for the attributes you want to use, then all user accounts must be updated to include that information before you proceed with information barriers. To get help with this, see the following resources:<br/>- [Configure user account properties with Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/configure-user-account-properties-with-office-365-powershell)<br/>- [Add or update a user's profile information using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal)
 
-#### Example: Contoso's segments 
+#### Example: Contoso's departments 
 
 Referring to our example of Contoso with five departments, our list of segments includes the Department attribute in Azure Active Directory:
 - HR
@@ -139,17 +139,19 @@ Referring to our example of Contoso with five departments, our list of segments 
 - Research
 - Manufacturing
 
-Although no information barrier policies are defined to limit HR or Manufacturing from communicating, those segments are defined anyway. 
+Although no information barrier policies are defined to limit HR or Manufacturing from communicating, those segments will be defined anyway. 
 
 ### Define segments with policy filters
 
-To define an organizational segment, use the `New-OrganizationSegment` cmdlet with the `UserGroupFilter` parameter that corresponds to the attribute you want to use. 
+1. To define an organizational segment, use the `New-OrganizationSegment` cmdlet with the `UserGroupFilter` parameter that corresponds to the attribute you want to use. 
 
-Example: `New-OrganizationSegment -Name "Segment1" -UserGroupFilter "Department -eq 'Department1'"`
+    Example: `New-OrganizationSegment -Name "Segment1" -UserGroupFilter "Department -eq 'Department1'"`
 
-In this example, a segment called *Segment1* is defined using *Department1*, a value in the Department attribute.
+    In this example, a segment called *Segment1* is defined using *Department1*, a value in the Department attribute.
 
-After you run each cmdlet, you should see a list of details about the new segment. Details include the segment's type, who created or last modified it, and so on. 
+2. Repeat step 1 for each segment you want to define.
+
+    After you run each cmdlet, you should see a list of details about the new segment. Details include the segment's type, who created or last modified it, and so on. 
 
 > [!IMPORTANT]
 > **Make sure that your segments do not overlap**. Each user in your organization should belong to one (and only one) segment. No user should belong to two or more segments. Segments should be defined for all users in your organization. 
@@ -170,7 +172,7 @@ Recall that Contoso has five departments: HR, Sales, Marketing, Research, and Ma
 
 ### View or edit existing segments
 
-1. To view all existing segments, run the `Get-OrganizationSegment` cmdlet.
+1. To view all existing segments, use the `Get-OrganizationSegment` cmdlet.
 
     You will see a list of segments and details for each, such as segment type, its UserGroupFilter value, who created or last modified it, GUID, and so on.
 
@@ -183,7 +185,7 @@ Recall that Contoso has five departments: HR, Sales, Marketing, Research, and Ma
 
     In this example, for the segment that has the GUID "c96e0837-c232-4a8a-841e-ef45787d8fcd", we are updating the department name to "HRDept".
 
-When you have finished defining or editing your segments, proceed to plan (or define) information barrier policies.
+When you have finished defining or editing your segments, proceed to [define](#part-2-define-information-barrier-policies) (or [edit](#edit-or-remove-an-information-barrier-policy)) information barrier policies.
 
 ## Part 2: Define information barrier policies
 
