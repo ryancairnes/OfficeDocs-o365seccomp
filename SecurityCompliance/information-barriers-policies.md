@@ -93,12 +93,36 @@ Currently, information barrier policies are defined and managed in the Office 36
 
 ### Determine what policies are needed
 
+You can use information barrier policies to:
+- Block communications between two segments;
+- Allow one segment to communicate with only one other segment;
+- Prevent one segment from communicating with two other segments;
+- ...and so on.
+
+As an example, suppose that Contoso has five departments: HR, Sales, Marketing, Research, and Manufacturing. In order to remain compliant with industry regulations, people in some departments are not supposed to communicate with certain other departments. The following table illustrates the situation:
+
+|Segment  |Can talk to  |Cannot talk to  |
+|---------|---------|---------|
+|HR     |Everyone         |(no restrictions)         |
+|Sales     |HR, Marketing, Manufacturing         |Research         |
+|Marketing     |HR, Sales, Manufacturing         |Research         |
+|Research     |HR (only)        |Sales, Marketing, Manufacturing     |
+|Manufacturing |Everyone |(no restrictions) |
+
+In this case, Contoso's plan would include two information barrier policies, as follows:
+
+- A policy designed to prevent Sales and Marketing from communicating with Research
+- A policy designed to allow Research to communicate with HR only 
+
+Manufacturing and HR don't have any other restrictions, so Contoso does not need additional information barrier policies at this time.
+
 ### Make a list of segments to define
 
-### Identify which attributes to use
+In addition to your list of needed policies, make a list of segments, and determine which attributes you'll use. We recommend using an attribute in Azure Active Directory. For example, you might use the Department attribute, assuming no single employee is assigned to more than one department. To see a list of supported attributes, refer to [Attributes for information barrier policies (Preview)](information-barriers-attributes.md).
+.
 
-Before you segment users in your organization, determine which attributes you'll use. We recommend using an attribute in Azure Active Directory. For example, you might use the Department attribute, assuming no single employee is assigned to more than one department. To see a list of supported attributes, refer to [Attributes for information barrier policies (Preview)](information-barriers-attributes.md).
-
+> [!IMPORTANT]
+> Although we recommend that you segment all users, you might not include all segments in your information barrier policies. And, no single segment can be included in more than one information barrier policy.
 
 ### Define segments in terms of policy filters
 
@@ -140,25 +164,6 @@ After you run each cmdlet, you should see a list of details about the new segmen
 When you have finished defining or editing your segments, proceed to plan (or define) information barrier policies.
 
 
-> [!IMPORTANT]
-> Although we recommend that you segment all users, you might not include all segments in your information barrier policies. And, no single segment can be included in more than one information barrier policy.
-
-As an example, recall that Contoso has five departments: HR, Sales, Marketing, Research, and Manufacturing. Contoso set up a table to illustrate which segments can (or cannot) talk to each other, like this:
-
-|Segment  |Can talk to  |Cannot talk to  |
-|---------|---------|---------|
-|HR     |Everyone         |(no restrictions)         |
-|Sales     |HR, Marketing, Manufacturing         |Research         |
-|Marketing     |HR, Sales, Manufacturing         |Research         |
-|Research     |HR (only)        |Sales, Marketing, Manufacturing     |
-|Manufacturing |Everyone |(no restrictions) |
-
-In this case, Contoso's plan would include two information barrier policies, as follows:
-
-- A policy designed to prevent Sales and Marketing from communicating with Research
-- A policy designed to allow Research to communicate with HR only 
-
-Manufacturing and HR don't have any other restrictions, so Contoso does not need additional information barrier policies at this time.
 
 ### A few important points to keep in mind
 
