@@ -120,7 +120,7 @@ Referring to our example of Contoso with five departments, our plan includes one
 
 As part of this planning process, determine which attributes in your organization's directory data you'll use to define segments. We recommend using an attribute, such as *Department* or *MemberOf*, in Azure Active Directory. To see a list of supported attributes, refer to [Attributes for information barrier policies (Preview)](information-barriers-attributes.md).
 
-If your directory data does not have values for attributes you want to use, update user accounts. To get help with this, see the following resources:
+If your directory data does not have values for attributes you want to use, then the user accounts must be updated to include that information. To get help with this, see the following resources:
 - [Configure user account properties with Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/configure-user-account-properties-with-office-365-powershell)
 - [Add or update a user's profile information using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal)
 
