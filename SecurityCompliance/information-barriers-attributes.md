@@ -27,9 +27,9 @@ The attributes listed in this article can be used to define (or edit) segments o
 
 Examples:
 
-`New-OrganizationSegment -Name "Segment1" -UserGroupFilter "Department -eq 'HR'"`
+`New-OrganizationSegment -Name "Segment1" -UserGroupFilter "Department -eq 'Department1'"`
 
-`New-OrganizationSegment -Name "Segment1" -UserGroupFilter "MemberOf -eq 'HR'"`
+`New-OrganizationSegment -Name "SegmentA" -UserGroupFilter "MemberOf -eq 'BlueGroup'"`
 
 When you define segments, use the same attribute for all your segments. For example, if you define some segments using *Department*, define all of the segments using *Department*. Don't define some segments using *Department* and others using *MemberOf*. Make sure your segments do not overlap; each user should be assigned to exactly one segment. 
 
@@ -37,7 +37,7 @@ To learn more, see [Define segments with policy filters](information-barriers-po
 
 ## Reference
 
-Use the following table as a reference for attributes that can be used with information barriers:
+Use the following table as a reference for attributes that can be used with information barriers. You can use an Azure Active Directory attribute or an Exchange attribute, provided the attribute is listed below.
 
 |Azure Active Directory property name (LDAP display name)  |Exchange property name  |Value type  |
 |---------|---------|---------|
