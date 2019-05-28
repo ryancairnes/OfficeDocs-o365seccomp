@@ -88,18 +88,18 @@ After you run each cmdlet, you should see a list of details about the new segmen
 
 ### View or edit existing segments
 
-1. To view a list of existing segments, run the `Get-OrganizationSegment` cmdlet.
+1. To view all existing segments, run the `Get-OrganizationSegment` cmdlet.
 
-    You will see a list of segments and details for each. Details include each segment's type, who created or last modified it, and so on. 
+    You will see a list of segments and details for each, such as segment type, its UserGroupFilter value, who created or last modified it, GUID, and so on.
 
     > [!TIP]
-    > Print or save your list of segments for reference later. For example, if you want to edit a segment, you will need to know its Identity.
+    > Print or save your list of segments for reference later. For example, if you want to edit a segment, you will need to know its name or identify value (this will be used with the Identity parameter).
 
 2. To edit a segment, use the `Set-OrganizationSegment` cmdlet with the Identity parameter and relevant details. Here's an example:
 
-    `example`
+    `Set-OrganizationSegment -Identity c96e0837-c232-4a8a-841e-ef45787d8fcd -UserGroupFilter "Department -eq 'HRDept'"`
 
-    In this example, we are updating the department name from "HR" to "HRDept" for the segment that has the Identity value of `what`.
+    In this example, for the segment that has the GUID "c96e0837-c232-4a8a-841e-ef45787d8fcd", we are updating the department name to "HRDept".
 
 When you have finished defining or editing your segments, proceed to plan (or define) information barrier policies.
 
