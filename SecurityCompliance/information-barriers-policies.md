@@ -128,11 +128,7 @@ In addition to your list of needed policies, make a list of segments for your or
 Determine which attributes in your organization's directory data you'll use to define segments. Consider using *Department* or *MemberOf*, assuming you have values in those attributes for all users. To see a list of supported attributes, refer to [Attributes for information barrier policies (Preview)](information-barriers-attributes.md).
 
 > [!IMPORTANT]
-> Before you proceed to the next section, make sure your directory data has values for attributes that you can use to define segments.
-
-**If your directory data does not have values for attributes you want to use, then the user accounts must be updated to include that information**. To get help with this, see the following resources:
-- [Configure user account properties with Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/configure-user-account-properties-with-office-365-powershell)
-- [Add or update a user's profile information using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal)
+> **Before you proceed to the next section, make sure your directory data has values for attributes that you can use to define segments**. If your directory data does not have values for the attributes you want to use, then all user accounts must be updated to include that information before you proceed with information barriers. To get help with this, see the following resources:<br/>- [Configure user account properties with Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/configure-user-account-properties-with-office-365-powershell)<br/>- [Add or update a user's profile information using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal)
 
 #### Example: Contoso's segments 
 
