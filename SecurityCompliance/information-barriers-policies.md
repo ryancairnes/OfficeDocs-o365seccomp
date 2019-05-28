@@ -43,7 +43,7 @@ With information barriers, you can define policies that are designed to prevent 
 
 For more details about these plans and compliance features, see [Compliance Solutions](https://products.office.com/business/security-and-compliance/compliance-solutions).
 
-Licenses must be assigned to users who will be affected by information barrier policies. In addition, users must be mail-enabled in Office 365. 
+Licenses must be assigned to users who are affected by information barrier policies. In addition, users must be mail-enabled in Office 365. 
 
 ### Permissions
 
@@ -142,7 +142,7 @@ Referring to our example of Contoso with five departments, our list of segments 
 - Research
 - Manufacturing
 
-Although no information barrier policies will be defined to limit HR or Manufacturing from communicating, those segments will be defined anyway. 
+Although no information barrier policies are defined to limit HR or Manufacturing from communicating, those segments are defined anyway. 
 
 ### Define segments in terms of policy filters
 
@@ -174,7 +174,7 @@ Recall that Contoso has five departments: HR, Sales, Marketing, Research, and Ma
     You will see a list of segments and details for each, such as segment type, its UserGroupFilter value, who created or last modified it, GUID, and so on.
 
     > [!TIP]
-    > Print or save your list of segments for reference later. For example, if you want to edit a segment, you will need to know its name or identify value (this will be used with the Identity parameter).
+    > Print or save your list of segments for reference later. For example, if you want to edit a segment, you will need to know its name or identify value (this is used with the Identity parameter).
 
 2. To edit a segment, use the `Set-OrganizationSegment` cmdlet with the Identity parameter and relevant details. Here's an example:
 
@@ -204,7 +204,7 @@ To prevent Sales and Marketing from communicating with Research, Contoso uses th
 
 `New-InformationBarrierPolicy -Name "SalesMarketingBlockedFromResearch" -AssignedSegment "Sales, Marketing" -SegmentsBlocked "Research" -State Inactive`
 
-In this example, the information barrier policy is called *SalesMarketingBlockedFromResearch*. When this policy is active and applied, it will be assigned to users who are in the Sales and Marketing segments. Everyone in those two segments will be prevented from communicating with users in the Research segment.
+In this example, the information barrier policy is called *SalesMarketingBlockedFromResearch*. When this policy is active and applied, it is assigned to users who are in the Sales and Marketing segments. Everyone in those two segments are prevented from communicating with users in the Research segment.
 
 ### Scenario 2: Allow a segment to communicate only with one other segment
 
