@@ -293,13 +293,16 @@ If you want to edit or remove an information barrier policy, you must first set 
 
     Changes are applied, user by user, for your organization. If your organization is large, it can take 24 hours for this process to complete.
 
-At this point, one or more information barrier policies are set to inactive status. From here, you can leave it as is, [edit a policy](#edit-a-policy), or remove a policy altogether.
+At this point, one or more information barrier policies are set to inactive status. From here, you can:
+- leave it as is (set to inactive status); 
+- [edit a policy](#edit-a-policy); or 
+- remove a policy.
 
 ### Edit a policy
 
 1. To view a list of current information barrier policies, run the `Get-InformationBarrierPolicy` cmdlet.
 
-    In the list of results, identify the policy that you want to change (or remove). Note the policy's GUID and name.
+    In the list of results, identify the policy that you want to change. Note the policy's GUID and name. Make sure the policy is set to inactive status.
 
 2. Use the `Set-InformationBarrierPolicy` cmdlet using an Identity parameter, and specify any changes you want to make.
 
@@ -315,9 +318,29 @@ At this point, one or more information barrier policies are set to inactive stat
 
 3. Repeat steps 1-2 for each policy you want to edit.
 
+4. When you are finished editing your policies, proceed to [Part 3: Apply information barrier policies](#part-3-apply-information-barrier-policies).
+
 ### Remove a policy
 
+1. Make sure to [set the policy to inactive status](#set-a-policy-to-inactive-status).
 
+2. To view a list of current information barrier policies, run the `Get-InformationBarrierPolicy` cmdlet.
+
+    In the list of results, identify the policy that you want to remove. Note the policy's GUID and name. Make sure the policy is set to inactive status.
+
+3. Use the `Remove-InformationBarrierPolicy` cmdlet with an Identity parameter.
+
+    For example, suppose we want to remove a policy that has GUID *43c37853-ea10-4b90-a23d-ab8c93772471*. To do this, we use this cmdlet:
+    
+    `Remove-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c93772471`
+
+    You will be prompted to confirm the change.
+
+4. Repeat steps 1-3 for each policy you want to remove.
+
+5. When you are finished removing policies, run the `Start-InformationBarrierPoliciesApplication` cmdlet.
+
+    Changes are applied, user by user, for your organization. If your organization is large, it can take 24 hours for this process to complete.
 
 ## Related articles
 
