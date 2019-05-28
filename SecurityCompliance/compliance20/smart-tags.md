@@ -15,7 +15,7 @@ search.appverid:
 ms.assetid: 
 ROBOTS: NOINDEX, NOFOLLOW 
 
-description: ""
+description: "Smart tags let you leverage the machine learning capabilities when reviewing content in an Advanced eDiscovery case. Use smart tag groups to display the results of machine-learning detection models, such as the attorney-client privilege model."
 ---
 
 # Set up smart tags in Advanced eDiscovery
@@ -28,9 +28,9 @@ Machine learning (ML) capabilities in Advanced eDiscovery can help you make the 
 
 2. Click **Add tag group** and then select **Add smart tag group**.
 
-3. Select the ML model that you want to associate to the tag group. 
+3. Select the ML model that you want to associate to the tag group.
     
-   This will create a tag group and *N* child tags, where *N* is the number of possible outputs of the model. For example, the attorney-client privilege detection model has two possible outputs: 
+   This will create a tag group and *N* child tags, where *N* is the number of possible outputs of the model. For example, the [attorney-client privilege detection model](attorney-privilege-detection.md)attorney-client has two possible outputs: 
 
    - **Positive** - Use to tag documents that contain attorney-client privileged content.
    

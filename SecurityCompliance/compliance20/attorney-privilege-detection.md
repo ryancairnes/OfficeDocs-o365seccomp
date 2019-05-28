@@ -15,7 +15,7 @@ search.appverid:
 ms.assetid: 
 ROBOTS: NOINDEX, NOFOLLOW 
 
-description: ""
+description: "Opt-in and use the attorney-client privilege detection model to leverage the machine learning-based detection of privileged content when reviewing content in an Advanced eDiscovery case."
 ---
 
 # Set up attorney-client privilege detection in Advanced eDiscovery
@@ -27,7 +27,7 @@ A major and costly aspect of the review phase of any eDiscovery process is revie
 
 ## How does it work?
 
-When attorney-client privilege detection is enabled, all documents in a review set will be processed by the attorney-client privilege detection model when you [ analyze the data](analyzing-data-in-review-set.md) in the review set. The model looks for two things:
+When attorney-client privilege detection is enabled, all documents in a review set will be processed by the attorney-client privilege detection model when you [analyze the data](analyzing-data-in-review-set.md) in the review set. The model looks for two things:
 
 - Privileged content - The model uses machine learning to determines the likelihood that the document contains content that is legal in nature.
 
@@ -67,7 +67,7 @@ As previously stated, the attorney-client privilege detection model is in Previe
 
 ### Step 2: Upload a list of attorneys (optional)
 
-In take full advantage of the attorney-client privilege detection model and use the results of the **Has Attorney** or **Potentially Privileged** detection that was previously describe, we recommend that you upload a list of email addresses for the lawyers and legal personnel who work for your organization. 
+To take full advantage of the attorney-client privilege detection model and use the results of the **Has Attorney** or **Potentially Privileged** detection that was previously describe, we recommend that you upload a list of email addresses for the lawyers and legal personnel who work for your organization. 
 
 To upload an attorney list for use by the attorney-client privilege detection model:
 
