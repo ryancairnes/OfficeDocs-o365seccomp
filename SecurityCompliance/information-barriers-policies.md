@@ -223,11 +223,9 @@ In this case, Research can communicate only with HR, but HR is not restricted fr
 
 Information barrier policies are not in effect until they are set to active status and then applied. 
 
-1. If you haven't already done so, as a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
+1. Run the `Get-InformationBarrierPolicy` cmdlet to see a list of policies that have been defined. Note the status of each policy.
 
-2. Run the `Get-InformationBarrierPolicy` cmdlet to see a list of policies that have been defined. Note the status of each policy.
-
-3. To set a policy to active status, use the `Set-InformationBarrierPolicy` cmdlet with the State parameter set to Active, such as shown in the following example:
+2. To set a policy to active status, use the `Set-InformationBarrierPolicy` cmdlet with the State parameter set to Active, such as shown in the following example:
     
     `$identity  = | Set-InformationBarrierPolicy -Name "ResearchIBPolicy" | select Identity
     Set-InformationBarrierPolicy -Identity $identity -State Active`
@@ -236,7 +234,7 @@ Information barrier policies are not in effect until they are set to active stat
 
     Repeat this step as appropriate for each new policy.
 
-4. When you have finished setting your information barrier policies to active status, run the `Start-InformationBarrierPoliciesApplication` cmdlet in the Office 365 Security & Compliance Center.
+3. When you have finished setting your information barrier policies to active status, run the `Start-InformationBarrierPoliciesApplication` cmdlet in the Office 365 Security & Compliance Center.
 
     Policies are applied, user by user, for your organization. If your organization is large, it can take 24 hours for this process to complete.
 
@@ -244,36 +242,32 @@ Information barrier policies are not in effect until they are set to active stat
 
 After you have applied information barrier policies, follow these steps to verify status:
 
-1. If you haven't already done so, as a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
-
-2. To verify status for an information barrier policy, use the `Get-InformationBarrierPoliciesApplicationStatus` cmdlet.
+1. To verify status for an information barrier policy, use the `Get-InformationBarrierPoliciesApplicationStatus` cmdlet.
 
     If you want to view a list of all information barrier policy applications, run the following cmdlet:
 
     `Get-InformationBarrierPoliciesApplicationStatus -All`
 
-3. To verify status for a specific user, run the `Get-InformationBarrierRecipientStatus -user1 username -user2 username` cmdlet, where each *username* refers to a user account in Office 365. (For example, Megan Bowen at Contoso has a user account *meganb*, and Alex Williams has a user account *alexw*.)
+2. To verify status for a specific user, run the `Get-InformationBarrierRecipientStatus -user1 username -user2 username` cmdlet, where each *username* refers to a user account in Office 365. (For example, Megan Bowen at Contoso has a user account *meganb*, and Alex Williams has a user account *alexw*.)
 
 ## Edit or remove an information barrier policy
 
 If you want to edit or remove an information barrier policy, you must first set that policy to inactive status. 
 
-1. If you haven't already done so, as a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
+1. To view a list of current information barrier policies, run the `Get-InformationBarrierPolicy` cmdlet.
 
-2. To view a list of current information barrier policies, run the `Get-InformationBarrierPolicy` cmdlet.
+2. In the list of results, identify the policy that you want to change (or remove). Note the policy's name.
 
-3. In the list of results, identify the policy that you want to change (or remove). Note the policy's name.
-
-4. To set the policy's status to inactive, use the `Set-InformationBarrierPolicy` cmdlet with the State parameter set to Inactive, as shown in the following example:
+3. To set the policy's status to inactive, use the `Set-InformationBarrierPolicy` cmdlet with the State parameter set to Inactive, as shown in the following example:
 
     `$identity  = | Get-InformationBarrierPolicy -Name "ResearchIBPolicy" | select Identity
     Set-InformationBarrierPolicy -Identity $identity -State Inactive`
 
     In this example, we are setting an information barrier policy called ResearchIBPolicy to an inactive status.
 
-5. Run the `Start-InformationBarrierPoliciesApplication` cmdlet.
+4. Run the `Start-InformationBarrierPoliciesApplication` cmdlet.
 
-6. If the process is taking a long time to finish, you can update recipients in Azure Active Directory and wait 30 minutes for FwdSync to occur. For more details about how this works, see [New address lists that you create in Exchange Online don't contain all the expected recipients](https://support.microsoft.com/help/2955640/new-address-lists-that-you-create-in-exchange-online-don-t-contain-all).
+5. If the process is taking a long time to finish, you can update recipients in Azure Active Directory and wait 30 minutes for FwdSync to occur. For more details about how this works, see [New address lists that you create in Exchange Online don't contain all the expected recipients](https://support.microsoft.com/help/2955640/new-address-lists-that-you-create-in-exchange-online-don-t-contain-all).
 
 At this point, your information barrier policy is set to inactive. You can leave it as is, edit it, or remove it altogether.
 
