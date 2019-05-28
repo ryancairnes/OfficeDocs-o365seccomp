@@ -41,7 +41,7 @@ With information barriers, if you meet the [prerequisites](#prerequisites), you 
 Scoped directory search | **Before you define your organization's first information barrier policy, you must [enable scoped directory search in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-scoped-directory-search)**. Wait at least 24 hours after enabling scoped directory search before you set up or define information barrier policies.
 |PowerShell | Currently, information barrier policies are defined and managed in the Office 365 Security & Compliance Center using PowerShell cmdlets. Although several scenarios and examples are provided in this article, you'll need to be familiar with PowerShell cmdlets and parameters.| 
 
-In addition to these prerequisites, you must also connect to the Security & Compliance Center, and provide admin consent.
+In addition to these prerequisites, you must also connect to the Security & Compliance Center, and provide admin consent. To do this, use the following procedure:
 
 ### Connect to the Security & Compliance Center and provide admin consent
 
@@ -74,15 +74,15 @@ To define an organizational segment, use the `New-OrganizationSegment` cmdlet wi
 
 As an example, suppose that Contoso has five departments: HR, Sales, Marketing, Research, and Manufacturing. Contoso will define segments using the Department attribute in Azure Active Directory, as shown in the following examples:
 
-`New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"`
+`New-OrganizationSegment -Name "HRSeg" -UserGroupFilter "Department -eq 'HR'"`
 
-`New-OrganizationSegment -Name "Sales" -UserGroupFilter "Department -eq 'Sales'"`
+`New-OrganizationSegment -Name "SalesSeg" -UserGroupFilter "Department -eq 'Sales'"`
 
-`New-OrganizationSegment -Name "Marketing" -UserGroupFilter "Department -eq 'Marketing'"`
+`New-OrganizationSegment -Name "MarketingSeg" -UserGroupFilter "Department -eq 'Marketing'"`
 
-`New-OrganizationSegment -Name "Research" -UserGroupFilter "Department -eq 'Research'"`
+`New-OrganizationSegment -Name "ResearchSeg" -UserGroupFilter "Department -eq 'Research'"`
 
-`New-OrganizationSegment -Name "Manufacturing" -UserGroupFilter "Department -eq 'Manufacturing'"`
+`New-OrganizationSegment -Name "ManufacturingSeg" -UserGroupFilter "Department -eq 'Manufacturing'"`
 
 After you run each cmdlet, you should see a list of details about the new segment. Details include the segment's type, who created or last modified it, and so on. 
 
