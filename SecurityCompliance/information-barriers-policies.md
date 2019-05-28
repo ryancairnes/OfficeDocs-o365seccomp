@@ -183,7 +183,7 @@ Recall that Contoso has five departments: HR, Sales, Marketing, Research, and Ma
 
     `Set-OrganizationSegment -Identity c96e0837-c232-4a8a-841e-ef45787d8fcd -UserGroupFilter "Department -eq 'HRDept'"`
 
-    In this example, for the segment that has the GUID "c96e0837-c232-4a8a-841e-ef45787d8fcd", we are updating the department name to "HRDept".
+    In this example, for the segment that has the GUID *c96e0837-c232-4a8a-841e-ef45787d8fcd*, we are updating the department name to "HRDept".
 
 When you have finished defining or editing your segments, proceed to [define](#part-2-define-information-barrier-policies) (or [edit](#edit-or-remove-an-information-barrier-policy)) information barrier policies.
 
@@ -247,16 +247,15 @@ In this case, Research can communicate only with HR, but HR is not restricted fr
 
 Information barrier policies are not in effect until they are set to active status and then applied. 
 
-1. Run the `Get-InformationBarrierPolicy` cmdlet to see a list of policies that have been defined. Note the status of each policy.
+1. Use the `Get-InformationBarrierPolicy -Organization $org` cmdlet to see a list of policies that have been defined. Note the status and identity (GUID) of each policy.
 
-2. To set a policy to active status, use the `Set-InformationBarrierPolicy` cmdlet with the State parameter set to Active, such as shown in the following example:
+2. To set a policy to active status, use the `Set-InformationBarrierPolicy` cmdlet with an Identity parameter, and the State parameter set to Active. Here's an example:
     
-    `$identity  = | Set-InformationBarrierPolicy -Name "ResearchIBPolicy" | select Identity
-    Set-InformationBarrierPolicy -Identity $identity -State Active`
+    `Set-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c93772471 -State Active`
     
-    In this example, we are setting an information barrier policy called `ResearchIBPolicy` to active status.
+    In this example, we are setting an information barrier policy that has the GUID *43c37853-ea10-4b90-a23d-ab8c93772471* to active status.
 
-    Repeat this step as appropriate for each new policy.
+    Repeat this step as appropriate for each policy.
 
 3. When you have finished setting your information barrier policies to active status, run the `Start-InformationBarrierPoliciesApplication` cmdlet in the Office 365 Security & Compliance Center.
 
@@ -278,20 +277,47 @@ After you have applied information barrier policies, follow these steps to verif
 
 If you want to edit or remove an information barrier policy, you must first set that policy to inactive status. 
 
+### Set a policy to inactive status
+
 1. To view a list of current information barrier policies, run the `Get-InformationBarrierPolicy` cmdlet.
 
-2. In the list of results, identify the policy that you want to change (or remove). Note the policy's name.
+    In the list of results, identify the policy that you want to change (or remove). Note the policy's GUID and name.
 
-3. To set the policy's status to inactive, use the `Set-InformationBarrierPolicy` cmdlet with the State parameter set to Inactive, as shown in the following example:
+2. To set the policy's status to inactive, use the `Set-InformationBarrierPolicy` cmdlet with an Identity parameter and the State parameter set to Inactive, as shown in the following example:
 
-    `$identity  = | Get-InformationBarrierPolicy -Name "ResearchIBPolicy" | select Identity
-    Set-InformationBarrierPolicy -Identity $identity -State Inactive`
+    `Set-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c9377247 -State Inactive`
 
-    In this example, we are setting an information barrier policy called ResearchIBPolicy to an inactive status.
+    In this example, we are setting an information barrier policy that has GUID *43c37853-ea10-4b90-a23d-ab8c9377247* to an inactive status.
 
-4. Run the `Start-InformationBarrierPoliciesApplication` cmdlet.
+3. Run the `Start-InformationBarrierPoliciesApplication` cmdlet.
 
-At this point, your information barrier policy is set to inactive. You can leave it as is, edit it, or remove it altogether.
+    Changes are applied, user by user, for your organization. If your organization is large, it can take 24 hours for this process to complete.
+
+At this point, one or more information barrier policies are set to inactive status. From here, you can leave it as is, [edit a policy](#edit-a-policy), or remove a policy altogether.
+
+### Edit a policy
+
+1. To view a list of current information barrier policies, run the `Get-InformationBarrierPolicy` cmdlet.
+
+    In the list of results, identify the policy that you want to change (or remove). Note the policy's GUID and name.
+
+2. Use the `Set-InformationBarrierPolicy` cmdlet using an Identity parameter, and specify any changes you want to make.
+
+    For example, suppose we want to change a policy such that instead of preventing a segment from communicating with two other segments, the segment can communicate with only one other specific segment.
+    
+    Originally, the policy we want to change was defined by using this cmdlet: `New-InformationBarrierPolicy -Name "Seg5CannotTalkToSeg6or7" -AssignedSegment "Seg5" -SegmentsBlocked "Seg6, Seg7"`
+
+    The policy named *Seg5CannotTalkToSeg6or7* (which as GUID *43c37853-ea10-4b90-a23d-ab8c93772471*) was designed to prevents people in Seg5 from communicating with people in Seg6 and Seg7. 
+    
+    Suppose we want to change this so that people in Seg5 can only communicate with people in Seg8, and that we want to rename the policy to *Seg5CanOnlyTalkToSeg8*. To make these changes, we might use a cmdlet like this: `Set-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c93772471 -Name "Seg5CanOnlyTalkToSeg8" -SegmentsAllowed "Seg8"`
+
+    In this case, we have changed the policy's name and its effect on people in Seg5.
+
+3. Repeat steps 1-2 for each policy you want to edit.
+
+### Remove a policy
+
+
 
 ## Related articles
 
