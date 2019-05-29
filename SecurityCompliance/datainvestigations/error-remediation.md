@@ -36,7 +36,7 @@ Use the following workflow to remediate files with errors in Data Investigations
 
     ![Error remediation](../media/8c2faf1a-834b-44fc-b418-6a18aed8b81a.png)
 
-    The error remediation session will begin, starting with a preparation stage where the files that errored are moved to a secure Azure location to be downloaded.
+    The error remediation session will begin, starting with a preparation stage where the files with errors are moved to a secure Azure location to be downloaded.
 
     ![Preparing error remediation](../media/390572ec-7012-47c4-a6b6-4cbb5649e8a8.png)
 
@@ -59,17 +59,18 @@ Use the following workflow to remediate files with errors in Data Investigations
     ![Preparing error remediation](../media/f364ab4d-31c5-4375-b69f-650f694a2f69.png)
 
      > [!NOTE]
-     > If you have issues running this command, see https://go.microsoft.com/fwlink/?linkid=2038117 for troubleshooting tips.
+     > If you have issues running this command, see [Troubleshoot AzCopy in Advanced eDiscovery](../compliance20/troubleshooting-azcopy.md).
 
 7. After downloading the files, you can remediate them with an appropriate tool. For password protected files, there are a number of password cracking tools you can use. If you know the passwords for the files, you can open them and remove the password protection.
-    > [!NOTE]
-    > IT is important that you retain the directory structure and file names of the remediated files in tact.  All naming conventions used in the downloaded files and folders make it possible to associate the remdiated files back to the original.
+    
+   > [!NOTE]
+    > It's important that you retain the directory structure and file names of the remediated files in tact.  All naming conventions used in the downloaded files and folders make it possible to associate the remdiated files back to the original.
 
 8. Now, return to Data Investigations (Preview) and click **Next: Upload files**.  This will move to the next step where you can now upload the files.
 
     ![Upload Files](../media/af3d8617-1bab-4ecd-8de0-22e53acba240.png)
 
-9. Specifiy the location of the remediated files in the **Path to location of files** text box, then click **Copy to clibpboard**.
+9. Specify the location of the remediated files in the **Path to location of files** text box, then click **Copy to clipboard**.
 
 10. Paste the command into a Windows Command Prompt and press **Enter** to upload the files.
 
@@ -83,12 +84,9 @@ Use the following workflow to remediate files with errors in Data Investigations
 
 When remediated files are uploaded, the original metadata is preserved with the exception of the following fields: 
 
-- DocumentExtractedUrl
 - ExtractedTextSize
 - HasText
 - IsErrorRemediate
-- IsParentExtractedUrl
-- ItemExtractedUrl
 - LoadId
 - ProcessingErrorMessage
 - ProcessingStatus
