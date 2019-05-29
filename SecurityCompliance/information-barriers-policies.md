@@ -58,21 +58,18 @@ To learn more, see the following resources:
 
 ## Connect to the Security & Compliance Center and provide admin consent
 
-Use the following procedure before you define (or edit) segments or information barrier policies.
+Before you define or edit segments or information barrier policies, follow these steps:
 
 1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
 2. Run the following PowerShell cmdlets, one at a time:<br>
 
-    `Login-AzureRmAccount`  
-
-    `$appId="bcf62038-e005-436d-b970-2a472f8c1982"` 
-
-    `$sp=Get-AzureRmADServicePrincipal -ServicePrincipalName $appId` 
-
-    `if ($sp -eq $null) { New-AzureRmADServicePrincipal -ApplicationId $appId }`
-
-    `Start-Process  "https://login.microsoftonline.com/common/adminconsent?client_id=$appId"`
+    ```Login-AzureRmAccount 
+    $appId="bcf62038-e005-436d-b970-2a472f8c1982" 
+    $sp=Get-AzureRmADServicePrincipal -ServicePrincipalName $appId
+    if ($sp -eq $null) { New-AzureRmADServicePrincipal -ApplicationId $appId }
+    Start-Process  "https://login.microsoftonline.com/common/adminconsent?client_id=$appId"
+    ```
 
 3. When prompted, sign in using your work or school account for Office 365.
 
