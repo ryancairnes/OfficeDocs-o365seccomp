@@ -37,7 +37,7 @@ To learn more, see [Define segments using PowerShell](information-barriers-polic
 
 ## Reference
 
-Use the following table as a reference for attributes that can be used with information barriers. You can use an Azure Active Directory attribute or an Exchange attribute, provided the attribute is listed below.
+The following table lists the attributes that you can use with information barriers.
 
 |Azure Active Directory property name (LDAP display name)  |Exchange property name  |Value type  |
 |---------|---------|---------|
