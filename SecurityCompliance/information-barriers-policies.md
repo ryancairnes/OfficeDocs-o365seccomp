@@ -265,13 +265,23 @@ Information barrier policies are not in effect until they are set to active stat
 
 After you have applied information barrier policies, follow these steps to verify status:
 
-1. To verify status for an information barrier policy, use the `Get-InformationBarrierPoliciesApplicationStatus` cmdlet.
+1. To view a list of all information barrier policy applications, use the `Get-InformationBarrierPoliciesApplicationStatus -All` cmdlet.
 
-    If you want to view a list of all information barrier policy applications, run the following cmdlet:
+    This will confirm whether policy application completed, failed, or is in progress.
 
-    `Get-InformationBarrierPoliciesApplicationStatus -All`
+2. To view a list of information barrier policies, use the `Get-InformationBarrierPolicy -Organization $org` cmdlet.
 
-2. To verify status for a specific user, run the `Get-InformationBarrierRecipientStatus -user1 username -user2 username` cmdlet, where each *username* refers to a user account in Office 365. (For example, Megan Bowen at Contoso has a user account *meganb*, and Alex Williams has a user account *alexw*.)
+    This will display a list of policies and their status.
+
+3. To view information about segments, use the `Get-OrganizationSegment` cmdlet.
+
+    This will display a list of segments defined for your organization.
+    
+3. To verify status for a specific user, use the `Get-InformationBarrierRecipientStatus` cmdlet with Identity parameters. 
+
+    For example,  you could use `Get-InformationBarrierRecipientStatus -user1 username -user2 username`, where each *username* refers to a user account in Office 365. 
+    
+    This would return information about two users, such as whether a policy is defined that affects the users.
 
 ## Edit or remove an information barrier policy
 
