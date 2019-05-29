@@ -36,7 +36,7 @@ Use the following workflow to remediate files with errors in Data Investigations
 
     ![Error remediation](../media/8c2faf1a-834b-44fc-b418-6a18aed8b81a.png)
 
-    The error remediation session will begin, starting with a preparation stage where the files with errors are moved to a secure Azure location to be downloaded.
+    The error remediation session will begin, starting with a preparation stage where the files with errors are copied to a secure Azure location so that they can be downloaded.
 
     ![Preparing error remediation](../media/390572ec-7012-47c4-a6b6-4cbb5649e8a8.png)
 
