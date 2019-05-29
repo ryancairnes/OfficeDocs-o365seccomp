@@ -295,15 +295,15 @@ Click one of the following links to go to a specific table.
   
 ||||
 |:-----|:-----|:-----|
-|[File and page activities](#file-and-page-activities)<br/> |[Folder activities](#folder-activities)<br/> |[Sharing and access request activities](#sharing-and-access-request-activities)<br/> |
-|[Synchronization activities](#synchronization-activities)<br/> |[Site administration activities](#site-administration-activities)<br/> |[Exchange mailbox activities](#exchange-mailbox-activities)<br/> |
-|[Sway activities](#sway-activities) <br/> |[User administration activities](#user-administration-activities) <br/> |[Azure AD group administration activities](#azure-ad-group-administration-activities) <br/> 
-|[Application administration activities](#application-administration-activities) <br/> |[Role administration activities](#role-administration-activities) <br/> |[Directory administration activities](#directory-administration-activities) <br/>| 
-|[eDiscovery activities](#ediscovery-activities) <br/> |[Power BI activities](#power-bi-activities) <br/> |[Microsoft Workplace Analytics](#microsoft-workplace-analytics-activities)<br/>|
-|[Microsoft Teams activities](#microsoft-teams-activities) <br/> |[Yammer activities](#yammer-activities) <br/> |[Microsoft Flow activities](#microsoft-flow-activities) <br/>|
-|[Microsoft PowerApps activities](#microsoft-powerapps)<br/>|[Microsoft Stream activities](#microsoft-stream-activities) <br/>|[Exchange admin activities](#exchange-admin-audit-log)<br/>|
+|[File and page activities](#file-and-page-activities)<br/> |[Folder activities](#folder-activities)<br/> |[SharePoint list activities](#sharepoint-list-activities)<br/>|
+|[Sharing and access request activities](#sharing-and-access-request-activities)<br/> |[Synchronization activities](#synchronization-activities)<br/> |[Site administration activities](#site-administration-activities)<br/> |
+|[Exchange mailbox activities](#exchange-mailbox-activities)<br/> |[Sway activities](#sway-activities) <br/> |[User administration activities](#user-administration-activities) <br/> |
+|[Azure AD group administration activities](#azure-ad-group-administration-activities) <br/> |[Application administration activities](#application-administration-activities) <br/> |[Role administration activities](#role-administration-activities) <br/> |
+|[Directory administration activities](#directory-administration-activities) <br/>|[eDiscovery activities](#ediscovery-activities) <br/> |[Advanced eDiscovery activities](#advanced-ediscovery-activities)<br/> |
+|[Power BI activities](#power-bi-activities) <br/> |[Microsoft Workplace Analytics](#microsoft-workplace-analytics-activities)<br/>|[Microsoft Teams activities](#microsoft-teams-activities) <br/> |
+|[Yammer activities](#yammer-activities) <br/> |[Microsoft Flow activities](#microsoft-flow-activities) <br/>|[Microsoft PowerApps activities](#microsoft-powerapps)<br/>|
+|[Microsoft Stream activities](#microsoft-stream-activities) <br/>|[Exchange admin activities](#exchange-admin-audit-log)<br/>|
 ||||
-   
   
 ### File and page activities
   
@@ -319,7 +319,7 @@ The following table describes the file and page activities in SharePoint Online 
 |Deleted file  <br/> |FileDeleted  <br/> |User deletes a document from a site.  <br/> |
 |Deleted file from recycle bin  <br/> |FileDeletedFirstStageRecycleBin  <br/> |User deletes a file from the recycle bin of a site.  <br/> |
 |Deleted file from second-stage recycle bin  <br/> |FileDeletedSecondStageRecycleBin  <br/> |User deletes a file from the second-stage recycle bin of a site.  <br/> |
-|Detected document sensitivity mismatch <br/>|DocumentSensitivityMismatchDetected<br/>|A mismatch in document sensitivity was detected. <br/>|
+|Detected document sensitivity mismatch <br/>|DocumentSensitivityMismatchDetected<br/>|User uploads a document classified with a sensitivity label that has a higher priority than the sensitivity label that's applied to the site the document is uploaded to. Note this event isn't triggered if the sensitivity label applied to a site has a higher priority than the sensitivity label applied to a document that's uploaded to the site. For more information about sensitivity label priority, see the "Label priority" section in [Overview of sensitivity labels](sensitivity-labels.md#label-priority-order-matters).<br/>|
 |Detected malware in file  <br/> |FileMalwareDetected  <br/> |SharePoint anti-virus engine detects malware in a file.  <br/> |
 |Discarded file checkout  <br/> |FileCheckOutDiscarded  <br/> |User discards (or undos) a checked out file. That means any changes they made to the file when it was checked out are discarded, and not saved to the version of the document in the document library.  <br/> |
 |Downloaded file  <br/> |FileDownloaded  <br/> |User downloads a document from a site.  <br/> |
@@ -334,7 +334,7 @@ The following table describes the file and page activities in SharePoint Online 
 |Uploaded file  <br/> |FileUploaded  <br/> |User uploads a document to a folder on a site.  <br/> |
 |Viewed page  <br/> |PageViewed  <br/> |User views a page on a site. This doesn't include using a Web browser to view files located in a document library.  <br/> |
 |(none)  <br/> |PageViewedExtended  <br/> |This is related to the "Viewed page" (PageViewed) activity. A PageViewedExtended event is logged when the same person continually views a web page for an extended period of time (up to 3 hours). The purpose of logging PageViewedExtended events is to reduce the number of PageViewed events that are logged when a page is continually viewed. This helps reduce the noise of multiple PageViewed records for what is essentially the same user activity, and lets you focus on the initial (and more important) PageViewed event.  <br/> |
-|View signaled by client <br/>|ClientViewSignaled<br/>|A user’s client (such as website or mobile app) has signaled that the indicated page has been viewed by the user. This activity is often logged following a PagePrefetched event for a page. <br/><br/>**Note**: Because ClientViewSignaled events are signaled by the client, rather than the server, it's possible the event may not be logged by the server and therefore may not appear in the audit log. It's also possible that information in the audit record may not be trustworthy. However, because the user’s identity is validated by the token used to create the signal, the user’s identity listed in the corresponding audit record is accurate. |
+|View signaled by client <br/>|ClientViewSignaled<br/>|A user’s client (such as website or mobile app) has signaled that the indicated page has been viewed by the user. This activity is often logged following a PagePrefetched event for a page. <br/><br/>**NOTE**: Because ClientViewSignaled events are signaled by the client, rather than the server, it's possible the event may not be logged by the server and therefore may not appear in the audit log. It's also possible that information in the audit record may not be trustworthy. However, because the user’s identity is validated by the token used to create the signal, the user’s identity listed in the corresponding audit record is accurate. |
 |(none) <br/>|PagePrefetched<br/>|A user’s client (such as website or mobile app) has requested the indicated page to help improve performance if the user browses to it. This event is logged to indicate the page content has been served to the user’s client; this event isn't a definitive indication that the user actually navigated to the page. When the page content is rendered by the client (as per the user’s request) a ClientViewSignaled event should be generated. Note that not all clients support indicating a pre-fetch, and therefore some pre-fetched activities might instead be logged as PageViewed events.<br/>|
 ||||
   
@@ -373,9 +373,9 @@ The following table describes activities related to when users interact with lis
 | Deleted list item         | List Item Deleted        | A user deleted a SharePoint list item.|
 | Deleted site column       | SiteColumnDeleted        | A user deleted a SharePoint site column. |
 | Deleted site content type | SiteContentTypeDeleted   | A user deleted a site content type.|
-| Recycled list item        | ListItemRecycled         | A user recycles a list item on a SharePoint site.|
-| Restored list             | ListRestored             | A user restored a deleted SharePoint list from the Recycle Bin.|
-| Restored list item        | ListItemRestored         | A user restored a deleted SharePoint list item from the Recycle Bin.|
+| Recycled list item        | ListItemRecycled         | A user moved a SharePoint list item to the Recycle Bin.|
+| Restored list             | ListRestored             | A user restored a SharePoint list from the Recycle Bin.|
+| Restored list item        | ListItemRestored         | A user restored a SharePoint list item from the Recycle Bin.|
 | Updated list              | ListUpdated              | A user updated a SharePoint list by modifying one or more properties.|
 | Updated list column       | ListColumnUpdated        | A user updated a SharePoint list column by modifying one or more properties.|
 | Updated list content type | ListContentTypeUpdated   | A user updated a list content type by modifying one or more properties.|
@@ -448,7 +448,7 @@ The following table lists events related to assigning permissions in SharePoint 
 |Modified access request setting  <br/> |WebRequestAccessModified  <br/> |The access request settings were modified on a site.  <br/> |
 |Modified 'Members Can Share' setting  <br/> |WebMembersCanShareModified  <br/> |The **Members Can Share** setting was modified on a site.  <br/> |
 |Modified permission level on site collection  <br/> |PermissionLevelModified  <br/> |A permission level was changed on a site collection.  <br/> |
-|Modified site permissions  <br/> |SitePermissionsModified  <br/> |Site administrator or owner (or system account) changes the permission level that are assigned to a group on a site. This activity is also logged if all permissions are removed from a group.  <br/> > [!NOTE]> This operation has been deprecated in SharePoint Online. To find related events, you can search for other permission-related activities such as **Added site collection admin**, **Added user or group to SharePoint group**, **Allowed user to create groups**, **Created group**, and **Deleted group.**|
+|Modified site permissions  <br/> |SitePermissionsModified  <br/> |Site administrator or owner (or system account) changes the permission level that are assigned to a group on a site. This activity is also logged if all permissions are removed from a group.  <br/><br/> **NOTE**: This operation has been deprecated in SharePoint Online. To find related events, you can search for other permission-related activities such as **Added site collection admin**, **Added user or group to SharePoint group**, **Allowed user to create groups**, **Created group**, and **Deleted group.**|
 |Removed permission level from site collection  <br/> |PermissionLevelRemoved  <br/> |A permission level was removed from a site collection.  <br/> |
 |Removed site collection admin  <br/> |SiteCollectionAdminRemoved <br/> |Site collection administrator or owner removes a person as a site collection administrator for a site. This activity is also logged when an admin removes themselves from the list of site collection administrators for a user's OneDrive account (by editing the user profile in the SharePoint admin center).  Note that to return this activity in the audit log search results, you have to search for all activities. <br/> |
 |Removed user or group from SharePoint group  <br/> |RemovedFromGroup  <br/> |User removed a member or guest from a SharePoint group. This might have been an intentional action or the result of another activity, such as an unsharing event.  <br/> |
@@ -464,9 +464,9 @@ The following table lists events that result from site administration tasks in S
   
 |**Friendly name**|**Operation**|**Description**|
 |:-----|:-----|:-----|
-|Added allowed data location<br/>|AllowedDataLocationAdded|<br/>|<br/>|
-|Added exempt user agent  <br/> |ExemptUserAgentSet  <br/> |A SharePoint or global administrator adds a user agent to the list of exempt user agents in the SharePoint admin center.  <br/> |
-|Added geo location admin<br/>|GeoAdminAdded<br/>|<br/>|
+|Added allowed data location<br/>|AllowedDataLocationAdded|A SharePoint or global administrator added an allowed data location in a multi-geo environment. <br/>|
+|Added exempt user agent  <br/> |ExemptUserAgentSet  <br/> |A SharePoint or global administrator added a user agent to the list of exempt user agents in the SharePoint admin center.  <br/> |
+|Added geo location admin<br/>|GeoAdminAdded<br/>|A SharePoint or global administrator added a user as a geo admin of a location. <br/>|
 |Allowed user to create groups  <br/> |AllowGroupCreationSet  <br/> |Site administrator or owner adds a permission level to a site that allows a user assigned that permission to create a group for that site.  <br/> |
 |Cancelled site geo move  <br/> |SiteGeoMoveCancelled  <br/> |A SharePoint or global administrator successfully cancels a SharePoint or OneDrive site geo move. The Multi-Geo capability lets an Office 365 organization span multiple Office 365 datacenter geographies, which are called geos. For more information, see [Multi-Geo Capabilities in OneDrive and SharePoint Online in Office 365](https://go.microsoft.com/fwlink/?linkid=860840).  <br/> |
 |Changed a sharing policy  <br/> |SharingPolicyChanged  <br/> |A SharePoint or global administrator changed a SharePoint sharing policy by using the Office 365 admin portal, SharePoint admin portal, or SharePoint Online Management Shell. Any change to the settings in the sharing policy in your organization will be logged. The policy that was changed is identified in the **ModifiedProperties** field in the detailed properties of the event record.  <br/> |
@@ -486,8 +486,8 @@ The following table lists events that result from site administration tasks in S
 |Enabled RSS feeds  <br/> |NewsFeedEnabledSet  <br/> |Site administrator or owner enables RSS feeds for a site. Global administrators can enable RSS feeds for the entire organization in the SharePoint admin center.  <br/> |
 |Joined site to hub site<br/>|HubSiteJoined<br/>|A site owner associates their site with a hub site.<br/>|
 |Registered hub site<br/>|HubSiteRegistered<br/>|A SharePoint or global administrator creates a hub site. The results is that the site is registered to be a hub site. <br/>|
-|Removed allowed data location<br/>|AllowedDataLocationDeleted<br/>|<br/>|
-|Removed geo location admin<br/>|GeoAdminDeleted<br/>|<br/>|
+|Removed allowed data location<br/>|AllowedDataLocationDeleted<br/>|A SharePoint or global administrator removed an allowed data location in a multi-geo environment.<br/>|
+|Removed geo location admin<br/>|GeoAdminDeleted<br/>|A SharePoint or global administrator removed a user as a geo admin of a location.<br/>|
 |Renamed site  <br/> |SiteRenamed  <br/> |Site administrator or owner renames a site  <br/> |
 |Scheduled site geo move  <br/> |SiteGeoMoveScheduled  <br/> |A SharePoint or global administrator successfully schedules a SharePoint or OneDrive site geo move. The Multi-Geo capability lets an Office 365 organization span multiple Office 365 datacenter geographies, which are called geos. For more information, see [Multi-Geo Capabilities in OneDrive and SharePoint Online in Office 365](https://go.microsoft.com/fwlink/?linkid=860840).  <br/> |
 |Set host site  <br/> |HostSiteSet  <br/> |A SharePoint or global administrator changes the designated site to host personal or OneDrive for Business sites.  <br/> |
@@ -640,33 +640,34 @@ For a list and detailed description of the eDiscovery activities that are logged
   
 ### Advanced eDiscovery activities
 
-The following table lists activities that result from IT and legal professionals performing tasks in the Advanced eDiscovery solution in Microsoft 365. For more information, see [Overview of the Advanced eDiscovery solution in Microsoft 365](compliance20/overview-ediscovery-20.md).
+The following table lists activities that result from IT and legal professionals performing tasks in Advanced eDiscovery in Microsoft 365. For more information, see [Overview of the Advanced eDiscovery solution in Microsoft 365](compliance20/overview-ediscovery-20.md).
 
 |**Friendly name**|**Operation**|**Description**|
 |:-----|:-----|:-----|
-| Added data to another review set<br/>         | AddWorkingSetQueryToWorkingSet<br/>  |  <br/>|
-| Added data to review set <br/>                | AddQueryToWorkingSet<br/>            |  <br/>|
-| Added non-Office 365 data to review set<br/>  | AddNonOffice365DataToWorkingSet<br/> |  <br/>|
-| Added remediated documents to review set<br/> | AddRemediatedData<br/>               |  <br/>|
-| Analyzed data in review set <br/>             | RunAlgo<br/>                         |  <br/>|
-| Annotated document in review set <br/>        | AnnotateDocument<br/>                |  <br/>|
-| Compared load sets <br/>                      | LoadComparisonJob<br/>               |  <br/>|
-| Converted redacted documents to PDF<br/>      | BurnJob<br/>                         |  <br/>|
-| Created review set<br/>                       | CreateWorkingSet<br/>                |  <br/>|
-| Created review set search<br/>                | CreateWorkingSetSearch<br/>          |  <br/>|
-| Created tag<br/>                              | CreateTag<br/>                       |  <br/>|
-| Deleted review set search <br/>               | DeleteWorkingSetSearch<br/>          |  <br/>|
-| Deleted tag<br/>                              | DeleteTag<br/>                       |  <br/>|
-| Downloaded document<br/>                      | DownloadDocument<br/>                |  <br/>|
-| Edited tag <br/>                              | DownloadDocument<br/>                |  <br/>|
-| Exported documents from review set <br/>      | ExportJob<br/>                       |  <br/>|
-| Modified case setting <br/>                   | UpdateCaseSettings<br/>              |  <br/>|
-| Modified review set search<br/>               | UpdateWorkingSetSearch<br/>          |  <br/>|
-| Previewed review set search <br/>             | PreviewWorkingSetSearch<br/>         |  <br/>|
-| Remediated error documents <br/>              | ErrorRemediationJob<br/>             |  <br/>|
-| Tagged document<br/>                          | TagFiles<br/>                        |  <br/>|
-| Tagged results of a query<br/>                | TagJob<br/>                          |  <br/>|
-| Viewed document in review set<br/>            | ViewDocument<br/>                    |  <br/>|
+| Added data to another review set<br/>         | AddWorkingSetQueryToWorkingSet<br/>  |  User added documents from one review set to a different review set.<br/>|
+| Added data to review set <br/>                | AddQueryToWorkingSet<br/>            |  User added the search results from a content search associated with an Advanced eDiscovery case to a review set.<br/>|
+| Added non-Office 365 data to review set<br/>  | AddNonOffice365DataToWorkingSet<br/> |  User added non-Office 365 data to a review set.<br/>|
+| Added remediated documents to review set<br/> | AddRemediatedData<br/>               |  User uploads documents that had indexing errors that were fixed to a review set.<br/>|
+| Analyzed data in review set <br/>             | RunAlgo<br/>                         |  User ran  analytics on the  documents in a review set. <br/>|
+| Annotated document in review set <br/>        | AnnotateDocument<br/>                |  User annotated a document in a review set. Annotation includes redacting content in a document. <br/>|
+| Compared load sets <br/>                      | LoadComparisonJob<br/>               |User compared two different load sets in a review set. A load set is when data from a content search that associated with the case is added to a review set.  <br/>|
+| Converted redacted documents to PDF<br/>      | BurnJob<br/>                         |User converted all the redacted documents in a review set to PDF files.<br/>|
+| Created review set<br/>                       | CreateWorkingSet<br/>                |User created a review set.<br/>|
+| Created review set search<br/>                | CreateWorkingSetSearch<br/>          |User created a search query that searches the documents in a review set. <br/>|
+| Created tag<br/>                              | CreateTag<br/>                       |User created a tag group in a review set. A tag group can contain one or more child tags. These tags are then used to tag documents in the review set.<br/>|
+| Deleted review set search <br/>               | DeleteWorkingSetSearch<br/>          |User deleted a search query in a review set.<br/>|
+| Deleted tag<br/>                              | DeleteTag<br/>                       |User deleted a tag or a tag group in a review set.<br/>|
+| Downloaded document<br/>                      | DownloadDocument<br/>                |User downloaded a document from a review set.<br/>|
+| Edited tag <br/>                              | DownloadDocument<br/>                |User changed a tag in a review set.<br/>|
+| Exported documents from review set <br/>      | ExportJob<br/>                       |User exported documents from a review set.<br/>|
+| Modified case setting <br/>                   | UpdateCaseSettings<br/>              | User modified the settings for a case. Case settings include case information, access permissions, and settings that control search and analytics behavior.<br/>|
+| Modified review set search<br/>               | UpdateWorkingSetSearch<br/>          |  User edited a search query in a review set.<br/>|
+| Previewed review set search <br/>             | PreviewWorkingSetSearch<br/>         |  User previewed the results of a search query in a review set.<br/>|
+| Remediated error documents <br/>              | ErrorRemediationJob<br/>             |  User fixes files that contained indexing errors. <br/>|
+| Tagged document<br/>                          | TagFiles<br/>                        |  User tags a document in a review set.<br/>|
+| Tagged results of a query<br/>                | TagJob<br/>                          |  User tags all of the documents that match the criteria of search query in a review set.<br/>|
+| Viewed document in review set<br/>            | ViewDocument<br/>                    |  User viewed a document in a review set.<br/>|
+|||
 
 ### Power BI activities
   
