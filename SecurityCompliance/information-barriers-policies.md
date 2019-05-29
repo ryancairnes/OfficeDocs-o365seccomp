@@ -208,7 +208,7 @@ After you have applied information barrier policies, follow these steps to verif
 
     In this example, for the segment that has the GUID *c96e0837-c232-4a8a-841e-ef45787d8fcd*, we are updating the department name to "HRDept".
 
-When you have finished defining or editing all segments for your organization, proceed to [define](#part-2-define-information-barrier-policies) (or [edit](#edit-or-remove-an-information-barrier-policy)) information barrier policies.
+When you have finished editing segments for your organization, you can [define](#part-2-define-information-barrier-policies) or [edit](#edit-a-policy) information barrier policies.
 
 ### Edit a policy
 
