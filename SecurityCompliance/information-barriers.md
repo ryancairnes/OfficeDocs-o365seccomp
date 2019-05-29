@@ -22,13 +22,13 @@ Microsoft cloud services include powerful communication and collaboration capabi
 Information barriers are in preview now, beginning with Microsoft Teams. When these features are available for your organization, a compliance administrator or information barriers administrator can define policies to allow or prevent communications between groups of users in Microsoft Teams. Information barrier policies can be used for situations like these:
 
 - A day trader cannot call someone on the marketing team
-- Finance personnel working on confidential company information cannot receive calls from people outside their organization
-- An internal team with trade secret material cannot call or chat online with people outside their organization
+- Finance personnel working on confidential company information cannot receive calls from certain groups within their organization
+- An internal team with trade secret material cannot call or chat online with people in certain groups within their organization
 - A research team can only call or chat online with a product development team
 
-For all of these example scenarios (and more), information barrier policies can be defined to prevent or allow communications in Microsoft Teams. Such poliicies can prevent people from calling or chatting with those they shouldn't, or enable people to communicate with specific groups in Microsoft Teams. With information barrier policies in effect, whenever users who are covered by those policies attempt to communicate with others in Microsoft Teams, checks are done to prevent unauthorized communication (or allow authorized communication). 
+For all of these example scenarios (and more), information barrier policies can be defined to prevent or allow communications in Microsoft Teams. Such policies can prevent people from calling or chatting with those they shouldn't, or enable people to communicate only with specific groups in Microsoft Teams. With information barrier policies in effect, whenever users who are covered by those policies attempt to communicate with others in Microsoft Teams, checks are done to prevent (or allow) communication (as defined by information barrier policies). 
 
-Information barrier policies determine and prevent the following kinds of unauthorized communications:
+Information barrier policies apply to the following kinds of communication attempts:
 
 - Searching for user
 - Adding a member to a team
@@ -43,7 +43,7 @@ If the people involved are included in an information barrier policy that preven
 > [!IMPORTANT]
 > Potentially, everyone included in an information barrier policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barrier policies are part of the same team or group chat, they might be removed from those chat sessions and further communication with the group might not be allowed. However, information barriers will not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
 
-Currently, information barrier policies are defined and managed in Office 365 by using PowerShell cmdlets. This is typically done by a compliance administrator or a global administrator, and requires familiarity with PowerShell cmdlets (and parameters).
+Currently, information barrier policies are defined and managed in Office 365 by using PowerShell cmdlets. This is typically done by a compliance administrator or a global administrator, and requires familiarity with PowerShell cmdlets (and parameters). To learn more, see [PowerShell (for defining information barriers)](information-barriers-policies.md#powershell).
 
 ## Required licenses and permissions
 
@@ -68,6 +68,6 @@ You must be familiar with PowerShell cmdlets in order to define, validate, or ed
 ## Next steps
 
 - [Learn more about information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams)
-- a[See the attributes that can be used for information barrier policies](information-barriers-attributes.md)
-- [Define policies for information barriers in Microsoft Teams](information-barriers-policies.md) 
+- [See the attributes that can be used for information barrier policies](information-barriers-attributes.md)
+- [Define policies for information barriers](information-barriers-policies.md) 
 

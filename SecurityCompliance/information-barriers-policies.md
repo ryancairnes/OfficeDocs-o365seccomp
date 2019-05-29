@@ -304,9 +304,9 @@ If you want to edit or remove an information barrier policy, you must first set 
     Changes are applied, user by user, for your organization. If your organization is large, it can take 24 hours for this process to complete.
 
 At this point, one or more information barrier policies are set to inactive status. From here, you can:
-- leave it as is (set to inactive status); 
+- leave it as is (a policy set to inactive status has no effect on users); 
 - [edit a policy](#edit-a-policy); or 
-- remove a policy.
+- [remove a policy](#remove-a-policy).
 
 ### Edit a policy
 
