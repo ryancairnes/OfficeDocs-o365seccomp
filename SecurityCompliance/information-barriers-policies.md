@@ -299,8 +299,6 @@ At this point, one or more information barrier policies are set to inactive stat
 
 ## Example: Contoso's departments, segments, and policies
 
-### Contoso's plan for policies
-
 Contoso has five departments: HR, Sales, Marketing, Research, and Manufacturing. In order to remain compliant with industry regulations, people in some departments are not supposed to communicate with other departments, as listed in the following table:
 
 |Segment  |Can talk to  |Cannot talk to  |
@@ -318,20 +316,14 @@ With this in mind, Contoso's plan includes two information barrier policies:
 
 The Manufacturing and HR departments don't have any other restrictions, so Contoso does not need additional information barrier policies at this time. 
 
-### Contoso's departments 
-
-Contoso has five departments. The list of segments includes the Department attribute in Azure Active Directory:
+The list of segments includes the Department attribute in Azure Active Directory:
 - HR
 - Sales
 - Marketing
 - Research
 - Manufacturing
 
-Although no information barrier policies are defined to limit HR or Manufacturing from communicating, those segments are defined anyway. 
-
-### Contoso's segment definitions
-
-Using the *Department* attribute in Azure Active Directory, Contoso's segments are defined as follows:
+Although no information barrier policies are defined to limit HR or Manufacturing from communicating, those segments are defined anyway. Using the *Department* attribute in Azure Active Directory, Contoso's segments are defined as follows:
 
 `New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"`
 
@@ -343,22 +335,17 @@ Using the *Department* attribute in Azure Active Directory, Contoso's segments a
 
 `New-OrganizationSegment -Name "Manufacturing" -UserGroupFilter "Department -eq 'Manufacturing'"`
 
-### Contoso's example policy 1: Prevent Sales and Marketing from communicating with Research
-
-To prevent Sales and Marketing from communicating with Research, Contoso uses the following cmdlet:
+With the segments defined, Contoso proceeds to define two policies. For the first policy, designed to prevent Sales and Marketing from communicating with Research, Contoso uses the following cmdlet:
 
 `New-InformationBarrierPolicy -Name "SalesMarketingBlockedFromResearch" -AssignedSegment "Sales, Marketing" -SegmentsBlocked "Research" -State Inactive`
 
 In this example, the information barrier policy is called *SalesMarketingBlockedFromResearch*. When this policy is active and applied, it will help prevent users who are in the Sales and Marketing segments from communicating with users in the Research segment.
 
-### Contoso's example policy 2: Allow Research to communicate only with HR
-
-To allow Research to communicate with HR only, Contoso uses the following cmdlet:
+For Contoso's second policy, to allow Research to communicate with HR only, Contoso uses the following cmdlet:
  
 `New-InformationBarrierPolicy -Name "Research-Engineering" -AssignedSegment "Research" -SegmentsAllowed "HR" -State Inactive`    
 
 In this case, Research can communicate only with HR, but HR is not restricted from communicating with other segments.
-
 
 ## Related articles
 
