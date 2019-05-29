@@ -263,15 +263,9 @@ At this point, one or more information barrier policies are set to inactive stat
 
 2. Use the `Set-InformationBarrierPolicy` cmdlet using an Identity parameter, and specify any changes you want to make.
 
-    For example, suppose we want to change a policy such that instead of preventing a segment from communicating with two other segments, the segment can communicate with only one other specific segment.
+    For example, suppose a policy was defined by using this cmdlet: `New-InformationBarrierPolicy -Name "Seg5CannotTalkToSeg6or7" -AssignedSegment "Seg5" -SegmentsBlocked "Seg6, Seg7"`
     
-    Originally, the policy we want to change was defined by using this cmdlet: `New-InformationBarrierPolicy -Name "Seg5CannotTalkToSeg6or7" -AssignedSegment "Seg5" -SegmentsBlocked "Seg6, Seg7"`
-
-    The policy named *Seg5CannotTalkToSeg6or7* (which as GUID *43c37853-ea10-4b90-a23d-ab8c93772471*) was designed to prevents people in Seg5 from communicating with people in Seg6 and Seg7. 
-    
-    Suppose we want to change this so that people in Seg5 can only communicate with people in Seg8, and that we want to rename the policy to *Seg5CanOnlyTalkToSeg8*. To make these changes, we might use a cmdlet like this: `Set-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c93772471 -Name "Seg5CanOnlyTalkToSeg8" -SegmentsAllowed "Seg8"`
-
-    In this case, we have changed the policy's name and its effect on people in Seg5.
+    Suppose we want to change it so that people in Seg5 can only communicate with people in Seg8, and that we want to rename the policy to *Seg5CanOnlyTalkToSeg8*. To make these changes, we might use a cmdlet like this: `Set-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c93772471 -Name "Seg5CanOnlyTalkToSeg8" -SegmentsAllowed "Seg8"`
 
 3. Repeat steps 1-2 for each policy you want to edit.
 
