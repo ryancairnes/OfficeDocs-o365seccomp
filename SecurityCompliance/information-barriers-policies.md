@@ -25,10 +25,10 @@ With information barriers, you can define policies that are designed to prevent 
 |Phase    |What's involved  |
 |---------|---------|
 |[Make sure prerequisites are met](#prerequisites)     |- Confirm that you have a subscription that includes information barriers<br/>- Verify that licenses are assigned and users are mail-enabled<br/>- Verify that you have the necessary permissions to define/edit policies<br/>- Make sure that your directory data reflects your organization's structure<br/>- Make sure that scoped directory search is enabled in Microsoft Teams<br/>- Use PowerShell (example cmdlets are provided)<br/>- Provide admin consent (steps are included)          |
-|[Part 1: Segment all the users in your organization](#part-1-segment-users)     |- Determine what policies are needed<br/>- Make a list of segments to define<br/>- Identify which [attributes](information-barriers-attributes.md) to use<br/>- Define segments in terms of policy filters<br/>- (As needed) View/edit segments         |
-|[Part 2: Define information barrier policies](#part-2-define-information-barrier-policies)     |- Define the policies (do not apply yet)<br/>- (As needed) View/edit policies         |
+|[Part 1: Segment all the users in your organization](#part-1-segment-users)     |- Determine what policies are needed<br/>- Make a list of segments to define<br/>- Identify which [attributes](information-barriers-attributes.md) to use<br/>- Define segments in terms of policy filters<br/>- (As needed) [View/edit segments](#edit-a-segment)         |
+|[Part 2: Define information barrier policies](#part-2-define-information-barrier-policies)     |- Define the policies (do not apply yet)<br/>- (As needed) [View/edit policies](#edit-a-policy)         |
 |[Part 3: Apply information barrier policies](#part-3-apply-information-barrier-policies)     |- Set policies to active status<br/>- Run the policy application<br/>- Verify policy status         |
-|(As needed) [Edit or remove an information barrier policy](#edit-or-remove-an-information-barrier-policy)     |- Set a policy to inactive status<br/>- Edit or remove a policy<br/>- Run the policy application<br/>- Verify policy status         |
+|(As needed) [Edit a segment or a policy](#edit-a-segment-or-a-policy)     |- Edit a segment<br/>- Edit or remove a policy<br/>- Run the policy application<br/>- Verify policy status         |
 |(As needed) [Troubleshooting](information-barriers-troubleshooting.md)|- Take action when policies are not working as expected<br/>- [See troubleshooting for information barriers (Preview)](information-barriers-troubleshooting.md)|
 
 ## Prerequisites
@@ -56,13 +56,13 @@ To learn more, see the following resources:
 
 **Currently, information barrier policies are defined and managed in the Office 365 Security & Compliance Center using PowerShell cmdlets**. Although several scenarios and examples are provided in this article, you'll need to be familiar with PowerShell cmdlets and parameters. 
 
-## Connect to the Security & Compliance Center and provide admin consent
+### Connect to the Security & Compliance Center and provide admin consent
 
 Before you define or edit segments or information barrier policies, follow these steps:
 
 1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
-2. Run the following PowerShell cmdlets, one at a time:<br>
+2. Run the following PowerShell cmdlets:<br>
 
     ```Login-AzureRmAccount 
     $appId="bcf62038-e005-436d-b970-2a472f8c1982" 
