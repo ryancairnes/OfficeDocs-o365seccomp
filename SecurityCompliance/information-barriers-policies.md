@@ -95,8 +95,8 @@ Use the following procedure before you define (or edit) segments or information 
 ### Determine what policies are needed
 
 Make a list of information barrier policies needed for your organization. You can use information barrier policies to:
-- block communications between certain segments; or 
-- allow communications between certain segments.
+- Block communications between certain segments; or 
+- Allow communications between certain segments.
 
 Prepare a plan that includes the minimum number of policies you need for compliance. As you plan your information barrier policies, keep the following points in mind:
 - Currently, information barrier policies do not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
@@ -259,7 +259,7 @@ Information barrier policies are not in effect until they are set to active stat
 
 3. When you have finished setting your information barrier policies to active status, use the `Start-InformationBarrierPoliciesApplication` cmdlet in the Office 365 Security & Compliance Center.
 
-    Policies are applied, user by user, for your organization. If your organization is large, it can take 24 hours for this process to complete.
+    Policies are applied, user by user, for your organization. If your organization is large, it can take 24 hours (or more) for this process to complete.
 
 ## Verify status of information barrier policies
 
@@ -299,14 +299,14 @@ If you want to edit or remove an information barrier policy, you must first set 
 
     In this example, we are setting an information barrier policy that has GUID *43c37853-ea10-4b90-a23d-ab8c9377247* to an inactive status.
 
-3. use the `Start-InformationBarrierPoliciesApplication` cmdlet.
+3. Use the `Start-InformationBarrierPoliciesApplication` cmdlet.
 
-    Changes are applied, user by user, for your organization. If your organization is large, it can take 24 hours for this process to complete.
+    Changes are applied, user by user, for your organization. If your organization is large, it can take 24 hours (or more) for this process to complete.
 
 At this point, one or more information barrier policies are set to inactive status. From here, you can:
-- leave it as is (a policy set to inactive status has no effect on users); 
-- [edit a policy](#edit-a-policy); or 
-- [remove a policy](#remove-a-policy).
+- Leave it as is (a policy set to inactive status has no effect on users); 
+- [Edit a policy](#edit-a-policy); or 
+- [Remove a policy](#remove-a-policy).
 
 ### Edit a policy
 
