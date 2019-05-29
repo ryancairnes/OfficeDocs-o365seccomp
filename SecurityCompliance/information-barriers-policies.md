@@ -56,7 +56,7 @@ To learn more, see the following resources:
 
 **Currently, information barrier policies are defined and managed in the Office 365 Security & Compliance Center using PowerShell cmdlets**. Although several scenarios and examples are provided in this article, you'll need to be familiar with PowerShell cmdlets and parameters. 
 
-### Connect to the Security & Compliance Center and provide admin consent
+## Connect to the Security & Compliance Center and provide admin consent
 
 Use the following procedure before you define (or edit) segments or information barrier policies.
 
@@ -99,7 +99,6 @@ Determine which attributes in your organization's directory data you'll use to d
 > [!IMPORTANT]
 > **Before you proceed to the next section, make sure your directory data has values for attributes that you can use to define segments**. If your directory data does not have values for the attributes you want to use, then all user accounts must be updated to include that information before you proceed with information barriers. To get help with this, see the following resources:<br/>- [Configure user account properties with Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/configure-user-account-properties-with-office-365-powershell)<br/>- [Add or update a user's profile information using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal)
 
-
 ### Define segments using PowerShell
 
 1. To define an organizational segment, use the `New-OrganizationSegment` cmdlet with the `UserGroupFilter` parameter that corresponds to the attribute you want to use. 
@@ -114,23 +113,6 @@ Determine which attributes in your organization's directory data you'll use to d
 
 > [!IMPORTANT]
 > **Make sure that your segments do not overlap**. Each user in your organization should belong to one (and only one) segment. No user should belong to two or more segments. Segments should be defined for all users in your organization. 
-
-### View or edit existing segments
-
-1. To view all existing segments, use the `Get-OrganizationSegment` cmdlet.
-
-    You will see a list of segments and details for each, such as segment type, its UserGroupFilter value, who created or last modified it, GUID, and so on.
-
-    > [!TIP]
-    > Print or save your list of segments for reference later. For example, if you want to edit a segment, you will need to know its name or identify value (this is used with the Identity parameter).
-
-2. To edit a segment, use the `Set-OrganizationSegment` cmdlet with the Identity parameter and relevant details. Here's an example:
-
-    `Set-OrganizationSegment -Identity c96e0837-c232-4a8a-841e-ef45787d8fcd -UserGroupFilter "Department -eq 'HRDept'"`
-
-    In this example, for the segment that has the GUID *c96e0837-c232-4a8a-841e-ef45787d8fcd*, we are updating the department name to "HRDept".
-
-When you have finished defining or editing all segments for your organization, proceed to [define](#part-2-define-information-barrier-policies) (or [edit](#edit-or-remove-an-information-barrier-policy)) information barrier policies.
 
 ## Part 2: Define information barrier policies
 
@@ -214,30 +196,24 @@ After you have applied information barrier policies, follow these steps to verif
     
     This returns information about the users, such as whether any policies are defined that affect the users.
 
-## Edit or remove an information barrier policy
+## Edit a segment or policy
 
-If you want to edit or remove an information barrier policy, you must first set that policy to inactive status. 
+### Edit a segment
 
-### Set a policy to inactive status
+1. To view all existing segments, use the `Get-OrganizationSegment` cmdlet.
 
-1. To view a list of current information barrier policies, use the `Get-InformationBarrierPolicy` cmdlet.
+    You will see a list of segments and details for each, such as segment type, its UserGroupFilter value, who created or last modified it, GUID, and so on.
 
-    In the list of results, identify the policy that you want to change (or remove). Note the policy's GUID and name.
+    > [!TIP]
+    > Print or save your list of segments for reference later. For example, if you want to edit a segment, you will need to know its name or identify value (this is used with the Identity parameter).
 
-2. To set the policy's status to inactive, use the `Set-InformationBarrierPolicy` cmdlet with an Identity parameter and the State parameter set to Inactive, as shown in the following example:
+2. To edit a segment, use the `Set-OrganizationSegment` cmdlet with the Identity parameter and relevant details. Here's an example:
 
-    `Set-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c9377247 -State Inactive`
+    `Set-OrganizationSegment -Identity c96e0837-c232-4a8a-841e-ef45787d8fcd -UserGroupFilter "Department -eq 'HRDept'"`
 
-    In this example, we are setting an information barrier policy that has GUID *43c37853-ea10-4b90-a23d-ab8c9377247* to an inactive status.
+    In this example, for the segment that has the GUID *c96e0837-c232-4a8a-841e-ef45787d8fcd*, we are updating the department name to "HRDept".
 
-3. Use the `Start-InformationBarrierPoliciesApplication` cmdlet.
-
-    Changes are applied, user by user, for your organization. If your organization is large, it can take 24 hours (or more) for this process to complete.
-
-At this point, one or more information barrier policies are set to inactive status. From here, you can:
-- Leave it as is (a policy set to inactive status has no effect on users); 
-- [Edit a policy](#edit-a-policy); or 
-- [Remove a policy](#remove-a-policy).
+When you have finished defining or editing all segments for your organization, proceed to [define](#part-2-define-information-barrier-policies) (or [edit](#edit-or-remove-an-information-barrier-policy)) information barrier policies.
 
 ### Edit a policy
 
@@ -255,7 +231,7 @@ At this point, one or more information barrier policies are set to inactive stat
 
 4. When you are finished editing your policies, proceed to [Part 3: Apply information barrier policies](#part-3-apply-information-barrier-policies).
 
-### Remove a policy
+## Remove a policy
 
 1. Make sure to [set the policy to inactive status](#set-a-policy-to-inactive-status).
 
@@ -276,6 +252,27 @@ At this point, one or more information barrier policies are set to inactive stat
 5. When you are finished removing policies, apply your changes. To do this, use the `Start-InformationBarrierPoliciesApplication` cmdlet.
 
     Changes are applied, user by user, for your organization. If your organization is large, it can take 24 hours (or more) for this process to complete.
+
+## Set a policy to inactive status
+
+1. To view a list of current information barrier policies, use the `Get-InformationBarrierPolicy` cmdlet.
+
+    In the list of results, identify the policy that you want to change (or remove). Note the policy's GUID and name.
+
+2. To set the policy's status to inactive, use the `Set-InformationBarrierPolicy` cmdlet with an Identity parameter and the State parameter set to Inactive, as shown in the following example:
+
+    `Set-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c9377247 -State Inactive`
+
+    In this example, we are setting an information barrier policy that has GUID *43c37853-ea10-4b90-a23d-ab8c9377247* to an inactive status.
+
+3. Use the `Start-InformationBarrierPoliciesApplication` cmdlet.
+
+    Changes are applied, user by user, for your organization. If your organization is large, it can take 24 hours (or more) for this process to complete.
+
+At this point, one or more information barrier policies are set to inactive status. From here, you can:
+- Leave it as is (a policy set to inactive status has no effect on users); 
+- [Edit a policy](#edit-a-policy); or 
+- [Remove a policy](#remove-a-policy).
 
 ## Example: Contoso's departments, segments, and policies
 
