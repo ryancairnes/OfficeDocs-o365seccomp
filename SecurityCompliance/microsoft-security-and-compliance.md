@@ -3,7 +3,7 @@ title: "The new Microsoft 365 security center and Microsoft 365 compliance cente
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 04/22/2019
+ms.date: 05/29/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -56,6 +56,8 @@ If you have another subscription, such as a standalone plan that includes the Of
 ### Easy access!
 
 With improved navigation, integrated solutions, and a streamlined experience, you'll be able to see and access the information you're most interested in and take advantage of the powerful security and compliance solutions in Microsoft 365. And, while more functionality and solutions are being added over the coming months, the Office 365 Security & Compliance Center ([https://protection.microsoft.com](https://protection.microsoft.com)) is still available.
+
+In the navigation pane on the left side of the screen, choose **More resources**. Then, under **Office 365 security & compliance center**, choose **Open**.
 
 ### Smooth transition!
 
