@@ -69,7 +69,7 @@ Use the following workflow to remediate files with errors in Advanced eDiscovery
 
     ![Upload Files](../media/af3d8617-1bab-4ecd-8de0-22e53acba240.png)
 
-9. Specifiy the location of the remediated files in the **Path to location of files** text box, then click **Copy to clibpboard**.
+9. Specifiy the location of the remediated files in the **Path to location of files** text box, then click **Copy to clipboard**.
 
 10. Paste the command into a Windows Command Prompt and press **Enter** to upload the files.
 
@@ -83,12 +83,9 @@ Use the following workflow to remediate files with errors in Advanced eDiscovery
 
 When remediated files are uploaded, the original metadata is preserved with the exception of the following fields: 
 
-- DocumentExtractedUrl
 - ExtractedTextSize
 - HasText
 - IsErrorRemediate
-- IsParentExtractedUrl
-- ItemExtractedUrl
 - LoadId
 - ProcessingErrorMessage
 - ProcessingStatus
