@@ -88,12 +88,6 @@ Make a list of information barrier policies needed for your organization. You ca
 - Block communications between certain segments; or 
 - Allow communications between certain segments.
 
-Prepare a plan for the policies you must have for compliance. As you plan your information barrier policies, keep the following points in mind:
-- Currently, information barrier policies do not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
-- Potentially, everyone included in an information barrier policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barrier policies are part of the same team or group chat, they might be removed from those chat sessions. [Learn more about information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
-- Avoid bulk moves when information barrier policies are in effect. Ask your tenant admins not to move users between segments who cannot talk to each other. Either temporarily grant communication access and disable it later, after all users are moved, or create an intermediate segment who can talk to each of the initial segments. In any case, do not move users in bulk between entities who cannot communicate.
-
-
 ### Make a list of segments
 
 In addition to your list of needed policies, make a list of segments for your organization. Every user in your organization should belong to a segment, and no user should belong to two or more segments. Each segment can have only one information barrier policy applied. 
