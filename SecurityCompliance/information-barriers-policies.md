@@ -92,6 +92,8 @@ Use the following procedure before you define (or edit) segments or information 
 
 ## Part 1: Segment users
 
+During this phase, you determine what policies are needed, make a list of segments to define, and then define your segments.
+
 ### Determine what policies are needed
 
 Make a list of information barrier policies needed for your organization. You can use information barrier policies to:
@@ -102,24 +104,6 @@ Prepare a plan that includes the minimum number of policies you need for complia
 - Currently, information barrier policies do not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
 - Potentially, everyone included in an information barrier policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barrier policies are part of the same team or group chat, they might be removed from those chat sessions. [Learn more about information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
 
-#### Example: Contoso's plan for policies
-
-Contoso has five departments: HR, Sales, Marketing, Research, and Manufacturing. In order to remain compliant with industry regulations, people in some departments are not supposed to communicate with other departments, as listed in the following table:
-
-|Segment  |Can talk to  |Cannot talk to  |
-|---------|---------|---------|
-|HR     |Everyone         |(no restrictions)         |
-|Sales     |HR, Marketing, Manufacturing         |Research         |
-|Marketing     |HR, Sales, Manufacturing         |Research         |
-|Research     |HR (only)        |Sales, Marketing, Manufacturing     |
-|Manufacturing |Everyone |(no restrictions) |
-
-With this in mind, Contoso's plan includes two information barrier policies:
-
-1. A policy designed to prevent Sales and Marketing from communicating with Research
-2. A policy designed to allow Research to communicate with HR only 
-
-The Manufacturing and HR departments don't have any other restrictions, so Contoso does not need additional information barrier policies at this time. 
 
 ### Make a list of segments to define
 
@@ -130,16 +114,6 @@ Determine which attributes in your organization's directory data you'll use to d
 > [!IMPORTANT]
 > **Before you proceed to the next section, make sure your directory data has values for attributes that you can use to define segments**. If your directory data does not have values for the attributes you want to use, then all user accounts must be updated to include that information before you proceed with information barriers. To get help with this, see the following resources:<br/>- [Configure user account properties with Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/configure-user-account-properties-with-office-365-powershell)<br/>- [Add or update a user's profile information using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal)
 
-#### Example: Contoso's departments 
-
-Referring to our example of Contoso with five departments, our list of segments includes the Department attribute in Azure Active Directory:
-- HR
-- Sales
-- Marketing
-- Research
-- Manufacturing
-
-Although no information barrier policies are defined to limit HR or Manufacturing from communicating, those segments will be defined anyway. 
 
 ### Define segments with policy filters
 
@@ -156,19 +130,6 @@ Although no information barrier policies are defined to limit HR or Manufacturin
 > [!IMPORTANT]
 > **Make sure that your segments do not overlap**. Each user in your organization should belong to one (and only one) segment. No user should belong to two or more segments. Segments should be defined for all users in your organization. 
 
-#### Example: Contoso's segment definitions
-
-Recall that Contoso has five departments: HR, Sales, Marketing, Research, and Manufacturing. Using the *Department* attribute in Azure Active Directory, Contoso's segments are defined as follows:
-
-`New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"`
-
-`New-OrganizationSegment -Name "Sales" -UserGroupFilter "Department -eq 'Sales'"`
-
-`New-OrganizationSegment -Name "Marketing" -UserGroupFilter "Department -eq 'Marketing'"`
-
-`New-OrganizationSegment -Name "Research" -UserGroupFilter "Department -eq 'Research'"`
-
-`New-OrganizationSegment -Name "Manufacturing" -UserGroupFilter "Department -eq 'Manufacturing'"`
 
 ### View or edit existing segments
 
@@ -212,14 +173,6 @@ When you have a list of user segments and the information barrier policies you w
    - [View or edit an information barrier policy](#edit-or-remove-an-information-barrier-policy)
    - Proceed to [Part 3: Apply information barrier policies](#part-3-apply-information-barrier-policies)
 
-#### Contoso's example: Prevent Sales and Marketing from communicating with Research
-
-To prevent Sales and Marketing from communicating with Research, Contoso uses the following cmdlet:
-
-`New-InformationBarrierPolicy -Name "SalesMarketingBlockedFromResearch" -AssignedSegment "Sales, Marketing" -SegmentsBlocked "Research" -State Inactive`
-
-In this example, the information barrier policy is called *SalesMarketingBlockedFromResearch*. When this policy is active and applied, it will help prevent users who are in the Sales and Marketing segments from communicating with users in the Research segment.
-
 ### Scenario 2: Allow a segment to communicate only with one other segment
 
 1. To allow one segment to communicate with only one other segment, use the `New-InformationBarrierPolicy` cmdlet with the **SegmentsAllowed** parameter. 
@@ -234,14 +187,6 @@ In this example, the information barrier policy is called *SalesMarketingBlocked
    - Go to [Scenario 1: Block communications between segments](#scenario-1-block-communications-between-segments) 
    - [View or edit an information barrier policy](#edit-or-remove-an-information-barrier-policy)
    - Proceed to [Part 3: Apply information barrier policies](#part-3-apply-information-barrier-policies)
-
-#### Contoso's example: Allow Research to communicate only with HR
-
-To allow Research to communicate with HR only, Contoso uses the following cmdlet:
- 
-`New-InformationBarrierPolicy -Name "Research-Engineering" -AssignedSegment "Research" -SegmentsAllowed "HR" -State Inactive`    
-
-In this case, Research can communicate only with HR, but HR is not restricted from communicating with other segments.
 
 ## Part 3: Apply information barrier policies
 
@@ -351,6 +296,69 @@ At this point, one or more information barrier policies are set to inactive stat
 5. When you are finished removing policies, use the `Start-InformationBarrierPoliciesApplication` cmdlet.
 
     Changes are applied, user by user, for your organization. If your organization is large, it can take 24 hours for this process to complete.
+
+## Example: Contoso's departments, segments, and policies
+
+### Contoso's plan for policies
+
+Contoso has five departments: HR, Sales, Marketing, Research, and Manufacturing. In order to remain compliant with industry regulations, people in some departments are not supposed to communicate with other departments, as listed in the following table:
+
+|Segment  |Can talk to  |Cannot talk to  |
+|---------|---------|---------|
+|HR     |Everyone         |(no restrictions)         |
+|Sales     |HR, Marketing, Manufacturing         |Research         |
+|Marketing     |HR, Sales, Manufacturing         |Research         |
+|Research     |HR (only)        |Sales, Marketing, Manufacturing     |
+|Manufacturing |Everyone |(no restrictions) |
+
+With this in mind, Contoso's plan includes two information barrier policies:
+
+1. A policy designed to prevent Sales and Marketing from communicating with Research
+2. A policy designed to allow Research to communicate with HR only 
+
+The Manufacturing and HR departments don't have any other restrictions, so Contoso does not need additional information barrier policies at this time. 
+
+### Contoso's departments 
+
+Contoso has five departments. The list of segments includes the Department attribute in Azure Active Directory:
+- HR
+- Sales
+- Marketing
+- Research
+- Manufacturing
+
+Although no information barrier policies are defined to limit HR or Manufacturing from communicating, those segments are defined anyway. 
+
+### Contoso's segment definitions
+
+Using the *Department* attribute in Azure Active Directory, Contoso's segments are defined as follows:
+
+`New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"`
+
+`New-OrganizationSegment -Name "Sales" -UserGroupFilter "Department -eq 'Sales'"`
+
+`New-OrganizationSegment -Name "Marketing" -UserGroupFilter "Department -eq 'Marketing'"`
+
+`New-OrganizationSegment -Name "Research" -UserGroupFilter "Department -eq 'Research'"`
+
+`New-OrganizationSegment -Name "Manufacturing" -UserGroupFilter "Department -eq 'Manufacturing'"`
+
+### Contoso's example policy 1: Prevent Sales and Marketing from communicating with Research
+
+To prevent Sales and Marketing from communicating with Research, Contoso uses the following cmdlet:
+
+`New-InformationBarrierPolicy -Name "SalesMarketingBlockedFromResearch" -AssignedSegment "Sales, Marketing" -SegmentsBlocked "Research" -State Inactive`
+
+In this example, the information barrier policy is called *SalesMarketingBlockedFromResearch*. When this policy is active and applied, it will help prevent users who are in the Sales and Marketing segments from communicating with users in the Research segment.
+
+### Contoso's example policy 2: Allow Research to communicate only with HR
+
+To allow Research to communicate with HR only, Contoso uses the following cmdlet:
+ 
+`New-InformationBarrierPolicy -Name "Research-Engineering" -AssignedSegment "Research" -SegmentsAllowed "HR" -State Inactive`    
+
+In this case, Research can communicate only with HR, but HR is not restricted from communicating with other segments.
+
 
 ## Related articles
 
