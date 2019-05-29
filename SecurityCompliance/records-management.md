@@ -17,17 +17,17 @@ description: "With records management in Microsoft 365, you can apply your organ
 
 # Records management in Microsoft 365
 
-Organizations of all types require a records-management solution to manage business, legal, and HR records across their corporate data. Records management in Microsoft 365 helps an organization manage their legal obligations, provides the ability to demonstrate compliance with regulations, and increases efficiency with regular disposition of  items that are no longer of value or no longer required for business purposes.
+Organizations of all types require a records-management solution to manage regulatory, legal, and business-critical records across their corporate data. Records management in Microsoft 365 helps an organization manage their legal obligations, provides the ability to demonstrate compliance with regulations, and increases efficiency with regular disposition of items that are no longer required to be retained, no longer of value, or no longer required for business purposes.
 
-The records-management solution supports the following elements: 
+The records-management solution supports the following elements:
 
-- 	**Label as a record**. Publish [record labels](labels.md#using-retention-labels-for-records-management) to be applied by end users, or [auto-apply record labels](labels.md#applying-a-retention-label-automatically-based-on-conditions) to items containing specific sensitive information, keywords or content types.
+- 	**Migrate and manage your retention plan with file plan** and use [file plan manager](file-plan-manager.md) to bring in your existing retention plan, or build new with file descriptors and expanding hierarchies.
 
 - 	**Establish retention and deletion policies within the record label**. Define [retention](retention-policies.md#retaining-content-for-a-specific-period-of-time) and [disposition](retention-policies.md#deleting-content-thats-older-than-a-specific-age) periods based on a variety of factors including the date last modified or created.
 
 - 	**Trigger event-based retention** with [event-based retention](event-driven-retention.md).
 
-- 	**Migrate and manage your retention plan with file plan** and use [file plan manager](file-plan-manager.md) to bring in your existing retention plan, or build new with file descriptors and expanding hierarchies.
+- 	**Label as a record**. Publish [record labels](labels.md#using-retention-labels-for-records-management) to be applied by end users, or [auto-apply record labels](labels.md#applying-a-retention-label-automatically-based-on-conditions) to items containing specific sensitive information, keywords or content types.
 
 - 	**Review and validate disposition** with [disposition review](disposition-reviews.md).
 
