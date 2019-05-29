@@ -365,21 +365,21 @@ The following table describes activities related to when users interact with lis
 | Created list column       | ListColumnCreated        | A user created a new SharePoint list column. A list column is a column that's attached to one or more SharePoint lists. |
 | Created list content type | ListContentTypeCreated   | A user created a new list content type. A list content type is a content type that's attached to one or more SharePoint lists.|
 | Created list item         | ListItemCreated          | A user created a new item in an existing SharePoint list.|
-| Created site column       | SiteColumnCreated        | A user created a new SharePoint site column. A site column is a column that isn't attached to a list. A site column is also a metadata structure that can be used by any list in a given web. |
+| Created site column       | SiteColumnCreated        | A user created a new SharePoint site column. A site column is a column that isn't attached to a list. A site column is also a metadata structure that can be used by any list in a given web.|
 | Created site content type | Site ContentType Created | A user created a new site content type. A site content type is a content type that's attached to the parent site.|
-| Deleted list              | ListDeleted              | A user deleted a SharePoint list.                                          |
-| Deleted list column       | List Column Deleted      | A user deleted a SharePoint list column.                                   |
-| Deleted list content type | ListContentTypeDeleted   | A user deleted a list content type.                                        |
-| Deleted list item         | List Item Deleted        | A user deleted a SharePoint list item.                                     |
-| Deleted site column       | SiteColumnDeleted        | A user deleted a SharePoint site column.                                   |
-| Deleted site content type | SiteContentTypeDeleted   | A user deleted a site content type.                                        |
-| Recycled list item        | ListItemRecycled         | A user recycled a SharePoint list item.                                    |
-| Restored list             | ListRestored             | A user restored a deleted SharePoint list from the Recycle Bin.            |
-| Restored list item        | ListItemRestored         | A user restored a deleted SharePoint list item from the Recycle Bin.       |
-| Updated list              | ListUpdated              | A user updated a SharePoint list by modifying one or more properties.      |
+| Deleted list              | ListDeleted              | A user deleted a SharePoint list.|
+| Deleted list column       | List Column Deleted      | A user deleted a SharePoint list column.|
+| Deleted list content type | ListContentTypeDeleted   | A user deleted a list content type. |
+| Deleted list item         | List Item Deleted        | A user deleted a SharePoint list item.|
+| Deleted site column       | SiteColumnDeleted        | A user deleted a SharePoint site column. |
+| Deleted site content type | SiteContentTypeDeleted   | A user deleted a site content type.|
+| Recycled list item        | ListItemRecycled         | A user recycles a list item on a SharePoint site.|
+| Restored list             | ListRestored             | A user restored a deleted SharePoint list from the Recycle Bin.|
+| Restored list item        | ListItemRestored         | A user restored a deleted SharePoint list item from the Recycle Bin.|
+| Updated list              | ListUpdated              | A user updated a SharePoint list by modifying one or more properties.|
 | Updated list column       | ListColumnUpdated        | A user updated a SharePoint list column by modifying one or more properties.|
-| Updated list content type | ListContentTypeUpdated   | A user updated a list content type by modifying one or more properties.     
-| Updated list item         | ListItemUpdated          | A user updated a SharePoint list item by modifying one or more properties.  
+| Updated list content type | ListContentTypeUpdated   | A user updated a list content type by modifying one or more properties.|
+| Updated list item         | ListItemUpdated          | A user updated a SharePoint list item by modifying one or more properties.|  
 | Updated site column       | SiteColumnUpdated        | A user updated a SharePoint site column by modifying one or more properties.|
 | Updated site content type | SiteContentTypeUpdated   | A user updated a site content type by modifying one or more properties.|
 ||||
@@ -482,7 +482,7 @@ The following table lists events that result from site administration tasks in S
 |Enabled document preview  <br/> |PreviewModeEnabledSet  <br/> |Site administrator enables document preview for a site.  <br/> |
 |Enabled legacy workflow  <br/> |LegacyWorkflowEnabledSet  <br/> |Site administrator or owner adds the SharePoint 2013 Workflow Task content type to the site. Global administrators can also enable work flows for the entire organization in the SharePoint admin center.  <br/> |
 |Enabled Office on Demand  <br/> |OfficeOnDemandSet  <br/> |Site administrator enables Office on Demand, which lets users access the latest version of Office desktop applications. Office on Demand is enabled in the SharePoint admin center and requires an Office 365 subscription that includes full, installed Office applications.  <br/> |
-|Enabled result source for People Searches<br/>|PeopleResultsScopeSet<br/>|<br/>|
+|Enabled result source for People Searches<br/>|PeopleResultsScopeSet<br/>|Site administrator creates the result source for People Searches for a site.<br/>|
 |Enabled RSS feeds  <br/> |NewsFeedEnabledSet  <br/> |Site administrator or owner enables RSS feeds for a site. Global administrators can enable RSS feeds for the entire organization in the SharePoint admin center.  <br/> |
 |Joined site to hub site<br/>|HubSiteJoined<br/>|A site owner associates their site with a hub site.<br/>|
 |Registered hub site<br/>|HubSiteRegistered<br/>|A SharePoint or global administrator creates a hub site. The results is that the site is registered to be a hub site. <br/>|
@@ -491,7 +491,7 @@ The following table lists events that result from site administration tasks in S
 |Renamed site  <br/> |SiteRenamed  <br/> |Site administrator or owner renames a site  <br/> |
 |Scheduled site geo move  <br/> |SiteGeoMoveScheduled  <br/> |A SharePoint or global administrator successfully schedules a SharePoint or OneDrive site geo move. The Multi-Geo capability lets an Office 365 organization span multiple Office 365 datacenter geographies, which are called geos. For more information, see [Multi-Geo Capabilities in OneDrive and SharePoint Online in Office 365](https://go.microsoft.com/fwlink/?linkid=860840).  <br/> |
 |Set host site  <br/> |HostSiteSet  <br/> |A SharePoint or global administrator changes the designated site to host personal or OneDrive for Business sites.  <br/> |
-|Set storage quota for geo location  <br/> |GeoQuotaAllocated<br/> |<br/> |
+|Set storage quota for geo location  <br/> |GeoQuotaAllocated<br/> |A SharePoint or global administrator configured the storage quota for a geo location in a multi-geo environment.<br/> |
 |Unjoined site from hub site<br/>|HubSiteUnjoined<br/>|A site owner disassociates their site from a hub site.<br/>|
 |Unregistered hub site<br/>|HubSiteUnregistered<br/>|A SharePoint or global administrator unregisters a site as a hub site. When a hub site is unregistered, it no longer functions as a hub site. <br/>|
 ||||
