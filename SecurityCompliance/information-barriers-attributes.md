@@ -3,7 +3,7 @@ title: "Attributes for information barrier policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 05/28/2019
+ms.date: 05/29/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -27,9 +27,10 @@ The attributes listed in this article can be used to define (or edit) segments o
 
 Examples:
 
-`New-OrganizationSegment -Name "Segment1" -UserGroupFilter "Department -eq 'Department1'"`
-
-`New-OrganizationSegment -Name "SegmentA" -UserGroupFilter "MemberOf -eq 'BlueGroup'"`
+|Example  |Cmdlet  |
+|---------|---------|
+|Define a segment called Segment1 using the Department attribute     | `New-OrganizationSegment -Name "Segment1" -UserGroupFilter "Department -eq 'Department1'"`        |
+|Define a segment called SegmentA using the MemberOf attribute     | `New-OrganizationSegment -Name "SegmentA" -UserGroupFilter "MemberOf -eq 'BlueGroup'"`        |
 
 When you define segments, use the same attribute for all your segments. For example, if you define some segments using *Department*, define all of the segments using *Department*. Don't define some segments using *Department* and others using *MemberOf*. Make sure your segments do not overlap; each user should be assigned to exactly one segment. 
 
