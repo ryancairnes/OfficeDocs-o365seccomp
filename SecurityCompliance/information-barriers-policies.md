@@ -331,19 +331,15 @@ Contoso will use the Department attribute in Azure Active Directory to define se
 |Research     | `New-OrganizationSegment -Name "Research" -UserGroupFilter "Department -eq 'Research'"`        |
 |Manufacturing     | `New-OrganizationSegment -Name "Manufacturing" -UserGroupFilter "Department -eq 'Manufacturing'"`        |
 
-With the segments defined, Contoso proceeds to define two policies. For the first policy, designed to prevent Sales and Marketing from communicating with Research, Contoso uses the following cmdlet:
+With the segments defined, Contoso proceeds to define two policies. 
 
-`New-InformationBarrierPolicy -Name "SalesMarketingBlockedFromResearch" -AssignedSegment "Sales, Marketing" -SegmentsBlocked "Research" -State Inactive`
 
-In this example, the information barrier policy is called *SalesMarketingBlockedFromResearch*. When this policy is active and applied, it will help prevent users who are in the Sales and Marketing segments from communicating with users in the Research segment.
+|Policy  |Policy Definition  |
+|---------|---------|
+|Policy 1: Prevent Sales and Marketing from communicating with Research     | `New-InformationBarrierPolicy -Name "SalesMarketingBlockedFromResearch" -AssignedSegment "Sales, Marketing" -SegmentsBlocked "Research" -State Inactive` <p> In this example, the information barrier policy is called *SalesMarketingBlockedFromResearch*. When this policy is active and applied, it will help prevent users who are in the Sales and Marketing segments from communicating with users in the Research segment.       |
+|Policy 2: Allow Research to communicate with HR only     | `New-InformationBarrierPolicy -Name "Research-Engineering" -AssignedSegment "Research" -SegmentsAllowed "HR" -State Inactive` <p>In this case, Research can communicate only with HR, but HR is not restricted from communicating with other segments. |
 
-For Contoso's second policy, to allow Research to communicate with HR only, Contoso uses the following cmdlet:
- 
-`New-InformationBarrierPolicy -Name "Research-Engineering" -AssignedSegment "Research" -SegmentsAllowed "HR" -State Inactive`    
-
-In this case, Research can communicate only with HR, but HR is not restricted from communicating with other segments.
-
-With segments and policies defined, Contoso applies the policies. Now, Contoso is in compliance with legal and industry requirements.
+With segments and policies defined, Contoso applies the policies. When that finishes, Contoso is compliant with legal and industry requirements.
 
 ## Related articles
 
