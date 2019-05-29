@@ -218,9 +218,9 @@ When you have finished defining or editing all segments for your organization, p
 
 2. Use the `Set-InformationBarrierPolicy` cmdlet using an Identity parameter, and specify any changes you want to make.
 
-    For example, suppose a policy was defined by using this cmdlet: `New-InformationBarrierPolicy -Name "Seg5CannotTalkToSeg6or7" -AssignedSegment "Seg5" -SegmentsBlocked "Seg6, Seg7"`
+    For example, suppose a policy was defined by using this cmdlet: `New-InformationBarrierPolicy -Name "ResearchBlockedFromSalesMarketing" -AssignedSegment "Research" -SegmentsBlocked "Sales, Marketing"`
     
-    Suppose we want to change it so that people in Seg5 can only communicate with people in Seg8, and that we want to rename the policy to *Seg5CanOnlyTalkToSeg8*. To make these changes, we might use a cmdlet like this: `Set-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c93772471 -Name "Seg5CanOnlyTalkToSeg8" -SegmentsAllowed "Seg8"`
+    Suppose we want to change it so that people in Research can only communicate with people in HR. To make this change, we might use a cmdlet like this: `Set-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c93772471 -SegmentsAllowed "HR"`
 
 3. Repeat steps 1-2 for each policy you want to edit.
 
@@ -264,10 +264,10 @@ When you have finished defining or editing all segments for your organization, p
 
     Changes are applied, user by user, for your organization. If your organization is large, it can take 24 hours (or more) for this process to complete.
 
-At this point, one or more information barrier policies are set to inactive status. From here, you can:
-- Leave it as is (a policy set to inactive status has no effect on users); 
-- [Edit a policy](#edit-a-policy); or 
-- [Remove a policy](#remove-a-policy).
+At this point, one or more information barrier policies are set to inactive status. From here, you can do any of the following:
+- Leave it as is (a policy set to inactive status has no effect on users)
+- [Edit a policy](#edit-a-policy) 
+- [Remove a policy](#remove-a-policy)
 
 ## Example: Contoso's departments, segments, and policies
 
