@@ -110,7 +110,6 @@ Be sure to read the following items before you start searching the Office 365 au
     |eDiscovery  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
     |Exchange Online  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> ||
     |Microsoft Flow  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
-    |Microsoft Forms  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
     |Microsoft Project  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
     |Microsoft Stream  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
     |Microsoft Teams  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> ||
@@ -175,8 +174,13 @@ Here's the process for searching the audit log in Office 365.
     
     Leave this box blank to return entries for all files and folders in your organization.
     
-    > [!TIP]
-    > If you're looking for all activities related to a **site**, add the wildcard symbol (\*) after the URL to return all entries for that site; for example, **"https://contoso-my.sharepoint.com/personal/*"**.
+   **TIPS**
+
+   - If you're looking for all activities related to a **site**, add the wildcard symbol (\*) after the URL to return all entries for that site; for example, **"https://contoso-my.sharepoint.com/personal/*"**.
+
+   - If you're looking for all activities related to a **file**, add the wildcard symbol (\*) before the file name to return all entries for that file; for example, **"*Customer_Profitability_Sample.csv"**.
+    
+
     
 5. Click **Search** to run the search using your search criteria. 
     
