@@ -41,39 +41,42 @@ Also, make sure to [connect to the Security & Compliance Center and provide admi
 
 Follow these steps to determine whether the users are affected by an information barrier policy, whether the users are in the correct segments, and whether filters are applied correctly in information barriers.
 
-1. Check to see if the users are included in an information barrier policy. To do this, run the `Get-InformationBarrierRecipientStatus` cmdlet with the Identity parameter. You can use any identity value that uniquely identifies each recipient, such as Name, Alias, Distinguished name (DN), Canonical DN, Email address, or GUID.
+1. Check to see if each user is included in an information barrier policy. To do this, use the `Get-InformationBarrierRecipientStatus` cmdlet with the Identity parameter. 
 
-    Example: `Get-InformationBarrierRecipientStatus -User1 meganb -User2 alexw`
+    You can use any identity value that uniquely identifies each recipient, such as Name, Alias, Distinguished name (DN), Canonical DN, Email address, or GUID.
 
-    In this example, we are using two users' aliases for the Identity parameter. (You can also use this cmdlet for one user, like this: ``) When we run this cmdlet, we will be able to see if either user is affected by an information barrier policy. Its GUID will be listed as "ExoPolicyId."
+    Example: `Get-InformationBarrierRecipientStatus -Identity meganb`
+
+    In this example, we are using an alias (*meganb*) for the Identity parameter. This cmdlet will return information that indicates whether the user is affected by an information barrier policy. (Its GUID will be listed as *ExoPolicyId*.)
 
     If the users are not included in information barrier policies, contact support. Otherwise, proceed to the next step.
 
-2. Check to see which segments are affected by an information barrier policy. To do this, run the `Get-InformationBarrierPolicy` cmdlet with the Identity parameter. Use details, such as the policy GUID (ExoPolicyId) you received during the previous step, as an identity value.
+2. Check to see which segments are affected by an information barrier policy. To do this, use the `Get-InformationBarrierPolicy` cmdlet with the Identity parameter. Use details, such as the policy GUID (ExoPolicyId) you received during the previous step, as an identity value.
 
     Example: `Get-InformationBarrierPolicy -Identity b42c3d0f-49e9-4506-a0a5-bf2853b5df6f`
 
-    In this example, we are getting detailed information about the information barrier policy that has "ExoPolicyId: b42c3d0f-49e9-4506-a0a5-bf2853b5df6f."
+    In this example, we are getting detailed information about the information barrier policy that has ExoPolicyId *b42c3d0f-49e9-4506-a0a5-bf2853b5df6f*.
     
-    After you run the cmdlet, in the results, look for **AssignedSegment**, **SegmentsAllowed**, **SegmentsBlocked**, and **SegmentAllowedFilter** values.
+    After you run the cmdlet, in the results, look for **AssignedSegment**, **SegmentsAllowed**, and **SegmentsBlocked** values.
 
-    Example: After running the cmdlet, we saw the following in our list of results:
+    Example: After running the `Get-InformationBarrierPolicy` cmdlet, we saw the following in our list of results:
 
     ```powershell
         AssignedSegment      : Sales
         SegmentsAllowed      : {}
         SegmentsBlocked      : {Research}
-        SegmentAllowedFilter :
     ```
-    In this case, we can see that the policy affects people who are in the Sales and Research segments, and that people in Sales are prevented from communicating with Research. If this seems correct, then information barriers are working as expected. If something is not correct, proceed to the next step.
+    In this case, we can see that an information barrier policy affects people who are in the Sales and Research segments. In this case, people in Sales are prevented from communicating with people in Research. If this seems correct, then information barriers are working as expected. If not, proceed to the next step.
 
-4. Make sure your segments are defined correctly. To do this, run the `Get-OrganizationSegment` cmdlet, and review the list of results. 
+4. Make sure your segments are defined correctly. To do this, use the `Get-OrganizationSegment` cmdlet, and review the list of results. 
 
     To view details for a specific segment, use the `Get-OrganizationSegment` cmdlet with an Identity parameter. 
 
-    Example: `Get-OrganizationSegment -Identity "FFO.extest.microsoft.com/Microsoft Exchange Hosted Organizations/IBAPCorp04.onmicrosoft.com/Configuration/Sales"`
+    Example: `Get-OrganizationSegment -Identity c96e0837-c232-4a8a-841e-ef45787d8fcd`
 
-    Review the details for the segment. If necessary, [edit a segment](information-barriers-policies.md#view-or-edit-existing-segments), wait 30 minutes, and then re-run the `Start-InformationBarrierPoliciesApplication` cmdlet.
+    In this example, we are getting information about the segment that has GUID *c96e0837-c232-4a8a-841e-ef45787d8fcd*.
+
+    Review the details for the segment. If necessary, [edit a segment](information-barriers-policies.md#view-or-edit-existing-segments), wait 30 minutes, and then re-use the `Start-InformationBarrierPoliciesApplication` cmdlet.
 
     If you are still having issues with your information barrier policy, contact support.
     
@@ -86,7 +89,7 @@ After running the `Start-InformationBarrierPoliciesApplication` cmdlet, the proc
 
 1. Keep in mind that when you run the policy application cmdlet, information barrier policies are being applied (or removed), user by user, for all accounts in your organization. If you have a lot of users, it will take a while to process. 
 
-2. If you have waited a long time and the process still isn't finished, you can update a field in the users' profiles in Azure Active Directory, and wait 30 minutes for FwdSync to occur. For more details about how this works, see [New address lists that you create in Exchange Online don't contain all the expected recipients](https://support.microsoft.com/help/2955640/new-address-lists-that-you-create-in-exchange-online-don-t-contain-all).
+2. If you have waited a long time and the process still isn't finished, you can update a field in the users' profiles in Azure Active Directory, and then wait about 30 minutes for FwdSync to occur. For more details about how this works, see [New address lists that you create in Exchange Online don't contain all the expected recipients](https://support.microsoft.com/help/2955640/new-address-lists-that-you-create-in-exchange-online-don-t-contain-all).
 
 3. If after step 2 you are still having issues with the process finishing, contact support.
 

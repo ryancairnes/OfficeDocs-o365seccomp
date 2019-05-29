@@ -257,7 +257,7 @@ Information barrier policies are not in effect until they are set to active stat
 
     Repeat this step as appropriate for each policy.
 
-3. When you have finished setting your information barrier policies to active status, run the `Start-InformationBarrierPoliciesApplication` cmdlet in the Office 365 Security & Compliance Center.
+3. When you have finished setting your information barrier policies to active status, use the `Start-InformationBarrierPoliciesApplication` cmdlet in the Office 365 Security & Compliance Center.
 
     Policies are applied, user by user, for your organization. If your organization is large, it can take 24 hours for this process to complete.
 
@@ -289,7 +289,7 @@ If you want to edit or remove an information barrier policy, you must first set 
 
 ### Set a policy to inactive status
 
-1. To view a list of current information barrier policies, run the `Get-InformationBarrierPolicy` cmdlet.
+1. To view a list of current information barrier policies, use the `Get-InformationBarrierPolicy` cmdlet.
 
     In the list of results, identify the policy that you want to change (or remove). Note the policy's GUID and name.
 
@@ -299,7 +299,7 @@ If you want to edit or remove an information barrier policy, you must first set 
 
     In this example, we are setting an information barrier policy that has GUID *43c37853-ea10-4b90-a23d-ab8c9377247* to an inactive status.
 
-3. Run the `Start-InformationBarrierPoliciesApplication` cmdlet.
+3. use the `Start-InformationBarrierPoliciesApplication` cmdlet.
 
     Changes are applied, user by user, for your organization. If your organization is large, it can take 24 hours for this process to complete.
 
@@ -310,7 +310,7 @@ At this point, one or more information barrier policies are set to inactive stat
 
 ### Edit a policy
 
-1. To view a list of current information barrier policies, run the `Get-InformationBarrierPolicy` cmdlet.
+1. To view a list of current information barrier policies, use the `Get-InformationBarrierPolicy` cmdlet.
 
     In the list of results, identify the policy that you want to change. Note the policy's GUID and name. Make sure the policy is set to inactive status.
 
@@ -334,7 +334,7 @@ At this point, one or more information barrier policies are set to inactive stat
 
 1. Make sure to [set the policy to inactive status](#set-a-policy-to-inactive-status).
 
-2. To view a list of current information barrier policies, run the `Get-InformationBarrierPolicy` cmdlet.
+2. To view a list of current information barrier policies, use the `Get-InformationBarrierPolicy` cmdlet.
 
     In the list of results, identify the policy that you want to remove. Note the policy's GUID and name. Make sure the policy is set to inactive status.
 
@@ -348,7 +348,7 @@ At this point, one or more information barrier policies are set to inactive stat
 
 4. Repeat steps 1-3 for each policy you want to remove.
 
-5. When you are finished removing policies, run the `Start-InformationBarrierPoliciesApplication` cmdlet.
+5. When you are finished removing policies, use the `Start-InformationBarrierPoliciesApplication` cmdlet.
 
     Changes are applied, user by user, for your organization. If your organization is large, it can take 24 hours for this process to complete.
 
