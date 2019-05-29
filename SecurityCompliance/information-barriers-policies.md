@@ -100,9 +100,9 @@ Determine which attributes in your organization's directory data you'll use to d
 
 1. To define an organizational segment, use the `New-OrganizationSegment` cmdlet with the `UserGroupFilter` parameter that corresponds to the attribute you want to use. 
 
-    Example: `New-OrganizationSegment -Name "Segment1" -UserGroupFilter "Department -eq 'Department1'"`
+    Example: `New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"`
 
-    In this example, a segment called *Segment1* is defined using *Department1*, a value in the Department attribute.
+    In this example, a segment called *HR* is defined using *HR*, a value in the Department attribute.
 
 2. Repeat step 1 for each segment you want to define.
 
@@ -125,32 +125,30 @@ When you have a list of user segments and the information barrier policies you w
 
 1. To block communications between segments, use the `New-InformationBarrierPolicy` cmdlet with the **SegmentsBlocked** parameter. 
 
-    Example: `New-InformationBarrierPolicy -Name "Seg1CannotTalkToSeg2" -AssignedSegment "Seg1" -SegmentsBlocked "Seg2" -State Inactive`
+    Example: `New-InformationBarrierPolicy -Name "SalesBlockedFromResearch" -AssignedSegment "Sales" -SegmentsBlocked "Research" -State Inactive`
 
-    In this case, we are defining a policy called *Seg1CannotTalkToSeg2*. This policy can be applied to users in a segment called *Seg1*. When active and applied, this policy will help prevent people in *Seg1* from communicating with people in a segment called *Seg2*.
+    In this case, we are defining a policy called *SalesBlockedFromResearch*. This policy can be applied to users in a segment called *Sales*. When active and applied, this policy will help prevent people in *Sales* from communicating with people in a segment called *Research*.
 
-    Repeat this step for each policy you want to define to block communications
+    Repeat this step for each policy you want to define to block communications.
  
 2. Do one of the following:
 
    - (If needed) [Define a policy to allow a segment to communicate only with one other segment](#scenario-2-allow-a-segment-to-communicate-only-with-one-other-segment) 
-   - (If needed) [View or edit an information barrier policy](#edit-or-remove-an-information-barrier-policy)
    - (After all your policies are defined) [Apply information barrier policies](#part-3-apply-information-barrier-policies)
 
 ### Scenario 2: Allow a segment to communicate only with one other segment
 
 1. To allow one segment to communicate with only one other segment, use the `New-InformationBarrierPolicy` cmdlet with the **SegmentsAllowed** parameter. 
 
-    Example: `New-InformationBarrierPolicy -Name "Seg3CanOnlyTalkToSeg4" -AssignedSegment "Seg3" -SegmentsAllowed "Seg4" -State Inactive`
+    Example: `New-InformationBarrierPolicy -Name "ResearchTalksToHR" -AssignedSegment "Research" -SegmentsAllowed "HR" -State Inactive`
 
-    In this case, we are defining a policy called *Seg3CanOnlyTalkToSeg4*. This policy can be applied to users in a segment called *Seg3*. When active and applied, this policy will allow people in *Seg3* to communicate only with people in a segment called *Seg4*. (In this case, Seg3 cannot communicate with users who are not part of Seg4.)
+    In this case, we are defining a policy called *ResearchTalksToHR*. This policy can be applied to users in a segment called *Research*. When active and applied, this policy will allow people in *Research* to communicate only with people in a segment called *HR*. (In this case, Research cannot communicate with users who are not part of HR.)
 
     Repeat this step for each policy you want to define to restrict communications.
 
 2. Do one of the following:
 
    - (If needed) [Define a policy to block communications between segments](#scenario-1-block-communications-between-segments) 
-   - (If needed) [View or edit an information barrier policy](#edit-or-remove-an-information-barrier-policy)
    - (After all your policies are defined) [Apply information barrier policies](#part-3-apply-information-barrier-policies)
 
 ## Part 3: Apply information barrier policies
@@ -309,7 +307,7 @@ With the segments defined, Contoso proceeds to define two policies.
 |Policy  |Policy Definition  |
 |---------|---------|
 |Policy 1: Prevent Sales and Marketing from communicating with Research     | `New-InformationBarrierPolicy -Name "SalesMarketingBlockedFromResearch" -AssignedSegment "Sales, Marketing" -SegmentsBlocked "Research" -State Inactive` <p> In this example, the information barrier policy is called *SalesMarketingBlockedFromResearch*. When this policy is active and applied, it will help prevent users who are in the Sales and Marketing segments from communicating with users in the Research segment.       |
-|Policy 2: Allow Research to communicate with HR only     | `New-InformationBarrierPolicy -Name "Research-Engineering" -AssignedSegment "Research" -SegmentsAllowed "HR" -State Inactive` <p>In this case, Research can communicate only with HR, but HR is not restricted from communicating with other segments. |
+|Policy 2: Allow Research to communicate with HR only     | `New-InformationBarrierPolicy -Name "ResearchTalksToHR" -AssignedSegment "Research" -SegmentsAllowed "HR" -State Inactive` <p>In this case, the information barrier policy is called *ResearchTalksToHR*. When this policy is active and applied, Research can communicate only with HR, but HR is not restricted from communicating with other segments. |
 
 With segments and policies defined, Contoso applies the policies. When that finishes, Contoso is compliant with legal and industry requirements.
 
