@@ -33,7 +33,7 @@ Examples:
 
 When you define segments, use the same attribute for all your segments. For example, if you define some segments using *Department*, define all of the segments using *Department*. Don't define some segments using *Department* and others using *MemberOf*. Make sure your segments do not overlap; each user should be assigned to exactly one segment. 
 
-To learn more, see [Define segments with policy filters](information-barriers-policies.md#define-segments-with-policy-filters).
+To learn more, see [Define segments using PowerShell](information-barriers-policies.md#define-segments-using-powershell).
 
 ## Reference
 
