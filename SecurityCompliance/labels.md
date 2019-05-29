@@ -53,7 +53,7 @@ With retention labels, you can:
       
 - **Implement records management across Office 365**, including both email and documents. You can use a retention label to classify content as a record. When this happens, the label can't be changed or removed, and the content can't be edited or deleted. 
 
-- **Apply a default retention label to a document library, folder or docset** in SharePoint, so that all documents that arrive in that location inherit the default retention label.  
+- **Apply a default retention label to a document library, folder, or document set** in SharePoint, so that all documents that arrive in that location inherit the default retention label.  
     
 You create and manage retention labels on the **Labels** page > **Retention** tab in the Microsoft 365 compliance center, Microsoft 365 security center, or Office 365 Security and Compliance Center.  
 
@@ -61,9 +61,9 @@ You create and manage retention labels on the **Labels** page > **Retention** ta
 
 Making retention labels available to people in your organization so that they can classify content is a two-step process: first you create the retention labels, and then you publish them to the locations you choose. When you publish retention labels, a retention label policy gets created.
   
-![Diagram of roles and tasks for retention labels](media/4082bc7d-c04c-4b9a-8a26-7f12565d3311.png)
+![Diagram of roles and tasks for labels](media/4082bc7d-c04c-4b9a-8a26-7f12565d3311.png)
   
-Retention labels are independent, reusable building blocks that can be included in one or many retention label policies. The primary purpose of a retention label policy is to group a set of retention labels and specify the locations where you want those labels to appear.
+Retention labels are independent, reusable building blocks that are included in one or more retention label policies. The primary purpose of a retention label policy is to group a set of retention labels and specify the locations where you want those labels to appear.
   
 ![Diagram of labels, label policies, and locations](media/eee42516-adf0-4664-b5ab-76727a9a3511.png)
   
@@ -485,19 +485,3 @@ To use the label cmdlets, you need to:
   - [Remove-RetentionComplianceRule](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/remove-retentioncompliancerule)
 
   - [Set-RetentionComplianceRule](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/set-retentioncompliancerule)
-
-## More information
-
-[Overview of file plan manager](file-plan-manager.md)
-
-[Overview of event-driven retention](event-driven-retention.md)
-
-[Overview of disposition reviews](disposition-reviews.md)
-
-[View label usage with label analytics](label-analytics.md#retention-label-usage)
-
-[View label activity for documents](view-label-activity-for-documents.md)
-
-[Overview of retention policies](retention-policies.md)
-
-
