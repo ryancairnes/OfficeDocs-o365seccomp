@@ -13,12 +13,12 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: af398293-c69d-465e-a249-d74561552d30
-description: "File plan manager provides advanced management capabilities for retention labels and policies, and provides an integrated way to traverse label and label-to-content activity for your entire content lifecycle – from creation, through collaboration, record declaration, retention, and finally disposition."
+description: "File plan manager provides advanced management capabilities for retention labels, retention label policies, and provides an integrated way to traverse label and label-to-content activity for your entire content lifecycle – from creation, through collaboration, record declaration, retention, and finally disposition."
 ---
 
 # Overview of file plan manager
 
-File plan manager provides advanced management capabilities for retention labels and policies, and provides an integrated way to traverse label and label-to-content activity for your entire content lifecycle – from creation, through collaboration, record declaration, retention, and finally disposition.
+File plan manager provides advanced management capabilities for retention labels, retention label policies, and provides an integrated way to traverse label and label-to-content activity for your entire content lifecycle – from creation, through collaboration, record declaration, retention, and finally disposition.
 
 ![File plan page](media/file-plan-page.png)
 
@@ -45,7 +45,7 @@ These retention labels are configured only to retain content, not delete content
 You can determine who opened file plan manager and kicked off the first-run experience by reviewing the audit log for the activities **Created retention policy** and **Created retention configuration for a retention policy**.
 
 > [!NOTE]
-> Due to customer feedback, we have removed this feature that creates the default retention labels and label policy mentioned above. You will only see this policy and labels if you used file plan manager before April 11, 2019.
+> Due to customer feedback, we have removed this feature that creates the default retention labels and retention label policy mentioned above. You will only see these retention labels and retention label policy if you opened file plan manager before April 11, 2019.
 
 ## Navigating your file plan
 
@@ -78,9 +78,9 @@ On the **file plan labels** tab, the following additional information and capabi
 
 ![Label settings in file plan](media/file-plan-label-columns.png)
 
-### Label file plan descriptors columns
+### Retention label file plan descriptors columns
 
-You can now include more information in the configuration of your retention labels. Inserting file plan descriptors into labels will improve the manageability and organization of your file plan.
+You can now include more information in the configuration of your retention labels. Inserting file plan descriptors into retention  labels will improve the manageability and organization of your file plan.
 
 To get you started, file plan manager provides some out-of-box values for: Function/department, Category, Authority type and Provision/citation. You can add new file plan descriptor values when creating or editing a retention label.
 
@@ -92,7 +92,7 @@ Here's a view of the file plan descriptors columns on the labels tab of file pla
 
 ![file-plan-descriptors-on-labels-tab.png](media/file-plan-descriptors-on-labels-tab.png)
 
-## Export labels out of your file plan
+## Export all existing retention labels to analyze and/or perform offline reviews
 
 From file plan manager, you can export the details of all retention labels into a .csv file to assist you in facilitating periodic compliance reviews with data governance stakeholders in your organization.
 
@@ -104,11 +104,11 @@ A *.csv file containing all existing retention labels will open.
 
 ![CSV file showing all retention labels](media/file-plan-csv-file.png)
 
-## Import labels into your file plan
+## Import retention labels into your file plan
 
-From file plan manager, you can bulk import new labels as well as modify existing retention labels.
+From file plan manager, you can bulk import new retention labels as well as modify existing retention labels.
 
-To import new retention labels and make updates existing retention labels, go to **file plan manager** \> **file plan actions** \> **import labels**.
+To import new retention labels and update existing retention labels, go to **file plan manager** \> **file plan actions** \> **import labels**.
 
 ![Option to import file plan](media/file-plan-import-labels-option.png)
 
@@ -118,7 +118,7 @@ Download a blank template (or start from an export of your current file plan).
 
 ![Blank file plan template open in Excel](media/file-plan-blank-template.png)
 
-Fill-out the template (coming soon is reference information about valid values for entries).
+Fill-out the template (coming soon: reference information about valid value combinations for a single retention label).
 
 ![File plan template with information filled in](media/file-plan-filled-out-template.png)
 
@@ -126,7 +126,9 @@ Upload the filled-out template, and file plan manager will validate the entries 
 
 ![File plan import statistics](media/file-plan-import-statistics.png)
 
-When the import is complete, return to file plan manager to assign new labels to new or existing policies.
+In the event there is a validation error, file plan import will continue to validate every entry in the import file and display all errors referencing line/row numbers in the import file, copy the displayed error results so that you can easilly return to the import file and correct the errors. 
+
+When the import is complete, return to file plan manager to associate the new retention labels to new or existing retention label policies.
 
 ![Option to publish labels](media/file-plan-publish-labels-option.png)
 
