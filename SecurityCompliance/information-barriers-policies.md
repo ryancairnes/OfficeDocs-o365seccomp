@@ -100,14 +100,15 @@ Make a list of information barrier policies needed for your organization. You ca
 - Block communications between certain segments; or 
 - Allow communications between certain segments.
 
-Prepare a plan that includes the minimum number of policies you need for compliance. As you plan your information barrier policies, keep the following points in mind:
+Prepare a plan for the policies you must have for compliance. As you plan your information barrier policies, keep the following points in mind:
 - Currently, information barrier policies do not apply to email communications or to file sharing through SharePoint Online or OneDrive. 
 - Potentially, everyone included in an information barrier policy can be blocked from communicating with others in Microsoft Teams. When people affected by information barrier policies are part of the same team or group chat, they might be removed from those chat sessions. [Learn more about information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
+- Avoid bulk moves when information barrier policies are in effect. Ask your tenant admins not to move users between segments who cannot talk to each other. Either temporarily grant communication access and disable it later, after all users are moved, or create an intermediate segment who can talk to each of the initial segments. In any case, do not move users in bulk between entities who cannot communicate.
 
 
-### Make a list of segments to define
+### Make a list of segments
 
-In addition to your list of needed policies, make a list of segments for your organization. Every user in your organization should belong to a segment, and no user should belong to two or more segments. Each segment can have only one information barrier policy applied. You will most likely have some segments that are not included in information barrier policies. As a best practice, plan to define segments for all users anyway.  
+In addition to your list of needed policies, make a list of segments for your organization. Every user in your organization should belong to a segment, and no user should belong to two or more segments. Each segment can have only one information barrier policy applied. 
 
 Determine which attributes in your organization's directory data you'll use to define segments. Consider using *Department* or *MemberOf*, assuming you have values in those attributes for all users. To see a list of supported attributes, refer to [Attributes for information barrier policies (Preview)](information-barriers-attributes.md).
 
@@ -115,7 +116,7 @@ Determine which attributes in your organization's directory data you'll use to d
 > **Before you proceed to the next section, make sure your directory data has values for attributes that you can use to define segments**. If your directory data does not have values for the attributes you want to use, then all user accounts must be updated to include that information before you proceed with information barriers. To get help with this, see the following resources:<br/>- [Configure user account properties with Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/configure-user-account-properties-with-office-365-powershell)<br/>- [Add or update a user's profile information using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal)
 
 
-### Define segments with policy filters
+### Define segments using PowerShell
 
 1. To define an organizational segment, use the `New-OrganizationSegment` cmdlet with the `UserGroupFilter` parameter that corresponds to the attribute you want to use. 
 
@@ -129,7 +130,6 @@ Determine which attributes in your organization's directory data you'll use to d
 
 > [!IMPORTANT]
 > **Make sure that your segments do not overlap**. Each user in your organization should belong to one (and only one) segment. No user should belong to two or more segments. Segments should be defined for all users in your organization. 
-
 
 ### View or edit existing segments
 
@@ -150,13 +150,13 @@ When you have finished defining or editing your segments, proceed to [define](#p
 
 ## Part 2: Define information barrier policies
 
+> [!IMPORTANT]
+> As you define information barrier policies, make sure to set those policies to inactive status until you are ready to apply them. Defining (or editing) policies does not affect users until those policies are set to active status and then applied.
+
 When you have a list of user segments and the information barrier policies you want to define, select a scenario, and then follow the steps.
 
 - [Scenario 1: Block communications between segments](#scenario-1-block-communications-between-segments)
 - [Scenario 2: Allow a segment to communicate only with one other segment](#scenario-2-allow-a-segment-to-communicate-only-with-one-other-segment)
-
-> [!IMPORTANT]
-> As you define information barrier policies, make sure to set those policies to inactive status until you are ready to apply them. 
 
 ### Scenario 1: Block communications between segments
 
@@ -166,12 +166,13 @@ When you have a list of user segments and the information barrier policies you w
 
     In this case, we are defining a policy called *Seg1CannotTalkToSeg2*. This policy can be applied to users in a segment called *Seg1*. When active and applied, this policy will help prevent people in *Seg1* from communicating with people in a segment called *Seg2*.
 
+    Repeat this step for each policy you want to define to block communications
+ 
 2. Do one of the following:
 
-   - Repeat step 1 for each policy you want to define to block communications
-   - Proceed to [Scenario 2: Allow a segment to communicate only with one other segment](#scenario-2-allow-a-segment-to-communicate-only-with-one-other-segment) 
-   - [View or edit an information barrier policy](#edit-or-remove-an-information-barrier-policy)
-   - Proceed to [Part 3: Apply information barrier policies](#part-3-apply-information-barrier-policies)
+   - (If needed) [Define a policy to allow a segment to communicate only with one other segment](#scenario-2-allow-a-segment-to-communicate-only-with-one-other-segment) 
+   - (If needed) [View or edit an information barrier policy](#edit-or-remove-an-information-barrier-policy)
+   - (After all your policies are defined) [Apply information barrier policies](#part-3-apply-information-barrier-policies)
 
 ### Scenario 2: Allow a segment to communicate only with one other segment
 
@@ -181,16 +182,17 @@ When you have a list of user segments and the information barrier policies you w
 
     In this case, we are defining a policy called *Seg3CanOnlyTalkToSeg4*. This policy can be applied to users in a segment called *Seg3*. When active and applied, this policy will allow people in *Seg3* to communicate only with people in a segment called *Seg4*. (In this case, Seg3 cannot communicate with users who are not part of Seg4.)
 
+    Repeat this step for each policy you want to define to restrict communications.
+
 2. Do one of the following:
 
-   - Repeat step 1 for each policy you want to define to allow communications
-   - Go to [Scenario 1: Block communications between segments](#scenario-1-block-communications-between-segments) 
-   - [View or edit an information barrier policy](#edit-or-remove-an-information-barrier-policy)
-   - Proceed to [Part 3: Apply information barrier policies](#part-3-apply-information-barrier-policies)
+   - (If needed) [Define a policy to block communications between segments](#scenario-1-block-communications-between-segments) 
+   - (If needed) [View or edit an information barrier policy](#edit-or-remove-an-information-barrier-policy)
+   - (After all your policies are defined) [Apply information barrier policies](#part-3-apply-information-barrier-policies)
 
 ## Part 3: Apply information barrier policies
 
-Information barrier policies are not in effect until they are set to active status and then applied. 
+Information barrier policies are not in effect until you set them to active status, and then apply the policies.
 
 1. Use the `Get-InformationBarrierPolicy -Organization $org` cmdlet to see a list of policies that have been defined. Note the status and identity (GUID) of each policy.
 
@@ -293,11 +295,13 @@ At this point, one or more information barrier policies are set to inactive stat
 
 4. Repeat steps 1-3 for each policy you want to remove.
 
-5. When you are finished removing policies, use the `Start-InformationBarrierPoliciesApplication` cmdlet.
+5. When you are finished removing policies, apply your changes. To do this, use the `Start-InformationBarrierPoliciesApplication` cmdlet.
 
-    Changes are applied, user by user, for your organization. If your organization is large, it can take 24 hours for this process to complete.
+    Changes are applied, user by user, for your organization. If your organization is large, it can take 24 hours (or more) for this process to complete.
 
 ## Example: Contoso's departments, segments, and policies
+
+To see how an organization might approach defining segments and policies, consider the following example.
 
 Contoso has five departments: HR, Sales, Marketing, Research, and Manufacturing. In order to remain compliant with industry regulations, people in some departments are not supposed to communicate with other departments, as listed in the following table:
 
@@ -316,24 +320,16 @@ With this in mind, Contoso's plan includes two information barrier policies:
 
 The Manufacturing and HR departments don't have any other restrictions, so Contoso does not need additional information barrier policies at this time. 
 
-The list of segments includes the Department attribute in Azure Active Directory:
-- HR
-- Sales
-- Marketing
-- Research
-- Manufacturing
+Contoso will use the Department attribute in Azure Active Directory to define segments, as follows:
 
-Although no information barrier policies are defined to limit HR or Manufacturing from communicating, those segments are defined anyway. Using the *Department* attribute in Azure Active Directory, Contoso's segments are defined as follows:
 
-`New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"`
-
-`New-OrganizationSegment -Name "Sales" -UserGroupFilter "Department -eq 'Sales'"`
-
-`New-OrganizationSegment -Name "Marketing" -UserGroupFilter "Department -eq 'Marketing'"`
-
-`New-OrganizationSegment -Name "Research" -UserGroupFilter "Department -eq 'Research'"`
-
-`New-OrganizationSegment -Name "Manufacturing" -UserGroupFilter "Department -eq 'Manufacturing'"`
+|Department  |Segment Definition  |
+|---------|---------|
+|HR     | `New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"`        |
+|Sales     | `New-OrganizationSegment -Name "Sales" -UserGroupFilter "Department -eq 'Sales'"`        |
+|Marketing     | `New-OrganizationSegment -Name "Marketing" -UserGroupFilter "Department -eq 'Marketing'"`        |
+|Research     | `New-OrganizationSegment -Name "Research" -UserGroupFilter "Department -eq 'Research'"`        |
+|Manufacturing     | `New-OrganizationSegment -Name "Manufacturing" -UserGroupFilter "Department -eq 'Manufacturing'"`        |
 
 With the segments defined, Contoso proceeds to define two policies. For the first policy, designed to prevent Sales and Marketing from communicating with Research, Contoso uses the following cmdlet:
 
@@ -346,6 +342,8 @@ For Contoso's second policy, to allow Research to communicate with HR only, Cont
 `New-InformationBarrierPolicy -Name "Research-Engineering" -AssignedSegment "Research" -SegmentsAllowed "HR" -State Inactive`    
 
 In this case, Research can communicate only with HR, but HR is not restricted from communicating with other segments.
+
+With segments and policies defined, Contoso applies the policies. Now, Contoso is in compliance with legal and industry requirements.
 
 ## Related articles
 
