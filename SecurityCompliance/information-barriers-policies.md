@@ -88,6 +88,8 @@ Make a list of information barrier policies needed for your organization. You ca
 - Block communications between certain segments; or 
 - Allow communications between certain segments.
 
+(See [Example: Contoso's departments, segments, and policies](#example-contosos-departments-segments-and-policies).)
+
 ### Make a list of segments
 
 In addition to your list of needed policies, make a list of segments for your organization. Every user in your organization should belong to a segment, and no user should belong to two or more segments. Each segment can have only one information barrier policy applied. 
@@ -128,7 +130,7 @@ Determine which attributes in your organization's directory data you'll use to d
 
     In this example, for the segment that has the GUID *c96e0837-c232-4a8a-841e-ef45787d8fcd*, we are updating the department name to "HRDept".
 
-When you have finished defining or editing your segments, proceed to [define](#part-2-define-information-barrier-policies) (or [edit](#edit-or-remove-an-information-barrier-policy)) information barrier policies.
+When you have finished defining or editing all segments for your organization, proceed to [define](#part-2-define-information-barrier-policies) (or [edit](#edit-or-remove-an-information-barrier-policy)) information barrier policies.
 
 ## Part 2: Define information barrier policies
 
