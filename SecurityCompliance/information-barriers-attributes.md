@@ -25,8 +25,6 @@ This article provides a list of attributes that can be used. To learn more about
 
 The attributes listed in this article can be used to define (or edit) segments of users. Segments are used as parameters (UserGroupFilter) in information barrier policies.
 
-Examples:
-
 |Example  |Cmdlet  |
 |---------|---------|
 |Define a segment called Segment1 using the Department attribute     | `New-OrganizationSegment -Name "Segment1" -UserGroupFilter "Department -eq 'Department1'"`        |
