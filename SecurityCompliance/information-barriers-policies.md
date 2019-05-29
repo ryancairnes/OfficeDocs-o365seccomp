@@ -13,7 +13,7 @@ localization_priority: None
 description: "Learn how to define policies for information barriers in Microsoft Teams."
 ---
 
-# Define policies for information barriers in Microsoft Teams (Preview)
+# Define policies for information barriers (Preview)
 
 With information barriers, you can define policies that are designed to prevent certain segments of users from communicating with each other, or allow specific segments to communicate only with certain other segments. Information barrier policies can help your organization maintain compliance with relevant industry standards and regulations, and avoid potential conflicts of interest. To learn more, see [Information barriers (Preview)](information-barriers.md). 
 
