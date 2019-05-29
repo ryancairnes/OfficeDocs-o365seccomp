@@ -3,7 +3,7 @@ title: "Overview of the new Microsoft 365 compliance center"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 04/09/2019
+ms.date: 05/29/2019
 audience: ITPro
 ms.topic: article
 ms.service: o365-seccomp
@@ -83,6 +83,14 @@ We are still developing the Microsoft 365 compliance center, and we'll be adding
 ### Why don't I see the new Microsoft 365 compliance center yet?
 
 First, make sure you have the appropriate [licenses and permissions](microsoft-security-and-compliance.md#required-licenses-and-permissions). Then, sign in at [https://compliance.microsoft.com](https://compliance.microsoft.com). If you don't see the new compliance center yet, you will have it soon.
+
+### Some of my compliance features are not available in the Microsoft 365 compliance center. What do I do?
+
+To access features that are not yet available in the Microsoft 365 compliance center, you can use the Office 365 Security & Compliance Center. 
+
+To go there, in the Microsoft 365 compliance center, in the navigation pane on the left side of the screen, choose **More resources**, and then, under **Office 365 security & compliance center**, choose **Open**.
+
+![More resources](media/MoreResourcesShowAll.png)
 
 ### I can't find some of my compliance settings. What do I do?
 
