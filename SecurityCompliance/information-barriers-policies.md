@@ -33,18 +33,6 @@ With information barriers, you can define policies that are designed to prevent 
 
 ## Prerequisites
 
-### Licenses and subscriptions
-
-**Currently, the information barrier feature is in preview**. When information barrier policies are generally available, they'll be included in the following subscriptions:
-- Microsoft 365 E5
-- Office 365 E5
-- Office 365 Advanced Compliance
-- Microsoft 365 Information Protection and Compliance
-
-For more details about these plans and compliance features, see [Compliance Solutions](https://products.office.com/business/security-and-compliance/compliance-solutions).
-
-Licenses must be assigned to users who are affected by information barrier policies. In addition, users must be mail-enabled in Office 365. 
-
 ### Permissions
 
 To define or edit information barrier policies, **you must be assigned an appropriate role**, such as one of the following:
