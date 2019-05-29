@@ -191,7 +191,7 @@ After you have applied information barrier policies, follow these steps to verif
     
     This returns information about the users, such as whether any policies are defined that affect the users.
 
-## Edit a segment or policy
+## Edit a segment or a policy
 
 ### Edit a segment
 
@@ -226,7 +226,7 @@ When you have finished defining or editing all segments for your organization, p
 
 4. When you are finished editing your policies, proceed to [Part 3: Apply information barrier policies](#part-3-apply-information-barrier-policies).
 
-## Remove a policy
+### Remove a policy
 
 1. Make sure to [set the policy to inactive status](#set-a-policy-to-inactive-status).
 
@@ -248,7 +248,7 @@ When you have finished defining or editing all segments for your organization, p
 
     Changes are applied, user by user, for your organization. If your organization is large, it can take 24 hours (or more) for this process to complete.
 
-## Set a policy to inactive status
+### Set a policy to inactive status
 
 1. To view a list of current information barrier policies, use the `Get-InformationBarrierPolicy` cmdlet.
 
@@ -291,7 +291,6 @@ With this in mind, Contoso's plan includes two information barrier policies:
 The Manufacturing and HR departments don't have any other restrictions, so Contoso does not need additional information barrier policies at this time. 
 
 Contoso will use the Department attribute in Azure Active Directory to define segments, as follows:
-
 
 |Department  |Segment Definition  |
 |---------|---------|
