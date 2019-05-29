@@ -384,6 +384,7 @@
 ## [Release notes](datainvestigations/data-investigations-release-notes.md)
 ## [Manage a data spillage incident](datainvestigations/manage-data-spillage-incidents.md)
 ## [Create a new investigation](datainvestigations/create-new-investigation.md)
+## [Assign permissions for data investigations](datainvestigations/permissions.md)
  
 ## [Search for data in an investigation](datainvestigations/search-for-data.md)
 ### [Build search queries](datainvestigations/build-search-queries.md)
