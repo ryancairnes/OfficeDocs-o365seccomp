@@ -64,7 +64,8 @@ Before you define or edit segments or information barrier policies, follow these
 
 2. Run the following PowerShell cmdlets:<br>
 
-    ```Login-AzureRmAccount 
+    ```
+    Login-AzureRmAccount 
     $appId="bcf62038-e005-436d-b970-2a472f8c1982" 
     $sp=Get-AzureRmADServicePrincipal -ServicePrincipalName $appId
     if ($sp -eq $null) { New-AzureRmADServicePrincipal -ApplicationId $appId }
