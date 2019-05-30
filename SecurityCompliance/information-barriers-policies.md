@@ -101,13 +101,15 @@ During this phase, you determine what policies are needed, make a list of segmen
 
 ### Determine what policies are needed
 
-Make a list of information barrier policies needed for your organization. You can use information barrier policies to:
-- Block communications between certain segments; or 
-- Allow communications between certain segments.
+Considering legal and industry regulations, who are the groups within your organization who will need information barrier policies? Make a list. Are there any groups who should be prevented from communicating with another group? Are there any groups that should be allowed to communicate only with one or two other groups? Think about the policies you need as belonging to one of two groups:
+- **Blocking policies** that prevent one group from communicating with another group
+- **Allow policies** that allow certain groups to communicate with only certain other groups.
+
+When you have your list of groups and policies, proceed to identify the segments you'll need.
 
 (See [Example: Contoso's departments, segments, and policies](#example-contosos-departments-segments-and-policies) in this article.)
 
-### Make a list of segments
+### Identify segments
 
 In addition to your list of needed policies, make a list of segments for your organization. Every user in your organization should belong to a segment, and no user should belong to two or more segments. Each segment can have only one information barrier policy applied. 
 
