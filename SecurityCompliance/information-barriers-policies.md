@@ -120,7 +120,10 @@ After you have defined your segments, proceed to define information barrier poli
 
 With your list of user segments and the information barrier policies you want to define, select a scenario, and then follow the steps. 
 
-**Make sure that as you define policies, you do not assign more than one policy to a segment**. For example, if you define a policy for a segment called Sales, do not define an additional policy that is assigned to Sales. Determine whether you need to prevent communications between certain segments, or limit communications to certain segments. Choose between the scenarios below to define your policies.
+> [!IMPORTANT]
+> **Make sure that as you define policies, you do not assign more than one policy to a segment**. For example, if you define one policy for a segment called *Sales*, do not define an additional policy for *Sales*. 
+
+Determine whether you need to prevent communications between certain segments, or limit communications to certain segments. Choose between the scenarios below to define your policies.
 
 - [Scenario 1: Block communications between segments](#scenario-1-block-communications-between-segments)
 - [Scenario 2: Allow a segment to communicate only with one other segment](#scenario-2-allow-a-segment-to-communicate-only-with-one-other-segment)
@@ -144,19 +147,19 @@ With your list of user segments and the information barrier policies you want to
 
     Syntax: `New-InformationBarrierPolicy -Name "policyname" -AssignedSegment "segmentname, segmentname" -SegmentsBlocked "segmentname, segmentname"`
 
-    Example 1 - Define a policy to block multiple segments from communicating with another segment: 
+    Example 1: Define a policy to block multiple segments from communicating with another segment 
     
     `New-InformationBarrierPolicy -Name "SalesMarketingBlockedFromResearch" -AssignedSegment "Sales, Marketing" -SegmentsBlocked "Research" -State Inactive`
 
     In this example, we defined a policy for the *Sales* and *Marketing* segments. When active and applied, this policy prevents *Sales* and *Marketing* from communicating with *Research*.
 
-    Example 2 - Define a policy to block one segment from communicating with multiple other segments: 
+    Example 2: Define a policy to block one segment from communicating with multiple other segments 
     
     `New-InformationBarrierPolicy -Name "SalesBlockedFromResearchManufacturing" -AssignedSegment "Sales" -SegmentsBlocked "Research, Manufacturing" -State Inactive`
 
     In this case, we defined a policy for the *Sales* segment. When active and applied, this policy prevents *Sales* from communicating with either *Research* or *Manufacturing*.
 
-    Repeat this step for each policy you want to define to block communications.
+    Repeat this step for each policy you want to define to block communications between segments.
  
 2. Do one of the following:
 
@@ -177,13 +180,13 @@ With your list of user segments and the information barrier policies you want to
 
     Syntax: `New-InformationBarrierPolicy -Name "policyname" -AssignedSegment "segmentname" -SegmentsAllowed "segmentname, segmentname"`
 
-    Example 1 - Define a policy to allow multiple segments to communicate with only one other segment:
+    Example 1: Define a policy to allow multiple segments to communicate with only one other segment
 
     `New-InformationBarrierPolicy -Name "ResearchManufacturingTalkToHROnly" -AssignedSegment "Research, Manufacturing" -SegmentsAllowed "HR" -State Inactive`
 
     In this example, we defined a policy that allows the *Research* and *Manufacturing* segments to communicate only with *HR*.
 
-    Example 2 - Define a policy to allow multiple segments to communicate with only certain other segments:
+    Example 2: Define a policy to allow multiple segments to communicate with only certain other segments
 
     `New-InformationBarrierPolicy -Name "SalesMarketingTalkToHRManufacturingOnly" -AssignedSegment "Sales, Marketing" -SegmentsAllowed "HR, Manufacturing" -State Inactive`
 
@@ -210,7 +213,7 @@ Information barrier policies are not in effect until you set them to active stat
 
     Example: `Set-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c93772471 -State Active`
     
-    In this example, we are setting an information barrier policy that has the GUID *43c37853-ea10-4b90-a23d-ab8c93772471* to active status.
+    In this example, we set an information barrier policy that has the GUID *43c37853-ea10-4b90-a23d-ab8c93772471* to active status.
 
     Repeat this step as appropriate for each policy.
 
@@ -254,7 +257,7 @@ After you have applied information barrier policies, follow these steps to verif
     
     `Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw`
     
-    In this example, we are referring to two user accounts in Office 365: *meganb* for *Megan*, and *alexw* for *Alex*.
+    In this example, we refer to two user accounts in Office 365: *meganb* for *Megan*, and *alexw* for *Alex*.
     
     (You can also use this cmdlet for a single user: `Get-InformationBarrierRecipientStatus -Identity <value>`)
     
@@ -279,7 +282,7 @@ After you have applied information barrier policies, follow these steps to verif
 
     Example: `Set-OrganizationSegment -Identity c96e0837-c232-4a8a-841e-ef45787d8fcd -UserGroupFilter "Department -eq 'HRDept'"`
 
-    In this example, for the segment that has the GUID *c96e0837-c232-4a8a-841e-ef45787d8fcd*, we are updating the department name to "HRDept".
+    In this example, for the segment that has the GUID *c96e0837-c232-4a8a-841e-ef45787d8fcd*, we updated the department name to "HRDept".
 
 When you have finished editing segments for your organization, you can proceed to [define](#part-2-define-information-barrier-policies) or [edit](#edit-a-policy) information barrier policies.
 
@@ -347,7 +350,7 @@ When you have finished editing segments for your organization, you can proceed t
 
     `Set-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c9377247 -State Inactive`
 
-    In this example, we are setting an information barrier policy that has GUID *43c37853-ea10-4b90-a23d-ab8c9377247* to an inactive status.
+    In this example, we set an information barrier policy that has GUID *43c37853-ea10-4b90-a23d-ab8c9377247* to an inactive status.
 
 3. To apply your changes, use the **Start-InformationBarrierPoliciesApplication** cmdlet.
 
