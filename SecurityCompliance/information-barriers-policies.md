@@ -20,6 +20,17 @@ With information barriers, you can define policies that are designed to prevent 
 > [!IMPORTANT]
 > This article describes how to plan, define, implement, and manage information barrier policies. Several steps are involved, and the work flow is divided into several parts. Make sure to read through the [prerequisites](#prerequisites) and the entire process before you begin defining (or editing) information barrier policies.
 
+## The concepts
+
+Before you plan, define, and implement information barrier policies, get to know the basic underlying concepts. 
+
+- **Users** are grouped into non-overlapping **Segments**.
+- **Segments** are defined using an **Attribute** in Azure Active Directory (or Exchange Online).
+- **Policies** are defined and are assigned to **Segments**. (Each segment cannot be assigned more than one policy.)
+- When you define policies, you choose from two kinds of policies:
+    - **Block**: Prevent one segment from communicating with another segment
+    - **Allow**: Enable one segment to communicate with only other specific segments
+
 ## The work flow at a glance
 
 |Phase    |What's involved  |
