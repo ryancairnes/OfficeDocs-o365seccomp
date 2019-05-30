@@ -112,6 +112,9 @@ Determine which attributes in your organization's directory data you'll use to d
 > [!IMPORTANT]
 > **Make sure that your segments do not overlap**. Each user in your organization should belong to one (and only one) segment. No user should belong to two or more segments. Segments should be defined for all users in your organization. 
 
+(See [Example: Contoso's departments, segments, and policies](#example-contosos-departments-segments-and-policies).)
+
+
 ## Part 2: Define information barrier policies
 
 > [!IMPORTANT]
@@ -121,6 +124,9 @@ When you have a list of user segments and the information barrier policies you w
 
 - [Scenario 1: Block communications between segments](#scenario-1-block-communications-between-segments)
 - [Scenario 2: Allow a segment to communicate only with one other segment](#scenario-2-allow-a-segment-to-communicate-only-with-one-other-segment)
+
+(See [Example: Contoso's departments, segments, and policies](#example-contosos-departments-segments-and-policies).)
+
 
 ### Scenario 1: Block communications between segments
 
