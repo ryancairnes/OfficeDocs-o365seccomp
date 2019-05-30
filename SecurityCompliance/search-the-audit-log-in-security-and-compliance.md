@@ -295,15 +295,15 @@ Click one of the following links to go to a specific table.
   
 ||||
 |:-----|:-----|:-----|
-|[File and page activities](#file-and-page-activities)<br/> |[Folder activities](#folder-activities)<br/> |[Sharing and access request activities](#sharing-and-access-request-activities)<br/> |
-|[Synchronization activities](#synchronization-activities)<br/> |[Site administration activities](#site-administration-activities)<br/> |[Exchange mailbox activities](#exchange-mailbox-activities)<br/> |
-|[Sway activities](#sway-activities) <br/> |[User administration activities](#user-administration-activities) <br/> |[Azure AD group administration activities](#azure-ad-group-administration-activities) <br/> 
-|[Application administration activities](#application-administration-activities) <br/> |[Role administration activities](#role-administration-activities) <br/> |[Directory administration activities](#directory-administration-activities) <br/>| 
-|[eDiscovery activities](#ediscovery-activities) <br/> |[Power BI activities](#power-bi-activities) <br/> |[Microsoft Workplace Analytics](#microsoft-workplace-analytics-activities)<br/>|
-|[Microsoft Teams activities](#microsoft-teams-activities) <br/> |[Yammer activities](#yammer-activities) <br/> |[Microsoft Flow activities](#microsoft-flow-activities) <br/>|
-|[Microsoft PowerApps activities](#microsoft-powerapps)<br/>|[Microsoft Stream activities](#microsoft-stream-activities) <br/>|[Exchange admin activities](#exchange-admin-audit-log)<br/>|
+|[File and page activities](#file-and-page-activities)<br/> |[Folder activities](#folder-activities)<br/> |[SharePoint list activities](#sharepoint-list-activities)<br/>|
+|[Sharing and access request activities](#sharing-and-access-request-activities)<br/> |[Synchronization activities](#synchronization-activities)<br/> |[Site administration activities](#site-administration-activities)<br/> |
+|[Exchange mailbox activities](#exchange-mailbox-activities)<br/> |[Sway activities](#sway-activities) <br/> |[User administration activities](#user-administration-activities) <br/> |
+|[Azure AD group administration activities](#azure-ad-group-administration-activities) <br/> |[Application administration activities](#application-administration-activities) <br/> |[Role administration activities](#role-administration-activities) <br/> |
+|[Directory administration activities](#directory-administration-activities) <br/>|[eDiscovery activities](#ediscovery-activities) <br/> |[Advanced eDiscovery activities](#advanced-ediscovery-activities)<br/> |
+|[Power BI activities](#power-bi-activities) <br/> |[Microsoft Workplace Analytics](#microsoft-workplace-analytics-activities)<br/>|[Microsoft Teams activities](#microsoft-teams-activities) <br/> |
+|[Yammer activities](#yammer-activities) <br/> |[Microsoft Flow activities](#microsoft-flow-activities) <br/>|[Microsoft PowerApps activities](#microsoft-powerapps)<br/>|
+|[Microsoft Stream activities](#microsoft-stream-activities) <br/>|[Exchange admin activities](#exchange-admin-audit-log)<br/>|
 ||||
-   
   
 ### File and page activities
   
@@ -319,6 +319,7 @@ The following table describes the file and page activities in SharePoint Online 
 |Deleted file  <br/> |FileDeleted  <br/> |User deletes a document from a site.  <br/> |
 |Deleted file from recycle bin  <br/> |FileDeletedFirstStageRecycleBin  <br/> |User deletes a file from the recycle bin of a site.  <br/> |
 |Deleted file from second-stage recycle bin  <br/> |FileDeletedSecondStageRecycleBin  <br/> |User deletes a file from the second-stage recycle bin of a site.  <br/> |
+|Detected document sensitivity mismatch <br/>|DocumentSensitivityMismatchDetected<br/>|User uploads a document classified with a sensitivity label that has a higher priority than the sensitivity label that's applied to the site the document is uploaded to. Note this event isn't triggered if the sensitivity label applied to a site has a higher priority than the sensitivity label applied to a document that's uploaded to the site. For more information about sensitivity label priority, see the "Label priority" section in [Overview of sensitivity labels](sensitivity-labels.md#label-priority-order-matters).<br/>|
 |Detected malware in file  <br/> |FileMalwareDetected  <br/> |SharePoint anti-virus engine detects malware in a file.  <br/> |
 |Discarded file checkout  <br/> |FileCheckOutDiscarded  <br/> |User discards (or undos) a checked out file. That means any changes they made to the file when it was checked out are discarded, and not saved to the version of the document in the document library.  <br/> |
 |Downloaded file  <br/> |FileDownloaded  <br/> |User downloads a document from a site.  <br/> |
@@ -333,6 +334,8 @@ The following table describes the file and page activities in SharePoint Online 
 |Uploaded file  <br/> |FileUploaded  <br/> |User uploads a document to a folder on a site.  <br/> |
 |Viewed page  <br/> |PageViewed  <br/> |User views a page on a site. This doesn't include using a Web browser to view files located in a document library.  <br/> |
 |(none)  <br/> |PageViewedExtended  <br/> |This is related to the "Viewed page" (PageViewed) activity. A PageViewedExtended event is logged when the same person continually views a web page for an extended period of time (up to 3 hours). The purpose of logging PageViewedExtended events is to reduce the number of PageViewed events that are logged when a page is continually viewed. This helps reduce the noise of multiple PageViewed records for what is essentially the same user activity, and lets you focus on the initial (and more important) PageViewed event.  <br/> |
+|View signaled by client <br/>|ClientViewSignaled<br/>|A user’s client (such as website or mobile app) has signaled that the indicated page has been viewed by the user. This activity is often logged following a PagePrefetched event for a page. <br/><br/>**NOTE**: Because ClientViewSignaled events are signaled by the client, rather than the server, it's possible the event may not be logged by the server and therefore may not appear in the audit log. It's also possible that information in the audit record may not be trustworthy. However, because the user’s identity is validated by the token used to create the signal, the user’s identity listed in the corresponding audit record is accurate. |
+|(none) <br/>|PagePrefetched<br/>|A user’s client (such as website or mobile app) has requested the indicated page to help improve performance if the user browses to it. This event is logged to indicate the page content has been served to the user’s client; this event isn't a definitive indication that the user actually navigated to the page. When the page content is rendered by the client (as per the user’s request) a ClientViewSignaled event should be generated. Note that not all clients support indicating a pre-fetch, and therefore some pre-fetched activities might instead be logged as PageViewed events.<br/>|
 ||||
   
 ### Folder activities
@@ -352,6 +355,35 @@ The following table describes the folder activities in SharePoint Online and One
 |Restored folder  <br/> |FolderRestored  <br/> |User restores a deleted folder from the recycle bin on a site.  <br/> |
 ||||
   
+### SharePoint list activities
+  
+The following table describes activities related to when users interact with lists and list items in SharePoint Online.
+
+|**Friendly name**|**Operation**|**Description**|
+|:-----|:-----|:-----|
+| Created list              | ListCreated              | A user created a new SharePoint list.|
+| Created list column       | ListColumnCreated        | A user created a new SharePoint list column. A list column is a column that's attached to one or more SharePoint lists. |
+| Created list content type | ListContentTypeCreated   | A user created a new list content type. A list content type is a content type that's attached to one or more SharePoint lists.|
+| Created list item         | ListItemCreated          | A user created a new item in an existing SharePoint list.|
+| Created site column       | SiteColumnCreated        | A user created a new SharePoint site column. A site column is a column that isn't attached to a list. A site column is also a metadata structure that can be used by any list in a given web.|
+| Created site content type | Site ContentType Created | A user created a new site content type. A site content type is a content type that's attached to the parent site.|
+| Deleted list              | ListDeleted              | A user deleted a SharePoint list.|
+| Deleted list column       | List Column Deleted      | A user deleted a SharePoint list column.|
+| Deleted list content type | ListContentTypeDeleted   | A user deleted a list content type. |
+| Deleted list item         | List Item Deleted        | A user deleted a SharePoint list item.|
+| Deleted site column       | SiteColumnDeleted        | A user deleted a SharePoint site column. |
+| Deleted site content type | SiteContentTypeDeleted   | A user deleted a site content type.|
+| Recycled list item        | ListItemRecycled         | A user moved a SharePoint list item to the Recycle Bin.|
+| Restored list             | ListRestored             | A user restored a SharePoint list from the Recycle Bin.|
+| Restored list item        | ListItemRestored         | A user restored a SharePoint list item from the Recycle Bin.|
+| Updated list              | ListUpdated              | A user updated a SharePoint list by modifying one or more properties.|
+| Updated list column       | ListColumnUpdated        | A user updated a SharePoint list column by modifying one or more properties.|
+| Updated list content type | ListContentTypeUpdated   | A user updated a list content type by modifying one or more properties.|
+| Updated list item         | ListItemUpdated          | A user updated a SharePoint list item by modifying one or more properties.|  
+| Updated site column       | SiteColumnUpdated        | A user updated a SharePoint site column by modifying one or more properties.|
+| Updated site content type | SiteContentTypeUpdated   | A user updated a site content type by modifying one or more properties.|
+||||
+
 ### Sharing and access request activities
   
 The following table describes the user sharing and access request activities in SharePoint Online and OneDrive for Business. For sharing events, the **Detail** column under **Results** identifies the name of the user or group the item was shared with and whether that user or group is a member or guest in your organization. For more information, see [Use sharing auditing in the Office 365 audit log](use-sharing-auditing.md).
@@ -364,10 +396,7 @@ The following table describes the user sharing and access request activities in 
 |Accepted access request  <br/> |AccessRequestAccepted  <br/> |An access request to a site, folder, or document was accepted and the requesting user has been granted access.  <br/> |
 |Accepted sharing invitation  <br/> |SharingInvitationAccepted  <br/> |User (member or guest) accepted a sharing invitation and was granted access to a resource. This event includes information about the user who was invited and the email address that was used to accept the invitation (they could be different). This activity is often accompanied by a second event that describes how the user was granted access to the resource, for example, adding the user to a group that has access to the resource.  <br/> |
 |Added permission level to site collection  <br/> |PermissionLevelAdded  <br/> |A permission level was added to a site collection.  <br/> |
-|User added to secure link  <br/> |AddedToSecureLink  <br/> |A user was added to the list of entities who can use this secure sharing link.  <br/> |
 |Blocked sharing invitation  <br/> |SharingInvitationBlocked  <br/> | A sharing invitation sent by a user in your organization is blocked because of an external sharing policy that either allows or denies external sharing based on the domain of the target user. In this case, the sharing invitation was blocked because:  <br/>  The target user's domain isn't included in the list of allowed domains.  <br/>  Or  <br/>  The target user's domain is included in the list of blocked domains.  <br/>  For more information about allowing or blocking external sharing based on domains, see [Restricted domains sharing in SharePoint Online and OneDrive for Business](https://support.office.com/article/5d7589cd-0997-4a00-a2ba-2320ec49c4e9).  <br/> |
-|Broke permission level inheritance  <br/> |PermissionLevelsInheritanceBroken  <br/> |An item was changed so that it no longer inherits permission levels from its parent.  <br/> |
-|Broke sharing inheritance  <br/> |SharingInheritanceBroken  <br/> |An item was changed so that it no longer inherits sharing permissions from its parent.  <br/> |
 |Created a company shareable link  <br/> |CompanyLinkCreated  <br/> |User created a company-wide link to a resource. company-wide links can only be used by members in your organization. They can't be used by guests.  <br/> |
 |Created access request  <br/> |AccessRequestCreated  <br/> |User requests access to a site, folder, or document they don't have permissions to access.  <br/> |
 |Created an anonymous link  <br/> |AnonymousLinkCreated  <br/> |User created an anonymous link to a resource. Anyone with this link can access the resource without having to be authenticated.  <br/> |
@@ -375,11 +404,8 @@ The following table describes the user sharing and access request activities in 
 |Created sharing invitation  <br/> |SharingInvitationCreated  <br/> |User shared a resource in SharePoint Online or OneDrive for Business with a user who isn't in your organization's directory.  <br/> |
 |Deleted secure link  <br/> |SecureLinkDeleted  <br/> |A secure sharing link was deleted.  <br/> |
 |Denied access request  <br/> |AccessRequestDenied  <br/> |An access request to a site, folder, or document was denied.  <br/> |
-|Modified permission level on site collection  <br/> |PermissionLevelModified  <br/> |A permission level was changed on a site collection.  <br/> |
 |Removed a company shareable link  <br/> |CompanyLinkRemoved  <br/> |User removed a company-wide link to a resource. The link can no longer be used to access the resource.  <br/> |
 |Removed an anonymous link  <br/> |AnonymousLinkRemoved  <br/> |User removed an anonymous link to a resource. The link can no longer be used to access the resource.  <br/> |
-|Removed permission level from site collection  <br/> |PermissionLevelRemoved  <br/> |A permission level was removed from a site collection.  <br/> |
-|Restored sharing inheritance  <br/> |SharingInheritanceReset  <br/> |A change was made so that an item inherits sharing permissions from its parent.  <br/> |
 |Shared file, folder, or site  <br/> |SharingSet  <br/> |User (member or guest) shared a file, folder, or site in SharePoint or OneDrive for Business with a user in your organization's directory. The value in the **Detail** column for this activity identifies the name of the user the resource was shared with and whether this user is a member or a guest. This activity is often accompanied by a second event that describes how the user was granted access to the resource; for example, adding the user to a group that has access to the resource.  <br/> |
 |Updated access request  <br/> |AccessRequestUpdated  <br/> |An access request to an item was updated.  <br/> |
 |Updated an anonymous link  <br/> |AnonymousLinkUpdated  <br/> |User updated an anonymous link to a resource. The updated field is included in the EventData property when you export the search results.  <br/> |
@@ -406,17 +432,41 @@ The following table lists file synchronization activities in SharePoint Online a
 |Uploaded files to document library  <br/> |FileSyncUploadedFull  <br/> |User establishes a sync relationship and successfully uploads files for the first time from their computer to a document library.  <br/> |
 |Uploaded file changes to document library  <br/> |FileSyncUploadedPartial  <br/> |User successfully uploads changes to files on a document library. This event indicates that any changes made to the local version of a file from a document library are successfully uploaded to the document library. Only changes are uploaded because those files were previously uploaded by the user (as indicated by the **Uploaded files to document library** activity).  <br/> |
 ||||
+
+### Site permissions activities
+
+The following table lists events related to assigning permissions in SharePoint and using groups to give (and revoke) access to sites.
+
+|**Friendly name**|**Operation**|**Description**|
+|:-----|:-----|:-----|
+|Added site collection admin  <br/> |SiteCollectionAdminAdded  <br/> |Site collection administrator or owner adds a person as a site collection administrator for a site. Site collection administrators have full control permissions for the site collection and all subsites. This activity is also logged when an admin gives themselves access to a user's OneDrive account (by editing the user profile in the SharePoint admin center or  [by using the Microsoft 365 admin center](https://docs.microsoft.com/office365/admin/add-users/get-access-to-and-back-up-a-former-user-s-data#part-1---get-access-to-the-former-employees-onedrive-for-business-documents)). <br/> |
+|Added user or group to SharePoint group  <br/> |AddedToGroup  <br/> |User added a member or guest to a SharePoint group. This might have been an intentional action or the result of another activity, such as a sharing event.  <br/> |
+|Broke permission level inheritance  <br/> |PermissionLevelsInheritanceBroken  <br/> |An item was changed so that it no longer inherits permission levels from its parent.  <br/> |
+|Broke sharing inheritance  <br/> |SharingInheritanceBroken  <br/> |An item was changed so that it no longer inherits sharing permissions from its parent.  <br/> |
+|Created group  <br/> |GroupAdded  <br/> |Site administrator or owner creates a group for a site, or performs a task that results in a group being created. For example, the first time a user creates a link to share a file, a system group is added to the user's OneDrive for Business site. This event can also be a result of a user creating a link with edit permissions to a shared file.  <br/> |
+|Deleted group  <br/> |GroupRemoved  <br/> |User deletes a group from a site.  <br/> |
+|Modified access request setting  <br/> |WebRequestAccessModified  <br/> |The access request settings were modified on a site.  <br/> |
+|Modified 'Members Can Share' setting  <br/> |WebMembersCanShareModified  <br/> |The **Members Can Share** setting was modified on a site.  <br/> |
+|Modified permission level on site collection  <br/> |PermissionLevelModified  <br/> |A permission level was changed on a site collection.  <br/> |
+|Modified site permissions  <br/> |SitePermissionsModified  <br/> |Site administrator or owner (or system account) changes the permission level that are assigned to a group on a site. This activity is also logged if all permissions are removed from a group.  <br/><br/> **NOTE**: This operation has been deprecated in SharePoint Online. To find related events, you can search for other permission-related activities such as **Added site collection admin**, **Added user or group to SharePoint group**, **Allowed user to create groups**, **Created group**, and **Deleted group.**|
+|Removed permission level from site collection  <br/> |PermissionLevelRemoved  <br/> |A permission level was removed from a site collection.  <br/> |
+|Removed site collection admin  <br/> |SiteCollectionAdminRemoved <br/> |Site collection administrator or owner removes a person as a site collection administrator for a site. This activity is also logged when an admin removes themselves from the list of site collection administrators for a user's OneDrive account (by editing the user profile in the SharePoint admin center).  Note that to return this activity in the audit log search results, you have to search for all activities. <br/> |
+|Removed user or group from SharePoint group  <br/> |RemovedFromGroup  <br/> |User removed a member or guest from a SharePoint group. This might have been an intentional action or the result of another activity, such as an unsharing event.  <br/> |
+|Requested site admin permissions  <br/> |SiteAdminChangeRequest  <br/> |User requests to be added as a site collection administrator for a site collection. Site collection administrators have full control permissions for the site collection and all subsites.  <br/> |
+|Restored sharing inheritance  <br/> |SharingInheritanceReset  <br/> |A change was made so that an item inherits sharing permissions from its parent.  <br/> |
+|Updated group  <br/> |GroupUpdated  <br/> |Site administrator or owner changes the settings of a group for a site. This can include changing the group's name, who can view or edit the group membership, and how membership requests are handled.  <br/> |
+||||
+
   
 ### Site administration activities
   
-The following table lists the events that result from site administration tasks in SharePoint Online.
+The following table lists events that result from site administration tasks in SharePoint Online.
   
 |**Friendly name**|**Operation**|**Description**|
 |:-----|:-----|:-----|
-|Added exempt user agent  <br/> |ExemptUserAgentSet  <br/> |A SharePoint or global administrator adds a user agent to the list of exempt user agents in the SharePoint admin center.  <br/> |
-|Added site collection admin  <br/> |SiteCollectionAdminAdded  <br/> |Site collection administrator or owner adds a person as a site collection administrator for a site. Site collection administrators have full control permissions for the site collection and all subsites. This activity is also logged when an admin gives themselves access to a user's OneDrive account (by editing the user profile in the SharePoint admin center or  [by using the Microsoft 365 admin center](https://docs.microsoft.com/office365/admin/add-users/get-access-to-and-back-up-a-former-user-s-data#part-1---get-access-to-the-former-employees-onedrive-for-business-documents)). <br/> |
-|(none)  <br/> |SiteCollectionAdminRemoved <br/> |Site collection administrator or owner removes a person as a site collection administrator for a site. This activity is also logged when an admin removes themselves from the list of site collection administrators for a user's OneDrive account (by editing the user profile in the SharePoint admin center).  Note that to return this activity in the audit log search results, you have to search for all activities. <br/> |
-|Added user or group to SharePoint group  <br/> |AddedToGroup  <br/> |User added a member or guest to a SharePoint group. This might have been an intentional action or the result of another activity, such as a sharing event.  <br/> |
+|Added allowed data location<br/>|AllowedDataLocationAdded|A SharePoint or global administrator added an allowed data location in a multi-geo environment. <br/>|
+|Added exempt user agent  <br/> |ExemptUserAgentSet  <br/> |A SharePoint or global administrator added a user agent to the list of exempt user agents in the SharePoint admin center.  <br/> |
+|Added geo location admin<br/>|GeoAdminAdded<br/>|A SharePoint or global administrator added a user as a geo admin of a location. <br/>|
 |Allowed user to create groups  <br/> |AllowGroupCreationSet  <br/> |Site administrator or owner adds a permission level to a site that allows a user assigned that permission to create a group for that site.  <br/> |
 |Cancelled site geo move  <br/> |SiteGeoMoveCancelled  <br/> |A SharePoint or global administrator successfully cancels a SharePoint or OneDrive site geo move. The Multi-Geo capability lets an Office 365 organization span multiple Office 365 datacenter geographies, which are called geos. For more information, see [Multi-Geo Capabilities in OneDrive and SharePoint Online in Office 365](https://go.microsoft.com/fwlink/?linkid=860840).  <br/> |
 |Changed a sharing policy  <br/> |SharingPolicyChanged  <br/> |A SharePoint or global administrator changed a SharePoint sharing policy by using the Office 365 admin portal, SharePoint admin portal, or SharePoint Online Management Shell. Any change to the settings in the sharing policy in your organization will be logged. The policy that was changed is identified in the **ModifiedProperties** field in the detailed properties of the event record.  <br/> |
@@ -424,25 +474,26 @@ The following table lists the events that result from site administration tasks 
 |Changed exempt user agents  <br/> |CustomizeExemptUsers  <br/> |A SharePoint or global administrator customized the list of exempt user agents in the SharePoint admin center. You can specify which user agents to exempt from receiving an entire web page to index. This means when a user agent you've specified as exempt encounters an InfoPath form, the form will be returned as an XML file, instead of an entire web page. This makes indexing InfoPath forms faster.  <br/> |
 |Changed network access policy  <br/> |NetworkAccessPolicyChanged  <br/> |A SharePoint or global administrator changed the location-based access policy (also called a trusted network boundary) in the SharePoint admin center or by using SharePoint Online PowerShell. This type of policy controls who can access SharePoint and OneDrive resources in your organization based on authorized IP address ranges that you specify. For more information, see [Control access to SharePoint Online and OneDrive data based on network location](https://support.office.com/article/b5a5f1f1-1174-4c6b-91d0-9273a6b6971f).  <br/> |
 |Completed site geo move  <br/> |SiteGeoMoveCompleted  <br/> |A site geo move that was scheduled by a global administrator in your organization was successfully completed. The Multi-Geo capability lets an Office 365 organization span multiple Office 365 datacenter geographies, which are called geos. For more information, see [Multi-Geo Capabilities in OneDrive and SharePoint Online in Office 365](https://go.microsoft.com/fwlink/?linkid=860840).  <br/> |
-|Created group  <br/> |GroupAdded  <br/> |Site administrator or owner creates a group for a site, or performs a task that results in a group being created. For example, the first time a user creates a link to share a file, a system group is added to the user's OneDrive for Business site. This event can also be a result of a user creating a link with edit permissions to a shared file.  <br/> |
 |Created Sent To connection  <br/> |SendToConnectionAdded  <br/> |A SharePoint or global administrator creates a new Send To connection on the Records management page in the SharePoint admin center. A Send To connection specifies settings for a document repository or a records center. When you create a Send To connection, a Content Organizer can submit documents to the specified location.  <br/> |
 |Created site collection  <br/> |SiteCollectionCreated  <br/> |A SharePoint or global administrator creates a new site collection in your SharePoint Online organization or a user provisions their OneDrive for Business site.  <br/> |
-|Deleted group  <br/> |GroupRemoved  <br/> |User deletes a group from a site.  <br/> |
+|Deleted orphaned hub site<br/>|HubSiteOrphanHubDeleted<br/>|A SharePoint or global administrator deleted an orphan hub site, which is a hub site that doesn't have any sites associated with it. An orphaned hub is likely caused by the deletion of the original hub site. <br/>|
 |Deleted Sent To connection  <br/> |SendToConnectionRemoved  <br/> |A SharePoint or global administrator deletes a Send To connection on the Records management page in the SharePoint admin center.  <br/> |
 |Deleted site  <br/> |SiteDeleted  <br/> |Site administrator deletes a site.  <br/> |
 |Enabled document preview  <br/> |PreviewModeEnabledSet  <br/> |Site administrator enables document preview for a site.  <br/> |
 |Enabled legacy workflow  <br/> |LegacyWorkflowEnabledSet  <br/> |Site administrator or owner adds the SharePoint 2013 Workflow Task content type to the site. Global administrators can also enable work flows for the entire organization in the SharePoint admin center.  <br/> |
 |Enabled Office on Demand  <br/> |OfficeOnDemandSet  <br/> |Site administrator enables Office on Demand, which lets users access the latest version of Office desktop applications. Office on Demand is enabled in the SharePoint admin center and requires an Office 365 subscription that includes full, installed Office applications.  <br/> |
+|Enabled result source for People Searches<br/>|PeopleResultsScopeSet<br/>|Site administrator creates the result source for People Searches for a site.<br/>|
 |Enabled RSS feeds  <br/> |NewsFeedEnabledSet  <br/> |Site administrator or owner enables RSS feeds for a site. Global administrators can enable RSS feeds for the entire organization in the SharePoint admin center.  <br/> |
-|Modified access request setting  <br/> |WebRequestAccessModified  <br/> |The access request settings were modified on a site.  <br/> |
-|Modified Members Can Share setting  <br/> |WebMembersCanShareModified  <br/> |The **Members Can Share** setting was modified on a site.  <br/> |
-|Modified site permissions  <br/> |SitePermissionsModified  <br/> |Site administrator or owner (or system account) changes the permission level that are assigned to a group on a site. This activity is also logged if all permissions are removed from a group.  <br/> > [!NOTE]> This operation has been deprecated in SharePoint Online. To find related events, you can search for other permission-related activities such as **Added site collection admin**, **Added user or group to SharePoint group**, **Allowed user to create groups**, **Created group**, and **Deleted group.**         |
-|Removed user or group from SharePoint group  <br/> |RemovedFromGroup  <br/> |User removed a member or guest from a SharePoint group. This might have been an intentional action or the result of another activity, such as an unsharing event.  <br/> |
+|Joined site to hub site<br/>|HubSiteJoined<br/>|A site owner associates their site with a hub site.<br/>|
+|Registered hub site<br/>|HubSiteRegistered<br/>|A SharePoint or global administrator creates a hub site. The results is that the site is registered to be a hub site. <br/>|
+|Removed allowed data location<br/>|AllowedDataLocationDeleted<br/>|A SharePoint or global administrator removed an allowed data location in a multi-geo environment.<br/>|
+|Removed geo location admin<br/>|GeoAdminDeleted<br/>|A SharePoint or global administrator removed a user as a geo admin of a location.<br/>|
 |Renamed site  <br/> |SiteRenamed  <br/> |Site administrator or owner renames a site  <br/> |
-|Requested site admin permissions  <br/> |SiteAdminChangeRequest  <br/> |User requests to be added as a site collection administrator for a site collection. Site collection administrators have full control permissions for the site collection and all subsites.  <br/> |
 |Scheduled site geo move  <br/> |SiteGeoMoveScheduled  <br/> |A SharePoint or global administrator successfully schedules a SharePoint or OneDrive site geo move. The Multi-Geo capability lets an Office 365 organization span multiple Office 365 datacenter geographies, which are called geos. For more information, see [Multi-Geo Capabilities in OneDrive and SharePoint Online in Office 365](https://go.microsoft.com/fwlink/?linkid=860840).  <br/> |
 |Set host site  <br/> |HostSiteSet  <br/> |A SharePoint or global administrator changes the designated site to host personal or OneDrive for Business sites.  <br/> |
-|Updated group  <br/> |GroupUpdated  <br/> |Site administrator or owner changes the settings of a group for a site. This can include changing the group's name, who can view or edit the group membership, and how membership requests are handled.  <br/> |
+|Set storage quota for geo location  <br/> |GeoQuotaAllocated<br/> |A SharePoint or global administrator configured the storage quota for a geo location in a multi-geo environment.<br/> |
+|Unjoined site from hub site<br/>|HubSiteUnjoined<br/>|A site owner disassociates their site from a hub site.<br/>|
+|Unregistered hub site<br/>|HubSiteUnregistered<br/>|A SharePoint or global administrator unregisters a site as a hub site. When a hub site is unregistered, it no longer functions as a hub site. <br/>|
 ||||
   
 ### Exchange mailbox activities
@@ -455,7 +506,7 @@ The following table lists the activities that can be logged by mailbox audit log
 |Classified message as a record  <br/> |ApplyRecordLabel<br/> |A message was classified as a record. This occurs when a retention label that classifies content as a record is manually or automatically applied to a message.<br/> |
 |Copied messages to another folder  <br/> |Copy  <br/> |A message was copied to another folder.  <br/> |
 |Created mailbox item  <br/> |Create  <br/> |An item is created in the Calendar, Contacts, Notes, or Tasks folder in the mailbox; for example, a new meeting request is created. Note that creating, sending, or receiving a message isn't audited. Also, creating a mailbox folder is not audited.  <br/> |
-|Created new inbox rule in Outlook web app  <br/> |NewInboxRule<br/> |<br/> |
+|Created new inbox rule in Outlook web app  <br/> |NewInboxRule<br/> |A user created a new inbox rule in Outlook web app (OWA).<br/> |
 |Deleted messages from Deleted Items folder  <br/> |SoftDelete  <br/> |A message was permanently deleted or deleted from the Deleted Items folder. These items are moved to the Recoverable Items folder. Messages are also moved to the Recoverable Items folder when a user selects it and presses **Shift+Delete**.  <br/> |
 |Moved messages to another folder  <br/> |Move  <br/> |A message was moved to another folder.  <br/> |
 |Moved messages to Deleted Items folder  <br/> |MoveToDeletedItems  <br/> |A message was deleted and moved to the Deleted Items folder.  <br/> |
@@ -587,6 +638,37 @@ For a list and detailed description of the eDiscovery activities that are logged
 > [!NOTE]
 > It takes up to 30 minutes for events that result from the activities listed under **eDiscovery activities** in the **Activities** drop-down list to be displayed in the search results. Conversely, it takes up to 24 hours for the corresponding events from eDiscovery cmdlet activities to appear in the search results. 
   
+### Advanced eDiscovery activities
+
+The following table lists activities that result from IT and legal professionals performing tasks in Advanced eDiscovery in Microsoft 365. For more information, see [Overview of the Advanced eDiscovery solution in Microsoft 365](compliance20/overview-ediscovery-20.md).
+
+|**Friendly name**|**Operation**|**Description**|
+|:-----|:-----|:-----|
+| Added data to another review set<br/>         | AddWorkingSetQueryToWorkingSet<br/>  |  User added documents from one review set to a different review set.<br/>|
+| Added data to review set <br/>                | AddQueryToWorkingSet<br/>            |  User added the search results from a content search associated with an Advanced eDiscovery case to a review set.<br/>|
+| Added non-Office 365 data to review set<br/>  | AddNonOffice365DataToWorkingSet<br/> |  User added non-Office 365 data to a review set.<br/>|
+| Added remediated documents to review set<br/> | AddRemediatedData<br/>               |  User uploads documents that had indexing errors that were fixed to a review set.<br/>|
+| Analyzed data in review set <br/>             | RunAlgo<br/>                         |  User ran  analytics on the  documents in a review set. <br/>|
+| Annotated document in review set <br/>        | AnnotateDocument<br/>                |  User annotated a document in a review set. Annotation includes redacting content in a document. <br/>|
+| Compared load sets <br/>                      | LoadComparisonJob<br/>               |User compared two different load sets in a review set. A load set is when data from a content search that associated with the case is added to a review set.  <br/>|
+| Converted redacted documents to PDF<br/>      | BurnJob<br/>                         |User converted all the redacted documents in a review set to PDF files.<br/>|
+| Created review set<br/>                       | CreateWorkingSet<br/>                |User created a review set.<br/>|
+| Created review set search<br/>                | CreateWorkingSetSearch<br/>          |User created a search query that searches the documents in a review set. <br/>|
+| Created tag<br/>                              | CreateTag<br/>                       |User created a tag group in a review set. A tag group can contain one or more child tags. These tags are then used to tag documents in the review set.<br/>|
+| Deleted review set search <br/>               | DeleteWorkingSetSearch<br/>          |User deleted a search query in a review set.<br/>|
+| Deleted tag<br/>                              | DeleteTag<br/>                       |User deleted a tag or a tag group in a review set.<br/>|
+| Downloaded document<br/>                      | DownloadDocument<br/>                |User downloaded a document from a review set.<br/>|
+| Edited tag <br/>                              | DownloadDocument<br/>                |User changed a tag in a review set.<br/>|
+| Exported documents from review set <br/>      | ExportJob<br/>                       |User exported documents from a review set.<br/>|
+| Modified case setting <br/>                   | UpdateCaseSettings<br/>              | User modified the settings for a case. Case settings include case information, access permissions, and settings that control search and analytics behavior.<br/>|
+| Modified review set search<br/>               | UpdateWorkingSetSearch<br/>          |  User edited a search query in a review set.<br/>|
+| Previewed review set search <br/>             | PreviewWorkingSetSearch<br/>         |  User previewed the results of a search query in a review set.<br/>|
+| Remediated error documents <br/>              | ErrorRemediationJob<br/>             |  User fixes files that contained indexing errors. <br/>|
+| Tagged document<br/>                          | TagFiles<br/>                        |  User tags a document in a review set.<br/>|
+| Tagged results of a query<br/>                | TagJob<br/>                          |  User tags all of the documents that match the criteria of search query in a review set.<br/>|
+| Viewed document in review set<br/>            | ViewDocument<br/>                    |  User viewed a document in a review set.<br/>|
+|||
+
 ### Power BI activities
   
 You can search the audit log for activities in Power BI. For information about Power BI activities, see the "Activities audited by Power Power BI" section in [Using auditing within your organization](https://docs.microsoft.com/power-bi/service-admin-auditing#activities-audited-by-power-bi).
