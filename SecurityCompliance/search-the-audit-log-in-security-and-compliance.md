@@ -296,13 +296,13 @@ Click one of the following links to go to a specific table.
 ||||
 |:-----|:-----|:-----|
 |[File and page activities](#file-and-page-activities)<br/> |[Folder activities](#folder-activities)<br/> |[SharePoint list activities](#sharepoint-list-activities)<br/>|
-|[Sharing and access request activities](#sharing-and-access-request-activities)<br/> |[Synchronization activities](#synchronization-activities)<br/> |[Site administration activities](#site-administration-activities)<br/> |
-|[Exchange mailbox activities](#exchange-mailbox-activities)<br/> |[Sway activities](#sway-activities) <br/> |[User administration activities](#user-administration-activities) <br/> |
-|[Azure AD group administration activities](#azure-ad-group-administration-activities) <br/> |[Application administration activities](#application-administration-activities) <br/> |[Role administration activities](#role-administration-activities) <br/> |
-|[Directory administration activities](#directory-administration-activities) <br/>|[eDiscovery activities](#ediscovery-activities) <br/> |[Advanced eDiscovery activities](#advanced-ediscovery-activities)<br/> |
-|[Power BI activities](#power-bi-activities) <br/> |[Microsoft Workplace Analytics](#microsoft-workplace-analytics-activities)<br/>|[Microsoft Teams activities](#microsoft-teams-activities) <br/> |
-|[Yammer activities](#yammer-activities) <br/> |[Microsoft Flow activities](#microsoft-flow-activities) <br/>|[Microsoft PowerApps activities](#microsoft-powerapps)<br/>|
-|[Microsoft Stream activities](#microsoft-stream-activities) <br/>|[Exchange admin activities](#exchange-admin-audit-log)<br/>|
+|[Sharing and access request activities](#sharing-and-access-request-activities)<br/> |[Synchronization activities](#synchronization-activities)<br/> |[Site permissions activities](#site-permissions-activities)<br/> |
+|[Site administration activities](#site-administration-activities)<br/> |[Exchange mailbox activities](#exchange-mailbox-activities)<br/> |[Sway activities](#sway-activities) <br/> |
+|[User administration activities](#user-administration-activities) <br/> |[Azure AD group administration activities](#azure-ad-group-administration-activities) <br/> |[Application administration activities](#application-administration-activities) <br/> |
+|[Role administration activities](#role-administration-activities) <br/> |[Directory administration activities](#directory-administration-activities) <br/>|[eDiscovery activities](#ediscovery-activities) <br/> |
+|[Advanced eDiscovery activities](#advanced-ediscovery-activities)<br/> |[Power BI activities](#power-bi-activities) <br/> |[Microsoft Workplace Analytics](#microsoft-workplace-analytics-activities)<br/>|
+|[Microsoft Teams activities](#microsoft-teams-activities) <br/> |[Yammer activities](#yammer-activities) <br/> |[Microsoft Flow activities](#microsoft-flow-activities) <br/>|
+|[Microsoft PowerApps activities](#microsoft-powerapps)<br/>|[Microsoft Stream activities](#microsoft-stream-activities) <br/>|[Exchange admin activities](#exchange-admin-audit-log)<br/>|
 ||||
   
 ### File and page activities
@@ -313,12 +313,16 @@ The following table describes the file and page activities in SharePoint Online 
 |:-----|:-----|:-----|
 |Accessed file  <br/> |FileAccessed  <br/> |User or system account accesses a file.  <br/> |
 |(none)  <br/> |FileAccessedExtended  <br/> |This is related to the "Accessed file" (FileAccessed) activity. A FileAccessedExtended event is logged when the same person continually accesses a file for an extended period of time (up to 3 hours). The purpose of logging FileAccessedExtended events is to reduce the number of FileAccessed events that are logged when a file is continually accessed. This helps reduce the noise of multiple FileAccessed records for what is essentially the same user activity, and lets you focus on the initial (and more important) FileAccessed event.  <br/> |
+|Changed compliance policy label<br/> |ComplianceSettingChanged<br/> |A retention label was applied to or removed from a document. This event is triggered when a retention label is manually or automatically applied to a message.<br/> |
+|Changed record status to locked<br/> |LockRecord<br/> |The record status of a retention label that classifies a document as a record was locked. This means the document can't be modified or deleted. Only users assigned at least the contributor permission for a site can change the record status of a document.<br/> |
+|Changed record status to unlocked<br/> |UnlockRecord<br/> |The record status of a retention label that classifies a document as a record was unlocked. This means the document can be modified or deleted. Only users assigned at least the contributor permission for a site can change the record status of a document.<br/><br/> |
 |Checked in file  <br/> |FileCheckedIn  <br/> |User checks in a document that they checked out from a document library.  <br/> |
 |Checked out file  <br/> |FileCheckedOut  <br/> |User checks out a document located in a document library. Users can check out and make changes to documents that have been shared with them.  <br/> |
 |Copied file  <br/> |FileCopied  <br/> |User copies a document from a site. The copied file can be saved to another folder on the site.  <br/> |
 |Deleted file  <br/> |FileDeleted  <br/> |User deletes a document from a site.  <br/> |
 |Deleted file from recycle bin  <br/> |FileDeletedFirstStageRecycleBin  <br/> |User deletes a file from the recycle bin of a site.  <br/> |
 |Deleted file from second-stage recycle bin  <br/> |FileDeletedSecondStageRecycleBin  <br/> |User deletes a file from the second-stage recycle bin of a site.  <br/> |
+|Deleted record compliance policy label<br/> |ComplianceRecordDelete<br/> |A document that was classified as a record was deleted. A document is considered a record when a retention label that classifies content as a record is applied to the document. <br/> |
 |Detected document sensitivity mismatch <br/>|DocumentSensitivityMismatchDetected<br/>|User uploads a document classified with a sensitivity label that has a higher priority than the sensitivity label that's applied to the site the document is uploaded to. Note this event isn't triggered if the sensitivity label applied to a site has a higher priority than the sensitivity label applied to a document that's uploaded to the site. For more information about sensitivity label priority, see the "Label priority" section in [Overview of sensitivity labels](sensitivity-labels.md#label-priority-order-matters).<br/>|
 |Detected malware in file  <br/> |FileMalwareDetected  <br/> |SharePoint anti-virus engine detects malware in a file.  <br/> |
 |Discarded file checkout  <br/> |FileCheckOutDiscarded  <br/> |User discards (or undos) a checked out file. That means any changes they made to the file when it was checked out are discarded, and not saved to the version of the document in the document library.  <br/> |
@@ -393,12 +397,12 @@ The following table describes the user sharing and access request activities in 
   
 |**Friendly name**|**Operation**|**Description**|
 |:-----|:-----|:-----|
+|Added permission level to site collection  <br/> |PermissionLevelAdded  <br/> |A permission level was added to a site collection.  <br/> |
 |Accepted access request  <br/> |AccessRequestAccepted  <br/> |An access request to a site, folder, or document was accepted and the requesting user has been granted access.  <br/> |
 |Accepted sharing invitation  <br/> |SharingInvitationAccepted  <br/> |User (member or guest) accepted a sharing invitation and was granted access to a resource. This event includes information about the user who was invited and the email address that was used to accept the invitation (they could be different). This activity is often accompanied by a second event that describes how the user was granted access to the resource, for example, adding the user to a group that has access to the resource.  <br/> |
-|Added permission level to site collection  <br/> |PermissionLevelAdded  <br/> |A permission level was added to a site collection.  <br/> |
 |Blocked sharing invitation  <br/> |SharingInvitationBlocked  <br/> | A sharing invitation sent by a user in your organization is blocked because of an external sharing policy that either allows or denies external sharing based on the domain of the target user. In this case, the sharing invitation was blocked because:  <br/>  The target user's domain isn't included in the list of allowed domains.  <br/>  Or  <br/>  The target user's domain is included in the list of blocked domains.  <br/>  For more information about allowing or blocking external sharing based on domains, see [Restricted domains sharing in SharePoint Online and OneDrive for Business](https://support.office.com/article/5d7589cd-0997-4a00-a2ba-2320ec49c4e9).  <br/> |
-|Created a company shareable link  <br/> |CompanyLinkCreated  <br/> |User created a company-wide link to a resource. company-wide links can only be used by members in your organization. They can't be used by guests.  <br/> |
 |Created access request  <br/> |AccessRequestCreated  <br/> |User requests access to a site, folder, or document they don't have permissions to access.  <br/> |
+|Created a company shareable link  <br/> |CompanyLinkCreated  <br/> |User created a company-wide link to a resource. company-wide links can only be used by members in your organization. They can't be used by guests.  <br/> |
 |Created an anonymous link  <br/> |AnonymousLinkCreated  <br/> |User created an anonymous link to a resource. Anyone with this link can access the resource without having to be authenticated.  <br/> |
 |Created secure link  <br/> |SecureLinkCreated  <br/> |A secure sharing link was created to this item.  <br/> |
 |Created sharing invitation  <br/> |SharingInvitationCreated  <br/> |User shared a resource in SharePoint Online or OneDrive for Business with a user who isn't in your organization's directory.  <br/> |
@@ -502,23 +506,26 @@ The following table lists the activities that can be logged by mailbox audit log
   
 |**Friendly name**|**Operation**|**Description**|
 |:-----|:-----|:-----|
-|Added delegate mailbox permissions  <br/> |Add-MailboxPermission  <br/> |An administrator assigned the FullAccess mailbox permission to a user (known as a delegate) to another person's mailbox. The FullAccess permission allows the delegate to open the other person's mailbox, and read and manage the contents of the mailbox.  <br/> |
-|Classified message as a record  <br/> |ApplyRecordLabel<br/> |A message was classified as a record. This occurs when a retention label that classifies content as a record is manually or automatically applied to a message.<br/> |
+|Added delegate mailbox permissions  <br/> |AddMailboxPermissions  <br/> |An administrator assigned the FullAccess mailbox permission to a user (known as a delegate) to another person's mailbox. The FullAccess permission allows the delegate to open the other person's mailbox, and read and manage the contents of the mailbox.  <br/> |
+|Added or removed user with delegate access to calendar folder<br/> |UpdateCalendarDelegation<br/> |A user was added or removed as a delegate to the calendar of another user's mailbox. Calendar delegation gives someone else in the same organization permissions to manage the mailbox owner's calendar. <br/> |
+|Added permissions to folder<br/> |AddFolderPermissions<br/> |A folder permission was added. Folder permissions control which users in your organization can access folders in a mailbox and the messages located in those folders.<br/> |
 |Copied messages to another folder  <br/> |Copy  <br/> |A message was copied to another folder.  <br/> |
 |Created mailbox item  <br/> |Create  <br/> |An item is created in the Calendar, Contacts, Notes, or Tasks folder in the mailbox; for example, a new meeting request is created. Note that creating, sending, or receiving a message isn't audited. Also, creating a mailbox folder is not audited.  <br/> |
-|Created new inbox rule in Outlook web app  <br/> |NewInboxRule<br/> |A user created a new inbox rule in Outlook web app (OWA).<br/> |
+|Created new inbox rule in Outlook web app  <br/> |NewInboxRule<br/> |A mailbox owner or other user with access to the mailbox created a new inbox rule in the Outlook web app.<br/> |
 |Deleted messages from Deleted Items folder  <br/> |SoftDelete  <br/> |A message was permanently deleted or deleted from the Deleted Items folder. These items are moved to the Recoverable Items folder. Messages are also moved to the Recoverable Items folder when a user selects it and presses **Shift+Delete**.  <br/> |
-|Moved messages to another folder  <br/> |Move  <br/> |A message was moved to another folder.  <br/> |
+|Labeled message as a record  <br/> |ApplyRecordLabel<br/> |A message was classified as a record. This occurs when a retention label that classifies content as a record is manually or automatically applied to a message.<br/> ||Moved messages to another folder  <br/> |Move  <br/> |A message was moved to another folder.  <br/> |
 |Moved messages to Deleted Items folder  <br/> |MoveToDeletedItems  <br/> |A message was deleted and moved to the Deleted Items folder.  <br/> |
 |Modified folder permission  <br/> |UpdateFolderPermissions  <br/> |A folder permission was changed. Folder permissions control which users in your organization can access mailbox folders and the messages in the folder.  <br/> |
+|Modified inbox rule from Outlook web app<br/> |SetInboxRule<br/> |A mailbox owner or other user with access to the mailbox modified an inbox rule using the Outlook web app.<br/> |
 |Purged messages from the mailbox  <br/> |HardDelete  <br/> |A message was purged from the Recoverable Items folder (permanently deleted from the mailbox).  <br/> |
 |Removed delegate mailbox permissions  <br/> |Remove-MailboxPermission  <br/> |An administrator removed the FullAccess permission (that was assigned to a delegate) from a person's mailbox. After the FullAccess permission is removed, the delegate can't open the other person's mailbox or access any content in it.  <br/> |
+|Removed permissions from folder<br/> |RemoveFolderPermissions<br/> |A folder permission was removed. Folder permissions control which users in your organization can access folders in a mailbox and the messages located in those folders.<br/> |
 |Sent message using Send As permissions  <br/> |SendAs  <br/> |A message was sent using the SendAs permission. This means another user sent the message as though it came from the mailbox owner.  <br/> |
 |Sent message using Send On Behalf permissions  <br/> |SendOnBehalf  <br/> |A message was sent using the SendOnBehalf permission. This means another user sent the message on behalf of the mailbox owner. The message indicates to the recipient who the message was sent on behalf of and who actually sent the message.  <br/> |
 |Updated delegate access to calendar folder  <br/> |UpdateCalendarDelegation  <br/> |A calendar delegation was assigned to a mailbox. Calendar delegation gives someone else in the same organization permissions to manage the mailbox owner's calendar.  <br/> |
+|Updated inbox rules from Outlook client<br/> |UpdateInboxRules<br/> |A mailbox owner or other user with access to the mailbox modified an inbox rule in the Outlook client.<br/> |
 |Updated message  <br/> |Update  <br/> |A message or its properties was changed.  <br/> |
 |User signed in to mailbox  <br/> |MailboxLogin  <br/> |The user signed in to their mailbox.  <br/> |
-|(none)  <br/> |UpdateInboxRules  <br/> |An inbox rule has been added, removed, or changed. Inbox rules are used to process messages in the user's Inbox based on the specified conditions and take actions when the conditions of a rule are met, such as moving a message to a specified folder or deleting a message.  <br/> To return entries for inbox rule activities, you have to select **Show results for all activities** in the **Activities** list. Use the date range boxes and the **Users** list to narrow the search results.  <br/> |
 ||||
 
 ### Sway activities
