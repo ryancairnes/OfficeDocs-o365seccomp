@@ -3,7 +3,7 @@ title: "View reports for Office 365 Advanced Threat Protection"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 04/01/2019
+ms.date: 05/21/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -49,7 +49,7 @@ To get detailed status for a day, hover over the graph.
   
 ![ATP Threat Protection Status data for a day](media/d5c2c6ad-c002-4985-a032-c866e46fdea8.png)
   
-By default, the Threat Protection Status report shows data for the past seven days. However, you can choose **Filters** and change the date range to view data for up to 90 days.
+By default, the Threat Protection Status report shows data for the past seven days. However, you can choose **Filters** and change the date range to view data for up to 90 days. (If you are using a trial subscription, you might be limited to 30 days' of data.)
   
 ![ATP Threat Protection Status filters](media/4f703369-642b-402b-9758-b9c828283410.png)
   
@@ -87,9 +87,9 @@ In addition to the ATP reports described in this article, several other reports 
 
 |Report(s)  |Details  |
 |---------|---------|
-|**ATP Safe Links URL trace** (This is a report you generate by using PowerShell.) This report shows the results of ATP Safe Links actions over the past seven (7) days. |[Get-UrlTrace cmdlet reference](https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/get-urltrace?view=exchange-ps) |
-|**Email security reports**, such as a Top Senders and Recipients report, a Spoof Mail report, and a Spam Detections report. | [View email security reports in the Security &amp; Compliance Center](view-email-security-reports.md)        |
 |**Explorer** or **real-time detections** (Office 365 ATP Plan 2 customers have Explorer; Office 365 ATP Plan 1 customers have real-time detections.)| [Threat Explorer (and real-time detections)](threat-explorer.md)       |
+|**Email security reports**, such as a Top Senders and Recipients report, a Spoof Mail report, and a Spam Detections report. | [View email security reports in the Security &amp; Compliance Center](view-email-security-reports.md)        |
+|**ATP Safe Links URL trace** (This is a report you generate by using PowerShell.) This report shows the results of ATP Safe Links actions over the past seven (7) days. |[Get-UrlTrace cmdlet reference](https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/get-urltrace?view=exchange-ps) |
 |**EOP and ATP results** (This is a custom report you generate by using PowerShell). This report contains information, such as Domain, Date, Event Type, Direction, Action, and Message Count.  | [Get-MailTrafficATPReport cmdlet reference](https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/get-mailtrafficatpreport?view=exchange-ps) |
 |**EOP and ATP detections** (This is a custom report you generate by using PowerShell). This report contains details about malicious files or URLs, phishing attempts, impersonation, and other potential threats in email or files.   | [Get-MailDetailATPReport cmdlet reference](https://docs.microsoft.com/powershell/module/exchange/advanced-threat-protection/get-maildetailatpreport?view=exchange-ps)        |
 

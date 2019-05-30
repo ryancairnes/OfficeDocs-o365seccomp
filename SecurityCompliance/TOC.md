@@ -272,6 +272,7 @@
 ## [Responding to a Compromised Email Account in Office 365](responding-to-a-compromised-email-account.md)
 
 # Records management
+## [Records management](records-management.md)
 ## File plan
 ### [File plan manager](file-plan-manager.md)
 ### [Retention labels](labels.md)
@@ -491,6 +492,7 @@
 ## [Release notes](datainvestigations/data-investigations-release-notes.md)
 ## [Manage a data spillage incident](datainvestigations/manage-data-spillage-incidents.md)
 ## [Create a new investigation](datainvestigations/create-new-investigation.md)
+## [Assign permissions for data investigations](datainvestigations/permissions.md)
  
 ## [Search for data in an investigation](datainvestigations/search-for-data.md)
 ### [Build search queries](datainvestigations/build-search-queries.md)
