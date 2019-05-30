@@ -22,14 +22,15 @@ With information barriers, you can define policies that are designed to prevent 
 
 ## The concepts
 
-Before you plan, define, and implement information barrier policies, get to know the basic underlying concepts. With information barriers, you'll work with user accounts, segments, policies, and policy application. 
+Before you plan, define, and implement information barrier policies, get to know the basic underlying concepts. With information barriers, you'll work with user accounts, attributes defined for user accounts, segments, information barrier policies, and a policy application process. 
 
-- **User accounts** are grouped into non-overlapping **Segments**. You can use department, job title, location, team name, or any grouping that makes sense for your organizational needs.
-- **Segments** are defined in the Office 365 Security & Compliance Center by using an **Attribute** in Azure Active Directory (or Exchange Online). (See [Attributes for information barrier policies (Preview)](information-barriers-attributes.md).) Defining segments has no effect on users; it sets the stage for information barrier policies that are defined.
-- **Policies** are defined and assigned to individual **Segments**. (Each segment cannot be assigned more than one policy.)
-- When you define policies, you choose from two kinds of policies:
-    - **Block**: Prevent one segment from communicating with another segment
-    - **Allow**: Enable one segment to communicate with only other specific segments
+- **User accounts** have **attributes** that are defined in Azure Active Directory (or Exchange Online). Attributes can include department, job title, location, team name, etc. 
+
+- **Segments** are defined in the Office 365 Security & Compliance Center by with user account **attributes**. You can use department, job title, location, team name, or any [supported attribute](information-barriers-attributes.md) to define segments in your organization. Defining segments does not effect users until information barrier policies are defined and applied.
+
+- **Policies** are defined and assigned to individual **Segments**. (Each segment cannot be assigned more than one policy.) When you define policies, you choose from two kinds of policies:
+    - Policies that prevent one segment from communicating with another segment
+    - Policies that allow one segment to communicate with only certain other segments
 
 ## The work flow at a glance
 
