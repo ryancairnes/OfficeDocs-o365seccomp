@@ -1,13 +1,8 @@
 # [Security & Compliance](index.md)
 
 # Get started
-<!--sample comment: comment goes here-->
-<!-- Landing page for Overview of Office 365 security which covers our approach across protect, detect, investigate, respond, user training and education-->
-<!--Landing page-->
 ## [Office 365 security roadmap](security-roadmap.md)
 ## [Configure your Office 365 tenant for increased security](tenant-wide-setup-for-increased-security.md)
-<!-- /Landing page-->
-<!--Intoduction to Sec/Comp-->
 ## [The new Microsoft 365 security center and Microsoft 365 compliance center](microsoft-security-and-compliance.md)
 ### [Microsoft 365 compliance center](microsoft-365-compliance-center.md)
 ### [Microsoft 365 security center](overview-security-center.md)
@@ -17,11 +12,7 @@
 ### [Give users access to the Security & Compliance Center](grant-access-to-the-security-and-compliance-center.md)
 ## [Security Dashboard overview](security-dashboard.md)
 ## [Use your free Azure Active Directory subscription](use-your-free-azure-ad-subscription-in-office-365.md)
-<!--/Intro-->
-<!--Planning-->
 ## [Plan for security and compliance in Office 365](plan-for-security-and-compliance.md)
-<!--/Planning-->
-<!--Training-->
 ## [Chief Information Security Officer (CISO) workshop training](ciso-workshop.md)
 ### [Module 1 - Microsoft cybersecurity briefing](ciso-workshop-module-1.md)
 ### [Module 2 - Security management](ciso-workshop-module-2.md)
@@ -29,7 +20,7 @@
 ### [Module 4a - Threat protection strategy, Part I](ciso-workshop-module-4a.md)
 ### [Module 4b - Threat protection strategy, Part II](ciso-workshop-module-4b.md)
 ### [Module 5 - Information protection](ciso-workshop-module-5.md)
-<!--Pam-->
+
 # [Protect user and device access](protect-access-to-data-and-services.md)
 ## [Privileged access management](privileged-access-management-overview.md)
 ## [Configure privileged access management](privileged-access-management-configuration.md)
@@ -109,7 +100,8 @@
 ### [Use network upload to import RMS-encrypted PST files](use-network-upload-to-import-rms-encrypted-pst-files.md)
 ### [FAQ about importing PST files](faqimporting-pst-files-to-office-365.md)
 ### [Archive third-party data in Office 365](archiving-third-party-data.md)
-#### [Use sample connectors to archive third-party data](archive-third-party-data-with-sample-connector.md)
+#### [Use a sample connecector to archive Facebook data in Office 365 (preview)](archive-facebook-data-with-sample-connector.md)
+#### [Use a sample connector to archive Twitter data](archive-twitter-data-with-sample-connector.md)
 #### [Work with a partner to archive third-party data](work-with-partner-to-archive-third-party-data.md)
 ## Store data
 ### [Enable archive mailboxes](enable-archive-mailboxes.md)
@@ -139,18 +131,9 @@
 ### [View the data governance reports](view-the-data-governance-reports.md)
 ## More information about data governance
 ### [Watch videos from the Microsoft Data Governance team](https://go.microsoft.com/fwlink/?linkid=867039)
-<!--/Data gov-->
-<!--TOC/Area owner: tracyp and deniseb-->
-<!--Cyber Threat-->
 # [Security in Microsoft 365]
-<!--Protect, detect, investigate, respond-->
-<!--Landing Page-->
 # [Protect against threats](protect-against-threats.md)
-<!--/Landing Page-->
-<!--Edge filtering and antispam policy-->
 ## [Stub: The threat landscape and common attacks]
-<!--Begin Security Basics-->
-<!--E3 and E5 - Protect & Detect-->
 ### [Anti-spam and anti-malware protection](anti-spam-and-anti-malware-protection.md)
 #### [Office 365 email anti-spam protection](anti-spam-protection.md)
 #### [How to prevent real email from being marked as spam in Office 365](prevent-email-from-being-marked-as-spam.md)
@@ -165,8 +148,6 @@
 #### [Configure anti-malware policies](configure-anti-malware-policies.md)
 #### [Configure the anti-spam policies](configure-the-anti-spam-policies.md)
 #### [Create organization-wide safe sender or blocked sender lists in Office 365](create-organization-wide-safe-sender-or-blocked-sender-lists-in-office-365.md)
-#### [Create Block Sender lists in Office 365](create-block-sender-lists-in-office-365.md)
-#### [Create safe-sender lists in Office 365](create-safe-sender-lists-in-office-365.md)
 #### [Configure your spam filter policies](configure-your-spam-filter-policies.md)
 #### [Configure the connection filter policy](configure-the-connection-filter-policy.md)
 #### [Configure the outbound spam policy](configure-the-outbound-spam-policy.md)
@@ -184,9 +165,7 @@
 #### [How Office 365 validates the From: address to prevent phishing](how-office-365-validates-the-from-address.md)
 ### [Anti-spoofing protection in Office 365](anti-spoofing-protection.md)
 #### [Learn more about spoof intelligence](learn-about-spoof-intelligence.md)
-<!--Missing link-->
 ### Manage your security for specific workloads
-<!--/-->
 ### [What is EOP?](eop/what-is-eop.md)
 #### [Support for anonymous inbound email messages over IPv6](support-for-anonymous-inbound-email-messages-over-ipv6.md)
 ## [Quarantine email messages in Office 365](quarantine-email-messages.md)
@@ -195,46 +174,32 @@
 ### [Quarantine FAQ for Office 365](quarantine-faq.md)
 ### [Use user spam notifications to release and report quarantined messages in Office 365](use-spam-notifications-to-release-and-report-quarantined-messages.md)
 ### [Use user spam notifications to release and report quarantined messages in Office 365](use-spam-notifications-to-release-and-report-quarantined-messages.md)
-<!--SPF, DKIM, DMARC-->
 ### Email validation and authentication
 #### [How Office 365 uses SPF to prevent spoofing](how-office-365-uses-spf-to-prevent-spoofing.md)
 #### [Set up SPF in Office 365 to help prevent spoofing](set-up-spf-in-office-365-to-help-prevent-spoofing.md)
 #### [Use DKIM to validate outbound email](use-dkim-to-validate-outbound-email.md)
 #### [Support for validation of DKIM signed messages](support-for-validation-of-dkim-signed-messages.md)
 #### [Use DMARC to validate email](use-dmarc-to-validate-email.md)
-<!--/Protect-->
 ## [Stub: M365 and Edge filtering]
-<!--Investigate and Respond-->
 ### [Smart reports and insights in the Security & Compliance Center](reports-and-insights-in-security-and-compliance.md) 
 ### [View information about malicious files](malicious-files-detected-in-spo-odb-or-teams.md)
 ### [View email security reports in the Security & Compliance Center](view-email-security-reports.md)
 ### [Walkthrough - From a detailed report to an insight](from-a-detailed-report-to-an-insight.md)
 ### [Walkthrough - From an insight to a detailed report](from-an-insight-to-a-detailed-report.md)
 ### [Walkthrough - From a dashboard to an insight](from-a-dashboard-to-an-insight.md)
-<!--/Investigate and Respond-->
-<!--E5 ATP - Investigate and Respond-->
 ## [Advanced Threat Protection ](office-365-atp.md)
-<!--Actions for GAs (generally) 1-time setup-->
-<!--Admin audience-->
 ### ATP setup tasks for admins
 #### [Global Administrator setup tasks]
 ##### [Set up ATP Safe Links policies](set-up-atp-safe-links-policies.md)
 ##### [Set up ATP Safe Attachments policies](set-up-atp-safe-attachments-policies.md)
 ##### [Set up a custom "do not rewrite" URLs list](set-up-a-custom-do-not-rewrite-urls-list-with-atp.md)
 ##### [Set up a custom blocked URLs list](set-up-a-custom-blocked-urls-list-wtih-atp.md)
-<!--Actions for workload Admins only, setup-->
-<!--Admin audience-->
 #### [Role Administrator setup tasks]
 ##### [Turn on ATP for SharePoint, OneDrive, and Microsoft Teams](turn-on-atp-for-spo-odb-and-teams.md)
 ##### [ATP for SharePoint, OneDrive, and Microsoft Teams](atp-for-spo-odb-and-teams.md)
-<!--I've set it up. The real value is in using it.-->
-<!--Manage-->
 ### [Manage your security - ATP post-setup]
-<!--Story: Where is ATP in the M365 security scheme / why ATP-->
 #### The scoop re. ATP 
-<!--InfoSec audience: Step 1 - List threats-->
 ### [Understanding latest attack campaigns with threat analytics](latest-attack-campaigns.md)
-<!--InfoSec audience: Step 2 - Take action. Daily tasks / how to run sims and read reports successfully-->
 ### [Hunting in Microsoft 365 ATP](hunting.md)
 #### [View and read your ATP reports](view-reports-for-atp.md)
 #### [What ATP Safe Links warning pages mean](atp-safe-links-warning-pages.md)
@@ -244,11 +209,9 @@
 #### [Find and investigate malicious email that was delivered](investigate-malicious-email-that-was-delivered.md)
 #### [Threat Explorer (and real-time detections)](threat-explorer.md)
 #### [Threat Explorer views](threat-explorer-views.md)
-<!--SecInfo audience: Integrate with Microsoft or other techs-->
 ### [Integration for greater Security]
 #### [Integrate Office 365 ATP with Windows Defender Advanced Threat Protection](integrate-office-365-ti-with-wdatp.md)
 #### [SIEM integration with Office 365 ATP](siem-integration-with-office-365-ti.md)
-<!--SecInfo audience: How ATP Works-->
 ### [How ATP works]
 #### [How ATP Safe Links works](how-atp-safe-links-works.md)
 ##### [Dynamic Delivery and previewing details](dynamic-delivery-and-previewing.md)
@@ -257,20 +220,11 @@
 #### [How Threat Investigation and Response works](get-started-with-ti.md)
 #### [How Automated Investigation and Response works](automated-investigation-response-office.md)
 #### [Identify suspicious messages in Outlook.com and Outlook on the web](unverified-sender-feature.md)
-<!--End E5 ATP-->
-<!--TOC/Area owner: tracyp and deniseb-->
-<!--/Cyber Threat-->
-
-
-
-
-
 # Security incident management
 ## [Office 365 Security Incident Response](office365-security-incident-response-overview.md)
 ## [Detect and Remediate Illicit Consent Grants in Office 365](detect-and-remediate-illicit-consent-grants.md)
 ## [Detect and Remediate Outlook Rules and Custom Forms Injections Attacks in Office 365](detect-and-remediate-outlook-rules-forms-attack.md)
 ## [Responding to a Compromised Email Account in Office 365](responding-to-a-compromised-email-account.md)
-
 # Records management
 ## [Records management](records-management.md)
 ## File plan
