@@ -22,23 +22,25 @@ With information barriers, you can define policies that are designed to prevent 
 
 ## The concepts
 
-Before you plan, define, and implement information barrier policies, get to know the basic underlying concepts. With information barriers, you'll work with user account attributes, segments, information barrier policies, and a policy application process. 
+Before you plan, define, and implement information barrier policies, get to know the basic underlying concepts. With information barriers, you'll work with user account attributes, segments, information barrier policies, and a policy application process described in this article. 
 
 - **User account attributes** are defined in Azure Active Directory (or Exchange Online). These attributes can include department, job title, location, team name, etc. 
 
-- **Segments** are defined in the Office 365 Security & Compliance Center using a selected **user account attribute**, such as department, job title, location, team name, or any [supported attribute](information-barriers-attributes.md). Defining segments does not effect users; it just sets the stage for information barrier policies to be defined and applied.
+- **Segments** are defined in the Office 365 Security & Compliance Center using a selected **user account attribute**, such as department, job title, location, team name, or any [supported attribute](information-barriers-attributes.md). Defining segments does not effect users; it just sets the stage for information barrier policies to be defined and then applied.
 
 - **Information barrier policies** are defined and assigned to individual **Segments**. Not all segments will have a policy assigned. In addition, no single segment can be assigned more than one policy. When you define policies, you choose from two kinds of policies:
     - Policies that prevent one segment from communicating with another segment
     - Policies that allow one segment to communicate with only certain other segments
 
-Ideally, you'll use the minimum number of policies to ensure your organization is compliant with legal and industry requirements.
+    Ideally, you'll use the minimum number of policies to ensure your organization is compliant with legal and industry requirements.
+
+- **Policy application** is done after all information barrier policies are defined, and you are ready to apply them in your organization.
 
 ## The work flow at a glance
 
 |Phase    |What's involved  |
 |---------|---------|
-|[Make sure prerequisites are met](#prerequisites)     |- Verify that you have the necessary permissions to define/edit policies<br/>- Make sure that your directory data reflects your organization's structure<br/>- Make sure that scoped directory search is enabled in Microsoft Teams<br/>- Use PowerShell (example cmdlets are provided)<br/>- Provide admin consent (steps are included)          |
+|[Make sure prerequisites are met](#prerequisites)     |- Verify that you have the necessary permissions to define/edit policies<br/>- Make sure that your directory data reflects your organization's structure<br/>- Make sure that scoped directory search is enabled in Microsoft Teams<br/>- Make sure audit logging is turned on<br/>- Use PowerShell (example cmdlets are provided)<br/>- Provide admin consent (steps are included)          |
 |[Part 1: Segment all the users in your organization](#part-1-segment-users)     |- Determine what policies are needed<br/>- Make a list of segments to define<br/>- Identify which attributes to use<br/>- Define segments in terms of policy filters        |
 |[Part 2: Define information barrier policies](#part-2-define-information-barrier-policies)     |- Define your policies (do not apply yet)<br/>- Choose from two kinds (block or allow) |
 |[Part 3: Apply information barrier policies](#part-3-apply-information-barrier-policies)     |- Set policies to active status<br/>- Run the policy application<br/>- Verify policy status         |
@@ -56,15 +58,18 @@ To define or edit information barrier policies, **you must be assigned an approp
 - Information barriers administrator (this is a new role!)       
 ### Directory data
 
-**Make sure that your organization's structure is reflected in directory data**. To do this, make sure that attributes, such as group membership, department name, etc. are populated correctly in Azure Active Directory (or Exchange Online).
-
-To learn more, see the following resources:
+**Make sure that your organization's structure is reflected in directory data**. To do this, make sure that user account attributes, such as group membership, department name, etc. are populated correctly in Azure Active Directory (or Exchange Online). To learn more, see the following resources:
 - [Attributes for information barrier policies (Preview)](information-barriers-attributes.md)
-- [Add or update a user's profile information using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal).
+- [Add or update a user's profile information using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal)
+- [Configure user account properties with Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/configure-user-account-properties-with-office-365-powershell)
 
 ### Scoped directory search
 
 **Before you define your organization's first information barrier policy, you must [enable scoped directory search in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-scoped-directory-search)**. Wait at least 24 hours after enabling scoped directory search before you set up or define information barrier policies.
+
+### Audit logging
+
+In order to look up the status of a policy application, audit logging must be turned on. We recommend doing this before you begin to define segments or policies. To learn more, see [Turn Office 365 audit log search on or off](turn-audit-log-search-on-or-off.md).
 
 ### PowerShell
 
