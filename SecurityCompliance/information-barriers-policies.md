@@ -26,7 +26,7 @@ With information barriers, you can define policies that are designed to prevent 
 |---------|---------|
 |[Make sure prerequisites are met](#prerequisites)     |- Verify that you have the necessary permissions to define/edit policies<br/>- Make sure that your directory data reflects your organization's structure<br/>- Make sure that scoped directory search is enabled in Microsoft Teams<br/>- Use PowerShell (example cmdlets are provided)<br/>- Provide admin consent (steps are included)          |
 |[Part 1: Segment all the users in your organization](#part-1-segment-users)     |- Determine what policies are needed<br/>- Make a list of segments to define<br/>- Identify which attributes to use<br/>- Define segments in terms of policy filters        |
-|[Part 2: Define information barrier policies](#part-2-define-information-barrier-policies)     |- Define the policies (do not apply yet)       |
+|[Part 2: Define information barrier policies](#part-2-define-information-barrier-policies)     |- Define your policies (do not apply yet) |
 |[Part 3: Apply information barrier policies](#part-3-apply-information-barrier-policies)     |- Set policies to active status<br/>- Run the policy application<br/>- Verify policy status         |
 |(As needed) [Edit a segment or a policy](#edit-a-segment-or-a-policy)     |- Edit a segment<br/>- Edit or remove a policy<br/>- Run the policy application<br/>- Verify policy status         |
 |(As needed) [Troubleshooting](information-barriers-troubleshooting.md)|- Take action when policies are not working as expected|
@@ -174,9 +174,7 @@ Information barrier policies are not in effect until you set them to active stat
 
     Syntax: `Set-InformationBarrierPolicy -Identity GUID -State Active`
 
-    Here's an example:
-    
-    `Set-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c93772471 -State Active`
+    Example: `Set-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c93772471 -State Active`
     
     In this example, we are setting an information barrier policy that has the GUID *43c37853-ea10-4b90-a23d-ab8c93772471* to active status.
 
@@ -184,7 +182,7 @@ Information barrier policies are not in effect until you set them to active stat
 
 3. When you have finished setting your information barrier policies to active status, use the **Start-InformationBarrierPoliciesApplication** cmdlet in the Office 365 Security & Compliance Center.
 
-    Syntax: ``
+    Syntax: `Start-InformationBarrierPoliciesApplication`
 
     Policies are applied, user by user, for your organization. If your organization is large, it can take 24 hours (or more) for this process to complete.
 
