@@ -41,7 +41,9 @@ Also, make sure to [connect to the Security & Compliance Center and provide admi
 
 Follow these steps to determine whether the users are affected by an information barrier policy, whether the users are in the correct segments, and whether filters are applied correctly in information barriers.
 
-1. Check to see if each user is included in an information barrier policy. To do this, use the `Get-InformationBarrierRecipientStatus` cmdlet with the Identity parameter. 
+1. Check to see if each user is included in an information barrier policy. To do this, use the **Get-InformationBarrierRecipientStatus** cmdlet with the Identity parameter. 
+
+    The syntax is `Get-InformationBarrierRecipientStatus -Identity`
 
     You can use any identity value that uniquely identifies each recipient, such as Name, Alias, Distinguished name (DN), Canonical DN, Email address, or GUID.
 

@@ -99,9 +99,9 @@ Determine which attributes in your organization's directory data you'll use to d
 
 ### Define segments using PowerShell
 
-1. To define an organizational segment, use the **New-OrganizationSegment** cmdlet with the **UserGroupFilter** parameter that corresponds to the attribute you want to use. 
+1. To define an organizational segment, use the **New-OrganizationSegment** cmdlet with the **UserGroupFilter** parameter that corresponds to the [attribute](information-barriers-attributes.md) you want to use. 
 
-    The syntax is `New-OrganizationSegment -Name "segmentname" -UserGroupFilter "attribute -eq 'attributevalue'"`
+    Syntax: `New-OrganizationSegment -Name "segmentname" -UserGroupFilter "attribute -eq 'attributevalue'"`
 
     Example: `New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"`
 
@@ -112,27 +112,27 @@ Determine which attributes in your organization's directory data you'll use to d
     After you run each cmdlet, you should see a list of details about the new segment. Details include the segment's type, who created or last modified it, and so on. 
 
 > [!IMPORTANT]
-> **Make sure that your segments do not overlap**. Each user in your organization should belong to one (and only one) segment. No user should belong to two or more segments. Segments should be defined for all users in your organization. 
+> **Make sure that your segments do not overlap**. Each user in your organization should belong to one (and only one) segment. No user should belong to two or more segments. Segments should be defined for all users in your organization. (See [Example: Contoso's departments, segments, and policies](#example-contosos-departments-segments-and-policies) in this article.)
 
-(See [Example: Contoso's departments, segments, and policies](#example-contosos-departments-segments-and-policies).)
-
+After you have defined your segments, proceed to define information barrier policies.
 
 ## Part 2: Define information barrier policies
 
 > [!IMPORTANT]
 > As you define information barrier policies, make sure to set those policies to inactive status until you are ready to apply them. Defining (or editing) policies does not affect users until those policies are set to active status and then applied.
 
-When you have a list of user segments and the information barrier policies you want to define, select a scenario, and then follow the steps.
+With your list of user segments and the information barrier policies you want to define, select a scenario, and then follow the steps.
 
 - [Scenario 1: Block communications between segments](#scenario-1-block-communications-between-segments)
 - [Scenario 2: Allow a segment to communicate only with one other segment](#scenario-2-allow-a-segment-to-communicate-only-with-one-other-segment)
 
-(See [Example: Contoso's departments, segments, and policies](#example-contosos-departments-segments-and-policies).)
-
+(See [Example: Contoso's departments, segments, and policies](#example-contosos-departments-segments-and-policies) in this article.)
 
 ### Scenario 1: Block communications between segments
 
-1. To block communications between segments, use the `New-InformationBarrierPolicy` cmdlet with the **SegmentsBlocked** parameter. 
+1. To block communications between segments, use the **New-InformationBarrierPolicy** cmdlet with the **SegmentsBlocked** parameter. 
+
+    Syntax: `New-InformationBarrierPolicy -Name "policyname" -AssignedSegment "segmentname" -SegmentsBlocked "segmentname"`
 
     Example: `New-InformationBarrierPolicy -Name "SalesBlockedFromResearch" -AssignedSegment "Sales" -SegmentsBlocked "Research" -State Inactive`
 
@@ -147,7 +147,9 @@ When you have a list of user segments and the information barrier policies you w
 
 ### Scenario 2: Allow a segment to communicate only with one other segment
 
-1. To allow one segment to communicate with only one other segment, use the `New-InformationBarrierPolicy` cmdlet with the **SegmentsAllowed** parameter. 
+1. To allow one segment to communicate with only one other segment, use the **New-InformationBarrierPolicy** cmdlet with the **SegmentsAllowed** parameter. 
+
+    Syntax: `New-InformationBarrierPolicy -Name "policyname" -AssignedSegment "segmentname" -SegmentsAllowed "segmentname"`
 
     Example: `New-InformationBarrierPolicy -Name "ResearchTalksToHR" -AssignedSegment "Research" -SegmentsAllowed "HR" -State Inactive`
 
@@ -164,9 +166,15 @@ When you have a list of user segments and the information barrier policies you w
 
 Information barrier policies are not in effect until you set them to active status, and then apply the policies.
 
-1. Use the `Get-InformationBarrierPolicy -Organization $org` cmdlet to see a list of policies that have been defined. Note the status and identity (GUID) of each policy.
+1. Use the **Get-InformationBarrierPolicy** cmdlet to see a list of policies that have been defined. Note the status and identity (GUID) of each policy.
 
-2. To set a policy to active status, use the `Set-InformationBarrierPolicy` cmdlet with an Identity parameter, and the State parameter set to Active. Here's an example:
+    Syntax: `Get-InformationBarrierPolicy -Organization $org`
+
+2. To set a policy to active status, use the **Set-InformationBarrierPolicy** cmdlet with an **Identity** parameter, and the **State** parameter set to **Active**. 
+
+    Syntax: `Set-InformationBarrierPolicy -Identity GUID -State Active`
+
+    Here's an example:
     
     `Set-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c93772471 -State Active`
     
@@ -174,7 +182,9 @@ Information barrier policies are not in effect until you set them to active stat
 
     Repeat this step as appropriate for each policy.
 
-3. When you have finished setting your information barrier policies to active status, use the `Start-InformationBarrierPoliciesApplication` cmdlet in the Office 365 Security & Compliance Center.
+3. When you have finished setting your information barrier policies to active status, use the **Start-InformationBarrierPoliciesApplication** cmdlet in the Office 365 Security & Compliance Center.
+
+    Syntax: ``
 
     Policies are applied, user by user, for your organization. If your organization is large, it can take 24 hours (or more) for this process to complete.
 
@@ -196,7 +206,7 @@ After you have applied information barrier policies, follow these steps to verif
     
 3. To verify status for a specific user, use the **Get-InformationBarrierRecipientStatus** cmdlet with Identity parameters. 
 
-    The syntax is `Get-InformationBarrierRecipientStatus -Identity <value> -Identity2 <value>`
+    Syntax: `Get-InformationBarrierRecipientStatus -Identity <value> -Identity2 <value>`
 
     You can use any value that uniquely identifies each user, such as name, alias, distinguished name, canonical domain name, email address, or GUID.
 
@@ -216,7 +226,7 @@ After you have applied information barrier policies, follow these steps to verif
 
 1. To view all existing segments, use the **Get-OrganizationSegment** cmdlet.
     
-    The syntax is `Get-OrganizationSegment`
+    Syntax: `Get-OrganizationSegment`
 
     You will see a list of segments and details for each, such as segment type, its UserGroupFilter value, who created or last modified it, GUID, and so on.
 
