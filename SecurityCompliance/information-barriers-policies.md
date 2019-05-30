@@ -26,7 +26,7 @@ With information barriers, you can define policies that are designed to prevent 
 |---------|---------|
 |[Make sure prerequisites are met](#prerequisites)     |- Verify that you have the necessary permissions to define/edit policies<br/>- Make sure that your directory data reflects your organization's structure<br/>- Make sure that scoped directory search is enabled in Microsoft Teams<br/>- Use PowerShell (example cmdlets are provided)<br/>- Provide admin consent (steps are included)          |
 |[Part 1: Segment all the users in your organization](#part-1-segment-users)     |- Determine what policies are needed<br/>- Make a list of segments to define<br/>- Identify which attributes to use<br/>- Define segments in terms of policy filters        |
-|[Part 2: Define information barrier policies](#part-2-define-information-barrier-policies)     |- Define your policies (do not apply yet) |
+|[Part 2: Define information barrier policies](#part-2-define-information-barrier-policies)     |- Define your policies (do not apply yet)<br/>- Two kinds of policies (block or allow) |
 |[Part 3: Apply information barrier policies](#part-3-apply-information-barrier-policies)     |- Set policies to active status<br/>- Run the policy application<br/>- Verify policy status         |
 |(As needed) [Edit a segment or a policy](#edit-a-segment-or-a-policy)     |- Edit a segment<br/>- Edit or remove a policy<br/>- Run the policy application<br/>- Verify policy status         |
 |(As needed) [Troubleshooting](information-barriers-troubleshooting.md)|- Take action when policies are not working as expected|
@@ -190,19 +190,27 @@ Information barrier policies are not in effect until you set them to active stat
 
 After you have applied information barrier policies, follow these steps to verify status:
 
-1. To view a list of all information barrier policy applications, use the `Get-InformationBarrierPoliciesApplicationStatus -All` cmdlet.
+1. To view the status of the most recent information barrier policy application, use the **Get-InformationBarrierPoliciesApplicationStatus** cmdlet.
 
-    This will confirm whether policy application completed, failed, or is in progress.
+    Syntax: `Get-InformationBarrierPoliciesApplicationStatus`
 
-2. To view a list of information barrier policies, use the `Get-InformationBarrierPolicy -Organization $org` cmdlet.
+    To display status for all information barrier policy applications, use `Get-InformationBarrierPoliciesApplicationStatus -All $true`
 
-    This will display a list of policies and their status.
+    This will display information about whether policy application completed, failed, or is in progress.
 
-3. To view information about segments, use the `Get-OrganizationSegment` cmdlet.
+2. To view a list of information barrier policies, use the **Get-InformationBarrierPolicy** cmdlet.
 
-    This will display a list of segments defined for your organization.
+    Syntax: `Get-InformationBarrierPolicy -Organization $org`
+
+    This will display a list of information barrier policies that were defined, and their status.
+
+3. To view information about segments, use the **Get-OrganizationSegment** cmdlet.
+
+    Syntax: `Get-OrganizationSegment`
+
+    This will display a list of all segments defined for your organization.
     
-3. To verify status for a specific user, use the **Get-InformationBarrierRecipientStatus** cmdlet with Identity parameters. 
+3. To verify status for specific users, use the **Get-InformationBarrierRecipientStatus** cmdlet with Identity parameters. 
 
     Syntax: `Get-InformationBarrierRecipientStatus -Identity <value> -Identity2 <value>`
 
@@ -212,11 +220,11 @@ After you have applied information barrier policies, follow these steps to verif
     
     `Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw`
     
-    In this example, we are referring to user accounts in Office 365: meganb for Megan, and alexw for Alex.
+    In this example, we are referring to two user accounts in Office 365: *meganb* for *Megan*, and *alexw* for *Alex*.
     
     (You can also use this cmdlet for a single user: `Get-InformationBarrierRecipientStatus -Identity <value>`)
     
-    This returns information about the users, such as whether any policies are defined that affect the users.
+    This cmdlet returns information about users, such as attribute values and any information barrier policies that are applied.
 
 ## Edit a segment or a policy
 
@@ -231,65 +239,85 @@ After you have applied information barrier policies, follow these steps to verif
     > [!TIP]
     > Print or save your list of segments for reference later. For example, if you want to edit a segment, you will need to know its name or identify value (this is used with the Identity parameter).
 
-2. To edit a segment, use the `Set-OrganizationSegment` cmdlet with the Identity parameter and relevant details. Here's an example:
+2. To edit a segment, use the **Set-OrganizationSegment** cmdlet with the **Identity** parameter and relevant details. 
 
-    `Set-OrganizationSegment -Identity c96e0837-c232-4a8a-841e-ef45787d8fcd -UserGroupFilter "Department -eq 'HRDept'"`
+    Syntax: `Set-OrganizationSegment -Identity GUID -UserGroupFilter "attribute -eq 'attributevalue'"`
+
+    Example: `Set-OrganizationSegment -Identity c96e0837-c232-4a8a-841e-ef45787d8fcd -UserGroupFilter "Department -eq 'HRDept'"`
 
     In this example, for the segment that has the GUID *c96e0837-c232-4a8a-841e-ef45787d8fcd*, we are updating the department name to "HRDept".
 
-When you have finished editing segments for your organization, you can [define](#part-2-define-information-barrier-policies) or [edit](#edit-a-policy) information barrier policies.
+When you have finished editing segments for your organization, you can proceed to [define](#part-2-define-information-barrier-policies) or [edit](#edit-a-policy) information barrier policies.
 
 ### Edit a policy
 
-1. To view a list of current information barrier policies, use the `Get-InformationBarrierPolicy` cmdlet.
+1. To view a list of current information barrier policies, use the **Get-InformationBarrierPolicy** cmdlet.
 
-    In the list of results, identify the policy that you want to change. Note the policy's GUID and name. Make sure the policy is set to inactive status.
+    Syntax: `Get-InformationBarrierPolicy -Organization $org`
 
-2. Use the `Set-InformationBarrierPolicy` cmdlet using an Identity parameter, and specify any changes you want to make.
+    In the list of results, identify the policy that you want to change. Note the policy's GUID and name.
 
-    For example, suppose a policy was defined by using this cmdlet: `New-InformationBarrierPolicy -Name "ResearchBlockedFromSalesMarketing" -AssignedSegment "Research" -SegmentsBlocked "Sales, Marketing"`
+2. Use the **Set-InformationBarrierPolicy** cmdlet with an **Identity** parameter, and specify the changes you want to make.
+
+    Syntax (blocking segments from communicating with other segments): 
+
+    `Set-InformationBarrierPolicy -Identity GUID -SegmentsBlocked "segment1name, segment2name"` 
+
+    Syntax (enabling segments to communicate only with certain other segments):
     
-    Suppose we want to change it so that people in Research can only communicate with people in HR. To make this change, we might use a cmdlet like this: `Set-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c93772471 -SegmentsAllowed "HR"`
+    ``Set-InformationBarrierPolicy -Identity GUID -SegmentsAllowed "segment1name, segment2name"``
 
-3. Repeat steps 1-2 for each policy you want to edit.
+    Example: Suppose a policy was defined to block Research from communicating with Sales and Marketing. The policy was defined by using this cmdlet: `New-InformationBarrierPolicy -Name "ResearchBlockedFromSalesMarketing" -AssignedSegment "Research" -SegmentsBlocked "Sales, Marketing"`
+    
+    Suppose we want to change it so that people in Research can only communicate with people in HR. To make this change, we use this cmdlet: `Set-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c93772471 -SegmentsAllowed "HR"`
 
-4. When you are finished editing your policies, proceed to [Part 3: Apply information barrier policies](#part-3-apply-information-barrier-policies).
+3. When you are finished editing a policy, make sure to apply your changes. (See [Apply information barrier policies](#part-3-apply-information-barrier-policies).)
 
 ### Remove a policy
 
-1. Make sure to [set the policy to inactive status](#set-a-policy-to-inactive-status).
+1. To view a list of current information barrier policies, use the **Get-InformationBarrierPolicy** cmdlet.
 
-2. To view a list of current information barrier policies, use the `Get-InformationBarrierPolicy` cmdlet.
+    Syntax: `Get-InformationBarrierPolicy`
 
     In the list of results, identify the policy that you want to remove. Note the policy's GUID and name. Make sure the policy is set to inactive status.
 
-3. Use the `Remove-InformationBarrierPolicy` cmdlet with an Identity parameter.
+2. Use the **Remove-InformationBarrierPolicy** cmdlet with an Identity parameter.
 
-    For example, suppose we want to remove a policy that has GUID *43c37853-ea10-4b90-a23d-ab8c93772471*. To do this, we use this cmdlet:
+    Syntax: `Remove-InformationBarrierPolicy -Identity GUID`
+
+    Example: Suppose we want to remove a policy that has GUID *43c37853-ea10-4b90-a23d-ab8c93772471*. To do this, we use this cmdlet:
     
     `Remove-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c93772471`
 
-    You will be prompted to confirm the change.
+    When prompted, confirm the change.
 
-4. Repeat steps 1-3 for each policy you want to remove.
+3. Repeat steps 1-2 for each policy you want to remove.
 
-5. When you are finished removing policies, apply your changes. To do this, use the `Start-InformationBarrierPoliciesApplication` cmdlet.
+4. When you are finished removing policies, apply your changes. To do this, use the **Start-InformationBarrierPoliciesApplication** cmdlet.
+
+    Syntax: `Start-InformationBarrierPoliciesApplication`
 
     Changes are applied, user by user, for your organization. If your organization is large, it can take 24 hours (or more) for this process to complete.
 
 ### Set a policy to inactive status
 
-1. To view a list of current information barrier policies, use the `Get-InformationBarrierPolicy` cmdlet.
+1. To view a list of current information barrier policies, use the **Get-InformationBarrierPolicy** cmdlet.
+
+    Syntax: `Get-InformationBarrierPolicy -Organization $org`
 
     In the list of results, identify the policy that you want to change (or remove). Note the policy's GUID and name.
 
-2. To set the policy's status to inactive, use the `Set-InformationBarrierPolicy` cmdlet with an Identity parameter and the State parameter set to Inactive, as shown in the following example:
+2. To set the policy's status to inactive, use the **Set-InformationBarrierPolicy** cmdlet with an Identity parameter and the State parameter set to Inactive.
+
+    Syntax: `Set-InformationBarrierPolicy -Identity GUID -State Inactive`
 
     `Set-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c9377247 -State Inactive`
 
     In this example, we are setting an information barrier policy that has GUID *43c37853-ea10-4b90-a23d-ab8c9377247* to an inactive status.
 
-3. Use the `Start-InformationBarrierPoliciesApplication` cmdlet.
+3. To apply your changes, use the **Start-InformationBarrierPoliciesApplication** cmdlet.
+
+    Syntax: `Start-InformationBarrierPoliciesApplication`
 
     Changes are applied, user by user, for your organization. If your organization is large, it can take 24 hours (or more) for this process to complete.
 
