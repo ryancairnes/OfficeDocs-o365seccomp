@@ -138,16 +138,17 @@ With your list of user segments and the information barrier policies you want to
 
     In this case, we are defining a policy called *SalesBlockedFromResearch*. This policy can be applied to users in a segment called *Sales*. When active and applied, this policy will help prevent people in *Sales* from communicating with people in a segment called *Research*.
 
-    You can also use this cmdlet with multiple segments.
+    You can also use this cmdlet with multiple segments, as shown in the following two examples.
 
-    Example 1 - Assign policy to multiple segments: `New-InformationBarrierPolicy -Name "SalesBlockedFromResearch" -AssignedSegment "Sales, Marketing" -SegmentsBlocked "Research" -State Inactive`
+    Syntax: `New-InformationBarrierPolicy -Name "policyname" -AssignedSegment "segmentname, segmentname" -SegmentsBlocked "segmentname, segmentname"`
+
+    Example 1 - Assign a policy to multiple segments: `New-InformationBarrierPolicy -Name "SalesBlockedFromResearch" -AssignedSegment "Sales, Marketing" -SegmentsBlocked "Research" -State Inactive`
 
     In this case, we are applying a policy to the *Sales* and *Marketing* segments. When active and applied, this policy will prevent *Sales* and *Marketing* from communicating with *Research*.
 
-    Example 2 - Block multiple segments: `New-InformationBarrierPolicy -Name "SalesBlockedFromResearch" -AssignedSegment "Sales" -SegmentsBlocked "Research, Manufacturing" -State Inactive`
+    Example 2 - Assign a policy to block one segment from communicating with multiple other segments: `New-InformationBarrierPolicy -Name "SalesBlockedFromResearch" -AssignedSegment "Sales" -SegmentsBlocked "Research, Manufacturing" -State Inactive`
 
     In this case, we are applying a policy to the *Sales* segment. When active and applied, this policy will prevent *Sales* from communicating with either *Research* or *Manufacturing*.
-
 
     Repeat this step for each policy you want to define to block communications.
  
@@ -166,7 +167,7 @@ With your list of user segments and the information barrier policies you want to
 
     In this case, we are defining a policy called *ResearchTalksToHR*. This policy can be applied to users in a segment called *Research*. When active and applied, this policy will allow people in *Research* to communicate only with people in a segment called *HR*. (In this case, Research cannot communicate with users who are not part of HR.)
 
-    You can also specify multiple segments with this cmdlet.
+    You can also specify multiple segments with this cmdlet, as shown in the following two examples.
 
     Syntax: `New-InformationBarrierPolicy -Name "policyname" -AssignedSegment "segmentname" -SegmentsAllowed "segmentname, segmentname"`
 
