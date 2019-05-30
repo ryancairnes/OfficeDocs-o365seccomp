@@ -131,9 +131,7 @@
 ### [View the data governance reports](view-the-data-governance-reports.md)
 ## More information about data governance
 ### [Watch videos from the Microsoft Data Governance team](https://go.microsoft.com/fwlink/?linkid=867039)
-# [Security in Microsoft 365]
-# [Protect against threats](protect-against-threats.md)
-## [Stub: The threat landscape and common attacks]
+## [Protect against threats](protect-against-threats.md)
 ### [Anti-spam and anti-malware protection](anti-spam-and-anti-malware-protection.md)
 #### [Office 365 email anti-spam protection](anti-spam-protection.md)
 #### [How to prevent real email from being marked as spam in Office 365](prevent-email-from-being-marked-as-spam.md)
@@ -180,8 +178,7 @@
 #### [Use DKIM to validate outbound email](use-dkim-to-validate-outbound-email.md)
 #### [Support for validation of DKIM signed messages](support-for-validation-of-dkim-signed-messages.md)
 #### [Use DMARC to validate email](use-dmarc-to-validate-email.md)
-## [Stub: M365 and Edge filtering]
-### [Smart reports and insights in the Security & Compliance Center](reports-and-insights-in-security-and-compliance.md) 
+## [Smart reports and insights in the Security & Compliance Center](reports-and-insights-in-security-and-compliance.md) 
 ### [View information about malicious files](malicious-files-detected-in-spo-odb-or-teams.md)
 ### [View email security reports in the Security & Compliance Center](view-email-security-reports.md)
 ### [Walkthrough - From a detailed report to an insight](from-a-detailed-report-to-an-insight.md)
