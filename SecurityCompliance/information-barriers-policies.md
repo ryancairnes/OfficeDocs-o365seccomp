@@ -26,7 +26,7 @@ With information barriers, you can define policies that are designed to prevent 
 |---------|---------|
 |[Make sure prerequisites are met](#prerequisites)     |- Verify that you have the necessary permissions to define/edit policies<br/>- Make sure that your directory data reflects your organization's structure<br/>- Make sure that scoped directory search is enabled in Microsoft Teams<br/>- Use PowerShell (example cmdlets are provided)<br/>- Provide admin consent (steps are included)          |
 |[Part 1: Segment all the users in your organization](#part-1-segment-users)     |- Determine what policies are needed<br/>- Make a list of segments to define<br/>- Identify which attributes to use<br/>- Define segments in terms of policy filters        |
-|[Part 2: Define information barrier policies](#part-2-define-information-barrier-policies)     |- Define your policies (do not apply yet)<br/>- Two kinds of policies (block or allow) |
+|[Part 2: Define information barrier policies](#part-2-define-information-barrier-policies)     |- Define your policies (do not apply yet)<br/>- Choose from two kinds (block or allow) |
 |[Part 3: Apply information barrier policies](#part-3-apply-information-barrier-policies)     |- Set policies to active status<br/>- Run the policy application<br/>- Verify policy status         |
 |(As needed) [Edit a segment or a policy](#edit-a-segment-or-a-policy)     |- Edit a segment<br/>- Edit or remove a policy<br/>- Run the policy application<br/>- Verify policy status         |
 |(As needed) [Troubleshooting](information-barriers-troubleshooting.md)|- Take action when policies are not working as expected|
