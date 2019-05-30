@@ -3,7 +3,7 @@ title: "Define information barrier policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 05/29/2019
+ms.date: 05/30/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -192,9 +192,19 @@ After you have applied information barrier policies, follow these steps to verif
 
     This will display a list of segments defined for your organization.
     
-3. To verify status for a specific user, use the `Get-InformationBarrierRecipientStatus` cmdlet with Identity parameters. 
+3. To verify status for a specific user, use the **Get-InformationBarrierRecipientStatus** cmdlet with Identity parameters. 
 
-    For example,  you could use `Get-InformationBarrierRecipientStatus -user1 username -user2 username`, where each *username* refers to a user account in Office 365. (You can also use this cmdlet for a single user.)
+    The syntax is `Get-InformationBarrierRecipientStatus -Identity <value> -Identity2 <value>`
+
+    You can use any value that uniquely identifies each user, such as name, alias, distinguished name, canonical domain name, email address, or GUID.
+
+    Example: 
+    
+    `Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw`
+    
+    In this example, we are referring to user accounts in Office 365: meganb for Megan, and alexw for Alex.
+    
+    (You can also use this cmdlet for a single user: `Get-InformationBarrierRecipientStatus -Identity <value>`)
     
     This returns information about the users, such as whether any policies are defined that affect the users.
 
@@ -202,7 +212,9 @@ After you have applied information barrier policies, follow these steps to verif
 
 ### Edit a segment
 
-1. To view all existing segments, use the `Get-OrganizationSegment` cmdlet.
+1. To view all existing segments, use the **Get-OrganizationSegment** cmdlet.
+    
+    The syntax is `Get-OrganizationSegment`
 
     You will see a list of segments and details for each, such as segment type, its UserGroupFilter value, who created or last modified it, GUID, and so on.
 
