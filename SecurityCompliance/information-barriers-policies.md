@@ -62,7 +62,7 @@ Before you define or edit segments or information barrier policies, follow these
 
 1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
-2. Run the following PowerShell cmdlets:<br>
+2. Run the following PowerShell cmdlets:
 
     ```
     Login-AzureRmAccount 
@@ -86,7 +86,7 @@ Make a list of information barrier policies needed for your organization. You ca
 - Block communications between certain segments; or 
 - Allow communications between certain segments.
 
-(See [Example: Contoso's departments, segments, and policies](#example-contosos-departments-segments-and-policies).)
+(See [Example: Contoso's departments, segments, and policies](#example-contosos-departments-segments-and-policies) in this article.)
 
 ### Make a list of segments
 
@@ -99,7 +99,9 @@ Determine which attributes in your organization's directory data you'll use to d
 
 ### Define segments using PowerShell
 
-1. To define an organizational segment, use the `New-OrganizationSegment` cmdlet with the `UserGroupFilter` parameter that corresponds to the attribute you want to use. 
+1. To define an organizational segment, use the **New-OrganizationSegment** cmdlet with the **UserGroupFilter** parameter that corresponds to the attribute you want to use. 
+
+    The syntax is `New-OrganizationSegment -Name "segmentname" -UserGroupFilter "attribute -eq 'attributevalue'"`
 
     Example: `New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"`
 
