@@ -23,12 +23,13 @@ This article provides a list of attributes that can be used. To learn more about
 
 ## How to use attributes in information barrier policies
 
-The attributes listed in this article can be used to define (or edit) segments of users. Segments are used as parameters (UserGroupFilter) in information barrier policies.
+The attributes listed in this article can be used to define (or edit) segments of users. Segments are used as parameters (UserGroupFilter) in information barrier policies, as shown in the following examples:
 
 |Example  |Cmdlet  |
 |---------|---------|
 |Define a segment called Segment1 using the Department attribute     | `New-OrganizationSegment -Name "Segment1" -UserGroupFilter "Department -eq 'Department1'"`        |
-|Define a segment called SegmentA using the MemberOf attribute     | `New-OrganizationSegment -Name "SegmentA" -UserGroupFilter "MemberOf -eq 'BlueGroup'"`        |
+|Define a segment called SegmentA using the MemberOf attribute (suppose this attribute contains group names, such as "BlueGroup")     | `New-OrganizationSegment -Name "SegmentA" -UserGroupFilter "MemberOf -eq 'BlueGroup'"`        |
+|Define a segment called DayTraders using ExtensionAttribute1 (suppose this attribute contains job titles, such as "DayTrader")|`New-OrganizationSegment -Name "DayTraders" -UserGroupFilter "ExtensionAttribute1 -eq 'DayTrader'"` |
 
 When you define segments, use the same attribute for all your segments. For example, if you define some segments using *Department*, define all of the segments using *Department*. Don't define some segments using *Department* and others using *MemberOf*. Make sure your segments do not overlap; each user should be assigned to exactly one segment. 
 
