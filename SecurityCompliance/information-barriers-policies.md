@@ -40,7 +40,7 @@ Before you plan, define, and implement information barrier policies, get to know
 
 |Phase    |What's involved  |
 |---------|---------|
-|[Make sure prerequisites are met](#prerequisites)     |- Verify that you have the necessary permissions to define/edit policies<br/>- Make sure that your directory data reflects your organization's structure<br/>- Make sure that scoped directory search is enabled in Microsoft Teams<br/>- Make sure audit logging is turned on<br/>- Connect to the Office 365 Security & Compliance Center with PowerShell<br/>- Use PowerShell to perform the tasks in this article (example cmdlets are provided)<br/>- Provide admin consent (steps are included)          |
+|[Make sure prerequisites are met](#prerequisites)     |- Verify that you have the necessary permissions to define/edit segments and policies<br/>- Make sure that your directory data reflects your organization's structure<br/>- Make sure that scoped directory search is enabled in Microsoft Teams<br/>- Make sure audit logging is turned on<br/>- Use PowerShell to perform the tasks in this article (example cmdlets are provided)<br/>- Provide admin consent for information barriers in Microsoft Teams (steps are included)          |
 |[Part 1: Segment all the users in your organization](#part-1-segment-users)     |- Determine what policies are needed<br/>- Make a list of segments to define<br/>- Identify which attributes to use<br/>- Define segments in terms of policy filters        |
 |[Part 2: Define information barrier policies](#part-2-define-information-barrier-policies)     |- Define your policies (do not apply yet)<br/>- Choose from two kinds (block or allow) |
 |[Part 3: Apply information barrier policies](#part-3-apply-information-barrier-policies)     |- Set policies to active status<br/>- Run the policy application<br/>- Verify policy status         |
@@ -55,7 +55,10 @@ To define or edit information barrier policies, **you must be assigned an approp
 - Microsoft 365 Enterprise Global Administrator
 - Office 365 Global Administrator
 - Compliance Administrator
-- Information barriers administrator (this is a new role!)       
+- IB Compliance Management (this is a new role!)
+
+To learn more about roles and permissions, see [Permissions in the Office 365 Security & Compliance Center](permissions-in-the-security-and-compliance-center.md).
+       
 ### Directory data
 
 **Make sure that your organization's structure is reflected in directory data**. To do this, make sure that user account attributes, such as group membership, department name, etc. are populated correctly in Azure Active Directory (or Exchange Online). To learn more, see the following resources:
@@ -75,13 +78,13 @@ In order to look up the status of a policy application, audit logging must be tu
 
 **Currently, information barrier policies are defined and managed in the Office 365 Security & Compliance Center using PowerShell cmdlets**. Although several scenarios and examples are provided in this article, you'll need to be familiar with PowerShell cmdlets and parameters. 
 
-### Connect to the Security & Compliance Center and provide admin consent
+[Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
-Before you define or edit segments or information barrier policies, follow these steps:
+### Provide admin consent for information barriers in Microsoft Teams
 
-1. As a global administrator or compliance administrator, [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
+Use the following procedure to enable information barrier policies to work as expected in Microsoft Teams. For example, when your policies are in place, information barriers can remove people from chat sessions they are not supposed to be in. This helps ensure your organization remains compliant with policies and regulations. 
 
-2. Run the following PowerShell cmdlets:
+1. Run the following PowerShell cmdlets:
 
     ```
     Login-AzureRmAccount 
@@ -91,9 +94,9 @@ Before you define or edit segments or information barrier policies, follow these
     Start-Process  "https://login.microsoftonline.com/common/adminconsent?client_id=$appId"
     ```
 
-3. When prompted, sign in using your work or school account for Office 365.
+2. When prompted, sign in using your work or school account for Office 365.
 
-4. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
+3. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
 
 ## Part 1: Segment users
 
@@ -105,13 +108,13 @@ Considering legal and industry regulations, who are the groups within your organ
 - **Blocking policies** that prevent one group from communicating with another group
 - **Allow policies** that allow certain groups to communicate with only certain other groups.
 
-When you have your list of groups and policies, proceed to identify the segments you'll need.
+When you have your initial list of groups and policies, proceed to identify the segments you'll need.
 
 (See [Example: Contoso's departments, segments, and policies](#example-contosos-departments-segments-and-policies) in this article.)
 
 ### Identify segments
 
-In addition to your list of needed policies, make a list of segments for your organization. Every user in your organization should belong to a segment, and no user should belong to two or more segments. Each segment can have only one information barrier policy applied. 
+In addition to your initial list of policies, make a list of segments for your organization. Every user in your organization should belong to a segment, and no user should belong to two or more segments. Each segment can have only one information barrier policy applied. 
 
 Determine which attributes in your organization's directory data you'll use to define segments. You can use *Department*, *MemberOf*, or any of the supported attributes. Make sure that you have values in the attribute you select for all users. To see a list of supported attributes, refer to [Attributes for information barrier policies (Preview)](information-barriers-attributes.md).
 
