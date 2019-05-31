@@ -134,6 +134,9 @@ Determine which attributes in your organization's directory data you'll use to d
 
 ### Define segments using PowerShell
 
+> [!IMPORTANT]
+> **Make sure that your segments do not overlap**. Each user in your organization should belong to one (and only one) segment. No user should belong to two or more segments. Segments should be defined for all users in your organization. (See [Example: Contoso's defined segments](#contosos-defined-segments) in this article.)
+
 1. To define an organizational segment, use the **New-OrganizationSegment** cmdlet with the **UserGroupFilter** parameter that corresponds to the [attribute](information-barriers-attributes.md) you want to use. 
 
     Syntax: `New-OrganizationSegment -Name "segmentname" -UserGroupFilter "attribute -eq 'attributevalue'"`
@@ -145,9 +148,6 @@ Determine which attributes in your organization's directory data you'll use to d
 2. Repeat step 1 for each segment you want to define.
 
     After you run each cmdlet, you should see a list of details about the new segment. Details include the segment's type, who created or last modified it, and so on. 
-
-> [!IMPORTANT]
-> **Make sure that your segments do not overlap**. Each user in your organization should belong to one (and only one) segment. No user should belong to two or more segments. Segments should be defined for all users in your organization. (See [Example: Contoso's defined segments](#contosos-defined-segments) in this article.)
 
 After you have defined your segments, proceed to define information barrier policies.
 
