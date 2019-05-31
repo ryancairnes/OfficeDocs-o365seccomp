@@ -25,6 +25,7 @@ The following table lists the limits for cases in Advanced eDiscovery.
 |**Description of limit**|**Limit**|
   |:-----|:-----|
   |Maximum number of cases.  <br/> |50  <br/> |
+  |Maximum number of reviews sets per case.  <br/> |50  <br/> |
   |Total number of documents that can be added to a case (for all review sets in the case).  <br/> |1 million  <br/> |
   |Total file size per load set.  <br/> |100 GB  <br/> |
   |Maximum size of single file.   <br/> |100 MB <sup>1</sup> <br/> |
