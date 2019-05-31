@@ -159,33 +159,25 @@ Determine whether you need to prevent communications between certain segments, o
 
 ### Scenario 1: Block communications between segments
 
-1. To block communications between segments, use the **New-InformationBarrierPolicy** cmdlet with the **SegmentsBlocked** parameter. 
+When you want to block segments from communicating with each other, you define two policies: one for each direction. Each policy blocks communication one way only.
+
+For example, suppose you want to block communications between Segment A and Segment B. In this case, you define one policy preventing Segment A from communicating with Segment B, and then define a second policy to prevent Segment B from communicating with Segment A.
+
+1. To define your first blocking policy, use the **New-InformationBarrierPolicy** cmdlet with the **SegmentsBlocked** parameter. 
 
     Syntax: `New-InformationBarrierPolicy -Name "policyname" -AssignedSegment "segmentname" -SegmentsBlocked "segmentname"`
 
-    Example: `New-InformationBarrierPolicy -Name "SalesBlockedFromResearch" -AssignedSegment "Sales" -SegmentsBlocked "Research" -State Inactive`
+    Example: `New-InformationBarrierPolicy -Name "Sales-Research" -AssignedSegment "Sales" -SegmentsBlocked "Research" -State Inactive`
 
-    In this case, we defined a policy called *SalesBlockedFromResearch* for a segment called *Sales*. When active and applied, this policy prevents people in *Sales* from communicating with people in a segment called *Research*.
+    In this example, we defined a policy called *Sales-Research* for a segment called *Sales*. When active and applied, this policy prevents people in *Sales* from communicating with people in a segment called *Research*.
 
-    You can also use this cmdlet with multiple segments, as shown in the following two examples.
+2. To define your second blocking segment, use the **New-InformationBarrierPolicy** cmdlet with the **SegmentsBlocked** parameter again, this time with the segments reversed.
 
-    Syntax: `New-InformationBarrierPolicy -Name "policyname" -AssignedSegment "segmentname, segmentname" -SegmentsBlocked "segmentname, segmentname"`
+    Example: `New-InformationBarrierPolicy -Name "Research-Sales" -AssignedSegment "Research" -SegmentsBlocked "Sales" -State Inactive`
 
-    Example 1: Define a policy to block multiple segments from communicating with another segment 
-    
-    `New-InformationBarrierPolicy -Name "SalesMarketingBlockedFromResearch" -AssignedSegment "Sales, Marketing" -SegmentsBlocked "Research" -State Inactive`
-
-    In this example, we defined a policy for the *Sales* and *Marketing* segments. When active and applied, this policy prevents *Sales* and *Marketing* from communicating with *Research*.
-
-    Example 2: Define a policy to block one segment from communicating with multiple other segments 
-    
-    `New-InformationBarrierPolicy -Name "SalesBlockedFromResearchManufacturing" -AssignedSegment "Sales" -SegmentsBlocked "Research, Manufacturing" -State Inactive`
-
-    In this case, we defined a policy for the *Sales* segment. When active and applied, this policy prevents *Sales* from communicating with either *Research* or *Manufacturing*.
-
-    Repeat this step for each policy you want to define to block communications between segments.
+    In this example, we defined a policy called *Research-Sales* to prevent Research from communicating with Sales.
  
-2. Do one of the following:
+2. Proceed to one of the following:
 
    - (If needed) [Define a policy to allow a segment to communicate only with one other segment](#scenario-2-allow-a-segment-to-communicate-only-with-one-other-segment) 
    - (After all your policies are defined) [Apply information barrier policies](#part-3-apply-information-barrier-policies)
@@ -196,29 +188,29 @@ Determine whether you need to prevent communications between certain segments, o
 
     Syntax: `New-InformationBarrierPolicy -Name "policyname" -AssignedSegment "segmentname" -SegmentsAllowed "segmentname"`
 
-    Example: `New-InformationBarrierPolicy -Name "ResearchTalksToHR" -AssignedSegment "Research" -SegmentsAllowed "HR" -State Inactive`
+    Example: `New-InformationBarrierPolicy -Name "Manufacturing-HR" -AssignedSegment "Manufacturing" -SegmentsAllowed "HR" -State Inactive`
 
-    In this example, we defined a policy called *ResearchTalksToHR* for a segment called *Research*. When active and applied, this policy allows people in *Research* to communicate only with people in a segment called *HR*. (In this case, Research cannot communicate with users who are not part of HR.)
+    In this example, we defined a policy called *Manufacturing-HR* for a segment called *Manufacturing*. When active and applied, this policy allows people in *Manufacturing* to communicate only with people in a segment called *HR*. (In this case, Manufacturing cannot communicate with users who are not part of HR.)
 
-    You can also specify multiple segments with this cmdlet, as shown in the following two examples.
+    **You can also specify multiple segments with this cmdlet, as shown in the following two examples.**
 
     Syntax: `New-InformationBarrierPolicy -Name "policyname" -AssignedSegment "segmentname" -SegmentsAllowed "segmentname, segmentname"`
 
-    Example 1: Define a policy to allow multiple segments to communicate with only one other segment
+    **Example 1: Define a policy to allow multiple segments to communicate with only one other segment**
 
-    `New-InformationBarrierPolicy -Name "ResearchManufacturingTalkToHROnly" -AssignedSegment "Research, Manufacturing" -SegmentsAllowed "HR" -State Inactive`
+    `New-InformationBarrierPolicy -Name "ResearchManufacturing-HR" -AssignedSegment "Research, Manufacturing" -SegmentsAllowed "HR" -State Inactive`
 
     In this example, we defined a policy that allows the *Research* and *Manufacturing* segments to communicate only with *HR*.
 
-    Example 2: Define a policy to allow multiple segments to communicate with only certain other segments
+    **Example 2: Define a policy to allow multiple segments to communicate with only certain other segments**    
 
-    `New-InformationBarrierPolicy -Name "SalesMarketingTalkToHRManufacturingOnly" -AssignedSegment "Sales, Marketing" -SegmentsAllowed "HR, Manufacturing" -State Inactive`
+    `New-InformationBarrierPolicy -Name "SalesMarketing-HRManufacturing" -AssignedSegment "Sales, Marketing" -SegmentsAllowed "HR, Manufacturing" -State Inactive`
 
     In this example, we defined a policy that allows the *Sales* and *Marketing* segments to communicate with only *HR* and *Manufacturing*.
 
     Repeat this step for each policy you want to define to allow specific segments to communicate with only certain other specific segments.
 
-2. Do one of the following:
+2. Proceed to one of the following:
 
    - (If needed) [Define a policy to block communications between segments](#scenario-1-block-communications-between-segments) 
    - (After all your policies are defined) [Apply information barrier policies](#part-3-apply-information-barrier-policies)
@@ -229,7 +221,7 @@ Information barrier policies are not in effect until you set them to active stat
 
 1. Use the **Get-InformationBarrierPolicy** cmdlet to see a list of policies that have been defined. Note the status and identity (GUID) of each policy.
 
-    Syntax: `Get-InformationBarrierPolicy -Organization $org`
+    Syntax: `Get-InformationBarrierPolicy`
 
 2. To set a policy to active status, use the **Set-InformationBarrierPolicy** cmdlet with an **Identity** parameter, and the **State** parameter set to **Active**. 
 
@@ -261,7 +253,7 @@ After you have applied information barrier policies, follow these steps to verif
 
 2. To view a list of information barrier policies, use the **Get-InformationBarrierPolicy** cmdlet.
 
-    Syntax: `Get-InformationBarrierPolicy -Organization $org`
+    Syntax: `Get-InformationBarrierPolicy`
 
     This will display a list of information barrier policies that were defined, and their status.
 
@@ -314,7 +306,7 @@ When you have finished editing segments for your organization, you can proceed t
 
 1. To view a list of current information barrier policies, use the **Get-InformationBarrierPolicy** cmdlet.
 
-    Syntax: `Get-InformationBarrierPolicy -Organization $org`
+    Syntax: `Get-InformationBarrierPolicy`
 
     In the list of results, identify the policy that you want to change. Note the policy's GUID and name.
 
@@ -364,7 +356,7 @@ When you have finished editing segments for your organization, you can proceed t
 
 1. To view a list of current information barrier policies, use the **Get-InformationBarrierPolicy** cmdlet.
 
-    Syntax: `Get-InformationBarrierPolicy -Organization $org`
+    Syntax: `Get-InformationBarrierPolicy`
 
     In the list of results, identify the policy that you want to change (or remove). Note the policy's GUID and name.
 
