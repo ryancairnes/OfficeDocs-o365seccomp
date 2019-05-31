@@ -262,6 +262,22 @@ Using PowerShell, you can verify status of user accounts, segments, policies, an
 |The most recent information barrier policy application     | Use the **Get-InformationBarrierPoliciesApplicationStatus** cmdlet. <p>Syntax: `Get-InformationBarrierPoliciesApplicationStatus`<p>    This will display information about whether policy application completed, failed, or is in progress.       |
 |All information barrier policy applications|Use `Get-InformationBarrierPoliciesApplicationStatus -All $true`<p>This will display information about whether policy application completed, failed, or is in progress.|
 
+## Stop a policy application
+
+If, after you have started applying information barrier policies, you want to stop those policies from being applied, use the following procedure. Keep in mind that it will take approximately 30-35 minutes for the process to begin.
+
+1. To view the status of the most recent information barrier policy application, use the **Get-InformationBarrierPoliciesApplicationStatus** cmdlet.
+
+    Syntax: `Get-InformationBarrierPoliciesApplicationStatus`
+
+    Note the application's GUID.
+
+2. Use the **Stop-InformationBarrierPoliciesApplication** cmdlet with an Identity parameter.
+
+    Syntax:  `Stop-InformationBarrierPoliciesApplication -Identity GUID`
+
+    Example: `InformationBarrierPoliciesApplication -Identity 46237888-12ca-42e3-a541-3fcb7b5231d1`
+
 ## Edit a segment or a policy
 
 ### Edit a segment
@@ -361,22 +377,6 @@ At this point, one or more information barrier policies are set to inactive stat
 - Leave it as is (a policy set to inactive status has no effect on users)
 - [Edit a policy](#edit-a-policy) 
 - [Remove a policy](#remove-a-policy)
-
-## Stop a policy application
-
-If, after you have started applying information barrier policies, you want to stop those policies from being applied, use the following procedure. Keep in mind that it will take approximately 30-35 minutes for the process to begin.
-
-1. To view the status of the most recent information barrier policy application, use the **Get-InformationBarrierPoliciesApplicationStatus** cmdlet.
-
-    Syntax: `Get-InformationBarrierPoliciesApplicationStatus`
-
-    Note the application's GUID.
-
-2. Use the **Stop-InformationBarrierPoliciesApplication** cmdlet with an Identity parameter.
-
-    Syntax:  `Stop-InformationBarrierPoliciesApplication -Identity GUID`
-
-    Example: `InformationBarrierPoliciesApplication -Identity 46237888-12ca-42e3-a541-3fcb7b5231d1`
 
 ## Example: Contoso's departments, segments, and policies
 
