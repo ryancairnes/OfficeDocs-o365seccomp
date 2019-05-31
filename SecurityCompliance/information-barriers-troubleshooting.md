@@ -25,23 +25,24 @@ To perform the tasks described in this article, you must be assigned an appropri
 - Microsoft 365 Enterprise Global Administrator
 - Office 365 Global Administrator
 - Compliance Administrator
-- Information barriers administrator (this is a new role!)
+- IB Compliance Management (this is a new role!)
+
+To learn more about roles and permissions, see [Permissions in the Office 365 Security & Compliance Center](permissions-in-the-security-and-compliance-center.md).
 
 To learn more about prerequisites for information barriers, see [Prerequisites (for information barrier policies)](information-barriers-policies.md#prerequisites).
 
-Also, make sure to [connect to the Security & Compliance Center and provide admin consent](information-barriers-policies.md#connect-to-the-security--compliance-center-and-provide-admin-consent).
+Also, make sure to [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
 ## Issue: People are unexpectedly blocked from communicating in Microsoft Teams 
 
+In this case, people are reporting unexpected issues communicating in Microsoft Teams. Examples:
 - A user is unable to find or communicate with another user in Microsoft Teams.
 - A user cannot see or select another user in Microsoft Teams.
 - A user can see, but cannot send messages to, another user in Microsoft Teams.
 
 ### What to do
 
-Follow these steps to determine whether the users are affected by an information barrier policy, whether the users are in the correct segments, and whether filters are applied correctly in information barriers.
-
-1. Check to see if each user is included in an information barrier policy. To do this, use the **Get-InformationBarrierRecipientStatus** cmdlet with the Identity parameter. 
+1. Determine whether the users are affected by an information barrier policy. To do this, use the **Get-InformationBarrierRecipientStatus** cmdlet with the Identity parameter. 
 
     The syntax is `Get-InformationBarrierRecipientStatus -Identity`
 
@@ -49,11 +50,11 @@ Follow these steps to determine whether the users are affected by an information
 
     Example: `Get-InformationBarrierRecipientStatus -Identity meganb`
 
-    In this example, we are using an alias (*meganb*) for the Identity parameter. This cmdlet will return information that indicates whether the user is affected by an information barrier policy. (Its GUID will be listed as *ExoPolicyId*.)
+    In this example, we are using an alias (*meganb*) for the Identity parameter. This cmdlet will return information that indicates whether the user is affected by an information barrier policy. (Look for *ExoPolicyId: \<GUID>.)
 
     If the users are not included in information barrier policies, contact support. Otherwise, proceed to the next step.
 
-2. Check to see which segments are affected by an information barrier policy. To do this, use the `Get-InformationBarrierPolicy` cmdlet with the Identity parameter. Use details, such as the policy GUID (ExoPolicyId) you received during the previous step, as an identity value.
+2. Find out which segments are included in an information barrier policy. To do this, use the `Get-InformationBarrierPolicy` cmdlet with the Identity parameter. Use details, such as the policy GUID (ExoPolicyId) you received during the previous step, as an identity value.
 
     Example: `Get-InformationBarrierPolicy -Identity b42c3d0f-49e9-4506-a0a5-bf2853b5df6f`
 
@@ -82,18 +83,29 @@ Follow these steps to determine whether the users are affected by an information
 
     If you are still having issues with your information barrier policy, contact support.
     
-
 ## Issue: The information barrier application process is taking too long
 
-After running the `Start-InformationBarrierPoliciesApplication` cmdlet, the process is taking a really long time to finish.
+After running the **Start-InformationBarrierPoliciesApplication** cmdlet, the process is taking a really long time to finish.
 
 ### What to do
 
-1. Keep in mind that when you run the policy application cmdlet, information barrier policies are being applied (or removed), user by user, for all accounts in your organization. If you have a lot of users, it will take a while to process. 
+1. Keep in mind that when you run the policy application cmdlet, information barrier policies are being applied (or removed), user by user, for all accounts in your organization. If you have a lot of users, it will take a while to process. (As a general guideline, it takes about an hour to process 5,000 user accounts.) 
 
-2. If you have waited a long time and the process still isn't finished, you can update a field in the users' profiles in Azure Active Directory, and then wait about 30 minutes for FwdSync to occur. For more details about how this works, see [New address lists that you create in Exchange Online don't contain all the expected recipients](https://support.microsoft.com/help/2955640/new-address-lists-that-you-create-in-exchange-online-don-t-contain-all).
+2. Use the **Get-InformationBarrierPoliciesApplicationStatus** cmdlet to verify status.
 
-3. If after step 2 you are still having issues with the process finishing, contact support.
+    Syntax: `Get-InformationBarrierPoliciesApplicationStatus`
+
+    To display status for all information barrier policy applications, use `Get-InformationBarrierPoliciesApplicationStatus -All $true`
+
+    This will display information about whether policy application completed, failed, or is in progress..
+
+3. Depending on the results of step 2, take one of the following steps:
+
+    - If the application has not started, and it has been more than 45 minutes since the **Start-InformationBarrierPoliciesApplication** cmdlet has been run, review your audit log to see if there are any errors in policy definitions, or some other reason why the application has not started.
+
+    - If the application has failed, review your segments and policies. If necessary, [edit segments](information-barriers-policies.md#edit-a-segment) and/or [edit policies](information-barriers-policies.md#edit-a-policy), and then run the **Start-InformationBarrierPoliciesApplication** cmdlet again.
+
+    - If the application is still in progress, allow more time for it to complete. If it has been several days, contact support.
 
 ## Related topics
 

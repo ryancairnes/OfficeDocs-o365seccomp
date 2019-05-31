@@ -20,7 +20,7 @@ With information barriers, you can define policies that are designed to prevent 
 > [!IMPORTANT]
 > This article describes how to plan, define, implement, and manage information barrier policies. Several steps are involved, and the work flow is divided into several parts. Make sure to read through the [prerequisites](#prerequisites) and the entire process before you begin defining (or editing) information barrier policies.
 
-## Concepts of information barriers
+## Concepts of information barrier policies
 
 Before you plan, define, and implement information barrier policies, get to know the underlying concepts. With information barriers, you'll work with user account attributes, segments, information barrier policies, and a policy application process described in this article. 
 
@@ -40,7 +40,7 @@ Before you plan, define, and implement information barrier policies, get to know
 
 |Phase    |What's involved  |
 |---------|---------|
-|[Make sure prerequisites are met](#prerequisites)     |- Verify that you have the necessary permissions to define/edit segments and policies<br/>- Make sure that your directory data reflects your organization's structure<br/>- Make sure that scoped directory search is enabled in Microsoft Teams<br/>- Make sure audit logging is turned on<br/>- Use PowerShell to perform the tasks in this article (example cmdlets are provided)<br/>- Provide admin consent for information barriers in Microsoft Teams (steps are included)          |
+|[Make sure prerequisites are met](#prerequisites)     |- Confirm that your subscription includes information barriers<br/>- Verify that you have the necessary permissions to define/edit segments and policies<br/>- Make sure that your directory data reflects your organization's structure<br/>- Make sure that scoped directory search is enabled in Microsoft Teams<br/>- Make sure audit logging is turned on<br/>- Use PowerShell to perform the tasks in this article (example cmdlets are provided)<br/>- Provide admin consent for information barriers in Microsoft Teams (steps are included)          |
 |[Part 1: Segment all the users in your organization](#part-1-segment-users)     |- Determine what policies are needed<br/>- Make a list of segments to define<br/>- Identify which attributes to use<br/>- Define segments in terms of policy filters        |
 |[Part 2: Define information barrier policies](#part-2-define-information-barrier-policies)     |- Define your policies (do not apply yet)<br/>- Choose from two kinds (block or allow) |
 |[Part 3: Apply information barrier policies](#part-3-apply-information-barrier-policies)     |- Set policies to active status<br/>- Run the policy application<br/>- Verify policy status         |
@@ -48,6 +48,15 @@ Before you plan, define, and implement information barrier policies, get to know
 |(As needed) [Troubleshooting](information-barriers-troubleshooting.md)|- Take action when policies are not working as expected|
 
 ## Prerequisites
+
+**Currently, the information barrier feature is in private preview**. When these features are generally available, they'll be included in subscriptions, such as:
+
+- Microsoft 365 E5
+- Office 365 E5
+- Office 365 Advanced Compliance
+- Microsoft 365 E5 Information Protection and Compliance
+
+For more details, see [Compliance Solutions](https://products.office.com/business/security-and-compliance/compliance-solutions).
 
 ### Permissions
 
@@ -239,47 +248,20 @@ Information barrier policies are not in effect until you set them to active stat
 
     Syntax: `Start-InformationBarrierPoliciesApplication`
 
-    Policies are applied, user by user, for your organization. If your organization is large, it can take 24 hours (or more) for this process to complete.
+    After approximately a half hour, policies are applied, user by user, for your organization. If your organization is large, it can take 24 hours (or more) for this process to complete. (As a general guideline, it takes about an hour to process 5,000 user accounts.)
 
-## Verify status of information barrier policies
+## Verify status
 
-After you have applied information barrier policies, follow these steps to verify status:
+You can verify status of users, segments, policies, and policy application, as listed in the following table.
 
-1. To view the status of the most recent information barrier policy application, use the **Get-InformationBarrierPoliciesApplicationStatus** cmdlet.
 
-    Syntax: `Get-InformationBarrierPoliciesApplicationStatus`
-
-    To display status for all information barrier policy applications, use `Get-InformationBarrierPoliciesApplicationStatus -All $true`
-
-    This will display information about whether policy application completed, failed, or is in progress.
-
-2. To view a list of information barrier policies, use the **Get-InformationBarrierPolicy** cmdlet.
-
-    Syntax: `Get-InformationBarrierPolicy`
-
-    This will display a list of information barrier policies that were defined, and their status.
-
-3. To view information about segments, use the **Get-OrganizationSegment** cmdlet.
-
-    Syntax: `Get-OrganizationSegment`
-
-    This will display a list of all segments defined for your organization.
-    
-3. To verify status for specific users, use the **Get-InformationBarrierRecipientStatus** cmdlet with Identity parameters. 
-
-    Syntax: `Get-InformationBarrierRecipientStatus -Identity <value> -Identity2 <value>`
-
-    You can use any value that uniquely identifies each user, such as name, alias, distinguished name, canonical domain name, email address, or GUID.
-
-    Example: 
-    
-    `Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw`
-    
-    In this example, we refer to two user accounts in Office 365: *meganb* for *Megan*, and *alexw* for *Alex*.
-    
-    (You can also use this cmdlet for a single user: `Get-InformationBarrierRecipientStatus -Identity <value>`)
-    
-    This cmdlet returns information about users, such as attribute values and any information barrier policies that are applied.
+|To verify this  |Do this  |
+|---------|---------|
+|User accounts     |Use the **Get-InformationBarrierRecipientStatus** cmdlet with Identity parameters. <p>Syntax: `Get-InformationBarrierRecipientStatus -Identity <value> -Identity2 <value>` <p>You can use any value that uniquely identifies each user, such as name, alias, distinguished name, canonical domain name, email address, or GUID. <p>Example: `Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw` <p>In this example, we refer to two user accounts in Office 365: *meganb* for *Megan*, and *alexw* for *Alex*. <p>(You can also use this cmdlet for a single user: `Get-InformationBarrierRecipientStatus -Identity <value>`) <p>This cmdlet returns information about users, such as attribute values and any information barrier policies that are applied.|
+|Segments     |Use the **Get-OrganizationSegment** cmdlet.<p>Syntax: `Get-OrganizationSegment` <p>This will display a list of all segments defined for your organization.         |
+|Information barrier policies     |Use the **Get-InformationBarrierPolicy** cmdlet. <p> Syntax: `Get-InformationBarrierPolicy` <p>This will display a list of information barrier policies that were defined, and their status.       |
+|The most recent information barrier policy application     | Use the **Get-InformationBarrierPoliciesApplicationStatus** cmdlet. <p>Syntax: `Get-InformationBarrierPoliciesApplicationStatus`<p>    This will display information about whether policy application completed, failed, or is in progress.       |
+|All information barrier policy applications|Use `Get-InformationBarrierPoliciesApplicationStatus -All $true`<p>This will display information about whether policy application completed, failed, or is in progress.|
 
 ## Edit a segment or a policy
 
@@ -380,6 +362,22 @@ At this point, one or more information barrier policies are set to inactive stat
 - Leave it as is (a policy set to inactive status has no effect on users)
 - [Edit a policy](#edit-a-policy) 
 - [Remove a policy](#remove-a-policy)
+
+## Stop a policy application
+
+If, after you have started applying information barrier policies, you want to stop those policies from being applied, use the following procedure. Keep in mind that it will take approximately 30-35 minutes for the process to begin.
+
+1. To view the status of the most recent information barrier policy application, use the **Get-InformationBarrierPoliciesApplicationStatus** cmdlet.
+
+    Syntax: `Get-InformationBarrierPoliciesApplicationStatus`
+
+    Note the application's GUID.
+
+2. Use the **Stop-InformationBarrierPoliciesApplication** cmdlet with an Identity parameter.
+
+    Syntax:  `Stop-InformationBarrierPoliciesApplication -Identity GUID`
+
+    Example: `InformationBarrierPoliciesApplication -Identity 46237888-12ca-42e3-a541-3fcb7b5231d1`
 
 ## Example: Contoso's departments, segments, and policies
 
