@@ -24,14 +24,15 @@ As an admin, you can view, release, and delete quarantined messages, and report 
   
 By default, Office 365 sends phishing messages and messages containing malware directly to quarantine. Other filtered messages are sent to users' Junk Email folder unless you set up a policy to send them to quarantine.
   
-You must have global administrator (GA) permissions in Office 365 to work with quarantined messages that were sent to other users and to work with quarantined files.
+You must have global administrator (GA) permissions in Office 365 or be a member of one or more Security & Compliance Center role groups to work with quarantined messages that were sent to other users and to work with quarantined files. See [Permissions in the Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/securitycompliance/permissions-in-the-security-and-compliance-center?redirectSourcePath=%252farticle%252fd10608af-7934-490a-818e-e68f17d0e9c1) for more information on Security & Compliance Center permissions and roles.
+  
   
 > [!IMPORTANT]
 >By default, spam, bulk and phishing messages are kept in quarantine for 30 days. Messages that are quarantined because they matched a mail flow rule are kept in quarantine for 7 days. Malware messages are kept in quarantine for 15 days. You can customize the spam quarantine time in anti-spam settings in the Security &amp; Compliance Center. When Office 365 deletes a message from quarantine, you can't get it back. If you like, you can change the retention period for quarantined messages in your anti-spam filter policies. For more information, see [Setting the quarantine retention period](manage-quarantined-messages-and-files.md#BKMK_ModQuarantineTime) in this article. 
   
 ## View your organization's quarantined messages
 
-1. Using a work or school account that has global administrator privileges in your Office 365 organization, sign into Office 365 and [go to the Security and Compliance Center](go-to-the-securitycompliance-center.md).
+1. Using a work or school account that has global administrator privileges or appropirate Security & Compliance Center roles in your Office 365 organization, sign into Office 365 and [go to the Security and Compliance Center](go-to-the-securitycompliance-center.md).
     
 2. In the list on the left, expand **Threat Management**, choose **Review**, and then choose **Quarantine**.
     
@@ -184,7 +185,7 @@ You can configure how long messages and files will remain in quarantine before t
   
 ### To modify the quarantine retention period for the default spam filter policy in the Security and Compliance Center
 
-1. Using a work or school account that has global administrator privileges in your Office 365 organization, sign in to Office 365 and [go to the Security and Compliance Center](go-to-the-securitycompliance-center.md).
+1. Using a work or school account that has global administrator privileges or appropirate Security & Compliance Center roles in your Office 365 organization, sign in to Office 365 and [go to the Security and Compliance Center](go-to-the-securitycompliance-center.md).
     
 2. On the left, expand **Threat Management**, choose **Policy**, and then choose **Anti-spam**. <br/>
     > [!TIP]
