@@ -20,9 +20,9 @@ With information barriers, you can define policies that are designed to prevent 
 > [!IMPORTANT]
 > This article describes how to plan, define, implement, and manage information barrier policies. Several steps are involved, and the work flow is divided into several parts. Make sure to read through the [prerequisites](#prerequisites) and the entire process before you begin defining (or editing) information barrier policies.
 
-## The concepts
+## Concepts of information barriers
 
-Before you plan, define, and implement information barrier policies, get to know the basic underlying concepts. With information barriers, you'll work with user account attributes, segments, information barrier policies, and a policy application process described in this article. 
+Before you plan, define, and implement information barrier policies, get to know the underlying concepts. With information barriers, you'll work with user account attributes, segments, information barrier policies, and a policy application process described in this article. 
 
 - **User account attributes** are defined in Azure Active Directory (or Exchange Online). These attributes can include department, job title, location, team name, etc. 
 
@@ -40,7 +40,7 @@ Before you plan, define, and implement information barrier policies, get to know
 
 |Phase    |What's involved  |
 |---------|---------|
-|[Make sure prerequisites are met](#prerequisites)     |- Verify that you have the necessary permissions to define/edit policies<br/>- Make sure that your directory data reflects your organization's structure<br/>- Make sure that scoped directory search is enabled in Microsoft Teams<br/>- Make sure audit logging is turned on<br/>- Use PowerShell (example cmdlets are provided)<br/>- Provide admin consent (steps are included)          |
+|[Make sure prerequisites are met](#prerequisites)     |- Verify that you have the necessary permissions to define/edit policies<br/>- Make sure that your directory data reflects your organization's structure<br/>- Make sure that scoped directory search is enabled in Microsoft Teams<br/>- Make sure audit logging is turned on<br/>- Connect to the Office 365 Security & Compliance Center with PowerShell<br/>- Use PowerShell to perform the tasks in this article (example cmdlets are provided)<br/>- Provide admin consent (steps are included)          |
 |[Part 1: Segment all the users in your organization](#part-1-segment-users)     |- Determine what policies are needed<br/>- Make a list of segments to define<br/>- Identify which attributes to use<br/>- Define segments in terms of policy filters        |
 |[Part 2: Define information barrier policies](#part-2-define-information-barrier-policies)     |- Define your policies (do not apply yet)<br/>- Choose from two kinds (block or allow) |
 |[Part 3: Apply information barrier policies](#part-3-apply-information-barrier-policies)     |- Set policies to active status<br/>- Run the policy application<br/>- Verify policy status         |
