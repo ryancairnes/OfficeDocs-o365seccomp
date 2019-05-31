@@ -250,10 +250,9 @@ Information barrier policies are not in effect until you set them to active stat
 
     After approximately a half hour, policies are applied, user by user, for your organization. If your organization is large, it can take 24 hours (or more) for this process to complete. (As a general guideline, it takes about an hour to process 5,000 user accounts.)
 
-## Verify status
+## Verify status of user accounts, segments, policies, or policy application
 
-You can verify status of users, segments, policies, and policy application, as listed in the following table.
-
+Using PowerShell, you can verify status of user accounts, segments, policies, and policy application, as listed in the following table.
 
 |To verify this  |Do this  |
 |---------|---------|
