@@ -397,16 +397,16 @@ Contoso has five departments: HR, Sales, Marketing, Research, and Manufacturing.
 |---------|---------|---------|
 |HR     |Everyone         |(no restrictions)         |
 |Sales     |HR, Marketing, Manufacturing         |Research         |
-|Marketing     |HR, Sales, Manufacturing         |Research         |
-|Research     |HR (only)        |Sales, Marketing, Manufacturing     |
-|Manufacturing |Everyone |(no restrictions) |
+|Marketing     |Everyone         |(no restrictions)         |
+|Research     |HR, Marketing, Manufacturing        |Sales     |
+|Manufacturing |HR, Marketing |Anyone other than HR or Marketing |
 
-With this in mind, Contoso's plan includes two information barrier policies:
+With this in mind, Contoso's plan includes three information barrier policies:
 
-1. A policy designed to prevent Sales and Marketing from communicating with Research
-2. A policy designed to allow Research to communicate with HR only 
+1. A policy designed to prevent Sales from communicating with Research (and another policy to prevent Research from communicating with Sales)
+2. A policy designed to allow Manufacturing to communicate with HR and Marketing only 
 
-The Manufacturing and HR departments don't have any other restrictions, so Contoso does not need additional information barrier policies at this time. 
+It's not necessary to define policies for HR or Marketing.
 
 Contoso will use the Department attribute in Azure Active Directory to define segments, as follows:
 
@@ -423,8 +423,9 @@ With the segments defined, Contoso proceeds to define two policies.
 
 |Policy  |Policy Definition  |
 |---------|---------|
-|Policy 1: Prevent Sales and Marketing from communicating with Research     | `New-InformationBarrierPolicy -Name "SalesMarketingBlockedFromResearch" -AssignedSegment "Sales, Marketing" -SegmentsBlocked "Research" -State Inactive` <p> In this example, the information barrier policy is called *SalesMarketingBlockedFromResearch*. When this policy is active and applied, it will help prevent users who are in the Sales and Marketing segments from communicating with users in the Research segment.       |
-|Policy 2: Allow Research to communicate with HR only     | `New-InformationBarrierPolicy -Name "ResearchTalksToHR" -AssignedSegment "Research" -SegmentsAllowed "HR" -State Inactive` <p>In this case, the information barrier policy is called *ResearchTalksToHR*. When this policy is active and applied, Research can communicate only with HR, but HR is not restricted from communicating with other segments. |
+|Policy 1: Prevent Sales from communicating with Research     | `New-InformationBarrierPolicy -Name "Sales-Research" -AssignedSegment "Sales" -SegmentsBlocked "Research" -State Inactive` <p> In this example, the information barrier policy is called *Sales-Research*. When this policy is active and applied, it will help prevent users who are in the Sales segment from communicating with users in the Research segment. This is a one-way policy; it won't prevent Research from communicating with Sales. For that, Policy 2 is needed.      |
+|Policy 2: Prevent Research from communicating with Sales     | `New-InformationBarrierPolicy -Name "Research-Sales" -AssignedSegment "Research" -SegmentsBlocked "Sales" -State Inactive` <p> In this example, the information barrier policy is called *Research-Sales*. When this policy is active and applied, it will help prevent users who are in the Research segment from communicating with users in the Sales segment.       |
+|Policy 3: Allow Manufacturing to communicate with HR and Marketing only     | `New-InformationBarrierPolicy -Name "Manufacturing-HRMarketing" -AssignedSegment "Manufacturing" -SegmentsAllowed "HR, Marketing" -State Inactive` <p>In this case, the information barrier policy is called *Manufacturing-Marketing*. When this policy is active and applied, Manufacturing can communicate only with HR and Marketing. Note that HR and Marketing are not restricted from communicating with other segments. |
 
 With segments and policies defined, Contoso applies the policies. When that finishes, Contoso is compliant with legal and industry requirements.
 
