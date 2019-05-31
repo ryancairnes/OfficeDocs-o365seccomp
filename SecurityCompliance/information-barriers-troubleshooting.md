@@ -79,7 +79,7 @@ In this case, people are reporting unexpected issues communicating in Microsoft 
 
     In this example, we are getting information about the segment that has GUID *c96e0837-c232-4a8a-841e-ef45787d8fcd*.
 
-    Review the details for the segment. If necessary, [edit a segment](information-barriers-policies.md#edit-a-segment), wait 30 minutes, and then re-use the `Start-InformationBarrierPoliciesApplication` cmdlet.
+    Review the details for the segment. If necessary, [edit a segment](information-barriers-policies.md#edit-a-segment), and then re-use the `Start-InformationBarrierPoliciesApplication` cmdlet.
 
     If you are still having issues with your information barrier policy, contact support.
     
