@@ -82,7 +82,9 @@ In order to look up the status of a policy application, audit logging must be tu
 
 ### Provide admin consent for information barriers in Microsoft Teams
 
-Use the following procedure to enable information barrier policies to work as expected in Microsoft Teams. For example, when your policies are in place, information barriers can remove people from chat sessions they are not supposed to be in. This helps ensure your organization remains compliant with policies and regulations. 
+Use the following procedure to enable information barrier policies to work as expected in Microsoft Teams. 
+
+For example, when your policies are in place, information barriers can remove people from chat sessions they are not supposed to be in. This helps ensure your organization remains compliant with policies and regulations. 
 
 1. Run the following PowerShell cmdlets:
 
@@ -110,7 +112,7 @@ Considering legal and industry regulations, who are the groups within your organ
 
 When you have your initial list of groups and policies, proceed to identify the segments you'll need.
 
-(See [Example: Contoso's departments, segments, and policies](#example-contosos-departments-segments-and-policies) in this article.)
+(See [Example: Contoso's departments and plan](#contosos-departments-and-plan) in this article.)
 
 ### Identify segments
 
@@ -136,7 +138,7 @@ Determine which attributes in your organization's directory data you'll use to d
     After you run each cmdlet, you should see a list of details about the new segment. Details include the segment's type, who created or last modified it, and so on. 
 
 > [!IMPORTANT]
-> **Make sure that your segments do not overlap**. Each user in your organization should belong to one (and only one) segment. No user should belong to two or more segments. Segments should be defined for all users in your organization. (See [Example: Contoso's departments, segments, and policies](#example-contosos-departments-segments-and-policies) in this article.)
+> **Make sure that your segments do not overlap**. Each user in your organization should belong to one (and only one) segment. No user should belong to two or more segments. Segments should be defined for all users in your organization. (See [Example: Contoso's defined segments](#contosos-defined-segments) in this article.)
 
 After you have defined your segments, proceed to define information barrier policies.
 
@@ -155,7 +157,7 @@ Determine whether you need to prevent communications between certain segments, o
 > [!NOTE]
 > As you define information barrier policies, make sure to set those policies to inactive status until you are ready to apply them. Defining (or editing) policies does not affect users until those policies are set to active status and then applied.
 
-(See [Example: Contoso's departments, segments, and policies](#example-contosos-departments-segments-and-policies) in this article.)
+(See [Example: Contoso's information barrier policies](#contosos-information-barrier-policies) in this article.)
 
 ### Scenario 1: Block communications between segments
 
@@ -192,7 +194,7 @@ For example, suppose you want to block communications between Segment A and Segm
 
     In this example, we defined a policy called *Manufacturing-HR* for a segment called *Manufacturing*. When active and applied, this policy allows people in *Manufacturing* to communicate only with people in a segment called *HR*. (In this case, Manufacturing cannot communicate with users who are not part of HR.)
 
-    **You can also specify multiple segments with this cmdlet, as shown in the following two examples.**
+    **If needed, you can specify multiple segments with this cmdlet, as shown in the following two examples.**
 
     Syntax: `New-InformationBarrierPolicy -Name "policyname" -AssignedSegment "segmentname" -SegmentsAllowed "segmentname, segmentname"`
 
@@ -320,7 +322,7 @@ When you have finished editing segments for your organization, you can proceed t
     
     ``Set-InformationBarrierPolicy -Identity GUID -SegmentsAllowed "segmentname, segmentname"``
 
-    Example: Suppose a policy was defined to block Research from communicating with Sales and Marketing. The policy was defined by using this cmdlet: `New-InformationBarrierPolicy -Name "ResearchBlockedFromSalesMarketing" -AssignedSegment "Research" -SegmentsBlocked "Sales, Marketing"`
+    Example: Suppose a policy was defined to block Research from communicating with Sales and Marketing. The policy was defined by using this cmdlet: `New-InformationBarrierPolicy -Name "Research-SalesMarketing" -AssignedSegment "Research" -SegmentsBlocked "Sales, Marketing"`
     
     Suppose we want to change it so that people in Research can only communicate with people in HR. To make this change, we use this cmdlet: `Set-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c93772471 -SegmentsAllowed "HR"`
 
@@ -372,7 +374,7 @@ When you have finished editing segments for your organization, you can proceed t
 
     Syntax: `Start-InformationBarrierPoliciesApplication`
 
-    Changes are applied, user by user, for your organization. If your organization is large, it can take 24 hours (or more) for this process to complete.
+    Changes are applied, user by user, for your organization. If your organization is large, it can take 24 hours (or more) for this process to complete. (As a general guideline, it takes about an hour to process 5,000 user accounts.)
 
 At this point, one or more information barrier policies are set to inactive status. From here, you can do any of the following:
 - Leave it as is (a policy set to inactive status has no effect on users)
