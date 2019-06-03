@@ -15,7 +15,7 @@ search.appverid:
 ms.assetid: 
 ROBOTS: NOINDEX, NOFOLLOW 
 
-description: "Opt-in and use the attorney-client privilege detection model to leverage the machine learning-based detection of privileged content when reviewing content in an Advanced eDiscovery case."
+description: "Opt-in and use the attorney-client privilege detection model to use the machine learning-based detection of privileged content when reviewing content in an Advanced eDiscovery case."
 ---
 
 # Set up attorney-client privilege detection in Advanced eDiscovery
@@ -29,23 +29,23 @@ A major and costly aspect of the review phase of any eDiscovery process is revie
 
 When attorney-client privilege detection is enabled, all documents in a review set will be processed by the attorney-client privilege detection model when you [analyze the data](analyzing-data-in-review-set.md) in the review set. The model looks for two things:
 
-- Privileged content - The model uses machine learning to determines the likelihood that the document contains content that is legal in nature.
+- Privileged content – The model uses machine learning to determine the likelihood that the document contains content that is legal in nature.
 
-- Participants - As part of setting up attorney-client privilege detection, you have to submit a list of attorneys for your organization. The model then compares the participants of the document with the attorney list to determine if a document has at least one attorney participant.
+- Participants – As part of setting up attorney-client privilege detection, you have to submit a list of attorneys for your organization. The model then compares the participants of the document with the attorney list to determine if a document has at least one attorney participant.
 
 The model produces the following three properties for every document:
 
-- **AttorneyClientPrivilegeScore** - The likelihood the document is legal in nature; the values for the score are between **0** and **1**.
+- **AttorneyClientPrivilegeScore** – The likelihood the document is legal in nature; the values for the score are between **0** and **1**.
 
-- **HasAttorney** - This property is set to **true** if one of the document participants is listed in the attorney list; otherwise the value is **false**. The value is also set to **false** if your organization didn't upload an attorney list.
+- **HasAttorney** – This property is set to **true** if one of the document participants is listed in the attorney list; otherwise the value is **false**. The value is also set to **false** if your organization didn't upload an attorney list.
 
-- **IsPrivilege** - This property is set to **true** if the value for **AttorneyClientPrivilegeScore** is above the threshold *or* if the document has an attorney participant; otherwise, the value is set to **false**.
+- **IsPrivilege** – This property is set to **true** if the value for **AttorneyClientPrivilegeScore** is above the threshold *or* if the document has an attorney participant; otherwise the value is set to **false**.
 
 These properties (and their corresponding values) are added to the file metadata of the documents in a review set, as shown in the following screenshot:
 
 ![Attorney-client privilege properties shown in file metadata](../media/AeDAttorneyClientPrivilegeMetadata.png)
 
-Additionally, these three properties are searchable within a review set. For more information, see [Query the data in a review set](review-set-search.md).
+These three properties are also searchable within a review set. For more information, see [Query the data in a review set](review-set-search.md).
 
 ## Set up the attorney-client privilege detection model
 
@@ -53,7 +53,7 @@ To enable the attorney-client privilege detection model, your organization has t
 
 ### Step 1: Opt-in to attorney-client privilege detection
 
-As previously stated, the attorney-client privilege detection model is in Preview. Therefore a person in your organization eDiscovery Administrator (a member of the eDiscovery Administrator subgroup in the eDiscovery Manager role group) must to opt in to make the model available in your Advanced eDiscovery cases.
+As previously stated, the attorney-client privilege detection model is in Preview. Therefore a person in your organization eDiscovery Administrator (a member of the eDiscovery Administrator subgroup in the eDiscovery Manager role group) must opt in to make the model available in your Advanced eDiscovery cases.
 
 1. In the Security & Compliance Center, go to **eDiscovery > Advanced eDiscovery**.
 
@@ -67,7 +67,7 @@ As previously stated, the attorney-client privilege detection model is in Previe
 
 ### Step 2: Upload a list of attorneys (optional)
 
-To take full advantage of the attorney-client privilege detection model and use the results of the **Has Attorney** or **Potentially Privileged** detection that was previously describe, we recommend that you upload a list of email addresses for the lawyers and legal personnel who work for your organization. 
+To take full advantage of the attorney-client privilege detection model and use the results of the **Has Attorney** or **Potentially Privileged** detection that was previously described, we recommend that you upload a list of email addresses for the lawyers and legal personnel who work for your organization. 
 
 To upload an attorney list for use by the attorney-client privilege detection model:
 
@@ -75,7 +75,7 @@ To upload an attorney list for use by the attorney-client privilege detection mo
 
 2. On the **Advanced eDiscovery** home page, in the **Settings** tile, click **Configure experimental features**, and then click **Manage attorney-client privilege setting**.
 
-   The **Attorney-client privilege** page is displayed. Note the **Attorney-client privilege detection** toggle is turned on.
+   The **Attorney-client privilege** page is displayed, and the **Attorney-client privilege detection** toggle is turned on.
 
    ![Attorney-client privilege flyout page](../media/AeDUploadAttorneyList.png)
 
@@ -121,10 +121,10 @@ After analyzing the review set and setting up smart tags, the next step is to re
 
 If the model determines that a document doesn't contain content that is legal in nature or doesn't contain a participant from the attorney list, then neither label is displayed in the tagging panel.
 
-For example, the following screenshots show two documents; the first one contains content that is legal in nature and has a participant found in the the attorney's list; the second contains neither and therefore doesn't display any labels.
+For example, the following screenshots show two documents; the first one contains content that is legal in nature and has a participant found in the list of attorneys; the second contains neither and therefore doesn't display any labels.
 
 ![Document with Attorney and Legal content labels](../media/AeDTaggingPanelLegalContentAttorney.png)
 
 ![Document without any labels](../media/AeDTaggingPanelNegative.png)
 
-After you review a document and confirm whether or not it contains privileged content, you can tag the document with the appropriate tag.
+After you review a document to see if it contains privileged content, you can tag the document with the appropriate tag.

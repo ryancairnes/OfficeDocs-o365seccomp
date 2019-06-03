@@ -15,12 +15,12 @@ search.appverid:
 ms.assetid: 
 ROBOTS: NOINDEX, NOFOLLOW 
 
-description: "Smart tags let you leverage the machine learning capabilities when reviewing content in an Advanced eDiscovery case. Use smart tag groups to display the results of machine-learning detection models, such as the attorney-client privilege model."
+description: "Smart tags let you apply the machine learning capabilities when reviewing content in an Advanced eDiscovery case. Use smart tag groups to display the results of machine-learning detection models, such as the attorney-client privilege model."
 ---
 
 # Set up smart tags in Advanced eDiscovery
 
-Machine learning (ML) capabilities in Advanced eDiscovery can help you make the decision process more efficient when you're reviewing case documents in a review set. Smart tags are a way to bring the ML capabilities to where the decisions are recorded: when tagging documents during review. When you create a smart tag group, then the decisions that are the result of the ML model that you've associated with the smart tag group will be displayed in-line with the tags in the tag group. This helps see the ML results information in-line when you're reviewing specific documents.
+Machine learning (ML) capabilities in Advanced eDiscovery can help you make the decision process more efficient when reviewing case documents in a review set. Smart tags are a way to bring the ML capabilities to where the decisions are recorded: when tagging documents during review. When you create a smart tag group, then the decisions that are the result of the ML model that you've associated with the smart tag group will be displayed in-line with the tags in the tag group. This helps see the ML results information in-line when you're reviewing specific documents.
 
 ## How to set up a smart tag group
 
@@ -30,13 +30,13 @@ Machine learning (ML) capabilities in Advanced eDiscovery can help you make the 
 
 3. Select the ML model that you want to associate to the tag group.
     
-   This will create a tag group and *N* child tags, where *N* is the number of possible outputs of the model. For example, the [attorney-client privilege detection model](attorney-privilege-detection.md)attorney-client has two possible outputs: 
+   This creates a tag group and *N* child tags, where *N* is the number of possible outputs of the model. For example, the [attorney-client privilege detection model](attorney-privilege-detection.md)attorney-client has two possible outputs: 
 
    - **Positive** - Use to tag documents that contain attorney-client privileged content.
    
    - **Negative** - Use to tag documents that don't contain attorney-client privileged content.
     
-    If you select this model, a tag group with two child tags is created (one child tag named **Positive** and the other named **Negative**) for the review set. So in this example, each child tag corresponds to one of the possible outputs from the attorney-client privilege detection model.
+    If you select this model, a tag group with two child tags is created (one child tag named **Positive** and the other named **Negative**) for the review set. In this example, each child tag corresponds to one of the possible outputs from the attorney-client privilege detection model.
 
 4. Optionally, you can rename the tag group and the child tags. For example, you could rename the **Positive** tag to **Privileged** and the **Negative** tag to **Not privileged**.
 
