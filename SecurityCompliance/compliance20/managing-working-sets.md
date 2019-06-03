@@ -27,7 +27,7 @@ description: ""
 
 > ![](../media/ED_managews.png)
 
-2.  Then, select the Manage tags link.
+2.  Then select the Manage tags link.
 
 > ![](../media/ED_managetags.png)
 
