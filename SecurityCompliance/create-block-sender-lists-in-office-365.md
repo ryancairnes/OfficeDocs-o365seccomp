@@ -33,7 +33,7 @@ When creating a Block list it's important to pick the appropriate method based o
 
 ## Use Outlook Blocked Senders
 
-When only a small number of users are impacted, Outlook Blocked Senders should be used, because this will only impact mail being sent to them.
+When only a small number of users are impacted, that's when Outlook Blocked Senders should be used, because this will only impact mail being sent to them.
 
 > [!IMPORTANT]
 > If the unwanted messages are newsletters from a reputable and recognizable source, unsubscribing from the email is another option to stop the user from getting the emails in the future.
@@ -56,6 +56,3 @@ If it's necessary to block messages being sent to specific users or across the e
 When it’s not possible to use one of the other options to block a sender, *then* the Anti-Spam Policy IP Block List can be used. [Detailed steps can be found in the article Configure the connection filter policy](https://docs.microsoft.com/en-us/office365/securitycompliance/configure-the-connection-filter-policy). It's important to keep the list of blocked IPs to a *minimum* and using IP address ranges here is *not* recommended.
 
 You should *especially* avoid adding IP address ranges that belong to consumer services or shared infrastructures, and also ensure that you review the list of allowed IP addresses as part of regular maintenance. **Because allows-entries can open up routes for attack, you must closely manage this list and regularly remove the allows-entries that are no longer needed.** Also, if you will make allows in a Safe-Sender list be sure to read and understand the risks and precautions in *[Create Safe-Sender lists in Office 365](create-safe-sender-lists-in-office-365.md)*.
-
-
-
