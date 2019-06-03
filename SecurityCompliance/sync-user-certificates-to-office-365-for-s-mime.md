@@ -4,10 +4,9 @@ ms.author: chrisda
 author: chrisda
 manager: Serdars
 ms.date: 12/9/2016
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
-ms.custom: TN2DMC
 localization_priority: Normal
 search.appverid:
 - MET150

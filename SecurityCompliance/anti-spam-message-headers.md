@@ -3,10 +3,9 @@ title: "Anti-spam message headers"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
-ms.custom: TN2DMC
 localization_priority: Normal
 search.appverid:
 - MET150
@@ -19,12 +18,13 @@ description: "When Exchange Online Protection scans an inbound email message it 
 # Anti-spam message headers
 
 When Exchange Online Protection scans an inbound email message it inserts the **X-Forefront-Antispam-Report** header into each message. The fields in this header can help provide administrators with information about the message and about how it was processed. The fields in the **X-Microsoft-Antispam** header provide additional information about bulk mail and phishing. In addition to these two headers, Exchange Online Protection also inserts email authentication results for each message it processes in the **Authentication-results** header.
+
+For information about how to view an email message header in various email clients, see [Message Header Analyzer](https://go.microsoft.com/fwlink/p/?LinkId=306583). 
   
 > [!TIP]
-> For information about how to view an email message header in various email clients, see [Message Header Analyzer](https://go.microsoft.com/fwlink/p/?LinkId=306583). You can copy and paste the contents of the message header into the [Message Header Analyzer](https://testconnectivity.microsoft.com/?tabid=mha) tool. When you select a message in the quarantine in the Exchange admin center, the **View message header** link also easily lets you copy and paste the message header text into the tool. Once in the Message Header Analyzer tool, click **Analyze headers** in order to retrieve information about the header.
+>  You can copy and paste the contents of the message header into the [Message Analyzer](https://testconnectivity.microsoft.com/?tabid=mha) tool. This tool helps parse the headers and puts it into a more readible format.
   
 ## X-Forefront-Antispam-Report message header fields
-<a name="sectionSection0"> </a>
 
 After accessing the message header information, search for **X-Forefront-Antispam-Report** and then look for these fields. Other fields in this header are used exclusively by the Microsoft anti-spam team for diagnostic purposes.
 
@@ -34,17 +34,17 @@ After accessing the message header information, search for **X-Forefront-Antispa
 |CTRY|The country from which the message connected to the service. This is determined by the connecting IP address, which may not be the same as the originating sending IP address.|
 |LANG|The language in which the message was written, as specified by the country code (for example, ru_RU for Russian).|
 |SCL|The Spam Confidence Level (SCL) value of the message. For more information about interpreting these values, see [Spam confidence levels](spam-confidence-levels.md).|
-|PCL|The Phishing Confidence Level (PCL) value of the message. |
+|PCL|The Phishing Confidence Level (PCL) value of the message.|
 |SRV:BULK|The message was identified as a bulk email message. If the **Block all bulk email messages advanced spam filtering option** is enabled, it will be marked as spam. If it is not enabled, it will only be marked as spam if the rest of the filtering rules determine that the message is spam.|
 |SFV:SFE|Filtering was skipped and the message was let through because it was sent from an address on an individual's safe sender list.|
 |SFV:BLK|Filtering was skipped and the message was blocked because it was sent from an address on an individual's blocked sender list.  <br/> **Tip**: For more information about how end users can create safe and blocked sender lists, see [Block or allow (junk email settings)](https://go.microsoft.com/fwlink/p/?LinkId=294862) (Outlook on the web) and [Overview of the Junk Email Filter](https://go.microsoft.com/fwlink/p/?LinkId=270065) (Outlook).|
 |IPV:CAL|The message was allowed through the spam filters because the IP address was specified in an IP Allow list in the connection filter.|
 |IPV:NLI|The IP address was not listed on any IP reputation list.|
 |SFV:SPM|The message was marked as spam by the content filter.|
-|SFV:SKS|The message was marked as spam prior to being processed by the content filter. This includes messages where the message matched a Transport rule to automatically mark it as spam and bypass all additional filtering.|
+|SFV:SKS|The message was marked as spam prior to being processed by the content filter. This includes messages where the message matched a mail flow rule (also known as a transport rule) to automatically mark it as spam and bypass all additional filtering.|
 |SFV:SKA|The message skipped filtering and was delivered to the inbox because it matched an allow list in the spam filter policy, such as the **Sender allow** list.|
 |SFV:SKB|The message was marked as spam because it matched a block list in the spam filter policy, such as the **Sender block** list.|
-|SFV:SKN|The message was marked as non-spam prior to being processed by the content filter. This includes messages where the message matched a transport rule to automatically mark it as non-spam and bypass all additional filtering.|
+|SFV:SKN|The message was marked as non-spam prior to being processed by the content filter. This includes messages where the message matched a mail flow rule to automatically mark it as non-spam and bypass all additional filtering.|
 |SFV:SKI|Similar to SFV:SKN, the message skipped filtering for another reason such as being intra-organizational email within a tenant.|
 |SFV:SKQ|The message was released from the quarantine and was sent to the intended recipients.|
 |SFV:NSPM|The message was marked as non-spam and was sent to the intended recipients.|
@@ -54,7 +54,6 @@ After accessing the message header information, search for **X-Forefront-Antispa
 |X-CustomSpam: [ASFOption]|The message matched an advanced spam filtering  option. For example, **X-CustomSpam: Image links to remote sites** denotes that the **Image links to remote sites** ASF option was matched. To find out which X-header text is added for each specific ASF option, see [Advanced spam filtering  options](advanced-spam-filtering-asf-options.md).|
    
 ## X-Microsoft-Antispam message header fields
-<a name="sectionSection1"> </a>
 
 The following table describes useful fields in the **X-Microsoft-Antispam** message header. Other fields in this header are used exclusively by the Microsoft anti-spam team for diagnostic purposes.
   
@@ -64,16 +63,14 @@ The following table describes useful fields in the **X-Microsoft-Antispam** mess
 |PCL|The Phishing Confidence Level (PCL) of the message, which indicates whether it's a phishing message. This status can be returned as one of the following numerical values: <br/>• **0-3**: The message's content isn't likely to be phishing. <br/>• **4-8**: The message's content is likely to be phishing. <br/>• **-9990**: (Exchange Online Protection only) The message's content is likely to be phishing.  <br/>  The values are used to determine what action your email client takes on messages. For example, Outlook uses the PCL stamp to block the content of suspicious messages. For more information about phishing, and how Outlook processes phishing messages, see [Turn on or off links in email messages](https://support.office.com/article/2D79B907-93B6-4774-82E6-1F0385CF20F8).|
    
 ## Authentication-results message header
-<a name="sectionSection2"> </a>
 
 The results of checks against SPF, DKIM, and DMARC are recorded, or stamped, by Office 365 in the **Authentication-results** message header when our mail servers receive an email message.
   
 ### check stamp syntax and examples
-<a name="referenceSPFstamp"> </a>
 
 The following syntax examples show a portion of the text "stamp" that Office 365 applies to the message header for each email that undergoes an email authentication check when it is received by our mail servers. The stamp is added to the **Authentication-Results** header.
   
- **Syntax: SPF check stamp**
+**Syntax: SPF check stamp**
   
 For SPF, the following syntax applies.
   
@@ -81,14 +78,14 @@ For SPF, the following syntax applies.
 spf=<pass (IP address)|fail (IP address)|softfail (reason)|neutral|none|temperror|permerror> smtp.mailfrom=<domain>
 ```
 
- **Examples: SPF check stamp**
+**Examples: SPF check stamp**
   
 ```
 spf=pass (sender IP is 192.168.0.1) smtp.mailfrom=contoso.com
 spf=fail (sender IP is 127.0.0.1) smtp.mailfrom=contoso.com
 ```
 
- **Syntax: DKIM check stamp**
+**Syntax: DKIM check stamp**
   
 For DKIM, the following syntax applies.
   
@@ -96,14 +93,14 @@ For DKIM, the following syntax applies.
 dkim=<pass|fail (reason)|none> header.d=<domain>
 ```
 
- **Examples: DKIM check stamp**
+**Examples: DKIM check stamp**
   
 ```
 dkim=pass (signature was verified) header.d=contoso.com
 dkim=fail (body hash did not verify) header.d=contoso.com
 ```
 
- **Syntax: DMARC check stamp**
+**Syntax: DMARC check stamp**
   
 For DMARC, the following syntax applies.
   
@@ -111,7 +108,7 @@ For DMARC, the following syntax applies.
 dmarc=<pass|fail|bestguesspass|none> action=<permerror|temperror|oreject|pct.quarantine|pct.reject> header.from=<domain>
 ```
 
- **Examples: DMARC check stamp**
+**Examples: DMARC check stamp**
   
 ```
 dmarc=pass action=none header.from=contoso.com
@@ -121,7 +118,6 @@ dmarc=fail action=oreject header.from=contoso.com
 ```
 
 ### Authentication-results message header fields used by Office 365 email authentication
-<a name="referenceSPFstamp"> </a>
 
 This table describes the fields and possible values for each email authentication check.
   

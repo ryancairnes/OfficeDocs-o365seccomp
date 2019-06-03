@@ -1,22 +1,22 @@
 ---
-title: "Run a Content Search in the Office 365 Security &amp; Compliance Center"
+title: "Run a Content Search in the Security & Compliance Center"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
 ms.date: 6/26/2018
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 f1_keywords:
 - 'ms.o365.cc.ComplianceSearch'
 ms.service: O365-seccomp
 localization_priority: Normal
 ms.assetid: 61852fd9-fe8a-4880-a339-cb19ed3bff4a
-description: "Use Content Search in the Office 365 Security &amp; Compliance Center to search mailboxes, SharePoint Online sites, and OneDrive for Business locations. "
+description: "Use Content Search in the Security & Compliance Center to search mailboxes, SharePoint Online sites, and OneDrive for Business locations. "
 ---
 
-# Run a Content Search in the Office 365 Security &amp; Compliance Center
+# Run a Content Search in the Security & Compliance Center
 
-You can use the Content Search eDiscovery tool in the Office 365 Security &amp; Compliance Center to search for items such as email, documents, and instant messaging conversations in your Office 365 organization. Use this tool to search for items in these Office 365 services:
+You can use the Content Search eDiscovery tool in the Security & Compliance Center to search for items such as email, documents, and instant messaging conversations in your Office 365 organization. Use this tool to search for items in these Office 365 services:
   
 - Exchange Online mailboxes and public folders
     
@@ -50,9 +50,9 @@ Content Search is a new eDiscovery search tool with new and improved scaling and
 
 - For information and guidance about building search queries and using Boolean search operators, see [Keyword queries and search conditions for Content Search](keyword-queries-and-search-conditions.md). This article also contains information about searching for sensitive information types and searching for content that's shared with people inside and outside of your organization.
     
-- To have access to the **Content search** page to perform searches and preview and export search results, an administrator, compliance officer, or eDiscovery manager must be a member of the eDiscovery Manager role group in the Security &amp; Compliance Center. You don't have to assign additional search permissions in Exchange Online, SharePoint Online, or for OneDrive for Business sites. For more information, see [Assign eDiscovery permissions in the Office‍ 365 Security &amp; Compliance Center](assign-ediscovery-permissions.md).
+- To have access to the **Content search** page to perform searches and preview and export search results, an administrator, compliance officer, or eDiscovery manager must be a member of the eDiscovery Manager role group in the Security & Compliance Center. You don't have to assign additional search permissions in Exchange Online, SharePoint Online, or for OneDrive for Business sites. For more information, see [Assign eDiscovery permissions in the Office‍ 365 Security & Compliance Center](assign-ediscovery-permissions.md).
     
-- There are limits applied to Content Search to maintain the health and quality of services provided to Office 365 organizations. In most cases, you can't modify these limits, but you should be aware of them so that you can take these limits into consideration when planning, running, and troubleshooting searches. For more information, see [Limits for Search in the Office 365 Security &amp; Compliance Center](limits-for-content-search.md).
+- There are limits applied to Content Search to maintain the health and quality of services provided to Office 365 organizations. In most cases, you can't modify these limits, but you should be aware of them so that you can take these limits into consideration when planning, running, and troubleshooting searches. For more information, see [Limits for Search in the Security & Compliance Center](limits-for-content-search.md).
     
 - See the  section for estimated search times based on the number of mailboxes that are searched in a single Content Search. 
     
@@ -73,7 +73,7 @@ Content Search is a new eDiscovery search tool with new and improved scaling and
     
 2. Sign in to Office 365 using your work or school account.
     
-3. In the left pane of the Security &amp; Compliance Center, click **Search &amp; investigation** \> **Content search**.
+3. In the left pane of the Security & Compliance Center, click **Search** \> **Content search**.
     
 4. Click **New**![Add icon](media/O365-MDM-CreatePolicy-AddIcon.gif).
     
@@ -97,7 +97,7 @@ Content Search is a new eDiscovery search tool with new and improved scaling and
     
   - You can add inactive mailboxes and distribution groups to the list of mailboxes to search. For distribution groups, the mailboxes of group members are searched. Note that dynamic distribution groups aren't supported.
     
-  - To get a list of the inactive mailboxes in your organization, run the command  `Get-Mailbox -InactiveMailboxOnly` in Exchange Online PowerShell. Alternatively, you can go to **Data governance** \> **Retention** in the Security &amp; Compliance Center, and then click **More**![Navigation Bar ellipses](media/9723029d-e5cd-4740-b5b1-2806e4f28208.gif) \> **Inactive mailboxes**.
+  - To get a list of the inactive mailboxes in your organization, run the command  `Get-Mailbox -InactiveMailboxOnly` in Exchange Online PowerShell. Alternatively, you can go to **Data governance** \> **Retention** in the Security & Compliance Center, and then click **More**![Navigation Bar ellipses](media/9723029d-e5cd-4740-b5b1-2806e4f28208.gif) \> **Inactive mailboxes**.
     
   - You can also add the mailbox that's associated with an Office 365 Group or a Microsoft Team. In this case, only the group or team mailbox is searched; the mailboxes of the group or team members aren't searched. To search them, you have to specifically add them to the search.
     
@@ -162,12 +162,12 @@ Content Search is a new eDiscovery search tool with new and improved scaling and
 ## Export search results
 <a name="export"> </a>
 
-After a search is successfully run, you can export the search results to a local computer. When you export email results, they're downloaded to your computer as PST files. When you export content from SharePoint and OneDrive for Business sites, copies of native Office documents are exported. There are also additional documents and reports that are included with the exported search results. For more information, see [Export search results from the Office 365 Security &amp; Compliance Center](export-search-results.md).
+After a search is successfully run, you can export the search results to a local computer. When you export email results, they're downloaded to your computer as PST files. When you export content from SharePoint and OneDrive for Business sites, copies of native Office documents are exported. There are also additional documents and reports that are included with the exported search results. For more information, see [Export search results from the Security & Compliance Center](export-search-results.md).
   
 ## Preview search results
 <a name="preview"> </a>
 
-After a search is successfully completed, you can preview the search results. There are a number of limits related to previewing Content Search results. For more information, see [Limits for Search in the Office 365 Security &amp; Compliance Center](limits-for-content-search.md). Note that unindexed items aren't available for previewing.
+After a search is successfully completed, you can preview the search results. There are a number of limits related to previewing Content Search results. For more information, see [Limits for Search in the Security & Compliance Center](limits-for-content-search.md). Note that unindexed items aren't available for previewing.
   
 1. On the **Content search** page, select a search. 
     
@@ -254,25 +254,25 @@ If a search returns any errors, you don't have to re-search all of the content l
 
 Here's more information about Content Searches.
   
-[Limits and performance](run-a-content-search-in-the-security-and-compliance-center.md#limits)
+[Limits and performance](#limits-and-performance)
   
-[Unindexed items](run-a-content-search-in-the-security-and-compliance-center.md#unindexeditems)
+[Unindexed items](#unindexed-items) 
+ 
+[Microsoft Teams and Office 365 Groups](#microsoft-teams-and-office-365-groups)
   
-[Microsoft Teams and Office 365 Groups](run-a-content-search-in-the-security-and-compliance-center.md#teams)
+[OneDrive for Business](#onedrive-for-business)
   
-[OneDrive for Business](run-a-content-search-in-the-security-and-compliance-center.md#onedrive)
+[Search queries](#search-queries)
   
-[Search queries](run-a-content-search-in-the-security-and-compliance-center.md#queries)
+[Searching inactive mailboxes](#searching-inactive-mailboxes)
   
-[Searching inactive mailboxes](run-a-content-search-in-the-security-and-compliance-center.md#inactivemailboxes)
+[Miscellaneous](#miscellaneous)
   
-[Miscellaneous](run-a-content-search-in-the-security-and-compliance-center.md#misc)
+[Return to top](#before-you-begin)
   
-[(Return to top)](run-a-content-search-in-the-security-and-compliance-center.md#top)
+### Limits and performance
   
- **Limits and performance**
-  
-- For a description of the limits that are applied to the Content Search feature, see [Limits for Search in the Office 365 Security &amp; Compliance Center](limits-for-content-search.md).
+- For a description of the limits that are applied to the Content Search feature, see [Limits for Search in the Security & Compliance Center](limits-for-content-search.md).
     
 - Microsoft collects performance information for Content Searches run by all Office 365 organizations. While the complexity of the search query can impact search times, the biggest factor that affects how long searches take is the number of mailboxes searched. Although Microsoft doesn't provide a Service Level Agreement for search times, the following table lists average search times for a Content Search based on the number of mailboxes included in the search.
     
@@ -285,15 +285,14 @@ Here's more information about Content Searches.
 |50,000  <br/> |20 minutes  <br/> |
 |100,000  <br/> |25 minutes  <br/> |
    
-
   
- **Unindexed items**
+### Unindexed items
   
 - As previously explained, unindexed items in content locations that are searched are included in the estimated search results. If an unindexed item matches the search query (because other message or document properties meet the search criteria), it won't be included in the estimated number of unindexed items. If an unindexed item is excluded by the search criteria, it also won't be included in the estimated number of unindexed items. For more information, see [Unindexed items in Content Search](https://go.microsoft.com/fwlink/p/?LinkId=780739).
     
 
   
- **Microsoft Teams and Office 365 Groups**
+### Microsoft Teams and Office 365 Groups
   
 - Microsoft Teams are built on Office 365 Groups. Therefore, searching them is very similar. Keep the following things in mind when searching for content in Microsoft Teams and Office 365 Groups.
     
@@ -315,7 +314,7 @@ Here's more information about Content Searches.
   
   - When a user's mailbox is searched, any Microsoft Team or Office 365 Group that the user is a member of won't be searched. Similarly, when you search a Microsoft Team or an Office 365 Group, only the group mailbox and group site that you specify is searched; the mailboxes and OneDrive for Business accounts of group members aren't searched unless you explicitly add them to the search.
     
-  - To get a list of the members of a Microsoft Team or an Office 365 Group, you can view the properties on the **Home \> Groups** page in the Office 365 admin center. Alternatively, you can run the following command in Exchange Online PowerShell: 
+  - To get a list of the members of a Microsoft Team or an Office 365 Group, you can view the properties on the **Home \> Groups** page in the Microsoft 365 admin center. Alternatively, you can run the following command in Exchange Online PowerShell: 
     
   ```
   Get-UnifiedGroupLinks <group or team name> -LinkType Members | FL DisplayName,PrimarySmtpAddress 
@@ -338,15 +337,12 @@ Here's more information about Content Searches.
     > [!NOTE]
     > The capability to search the Wiki for a Microsoft Team or Channel (when you search the team's SharePoint site) was released on June 22, 2017. Wiki pages that were saved or updated on that date or after are available to be searched. Wiki pages last saved or updated before that date aren't available for search. 
   
-
-  
- **OneDrive for Business **
+### OneDrive for Business
   
 - To collect a list of the URLs for the OneDrive for Business sites in your organization, see [Create a list of all OneDrive locations in your organization](https://support.office.com/article/8e200cb2-c768-49cb-88ec-53493e8ad80a). The script in this article creates a text file that contains a list of all OneDrive for Business sites. To run this script, you'll have to install and use the SharePoint Online Management Shell. Be sure to append the URL for your organization's MySite domain to each OneDrive for Business site that you want to search. This is the domain that contains all your OneDrive for Business; for example,  `https://contoso-my.sharepoint.com`. Here's an example of a URL for a user's OneDrive for Business site:  `https://contoso-my.sharepoint.com/personal/sarad_contoso_onmicrosoft.com`.
     
 
-  
- **Search queries**
+### Search queries
   
 - Keeping the following things in mind when using the keyword list to create a search query.
     
@@ -366,11 +362,11 @@ Here's more information about Content Searches.
     
     ![Example of the query that's created when using the keyword list and a condition](media/b463750c-57fa-4602-9fed-0d5a420db3ad.png)
   
-  - If you have a search query that contains keywords for non-English characters (such as Chinese characters), you might have to use the **Set-ComplianceSearch** cmdlet to configure the language property for the content search. When you create a content search using the GUI in the Security &amp; Compliance Center, the default language is neutral. 
+  - If you have a search query that contains keywords for non-English characters (such as Chinese characters), you might have to use the **Set-ComplianceSearch** cmdlet to configure the language property for the content search. When you create a content search using the GUI in the Security & Compliance Center, the default language is neutral. 
     
     How can you tell if you need to change the language setting for a content search? If you're certain content locations contain the non-English characters you're searching for, but the search returns no results, the language setting might be the cause.
     
-    To change the language setting for an existing content search, run the following command in Security &amp; Compliance Center PowerShell:
+    To change the language setting for an existing content search, run the following command in Security & Compliance Center PowerShell:
     
   ```
   Set-ComplianceSearch <name of content search> -Language <culture code value>
@@ -379,8 +375,7 @@ Here's more information about Content Searches.
     For example, to change the language setting to Chinese, you would use  `zh-CN` for the culture code value. After you change the language setting, you'll have to re-run the search. For a list of possible culture code values, see [CultureInfo Class](https://go.microsoft.com/fwlink/p/?LinkID=184859). For content searches, we recommend that you use two-part culture codes for the value of the language setting; for example,  `ja-JP` and not  `ja`.
     
 
-  
- **Searching inactive mailboxes**
+### Searching inactive mailboxes
   
 As previously stated, you can search inactive mailboxes in a content search. Here are a few things to keep in mind when searching inactive mailboxes.
   
@@ -396,13 +391,11 @@ As previously stated, you can search inactive mailboxes in a content search. Her
     
   - [Delete an inactive mailbox in Office 365](delete-an-inactive-mailbox.md)
     
-
+### Miscellaneous
   
- **Miscellaneous**
-  
-- Content searches created on the **Content search** page in the Security &amp; Compliance Center aren't displayed on the **In-Place eDiscovery &amp; Hold** page in the Exchange admin center. This is because the Content Search architecture and the search objects created in the Security &amp; Compliance Center are completely different than the In-Place eDiscovery feature in Exchange Online. 
+- Content searches created on the **Content search** page in the Security & Compliance Center aren't displayed on the **In-Place eDiscovery &amp; Hold** page in the Exchange admin center. This is because the Content Search architecture and the search objects created in the Security & Compliance Center are completely different than the In-Place eDiscovery feature in Exchange Online. 
     
-    For the same reason, searches created on the **Content search** page aren't displayed on the **Searches** page of an eDiscovery case in the Security &amp; Compliance Center. 
+    For the same reason, searches created on the **Content search** page aren't displayed on the **Searches** page of an eDiscovery case in the Security & Compliance Center. 
     
 - What is the difference between restarting and retrying a search? When you restart a search, all content locations that are specified in the search are searched again in a new preview search. However, when you retry a search, only the content locations that failed when the search was last run are searched again.
    

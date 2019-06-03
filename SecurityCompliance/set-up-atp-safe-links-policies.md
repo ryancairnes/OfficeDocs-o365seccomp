@@ -3,7 +3,7 @@ title: "Set up Office 365 ATP Safe Links policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.date: 02/26/2019
 ms.service: O365-seccomp
@@ -20,7 +20,7 @@ description: "Set up Safe Links policies to protect your organization from malic
 # Set up Office 365 ATP Safe Links policies
 
 > [!IMPORTANT]
-> This article is intended for Office 365 Enterprise customers. If you are using Outlook.com, Office 365 Home, or Office 365 Personal, and you're looking for information about Safe Links in Outlook, see [Advanced Outlook.com security](https://support.office.com/article/advanced-outlook-com-security-for-office-365-subscribers-882d2243-eab9-4545-a58a-b36fee4a46e2).
+> This article is intended for business customers who have [Office 365 Advanced Threat Protection](office-365-atp.md). If you are a home user looking for information about Safe Links in Outlook, see [Advanced Outlook.com security](https://support.office.com/article/advanced-outlook-com-security-for-office-365-subscribers-882d2243-eab9-4545-a58a-b36fee4a46e2).
 
 [ATP Safe Links](atp-safe-links.md), a feature of [Office 365 Advanced Threat Protection](office-365-atp.md) (ATP), can help protect your organization from malicious links used in phishing and other attacks. If you have the necessary [permissions for the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md), you can set up ATP Safe Links policies to help ensure that when people click web addresses (URLs), your organization is protected. Your ATP Safe Links policies can be configured to scan URLs in email and URLs in Office documents.
   
@@ -28,13 +28,13 @@ description: "Set up Safe Links policies to protect your organization from malic
 
 ## What to do 
   
-1. [Review the prerequisites](#review-the-prerequisites).
+1. Review the prerequisites.
     
-2. [Review and edit the default ATP Safe Links policy that applies to everyone](#define-an-atp-safe-links-policy-that-applies-to-everyone). For example, you can [set up your custom blocked URLs list for ATP Safe Links](set-up-a-custom-blocked-urls-list-wtih-atp.md).
+2. Review and edit the default ATP Safe Links policy that applies to everyone. For example, you can [set up your custom blocked URLs list for ATP Safe Links](set-up-a-custom-blocked-urls-list-wtih-atp.md).
     
-3. [Add or edit policies for specific email recipients](#add-a-policy-for-specific-email-recipients), including [setting up your custom "Do not rewrite" URLs list for ATP Safe Links](set-up-a-custom-do-not-rewrite-urls-list-with-atp.md).
+3. Add or edit policies for specific email recipients, including [setting up your custom "Do not rewrite" URLs list for ATP Safe Links](set-up-a-custom-do-not-rewrite-urls-list-with-atp.md).
     
-4. [Learn about ATP Safe Links policy options](#learn-about-atp-safe-links-policy-options) (in this article), including settings for recent changes.
+4. Learn about ATP Safe Links policy options (in this article), including settings for recent changes.
     
 ## Step 1: Review the prerequisites
 
@@ -52,7 +52,7 @@ description: "Set up Safe Links policies to protect your organization from malic
 
 - Make sure that Office clients are configured to use [Modern Authentication](https://docs.microsoft.com/office365/enterprise/modern-auth-for-office-2013-and-2016) (this is for ATP Safe Links protection in Office documents).
     
-- [Learn about ATP Safe Links policy options](#learn-about-atp-safe-links-policy-options) (in this article). 
+- [Learn about ATP Safe Links policy options](#step-4-learn-about-atp-safe-links-policy-options) (in this article). 
 
 - Allow up to 30 minutes for your new or updated policy to spread to all Office 365 datacenters.
     

@@ -1,10 +1,10 @@
 ---
-title: "Collect data for a case in Advanced eDiscovery (Preview)"
+title: "Collect data for a case in Advanced eDiscovery"
 ms.author: esclee
 author: markjjo
 manager: laurawi
 ms.date: 
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -17,11 +17,11 @@ ms.assetid:
 description: ""
 ---
 
-# Collect data for a case in Advanced eDiscovery (Preview)
+# Collect data for a case in Advanced eDiscovery
 
-Once you have identified custodians and data sources that are of interest for your case, it's time to identify the set of documents to delve into. You can use the Search tool in Advanced eDiscovery (Preview) to identify these from custodial and non-custodial locations in Office 365.
+Once you have identified custodians and data sources that are of interest for your case, it's time to identify the set of documents to delve into. You can use the Search tool in Advanced eDiscovery to identify these from custodial and non-custodial locations in Office 365.
 
-After you run a search, you will be able to view statistics on the retrieved items such as the locations that had the most items that matched the search query. You can also preview a subset of the results. When you've identified the set of documents that want to further examine, you can add the search results to a working set to collect and process.
+After you run a search, you will be able to view statistics on the retrieved items such as the locations that had the most items that matched the search query. You can also preview a subset of the results. When you've identified the set of documents that want to further examine, you can add the search results to a review set to collect and process.
 
 ## Create a search
 
@@ -37,12 +37,11 @@ Once the search estimate is completed, click the search to display the flyout pa
 - Summary
 - Top locations
 - Queries
-- Refiners
 
 For more information about search statistics, see [Search statistics](search-statistics.md).
 
 Once preview is completed, the **Preview** button will be active. Click it to preview a sampled subset of the results.
 
-## Adding search results to a working set
+## Adding search results to a review set
 
-When you are ready to collect and process the entire results of a search, you can do so by adding it to a working set. For details, see [Add data to a working set](add-data-to-working-set.md). 
+When you are ready to collect and process the entire results of a search, you can do so by adding it to a review set. For details, see [Add data to a review set](add-data-to-review-set.md). 

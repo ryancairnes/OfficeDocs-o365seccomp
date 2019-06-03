@@ -28,7 +28,7 @@ If your organization needs to protect your data or comply with legal or regulato
                     </div>
                     <div class="cardText">
                         <h3>Get started - first 30 days</h3>
-                <p>These basic security and compliance tasks can be accomplished quickly and have a low impact to users: <br> - <a href="office-365-secure-score.md" target="_blank">Check Secure Score</a> <br> - <a href="search-the-audit-log-in-security-and-compliance.md">Turn on audit logging</a> <br> - <a href="tenant-wide-setup-for-increased-security.md">Configure tenant security</a> <br> - <a href="https://docs.microsoft.com/cloud-app-security/connect-office-365-to-microsoft-cloud-app-security">Connect Cloud App Security</a> <br> - <a href="https://docs.microsoft.com/azure/active-directory/active-directory-identityprotection-enable">Enable Azure AD Identity Protection</a> <br> - <a href="https://docs.microsoft.com/office365/enterprise/secure-sharepoint-online-sites-and-files">Secure SharePoint sites and files</a> <br> - <a href="configure-supervision-policies.md">Enable a data governance policy</a> </p>
+                <p>These basic security and compliance tasks can be accomplished quickly and have a low impact to users: <br> - <a href="microsoft-secure-score.md" target="_blank">Check Secure Score</a> <br> - <a href="search-the-audit-log-in-security-and-compliance.md">Turn on audit logging</a> <br> - <a href="tenant-wide-setup-for-increased-security.md">Configure tenant security</a> <br> - <a href="https://docs.microsoft.com/cloud-app-security/connect-office-365-to-microsoft-cloud-app-security">Connect Cloud App Security</a> <br> - <a href="https://docs.microsoft.com/azure/active-directory/active-directory-identityprotection-enable">Enable Azure AD Identity Protection</a> <br> - <a href="https://docs.microsoft.com/office365/enterprise/secure-sharepoint-online-sites-and-files">Secure SharePoint sites and files</a> <br> - <a href="configure-supervision-policies.md">Enable a data governance policy</a> </p>
                     </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@ If your organization needs to protect your data or comply with legal or regulato
                     <div class="cardText">
                         <h3>Beyond 90 days</h3>
                         <p>These are important security measures that build on previous work:<br>
-                        - <a href="office-365-secure-score.md" target="_blank">Review your Secure Score</a><br>
+                        - <a href="microsoft-secure-score.md" target="_blank">Review your Secure Score</a><br>
                         - <a href="https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access">Implement Secure Privileged Access</a><br>
                         - <a href="https://docs.microsoft.com/azure/active-directory/active-directory-identityprotection">Use Azure AD Identity Protection</a><br>
                         - <a href="protect-against-threats.md">Refine protection policies</a><br></p>
@@ -90,8 +90,8 @@ If your organization needs to protect your data or comply with legal or regulato
                     <div class="cardText">
                         <h3>Stay secure</h3>
                         <p><a href="security-roadmap.md">Office 365 Security Roadmap</a></p>
-                        <p><a href="office-365-secure-score.md" target="_blank">Microsoft Secure Score</a></p>
-                        <p><a href="https://protection.office.com" target="_blank">Office 365 Security & Compliance Center</a></p>
+                        <p><a href="microsoft-secure-score.md" target="_blank">Microsoft Secure Score</a></p>
+                        <p><a href="https://protection.office.com" target="_blank">Security & Compliance Center</a></p>
                     </div>
                 </div>
             </div>

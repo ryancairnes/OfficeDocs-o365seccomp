@@ -3,16 +3,16 @@ title: "Restrict access to content by using encryption in sensitivity labels"
 ms.author: stephow
 author: stephow-MSFT
 manager: laurawi
-ms.date: 10/22/2018
-ms.audience: Admin
-ms.topic: overview
+ms.date: 
+audience: Admin
+ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Priority
-ms.collection: Strat_O365_IP
+ms.collection: 
+- M365-security-compliance
 search.appverid: 
 - MOE150
 - MET150
-ms.assetid: af398293-c69d-465e-a249-d74561552d30
 description: "When you create a sensitivity label, you can restrict access to content that the label will be applied to. Sensitivity labels can use encryption to protect content."
 ---
 
@@ -31,7 +31,7 @@ When a document or email is encrypted, access to the content is restricted, so t
 - Remains encrypted no matter where it resides, inside or outside your organization, even if the file’s renamed.
 - Is encrypted both at rest (for example, in a OneDrive account) and in transit (for example, a sent email).
 
-The encryption settings are available in the Office 365 Security & Compliance Center > **Labels** page > **Sensitivity** tab > **Create a label**.
+The encryption settings are available when you create a sensitivity label in the Microsoft 365 compliance center, Microsoft 365 security center, or Office 365 Security & Compliance Center.
 
 ## How encryption works
 
@@ -42,7 +42,7 @@ Encryption uses Azure Rights Management (Azure RMS). Azure RMS uses encryption, 
 To begin, simply toggle **Encryption** to **On**, and then use the options below to control who can access email or documents to which this label is applied. You can:
 
 1. **Apply encryption to both email and documents, or just email.** If you choose just email, messages with this label will be encrypted in Outlook, but documents with this label won't be encrypted in other apps, such as Word or PowerPoint. 
-2. **Allow access to labeled content to expire**, either on a specific date or after a specific number of days after the label is applied. After this time, users won’t be able to open the labeled item. If you specify a date, it is effective midnight on that date in your current time zone. 
+2. **Allow access to labeled content to expire**, either on a specific date or after a specific number of days after the label is applied. After this time, users won’t be able to open the labeled item. If you specify a date, it is effective midnight on that date in your current time zone. (Note that some email clients may not enforce expiration and show emails past their expiration date, due to their caching mechanisms.)
 3. **Allow offline access** never, always, or for a specific number of days after the label is applied. If you restrict offline access to never or a number of days, when that threshold is reached, users must be reauthenticated and their access is logged. For more information, see the next section on the Rights Management use license.
 
 ![Encryption settings for sensitivity label](media/Sensitivity_Encryption_settings_for_sensitivity_label.png)
@@ -109,11 +109,31 @@ The Rights Management issuer is always granted Full Control permissions for the 
 
 For more information, see [Rights Management issuer and Rights Management owner](https://docs.microsoft.com/en-us/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
 
+## What happens to existing encryption when a label's applied
+
+Before a sensitivity label is applied to content, it's possible that a user already encrypted the content by applying some other protection setting. For example, a user might have applied:
+
+- The **Do Not Forward** option.
+- Custom protection by using the Azure Information Protection unified labeling client.
+- An Azure Rights Management Service (RMS) template that encrypts the content but is not associated with a label.
+
+This table describe what happens to existing encyption when a sensitivity label is applied to that content.
+<br/>
+<br/>
+
+| |**User applies a sensitivity label with encryption turned off**|**User applies a sensitivity label with encryption turned on**|**User applies a label with Remove Protection**<sup>1</sup>|
+|:-----|:-----|:-----|:-----|
+|**Do Not Forward**|Email - Protection is removed<br/>Document - Protection is preserved|Label protection is applied|**Do Not Forward** is removed|
+|**Custom protection**<sup>1</sup>|Protection is preserved|Label protection is applied|Custom protection is removed|
+|**Azure RMS template**|Protection is preserved|Label protection is applied|Custom protection is removed|
+
+<sup>1</sup>This is supported only in the Azure Information Protection labeling client.
+
 ## Storing encrypted content in OneDrive and SharePoint
 
 Be aware that when encryption is applied to files stored in OneDrive and SharePoint, the service cannot process the contents of these files. This means that features such as co-authoring, eDiscovery, search, Delve, and other collaborative features do not work. Also, data loss prevention (DLP) policies can work only with the metadata (including Office 365 labels) but not the contents of encrypted files (such as credit card numbers within files).
 
-This applies only to content stored in OneDrive and SharePoint. In Exchange Online, transport rules use the [super user account](https://docs.microsoft.com/en-us/azure/information-protection/configure-super-users) so that they can scan encrypted content and enforce DLP policies.
+This applies only to content stored in OneDrive and SharePoint. In Exchange Online, mail flow rules (also known as transport rules) use the [super user account](https://docs.microsoft.com/en-us/azure/information-protection/configure-super-users) so that they can scan encrypted content and enforce DLP policies.
 
 ## Important prerequisites
 

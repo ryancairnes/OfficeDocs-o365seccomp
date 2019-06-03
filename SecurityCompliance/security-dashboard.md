@@ -3,8 +3,8 @@ title: "Security dashboard overview"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 02/07/2019
-ms.audience: ITPro
+ms.date: 03/19/2019
+audience: ITPro
 ms.topic: overview
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -40,10 +40,10 @@ The Threat Management Summary widget tells you at a glance how your organization
 
 ![Security Dashboard - Threat Management Summary widget](media/SecDash-ThreatMgmtSummary.png)
 
-The information you'll see in the Threat Management Summary depends on what you subscription includes. The following table describes what information is included for Office 365 Enterprise E3 and Office 365 Enterprise E5.
+The information you'll see in the Threat Management Summary depends on what you subscription includes. The following table describes what information is included for Office 365 E3 and Office 365 E5.
 
 
-|Office 365 Enterprise E3  |Office 365 Enterprise E5  |
+|Office 365 E3  |Office 365 E5  |
 |---------|---------|
 |Malware messages blocked<br/>Phishing messages blocked<br>Messages reported by users<br><br><br><br> |Malware messages blocked<br>Phishing messages blocked<br>Messages reported by users<br>Zero-day malware blocked<br>Advanced phishing messages detected<br>Malicious URLs blocked |
 
@@ -94,9 +94,9 @@ Insights not only surface key issues you should review, they also include recomm
 
 For example, you might see that phishing email messages are being delivered because some users have disabled their junk mail options. To learn more about how insights work, see [Reports and insights in the Office 365 Security &amp; Compliance Center](reports-and-insights-in-security-and-compliance.md).
   
-## Threat intelligence
+## Threat investigation and response
 
-If your organization's subscription includes  [Threat Intelligence capabilities](office-365-ti.md), your Security Dashboard has a **Threat Intelligence** section that includes advanced tools. Your organization's security team can use the information in this section to understand emerging campaigns, investigate threats and manage incidents. 
+If your organization's subscription includes  [Office 365 Advanced Threat Protection Plan 2](office-365-ti.md), your Security Dashboard has a section that includes advanced threat investigation and response tools. Your organization's security team can use the information in this section to understand emerging campaigns, investigate threats and manage incidents. 
   
 ![Threat intelligence helps you understand attacks targeted at your organization](media/threatintelwidget.png)
   
@@ -107,7 +107,7 @@ Near the bottom of the Security Dashboard is a **Trends** section, which summari
   
 ![The Trends section summarizes email flow trends for the organization](media/trends.png)
   
-And, if your organization's Office 365 subscription includes [Threat Intelligence capabilities](office-365-ti.md), you will also have a **Recent threat management alerts** report in this section that enables your security team to view and take action on high-priority security alerts. 
+And, if your organization's Office 365 subscription includes [Office 365 Advanced Threat Protection Plan 2](office-365-ti.md), you will also have a **Recent threat management alerts** report in this section that enables your security team to view and take action on high-priority security alerts. 
 
 To view or access the Sent and Received Email widget, you must have permissions to view Advanced Threat Protection reports. To learn more, see [What permissions are needed to view the ATP reports?](view-reports-for-atp.md#what-permissions-are-needed-to-view-the-atp-reports). 
 
@@ -121,6 +121,6 @@ To view or access the Recent Threat Management Alerts widget, you must have perm
   
 [Office 365 Advanced Threat Protection](office-365-atp.md)
   
-[Office 365 Threat Intelligence](office-365-ti.md)
+[Office 365 Threat investigation and response](office-365-ti.md)
   
 

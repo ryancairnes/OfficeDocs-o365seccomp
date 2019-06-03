@@ -1,9 +1,9 @@
 ---
-title: "Search the audit log in the Office 365 Security &amp; Compliance Center"
+title: "Search the audit log in the Security & Compliance Center"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -14,10 +14,12 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 0d4d0f35-390b-4518-800e-0c7ec95e946c
-description: "Use the Office 365 Security & Compliance Center to search the unified audit log to view user and administrator activity in your Office 365 organization. "
+description: "Use the Security & Compliance Center to search the unified audit log to view user and administrator activity in your Office 365 organization. "
 ---
 
-# Search the audit log in the Office 365 Security & Compliance Center
+# Search the audit log in the Security & Compliance Center
+
+## Introduction
 
 Need to find if a user viewed a specific document or purged an item from their mailbox? If so, you can use the Office 365 Security &amp; Compliance Center to search the unified audit log to view user and administrator activity in your Office 365 organization. Why a unified audit log? Because you can search for the following types of user and admin activity in Office 365:
   
@@ -36,7 +38,7 @@ Need to find if a user viewed a specific document or purged an item from their m
     
 - User and admin activity in Sway
     
-- eDiscovery activities in the Office 365 Security & Compliance Center
+- eDiscovery activities in the security and compliance center
     
 - User and admin activity in Power BI
     
@@ -52,31 +54,31 @@ Need to find if a user viewed a specific document or purged an item from their m
 
 - Analyst and admin activity in Microsoft Workplace Analytics
 
-- User and admin activity in PowerApps
+- User and admin activity in Microsoft PowerApps
     
    
 ## Before you begin
 
 Be sure to read the following items before you start searching the Office 365 audit log.
   
-- You (or another admin) must first turn on audit logging before you can start searching the Office 365 audit log. To turn it on, just click **Start recording user and admin activity** on the **Audit log search** page in the Security &amp; Compliance Center. (If you don't see this link, auditing has already been turned on for your organization.) After you turn it on, a message is displayed that says the audit log is being prepared and that you can run a search in a couple of hours after the preparation is complete. You only have to do this once. 
+- You (or another admin) must first turn on audit logging before you can start searching the Office 365 audit log. To turn it on, just click **Start recording user and admin activity** on the **Audit log search** page in the Security & Compliance Center. (If you don't see this link, auditing has already been turned on for your organization.) After you turn it on, a message is displayed that says the audit log is being prepared and that you can run a search in a couple of hours after the preparation is complete. You only have to do this once. 
     
     > [!NOTE]
     > We're in the process of turning on auditing by default. Until then, you can turn it on as previously described. 
   
-- You have to be assigned the View-Only Audit Logs or Audit Logs role in Exchange Online to search the Office 365 audit log. By default, these roles are assigned to the Compliance Management and Organization Management role groups on the **Permissions** page in the Exchange admin center. To give a user the ability to search the Office 365 audit log with the minimum level of privileges, you can create a custom role group in Exchange Online, add the View-Only Audit Logs or Audit Logs role, and then add the user as a member of the new role group. For more information, see [Manage role groups in Exchange Online](https://go.microsoft.com/fwlink/p/?LinkID=730688).
+- You have to be assigned the View-Only Audit Logs or Audit Logs role in Exchange Online to search the Office 365 audit log. By default, these roles are assigned to the Compliance Management and Organization Management role groups on the **Permissions** page in the Exchange admin center. Note that global administrators in Office 365 and Microsoft 365 are automatically added as members of the Organization Management role group in Exchange Online. To give a user the ability to search the Office 365 audit log with the minimum level of privileges, you can create a custom role group in Exchange Online, add the View-Only Audit Logs or Audit Logs role, and then add the user as a member of the new role group. For more information, see [Manage role groups in Exchange Online](https://go.microsoft.com/fwlink/p/?LinkID=730688).
     
     > [!IMPORTANT]
-    > If you assign a user the View-Only Audit Logs or Audit Logs role on the **Permissions** page in the Security &amp; Compliance Center, they won't be able to search the Office 365 audit log. You have to assign the permissions in Exchange Online. This is because the underlying cmdlet used to search the audit log is an Exchange Online cmdlet. 
+    > If you assign a user the View-Only Audit Logs or Audit Logs role on the **Permissions** page in the Security & Compliance Center, they won't be able to search the Office 365 audit log. You have to assign the permissions in Exchange Online. This is because the underlying cmdlet used to search the audit log is an Exchange Online cmdlet. 
   
 - When an audited activity is performed by a user or admin, an audit record is generated and stored in the Office 365 audit log for your organization. The length of time that an audit record is retained (and searchable in the audit log) depends on your Office 365 subscription, and specifically the type of the license that is assigned to a specific user.
 
      - **Office 365 E3** - Audit records are retained for 90 days. That means you can search the audit log for activities that were performed within the last 90 days.
 
-     - **Office 365 E5** - Audit records are retained for 365 days (one year). That means you can search the audit log for activities that were performed within the last year. Retaining audit records for one year is also available for users that are assigned an E3/Exchange Online Plan 1 license and have an Office 365 Advanced Compliance add-on license.
+     - **Office 365 E5** - Audit records are also retained for 90 days. Retaining audit records for one year may eventually be available for E5 users and users with an E3 license and an Office 365 Advanced Compliance add-on license.
 
         > [!NOTE]
-        > The one-year retention period for audit records for E5 organizations (or E3 organizations that have Advanced Compliance add-on licenses) is currently available only as part of a private preview program. To enroll in this preview program, please file a request with [Microsoft Support](https://docs.microsoft.com/en-us/office365/admin/contact-support-for-business-products?redirectSourcePath=%252fen-us%252farticle%252fcontact-support-for-business-products-admin-help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b&view=o365-worldwide&tabs=online) and include the following as the description of what you need help with: "Long-term Office 365 audit log private preview".
+        > The private preview program for the one-year retention period for audit records for E5 organizations (or for users in E3 organizations that have Advanced Compliance add-on licenses) is closed to new enrollment. This article will be updated when the one-year retention period is available in public preview or released for general availability.
 
 - If you want to turn off audit log search in Office 365 for your organization, you can run the following command in remote PowerShell connected to your Exchange Online organization:
     
@@ -92,7 +94,7 @@ Be sure to read the following items before you start searching the Office 365 au
 
     For more information, see [Turn off audit log search in Office 365](turn-audit-log-search-on-or-off.md).
     
-- As previously stated, the underlying cmdlet used to search the audit log is an Exchange Online cmdlet, which is **Search-UnifiedAuditLog**. That means you can use this cmdlet to search the Office 365 audit log instead of using the **Audit log search** page in the Security &amp; Compliance Center. You have to run this cmdlet in remote PowerShell connected to your Exchange Online organization. For more information, see [Search-UnifiedAuditLog](https://go.microsoft.com/fwlink/p/?linkid=834776).
+- As previously stated, the underlying cmdlet used to search the audit log is an Exchange Online cmdlet, which is **Search-UnifiedAuditLog**. That means you can use this cmdlet to search the Office 365 audit log instead of using the **Audit log search** page in the Security & Compliance Center. You have to run this cmdlet in remote PowerShell connected to your Exchange Online organization. For more information, see [Search-UnifiedAuditLog](https://go.microsoft.com/fwlink/p/?linkid=834776).
     
 - If you want to programmatically download data from the Office 365 audit log, we recommend that you use the Office 365 Management Activity API instead of using a PowerShell script. The Office 365 Management Activity API is a REST web service that you can use to develop operations, security, and compliance monitoring solutions for your organization. For more information, see [Office 365 Management Activity API reference](https://go.microsoft.com/fwlink/?linkid=852309).
     
@@ -108,17 +110,17 @@ Be sure to read the following items before you start searching the Office 365 au
     |eDiscovery  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
     |Exchange Online  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> ||
     |Microsoft Flow  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
-    |Microsoft Forms  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
     |Microsoft Project  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
     |Microsoft Stream  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
     |Microsoft Teams  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> ||
     |Power BI  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
-    |Security &amp; Compliance Center  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> ||
+    |Security & Compliance Center  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> ||
     |SharePoint Online and OneDrive for Business  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> ||
     |Sway  <br/> ||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |
+    |Workplace Analytics<br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> || 
     |Yammer  <br/> ||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |
    
-- Azure Active Directory (Azure AD) is the directory service for Office 365. The unified audit log contains user, group, application, domain, and directory activities performed in the Office 365 admin center or in the in Azure management portal. For a complete list of Azure AD events, see [Azure Active Directory Audit Report Events](https://go.microsoft.com/fwlink/p/?LinkID=616549).
+- Azure Active Directory (Azure AD) is the directory service for Office 365. The unified audit log contains user, group, application, domain, and directory activities performed in the Microsoft 365 admin center or in the in Azure management portal. For a complete list of Azure AD events, see [Azure Active Directory Audit Report Events](https://go.microsoft.com/fwlink/p/?LinkID=616549).
     
 - Exchange Online audit logs consist of two types of events: Exchange admin events (actions taken by administrators) and mailbox events (actions taken by users on mailboxes). Note that mailbox auditing isn't enabled by default. It must be enable for each user mailbox before mailbox events can be searched for in the Office 365 audit log. For more information about mailbox auditing and the mailbox auditing actions that are logged, see [Enable mailbox auditing in Office 365](enable-mailbox-auditing.md).
     
@@ -142,11 +144,11 @@ Here's the process for searching the audit log in Office 365.
 1. Go to [https://protection.office.com](https://protection.office.com).
     
     > [!TIP]
-    > Use a private browsing session (not a regular session) to access the Office 365 Security &amp; Compliance Center because this will prevent the credential that you are currently logged on with from being used. To open an InPrivate Browsing session in Internet Explorer or Microsoft Edge, just press CTRL+SHIFT+P. To open a private browsing session in Google Chrome (called an incognito window), press CTRL+SHIFT+N. 
+    > Use a private browsing session (not a regular session) to access the Security & Compliance Center because this will prevent the credential that you are currently logged on with from being used. To open an InPrivate Browsing session in Internet Explorer or Microsoft Edge, just press CTRL+SHIFT+P. To open a private browsing session in Google Chrome (called an incognito window), press CTRL+SHIFT+N. 
   
 2. Sign in to Office 365 using your work or school account.
     
-3. In the left pane of the Security &amp; Compliance Center, click **Search &amp; investigation**, and then click **Audit log search**.
+3. In the left pane of the Security & Compliance Center, click **Search**, and then click **Audit log search**.
     
     The **Audit log search** page is displayed. 
     
@@ -172,8 +174,13 @@ Here's the process for searching the audit log in Office 365.
     
     Leave this box blank to return entries for all files and folders in your organization.
     
-    > [!TIP]
-    > If you're looking for all activities related to a **site**, add the wildcard symbol (\*) after the URL to return all entries for that site; for example, **"https://contoso-my.sharepoint.com/personal/*"**.
+   **TIPS**
+
+   - If you're looking for all activities related to a **site**, add the wildcard symbol (\*) after the URL to return all entries for that site; for example, **"https://contoso-my.sharepoint.com/personal/*"**.
+
+   - If you're looking for all activities related to a **file**, add the wildcard symbol (\*) before the file name to return all entries for that file; for example, **"*Customer_Profitability_Sample.csv"**.
+    
+
     
 5. Click **Search** to run the search using your search criteria. 
     
@@ -280,7 +287,7 @@ You can export the results of an audit log search to a comma separated value (CS
 
 ## Audited activities
 
-The tables in this section describe the activities that are audited in Office 365. You can search for these events by searching the audit log in the Security & Compliance Center.
+The tables in this section describe the activities that are audited in Office 365. You can search for these events by searching the audit log in the security and compliance center.
   
 These tables group related activities or the activities from a specific Office 365 service. The tables include the friendly name that's displayed in the **Activities** drop-down list and the name of the corresponding operation that appears in the detailed information of an audit record and in the CSV file when you export the search results. For descriptions of the detailed information, see [Detailed properties in the Office 365 audit log](detailed-properties-in-the-office-365-audit-log.md).
   
@@ -288,15 +295,15 @@ Click one of the following links to go to a specific table.
   
 ||||
 |:-----|:-----|:-----|
-|[File and page activities](#file-and-page-activities)<br/> |[Folder activities](#folder-activities)<br/> |[Sharing and access request activities](#sharing-and-access-request-activities)<br/> |
-|[Synchronization activities](#synchronization-activities)<br/> |[Site administration activities](#site-administration-activities)<br/> |[Exchange mailbox activities](#exchange-mailbox-activities)<br/> |
-|[Sway activities](#sway-activities) <br/> |[User administration activities](#user-administration-activities) <br/> |[Azure AD group administration activities](#azure-ad-group-administration-activities) <br/> |
-|[Application administration activities](#application-administration-activities) <br/> |[Role administration activities](#role-administration-activities) <br/> |[Directory administration activities](#directory-administration-activities) <br/> |
-|[eDiscovery activities](#ediscovery-activities) <br/> |[Power BI activities](#power-bi-activities) <br/> |[Microsoft Workplace Analytics](#microsoft-workplace-analytics-activities)<br/>|
-[Microsoft Teams activities](#microsoft-teams-activities) <br/> |[Yammer activities](#yammer-activities) <br/> |[Microsoft Flow](#microsoft-flow) <br/> 
-|[Microsoft PowerApps](#microsoft-powerapps)<br/>|[Microsoft Stream](#microsoft-stream) <br/>|[Exchange admin activities](#exchange-admin-audit-log)<br/>|
-|||
-   
+|[File and page activities](#file-and-page-activities)<br/> |[Folder activities](#folder-activities)<br/> |[SharePoint list activities](#sharepoint-list-activities)<br/>|
+|[Sharing and access request activities](#sharing-and-access-request-activities)<br/> |[Synchronization activities](#synchronization-activities)<br/> |[Site permissions activities](#site-permissions-activities)<br/> |
+|[Site administration activities](#site-administration-activities)<br/> |[Exchange mailbox activities](#exchange-mailbox-activities)<br/> |[Sway activities](#sway-activities) <br/> |
+|[User administration activities](#user-administration-activities) <br/> |[Azure AD group administration activities](#azure-ad-group-administration-activities) <br/> |[Application administration activities](#application-administration-activities) <br/> |
+|[Role administration activities](#role-administration-activities) <br/> |[Directory administration activities](#directory-administration-activities) <br/>|[eDiscovery activities](#ediscovery-activities) <br/> |
+|[Advanced eDiscovery activities](#advanced-ediscovery-activities)<br/> |[Power BI activities](#power-bi-activities) <br/> |[Microsoft Workplace Analytics](#microsoft-workplace-analytics-activities)<br/>|
+|[Microsoft Teams activities](#microsoft-teams-activities) <br/> |[Yammer activities](#yammer-activities) <br/> |[Microsoft Flow activities](#microsoft-flow-activities) <br/>|
+|[Microsoft PowerApps activities](#microsoft-powerapps)<br/>|[Microsoft Stream activities](#microsoft-stream-activities) <br/>|[Exchange admin activities](#exchange-admin-audit-log)<br/>|
+||||
   
 ### File and page activities
   
@@ -306,12 +313,17 @@ The following table describes the file and page activities in SharePoint Online 
 |:-----|:-----|:-----|
 |Accessed file  <br/> |FileAccessed  <br/> |User or system account accesses a file.  <br/> |
 |(none)  <br/> |FileAccessedExtended  <br/> |This is related to the "Accessed file" (FileAccessed) activity. A FileAccessedExtended event is logged when the same person continually accesses a file for an extended period of time (up to 3 hours). The purpose of logging FileAccessedExtended events is to reduce the number of FileAccessed events that are logged when a file is continually accessed. This helps reduce the noise of multiple FileAccessed records for what is essentially the same user activity, and lets you focus on the initial (and more important) FileAccessed event.  <br/> |
+|Changed compliance policy label<br/> |ComplianceSettingChanged<br/> |A retention label was applied to or removed from a document. This event is triggered when a retention label is manually or automatically applied to a message.<br/> |
+|Changed record status to locked<br/> |LockRecord<br/> |The record status of a retention label that classifies a document as a record was locked. This means the document can't be modified or deleted. Only users assigned at least the contributor permission for a site can change the record status of a document.<br/> |
+|Changed record status to unlocked<br/> |UnlockRecord<br/> |The record status of a retention label that classifies a document as a record was unlocked. This means the document can be modified or deleted. Only users assigned at least the contributor permission for a site can change the record status of a document.<br/><br/> |
 |Checked in file  <br/> |FileCheckedIn  <br/> |User checks in a document that they checked out from a document library.  <br/> |
 |Checked out file  <br/> |FileCheckedOut  <br/> |User checks out a document located in a document library. Users can check out and make changes to documents that have been shared with them.  <br/> |
 |Copied file  <br/> |FileCopied  <br/> |User copies a document from a site. The copied file can be saved to another folder on the site.  <br/> |
 |Deleted file  <br/> |FileDeleted  <br/> |User deletes a document from a site.  <br/> |
 |Deleted file from recycle bin  <br/> |FileDeletedFirstStageRecycleBin  <br/> |User deletes a file from the recycle bin of a site.  <br/> |
 |Deleted file from second-stage recycle bin  <br/> |FileDeletedSecondStageRecycleBin  <br/> |User deletes a file from the second-stage recycle bin of a site.  <br/> |
+|Deleted record compliance policy label<br/> |ComplianceRecordDelete<br/> |A document that was classified as a record was deleted. A document is considered a record when a retention label that classifies content as a record is applied to the document. <br/> |
+|Detected document sensitivity mismatch <br/>|DocumentSensitivityMismatchDetected<br/>|User uploads a document classified with a sensitivity label that has a higher priority than the sensitivity label that's applied to the site the document is uploaded to. Note this event isn't triggered if the sensitivity label applied to a site has a higher priority than the sensitivity label applied to a document that's uploaded to the site. For more information about sensitivity label priority, see the "Label priority" section in [Overview of sensitivity labels](sensitivity-labels.md#label-priority-order-matters).<br/>|
 |Detected malware in file  <br/> |FileMalwareDetected  <br/> |SharePoint anti-virus engine detects malware in a file.  <br/> |
 |Discarded file checkout  <br/> |FileCheckOutDiscarded  <br/> |User discards (or undos) a checked out file. That means any changes they made to the file when it was checked out are discarded, and not saved to the version of the document in the document library.  <br/> |
 |Downloaded file  <br/> |FileDownloaded  <br/> |User downloads a document from a site.  <br/> |
@@ -326,6 +338,8 @@ The following table describes the file and page activities in SharePoint Online 
 |Uploaded file  <br/> |FileUploaded  <br/> |User uploads a document to a folder on a site.  <br/> |
 |Viewed page  <br/> |PageViewed  <br/> |User views a page on a site. This doesn't include using a Web browser to view files located in a document library.  <br/> |
 |(none)  <br/> |PageViewedExtended  <br/> |This is related to the "Viewed page" (PageViewed) activity. A PageViewedExtended event is logged when the same person continually views a web page for an extended period of time (up to 3 hours). The purpose of logging PageViewedExtended events is to reduce the number of PageViewed events that are logged when a page is continually viewed. This helps reduce the noise of multiple PageViewed records for what is essentially the same user activity, and lets you focus on the initial (and more important) PageViewed event.  <br/> |
+|View signaled by client <br/>|ClientViewSignaled<br/>|A user’s client (such as website or mobile app) has signaled that the indicated page has been viewed by the user. This activity is often logged following a PagePrefetched event for a page. <br/><br/>**NOTE**: Because ClientViewSignaled events are signaled by the client, rather than the server, it's possible the event may not be logged by the server and therefore may not appear in the audit log. It's also possible that information in the audit record may not be trustworthy. However, because the user’s identity is validated by the token used to create the signal, the user’s identity listed in the corresponding audit record is accurate. |
+|(none) <br/>|PagePrefetched<br/>|A user’s client (such as website or mobile app) has requested the indicated page to help improve performance if the user browses to it. This event is logged to indicate the page content has been served to the user’s client; this event isn't a definitive indication that the user actually navigated to the page. When the page content is rendered by the client (as per the user’s request) a ClientViewSignaled event should be generated. Note that not all clients support indicating a pre-fetch, and therefore some pre-fetched activities might instead be logged as PageViewed events.<br/>|
 ||||
   
 ### Folder activities
@@ -345,6 +359,35 @@ The following table describes the folder activities in SharePoint Online and One
 |Restored folder  <br/> |FolderRestored  <br/> |User restores a deleted folder from the recycle bin on a site.  <br/> |
 ||||
   
+### SharePoint list activities
+  
+The following table describes activities related to when users interact with lists and list items in SharePoint Online.
+
+|**Friendly name**|**Operation**|**Description**|
+|:-----|:-----|:-----|
+| Created list              | ListCreated              | A user created a new SharePoint list.|
+| Created list column       | ListColumnCreated        | A user created a new SharePoint list column. A list column is a column that's attached to one or more SharePoint lists. |
+| Created list content type | ListContentTypeCreated   | A user created a new list content type. A list content type is a content type that's attached to one or more SharePoint lists.|
+| Created list item         | ListItemCreated          | A user created a new item in an existing SharePoint list.|
+| Created site column       | SiteColumnCreated        | A user created a new SharePoint site column. A site column is a column that isn't attached to a list. A site column is also a metadata structure that can be used by any list in a given web.|
+| Created site content type | Site ContentType Created | A user created a new site content type. A site content type is a content type that's attached to the parent site.|
+| Deleted list              | ListDeleted              | A user deleted a SharePoint list.|
+| Deleted list column       | List Column Deleted      | A user deleted a SharePoint list column.|
+| Deleted list content type | ListContentTypeDeleted   | A user deleted a list content type. |
+| Deleted list item         | List Item Deleted        | A user deleted a SharePoint list item.|
+| Deleted site column       | SiteColumnDeleted        | A user deleted a SharePoint site column. |
+| Deleted site content type | SiteContentTypeDeleted   | A user deleted a site content type.|
+| Recycled list item        | ListItemRecycled         | A user moved a SharePoint list item to the Recycle Bin.|
+| Restored list             | ListRestored             | A user restored a SharePoint list from the Recycle Bin.|
+| Restored list item        | ListItemRestored         | A user restored a SharePoint list item from the Recycle Bin.|
+| Updated list              | ListUpdated              | A user updated a SharePoint list by modifying one or more properties.|
+| Updated list column       | ListColumnUpdated        | A user updated a SharePoint list column by modifying one or more properties.|
+| Updated list content type | ListContentTypeUpdated   | A user updated a list content type by modifying one or more properties.|
+| Updated list item         | ListItemUpdated          | A user updated a SharePoint list item by modifying one or more properties.|  
+| Updated site column       | SiteColumnUpdated        | A user updated a SharePoint site column by modifying one or more properties.|
+| Updated site content type | SiteContentTypeUpdated   | A user updated a site content type by modifying one or more properties.|
+||||
+
 ### Sharing and access request activities
   
 The following table describes the user sharing and access request activities in SharePoint Online and OneDrive for Business. For sharing events, the **Detail** column under **Results** identifies the name of the user or group the item was shared with and whether that user or group is a member or guest in your organization. For more information, see [Use sharing auditing in the Office 365 audit log](use-sharing-auditing.md).
@@ -354,25 +397,19 @@ The following table describes the user sharing and access request activities in 
   
 |**Friendly name**|**Operation**|**Description**|
 |:-----|:-----|:-----|
+|Added permission level to site collection  <br/> |PermissionLevelAdded  <br/> |A permission level was added to a site collection.  <br/> |
 |Accepted access request  <br/> |AccessRequestAccepted  <br/> |An access request to a site, folder, or document was accepted and the requesting user has been granted access.  <br/> |
 |Accepted sharing invitation  <br/> |SharingInvitationAccepted  <br/> |User (member or guest) accepted a sharing invitation and was granted access to a resource. This event includes information about the user who was invited and the email address that was used to accept the invitation (they could be different). This activity is often accompanied by a second event that describes how the user was granted access to the resource, for example, adding the user to a group that has access to the resource.  <br/> |
-|Added permission level to site collection  <br/> |PermissionLevelAdded  <br/> |A permission level was added to a site collection.  <br/> |
-|User added to secure link  <br/> |AddedToSecureLink  <br/> |A user was added to the list of entities who can use this secure sharing link.  <br/> |
 |Blocked sharing invitation  <br/> |SharingInvitationBlocked  <br/> | A sharing invitation sent by a user in your organization is blocked because of an external sharing policy that either allows or denies external sharing based on the domain of the target user. In this case, the sharing invitation was blocked because:  <br/>  The target user's domain isn't included in the list of allowed domains.  <br/>  Or  <br/>  The target user's domain is included in the list of blocked domains.  <br/>  For more information about allowing or blocking external sharing based on domains, see [Restricted domains sharing in SharePoint Online and OneDrive for Business](https://support.office.com/article/5d7589cd-0997-4a00-a2ba-2320ec49c4e9).  <br/> |
-|Broke permission level inheritance  <br/> |PermissionLevelsInheritanceBroken  <br/> |An item was changed so that it no longer inherits permission levels from its parent.  <br/> |
-|Broke sharing inheritance  <br/> |SharingInheritanceBroken  <br/> |An item was changed so that it no longer inherits sharing permissions from its parent.  <br/> |
-|Created a company shareable link  <br/> |CompanyLinkCreated  <br/> |User created a company-wide link to a resource. company-wide links can only be used by members in your organization. They can't be used by guests.  <br/> |
 |Created access request  <br/> |AccessRequestCreated  <br/> |User requests access to a site, folder, or document they don't have permissions to access.  <br/> |
+|Created a company shareable link  <br/> |CompanyLinkCreated  <br/> |User created a company-wide link to a resource. company-wide links can only be used by members in your organization. They can't be used by guests.  <br/> |
 |Created an anonymous link  <br/> |AnonymousLinkCreated  <br/> |User created an anonymous link to a resource. Anyone with this link can access the resource without having to be authenticated.  <br/> |
 |Created secure link  <br/> |SecureLinkCreated  <br/> |A secure sharing link was created to this item.  <br/> |
 |Created sharing invitation  <br/> |SharingInvitationCreated  <br/> |User shared a resource in SharePoint Online or OneDrive for Business with a user who isn't in your organization's directory.  <br/> |
 |Deleted secure link  <br/> |SecureLinkDeleted  <br/> |A secure sharing link was deleted.  <br/> |
 |Denied access request  <br/> |AccessRequestDenied  <br/> |An access request to a site, folder, or document was denied.  <br/> |
-|Modified permission level on site collection  <br/> |PermissionLevelModified  <br/> |A permission level was changed on a site collection.  <br/> |
 |Removed a company shareable link  <br/> |CompanyLinkRemoved  <br/> |User removed a company-wide link to a resource. The link can no longer be used to access the resource.  <br/> |
 |Removed an anonymous link  <br/> |AnonymousLinkRemoved  <br/> |User removed an anonymous link to a resource. The link can no longer be used to access the resource.  <br/> |
-|Removed permission level from site collection  <br/> |PermissionLevelRemoved  <br/> |A permission level was removed from a site collection.  <br/> |
-|Restored sharing inheritance  <br/> |SharingInheritanceReset  <br/> |A change was made so that an item inherits sharing permissions from its parent.  <br/> |
 |Shared file, folder, or site  <br/> |SharingSet  <br/> |User (member or guest) shared a file, folder, or site in SharePoint or OneDrive for Business with a user in your organization's directory. The value in the **Detail** column for this activity identifies the name of the user the resource was shared with and whether this user is a member or a guest. This activity is often accompanied by a second event that describes how the user was granted access to the resource; for example, adding the user to a group that has access to the resource.  <br/> |
 |Updated access request  <br/> |AccessRequestUpdated  <br/> |An access request to an item was updated.  <br/> |
 |Updated an anonymous link  <br/> |AnonymousLinkUpdated  <br/> |User updated an anonymous link to a resource. The updated field is included in the EventData property when you export the search results.  <br/> |
@@ -397,19 +434,43 @@ The following table lists file synchronization activities in SharePoint Online a
 |Downloaded files to computer  <br/> |FileSyncDownloadedFull  <br/> |User establishes a sync relationship and successfully downloads files for the first time to their computer from a document library.  <br/> |
 |Downloaded file changes to computer  <br/> |FileSyncDownloadedPartial  <br/> |User successfully downloads any changes to files from a document library. This activity indicates that any changes that were made to files in the document library were downloaded to the user's computer. Only changes were downloaded because the document library was previously downloaded by the user (as indicated by the **Downloaded files to computer** activity).  <br/> |
 |Uploaded files to document library  <br/> |FileSyncUploadedFull  <br/> |User establishes a sync relationship and successfully uploads files for the first time from their computer to a document library.  <br/> |
-|Uploaded file changes to document library  <br/> |FileSyncUploadedPartial  <br/> |User successfully uploads changes to files on a document library. This event indicates that any changes made to the local version of a file from a document library are successfully uploaded to the document library. Only changes are unloaded because those files were previously uploaded by the user (as indicated by the ** Uploaded files to document library ** activity).  <br/> |
+|Uploaded file changes to document library  <br/> |FileSyncUploadedPartial  <br/> |User successfully uploads changes to files on a document library. This event indicates that any changes made to the local version of a file from a document library are successfully uploaded to the document library. Only changes are uploaded because those files were previously uploaded by the user (as indicated by the **Uploaded files to document library** activity).  <br/> |
 ||||
+
+### Site permissions activities
+
+The following table lists events related to assigning permissions in SharePoint and using groups to give (and revoke) access to sites.
+
+|**Friendly name**|**Operation**|**Description**|
+|:-----|:-----|:-----|
+|Added site collection admin  <br/> |SiteCollectionAdminAdded  <br/> |Site collection administrator or owner adds a person as a site collection administrator for a site. Site collection administrators have full control permissions for the site collection and all subsites. This activity is also logged when an admin gives themselves access to a user's OneDrive account (by editing the user profile in the SharePoint admin center or  [by using the Microsoft 365 admin center](https://docs.microsoft.com/office365/admin/add-users/get-access-to-and-back-up-a-former-user-s-data#part-1---get-access-to-the-former-employees-onedrive-for-business-documents)). <br/> |
+|Added user or group to SharePoint group  <br/> |AddedToGroup  <br/> |User added a member or guest to a SharePoint group. This might have been an intentional action or the result of another activity, such as a sharing event.  <br/> |
+|Broke permission level inheritance  <br/> |PermissionLevelsInheritanceBroken  <br/> |An item was changed so that it no longer inherits permission levels from its parent.  <br/> |
+|Broke sharing inheritance  <br/> |SharingInheritanceBroken  <br/> |An item was changed so that it no longer inherits sharing permissions from its parent.  <br/> |
+|Created group  <br/> |GroupAdded  <br/> |Site administrator or owner creates a group for a site, or performs a task that results in a group being created. For example, the first time a user creates a link to share a file, a system group is added to the user's OneDrive for Business site. This event can also be a result of a user creating a link with edit permissions to a shared file.  <br/> |
+|Deleted group  <br/> |GroupRemoved  <br/> |User deletes a group from a site.  <br/> |
+|Modified access request setting  <br/> |WebRequestAccessModified  <br/> |The access request settings were modified on a site.  <br/> |
+|Modified 'Members Can Share' setting  <br/> |WebMembersCanShareModified  <br/> |The **Members Can Share** setting was modified on a site.  <br/> |
+|Modified permission level on site collection  <br/> |PermissionLevelModified  <br/> |A permission level was changed on a site collection.  <br/> |
+|Modified site permissions  <br/> |SitePermissionsModified  <br/> |Site administrator or owner (or system account) changes the permission level that are assigned to a group on a site. This activity is also logged if all permissions are removed from a group.  <br/><br/> **NOTE**: This operation has been deprecated in SharePoint Online. To find related events, you can search for other permission-related activities such as **Added site collection admin**, **Added user or group to SharePoint group**, **Allowed user to create groups**, **Created group**, and **Deleted group.**|
+|Removed permission level from site collection  <br/> |PermissionLevelRemoved  <br/> |A permission level was removed from a site collection.  <br/> |
+|Removed site collection admin  <br/> |SiteCollectionAdminRemoved <br/> |Site collection administrator or owner removes a person as a site collection administrator for a site. This activity is also logged when an admin removes themselves from the list of site collection administrators for a user's OneDrive account (by editing the user profile in the SharePoint admin center).  Note that to return this activity in the audit log search results, you have to search for all activities. <br/> |
+|Removed user or group from SharePoint group  <br/> |RemovedFromGroup  <br/> |User removed a member or guest from a SharePoint group. This might have been an intentional action or the result of another activity, such as an unsharing event.  <br/> |
+|Requested site admin permissions  <br/> |SiteAdminChangeRequest  <br/> |User requests to be added as a site collection administrator for a site collection. Site collection administrators have full control permissions for the site collection and all subsites.  <br/> |
+|Restored sharing inheritance  <br/> |SharingInheritanceReset  <br/> |A change was made so that an item inherits sharing permissions from its parent.  <br/> |
+|Updated group  <br/> |GroupUpdated  <br/> |Site administrator or owner changes the settings of a group for a site. This can include changing the group's name, who can view or edit the group membership, and how membership requests are handled.  <br/> |
+||||
+
   
 ### Site administration activities
   
-The following table lists the events that result from site administration tasks in SharePoint Online.
+The following table lists events that result from site administration tasks in SharePoint Online.
   
 |**Friendly name**|**Operation**|**Description**|
 |:-----|:-----|:-----|
-|Added exempt user agent  <br/> |ExemptUserAgentSet  <br/> |A SharePoint or global administrator adds a user agent to the list of exempt user agents in the SharePoint admin center.  <br/> |
-|Added site collection admin  <br/> |SiteCollectionAdminAdded  <br/> |Site collection administrator or owner adds a person as a site collection administrator for a site. Site collection administrators have full control permissions for the site collection and all subsites. This activity is also logged when an admin gives themselves access to a user's OneDrive account (by editing the user profile in the SharePoint admin center or  [by using the Office 365 admin center](https://docs.microsoft.com/office365/admin/add-users/get-access-to-and-back-up-a-former-user-s-data#part-1---get-access-to-the-former-employees-onedrive-for-business-documents)). <br/> |
-|(none)  <br/> |SiteCollectionAdminRemoved <br/> |Site collection administrator or owner removes a person as a site collection administrator for a site. This activity is also logged when an admin removes themselves from the list of site collection administrators for a user's OneDrive account (by editing the user profile in the SharePoint admin center).  Note that to return this activity in the audit log search results, you have to search for all activities. <br/> |
-|Added user or group to SharePoint group  <br/> |AddedToGroup  <br/> |User added a member or guest to a SharePoint group. This might have been an intentional action or the result of another activity, such as a sharing event.  <br/> |
+|Added allowed data location<br/>|AllowedDataLocationAdded|A SharePoint or global administrator added an allowed data location in a multi-geo environment. <br/>|
+|Added exempt user agent  <br/> |ExemptUserAgentSet  <br/> |A SharePoint or global administrator added a user agent to the list of exempt user agents in the SharePoint admin center.  <br/> |
+|Added geo location admin<br/>|GeoAdminAdded<br/>|A SharePoint or global administrator added a user as a geo admin of a location. <br/>|
 |Allowed user to create groups  <br/> |AllowGroupCreationSet  <br/> |Site administrator or owner adds a permission level to a site that allows a user assigned that permission to create a group for that site.  <br/> |
 |Cancelled site geo move  <br/> |SiteGeoMoveCancelled  <br/> |A SharePoint or global administrator successfully cancels a SharePoint or OneDrive site geo move. The Multi-Geo capability lets an Office 365 organization span multiple Office 365 datacenter geographies, which are called geos. For more information, see [Multi-Geo Capabilities in OneDrive and SharePoint Online in Office 365](https://go.microsoft.com/fwlink/?linkid=860840).  <br/> |
 |Changed a sharing policy  <br/> |SharingPolicyChanged  <br/> |A SharePoint or global administrator changed a SharePoint sharing policy by using the Office 365 admin portal, SharePoint admin portal, or SharePoint Online Management Shell. Any change to the settings in the sharing policy in your organization will be logged. The policy that was changed is identified in the **ModifiedProperties** field in the detailed properties of the event record.  <br/> |
@@ -417,25 +478,26 @@ The following table lists the events that result from site administration tasks 
 |Changed exempt user agents  <br/> |CustomizeExemptUsers  <br/> |A SharePoint or global administrator customized the list of exempt user agents in the SharePoint admin center. You can specify which user agents to exempt from receiving an entire web page to index. This means when a user agent you've specified as exempt encounters an InfoPath form, the form will be returned as an XML file, instead of an entire web page. This makes indexing InfoPath forms faster.  <br/> |
 |Changed network access policy  <br/> |NetworkAccessPolicyChanged  <br/> |A SharePoint or global administrator changed the location-based access policy (also called a trusted network boundary) in the SharePoint admin center or by using SharePoint Online PowerShell. This type of policy controls who can access SharePoint and OneDrive resources in your organization based on authorized IP address ranges that you specify. For more information, see [Control access to SharePoint Online and OneDrive data based on network location](https://support.office.com/article/b5a5f1f1-1174-4c6b-91d0-9273a6b6971f).  <br/> |
 |Completed site geo move  <br/> |SiteGeoMoveCompleted  <br/> |A site geo move that was scheduled by a global administrator in your organization was successfully completed. The Multi-Geo capability lets an Office 365 organization span multiple Office 365 datacenter geographies, which are called geos. For more information, see [Multi-Geo Capabilities in OneDrive and SharePoint Online in Office 365](https://go.microsoft.com/fwlink/?linkid=860840).  <br/> |
-|Created group  <br/> |GroupAdded  <br/> |Site administrator or owner creates a group for a site, or performs a task that results in a group being created. For example, the first time a user creates a link to share a file, a system group is added to the user's OneDrive for Business site. This event can also be a result of a user creating a link with edit permissions to a shared file.  <br/> |
 |Created Sent To connection  <br/> |SendToConnectionAdded  <br/> |A SharePoint or global administrator creates a new Send To connection on the Records management page in the SharePoint admin center. A Send To connection specifies settings for a document repository or a records center. When you create a Send To connection, a Content Organizer can submit documents to the specified location.  <br/> |
 |Created site collection  <br/> |SiteCollectionCreated  <br/> |A SharePoint or global administrator creates a new site collection in your SharePoint Online organization or a user provisions their OneDrive for Business site.  <br/> |
-|Deleted group  <br/> |GroupRemoved  <br/> |User deletes a group from a site.  <br/> |
+|Deleted orphaned hub site<br/>|HubSiteOrphanHubDeleted<br/>|A SharePoint or global administrator deleted an orphan hub site, which is a hub site that doesn't have any sites associated with it. An orphaned hub is likely caused by the deletion of the original hub site. <br/>|
 |Deleted Sent To connection  <br/> |SendToConnectionRemoved  <br/> |A SharePoint or global administrator deletes a Send To connection on the Records management page in the SharePoint admin center.  <br/> |
 |Deleted site  <br/> |SiteDeleted  <br/> |Site administrator deletes a site.  <br/> |
 |Enabled document preview  <br/> |PreviewModeEnabledSet  <br/> |Site administrator enables document preview for a site.  <br/> |
 |Enabled legacy workflow  <br/> |LegacyWorkflowEnabledSet  <br/> |Site administrator or owner adds the SharePoint 2013 Workflow Task content type to the site. Global administrators can also enable work flows for the entire organization in the SharePoint admin center.  <br/> |
 |Enabled Office on Demand  <br/> |OfficeOnDemandSet  <br/> |Site administrator enables Office on Demand, which lets users access the latest version of Office desktop applications. Office on Demand is enabled in the SharePoint admin center and requires an Office 365 subscription that includes full, installed Office applications.  <br/> |
+|Enabled result source for People Searches<br/>|PeopleResultsScopeSet<br/>|Site administrator creates the result source for People Searches for a site.<br/>|
 |Enabled RSS feeds  <br/> |NewsFeedEnabledSet  <br/> |Site administrator or owner enables RSS feeds for a site. Global administrators can enable RSS feeds for the entire organization in the SharePoint admin center.  <br/> |
-|Modified access request setting  <br/> |WebRequestAccessModified  <br/> |The access request settings were modified on a site.  <br/> |
-|Modified Members Can Share setting  <br/> |WebMembersCanShareModified  <br/> |The **Members Can Share** setting was modified on a site.  <br/> |
-|Modified site permissions  <br/> |SitePermissionsModified  <br/> |Site administrator or owner (or system account) changes the permission level that are assigned to a group on a site. This activity is also logged if all permissions are removed from a group.  <br/> > [!NOTE]> This operation has been deprecated in SharePoint Online. To find related events, you can search for other permission-related activities such as **Added site collection admin**, **Added user or group to SharePoint group**, **Allowed user to create groups**, **Created group**, and **Deleted group.**         |
-|Removed user or group from SharePoint group  <br/> |RemovedFromGroup  <br/> |User removed a member or guest from a SharePoint group. This might have been an intentional action or the result of another activity, such as an unsharing event.  <br/> |
+|Joined site to hub site<br/>|HubSiteJoined<br/>|A site owner associates their site with a hub site.<br/>|
+|Registered hub site<br/>|HubSiteRegistered<br/>|A SharePoint or global administrator creates a hub site. The results is that the site is registered to be a hub site. <br/>|
+|Removed allowed data location<br/>|AllowedDataLocationDeleted<br/>|A SharePoint or global administrator removed an allowed data location in a multi-geo environment.<br/>|
+|Removed geo location admin<br/>|GeoAdminDeleted<br/>|A SharePoint or global administrator removed a user as a geo admin of a location.<br/>|
 |Renamed site  <br/> |SiteRenamed  <br/> |Site administrator or owner renames a site  <br/> |
-|Requested site admin permissions  <br/> |SiteAdminChangeRequest  <br/> |User requests to be added as a site collection administrator for a site collection. Site collection administrators have full control permissions for the site collection and all subsites.  <br/> |
 |Scheduled site geo move  <br/> |SiteGeoMoveScheduled  <br/> |A SharePoint or global administrator successfully schedules a SharePoint or OneDrive site geo move. The Multi-Geo capability lets an Office 365 organization span multiple Office 365 datacenter geographies, which are called geos. For more information, see [Multi-Geo Capabilities in OneDrive and SharePoint Online in Office 365](https://go.microsoft.com/fwlink/?linkid=860840).  <br/> |
 |Set host site  <br/> |HostSiteSet  <br/> |A SharePoint or global administrator changes the designated site to host personal or OneDrive for Business sites.  <br/> |
-|Updated group  <br/> |GroupUpdated  <br/> |Site administrator or owner changes the settings of a group for a site. This can include changing the group's name, who can view or edit the group membership, and how membership requests are handled.  <br/> |
+|Set storage quota for geo location  <br/> |GeoQuotaAllocated<br/> |A SharePoint or global administrator configured the storage quota for a geo location in a multi-geo environment.<br/> |
+|Unjoined site from hub site<br/>|HubSiteUnjoined<br/>|A site owner disassociates their site from a hub site.<br/>|
+|Unregistered hub site<br/>|HubSiteUnregistered<br/>|A SharePoint or global administrator unregisters a site as a hub site. When a hub site is unregistered, it no longer functions as a hub site. <br/>|
 ||||
   
 ### Exchange mailbox activities
@@ -444,23 +506,28 @@ The following table lists the activities that can be logged by mailbox audit log
   
 |**Friendly name**|**Operation**|**Description**|
 |:-----|:-----|:-----|
-|Added delegate mailbox permissions  <br/> |Add-MailboxPermission  <br/> |An administrator assigned the FullAccess mailbox permission to a user (known as a delegate) to another person's mailbox. The FullAccess permission allows the delegate to open the other person's mailbox, and read and manage the contents of the mailbox.  <br/> |
+|Added delegate mailbox permissions  <br/> |AddMailboxPermissions  <br/> |An administrator assigned the FullAccess mailbox permission to a user (known as a delegate) to another person's mailbox. The FullAccess permission allows the delegate to open the other person's mailbox, and read and manage the contents of the mailbox.  <br/> |
+|Added or removed user with delegate access to calendar folder<br/> |UpdateCalendarDelegation<br/> |A user was added or removed as a delegate to the calendar of another user's mailbox. Calendar delegation gives someone else in the same organization permissions to manage the mailbox owner's calendar. <br/> |
+|Added permissions to folder<br/> |AddFolderPermissions<br/> |A folder permission was added. Folder permissions control which users in your organization can access folders in a mailbox and the messages located in those folders.<br/> |
 |Copied messages to another folder  <br/> |Copy  <br/> |A message was copied to another folder.  <br/> |
 |Created mailbox item  <br/> |Create  <br/> |An item is created in the Calendar, Contacts, Notes, or Tasks folder in the mailbox; for example, a new meeting request is created. Note that creating, sending, or receiving a message isn't audited. Also, creating a mailbox folder is not audited.  <br/> |
+|Created new inbox rule in Outlook web app  <br/> |NewInboxRule<br/> |A mailbox owner or other user with access to the mailbox created a new inbox rule in the Outlook web app.<br/> |
 |Deleted messages from Deleted Items folder  <br/> |SoftDelete  <br/> |A message was permanently deleted or deleted from the Deleted Items folder. These items are moved to the Recoverable Items folder. Messages are also moved to the Recoverable Items folder when a user selects it and presses **Shift+Delete**.  <br/> |
-|Moved messages to another folder  <br/> |Move  <br/> |A message was moved to another folder.  <br/> |
+|Labeled message as a record  <br/> |ApplyRecordLabel<br/> |A message was classified as a record. This occurs when a retention label that classifies content as a record is manually or automatically applied to a message.<br/> ||Moved messages to another folder  <br/> |Move  <br/> |A message was moved to another folder.  <br/> |
 |Moved messages to Deleted Items folder  <br/> |MoveToDeletedItems  <br/> |A message was deleted and moved to the Deleted Items folder.  <br/> |
 |Modified folder permission  <br/> |UpdateFolderPermissions  <br/> |A folder permission was changed. Folder permissions control which users in your organization can access mailbox folders and the messages in the folder.  <br/> |
+|Modified inbox rule from Outlook web app<br/> |SetInboxRule<br/> |A mailbox owner or other user with access to the mailbox modified an inbox rule using the Outlook web app.<br/> |
 |Purged messages from the mailbox  <br/> |HardDelete  <br/> |A message was purged from the Recoverable Items folder (permanently deleted from the mailbox).  <br/> |
 |Removed delegate mailbox permissions  <br/> |Remove-MailboxPermission  <br/> |An administrator removed the FullAccess permission (that was assigned to a delegate) from a person's mailbox. After the FullAccess permission is removed, the delegate can't open the other person's mailbox or access any content in it.  <br/> |
+|Removed permissions from folder<br/> |RemoveFolderPermissions<br/> |A folder permission was removed. Folder permissions control which users in your organization can access folders in a mailbox and the messages located in those folders.<br/> |
 |Sent message using Send As permissions  <br/> |SendAs  <br/> |A message was sent using the SendAs permission. This means another user sent the message as though it came from the mailbox owner.  <br/> |
 |Sent message using Send On Behalf permissions  <br/> |SendOnBehalf  <br/> |A message was sent using the SendOnBehalf permission. This means another user sent the message on behalf of the mailbox owner. The message indicates to the recipient who the message was sent on behalf of and who actually sent the message.  <br/> |
 |Updated delegate access to calendar folder  <br/> |UpdateCalendarDelegation  <br/> |A calendar delegation was assigned to a mailbox. Calendar delegation gives someone else in the same organization permissions to manage the mailbox owner's calendar.  <br/> |
+|Updated inbox rules from Outlook client<br/> |UpdateInboxRules<br/> |A mailbox owner or other user with access to the mailbox modified an inbox rule in the Outlook client.<br/> |
 |Updated message  <br/> |Update  <br/> |A message or its properties was changed.  <br/> |
 |User signed in to mailbox  <br/> |MailboxLogin  <br/> |The user signed in to their mailbox.  <br/> |
-|(none)  <br/> |UpdateInboxRules  <br/> |An inbox rule has been added, removed, or changed. Inbox rules are used to process messages in the user's Inbox based on the specified conditions and take actions when the conditions of a rule are met, such as moving a message to a specified folder or deleting a message.  <br/> To return entries for inbox rule activities, you have to select **Show results for all activities** in the **Activities** list. Use the date range boxes and the **Users** list to narrow the search results.  <br/> |
 ||||
-  
+
 ### Sway activities
   
 The following table lists user and admin activities in Sway. Sway is an Office 365 app that helps users gather, format, and share ideas, stories, and presentations on an interactive, web-based canvas. For more information, see [Frequently asked questions about Sway - Admin Help](https://support.office.com/article/446380fa-25bf-47b2-996c-e12cb2f9d075).
@@ -476,17 +543,17 @@ The following table lists user and admin activities in Sway. Sway is an Office 3
 |Enabled Sway duplication  <br/> |EnableDuplication  <br/> |User enables duplication of a Sway; the ability for a user to enable duplication of a Sway is enabled by default.  <br/> |
 |Revoked Sway sharing  <br/> |SwayRevokeShare  <br/> |User stops sharing a Sway by revoking access to it. Revoking access changes the links associated with a Sway.  <br/> |
 |Shared Sway  <br/> |SwayShare  <br/> |User intends to share a Sway. This event captures the user action of clicking a specific share destination within the Sway share menu. The event doesn't indicate whether the user completed the share action.  <br/> |
-|Turned off external sharing of Sway  <br/> |SwayExternalSharingOff  <br/> |Administrator disables external Sway sharing for the entire organization by using the Office 365 admin center.  <br/> |
-|Turned on external sharing of Sway  <br/> |SwayExternalSharingOn  <br/> |Administrator enables external Sway sharing for the entire organization by using the Office 365 admin center.  <br/> |
-|Turned off Sway service  <br/> |SwayServiceOff  <br/> |Administrator disables Sway for the entire organization by using the Office 365 admin center.  <br/> |
-|Turned on Sway service  <br/> |SwayServiceOn  <br/> |Administrator enables Sway for the entire organization by using the Office 365 admin center (Sway service is enabled by default).  <br/> |
+|Turned off external sharing of Sway  <br/> |SwayExternalSharingOff  <br/> |Administrator disables external Sway sharing for the entire organization by using the Microsoft 365 admin center.  <br/> |
+|Turned on external sharing of Sway  <br/> |SwayExternalSharingOn  <br/> |Administrator enables external Sway sharing for the entire organization by using the Microsoft 365 admin center.  <br/> |
+|Turned off Sway service  <br/> |SwayServiceOff  <br/> |Administrator disables Sway for the entire organization by using the Microsoft 365 admin center.  <br/> |
+|Turned on Sway service  <br/> |SwayServiceOn  <br/> |Administrator enables Sway for the entire organization by using the Microsoft 365 admin center (Sway service is enabled by default).  <br/> |
 |Viewed Sway  <br/> |SwayView  <br/> |User views a Sway.  <br/> |
 ||||
 
   
 ### User administration activities
   
-The following table lists user administration activities that are logged when an admin adds or changes a user account by using the Office 365 admin center or the Azure management portal.
+The following table lists user administration activities that are logged when an admin adds or changes a user account by using the Microsoft 365 admin center or the Azure management portal.
   
 |**Activity**|**Operation**|**Description**|
 |:-----|:-----|:-----|
@@ -502,7 +569,7 @@ The following table lists user administration activities that are logged when an
   
 ### Azure AD group administration activities
   
-The following table lists group administration activities that are logged when an admin or a user creates or changes an Office 365 group or when an admin creates a security group by using the Office 365 admin center or the Azure management portal. For more information about groups in Office 365, see [View, create, and delete Groups in the Office 365 admin center](https://support.office.com/article/a6360120-2fc4-46af-b105-6a04dc5461c7).
+The following table lists group administration activities that are logged when an admin or a user creates or changes an Office 365 group or when an admin creates a security group by using the Microsoft 365 admin center or the Azure management portal. For more information about groups in Office 365, see [View, create, and delete Groups in the Microsoft 365 admin center](https://support.office.com/article/a6360120-2fc4-46af-b105-6a04dc5461c7).
   
 |**Friendly name**|**Operation**|**Description**|
 |:-----|:-----|:-----|
@@ -530,7 +597,7 @@ The following table lists application admin activities that are logged when an a
 
 ### Role administration activities
   
-The following table lists Azure AD role administration activities that are logged when an admin manages admin roles in the Office 365 admin center or in the Azure management portal.
+The following table lists Azure AD role administration activities that are logged when an admin manages admin roles in the Microsoft 365 admin center or in the Azure management portal.
   
 |**Friendly name**|**Operation**|**Description**|
 |:-----|:-----|:-----|
@@ -541,7 +608,7 @@ The following table lists Azure AD role administration activities that are logge
    
 ### Directory administration activities
   
-The following table lists Azure AD directory and domain related activities that are logged when an administrator manages their Office 365 organization in the Office 365 admin center or in the Azure management portal.
+The following table lists Azure AD directory and domain related activities that are logged when an administrator manages their Office 365 organization in the Microsoft 365 admin center or in the Azure management portal.
   
 |**Friendly name**|**Operation**|**Description**|
 |:-----|:-----|:-----|
@@ -561,7 +628,7 @@ The following table lists Azure AD directory and domain related activities that 
    
 ### eDiscovery activities
   
-Content Search and eDiscovery-related activities that are performed in Office 365 Security & Compliance Center or by running the corresponding Windows PowerShell cmdlets are logged in the Office 365 audit log. This includes the following activities:
+Content Search and eDiscovery-related activities that are performed in the security and compliance center or by running the corresponding PowerShell cmdlets are logged in the audit log. This includes the following activities:
   
 - Creating and managing eDiscovery cases
     
@@ -578,6 +645,37 @@ For a list and detailed description of the eDiscovery activities that are logged
 > [!NOTE]
 > It takes up to 30 minutes for events that result from the activities listed under **eDiscovery activities** in the **Activities** drop-down list to be displayed in the search results. Conversely, it takes up to 24 hours for the corresponding events from eDiscovery cmdlet activities to appear in the search results. 
   
+### Advanced eDiscovery activities
+
+The following table lists activities that result from IT and legal professionals performing tasks in Advanced eDiscovery in Microsoft 365. For more information, see [Overview of the Advanced eDiscovery solution in Microsoft 365](compliance20/overview-ediscovery-20.md).
+
+|**Friendly name**|**Operation**|**Description**|
+|:-----|:-----|:-----|
+| Added data to another review set<br/>         | AddWorkingSetQueryToWorkingSet<br/>  |  User added documents from one review set to a different review set.<br/>|
+| Added data to review set <br/>                | AddQueryToWorkingSet<br/>            |  User added the search results from a content search associated with an Advanced eDiscovery case to a review set.<br/>|
+| Added non-Office 365 data to review set<br/>  | AddNonOffice365DataToWorkingSet<br/> |  User added non-Office 365 data to a review set.<br/>|
+| Added remediated documents to review set<br/> | AddRemediatedData<br/>               |  User uploads documents that had indexing errors that were fixed to a review set.<br/>|
+| Analyzed data in review set <br/>             | RunAlgo<br/>                         |  User ran  analytics on the  documents in a review set. <br/>|
+| Annotated document in review set <br/>        | AnnotateDocument<br/>                |  User annotated a document in a review set. Annotation includes redacting content in a document. <br/>|
+| Compared load sets <br/>                      | LoadComparisonJob<br/>               |User compared two different load sets in a review set. A load set is when data from a content search that associated with the case is added to a review set.  <br/>|
+| Converted redacted documents to PDF<br/>      | BurnJob<br/>                         |User converted all the redacted documents in a review set to PDF files.<br/>|
+| Created review set<br/>                       | CreateWorkingSet<br/>                |User created a review set.<br/>|
+| Created review set search<br/>                | CreateWorkingSetSearch<br/>          |User created a search query that searches the documents in a review set. <br/>|
+| Created tag<br/>                              | CreateTag<br/>                       |User created a tag group in a review set. A tag group can contain one or more child tags. These tags are then used to tag documents in the review set.<br/>|
+| Deleted review set search <br/>               | DeleteWorkingSetSearch<br/>          |User deleted a search query in a review set.<br/>|
+| Deleted tag<br/>                              | DeleteTag<br/>                       |User deleted a tag or a tag group in a review set.<br/>|
+| Downloaded document<br/>                      | DownloadDocument<br/>                |User downloaded a document from a review set.<br/>|
+| Edited tag <br/>                              | DownloadDocument<br/>                |User changed a tag in a review set.<br/>|
+| Exported documents from review set <br/>      | ExportJob<br/>                       |User exported documents from a review set.<br/>|
+| Modified case setting <br/>                   | UpdateCaseSettings<br/>              | User modified the settings for a case. Case settings include case information, access permissions, and settings that control search and analytics behavior.<br/>|
+| Modified review set search<br/>               | UpdateWorkingSetSearch<br/>          |  User edited a search query in a review set.<br/>|
+| Previewed review set search <br/>             | PreviewWorkingSetSearch<br/>         |  User previewed the results of a search query in a review set.<br/>|
+| Remediated error documents <br/>              | ErrorRemediationJob<br/>             |  User fixes files that contained indexing errors. <br/>|
+| Tagged document<br/>                          | TagFiles<br/>                        |  User tags a document in a review set.<br/>|
+| Tagged results of a query<br/>                | TagJob<br/>                          |  User tags all of the documents that match the criteria of search query in a review set.<br/>|
+| Viewed document in review set<br/>            | ViewDocument<br/>                    |  User viewed a document in a review set.<br/>|
+|||
+
 ### Power BI activities
   
 You can search the audit log for activities in Power BI. For information about Power BI activities, see the "Activities audited by Power Power BI" section in [Using auditing within your organization](https://docs.microsoft.com/power-bi/service-admin-auditing#activities-audited-by-power-bi).
@@ -618,7 +716,7 @@ The following table lists the user and admin activities in Microsoft Teams that 
 |Added members to team  <br/> |MemberAdded  <br/> |A team owner adds member(s) to a team.  <br/> |
 |Added tab  <br/> |TabAdded  <br/> |A user adds a tab to a channel.  <br/> |
 |Changed channel setting  <br/> |ChannelSettingChanged  <br/> | The ChannelSettingChanged operation is logged when the following activities are performed by a team member. For each of these activities, a description of the setting that was changed (shown in parenthesis below) is displayed in the **Item** column in the audit log search results.  <br/> <br/>- Changes the name of a team channel ( **Channel name**).  <br/>  <br/>- Changes the description of a team channel ( **Channel description**).  <br/> |
-|Changed organization setting  <br/> |TeamsTenantSettingChanged  <br/> | The TeamsTenantSettingChanged operation is logged when the following activities are performed by a global admin (using the Office 365 admin center); note that these activities affect organization-wide Microsoft Teams settings. For more information, see [Administrator settings for Microsoft Teams](https://support.office.com/article/3966a3f5-7e0f-4ea9-a402-41888f455ba2).  <br/>  For each of these activities, a description of the setting that was changed (shown in parenthesis below) is displayed in the **Item** column in the audit log search results.  <br/><br/>- Enables or disables Microsoft Teams for the organization ( **Microsoft Teams**).  <br/><br/>- Enables or disables interoperability between Microsoft Teams and Skype for Business for the organization ( **Skype for Business interoperability**).<br/><br/>- Enables or disables the organizational chart view in Microsoft Teams clients ( **Org chart view**).  <br/><br/>-  Enables or disables the ability for team members to schedule private meetings ( **Private meeting scheduling**).  <br/><br/>- Enables or disables the ability for team members to schedule channel meetings ( **Channel meeting scheduling**).  <br/><br/>- Enables or disables video calling in Teams meetings ( **Video for Skype meetings**).  <br/><br/>- Enables or disables screen sharing in Microsoft Teams meetups for the organization ( **Screen sharing for Skype meetings**).  <br/><br/>- Enables or disables that ability to add animated images (called Giphys) to Teams conversations ( **Animated images**).  <br/><br/>- Changes the content rating setting for the organization ( **Content rating**). The content rating restricts the type of animated image that can be displayed in conversations.  <br/><br/>-   Enables or disables the ability for team members to add customizable images (called custom memes) from the Internet to team conversations ( **Customizable images from the Internet**).  <br/><br/>- Enables or disables the ability for team members to add editable images (called stickers) to team conversations ( **Editable images**).<br/><br/>- Enables or disables that ability for team members to use bots in Microsoft Teams chats and channels ( **Org-wide bots**).<br/><br/>- Enables specific bots for Microsoft Teams; this doesn't include the T-Bot, which is Teams help bot that's available when bots are enabled for the organization ( **Individual bots**).  <br/><br/>- Enables or disables the ability for team members to add extensions or tabs ( **Extensions or tabs**).  <br/><br/>- Enables or disables the side-loading of proprietary Bots for Microsoft Teams ( **Side loading of Bots**).  <br/><br/>- Enables or disables the ability for users to send email messages to a Microsoft Teams channel ( **Channel email**).  <br/> |
+|Changed organization setting  <br/> |TeamsTenantSettingChanged  <br/> | The TeamsTenantSettingChanged operation is logged when the following activities are performed by a global admin (using the Microsoft 365 admin center); note that these activities affect organization-wide Microsoft Teams settings. For more information, see [Administrator settings for Microsoft Teams](https://support.office.com/article/3966a3f5-7e0f-4ea9-a402-41888f455ba2).  <br/>  For each of these activities, a description of the setting that was changed (shown in parenthesis below) is displayed in the **Item** column in the audit log search results.  <br/><br/>- Enables or disables Microsoft Teams for the organization ( **Microsoft Teams**).  <br/><br/>- Enables or disables interoperability between Microsoft Teams and Skype for Business for the organization ( **Skype for Business interoperability**).<br/><br/>- Enables or disables the organizational chart view in Microsoft Teams clients ( **Org chart view**).  <br/><br/>-  Enables or disables the ability for team members to schedule private meetings ( **Private meeting scheduling**).  <br/><br/>- Enables or disables the ability for team members to schedule channel meetings ( **Channel meeting scheduling**).  <br/><br/>- Enables or disables video calling in Teams meetings ( **Video for Skype meetings**).  <br/><br/>- Enables or disables screen sharing in Microsoft Teams meetups for the organization ( **Screen sharing for Skype meetings**).  <br/><br/>- Enables or disables that ability to add animated images (called Giphys) to Teams conversations ( **Animated images**).  <br/><br/>- Changes the content rating setting for the organization ( **Content rating**). The content rating restricts the type of animated image that can be displayed in conversations.  <br/><br/>-   Enables or disables the ability for team members to add customizable images (called custom memes) from the Internet to team conversations ( **Customizable images from the Internet**).  <br/><br/>- Enables or disables the ability for team members to add editable images (called stickers) to team conversations ( **Editable images**).<br/><br/>- Enables or disables that ability for team members to use bots in Microsoft Teams chats and channels ( **Org-wide bots**).<br/><br/>- Enables specific bots for Microsoft Teams; this doesn't include the T-Bot, which is Teams help bot that's available when bots are enabled for the organization ( **Individual bots**).  <br/><br/>- Enables or disables the ability for team members to add extensions or tabs ( **Extensions or tabs**).  <br/><br/>- Enables or disables the side-loading of proprietary Bots for Microsoft Teams ( **Side loading of Bots**).  <br/><br/>- Enables or disables the ability for users to send email messages to a Microsoft Teams channel ( **Channel email**).  <br/> |
 |Changed role of members in team  <br/> |MemberRoleChanged  <br/> |A team owner changes the role of member(s) in a team. The following values indicate the Role type assigned to the user.  <br/><br/><br/> **1** - Indicates the Owner role.<br/>**2** -   Indicates the Member role. <br/>**3** - Indicates the Guest role. <br/>The Members property also includes the name of your organization, and the member's email address.  <br/> |
 |Changed team setting  <br/> |TeamSettingChanged  <br/> | The TeamSettingChanged operation is logged when the following activities are performed by a team owner. For each of these activities, a description of the setting that was changed (shown in parenthesis below) is displayed in the **Item** column in the audit log search results.  <br/><br/>- Changes the access type for a team. Teams can be set as Private or Public ( **Team access type**). When a team is private (the default setting), users can access the team only by invitation. When a team is public, it's discoverable by anyone.  <br/><br/>- Changes the information classification of a team ( **Team classification**).  <br/>  For example, team data can be classified as high business impact, medium business impact, or low business impact.<br/><br/>- Changes the name of a team ( **Team name**).  <br/><br/>- Changes the team description ( **Team description**). <br/><br/>- Changes made to any of the team settings. A team owner can access these settings in a Teams client by right-clicking a team, clicking **Manage team**, and then clicking the **Settings** tab. For these activities, the name of the setting that was changed is displayed in the **Item** column in the audit log search results.  <br/> |
 |Created team  <br/> |TeamCreated  <br/> |A user creates a new team.  <br/> |
@@ -658,18 +756,18 @@ The following table lists the user and admin activities in Yammer that are logge
 |Viewed file  <br/> |FileVisited  <br/> |User views a file.  <br/> |
 ||||
    
-### Microsoft Flow
+### Microsoft Flow activities
 
-You can search the audit log for activities in Microsoft Flow. These activities include creating, editing and deleting flows, and changing flow permissions. For information about auditing for Flow activities, see the blog  [Microsoft Flow audit events now available in Office 365 Security & Compliance Center](https://flow.microsoft.com/blog/security-and-compliance-center).
+You can search the audit log for activities in Microsoft Flow. These activities include creating, editing and deleting flows, and changing flow permissions. For information about auditing for Flow activities, see the blog  [Microsoft Flow audit events now available in Security & Compliance Center](https://flow.microsoft.com/blog/security-and-compliance-center).
 
 ### Microsoft PowerApps
 
 You can search the audit log for app-related activities in PowerApps. These activities include creating, launching, and publishing an app. Assigning permissions to apps is also audited. For a description of all PowerApps activities, see [Activity logging for PowerApps](https://docs.microsoft.com/en-us/power-platform/admin/logging-powerapps#what-events-are-audited).
 
-### Microsoft Stream
+### Microsoft Stream activities
   
 You can search the audit log for activities in Microsoft Stream. These activities include video activities performed by users, group channel activities, and admin activities such as managing users, managing organization settings, and exporting reports. For a description of these activities, see the "Activities logged in Microsoft Stream" section in [Audit Logs in Microsoft Stream](https://docs.microsoft.com/stream/audit-logs).
-  
+
 ### Exchange admin audit log
   
 Exchange administrator audit logging—which is enabled by default in Office 365—logs an event in the Office 365 audit log when an administrator (or a user who has been assigned administrative permissions) makes a change in your Exchange Online organization. Changes made by using the Exchange admin center or by running a cmdlet in Windows PowerShell are logged in the Exchange admin audit log. For more detailed information about admin audit logging in Exchange, see [Administrator audit logging](https://go.microsoft.com/fwlink/p/?LinkID=619225).
@@ -692,9 +790,9 @@ Here are some tips for searching for activity in the Exchange admin audit log:
 
 For more information about the auditing and reporting features available in Office 365, see [Auditing and Reporting in Office 365](office-365-auditing-and-reporting-overview.md). 
 
-**What are different Office 365 Services that are currently audited?**
+**What are different Office 365 services that are currently audited?**
 
-The most used Office 365 Services like Exchange Online, SharePoint, OneDrive, Azure Active Directory, Microsoft Teams, CRM, Advanced Threat Protection, and Data Loss Prevention are audited. See the [Intro](#search-the-audit-log-in-the-office-365-security-amp-compliance-center) section in this article for a complete list.
+The most used Office 365 services like Exchange Online, SharePoint Online, OneDrive for Business, Azure Active Directory, Microsoft Teams, Dynamics 365, Advanced Threat Protection, and Power BI are audited. See the [beginning of this article](search-the-audit-log-in-security-and-compliance.md) for a list of services that are audited.
 
 **What activities are audited by auditing service in Office 365?**
 
@@ -710,18 +808,18 @@ As previously explained, the retention period for audit records depends on your 
 
 - **Office 365 E3** - Audit records are retained for 90 days.
 
-- **Office 365 E5** - Audit records are retained for 365 days (one year). Retaining audit records for one year is also available for organizations that have an E3 subscription and an Office 365 Advanced Compliance add-on subscription.
+- **Office 365 E5** - Audit records are also retained for 90 days. Retaining audit records for one year may eventually be available for E5 users and users with an E3 license and an Office 365 Advanced Compliance add-on license.
 
      > [!NOTE]
-     > As previously explained, the one-year retention period for audit records for E5 organizations (or E3 organizations that have Advanced Compliance add-on licenses) is currently available only as part of a private preview program. To enroll in this preview program, please file a request with [Microsoft Support](https://docs.microsoft.com/en-us/office365/admin/contact-support-for-business-products?redirectSourcePath=%252fen-us%252farticle%252fcontact-support-for-business-products-admin-help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b&view=o365-worldwide&tabs=online) and include the following as the description of what you need help with: "Long-term Office 365 audit log private preview".
+     > As previously explained, the private preview program for the one-year retention period for audit records for E5 organizations (or E3 organizations that have Advanced Compliance add-on licenses) is closed to new enrollment. This article will be updated when the one-year retention period is available in public preview or released for general availability.
 
-Also note that the duration of the retention period for audit records is based on per-user licensing. For example, if a user in your organization is assigned an Office 365 E3 license, then the audit records for activities performed by that user are retained for 90 days. If a different user is assigned an Office 365 E5 license, their audit records are retained for one year. 
+Also note that the duration of the retention period for audit records is based on per-user licensing. For example, if a user in your organization is assigned an Office 365 E3 or E5 license, then the audit records for activities performed by that user are retained for 90 days.
 
 **Can I access the auditing data programmatically?**
 
 Yes. The Office 365 Management Activity API is used to fetch the audit logs programmatically.  To get started, see [Get started with Office 365 Management APIs](https://docs.microsoft.com/office/office-365-management-api/get-started-with-office-365-management-apis).
 
-**Are there other ways to get auditing logs other than using the Office 365 Security & Compliance Center or the Office 365 Management Activity API?**
+**Are there other ways to get auditing logs other than using the security and compliance center or the Office 365 Management Activity API?**
 
 No. These are the only two ways to get data from the Office 365 auditing service. 
 
@@ -740,15 +838,3 @@ No. We currently have auditing pipeline deployments in the NA (North America), E
 **Is auditing data encrypted?**
 
 Auditing data is stored in Exchange mailboxes (data at rest) in the same region where the auditing pipeline is deployed. This data is not encrypted. However, data in transit is always encrypted. 
-
-
-
-
-
-
-
-
-
-
-
-

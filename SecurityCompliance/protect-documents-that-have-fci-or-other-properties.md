@@ -1,10 +1,10 @@
 ---
 title: "Create a DLP policy to protect documents with FCI or other properties"
-ms.author: stephow
-author: stephow-MSFT
+ms.author: deniseb
+author: denisebmsft
 manager: laurawi
 ms.date: 6/29/2018
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 f1_keywords:
 - 'ms.o365.cc.UnifiedDLPRuleContentPropertyContainsWords'
@@ -12,8 +12,8 @@ ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid: 
 - MET150
-ms.collection: Strat_O365_IP
-ms.assetid: 1b9e3c6c-4308-4a20-b11e-c37b8013e177
+ms.collection: 
+- M365-security-compliance
 description: "Many organizations already have a process to identify and classify sensitive information by using the classification properties in Windows Server File Classification Infrastructure (FCI), the document properties in SharePoint, or the document properties applied by a third-party system. If this describes your organization, you can create a DLP policy in Office 365 that recognizes the properties that have been applied to documents by Windows Server FCI or other system, so that the DLP policy can be enforced on Office documents with specific FCI or other property values."
 ---
 
@@ -45,7 +45,7 @@ You first need to upload a document with the property that you want to reference
   
 ### Step 2: Create a managed property
 
-1. Sign in to the Office 365 admin center.
+1. Sign in to the Microsoft 365 admin center.
     
 2. In the left navigation, choose **Admin centers** \> **SharePoint**. You're now in the SharePoint admin center.
     

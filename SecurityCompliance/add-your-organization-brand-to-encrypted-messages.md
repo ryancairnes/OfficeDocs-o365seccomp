@@ -3,17 +3,19 @@ title: "Add your organization brand to your encrypted messages"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
+ms.date: 4/30/2019
 search.appverid:
 - MET150
 - MOE150
 ms.assetid: 7a29260d-2959-42aa-8916-feceff6ee51d
-ms.collection:
+ms.collection: 
+- Strat_O365_IP
 - M365-security-compliance
-description: "As an Exchange administrator, you can apply your organization's branding to  your organization's encrypted email messages and the contents of the encryption portal."
+description: "As an Office 365 global administrator, you can apply your organization's branding to  your organization's encrypted email messages and to the contents of the encryption portal."
 ---
 
 # Add your organization's brand to your encrypted messages
@@ -21,20 +23,30 @@ description: "As an Exchange administrator, you can apply your organization's br
 As an Exchange Online or Exchange Online Protection administrator, you can apply your company branding to customize the look of your organization's Office 365 Message Encryption email messages and the contents of the encryption portal. Using the Get-OMEConfiguration and Set-OMEConfiguration Windows PowerShell cmdlets, you can customize the following aspects of the viewing experience for recipients of encrypted email messages:
   
 - Introductory text of the email that contains the encrypted message
+
 - Disclaimer text of the email that contains the encrypted message
+
 - Text that appears in the OME portal
+
 - Logo that appears in the email message and OME portal
+
 - Background color in the email message and OME portal
 
 You can also revert back to the default look and feel at any time.
 
-If you'd like more control, you can create multiple templates for encrypted emails originating from your organization. Using these templates, you can control more than just the look and feel of the email messages, but also control parts of the end-user experience. For example, you can specify whether or not recipients of mail that have this template applied and who use Google, Yahoo, and Microsoft Accounts can use these accounts to sign in to the Office 365 Message Encryption portal. You might use templates to fulfill several use cases, such as:
+ If you'd like more control, you can use Office 365 Advanced Message Encryption and create multiple templates for encrypted emails originating from your organization. Using these templates, you can control more than just the look and feel of the email messages, but also control parts of the end-user experience. For example, you can specify whether or not recipients of mail that have this template applied and who use Google, Yahoo, and Microsoft Accounts can use these accounts to sign in to the Office 365 Message Encryption portal. You might use templates to fulfill several use cases, such as:
 
 - Templates for each department, such as Finance, Sales, etc.
+
 - Templates for different products
+
 - Templates for different geographical regions or countries
 
-Once you've created the templates, you can apply them to encrypted emails by using Exchange mail flow rules. All mails that are branded by using these templates can be revoked.
+- Whether or not you want to allow emails to be revoked
+
+- Whether or not you want emails sent to external recipients to expire after a specified number of days.
+
+Once you've created the templates, you can apply them to encrypted emails by using Exchange mail flow rules. If you have Office 365 Advanced Message Encryption, you can revoke any email that you've branded by using these templates.
   
 ||
 |:-----|
@@ -54,11 +66,13 @@ You create branding templates for your organization in Windows PowerShell with t
    ```powershell
    New-OMEConfiguration -Identity <OMEConfigurationIdParameter>
    ```
+
    For example,
 
    ```powershell
    New-OMEConfiguration -Identity <Branding template 1>
    ```
+
 3. Define the customizations for the template you just defined by using the Set-OMEConfiguration cmdlet as described in [Set-OMEConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/Set-OMEConfiguration) or use the following table for guidance.
 
 |**To customize this feature of the encryption experience**|**Use these commands**|
@@ -94,6 +108,7 @@ You create branding templates for your organization in Windows PowerShell with t
 After you've created a branding template, you can create Exchange mail flow rules to apply that custom branding based on certain conditions. Such a rule will apply custom branding in the following scenarios:
 
 - If the email was manually encrypted by the end-user from the Outlook or Outlook on the web (formerly known as Outlook Web App) clients
+
 - If the email was automatically encrypted by an Exchange Mail Flow rule or Office 365 Data Loss Prevention policy
 
 For information on how to create an Exchange mail flow rule that applies encryption, see [Define mail flow rules to encrypt email messages in Office 365](define-mail-flow-rules-to-encrypt-email.md).
@@ -104,7 +119,7 @@ For information on how to create an Exchange mail flow rule that applies encrypt
 
 3. In the Office 365 admin center, choose **Admin centers** \> **Exchange**.
 
-4. In the EAC, go to **Mail flow** \> **Rules** and select **New** ![New icon](media/457cd93f-22c2-4571-9f83-1b129bcfb58e.gif) \> **Create a new rule**. For more information about using the EAC, see [Exchange Admin Center in Exchange Online](https://docs.microsoft.com/exchange/exchange-admin-center).
+4. In the EAC, go to **Mail flow** \> **Rules** and select **New** ![New icon](media/457cd93f-22c2-4571-9f83-1b129bcfb58e.gif) \> **Create a new rule**. For more information about using the EAC, see [Exchange admin center in Exchange Online](https://docs.microsoft.com/exchange/exchange-admin-center).
 
 5. In **Name**, type a name for the rule, such as Branding for sales department.
 
@@ -115,6 +130,7 @@ For information on how to create an Exchange mail flow rule that applies encrypt
      - Encrypted emails sent to a particular domain
 
 7. From **Do the following**, select **Modify the message security** > **Apply custom branding to OME messages**. Next, from the drop-down, select a branding template from those that you created.
+
 8. (Optional) If you want the mail flow rule to also apply encryption in addition to the custom branding, From **Do the following**, select **Modify the message security** and then choose **Apply Office 365 Message Encryption and rights protection**. Select an RMS template from the list, choose **Save**, and then choose **OK**.
   
      The list of templates includes all default templates and options as well as any custom templates you've created for use by Office 365. If the list is empty, ensure that you have set up Office 365 Message Encryption with the new capabilities as described in [Set up new Office 365 Message Encryption capabilities](set-up-new-message-encryption-capabilities.md). For information about the default templates, see [Configuring and managing templates for Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/configure-policy-templates). For information about the **Do Not Forward** option, see [Do Not Forward option for emails](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#do-not-forward-option-for-emails). For information about the **encrypt only** option, see [Encrypt Only option for emails](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#encrypt-only-option-for-emails).

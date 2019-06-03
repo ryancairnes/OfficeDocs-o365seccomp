@@ -4,10 +4,9 @@ ms.author: tracyp
 author: MSFTTracyP
 manager: laurawi
 ms.date: 4/9/2016
-ms.audience: ITPro
+audience: ITPro
 ms.topic: hub-page
 ms.service: O365-seccomp
-ms.custom: TN2DMC
 localization_priority: Normal
 search.appverid:
 - MET150

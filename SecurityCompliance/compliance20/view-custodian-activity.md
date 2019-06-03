@@ -4,7 +4,7 @@ ms.author: markjjo
 author: markjjo
 manager: laurawi
 ms.date: 
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -18,32 +18,38 @@ description: ""
 ---
 # View custodian audit activity
 
-Need to find if a user viewed a specific document or purged an item from their mailbox? Advanced eDiscovery (Preview) is now integrated with the existing audit log search tool in the Security & Compliance Center. Using this embedded experience, you can use the Advanced eDiscovery (Preview) Custodian Management tool to facilitate your investigation by easily accessing and searching the activity for custodians within your case.
+Need to find if a user viewed a specific document or purged an item from their mailbox? Advanced eDiscovery is now integrated with the existing audit log search tool in the Security & Compliance Center. Using this embedded experience, you can use the Advanced eDiscovery Custodian Management tool to facilitate your investigation by easily accessing and searching the activity for custodians within your case.
 
 ## Before you begin
 
-You have to be assigned the View-Only Audit Logs or Audit Logs role in Exchange Online to search the Office 365 audit log. By default, these roles are assigned to the Compliance Management and Organization Management role groups on the Permissions page in the Exchange admin center. To give a user the ability to search the Advanced eDiscovery (Preview) audit log with the minimum level of privileges, you can create a custom role group in Exchange Online, add the View-Only Audit Logs or Audit Logs role, and then add the user as a member of the new role group. For more information, see Manage role groups in Exchange Online.
+You have to be assigned the View-Only Audit Logs or Audit Logs role in Exchange Online to search the Office 365 audit log. By default, these roles are assigned to the Compliance Management and Organization Management role groups on the Permissions page in the Exchange admin center. To give a user the ability to search the Advanced eDiscovery audit log with the minimum level of privileges, you can create a custom role group in Exchange Online, add the View-Only Audit Logs or Audit Logs role, and then add the user as a member of the new role group. For more information, see Manage role groups in Exchange Online.
 
 > [!IMPORTANT]
 > If you assign a user the View-Only Audit Logs or Audit Logs role on the Permissions page in the Security & Compliance Center, they won't be able to search the Office 365 audit log. You have to assign the permissions in Exchange Online. This is because the underlying cmdlet used to search the audit log is an Exchange Online cmdlet.
 
-## Step 1: Create an Advanced eDiscovery (Preview) audit log search
+## Step 1: Search the audit log for activities performed by a custodian
 
-   1. Select an existing case from the **Security & Compliance Center > Advanced eDiscovery (Preview)**.
+1. Go to  **eDiscovery > Advanced eDiscovery** and open the case.
+  
+2. Click the **Custodians** tab.
+  
+3. Select a custodian from the list, and then click **View custodian activity** on the flyout page.
+
+    The Custodian activities search page is displayed. Note the custodian you selected in the previous step is displayed in the **Custodian** drop-down box. You can select different custodians in the drop-down box, but you can only search for activities for one custodian at a time.
+
+    ![Custodian activities search page](../media/AeDCustodianActivities1.png)
    
-   2. Navigate to the **Custodians** tab and select a custodian.
-   
-   3. Once you have selected a custodian, click **View Custodian Activity** from the details panel.
-   
-   4. Configure the following search criteria:
+4. Configure the following search criteria:
       
-      a. **Activities** - Click the drop-down list to display the activities that you can search for. After you run the search, only the audit records for the selected activities are displayed. Selecting **Show results for all activities** will display results for all activities that meet the other search criteria.
+   a. **Activities** - Click the drop-down list to display the activities that you can search for. After you run the search, only the audit records for the selected activities are displayed. Selecting **Show results for all activities** will display results for all activities performed by the custodian that match the other search criteria.
+
+      ![List of Activities](../media/CustodianActivityAudit.PNG)
       
       b. **Start date and End date** - Select a date and time range to display the events that occurred within that period. The last seven days are selected by default. The date and time are presented in Coordinated Universal Time (UTC) format. The maximum date range that you can specify is one year.
       
       c. **Custodians** - Click in this box and then select a specific custodian to display search results for. Audit records for the selected activity performed by the users you select in this box are displayed in the list of results.
-    
-    1. Click **Search** to run the search using your search criteria. The search results are loaded, and after a few moments they are displayed under Results on the Custodian Activities search page. 
+      
+   5. Click   ![Search Button](../media/SearchButton.PNG)  to run the search using your search criteria. The search results are loaded, and after a few moments they are displayed under Results on the Custodian Activities search page. 
 
 ## Step 2: View the audit log search results
 
@@ -96,4 +102,4 @@ You can export the results of an audit log search to a comma separated value (CS
 
 3. After you select an export option, a message is displayed at the bottom of the window that prompts you to open the CSV file, save it to the Downloads folder, or save it to a specific folder
 
-For more information about viewing, filtering, or exporting audit log search results, see [Search the audit log in the Office 365 Security & Compliance Center](../search-the-audit-log-in-security-and-compliance.md).
+For more information about viewing, filtering, or exporting audit log search results, see [Search the audit log in the Security & Compliance Center](../search-the-audit-log-in-security-and-compliance.md).

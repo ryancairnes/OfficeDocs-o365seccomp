@@ -4,7 +4,7 @@ ms.author: deniseb
 author: denisebmsft
 manager: laurawi
 ms.date: 6/4/2018
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -12,6 +12,8 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: f3724c6c-ec64-4a24-ba71-bfd68020d4d2
+ms.collection:
+- M365-security-compliance
 description: "See how you can move from an insight to a detailed report in the Security &amp; Compliance Center through a data loss prevention example."
 ---
 
@@ -31,7 +33,7 @@ Let's walk through the flow from the dashboard to an insight to a detailed repor
   
 3. Selecting an item in the list opens a pane where we can view more details about that item. (Click an item.)<br/>![Details for a selected insight](media/dcbb389f-23b0-4031-b789-4a49068af85a.png)<br/>We see recommended actions we should consider, such as reviewing policies. ([Learn more about data loss prevention policies](data-loss-prevention-policies.md).)
     
-4. We also have a link to view more details. (Click **See related activity in Explorer**.)<br/>This takes us to a report type called [Explorer](use-explorer-in-security-and-compliance.md) (also referred to as Threat explorer), where we can apply filters and drill into specific details.<br/>![Explorer view with more detail about a selected insight](media/3ad15b15-7158-44b7-beda-013351bd868e.png)
+4. We also have a link to view more details. (Click **See related activity in Explorer**.)<br/>This takes us to a report type called [Threat Explorer (and real-time detections)](threat-explorer.md), where we can apply filters and drill into specific details.<br/>![Explorer view with more detail about a selected insight](media/3ad15b15-7158-44b7-beda-013351bd868e.png)
   
 In this way, we can move easily from an insight into its underlying details, and make more informed decisions about data loss prevention for an organization.
   

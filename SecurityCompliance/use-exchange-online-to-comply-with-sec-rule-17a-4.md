@@ -3,9 +3,11 @@ title: "Use Exchange Online and the Security & Compliance Center to comply with 
 ms.author: stephow
 author: stephow-MSFT
 manager: laurawi
-ms.audience: Admin
-ms.topic: overview
+ms.date: 
+audience: Admin
+ms.topic: conceptual
 ms.service: O365-seccomp
+ms.collection: M365-security-compliance
 localization_priority: Priority
 search.appverid: 
 - MOE150

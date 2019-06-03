@@ -1,10 +1,10 @@
 ---
-title: "Search limits in Advanced eDiscovery (Preview)"
+title: "Search limits in Advanced eDiscovery"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
 ms.date: 
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -17,6 +17,6 @@ ms.assetid:
 description: ""
 ---
 
-# Search limits in Advanced eDiscovery (Preview)
+# Search limits in Advanced eDiscovery
 
 Content coming soon.

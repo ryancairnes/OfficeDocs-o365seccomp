@@ -4,10 +4,9 @@ ms.author: krowley
 author: kccross
 manager: laurawi
 ms.date: 12/9/2016
-ms.audience: ITPro
+audience: ITPro
 ms.topic: hub-page
 ms.service: O365-seccomp
-ms.custom: TN2DMC
 localization_priority: Normal
 ms.assetid: 70ab4af2-fec4-4886-8e12-27d348649204
 description: "Here are a few things you should be aware of before you start working with EOP."
@@ -19,7 +18,7 @@ Welcome to the Microsoft Exchange Online Protection (EOP) hosted email filtering
   
 - To learn more about EOP, check out the [Exchange Online Protection Service Description](https://go.microsoft.com/fwlink/p/?LinkId=320619). Other useful resources are [Exchange Online Protection overview](exchange-online-protection-overview.md), [EOP general FAQ](eop-general-faq.md), and [EOP features](eop-features.md), as well as the [Exchange Online Protection home page](https://go.microsoft.com/fwlink/?LinkId=279912).
     
-- To get started with EOP, new customers should head for [Set up your EOP service](set-up-your-eop-service.md). This topic provides steps that'll help you get EOP up and running. You may also want to view the series of introductory videos shown on [Videos for getting started with EOP](videos-for-getting-started-with-eop.md).
+- To get started with EOP, new customers should head for [Set up your EOP service](set-up-your-eop-service.md). This topic provides steps that'll help you get EOP up and running. 
     
 - If you need more help or want to share ideas, the [EOP forum](https://go.microsoft.com/fwlink/?LinkId=285351) is a great place to start. 
     
@@ -33,8 +32,6 @@ The Help content for EOP administrators consists of the following top-level cate
     
 - [EOP features](eop-features.md) Provides a list of features that are available in EOP. 
     
-- [Videos for getting started with EOP](videos-for-getting-started-with-eop.md) Introduces EOP with a series of videos that detail common set up tasks. 
-    
 - [Set up your EOP service](set-up-your-eop-service.md) Provides steps for setting up your EOP service, and links to additional information. 
     
 - [Switch to EOP from Google Postini, the Barracuda Spam and Virus Firewall, or Cisco IronPort](switch-to-eop-from-google-postini-the-barracuda-spam-and-virus-firewall-or-cisco.md) Describes the process for switching to EOP from another email protection product. 
@@ -45,7 +42,7 @@ The Help content for EOP administrators consists of the following top-level cate
     
 - [Best practices for configuring EOP](best-practices-for-configuring-eop.md) Describes recommended configuration settings and considerations for after you set up and provision your service. 
     
-- [Messaging policy and compliance in EOP](messaging-policy-and-compliance-in-eop.md) Describes how to use Exchange Transport rules (custom filtering rules) to enforce specific company regulations and policies, and how to use auditing reports to track configuration changes to the service. 
+- [Messaging policy and compliance in EOP](messaging-policy-and-compliance-in-eop.md) Describes how to use Exchange mail flow rules (also known as transport rules) to enforce specific company regulations and policies, and how to use auditing reports to track configuration changes to the service. 
     
 - [Anti-Spam and Anti-Malware Protection](http://technet.microsoft.com/library/93c6c227-7442-4293-b64d-ec8f15c928db.aspx) Describes spam filtering and malware filtering and shows how to customize them to best meet the needs of your organization. Also describes tasks that administrators and end users can perform on quarantined messages. 
     

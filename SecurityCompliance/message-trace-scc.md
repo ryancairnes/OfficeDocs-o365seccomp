@@ -3,15 +3,17 @@ title: "Message trace in the Security & Compliance Center"
 ms.author: chrisda
 author: chrisda
 manager: serdars
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
-ms.prod: office-online-server
+ms.service: O365-seccomp
 localization_priority: Normal
 ms.assetid: 3e64f99d-ac33-4aba-91c5-9cb4ca476803
 description: "Admins can use message trace in the Security & Compliance Center to find out what happened to messages."
 ---
 
 # Message trace in the Security & Compliance Center
+
+## Overview
 
 Message trace in the Security & Compliance Center follows email messages as they travel through your Exchange Online organization. You can determine if a message was received, rejected, deferred, or delivered by the service. It also shows what actions were taken on the message before it reached its final status.
 
@@ -49,7 +51,8 @@ The default values are **All senders** and **All recipients**, but you can use t
 
 - **To these people**: Click in this field to select one or more recipients in your organization.
 
-You can also type the email addresses of external senders and recipients. Wildcards are supported (`*@contoso.com` or `scot?@contoso.com`), but you can't use multiple wildcard entries in the same field at the same time.
+> [!NOTE]
+> You can also type the email addresses of external senders and recipients. Wildcards are supported (`*@contoso.com` or `scot?@contoso.com`), but you can't use multiple wildcard entries in the same field at the same time.<br/>You can paste multiple senders or recipients list separated with semicolon (`;`). Spaces (`\s`), carriage return (`\r`) or next lines (`\n`) symbols are allowed.
 
 ### Time range
 
@@ -363,9 +366,9 @@ An example **custom_data** value for a message that contains malware looks like 
 
 `S:AMA=SUM|v=1|action=b|error=|atch=1;S:AMA=EV|engine=M|v=1|sig=1.155.974.0|name=DOS/Test_File|file=filename;S:AMA=EV|engine=A|v=1|sig=201707282038|name=Test_File|file=filename`
 
-#### Transport rule agent
+#### Transport Rule agent
 
-A **custom_data** value that starts with`S:TRA` is from the transport rule agent for mail flow rules (also known as transport rules). The key details are described in the following table:
+A **custom_data** value that starts with`S:TRA` is from the Transport Rule agent for mail flow rules (also known as transport rules). The key details are described in the following table:
 
 |**Value**|**Description**|
 |:-----|:-----|

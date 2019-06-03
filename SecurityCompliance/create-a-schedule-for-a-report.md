@@ -4,7 +4,7 @@ ms.author: deniseb
 author: denisebmsft
 manager: laurawi
 ms.date: 6/1/2018
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -12,6 +12,8 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: a74f637b-3710-4c41-b70f-b5a812929a81
+ms.collection:
+- M365-security-compliance
 description: "Learn how to set up a schedule for a report in the Security &amp; Compliance Center."
 ---
 

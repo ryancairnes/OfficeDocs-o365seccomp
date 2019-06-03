@@ -3,7 +3,7 @@ title: "Set up and download a custom report in the Security &amp; Compliance Cen
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -11,6 +11,8 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 1a7be622-f6a5-4ce1-a343-f249475334f6
+ms.collection:
+- M365-security-compliance
 description: "Learn how to set up and download a report with a custom date range and filters in the Security &amp; Compliance Center."
 ---
 

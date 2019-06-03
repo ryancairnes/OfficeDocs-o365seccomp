@@ -4,11 +4,11 @@ ms.author: chrfox
 author: chrfox
 manager: laurawi
 ms.date: 4/23/2018
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.collection: 
 - o365_security_incident_response
-- Strat_O365_IP
+- M365-security-compliance
 ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid:
@@ -30,7 +30,11 @@ You need to search the Office 365 **audit log** to find signs, also called Indic
 3. Create a search (all activities and all users) and filter the results for Consent to application, and Add OAuth2PermissionGrant.
 4. Examine the Extended Properties and check to see if IsAdminContent is set to True.
 
-
+> [!NOTE]
+>  
+   - It can take up to 30 minutes or up to 24 hours after an event occurs for the corresponding audit log entry to be displayed in the search results.
+   - The length of time that an audit record is retained and searchable in the audit log depends on your Office 365 subscription, and specifically the type of the license that is assigned to a specific user. For more information, see [Audit log](search-the-audit-log-in-security-and-compliance.md).
+      
 If this value is true, it indicates that someone with Global Administrator access may have granted broad access to data. If this is unexpected, take steps to [confirm an attack](detect-and-remediate-illicit-consent-grants.md#confirmattack).
 
 <a name="confirmattack"> </a>
@@ -80,7 +84,7 @@ The script produces one file named Permissions.csv. Follow these steps to look f
 4.	In the ClientDisplayName column (column C) look for apps that seem suspicious. Apps with misspelled names, super bland names, or hacker-sounding names should be reviewed carefully.
 
 ## Determine the scope of the attack
-After you have finished inventorying application access, review the Office 365 **audit log** to determine the full scope of the breach.  Search on the affected users, the time frames that the illicit application had access to your organization, and the permissions the app had. You can search the **audit log** in the [Office 365 Security and Compliance Center](https://support.office.com/article/Search-the-audit-log-in-the-Office-365-Security-Compliance-Center-0d4d0f35-390b-4518-800e-0c7ec95e946c). 
+After you have finished inventorying application access, review the Office 365 **audit log** to determine the full scope of the breach.  Search on the affected users, the time frames that the illicit application had access to your organization, and the permissions the app had. You can search the **audit log** in the [Microsoft 365 Security and Compliance Center](https://support.office.com/article/Search-the-audit-log-in-the-Office-365-Security-Compliance-Center-0d4d0f35-390b-4518-800e-0c7ec95e946c). 
 
 > [!IMPORTANT]
 > [Mailbox auditing](https://support.office.com/article/Enable-mailbox-auditing-in-Office-365-aaca8987-5b62-458b-9882-c28476a66918) and [Activity auditing for admins and users](https://support.office.com/article/turn-office-365-audit-log-search-on-or-off-e893b19a-660c-41f2-9074-d3631c95a014) must have been enabled prior to the attack for you to get this information.

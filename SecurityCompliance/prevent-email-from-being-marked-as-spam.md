@@ -4,15 +4,15 @@ ms.author: stephow
 author: stephow-MSFT
 manager: laurawi
 ms.date: 6/7/2018
-ms.audience: Admin
-ms.topic: overview
+audience: Admin
+ms.topic: article
 ms.service: O365-seccomp
+ms.collection: 
+- M365-security-compliance
 localization_priority: Priority
-ms.collection: Strat_O365_IP
 search.appverid: 
 - MOE150
 - MET150
-ms.assetid: 34823bbc-a3e3-4949-ba42-97c73997eeed
 description: "Learn how to prevent False Positives and keep real email out of junk in Office 365."
 ---
 
@@ -36,13 +36,13 @@ In the header, look for the following headings and values.
 
 - **SFV:BLK** Indicates that the message was marked as spam because the sending address is on the recipient's Blocked Senders List. 
     
-- **SFV:SKS** Indicates that the message was marked as spam prior to the content filter. This could include a transport rule marking the message as spam. Run a message trace to see if a transport rule triggered which may have set a high spam confidence level (SCL). 
+- **SFV:SKS** Indicates that the message was marked as spam prior to the content filter. This could include a mail flow rule (also known as a transport rule) marking the message as spam. Run a message trace to see if a mail flow rule triggered which may have set a high spam confidence level (SCL). 
     
 - **SFV:SKB** Indicates that the message was marked as spam because it matched a block list in the spam filter policy. 
     
 - **SFV:BULK** Indicates that the Bulk Complaint Level (BCL) value located in the x-microsoft-antispam header is above the Bulk threshold that has been set for the content filter. Bulk email is email which users may have signed up for, but may still be undesirable. In the message header find the BCL (Bulk Confidence Level) property in the X-Microsoft-Antispam header. If the BCL value is less than the threshold set in the Spam Filter, you may want to adjust the threshold to instead mark these types of bulk messages as spam. Different users have different tolerances and preferences for [how bulk email is handled](https://docs.microsoft.com/en-us/office365/SecurityCompliance/bulk-complaint-level-values). You can create different policies or rules for different user preferences.
     
-- **CAT:SPOOF** or **CAT:PHISH** Indicates that the ﻿message appears to be spoofed, meaning that the message source cannot be validated and could be suspicious. If valid, the sender will need to make sure that they have proper SPF and DKIM configuration. Check the Authentication-Results header for more information. Although it may be difficult to get all senders to use proper email authentication methods, bypassing these checks can be extremely dangerous and is the top cause of compromises. 
+- **CAT:SPOOF** or **CAT:PHISH** Indicates that the message appears to be spoofed, meaning that the message source cannot be validated and could be suspicious. If valid, the sender will need to make sure that they have proper SPF and DKIM configuration. Check the Authentication-Results header for more information. Although it may be difficult to get all senders to use proper email authentication methods, bypassing these checks can be extremely dangerous and is the top cause of compromises. 
     
 ### x-customspam
 
@@ -54,9 +54,13 @@ In order to work effectively, Exchange Online Protection (EOP) requires that adm
   
 ### For admins
 
-- **Point your DNS records to Office 365** In order for EOP to provide protection, your mail exchanger (MX) DNS record(s) for all domains must be pointed to Office 365 -- and only to Office 365. If your MX does not point to Office 365, then EOP will not provide spam filtering for your users. In the situation where you wish to use another service or appliance to provide spam filtering for your domain, you should consider disabling the spam protection in EOP. You can do this by creating a transport rule that sets the SCL value to -1. If you later decide to use EOP, make sure to remove this transport rule. 
+- **Point your DNS records to Office 365** In order for EOP to provide protection, your mail exchanger (MX) DNS record(s) for all domains must be pointed to Office 365 -- and only to Office 365. If your MX does not point to Office 365, then EOP will not provide spam filtering for your users. In the situation where you wish to use another service or appliance to provide spam filtering for your domain, you should consider disabling the spam protection in EOP. You can do this by creating a mail flow rule that sets the SCL value to -1. If you later decide to use EOP, make sure to remove this mail flow rule. 
     
 - **Turn on the report message add-in for users** We strongly recommend that you [enable the report message add-in for your users](enable-the-report-message-add-in.md). As an administrator, you may also be able to view the feedback your users are sending and use any patterns to adjust any settings that may be causing problems.
+
+- **Make sure that your users are inside the allowed limits** for sending and receiving emails as showed [here](https://docs.microsoft.com/en-us/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits).
+
+ - **Double-check the bulk levels** as specified [here](bulk-complaint-level-values.md)
     
 ### For users
     
@@ -69,7 +73,7 @@ EOP will honor your users' Safe Senders and Recipients, but not Safe Domains. Th
 - **Disable SmartScreen filtering in Outlook** If you are using an older Outlook desktop client, you should disable the SmartScreen filtering functionality, which has been discontinued. If enabled, it can cause false positives. This should not be required if running an updated desktop Outlook client.
 
 ## Troubleshooting: A message ends up in the Junk folder even though EOP marked the message as non-spam
-<a name="TroubleshootingJunkEOPNonSpam"> </a>
+
 
 If your users have the option in Outlook enabled for "Safe Lists Only: Only mail from people or domains on your Safe Senders list or Safe Recipients List will be delivered to your Inbox", then all email will go to the junk folder for a sender unless the sender is on the recipient's Safe Sender list. This will happen regardless of whether EOP marks a message as non-spam, or if you have set up a rule in EOP to mark a message as non-spam.
   
@@ -85,7 +89,7 @@ If you look at the header of a message, it may include the stamp SFV:SKN (IP All
     
 2. Run the following command to view the user's junk email configuration settings:
     
-  ```
+  ```Powershell
   Get-MailboxJunkEmailConfiguration example@contoso.com | fl TrustedListsOnly,ContactsTrusted,TrustedSendersAndDomains
   ```
 

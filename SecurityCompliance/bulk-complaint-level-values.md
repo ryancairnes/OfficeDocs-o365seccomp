@@ -4,10 +4,9 @@ ms.author: krowley
 author: kccross
 manager: laurawi
 ms.date: 3/5/2015
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
-ms.custom: TN2DMC
 localization_priority: Normal
 search.appverid:
 - MET150

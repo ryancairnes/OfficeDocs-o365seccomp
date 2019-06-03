@@ -3,13 +3,14 @@ title: "Responding to a Compromised Email Account in Office 365"
 ms.author: chrfox
 author: chrfox
 manager: laurawi
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.collection: 
 - o365_security_incident_response
-- Strat_O365_IP
+- M365-security-compliance
+ms.custom: TopSMBIssues
 ms.service: O365-seccomp
-localization_priority: Normal
+localization_priority: Priority
 search.appverid:
 - MET150
 description: "Learn how to recognize and respond to a compromised email account in Office 365"
@@ -35,7 +36,7 @@ Users might notice and report unusual activity in their Office 365 mailboxes. He
 - Mail forwarding was recently added.
 - An unusual signature was recently added, such as a fake banking signature or a prescription drug signature.
 
-If a user reports any of the above symptoms, you should perform further investigation. The Office 365 Security & Compliance Center and the Azure Portal offer tools to help you investigate the activity of a user account that you suspect may be compromised.
+If a user reports any of the above symptoms, you should perform further investigation. The Microsoft 365 Security & Compliance Center and the Azure Portal offer tools to help you investigate the activity of a user account that you suspect may be compromised.
 - Office 365 Unified Audit Logs in the Security & Compliance Center - Review all the activities for the suspected account by filtering the results for the date range spanning from immediately before the suspicious activity occurred to the current date. Do not filter on the activities during the search.
 - Use the Azure AD Sign-in logs and other risk reports that are available in the Azure AD portal. Examine the values in these columns:
     - Review IP address
@@ -66,7 +67,7 @@ You must perform all the following steps to regain access to your account the so
 > It is highly recommended that you enable Multi-Factor Authentication (MFA) in order to prevent compromise, especially for accounts with administrative privileges.  You can learn more [here](https://support.office.com/en-us/article/Set-up-multi-factor-authentication-for-Office-365-users-8f0454b2-f51a-4d9c-bcde-2c48e41621c6).
 
 ### Step 2 Remove suspicious email forwarding addresses
-1. Open the **Office 365 Admin Center > Active Users**.
+1. Open the **Microsoft 365 admin center > Active Users**.
 2. Find the user account in question and expand **Mail Settings**.
 3. For **Email forwarding**, click **Edit**.
 4. Remove any suspicious forwarding addresses.
@@ -85,11 +86,11 @@ If the suspected compromised mailbox was used illicitly to send spam email, it i
 > [!IMPORTANT]
 > You can block the suspected compromised account from signing-in until you believe it is safe to re-enable access.
 
-1. Go to the Office 365 admin center.
-2. In the Office 365 admin center, select **Users**.
+1. Go to the Microsoft 365 admin center.
+2. In the Microsoft 365 admin center, select **Users**.
 3. Select the employee that you want to block, and then choose **Edit** next to **Sign-in status** in the user pane
 4. On the **Sign-in status** pane, choose **Sign-in blocked** and then **Save**. 
-5. In the Office 365 admin center, in the lower-left navigation pane, expand **Admin Centers** and select **Exchange**.
+5. In the Admin center, in the lower-left navigation pane, expand **Admin Centers** and select **Exchange**.
 6. In the Exchange admin center, navigate to **Recipients > Mailboxes**.
 7. Select the user, and on the user properties page, under **Mobile Devices**, click **Disable Exchange ActivcSync** and **Disable OWA for Devices** and answer **yes** to both.
 8. Under **Email Connectivity**, **Disable** and answer **yes**. 
@@ -98,14 +99,14 @@ If the suspected compromised mailbox was used illicitly to send spam email, it i
 > [!NOTE]
 > Administrative role group membership can be restored after the account has been secured.
 
-1. Sign in to the Office 365 Admin Center with a global administrator account and open **Active Users**.
+1. Sign in to the Microsoft 365 admin center with a global administrator account and open **Active Users**.
 2. Find the suspected compromised account and manually check to see if there are any administrative roles assigned to the account.
 3. Open the **Security & Compliance Center**.
 4. Click **Permissions**.
 5. Manually review the role groups to see if the suspected compromised account is a member of any of them.  If it is:
     a. Click the role group and click **Edit Role Group**.
     b. Click **Chose Members** and **Edit** to remove the user from the role group.
-6. Open the **Exchange Admin Center**
+6. Open the **Exchange admin center**
 7. Click **Permissions**.
 8. Manually review the role groups to see if the suspected compromised account is a member of any of them. If it is:
     a. Click the role group and click **Edit**.
@@ -127,3 +128,4 @@ Your Office 365 subscription comes with a powerful set of security capabilities 
 - [Detect and Remediate Outlook Rules and Custom Forms Injections Attacks in Office 365](detect-and-remediate-outlook-rules-forms-attack.md)
 - [Internet Crime Complaint Center](http://www.ic3.gov/preventiontips.aspx)
 - [Securities and Exchange Commission - "Phishing" Fraud](http://www.sec.gov/investor/pubs/phishing.htm)
+- To report spam email directly to Microsoft and your admin [Use the Report Message add-in](https://support.office.com/en-us/article/Use-the-Report-Message-add-in-b5caa9f1-cdf3-4443-af8c-ff724ea719d2)

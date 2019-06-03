@@ -4,7 +4,7 @@ ms.author: deniseb
 author: denisebmsft
 manager: laurawi
 ms.date: 6/4/2018
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -12,6 +12,8 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 703c41df-b3e2-4e7e-9eeb-1a0b8d60fb56
+ms.collection:
+- M365-security-compliance
 description: "Learn how you can go from a dashboard to an insight with recommended actions in the Security &amp; Compliance Center."
 ---
 

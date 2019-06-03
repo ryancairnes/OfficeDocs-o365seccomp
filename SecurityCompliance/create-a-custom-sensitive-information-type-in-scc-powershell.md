@@ -1,21 +1,21 @@
 ---
-title: "Create a custom sensitive information type in Office 365 Security & Compliance Center PowerShell"
-ms.author: stephow
-author: stephow-MSFT
+title: "Create a custom sensitive information type in Security & Compliance Center PowerShell"
+ms.author: deniseb
+author: denisebmsft
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Priority
-ms.collection: Strat_O365_IP
+ms.collection: 
+- M365-security-compliance
 search.appverid: 
 - MOE150
 - MET150
-ms.assetid: 82c382a5-b6db-44fd-995d-b333b3c7fc30
-description: "Learn how to create and import a custom sensitive information type for DLP in the Office 365 Security & Compliance Center."
+description: "Learn how to create and import a custom sensitive information type for DLP in the Security & Compliance Center."
 ---
 
-# Create a custom sensitive information type in Office 365 Security & Compliance Center PowerShell
+# Create a custom sensitive information type in Security & Compliance Center PowerShell
 
 Data loss prevention (DLP) in Office 365 includes many built-in [sensitive information types](what-the-sensitive-information-types-look-for.md) that are ready for you to use in your DLP policies. These built-in types can help identify and protect credit card numbers, bank account numbers, passport numbers, and more. 
   
@@ -314,9 +314,9 @@ When complete, your RulePack element should look like this.
   
 ## Changes for Exchange Online
 
-Previously, you might have used Exchange Online PowerShell to import your custom sensitive information types for DLP. Now your custom sensitive information types can be used in both the Exchange Admin Center and the Security &amp; Compliance Center. As part of this improvement, you should use Security &amp; Compliance Center PowerShell to import your custom sensitive information types - you can't import them from the Exchange PowerShell anymore. Your custom sensitive information types will continue to work just like before; however, it may take up to one hour for changes made to custom sensitive information types in the Security &amp; Compliance Center to appear in the Exchange Admin Center.
+Previously, you might have used Exchange Online PowerShell to import your custom sensitive information types for DLP. Now your custom sensitive information types can be used in both the Exchange admin center and the Security &amp; Compliance Center. As part of this improvement, you should use Security &amp; Compliance Center PowerShell to import your custom sensitive information types - you can't import them from the Exchange PowerShell anymore. Your custom sensitive information types will continue to work just like before; however, it may take up to one hour for changes made to custom sensitive information types in the Security &amp; Compliance Center to appear in the Exchange admin center.
   
-Note that in the Security &amp; Compliance Center, you use the  `DlpSensitiveInformationTypeRulePackage` cmdlet to upload a rule package. Previously, in the Exchange Admin Center, you used the  `ClassificationRuleCollection` cmdlet. 
+Note that in the Security &amp; Compliance Center, you use the  `DlpSensitiveInformationTypeRulePackage` cmdlet to upload a rule package. Previously, in the Exchange admin center, you used the  `ClassificationRuleCollection` cmdlet. 
   
 ## Upload your rule package
 
@@ -324,7 +324,7 @@ To upload your rule package, do the following steps:
   
 1. Save it as an .xml file with Unicode encoding.
     
-2. [Connect to Office 365 Security & Compliance Center PowerShell](http://go.microsoft.com/fwlink/p/?LinkID=799771)
+2. [Connect to Security & Compliance Center PowerShell](http://go.microsoft.com/fwlink/p/?LinkID=799771)
     
 3. Use the following syntax:
 
@@ -414,7 +414,7 @@ In Security & Compliance Center PowerShell, there are two methods to remove cust
 
 - **Remove a custom rule package and all custom sensitive information types that it contains**: This method is documented in this section.
 
-1. [Connect to Office 365 Security & Compliance Center PowerShell](http://go.microsoft.com/fwlink/p/?LinkID=799771)
+1. [Connect to Security & Compliance Center PowerShell](http://go.microsoft.com/fwlink/p/?LinkID=799771)
 
 2. To remove a custom rule package, use the following syntax:
 
@@ -464,7 +464,7 @@ In Security & Compliance Center PowerShell, modifying a custom sensitive informa
 
 3. Import the updated XML file back into the existing rule package.
 
-To connect to Security & Compliance Center PowerShell, see [Connect to Office 365 Security & Compliance Center PowerShell](http://go.microsoft.com/fwlink/p/?LinkID=799771).
+To connect to Security & Compliance Center PowerShell, see [Connect to Security & Compliance Center PowerShell](http://go.microsoft.com/fwlink/p/?LinkID=799771).
 
 #### Step 1: Export the existing rule package to an XML file
 

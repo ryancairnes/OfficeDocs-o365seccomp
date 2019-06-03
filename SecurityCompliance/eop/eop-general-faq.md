@@ -4,10 +4,9 @@ ms.author: krowley
 author: kccross
 manager: laurawi
 ms.date: 1/2/2018
-ms.audience: ITPro
+audience: ITPro
 ms.topic: reference
 ms.service: O365-seccomp
-ms.custom: TN2DMC
 localization_priority: Normal
 ms.assetid: 9dbff00a-474e-4452-aeb5-5be9a6b8c6d5
 description: "Here we answer the most common general questions about the Microsoft Exchange Online Protection (EOP) cloud-hosted email filtering service. For additional frequently asked questions (FAQ) topics, go to the following links:"
@@ -59,7 +58,7 @@ A. Office 365 is the name given to a collection of products and services that ma
   
  **Q. Does EOP have a communication portal where I can find out about known issues and expected resolutions? What about new features?**
   
-A. The Office 365 admin center will have some of this information. If you are impacted by a Service Level Event then you should see a communication alert (typically accompanied by a bell icon) after signing in to the Office 365 admin center. We recommend that you read and act on any items as appropriate.
+A. The Microsoft 365 admin center will have some of this information. If you are impacted by a Service Level Event then you should see a communication alert (typically accompanied by a bell icon) after signing in to the Microsoft 365 admin center. We recommend that you read and act on any items as appropriate.
   
 Regarding new EOP features, the [Office 365 for business roadmap](https://office.microsoft.com/en-us/products/office-365-roadmap-FX104343353.aspx) is a good resource for finding out information about upcoming new features. We'll also be posting blog articles about new features to the [Office Blogs](https://go.microsoft.com/fwlink/p/?LinkId=392724) website. 
   

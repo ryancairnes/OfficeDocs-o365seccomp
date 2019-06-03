@@ -1,17 +1,18 @@
 ---
 title: "Quarantine"
-ms.author: krowley
-author: kccross
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.date: 6/16/2017
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
-ms.custom: TN2DMC
 localization_priority: Normal
 search.appverid:
 - MET150
-ms.assetid: e9eecdde-dcc2-4283-a820-98d1e740e4f1
+ms.assetid: e9eecdde-dcc2-4283-a820-98d1e740e4f
+ms.collection:
+- M365-security-compliance
 description: "Learn about hosted quarantine for Exchange Online and Exchange Online Protection."
 ---
 

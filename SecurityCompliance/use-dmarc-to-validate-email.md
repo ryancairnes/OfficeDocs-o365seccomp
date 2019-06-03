@@ -3,13 +3,12 @@ title: "Use DMARC to validate email in Office 365"
 ms.author: tracyp
 author: MSFTTracyP
 manager: laurawi
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid:
 - MET150
-ms.custom: TN2DMC
 ms.assetid: 4a05898c-b8e4-4eab-bd70-ee912e349737
 ms.collection:
 - M365-security-compliance
@@ -204,7 +203,7 @@ Office 365 is configured like this because some legitimate email may fail DMARC.
   
 - Users add safe senders individually by using their email client
     
-- Administrators create an Exchange transport rule (ETR) for all users that allows messages for those particular senders. 
+- Administrators create an Exchange mail flow rule (also known as a transport rule) for all users that allows messages for those particular senders. 
     
 ## Troubleshooting your DMARC implementation
 <a name="dmarctroubleshoot"> </a>

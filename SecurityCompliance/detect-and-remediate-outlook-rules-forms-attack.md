@@ -4,11 +4,11 @@ ms.author: chrfox
 author: chrfox
 manager: laurawi
 ms.date: 04/23/2018
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.collection: 
 - o365_security_incident_response
-- Strat_O365_IP
+- M365-security-compliance
 ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid:
@@ -136,7 +136,7 @@ The Rules and Forms exploits are only used by an attacker after they have stolen
 
 The best way to protect your user accounts, and especially your administrator accounts, is to [set up multi-factor authentication for Office 365 users](https://support.office.com/article/set-up-multi-factor-authentication-for-office-365-users-8f0454b2-f51a-4d9c-bcde-2c48e41621c6).  You should also:
 <ol>
-    <li>Monitor how your user accounts are <a href="https://docs.microsoft.com/azure/active-directory/active-directory-view-access-usage-reports">accessed and used</a>. You may not prevent the initial breach, but you will shorten the duration and the impact of the breach by detecting it sooner. You can use these: <a href="https://support.office.com/article/overview-of-office-365-cloud-app-security-81f0ee9a-9645-45ab-ba56-de9cbccab475"> Office 365 Cloud App Security policies</a> to monitor you accounts and alert on unusual activity. 
+    <li>Monitor how your user accounts are <a href="https://docs.microsoft.com/azure/active-directory/active-directory-view-access-usage-reports">accessed and used</a>. You may not prevent the initial breach, but you will shorten the duration and the impact of the breach by detecting it sooner. You can use these: <a href="https://docs.microsoft.com/cloud-app-security/what-is-cloud-app-security"> Office 365 Cloud App Security policies</a> to monitor you accounts and alert on unusual activity. 
         <ol type="a">
             <li><b>Multiple failed login attempts</b> This policy profiles your environment and triggers alerts when users perform multiple failed login activities in a single session with respect to the learned baseline, which could indicate an attempted breach.</li>
             <li><b>Impossible travel</b> - This policy profiles your environment and triggers alerts when activities are detected from the same user in different locations within a time period that is shorter than the expected travel time between the two locations. This could indicate that a different user is using the same credentials. Detecting this anomalous behavior necessitates an initial learning period of seven days during which it learns a new user’s activity pattern.</li>

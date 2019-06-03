@@ -4,7 +4,7 @@ ms.author: krowley
 author: kccross
 manager: laurawi
 ms.date: 02/11/2019
-ms.audience: ITPro
+audience: ITPro
 ms.topic: overview
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -32,25 +32,25 @@ OME combines email encryption and rights management capabilities. Rights managem
 You can use the new capabilities for OME under the following conditions:
   
 - If you have never set up OME or IRM for Exchange Online in Office 365.
-    
+
 - If you have set up OME and IRM, you can use these steps if you are using the Azure Rights Management service from Azure Information Protection.
-    
-- If you are using Exchange Online with Active Directory Rights Management service (AD RMS), you can't enable these new capabilities right away. Instead, you need to [migrate AD RMS to Azure Information Protection](https://docs.microsoft.com/information-protection/plan-design/migrate-from-ad-rms-to-azure-rms) first. When you've finished the migration, you can successfully set up OME. 
-    
+
+- If you are using Exchange Online with Active Directory Rights Management service (AD RMS), you can't enable these new capabilities right away. Instead, you need to [migrate AD RMS to Azure Information Protection](https://docs.microsoft.com/information-protection/plan-design/migrate-from-ad-rms-to-azure-rms) first. When you've finished the migration, you can successfully set up OME.
+
     If you choose to continue to use on-premises AD RMS with Exchange Online instead of migrating to Azure Information Protection, you will not be able to use these new capabilities.
-    
+
 ## What subscriptions do I need to use the new OME capabilities?
 
 To use the new OME capabilities, you need one of the following plans:
   
-- Office 365 Message Encryption is offered as part of Office 365 Enterprise E3 and E5, Microsoft Enterprise E3 and E5, Microsoft 365 Business, Office 365 A1, A3, and A5, and Office 365 Government G3 and G5. Customers do not need additional licenses to receive the new protection capabilities powered by Azure Information Protection. 
-    
+- Office 365 Message Encryption is offered as part of Office 365 Enterprise E3 and E5, Microsoft Enterprise E3 and E5, Microsoft 365 Business, Office 365 A1, A3, and A5, and Office 365 Government G3 and G5. Customers do not need additional licenses to receive the new protection capabilities powered by Azure Information Protection.
+
 - You can also add Azure Information Protection Plan 1 to the following plans to receive the new Office 365 Message Encryption capabilities: Exchange Online Plan 1, Exchange Online Plan 2, Office 365 F1, Office 365 Business Essentials, Office 365 Business Premium, or Office 365 Enterprise E1.
-    
+
 - Each user benefiting from Office 365 Message Encryption needs to be licensed to be covered by the feature.
-    
-- For the full list see the [Exchange Online service descriptions](https://technet.microsoft.com/library/exchange-online-service-description.aspx) for Office 365 Message Encryption. 
-    
+
+- For the full list see the [Exchange Online service descriptions](https://technet.microsoft.com/library/exchange-online-service-description.aspx) for Office 365 Message Encryption.
+
 ## Can I use Exchange Online with bring your own key (BYOK) in Azure Information Protection?
 
 Yes! Microsoft recommends that you complete the steps to set up BYOK before you set up OME.
@@ -127,7 +127,7 @@ Currently encrypted messages are not supported for a Shared Mailbox.
 
 ## Can I customize encrypted messages with my company branding?
 
-Yes! For information on customizing email messages and the OME portal, see Add your organization's brand to your encrypted messages. See [Add your organization's brand to your encrypted messages.](add-your-organization-brand-to-encrypted-messages.md)﻿
+Yes! For information on customizing email messages and the OME portal, see Add your organization's brand to your encrypted messages. See [Add your organization's brand to your encrypted messages.](add-your-organization-brand-to-encrypted-messages.md)
   
 ## Are there any reporting capabilities or insights for encrypted emails?
 
@@ -136,5 +136,3 @@ Not at this time but coming soon.
 ## Can I use message encryption with compliance features such as eDiscovery?
 
 Yes. All encrypted email messages are discoverable by Office 365 compliance features.
-  
-
