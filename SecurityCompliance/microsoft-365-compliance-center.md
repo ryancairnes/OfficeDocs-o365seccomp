@@ -86,15 +86,12 @@ First, make sure you have the appropriate [licenses and permissions](microsoft-s
 
 ### Some of my compliance features are not available in the Microsoft 365 compliance center. What do I do?
 
-To access features that are not yet available in the Microsoft 365 compliance center, you can use the Office 365 Security & Compliance Center. 
+We are still adding functionality to the Microsoft 365 compliance center. If you can't find something, such as audit log search, use the Office 365 Security & Compliance Center ([https://protection.office.com](https://protection.office.com)). Your configurations will be saved in both the existing Office 365 Security & Compliance Center and in the new Microsoft 365 compliance center automatically.
 
 To go there, in the Microsoft 365 compliance center, in the navigation pane on the left side of the screen, choose **More resources**, and then, under **Office 365 security & compliance center**, choose **Open**.
 
 ![More resources](media/MoreResourcesShowAll.png)
 
-### I can't find some of my compliance settings. What do I do?
-
-We are still adding functionality to the Microsoft 365 compliance center. If you can't find something, such as audit log search, try navigating to the Office 365 Security & Compliance Center ([https://protection.office.com](https://protection.office.com)). Your configurations will be saved in both the existing Office 365 Security & Compliance Center and in the new Microsoft 365 compliance center automatically.
 
 ## Next steps
 
