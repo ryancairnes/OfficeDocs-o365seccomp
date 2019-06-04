@@ -14,7 +14,6 @@ search.appverid:
 - MET150
 ms.assetid: 
 ROBOTS: NOINDEX, NOFOLLOW 
-
 description: "Opt-in and use the attorney-client privilege detection model to use the machine learning-based detection of privileged content when reviewing content in an Advanced eDiscovery case."
 ---
 
@@ -23,7 +22,7 @@ description: "Opt-in and use the attorney-client privilege detection model to us
 A major and costly aspect of the review phase of any eDiscovery process is reviewing documents for privileged content. Advanced eDiscovery provides machine learning-based detection of privileged content to make this process more efficient. This feature is called *attorney-client privilege detection*.
 
 > [!NOTE]
-> The attorney-client privilege detection model in Advanced eDiscovery is in Preview. You must opt-in before you can use it.
+> You must opt in to the attorney-client privilege detection model before you can use it. See [Step 1](#step-1-opt-in-to-attorney-client-privilege-detection) for instructions.
 
 ## How does it work?
 

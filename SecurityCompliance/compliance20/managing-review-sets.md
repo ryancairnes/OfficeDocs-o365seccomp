@@ -37,7 +37,7 @@ Review sets can be created on the **Review sets** tab by clicking **+ Add review
 
 ![Add review set](../media/f45c51d9-585d-47d1-b7fb-0288715e0b6a.png)
 
-On the **Add review set** flyout page, type a name for the review set and then click **Save**.  The new review set is displayed in the list on the **Review sets** tab.
+On the **Add review set** flyout page, type a name for the review set and then click **Save**. The new review set is displayed in the list on the **Review sets** tab.
 
 ![New review set listed on Review set tab](../media/AeDnewreviewset.png)
 
@@ -50,8 +50,3 @@ There are three different ways to add data to a review set in an Advanced eDisco
 2. [Load non-Office 365 data into a review set](load-non-office365-data.md)
 
 3. [Add data to a review set from another review set](add-data-to-review-set-from-another-review-set.md)
- 
-## Create tag groups
-
-Before you or other people can tag documents in a review set, the tags must first be created. You can do this by create tag groups that contain child tags.
-

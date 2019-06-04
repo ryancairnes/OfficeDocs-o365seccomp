@@ -11,7 +11,7 @@ ms.collection: M365-security-compliance
 search.appverid: 
 - MOE150
 - MET150
-description: ""
+description: "Learn about the limits in effect for the Advanced eDiscovery solution in Microsoft 365. This includes case limits, indexing limits, and search limits when using the search tool to collect case data."
 ---
 
 # Limits in Advanced eDiscovery
