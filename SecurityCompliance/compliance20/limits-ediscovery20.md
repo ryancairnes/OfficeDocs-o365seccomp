@@ -16,21 +16,20 @@ description: ""
 
 # Limits in Advanced eDiscovery
 
-This article describes the limits in Advanced eDiscovery.
+This article describes the limits in the Advanced eDiscovery solution in Microsoft 365.
 
 ## Case limits
 
 The following table lists the limits for cases in Advanced eDiscovery.
 
 |**Description of limit**|**Limit**|
-  |:-----|:-----|
-  |Total number of documents that can be added to a case (for all review sets in the case).  <br/> |1 million  <br/> |
-  |Total file size per load set.  <br/> |100 GB  <br/> |
-  |Daily case load   <br/> |2 TB <br/> |
-  |Loads per case.  <br/> |15 <br/> |
-  |Review sets in a case.  <br/> |20 <br/> |
+|:-----|:-----|
+|Total number of documents that can be added to a case (for all review sets in a case).  <br/> |1 million  <br/> |
+|Total file size per load set.  <br/> |100 GB  <br/> |
+|Total amount of data loaded into a case per day.<br/> |2 TB <br/> |
+|Maximum number of loads sets per case.  <br/> |15 <br/> |
+|Maximum number of review sets per case.  <br/> |20 <br/> |
 |||
-
 
 ## Indexing limits
 
@@ -38,38 +37,40 @@ The following table lists the indexing limits in Advanced eDiscovery.
 
 |**Description of limit**|**Limit**|
   |:-----|:-----|
-  |Maximum number of characters extracted from a single file.  <br/> |10 million <sup>1</sup> <br/> |
-  |Maximum size of single file.   <br/> |100 MB <sup>1</sup> <br/> |
-  |Maximum depth of embedded items in a document.  <br/> |25 <sup>1</sup> <br/> |
-  |OCR file size.  <br/> |24 MB <sup>1</sup> <br/> |  
+  |Maximum number of characters extracted from a single file.  <br/> |10 million<sup>1</sup> <br/> |
+  |Maximum size of single file.   <br/> |100 MB<sup>1</sup> <br/> |
+  |Maximum depth of embedded items in a document.  <br/> |25<sup>1</sup> <br/> |
+  |Maximum size of file processed by Optical Character Recognition (OCR).  <br/> |24 MB<sup>1</sup> <br/> |  
 |||
+
 ## Search limits
 
-|**Description of limit**|**Limit**|
-  |:-----|:-----|
-  |Characters per search.  <br/> |Mailbox: 10,000; Sites: 4,000 when searching all sites or 2,000 when searching up to 20 sites  <br/> |
-  |Variants returned when using prefix wildcard to search for an exact phrase in a search or when using a prefix wildcard and the "NEAR" or "ONEAR" Boolean operator.  <br/> |10,000  <br/> |
-  |Minimum number of alpha characters for preefix wildcards.  <br/> |3  <br/> |
-  |Keywords per workload search.  <br/> |20  <br/> |
-  |Mailboxes or sites per workload search.  <br/> |No limit  <br/> |
-  |Simultaneous workload searches.  <br/> |No limit  <br/> |
-  |Number of workload searches started by a single userKeywords per workload search.  <br/> |10  <br/> |
-  |Items per mailbox in workload search preview.  <br/> |100  <br/> |
-  |Items across all mailboxes per workload search preview.  <br/> |1000  <br/> |
-  |Mailboxes per worload search preview.  <br/> |1000  <br/> |
-  |SharePoint and OneDrive for Business items per site for workload search preview.  <br/> |200  <br/> |
-  |SharePoint and OneDrive for Business sites per workload search preview.  <br/> |200  <br/> |
-  |Public folder mailbox items per workload search preview.  <br/> |100  <br/> |
-  |Items across all public folder mailbox per workload search preview.  <br/> |200  <br/> |
-  |Public folder mailboxes per workload search preview.  <br/> |500  <br/> |
-|||
+The limits described in this section are related to using the search tool on the **Searches** tab to collect data for a case. For more information, see [Collect data for a case in Advanced eDiscovery](collecting-data-for-ediscovery.md).
 
+|**Description of limit**|**Limit**|
+|:-----|:-----|
+|Maximum number of mailboxes or sites that can be searched in a single search.  <br/> |No limit  <br/> |
+|Maximum number of searches that can run at the same time.  <br/> |No limit  <br/> | 
+|Maximum number of searches that a single user can start at the same time.  <br/> |10  <br/> | 
+|Maximum number of characters for a search query (including operators and conditions).  <br/> |**Mailboxes**: 10,000<br/>**Sites**: 4,000 when searching all sites or 2,000 when searching up to 20 sites <sup>2</sup> <br/> |
+|Minimum number of alpha characters for prefix wildcards; for example **one\*** or **set\***. <br/> |3  <br/> |  
+|Maximum number of rows in a keywords list.  <br/> |20  <br/> |
+|Maximum variants returned when using prefix wildcard to search for an exact phrase or when using a prefix wildcard and the **NEAR** or **ONEAR** Boolean operator.  <br/> |10,000 <sup>3</sup> <br/> |
+|Maximum number of items per user mailbox that are displayed on preview page for searches. The newest items are displayed.   <br/> |100  <br/> |
+|Maximum number of items from all mailboxes displayed on preview page for searches.  <br/> |1,000  <br/> |
+|Maximum number of mailboxes that can be previewed for search results.  If there are more than 1000 mailboxes that contain items that match the search query, only the top 1,000 mailboxes with the most results are available for preview.<br/> |1,000  <br/> |
+|Maximum number of items from SharePoint and OneDrive for Business sites displayed on preview page for searches. The newest items are displayed.  <br/> |200  <br/> |
+|Maximum number of SharePoint and OneDrive for Business sites that can be previewed for search results. If there are more than 200 sites that contain items that match the search query, only the top 200 sites with the most results are available for preview.  <br/> |200  <br/> |
+|Maximum number of items per public folder mailbox displayed on preview page for searches.  <br/> |100  <br/> |
+|Maximum number of items found in all public folder mailbox items displayed on preview page for searches.  <br/> |200  <br/> |
+|Maximum number of public folder mailboxes that can be previewed for search results. If there are more than 500 public folder mailboxes that contain items that match the search query, only the top 500 mailboxes with the most results are available for preview.  <br/> |500  <br/> |
+|||
 
 ## Viewer limits
 
 |**Description of limit**|**Limit**|
   |:-----|:-----|
-  |Excel files in native viewer.  <br/> |4 MB  <br/> |
+  |Maximum size of Excel files that can be viewed in native viewer.  <br/> |4 MB  <br/> |
 |||
 
 
@@ -77,8 +78,13 @@ The following table lists the indexing limits in Advanced eDiscovery.
 
 |**Description of limit**|**Limit**|
   |:-----|:-----|
-  |Download action in a review set.  <br/> |3 MB or 50 files  <br/> |
+  |Maximum size or number of documents downloaded from review set.  <br/> |3 MB per file or 50 files <sup>4</sup>  <br/> |
 |||
+<br/>
 
- > [!NOTE]
-> <sup>1</sup> Any item that exceeds a single file limit will show up as a processing error. 
+> [!NOTE]
+> <sup>1</sup> Any item that exceeds a single file limit will show up as a processing error.<br/>
+> <sup>2</sup> When searching SharePoint and OneDrive for Business locations, the characters in the URLs of the sites being searched count against this limit.<br/>
+> <sup>3</sup> For non-phrase queries (a keyword value that doesn't use double quotation marks) we use a special prefix index. This tells us that a word occurs in a document, but not where it occurs in the document. To do a phrase query (a keyword value with double quotation marks), we need to compare the position within the document for the words in the phrase. This means that we can't use the prefix index for phrase queries. In this case, we internally expand the query with all possible words that the prefix expands to; for example,  **time\*** can expand to  **"time OR timer OR times OR timex OR timeboxed OR …"**. The limit of 10,000 is the maximum number of variants the word can expand to, not the number of documents matching the query. There is no upper limit for non-phrase terms.<br/>
+> <sup>4</sup> This limit applies to downloading selected documents from a review set. It doesn't apply to exporting documents from a review set. For more information about downloading and exporting documents, see [Export case data in Advanced eDiscovery](exporting-data-ediscover20.md). <br/>
+
