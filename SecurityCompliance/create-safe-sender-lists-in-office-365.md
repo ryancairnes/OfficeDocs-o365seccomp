@@ -23,6 +23,9 @@ If you want to ensure that users receive emails from a particular sender or send
 
 The recommended method to configure a safe sender list is to use an Exchange Transport Rules (ETRs) as this presents the most flexibility to ensure that only the right messages get allowed. *Anti-Spam policy email address* and *Domain based allow lists* are not as secure as *IP address-based lists* because domains can easily be spoofed. But anti-spam policy IP based allow lists also present risks as they will allow any domains sent through that IP to bypass spam filtering. Please be careful and monitor *any* exceptions made, carefully.
 
+> [!IMPORTANT]
+> Information on how to create a **Blocked Sender List** is [here](create-block-sender-lists-in-office-365.md).
+
 ## Options from most to least recommended
 
 You should always restrict your Allow lists because they bypass many security measures. You must recheck all Allow lists as a part of your standard maintenance, so that you are aware of who is permitted to bypass. The recomendation is to use restrictive ETRs where possible.
@@ -83,3 +86,6 @@ The least desirable option is to authorize by sender/domain. This option should 
 > Configuring Anti-Spam polices to *allow sender/allow domain* will result in messages skipping spam filtering for a) messages from senders in the allow list, or b) any senders from an allowed domain. This method significantly increases the risk spammers can spoof the sending domain (or impersonate the full email address) which skips all spam filtering, sender authentication checks, and will send the message directly into a person's inbox.
 > 
 > Do not add domains you own or popular domains (e.g. `microsoft.com`) to the mail flow rule as a condition. This method is considered high risk since it creates opportunities for bad actors to send you mail that would otherwise be filtered out, increasing risk.
+
+> [!IMPORTANT]
+> Information on how to create a **Blocked Sender List** is [here](create-block-sender-lists-in-office-365.md).
