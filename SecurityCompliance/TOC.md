@@ -539,6 +539,11 @@
 ### [What's new in Compliance Manager (Preview)](compliance-manager-release-notes.md)
 ### [Working with Compliance Manager (Preview)](working-with-compliance-manager.md)
 ### [Compliance score methodology (Preview)](compliance-score-methodology.md)
+## [Information barriers (Preview)](information-barriers.md)
+### [Define information barrier policies (Preview)](information-barriers-policies.md)
+### [Attributes for information barrier policies (Preview)](information-barriers-attributes.md)
+### [Troubleshooting information barriers (Preview)](information-barriers-troubleshooting.md)
+
 ## Customer Key
 ### [Controlling your data in Office 365 using Customer Key](controlling-your-data-using-customer-key.md)
 ### [Service encryption with Customer Key for Office 365 FAQ](service-encryption-with-customer-key-faq.md)
