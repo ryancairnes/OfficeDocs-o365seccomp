@@ -316,7 +316,6 @@
 # [Manage legal investigations](manage-legal-investigations.md)
 
 ## [Advanced eDiscovery solution in Microsoft 365](compliance20/overview-ediscovery-20.md)
-### [Release notes](compliance20/release-notes-ediscovery20.md)
 ### [Create a new case](compliance20/create-new-ediscovery-case.md)
 
 ### [Work with custodians](compliance20/managing-custodians.md)
@@ -351,6 +350,7 @@
 #### [View documents in a review set](compliance20/view-documents-in-review-set.md)
 #### [Query the data in a review set](compliance20/review-set-search.md)
 #### [Tag documents in a review set](compliance20/tagging-documents.md)
+#### [Set up attorney-client privilege detection](compliance20/attorney-privilege-detection.md)
 
 ### [Analyze case data](compliance20/analyzing-data-in-review-set.md)
 #### [Near duplicate detection](compliance20/near-duplicates.md)
@@ -370,6 +370,7 @@
 #### [Configure search and analytics settings](compliance20/configure-search-analytics-settings.md)
 
 ### Advanced eDiscovery reference
+#### [Release notes](compliance20/release-notes-ediscovery20.md)
 #### [Limits in Advanced eDiscovery](compliance20/limits-ediscovery20.md)
 #### [Supported file types](compliance20/supported-filetypes-ediscovery20.md)
 #### [Document metadata fields](compliance20/document-metadata-fields.md)
