@@ -73,12 +73,11 @@ The limits described in this section are related to using the search tool on the
   |Maximum size of Excel files that can be viewed in native viewer.  <br/> |4 MB  <br/> |
 |||
 
-
 ## Review set download limits
 
 |**Description of limit**|**Limit**|
-  |:-----|:-----|
-  |Maximum size or number of documents downloaded from review set.  <br/> |3 MB per file or 50 files <sup>4</sup>  <br/> |
+|:-----|:-----|
+|Maximum size or number of documents downloaded from review set.  <br/> |3 MB per file or 50 files <sup>4</sup>  <br/> |
 |||
 <br/>
 
