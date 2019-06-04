@@ -1,27 +1,8 @@
----
-title: "Manage working sets in Advanced eDiscovery (Preview)"
-ms.author: markjjo
-author: markjjo
-manager: laurawi
-ms.date: 
-ms.audience: Admin
-ms.topic: article
-ms.service: O365-seccomp
-localization_priority: Normal
-ms.collection: M365-security-compliance 
-search.appverid: 
-- MOE150
-- MET150
-ms.assetid: 
+## Create tag groups
 
-description: ""
----
+Before you or other people can tag documents in a review set, the tags must be created. You can do this by creating tag groups that contain child tags. Tags are displayed in the tagging panel when reviewing documents in a review set.
 
-# Manage working sets in Advanced eDiscovery (Preview)  
-
-## Manage Tags
-
-> The tag panel can be configured to meet the requirements of your case. To configure the tag panel you will need to navigate to the working set management page
+To create a tag group:
 
 1.  Within the working set, select Manage Working Set.
 
@@ -58,7 +39,4 @@ Once inside the tag management, tags can be created to meet the requirements of 
 1.  To nest tags, click the ellipses of a **tag** and select a new tag to add.
     
     ![](../media/ED_tagnesting.png)
-
-
-  
 

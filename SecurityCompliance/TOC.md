@@ -348,6 +348,7 @@
 #### [View documents in a review set](compliance20/view-documents-in-review-set.md)
 #### [Query the data in a review set](compliance20/review-set-search.md)
 #### [Tag documents in a review set](compliance20/tagging-documents.md)
+#### [Set up attorney-client privilege detection](compliance20/attorney-privilege-detection.md)
 
 ### [Analyze case data](compliance20/analyzing-data-in-review-set.md)
 #### [Near duplicate detection](compliance20/near-duplicates.md)
