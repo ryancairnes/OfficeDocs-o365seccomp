@@ -38,7 +38,7 @@ The following table lists the indexing limits in Advanced eDiscovery.
 |**Description of limit**|**Limit**|
   |:-----|:-----|
   |Maximum number of characters extracted from a single file.  <br/> |10 million<sup>1</sup> <br/> |
-  |Maximum size of single file.   <br/> |100 MB<sup>1</sup> <br/> |
+  |Maximum size of a single file.   <br/> |100 MB<sup>1</sup> <br/> |
   |Maximum depth of embedded items in a document.  <br/> |25<sup>1</sup> <br/> |
   |Maximum size of file processed by Optical Character Recognition (OCR).  <br/> |24 MB<sup>1</sup> <br/> |  
 |||
@@ -70,14 +70,14 @@ The limits described in this section are related to using the search tool on the
 
 |**Description of limit**|**Limit**|
   |:-----|:-----|
-  |Maximum size of Excel files that can be viewed in native viewer.  <br/> |4 MB  <br/> |
+  |Maximum size of Excel file that can be viewed in the native viewer.  <br/> |4 MB  <br/> |
 |||
 
 ## Review set download limits
 
 |**Description of limit**|**Limit**|
 |:-----|:-----|
-|Maximum size or number of documents downloaded from review set.  <br/> |3 MB per file or 50 files <sup>4</sup>|
+|Total file size or maximum number of documents downloaded from a review set.  <br/> |3 MB or 50 documents <sup>4</sup>|
 |||
 
 <br/>
