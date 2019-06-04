@@ -77,8 +77,10 @@ The limits described in this section are related to using the search tool on the
 
 |**Description of limit**|**Limit**|
 |:-----|:-----|
-|Maximum size or number of documents downloaded from review set.  <br/> |3 MB per file or 50 files <sup>4</sup>  <br/> |
+|Maximum size or number of documents downloaded from review set.  <br/> |3 MB per file or 50 files <sup>4</sup>|
 |||
+
+<br/>
 <br/>
 
 > [!NOTE]
