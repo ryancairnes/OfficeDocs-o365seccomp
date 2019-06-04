@@ -1,5 +1,5 @@
 ---
-title: "Unregistered Domain Email"
+title: "Fix email delivery issues for error code 5.7.7xx in Exchange Online"
 ms.author: tracyp
 author: MSFTTracyP
 manager: laurawi
@@ -13,14 +13,26 @@ search.appverid:
 - MOE150
 ms.collection:
 - M365-security-compliance
-description: "If you send a high volume of unregistered domain email, you run the risk of your email getting blocked. Read this article to learn more."
+description: "Learn how to fix email issues for error code 5.7.7xx in Exchange Online (tenant blocked from sending mail)."
 ---
 
-# Unregistered Domain Email: What you need to know
+# Fix email delivery issues for error code 5.7.7xx in Exchange Online
+
+This topic describes what you can do if you see status code 550 5.7.7xx in a non-delivery report (also known as an NDR, bounce message, delivery status notification, or DSN). You'll see this automated notification when your tenant is restricted from sending email in one way or another. These error codes will usually come in as 705 or 750.
+
+## 5.7.705: Tenant has exceeded threshold restriction: What you need to know
+
+Internal senders could see this NDR whenever you try to send mail if your tenant was compromised. This usually occus when the majority of traffic from your tenant has been detected as suspicious and has resulted in a ban on sending ability for the tenant. This can also occur if your users send an large amount of bulk mail from Office 365. As stated in the service description, Exchange Online customers who need to send legitimate bulk commercial email (for example, customer newsletters) should use third-party providers that specialize in these services.
+
+Once your users collectively, as a tenant, send a certain amount of suspicious mail through the service, all users can be prevented from sending any mail until the problem is fixed. Users will receive a Non-Delivery Report (NDR) that states:
+
+- 550 5.7.705 Access denied, tenant has exceeded threshold
+
+## 5.7.750: Unregistered Domain Email restriction: What you need to know
 
 Office 365 allows for tenants to relay some messages through Exchange Online Protection (EOP). One supported example of this would be when users have an Office 365 mailbox and someone external sends them email but email forwarding is configured so that it goes back out to the user's external mailbox. This is most common in education environments where students want to leverage their personal email interface but still get emails related to school. Another example is when customers are in a hybrid scenario and have on-premises servers that send email out of EOP.
 
-## Problems with unregistered domains
+### Problems with unregistered domains
 
 The problem is when on-premises servers get compromised and end up relaying a large volume of spam out of EOP. In almost all cases, the right connectors are set up but email is being sent from unregistered, also known as unprovisioned, domains. Office 365 does allow a reasonable amount of mail to come from unregistered domains, but an Accepted Domain should be configured in the Admin Center for each domain you plan on sending out of.
 
@@ -28,9 +40,9 @@ Once compromised, tenants will be prevented from sending outbound mail for unreg
 
 - 550 5.7.750 Service unavailable. Client blocked from sending from unregistered domains
 
-## Unblocking tenant in order to send again
+## How to unblocking tenant in order to send again
 
-There are several things you need to do if you get blocked for sending from unregistered domains:
+There are several things you need to do if your tenant get blocked for sending email:
 
 1. Make sure that you register all of your domains in Microsoft 365 admin center. More information can be found [here](https://docs.microsoft.com/en-us/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
 
