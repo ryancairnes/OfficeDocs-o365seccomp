@@ -16,7 +16,7 @@ search.appverid: met150
 
 # Monitor and report identities in Microsoft 365 security
 
-You can monitor the identities in your organization and keep track of suspicious or risky behaviors. In the **Identities** category of **Monitoring & reports**, you can track:
+You can monitor the identities in your organization and keep track of suspicious or risky behaviors. In the **Identities** category of **Reports**, you can track:
 
 * Users with the most detected anomalies
 * How many users are reported at risk by conditional access policies
