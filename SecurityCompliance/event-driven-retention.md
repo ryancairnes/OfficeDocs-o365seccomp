@@ -98,7 +98,7 @@ Note that once you choose an event type and create the label, the event type can
   
 ### Step 3: Publish or auto-apply the label
 
-Just like any label, you need to publish or auto-apply an event-based label, so that it's manually or automatically applied to content. You can do this on the **Labels** or **Label policies** page. Note that labels that classify content as a record can only be published and manually applied to content. 
+Just like any label, you need to publish or auto-apply an event-based label, so that it's manually or automatically applied to content. You can do this on the **Labels** or **Label policies** page. 
   
 ![Options to publish or auto-apply a label](media/c9232c54-bbc0-40d2-abc2-122d5d1e70af.png)
   
