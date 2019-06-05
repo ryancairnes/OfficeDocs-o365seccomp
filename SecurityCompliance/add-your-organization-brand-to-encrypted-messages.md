@@ -70,7 +70,7 @@ You create branding templates for your organization in Windows PowerShell with t
    For example,
 
    ```powershell
-   New-OMEConfiguration -Identity <Branding template 1>
+   New-OMEConfiguration -Identity "Branding template 1"
    ```
 
 3. Define the customizations for the template you just defined by using the Set-OMEConfiguration cmdlet as described in [Set-OMEConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/Set-OMEConfiguration) or use the following table for guidance.
