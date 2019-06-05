@@ -1,5 +1,5 @@
 ---
-title: Monitor and report identities in Microsoft 365 security
+title: View identity reports in Microsoft 365 security
 description: Describes how you can monitor the identities in your organization and keep track of suspicious or risky behaviors.
 keywords: security, malware, Microsoft 365, M365, security center, monitor, report, identity
 ms.prod: w10
@@ -14,7 +14,7 @@ ms.topic: article
 search.appverid: met150
 ---
 
-# Monitor and report identities in Microsoft 365 security
+# View identity reports in Microsoft 365 security
 
 You can monitor the identities in your organization and keep track of suspicious or risky behaviors. In the **Identities** category of **Reports**, you can track:
 

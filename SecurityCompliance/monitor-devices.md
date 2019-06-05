@@ -1,5 +1,5 @@
 ---
-title: Monitor devices in Microsoft 365 security
+title: View device reports in Microsoft 365 security
 description: Describes how you can keep your devices secure, up-to-date, and spot potential threats in your organization
 keywords: security, malware, Microsoft 365, M365, security center, monitor, report, devices
 ms.prod: w10
@@ -14,35 +14,35 @@ ms.topic: article
 search.appverid: met150
 ---
 
-# Monitor devices in Microsoft 365 security
+# View device reports in Microsoft 365 security
 
 Keep your devices secure, up-to-date, and spot potential threats in the Microsoft 365 security center.
 
 ## View device alerts
 
-Get up-to-date alerts about breach activity and other threats on your devices from Windows Defender ATP (available with an E5 license). Microsoft 365 security center effectively monitors these alerts at a high level using your preferred workflow.
+Get up-to-date alerts about breach activity and other threats on your devices from Microsoft Defender ATP (available with an E5 license). Microsoft 365 security center effectively monitors these alerts at a high level using your preferred workflow.
 
 ### Monitor high-impact alerts
 
-Each Windows Defender ATP alert has a corresponding severity—high, medium, low, or informational—that indicates its potential impact to your network if left unattended.  
+Each Microsoft Defender ATP alert has a corresponding severity—high, medium, low, or informational—that indicates its potential impact to your network if left unattended.  
 
-Use the **Device alert severity** card to focus specifically on alerts that are more severe and might require immediate response. From this card, you can view more information on the Windows Defender Security Center portal.
+Use the **Device alert severity** card to focus specifically on alerts that are more severe and might require immediate response. From this card, you can view more information on the Microsoft Defender Security Center portal.
 
 ![Device alerts severity card](./media/security-docs/device-alerts-severity.png)
 
 ### Understand sources of alerts
 
-Windows Defender ATP leverages data from a broad range of security sensors and intelligence sources to generate alerts. For example, it can use detection information from Windows Defender Antivirus and third-party antimalware, as well as your own custom threat intelligence provided through the web service API.
+Microsoft Defender ATP leverages data from a broad range of security sensors and intelligence sources to generate alerts. For example, it can use detection information from Windows Defender Antivirus and third-party antimalware, as well as your own custom threat intelligence provided through the web service API.
 
 The **Device alert detection** sources card shows the distribution of alerts by source. This card can help you track activity related to certain sources, particularly your custom sources. You can also use this to focus on alerts coming from sensors that are not configured to automatically block malicious activity or components.
 
 ![Device alert detection sources card](./media/security-docs/device-alert-detection-sources.png)
 
-From this card, you can view more information on the Windows Defender Security Center portal.
+From this card, you can view more information on the Microsoft Defender Security Center portal.
 
 ### Understand the types of threats that trigger alerts
 
-Windows Defender ATP sorts each alert into a category representing a certain stage in the attack chain or a type of threat component. For example, detected threat activity might be categorized into “lateral movement” to indicate that the activity involved an attempt to reach other devices on the network and has likely occurred after attackers have gained an initial foothold. When detected, a threat component might either be classified broadly as “malware” or more specifically as “ransomware”, “credential stealing” or other types of malicious or unwanted software.
+Microsoft Defender ATP sorts each alert into a category representing a certain stage in the attack chain or a type of threat component. For example, detected threat activity might be categorized into “lateral movement” to indicate that the activity involved an attempt to reach other devices on the network and has likely occurred after attackers have gained an initial foothold. When detected, a threat component might either be classified broadly as “malware” or more specifically as “ransomware”, “credential stealing” or other types of malicious or unwanted software.
 
 The **Device threat categories** card shows the distribution of alerts into these categories. You can use this information to identify threat activity, such as attempts at credential theft, which can have more significant impact compared to attempts at social engineering, for example. You can also use this to monitor for potentially destructive threats like ransomware.
 
@@ -50,7 +50,7 @@ The **Device threat categories** card shows the distribution of alerts into thes
 
 ### Monitor active alerts
 
-The **Device alert status** card indicates the number of alerts that have not been resolved and might require attention. From this card, you can view more information on the Windows Defender Security Center portal.
+The **Device alert status** card indicates the number of alerts that have not been resolved and might require attention. From this card, you can view more information on the Microsoft Defender Security Center portal.
 
 ![Device alert status card](./media/security-docs/device-alert-status.png)
 
@@ -61,7 +61,7 @@ When resolving a Window Defender ATP alert, your security staff can specify whet
 * A true alert that identifies actual breach activity or threat components
 * A false alert that has incorrectly detected normal activity
 
-The **Device alert classification** card shows whether your resolved alerts have been classified as true or false alerts. From this card, you can view more information on the Windows Defender Security Center portal.
+The **Device alert classification** card shows whether your resolved alerts have been classified as true or false alerts. From this card, you can view more information on the Microsoft Defender Security Center portal.
 
 Note: In some cases, classification information is unavailable for certain alerts.
 
@@ -80,7 +80,7 @@ The **Device alert determination** card shows the determination provided for eac
 * **Unwanted software** – apps and other software that are not considered malicious, but otherwise violate policy or acceptable use standards
 * **Others** – any other determination that does not fall under the provided types
 
-From this card, you can view more information in Windows Defender security center.
+From this card, you can view more information in Microsoft Defender Security Center.
 
 ![Device alert determination card](./media/security-docs/device-alert-determination.png)
 
@@ -92,7 +92,7 @@ From this card, you can view more information in Windows Defender security cente
 
 ## Monitor and report status of Intune-managed devices
 
-The following monitoring and reports contain data from devices enrolled in Intune. Data from unenrolled devices is not included. Only Global Administrators can view these cards.
+The following reports contain data from devices enrolled in Intune. Data from unenrolled devices is not included. Only Global Administrators can view these cards.
 
 Intune enrolled device data includes:
 
