@@ -24,6 +24,6 @@ You can monitor the identities in your organization and keep track of suspicious
 
 ![Identities category of monitoring & reports page](./media/security-docs/identities.png)
 
-For users with specific detections, you can explore the specific alert and investigate in Windows Defender security center. Detections include anomalies such as users who sign in from unfamiliar locations.
+For users with specific detections, you can explore the specific alert and investigate in Microsoft Defender Security Center. Detections include anomalies such as users who sign in from unfamiliar locations.
 
 For a complete set of risk events, see [Azure Active Directory risk events](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-risk-events).

@@ -1,5 +1,5 @@
 ---
-title: "Overview of the new Microsoft 365 compliance center"
+title: Overview of the new Microsoft 365 compliance center
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
@@ -8,7 +8,7 @@ audience: ITPro
 ms.topic: article
 ms.service: o365-seccomp
 localization_priority: Normal
-description: "Learn about the new Microsoft 365 compliance center, including what it contains, how to get it, and your next steps."
+description: Learn about the new Microsoft 365 compliance center, including what it contains, how to get it, and your next steps.
 ---
 
 # Overview of the all-new Microsoft 365 compliance center

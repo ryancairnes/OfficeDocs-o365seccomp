@@ -1,6 +1,6 @@
 ---
 title: Microsoft Secure Score
-description: Describes Microsoft 365 Secure Score, how details are calculated, and what security admins can expect using it.
+description: Describes Microsoft Secure Score in the Microsoft 365 security center, how details are calculated, and what security admins can expect using it.
 keywords: security, malware, Microsoft 365, M365, secure score, security center, improvement actions
 ms.prod: w10
 ms.mktglfcycl: deploy
@@ -40,13 +40,13 @@ Currently, to view Microsoft Secure Score, you must be assigned one of the follo
 
 ## Rich experiences & additional security recommendations
 
-In Microsoft Secure Score, we’ve added recommendations from Azure AD, Intune, and Cloud App Security, with recommendations from Azure Security Center and Windows Defender ATP coming soon. We've also added even more Office 365 security recommendations. With additional insights and more visibility into a broader set of Microsoft products and services, you can feel confident reporting up to management about your organization’s security health. You can also get your score using the [Microsoft Graph API](https://docs.microsoft.com/graph/api/resources/securescores?view=graph-rest-beta).
+In Microsoft Secure Score, we’ve added recommendations from Azure AD, Intune, and Cloud App Security, with recommendations from Azure Security Center and Microsoft Defender ATP coming soon. We've also added even more Office 365 security recommendations. With additional insights and more visibility into a broader set of Microsoft products and services, you can feel confident reporting up to management about your organization’s security health. You can also get your score using the [Microsoft Graph API](https://docs.microsoft.com/graph/api/resources/securescores?view=graph-rest-beta).
 
 To help you the information you need more quickly, Microsoft recommendations are organized into groups:
 
 * Identity (protection state of your Azure AD accounts and roles)
 * Data (protection state of your Office 365 documents)
-* Device (protection state of your devices; Windows Defender ATP improvement actions coming soon)
+* Device (protection state of your devices; Microsoft Defender ATP improvement actions coming soon)
 * App (protection state of your email and cloud apps)
 * Infrastructure (protection state of your Azure resources; coming soon)
 
@@ -79,7 +79,7 @@ When you click on an improvement action, a fly out appears. To complete the acti
 
 You can view a graph of your organization's score over time in the **History** tab. This view includes the global average, industry average, and similar seat count, along with all the actions taken in the selected time range. You can also customize a date range and filter by category.
 
-The score is calculated once per day (around 1:00 AM PST). If you make a change to a measured action, the score will automatically update the next day. It is also important to note that some other portals show parts of the Microsoft Secure Score (like Windows Defender Security Center). If you complete an improvement action and the score is increased in those portals, it may take up to 24 hours for the updated score to display in Microsoft 365 security center.  
+The score is calculated once per day (around 1:00 AM PST). If you make a change to a measured action, the score will automatically update the next day. It is also important to note that some other portals show parts of the Microsoft Secure Score (like Microsoft Defender Security Center). If you complete an improvement action and the score is increased in those portals, it may take up to 24 hours for the updated score to display in Microsoft 365 security center.  
 
 ## How Secure Score is calculated
 

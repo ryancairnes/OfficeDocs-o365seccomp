@@ -56,7 +56,7 @@ The **Device alert status** card indicates the number of alerts that have not be
 
 ### Monitor classification of resolved alerts
 
-When resolving a Window Defender ATP alert, your security staff can specify whether an alert has been verified as:
+When resolving a Microsoft Defender ATP alert, your security staff can specify whether an alert has been verified as:
 
 * A true alert that identifies actual breach activity or threat components
 * A false alert that has incorrectly detected normal activity
@@ -141,7 +141,7 @@ Intune enrolled device data includes:
 
 ## Monitor and manage ASR rule deployment and detections
 
-[Attack Surface Reduction (ASR) rules](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard) help prevent actions and apps that are typically used by exploit-seeking malware to infect machines. These rules control when and how executables can run. For example, you can prevent JavaScript or VBScript from launching a downloaded executable, block Win32 API calls from Office macros, or block processes that run from USB drives.
+[Attack Surface Reduction (ASR) rules](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard) help prevent actions and apps that are typically used by exploit-seeking malware to infect machines. These rules control when and how executables can run. For example, you can prevent JavaScript or VBScript from launching a downloaded executable, block Win32 API calls from Office macros, or block processes that run from USB drives.
 
 ![Attack surface reductions card](./media/security-docs/attack-surface-reduction-rules.png)
 
@@ -198,7 +198,7 @@ To get a list of the selected files with their full paths for exclusion, select 
 
 Logs for the ASR rule **Block credential stealing from the Windows local security authority subsystem (lsass.exe)** capture the source app **lsass.exe**, a normal system file, as the detected file. As a result, the generated list of exclusion paths will include this file. To exclude the file that triggered this rule instead of **lsass.exe**, use the path to the source app instead of the detected file.
 
-To locate the source app, run the following [advanced hunting query](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/advanced-hunting-windows-defender-advanced-threat-protection) for this specific rule (identified by rule ID 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2): 
+To locate the source app, run the following [advanced hunting query](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting) for this specific rule (identified by rule ID 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2):
 
 ```MiscEvents
 | where EventTime > ago(7d)
@@ -210,9 +210,9 @@ To locate the source app, run the following [advanced hunting query](https://doc
 #### Check files for exclusion
 Before excluding a file from ASR, we recommend that you inspect the file to determine if it is indeed not malicious.
 
-To review a file, use the [file information page](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/investigate-files-windows-defender-advanced-threat-protection) on Windows Defender Security Center. The page provides prevalence information as well as the VirusTotal antivirus detection ratio. You can also use the page to submit the file for deep analysis.
+To review a file, use the [file information page](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/investigate-files) on Microsoft Defender Security Center. The page provides prevalence information as well as the VirusTotal antivirus detection ratio. You can also use the page to submit the file for deep analysis.
 
-To locate a detected file in Windows Defender Security Center, search for all ASR detections using the following advanced hunting query:
+To locate a detected file in Microsoft Defender Security Center, search for all ASR detections using the following advanced hunting query:
 
 ```MiscEvents
 | where EventTime > ago(7d)
@@ -220,4 +220,4 @@ To locate a detected file in Windows Defender Security Center, search for all AS
 | project FolderPath, FileName, SHA1, InitiatingProcessFolderPath, InitiatingProcessFileName, InitiatingProcessSHA1
 ```
 
-Use the **SHA1** or the **InitiatingProcessSHA1** in the results to search for the file using the universal search bar in Windows Defender Security Center.
+Use the **SHA1** or the **InitiatingProcessSHA1** in the results to search for the file using the universal search bar in Microsoft Defender Security Center.

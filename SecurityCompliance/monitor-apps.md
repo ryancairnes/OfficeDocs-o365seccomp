@@ -1,5 +1,5 @@
 ---
-title: Monitor and report app status in Microsoft 365 security
+title: View app reports in Microsoft 365 security
 description: Describes how you can gain more insight into cloud app use in your organization
 keywords: security, malware, Microsoft 365, M365, security center, monitor, report, apps
 ms.prod: w10
@@ -14,14 +14,13 @@ ms.topic: article
 search.appverid: met150
 ---
 
-# Monitor and report app status in Microsoft 365 security
-
+# View app reports in Microsoft 365 security
 
 These reports provide more insight into how cloud apps are being used in your organization, including what kinds of apps, their level of risk, and alerts.
 
 ## Monitor email accounts at risk
 
-**Email protection** shows email accounts at risk. You can click an account to investigate further in Windows Defender Security Center.
+**Email protection** shows email accounts at risk. You can click an account to investigate further in Microsoft Defender Security Center.
 
 ![Email protection card](./media/security-docs/email-protection.png)
 
