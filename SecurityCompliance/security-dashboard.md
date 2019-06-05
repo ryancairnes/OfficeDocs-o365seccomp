@@ -40,10 +40,10 @@ The Threat Management Summary widget tells you at a glance how your organization
 
 ![Security Dashboard - Threat Management Summary widget](media/SecDash-ThreatMgmtSummary.png)
 
-The information you'll see in the Threat Management Summary depends on what you subscription includes. The following table describes what information is included for Office 365 Enterprise E3 and Office 365 Enterprise E5.
+The information you'll see in the Threat Management Summary depends on what you subscription includes. The following table describes what information is included for Office 365 E3 and Office 365 E5.
 
 
-|Office 365 Enterprise E3  |Office 365 Enterprise E5  |
+|Office 365 E3  |Office 365 E5  |
 |---------|---------|
 |Malware messages blocked<br/>Phishing messages blocked<br>Messages reported by users<br><br><br><br> |Malware messages blocked<br>Phishing messages blocked<br>Messages reported by users<br>Zero-day malware blocked<br>Advanced phishing messages detected<br>Malicious URLs blocked |
 

@@ -7,7 +7,7 @@ audience: Admin
 ms.topic: hub-page
 ms.service: O365-seccomp
 localization_priority: Normal
-ms.date: 4/30/2019
+ms.date: 05/09/2019
 search.appverid: 
 - MOE150
 - MET150
@@ -37,7 +37,7 @@ Threat protection features are included in all Office 365 subscriptions; however
 |Anti-phishing protection    | [EOP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description)      |
 |Advanced anti-phishing protection    | [Office 365 ATP](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)   |
 |Anti-spam protection     | [EOP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description)       |
-|Zero-hour auto purge (for email)    | [EOP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description) (EOP)        |
+|Zero-hour auto purge (for email)    | [EOP](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description)        |
 |Audit logging (this is used for reporting purposes)    | [Exchange Online](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description)        |
 
 ### Roles and permissions
