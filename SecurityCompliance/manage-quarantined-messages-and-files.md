@@ -24,7 +24,7 @@ As an admin, you can view, release, and delete quarantined messages, and report 
   
 By default, Office 365 sends phishing messages and messages containing malware directly to quarantine. Other filtered messages are sent to users' Junk Email folder unless you set up a policy to send them to quarantine.
   
-You must have global administrator (GA) permissions in Office 365 or be a member of one or more Security & Compliance Center role groups to work with quarantined messages that were sent to other users and to work with quarantined files. See [Permissions in the Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/securitycompliance/permissions-in-the-security-and-compliance-center?redirectSourcePath=%252farticle%252fd10608af-7934-490a-818e-e68f17d0e9c1) for more information on Security & Compliance Center permissions and roles.
+You must have global administrator permissions in Office 365, or be a member of one or more Security & Compliance Center role groups, to work with quarantined messages or quarantined files. See [Permissions in the Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/securitycompliance/permissions-in-the-security-and-compliance-center) for more information.
   
   
 > [!IMPORTANT]
