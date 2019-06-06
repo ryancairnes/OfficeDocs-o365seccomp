@@ -14,7 +14,7 @@ ms.topic: article
 search.appverid: met150
 ---
 
-# View app reports in Microsoft 365 security
+# Apps monitoring and reporting in Microsoft 365 security center
 
 These reports provide more insight into how cloud apps are being used in your organization, including what kinds of apps, their level of risk, and alerts.
 
