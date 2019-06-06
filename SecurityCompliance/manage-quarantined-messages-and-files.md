@@ -185,7 +185,7 @@ You can configure how long messages and files will remain in quarantine before t
   
 ### To modify the quarantine retention period for the default spam filter policy in the Security and Compliance Center
 
-1. Using a work or school account that has global administrator privileges or appropirate Security & Compliance Center roles in your Office 365 organization, sign in to Office 365 and [go to the Security and Compliance Center](go-to-the-securitycompliance-center.md).
+1. Using a work or school account that has global administrator privileges (or appropriate Security & Compliance Center roles) in your Office 365 organization, sign in to Office 365 and [go to the Security and Compliance Center](go-to-the-securitycompliance-center.md).
     
 2. On the left, expand **Threat Management**, choose **Policy**, and then choose **Anti-spam**. <br/>
     > [!TIP]
