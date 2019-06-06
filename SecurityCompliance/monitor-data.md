@@ -14,7 +14,7 @@ ms.topic: article
 search.appverid: met150
 ---
 
-# View data reports in Microsoft 365 security
+# Data monitoring and reporting in Microsoft 365 security center
 
 The **Data** category helps track user activity that could lead to unauthorized data disclosure. These are the rework of existing Office 365 DLP policy reports plus a third-party DLP policy match report.
 

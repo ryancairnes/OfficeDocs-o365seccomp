@@ -1,5 +1,5 @@
 ---
-title: Monitor and report security status in Microsoft 365 security center
+title: View reports on security status in Microsoft 365 security center
 description: Describes how Microsoft 365 security center provides at a glance summary of protection and security status.
 keywords: security, malware, Microsoft 365, M365, security center, monitor, report, status
 ms.prod: w10
@@ -14,7 +14,7 @@ ms.topic: article
 search.appverid: met150
 ---
 
-# Reports in Microsoft 365 security center
+# Monitor and view reports in Microsoft 365 security center
 
 The Microsoft 365 security center provides at a glance summary of protection and security status across your Microsoft 365 environment.
 

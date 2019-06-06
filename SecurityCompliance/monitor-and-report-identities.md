@@ -14,7 +14,7 @@ ms.topic: article
 search.appverid: met150
 ---
 
-# View identity reports in Microsoft 365 security
+# Identity monitoring and reporting in Microsoft 365 security center
 
 You can monitor the identities in your organization and keep track of suspicious or risky behaviors. In the **Identities** category of **Reports**, you can track:
 

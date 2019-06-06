@@ -14,7 +14,7 @@ ms.topic: article
 search.appverid: met150
 ---
 
-# View device reports in Microsoft 365 security
+# Device monitoring and reporting in Microsoft 365 security center
 
 Keep your devices secure, up-to-date, and spot potential threats in the Microsoft 365 security center.
 

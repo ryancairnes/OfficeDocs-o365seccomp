@@ -492,11 +492,12 @@
 ## [Search for eDiscovery activities in the audit log](search-for-ediscovery-activities-in-the-audit-log.md)
 
 # Monitor security and compliance
-## [Microsoft 365 security center reports](monitoring-and-reporting.md)
-### [Identity reports in Microsoft 365 security](monitor-and-report-identities.md)
-### [Data reports in Microsoft 365 security](monitor-data.md)
-### [Device reports in Microsoft 365 security](monitor-devices.md)
-### [App reports in Microsoft 365 security](monitor-apps.md)
+## Microsoft 365 security center
+### [Monitor and view reports](monitoring-and-reporting.md)
+### [Identity monitoring and reporting](monitor-and-report-identities.md)
+### [Data monitoring and reporting](monitor-data.md)
+### [Device monitoring and reporting](monitor-devices.md)
+### [App monitoring and reporting](monitor-apps.md)
 ## [Alert policies](alert-policies.md)
 ### [Create a schedule for a report](create-a-schedule-for-a-report.md)
 ### [Manage schedules for multiple reports](manage-schedules-for-multiple-reports.md)

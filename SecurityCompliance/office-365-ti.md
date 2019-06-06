@@ -64,7 +64,7 @@ Use the following resources to learn more about threat investigation and respons
     
 - [Use Attack Simulator to simulate attacks and increase user awareness](attack-simulator.md)
     
-- [Integrate Threat Investigation and Response capabilities with Windows Defender Advanced Threat Protection](integrate-office-365-ti-with-wdatp.md)
+- [Integrate Threat Investigation and Response capabilities with Microsoft Defender Advanced Threat Protection](integrate-office-365-ti-with-wdatp.md)
     
 ## Related topics
 
