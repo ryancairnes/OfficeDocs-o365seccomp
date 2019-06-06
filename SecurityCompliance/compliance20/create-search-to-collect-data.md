@@ -21,13 +21,13 @@ description: ""
 
 On the **Searches** tab in your case, you can create a new search by clicking **New search** and following the wizard.
 
-## Name your search and give description
+## Name your search and give it a description
 
 Each search with a case should have a unique name. You can optionally provide a description for your search. 
 
-## Define your conditions
+## Define your search query and conditions
 
-You can define the conditions for your search using the pre-built condition cards or using Keyword Query Language (KQL). For more information, see [Build search queries](building-search-queries.md).
+You can define the keywords query and any conditions for the search by using the pre-built condition cards or using Keyword Query Language (KQL). For more information, see [Build search queries](building-search-queries.md).
 
 ## Choose the custodians to search from
 
