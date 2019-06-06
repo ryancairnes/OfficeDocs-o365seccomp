@@ -23,4 +23,6 @@ After Twitter data is imported, you can apply Office 365 compliance features suc
 (From website: 
 Communication is powerful with Instant Bloomberg, the leading chat tool used by the global financial community. Completely integrated with the Bloomberg Terminal, our unique chat-parsing technology lets you capture chat text, incorporate crucial deal details and send them directly to your trading platform. All chats are archived and auditable, enabling you to meet compliance requirements. You can share screens, data sets, charts or Excel files through Instant Bloomberg to collaborate quickly and easily with colleagues and trading partners.)
 
+While market participants rely on the security, stability and consistency of the Instant Bloomberg chat service to view securities, share information and engage in trade negotiations, compliance officers want a better way to manage these communications.
+
 "The SSH protocol (also referred to as Secure Shell) is a method for secure remote login from one computer to another. It provides several alternative options for strong authentication, and it protects the communications security and integrity with strong encryption. It is a secure alternative to the non-protected login protocols (such as telnet, rlogin) and insecure file transfer methods (such as FTP). "
