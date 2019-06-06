@@ -218,10 +218,10 @@
 ### [SIEM integration with Office 365 ATP](siem-integration-with-office-365-ti.md)
 ## How ATP works
 ### [How ATP Safe Links works](how-atp-safe-links-works.md)
-### [Dynamic Delivery and previewing details](dynamic-delivery-and-previewing.md)
 ### [How ATP Safe Attachments works](how-atp-safe-attachments-works.md)
-### [About Threat investigation and response](office-365-ti.md)
+#### [Dynamic Delivery and previewing details](dynamic-delivery-and-previewing.md)
 ### [How Threat Investigation and Response works](get-started-with-ti.md)
+#### [About Threat investigation and response](office-365-ti.md)
 ### [How Automated Investigation and Response works](automated-investigation-response-office.md)
 ### [Identify suspicious messages in Outlook.com and Outlook on the web](unverified-sender-feature.md)
 
