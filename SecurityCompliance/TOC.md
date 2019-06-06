@@ -10,7 +10,6 @@
 ## [Go to the Security & Compliance Center](go-to-the-securitycompliance-center.md)
 ### [Permissions in the Security & Compliance Center](permissions-in-the-security-and-compliance-center.md)
 ### [Give users access to the Security & Compliance Center](grant-access-to-the-security-and-compliance-center.md)
-## [Security Dashboard overview](security-dashboard.md)
 ## [Use your free Azure Active Directory subscription](use-your-free-azure-ad-subscription-in-office-365.md)
 ## [Plan for security and compliance in Office 365](plan-for-security-and-compliance.md)
 ## [Chief Information Security Officer (CISO) workshop training](ciso-workshop.md)
@@ -180,12 +179,19 @@
 ### [Use DKIM to validate outbound email](use-dkim-to-validate-outbound-email.md)
 ### [Support for validation of DKIM signed messages](support-for-validation-of-dkim-signed-messages.md)
 ### [Use DMARC to validate email](use-dmarc-to-validate-email.md)
-## [Smart reports and insights in the Security & Compliance Center](reports-and-insights-in-security-and-compliance.md) 
+## [Smart reports and insights in the Security & Compliance Center](reports-and-insights-in-security-and-compliance.md)
+### [Security Dashboard overview](security-dashboard.md) 
+#### [Walkthrough - From a detailed report to an insight](from-a-detailed-report-to-an-insight.md)
+#### [Walkthrough - From an insight to a detailed report](from-an-insight-to-a-detailed-report.md)
+#### [Walkthrough - From a dashboard to an insight](from-a-dashboard-to-an-insight.md)
+#### [Create a schedule for a report](create-a-schedule-for-a-report.md)
+#### [Manage schedules for multiple reports](manage-schedules-for-multiple-reports.md)
+#### [Set up and download a custom report](set-up-and-download-a-custom-report.md)
+#### [Download existing reports](download-existing-reports.md)
+### [Enable or disable safety tips in Office 365](enable-or-disable-safety-tips.md)
 ### [View information about malicious files](malicious-files-detected-in-spo-odb-or-teams.md)
 ### [View email security reports in the Security & Compliance Center](view-email-security-reports.md)
-### [Walkthrough - From a detailed report to an insight](from-a-detailed-report-to-an-insight.md)
-### [Walkthrough - From an insight to a detailed report](from-an-insight-to-a-detailed-report.md)
-### [Walkthrough - From a dashboard to an insight](from-a-dashboard-to-an-insight.md)
+
 # [Advanced Threat Protection ](office-365-atp.md)
 ## ATP setup tasks for admins
 ### Global Administrator setup tasks
@@ -213,7 +219,7 @@
 ## How ATP works
 ### [How ATP Safe Links works](how-atp-safe-links-works.md)
 ### [Dynamic Delivery and previewing details](dynamic-delivery-and-previewing.md)
-## [How ATP Safe Attachments works](how-atp-safe-attachments-works.md)
+### [How ATP Safe Attachments works](how-atp-safe-attachments-works.md)
 ### [About Threat investigation and response](office-365-ti.md)
 ### [How Threat Investigation and Response works](get-started-with-ti.md)
 ### [How Automated Investigation and Response works](automated-investigation-response-office.md)
@@ -484,11 +490,6 @@
 ### [Monitor devices in Microsoft 365 security](monitor-devices.md)
 ### [Monitor apps in Microsoft 365 security](monitor-apps.md)
 ## [Alert policies](alert-policies.md)
-### [Create a schedule for a report](create-a-schedule-for-a-report.md)
-### [Manage schedules for multiple reports](manage-schedules-for-multiple-reports.md)
-### [Set up and download a custom report](set-up-and-download-a-custom-report.md)
-### [Download existing reports](download-existing-reports.md)
-## [Enable or disable safety tips in Office 365](enable-or-disable-safety-tips.md)
 
 # Mail flow
 ## [Enable the Report Message add-in](enable-the-report-message-add-in.md)
