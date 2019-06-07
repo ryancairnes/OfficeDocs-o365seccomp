@@ -33,14 +33,14 @@ This panel can be toggled on/off to display various metadata associated with the
 
 ## Native view
 
-The Native viewer displays the richest view of a document. It supports hundreds of file types and is meant to display the truest to native experience possible. For Microsoft Office files, for example, the viewer leverages Office Online in order to display content such as document comments, Excel formulas, hidden rows/columns, PowerPoint notes, etc. For more information regarding the Office Online viewers, visit here \[need link\]
+The Native viewer displays the richest view of a document. It supports hundreds of file types and is meant to display the truest to native experience possible. For Microsoft Office files, the viewer uses the web version of Office apps to display content such as document comments, Excel formulas, hidden rows/columns, and PowerPoint notes.
 
 ![Native view
 ](../media/Reviewimage3.png)
 
 ## Text view
 
-The Text viewer provides a view of the extracted text of a file. It ignores any embedded images and formatting but will be a very performant view if a user is trying to understand the content quickly. Text view also includes other features:
+The Text viewer provides a view of the extracted text of a file. It ignores any embedded images and formatting but is very effective if you are trying to understand the content quickly. Text view also includes these features:
 
   - Line counter makes it easier to reference specific portions of a document
 
