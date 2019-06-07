@@ -100,7 +100,7 @@
 ### [Use network upload to import RMS-encrypted PST files](use-network-upload-to-import-rms-encrypted-pst-files.md)
 ### [FAQ about importing PST files](faqimporting-pst-files-to-office-365.md)
 ### [Archive third-party data in Office 365](archiving-third-party-data.md)
-#### [Use a sample connecector to archive Facebook data in Office 365 (preview)](archive-facebook-data-with-sample-connector.md)
+#### [Use a sample connector to archive Facebook data in Office 365 (preview)](archive-facebook-data-with-sample-connector.md)
 #### [Use a sample connector to archive Twitter data](archive-twitter-data-with-sample-connector.md)
 #### [Work with a partner to archive third-party data](work-with-partner-to-archive-third-party-data.md)
 ## Store data
