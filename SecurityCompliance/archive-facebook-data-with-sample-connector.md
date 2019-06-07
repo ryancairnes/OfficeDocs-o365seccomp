@@ -14,7 +14,7 @@ description: "Administrators can set up a native connector to import third-party
 
 # Use a sample connector to archive Facebook data in Office 365 (Preview)
 
-The sample connector feature to archive Facebook data in Office 365 is in Preview..
+The sample connector feature to archive Facebook data in Office 365 is in Preview.
 
 Use a sample connector in the Security & Compliance Center in Office 365 to import and archive data from a third-party data source such as Facebook Business pages, LinkedIn, Twitter, and Instant Bloomberg. After you set up and configure a sample connector, it connects to the third-party data source (on a scheduled basis), converts the content of an item to an email message format, and then imports those items to a mailbox in Office 365.
 
