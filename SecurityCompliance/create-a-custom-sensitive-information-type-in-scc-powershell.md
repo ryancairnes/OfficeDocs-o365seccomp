@@ -348,7 +348,7 @@ To upload your rule package, do the following steps:
     Get-DlpSensitiveInformationTypeRulePackage
     ``` 
 
-  - Run the following command and verify the sensitive information type is listed:
+  - Run the [Get-DlpSensitiveInformationType](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/get-dlpsensitiveinformationtype?view=exchange-ps) cmdlet to verify the sensitive information type is listed:
 
     ```
     Get-DlpSensitiveInformationType
@@ -356,7 +356,7 @@ To upload your rule package, do the following steps:
 
     For custom sensitive information types, the Publisher property value will be something other than Microsoft Corporation.
 
-  - Replace \<Name\> with the Name value of the sensitive information type (for example, Employee ID) and run the following command:
+  - Replace \<Name\> with the Name value of the sensitive information type (example: Employee ID) and run the [Get-DlpSensitiveInformationType](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/get-dlpsensitiveinformationtype?view=exchange-ps) cmdlet:
 
     ```
     Get-DlpSensitiveInformationType -Identity "<Name>"
@@ -402,11 +402,12 @@ If a custom sensitive information type contains an issue that may affect perform
 
 DLP uses the search crawler to identify and classify sensitive information in site content. Content in SharePoint Online and OneDrive for Business sites is recrawled automatically whenever it's updated. But to identify your new custom type of sensitive information in all existing content, that content must be recrawled.
   
-In Office 365, you can't manually request a recrawl of an entire tenant, but you can do this for a site collection, list, or library - see [Manually request crawling and re-indexing of a site, a library or a list](https://support.office.com/article/9afa977d-39de-4321-b4ca-8c7c7e6d264e).
+In Office 365, you can't manually request a recrawl of an entire tenant, but you can do this for a site collection, list, or library - see [Manually request crawling and re-indexing of a site, a library or a list](https://docs.microsoft.com/sharepoint/crawl-site-content).
   
 ## Remove a custom sensitive information type
 
-**Note**: Before your remove a custom sensitive information type, verify that no DLP policies or Exchange mail flow rules (also known as transport rules) still reference the sensitive information type.
+> [!NOTE]
+> Before your remove a custom sensitive information type, verify that no DLP policies or Exchange mail flow rules (also known as transport rules) still reference the sensitive information type.
 
 In Security & Compliance Center PowerShell, there are two methods to remove custom sensitive information types:
 
@@ -416,7 +417,7 @@ In Security & Compliance Center PowerShell, there are two methods to remove cust
 
 1. [Connect to Security & Compliance Center PowerShell](http://go.microsoft.com/fwlink/p/?LinkID=799771)
 
-2. To remove a custom rule package, use the following syntax:
+2. To remove a custom rule package, use the [Remove-DlpSensitiveInformationTypeRulePackage](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/remove-dlpsensitiveinformationtyperulepackage?view=exchange-ps) cmdlet:
 
     ```
     Remove-DlpSensitiveInformationTypeRulePackage -Identity "RulePackageIdentity"
@@ -434,13 +435,13 @@ In Security & Compliance Center PowerShell, there are two methods to remove cust
 
 3. To verify that you've successfully removed a custom sensitive information type, do any of the following steps:
 
-  - Run the following command and verify the rule package is no longer listed:
+  - Run the [Get-DlpSensitiveInformationTypeRulePackage](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/get-dlpsensitiveinformationtyperulepackage?view=exchange-ps) cmdlet and verify the rule package is no longer listed:
 
     ```
     Get-DlpSensitiveInformationTypeRulePackage
     ``` 
 
-  - Run the following command and verify the sensitive information types in the removed rule package are no longer listed:
+  - Run the [Get-DlpSensitiveInformationType](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/get-dlpsensitiveinformationtype?view=exchange-ps) cmdlet to verify the sensitive information types in the removed rule package are no longer listed:
 
     ```
     Get-DlpSensitiveInformationType
@@ -448,7 +449,7 @@ In Security & Compliance Center PowerShell, there are two methods to remove cust
 
     For custom sensitive information types, the Publisher property value will be something other than Microsoft Corporation.
 
-  - Replace \<Name\> with the Name value of the sensitive information type (for example, Employee ID) and run the following command to verify the sensitive information type is no longer listed:
+  - Replace \<Name\> with the Name value of the sensitive information type (for example, Employee ID) and run the [Get-DlpSensitiveInformationType](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/get-dlpsensitiveinformationtype?view=exchange-ps) cmdlet to verify the sensitive information type is no longer listed:
 
     ```
     Get-DlpSensitiveInformationType -Identity "<Name>"
@@ -468,9 +469,10 @@ To connect to Security & Compliance Center PowerShell, see [Connect to Security 
 
 #### Step 1: Export the existing rule package to an XML file
 
-**Note**: If you have a copy of the XML file (for example, you just created and imported it), you can skip to the next step to modify the XML file.
+> [!NOTE]
+> If you have a copy of the XML file (for example, you just created and imported it), you can skip to the next step to modify the XML file.
 
-1. If you don't already know it, run the following command to find the name of the custom rule package:
+1. If you don't already know it, run the [Get-DlpSensitiveInformationTypeRulePackage](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/get-dlpsensitiveinformationtype?view=exchange-ps) cmdlet to find the name of the custom rule package:
 
     ```
     Get-DlpSensitiveInformationTypeRulePackage
@@ -508,18 +510,10 @@ Sensitive information types in the XML file and other elements in the file are d
 
 #### Step 3: Import the updated XML file back into the existing rule package
 
-To import the updated XML back into the existing rule package, use the following syntax:
+To import the updated XML back into the existing rule package, use the [Set-DlpSensitiveInformationTypeRulePackage](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/set-dlpsensitiveinformationtyperulepackage?view=exchange-ps) cmdlet:
 
 ```
-Set-DlpSensitiveInformationTypeRulePackage -Identity "RulePackageIdentity" -FileData (Get-Content -Path "PathToUnicodeXMLFile" -Encoding Byte)
-```
-
-You can use the Name value or the `RulePack id` (GUID) value to identify the rule package.
-
-This example uploads the updated Unicode XML file named MyUpdatedRulePack.xml from C:\My Documents into the existing rule package named "Employee ID Custom Rule Pack".
-
-```
-Set-DlpSensitiveInformationTypeRulePackage -Identity "Employee ID Custom Rule Pack" -FileData (Get-Content -Path "C:\My Documents\MyUpdatedRulePack.xml" -Encoding Byte)
+Set-DlpSensitiveInformationTypeRulePackage -FileData ([Byte[]]$(Get-Content -Path "C:\My Documents\External Sensitive Info Type Rule Collection.xml" -Encoding Byte -ReadCount 0))
 ```
 
 For detailed syntax and parameter information, see [Set-DlpSensitiveInformationTypeRulePackage](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/set-dlpsensitiveinformationtyperulepackage).
