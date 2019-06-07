@@ -36,9 +36,9 @@ But if your organization needs to retain mailbox content for former employees, y
 
 In addition to Litigation Hold, using the new Office 365 retention policy feature in the Security & Compliance Center is another way to make a mailbox inactive. To use a retention policy to make an inactive mailbox: 
   
-- It has to be applied to Exchange mailboxes or Skype for Business locations (because Skype-related content is stored in the user's mailbox). 
-    
 - It has to be configured to retain content or retain and then delete content. If a retention policy is configured to just delete content, a mailbox that the policy is applied to won't become inactive when the mailbox is deleted.
+
+- It has to be applied to Exchange mailboxes or Skype for Business locations (because Skype-related content is stored in the user's mailbox). 
     
 - It can be query-based so that it retains only items that match a search query. 
     
@@ -67,7 +67,7 @@ For more information about eDiscovery cases and holds, see [eDiscovery cases](ed
   
 ## Inactive mailboxes and Office 365 labels
 
-Labels in Office 365 help you classify email data in your organization for governance, and enforce retention rules based on that classification. A label can be applied to an email item either manually by users or automatically by administrators, and an email item can only have single label assigned to it. If a single email item in a user's mailbox has a label assigned to it and the mailbox or the user's Office 365 account is deleted, the mailbox will become an inactive mailbox. Similar to eDiscovery case holds, we don't recommend using labels to make a mailbox inactive. Instead, we recommend that you use a Litigation Hold or an Office 365 retention policy. Be aware that in the case of labels, you might not realize that a label has been applied to an email item and then inadvertently make an inactive mailbox when you delete the user's account. 
+Labels in Office 365 help you classify email data in your organization for governance, and enforce retention rules based on that classification. A label can be applied to an email item either manually by users or automatically by administrators, and an email item can only have single label assigned to it. If a single email item in a user's mailbox has a label assigned to it (and it's configured to retain or retain and then delete the item) and the mailbox or the user's Office 365 account is deleted, the mailbox will become an inactive mailbox. Similar to eDiscovery case holds, we don't recommend using labels to make a mailbox inactive. Instead, we recommend that you use a Litigation Hold or an Office 365 retention policy. Be aware that in the case of labels, you might not realize that a label has been applied to an email item and then inadvertently make an inactive mailbox when you delete the user's account. 
   
 For more information about labels, see [Overview of labels in Office 365](labels.md).
   
@@ -85,10 +85,10 @@ The following table summarizes the process of making an inactive mailbox for dif
   
 |**To…**|**Do this...**|**Result**|
 |:-----|:-----|:-----|
-|Retain mailbox content indefinitely after an employee leaves the organization  <br/> | Place the mailbox on Litigation Hold or apply an Office 365 retention policy to the mailbox.  <br/>  Don't specify a hold duration for the Litigation Hold or don't configure the Office 365 retention policy to delete items; alternatively you can use a retention policy that retains items forever.  <br/>  Remove the user's Office 365 account.  <br/> |All content in the inactive mailbox, including items in the Recoverable Items folder, is retained indefinitely.  <br/> |
+|Retain mailbox content indefinitely after an employee leaves the organization  <br/> | Place the mailbox on Litigation Hold or apply an Office 365 retention policy (that's configured to retain content) to the mailbox.  <br/>  Don't specify a hold duration for the Litigation Hold or don't configure the Office 365 retention policy to delete items; alternatively you can use a retention policy that retains items forever.  <br/>  Remove the user's Office 365 account.  <br/> |All content in the inactive mailbox, including items in the Recoverable Items folder, is retained indefinitely.  <br/> |
 |Retain mailbox content for a specific period after an employee leaves the organization and then delete it  <br/> | Apply an Office 365 retention policy to the mailbox.  <br/>  Configure the retention policy to retain and then delete items when the retention period expires.  <br/>  Remove the user's Office 365 account.  <br/> |When the retention period for a mailbox item expires, the item is moved to the Recoverable Items folder and then it's permanently deleted (purged) from the inactive mailbox when the deleted item retention period (for Exchange mailboxes) expires. The retention period of the Office 365 retention policy can be configured based on the original date a mailbox item was received or created, or when it was last modified.  <br/> |
    
-**NOTE:** If a Litigation Hold is already placed on a mailbox, or if an Office 365 retention policy is already applied to it, then all you have to do is delete the corresponding Office 365 user account to create an inactive mailbox. 
+**NOTE:** If a Litigation Hold is already placed on a mailbox, or if an Office 365 retention policy (that's configured to retain or retain and then delete content) is already applied to the mailbox, then all you have to do is delete the corresponding Office 365 user account to create an inactive mailbox. 
   
 ## Managing inactive mailboxes
 
