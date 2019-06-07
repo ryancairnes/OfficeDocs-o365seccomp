@@ -3,7 +3,7 @@ title: "How to identify the type of hold placed on an Exchange Online mailbox"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 6/22/2018
+ms.date: 
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
