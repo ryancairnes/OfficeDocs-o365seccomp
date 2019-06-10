@@ -10,7 +10,6 @@
 ## [Go to the Security & Compliance Center](go-to-the-securitycompliance-center.md)
 ### [Permissions in the Security & Compliance Center](permissions-in-the-security-and-compliance-center.md)
 ### [Give users access to the Security & Compliance Center](grant-access-to-the-security-and-compliance-center.md)
-## [Security Dashboard overview](security-dashboard.md)
 ## [Use your free Azure Active Directory subscription](use-your-free-azure-ad-subscription-in-office-365.md)
 ## [Plan for security and compliance in Office 365](plan-for-security-and-compliance.md)
 ## [Chief Information Security Officer (CISO) workshop training](ciso-workshop.md)
@@ -77,19 +76,20 @@
 #### [Set up Azure Rights Management for the previous version of Office 365 Message Encryption](set-up-azure-rms-for-previous-version-message-encryption.md)
 
 # Records management
-## [File plan manager](file-plan-manager.md)
-## [Retention labels](labels.md)
-### [Comply with SEC Rule 17a-4](use-exchange-online-to-comply-with-sec-rule-17a-4.md)
+## [Records management](records-management.md)
+## File plan
+### [File plan manager](file-plan-manager.md)
+### [Retention labels](labels.md)
 ### [Create and publish retention labels by using PowerShell](https://docs.microsoft.com/en-us/office365/securitycompliance/bulk-create-publish-labels-using-powershell)
-## [Event-based retention](event-driven-retention.md)
-### [Automate event-based retention](automate-event-driven-retention.md)
-## [Disposition reviews](disposition-reviews.md)
-## Monitor records management
-### [View the data governance reports](view-the-data-governance-reports.md)
-### [View label activity for documents](view-label-activity-for-documents.md)
 ### [View label usage with label analytics](label-analytics.md)
-## More information about records management
-### [Watch videos from the Microsoft Data Governance team](https://go.microsoft.com/fwlink/?linkid=867039)
+### [View label activity for documents](view-label-activity-for-documents.md)
+### [View the data governance reports](view-the-data-governance-reports.md)
+## Events
+### [Event-based retention](event-driven-retention.md)
+### [Automate event-based retention](automate-event-driven-retention.md)
+## [Disposition](disposition-reviews.md)
+## More about records management
+### [Watch videos about records management](https://go.microsoft.com/fwlink/?linkid=867039)
 
 # Manage data governance
 ## [Import data](importing-pst-files-to-office-365.md)
@@ -100,7 +100,7 @@
 ### [Use network upload to import RMS-encrypted PST files](use-network-upload-to-import-rms-encrypted-pst-files.md)
 ### [FAQ about importing PST files](faqimporting-pst-files-to-office-365.md)
 ### [Archive third-party data in Office 365](archiving-third-party-data.md)
-#### [Use a sample connecector to archive Facebook data in Office 365 (preview)](archive-facebook-data-with-sample-connector.md)
+#### [Use a sample connector to archive Facebook data](archive-facebook-data-with-sample-connector.md)
 #### [Use a sample connector to archive Twitter data](archive-twitter-data-with-sample-connector.md)
 #### [Work with a partner to archive third-party data](work-with-partner-to-archive-third-party-data.md)
 ## Store data
@@ -179,12 +179,19 @@
 ### [Use DKIM to validate outbound email](use-dkim-to-validate-outbound-email.md)
 ### [Support for validation of DKIM signed messages](support-for-validation-of-dkim-signed-messages.md)
 ### [Use DMARC to validate email](use-dmarc-to-validate-email.md)
-## [Smart reports and insights in the Security & Compliance Center](reports-and-insights-in-security-and-compliance.md) 
+## [Smart reports and insights in the Security & Compliance Center](reports-and-insights-in-security-and-compliance.md)
+### [Security Dashboard overview](security-dashboard.md) 
+#### [Walkthrough - From a detailed report to an insight](from-a-detailed-report-to-an-insight.md)
+#### [Walkthrough - From an insight to a detailed report](from-an-insight-to-a-detailed-report.md)
+#### [Walkthrough - From a dashboard to an insight](from-a-dashboard-to-an-insight.md)
+#### [Create a schedule for a report](create-a-schedule-for-a-report.md)
+#### [Manage schedules for multiple reports](manage-schedules-for-multiple-reports.md)
+#### [Set up and download a custom report](set-up-and-download-a-custom-report.md)
+#### [Download existing reports](download-existing-reports.md)
+### [Enable or disable safety tips in Office 365](enable-or-disable-safety-tips.md)
 ### [View information about malicious files](malicious-files-detected-in-spo-odb-or-teams.md)
 ### [View email security reports in the Security & Compliance Center](view-email-security-reports.md)
-### [Walkthrough - From a detailed report to an insight](from-a-detailed-report-to-an-insight.md)
-### [Walkthrough - From an insight to a detailed report](from-an-insight-to-a-detailed-report.md)
-### [Walkthrough - From a dashboard to an insight](from-a-dashboard-to-an-insight.md)
+
 # [Advanced Threat Protection ](office-365-atp.md)
 ## ATP setup tasks for admins
 ### Global Administrator setup tasks
@@ -211,10 +218,10 @@
 ### [SIEM integration with Office 365 ATP](siem-integration-with-office-365-ti.md)
 ## How ATP works
 ### [How ATP Safe Links works](how-atp-safe-links-works.md)
-### [Dynamic Delivery and previewing details](dynamic-delivery-and-previewing.md)
-## [How ATP Safe Attachments works](how-atp-safe-attachments-works.md)
-### [About Threat investigation and response](office-365-ti.md)
+### [How ATP Safe Attachments works](how-atp-safe-attachments-works.md)
+#### [Dynamic Delivery and previewing details](dynamic-delivery-and-previewing.md)
 ### [How Threat Investigation and Response works](get-started-with-ti.md)
+#### [About Threat investigation and response](office-365-ti.md)
 ### [How Automated Investigation and Response works](automated-investigation-response-office.md)
 ### [Identify suspicious messages in Outlook.com and Outlook on the web](unverified-sender-feature.md)
 
@@ -223,21 +230,6 @@
 ## [Detect and Remediate Illicit Consent Grants in Office 365](detect-and-remediate-illicit-consent-grants.md)
 ## [Detect and Remediate Outlook Rules and Custom Forms Injections Attacks in Office 365](detect-and-remediate-outlook-rules-forms-attack.md)
 ## [Responding to a Compromised Email Account in Office 365](responding-to-a-compromised-email-account.md)
-# Records management
-## [Records management](records-management.md)
-## File plan
-### [File plan manager](file-plan-manager.md)
-### [Retention labels](labels.md)
-### [Create and publish retention labels by using PowerShell](https://docs.microsoft.com/en-us/office365/securitycompliance/bulk-create-publish-labels-using-powershell)
-### [View label usage with label analytics](label-analytics.md)
-### [View label activity for documents](view-label-activity-for-documents.md)
-### [View the data governance reports](view-the-data-governance-reports.md)
-## Events
-### [Event-based retention](event-driven-retention.md)
-### [Automate event-based retention](automate-event-driven-retention.md)
-## [Disposition](disposition-reviews.md)
-## More about records management
-### [Watch videos about records management](https://go.microsoft.com/fwlink/?linkid=867039)
 
 # Manage data governance
 ## [Import data](importing-pst-files-to-office-365.md)
@@ -499,11 +491,6 @@
 ### [Device monitoring and reporting](monitor-devices.md)
 ### [App monitoring and reporting](monitor-apps.md)
 ## [Alert policies](alert-policies.md)
-### [Create a schedule for a report](create-a-schedule-for-a-report.md)
-### [Manage schedules for multiple reports](manage-schedules-for-multiple-reports.md)
-### [Set up and download a custom report](set-up-and-download-a-custom-report.md)
-### [Download existing reports](download-existing-reports.md)
-## [Enable or disable safety tips in Office 365](enable-or-disable-safety-tips.md)
 
 # Mail flow
 ## [Enable the Report Message add-in](enable-the-report-message-add-in.md)

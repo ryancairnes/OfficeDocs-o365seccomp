@@ -63,9 +63,9 @@ Explore key learnings about threat protection, security evolution, strategies, a
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtQLS]
 
-## Part 11: Roadmap for Securing Privileged Access (12:29)
+## Part 11: Roadmap for Securing Privileged Access (22:26)
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtLpa]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE36aLB]
 
 ## Part 12: Roadmap for (Not) Petya and Critical Security Hygiene (10:28)
 
