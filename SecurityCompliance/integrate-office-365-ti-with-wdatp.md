@@ -45,7 +45,7 @@ Integrating Office 365 ATP with Microsoft Defender ATP is set up by using both t
     
 3. In the upper right corner of the screen, choose **WDATP Settings**.
     
-4. In the Microsoft Defender ATP connection dialog box, turn on Connect to Microsoft ATP.<br>![Microsoft Defender ATP connection](media/Explorer-WDATPConnection-dialog.png)<br>
+4. In the Windows Defender ATP connection dialog box, turn on Connect to Windows ATP.<br>![Microsoft Defender ATP connection](media/Explorer-WDATPConnection-dialog.png)<br>
     
 5. Enable the connection in the Microsoft Defender Security Center.
 
