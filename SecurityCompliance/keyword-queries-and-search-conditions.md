@@ -115,7 +115,8 @@ The following table lists the contact properties that are indexed and that you c
 |OtherAddress|The value for the **Other** address property.|
 |Surname|The name in the **Last** name property.|
 |Title|The title in the **Job title** property.|
-   
+
+<br/> **Note:** When searching email, site and contact properties, it is not possible to search for items in which the field is empty.  For example, subject:”” will return zero results instead of returning items with an empty subject.
 
 ## Searchable sensitive data types
 
