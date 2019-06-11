@@ -1,5 +1,5 @@
 ---
-title: Monitor and report security status in Microsoft 365 security center
+title: Monitor and view reports in Microsoft 365 security center
 description: Describes how Microsoft 365 security center provides at a glance summary of protection and security status.
 keywords: security, malware, Microsoft 365, M365, security center, monitor, report, status
 ms.prod: w10
@@ -14,15 +14,15 @@ ms.topic: article
 search.appverid: met150
 ---
 
-# Monitor and report security status in Microsoft 365 security center
+# Monitor and view reports in Microsoft 365 security center
 
 The Microsoft 365 security center provides at a glance summary of protection and security status across your Microsoft 365 environment.
 
-The security center includes a **Monitoring & reports** section which features a host of cards covering a variety of areas that security analysts and administrators track as part of their day-to-day operations. On drill-down, cards provide detailed reports and, in some cases, management options.
+The security center includes a **Reports** section which features a host of cards covering a variety of areas that security analysts and administrators track as part of their day-to-day operations. On drill-down, cards provide detailed reports and, in some cases, management options.
 
 ## Customize views
 
-By default, monitoring and report cards are grouped into these categories:
+By default, cards are grouped into these categories:
   
 * [Identities](monitor-and-report-identities.md) – user accounts and credentials
 * [Data](monitor-data.md) – email and document contents
