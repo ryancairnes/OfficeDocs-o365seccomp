@@ -26,9 +26,6 @@ Need to find if a user viewed a specific document or purged an item from their m
 - User activity in SharePoint Online and OneDrive for Business
     
 - User activity in Exchange Online (Exchange mailbox audit logging)
-    
-    > [!IMPORTANT]
-    > Mailbox audit logging must be turned on for each user mailbox before user activity in Exchange Online will be logged. For more information, see [Enable mailbox auditing in Office 365](enable-mailbox-auditing.md).
   
 - Admin activity in SharePoint Online
     
@@ -502,7 +499,9 @@ The following table lists events that result from site administration tasks in S
   
 ### Exchange mailbox activities
   
-The following table lists the activities that can be logged by mailbox audit logging. Mailbox activities performed by the mailbox owner, a delegated user, or an administrator are logged. By default, mailbox auditing in Office 365 isn't turned on. Mailbox audit logging must be turned on for each mailbox before mailbox activity will be logged. For more information, see [Enable mailbox auditing in Office 365](https://go.microsoft.com/fwlink/p/?LinkID=626109).
+The following table lists the activities that can be logged by mailbox audit logging. Mailbox activities performed by the mailbox owner, a delegated user, or an administrator are automatically logged in the Office 365 audit log for up to 90 days. Note that it's possible for an admin to turn off mailbox audit logging for all users in your organizatin. In this case, no mailbox actions for any user are are logged. For more information, see [Manage mailbox auditing](enable-mailbox-auditing.md).
+
+ You can also search for mailbox activities by using the [Search-MailboxAuditLog](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/search-mailboxauditlog) cmdlet in Exchange Online PowerShell. 
   
 |**Friendly name**|**Operation**|**Description**|
 |:-----|:-----|:-----|
@@ -513,7 +512,8 @@ The following table lists the activities that can be logged by mailbox audit log
 |Created mailbox item  <br/> |Create  <br/> |An item is created in the Calendar, Contacts, Notes, or Tasks folder in the mailbox; for example, a new meeting request is created. Note that creating, sending, or receiving a message isn't audited. Also, creating a mailbox folder is not audited.  <br/> |
 |Created new inbox rule in Outlook web app  <br/> |NewInboxRule<br/> |A mailbox owner or other user with access to the mailbox created a new inbox rule in the Outlook web app.<br/> |
 |Deleted messages from Deleted Items folder  <br/> |SoftDelete  <br/> |A message was permanently deleted or deleted from the Deleted Items folder. These items are moved to the Recoverable Items folder. Messages are also moved to the Recoverable Items folder when a user selects it and presses **Shift+Delete**.  <br/> |
-|Labeled message as a record  <br/> |ApplyRecordLabel<br/> |A message was classified as a record. This occurs when a retention label that classifies content as a record is manually or automatically applied to a message.<br/> ||Moved messages to another folder  <br/> |Move  <br/> |A message was moved to another folder.  <br/> |
+|Labeled message as a record  <br/> |ApplyRecordLabel<br/> |A message was classified as a record. This occurs when a retention label that classifies content as a record is manually or automatically applied to a message.<br/> |
+|Moved messages to another folder  <br/> |Move  <br/> |A message was moved to another folder.  <br/> |
 |Moved messages to Deleted Items folder  <br/> |MoveToDeletedItems  <br/> |A message was deleted and moved to the Deleted Items folder.  <br/> |
 |Modified folder permission  <br/> |UpdateFolderPermissions  <br/> |A folder permission was changed. Folder permissions control which users in your organization can access mailbox folders and the messages in the folder.  <br/> |
 |Modified inbox rule from Outlook web app<br/> |SetInboxRule<br/> |A mailbox owner or other user with access to the mailbox modified an inbox rule using the Outlook web app.<br/> |
@@ -522,7 +522,6 @@ The following table lists the activities that can be logged by mailbox audit log
 |Removed permissions from folder<br/> |RemoveFolderPermissions<br/> |A folder permission was removed. Folder permissions control which users in your organization can access folders in a mailbox and the messages located in those folders.<br/> |
 |Sent message using Send As permissions  <br/> |SendAs  <br/> |A message was sent using the SendAs permission. This means another user sent the message as though it came from the mailbox owner.  <br/> |
 |Sent message using Send On Behalf permissions  <br/> |SendOnBehalf  <br/> |A message was sent using the SendOnBehalf permission. This means another user sent the message on behalf of the mailbox owner. The message indicates to the recipient who the message was sent on behalf of and who actually sent the message.  <br/> |
-|Updated delegate access to calendar folder  <br/> |UpdateCalendarDelegation  <br/> |A calendar delegation was assigned to a mailbox. Calendar delegation gives someone else in the same organization permissions to manage the mailbox owner's calendar.  <br/> |
 |Updated inbox rules from Outlook client<br/> |UpdateInboxRules<br/> |A mailbox owner or other user with access to the mailbox modified an inbox rule in the Outlook client.<br/> |
 |Updated message  <br/> |Update  <br/> |A message or its properties was changed.  <br/> |
 |User signed in to mailbox  <br/> |MailboxLogin  <br/> |The user signed in to their mailbox.  <br/> |
