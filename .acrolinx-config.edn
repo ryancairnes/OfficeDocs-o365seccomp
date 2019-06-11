@@ -1,2 +1,2 @@
 {:allowed-branchname-matches ["master"]
- :allowed-filename-matches ["Security*/"]}
+ :allowed-filename-matches ["SecurityCompliance/"]}
