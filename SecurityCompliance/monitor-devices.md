@@ -1,5 +1,5 @@
 ---
-title: Monitor devices in Microsoft 365 security
+title: Device monitoring and reporting in Microsoft 365 security center
 description: Describes how you can keep your devices secure, up-to-date, and spot potential threats in your organization
 keywords: security, malware, Microsoft 365, M365, security center, monitor, report, devices
 ms.prod: w10
@@ -14,35 +14,35 @@ ms.topic: article
 search.appverid: met150
 ---
 
-# Monitor devices in Microsoft 365 security
+# Device monitoring and reporting in Microsoft 365 security center
 
 Keep your devices secure, up-to-date, and spot potential threats in the Microsoft 365 security center.
 
 ## View device alerts
 
-Get up-to-date alerts about breach activity and other threats on your devices from Windows Defender ATP (available with an E5 license). Microsoft 365 security center effectively monitors these alerts at a high level using your preferred workflow.
+Get up-to-date alerts about breach activity and other threats on your devices from Microsoft Defender ATP (available with an E5 license). Microsoft 365 security center effectively monitors these alerts at a high level using your preferred workflow.
 
 ### Monitor high-impact alerts
 
-Each Windows Defender ATP alert has a corresponding severity—high, medium, low, or informational—that indicates its potential impact to your network if left unattended.  
+Each Microsoft Defender ATP alert has a corresponding severity—high, medium, low, or informational—that indicates its potential impact to your network if left unattended.  
 
-Use the **Device alert severity** card to focus specifically on alerts that are more severe and might require immediate response. From this card, you can view more information on the Windows Defender Security Center portal.
+Use the **Device alert severity** card to focus specifically on alerts that are more severe and might require immediate response. From this card, you can view more information on the Microsoft Defender Security Center portal.
 
 ![Device alerts severity card](./media/security-docs/device-alerts-severity.png)
 
 ### Understand sources of alerts
 
-Windows Defender ATP leverages data from a broad range of security sensors and intelligence sources to generate alerts. For example, it can use detection information from Windows Defender Antivirus and third-party antimalware, as well as your own custom threat intelligence provided through the web service API.
+Microsoft Defender ATP leverages data from a broad range of security sensors and intelligence sources to generate alerts. For example, it can use detection information from Windows Defender Antivirus and third-party antimalware, as well as your own custom threat intelligence provided through the web service API.
 
 The **Device alert detection** sources card shows the distribution of alerts by source. This card can help you track activity related to certain sources, particularly your custom sources. You can also use this to focus on alerts coming from sensors that are not configured to automatically block malicious activity or components.
 
 ![Device alert detection sources card](./media/security-docs/device-alert-detection-sources.png)
 
-From this card, you can view more information on the Windows Defender Security Center portal.
+From this card, you can view more information on the Microsoft Defender Security Center portal.
 
 ### Understand the types of threats that trigger alerts
 
-Windows Defender ATP sorts each alert into a category representing a certain stage in the attack chain or a type of threat component. For example, detected threat activity might be categorized into “lateral movement” to indicate that the activity involved an attempt to reach other devices on the network and has likely occurred after attackers have gained an initial foothold. When detected, a threat component might either be classified broadly as “malware” or more specifically as “ransomware”, “credential stealing” or other types of malicious or unwanted software.
+Microsoft Defender ATP sorts each alert into a category representing a certain stage in the attack chain or a type of threat component. For example, detected threat activity might be categorized into “lateral movement” to indicate that the activity involved an attempt to reach other devices on the network and has likely occurred after attackers have gained an initial foothold. When detected, a threat component might either be classified broadly as “malware” or more specifically as “ransomware”, “credential stealing” or other types of malicious or unwanted software.
 
 The **Device threat categories** card shows the distribution of alerts into these categories. You can use this information to identify threat activity, such as attempts at credential theft, which can have more significant impact compared to attempts at social engineering, for example. You can also use this to monitor for potentially destructive threats like ransomware.
 
@@ -50,18 +50,18 @@ The **Device threat categories** card shows the distribution of alerts into thes
 
 ### Monitor active alerts
 
-The **Device alert status** card indicates the number of alerts that have not been resolved and might require attention. From this card, you can view more information on the Windows Defender Security Center portal.
+The **Device alert status** card indicates the number of alerts that have not been resolved and might require attention. From this card, you can view more information on the Microsoft Defender Security Center portal.
 
 ![Device alert status card](./media/security-docs/device-alert-status.png)
 
 ### Monitor classification of resolved alerts
 
-When resolving a Window Defender ATP alert, your security staff can specify whether an alert has been verified as:
+When resolving a Microsoft Defender ATP alert, your security staff can specify whether an alert has been verified as:
 
 * A true alert that identifies actual breach activity or threat components
 * A false alert that has incorrectly detected normal activity
 
-The **Device alert classification** card shows whether your resolved alerts have been classified as true or false alerts. From this card, you can view more information on the Windows Defender Security Center portal.
+The **Device alert classification** card shows whether your resolved alerts have been classified as true or false alerts. From this card, you can view more information on the Microsoft Defender Security Center portal.
 
 Note: In some cases, classification information is unavailable for certain alerts.
 
@@ -80,7 +80,7 @@ The **Device alert determination** card shows the determination provided for eac
 * **Unwanted software** – apps and other software that are not considered malicious, but otherwise violate policy or acceptable use standards
 * **Others** – any other determination that does not fall under the provided types
 
-From this card, you can view more information in Windows Defender security center.
+From this card, you can view more information in Microsoft Defender Security Center.
 
 ![Device alert determination card](./media/security-docs/device-alert-determination.png)
 
@@ -92,7 +92,7 @@ From this card, you can view more information in Windows Defender security cente
 
 ## Monitor and report status of Intune-managed devices
 
-The following monitoring and reports contain data from devices enrolled in Intune. Data from unenrolled devices is not included. Only Global Administrators can view these cards.
+The following reports contain data from devices enrolled in Intune. Data from unenrolled devices is not included. Only Global Administrators can view these cards.
 
 Intune enrolled device data includes:
 
@@ -141,7 +141,7 @@ Intune enrolled device data includes:
 
 ## Monitor and manage ASR rule deployment and detections
 
-[Attack Surface Reduction (ASR) rules](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard) help prevent actions and apps that are typically used by exploit-seeking malware to infect machines. These rules control when and how executables can run. For example, you can prevent JavaScript or VBScript from launching a downloaded executable, block Win32 API calls from Office macros, or block processes that run from USB drives.
+[Attack Surface Reduction (ASR) rules](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard) help prevent actions and apps that are typically used by exploit-seeking malware to infect machines. These rules control when and how executables can run. For example, you can prevent JavaScript or VBScript from launching a downloaded executable, block Win32 API calls from Office macros, or block processes that run from USB drives.
 
 ![Attack surface reductions card](./media/security-docs/attack-surface-reduction-rules.png)
 
@@ -198,7 +198,7 @@ To get a list of the selected files with their full paths for exclusion, select 
 
 Logs for the ASR rule **Block credential stealing from the Windows local security authority subsystem (lsass.exe)** capture the source app **lsass.exe**, a normal system file, as the detected file. As a result, the generated list of exclusion paths will include this file. To exclude the file that triggered this rule instead of **lsass.exe**, use the path to the source app instead of the detected file.
 
-To locate the source app, run the following [advanced hunting query](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/advanced-hunting-windows-defender-advanced-threat-protection) for this specific rule (identified by rule ID 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2): 
+To locate the source app, run the following [advanced hunting query](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting) for this specific rule (identified by rule ID 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2):
 
 ```MiscEvents
 | where EventTime > ago(7d)
@@ -210,9 +210,9 @@ To locate the source app, run the following [advanced hunting query](https://doc
 #### Check files for exclusion
 Before excluding a file from ASR, we recommend that you inspect the file to determine if it is indeed not malicious.
 
-To review a file, use the [file information page](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/investigate-files-windows-defender-advanced-threat-protection) on Windows Defender Security Center. The page provides prevalence information as well as the VirusTotal antivirus detection ratio. You can also use the page to submit the file for deep analysis.
+To review a file, use the [file information page](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/investigate-files) on Microsoft Defender Security Center. The page provides prevalence information as well as the VirusTotal antivirus detection ratio. You can also use the page to submit the file for deep analysis.
 
-To locate a detected file in Windows Defender Security Center, search for all ASR detections using the following advanced hunting query:
+To locate a detected file in Microsoft Defender Security Center, search for all ASR detections using the following advanced hunting query:
 
 ```MiscEvents
 | where EventTime > ago(7d)
@@ -220,4 +220,4 @@ To locate a detected file in Windows Defender Security Center, search for all AS
 | project FolderPath, FileName, SHA1, InitiatingProcessFolderPath, InitiatingProcessFileName, InitiatingProcessSHA1
 ```
 
-Use the **SHA1** or the **InitiatingProcessSHA1** in the results to search for the file using the universal search bar in Windows Defender Security Center.
+Use the **SHA1** or the **InitiatingProcessSHA1** in the results to search for the file using the universal search bar in Microsoft Defender Security Center.
