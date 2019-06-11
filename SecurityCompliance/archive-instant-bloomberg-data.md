@@ -16,23 +16,23 @@ description: "Administrators can set up a native connector to import data from t
 
 The connector feature to archive Instant Bloomberg data in Office 365 is in Preview.
 
-Use a native connector in the Security & Compliance Center in Office 365 to import and archive financial services chat data from [Instant Bloomberg](https://www.bloomberg.com/professional/product/collaboration/) collaboration tool. After you set up and configure a connector, it connects to your organization's Instant Bloomberg account (on a daily basis), converts the content of chat messages to an email message format, and then imports those items to mailboxes in Office 365.
+Use a native connector in the Security & Compliance Center in Office 365 to import and archive financial services chat data from [Instant Bloomberg](https://www.bloomberg.com/professional/product/collaboration/) collaboration tool. After you set up and configure a connector, it connects to your organization's Bloomberg secure FTP site (SFTP) once every day, converts the content of chat messages to an email message format, and then imports those items to mailboxes in Office 365.
 
-After Instant Bloomberg data is imported and located in user mailboxes, you can user Office 365 compliance features such as Litigation Hold, Content Search, In-Place Archiving, Auditing, and Office 365 retention policies to Instant Bloomberg data. For example, you can search third-party data using Content Search or associate it with a custodian in an Advanced eDiscovery case. Using sample connectors to import and archive Twitter data in Office 365 can help your organization stay compliant with government and regulatory policies.
-
-> [!NOTE]
-> At this time, Instant Bloomberg chat messages that are archived in mailboxes won’t be monitored by supervision policies in Office 365.
+After Instant Bloomberg data is stored in user mailboxes, you can use Office 365 compliance features such as Litigation Hold, Content Search, In-Place Archiving, Auditing, and Office 365 retention policies to Instant Bloomberg data. For example, you can search third-party data using Content Search or associate it with a custodian in an Advanced eDiscovery case. Using an Instant Bloomberg connector to import and archive Twitter data in Office 365 can help your organization stay compliant with government and regulatory policies.
 
 ## Overview of archiving Instant Bloomberg data
 
-The following overview explains the implementation process of archiving Instant Bloomberg chat data in Office 365. Note that many of the implementation steps are external to Office 365 and must be completed before you can create the Instant Bloomberg connector in the Security & Compliance Center.
+The following overview explains the process of using a connector to archive Instant Bloomberg chat data in Office 365. 
 
+![Instant Bloomberg import and archive process](media/InstantBloombergDataArchiving.png)
 
 ## Before you begin
 
-- You need to subscribe to [Blooomberg Anywhere](https://www.bloomberg.com/professional/product/remote-access/?bbgsum-page=DG-WS-PROF-PROD-BBA). This is required so that you can log in to Bloomberg Anywhere to access the Bloomberg SFTP site that you have to set up and configure.
+Many of the implementation steps required to archive Instant Bloomberg data are external to Office 365 and must be completed before you can create the connector in the Security & Compliance Center.
 
-- You need to set up a Bloomberg SFTP (Secure file transfer protocol) site. After working with Bloomberg to set up the SFTP site, data from Instant Bloomberg will be uploaded to the SFTP site on a daily basis. The connector you create in Step 2 connects to this SFTP site and transfers the chat data to Office 365 mailboxes. SFTP also encrypts the Instant Bloomberg chat data that is sent to Office 365 mailboxes during the transfer process.
+- Subscribe to [Blooomberg Anywhere](https://www.bloomberg.com/professional/product/remote-access/?bbgsum-page=DG-WS-PROF-PROD-BBA). This is required so that you can log in to Bloomberg Anywhere to access the Bloomberg SFTP site that you have to set up and configure.
+
+- Set up a Bloomberg SFTP (Secure file transfer protocol) site. After working with Bloomberg to set up the SFTP site, data from Instant Bloomberg is uploaded to the SFTP site on a daily basis. The connector you create in Step 2 connects to this SFTP site and transfers the chat data to Office 365 mailboxes. SFTP also encrypts the Instant Bloomberg chat data that is sent to Office 365 mailboxes during the transfer process.
 
     For information about Bloomberg SFTP (also called *BB-SFTP*):
 
@@ -40,15 +40,15 @@ The following overview explains the implementation process of archiving Instant 
     
     - Contact [Bloomberg customer support](https://service.bloomberg.com/portal/sessions/new?utm_source=bloomberg-menu&utm_medium=csc).
 
-    After you work with Bloomberg to set up an SFTP site, Bloomberg will provide some information to you after you respond to the Bloomberg implemenation email message. Save a copy of the following information. You'll use it to set up a connector in Step 3.
+    After you work with Bloomberg to set up an SFTP site, Bloomberg will provide some information to you after you respond to the Bloomberg implementation email message. Save a copy of the following information. You'll use it to set up a connector in Step 3.
 
-    - Firm code
+    - Firm code, which is the username used to log in to the Bloomberg SFTP site.
 
-    - Password for SFTP site
+    - Password for Bloomberg SFTP site
 
     - URL for Bloomberg SFTP site (for example, sftp.bloomberg.com)
 
-    - SFTP port number
+    - Port number for Bloomberg SFTP site
 
 - The user who creates the Instant Bloomberg connector in Step 2 (and who downloads the public keys and IP address in Step 1) must be assigned the Mailbox Import Export role in Exchange Online. This is required to access the **Archive third-party data** page in the Security & Compliance Center. By default, this role isn't assigned to any role group in Exchange Online. You can add the Mailbox Import Export role to the Organization Management role group in Exchange Online. Or you can create a new role group, assign the Mailbox Import Export role, and then add the appropriate users as members. For more information, see the  [Create role groups](https://docs.microsoft.com/Exchange/permissions-exo/role-groups#create-role-groups) or [Modify role groups](https://docs.microsoft.com/Exchange/permissions-exo/role-groups#modify-role-groups) sections in the article "Manage role groups in Exchange Online".
 
@@ -56,7 +56,7 @@ The following overview explains the implementation process of archiving Instant 
 
 The first step is to obtain a copy of the public keys for Secure Shell (SSH) and Pretty Good Privacy (PGP). You'll use these keys in Step 2 to configure the Bloomberg SFTP site to allow the connector (that you create in Step 3) to connect to the SFTP site and transfer the Instant Bloomberg chat data to Office 365 mailboxes. You also obtain an IP address in this step, which you use when configuring the Bloomberg SFTP site.
 
-1.  Go to <https://protection.office.com> and then click **Data governance \> Import** and then click **Archive third-party data**.
+1. Go to <https://protection.office.com> and then click **Data governance \> Import** and then click **Archive third-party data**.
 
 2. On the **Archive third-party data** page, click **Add a connector**, and then click **Instant Bloomberg**.
 
@@ -64,19 +64,19 @@ The first step is to obtain a copy of the public keys for Secure Shell (SSH) and
 
 4. On the **Add credentials for Bloomberg SFTP site** under step 1, click **Download public keys and IP address**.
 
-5. Save a copy of the Keys.txt file to your local computer. This file contains the following three items:
+5. Save a copy of the Keys.txt file to your local computer. This file contains the following three items that will be used to configure the Bloomberg SFTP site in Step 2:
 
-   - SSH public key
+   - SSH public key – This key will be used to configure Secure Shell (SSH) to enable a secure remote login when the connector connects to the Bloomberg SFTP site.
 
-   - PGP public key
+   - PGP public key – This key will be used to configure the encryption of data that's transferred from the Bloomberg SFTP site to Office 365.
 
-   - IP address: 40.124.28.216
+   - IP address – The Bloomberg SFTP site will be configured to accept a connection request only from this IP address, which is used by the Instant Bloomberg connector that you create in Step 3. 
 
-6. Click **Cancel** to close the wizard. You'll come back to this wizard in Step 3 to create the connector.
+6. Click **Cancel** to close the wizard. You come back to this wizard in Step 3 to create the connector.
 
 ## Step 2: Configure the Bloomberg SFTP site so Office 365 can connect to it
 
-The next step is to use the SSH and PGP public keys and the IP address that you obtained in Step 1 to configure SSH authentication and PGP encryption for the Bloomberg SFTP site. This will allow the Instant Bloomberg connector that you create in Step 3 to connect to the Bloomberg SFTP site and transfer Instant Bloomberg data to Office 365. Contact [Bloomberg customer support](https://service.bloomberg.com/portal/sessions/new?utm_source=bloomberg-menu&utm_medium=csc) if you need assitance setting this up.
+The next step is to use the SSH and PGP public keys and the IP address that you obtained in Step 1 to configure SSH authentication and PGP encryption for the Bloomberg SFTP site. This allows the Instant Bloomberg connector that you create in Step 3 to connect to the Bloomberg SFTP site and transfer Instant Bloomberg data to Office 365. Contact [Bloomberg customer support](https://service.bloomberg.com/portal/sessions/new?utm_source=bloomberg-menu&utm_medium=csc) if you need assistance setting this up.
 
 1. Log in to the Bloomberg CCNS control panel using an account for your organization.
 
@@ -86,7 +86,7 @@ The next step is to use the SSH and PGP public keys and the IP address that you 
 
 4. In the **Add Public Key** window, click the **Key Type** dropdown list, and then click **Login**.
 
-5. Copy the entire SSH public key (all characters between, but not including, the double quotation marks) that you downloaded in Step 1, paste it in this field, and then click **Submit**.
+5. Copy the entire SSH public key (all characters between, but not including, the double quotation marks) that you downloaded in Step 1, paste it in this field, and then click **Submit** to save the key.
  
     For example, you would copy the following SSH public key:
 
@@ -96,26 +96,44 @@ The next step is to use the SSH and PGP public keys and the IP address that you 
 
 6. To enable PGP encryption, click **Add** again on the **Public Keys** tab, click the **Key Type** dropdown list, and this time click **Encryption**.
 
-7. Copy the entire PGP public key (all characters between, but not including, the double quotation marks) that you downloaded in Step 1, paste it in this field, and then click **Submit**. 
+7. Copy the entire PGP public key (all characters between, but not including, the double quotation marks) that you downloaded in Step 1, paste it in this field, and then click **Submit** to save the key. 
 
     For example, you would copy the following PGP public key:
 
     ```
     -----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: BCPG C# v1.7.4137.9688\n\nmQENBFz+6UQBCACKC4ilYoVOP5b/F0CO+oQYbag79Ov4NZxM4EKW51lUAvKNExRM\nc1C/gwXm8bghht8GEODckXXqx8qSSXUEeA/ROweXNtD1u1kn7PgYEFUeD/qE739m\nm5lxXF9Vod26AtKQ9Y1EvYoQEltwztAaXg8K8LQzB+tzN079d1cxM5tbiRQLttAh\nOt5amLXuINt8+dWyNas3DfgIBUmwfkwCbUO0ElrIhvvO3A85K97SX9Q6Py0SkfkK\nQpnULuhdjSm+7k7qlVMf0s8e/9jUXYKbMFkxlOoMq052vV0l0VQNSeuKoC+m6+LT\nEPab89AMt6S4Ujum9wTUy1eWNx9vV0y/w8N7ABEBAAG0JDM5MjM4ZTg3LWI1YWIt\nNGVmNi1hNTU5LWFmNTRjNmIwN2I0MokBHAQQAQIABgUCXP7pRAAKCRAJQdjaG//S\nCy70B/wKrR2CcqtZx56yrGJFfVy3niEt16VEA3xJM3D9nX0gmgo85Nh5gkiY3ahH\nnNEmgW5vlCM1gcgFeoZWe8A80G4QoabslSUzLbq9HsHOOAQApsfhrhXpylrAVa4n\nI53XUOxWdOTa4xsOob8hSRADqJbwHPOsoAr2A87TvZ9LSi2Mii5omeTq416CLnoS\nPBAEhelZm+ruy5JhzA1yXvWYFH08wNqSHO3bskdES2yW5SyQmYlcoEztWE0Q0Z+G\nZT3kOa/W2MbcZovFCQIfqhwVfXtIzx5uYUmxgk5cFKUJJMlO0AZK/HwM22xuuIWe\ndMa6OMo/n8tvEBxrLQMdVPlz+hZ6\n=AwmP\n-----END PGP PUBLIC KEY BLOCK-----\n
     ```
+8. Back on the main window of the CCNS control panel, under **Add your IP address here**, enter the following IP address (which is included in Keys.txt file that you downloaded in Step 1) in the **Add address field**.
+
+   ```
+   40.124.28.216
+   ```
 
 ## Step 3: Create an Instant Bloomberg connector
 
+The last step is to create an Instant Bloomberg connector in the Security & Compliance Center. The connector uses the information you provide to connect to the Bloomberg SFTP site and transfer chat messages to the corresponding user mailbox boxes in Office 365. 
 
+1. Go to <https://protection.office.com> and then click **Data governance \> Import** and then click **Archive third-party data**.
 
-## Step 5:
+2. On the **Archive third-party data** page, click **Add a connector**, and then click **Instant Bloomberg**.
 
+3. On the **Terms of service** page, click **Accept**.
 
+4. On the **Add credentials for Bloomberg SFTP site** page, under Step 3, enter the required information in the following boxes and then click **Next**.
 
+    - **Firm code** – Username for the Bloomberg SFTP site.
 
-(From website: 
-Communication is powerful with Instant Bloomberg, the leading chat tool used by the global financial community. Completely integrated with the Bloomberg Terminal, our unique chat-parsing technology lets you capture chat text, incorporate crucial deal details and send them directly to your trading platform. All chats are archived and auditable, enabling you to meet compliance requirements. You can share screens, data sets, charts or Excel files through Instant Bloomberg to collaborate quickly and easily with colleagues and trading partners.)
+    - **Password — Password for Bloomberg SFTP site
 
-While market participants rely on the security, stability and consistency of the Instant Bloomberg chat service to view securities, share information and engage in trade negotiations, compliance officers want a better way to manage these communications.
+    - **SFTP URL** – The URL for Bloomberg SFTP site (for example, sftp.bloomberg.com).
 
-"The SSH protocol (also referred to as Secure Shell) is a method for secure remote login from one computer to another. It provides several alternative options for strong authentication, and it protects the communications security and integrity with strong encryption. It is a secure alternative to the non-protected login protocols (such as telnet, rlogin) and insecure file transfer methods (such as FTP). "
+    - **SFTP port** – The port number for Bloomberg SFTP site.
+
+5. On the **Alternative mailbox** page, type the email address of a mailbox that will be used to store chat messages from Instant Bloomberg that can't be associated with a user mailbox in your organization.
+
+   > [!NOTE]
+   > Every chat message in Instant Bloomberg includes a property called *CorporateEmailAddress*, which contains the your organization's email address for each participant in the chat message. During the import process, the connector attempts to import chat messages to a user mailbox in Office 365 that has the same email addresses that matches the ones in the *CorporateEmailAddress* property. If the there isn't an Office 365 mailbox with the same address as the ones in the *CorporateEmailAddress* property, the connector imports the chat message to the alternative mailbox that you specify on this page. At this time, Instant Bloomberg chat messages archived in the alternative mailbox won’t be monitored by supervision policies in Office 365.
+
+6. Click **Next**, review your settings, and then click **prepare** to create the connector.
+
+7. Go to the **Archive third-party data** page to see the progress of the import process for the new connector.
