@@ -39,6 +39,9 @@ For step-by-step instructions on how to create a Content Search, see [Content Se
 ## Searchable email properties
 
 The following table lists email message properties that can be searched by using the Content Search feature in the Security & Compliance Center or by using the **New-ComplianceSearch** or the **Set-ComplianceSearch** cmdlet. The table includes an example of the  _property:value_ syntax for each property and a description of the search results returned by the examples. You can type these  `property:value` pairs in the keywords box for a Content Search. 
+
+> [!NOTE]
+> When searching email properties, it's not possible to search for items in which the specified property is empty or blank. For example, using the *property:value* pair of **subject:""** to search for email messages with an empty subject line will return zero results. This also applies when searching site and contact properties.
   
 |**Property**|**Property description**|**Examples**|**Search results returned by the examples**|
 |:-----|:-----|:-----|:-----|
@@ -115,8 +118,6 @@ The following table lists the contact properties that are indexed and that you c
 |OtherAddress|The value for the **Other** address property.|
 |Surname|The name in the **Last** name property.|
 |Title|The title in the **Job title** property.|
-
-<br/> **Note:** When searching email, site and contact properties, it is not possible to search for items in which the field is empty.  For example, subject:”” will return zero results instead of returning items with an empty subject.
 
 ## Searchable sensitive data types
 
