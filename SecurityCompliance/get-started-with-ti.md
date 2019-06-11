@@ -91,7 +91,7 @@ Office 365 Threat Invesigation and Response capabilities are included in Office 
   |Use [Threat Explorer (and real-time detections)](threat-explorer.md) to analyze threats  <br/> |Office 365 Global Administrator  <br/> Security Administrator (assigned in the Security &amp; Compliance Center)  <br/> Security Reader (assigned in the Security &amp; Compliance Center)  <br/> |
   |View Incidents (also referred to as Investigations) <br/> Add email messages to an incident  <br/> |Office 365 Global Administrator  <br/> Security Administrator (assigned in the Security &amp; Compliance Center)  <br/> Security Reader (assigned in the Security &amp; Compliance Center)  <br/> |
   |Trigger email actions in an incident  <br/> Find and delete suspicious email messages  <br/> |Office 365 Global Administrator or Security Administrator  <br/> One of the roles above and Search and Purge (assigned in the Security &amp; Compliance Center)  <br/> |
-  |Integrate Office 365 Advanced Threat Protection Plan 2 with Windows Defender Advanced Threat Protection  <br/> Integrate Office 365 Advanced Threat Protection Plan 2 with a SIEM server  <br/> |Office 365 Global Administrator  <br/> Security Administrator (assigned in the Security &amp; Compliance Center)  <br/> Appropriate role assigned in additional applications (such as Windows Defender Advanced Threat Protection portal or a SIEM server)  <br/> |
+  |Integrate Office 365 Advanced Threat Protection Plan 2 with Microsoft Defender ATP  <br/> Integrate Office 365 Advanced Threat Protection Plan 2 with a SIEM server  <br/> |Office 365 Global Administrator  <br/> Security Administrator (assigned in the Security &amp; Compliance Center)  <br/> Appropriate role assigned in additional applications (such as Microsoft Defender Security Center or a SIEM server)  <br/> |
    
 For information about roles, role groups, and permissions, see [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md).
     
@@ -101,7 +101,7 @@ For information about roles, role groups, and permissions, see [Permissions in t
     
 - [Find and investigate malicious email that was delivered (Office 365 Threat Investigation and Response)](investigate-malicious-email-that-was-delivered.md)
     
-- [Integrate Office 365 Threat Investigation and Response with Windows Defender Advanced Threat Protection](integrate-office-365-ti-with-wdatp.md)
+- [Integrate Office 365 Threat Investigation and Response with Microsoft Defender Advanced Threat Protection](integrate-office-365-ti-with-wdatp.md)
     
 - [Learn about Attack Simulator](attack-simulator.md)
   

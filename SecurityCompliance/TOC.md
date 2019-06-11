@@ -100,7 +100,7 @@
 ### [Use network upload to import RMS-encrypted PST files](use-network-upload-to-import-rms-encrypted-pst-files.md)
 ### [FAQ about importing PST files](faqimporting-pst-files-to-office-365.md)
 ### [Archive third-party data in Office 365](archiving-third-party-data.md)
-#### [Use a sample connector to archive Facebook data in Office 365 (preview)](archive-facebook-data-with-sample-connector.md)
+#### [Use a sample connector to archive Facebook data](archive-facebook-data-with-sample-connector.md)
 #### [Use a sample connector to archive Twitter data](archive-twitter-data-with-sample-connector.md)
 #### [Work with a partner to archive third-party data](work-with-partner-to-archive-third-party-data.md)
 ## Store data
@@ -204,7 +204,7 @@
 #### [ATP for SharePoint, OneDrive, and Microsoft Teams](atp-for-spo-odb-and-teams.md)
 ## Manage your security - ATP post-setup
 ## [Understanding latest attack campaigns with threat analytics](latest-attack-campaigns.md)
-## [Hunting in Microsoft 365 ATP](hunting.md)
+## [Hunting in Microsoft 365](hunting.md)
 ## [View and read your ATP reports](view-reports-for-atp.md)
 ## [What ATP Safe Links warning pages mean](atp-safe-links-warning-pages.md)
 ## [Use Threat Trackers](threat-trackers.md)
@@ -214,7 +214,7 @@
 ## [Threat Explorer (and real-time detections)](threat-explorer.md)
 ### [Threat Explorer views](threat-explorer-views.md)
 ## Integration for greater security
-### [Integrate Office 365 ATP with Windows Defender Advanced Threat Protection](integrate-office-365-ti-with-wdatp.md)
+### [Integrate Office 365 ATP with Microsoft Defender ATP](integrate-office-365-ti-with-wdatp.md)
 ### [SIEM integration with Office 365 ATP](siem-integration-with-office-365-ti.md)
 ## How ATP works
 ### [How ATP Safe Links works](how-atp-safe-links-works.md)
@@ -484,11 +484,12 @@
 ## [Search for eDiscovery activities in the audit log](search-for-ediscovery-activities-in-the-audit-log.md)
 
 # Monitor security and compliance
-## [Microsoft 365 security center monitoring and reporting](monitoring-and-reporting.md)
-### [Monitor and report identities in Microsoft 365 security](monitor-and-report-identities.md)
-### [Monitor data in Microsoft 365 security](monitor-data.md)
-### [Monitor devices in Microsoft 365 security](monitor-devices.md)
-### [Monitor apps in Microsoft 365 security](monitor-apps.md)
+## Microsoft 365 security center
+### [Monitor and view reports](monitoring-and-reporting.md)
+### [Identity monitoring and reporting](monitor-and-report-identities.md)
+### [Data monitoring and reporting](monitor-data.md)
+### [Device monitoring and reporting](monitor-devices.md)
+### [App monitoring and reporting](monitor-apps.md)
 ## [Alert policies](alert-policies.md)
 
 # Mail flow

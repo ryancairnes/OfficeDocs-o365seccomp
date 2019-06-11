@@ -37,8 +37,8 @@ This at-a-glance information helps you keep up with the latest activities in you
 The Microsoft 365 security center includes:
 
 * **Home** – Get at-a-glance view of the overall security health of your organization.
-* **Alerts** – Have greater visibility into all the alerts across your Microsoft 356 environment, including alerts from Microsoft Cloud App Security, Office 365 ATP, Azure AD, and Windows Defender ATP. Available to E3 and E5 customers.  
-* **Monitoring & reports** – Get the detail and information you need to better protect your users, devices, apps, and more. 
+* **Alerts** – Have greater visibility into all the alerts across your Microsoft 356 environment, including alerts from Microsoft Cloud App Security, Office 365 ATP, Azure AD, and Microsoft Defender ATP. Available to E3 and E5 customers.  
+* **Reports** – Get the detail and information you need to better protect your users, devices, apps, and more.
 * **Secure score** – Improve your overall security posture with Microsoft Secure Score. This page provides an all up summary of the different security features and capabilities you’ve enabled and includes recommendations for areas to improve.
 * **Hunting** – Proactively search for malware, suspicious files, and activities in your Microsoft 365 organization.
 * **Classification** – Help protect data loss by adding labels to classify documents, email messages, documents, sites, and more. When a label is applied (automatically or by the user), the content or site is protected based on the settings you choose. For example, you can create labels that encrypt files, add content marking, and control user access to specific sites.
@@ -50,6 +50,6 @@ The Microsoft 365 security center includes:
 Explore these topics about monitoring, reviewing, and responding to your security needs:
 
 * Review and improve your security posture holistically with [Microsoft Secure Score](microsoft-secure-score.md)
-* [Monitor and report](monitoring-and-reporting.md) the status of your identities, data, devices, apps, and infrastructure
+* [Report](monitoring-and-reporting.md) the status of your identities, data, devices, apps, and infrastructure
 * [Proactively hunt](hunting.md) for intrusion attempts and breach activity affecting your email, data, devices, and accounts
 * [Understand the latest attack campaigns](latest-attack-campaigns.md) and techniques with threat analytics

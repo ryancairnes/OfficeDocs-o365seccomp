@@ -1,7 +1,7 @@
 ---
 title: Understand the latest attack campaigns and techniques with threat analytic
 description: Describes threat analytics interactive reports
-keywords: security, malware, Microsoft 365, M365, security center, threat analytics, Windows Defender ATP, cyber, security posture, emerging threats
+keywords: security, malware, Microsoft 365, M365, security center, threat analytics, Microsoft Defender ATP, cyber, security posture, emerging threats
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
@@ -20,4 +20,4 @@ Cyber threats are becoming more frequent and sophisticated. It’s critical for 
 
 **Threat analytics** is a set of interactive reports published as soon as emerging threats—new techniques, attack campaigns, and malware outbreaks—are identified. The reports help you the assess impact of threats to your environment and provides recommended actions to contain, increase organizational resilience, and prevent specific threats.
 
-[Learn more about threat analytics in Windows Defender ATP](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-atp/threat-analytics).  
+[Learn more about threat analytics in Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/threat-analytics).  
