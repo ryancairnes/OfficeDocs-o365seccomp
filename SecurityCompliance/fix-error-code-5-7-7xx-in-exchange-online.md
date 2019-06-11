@@ -3,7 +3,7 @@ title: "Fix email delivery issues for error code 5.7.7xx in Exchange Online"
 ms.author: tracyp
 author: MSFTTracyP
 manager: laurawi
-ms.date: 10/17/2018
+ms.date: 6/11/2019
 audience: Admin
 ms.topic: overview
 ms.service: O365-seccomp

@@ -68,7 +68,7 @@ To verify whether you can revoke a particular email message by using Windows Pow
 
 1. Using a work or school account that has global administrator permissions in your Office 365 organization, start a Windows PowerShell session and connect to Exchange Online. For instructions, see [Connect to Exchange Online PowerShell](https://aka.ms/exopowershell).
 
-2. Run the Set-OMEMessageStatus cmdlet as follows:
+2. Run the Get-OMEMessageStatus cmdlet as follows:
 
      ```powershell
      Get-OMEMessageStatus -MessageId "<message id>" | ft -a  Subject, IsRevocable
