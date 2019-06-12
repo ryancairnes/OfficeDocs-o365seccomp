@@ -16,12 +16,12 @@ description: "Administrators can set up a native connector to import third-party
 
 The sample connector feature to archive Facebook data in Office 365 is in Preview.
 
-Use a sample connector in the Security & Compliance Center in Office 365 to import and archive data from a third-party data source such as Facebook Business pages, LinkedIn, Twitter, and Instant Bloomberg. After you set up and configure a sample connector, it connects to the third-party data source (on a scheduled basis), converts the content of an item to an email message format, and then imports those items to a mailbox in Office 365.
+Use a sample connector in the Security & Compliance Center in Office 365 to import and archive data from Facebook Business pages to Office 365. After you set up and configure a sample connector, it connects to the Facebook Business page (on a scheduled basis), converts the content of Facebook items to an email message format, and then imports those items to a mailbox in Office 365.
 
-After third-party data is imported, you can apply Office 365 compliance features such as Litigation Hold, Content Search, In-Place Archiving, Auditing, Supervision, and Office 365 retention policies to the third-party data. For example, when a mailbox is placed on Litigation Hold or assigned to a retention policy, the third-party data will be retained. You can search third-party data using Content Search or associate it with a custodian in an Advanced eDiscovery case. Using sample connectors to import and archive third-party data in Office 365 can help your organization stay compliant with government and regulatory policies.
+After the Facebook data is imported, you can apply Office 365 compliance features such as Litigation Hold, Content Search, In-Place Archiving, Auditing, Supervision, and Office 365 retention policies to the Facebook data. For example, when a mailbox is placed on Litigation Hold or assigned to a retention policy, the Facebook data will be preserved. You can search third-party data using Content Search or associate the mailbox where the Facebook data is stored with a custodian in an Advanced eDiscovery case. Using a connector to import and archive Facebook data in Office 365 can help your organization stay compliant with government and regulatory policies.
 
 > [!NOTE]
-> Currently, only the sample connectors for Facebook Business pages and [Twitter](archive-twitter-data-with-sample-connector.md) is available for Preview. More sample connectors are coming soon.
+> At this time, only the sample connectors for Facebook Business pages and [Twitter](archive-twitter-data-with-sample-connector.md) is available for Preview. More sample connectors are coming soon.
 
 
 ## Prerequisites for setting up a connector for Facebook Business pages

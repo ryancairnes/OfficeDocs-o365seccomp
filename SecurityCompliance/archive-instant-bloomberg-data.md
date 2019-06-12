@@ -18,7 +18,7 @@ The connector feature to archive Instant Bloomberg data in Office 365 is in Prev
 
 Use a native connector in the Security & Compliance Center in Office 365 to import and archive financial services chat data from [Instant Bloomberg](https://www.bloomberg.com/professional/product/collaboration/) collaboration tool. After you set up and configure a connector, it connects to your organization's Bloomberg secure FTP site (SFTP) once every day, converts the content of chat messages to an email message format, and then imports those items to mailboxes in Office 365.
 
-After Instant Bloomberg data is stored in user mailboxes, you can use Office 365 compliance features such as Litigation Hold, Content Search, In-Place Archiving, Auditing, and Office 365 retention policies to Instant Bloomberg data. For example, you can search third-party data using Content Search or associate it with a custodian in an Advanced eDiscovery case. Using an Instant Bloomberg connector to import and archive Twitter data in Office 365 can help your organization stay compliant with government and regulatory policies.
+After Instant Bloomberg data is stored in user mailboxes, you can apply Office 365 compliance features such as Litigation Hold, Content Search, In-Place Archiving, Auditing, and Office 365 retention policies to Instant Bloomberg data. For example, you can search Instant Bloomberg chat messages using Content Search or associate the mailbox that contains the Instant Bloomberg data with a custodian in an Advanced eDiscovery case. Using an Instant Bloomberg connector to import and archive data in Office 365 can help your organization stay compliant with government and regulatory policies.
 
 ## Overview of archiving Instant Bloomberg data
 
