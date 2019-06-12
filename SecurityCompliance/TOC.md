@@ -102,6 +102,8 @@
 ### [Archive third-party data in Office 365](archiving-third-party-data.md)
 #### [Use a sample connector to archive Facebook data](archive-facebook-data-with-sample-connector.md)
 #### [Use a sample connector to archive Twitter data](archive-twitter-data-with-sample-connector.md)
+#### [Set up a connector to archive Instant Bloomberg data](archive-instant-bloomberg-data.md)
+#### [Set up a connector to archive LinkedIn data](archive-linkedin-data.md)
 #### [Work with a partner to archive third-party data](work-with-partner-to-archive-third-party-data.md)
 ## Store data
 ### [Enable archive mailboxes](enable-archive-mailboxes.md)
