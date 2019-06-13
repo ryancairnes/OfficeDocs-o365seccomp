@@ -49,46 +49,32 @@ It's helpful to know the underlying concepts of information barrier policies bef
 
 In addition to the [required licenses and permissions](information-barriers.md#required-licenses-and-permissions), make sure that the following requirements are met: 
      
-### Directory data
+- **Directory data**. Make sure that your organization's structure is reflected in directory data. To do this, make sure that user account attributes, such as group membership, department name, etc. are populated correctly in Azure Active Directory (or Exchange Online). To learn more, see the following resources:
+  - [Attributes for information barrier policies (Preview)](information-barriers-attributes.md)
+  - [Add or update a user's profile information using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal)
+  - [Configure user account properties with Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/configure-user-account-properties-with-office-365-powershell)
 
-**Make sure that your organization's structure is reflected in directory data**. To do this, make sure that user account attributes, such as group membership, department name, etc. are populated correctly in Azure Active Directory (or Exchange Online). To learn more, see the following resources:
-- [Attributes for information barrier policies (Preview)](information-barriers-attributes.md)
-- [Add or update a user's profile information using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal)
-- [Configure user account properties with Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/configure-user-account-properties-with-office-365-powershell)
+- **Scoped directory search**. Before you define your organization's first information barrier policy, you must [enable scoped directory search in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-scoped-directory-search). Wait at least 24 hours after enabling scoped directory search before you set up or define information barrier policies.
 
-### Scoped directory search
+- **Audit logging**. In order to look up the status of a policy application, audit logging must be turned on. We recommend doing this before you begin to define segments or policies. To learn more, see [Turn Office 365 audit log search on or off](turn-audit-log-search-on-or-off.md).
 
-**Before you define your organization's first information barrier policy, you must [enable scoped directory search in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-scoped-directory-search)**. Wait at least 24 hours after enabling scoped directory search before you set up or define information barrier policies.
+- **PowerShell**. Currently, information barrier policies are defined and managed in the Office 365 Security & Compliance Center using PowerShell cmdlets. Although several scenarios and examples are provided in this article, you'll need to be familiar with PowerShell cmdlets and parameters. [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
-### Audit logging
+- Admin consent for information barriers in Microsoft Teams. When your policies are in place, information barriers can remove people from chat sessions they are not supposed to be in. This helps ensure your organization remains compliant with policies and regulations. Use the following procedure to enable information barrier policies to work as expected in Microsoft Teams. 
 
-In order to look up the status of a policy application, audit logging must be turned on. We recommend doing this before you begin to define segments or policies. To learn more, see [Turn Office 365 audit log search on or off](turn-audit-log-search-on-or-off.md).
+   1. Run the following PowerShell cmdlets:
 
-### PowerShell
+      ```
+      Login-AzureRmAccount 
+      $appId="bcf62038-e005-436d-b970-2a472f8c1982" 
+      $sp=Get-AzureRmADServicePrincipal -ServicePrincipalName $appId
+      if ($sp -eq $null) { New-AzureRmADServicePrincipal -ApplicationId $appId }
+      Start-Process  "https://login.microsoftonline.com/common/adminconsent?client_id=$appId"
+      ```
 
-**Currently, information barrier policies are defined and managed in the Office 365 Security & Compliance Center using PowerShell cmdlets**. Although several scenarios and examples are provided in this article, you'll need to be familiar with PowerShell cmdlets and parameters. 
+   2. When prompted, sign in using your work or school account for Office 365.
 
-[Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
-
-### Provide admin consent for information barriers in Microsoft Teams
-
-Use the following procedure to enable information barrier policies to work as expected in Microsoft Teams. 
-
-For example, when your policies are in place, information barriers can remove people from chat sessions they are not supposed to be in. This helps ensure your organization remains compliant with policies and regulations. 
-
-1. Run the following PowerShell cmdlets:
-
-    ```
-    Login-AzureRmAccount 
-    $appId="bcf62038-e005-436d-b970-2a472f8c1982" 
-    $sp=Get-AzureRmADServicePrincipal -ServicePrincipalName $appId
-    if ($sp -eq $null) { New-AzureRmADServicePrincipal -ApplicationId $appId }
-    Start-Process  "https://login.microsoftonline.com/common/adminconsent?client_id=$appId"
-    ```
-
-2. When prompted, sign in using your work or school account for Office 365.
-
-3. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
+   3. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
 
 With all the prerequisites met, proceed to the next section.
 
@@ -107,9 +93,6 @@ Considering legal and industry regulations, who are the groups within your organ
 - "Allow" policies allow a group to communicate with only certain other, specific groups.
 
 When you have your initial list of groups and policies, proceed to identify the segments you'll need.
-
-
-
 
 ### Identify segments
 
