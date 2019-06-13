@@ -34,11 +34,18 @@ After the LinkedIn Company page data is stored in a mailbox, you can use Office 
 
 3. On the **Terms of service** page, click **Accept**.
 
-4. On the **Sign in with LinkedIn** page, click **Sign in with LinkedIn**.
+4. On the **Sign in with LinkedIn** page, click **Sign in with LinkedIn**. 
+
+   The LinkedIn sign in page is displayed.
+
+   ![LinkedIn sign in page](media/LinkedInSigninPage.png)
 
 5. On the LinkedIn sign in page, enter the email address (or phone number) and password for the LinkedIn account that associated with the company page that you want to archive, and then click **Sign in**.
 
    A wizard page is displayed with a list of all LinkedIn Company Pages associated with the account that you signed in to. A connector can only be configured for one company page. If your organization has multiple LinkedIn Company Pages, you have to create a connector for each one.
+
+   ![A page with a list of LinkedIn Company Pages is displayed](media/LinkedInSelectCompanyPage.png)
+
 
 6. Select the company page that you want to archive items from, and then click **Next**.
 
@@ -67,6 +74,5 @@ To view more details, click the connector in the list on the **Archive third-par
    ```
    subject:"Contoso Company Page"
    ```
-<br/>
 
 - To make it easier to locate or manage items that are imported, the owner of the storage mailbox (or anyone assigned the FullAccess permission) can set up an inbox rule to move the items from a specific LinkedIn Company page to a specific folder. This is helpful if the storage mailbox is used to archive items that are imported from different third-party data sources. For example, you can create an inbox rule that moves all items that contain the name of a specific LinkedIn Company page in the subject field to a specific folder.
