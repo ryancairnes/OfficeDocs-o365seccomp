@@ -259,7 +259,7 @@ The Compliance Center Activity Feed contains log activities of Customer Lockbox.
 
 Customer Lockbox requests have a default duration of 12 hours. If you don't respond to a request within 12 hour, the request expires.
 
-#### What does Microsoft when a customer rejects a Customer Lockbox request?
+#### What does Microsoft do when a customer rejects a Customer Lockbox request?
 
 If a customer rejects a Customer Lockbox request, no access to customer content occurs. If a user in your organization continues to experience a service issue requiring Microsoft to access customer content to resolve the issue, then the service issue might persist and Microsoft will inform the user about this.
 
