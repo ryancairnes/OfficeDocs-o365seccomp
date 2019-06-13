@@ -255,7 +255,8 @@ A retention policy that applies to Teams can use [Preservation Lock](#locking-a-
 By using PowerShell, you can exclude specific types of Exchange items from a retention policy. For example, you can exclude voicemail messages, IM conversations, and other Skype for Business Online content in mailboxes. You can also exclude calendar, note, and task items. This capability is available only by using PowerShell; it's not available in the UI when you create a retention policy.
   
 To do this, use the  `ExcludedItemClasses` parameter of the  `New-RetentionComplianceRule` and  `Set-RetentionComplianceRule` cmdlets. For more information about PowerShell, see the below section [Find the PowerShell cmdlets for retention policies](#find-the-powershell-cmdlets-for-retention-policies).
-  
+
+
 ## Locking a retention policy
 Some organizations may need to comply with rules defined by regulatory bodies such as the Securities and Exchange Commission (SEC) Rule 17a-4, which requires that after a retention policy is turned on, it cannot be turned off or made less restrictive. With Preservation Lock, you can lock the policy so that no one — including the administrator — can turn off the policy or make it less restrictive.
   
@@ -289,6 +290,22 @@ A Preservation Lock is now placed on the retention policy. If you run `Get-Reten
 
 ![Locked policy with all parameters shown in PowerShell](media/retention-policy-preservation-lock-locked-policy.PNG)
   
+## Releasing a retention policy
+
+You can turn off or delete a retention period at any time. When you do so, any SharePoint or OneDrive content that's being retained is not immediately and permanently deleted. Instead, there is a 30-day grace period, during which you can restore any content from the Preservation Hold library. This grace period is configurable by using PowerShell.
+
+First, [connect to Office 365 Security & Compliance Center PowerShell](http://go.microsoft.com/fwlink/p/?LinkID=799771).
+
+Then run this PowerShell script.
+
+`
+$siteSubscription = Get-SPSiteSubscription -Identity 
+$siteSubScriptionId 
+$siteSubSettingsMgr = [Microsoft.SharePoint.SPSiteSubscriptionSettingsManager]::Local
+$properties = $siteSubSettingsMgr.GetProperties($siteSubscription)
+$properties.SetValue("ip_tenantGracePeriodInDays",  30)
+`
+
 ## The principles of retention, or what takes precedence?
 
 It's possible or even likely that content might have several retention policies applied to it, each with a different action (retain, delete, or both) and retention period. What takes precedence? At the highest level, rest assured that content being retained by one policy can't be permanently deleted by another policy.
