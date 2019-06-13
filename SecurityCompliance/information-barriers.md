@@ -3,7 +3,7 @@ title: "Information barriers overview"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 05/31/2019
+ms.date: 06/13/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -24,24 +24,10 @@ Information barriers are in preview now, beginning with Microsoft Teams. When th
 - An internal team with trade secret material cannot call or chat online with people in certain groups within their organization
 - A research team can only call or chat online with a product development team
 
-For all of these example scenarios (and more), information barrier policies can be defined to prevent or allow communications in Microsoft Teams. Such policies can prevent people from calling or chatting with those they shouldn't, or enable people to communicate only with specific groups in Microsoft Teams. With information barrier policies in effect, whenever users who are covered by those policies attempt to communicate with others in Microsoft Teams, checks are done to prevent (or allow) communication (as defined by information barrier policies). 
+For all of these example scenarios (and more), information barrier policies can be defined to prevent or allow communications in Microsoft Teams. Such policies can prevent people from calling or chatting with those they shouldn't, or enable people to communicate only with specific groups in Microsoft Teams. With information barrier policies in effect, whenever users who are covered by those policies attempt to communicate with others in Microsoft Teams, checks are done to prevent (or allow) communication (as defined by information barrier policies). To learn more about the user experience with information barriers, see [information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
 
 > [!NOTE]
 > Information barriers will not apply to email communications or to file sharing through SharePoint Online or OneDrive.
-
-Information barrier policies apply to the following kinds of communication activities:
-
-- Searching for user
-- Adding a member to a team
-- Starting a chat session with someone
-- Starting a group chat 
-- Inviting someone to join a meeting
-- Sharing a screen 
-- Placing a call
-
-If the people involved are included in an information barrier policy that prevents the activity, they will not be able to proceed. To learn more about the user experience with information barriers, see [information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
-
-Currently, information barrier policies are defined and managed in Office 365 by using PowerShell cmdlets. This is typically done by a compliance administrator or a global administrator, and requires familiarity with PowerShell cmdlets (and parameters). To learn more, see [PowerShell (for defining information barriers)](information-barriers-policies.md#powershell).
 
 ## Required licenses and permissions
 
