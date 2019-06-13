@@ -81,7 +81,6 @@ With all the prerequisites met, proceed to the next section.
 > [!TIP]
 > To help you prepare your plan, an example scenario is included in this article. See [Example: Contoso's departments, segments, and policies](#example-contosos-departments-segments-and-policies).<p>In addition, a downloadable Excel workbook is available to help you plan and define your segments and policies (and create your PowerShell cmdlets). [Get the workbook](https://github.com/MicrosoftDocs/OfficeDocs-O365SecComp/raw/public/SecurityCompliance/media/InfoBarriers-PowerShellGenerator.xlsx). 
 
-
 ## Part 1: Segment users
 
 During this phase, you determine what information barrier policies are needed, make a list of segments to define, and then define your segments.
@@ -105,9 +104,6 @@ Determine which attributes in your organization's directory data you'll use to d
 
 ### Define segments using PowerShell
 
-> [!IMPORTANT]
-> **Make sure that your segments do not overlap**. Each user in your organization should belong to one (and only one) segment. No user should belong to two or more segments. Segments should be defined for all users in your organization. (See [Example: Contoso's defined segments](#contosos-defined-segments) in this article.)
-
 1. To define an organizational segment, use the **New-OrganizationSegment** cmdlet with the **UserGroupFilter** parameter that corresponds to the [attribute](information-barriers-attributes.md) you want to use. 
 
     Syntax: `New-OrganizationSegment -Name "segmentname" -UserGroupFilter "attribute -eq 'attributevalue'"`
@@ -120,14 +116,14 @@ Determine which attributes in your organization's directory data you'll use to d
 
     After you run each cmdlet, you should see a list of details about the new segment. Details include the segment's type, who created or last modified it, and so on. 
 
+> [!IMPORTANT]
+> **Make sure that your segments do not overlap**. Each user in your organization should belong to one (and only one) segment. No user should belong to two or more segments. Segments should be defined for all users in your organization. (See [Example: Contoso's defined segments](#contosos-defined-segments) in this article.)
+
 After you have defined your segments, proceed to define information barrier policies.
 
 ## Part 2: Define information barrier policies
 
 With your list of user segments and the information barrier policies you want to define, select a scenario, and then follow the steps. 
-
-> [!IMPORTANT]
-> **Make sure that as you define policies, you do not assign more than one policy to a segment**. For example, if you define one policy for a segment called *Sales*, do not define an additional policy for *Sales*. 
 
 Determine whether you need to prevent communications between certain segments, or limit communications to certain segments. Choose between the scenarios below to define your policies.
 
@@ -135,7 +131,7 @@ Determine whether you need to prevent communications between certain segments, o
 - [Scenario 2: Allow a segment to communicate only with one other segment](#scenario-2-allow-a-segment-to-communicate-only-with-one-other-segment)
 
 > [!IMPORTANT]
-> As you define information barrier policies, make sure to set those policies to inactive status until you are ready to apply them. Defining (or editing) policies does not affect users until those policies are set to active status and then applied.
+> **Make sure that as you define policies, you do not assign more than one policy to a segment**. For example, if you define one policy for a segment called *Sales*, do not define an additional policy for *Sales*.<p>In addition, as you define information barrier policies, make sure to set those policies to inactive status until you are ready to apply them. Defining (or editing) policies does not affect users until those policies are set to active status and then applied.
 
 (See [Example: Contoso's information barrier policies](#contosos-information-barrier-policies) in this article.)
 
