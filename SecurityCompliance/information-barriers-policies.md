@@ -38,7 +38,7 @@ It's helpful to know the underlying concepts of information barrier policies bef
 
 |Phase    |What's involved  |
 |---------|---------|
-|[Make sure prerequisites are met](#prerequisites)     |- Confirm that your subscription includes information barriers<br/>- Verify that you have the necessary permissions<br/>- Make sure that your directory data reflects your organization's structure<br/>- Make sure that scoped directory search is enabled in Microsoft Teams<br/>- Make sure audit logging is turned on<br/>- Use PowerShell (examples are provided)<br/>- Provide admin consent for information barriers in Microsoft Teams (steps are included)          |
+|[Make sure prerequisites are met](#prerequisites)     |- Verify that you have the [required licenses and permissions](information-barriers.md#required-licenses-and-permissions)<br/>- Make sure that your directory data reflects your organization's structure<br/>- Make sure that scoped directory search is enabled in Microsoft Teams<br/>- Make sure audit logging is turned on<br/>- Use PowerShell (examples are provided)<br/>- Provide admin consent for information barriers in Microsoft Teams (steps are included)          |
 |[Part 1: Segment all the users in your organization](#part-1-segment-users)     |- Determine what policies are needed<br/>- Make a list of segments to define<br/>- Identify which attributes to use<br/>- Define segments in terms of policy filters        |
 |[Part 2: Define information barrier policies](#part-2-define-information-barrier-policies)     |- Define your policies (do not apply yet)<br/>- Choose from two kinds (block or allow) |
 |[Part 3: Apply information barrier policies](#part-3-apply-information-barrier-policies)     |- Set policies to active status<br/>- Run the policy application<br/>- Verify policy status         |
@@ -47,25 +47,8 @@ It's helpful to know the underlying concepts of information barrier policies bef
 
 ## Prerequisites
 
-**Currently, the information barrier feature is in private preview**. When these features are generally available, they'll be included in subscriptions, such as:
-
-- Microsoft 365 E5
-- Office 365 E5
-- Office 365 Advanced Compliance
-- Microsoft 365 E5 Information Protection and Compliance
-
-For more details, see [Compliance Solutions](https://products.office.com/business/security-and-compliance/compliance-solutions).
-
-### Permissions
-
-To define or edit information barrier policies, **you must be assigned an appropriate role**, such as one of the following:
-- Microsoft 365 Enterprise Global Administrator
-- Office 365 Global Administrator
-- Compliance Administrator
-- IB Compliance Management (this is a new role!)
-
-To learn more about roles and permissions, see [Permissions in the Office 365 Security & Compliance Center](permissions-in-the-security-and-compliance-center.md).
-       
+In addition to the [required licenses and permissions](information-barriers.md#required-licenses-and-permissions), make sure that the following requirements are met: 
+     
 ### Directory data
 
 **Make sure that your organization's structure is reflected in directory data**. To do this, make sure that user account attributes, such as group membership, department name, etc. are populated correctly in Azure Active Directory (or Exchange Online). To learn more, see the following resources:
@@ -107,6 +90,12 @@ For example, when your policies are in place, information barriers can remove pe
 
 3. In the **Permissions requested** dialog box, review the information, and then choose **Accept**.
 
+With all the prerequisites met, proceed to the next section.
+
+> [!TIP]
+> To help you prepare your plan, an example scenario is included in this article. See [Example: Contoso's departments, segments, and policies](#example-contosos-departments-segments-and-policies).<p>In addition, a workbook is available that you can use to plan and define your segments and policies (and create the PowerShell cmdlets you'll need). [Get the workbook](https://github.com/MicrosoftDocs/OfficeDocs-O365SecComp/raw/public/SecurityCompliance/media/InfoBarriers-PowerShellGenerator.xlsx). 
+
+
 ## Part 1: Segment users
 
 During this phase, you determine what information barrier policies are needed, make a list of segments to define, and then define your segments.
@@ -119,7 +108,8 @@ Considering legal and industry regulations, who are the groups within your organ
 
 When you have your initial list of groups and policies, proceed to identify the segments you'll need.
 
-(See [Example: Contoso's departments and plan](#contosos-departments-and-plan) in this article.)
+
+
 
 ### Identify segments
 
