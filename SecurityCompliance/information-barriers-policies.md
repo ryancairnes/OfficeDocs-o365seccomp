@@ -79,7 +79,7 @@ In addition to the [required licenses and permissions](information-barriers.md#r
 With all the prerequisites met, proceed to the next section.
 
 > [!TIP]
-> To help you prepare your plan, an example scenario is included in this article. See [Example: Contoso's departments, segments, and policies](#example-contosos-departments-segments-and-policies).<p>In addition, a workbook is available to help you plan and define your segments and policies (and create your PowerShell cmdlets). [Get the workbook](https://github.com/MicrosoftDocs/OfficeDocs-O365SecComp/raw/public/SecurityCompliance/media/InfoBarriers-PowerShellGenerator.xlsx). 
+> To help you prepare your plan, an example scenario is included in this article. See [Example: Contoso's departments, segments, and policies](#example-contosos-departments-segments-and-policies).<p>In addition, a downloadable Excel workbook is available to help you plan and define your segments and policies (and create your PowerShell cmdlets). [Get the workbook](https://github.com/MicrosoftDocs/OfficeDocs-O365SecComp/raw/public/SecurityCompliance/media/InfoBarriers-PowerShellGenerator.xlsx). 
 
 
 ## Part 1: Segment users
