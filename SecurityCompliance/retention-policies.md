@@ -295,11 +295,11 @@ A Preservation Lock is now placed on the retention policy. If you run `Get-Reten
   
 ## Releasing a retention policy
 
-You can turn off or delete a retention period at any time. When you do so, any SharePoint or OneDrive content that's being retained is not immediately and permanently deleted. Instead, there is a 30-day grace period, during which you can restore any content from the Preservation Hold library. This grace period is configurable by using PowerShell.
+You can turn off or delete a retention period at any time. When you do so, any SharePoint or OneDrive content that's being retained is not immediately and permanently deleted. Instead, to help prevent inadvertent data loss, there is a 30-day grace period, during which content expiration does not happen in the Preservation Hold library, so that you can restore any content from there, if needed. You can also turn on the retention policy again during the grace period, and no content will be expired for that policy. This grace period is configurable by using PowerShell.
 
 First, [connect to Office 365 Security & Compliance Center PowerShell](http://go.microsoft.com/fwlink/p/?LinkID=799771).
 
-Then run this PowerShell script.
+Then run this PowerShell script. You can set `ip_tenantGracePeriodInDays` property in the tenant subscription settings to any value between 0-100 days. If you set this to 0, there is no grace period, and any retention policy will be released immediately. 
 
 `
 $siteSubscription = Get-SPSiteSubscription -Identity 
