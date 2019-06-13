@@ -3,7 +3,7 @@ title: "Define information barrier policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 05/31/2019
+ms.date: 06/13/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -22,17 +22,15 @@ With information barriers, you can define policies that are designed to prevent 
 
 ## Concepts of information barrier policies
 
-Before you plan, define, and implement information barrier policies, get to know the underlying concepts. With information barriers, you'll work with user account attributes, segments, information barrier policies, and a policy application process described in this article. 
+It's helpful to know the underlying concepts of information barrier policies before you begin to plan, define, and implement information barriers:
 
-- **User account attributes** are defined in Azure Active Directory (or Exchange Online). These attributes can include department, job title, location, team name, etc. 
+- **User account attributes** are defined in Azure Active Directory (or Exchange Online). These attributes can include department, job title, location, team name, and other job profile details. 
 
-- **Segments** are defined in the Office 365 Security & Compliance Center using a selected **user account attribute**, such as department, job title, location, team name, or any [supported attribute](information-barriers-attributes.md). Defining segments does not effect users; it just sets the stage for information barrier policies to be defined and then applied.
+- **Segments** are sets of users that are defined in the Office 365 Security & Compliance Center using a selected **user account attribute**. (See the [list of supported attributes](information-barriers-attributes.md).) 
 
-- **Information barrier policies** are defined and assigned to individual **Segments**. Not all segments will have a policy assigned. In addition, no single segment can be assigned more than one policy. When you define policies, you choose from two kinds of policies:
-    - Policies that prevent one segment from communicating with another segment
-    - Policies that allow one segment to communicate with only certain other segments
-
-    Ideally, you'll use the minimum number of policies to ensure your organization is compliant with legal and industry requirements.
+- **Information barrier policies** determine communication limits or restrictions. When you define information barrier policies, you choose from two kinds of policies:
+    - "Block" policies that prevent one segment from communicating with another segment
+    - "Allow" policies that allow one segment to communicate with only certain other segments
 
 - **Policy application** is done after all information barrier policies are defined, and you are ready to apply them in your organization.
 
@@ -40,7 +38,7 @@ Before you plan, define, and implement information barrier policies, get to know
 
 |Phase    |What's involved  |
 |---------|---------|
-|[Make sure prerequisites are met](#prerequisites)     |- Confirm that your subscription includes information barriers<br/>- Verify that you have the necessary permissions to define/edit segments and policies<br/>- Make sure that your directory data reflects your organization's structure<br/>- Make sure that scoped directory search is enabled in Microsoft Teams<br/>- Make sure audit logging is turned on<br/>- Use PowerShell to perform the tasks in this article (example cmdlets are provided)<br/>- Provide admin consent for information barriers in Microsoft Teams (steps are included)          |
+|[Make sure prerequisites are met](#prerequisites)     |- Confirm that your subscription includes information barriers<br/>- Verify that you have the necessary permissions<br/>- Make sure that your directory data reflects your organization's structure<br/>- Make sure that scoped directory search is enabled in Microsoft Teams<br/>- Make sure audit logging is turned on<br/>- Use PowerShell (examples are provided)<br/>- Provide admin consent for information barriers in Microsoft Teams (steps are included)          |
 |[Part 1: Segment all the users in your organization](#part-1-segment-users)     |- Determine what policies are needed<br/>- Make a list of segments to define<br/>- Identify which attributes to use<br/>- Define segments in terms of policy filters        |
 |[Part 2: Define information barrier policies](#part-2-define-information-barrier-policies)     |- Define your policies (do not apply yet)<br/>- Choose from two kinds (block or allow) |
 |[Part 3: Apply information barrier policies](#part-3-apply-information-barrier-policies)     |- Set policies to active status<br/>- Run the policy application<br/>- Verify policy status         |
@@ -111,13 +109,13 @@ For example, when your policies are in place, information barriers can remove pe
 
 ## Part 1: Segment users
 
-During this phase, you determine what policies are needed, make a list of segments to define, and then define your segments.
+During this phase, you determine what information barrier policies are needed, make a list of segments to define, and then define your segments.
 
 ### Determine what policies are needed
 
 Considering legal and industry regulations, who are the groups within your organization who will need information barrier policies? Make a list. Are there any groups who should be prevented from communicating with another group? Are there any groups that should be allowed to communicate only with one or two other groups? Think about the policies you need as belonging to one of two groups:
-- **Blocking policies** that prevent one group from communicating with another group
-- **Allow policies** that allow certain groups to communicate with only certain other groups.
+- "Block" policies prevent one group from communicating with another group.
+- "Allow" policies allow a group to communicate with only certain other, specific groups.
 
 When you have your initial list of groups and policies, proceed to identify the segments you'll need.
 
@@ -127,7 +125,7 @@ When you have your initial list of groups and policies, proceed to identify the 
 
 In addition to your initial list of policies, make a list of segments for your organization. Every user in your organization should belong to a segment, and no user should belong to two or more segments. Each segment can have only one information barrier policy applied. 
 
-Determine which attributes in your organization's directory data you'll use to define segments. You can use *Department*, *MemberOf*, or any of the supported attributes. Make sure that you have values in the attribute you select for all users. To see a list of supported attributes, refer to [Attributes for information barrier policies (Preview)](information-barriers-attributes.md).
+Determine which attributes in your organization's directory data you'll use to define segments. You can use *Department*, *MemberOf*, or any of the supported attributes. Make sure that you have values in the attribute you select for all users. [See the list of supported attributes for information barriers (Preview)](information-barriers-attributes.md).
 
 > [!IMPORTANT]
 > **Before you proceed to the next section, make sure your directory data has values for attributes that you can use to define segments**. If your directory data does not have values for the attributes you want to use, then all user accounts must be updated to include that information before you proceed with information barriers. To get help with this, see the following resources:<br/>- [Configure user account properties with Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/configure-user-account-properties-with-office-365-powershell)<br/>- [Add or update a user's profile information using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal)
@@ -163,7 +161,7 @@ Determine whether you need to prevent communications between certain segments, o
 - [Scenario 1: Block communications between segments](#scenario-1-block-communications-between-segments)
 - [Scenario 2: Allow a segment to communicate only with one other segment](#scenario-2-allow-a-segment-to-communicate-only-with-one-other-segment)
 
-> [!NOTE]
+> [!IMPORTANT]
 > As you define information barrier policies, make sure to set those policies to inactive status until you are ready to apply them. Defining (or editing) policies does not affect users until those policies are set to active status and then applied.
 
 (See [Example: Contoso's information barrier policies](#contosos-information-barrier-policies) in this article.)
@@ -250,11 +248,11 @@ Information barrier policies are not in effect until you set them to active stat
 
     After approximately a half hour, policies are applied, user by user, for your organization. If your organization is large, it can take 24 hours (or more) for this process to complete. (As a general guideline, it takes about an hour to process 5,000 user accounts.)
 
-## Verify status of user accounts, segments, policies, or policy application
+## View status of user accounts, segments, policies, or policy application
 
-Using PowerShell, you can verify status of user accounts, segments, policies, and policy application, as listed in the following table.
+With PowerShell, you can view status of user accounts, segments, policies, and policy application, as listed in the following table.
 
-|To verify this  |Do this  |
+|To view this  |Do this  |
 |---------|---------|
 |User accounts     |Use the **Get-InformationBarrierRecipientStatus** cmdlet with Identity parameters. <p>Syntax: `Get-InformationBarrierRecipientStatus -Identity <value> -Identity2 <value>` <p>You can use any value that uniquely identifies each user, such as name, alias, distinguished name, canonical domain name, email address, or GUID. <p>Example: `Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw` <p>In this example, we refer to two user accounts in Office 365: *meganb* for *Megan*, and *alexw* for *Alex*. <p>(You can also use this cmdlet for a single user: `Get-InformationBarrierRecipientStatus -Identity <value>`) <p>This cmdlet returns information about users, such as attribute values and any information barrier policies that are applied.|
 |Segments     |Use the **Get-OrganizationSegment** cmdlet.<p>Syntax: `Get-OrganizationSegment` <p>This will display a list of all segments defined for your organization.         |
