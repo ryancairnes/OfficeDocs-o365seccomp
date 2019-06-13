@@ -60,7 +60,7 @@ In addition to the [required licenses and permissions](information-barriers.md#r
 
 - **PowerShell**. Currently, information barrier policies are defined and managed in the Office 365 Security & Compliance Center using PowerShell cmdlets. Although several scenarios and examples are provided in this article, you'll need to be familiar with PowerShell cmdlets and parameters. [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
-- Admin consent for information barriers in Microsoft Teams. When your policies are in place, information barriers can remove people from chat sessions they are not supposed to be in. This helps ensure your organization remains compliant with policies and regulations. Use the following procedure to enable information barrier policies to work as expected in Microsoft Teams. 
+- **Admin consent for information barriers in Microsoft Teams**. When your policies are in place, information barriers can remove people from chat sessions they are not supposed to be in. This helps ensure your organization remains compliant with policies and regulations. Use the following procedure to enable information barrier policies to work as expected in Microsoft Teams. 
 
    1. Run the following PowerShell cmdlets:
 
