@@ -39,7 +39,7 @@ It's helpful to know the underlying concepts of information barrier policies:
 
 |Phase    |What's involved  |
 |---------|---------|
-|[Make sure prerequisites are met](#prerequisites)     |- Verify that you have the [required licenses and permissions](information-barriers.md#required-licenses-and-permissions)<br/>- Make sure that your directory data reflects your organization's structure<br/>- Make sure that scoped directory search is enabled in Microsoft Teams<br/>- Make sure audit logging is turned on<br/>- Use PowerShell (examples are provided)<br/>- Provide admin consent for Microsoft Teams (steps are included)          |
+|[Make sure prerequisites are met](#prerequisites)     |- Verify that you have the [required licenses and permissions](information-barriers.md#required-licenses-and-permissions)<br/>- Make sure that directory data reflects your organization's structure<br/>- Make sure that scoped directory search is enabled in Microsoft Teams<br/>- Make sure audit logging is turned on<br/>- Use PowerShell (examples are provided)<br/>- Provide admin consent for Microsoft Teams (steps are included)          |
 |[Part 1: Segment all the users in your organization](#part-1-segment-users)     |- Determine what policies are needed<br/>- Make a list of segments to define<br/>- Identify which attributes to use<br/>- Define segments in terms of policy filters        |
 |[Part 2: Define information barrier policies](#part-2-define-information-barrier-policies)     |- Define your policies (do not apply yet)<br/>- Choose from two kinds (block or allow) |
 |[Part 3: Apply information barrier policies](#part-3-apply-information-barrier-policies)     |- Set policies to active status<br/>- Run the policy application<br/>- View policy status         |
