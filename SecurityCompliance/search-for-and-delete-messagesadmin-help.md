@@ -3,7 +3,7 @@ title: "Search for and delete messages - Admin help"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 12/20/2017
+ms.date: 
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
