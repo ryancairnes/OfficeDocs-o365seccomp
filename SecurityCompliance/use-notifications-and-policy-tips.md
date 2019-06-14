@@ -76,6 +76,9 @@ When you create a DLP policy, both email notifications and policy tips are part 
 9. In the rule editor, under **User notifications**, switch the status on.
     
     ![User notifications section of rule editor](media/47705927-c60b-4054-a072-ab914f33d15d.png)
+
+> [!NOTE]
+> DLP policies apply to all documents that match the policy, whether those documents are new or existing. However, an email notification is only generated when new content matches an existing DLP policy. Existing content is protected, but will not generate a user notification via email.
   
 ## Options for configuring email notifications
 
@@ -86,7 +89,7 @@ For each rule in a DLP policy, you can:
 - Customize the text that's included in the notification by using HTML or tokens. See the section below for more information.
     
 > [!NOTE]
->  Email notifications can be sent only to individual recipients—not groups or distribution lists. Only new content will trigger an email notification. Editing existing content will trigger policy tips but not an email notification. 
+>  Email notifications can be sent only to individual recipients—not groups or distribution lists. Only new content will trigger an email notification. Editing existing content will trigger policy tips, but not an email notification. 
   
 ![Email notification options](media/4e7b9500-2a78-44e6-9067-09f4bfd50301.png)
   
