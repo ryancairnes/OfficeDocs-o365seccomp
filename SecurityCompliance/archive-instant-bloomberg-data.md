@@ -74,9 +74,7 @@ The first step is to obtain a copy of the public keys for Secure Shell (SSH) and
 
 3. On the **Terms of service** page, click **Accept**.
 
-4. On the **Add credentials for Bloomberg SFTP site** under step 1, click **Download public keys and IP address**.
-
-5. Save a copy of the Keys.txt file to your local computer. This file contains the following three items that will be used to configure the Bloomberg SFTP site in Step 2:
+4. On the **Add credentials for Bloomberg SFTP site** under step 1, click **Download SSH key** and **Download PGP key** download links to save a copy of each public key file to your local computer. These files contain the following items that will be used to configure the Bloomberg SFTP site in Step 2:
 
    - SSH public key – This key will be used to configure Secure Shell (SSH) to enable a secure remote login when the connector connects to the Bloomberg SFTP site.
 
@@ -84,7 +82,7 @@ The first step is to obtain a copy of the public keys for Secure Shell (SSH) and
 
    - IP address – The Bloomberg SFTP site will be configured to accept a connection request only from this IP address, which is used by the Instant Bloomberg connector that you create in Step 3. 
 
-6. Click **Cancel** to close the wizard. You come back to this wizard in Step 3 to create the connector.
+5. Click **Cancel** to close the wizard. You come back to this wizard in Step 3 to create the connector.
 
 ## Step 2: Configure the Bloomberg SFTP site
 
