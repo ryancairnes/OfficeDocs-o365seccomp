@@ -62,9 +62,11 @@ After you create and start a data investigation search, the tool uses the search
 
 ## Add search results to evidence
 
-When you're satisfied with the results of a search and you're ready to analyze and remediate those search results, you can add them to an evidence set in the investigation. When you add items to an evidence set on the **Evidence** tab, the following two things occur:
+When you're satisfied with the results of a search and you're ready to analyze and remediate those search results, you can add them to an evidence set in the investigation. When you add items to an evidence set on the **Evidence** tab, the following three things occur:
 
-- All items in the search results are copied from the data source in the live service, and copied to a secure Azure storage location in the Microsoft cloud.
+- The search is run again, and the latest results of the search are added to the evidence set. That means the items that are actually added to evidence may be different than the estimated search results displayed on the search flyout page. This might happen if some time has passed between the last time your ran the search and when you add the search results to evidence.
+
+- All items in the search results are copied from the data source in the live service, and copied to a secure Azure Storage location in the Microsoft cloud.
 
 - All items (including the content and metadata) are re-indexed so that all data in the evidence set is fully searchable during your investigation. Re-indexing the data results in thorough and very fast searches when you search the data in the evidence set during your investigation.
 
