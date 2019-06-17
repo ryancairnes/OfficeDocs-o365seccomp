@@ -28,13 +28,11 @@ A SIEM server can receive data from a wide variety of Microsoft 365 services and
 
 | Microsoft 365 Service or Application | SIEM server inputs | Resources to learn more |
 | --- | --- | --- |
-| [Office 365 Advanced Threat Protection](office-365-atp.md) <br/>   or   <br/>[Office 365 Threat Intelligence](office-365-ti.md) | Audit logs | [SIEM integration with Office 365 Advanced Threat Protection](siem-integration-with-office-365-ti.md) |
+| [Office 365 Advanced Threat Protection](office-365-atp.md) <br/>or<br/>[Office 365 Threat Intelligence](office-365-ti.md) | Audit logs | [SIEM integration with Office 365 Advanced Threat Protection](siem-integration-with-office-365-ti.md) |
 | [Microsoft Cloud App Security](https://docs.microsoft.com/cloud-app-security/what-is-cloud-app-security) | Log integration | [SIEM integration with Microsoft Cloud App Security](https://docs.microsoft.com/cloud-app-security/siem) |
-| [Office 365 Cloud App Security](https://docs.microsoft.com/cloud-app-security/what-is-cloud-app-security) | Log integration | [Integrate your SIEM server with Cloud App Security](https://docs.microsoft.com/cloud-app-security/siem) |
 | [Microsoft Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/) | Log integration | [Pull alerts to your SIEM tools](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-siem) |
 | [Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-intro) (Threat Protection and Threat Detection) | Alerts | [Azure Security data export to SIEM - Pipeline Configuration - Preview](https://docs.microsoft.com/azure/security-center/security-center-export-data-to-siem) |
-| [Azure Active Directory Identity Protection](https://docs.microsoft.com/azure/active-directory/identity-protection/overview) | Azure Monitor | [(Blog) Use Azure Monitor to integrate with SIEM tools](https://azure.microsoft.com/blog/use-azure-monitor-to-integrate-with-siem-tools) |
-| [Azure Advanced Threat Analytics](https://docs.microsoft.com/azure/security/azure-threat-detection) | Log integration | [ATA SIEM log reference](https://docs.microsoft.com/advanced-threat-analytics/cef-format-sa) |
+| [Azure Active Directory Identity Protection](https://docs.microsoft.com/azure/active-directory/identity-protection/overview)<br/>or<br/>[Azure Advanced Threat Analytics](https://docs.microsoft.com/azure/security/azure-threat-detection) | Azure Monitor | [(Blog) Use Azure Monitor to integrate with SIEM tools](https://azure.microsoft.com/blog/use-azure-monitor-to-integrate-with-siem-tools) |
 
 ## Audit logging must be turned on
 
