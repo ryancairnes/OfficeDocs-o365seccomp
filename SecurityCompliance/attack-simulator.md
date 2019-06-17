@@ -3,7 +3,7 @@ title: "Attack Simulator in Office 365"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 03/05/2019
+ms.date: 06/13/2019
 audience: ITPro
 ms.topic: overview
 ms.service: O365-seccomp
@@ -19,10 +19,10 @@ description: "As an Office 365 global administrator, you can use Attack Simulato
 
 # Attack Simulator in Office 365
 
-**Summary** If you are an Office 365 global administrator and your organization has [Office 365 Threat Investigation and Response capabilities](office-365-ti.md), you can use Attack Simulator to run realistic attack scenarios in your organization. This can help you identify and find vulnerable users before a real attack impacts your bottom line. Read this article to learn more.
+**Summary** If you are an Office 365 global administrator or a security administrator and your organization has [Office 365 Threat Investigation and Response capabilities](office-365-ti.md), you can use Attack Simulator to run realistic attack scenarios in your organization. This can help you identify and find vulnerable users before a real attack impacts your bottom line. Read this article to learn more.
 
 > [!IMPORTANT]
-> Office 365 Advanced Threat Protection and Threat Investigation and Response (formerly known as Threat Intelligence) are now part of Office 365 Advanced Threat Protection Plan 2, with additional threat protection capabilities. To learn more, see [Office 365 Advanced Threat Protection plans and pricing](https://products.office.com/exchange/advance-threat-protection) and the [Office 365 Advanced Threat Protection Service Description](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description).
+> Office 365 Advanced Threat Protection and Threat Investigation and Response (formerly known as Threat Intelligence) are part of Office 365 Advanced Threat Protection Plan 2, along with additional threat protection capabilities. To learn more, see [Office 365 Advanced Threat Protection plans and pricing](https://products.office.com/exchange/advance-threat-protection) and the [Office 365 Advanced Threat Protection Service Description](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description).
   
 ## The Attacks
 
@@ -32,11 +32,8 @@ Three kinds of attack simulations are currently available:
 - [Password-spray attack](#password-spray-attack)
 - [Brute-force password attack](#brute-force-password-attack)
     
-For an attack to be successfully launched, you use multi-factor authentication on the account you are using to run simulated attacks. In addition, you must be an Office 365 global administrator.
-  
-> [!NOTE]
-> Support for Conditional Access is coming soon. 
-  
+For an attack to be successfully launched, make sure that the account you are using to run simulated attacks is using multi-factor authentication. In addition, you must be an Office 365 global administrator or a security administrator. (To learn more about roles and permissions, see [Permissions in the Office 365 Security & Compliance Center](permissions-in-the-security-and-compliance-center.md).)
+    
 To access Attack Simulator, in the Security &amp; Compliance Center, choose **Threat management** \> **Attack simulator**.
   
 ## Before you begin...
@@ -45,13 +42,12 @@ Make sure that you and your organization meet the following requirements for Att
       
 - **Your organization's email is hosted in Exchange Online**. (Attack Simulator is not available for on-premises email servers.)
     
-- **You are an Office 365 global administrator**
+- **You are an Office 365 global administrator or security administrator**
     
-- **[Multi-factor authentication](https://docs.microsoft.com/office365/admin/security-and-compliance/set-up-multi-factor-authentication?view=o365-worldwide) (MFA) is turned on, for at least the Office 365 global administrator account**. (Ideally, MFA is turned on for all users in your organization.)
+- **[Multi-factor authentication/Conditional Access](https://docs.microsoft.com/office365/admin/security-and-compliance/set-up-multi-factor-authentication?view=o365-worldwide) is turned on, for at least the Office 365 global administrator account and security administrators**. (Ideally, multi-factor authentication/conditional access is turned on for all users in your organization.)
  
 - **Your organization has [Office 365 Advanced Threat Protection Plan 2](office-365-ti.md)**, with Attack Simulator visible in the Security &amp; Compliance Center (go to **Threat management** \> **Attack simulator**)<br/>![Threat management - Attack Simulator](media/ThreatMgmt-AttackSimulator.png)
 
-    
 ## Display name spear-phishing attack
 
 Phishing is a generic term for a broad suite of attacks classed as a social engineering style attack. This attack is focused on spear phishing, a more targeted attack that is aimed at a specific group of individuals or an organization. Typically, a customized attack with some reconnaissance performed and using a display name that will generate trust in the recipient, such as an email message that looks like it came from an executive within your organization.
@@ -122,11 +118,17 @@ A brute-force password attack against an organization is typically used after a 
     
 ## New features in Attack Simulator
 
-New features are being added to Attack Simulator. These include:
+New features have recently been added to Attack Simulator. These include:
 
-- **Advanced reporting capabilities**. You'll be able to see data such as the fastest (or slowest) time to open an attack simulation email message, the fastest (or slowest) time to click a link in the message, and more.
+- **Advanced reporting capabilities**. The ability to see data such as the fastest (or slowest) time to open an attack simulation email message, the fastest (or slowest) time to click a link in the message, and more visualizations.
 
-- **Email template editor**. You can create a custom, reusable email template that you can use for future attack simulations.
+- **Email template editor**. The ability to create a custom, reusable email template's that you can use for future attack simulations.
+
+- **CSV Recipient Import**. The ability to use a CSV file to import your target recipient list instead of using the address book picker.
+
+**More new features are coming soon to Attack Simulator**. These include:
+
+- **Attachment payload phishing simulation**. The ability to use an attachment as the payload for phishing simulation in place of a URL.
 
 Visit the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap) to see what's in development, what's rolling out, and what's already launched.
 

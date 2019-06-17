@@ -16,7 +16,7 @@ ms.collection:
 description: "Basic spam filter settings include selecting the action to take on messages that are identified as spam."
 ---
 
-## Configure your spam filter policies
+# Configure your spam filter policies
 Spam filter settings include selecting the action to take on messages that are identified as spam. Spam filter policy settings are applied to inbound messages only and there are two types:
 
   - Default: The default spam filter policy is used to configure company-wide spam filter settings. This policy can not be renamed and is always on.

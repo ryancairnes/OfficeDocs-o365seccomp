@@ -1,7 +1,7 @@
 ---
 title: How policies and protections are combined when mail is red-flagged
 description: Describes what policies and protections apply when e-mail encounters multiple protections and is scanned by multiple forms of detection.
-keywords: security, malware, Microsoft 365, M365, security center, ATP, Windows Defender ATP, Office 365 ATP, Azure ATP
+keywords: security, malware, Microsoft 365, M365, security center, ATP, Microsoft Defender ATP, Office 365 ATP, Azure ATP
 ms.author: tracyp
 author: MSFTTracyp
 manager: laurawi
