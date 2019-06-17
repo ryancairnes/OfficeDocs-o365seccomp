@@ -39,8 +39,6 @@ There are two ways to import and archive third-party data in Office 365:
    - **Facebook** – [Use a sample connector to archive Facebook data in Office 365](archive-facebook-data-with-sample-connector.md)
   
    - **Twitter** – [Use a sample connector to archive Twitter data in Office 365](archive-twitter-data-with-sample-connector.md)
-
-   - **Instant Bloomberg** – [Set up a connector to archive Instant Bloomberg data in Office 365](archive-instant-bloomberg-data.md)
     
    - **LinkedIn** – [Set up a connector to archive LinkedIn data in Office 365](archive-linkedin-data.md)
 

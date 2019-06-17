@@ -16,9 +16,9 @@ description: "Administrators can set up a native connector to import data from a
 
 The connector feature to archive data from LinkedIn Company pages in Office 365 is in Preview.
 
-Use a native connector in the Security & Compliance Center in Office 365 to import and archive data from LinkedIn Company pages. After you set up and configure a connector, it connects to the account for the specific LinkedIn Company page (once every day), converts the content messages posted to the Company page to an email message format, and then imports those items to a mailbox in Office 365.
+Use a native connector in the Security & Compliance Center in Office 365 to import and archive data from LinkedIn Company pages. After you set up and configure a connector, it connects to the account for the specific LinkedIn Company page once every 24 hours. The connector converts the messages posted to the Company page to an email message, and then imports those items to a mailbox in Office 365.
 
-After the LinkedIn Company page data is stored in a mailbox, you can use Office 365 compliance features such as Litigation Hold, Content Search, In-Place Archiving, Auditing, and Office 365 retention policies to LinkedIn data. For example, you can search for these items using Content Search or associate the storage mailbox with a custodian in an Advanced eDiscovery case. Creating a connector to import and archive LinkedIn data in Office 365 can help your organization stay compliant with government and regulatory policies.
+After the LinkedIn Company page data is stored in a mailbox, you can apply Office 365 compliance features such as Litigation Hold, Content Search, In-Place Archiving, Auditing, and Office 365 retention policies to LinkedIn data. For example, you can search for these items using Content Search or associate the storage mailbox with a custodian in an Advanced eDiscovery case. Creating a connector to import and archive LinkedIn data in Office 365 can help your organization stay compliant with government and regulatory policies.
 
 ## Before you  begin
 
@@ -51,7 +51,7 @@ After the LinkedIn Company page data is stored in a mailbox, you can use Office 
 
 7. On the **Set filters** page, you can apply a filter to initially import items that are a certain age. Select an age, and then click **Next**.
 
-8. On the **Set storage account** page, type the email address of an Office 365 mailbox that the LinkedIn items are imported to, and then click **Next**. Items are imported to the Inbox folder in this mailbox.
+8. On the **Set storage account** page, type the email address of an Office 365 mailbox that the LinkedIn items will be imported to, and then click **Next**. Items are imported to the Inbox folder in this mailbox.
 
 9. Review the connector settings and then click **Save** to complete the connector setup.
 
@@ -75,4 +75,4 @@ To view more details, click the connector in the list on the **Archive third-par
    subject:"Contoso Company Page"
    ```
 
-- To make it easier to locate or manage items that are imported, the owner of the storage mailbox (or anyone assigned the FullAccess permission) can set up an inbox rule to move the items from a specific LinkedIn Company page to a specific folder. This is helpful if the storage mailbox is used to archive items that are imported from different third-party data sources. For example, you can create an inbox rule that moves all items that contain the name of a specific LinkedIn Company page in the subject field to a specific folder.
+- To make it easier to locate or manage LinkedIn items imported to Office 365, the owner of the storage mailbox (or anyone assigned the FullAccess permission) can set up an inbox rule to move the items from a specific LinkedIn Company page to a specific folder. This is helpful if the storage mailbox is used to archive items that are imported from different third-party data sources. For example, you can create an inbox rule that moves all items that contain the name of a specific LinkedIn Company page in the subject field to a specific folder.
