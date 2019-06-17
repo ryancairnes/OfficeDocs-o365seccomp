@@ -35,6 +35,7 @@ A SIEM server can receive data from a wide variety of Microsoft 365 services and
 |[Azure Advanced Threat Analytics](https://docs.microsoft.com/azure/security/azure-threat-detection) | Azure Monitor | [(Blog) Use Azure Monitor to integrate with SIEM tools](https://azure.microsoft.com/blog/use-azure-monitor-to-integrate-with-siem-tools) |
 |[Azure Active Directory Identity Protection](https://docs.microsoft.com/azure/active-directory/identity-protection/overview) |Log integration |[Integrate Microsoft Graph Security API alerts with a SIEM](https://docs.microsoft.com/graph/security-siemintegration) |
 
+
 ## Audit logging must be turned on
 
 Make sure audit logging is turned on before you configure SIEM server integration. 
