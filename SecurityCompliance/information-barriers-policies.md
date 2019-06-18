@@ -33,8 +33,8 @@ It's helpful to know the underlying concepts of information barrier policies:
 - **Segments** are sets of users that are defined in the Office 365 Security & Compliance Center using a selected **user account attribute**. (See the [list of supported attributes](information-barriers-attributes.md).) 
 
 - **Information barrier policies** determine communication limits or restrictions. When you define information barrier policies, you choose from two kinds of policies:
-    - "Block" policies that prevent one segment from communicating with another segment
-    - "Allow" policies that allow one segment to communicate with only certain other segments
+    - "Block" policies prevent one segment from communicating with another segment.
+    - "Allow" policies allow one segment to communicate with only certain other segments.
 
 - **Policy application** is done after all information barrier policies are defined, and you are ready to apply them in your organization.
 
