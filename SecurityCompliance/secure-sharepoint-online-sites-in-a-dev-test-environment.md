@@ -3,7 +3,7 @@ title: "Secure SharePoint Online sites in a dev/test environment"
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 04/09/2019
+ms.date: 06/18/2019
 audience: ITPro
 ms.topic: article
 ms.collection: 
@@ -507,8 +507,8 @@ Next, configure a DLP policy that blocks users when they share a document on a S
     
 16. Click **OK**.
     
-17. In the **What do you want to do if we detect sensitive info?** pane, click **Next**.
-    
+17. In the **Do you want to turn on the policy or test things out first?** pane, click **Yes, turn it on right away**, and then click **Next**.
+
 18. In the **Do you want to turn on the policy or test things out first?** pane, click **Yes, turn it on right away**, and then click **Next**.
     
 19. In the **Review your settings** pane, click **Create**, and then click **Close**.
