@@ -68,8 +68,8 @@ To have access to the **Content search** page to run searches and preview and ex
     
       Why use the keyword list? You can get statistics that show how many items match each keyword. This can help you quickly identify which keywords are the most (and least) effective. You can also use a keyword phrase (surrounded by parentheses) in a row. For more information about search statistics, see [View keyword statistics for Content Search results](view-keyword-statistics-for-content-search.md).
 
-    > [!NOTE]
-    > To help reduce issues caused by large keyword lists, you're now limited to a maximum of 20 rows in the keyword list.
+     > [!NOTE]
+     > To help reduce issues caused by large keyword lists, you're now limited to a maximum of 20 rows in the keyword list.
     
     - **Conditions** – You can add search conditions to narrow a search and return a more refined set of results. Each condition adds a clause to the search query that is created and run when you start the search. A condition is logically connected to the keyword query (specified in the keyword box) by a logical operator (**c:c**) that is similar in functionality to the **AND** operator. That means that items have to satisfy both the keyword query and one or more conditions to be included in the results. This is how conditions help to narrow your results. For a list and description of conditions that you can use in a search query, see the "Search conditions" section in [Keyword queries and search conditions for Content Search](keyword-queries-and-search-conditions.md#search-conditions).
     
@@ -83,7 +83,9 @@ To have access to the **Content search** page to run searches and preview and ex
   
          You can also add distribution groups to the list of Exchange mailboxes to search. For distribution groups, the mailboxes of group members are searched. Dynamic distribution groups aren't supported.
     
-       **Important:** When you search all mailbox locations or just specific mailboxes, data from other Office 365 applications that's saved to user mailboxes is included when you export the results of a Content Search. This data won't be included in the estimated search results and isn't available for preview. It is included when you export and download the search results; see [Exporting data from other Office 365 applications](#exporting-data-from-myanalytics-and-other-office-365-applications) in the "More information about content search" section. 
+       > [!NOTE]
+       > When you search all mailbox locations or just specific mailboxes, data from other Office 365 applications that's saved to user mailboxes is included when you export the results of a Content Search. This data won't be included in the estimated search results and isn't available for preview. It is included when you export and download the search results. For more information, see [Content stored in Exchange Online mailboxes](what-is-stored-in-exo-mailbox.md).
+
     
 6. After you've set up your search query, click **Save & run**.
     
