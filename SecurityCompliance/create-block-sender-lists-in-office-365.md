@@ -44,6 +44,8 @@ The steps to set this up are different between [Outlook Web App](https://support
 
 When multiple users are being impacted, the scope is wider, and you need to use a company-wide sender/domain block list Anti-Spam policy. The detailed steps can be found in [Configure your spam filter policies](https://docs.microsoft.com/en-us/office365/securitycompliance/configure-your-spam-filter-policies) document. Any messages blocked through this method will follow the spam action as configured in the policy.
 
+The maximum limit for these lists is approximately 1000 entries.
+
 ## Use Exchange Transport Rules (ETRs) to Block specific senders
 
 If it's necessary to block messages being sent to specific users or across the entire organization, ETRs (also called mail flow rules) can be used. ETRs are more flexible because they can trigger off the sender Email Address or Domain as well as key words and other properties  in the message. This flexibility will let you create partial- to complete blocks. [Please click for the steps to create an ETR, also known as a mail-flow rules](https://docs.microsoft.com/en-us/office365/SecurityCompliance/use-mail-flow-rules-to-set-the-spam-confidence-level-scl-in-messages).
