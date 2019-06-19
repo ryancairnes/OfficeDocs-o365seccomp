@@ -178,7 +178,7 @@ For example, suppose you want to block communications between Segment A and Segm
 
     **If needed, you can specify multiple segments with this cmdlet, as shown in the following two examples.**
 
-    Syntax: `New-InformationBarrierPolicy -Name "policyname" -AssignedSegment "segmentname" -SegmentsAllowed "segmentname, segmentname"`
+    Syntax: `New-InformationBarrierPolicy -Name "policyname" -AssignedSegment "segmentname" -SegmentsAllowed "segmentname", "segmentname"`
 
     **Example 1: Define a policy to allow multiple segments to communicate with only one other segment**
 
@@ -188,7 +188,7 @@ For example, suppose you want to block communications between Segment A and Segm
 
     **Example 2: Define a policy to allow multiple segments to communicate with only certain other segments**    
 
-    `New-InformationBarrierPolicy -Name "SalesMarketing-HRManufacturing" -AssignedSegment "Sales, Marketing" -SegmentsAllowed "HR, Manufacturing" -State Inactive`
+    `New-InformationBarrierPolicy -Name "SalesMarketing-HRManufacturing" -AssignedSegment "Sales, Marketing" -SegmentsAllowed "HR", "Manufacturing" -State Inactive`
 
     In this example, we defined a policy that allows the *Sales* and *Marketing* segments to communicate with only *HR* and *Manufacturing*.
 
@@ -286,13 +286,13 @@ When you have finished editing segments for your organization, you can proceed t
 
     Syntax (blocking segments from communicating with other segments): 
 
-    `Set-InformationBarrierPolicy -Identity GUID -SegmentsBlocked "segmentname, segmentname"` 
+    `Set-InformationBarrierPolicy -Identity GUID -SegmentsBlocked "segmentname", "segmentname"` 
 
     Syntax (enabling segments to communicate only with certain other segments):
     
-    ``Set-InformationBarrierPolicy -Identity GUID -SegmentsAllowed "segmentname, segmentname"``
+    ``Set-InformationBarrierPolicy -Identity GUID -SegmentsAllowed "segmentname", "segmentname"``
 
-    Example: Suppose a policy was defined to block Research from communicating with Sales and Marketing. The policy was defined by using this cmdlet: `New-InformationBarrierPolicy -Name "Research-SalesMarketing" -AssignedSegment "Research" -SegmentsBlocked "Sales, Marketing"`
+    Example: Suppose a policy was defined to block Research from communicating with Sales and Marketing. The policy was defined by using this cmdlet: `New-InformationBarrierPolicy -Name "Research-SalesMarketing" -AssignedSegment "Research" -SegmentsBlocked "Sales", "Marketing"`
     
     Suppose we want to change it so that people in Research can only communicate with people in HR. To make this change, we use this cmdlet: `Set-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c93772471 -SegmentsAllowed "HR"`
 
@@ -396,7 +396,7 @@ Contoso defines three polices, as described in the following table:
 |---------|---------|
 |Policy 1: Prevent Sales from communicating with Research     | `New-InformationBarrierPolicy -Name "Sales-Research" -AssignedSegment "Sales" -SegmentsBlocked "Research" -State Inactive` <p> In this example, the information barrier policy is called *Sales-Research*. When this policy is active and applied, it will help prevent users who are in the Sales segment from communicating with users in the Research segment. This is a one-way policy; it won't prevent Research from communicating with Sales. For that, Policy 2 is needed.      |
 |Policy 2: Prevent Research from communicating with Sales     | `New-InformationBarrierPolicy -Name "Research-Sales" -AssignedSegment "Research" -SegmentsBlocked "Sales" -State Inactive` <p> In this example, the information barrier policy is called *Research-Sales*. When this policy is active and applied, it will help prevent users who are in the Research segment from communicating with users in the Sales segment.       |
-|Policy 3: Allow Manufacturing to communicate with HR and Marketing only     | `New-InformationBarrierPolicy -Name "Manufacturing-HRMarketing" -AssignedSegment "Manufacturing" -SegmentsAllowed "HR, Marketing" -State Inactive` <p>In this case, the information barrier policy is called *Manufacturing-HRMarketing*. When this policy is active and applied, Manufacturing can communicate only with HR and Marketing. Note that HR and Marketing are not restricted from communicating with other segments. |
+|Policy 3: Allow Manufacturing to communicate with HR and Marketing only     | `New-InformationBarrierPolicy -Name "Manufacturing-HRMarketing" -AssignedSegment "Manufacturing" -SegmentsAllowed "HR", "Marketing" -State Inactive` <p>In this case, the information barrier policy is called *Manufacturing-HRMarketing*. When this policy is active and applied, Manufacturing can communicate only with HR and Marketing. Note that HR and Marketing are not restricted from communicating with other segments. |
 
 With segments and policies defined, Contoso applies the policies by running the **Start-InformationBarrierPoliciesApplication** cmdlet. 
 
