@@ -182,9 +182,9 @@ For example, suppose you want to block communications between Segment A and Segm
 
     **Example 2: Define a policy to allow a segment to communicate with only two other segments**    
 
-    `New-InformationBarrierPolicy -Name "SalesMarketing-HRManufacturing" -AssignedSegment "Marketing" -SegmentsAllowed "HR","Manufacturing" -State Inactive`
+    `New-InformationBarrierPolicy -Name "Research-HRManufacturing" -AssignedSegment "Research" -SegmentsAllowed "HR","Manufacturing" -State Inactive`
 
-    In this example, we defined a policy that allows the *Sales* and *Marketing* segments to communicate with only *HR* and *Manufacturing*.
+    In this example, we defined a policy that allows the *Research* segment to communicate with only *HR* and *Manufacturing*.
 
     Repeat this step for each policy you want to define to allow specific segments to communicate with only certain other specific segments.
 
