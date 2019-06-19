@@ -256,6 +256,19 @@ For example, the employee ID entity looks for the keyword "card" because it migh
     <Match idRef="Keyword_false_positives_intl" />
 </Any>
 ```
+
+### Find a number of unique matches
+
+If you want to match a number of unique terms, use the *uniqueResults* parameter, set to *true*, as shown in the following example:
+
+```
+<Pattern confidenceLevel="75">
+    <IdMatch idRef="Salary_Revision_terms" />
+    <Match idRef=" Salary_Revision_ID " minCount="3" uniqueResults="true" />
+</Pattern>
+```
+
+In this example, a pattern is defined for salary revision using at least three unique matches. 
   
 ## How close to the entity must the other evidence be? [patternsProximity attribute]
 
