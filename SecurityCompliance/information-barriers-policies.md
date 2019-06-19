@@ -116,7 +116,7 @@ Defining segments does not effect users; it just sets the stage for information 
 
     Example: `New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"`
 
-    In this example, a segment called *HR* is defined using *HR*, a value in the Department attribute.
+    In this example, a segment called *HR* is defined using *HR*, a value in the *Department* attribute.
 
 2. Repeat step 1 for each segment you want to define.
 
@@ -149,7 +149,7 @@ For example, suppose you want to block communications between Segment A and Segm
 
 1. To define your first blocking policy, use the **New-InformationBarrierPolicy** cmdlet with the **SegmentsBlocked** parameter. 
 
-    Syntax: `New-InformationBarrierPolicy -Name "policyname" -AssignedSegment "segmentname" -SegmentsBlocked "segmentname"`
+    Syntax: `New-InformationBarrierPolicy -Name "policyname" -AssignedSegment "segment1name" -SegmentsBlocked "segment2name"`
 
     Example: `New-InformationBarrierPolicy -Name "Sales-Research" -AssignedSegment "Sales" -SegmentsBlocked "Research" -State Inactive`
 
@@ -159,7 +159,7 @@ For example, suppose you want to block communications between Segment A and Segm
 
     Example: `New-InformationBarrierPolicy -Name "Research-Sales" -AssignedSegment "Research" -SegmentsBlocked "Sales" -State Inactive`
 
-    In this example, we defined a policy called *Research-Sales* to prevent Research from communicating with Sales.
+    In this example, we defined a policy called *Research-Sales* to prevent *Research* from communicating with *Sales*.
  
 2. Proceed to one of the following:
 
@@ -170,11 +170,11 @@ For example, suppose you want to block communications between Segment A and Segm
 
 1. To allow one segment to communicate with only one other segment, use the **New-InformationBarrierPolicy** cmdlet with the **SegmentsAllowed** parameter. 
 
-    Syntax: `New-InformationBarrierPolicy -Name "policyname" -AssignedSegment "segmentname" -SegmentsAllowed "segmentname"`
+    Syntax: `New-InformationBarrierPolicy -Name "policyname" -AssignedSegment "segment1name" -SegmentsAllowed "segment2name"`
 
     Example: `New-InformationBarrierPolicy -Name "Manufacturing-HR" -AssignedSegment "Manufacturing" -SegmentsAllowed "HR" -State Inactive`
 
-    In this example, we defined a policy called *Manufacturing-HR* for a segment called *Manufacturing*. When active and applied, this policy allows people in *Manufacturing* to communicate only with people in a segment called *HR*. (In this case, Manufacturing cannot communicate with users who are not part of HR.)
+    In this example, we defined a policy called *Manufacturing-HR* for a segment called *Manufacturing*. When active and applied, this policy allows people in *Manufacturing* to communicate only with people in a segment called *HR*. (In this case, *Manufacturing* cannot communicate with users who are not part of *HR*.)
 
     **If needed, you can specify multiple segments with this cmdlet, as shown in the following example.**
 
