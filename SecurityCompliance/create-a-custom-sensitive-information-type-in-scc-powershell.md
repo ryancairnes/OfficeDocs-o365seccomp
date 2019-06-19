@@ -257,7 +257,7 @@ For example, the employee ID entity looks for the keyword "card" because it migh
 </Any>
 ```
 
-### Find a number of unique matches
+### Match a number of unique terms
 
 If you want to match a number of unique terms, use the *uniqueResults* parameter, set to *true*, as shown in the following example:
 
