@@ -3,7 +3,7 @@ title: "Manage GDPR data subject requests with the DSR case tool in the Security
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 5/25/2018
+ms.date: 
 audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
