@@ -131,7 +131,7 @@ Yes! For information on customizing email messages and the OME portal, see Add y
   
 ## Are there any reporting capabilities or insights for encrypted emails?
 
-Not at this time but coming soon.
+There is an Encryption report in the Security and Compliance Center. See [View email security reports in the Security & Compliance Center.](view-email-security-reports.md)
   
 ## Can I use message encryption with compliance features such as eDiscovery?
 
