@@ -110,22 +110,38 @@ Determine which attributes in your organization's directory data you'll use to d
 
 Defining segments does not effect users; it just sets the stage for information barrier policies to be defined and then applied.
 
-1. To define an organizational segment, use the **New-OrganizationSegment** cmdlet with the **UserGroupFilter** parameter that corresponds to the [attribute](information-barriers-attributes.md) you want to use. 
+To define an organizational segment, use the **New-OrganizationSegment** cmdlet with the **UserGroupFilter** parameter that corresponds to the [attribute](information-barriers-attributes.md) you want to use.
 
-    Syntax: `New-OrganizationSegment -Name "segmentname" -UserGroupFilter "attribute -eq 'attributevalue'"`
+Syntax: `New-OrganizationSegment -Name "segmentname" -UserGroupFilter "attribute -eq 'attributevalue'"`
 
-    Example: `New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"`
+Example: `New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"`
 
-    In this example, a segment called *HR* is defined using *HR*, a value in the Department attribute.
+In this example, a segment called *HR* is defined using *HR*, a value in the *Department* attribute. The "-eq" portion of the cmdlet refers to "equals."
 
-2. Repeat step 1 for each segment you want to define.
+Repeat this process for each segment you want to define.
 
-    After you run each cmdlet, you should see a list of details about the new segment. Details include the segment's type, who created or last modified it, and so on. 
+After you run each cmdlet, you should see a list of details about the new segment. Details include the segment's type, who created or last modified it, and so on. 
 
 > [!IMPORTANT]
 > **Make sure that your segments do not overlap**. Each user who will be affected by information barriers should belong to one (and only one) segment. No user should belong to two or more segments. (See [Example: Contoso's defined segments](#contosos-defined-segments) in this article.)
 
 After you have defined your segments, proceed to define information barrier policies.
+
+### Using "equals" and "not equals" in segment definitions
+
+In the first example shown above, we defined a segment such that "Department equals HR." That segment included an "equals" parameter. You can also define segments using a "not equals" parameter, as shown in the following example:
+
+Syntax: `New-OrganizationSegment -Name "segmentname" -UserGroupFilter "attribute -ne 'attributevalue'"`
+
+Example: `New-OrganizationSegment -Name "NotSales" -UserGroupFilter "Department -ne 'Sales'"`
+
+In this example, we defined a segment called NotSales that includes everyone who is not in Sales. The "-ne" portion of the cmdlet refers to "not equals."
+
+In addition, you can define a segment using both "equals" and "not equals" parameters.
+
+Example: `New-OrganizationSegment -Name "LocalFTE" -UserGroupFilter "Location -eq 'Local'" and "Position -ne 'Temporary'"`
+
+In this example, we defined a segment called *LocalFTE* that includes people who are locally located and whose positions are not listed as *Temporary*.
 
 ## Part 2: Define information barrier policies
 
@@ -149,7 +165,7 @@ For example, suppose you want to block communications between Segment A and Segm
 
 1. To define your first blocking policy, use the **New-InformationBarrierPolicy** cmdlet with the **SegmentsBlocked** parameter. 
 
-    Syntax: `New-InformationBarrierPolicy -Name "policyname" -AssignedSegment "segmentname" -SegmentsBlocked "segmentname"`
+    Syntax: `New-InformationBarrierPolicy -Name "policyname" -AssignedSegment "segment1name" -SegmentsBlocked "segment2name"`
 
     Example: `New-InformationBarrierPolicy -Name "Sales-Research" -AssignedSegment "Sales" -SegmentsBlocked "Research" -State Inactive`
 
@@ -159,7 +175,7 @@ For example, suppose you want to block communications between Segment A and Segm
 
     Example: `New-InformationBarrierPolicy -Name "Research-Sales" -AssignedSegment "Research" -SegmentsBlocked "Sales" -State Inactive`
 
-    In this example, we defined a policy called *Research-Sales* to prevent Research from communicating with Sales.
+    In this example, we defined a policy called *Research-Sales* to prevent *Research* from communicating with *Sales*.
  
 2. Proceed to one of the following:
 
@@ -170,11 +186,11 @@ For example, suppose you want to block communications between Segment A and Segm
 
 1. To allow one segment to communicate with only one other segment, use the **New-InformationBarrierPolicy** cmdlet with the **SegmentsAllowed** parameter. 
 
-    Syntax: `New-InformationBarrierPolicy -Name "policyname" -AssignedSegment "segmentname" -SegmentsAllowed "segmentname"`
+    Syntax: `New-InformationBarrierPolicy -Name "policyname" -AssignedSegment "segment1name" -SegmentsAllowed "segment2name"`
 
     Example: `New-InformationBarrierPolicy -Name "Manufacturing-HR" -AssignedSegment "Manufacturing" -SegmentsAllowed "HR" -State Inactive`
 
-    In this example, we defined a policy called *Manufacturing-HR* for a segment called *Manufacturing*. When active and applied, this policy allows people in *Manufacturing* to communicate only with people in a segment called *HR*. (In this case, Manufacturing cannot communicate with users who are not part of HR.)
+    In this example, we defined a policy called *Manufacturing-HR* for a segment called *Manufacturing*. When active and applied, this policy allows people in *Manufacturing* to communicate only with people in a segment called *HR*. (In this case, *Manufacturing* cannot communicate with users who are not part of *HR*.)
 
     **If needed, you can specify multiple segments with this cmdlet, as shown in the following example.**
 
@@ -278,17 +294,11 @@ When you have finished editing segments for your organization, you can proceed t
 
 2. Use the **Set-InformationBarrierPolicy** cmdlet with an **Identity** parameter, and specify the changes you want to make.
 
-    Syntax (blocking segments from communicating with other segments): 
-
-    `Set-InformationBarrierPolicy -Identity GUID -SegmentsBlocked "segment1name","segment2name"` 
-
-    Syntax (enabling segments to communicate only with certain other segments):
+    Example: Suppose a policy was defined to block the *Research* segment from communicating with the *Sales* and *Marketing* segments. The policy was defined by using this cmdlet: `New-InformationBarrierPolicy -Name "Research-SalesMarketing" -AssignedSegment "Research" -SegmentsBlocked "Sales","Marketing"`
     
-    ``Set-InformationBarrierPolicy -Identity GUID -SegmentsAllowed "segment1name","segment2name"``
+    Suppose we want to change it so that people in the *Research* segment can only communicate with people in the *HR* segment. To make this change, we use this cmdlet: `Set-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c93772471 -SegmentsAllowed "HR"`
 
-    Example: Suppose a policy was defined to block Research from communicating with Sales and Marketing. The policy was defined by using this cmdlet: `New-InformationBarrierPolicy -Name "Research-SalesMarketing" -AssignedSegment "Research" -SegmentsBlocked "Sales","Marketing"`
-    
-    Suppose we want to change it so that people in Research can only communicate with people in HR. To make this change, we use this cmdlet: `Set-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c93772471 -SegmentsAllowed "HR"`
+    In this example, we changed "SegmentsBlocked" to "SegmentsAllowed" and specified the *HR* segment.
 
 3. When you are finished editing a policy, make sure to apply your changes. (See [Apply information barrier policies](#part-3-apply-information-barrier-policies).)
 
@@ -341,7 +351,7 @@ When you have finished editing segments for your organization, you can proceed t
     Changes are applied, user by user, for your organization. If your organization is large, it can take 24 hours (or more) for this process to complete. (As a general guideline, it takes about an hour to process 5,000 user accounts.)
 
 At this point, one or more information barrier policies are set to inactive status. From here, you can do any of the following:
-- Leave it as is (a policy set to inactive status has no effect on users)
+- Keep it as is (a policy set to inactive status has no effect on users)
 - [Edit a policy](#edit-a-policy) 
 - [Remove a policy](#remove-a-policy)
 
