@@ -129,7 +129,7 @@ After you have defined your segments, proceed to define information barrier poli
 
 ### Using "equals" and "not equals" in segment definitions
 
-In the first example shown above, we defined a segment that includes the logic, *Department equals HR*. You can also define segments using a "not equals" parameter, as shown in the following example:
+In the first example shown above, we defined a segment such that "Department equals HR." That segment included an "equals" parameter. You can also define segments using a "not equals" parameter, as shown in the following example:
 
 Syntax: `New-OrganizationSegment -Name "segmentname" -UserGroupFilter "attribute -ne 'attributevalue'"`
 
