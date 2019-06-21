@@ -122,7 +122,7 @@ Keep in mind that when you run the policy application cmdlet, information barrie
 
     This will display information about whether policy application completed, failed, or is in progress..
 
-2. Depending on the results of step 2, take one of the following steps:
+2. Depending on the results of the previous step, take one of the following steps:
   
     |Status  |Next step  |
     |---------|---------|
