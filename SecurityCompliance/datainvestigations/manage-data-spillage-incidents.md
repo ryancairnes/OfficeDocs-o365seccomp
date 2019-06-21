@@ -1,10 +1,9 @@
 ---
 title: "Manage a data spillage incident in Microsoft 365"
 ms.author: markjjo
-author: markjjo
 manager: laurawi
 ms.date: 
-audience: Admin
+ms.audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -119,20 +118,17 @@ To determine which users are involved in the data spillage, you can create a new
 
 ## Step 4: Delete the spilled data
 
-### Deleting mailbox items
+Using data investigations, you can delete items from their original locations (e.g. mailboxes, sharepoint sites) across the tenant. Because you collected items as evidence, you will have copies of the items in an evidence set to further investigate or simply preserve them. 
 
-After you review and validate that the search results contain only the email messages that must be deleted, you can permanently delete them by running the **New-ComplianceSearchAction -Purge -PurgeType HardDelete** command in Security & Compliance Center PowerShell. For instructions, see [Search for and delete email messages](../search-for-and-delete-messages-in-your-organization.md). 
+To delete items from original locations in **Evidence set**:
 
-If single item recovery is enabled for mailboxes in your organization, permanently deleted items will be retained in the user's Recoverable items folder (and accessible by admins) until the deleted item retention period ends (the default is 14 days). Additionally, if any mailbox that contains spilled data is on a legal hold or assigned to a retention policy, purged messages will be retained in the Recoverable items folder until the hold duration for the item expires. To hard delete messages immediately, you need to perform addition tasks. For instructions, see [Delete items in the Recoverable Items folder of cloud-based mailboxes on hold](../delete-items-in-the-recoverable-items-folder-of-mailboxes-on-hold.md).  
+1. In **Evidence set**, select items that you want to delete. If you select attachments of an email, the parent email will be selected and deleted. 
+ 
+2. Click **Action** and **Delete items from original locations**.
 
-> [!IMPORTANT]
-> Check with your records management or legal departments before removing a hold or retention policy. Your organization may have a policy that defines whether a mailbox on hold or a data spillage incident takes priority. 
+3. Verify the items that you are about to delete and click **Delete**.
 
-### Deleting site items
-
-To permanently delete a document from a SharePoint site or OneDrive account, you have to delete the document and then you have to delete from the site Recycle Bin and then delete it from the site collection Recycle Bin. For more information, see [Delete documents in SharePoint and OneDrive](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-office365#deleting-documents-in-sharepoint-online-and-onedrive-for-business).
-
-Alternatively, you can delete an entire site collection that might contained spilled data. For instructions, see [Delete a site collection](https://docs.microsoft.com/sharepoint/delete-site-collection).
+Currently, deleted items will be retained until recovery period expires. This is also known as **Soft delete**. For more information on how to delete items from their original locations, see [Delete items from original locations](../delete-items-from-original-locations.md)
 
 ## Step 5: Close or delete the investigation
 
