@@ -3,7 +3,7 @@ title: "Threat Explorer (and real-time detections)"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 05/22/2019
+ms.date: 06/20/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -127,6 +127,7 @@ In addition to the scenarios outlined in this article, you have many more report
 You must have [Office 365 ATP](office-365-atp.md) to get Explorer or real-time detections.
 - Explorer is included in Office 365 ATP Plan 2. 
 - The real-time detections report is included in Office 365 ATP Plan 1.
+- Plan to assign licenses for all users who should be protected by ATP. (Explorer or real-time detections will show detection data for licensed users.)
 
 To view and use Explorer or real-time detections, you must have appropriate permissions, such as those granted to a security administrator or security reader. 
 
