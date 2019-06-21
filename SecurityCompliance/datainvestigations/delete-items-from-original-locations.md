@@ -28,4 +28,4 @@ To delete items from original locations in **Evidence set**:
 
 3. Verify the items that you are about to delete and click **Delete**.
 
-Currently, deleted items will be retained until recovery or deleted items retention period expires. This is also known as **Soft delete**. You can verify the result of deletion in **Jobs** tab. 
+Currently, deleted items will be retained until recovery or deleted items retention period expires. This is also known as **Soft delete**. You can check the result of deletion in **Jobs** tab. 
