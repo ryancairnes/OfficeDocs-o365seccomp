@@ -295,7 +295,7 @@ A Preservation Lock is now placed on the retention policy. If you run `Get-Reten
   
 ## Releasing a retention policy
 
-You can turn off or delete a retention period at any time. When you do so, any SharePoint or OneDrive content that's being retained is not immediately and permanently deleted. Instead, to help prevent inadvertent data loss, there is a 30-day grace period, during which content expiration does not happen in the Preservation Hold library, so that you can restore any content from there, if needed. You can also turn on the retention policy again during the grace period, and no content will be expired for that policy. This grace period is configurable by using PowerShell.
+You can turn off or delete a retention policy at any time. When you do so, any SharePoint or OneDrive content that's being retained is not immediately and permanently deleted. Instead, to help prevent inadvertent data loss, there is a 30-day grace period, during which content expiration for that policy does not happen in the Preservation Hold library, so that you can restore any content from there, if needed. You can also turn on the retention policy again during the grace period, and no content will be deleted for that policy. This grace period is configurable by using PowerShell.
 
 First, [connect to Office 365 Security & Compliance Center PowerShell](http://go.microsoft.com/fwlink/p/?LinkID=799771).
 
@@ -308,6 +308,8 @@ $siteSubSettingsMgr = [Microsoft.SharePoint.SPSiteSubscriptionSettingsManager]::
 $properties = $siteSubSettingsMgr.GetProperties($siteSubscription)
 $properties.SetValue("ip_tenantGracePeriodInDays",  30)
 `
+
+This 30-day grace period in SharePoint and OneDrive corresponds to the 30-day delay hold in Exchange. For more information, see [Managing mailboxes on delay hold](https://docs.microsoft.com/en-us/office365/securitycompliance/identify-a-hold-on-an-exchange-online-mailbox#managing-mailboxes-on-delay-hold).
 
 ## The principles of retention, or what takes precedence?
 
