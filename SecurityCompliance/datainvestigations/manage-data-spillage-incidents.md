@@ -128,7 +128,7 @@ To delete items from original locations in **Evidence set**:
 
 3. Verify the items that you are about to delete and click **Delete**.
 
-Currently, deleted items will be retained until recovery period expires. This is also known as **Soft delete**. For more information on how to delete items from their original locations, see [Delete items from original locations](../delete-items-from-original-locations.md)
+Currently, deleted items will be retained until recovery period expires. This is also known as **Soft delete**. For more information on how to delete items from their original locations, see [Delete items from original locations](delete-items-from-original-locations.md).
 
 ## Step 5: Close or delete the investigation
 
