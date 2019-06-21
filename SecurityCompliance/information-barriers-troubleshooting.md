@@ -51,9 +51,13 @@ In this example, we refer to two user accounts in Office 365: *meganb* for *Mega
 (You can also use this cmdlet for a single user: `Get-InformationBarrierRecipientStatus -Identity <value>`) 
 This cmdlet returns information about users, such as attribute values and any information barrier policies that are applied.
 
-- If you do not see any segments listed, then one or both users are not assigned to a segment. 
 
-If users are not assigned to a segment
+|Results  |Next steps  |
+|---------|---------|
+|No segments are listed for the selected user(s)     |Do one of the following:<br/>- Assign users to an existing segment by editing their user profiles in Azure Active Directory<br/>- Define a segment using a [supported attribute for information barriers](information-barriers-attributes.md)         |
+|Segments are listed but no information barrier policies are assigned to those segments     |Do one of the following:<br/>- [Define an information barrier policy](information-barriers-policies.md#part-2-define-information-barrier-policies) for each segment in question<br/>- [Edit an information barrier policy](information-barriers-policies.md#edit-a-policy) and assign it to the correct segment         |
+|Segments are listed and each is included in an information barrier policy     |- Run the `Get-InformationBarrierPolicy` cmdlet to verify that information barrier policies are active<br/>- Run the `Get-InformationBarrierPoliciesApplicationStatus` cmdlet to confirm the policies are applied<br/>- Run the `Start-InformationBarrierPoliciesApplication` cmdlet to apply all active information barrier policies          |
+
 
 ## Issue: People are unexpectedly blocked from communicating in Microsoft Teams 
 
