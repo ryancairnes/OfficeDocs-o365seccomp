@@ -242,7 +242,7 @@ The Twitter developer app is now ready to use.
 
    ![](media/TCimage44.png)
 
-10. On the **Set Storage Account** page, select the Office 365 mailbox that the Twitter items will be imported to.
+10. On the **Set Storage Account** page, type the email address of an Office 365 mailbox that the Twitter items will be imported to.
 
     ![](media/TCimage45.png)
 
