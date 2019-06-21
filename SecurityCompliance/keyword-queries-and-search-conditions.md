@@ -42,8 +42,6 @@ The following table lists email message properties that can be searched by using
 
 > [!NOTE]
 > When searching email properties, it's not possible to search for items in which the specified property is empty or blank. For example, using the *property:value* pair of **subject:""** to search for email messages with an empty subject line will return zero results. This also applies when searching site and contact properties.
-
-<br/>
   
 |**Property**|**Property description**|**Examples**|**Search results returned by the examples**|
 |:-----|:-----|:-----|:-----|
@@ -101,8 +99,6 @@ The following table lists the contact properties that are indexed and that you c
   
 > [!TIP]
 > To search for values that contain spaces or special characters, use double quotation marks ("  ") to contain the phrase; for example,  `businessaddress:"123 Main Street"`. 
-
-<br/>
   
 |**Property**|**Property description**|
 |:-----|:-----|

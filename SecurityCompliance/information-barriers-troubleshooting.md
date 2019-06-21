@@ -3,7 +3,7 @@ title: "Troubleshooting information barriers"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 05/31/2019
+ms.date: 06/21/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -15,9 +15,10 @@ description: "Use this article as a guide for troubleshooting information barrie
 
 # Troubleshooting information barriers (Preview)
 
-Information barriers can help your organization remain compliant with legal requirements and industry regulations. For example, with information barriers, you can restrict communication between specific groups of users to avoid a conflict of interest or other issues. To learn more, see [Information barriers (Preview)](information-barriers.md).
+[Information barriers (Preview)](information-barriers.md) can help your organization remain compliant with legal requirements and industry regulations. For example, with information barriers, you can restrict communication between specific groups of users to avoid a conflict of interest or other issues. (To learn more about how to set up information barriers, see [Define policies for information barriers (Preview)](information-barriers-policies.md).)
 
-This article provides guidance you can use to get answers to questions or resolve issues that may arise with information barriers.  
+In the event that people run into unexpected issues after information barriers are in place, there are some steps you can take to resolve those issues. Use this article as a guide.
+
 
 ## Before you begin...
 
@@ -27,18 +28,43 @@ To perform the tasks described in this article, you must be assigned an appropri
 - Compliance Administrator
 - IB Compliance Management (this is a new role!)
 
-To learn more about roles and permissions, see [Permissions in the Office 365 Security & Compliance Center](permissions-in-the-security-and-compliance-center.md).
-
 To learn more about prerequisites for information barriers, see [Prerequisites (for information barrier policies)](information-barriers-policies.md#prerequisites).
 
-Also, make sure to [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
+Make sure to [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
+
+## Issue: Communications are still allowed between users who should be blocked in Microsoft Teams
+
+In this case, although information barriers are defined, active, and applied, people who should be prevented from communicating with each other still can in Microsoft Teams.
+
+### What to do
+
+Verify that the users in question are included in an information barrier policy. Use the **Get-InformationBarrierRecipientStatus** cmdlet with Identity parameters.
+
+Syntax: `Get-InformationBarrierRecipientStatus -Identity <value> -Identity2 <value>` 
+
+You can use any value that uniquely identifies each user, such as name, alias, distinguished name, canonical domain name, email address, or GUID. 
+
+Example: `Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw` 
+
+In this example, we refer to two user accounts in Office 365: *meganb* for *Megan*, and *alexw* for *Alex*. 
+
+(You can also use this cmdlet for a single user: `Get-InformationBarrierRecipientStatus -Identity <value>`) 
+This cmdlet returns information about users, such as attribute values and any information barrier policies that are applied.
+
+
+|Results  |Next steps  |
+|---------|---------|
+|No segments are listed for the selected user(s)     |Do one of the following:<br/>- Assign users to an existing segment by editing their user profiles in Azure Active Directory<br/>- Define a segment using a [supported attribute for information barriers](information-barriers-attributes.md)         |
+|Segments are listed but no information barrier policies are assigned to those segments     |Do one of the following:<br/>- [Define an information barrier policy](information-barriers-policies.md#part-2-define-information-barrier-policies) for each segment in question<br/>- [Edit an information barrier policy](information-barriers-policies.md#edit-a-policy) and assign it to the correct segment         |
+|Segments are listed and each is included in an information barrier policy     |- Run the `Get-InformationBarrierPolicy` cmdlet to verify that information barrier policies are active<br/>- Run the `Get-InformationBarrierPoliciesApplicationStatus` cmdlet to confirm the policies are applied<br/>- Run the `Start-InformationBarrierPoliciesApplication` cmdlet to apply all active information barrier policies          |
+
 
 ## Issue: People are unexpectedly blocked from communicating in Microsoft Teams 
 
 In this case, people are reporting unexpected issues communicating in Microsoft Teams. Examples:
 - A user is unable to find or communicate with another user in Microsoft Teams.
 - A user cannot see or select another user in Microsoft Teams.
-- A user can see, but cannot send messages to, another user in Microsoft Teams.
+- A user can see another user, but cannot select or send messages to that other user in Microsoft Teams.
 
 ### What to do
 
@@ -89,23 +115,24 @@ After running the **Start-InformationBarrierPoliciesApplication** cmdlet, the pr
 
 ### What to do
 
-1. Keep in mind that when you run the policy application cmdlet, information barrier policies are being applied (or removed), user by user, for all accounts in your organization. If you have a lot of users, it will take a while to process. (As a general guideline, it takes about an hour to process 5,000 user accounts.) 
+Keep in mind that when you run the policy application cmdlet, information barrier policies are being applied (or removed), user by user, for all accounts in your organization. If you have a lot of users, it will take a while to process. (As a general guideline, it takes about an hour to process 5,000 user accounts.)
 
-2. Use the **Get-InformationBarrierPoliciesApplicationStatus** cmdlet to verify status.
+1. Use the **Get-InformationBarrierPoliciesApplicationStatus** cmdlet to verify status of the most recent policy application.
 
     Syntax: `Get-InformationBarrierPoliciesApplicationStatus`
 
-    To display status for all information barrier policy applications, use `Get-InformationBarrierPoliciesApplicationStatus -All $true`
+    (To display status for *all* information barrier policy applications, use this cmdlet:<br/>
+    `Get-InformationBarrierPoliciesApplicationStatus -All $true`)
 
     This will display information about whether policy application completed, failed, or is in progress..
 
-3. Depending on the results of step 2, take one of the following steps:
-
-    - If the application has not started, and it has been more than 45 minutes since the **Start-InformationBarrierPoliciesApplication** cmdlet has been run, review your audit log to see if there are any errors in policy definitions, or some other reason why the application has not started.
-
-    - If the application has failed, review your segments and policies. If necessary, [edit segments](information-barriers-policies.md#edit-a-segment) and/or [edit policies](information-barriers-policies.md#edit-a-policy), and then run the **Start-InformationBarrierPoliciesApplication** cmdlet again.
-
-    - If the application is still in progress, allow more time for it to complete. If it has been several days, contact support.
+2. Depending on the results of the previous step, take one of the following steps:
+  
+    |Status  |Next step  |
+    |---------|---------|
+    |**Not started**     |If it has been more than 45 minutes since the **Start-InformationBarrierPoliciesApplication** cmdlet has been run, review your audit log to see if there are any errors in policy definitions, or some other reason why the application has not started. |
+    |**Failed**     |If the application has failed, review your audit log. Also review your segments and policies. Are any users assigned to more than one segment? Are any segments assigned more than one poliicy? If necessary, [edit segments](information-barriers-policies.md#edit-a-segment) and/or [edit policies](information-barriers-policies.md#edit-a-policy), and then run the **Start-InformationBarrierPoliciesApplication** cmdlet again.  |
+    |**In progress**     |If the application is still in progress, allow more time for it to complete. If it has been several days, gather your audit logs, and then contact support. |
 
 ## Related topics
 
