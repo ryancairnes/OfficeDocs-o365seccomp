@@ -38,7 +38,7 @@ In this case, although information barriers are defined, active, and applied, pe
 
 ### What to do
 
-1. Verify that the users in question are included in an information barrier policy. 
+1. Verify that the users in question are included in an information barrier policy. Use the 
 
 ## Issue: People are unexpectedly blocked from communicating in Microsoft Teams 
 
@@ -107,12 +107,12 @@ After running the **Start-InformationBarrierPoliciesApplication** cmdlet, the pr
     This will display information about whether policy application completed, failed, or is in progress..
 
 3. Depending on the results of step 2, take one of the following steps:
-
-    - If the application has not started, and it has been more than 45 minutes since the **Start-InformationBarrierPoliciesApplication** cmdlet has been run, review your audit log to see if there are any errors in policy definitions, or some other reason why the application has not started.
-
-    - If the application has failed, review your segments and policies. If necessary, [edit segments](information-barriers-policies.md#edit-a-segment) and/or [edit policies](information-barriers-policies.md#edit-a-policy), and then run the **Start-InformationBarrierPoliciesApplication** cmdlet again.
-
-    - If the application is still in progress, allow more time for it to complete. If it has been several days, contact support.
+  
+    |Status  |Next step  |
+    |---------|---------|
+    |**Not started**     |If it has been more than 45 minutes since the **Start-InformationBarrierPoliciesApplication** cmdlet has been run, review your audit log to see if there are any errors in policy definitions, or some other reason why the application has not started. |
+    |**Failed**     |If the application has failed, review your audit log. Also review your segments and policies. Are any users assigned to more than one segment? Are any segments assigned more than one poliicy? If necessary, [edit segments](information-barriers-policies.md#edit-a-segment) and/or [edit policies](information-barriers-policies.md#edit-a-policy), and then run the **Start-InformationBarrierPoliciesApplication** cmdlet again.  |
+    |**In progress**     |If the application is still in progress, allow more time for it to complete. If it has been several days, gather your audit logs, and then contact support. |
 
 ## Related topics
 
