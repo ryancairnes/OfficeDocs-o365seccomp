@@ -38,7 +38,22 @@ In this case, although information barriers are defined, active, and applied, pe
 
 ### What to do
 
-1. Verify that the users in question are included in an information barrier policy. Use the 
+Verify that the users in question are included in an information barrier policy. Use the **Get-InformationBarrierRecipientStatus** cmdlet with Identity parameters.
+
+Syntax: `Get-InformationBarrierRecipientStatus -Identity <value> -Identity2 <value>` 
+
+You can use any value that uniquely identifies each user, such as name, alias, distinguished name, canonical domain name, email address, or GUID. 
+
+Example: `Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw` 
+
+In this example, we refer to two user accounts in Office 365: *meganb* for *Megan*, and *alexw* for *Alex*. 
+
+(You can also use this cmdlet for a single user: `Get-InformationBarrierRecipientStatus -Identity <value>`) 
+This cmdlet returns information about users, such as attribute values and any information barrier policies that are applied.
+
+- If you do not see any segments listed, then one or both users are not assigned to a segment. 
+
+If users are not assigned to a segment
 
 ## Issue: People are unexpectedly blocked from communicating in Microsoft Teams 
 
