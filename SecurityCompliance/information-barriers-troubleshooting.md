@@ -96,17 +96,18 @@ After running the **Start-InformationBarrierPoliciesApplication** cmdlet, the pr
 
 ### What to do
 
-1. Keep in mind that when you run the policy application cmdlet, information barrier policies are being applied (or removed), user by user, for all accounts in your organization. If you have a lot of users, it will take a while to process. (As a general guideline, it takes about an hour to process 5,000 user accounts.) 
+Keep in mind that when you run the policy application cmdlet, information barrier policies are being applied (or removed), user by user, for all accounts in your organization. If you have a lot of users, it will take a while to process. (As a general guideline, it takes about an hour to process 5,000 user accounts.)
 
-2. Use the **Get-InformationBarrierPoliciesApplicationStatus** cmdlet to verify status.
+1. Use the **Get-InformationBarrierPoliciesApplicationStatus** cmdlet to verify status of the most recent policy application.
 
     Syntax: `Get-InformationBarrierPoliciesApplicationStatus`
 
-    To display status for all information barrier policy applications, use `Get-InformationBarrierPoliciesApplicationStatus -All $true`
+    (To display status for *all* information barrier policy applications, use this cmdlet:<br/>
+    `Get-InformationBarrierPoliciesApplicationStatus -All $true`)
 
     This will display information about whether policy application completed, failed, or is in progress..
 
-3. Depending on the results of step 2, take one of the following steps:
+2. Depending on the results of step 2, take one of the following steps:
   
     |Status  |Next step  |
     |---------|---------|
