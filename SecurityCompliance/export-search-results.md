@@ -3,7 +3,7 @@ title: "Export Content Search results"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 f1_keywords:
 - 'ms.o365.cc.CustomizeExport'
@@ -75,7 +75,7 @@ Exporting the results of a Content Search involves preparing the results, and th
 
 The first step is to prepare the search results for exporting. When you prepare results, they are uploaded to an Azure storage location in the Microsoft cloud. Note that content from mailboxes and sites is uploaded at a maximum rate of 2 GB per hour.
   
-1. Go to [https://compliance.microsoft.com](https://compliance.microsoft.com).
+1. Go to [https://protection.office.com](https://protection.office.com).
     
 2. Sign in to Office 365 using your work or school account.
     

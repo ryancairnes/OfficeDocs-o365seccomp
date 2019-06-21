@@ -3,35 +3,31 @@ title: "Mail flow insights in the Security & Compliance Center"
 ms.author: chrisda
 author: chrisda
 manager: serdars
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
 ms.assetid: beb6acaa-6016-4d54-ba7e-3d6d035e2b46
 description: "Admins can learn about the mail flow dashboard in the Security & Compliance Center."
-ROBOTS: NOINDEX, NOFOLLOW
 ---
 
 # Mail flow insights in the Security & Compliance Center
-
-> [!NOTE]
-> The features described in this topic haven't been deployed to all Office 365 organizations, and are subject to change.
 
 Admins can use mail flow dashboard in the Security & Compliance Center to discover trends, insights and take actions to fix issues related to mail flow in their Office 365 organization.
 
 The insights, reports, and widgets that are available in the mail flow dashboard are:
 
-- [Mail flow map report](mfi-mail-flow-map-report.md) (This report is new and is currently being deployed in Office 365.)
+- [Mail flow map report](mfi-mail-flow-map-report.md)
 
-- [Domain mail flow status insight](mfi-domain-mail-flow-status-insight.md) (This insight is new and is currently being deployed in Office 365.)
+- [Domain mail flow status insight](mfi-domain-mail-flow-status-insight.md)
 
-- [SMTP Auth clients report](mfi-smtp-auth-clients-report.md) (This report is new and is currently being deployed in Office 365.)
+- [SMTP Auth clients report](mfi-smtp-auth-clients-report.md)
 
-- [Sender domain insight](mfi-sender-domain-insight.md) (This insight is new and is currently being deployed in Office 365.)
+- [Sender domain insight](mfi-sender-domain-insight.md)
 
-- [Non-delivery report](mfi-non-delivery-report.md) (This report is new and is currently being deployed in Office 365.)
+- [Non-delivery report](mfi-non-delivery-report.md)
 
-- [Non-accepted domain report](mfi-non-accepted-domain-report.md) (This report is new and is currently being deployed in Office 365.)
+- [Non-accepted domain report](mfi-non-accepted-domain-report.md)
 
 - [Outbound and inbound mail flow](mfi-outbound-and-inbound-mail-flow.md)
 

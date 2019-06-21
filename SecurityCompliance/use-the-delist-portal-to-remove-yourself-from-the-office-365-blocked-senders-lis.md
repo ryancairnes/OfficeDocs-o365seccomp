@@ -4,7 +4,7 @@ ms.author: tracyp
 author: MSFTTracyP
 manager: laurawi
 ms.date: 4/18/2016
-ms.audience: ITPro
+audience: ITPro
 ms.topic: troubleshooting
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -50,4 +50,6 @@ where  _IP address_ is the IP address of the computer on which the mail server r
     After the IP address is removed from the blocked senders list, email messages from that IP address will be delivered to recipients who use Office 365. So, make sure you're confident that email sent from that IP address won't be abusive or malicious; otherwise, the IP address might be blocked again.
     
     > [!NOTE]
-    > It may take up to 1 hour before restrictions are removed.
+    > It may take up to 24 hours or results can vary widely before restrictions are removed.
+    
+Read about [How to prevent real email from being marked as spam in Office 365](prevent-email-from-being-marked-as-spam.md ) and [Controlling outbound spam in Office 365](outbound-spam-controls.md) to prevent IP from being blacklisted.

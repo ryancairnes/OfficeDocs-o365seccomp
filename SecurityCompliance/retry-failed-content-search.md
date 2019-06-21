@@ -3,7 +3,7 @@ title: "Retry a Content Search to resolve a content location error"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -17,7 +17,7 @@ description: "Use the Retry button for resolve Content Searches that have conten
 
 # Retry a Content Search to resolve a content location error
 
-When you use Content Search in the security and compliance center to search a very large number of mailboxes (for example, searching 100,000 mailboxes or more in a single Content Search), you may get search errors that are similar to the following:
+When you use Content Search in the security and compliance center to search a large number of mailboxes, you may get search errors that are similar to the following:
 
 ```
 Error
@@ -29,7 +29,7 @@ User1@contoso.com: Problem in processing the request. Please try again later. If
 User2@contoso.com: Application error occurred. Please try again later. (CS012-002)
 ```
 
-These errors (with error codes of CS008-009 and CS012-002) indicate that Content Search failed to search specific content locations; in this example, two mailboxes weren't searched. These errors are displayed on the status details flyout page of the Content Search.
+These errors (with error codes of CS001-002, CS003-002, CS008-009, CS012-002, and other errors of the form CS0XX-0XX) indicate that Content Search failed to search specific content locations; in this example, two mailboxes weren't searched. These errors are displayed on the status details flyout page of the Content Search.
 
 ## Cause of content location errors
 

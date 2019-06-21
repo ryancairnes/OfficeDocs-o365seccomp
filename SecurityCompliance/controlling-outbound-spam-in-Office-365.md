@@ -1,10 +1,10 @@
 ---
-title: "Controlling outbound spam in Office 365"
+title: "Control outbound spam in Office 365"
 ms.author: tracyp
 author: MSFTTracyP
 manager: laurawi
 ms.date: 09/18/2018
-ms.audience: Admin
+audience: Admin
 ms.topic: overview
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -17,17 +17,17 @@ ms.collection:
 description: "If your organization sends a lot of bulk mail that's marked as spam, you could get blocked from sending email with Office 365. Read this article to learn more about why this happens and what you can do about it."
 ---
 
-# Controlling outbound spam in Office 365
+# Control outbound spam in Office 365
 
 We take managing outbound spam seriously because ours is a shared service.  There are many customers behind a shared pool of resources, where if one customer sends outbound spam, it can degrade the outbound IP reputation of the service and affects the successful deliverability of email for other customers. It is unfair to Customer A if Customer B spams and various 3rd party IP blocklists list the IP address that it uses.
 
 ## What admins can do to control outbound spam
 
-- **Enable notifications when an account is sending spam or shut down**. Administrators can get bcc’ed whenever a message is marked as outbound spam and sent through the High Risk pool. By monitoring this mailbox, an admin can detect if they have a compromised account in their network or if the spam filter is mistakenly marking their email as spam.  More information on setting up the outbound spam policy can be found [here](configure-the-outbound-spam-policy.md).
+- **Enable notifications when an account is sending spam or shut down**. Administrators can get bcc’ed whenever a message is marked as outbound spam and sent through the High Risk pool. By monitoring this mailbox, an admin can detect if they have a compromised account in their network or if the spam filter is mistakenly marking their email as spam. You can find more information on setting up the outbound spam policy [here](configure-the-outbound-spam-policy.md).
  
 - **Manually review spam complaints from 3rd party email providers**. Many 3rd party email services like Outlook.com, Yahoo and AOL provide a Feedback Loop where if any user in their service marks an email from our service as spam, the message is packaged up and sent back to us for review. To learn more about sender support for Outlook.com, click [here](https://sendersupport.olc.protection.outlook.com/pm/services.aspx).
 
-## What EOP does to control outbound spam 
+## What EOP does to control outbound spam
 
 1. **Segregation of outbound traffic into separate pools of IPs**. Every message that customers send outbound through the service is scanned for spam. If the message is spam, it is routed through the High Risk Delivery pool. This IP pool contains non-deliverable status notifications and spam. Delivery to the intended recipient is not guaranteed as many third parties will not accept email because the quality of email it emits.<br/><br/>Splitting the traffic this way ensures that the lower quality email (spam, backscatter NDRs) does not drag down the reputation of the regular outbound email pools. The high risk pool typically has low reputation at many receivers around the Internet, although this is not universal. 
 

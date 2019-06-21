@@ -3,7 +3,7 @@ title: "Import non-Office 365 content for Advanced eDiscovery analysis"
 ms.author: chrfox
 author: chrfox
 manager: laurawi
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal

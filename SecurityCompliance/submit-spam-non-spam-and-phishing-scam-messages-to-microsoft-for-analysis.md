@@ -3,8 +3,8 @@ title: "Submit spam, non-spam, and phishing scam messages to Microsoft for analy
 ms.author: tracyp
 author: MSFTTracyP
 manager: laurawi
-ms.date: 6/11/2018
-ms.audience: ITPro
+ms.date: 04/19/2019
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -28,11 +28,11 @@ It can be frustrating when users in your organization receive junk messages (spa
 
 If you receive a message that passed through the spam filters that and should be classified as junk or a phishing scam, you can submit the "false negative" message to the Microsoft Spam Analysis and Microsoft Phishing Analysis teams, as appropriate. The analysts will review the message and add it to the service-wide filters if it meets the classification criteria. 
   
-For more spam settings that apply to the whole organization, see [Block email spam with the Office 365 spam filter to prevent false negative issues](https://go.microsoft.com/fwlink/p/?LinkId=534225). This article contains tips to help prevent false negatives.
+For more spam settings that apply to the whole organization, see [Block email spam with the Office 365 spam filter to prevent false negative issues](reduce-spam-email.md). This article contains tips to help prevent false negatives.
   
 You can submit junk email messages in the following ways:
   
-- For Outlook and Outlook on the web users, use the Report Message Add-in for Microsoft Outlook. For information about how to install and use this tool, see [Enable the Report Message add-in](https://support.office.com/article/4250c4bc-6102-420b-9e0a-a95064837676). 
+- For Outlook and Outlook on the web users, use the Report Message Add-in for Microsoft Outlook. For information about how to install and use this tool, see [Enable the Report Message add-in](enable-the-report-message-add-in.md). 
         
 - You can also use email to submit messages to Microsoft that should be classified as junk or phishing scams, as described in the following procedure.
     
@@ -61,7 +61,7 @@ To submit a junk or phishing scam message to Microsoft:
 
 If a message was incorrectly identified as junk, you can submit the "false positive" message to the Microsoft Spam Analysis Team. The analysts will evaluate and analyze the message. Depending on the results of the analysis, the service-wide spam content filter rules may be adjusted to allow the message through.
   
-Administrators can review more spam setting information that applies to a whole organization. See [How to help ensure that a message isn't marked as spam](https://go.microsoft.com/fwlink/p/?LinkId=534224). This information is helpful if you have administrator-level control and you want to prevent false positives.
+Administrators can review more spam setting information that applies to a whole organization. See [How to help ensure that a message isn't marked as spam](prevent-email-from-being-marked-as-spam.md). This information is helpful if you have administrator-level control and you want to prevent false positives.
   
 You can submit non-spam messages in the following ways:
   
@@ -77,7 +77,7 @@ You can submit non-spam messages in the following ways:
     
   - Users can release their own spam-quarantined messages and report them as false positives through the following channels: 
     
-  - The Exchange admin center (EAC) user interface. For more information, see [Find and Release Quarantined Messages (End Users)](http://technet.microsoft.com/library/e439b560-827a-4807-abd3-6b861c1ff786.aspx).
+  - The Exchange admin center (EAC) user interface. For more information, see [Find and Release Quarantined Messages (End Users)](find-and-release-quarantined-messages-as-a-user.md).
     
   - End-user spam notification messages (if they're enabled by your administrator). 
     
@@ -113,10 +113,10 @@ Spam evaluation is an ongoing process that applies regardless of the originating
 ## For more information
 <a name="sectionSection4"> </a>
 
-[Anti-spam and anti-malware protection](http://technet.microsoft.com/library/93c6c227-7442-4293-b64d-ec8f15c928db.aspx)
+[Anti-spam and anti-malware protection](anti-spam-and-anti-malware-protection.md)
   
-[How to help ensure that a message isn't marked as spam](https://go.microsoft.com/fwlink/p/?LinkId=534224)
+[How to help ensure that a message isn't marked as spam](prevent-email-from-being-marked-as-spam.md)
   
-[Block email spam with the Office 365 spam filter to prevent false negative issues](https://go.microsoft.com/fwlink/p/?LinkId=534225)
+[Block email spam with the Office 365 spam filter to prevent false negative issues](reduce-spam-email.md)
   
 

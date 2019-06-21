@@ -4,7 +4,7 @@ ms.author: markjjo
 author: markjjo
 manager: laurawi
 ms.date: 
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -31,7 +31,7 @@ When the legal case or investigation supported by an eDiscovery case is complete
 
 To close a case:
 
-1. From the **Advanced eDiscovery (Preview)** page, go to your case.
+1. From the **Advanced eDiscovery** page, go to your case.
 
 2. Go to **Settings** and select **Case Information**. 
 
@@ -39,7 +39,7 @@ To close a case:
 
 To delete a case:
 
-1. From the **Advanced eDiscovery (Preview)** page, go to your case.
+1. From the **Advanced eDiscovery** page, go to your case.
 
 2. Go to **Settings** and select **Case Information**. 
 

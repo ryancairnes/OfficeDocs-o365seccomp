@@ -3,8 +3,7 @@ title: "Security dashboard overview"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 03/19/2019
-ms.audience: ITPro
+audience: ITPro
 ms.topic: overview
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -25,7 +24,7 @@ The [Security &amp; Compliance Center](go-to-the-securitycompliance-center.md) e
   
 Watch the video to get an overview, and then read this article to learn more.
   
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/3540b1f8-62d2-47fa-a07d-d7ad76f55b0f?autoplay=false]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1VV3o]
   
 Depending on what your organization's Office 365 subscription includes, the Security Dashboard includes several widgets, such as Threat Management Summary, Threat Protection Status, Global Weekly Threat Detections, Malware, and more, as described in the following sections.
   
@@ -40,10 +39,10 @@ The Threat Management Summary widget tells you at a glance how your organization
 
 ![Security Dashboard - Threat Management Summary widget](media/SecDash-ThreatMgmtSummary.png)
 
-The information you'll see in the Threat Management Summary depends on what you subscription includes. The following table describes what information is included for Office 365 Enterprise E3 and Office 365 Enterprise E5.
+The information you'll see in the Threat Management Summary depends on what you subscription includes. The following table describes what information is included for Office 365 E3 and Office 365 E5.
 
 
-|Office 365 Enterprise E3  |Office 365 Enterprise E5  |
+|Office 365 E3  |Office 365 E5  |
 |---------|---------|
 |Malware messages blocked<br/>Phishing messages blocked<br>Messages reported by users<br><br><br><br> |Malware messages blocked<br>Phishing messages blocked<br>Messages reported by users<br>Zero-day malware blocked<br>Advanced phishing messages detected<br>Malicious URLs blocked |
 

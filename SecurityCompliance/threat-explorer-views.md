@@ -1,41 +1,39 @@
 ---
-title: "Threat Explorer views"
+title: "Views in Threat Explorer and real-time detections"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
 ms.date: 03/18/2019
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid:
 ms.collection: 
 - M365-security-compliance
-description: "Learn about the various kinds of views available in Explorer (also called Threat Explorer) as part of Office 365 Advanced Threat Protection Plan 2."
+description: "Learn about the various kinds of views available in Threat Explorer and real-time detections."
 ---
 
-# Threat Explorer views
-
-[Threat Explorer](use-explorer-in-security-and-compliance.md) is a powerful, near real-time tool to help Security Operations teams investigate and respond to threats in the Security &amp; Compliance Center. Explorer displays information about suspected malware and phish in email and files in Office 365, as well as other security threats and risks to your organization. 
-
-When you first open Explorer, the default view shows email malware detections for the past 7 days. 
+# Views in Threat Explorer and real-time detections
 
 ![Threat Explorer](media/ThreatExplorerFirstOpened.png)
 
-Explorer can also show security protection features in Office 365, including [Safe Links](atp-safe-links.md) and [Safe Attachments](atp-safe-attachments.md) and can be modified to show data for the past 30 days. 
+[Threat Explorer](use-explorer-in-security-and-compliance.md) (and the real-time detections report) is a powerful, near real-time tool to help Security Operations teams investigate and respond to threats in the Security &amp; Compliance Center. Explorer (and the real-time detections report) displays information about suspected malware and phish in email and files in Office 365, as well as other security threats and risks to your organization. 
 
-> [!NOTE]
-> If you have a trial subscription for Office 365 Advanced Threat Protection Plan 2 or Office 365 E5, you will only see detections and email data for the past 7 days.
-  
+- If you have [Office 365 Advanced Threat Protection](office-365-atp.md) (ATP) Plan 2, then you have Explorer.
+- If you have Office 365 ATP Plan 1, then you have real-time detections.
+
+When you first open Explorer (or the real-time detections report), the default view shows email malware detections for the past 7 days. This report can also show ATP detections, such as malicious URLs detected by [Safe Links](atp-safe-links.md), and malicious files detected by [Safe Attachments](atp-safe-attachments.md). This report can be modified to show data for the past 30 days (unless you are using a trial subscription). Trial subscriptions will include data for the past seven days only.
+
 Use the **View** menu to change what information is displayed. Tooltips help you determine which view to use.
   
 ![Threat Explorer View menu](media/ThreatExplorerViewMenu.png)
 
-Once you have selected a view, you can apply filters and set up queries to conduct further analysis. The following sections provide a brief overview of the various views available in Explorer.  
+Once you have selected a view, you can apply filters and set up queries to conduct further analysis. The following sections provide a brief overview of the various views available in Explorer (or real-time detections).  
 
 ## Email > Malware
 
-To view this report, in Explorer, choose **View** > **Email** > **Malware**. This view shows information about email messages that were identified as containing malware.  
+To view this report, in Explorer (or real-time detections), choose **View** > **Email** > **Malware**. This view shows information about email messages that were identified as containing malware.  
 
 ![View data about email identified as malware](media/ExplorerEmailMalwareMenu.png) 
 
@@ -51,7 +49,7 @@ Below the chart, view more details about specific messages. When you select an i
 
 ## Email > Phish
 
-To view this report, in Explorer, choose **View** > **Email** > **Phish**. This view shows email messages identified as phishing attempts.  
+To view this report, in Explorer (or real-time detections), choose **View** > **Email** > **Phish**. This view shows email messages identified as phishing attempts.  
 
 ![View data about email identified as phishing attempts](media/ThreatExplorerEmailPhish.png) 
 
@@ -71,7 +69,7 @@ When you select an item in the list, such as a URL that was detected, a fly-out 
 
 ## Email > User-reported
 
-To view this report, in Explorer, choose **View** > **Email** > **User-reported**. This view shows email that users have reported as junk, not junk, or phishing email. 
+To view this report, in Explorer (or real-time detections), choose **View** > **Email** > **User-reported**. This view shows email that users have reported as junk, not junk, or phishing email. 
 
 ![Email messages reported by users](media/ThreatExplorerEmailUserReportedViewOptions.png) 
 
@@ -102,7 +100,7 @@ Below the chart, view more details about specific email messages, such as subjec
 
 ## Content > Malware
 
-To view this report, in Explorer, choose **View** > **Content** > **Malware**. This view shows files that were identified as malicious by [Office 365 Advanced Threat Protection in SharePoint Online, OneDrive for Business, and Microsoft Teams](atp-for-spo-odb-and-teams.md).
+To view this report, in Explorer (or real-time detections), choose **View** > **Content** > **Malware**. This view shows files that were identified as malicious by [Office 365 Advanced Threat Protection in SharePoint Online, OneDrive for Business, and Microsoft Teams](atp-for-spo-odb-and-teams.md).
 
 View information by malware family, detection technology (how the malware was detected), and workload (OneDrive, SharePoint, or Teams). 
 
@@ -112,7 +110,7 @@ Below the chart, view more details about specific files, such as attachment file
   
 ## Click-to-filter capabilities
 
-With Explorer, you can apply a filter in a click. Click an item in the legend, and that item becomes a filter for the report. For example, suppose we are looking at the Malware view in Explorer:
+With Explorer (and real-time detections), you can apply a filter in a click. Click an item in the legend, and that item becomes a filter for the report. For example, suppose we are looking at the Malware view in Explorer:
   
 ![Go to Threat management \> Explorer](media/cab32fa2-66f1-4ad5-bc1d-2bac4dbeb48c.png)
   
@@ -132,7 +130,7 @@ The ability to filter in a click and navigate to specific details can save you a
 
 ## Queries and filters
 
-Explorer has several powerful filters and querying capabilities that enable you to drill into details, such as top targeted users, top malware families, detection technology and more. Each kind of report offers a variety of ways to view and explore data.
+Explorer (and the real-time detections report) has several powerful filters and querying capabilities that enable you to drill into details, such as top targeted users, top malware families, detection technology and more. Each kind of report offers a variety of ways to view and explore data.
 
 > [!IMPORTANT]
-> Do not use wildcard characters, such as an asterisk (*) or a question mark (?), in the query bar for Explorer. When you search on the Subject field for email messages, Explorer will perform partial matching and yield results similar to a wildcard search.
+> Do not use wildcard characters, such as an asterisk (*) or a question mark (?), in the query bar for Explorer (or real-time detections). When you search on the Subject field for email messages, Explorer (or real-time detections) will perform partial matching and yield results similar to a wildcard search.

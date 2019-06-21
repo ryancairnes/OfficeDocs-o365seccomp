@@ -1,14 +1,14 @@
 ---
-title: "Overview of the new Microsoft 365 compliance center"
+title: Overview of the new Microsoft 365 compliance center
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 04/09/2019
-ms.audience: ITPro
+ms.date: 05/29/2019
+audience: ITPro
 ms.topic: article
 ms.service: o365-seccomp
 localization_priority: Normal
-description: "Learn about the new Microsoft 365 compliance center, including what it contains, how to get it, and your next steps."
+description: Learn about the new Microsoft 365 compliance center, including what it contains, how to get it, and your next steps.
 ---
 
 # Overview of the all-new Microsoft 365 compliance center
@@ -63,7 +63,7 @@ In addition to links in cards on the home page, you'll find a navigation pane on
 
 |  |  |
 |---------|---------|
-|![Navigation in the Microsoft 365 compliance center](media/m365-compliance-center-leftnav.png)  |<br/><br/> Go to **Alerts** to view and resolve [alerts](alerts.md)<br/><br/>Visit **Monitoring & reports** to view data about [label usage and retention](sensitivity-labels.md), [DLP policy matches and overrides](view-the-dlp-reports.md), [shared files](https://docs.microsoft.com/cloud-app-security/file-filters), [third-party apps in use](https://docs.microsoft.com/cloud-app-security/discovered-apps), and more.<br/><br/>Expand the **Classification** section to access your [labels](labels.md), [label policies](sensitivity-labels.md#what-label-policies-can-do), [sensitive information types](what-the-sensitive-information-types-look-for.md), and [label analytics](view-label-activity-for-documents.md).<br/><br/>Go to **Policies** to view [alerts](alerts.md) and to access your [DLP](data-loss-prevention-policies.md) and [retention](retention-policies.md) policies.<br/><br/> Use the links in the **Solutions** section to access your organization's compliance solutions. These include: <br/>[Data governance > Dispositions](disposition-reviews.md)<br/>[eDiscovery (preview)](compliance20/overview-ediscovery-20.md)<br/>[Supervision](supervision-policies.md)<br/>[Data investigations](datainvestigations/overview-data-investigations.md)<br/>[Data subject requests](manage-gdpr-data-subject-requests-with-the-dsr-case-tool.md)        |
+|![Navigation in the Microsoft 365 compliance center](media/m365-compliance-center-leftnav.png)  |<br/><br/> Go to **Alerts** to view and resolve [alerts](alerts.md)<br/><br/>Visit **Reports** to view data about [label usage and retention](sensitivity-labels.md), [DLP policy matches and overrides](view-the-dlp-reports.md), [shared files](https://docs.microsoft.com/cloud-app-security/file-filters), [third-party apps in use](https://docs.microsoft.com/cloud-app-security/discovered-apps), and more.<br/><br/>Expand the **Classification** section to access your [labels](labels.md), [label policies](sensitivity-labels.md#what-label-policies-can-do), [sensitive information types](what-the-sensitive-information-types-look-for.md), and [label analytics](view-label-activity-for-documents.md).<br/><br/>Go to **Policies** to view [alerts](alerts.md) and to access your [DLP](data-loss-prevention-policies.md) and [retention](retention-policies.md) policies.<br/><br/> Use the links in the **Solutions** section to access your organization's compliance solutions. These include: <br/>[Data governance > Dispositions](disposition-reviews.md)<br/>[eDiscovery (preview)](compliance20/overview-ediscovery-20.md)<br/>[Supervision](supervision-policies.md)<br/>[Data investigations](datainvestigations/overview-data-investigations.md)<br/>[Data subject requests](manage-gdpr-data-subject-requests-with-the-dsr-case-tool.md)        |
 
 
 ## How do I get this?
@@ -84,9 +84,14 @@ We are still developing the Microsoft 365 compliance center, and we'll be adding
 
 First, make sure you have the appropriate [licenses and permissions](microsoft-security-and-compliance.md#required-licenses-and-permissions). Then, sign in at [https://compliance.microsoft.com](https://compliance.microsoft.com). If you don't see the new compliance center yet, you will have it soon.
 
-### I can't find some of my compliance settings. What do I do?
+### Some of my compliance features are not available in the Microsoft 365 compliance center. What do I do?
 
-We are still adding functionality to the Microsoft 365 compliance center. If you can't find something, such as audit log search, try navigating to the Office 365 Security & Compliance Center ([https://protection.office.com](https://protection.office.com)). Your configurations will be saved in both the existing Office 365 Security & Compliance Center and in the new Microsoft 365 compliance center automatically.
+We are still adding functionality to the Microsoft 365 compliance center. If you can't find something, such as audit log search, use the Office 365 Security & Compliance Center ([https://protection.office.com](https://protection.office.com)). Your configurations will be saved in both the existing Office 365 Security & Compliance Center and in the new Microsoft 365 compliance center automatically.
+
+To go there, in the Microsoft 365 compliance center, in the navigation pane on the left side of the screen, choose **More resources**, and then, under **Office 365 security & compliance center**, choose **Open**.
+
+![More resources](media/MoreResourcesShowAll.png)
+
 
 ## Next steps
 

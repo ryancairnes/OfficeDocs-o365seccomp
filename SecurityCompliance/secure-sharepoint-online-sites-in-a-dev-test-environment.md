@@ -4,7 +4,7 @@ ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
 ms.date: 04/09/2019
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.collection: 
 - Ent_O365
@@ -204,9 +204,7 @@ In this phase, you create the retention labels for the different levels of secur
     
 7. On the **Review your settings** pane, click **Create the label**.
     
-8. For your additional labels, click **Create a label**, and then repeat steps 3-7.
-
-9. Repeat steps 3-8 for additional labels with these names:
+8. Repeat steps 3-7 for additional labels with these names:
     
   - Private
     
@@ -214,21 +212,21 @@ In this phase, you create the retention labels for the different levels of secur
     
   - Highly Confidential
   
-10. From the **Home > Labels** pane, click **Publish labels**.
+9. From the **Home > Labels** pane, click **Publish labels**.
     
-11. On the **Choose labels to publish** pane, click **Choose labels to publish**.
+10. On the **Choose labels to publish** pane, click **Choose labels to publish**.
     
-12. On the **Choose labels** pane, click **Add** and select all four labels.
+11. On the **Choose labels** pane, click **Add** and select all four labels.
     
-13. Click **Done**.
+12. Click **Done**.
     
-14. On the **Choose labels to publish** pane, click **Next**.
+13. On the **Choose labels to publish** pane, click **Next**.
     
-15. On the **Choose locations** pane, click **Next**.
+14. On the **Choose locations** pane, click **Next**.
     
-16. On the **Name your policy** pane, type **Example organization** in **Name**, and then click **Next**.
+15. On the **Name your policy** pane, type **Example organization** in **Name**, and then click **Next**.
     
-17. On the **Review your settings** pane, click **Publish labels**, and then click **Close**.
+16. On the **Review your settings** pane, click **Publish labels**, and then click **Close**.
     
 ## Phase 4: Create your SharePoint Online team sites
 

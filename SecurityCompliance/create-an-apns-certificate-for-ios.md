@@ -4,7 +4,7 @@ ms.author: brendonb
 author: brendonb
 manager: laurawi
 ms.date: 8/5/2016
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 f1_keywords:
 - 'O365M_APNCertMDM'

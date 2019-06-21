@@ -3,7 +3,7 @@ title: "ATP anti-phishing capabilities in Office 365"
 ms.author: tracyp
 author: MSFTTracyp
 manager: laurawi
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
