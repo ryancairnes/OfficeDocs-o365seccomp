@@ -3,7 +3,7 @@ title: "Define information barrier policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 06/19/2019
+ms.date: 06/21/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -259,7 +259,9 @@ If, after you have started applying information barrier policies, you want to st
 
     Syntax:  `Stop-InformationBarrierPoliciesApplication -Identity GUID`
 
-    Example: `InformationBarrierPoliciesApplication -Identity 46237888-12ca-42e3-a541-3fcb7b5231d1`
+    Example: `Stop-InformationBarrierPoliciesApplication -Identity 46237888-12ca-42e3-a541-3fcb7b5231d1`
+
+    In this example, we are stopping information barrier policies from being applied.
 
 ## Edit a segment or a policy
 
