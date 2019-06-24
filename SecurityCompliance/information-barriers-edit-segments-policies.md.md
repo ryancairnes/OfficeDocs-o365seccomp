@@ -74,7 +74,7 @@ When you have finished editing segments for your organization, you can either [d
 
     In this example, we changed "SegmentsBlocked" to "SegmentsAllowed" and specified the *HR* segment.
 
-3. When you are finished editing a policy, make sure to apply your changes. (See [Apply information barrier policies](#part-3-apply-information-barrier-policies).)
+3. When you are finished editing a policy, make sure to apply your changes. (See [Apply information barrier policies](information-barriers-policies.md#part-3-apply-information-barrier-policies).)
 
 ### Remove a policy
 
