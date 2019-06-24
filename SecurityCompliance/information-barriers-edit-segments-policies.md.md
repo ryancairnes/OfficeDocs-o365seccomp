@@ -24,11 +24,11 @@ After you have [defined information barrier policies](information-barriers-polic
 
 ## Edit user account attributes
 
-Use this procedure to edit attributes in user account profiles that are used for segmenting users. 
+Use this procedure to edit attributes that are used for segmenting users. 
 
-For example, if you are using a Department attribute, and one or more user accounts does not currently have any values listed for Department, you'll want to add edit those user accounts to include that information. 
+For example, if you are using a Department attribute, and one or more user accounts do not currently have any values listed for Department, you must edit those user accounts to include Department information. 
 
-User account profile attributes are used for defining segments, and then information barrier policies are assigned to the segments that are defined.
+User account attributes are used for defining segments, so that information barrier policies can be assigned.
 
 1. To view details for a specific user account, such as attribute values and assigned segment(s), use the **Get-InformationBarrierRecipientStatus** cmdlet with Identity parameters. 
 
@@ -44,11 +44,11 @@ User account profile attributes are used for defining segments, and then informa
     
 2. Determine which attribute you want to edit for your user account profile(s). Refer to [Attributes for information barrier policies (Preview)](information-barriers-attributes.md) for more details. 
 
-3. Edit one or more user account(s) to include values for the attribute you selected in the previous step. To do this, use one of the following procedures:
+3. Edit one or more user accounts to include values for the attribute you selected in the previous step. To do this, use one of the following procedures:
 
-    - [Add or update a user's profile information using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal)
+    - To edit a single account, see [Add or update a user's profile information using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal).
 
-    - [Configure user account properties with Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/configure-user-account-properties-with-office-365-powershell).)
+    - To edit multiple accounts (or use PowerShell to edit a single account), see [Configure user account properties with Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/configure-user-account-properties-with-office-365-powershell).
 
 ## Edit a segment
 
