@@ -305,7 +305,7 @@ When that finishes, Contoso is compliant with legal and industry requirements.
 
 ## Related articles
 
-
+[Edit or remove information barrier policies (Preview)](information-barriers-edit-segments-policies.md.md)
 
 [Get an overview of information barriers](information-barriers.md)
 
