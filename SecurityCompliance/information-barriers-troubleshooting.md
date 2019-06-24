@@ -103,7 +103,7 @@ Determine whether the users are affected by an information barrier policy.
 
     In this example, we are getting information about the segment that has GUID *c96e0837-c232-4a8a-841e-ef45787d8fcd*.
 
-    Review the details for the segment. If necessary, [edit a segment](information-barriers-policies.md#edit-a-segment), and then re-use the `Start-InformationBarrierPoliciesApplication` cmdlet.
+    Review the details for the segment. If necessary, [edit a segment](information-barriers-edit-segments-policies.md.md#edit-a-segment), and then re-use the `Start-InformationBarrierPoliciesApplication` cmdlet.
 
     If you are still having issues with your information barrier policy, contact support.
     
