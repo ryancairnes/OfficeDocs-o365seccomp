@@ -27,7 +27,7 @@
 # [Protect information](protect-information.md)
 ## [Sensitivity labels](sensitivity-labels.md)
 ### [Restrict access to content by using encryption in sensitivity labels](encryption-sensitivity-labels.md)
-### [Apply a sensitivity label to content automatically](apply_sensitivity_label_automatically.md)
+### [Apply a sensitivity label to content automatically](apply-sensitivity-label-automatically.md)
 ### [View label usage with label analytics](label-analytics.md)
 
 ## [Prevent data loss (DLP)](data-loss-prevention-policies.md)
