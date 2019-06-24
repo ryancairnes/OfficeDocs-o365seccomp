@@ -27,7 +27,7 @@
 # [Protect information](protect-information.md)
 ## [Sensitivity labels](sensitivity-labels.md)
 ### [Restrict access to content by using encryption in sensitivity labels](encryption-sensitivity-labels.md)
-### [Apply a sensitivity label to content automatically](apply_sensitivity_label_automatically.md)
+### [Apply a sensitivity label to content automatically](apply-sensitivity-label-automatically.md)
 ### [View label usage with label analytics](label-analytics.md)
 
 ## [Prevent data loss (DLP)](data-loss-prevention-policies.md)
@@ -538,6 +538,8 @@
 ### [Define information barrier policies (Preview)](information-barriers-policies.md)
 ### [Attributes for information barrier policies (Preview)](information-barriers-attributes.md)
 ### [Troubleshooting information barriers (Preview)](information-barriers-troubleshooting.md)
+### [Edit or remove information barrier policies (Preview)](information-barriers-edit-segments-policies.md.md)
+
 
 ## Customer Key
 ### [Controlling your data in Office 365 using Customer Key](controlling-your-data-using-customer-key.md)
