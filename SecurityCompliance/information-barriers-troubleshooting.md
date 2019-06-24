@@ -22,9 +22,9 @@ In the event that people run into unexpected issues after information barriers a
 > [!IMPORTANT]
 > To perform the tasks described in this article, you must be assigned an appropriate role, such as one of the following:<br/>- Microsoft 365 Enterprise Global Administrator<br/>- Office 365 Global Administrator<br/>- Compliance Administrator<br/>- IB Compliance Management (this is a new role!)<p>To learn more about prerequisites for information barriers, see [Prerequisites (for information barrier policies)](information-barriers-policies.md#prerequisites).<p>Make sure to [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
-## Issue: Communications are still allowed between users who should be blocked in Microsoft Teams
+## Issue: Communications are allowed between users who should be blocked in Microsoft Teams
 
-In this case, although information barriers are defined, active, and applied, people who should be prevented from communicating with each other still can in Microsoft Teams.
+In this case, although information barriers are defined, active, and applied, people who should be prevented from communicating with each other are somehow able to in Microsoft Teams.
 
 ### What to do
 
@@ -38,7 +38,9 @@ Example: `Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alex
 
 In this example, we refer to two user accounts in Office 365: *meganb* for *Megan*, and *alexw* for *Alex*. 
 
-(You can also use this cmdlet for a single user: `Get-InformationBarrierRecipientStatus -Identity <value>`) 
+> [!NOTE]
+> You can also use this cmdlet for a single user: `Get-InformationBarrierRecipientStatus -Identity <value>`
+
 This cmdlet returns information about users, such as attribute values and any information barrier policies that are applied.
 
 
