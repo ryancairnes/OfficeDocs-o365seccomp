@@ -28,39 +28,45 @@ In this case, although information barriers are defined, active, and applied, pe
 
 ### What to do
 
-Verify that the users in question are included in an information barrier policy. Use the **Get-InformationBarrierRecipientStatus** cmdlet with Identity parameters.
+Verify that the users in question are included in an information barrier policy. 
 
-Syntax: `Get-InformationBarrierRecipientStatus -Identity <value> -Identity2 <value>` 
+1. Use the **Get-InformationBarrierRecipientStatus** cmdlet with Identity parameters.
 
-You can use any value that uniquely identifies each user, such as name, alias, distinguished name, canonical domain name, email address, or GUID. 
+    Syntax: `Get-InformationBarrierRecipientStatus -Identity <value> -Identity2 <value>` 
 
-Example: `Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw` 
+    You can use any value that uniquely identifies each user, such as name, alias, distinguished name, canonical domain name, email address, or GUID. 
 
-In this example, we refer to two user accounts in Office 365: *meganb* for *Megan*, and *alexw* for *Alex*. 
+    Example: `Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw` 
 
-> [!NOTE]
-> You can also use this cmdlet for a single user: `Get-InformationBarrierRecipientStatus -Identity <value>`
+    In this example, we refer to two user accounts in Office 365: *meganb* for *Megan*, and *alexw* for *Alex*. 
+    
+    > [!TIP]
+    > You can also use this cmdlet for a single user: `Get-InformationBarrierRecipientStatus -Identity <value>`
+    
+2. Review the findings. The **Get-InformationBarrierRecipientStatus** cmdlet returns information about users, such as attribute values and any information barrier policies that are applied. 
 
-This cmdlet returns information about users, such as attribute values and any information barrier policies that are applied.
-
-
-|Results  |Next steps  |
-|---------|---------|
-|No segments are listed for the selected user(s)     |Do one of the following:<br/>- Assign users to an existing segment by editing their user profiles in Azure Active Directory<br/>- Define a segment using a [supported attribute for information barriers](information-barriers-attributes.md)         |
-|Segments are listed but no information barrier policies are assigned to those segments     |Do one of the following:<br/>- [Define an information barrier policy](information-barriers-policies.md#part-2-define-information-barrier-policies) for each segment in question<br/>- [Edit an information barrier policy](information-barriers-policies.md#edit-a-policy) and assign it to the correct segment         |
-|Segments are listed and each is included in an information barrier policy     |- Run the `Get-InformationBarrierPolicy` cmdlet to verify that information barrier policies are active<br/>- Run the `Get-InformationBarrierPoliciesApplicationStatus` cmdlet to confirm the policies are applied<br/>- Run the `Start-InformationBarrierPoliciesApplication` cmdlet to apply all active information barrier policies          |
-
+    Review the results, and then take your next steps, as described in the following table:
+    
+    |Results  |Next steps  |
+    |---------|---------|
+    |No segments are listed for the selected user(s)     |Do one of the following:<br/>- Assign users to an existing segment by editing their user profiles in Azure Active Directory<br/>- Define a segment using a [supported attribute for information barriers](information-barriers-attributes.md)         |
+    |Segments are listed but no information barrier policies are assigned to those segments     |Do one of the following:<br/>- [Define an information barrier policy](information-barriers-policies.md#part-2-define-information-barrier-policies) for each segment in question<br/>- [Edit an information barrier policy](information-barriers-policies.md#edit-a-policy) and assign it to the correct segment         |
+    |Segments are listed and each is included in an information barrier policy     |- Run the `Get-InformationBarrierPolicy` cmdlet to verify that information barrier policies are active<br/>- Run the `Get-InformationBarrierPoliciesApplicationStatus` cmdlet to confirm the policies are applied<br/>- Run the `Start-InformationBarrierPoliciesApplication` cmdlet to apply all active information barrier policies          |
+    
 
 ## Issue: People are unexpectedly blocked from communicating in Microsoft Teams 
 
-In this case, people are reporting unexpected issues communicating in Microsoft Teams. Examples:
-- A user is unable to find or communicate with another user in Microsoft Teams.
-- A user cannot see or select another user in Microsoft Teams.
+In this case, people are reporting unexpected issues communicating with others in Microsoft Teams. Examples:
+- A user is unable to find another user in Microsoft Teams.
+- A user cannot select another user in Microsoft Teams.
 - A user can see another user, but cannot select or send messages to that other user in Microsoft Teams.
+- A user can see and select another user, but cannot communicate with that user in Microsoft Teams.
 
 ### What to do
 
-1. Determine whether the users are affected by an information barrier policy. To do this, use the **Get-InformationBarrierRecipientStatus** cmdlet with the Identity parameter. 
+Determine whether the users are affected by an information barrier policy.
+
+1. Use the **Get-InformationBarrierRecipientStatus** cmdlet with the Identity parameter. 
 
     The syntax is `Get-InformationBarrierRecipientStatus -Identity`
 
