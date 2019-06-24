@@ -32,7 +32,7 @@ This article describes how to plan, define, implement, and manage information ba
 |[Part 1: Segment users in your organization](#part-1-segment-users)     |- Determine what policies are needed<br/>- Make a list of segments to define<br/>- Identify which attributes to use<br/>- Define segments in terms of policy filters        |
 |[Part 2: Define information barrier policies](#part-2-define-information-barrier-policies)     |- Define your policies (do not apply yet)<br/>- Choose from two kinds (block or allow) |
 |[Part 3: Apply information barrier policies](#part-3-apply-information-barrier-policies)     |- Set policies to active status<br/>- Run the policy application<br/>- View policy status         |
-|(As needed) [Edit a segment or a policy](information-barriers-edit-segments-policies.md.md)    |- Edit a segment<br/>- Edit or remove a policy<br/>- Run the policy application<br/>- View policy status         |
+|(As needed) [Edit a segment or a policy](information-barriers-edit-segments-policies.md.md)    |- Edit a segment<br/>- Edit or remove a policy<br/>- Rerun the policy application<br/>- View policy status         |
 |(As needed) [Troubleshooting](information-barriers-troubleshooting.md)|- Take action when things are not working as expected|
 
 ## Prerequisites
