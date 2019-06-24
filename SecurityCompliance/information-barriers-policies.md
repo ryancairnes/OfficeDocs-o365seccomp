@@ -117,21 +117,21 @@ After you have defined your segments, proceed to [define information barrier pol
 
 In the following example, we are defining a segment such that "Department equals HR." 
 
-Example: `New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"`
+**Example**: `New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"`
 
 Notice that the segment definition includes an "equals" parameter denoted as **-eq**. 
 
 You can also define segments using a "not equals" parameter, denoted as **-ne**, as shown in the following example:
 
-Syntax: `New-OrganizationSegment -Name "segmentname" -UserGroupFilter "attribute -ne 'attributevalue'"`
+**Syntax**: `New-OrganizationSegment -Name "segmentname" -UserGroupFilter "attribute -ne 'attributevalue'"`
 
-Example: `New-OrganizationSegment -Name "NotSales" -UserGroupFilter "Department -ne 'Sales'"`
+**Example**: `New-OrganizationSegment -Name "NotSales" -UserGroupFilter "Department -ne 'Sales'"`
 
 In this example, we defined a segment called *NotSales* that includes everyone who is not in *Sales*. The **-ne** portion of the cmdlet refers to "not equals."
 
 In addition to defining segments using "equals" or "not equals", you can define a segment using both "equals" and "not equals" parameters.
 
-Example: `New-OrganizationSegment -Name "LocalFTE" -UserGroupFilter "Location -eq 'Local'" and "Position -ne 'Temporary'"`
+**Example**: `New-OrganizationSegment -Name "LocalFTE" -UserGroupFilter "Location -eq 'Local'" and "Position -ne 'Temporary'"`
 
 In this example, we defined a segment called *LocalFTE* that includes people who are locally located and whose positions are not listed as *Temporary*.
 
