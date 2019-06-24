@@ -17,6 +17,8 @@ description: "Learn how to edit or remove policies for information barriers."
 
 ## Overview
 
+After you have [defined information barrier policies](information-barriers-policies.md), you might need to make changes to those policies. Use this article as a guide for making changes to user segments or policies for information barriers.
+
 ## Stop a policy application
 
 If, after you have started applying information barrier policies, you want to stop those policies from being applied, use the following procedure. Keep in mind that it will take approximately 30-35 minutes for the process to begin.
