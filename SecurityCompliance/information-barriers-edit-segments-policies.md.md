@@ -17,7 +17,7 @@ description: "Learn how to edit or remove policies for information barriers."
 
 ## Overview
 
-After you have [defined information barrier policies](information-barriers-policies.md), you might need to make changes to those policies. Use this article as a guide for making changes to user segments or policies for information barriers.
+After you have [defined information barrier policies](information-barriers-policies.md), you might need to make changes to those policies or to your user segments. Use this article as a guide.
 
 > [!IMPORTANT]
 > To perform the tasks described in this article, you must be assigned an appropriate role, such as one of the following:<br/>- Microsoft 365 Enterprise Global Administrator<br/>- Office 365 Global Administrator<br/>- Compliance Administrator<br/>- IB Compliance Management (this is a new role!)<p>To learn more about prerequisites for information barriers, see [Prerequisites (for information barrier policies)](information-barriers-policies.md#prerequisites).<p>Make sure to [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
@@ -40,9 +40,7 @@ If, after you have started applying information barrier policies, you want to st
 
     In this example, we are stopping information barrier policies from being applied.
 
-## Edit a segment or a policy
-
-### Edit a segment
+## Edit a segment
 
 1. To view all existing segments, use the **Get-OrganizationSegment** cmdlet.
     
@@ -63,7 +61,7 @@ If, after you have started applying information barrier policies, you want to st
 
 When you have finished editing segments for your organization, you can either [define](information-barriers-policies.md#part-2-define-information-barrier-policies) or [edit](#edit-a-policy) information barrier policies.
 
-### Edit a policy
+## Edit a policy
 
 1. To view a list of current information barrier policies, use the **Get-InformationBarrierPolicy** cmdlet.
 
@@ -81,7 +79,7 @@ When you have finished editing segments for your organization, you can either [d
 
 3. When you are finished editing a policy, make sure to apply your changes. (See [Apply information barrier policies](information-barriers-policies.md#part-3-apply-information-barrier-policies).)
 
-### Remove a policy
+## Remove a policy
 
 1. To view a list of current information barrier policies, use the **Get-InformationBarrierPolicy** cmdlet.
 
@@ -107,7 +105,7 @@ When you have finished editing segments for your organization, you can either [d
 
     Changes are applied, user by user, for your organization. If your organization is large, it can take 24 hours (or more) for this process to complete.
 
-### Set a policy to inactive status
+## Set a policy to inactive status
 
 1. To view a list of current information barrier policies, use the **Get-InformationBarrierPolicy** cmdlet.
 
@@ -133,7 +131,6 @@ At this point, one or more information barrier policies are set to inactive stat
 - Keep it as is (a policy set to inactive status has no effect on users)
 - [Edit a policy](#edit-a-policy) 
 - [Remove a policy](#remove-a-policy)
-
 
 ## Related articles
 
