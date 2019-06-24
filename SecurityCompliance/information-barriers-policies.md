@@ -3,7 +3,7 @@ title: "Define information barrier policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 06/21/2019
+ms.date: 06/24/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -108,36 +108,42 @@ Determine which attributes in your organization's directory data you'll use to d
 
 ### Define segments using PowerShell
 
-Defining segments does not effect users; it just sets the stage for information barrier policies to be defined and then applied.
-
-To define an organizational segment, use the **New-OrganizationSegment** cmdlet with the **UserGroupFilter** parameter that corresponds to the [attribute](information-barriers-attributes.md) you want to use.
-
-Syntax: `New-OrganizationSegment -Name "segmentname" -UserGroupFilter "attribute -eq 'attributevalue'"`
-
-Example: `New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"`
-
-In this example, a segment called *HR* is defined using *HR*, a value in the *Department* attribute. The "-eq" portion of the cmdlet refers to "equals."
-
-Repeat this process for each segment you want to define.
-
-After you run each cmdlet, you should see a list of details about the new segment. Details include the segment's type, who created or last modified it, and so on. 
-
 > [!IMPORTANT]
 > **Make sure that your segments do not overlap**. Each user who will be affected by information barriers should belong to one (and only one) segment. No user should belong to two or more segments. (See [Example: Contoso's defined segments](#contosos-defined-segments) in this article.)
 
-After you have defined your segments, proceed to define information barrier policies.
+Defining segments does not effect users; it just sets the stage for information barrier policies to be defined and then applied.
+
+1. Use the **New-OrganizationSegment** cmdlet with the **UserGroupFilter** parameter that corresponds to the [attribute](information-barriers-attributes.md) you want to use.
+    
+    Syntax: `New-OrganizationSegment -Name "segmentname" -UserGroupFilter "attribute -eq 'attributevalue'"`
+    
+    Example: `New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"`
+    
+    In this example, a segment called *HR* is defined using *HR*, a value in the *Department* attribute. The **-eq** portion of the cmdlet refers to "equals." (Alternately, you can use **-ne** to mean "not equals". See [Using "equals" and "not equals" in segment definitions](#using-equals-and-not-equals-in-segment-definitions).)
+
+    After you run each cmdlet, you should see a list of details about the new segment. Details include the segment's type, who created or last modified it, and so on. 
+
+2. Repeat this process for each segment you want to define.
+
+After you have defined your segments, proceed to [define information barrier policies](#part-2-define-information-barrier-policies).
 
 ### Using "equals" and "not equals" in segment definitions
 
-In the first example shown above, we defined a segment such that "Department equals HR." That segment included an "equals" parameter. You can also define segments using a "not equals" parameter, as shown in the following example:
+In the following example, we are defining a segment such that "Department equals HR." 
+
+Example: `New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"`
+
+Notice that the segment definition includes an "equals" parameter denoted as **-eq**. 
+
+You can also define segments using a "not equals" parameter, denoted as **-ne**, as shown in the following example:
 
 Syntax: `New-OrganizationSegment -Name "segmentname" -UserGroupFilter "attribute -ne 'attributevalue'"`
 
 Example: `New-OrganizationSegment -Name "NotSales" -UserGroupFilter "Department -ne 'Sales'"`
 
-In this example, we defined a segment called NotSales that includes everyone who is not in Sales. The "-ne" portion of the cmdlet refers to "not equals."
+In this example, we defined a segment called *NotSales* that includes everyone who is not in *Sales*. The **-ne** portion of the cmdlet refers to "not equals."
 
-In addition, you can define a segment using both "equals" and "not equals" parameters.
+In addition to defining segments using "equals" or "not equals", you can define a segment using both "equals" and "not equals" parameters.
 
 Example: `New-OrganizationSegment -Name "LocalFTE" -UserGroupFilter "Location -eq 'Local'" and "Position -ne 'Temporary'"`
 
