@@ -22,27 +22,11 @@ After you have [defined information barrier policies](information-barriers-polic
 > [!IMPORTANT]
 > To perform the tasks described in this article, you must be assigned an appropriate role, such as one of the following:<br/>- Microsoft 365 Enterprise Global Administrator<br/>- Office 365 Global Administrator<br/>- Compliance Administrator<br/>- IB Compliance Management (this is a new role!)<p>To learn more about prerequisites for information barriers, see [Prerequisites (for information barrier policies)](information-barriers-policies.md#prerequisites).<p>Make sure to [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
-## Stop a policy application
-
-If, after you have started applying information barrier policies, you want to stop those policies from being applied, use the following procedure. Keep in mind that it will take approximately 30-35 minutes for the process to begin.
-
-1. To view the status of the most recent information barrier policy application, use the **Get-InformationBarrierPoliciesApplicationStatus** cmdlet.
-
-    Syntax: `Get-InformationBarrierPoliciesApplicationStatus`
-
-    Note the application's GUID.
-
-2. Use the **Stop-InformationBarrierPoliciesApplication** cmdlet with an Identity parameter.
-
-    Syntax:  `Stop-InformationBarrierPoliciesApplication -Identity GUID`
-
-    Example: `Stop-InformationBarrierPoliciesApplication -Identity 46237888-12ca-42e3-a541-3fcb7b5231d1`
-
-    In this example, we are stopping information barrier policies from being applied.
-
 ## Edit user account attributes
 
-Use this procedure to edit attributes in user account profiles that are used for segmenting users. For example, if you are using a Department attribute, and one or more user accounts does not currently have any values listed for Department, you'll want to add edit those user accounts to include that information. 
+Use this procedure to edit attributes in user account profiles that are used for segmenting users. 
+
+For example, if you are using a Department attribute, and one or more user accounts does not currently have any values listed for Department, you'll want to add edit those user accounts to include that information. 
 
 User account profile attributes are used for defining segments, and then information barrier policies are assigned to the segments that are defined.
 
@@ -65,7 +49,6 @@ User account profile attributes are used for defining segments, and then informa
     - [Add or update a user's profile information using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal)
 
     - [Configure user account properties with Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/configure-user-account-properties-with-office-365-powershell).)
-
 
 ## Edit a segment
 
@@ -108,32 +91,6 @@ When you have finished editing segments for your organization, you can either [d
 
 3. When you are finished editing a policy, make sure to apply your changes. (See [Apply information barrier policies](information-barriers-policies.md#part-3-apply-information-barrier-policies).)
 
-## Remove a policy
-
-1. To view a list of current information barrier policies, use the **Get-InformationBarrierPolicy** cmdlet.
-
-    Syntax: `Get-InformationBarrierPolicy`
-
-    In the list of results, identify the policy that you want to remove. Note the policy's GUID and name. Make sure the policy is set to inactive status.
-
-2. Use the **Remove-InformationBarrierPolicy** cmdlet with an Identity parameter.
-
-    Syntax: `Remove-InformationBarrierPolicy -Identity GUID`
-
-    Example: Suppose we want to remove a policy that has GUID *43c37853-ea10-4b90-a23d-ab8c93772471*. To do this, we use this cmdlet:
-    
-    `Remove-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c93772471`
-
-    When prompted, confirm the change.
-
-3. Repeat steps 1-2 for each policy you want to remove.
-
-4. When you are finished removing policies, apply your changes. To do this, use the **Start-InformationBarrierPoliciesApplication** cmdlet.
-
-    Syntax: `Start-InformationBarrierPoliciesApplication`
-
-    Changes are applied, user by user, for your organization. If your organization is large, it can take 24 hours (or more) for this process to complete.
-
 ## Set a policy to inactive status
 
 1. To view a list of current information barrier policies, use the **Get-InformationBarrierPolicy** cmdlet.
@@ -160,6 +117,50 @@ At this point, one or more information barrier policies are set to inactive stat
 - Keep it as is (a policy set to inactive status has no effect on users)
 - [Edit a policy](#edit-a-policy) 
 - [Remove a policy](#remove-a-policy)
+
+## Remove a policy
+
+1. To view a list of current information barrier policies, use the **Get-InformationBarrierPolicy** cmdlet.
+
+    Syntax: `Get-InformationBarrierPolicy`
+
+    In the list of results, identify the policy that you want to remove. Note the policy's GUID and name. Make sure the policy is set to inactive status.
+
+2. Use the **Remove-InformationBarrierPolicy** cmdlet with an Identity parameter.
+
+    Syntax: `Remove-InformationBarrierPolicy -Identity GUID`
+
+    Example: Suppose we want to remove a policy that has GUID *43c37853-ea10-4b90-a23d-ab8c93772471*. To do this, we use this cmdlet:
+    
+    `Remove-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c93772471`
+
+    When prompted, confirm the change.
+
+3. Repeat steps 1-2 for each policy you want to remove.
+
+4. When you are finished removing policies, apply your changes. To do this, use the **Start-InformationBarrierPoliciesApplication** cmdlet.
+
+    Syntax: `Start-InformationBarrierPoliciesApplication`
+
+    Changes are applied, user by user, for your organization. If your organization is large, it can take 24 hours (or more) for this process to complete.
+
+## Stop a policy application
+
+If, after you have started applying information barrier policies, you want to stop those policies from being applied, use the following procedure. Keep in mind that it will take approximately 30-35 minutes for the process to begin.
+
+1. To view the status of the most recent information barrier policy application, use the **Get-InformationBarrierPoliciesApplicationStatus** cmdlet.
+
+    Syntax: `Get-InformationBarrierPoliciesApplicationStatus`
+
+    Note the application's GUID.
+
+2. Use the **Stop-InformationBarrierPoliciesApplication** cmdlet with an Identity parameter.
+
+    Syntax:  `Stop-InformationBarrierPoliciesApplication -Identity GUID`
+
+    Example: `Stop-InformationBarrierPoliciesApplication -Identity 46237888-12ca-42e3-a541-3fcb7b5231d1`
+
+    In this example, we are stopping information barrier policies from being applied.
 
 ## Related articles
 
