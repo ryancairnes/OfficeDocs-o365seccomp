@@ -28,7 +28,7 @@ Use this procedure to edit attributes that are used for segmenting users.
 
 For example, if you are using a Department attribute, and one or more user accounts do not currently have any values listed for Department, you must edit those user accounts to include Department information. 
 
-User account attributes are used for defining segments, so that information barrier policies can be assigned.
+User account attributes are used for defining segments so that information barrier policies can be assigned.
 
 1. To view details for a specific user account, such as attribute values and assigned segment(s), use the **Get-InformationBarrierRecipientStatus** cmdlet with Identity parameters. 
 
