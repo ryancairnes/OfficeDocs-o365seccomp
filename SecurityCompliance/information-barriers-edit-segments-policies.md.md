@@ -17,7 +17,7 @@ description: "Learn how to edit or remove policies for information barriers."
 
 ## Overview
 
-After you have [defined information barrier policies](information-barriers-policies.md), you might need to make changes to those policies or to your user segments. Use this article as a guide.
+After you have [defined information barrier policies](information-barriers-policies.md), you might need to make changes to those policies or to your user segments, as part of [troubleshooting](information-barriers-troubleshooting.md) or as regular maintenance. Use this article as a guide.
 
 > [!IMPORTANT]
 > To perform the tasks described in this article, you must be assigned an appropriate role, such as one of the following:<br/>- Microsoft 365 Enterprise Global Administrator<br/>- Office 365 Global Administrator<br/>- Compliance Administrator<br/>- IB Compliance Management (this is a new role!)<p>To learn more about prerequisites for information barriers, see [Prerequisites (for information barrier policies)](information-barriers-policies.md#prerequisites).<p>Make sure to [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
@@ -135,6 +135,8 @@ At this point, one or more information barrier policies are set to inactive stat
 ## Related articles
 
 [Get an overview of information barriers](information-barriers.md)
+
+[Define policies for information barriers (Preview)](information-barriers-policies.md)
 
 [Learn more about information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams)
 
