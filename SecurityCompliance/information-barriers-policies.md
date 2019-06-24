@@ -24,20 +24,6 @@ This article describes how to plan, define, implement, and manage information ba
 > [!TIP]
 > This article includes an [example scenario](#example-contosos-departments-segments-and-policies) and a [downloadable Excel workbook](https://github.com/MicrosoftDocs/OfficeDocs-O365SecComp/raw/public/SecurityCompliance/media/InfoBarriers-PowerShellGenerator.xlsx) to help you plan and define your information barrier policies.
 
-## Concepts of information barrier policies
-
-It's helpful to know the underlying concepts of information barrier policies:
-
-- **User account attributes** are defined in Azure Active Directory (or Exchange Online). These attributes can include department, job title, location, team name, and other job profile details. 
-
-- **Segments** are sets of users that are defined in the Office 365 Security & Compliance Center using a selected **user account attribute**. (See the [list of supported attributes](information-barriers-attributes.md).) 
-
-- **Information barrier policies** determine communication limits or restrictions. When you define information barrier policies, you choose from two kinds of policies:
-    - "Block" policies prevent one segment from communicating with another segment.
-    - "Allow" policies allow one segment to communicate with only certain other segments.
-
-- **Policy application** is done after all information barrier policies are defined, and you are ready to apply them in your organization.
-
 ## The work flow at a glance
 
 |Phase    |What's involved  |
