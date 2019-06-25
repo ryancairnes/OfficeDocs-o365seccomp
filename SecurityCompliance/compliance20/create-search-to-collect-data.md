@@ -1,5 +1,5 @@
 ---
-title: "Create a search to collect data"
+title: "Create a search"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
