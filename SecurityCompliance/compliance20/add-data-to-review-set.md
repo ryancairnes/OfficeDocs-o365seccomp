@@ -45,8 +45,8 @@ If you want to validate the results of a search more thoroughly before adding al
 
 To add a sample to a review set, click a search on the **Searches** tab and click **Sample** on the flyout page. On the **Sampling parameters** page, choose one of the following options:
 
-- **Confidence level %** and **Confidence interval % — The items added to the review set will be determined by the statistical parameters that you set. If you typically use a confidence level and interval when sampling results, specify them in the drop-down boxes. Otherwise, use the default settings.
+- **Confidence level %** and **Confidence interval %** – The items added to the review set will be determined by the statistical parameters that you set. If you typically use a confidence level and interval when sampling results, specify them in the drop-down boxes. Otherwise, use the default settings.
 
-- **Random sample % — The items added to the review set is based on a random selection of the specified percentage of the total number of items returned by the search.
+- **Random sample %** – The items added to the review set is based on a random selection of the specified percentage of the total number of items returned by the search.
 
-After selecting and configuring one of the previous options, choose an existing review set to add the sample to and then click **Send**. Again, you can track the progress on the **Jobs** tab or on the **Searches** tab by monitoring the status in the **Added data to review set** column.
+After selecting and configuring one of the previous options, choose a review set to add the sample to and then click **Send**. Again, you can track the progress on the **Jobs** tab or on the **Searches** tab by monitoring the status in the **Added data to review set** column.
