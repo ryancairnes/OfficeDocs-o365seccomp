@@ -26,7 +26,7 @@ description: ""
 
 The first step is to search the audit log and then export the results to a comma separated value (CSV) file on your local computer.
   
-1. Run an [audit log search](search-the-audit-log-in-security-and-compliance.md#search-the-audit-log) and then revise the search criteria until you have the desired results.
+1. Run an [audit log search](search-the-audit-log-in-security-and-compliance.md#search-the-audit-log) and revise the search criteria if necessary until you have the desired results.
     
 2. Click **Export results** and select **Download all results**. 
     
@@ -42,40 +42,48 @@ The first step is to search the audit log and then export the results to a comma
   > You can download a maximum of 50,000 entries to a CSV file from a single audit log search. If 50,000 entries are downloaded to the CSV file, you can probably assume there are more than 50,000 events that met the search criteria. To export more than this limit, try using a date range to reduce the number of audit log records. You might have to run multiple searches with smaller date ranges to export more than 50,000 entries.
 
 
-## Step 2: Format the audit log records using Power Query
+## Step 2: Format the exported audit log using Power Query
 
 
 
 
 1. In Excel 2016, open a blank workbook.
     
-2. On the **Data** tab, click **From Text/CSV**, and open the CSV file that you downloaded in Step 1.
+2. In the **Get & Transform Data** ribbon group on the **Data** tab, click **From Text/CSV**, and open the CSV file that you downloaded in Step 1.
     
-3. On the thumbnail page that's displayed, click **Transform Data**.
+3. In the window that's displayed, click **Transform Data**.
 
    The CSV file is opened in **Power Query Editor**. There are four columns: **CreationDate**, **UserIds**, **Operations**, and **AuditData**. The **AuditData** column is a JSON object that contains multiple properties. The next step is to create a new column for each of the properties in the JSON object. 
     
-4. Right-click the title in the **AuditData** column, and then select **Transform > JSON**. 
+4. Right-click the title in the **AuditData** column, click **Transform** and then click **JSON**. 
  
-5. 
+   ![Right-click the AuditData column, click Transform, and then select JSON](media/JSONTransform.png)
+
+5. In the upper-right corner of the **AuditData** column, click the expand icon.
     
-    ![On the Home tab, click Split Column, and then click By Delimiter](media/aeb503e8-565b-42ea-91e2-9f127a74c00c.png)
-  
-6. In the **Split Column by Delimiter** window, do the following: 
+   ![In the AuditData column, click the expand icon](media/JSONTransformExpandIcon.png)
+
+   A partial list of the fields in the JSON object are displayed.
+
+6. To display all fields in the JSON object, click **Load more**.
+
+   ![Click Load more to display all fields from JSON object](media/JSONTransformLoadJSONProperties.png)
+
+   You can unselect the checkbox next to any field that you don't want to include.
+
+8. Do one of the following things to format the title of the columns that will be added for each JSON field that's selected.
+
+    - Unselect the **Use original column name as prefix** checkbox to use the name of the JSON fields as the column names; for example, **RecordType** or **SourceFileName**.
     
-      - Under **Select or enter delimiter**, select **Comma**.
-    
-      - Under **Split**, select **At each occurrence of the delimiter**.
-    
+   - Leave the **Use original column name as prefix** checkbox selected to add the AuditData prefix to the column names; for example, **AuditData.RecordType** or **AuditData.SourceFileName**.
+
 7. Click **OK**.
     
-    The **Detail** column is split into multiple columns. Each new column is named **Detail.1**, **Detail.2**, **Detail.3**, and so on. You'll notice the values in each cell in the **Detail.n** columns are prefixed with the name of the property; for example, **Operation:SharingSet**, **Operation:SharingInvitationAccepted**, and **Operation:SharingInvitationCreated**.
-    
-    ![The Detail column is split into multiple columns, one for each property](media/4b104ead-0313-4bd4-b2a9-f143ccb378ac.png)
+    The **AuditData** column is split into multiple columns. Each new column corresponds to a property in the AuditData JSON object. Each row in the column contains the value for the property. If the property doesn't contain a value, the *null* value is displayed.
   
-8. On the **File** tab, click **Close &amp; Load** to close the Query Editor and open the file in an Excel workbook. 
+8. On the **Home** tab, click **Close & Load** to close the Power Query Editor and open the file in an Excel workbook. 
     
-    The next step is to filter the file to only display the **SharingSet** and **SharingInvitationCreated** events. 
+    
 
 ## More information
 
