@@ -182,7 +182,7 @@ One of the most powerful features of a retention policy is that by default it ap
     
 - OneDrive accounts
     
-- Office 365 groups (applies to content in the group's mailbox, site, and documents. Support for content in Planner, Yammer, and CRM is coming soon.)
+- Office 365 groups (applies to content in the group's mailbox, site, and documents. Support for content in Planner, Yammer, CRM Microsoft Teams, PowerBI, Stream, Exchange and SharePoint Team Sites is coming soon.)
     
 - Exchange public folders
     
@@ -226,7 +226,7 @@ Note that **Conversation History**, a folder in Outlook, is a feature that has n
 
 ### Office 365 groups locations
 
-To retain content for an Office 365 group, you need to use the Office 365 groups location. Even though an Office 365 group has an Exchange mailbox, a retention policy that includes the entire Exchange location won't include content in Office 365 group mailboxes. A retention policy applied to an Office 365 group includes both the group mailbox and site.
+To retain content for an Office 365 group, you need to use the Office 365 groups location. Even though an Office 365 group has an Exchange mailbox, a retention policy that includes the entire Exchange location won't include content in Office 365 group mailboxes. A retention policy applied to an Office 365 group includes both the group mailbox and site. A retention policy applied to an Office 365 group will protect the resources created by an Office 365 group, which would include Microsoft Teams.
 
 In addition, it's not possible to use the Exchange location to include or exclude a specific group mailbox. Although the Exchange location initially allows a group mailbox to be selected, when you try to save the retention policy, you'll receive an error that "RemoteGroupMailbox" is not a valid selection for the Exchange location. 
   
@@ -248,7 +248,7 @@ We're still working on retention in Teams, and additional features are coming. I
     
 - **Teams may take up to 30 days to clean up retained content** A retention policy applied to Teams will delete the content from all relevant storage locations. However, immediately after launch, it may take up to 30 days for Teams clients to clean up content based on the retention policy. But even though content still appears in the Teams clients, that content will not appear in content search or eDiscovery after the end of the retention period. 
     
-In a Team, files that are shared in chat are stored in the OneDrive account of the user who shared the file. Files that are uploaded into channels are stored in the SharePoint site for the Team. Therefore, to retain or delete files in a Team, you need to create a retention policy that applies to the SharePoint and OneDrive locations. If you want to apply a policy to the files of just a specific team, you can choose the SharePoint site for the Team and the OneDrive accounts of users in the Team.
+In a Team, files that are shared in chat are stored in the OneDrive account of the user who shared the file. Files that are uploaded into channels are stored in the SharePoint site for the Team. Therefore, to retain or delete files in a Team, you need to create a retention policy that applies to the SharePoint and OneDrive locations. You would need to use a Retention Policy that targets SharePoint and OneDrive specifically. If you want to apply a policy to the files of just a specific team, you can choose the SharePoint site for the Team and the OneDrive accounts of users in the Team.
   
 A retention policy that applies to Teams can use [Preservation Lock](#locking-a-retention-policy).
   
