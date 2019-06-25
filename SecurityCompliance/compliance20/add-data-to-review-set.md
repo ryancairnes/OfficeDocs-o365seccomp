@@ -21,7 +21,7 @@ description: ""
 
 When you're satisfied with the results of a search and you're ready to review and analyze those search results, you can add them to a review set in the case. Copying the original data to the review set also facilitates the review and analysis process by providing you with advanced analytics tools such as themes detection, near-duplicate detection, and email thread identification. You can also add data from non-Office 365 data sources to a review set so that you can review that data in addition to the data you collect from Office 365.
 
-When you add the results of a search to a review set (review sets are located on the **Review sets** tab of the case), the following things occur:
+When you add the results of a search to a review set (review sets are on the **Review sets** tab of the case), the following things occur:
 
 - The search is run again. This means the actual search results copied to the review set may be different than the estimated results that were returned when the search was last run.
 
@@ -33,7 +33,7 @@ To add data to a review set, click a search on the **Searches** tab, and then cl
 
 ![Adding data to a review set](../media/c1b4fc00-7a15-4587-b9b0-ce594bb02e4d.png)
 
-Note that you can add to an existing review set or create a new review set.  If adding to a new review set, specify the name and then click **Add**.
+You can add to an existing review set or create a new review set.  If adding to a new review set, specify the name and then click **Add**.
 
 ![Select a review set](../media/e8c6ab51-da8d-4c39-9b21-26bfdf453fb9.png)
 
@@ -45,8 +45,8 @@ If you want to validate the results of a search more thoroughly before adding al
 
 To add a sample to a review set, click a search on the **Searches** tab and click **Sample** on the flyout page. On the **Sampling parameters** page, choose one of the following options:
 
-- **Confidence level %** and **Confidence interval %** – The items added to the review set will be determined by the statistical parameters that you set. If you typically use a confidence level and interval when sampling results, specify them in the drop-down boxes. Otherwise, just use the default settings.
+- **Confidence level %** and **Confidence interval % — The items added to the review set will be determined by the statistical parameters that you set. If you typically use a confidence level and interval when sampling results, specify them in the drop-down boxes. Otherwise, use the default settings.
 
-- **Random sample %** – The items added to the review set is based on a random selection of the specified percentage of the total number of items returned by the search.
+- **Random sample % — The items added to the review set is based on a random selection of the specified percentage of the total number of items returned by the search.
 
 After selecting and configuring one of the previous options, choose an existing review set to add the sample to and then click **Send**. Again, you can track the progress on the **Jobs** tab or on the **Searches** tab by monitoring the status in the **Added data to review set** column.
