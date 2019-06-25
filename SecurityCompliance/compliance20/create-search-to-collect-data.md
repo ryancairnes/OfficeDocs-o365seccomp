@@ -1,5 +1,5 @@
 ---
-title: "Create a search to collect data"
+title: "Create a search"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,7 +17,7 @@ ms.assetid:
 description: ""
 ---
 
-# Create a search to collect data
+# Create a search
 
 On the **Searches** tab in your case, you can create a new search by clicking **New search** and following the wizard.
 
