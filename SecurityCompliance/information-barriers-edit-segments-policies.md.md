@@ -1,5 +1,5 @@
 ---
-title: "Edit or remove information barrier policies"
+title: "Edit information barrier policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
