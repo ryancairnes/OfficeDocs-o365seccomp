@@ -331,7 +331,7 @@
 #### [Error remediation when processing data](compliance20/error-remediation.md)
 
 ### [Collect data for a case](compliance20/collecting-data-for-ediscovery.md)
-#### [Create a search to collect data](compliance20/create-search-to-collect-data.md)
+#### [Create a search](compliance20/create-search-to-collect-data.md)
 #### [Build search queries](compliance20/building-search-queries.md)
 #### [Search statistics](compliance20/search-statistics.md)
 #### [Add search results to a review set](compliance20/add-data-to-review-set.md)
