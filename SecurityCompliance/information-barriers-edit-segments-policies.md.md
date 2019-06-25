@@ -19,16 +19,16 @@ After you have [defined information barrier policies](information-barriers-polic
 
 ## What do you want to do?
 
-|Action  |Use when  |
+|Action  |Description |
 |---------|---------|
-|[Edit user account attributes](#edit-user-account-attributes)     |Do this when users are not included in segments they should be, or to change which segments they're in.         |
-|[Edit a segment](#edit-a-segment)     |Do this when you want to change how a segment is defined. For example, you might have originally defined segments using Department and now want to use another attribute.         |
-|[Edit a policy](#edit-a-policy)     |Do this when you want to change how a policy works. For example, instead of blocking communications between two segments, you might decide you want to allow communications to occur only between certain segments.         |
-|[Set a policy to inactive status](#set-a-policy-to-inactive-status)     |Do this when you want to make changes to a policy, or when you don't want a policy to be in effect.         |
-|[Remove a policy](#remove-a-policy)     |Do this when you no longer need a particular information barrier policy.         |
-|[Stop a policy application](#stop-a-policy-application)     |Do this when you want to stop the process of applying information barrier policies. Note that stopping a policy application is not instant, and it does not undo policies that are already applied to users.         |
-|[Define policies for information barriers (Preview)](information-barriers-policies.md)     |Do this when you want new information barrier policies for your organization.         |
-|[Troubleshooting information barriers (Preview)](information-barriers-troubleshooting.md)     |Refer to this article when things do not run as expected with information barriers.         |
+|[Edit user account attributes](#edit-user-account-attributes)     |Fill in attributes in Azure Active Directory that can be used to define segments.<br/>Edit user account attributes when users are not included in segments they should be, to change which segments users are in, or to define segments using different attributes.         |
+|[Edit a segment](#edit-a-segment)     |Edit segments when you want to change how a segment is defined. <br/>For example, you might have originally defined segments using *Department* and now want to use another attribute, such as *MemberOf*.         |
+|[Edit a policy](#edit-a-policy)     |Edit an information barrier policy when you want to change how a policy works.<br/>For example, instead of blocking communications between two segments, you might decide you want to allow communications to occur only between certain segments.         |
+|[Set a policy to inactive status](#set-a-policy-to-inactive-status)     |Set a policy to inactive status when you want to make changes to a policy, or when you don't want a policy to be in effect.         |
+|[Remove a policy](#remove-a-policy)     |Remove an information barrier policy when you no longer need a particular policy in place.         |
+|[Stop a policy application](#stop-a-policy-application)     |Do this when you want to stop the process of applying information barrier policies.<br/>Note that stopping a policy application is not instant, and it does not undo policies that are already applied to users.         |
+|[Define policies for information barriers (Preview)](information-barriers-policies.md)     |Define an information barrier policy when you do not already have such policies in place, and you must restrict or limit communications between specific groups of users.         |
+|[Troubleshooting information barriers (Preview)](information-barriers-troubleshooting.md)     |Refer to this article when you run into unexpected issues with information barriers.         |
 
 > [!IMPORTANT]
 > To perform the tasks described in this article, you must be assigned an appropriate role, such as one of the following:<br/>- Microsoft 365 Enterprise Global Administrator<br/>- Office 365 Global Administrator<br/>- Compliance Administrator<br/>- IB Compliance Management (this is a new role!)<p>To learn more about prerequisites for information barriers, see [Prerequisites (for information barrier policies)](information-barriers-policies.md#prerequisites).<p>Make sure to [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
