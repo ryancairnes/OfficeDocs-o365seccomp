@@ -13,11 +13,27 @@ localization_priority: None
 description: "Learn how to edit or remove policies for information barriers."
 ---
 
-# Edit or remove information barrier policies (Preview)
-
-## Overview
+# Edit (or remove) information barrier policies (Preview)
 
 After you have [defined information barrier policies](information-barriers-policies.md), you might need to make changes to those policies or to your user segments, as part of [troubleshooting](information-barriers-troubleshooting.md) or as regular maintenance. Use this article as a guide.
+
+## What do you want to do?
+
+- [Edit user account attributes](#edit-user-account-attributes)
+
+- [Edit a segment](#edit-a-segment)
+
+- [Edit a policy](#edit-a-policy)
+
+- [Set a policy to inactive status](#set-a-policy-to-inactive-status)
+
+- [Remove a policy](#remove-a-policy)
+
+- [Stop a policy application](#stop-a-policy-application)
+
+- [Define policies for information barriers (Preview)](information-barriers-policies.md)
+
+- [Troubleshooting information barriers (Preview)](information-barriers-troubleshooting.md)
 
 > [!IMPORTANT]
 > To perform the tasks described in this article, you must be assigned an appropriate role, such as one of the following:<br/>- Microsoft 365 Enterprise Global Administrator<br/>- Office 365 Global Administrator<br/>- Compliance Administrator<br/>- IB Compliance Management (this is a new role!)<p>To learn more about prerequisites for information barriers, see [Prerequisites (for information barrier policies)](information-barriers-policies.md#prerequisites).<p>Make sure to [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
