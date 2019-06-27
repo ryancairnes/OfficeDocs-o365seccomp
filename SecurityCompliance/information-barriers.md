@@ -3,7 +3,7 @@ title: "Information barriers overview"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 06/13/2019
+ms.date: 06/26/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
