@@ -14,17 +14,16 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 0d4d0f35-390b-4518-800e-0c7ec95e946c
-description: ""
+description: "After you export and download the results of an Office 365 audit log search to a CSV file, you can use the JSON transform feature in the Power Query Editor in Excel to split each property in the JSON object in the AuditData column into its own column. This can help you quickly locate the specific auditing data you're looking for."
 ---
 
 # Export, configure, and view audit log records
 
-
-
+After you search the Office 365 audit log and download the search results to a CSV file, the file contains a column named **AuditData**, which contains additional information about each event. The data in this column is formatted as a JSON object, which contains multiple properties that are configured as *property:value* pairs separated by commas. You can use the JSON transform feature in the Power Query Editor in Excel to split each property in the JSON object in the **AuditData** column into multiple columns so that each property has its own column. This lets you sort and filter on one or more of these properties, which can help you quickly locate the specific auditing data you're looking for.
 
 ## Step 1: Export audit log search results
 
-The first step is to search the audit log and then export the results to a comma separated value (CSV) file on your local computer.
+The first step is to search the audit log and then export the results in a comma-separated value (CSV) file to your local computer.
   
 1. Run an [audit log search](search-the-audit-log-in-security-and-compliance.md#search-the-audit-log) and revise the search criteria if necessary until you have the desired results.
     
@@ -36,18 +35,16 @@ The first step is to search the audit log and then export the results to a comma
 
    A message is displayed at the bottom of the window that prompts you to open or save the CSV file. 
 
-3. Click **Save > Save as** and save the CSV file to your local computer. It will take a while to download a large number of search results. This is typically the case when searching for all activities or a broad date range. A message at the bottom of the windows is displayed when the CSV file is finished downloading.
+3. Click **Save > Save as** and save the CSV file to your local computer. It takes a while to download many search results. This is typically the case when searching for all activities or a broad date range. A message at the bottom of the windows is displayed when the CSV file is finished downloading.
  
    ![Message displayed when the CSV file is finished downloading](media/ExportAuditSearchResultsFinish.png)
 
 > [!NOTE]
   > You can download a maximum of 50,000 entries to a CSV file from a single audit log search. If 50,000 entries are downloaded to the CSV file, you can probably assume there are more than 50,000 events that met the search criteria. To export more than this limit, try using a date range to reduce the number of audit log records. You might have to run multiple searches with smaller date ranges to export more than 50,000 entries.
 
+## Step 2: Format the exported audit log using the Power Query Editor
 
-## Step 2: Format the exported audit log using Power Query
-
-
-
+The next step is to use the JSON transform feature in the Power Query Editor in Excel to split each property in the JSON object in the **AuditData** column into its own column. Then you filter columns to view records based on the values of specific properties. This can help you quickly locate the specific auditing data you're looking for.
 
 1. Open a blank workbook in Excel for Office 365, Excel 2019, or Excel 2016.
     
@@ -59,7 +56,9 @@ The first step is to search the audit log and then export the results to a comma
     
 4. In the window that's displayed, click **Transform Data**.
 
-   The CSV file is opened in **Power Query Editor**. There are four columns: **CreationDate**, **UserIds**, **Operations**, and **AuditData**. The **AuditData** column is a JSON object that contains multiple properties. The next step is to create a new column for each of the properties in the JSON object. 
+   ![Click Transform Data](media/JSONOpenPowerQuery.png)
+
+The CSV file is opened in the **Query Editor**. There are four columns: **CreationDate**, **UserIds**, **Operations**, and **AuditData**. The **AuditData** column is a JSON object that contains multiple properties. The next step is to create a column for each property in the JSON object.
     
 5. Right-click the title in the **AuditData** column, click **Transform**, and then click **JSON**. 
  
@@ -69,17 +68,20 @@ The first step is to search the audit log and then export the results to a comma
     
    ![In the AuditData column, click the expand icon](media/JSONTransformExpandIcon.png)
 
-   A partial list of the fields in the JSON object are displayed.
+   A partial list of the properties in the JSON object is displayed.
 
-7. To display all fields in the JSON object, click **Load more**.
+7. To display all the properties in the JSON object, click **Load more**.
 
-   ![Click Load more to display all fields from JSON object](media/JSONTransformLoadJSONProperties.png)
+   ![Click Load more to display all properties in JSON object](media/JSONTransformLoadJSONProperties.png)
 
-   You can unselect the checkbox next to any field that you don't want to include. This is a good way to simply the audit log by eliminating columns that aren't useful. 
+   You can unselect the checkbox next to any property that you don't want to include. Eliminating columns that aren't useful for your investigation is a good way to reduce the amount of data displayed in the audit log. 
 
-8. Do one of the following things to format the title of the columns that will be added for each JSON field that's selected.
+   > [!NOTE]
+   > The JSON properties displayed in the previous screenshot are based on the properties found in **AuditData** column from the first 1,000 rows in the CSV file. If there are different JSON properties in records after the first 1,000 rows, these properties (and a corresponding column) won't be included when the **AuditData** column is split into multiple columns. To help prevent this, consider re-running the audit log search and narrow the search criteria so that fewer records are returned. Another workaround is to filter items in the **Operations** to reduce the number of rows before transform the JSON object in the **AuditData** column.
 
-    - Unselect the **Use original column name as prefix** checkbox to use the name of the JSON field as the column names; for example, **RecordType** or **SourceFileName**.
+8. Do one of the following things to format the title of the columns that are added for each JSON property that's selected.
+
+    - Unselect the **Use original column name as prefix** checkbox to use the name of the JSON property as the column names; for example, **RecordType** or **SourceFileName**.
     
    - Leave the **Use original column name as prefix** checkbox selected to add the AuditData prefix to the column names; for example, **AuditData.RecordType** or **AuditData.SourceFileName**.
 
@@ -87,30 +89,13 @@ The first step is to search the audit log and then export the results to a comma
     
     The **AuditData** column is split into multiple columns. Each new column corresponds to a property in the AuditData JSON object. Each row in the column contains the value for the property. If the property doesn't contain a value, the *null* value is displayed. In Excel, cells with null values are empty.
   
-10. On the **Home** tab, click **Close & Load** to close the Power Query Editor and open the file in an Excel workbook. 
-    
-Here are screenshots of the CSV version of the audit log and the version in Excel after you use the JSON transform feature in Power Query editor.
-
-**Before**
-
-
-
-**After**
+10. On the **Home** tab, click **Close & Load** to close the Power Query Editor and open the transformed CSV file in an Excel workbook. 
 
 ## Tips for viewing audit log records
 
-Here are some tips and example of viewing the audit log after you use the JSON transform feature to split the AuditData column into multiple columns.
+Here are some tips and examples of viewing the audit log after you use the JSON transform feature to split the **AuditData** column into multiple columns.
 
-- 
+- Filter the **RecordType** column to display only the records from a specific Office 365 service or functional area. For example, to show events related to SharePoint sharing, you would select **14** (the enum value for records triggered by SharePoint sharing activities). For a list of the Office 365 services that correspond to the enum values displayed in the **RecordType** column, see [Detailed properties in the Office 365 audit log](detailed-properties-in-the-office-365-audit-log.md).
 
+- Filter the **Operations** column to display the records for specific activities. For a list of most operations that correspond to a searchable activity in the audit log search tool in the Security & Compliance Center, see the "Audited activities" section in [Search the audit log in the Security & Compliance Center](search-the-audit-log-in-security-and-compliance.md#audited-activities).
 
-
-## More information
-
-
-    
-- If you download all results, the CSV file contains a column named **AuditData**, which contains additional information about each event. As previously stated, this column contains a multi-value property for multiple properties from the audit log record. Each of the **property:value** pairs in this multi-value property are separated by a comma. You can use the Power Query in Excel to split this column into multiple columns so that each property will have its own column. This will let you sort and filter on one or more of these properties. To learn how to do this, see the "Split a column by delimiter" section in [Split a column of text (Power Query)](https://support.office.com/article/5282d425-6dd0-46ca-95bf-8e0da9539662).
-    
-    After you split the **AuditData** column, you can filter on the **Operations** column to display the detailed properties for a specific type of activity. 
-    
-- There's a 3,060-character limit for the data that's displayed in the **AuditData** field for an audit record. If the 3,060-character limit is exceeded, the data in this field is truncated. 
