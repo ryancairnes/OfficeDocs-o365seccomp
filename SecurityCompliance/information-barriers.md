@@ -3,7 +3,7 @@ title: "Information barriers overview"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 06/13/2019
+ms.date: 06/26/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -29,7 +29,7 @@ Information barriers are in preview now, beginning with Microsoft Teams. When th
 For all of these example scenarios (and more), information barrier policies can be defined to prevent or allow communications in Microsoft Teams. Such policies can prevent people from calling or chatting with those they shouldn't, or enable people to communicate only with specific groups in Microsoft Teams. With information barrier policies in effect, whenever users who are covered by those policies attempt to communicate with others in Microsoft Teams, checks are done to prevent (or allow) communication (as defined by information barrier policies). To learn more about the user experience with information barriers, see [information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams).
 
 > [!NOTE]
-> Information barriers will not apply to email communications or to file sharing through SharePoint Online or OneDrive.
+> Information barriers do not apply to email communications or to file sharing through SharePoint Online or OneDrive. In addition, information barriers are independent from [compliance boundaries](set-up-compliance-boundaries.md).
 
 ## Required licenses and permissions
 
@@ -50,6 +50,20 @@ To [define or edit information barrier policies](information-barriers-policies.m
 - Information barriers administrator
 
 You must be familiar with PowerShell cmdlets in order to define, validate, or edit information barrier policies. Although we provide several examples of PowerShell cmdlets in the [how-to information](information-barriers-policies.md), you'll need to know additional details, such as parameters, for your organization.
+
+## Concepts of information barrier policies
+
+It's helpful to know the underlying concepts of information barrier policies:
+
+- **User account attributes** are defined in Azure Active Directory (or Exchange Online). These attributes can include department, job title, location, team name, and other job profile details. 
+
+- **Segments** are sets of users that are defined in the Office 365 Security & Compliance Center using a selected **user account attribute**. (See the [list of supported attributes](information-barriers-attributes.md).) 
+
+- **Information barrier policies** determine communication limits or restrictions. When you define information barrier policies, you choose from two kinds of policies:
+    - "Block" policies prevent one segment from communicating with another segment.
+    - "Allow" policies allow one segment to communicate with only certain other segments.
+
+- **Policy application** is done after all information barrier policies are defined, and you are ready to apply them in your organization.
 
 ## Next steps
 
