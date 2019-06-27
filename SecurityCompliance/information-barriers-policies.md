@@ -3,7 +3,7 @@ title: "Define information barrier policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 06/24/2019
+ms.date: 06/26/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -48,7 +48,9 @@ In addition to the [required licenses and permissions](information-barriers.md#r
 
 - **Audit logging**. In order to look up the status of a policy application, audit logging must be turned on. We recommend doing this before you begin to define segments or policies. To learn more, see [Turn Office 365 audit log search on or off](turn-audit-log-search-on-or-off.md).
 
-- **PowerShell**. Currently, information barrier policies are defined and managed in the Office 365 Security & Compliance Center using PowerShell cmdlets. Although several examples are provided in this article, you'll need to be familiar with PowerShell cmdlets and parameters. [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
+- **PowerShell**. Currently, information barrier policies are defined and managed in the Office 365 Security & Compliance Center using PowerShell cmdlets. Although several examples are provided in this article, you'll need to be familiar with PowerShell cmdlets and parameters. You will also need the AzureRM module.
+    - [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps)
+    - [Install the Azure PowerShell module](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-2.3.2)
 
 - **Admin consent for information barriers in Microsoft Teams**. When your policies are in place, information barriers can remove people from chat sessions they are not supposed to be in. This helps ensure your organization remains compliant with policies and regulations. Use the following procedure to enable information barrier policies to work as expected in Microsoft Teams. 
 
