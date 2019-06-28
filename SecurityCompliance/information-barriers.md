@@ -31,6 +31,12 @@ For all of these example scenarios (and more), information barrier policies can 
 > [!NOTE]
 > Information barriers do not apply to email communications or to file sharing through SharePoint Online or OneDrive. In addition, information barriers are independent from [compliance boundaries](set-up-compliance-boundaries.md).
 
+## What happens when information barriers are in effect
+
+When information barrier policies are in place, people who should not communicate with other specific users won't be able to find, select, chat, or call those users. Initially, information barriers apply to Microsoft Teams chats and channels only. 
+
+
+
 ## Required licenses and permissions
 
 **Currently, the information barrier feature is in private preview**. When these features are generally available, they'll be included in subscriptions, such as:
