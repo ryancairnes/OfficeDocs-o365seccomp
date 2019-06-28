@@ -307,3 +307,8 @@ With segments and policies defined, Contoso applies the policies by running the 
 
 When that finishes, Contoso is compliant with legal and industry requirements.
 
+## Related articles
+
+- [Get an overview of information barriers (Preview)](information-barriers.md)
+
+- [Information barriers in Microsoft Teams preview](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams)
