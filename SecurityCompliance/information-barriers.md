@@ -67,11 +67,12 @@ To [define or edit information barrier policies](information-barriers-policies.m
 - Compliance administrator
 - Information barriers administrator
 
-You must be familiar with PowerShell cmdlets in order to define, validate, or edit information barrier policies. Although we provide several examples of PowerShell cmdlets in the [how-to information](information-barriers-policies.md), you'll need to know additional details, such as parameters, for your organization.
+You must be familiar with PowerShell cmdlets in order to define, validate, or edit information barrier policies. Although we provide several examples of PowerShell cmdlets in the [how-to article](information-barriers-policies.md), you'll need to know additional details, such as parameters, for your organization.
 
 ## Next steps
 
 - [Learn more about information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams)
 - [See the attributes that can be used for information barrier policies](information-barriers-attributes.md)
-- [Define policies for information barriers](information-barriers-policies.md) 
+- [Define policies for information barriers](information-barriers-policies.md)
+- [Edit (or remove) information barrier policies (Preview)](information-barriers-edit-segments-policies.md.md) 
 
