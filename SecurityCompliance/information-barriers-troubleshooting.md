@@ -68,12 +68,11 @@ Determine whether the users are affected by an information barrier policy. Depen
     |---------|---------|
     | `Get-InformationBarrierRecipientStatus -Identity` <p>You can use any identity value that uniquely identifies each recipient, such as Name, Alias, Distinguished name (DN), Canonical DN, Email address, or GUID.     |`Get-InformationBarrierRecipientStatus -Identity meganb` <p>In this example, we are using an alias (*meganb*) for the Identity parameter. This cmdlet will return information that indicates whether the user is affected by an information barrier policy. (Look for *ExoPolicyId: \<GUID>.)         |
 
-
     If the users are not included in information barrier policies, contact support. Otherwise, proceed to the next step.
 
 2. Find out which segments are included in an information barrier policy. To do this, use the `Get-InformationBarrierPolicy` cmdlet with the Identity parameter. 
 
-    |Syntax  |Exanple  |
+    |Syntax  |Example  |
     |---------|---------|
     |`Get-InformationBarrierPolicy` <p>Use details, such as the policy GUID (ExoPolicyId) you received during the previous step, as an identity value.     | `Get-InformationBarrierPolicy -Identity b42c3d0f-49e9-4506-a0a5-bf2853b5df6f` <p>In this example, we are getting detailed information about the information barrier policy that has ExoPolicyId *b42c3d0f-49e9-4506-a0a5-bf2853b5df6f*.         |
 
@@ -90,11 +89,9 @@ Determine whether the users are affected by an information barrier policy. Depen
 
 4. Make sure your segments are defined correctly. To do this, use the `Get-OrganizationSegment` cmdlet, and review the list of results. 
 
-    To view details for a specific segment, use the `Get-OrganizationSegment` cmdlet with an Identity parameter. 
-
-    Example: `Get-OrganizationSegment -Identity c96e0837-c232-4a8a-841e-ef45787d8fcd`
-
-    In this example, we are getting information about the segment that has GUID *c96e0837-c232-4a8a-841e-ef45787d8fcd*.
+    |Syntax  |Example  |
+    |---------|---------|
+    |`Get-OrganizationSegment`<p>Use this cmdlet with an Identity parameter.     |`Get-OrganizationSegment -Identity c96e0837-c232-4a8a-841e-ef45787d8fcd` <p>In this example, we are getting information about the segment that has GUID *c96e0837-c232-4a8a-841e-ef45787d8fcd*.         |
 
     Review the details for the segment. If necessary, [edit a segment](information-barriers-edit-segments-policies.md.md#edit-a-segment), and then re-use the `Start-InformationBarrierPoliciesApplication` cmdlet.
 
