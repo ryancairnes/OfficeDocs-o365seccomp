@@ -99,7 +99,7 @@ Verify that the users in question are included in an information barrier policy.
     |Segments are listed and each is included in an information barrier policy     |- Run the `Get-InformationBarrierPolicy` cmdlet to verify that information barrier policies are active<br/>- Run the `Get-InformationBarrierPoliciesApplicationStatus` cmdlet to confirm the policies are applied<br/>- Run the `Start-InformationBarrierPoliciesApplication` cmdlet to apply all active information barrier policies          |
     
 
-## Issue: I need to remove information barrier policies for a single user
+## Issue: I need to remove a single user from an information barrier policy
 
 In this case, information barrier policies are in effect, and a one or more users are unexpectedly blocked from communicating with others in Microsoft Teams. Rather than remove information barrier policies altogether, you can remove one or more individual users from information barrier policies. 
 
