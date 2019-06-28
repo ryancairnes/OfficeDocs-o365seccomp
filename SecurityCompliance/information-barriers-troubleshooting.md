@@ -118,9 +118,7 @@ Information barrier policies are assigned to segments of users. Segments are def
 
 3. To remove a user from a segment affected by information barriers, [update the user's profile information in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal).
 
-4. Wait about 30 minutes for FwdSync to occur.
-
-
+4. Wait about 30 minutes for FwdSync to occur. Or, run the `Start-InformationBarrierPoliciesApplication` cmdlet to apply all active information barrier policies.
 
 ## Issue: The information barrier application process is taking too long
 
