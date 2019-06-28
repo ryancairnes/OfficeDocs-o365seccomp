@@ -130,10 +130,10 @@ Keep in mind that when you run the policy application cmdlet, information barrie
 
 1. Use the **Get-InformationBarrierPoliciesApplicationStatus** cmdlet to verify status of the most recent policy application.
 
-    Syntax: `Get-InformationBarrierPoliciesApplicationStatus`
+    |To view the most recent policy application  |To view status for all policy applications  |
+    |---------|---------|
+    |`Get-InformationBarrierPoliciesApplicationStatus`     |`Get-InformationBarrierPoliciesApplicationStatus -All $true`         |
 
-    (To display status for *all* information barrier policy applications, use this cmdlet:<br/>
-    `Get-InformationBarrierPoliciesApplicationStatus -All $true`)
 
     This will display information about whether policy application completed, failed, or is in progress.
 
@@ -155,13 +155,14 @@ Make sure that your organization does not have [Exchange address book policies](
 
 1. Connect to [Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps). 
 
-1. Run the [Get-AddressBookPolicy](https://docs.microsoft.com/powershell/module/exchange/email-addresses-and-address-books/get-addressbookpolicy?view=exchange-ps) cmdlet, and review the results.
+2. Run the [Get-AddressBookPolicy](https://docs.microsoft.com/powershell/module/exchange/email-addresses-and-address-books/get-addressbookpolicy?view=exchange-ps) cmdlet, and review the results.
 
     |Results  |Next step  |
     |---------|---------|
     |Exchange address book policies are listed     |[Remove address book policies](https://docs.microsoft.com/exchange/address-books/address-book-policies/remove-an-address-book-policy)         |
     |No address book policies exist |Review your audit logs to find out why policy application is failing |
 
+3. [View status of user accounts, segments, policies, or policy application](information-barriers-policies.md#view-status-of-user-accounts-segments-policies-or-policy-application).
 
 ## Related topics
 
