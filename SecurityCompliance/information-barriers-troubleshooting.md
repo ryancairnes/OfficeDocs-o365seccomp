@@ -22,7 +22,7 @@ In the event that people run into unexpected issues after information barriers a
 > [!IMPORTANT]
 > To perform the tasks described in this article, you must be assigned an appropriate role, such as one of the following:<br/>- Microsoft 365 Enterprise Global Administrator<br/>- Office 365 Global Administrator<br/>- Compliance Administrator<br/>- IB Compliance Management (this is a new role!)<p>To learn more about prerequisites for information barriers, see [Prerequisites (for information barrier policies)](information-barriers-policies.md#prerequisites).<p>Make sure to [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
-## Issue: People are unexpectedly blocked from communicating in Microsoft Teams 
+## Issue: People are unexpectedly blocked from communicating with others in Microsoft Teams 
 
 In this case, people are reporting unexpected issues communicating with others in Microsoft Teams. Examples:
 - A user searches for, but is unable to find, another user in Microsoft Teams.
@@ -90,13 +90,29 @@ Verify that the users in question are included in an information barrier policy.
 
     Review the results, and then take your next steps, as described in the following table:
     
-    |Results  |Next steps  |
+    |Results  |What to do next  |
     |---------|---------|
     |No segments are listed for the selected user(s)     |Do one of the following:<br/>- Assign users to an existing segment by editing their user profiles in Azure Active Directory. (See [Configure user account properties with Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/configure-user-account-properties-with-office-365-powershell).)<br/>- Define a segment using a [supported attribute for information barriers](information-barriers-attributes.md). Then, either [define a new policy](information-barriers-policies.md#part-2-define-information-barrier-policies) or [edit an existing policy](information-barriers-edit-segments-policies.md.md#edit-a-policy) to include that segment.  |
     |Segments are listed but no information barrier policies are assigned to those segments     |Do one of the following:<br/>- [Define a new information barrier policy](information-barriers-policies.md#part-2-define-information-barrier-policies) for each segment in question<br/>- [Edit an existing information barrier policy](information-barriers-edit-segments-policies.md.md#edit-a-policy) to assign it to the correct segment         |
     |Segments are listed and each is included in an information barrier policy     |- Run the `Get-InformationBarrierPolicy` cmdlet to verify that information barrier policies are active<br/>- Run the `Get-InformationBarrierPoliciesApplicationStatus` cmdlet to confirm the policies are applied<br/>- Run the `Start-InformationBarrierPoliciesApplication` cmdlet to apply all active information barrier policies          |
     
 
+## Issue: I need to remove information barrier policies for a single user
+
+In this case, one or more individual users must be removed from information barrier policies. 
+
+### What to do
+
+Information barrier policies are assigned to segments of users. Segments are defined by using certain [attributes in Azure Active Directory or Exchange Online](information-barriers-attributes.md). If you must remove a policy from a single user, one quick way to do it is to edit that user's profile in Azure Active Directory.
+
+
+## Issue: Information barrier policies are not being applied at all
+
+In this case, you have defined segments, defined information barrier policies, and have attempted to apply those policies. However, when you run the `Get-InformationBarrierPoliciesApplicationStatus` cmdlet, you can see that policy application has failed.
+
+### What to do
+
+1. Make sure that your organization does not have [Exchange address book policies](https://docs.microsoft.com/exchange/address-books/address-book-policies/address-book-policies) in place. 
 
 ## Issue: The information barrier application process is taking too long
 
