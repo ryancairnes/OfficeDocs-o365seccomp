@@ -107,28 +107,19 @@ In this case, information barrier policies are in effect, and a one or more user
 
 Information barrier policies are assigned to segments of users. Segments are defined by using certain [attributes in user account profiles](information-barriers-attributes.md). If you must remove a policy from a single user, consider editing that user's profile in Azure Active Directory such that the user is no longer included in a segment affected by information barriers.
 
-1. 
+1. Use the **Get-InformationBarrierRecipientStatus** cmdlet with Identity parameters. This cmdlet returns information about users, such as attribute values and any information barrier policies that are applied.
 
-2. [Add or update the user's profile information in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal).
-
-3. Wait about 30 minutes for FwdSync to occur.
-
-## Issue: Information barrier policies are not being applied at all
-
-In this case, you have defined segments, defined information barrier policies, and have attempted to apply those policies. However, when you run the `Get-InformationBarrierPoliciesApplicationStatus` cmdlet, you can see that policy application has failed.
-
-### What to do
-
-Make sure that your organization does not have [Exchange address book policies](https://docs.microsoft.com/exchange/address-books/address-book-policies/address-book-policies) in place. Such policies will prevent information barrier policies from being applied.
-
-1. Connect to [Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps). 
-
-1. Run the [Get-AddressBookPolicy](https://docs.microsoft.com/powershell/module/exchange/email-addresses-and-address-books/get-addressbookpolicy?view=exchange-ps) cmdlet, and review the results.
-
-    |Results  |Next step  |
+    |Syntax  |Example  |
     |---------|---------|
-    |Exchange address book policies are listed     |[Remove address book policies](https://docs.microsoft.com/exchange/address-books/address-book-policies/remove-an-address-book-policy)         |
-    |No address book policies exist |Review your audit logs to find out why policy application is failing |
+    |`Get-InformationBarrierRecipientStatus -Identity <value> -Identity2 <value>`<p>You can use any value that uniquely identifies each user, such as name, alias, distinguished name, canonical domain name, email address, or GUID.     |`Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw` <p>In this example, we refer to two user accounts in Office 365: *meganb* for *Megan*, and *alexw* for *Alex*.          |
+    |`Get-InformationBarrierRecipientStatus -Identity <value>` <p>You can use any value that uniquely identifies the user, such as name, alias, distinguished name, canonical domain name, email address, or GUID.|`Get-InformationBarrierRecipientStatus -Identity jeanp`<p>In this example, we refer to a single account in Office 365: *jeanp*. |
+
+2. Review the results to see if information barrier policies are assigned, and to which segment(s) the user(s) belong. 
+
+3. To remove a user from a segment affected by information barriers, [update the user's profile information in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal).
+
+4. Wait about 30 minutes for FwdSync to occur.
+
 
 
 ## Issue: The information barrier application process is taking too long
@@ -155,6 +146,24 @@ Keep in mind that when you run the policy application cmdlet, information barrie
     |**Not started**     |If it has been more than 45 minutes since the **Start-InformationBarrierPoliciesApplication** cmdlet has been run, review your audit log to see if there are any errors in policy definitions, or some other reason why the application has not started. |
     |**Failed**     |If the application has failed, review your audit log. Also review your segments and policies. Are any users assigned to more than one segment? Are any segments assigned more than one poliicy? If necessary, [edit segments](information-barriers-edit-segments-policies.md.md#edit-a-segment) and/or [edit policies](information-barriers-edit-segments-policies.md.md#edit-a-policy), and then run the **Start-InformationBarrierPoliciesApplication** cmdlet again.  |
     |**In progress**     |If the application is still in progress, allow more time for it to complete. If it has been several days, gather your audit logs, and then contact support. |
+
+## Issue: Information barrier policies are not being applied at all
+
+In this case, you have defined segments, defined information barrier policies, and have attempted to apply those policies. However, when you run the `Get-InformationBarrierPoliciesApplicationStatus` cmdlet, you can see that policy application has failed.
+
+### What to do
+
+Make sure that your organization does not have [Exchange address book policies](https://docs.microsoft.com/exchange/address-books/address-book-policies/address-book-policies) in place. Such policies will prevent information barrier policies from being applied.
+
+1. Connect to [Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps). 
+
+1. Run the [Get-AddressBookPolicy](https://docs.microsoft.com/powershell/module/exchange/email-addresses-and-address-books/get-addressbookpolicy?view=exchange-ps) cmdlet, and review the results.
+
+    |Results  |Next step  |
+    |---------|---------|
+    |Exchange address book policies are listed     |[Remove address book policies](https://docs.microsoft.com/exchange/address-books/address-book-policies/remove-an-address-book-policy)         |
+    |No address book policies exist |Review your audit logs to find out why policy application is failing |
+
 
 ## Related topics
 
