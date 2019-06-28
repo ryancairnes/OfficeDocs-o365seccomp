@@ -3,7 +3,7 @@ title: "Edit information barrier policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 06/24/2019
+ms.date: 06/28/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -43,16 +43,10 @@ User account attributes are used for defining segments so that information barri
 
 1. To view details for a specific user account, such as attribute values and assigned segment(s), use the **Get-InformationBarrierRecipientStatus** cmdlet with Identity parameters. 
 
-   Syntax: `Get-InformationBarrierRecipientStatus -Identity <value> -Identity2 <value>` 
-    
-   You can use any value that uniquely identifies each user, such as name, alias, distinguished name, canonical domain name, email address, or GUID. 
-    
-   Example: `Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw` 
-    
-   In this example, we refer to two user accounts in Office 365: *meganb* for *Megan*, and *alexw* for *Alex*. 
-    
-   (You can also use this cmdlet for a single user: `Get-InformationBarrierRecipientStatus -Identity <value>`) 
-    
+    |Syntax  |Example  |
+    |---------|---------|
+    |`Get-InformationBarrierRecipientStatus -Identity <value> -Identity2 <value>` <p>   You can use any value that uniquely identifies each user, such as name, alias, distinguished name, canonical domain name, email address, or GUID. <p>   (You can also use this cmdlet for a single user: `Get-InformationBarrierRecipientStatus -Identity <value>`)      |`Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw`  <p>   In this example, we refer to two user accounts in Office 365: *meganb* for *Megan*, and *alexw* for *Alex*.         |
+
 2. Determine which attribute you want to edit for your user account profile(s). Refer to [Attributes for information barrier policies (Preview)](information-barriers-attributes.md) for more details. 
 
 3. Edit one or more user accounts to include values for the attribute you selected in the previous step. To do this, use one of the following procedures:
@@ -76,11 +70,9 @@ Use this procedure edit the definition of a user segment. For example, you might
 
 2. To edit a segment, use the **Set-OrganizationSegment** cmdlet with the **Identity** parameter and relevant details. 
 
-    Syntax: `Set-OrganizationSegment -Identity GUID -UserGroupFilter "attribute -eq 'attributevalue'"`
-
-    Example: `Set-OrganizationSegment -Identity c96e0837-c232-4a8a-841e-ef45787d8fcd -UserGroupFilter "Department -eq 'HRDept'"`
-
-    In this example, for the segment that has the GUID *c96e0837-c232-4a8a-841e-ef45787d8fcd*, we updated the department name to "HRDept".
+    |Syntax  |Example  |
+    |---------|---------|
+    |`Set-OrganizationSegment -Identity GUID -UserGroupFilter "attribute -eq 'attributevalue'"`     |`Set-OrganizationSegment -Identity c96e0837-c232-4a8a-841e-ef45787d8fcd -UserGroupFilter "Department -eq 'HRDept'"` <p>In this example, for the segment that has the GUID *c96e0837-c232-4a8a-841e-ef45787d8fcd*, we updated the department name to "HRDept".         |
 
 When you have finished editing segments for your organization, you can either [define](information-barriers-policies.md#part-2-define-information-barrier-policies) or [edit](#edit-a-policy) information barrier policies.
 
@@ -112,11 +104,9 @@ When you have finished editing segments for your organization, you can either [d
 
 2. To set the policy's status to inactive, use the **Set-InformationBarrierPolicy** cmdlet with an Identity parameter and the State parameter set to Inactive.
 
-    Syntax: `Set-InformationBarrierPolicy -Identity GUID -State Inactive`
-
-    `Set-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c9377247 -State Inactive`
-
-    In this example, we set an information barrier policy that has GUID *43c37853-ea10-4b90-a23d-ab8c9377247* to an inactive status.
+    |Syntax  |Example  |
+    |---------|---------|
+    |`Set-InformationBarrierPolicy -Identity GUID -State Inactive`     |`Set-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c9377247 -State Inactive` <p>In this example, we set an information barrier policy that has GUID *43c37853-ea10-4b90-a23d-ab8c9377247* to an inactive status.         |
 
 3. To apply your changes, use the **Start-InformationBarrierPoliciesApplication** cmdlet.
 
@@ -139,11 +129,9 @@ At this point, one or more information barrier policies are set to inactive stat
 
 2. Use the **Remove-InformationBarrierPolicy** cmdlet with an Identity parameter.
 
-    Syntax: `Remove-InformationBarrierPolicy -Identity GUID`
-
-    Example: Suppose we want to remove a policy that has GUID *43c37853-ea10-4b90-a23d-ab8c93772471*. To do this, we use this cmdlet:
-    
-    `Remove-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c93772471`
+    |Syntax  |Example  |
+    |---------|---------|
+    |`Remove-InformationBarrierPolicy -Identity GUID`     |`Remove-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c93772471` <p>In this example, we are removing the policy that has GUID *43c37853-ea10-4b90-a23d-ab8c93772471*.          |
 
     When prompted, confirm the change.
 
@@ -167,11 +155,9 @@ If, after you have started applying information barrier policies, you want to st
 
 2. Use the **Stop-InformationBarrierPoliciesApplication** cmdlet with an Identity parameter.
 
-    Syntax:  `Stop-InformationBarrierPoliciesApplication -Identity GUID`
-
-    Example: `Stop-InformationBarrierPoliciesApplication -Identity 46237888-12ca-42e3-a541-3fcb7b5231d1`
-
-    In this example, we are stopping information barrier policies from being applied.
+    |Syntax  |Example  |
+    |---------|---------|
+    |`Stop-InformationBarrierPoliciesApplication -Identity GUID`     |`Stop-InformationBarrierPoliciesApplication -Identity 46237888-12ca-42e3-a541-3fcb7b5231d1` <p>In this example, we are stopping information barrier policies from being applied.         |
 
 ## Related articles
 
