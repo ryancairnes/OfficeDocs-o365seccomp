@@ -68,10 +68,15 @@ Delivery location shows the results of policies and detections that run post-del
 > [!TIP]
 > Threat Explorer (sometimes called Explorer), is a powerful report that can serve multiple purposes, such as finding and deleting messages, identifying the IP address of a malicious email sender, or starting an incident for further investigation. The following procedure focuses on using Explorer to find and delete malicious email from recipients mailboxes.
 
-  
+To see the changes to the former Delivery Status field (now Delivery Action and Delivery Location): 
+
 1. Go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account for Office 365. This takes you to the Security &amp; Compliance Center. 
     
 2. In the left navigation, choose **Threat management** \> **Explorer**.
+
+![Threat Explorer screenshot.](media/Threat Explorer Delivery Action and Delivery Location.PNG)
+
+<!--Comment>
     
 3. In the View menu, choose **All email**.<br/>![Use the View menu to choose between Email and Content reports](media/d39013ff-93b6-42f6-bee5-628895c251c2.png)
   
@@ -87,6 +92,7 @@ Delivery location shows the results of policies and detections that run post-del
     
 9. Use the **+ Actions** list to apply an action, such as **Move to deleted** items. This will delete the selected messages from the recipients' mailboxes.<br/>![When you select one or more email messages, you can choose from several available actions](media/ef12e10c-60a7-4f66-8f76-68d77ae26de1.png)
   
+-->
 ## Related topics
 
 [Office 365 Advanced Threat Protection Plan 2](office-365-ti.md)
