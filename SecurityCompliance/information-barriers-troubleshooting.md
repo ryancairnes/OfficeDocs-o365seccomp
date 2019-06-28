@@ -3,7 +3,7 @@ title: "Troubleshooting information barriers"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 06/24/2019
+ms.date: 06/28/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -57,14 +57,13 @@ Verify that the users in question are included in an information barrier policy.
 ## Issue: People are unexpectedly blocked from communicating in Microsoft Teams 
 
 In this case, people are reporting unexpected issues communicating with others in Microsoft Teams. Examples:
-- A user is unable to find another user in Microsoft Teams.
-- A user cannot select another user in Microsoft Teams.
-- A user can see another user, but cannot select or send messages to that other user in Microsoft Teams.
-- A user can see and select another user, but cannot communicate with that user in Microsoft Teams.
+- A user searches for, but is unable to find, another user in Microsoft Teams.
+- A user can find, but cannot select, another user in Microsoft Teams.
+- A user can see another user, but cannot send messages to that other user in Microsoft Teams.
 
 ### What to do
 
-Determine whether the users are affected by an information barrier policy.
+Determine whether the users are affected by an information barrier policy. Depending on how policies are configured, information barriers might be working as expected. Or, you might have to refine your organization's policies.
 
 1. Use the **Get-InformationBarrierRecipientStatus** cmdlet with the Identity parameter. 
 
