@@ -99,12 +99,13 @@ Verify that the users in question are included in an information barrier policy.
 
 ## Issue: I need to remove information barrier policies for a single user
 
-In this case, one or more individual users must be removed from information barrier policies. 
+In this case, information barrier policies are in effect, and a few users are unexpectedly blocked from communicating with others in Microsoft Teams. Rather than remove information barrier policies altogether, you can remove one or more individual users from information barrier policies. 
 
 ### What to do
 
 Information barrier policies are assigned to segments of users. Segments are defined by using certain [attributes in Azure Active Directory or Exchange Online](information-barriers-attributes.md). If you must remove a policy from a single user, one quick way to do it is to edit that user's profile in Azure Active Directory.
 
+1. 
 
 ## Issue: Information barrier policies are not being applied at all
 
@@ -112,7 +113,7 @@ In this case, you have defined segments, defined information barrier policies, a
 
 ### What to do
 
-Make sure that your organization does not have [Exchange address book policies](https://docs.microsoft.com/exchange/address-books/address-book-policies/address-book-policies) in place. 
+Make sure that your organization does not have [Exchange address book policies](https://docs.microsoft.com/exchange/address-books/address-book-policies/address-book-policies) in place. Such policies will prevent information barrier policies from being applied.
 
 1. Connect to [Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps). 
 
