@@ -244,6 +244,17 @@ With PowerShell, you can view status of user accounts, segments, policies, and p
 |The most recent information barrier policy application     | Use the **Get-InformationBarrierPoliciesApplicationStatus** cmdlet. <p>Syntax: `Get-InformationBarrierPoliciesApplicationStatus`<p>    This will display information about whether policy application completed, failed, or is in progress.       |
 |All information barrier policy applications|Use `Get-InformationBarrierPoliciesApplicationStatus -All $true`<p>This will display information about whether policy application completed, failed, or is in progress.|
 
+## What if I need to remove or change policies?
+
+Resources are available to help you manage your information barrier policies.
+
+- If something goes wrong with information barriers, see [Troubleshooting information barriers (Preview)](information-barriers-troubleshooting.md).
+
+- To stop policies from being applied, see [Stop a policy application](information-barriers-edit-segments-policies.md.md#stop-a-policy-application).
+
+- To remove an information barrier policy, see [Remove a policy](information-barriers-edit-segments-policies.md.md#remove-a-policy).
+
+- To make changes to segments or policies, see [Edit (or remove) information barrier policies (Preview)](information-barriers-edit-segments-policies.md.md).
 
 ## Example: Contoso's departments, segments, and policies
 
@@ -296,14 +307,3 @@ With segments and policies defined, Contoso applies the policies by running the 
 
 When that finishes, Contoso is compliant with legal and industry requirements.
 
-## Related articles
-
-[Edit or remove information barrier policies (Preview)](information-barriers-edit-segments-policies.md.md)
-
-[Get an overview of information barriers](information-barriers.md)
-
-[Learn more about information barriers in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/information-barriers-in-teams)
-
-[Attributes for information barrier policies (Preview)](information-barriers-attributes.md)
-
-[Troubleshooting information barriers (Preview)](information-barriers-troubleshooting.md)
