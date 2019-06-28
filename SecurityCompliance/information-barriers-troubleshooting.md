@@ -32,13 +32,10 @@ Verify that the users in question are included in an information barrier policy.
 
 1. Use the **Get-InformationBarrierRecipientStatus** cmdlet with Identity parameters.
 
-    Syntax: `Get-InformationBarrierRecipientStatus -Identity <value> -Identity2 <value>` 
+    |Syntax  |Example  |
+    |---------|---------|
+    |`Get-InformationBarrierRecipientStatus -Identity <value> -Identity2 <value>` <p>You can use any value that uniquely identifies each user, such as name, alias, distinguished name, canonical domain name, email address, or GUID.     |`Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw` <p>In this example, we refer to two user accounts in Office 365: *meganb* for *Megan*, and *alexw* for *Alex*.          |
 
-    You can use any value that uniquely identifies each user, such as name, alias, distinguished name, canonical domain name, email address, or GUID. 
-
-    Example: `Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw` 
-
-    In this example, we refer to two user accounts in Office 365: *meganb* for *Megan*, and *alexw* for *Alex*. 
     
     > [!TIP]
     > You can also use this cmdlet for a single user: `Get-InformationBarrierRecipientStatus -Identity <value>`
@@ -67,22 +64,19 @@ Determine whether the users are affected by an information barrier policy. Depen
 
 1. Use the **Get-InformationBarrierRecipientStatus** cmdlet with the Identity parameter. 
 
-    The syntax is `Get-InformationBarrierRecipientStatus -Identity`
+    |Syntax  |Column2  |
+    |---------|---------|
+    | `Get-InformationBarrierRecipientStatus -Identity` <p>You can use any identity value that uniquely identifies each recipient, such as Name, Alias, Distinguished name (DN), Canonical DN, Email address, or GUID.     |`Get-InformationBarrierRecipientStatus -Identity meganb` <p>In this example, we are using an alias (*meganb*) for the Identity parameter. This cmdlet will return information that indicates whether the user is affected by an information barrier policy. (Look for *ExoPolicyId: \<GUID>.)         |
 
-    You can use any identity value that uniquely identifies each recipient, such as Name, Alias, Distinguished name (DN), Canonical DN, Email address, or GUID.
-
-    Example: `Get-InformationBarrierRecipientStatus -Identity meganb`
-
-    In this example, we are using an alias (*meganb*) for the Identity parameter. This cmdlet will return information that indicates whether the user is affected by an information barrier policy. (Look for *ExoPolicyId: \<GUID>.)
 
     If the users are not included in information barrier policies, contact support. Otherwise, proceed to the next step.
 
-2. Find out which segments are included in an information barrier policy. To do this, use the `Get-InformationBarrierPolicy` cmdlet with the Identity parameter. Use details, such as the policy GUID (ExoPolicyId) you received during the previous step, as an identity value.
+2. Find out which segments are included in an information barrier policy. To do this, use the `Get-InformationBarrierPolicy` cmdlet with the Identity parameter. 
 
-    Example: `Get-InformationBarrierPolicy -Identity b42c3d0f-49e9-4506-a0a5-bf2853b5df6f`
+    |Syntax  |Exanple  |
+    |---------|---------|
+    |`Get-InformationBarrierPolicy` <p>Use details, such as the policy GUID (ExoPolicyId) you received during the previous step, as an identity value.     | `Get-InformationBarrierPolicy -Identity b42c3d0f-49e9-4506-a0a5-bf2853b5df6f` <p>In this example, we are getting detailed information about the information barrier policy that has ExoPolicyId *b42c3d0f-49e9-4506-a0a5-bf2853b5df6f*.         |
 
-    In this example, we are getting detailed information about the information barrier policy that has ExoPolicyId *b42c3d0f-49e9-4506-a0a5-bf2853b5df6f*.
-    
     After you run the cmdlet, in the results, look for **AssignedSegment**, **SegmentsAllowed**, and **SegmentsBlocked** values.
 
     Example: After running the `Get-InformationBarrierPolicy` cmdlet, we saw the following in our list of results:

@@ -159,8 +159,6 @@ If, after you have started applying information barrier policies, you want to st
     |---------|---------|
     |`Stop-InformationBarrierPoliciesApplication -Identity GUID`     |`Stop-InformationBarrierPoliciesApplication -Identity 46237888-12ca-42e3-a541-3fcb7b5231d1` <p>In this example, we are stopping information barrier policies from being applied.         |
 
-
-
 ## Related articles
 
 [Get an overview of information barriers](information-barriers.md)
