@@ -112,7 +112,17 @@ In this case, you have defined segments, defined information barrier policies, a
 
 ### What to do
 
-1. Make sure that your organization does not have [Exchange address book policies](https://docs.microsoft.com/exchange/address-books/address-book-policies/address-book-policies) in place. 
+Make sure that your organization does not have [Exchange address book policies](https://docs.microsoft.com/exchange/address-books/address-book-policies/address-book-policies) in place. 
+
+1. Connect to [Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps). 
+
+1. Run the [Get-AddressBookPolicy](https://docs.microsoft.com/powershell/module/exchange/email-addresses-and-address-books/get-addressbookpolicy?view=exchange-ps) cmdlet, and review the results.
+
+    |Results  |Next step  |
+    |---------|---------|
+    |Exchange address book policies are listed     |[Remove address book policies](https://docs.microsoft.com/exchange/address-books/address-book-policies/remove-an-address-book-policy)         |
+    |No address book policies exist |Review your audit logs to find out why policy application is failing |
+
 
 ## Issue: The information barrier application process is taking too long
 
