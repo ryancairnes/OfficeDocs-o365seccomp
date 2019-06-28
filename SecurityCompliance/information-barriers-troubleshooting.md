@@ -64,7 +64,7 @@ Determine whether the users are affected by an information barrier policy. Depen
 
 1. Use the **Get-InformationBarrierRecipientStatus** cmdlet with the Identity parameter. 
 
-    |Syntax  |Column2  |
+    |Syntax  |Example  |
     |---------|---------|
     | `Get-InformationBarrierRecipientStatus -Identity` <p>You can use any identity value that uniquely identifies each recipient, such as Name, Alias, Distinguished name (DN), Canonical DN, Email address, or GUID.     |`Get-InformationBarrierRecipientStatus -Identity meganb` <p>In this example, we are using an alias (*meganb*) for the Identity parameter. This cmdlet will return information that indicates whether the user is affected by an information barrier policy. (Look for *ExoPolicyId: \<GUID>.)         |
 
@@ -78,7 +78,7 @@ Determine whether the users are affected by an information barrier policy. Depen
 
     After you run the cmdlet, in the results, look for **AssignedSegment**, **SegmentsAllowed**, and **SegmentsBlocked** values.
 
-    Example: After running the `Get-InformationBarrierPolicy` cmdlet, we saw the following in our list of results:
+    For example, after running the `Get-InformationBarrierPolicy` cmdlet, we saw the following in our list of results:
 
     ```powershell
         AssignedSegment      : Sales
@@ -112,7 +112,7 @@ Keep in mind that when you run the policy application cmdlet, information barrie
     (To display status for *all* information barrier policy applications, use this cmdlet:<br/>
     `Get-InformationBarrierPoliciesApplicationStatus -All $true`)
 
-    This will display information about whether policy application completed, failed, or is in progress..
+    This will display information about whether policy application completed, failed, or is in progress.
 
 2. Depending on the results of the previous step, take one of the following steps:
   
