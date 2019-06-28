@@ -3,7 +3,7 @@ title: "Information barriers overview"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 06/26/2019
+ms.date: 06/28/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -53,7 +53,7 @@ You must be familiar with PowerShell cmdlets in order to define, validate, or ed
 
 ## Concepts of information barrier policies
 
-It's helpful to know the underlying concepts of information barrier policies:
+When you are ready to define policies for information barriers, you'll work with user account attributes, segments, "block" and/or "allow" policies, and policy application.
 
 - **User account attributes** are defined in Azure Active Directory (or Exchange Online). These attributes can include department, job title, location, team name, and other job profile details. 
 
