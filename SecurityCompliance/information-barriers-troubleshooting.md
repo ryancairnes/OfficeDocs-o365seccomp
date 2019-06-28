@@ -22,7 +22,7 @@ In the event that people run into unexpected issues after information barriers a
 > [!IMPORTANT]
 > To perform the tasks described in this article, you must be assigned an appropriate role, such as one of the following:<br/>- Microsoft 365 Enterprise Global Administrator<br/>- Office 365 Global Administrator<br/>- Compliance Administrator<br/>- IB Compliance Management (this is a new role!)<p>To learn more about prerequisites for information barriers, see [Prerequisites (for information barrier policies)](information-barriers-policies.md#prerequisites).<p>Make sure to [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
-## Issue: People are unexpectedly blocked from communicating with others in Microsoft Teams 
+## Issue: Users are unexpectedly blocked from communicating with others in Microsoft Teams 
 
 In this case, people are reporting unexpected issues communicating with others in Microsoft Teams. Examples:
 - A user searches for, but is unable to find, another user in Microsoft Teams.
@@ -39,7 +39,7 @@ Determine whether the users are affected by an information barrier policy. Depen
     |---------|---------|
     | `Get-InformationBarrierRecipientStatus -Identity` <p>You can use any identity value that uniquely identifies each recipient, such as Name, Alias, Distinguished name (DN), Canonical DN, Email address, or GUID.     |`Get-InformationBarrierRecipientStatus -Identity meganb` <p>In this example, we are using an alias (*meganb*) for the Identity parameter. This cmdlet will return information that indicates whether the user is affected by an information barrier policy. (Look for *ExoPolicyId: \<GUID>.)         |
 
-    If the users are not included in information barrier policies, contact support. Otherwise, proceed to the next step.
+    **If the users are not included in information barrier policies, contact support**. Otherwise, proceed to the next step.
 
 2. Find out which segments are included in an information barrier policy. To do this, use the `Get-InformationBarrierPolicy` cmdlet with the Identity parameter. 
 
@@ -56,7 +56,9 @@ Determine whether the users are affected by an information barrier policy. Depen
         SegmentsAllowed      : {}
         SegmentsBlocked      : {Research}
     ```
-    In this case, we can see that an information barrier policy affects people who are in the Sales and Research segments. In this case, people in Sales are prevented from communicating with people in Research. If this seems correct, then information barriers are working as expected. If not, proceed to the next step.
+    In this case, we can see that an information barrier policy affects people who are in the Sales and Research segments. In this case, people in Sales are prevented from communicating with people in Research. 
+    
+    If this seems correct, then information barriers are working as expected. If not, proceed to the next step.
 
 4. Make sure your segments are defined correctly. To do this, use the `Get-OrganizationSegment` cmdlet, and review the list of results. 
 
@@ -66,11 +68,11 @@ Determine whether the users are affected by an information barrier policy. Depen
 
     Review the details for the segment. If necessary, [edit a segment](information-barriers-edit-segments-policies.md.md#edit-a-segment), and then re-use the `Start-InformationBarrierPoliciesApplication` cmdlet.
 
-    If you are still having issues with your information barrier policy, contact support.
+    **If you are still having issues with your information barrier policy, contact support**.
 
 ## Issue: Communications are allowed between users who should be blocked in Microsoft Teams
 
-In this case, although information barriers are defined, active, and applied, people who should be prevented from communicating with each other are somehow able to in Microsoft Teams.
+In this case, although information barriers are defined, active, and applied, people who should be prevented from communicating with each other are somehow able to chat with and call each other in Microsoft Teams.
 
 ### What to do
 
