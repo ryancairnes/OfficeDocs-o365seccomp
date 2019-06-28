@@ -42,7 +42,7 @@ When you define policies for information barriers, you'll work with user account
 
 |Phase    |What's involved  |
 |---------|---------|
-|[Make sure prerequisites are met](#prerequisites)     |- Verify that you have the [required licenses and permissions](information-barriers.md#required-licenses-and-permissions)<br/>- Verify that your directory includes data for segmenting users<br/>- Enable scoped directory search for Microsoft Teams<br/>- Make sure audit logging is turned on<br/>- Use PowerShell (examples are provided)<br/>- Provide admin consent for Microsoft Teams (steps are included)          |
+|[Make sure prerequisites are met](#prerequisites)     |- Verify that you have the [required licenses and permissions](information-barriers.md#required-licenses-and-permissions)<br/>- Verify that your directory includes data for segmenting users<br/>- Enable scoped directory search for Microsoft Teams<br/>- Make sure audit logging is turned on<br/>- Make sure no Exchange address book policies are in place<br/>- Use PowerShell (examples are provided)<br/>- Provide admin consent for Microsoft Teams (steps are included)          |
 |[Part 1: Segment users in your organization](#part-1-segment-users)     |- Determine what policies are needed<br/>- Make a list of segments to define<br/>- Identify which attributes to use<br/>- Define segments in terms of policy filters        |
 |[Part 2: Define information barrier policies](#part-2-define-information-barrier-policies)     |- Define your policies (do not apply yet)<br/>- Choose from two kinds (block or allow) |
 |[Part 3: Apply information barrier policies](#part-3-apply-information-barrier-policies)     |- Set policies to active status<br/>- Run the policy application<br/>- View policy status         |
@@ -61,6 +61,8 @@ In addition to the [required licenses and permissions](information-barriers.md#r
 - **Scoped directory search**. Before you define your organization's first information barrier policy, you must [enable scoped directory search in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-scoped-directory-search). Wait at least 24 hours after enabling scoped directory search before you set up or define information barrier policies.
 
 - **Audit logging**. In order to look up the status of a policy application, audit logging must be turned on. We recommend doing this before you begin to define segments or policies. To learn more, see [Turn Office 365 audit log search on or off](turn-audit-log-search-on-or-off.md).
+
+- **No address book policies**. Before you define and apply information barrier policies, make sure no Exchange address book policies are in place. If you do have such policies, make sure to [remove your address book policies](https://docs.microsoft.com/exchange/address-books/address-book-policies/remove-an-address-book-policy) first.
 
 - **PowerShell**. Currently, information barrier policies are defined and managed in the Office 365 Security & Compliance Center using PowerShell cmdlets. Although several examples are provided in this article, you'll need to be familiar with PowerShell cmdlets and parameters. You will also need the AzureRM module.
     - [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps)
