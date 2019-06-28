@@ -51,7 +51,7 @@ To learn more about the user experience with information barriers, see [informat
 
 ## Required licenses and permissions
 
-**Currently, the information barrier feature is in private preview**. When these features are generally available, they'll be included in subscriptions, such as:
+**Currently, information barriers are in preview**. When these features are generally available, they'll be included in subscriptions, such as:
 
 - Microsoft 365 E5
 - Office 365 E5
