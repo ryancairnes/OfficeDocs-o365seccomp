@@ -65,7 +65,9 @@ To [define or edit information barrier policies](information-barriers-policies.m
 - Microsoft 365 global administrator
 - Office 365 global administrator
 - Compliance administrator
-- Information barriers administrator
+- IB Compliance Management (this is a new role!)
+
+(To learn more about roles and permissions, see [Permissions in the Office 365 Security & Compliance Center](permissions-in-the-security-and-compliance-center.md).)
 
 You must be familiar with PowerShell cmdlets in order to define, validate, or edit information barrier policies. Although we provide several examples of PowerShell cmdlets in the [how-to article](information-barriers-policies.md), you'll need to know additional details, such as parameters, for your organization.
 
