@@ -99,13 +99,17 @@ Verify that the users in question are included in an information barrier policy.
 
 ## Issue: I need to remove information barrier policies for a single user
 
-In this case, information barrier policies are in effect, and a few users are unexpectedly blocked from communicating with others in Microsoft Teams. Rather than remove information barrier policies altogether, you can remove one or more individual users from information barrier policies. 
+In this case, information barrier policies are in effect, and a one or more users are unexpectedly blocked from communicating with others in Microsoft Teams. Rather than remove information barrier policies altogether, you can remove one or more individual users from information barrier policies. 
 
 ### What to do
 
-Information barrier policies are assigned to segments of users. Segments are defined by using certain [attributes in Azure Active Directory or Exchange Online](information-barriers-attributes.md). If you must remove a policy from a single user, one quick way to do it is to edit that user's profile in Azure Active Directory.
+Information barrier policies are assigned to segments of users. Segments are defined by using certain [attributes in user account profiles](information-barriers-attributes.md). If you must remove a policy from a single user, consider editing that user's profile in Azure Active Directory such that the user is no longer included in a segment affected by information barriers.
 
 1. 
+
+2. [Add or update the user's profile information in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal).
+
+3. Wait about 30 minutes for FwdSync to occur.
 
 ## Issue: Information barrier policies are not being applied at all
 
