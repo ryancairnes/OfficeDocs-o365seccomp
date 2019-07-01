@@ -76,7 +76,6 @@ To see the changes to the former Delivery Status field (now Delivery Action and 
 <!--Comment>
 ![Threat Explorer with Delivery Action and Delivery Location fields.](media/ThreatExFields.PNG)
 
-<!--Comment>
     
 3. In the View menu, choose **All email**.<br/>![Use the View menu to choose between Email and Content reports](media/d39013ff-93b6-42f6-bee5-628895c251c2.png)
   
