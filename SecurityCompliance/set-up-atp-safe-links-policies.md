@@ -5,7 +5,7 @@ author: denisebmsft
 manager: laurawi
 audience: Admin
 ms.topic: article
-ms.date: 02/26/2019
+ms.date: 06/26/2019
 ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid:
@@ -127,7 +127,8 @@ Default policy options apply to everyone in your organization.
 |---------|---------|
 |**Off** <br/> |Does not scan URLs in email messages.  <br/> Enables you to define an exception rule, such as a rule that does not scan URLs in email messages for a specific group of recipients.  <br/> |
 |**On** <br/> |Rewrites URLs to route users through ATP Safe Links protection when the users click URLs in email messages.  <br/> Checks a URL when clicked against a list of blocked or malicious URLs.  <br/> |
-|**Use Safe Attachments to scan downloadable content** <br/> |When this option is selected, URLs that point to downloadable content are scanned.  <br/> |
+|**Apply real-time URL scanning for suspicious links and links that point to files** <br/> |When this option is selected, suspicious URLs and links that point to downloadable content are scanned.  <br/> |
+|**Wait for URL scanning to complete before delivering the message** <br/> |When this option is selected, messages that contain URLs to be scanned will be held until the URLs finish scanning and are confirmed to be safe before the messages are delivered.  <br/> |
 |**Apply Safe Links to messages sent within the organization** <br/> | When this option is available and selected, ATP Safe Links protection is applied to email messages sent between people in your organization, provided the email accounts are hosted in Office 365.  <br/> |
 |**Do not track user clicks** <br/> |When this option is selected, click data for URLs in email from external senders is not stored. URL click tracking for links within email messages sent within the organization is currently not supported.  <br/> |
 |**Do not allow users to click through to original URL** <br/> |When this option is selected, users cannot proceed past a [warning page](atp-safe-links-warning-pages.md) to a URL that is determined to be malicious.  <br/> |
@@ -141,4 +142,4 @@ Once your ATP Safe Links policies are in place, you can see how ATP is working f
 
 - [Use Explorer in the Security &amp; Compliance Center](use-explorer-in-security-and-compliance.md)
 
-Stay on top of new features coming to ATP. visit the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=O365) and learn about [new features that are being added to ATP](office-365-atp.md#new-features-in-office-365-atp).
+Stay on top of new features coming to ATP. visit the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=O365).
