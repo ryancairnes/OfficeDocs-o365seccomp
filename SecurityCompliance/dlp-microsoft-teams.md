@@ -3,7 +3,7 @@ title: "Data loss prevention and Microsoft Teams"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 05/03/2019
+ms.date: 07/01/2019
 audience: ITPro
 ms.topic: conceptual
 ms.service: O365-seccomp
@@ -26,7 +26,7 @@ Recently, [data loss prevention](data-loss-prevention-policies.md) (DLP) capabil
 
 - **Example 1: Protecting sensitive information in messages**. Suppose that someone attempts to share sensitive information in a Teams chat or channel with guests (external users). If you have a DLP policy defined to prevent this, messages with sensitive information that are sent to external users are deleted. This happens automatically, and within seconds, according to how your DLP policy is configured.
 
-- **Example 2: Protecting sensitive information in documents**. Suppose that someone attempts to share a document with guests in a Microsoft Teams channel or chat, and the document contains sensitive information. If you have a DLP policy defined to prevent this, the document won't open for those users. Note that in this case, your DLP policy must include SharePoint and OneDrive in order for protection to be in place.
+- **Example 2: Protecting sensitive information in documents**. Suppose that someone attempts to share a document with guests in a Microsoft Teams channel or chat, and the document contains sensitive information. If you have a DLP policy defined to prevent this, the document won't open for those users. Note that in this case, your DLP policy must include SharePoint and OneDrive in order for protection to be in place.  
 
 ## Policy tips help educate users
 
