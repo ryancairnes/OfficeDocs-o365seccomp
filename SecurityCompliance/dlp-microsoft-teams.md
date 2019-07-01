@@ -26,7 +26,10 @@ Recently, [data loss prevention](data-loss-prevention-policies.md) (DLP) capabil
 
 - **Example 1: Protecting sensitive information in messages**. Suppose that someone attempts to share sensitive information in a Teams chat or channel with guests (external users). If you have a DLP policy defined to prevent this, messages with sensitive information that are sent to external users are deleted. This happens automatically, and within seconds, according to how your DLP policy is configured.
 
-- **Example 2: Protecting sensitive information in documents**. Suppose that someone attempts to share a document with guests in a Microsoft Teams channel or chat, and the document contains sensitive information. If you have a DLP policy defined to prevent this, the document won't open for those users. Note that in this case, your DLP policy must include SharePoint and OneDrive in order for protection to be in place.
+    > [!NOTE]
+    > DLP for Microsoft Teams blocks sensitive content when shared with users who have [guest access](https://docs.microsoft.com/MicrosoftTeams/guest-access) in teams and channels, and with users who have [external access](https://docs.microsoft.com/MicrosoftTeams/manage-external-access) in meetings and chat sessions. If you are using [Microsoft Teams together with Skype for Business](https://docs.microsoft.com/microsoftteams/migration-interop-guidance-for-teams-with-skype), keep in mind that DLP for Teams does not block messages in interop or federated chat sessions.
+
+- **Example 2: Protecting sensitive information in documents**. Suppose that someone attempts to share a document with guests in a Microsoft Teams channel or chat, and the document contains sensitive information. If you have a DLP policy defined to prevent this, the document won't open for those users. Note that in this case, your DLP policy must include SharePoint and OneDrive in order for protection to be in place. (This is an example of DLP for SharePoint that shows up in Microsoft Teams.)
 
 ## Policy tips help educate users
 
