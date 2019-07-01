@@ -73,10 +73,9 @@ To see the changes to the former Delivery Status field (now Delivery Action and 
 1. Go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account for Office 365. This takes you to the Security &amp; Compliance Center. 
     
 2. In the left navigation, choose **Threat management** \> **Explorer**.
-
-![Threat Explorer with Delivery Action and Location fields.](media/ThreatExFields.PNG)
-
 <!--Comment>
+![Threat Explorer with Delivery Action and Delivery Location fields.](media/ThreatExFields.PNG)
+
     
 3. In the View menu, choose **All email**.<br/>![Use the View menu to choose between Email and Content reports](media/d39013ff-93b6-42f6-bee5-628895c251c2.png)
   
