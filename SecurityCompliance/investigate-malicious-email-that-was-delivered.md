@@ -19,7 +19,7 @@ description: "Learn how to use threat investigation and response capabilities to
 
 # Find and investigate malicious email that was delivered (Office 365 Advanced Threat Protection Plan 2)
 
-[Office 365 Advanced Threat Protection](office-365-atp.md) enables you to investigate activities that put your users at risk and take action to protect your organization. For example, if you are part of your organization's security team, you can find and investigate suspicious email messages that were delivered to your users. You can do this by using [Threat Explorer (or real-time detections)](threat-explorer.md).
+[Office 365 Advanced Threat Protection](office-365-atp.md) lets you to investigate activities that put your users at risk and take action to protect your organization. For example, if you are part of your organization's security team, you can find and investigate suspicious email messages that were delivered to your users. You can do this by using [Threat Explorer (or real-time detections)](threat-explorer.md).
   
 ## Before you begin...
 
@@ -35,16 +35,48 @@ Make sure that the following requirements are met:
     
 ## Dealing with suspicious emails
 
-Malicious attackers may be sending mail to your users to try and phish their credentials and gain access to your corporate secrets! In order to prevent this, you should use the threat protection services offered by Office 365, including [Exchange Online Protection](eop/exchange-online-protection-overview.md) and [Advanced Threat Protection](office-365-atp.md). However, there are times when an attacker could send mail to your users containing a URL and only later on make that URL point to malicious content (malware, etc.). Alternatively, you may realize too late that a user in your organization has been compromised, and while that user was compromised, an attacker used that account to send email to other users in your company. As part of cleaning up both of these scenarios, you may want to remove email messages from user inboxes. In situations like these, you can leverage [Threat Explorer (or real-time detections)](threat-explorer.md) to find and remove those email messages!
+Malicious attackers may be sending mail to your users to try and phish their credentials and gain access to your corporate secrets! To prevent this, you should use the threat protection services in Office 365, including [Exchange Online Protection](eop/exchange-online-protection-overview.md) and [Advanced Threat Protection](office-365-atp.md). However, there are times when an attacker could send mail to your users containing a URL and only later on make that URL point to malicious content (malware, etc.). Alternately, you may realize too late that a user in your organization has been compromised, and while that user was compromised, an attacker used that account to send email to other users in your company. As part of cleaning up both of these scenarios, you may want to remove email messages from user inboxes. In situations like these, you can leverage [Threat Explorer (or real-time detections)](threat-explorer.md) to find and remove those email messages!
+
+## Where re-routed emails are located after actions are taken
+
+Threat Explorer real-time detections has added the Delivery Action and Delivery Location fields in the place of Delivery Status. This results in a more complete picture of where your emails land. Part of the goal of this change is to make hunting easier for Security Ops people, but the net result is knowing the location of problem emails at a glance.
+
+Delivery Status is now broken out into two columns:
+
+- **Delivery Action** - What is the status of this email?
+- **Delivery Location** - Where was this email routed as a result?
+
+Delivery Action is the action taken on an email due to existing policies or detections. Here are the possible actions an email can take:
+
+1. **Delivered** – email was delivered to inbox or folder of a user and the user can directly access it.
+2. **Junked** – email was sent to either user’s junk folder or deleted folder, and the user has access to emails in their Junk or Deleted folder.
+3. **Blocked** – any emails that's quarantined, that  failed, or was dropped. This is completely inaccessible by the user!
+4. **Replaced** – any email where malicious attachments are replaced by .txt files that state the attachment was malicious.
+ 
+Delivery location shows the results of policies and detections that run post-delivery. It's linked to a Delivery Action. This field was added to give insight into the action taken when a problem mail is found. Here are the possible values of delivery location:
+
+1. **Inbox or folder** – The email is in inbox or a folder (according to your email rules).
+2. **On-prem or external** – The mailbox doesn’t exist on cloud but is on -premises.
+3. **Junk folder** – The email in in the Junk folder of a user.
+4. **Deleted items folder** – The email in the Deleted items folder of a user.
+5. **Quarantine** – The email in quarantine, and is not in a user’s mailbox.
+6. **Failed** – The email failed to reach the mailbox.
+7. **Dropped** – The email gets lost somewhere in the Mailflow.
   
 ## Find and delete suspicious email that was delivered
 
 > [!TIP]
-> Threat Explorer (also referred to as Explorer), is a powerful report that can serve multiple purposes, such as finding and deleting messages, identifying the IP address of a malicious email sender, or starting an incident for further investigation. The following procedure focuses on using Explorer to find and delete malicious email from recipients mailboxes. 
-  
+> Threat Explorer (sometimes called Explorer), is a powerful report that can serve multiple purposes, such as finding and deleting messages, identifying the IP address of a malicious email sender, or starting an incident for further investigation. The following procedure focuses on using Explorer to find and delete malicious email from recipients mailboxes.
+
+To see the changes to the former Delivery Status field (now Delivery Action and Delivery Location): 
+
 1. Go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account for Office 365. This takes you to the Security &amp; Compliance Center. 
     
 2. In the left navigation, choose **Threat management** \> **Explorer**.
+
+![Threat Explorer with Delivery Action and Location fields.](media/ThreatExFields.PNG)
+
+<!--Comment>
     
 3. In the View menu, choose **All email**.<br/>![Use the View menu to choose between Email and Content reports](media/d39013ff-93b6-42f6-bee5-628895c251c2.png)
   
@@ -60,6 +92,7 @@ Malicious attackers may be sending mail to your users to try and phish their cre
     
 9. Use the **+ Actions** list to apply an action, such as **Move to deleted** items. This will delete the selected messages from the recipients' mailboxes.<br/>![When you select one or more email messages, you can choose from several available actions](media/ef12e10c-60a7-4f66-8f76-68d77ae26de1.png)
   
+-->
 ## Related topics
 
 [Office 365 Advanced Threat Protection Plan 2](office-365-ti.md)
