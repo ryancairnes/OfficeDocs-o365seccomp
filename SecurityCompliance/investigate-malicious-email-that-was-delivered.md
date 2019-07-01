@@ -74,7 +74,7 @@ To see the changes to the former Delivery Status field (now Delivery Action and 
     
 2. In the left navigation, choose **Threat management** \> **Explorer**.
 
-![Threat Explorer with Delivery Action and Location fields.](media/ThreatExFields.PNG)
+![Threat Explorer with Delivery Action and Delivery Location fields.](media/ThreatExFields.PNG)
 
 <!--Comment>
     
