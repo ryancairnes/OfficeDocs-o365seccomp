@@ -28,7 +28,6 @@ Office 365 provides the following eDiscovery tools:
 - [Office 365 Advanced eDiscovery](ediscovery.md#advancedediscovery)
     
 ## Content Search in the Security & Compliance Center
-<a name="contentsearch"> </a>
 
 The following table contains links to topics that will help you use the Content Search tool in the Security & Compliance Center.
   
@@ -46,18 +45,15 @@ The following table contains links to topics that will help you use the Content 
 |[Differences between estimated and actual eDiscovery search results in Office 365](differences-between-estimated-and-actual-ediscovery-search-results.md) <br/> |Learn about the reasons why there might be differences between the number of estimated search results and the number of actual items that are exported.  <br/> |
 |[De-duplication in eDiscovery search results](de-duplication-in-ediscovery-search-results.md) <br/> |Learn about the optional de-duplication feature that you can enable when you export Exchange email messages that are the results of a Content Search.  <br/> |
 |[Search for and delete email messages in your Office 365 organization](search-for-and-delete-messages-in-your-organization.md) <br/> |Learn how to use Content Search to search for and delete an email message from  *all*  mailboxes in your organization. This can help you find and remove potentially harmful or high-risk email.  <br/> |
-|[Use Content Search to search the mailbox and OneDrive for Business site for a list of users](search-the-mailbox-and-onedrive-for-business-for-a-list-of-users.md) <br/> |Learn how to use a script to search the mailbox and One Drive for Business site for a group of users. Use [Step 2: Generate a list of users](search-the-mailbox-and-onedrive-for-business-for-a-list-of-users.md#step2) in this topic to quickly generate a list of email addresses that you can use for the source content locations when you create and run the search in Step 3.  <br/> |
+|[Use Content Search to search the mailbox and OneDrive for Business site for a list of users](search-the-mailbox-and-onedrive-for-business-for-a-list-of-users.md) <br/> |Learn how to use a script to search the mailbox and One Drive for Business site for a group of users. Use [Step 2: Generate a list of users](search-the-mailbox-and-onedrive-for-business-for-a-list-of-users.md#step-2-generate-a-list-of-users) in this topic to quickly generate a list of email addresses that you can use for the source content locations when you create and run the search in Step 3.  <br/> |
 |[Create, report on, and delete multiple Content Searches](create-report-on-and-delete-multiple-content-searches.md) <br/> |Learn how to use scripts to create multiple Content Searches, run reports to get the estimated results for each search, and then delete the searches. This can help you to quickly and efficiently identify and cull search data.  <br/> |
 |[Clone a Content Search in the Security & Compliance Center](clone-a-content-search.md) <br/> |Learn how to use the Windows PowerShell script in this article to quickly clone an existing Content Search. This can help you compare the results of different keyword search queries run on the same content locations or save time because you don't have to re-enter a large number of content locations when you create a new search.  <br/> |
 |[Configure permissions filtering for Content Search](permissions-filtering-for-content-search.md) <br/> |Learn how to use permissions filtering to let an eDiscovery manager search only a subset of mailboxes and sites in your Office 365 organization.  <br/> |
 |[Prepare a CSV file for a targeted Content Search](csv-file-for-an-id-list-content-search.md) <br/> |Learn how to use a Results.csv file or Unindexed Items.csv file (both which contain information about the results of a content search) to create a targeted search for specific mailbox items.  <br/> |
 |[Use Content Search in Office 365 for targeted collections](use-content-search-for-targeted-collections.md) <br/> |Learn how to use the Windows PowerShell script in this article to perform targeted collections using Content Search. A targeted collection means you want to search a specific folder because you're confident that items responsive to a case (or privileged items) are located in that folder. Use the script in this article to obtain the folder ID or path for the specific mailbox or site folders that you want to search.  <br/> |
 |[Use Content Search to search third-party data that was imported to Office 365](use-content-search-to-search-third-party-data-that-was-imported.md) <br/> |Learn how to use the  `kind` and  `itemclass` message properties to search third-party data that you imported to Office 365.  <br/> |
-   
-[Return to top](ediscovery.md#top)
   
 ## eDiscovery Cases in the Security & Compliance Center
-<a name="ediscoverycases"> </a>
 
 The following table contains links to topics that will help you use eDiscovery cases in the Security & Compliance Center. Use cases to add members who can access the case, place a hold on content locations relevant to the case, associate multiple Content Searches with the case, and export the search results from the case.
   
@@ -68,11 +64,8 @@ The following table contains links to topics that will help you use eDiscovery c
 |[Create a report on holds in eDiscovery cases in Office 365](create-a-report-on-holds-in-ediscovery-cases.md) <br/> |Learn how to use the Windows PowerShell script in this article to generate a report that contains information about all the holds that are associated with eDiscovery cases in the Security & Compliance Center.  <br/> |
 |[Use a script to add users to a hold in an eDiscovery case in the Security & Compliance Center](use-a-script-to-add-users-to-a-hold-in-ediscovery.md) <br/> |Learn how to use the Windows PowerShell script in this article to quickly add the mailboxes and OneDrive for Business sites for a list of users to a new hold that's associated with an eDiscovery case in the Security & Compliance Center.  <br/> |
 |[Search for eDiscovery activities in the Office 365 audit log](search-for-ediscovery-activities-in-the-audit-log.md) <br/> |Learn how to search the Office 365 audit log for activities related to creating and managing eDiscovery cases and Content Searches.  <br/> |
-   
-[Return to top](ediscovery.md#top)
   
 ## Office 365 Advanced eDiscovery
-<a name="advancedediscovery"> </a>
 
 The following table contains links to topics that will help you learn about and use the Advanced eDiscovery tool in Office 365.
   
@@ -89,7 +82,5 @@ The following table contains links to topics that will help you learn about and 
 |[Using the Advanced eDiscovery Relevance module](use-relevance-in-advanced-ediscovery.md) <br/> |Learn about the Relevance module in Advanced eDiscovery, including a workflow and guidelines and steps for training and file review.  <br/> |
 |[Exporting case data with Advanced eDiscovery](export-case-data-in-advanced-ediscovery.md) <br/> |Understand the guidelines for exporting eDiscovery case data and results for external review.  <br/> |
 |[Increase the download speed when exporting eDiscovery search results from Office 365](increase-download-speeds-when-exporting-ediscovery-results.md) <br/> |Learn how to configure the Windows Registry to increase the download speed when exporting case data from Advanced eDiscovery.  <br/> |
-   
-[Return to top](ediscovery.md#top)
+ 
   
-
