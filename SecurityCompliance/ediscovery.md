@@ -17,15 +17,15 @@ description: "Office 365 offers a number of different eDiscovery tools that you 
 
 # eDiscovery in Office 365
 
-Electronic discovery, or eDiscovery, is the process of identifying and delivering electronic information that can be used as evidence in legal cases. You can use eDiscovery in Office 365 to search for content in Exchange Online mailboxes, Office 365 Groups, Microsoft Teams, SharePoint Online and OneDrive for Business sites, and Skype for Business conversations. You can search mailboxes and sites in the same eDiscovery search by using the Content Search tool in the Security & Compliance Center. And you can use eDiscovery cases in the Security & Compliance Center to identify, hold, and export content found in mailboxes and sites. If your organization has an Office 365 E5 subscription, you can further analyze content by using Office 365 Advanced eDiscovery.
+Electronic discovery, or eDiscovery, is the process of identifying and delivering electronic information that can be used as evidence in legal cases. You can use eDiscovery in Office 365 to search for content in Exchange Online mailboxes, Office 365 Groups, Microsoft Teams, SharePoint Online and OneDrive for Business sites, and Skype for Business conversations. You can search mailboxes and sites in the same eDiscovery search by using the Content Search tool in the Security & Compliance Center. And you can use eDiscovery cases in the Security & Compliance Center to identify, hold, and export content found in mailboxes and sites. If your organization has an Office 365 E5 subscription, you can further analyze content by using the Advanced eDiscovery solution in Microsoft 365.
   
 Office 365 provides the following eDiscovery tools:
   
-- [Content Search in the Security & Compliance Center](ediscovery.md#contentsearch)
+- [Content Search in the Security & Compliance Center](#content-search-in-the-security--compliance-center)
     
-- [eDiscovery Cases in the Security & Compliance Center](ediscovery.md#ediscoverycases)
+- [eDiscovery Cases in the Security & Compliance Center](#ediscovery-cases-in-the-security--compliance-center)
     
-- [Office 365 Advanced eDiscovery](ediscovery.md#advancedediscovery)
+- [Advanced eDiscovery solution in Microsoft 365](#advanced-ediscovery-solution-in-microsoft-365)
     
 ## Content Search in the Security & Compliance Center
 
@@ -65,22 +65,8 @@ The following table contains links to topics that will help you use eDiscovery c
 |[Use a script to add users to a hold in an eDiscovery case in the Security & Compliance Center](use-a-script-to-add-users-to-a-hold-in-ediscovery.md) <br/> |Learn how to use the Windows PowerShell script in this article to quickly add the mailboxes and OneDrive for Business sites for a list of users to a new hold that's associated with an eDiscovery case in the Security & Compliance Center.  <br/> |
 |[Search for eDiscovery activities in the Office 365 audit log](search-for-ediscovery-activities-in-the-audit-log.md) <br/> |Learn how to search the Office 365 audit log for activities related to creating and managing eDiscovery cases and Content Searches.  <br/> |
   
-## Office 365 Advanced eDiscovery
+## Advanced eDiscovery solution in Microsoft 365
 
-The following table contains links to topics that will help you learn about and use the Advanced eDiscovery tool in Office 365.
-  
-|**Topic**|**Description**|
-|:-----|:-----|
-|[Office 365 Advanced eDiscovery](office-365-advanced-ediscovery.md) <br/> |Learn how the Advanced eDiscovery tool can help you analyze data in Office 365, streamline document reviews, and make decisions for efficient eDiscovery.  <br/> |
-|[Quick setup for Advanced eDiscovery](quick-setup-for-advanced-ediscovery.md) <br/> |Learn how to get started using Advanced eDiscovery.  <br/> |
-|[Prepare search results for Office 365 Advanced eDiscovery](prepare-search-results-for-advanced-ediscovery.md) <br/> |Learn prepare the results from a Content Search for analysis in Advanced eDiscovery.  <br/> |
-|[Setting up users and cases in Office 365 Advanced eDiscovery](set-up-users-and-cases-in-advanced-ediscovery.md) <br/> |Learn how to configure user roles, create cases, and assign users to cases in Advanced eDiscovery.  <br/> |
-|[Running the Process module and loading data](run-the-process-module-and-load-data-in-advanced-ediscovery.md) <br/> |Learn the guidelines for preparing case files for analysis with Advanced eDiscovery.  <br/> |
-|[Use Express Analysis in Office 365 Advanced eDiscovery](use-express-analysis-in-advanced-ediscovery.md) <br/> |Learn how to run the Express analysis mode of Advanced eDiscovery to quickly analyze a case and export the results.  <br/> |
-|[Analyzing case data with Advanced eDiscovery](analyze-case-data-with-advanced-ediscovery.md) <br/> |Get an overview of the Analyze process, which allows you to set parameters, run options, and view results in Advanced eDiscovery.  <br/> |
-|[Managing Advanced eDiscovery Relevance setup](manage-relevance-setup-in-advanced-ediscovery.md) <br/> |Read the recommendations for setting up Relevance training in Advanced eDiscovery to score files by their relevance and generate analytical results.  <br/> |
-|[Using the Advanced eDiscovery Relevance module](use-relevance-in-advanced-ediscovery.md) <br/> |Learn about the Relevance module in Advanced eDiscovery, including a workflow and guidelines and steps for training and file review.  <br/> |
-|[Exporting case data with Advanced eDiscovery](export-case-data-in-advanced-ediscovery.md) <br/> |Understand the guidelines for exporting eDiscovery case data and results for external review.  <br/> |
-|[Increase the download speed when exporting eDiscovery search results from Office 365](increase-download-speeds-when-exporting-ediscovery-results.md) <br/> |Learn how to configure the Windows Registry to increase the download speed when exporting case data from Advanced eDiscovery.  <br/> |
- 
-  
+The Advanced eDiscovery solution in Microsoft 365 builds on the existing eDiscovery and analytics capabilities in Office 365. This new solution, called *Advanced eDiscovery*, provides an end-to-end workflow to preserve, collect, review, analyze, and export content that's responsive to your organization's internal and external investigations. It also lets legal teams manage the entire legal hold notification workflow to communicate with custodians involved in a case. 
+
+For more information, see [Overview of the Advanced eDiscovery solution in Microsoft 365](compliance20/overview-ediscovery-20.md).
