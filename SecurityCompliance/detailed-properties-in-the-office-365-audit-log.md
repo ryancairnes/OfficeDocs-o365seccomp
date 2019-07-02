@@ -15,16 +15,16 @@ search.appverid:
 - BCS160
 - MET150
 ms.assetid: ce004100-9e7f-443e-942b-9b04098fcfc3
-description: "Descriptions of additional properties that are included in an Office 365 audit log record."
+description: "Descriptions of additional properties included in an Office 365 audit log record."
 ---
 
 # Detailed properties in the Office 365 audit log
 
 When you export the results of an audit log search from the Security & Compliance Center, you have the option to download all the results that meet your search criteria. You do this by selecting **Export results** \> **Download all results** on the **Audit log search** page. For more information, see [Search the audit log in the Office 365](search-the-audit-log-in-security-and-compliance.md).
   
- When your export all results for an audit log search, the raw data from the Office 365 unified audit log is copied to a comma separated value (CSV) file that is downloaded to your local computer. This file contains additional information from each audit record in a column named **AuditData**. This column contains a multi-value property for multiple properties from the audit log record. Each of the **property:value** pairs in this multi-value property are separated by a comma. 
+ When your export all results for an audit log search, the raw data from the Office 365 unified audit log is copied to a comma-separated value (CSV) file that is downloaded to your local computer. This file contains additional information from each audit record in a column named **AuditData**. This column contains a multi-value property for multiple properties from the audit log record. Each of the **property: value** pairs in this multi-value property are separated by a comma. 
   
-The following table describes the properties that are included—depending on the Office 365 service in which an event occurs—in the multi-property **AuditData** column. The **Office 365 service that has this property** column indicates the service and type of activity (user or admin) that includes the property. For more detailed information about these properties or about properties that might not be listed in this topic, see [Office 365 Management Activity API Schema](https://go.microsoft.com/fwlink/p/?LinkId=717993).
+The following table describes the properties that are included (depending on the Office 365 service in which an event occurs) in the multi-property **AuditData** column. The **Office 365 service that has this property** column indicates the service and type of activity (user or admin) that includes the property. For more detailed information about these properties or about properties that might not be listed in this topic, see [Office 365 Management Activity API Schema](https://go.microsoft.com/fwlink/p/?LinkId=717993).
   
 > [!TIP]
 > You can use the Power Query in Excel to split this column into multiple columns so that each property will have its own column. This will let you sort and filter on one or more of these properties. To learn how to do this, see the "Split a column by delimiter" section in [Split a column of text (Power Query)](https://support.office.com/article/5282d425-6dd0-46ca-95bf-8e0da9539662). 
@@ -32,7 +32,7 @@ The following table describes the properties that are included—depending on th
 |**Property**|**Description**|**Office 365 service that has this property**|
 |:-----|:-----|:-----|
 |Actor|The user or service account that performed the action.|Azure Active Directory|
-|AddOnName|The name of an add-on that was added, removed, or updated in a team. The type of add-ons in Microsoft Teams are a bot, a connector, or a tab.|Microsoft Teams|
+|AddOnName|The name of an add-on that was added, removed, or updated in a team. The type of add-ons in Microsoft Teams is a bot, a connector, or a tab.|Microsoft Teams|
 |AddOnType|The type of an add-on that was added, removed, or updated in a team. The following values indicate the type of add-on.  <br/> **1** - Indicates a bot.<br/> **2** - Indicates a connector.<br/> **3** - Indicates a tab.|Microsoft Teams|
 |AzureActiveDirectoryEventType|The type of Azure Active Directory event. The following values indicate the type of event.  <br/> **0** - Indicates an account login event.<br/> **1** - Indicates an Azure application security event.|Azure Active Directory|
 |ChannelGuid|The ID of a Microsoft Teams channel. The team that the channel is located in is identified by the **TeamName** and **TeamGuid** properties.|Microsoft Teams|
@@ -44,10 +44,10 @@ The following table describes the properties that are included—depending on th
 |CreationTime|The date and time in Coordinated Universal Time (UTC) when the user performed the activity.|All|
 |DestinationFileExtension|The file extension of a file that is copied or moved. This property is displayed only for the FileCopied and FileMoved user activities.|SharePoint|
 |DestinationFileName|The name of the file is copied or moved. This property is displayed only for the FileCopied and FileMoved actions.|SharePoint|
-|DestinationRelativeUrl|The URL of the destination folder where a file is copied or moved. The combination of the values for the **SiteURL**, the **DestinationRelativeURL**, and the **DestinationFileName** properties is the same as the value for the **ObjectID** property, which is the full path name for the file that was copied. This property is displayed only for the FileCopied and FileMoved user activities.|SharePoint|
+|DestinationRelativeUrl|The URL of the destination folder where a file is copied or moved. The combination of the values for the **SiteURL**, the **DestinationRelativeURL**, and the **DestinationFileName** property is the same as the value for the **ObjectID** property, which is the full path name for the file that was copied. This property is displayed only for the FileCopied and FileMoved user activities.|SharePoint|
 |EventSource|Identifies that an event occurred in SharePoint. Possible values are **SharePoint** and **ObjectModel**.|SharePoint|
 |ExternalAccess|For Exchange admin activity, specifies whether the cmdlet was run by a user in your organization, by Microsoft datacenter personnel or a datacenter service account, or by a delegated administrator. The value **False** indicates that the cmdlet was run by someone in your organization. The value **True** indicates that the cmdlet was run by datacenter personnel, a datacenter service account, or a delegated administrator.  <br/> For Exchange mailbox activity, specifies whether a mailbox was accessed by a user outside your organization.|Exchange|
-|ExtendedProperties|The extended properties for an the Azure Active Directory event.|Azure Active Directory|
+|ExtendedProperties|The extended properties for an Azure Active Directory event.|Azure Active Directory|
 |ID|The ID of the report entry. The ID uniquely identifies the report entry.|All|
 |InternalLogonType|Reserved for internal use.|Exchange (mailbox activity)|
 |ItemType|The type of object that was accessed or modified. Possible values include **File**, **Folder**, **Web**, **Site**, **Tenant**, and **DocumentLibrary**.|SharePoint|
@@ -70,9 +70,9 @@ The following table describes the properties that are included—depending on th
 |SiteUrl|The URL of the site where the file or folder accessed by the user is located.|SharePoint|
 |SourceFileExtension|The file extension of the file that was accessed by the user. This property is blank if the object that was accessed is a folder.|SharePoint|
 |SourceFileName|The name of the file or folder accessed by the user.|SharePoint|
-|SourceRelativeUrl|The URL of the folder that contains the file accessed by the user. The combination of the values for the **SiteURL**, the **SourceRelativeURL**, and the **SourceFileName** properties is the same as the value for the **ObjectID** property, which is the full path name for the file accessed by the user.|SharePoint|
+|SourceRelativeUrl|The URL of the folder that contains the file accessed by the user. The combination of the values for the **SiteURL**, the **SourceRelativeURL**, and the **SourceFileName** property is the same as the value for the **ObjectID** property, which is the full path name for the file accessed by the user.|SharePoint|
 |Subject|The subject line of the message that was accessed.|Exchange (mailbox activity)|
-|TabType| The type of tab added, removed, or updated in a team. The possible values for this property are:  <br/><br/> **Excelpin** - An Excel tab.  <br/> **Extension** - All first-party and third-party apps; such as Planner, VSTS, and Forms.  <br/> **Notes** - OneNote tab.  <br/> **Pdfpin** - A PDF tab.  <br/> **Powerbi** - A PowerBI tab.  <br/> **Powerpointpin** - A PowerPoint tab.  <br/> **Sharepointfiles** - A SharePoint tab.  <br/> **Webpage** - A pinned website tab.  <br/> **Wiki-tab** - A wiki tab.  <br/> **Wordpin** - A Word tab.|Microsoft Teams|
+|TabType| The type of tab added, removed, or updated in a team. The possible values for this property are:  <br/><br/> **Excel pin** - An Excel tab.  <br/> **Extension** - All first-party and third-party apps; such as Class Schedule, VSTS, and Forms.  <br/> **Notes** - OneNote tab.  <br/> **Pdfpin** - A PDF tab.  <br/> **Powerbi** - A PowerBI tab.  <br/> **Powerpointpin** - A PowerPoint tab.  <br/> **Sharepointfiles** - A SharePoint tab.  <br/> **Webpage** - A pinned website tab.  <br/> **Wiki-tab** - A wiki tab.  <br/> **Wordpin** - A Word tab.|Microsoft Teams|
 |Target|The user that the action (identified in the **Operation** property) was performed on. For example, if a guest user is added to SharePoint or a Microsoft Team, that user would be listed in this property.|Azure Active Directory|
 |TeamGuid|The ID of a team in Microsoft Teams.|Microsoft Teams|
 |TeamName|The name of a team in Microsoft Teams.|Microsoft Teams|
