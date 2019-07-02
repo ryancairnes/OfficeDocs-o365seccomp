@@ -68,16 +68,16 @@ The CSV file is opened in the **Query Editor**. There are four columns: **Creati
     
    ![In the AuditData column, click the expand icon](media/JSONTransformExpandIcon.png)
 
-   A partial list of the properties in the JSON object is displayed.
+   A partial list of the properties in the JSON objects in the **AuditData** column is displayed.
 
-7. To display all the properties in the JSON object, click **Load more**.
+7. Click **Load more** to display all properties in the JSON objects in the **AuditData** column.
 
    ![Click Load more to display all properties in JSON object](media/JSONTransformLoadJSONProperties.png)
 
    You can unselect the checkbox next to any property that you don't want to include. Eliminating columns that aren't useful for your investigation is a good way to reduce the amount of data displayed in the audit log. 
 
    > [!NOTE]
-   > The JSON properties displayed in the previous screenshot are based on the properties found in **AuditData** column from the first 1,000 rows in the CSV file. If there are different JSON properties in records after the first 1,000 rows, these properties (and a corresponding column) won't be included when the **AuditData** column is split into multiple columns. To help prevent this, consider re-running the audit log search and narrow the search criteria so that fewer records are returned. Another workaround is to filter items in the **Operations** to reduce the number of rows before transform the JSON object in the **AuditData** column.
+   > The JSON properties displayed in the previous screenshot (after you click **Load more**) are based on the properties found in the **AuditData** column from the first 1,000 rows in the CSV file. If there are different JSON properties in records after the first 1,000 rows, these properties (and a corresponding column) won't be included when the **AuditData** column is split into multiple columns. To help prevent this, consider re-running the audit log search and narrow the search criteria so that fewer records are returned. Another workaround is to filter items in the **Operations** column to reduce the number of rows (before you perform step 5 above) before transforming the JSON object in the **AuditData** column.
 
 8. Do one of the following things to format the title of the columns that are added for each JSON property that's selected.
 
