@@ -30,7 +30,7 @@
 ### [Apply a sensitivity label to content automatically](apply-sensitivity-label-automatically.md)
 ### [View label usage with label analytics](label-analytics.md)
 
-## [Prevent data loss (DLP)](data-loss-prevention-policies.md)
+## [Data loss prevention (DLP)](data-loss-prevention-policies.md)
 ### [DLP and Microsoft Teams](dlp-microsoft-teams.md)
 ### [Watch an extended overview of DLP](https://channel9.msdn.com/events/ignite/microsoft-ignite-orlando-2017/brk3111)
 ### Set up DLP
@@ -103,6 +103,7 @@
 #### [Use a sample connector to archive Facebook data](archive-facebook-data-with-sample-connector.md)
 #### [Use a sample connector to archive Twitter data](archive-twitter-data-with-sample-connector.md)
 #### [Set up a connector to archive LinkedIn data](archive-linkedin-data.md)
+#### [Set up a connector to archive Instant Bloomberg data](archive-instant-bloomberg-data.md)
 #### [Work with a partner to archive third-party data](work-with-partner-to-archive-third-party-data.md)
 ## Store data
 ### [Enable archive mailboxes](enable-archive-mailboxes.md)
@@ -245,6 +246,7 @@
 #### [Use a sample connector to archive Facebook data](archive-facebook-data-with-sample-connector.md)
 #### [Use a sample connector to archive Twitter data](archive-twitter-data-with-sample-connector.md)
 #### [Set up a connector to archive LinkedIn data](archive-linkedin-data.md)
+#### [Set up a connector to archive Instant Bloomberg data](archive-instant-bloomberg-data.md)
 #### [Work with a partner to archive third-party data](work-with-partner-to-archive-third-party-data.md)
 ## Store data
 ### [Enable archive mailboxes](enable-archive-mailboxes.md)
