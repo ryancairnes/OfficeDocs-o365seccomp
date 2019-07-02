@@ -30,9 +30,9 @@ The attributes listed in this article can be used to define or edit segments of 
 
 2. Make sure the user accounts have values filled in for the attribute(s) you selected in Step 1. View user account details, and if necessary, edit user accounts to include attribute values. 
 
-    To do this using PowerShell, see [Configure user account properties with Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/configure-user-account-properties-with-office-365-powershell).
+    - To edit multiple accounts (or use PowerShell to edit a single account), see [Configure user account properties with Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/configure-user-account-properties-with-office-365-powershell).
 
-    To do this in Azure Active Directory, see [Add or update a user's profile information using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal).
+    - To edit a single account, see [Add or update a user's profile information using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal).
 
 3. [Define segments using PowerShell](information-barriers-policies.md#define-segments-using-powershell), similar to the following examples:
 
@@ -49,7 +49,7 @@ The attributes listed in this article can be used to define or edit segments of 
 
 The following table lists the attributes that you can use with information barriers.
 
-|Azure Active Directory property name (LDAP display name)  |Exchange property name  |
+|Azure Active Directory property name<br/>(LDAP display name)  |Exchange property name  |
 |---------|---------|
 |Co       | Co        |
 |Company     |Company         |
