@@ -47,7 +47,7 @@ Using the DSR case tool you can:
     
 - Export data in response to a DSR access or export request.
     
-- Delete cases when the DSR investigation process is complete; this removes all searches and export jobs associated with the case.
+- Delete cases when the DSR investigation process is complete. This removes all searches and export jobs associated with the case.
     
 Here's the high-level process for using the DSR case tool to manage DSR investigations:
   
@@ -203,7 +203,7 @@ The computer you use to export data has to meet the following system requirement
     
 5. After you choose the export settings, click **Export**.
     
-    The search results are prepared for downloading, which means they're uploaded to the Azure storage area for your organization in the Microsoft cloud. The next steps show you how to download this data to your local computer.
+    The search results are prepared for downloading, which means they're uploaded to the Azure Storage area for your organization in the Microsoft cloud. The next steps show you how to download this data to your local computer.
     
 6. Click the **Export** tab to display the export job you created. Export jobs have the same name as the corresponding search with **_Export** appended to the end of search name. 
     
@@ -306,7 +306,7 @@ When you export data from the Office Roaming Service, the data is saved to a sep
   
     The **Type** condition (which are email message classes) should be the only item in the search query. You can delete the **Keywords** box or leave it blank. 
     
-5. Under **Locations**, make sure that Specific locations is selected, and then click **Modify**.
+5. Under **Locations**, make sure that **Specific locations** is selected, and then click **Modify**.
     
 6. On top part of the **Modify locations** flyout page (the mailbox section), click **Choose users, groups, or teams**.
     
@@ -318,7 +318,7 @@ When you export data from the Office Roaming Service, the data is saved to a sep
     
  **To export Office Roaming Service data:**
   
-1. When the search that you created in the previous step is complete, click the **Search** tab at the top of the page, and then click the checkbox next to the search. You may have to click ![refresh](media/165fb3ad-38a8-4dd9-9e76-296aefd96334.png) **Refresh** to display the search. 
+1. When the search that you created in the previous step is complete, click the **Search** tab at the top of the page, and then click the checkbox next to the search. You may have to click ![Refresh](media/165fb3ad-38a8-4dd9-9e76-296aefd96334.png) **Refresh** to display the search. 
     
 2. On the search flyout page, click ![Export search results icon](media/47205c65-babd-4b3a-bd7b-98dfd92883ba.png) **More**, and then select **Export results** from the drop-down list. 
     
@@ -326,7 +326,7 @@ When you export data from the Office Roaming Service, the data is saved to a sep
     
     ![Export options when exporting Office Roaming Service usage data](media/470a7d1e-eeae-4b42-95aa-15cb82ce2f68.png)
   
-    a. Under **Output options**, select the first option ( **All items, excluding ones that have ones that have an unrecognized format, are encrypted, or weren't indexed for other reasons**) to export indexed items only.
+    a. Under **Output options**, select the first option (**All items, excluding ones that have ones that have an unrecognized format, are encrypted, or weren't indexed for other reasons**) to export indexed items only.
     
     b. Under **Export Exchange content as**, select the second option, **One PST file containing all messages**.
     
@@ -336,7 +336,7 @@ When you export data from the Office Roaming Service, the data is saved to a sep
     
     The search results are prepared for downloading, which means they're uploaded to the Azure storage area for your organization in the Microsoft cloud. The next steps show you how to download this data to your local computer.
     
-5. Click the **Export** tab to display the export job you just created. Note that export jobs have the same name as the corresponding search with **_Export** appended to the end of search name. 
+5. Click the **Export** tab to display the export job you created. The export jobs have the same name as the corresponding search with **_Export** appended to the end of search name. 
     
 6. Click the export job that you just created to display the export flyout page. 
     
@@ -361,11 +361,11 @@ When you export data from the Office Roaming Service, the data is saved to a sep
   
 ### Exporting partially indexed items
 
-We recommend that you don't export partially indexed items (also called unindexed items) from the built-in search that's created when you create a new DSR case. That's because the search results will more than likely include partially indexed items for other users in your organization, and not just partially indexed items for the data subject). Instead, we recommend that you create a separate Content Search that's associated with the DSR case that's designed to export only the partially indexed items related to the data subject. 
+We recommend that you don't export partially indexed items (also called unindexed items) from the built-in search that's created when you create a DSR case. That's because the search results will more than likely include partially indexed items for other users in your organization, and not just partially indexed items for the data subject). Instead, we recommend that you create a separate Content Search that's associated with the DSR case that's designed to export only the partially indexed items related to the data subject. 
   
 Here's a high-level process to export partially indexed items. After they're export, you can review them to determine if an item is responsive to a DSR access or export request.
   
-1. Open the DSR case and create a new search on the **Search** page. 
+1. Open the DSR case and create a search on the **Search** page. 
     
 2. Use the following criteria for configuring the search query and the content locations to search:
     
@@ -391,7 +391,7 @@ For more information about partially indexed items, see:
 
 Conversations that are part of the Chat list in Microsoft Teams (called Team chats or one-to-one chats) are stored in the Exchange Online mailbox of the users who participate in the chats. Also, the files a person shares in a one-to-one chat are stored in the OneDrive account of the person who shares the file. Because the built-in search searches all mailboxes and OneDrive accounts in the organization, team chats and documents shared in a chat session (that the data subject created or uploaded) are returned by built-in search in a DSR case.
   
-Alternatively, conversations that are part of a Teams channel (also called channel messages) are stored in the mailbox that's associated with a team. These types of conversations that the data subject participated in are also returned by the built-in search because all mailboxes associated with Microsoft Teams are searched. Additionally, files that a data subject shares in a Teams channel are stored on the team's SharePoint site. Files created or uploaded by the data subject are returned by the built-in search in a DSR case because the sites associated with Microsoft Teams are included in the search.
+Alternatively, conversations that are part of a Teams channel (also called channel messages) are stored in the mailbox that's associated with a team. These types of conversations that the data subject participated in are also returned by the built-in search because all mailboxes associated with Teams are searched. Additionally, files that a data subject shares in a Teams channel are stored on the team's SharePoint site. Files created or uploaded by the data subject are returned by the built-in search in a DSR case because the sites associated with Teams are included in the search.
   
 Similarly, mailboxes and SharePoint sites that correspond to an Office 365 Group are also included in the built-in search. This means that email messages sent or received by the data subject and files created or uploaded by the data subject are returned. 
   
@@ -403,7 +403,7 @@ The built-in search in a DSR case will only return email messages that the data 
   
 Here's a high-level process to search for items that the data subject posted to a public folder. 
   
-1. Open the DSR case and create a new search on the **Search** page. 
+1. Open the DSR case and create a search on the **Search** page. 
     
 2. Use the following criteria for configuring the search query and the content locations to search:
     
