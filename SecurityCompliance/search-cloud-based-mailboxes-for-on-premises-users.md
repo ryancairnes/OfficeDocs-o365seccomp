@@ -43,7 +43,7 @@ In addition to this new capability, you can still use Content Search to search, 
 
 ## Filing a request with Microsoft Support to enable this feature
 
-You must file a request with Microsoft Support to enable your organization to use the graphical user interface in the Security & Compliance Center to search for Teams chat data in the cloud-based mailboxes for on-premises users. Note that this feature is available in Security & Compliance Center PowerShell. You don't have to submit a support request to use PowerShell to search for Teams chat data for on-premises users. 
+You must file a request with Microsoft Support to enable your organization to use the graphical user interface in the Security & Compliance Center to search for Teams chat data in the cloud-based mailboxes for on-premises users. This feature is available in Security & Compliance Center PowerShell. You don't have to submit a support request to use PowerShell to search for Teams chat data for on-premises users. 
   
 Include the following information when you submit the request to Microsoft Support:
   
@@ -51,9 +51,9 @@ Include the following information when you submit the request to Microsoft Suppo
     
 - The tenant name and tenant ID of your Office 365 organization. You can find these in the Azure Active Directory portal (under **Manage** \> **Properties**). See [Find your Office 365 tenant ID](https://support.office.com/article/6891b561-a52d-4ade-9f39-b492285e2c9b).
     
-- The following title or description of the purpose of the support request: "Enable Application Content Search for On-premises Users". This will help route the request to the Office 365 eDiscovery engineering team who will implement the request. 
+- The following title or description of the purpose of the support request: "Enable Application Content Search for On-premises Users". This helps route the request to the Office 365 eDiscovery engineering team who will implement the request. 
     
-After the engineering change is made, Microsoft Support will send you an estimated deployment date. Note that the deployment process usually takes 2-3 weeks after you submit the support request. 
+After the engineering change is made, Microsoft Support will send you an estimated deployment date. The deployment process usually takes 2-3 weeks after you submit the support request. 
   
 ### What happens after this feature is enabled?
 
@@ -75,7 +75,7 @@ After the feature has been enabled, you can use Content Search in the Security &
     
 2. On the **Search** page, click ![Add icon](media/8ee52980-254b-440b-99a2-18d068de62d3.gif) **New search**.
     
-    As previously explained, the **Add Office app content for on-premises users** checkbox is displayed under **Locations**. Note that it is selected by default.
+    As previously explained, the **Add Office app content for on-premises users** checkbox is displayed under **Locations**. It's selected by default.
     
 3. Create the keyword query and add conditions to the search query if necessary. To only search for Team chats data, you can add the following query in the **Keywords** box: 
     
@@ -87,11 +87,11 @@ After the feature has been enabled, you can use Content Search in the Security &
     
     - **All locations** - Select this option to search the mailboxes of all users in your organization. When the checkbox is selected, all cloud-based mailboxes for on-premises users will also be searched. 
     
-    - **Specific locations** - Select this option and then click **Modify** \> Choose user, groups, or teams to search specific mailboxes. As previously explained, the locations picker will let you search for on-premises users. 
+    - **Specific locations** - Select this option and then click **Modify** \> Choose user, groups, or teams to search specific mailboxes. As previously explained, the locations picker lets you search for on-premises users. 
     
-5. Save and run the search. Any search results from the cloud-based mailboxes for on-premises users can be previewed like any other search results. Additionally, you can you can export the search results (including any Teams chat data) to a PST file. For more information, see: 
+5. Save and run the search. Any search results from the cloud-based mailboxes for on-premises users can be previewed like any other search results. You can also export the search results (including any Teams chat data) to a PST file. For more information, see: 
     
-    - [Create a new search](content-search.md#create-a-new-search)
+    - [Create a search](content-search.md#create-a-search)
     
     - [Preview search results](content-search.md#preview-search-results)
     
@@ -103,7 +103,7 @@ You can use the **New-ComplianceSearch** and **Set-ComplianceSearch** cmdlets in
   
 1. [Connect to Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
     
-2. Run the following PowerShell command to create a new content searches the cloud-based mailboxes of on-premises users.
+2. Run the following PowerShell command to create a content search that searches the cloud-based mailboxes of on-premises users.
     
     ```
     New-ComplianceSearch <name of new search> -ContentMatchQuery <search query> -ExchangeLocation <on-premises user> -IncludeUserAppContent $true -AllowNotFoundExchangeLocationsEnabled $true  
@@ -117,7 +117,7 @@ You can use the **New-ComplianceSearch** and **Set-ComplianceSearch** cmdlets in
     New-ComplianceSearch "Redstone_Search" -ContentMatchQuery "redstone AND kind:im" -ExchangeLocation sarad@contoso.com -IncludeUserAppContent $true -AllowNotFoundExchangeLocationsEnabled $true  
     ```
 
-   After you create a new search, be sure to use the **Start-ComplianceSearch** cmdlet to run the search. 
+   After you create a search, be sure to use the **Start-ComplianceSearch** cmdlet to run the search. 
   
 For more information using these cmdlets, see:
   
@@ -142,7 +142,7 @@ Cloud-based mailboxes are created and stored in the same datacenter as your Offi
   
  **Are there any other requirements other than submitting a support request?**
   
- As previously explained, the identities of users with on-prem mailboxes must be synchronized to your cloud-based organization so that a corresponding mail user account is created for each on-premises user account in Office 365. Additionally, your organization must have an Office 365 enterprise subscription, such as an Office 365 Enterprise E1, E3, or E5 subscription. 
+ As previously explained, the identities of users with on-prem mailboxes must be synchronized to your cloud-based organization so that a corresponding mail user account is created for each on-premises user account in Office 365. Your organization must also have an Office 365 enterprise subscription, such as an Office 365 Enterprise E1, E3, or E5 subscription. 
   
  **Is there a risk of losing the Teams chat data if the user's on-premises mailbox is migrated to the cloud?**
   
