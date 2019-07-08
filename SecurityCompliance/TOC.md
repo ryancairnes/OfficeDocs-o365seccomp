@@ -537,11 +537,11 @@
 ### [What's new in Compliance Manager (Preview)](compliance-manager-release-notes.md)
 ### [Working with Compliance Manager (Preview)](working-with-compliance-manager.md)
 ### [Compliance score methodology (Preview)](compliance-score-methodology.md)
-## [Information barriers (Preview)](information-barriers.md)
-### [Define information barrier policies (Preview)](information-barriers-policies.md)
-### [Attributes for information barrier policies (Preview)](information-barriers-attributes.md)
-### [Troubleshooting information barriers (Preview)](information-barriers-troubleshooting.md)
-### [Edit information barrier policies (Preview)](information-barriers-edit-segments-policies.md.md)
+## [Information barriers](information-barriers.md)
+### [Define information barrier policies](information-barriers-policies.md)
+### [Attributes for information barrier policies](information-barriers-attributes.md)
+### [Troubleshooting information barriers](information-barriers-troubleshooting.md)
+### [Edit information barrier policies](information-barriers-edit-segments-policies.md.md)
 
 
 ## Customer Key
