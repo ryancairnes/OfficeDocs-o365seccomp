@@ -27,10 +27,10 @@
 # [Protect information](protect-information.md)
 ## [Sensitivity labels](sensitivity-labels.md)
 ### [Restrict access to content by using encryption in sensitivity labels](encryption-sensitivity-labels.md)
-### [Apply a sensitivity label to content automatically](apply_sensitivity_label_automatically.md)
+### [Apply a sensitivity label to content automatically](apply-sensitivity-label-automatically.md)
 ### [View label usage with label analytics](label-analytics.md)
 
-## [Prevent data loss (DLP)](data-loss-prevention-policies.md)
+## [Data loss prevention (DLP)](data-loss-prevention-policies.md)
 ### [DLP and Microsoft Teams](dlp-microsoft-teams.md)
 ### [Watch an extended overview of DLP](https://channel9.msdn.com/events/ignite/microsoft-ignite-orlando-2017/brk3111)
 ### Set up DLP
@@ -103,6 +103,7 @@
 #### [Use a sample connector to archive Facebook data](archive-facebook-data-with-sample-connector.md)
 #### [Use a sample connector to archive Twitter data](archive-twitter-data-with-sample-connector.md)
 #### [Set up a connector to archive LinkedIn data](archive-linkedin-data.md)
+#### [Set up a connector to archive Instant Bloomberg data](archive-instant-bloomberg-data.md)
 #### [Work with a partner to archive third-party data](work-with-partner-to-archive-third-party-data.md)
 ## Store data
 ### [Enable archive mailboxes](enable-archive-mailboxes.md)
@@ -245,6 +246,7 @@
 #### [Use a sample connector to archive Facebook data](archive-facebook-data-with-sample-connector.md)
 #### [Use a sample connector to archive Twitter data](archive-twitter-data-with-sample-connector.md)
 #### [Set up a connector to archive LinkedIn data](archive-linkedin-data.md)
+#### [Set up a connector to archive Instant Bloomberg data](archive-instant-bloomberg-data.md)
 #### [Work with a partner to archive third-party data](work-with-partner-to-archive-third-party-data.md)
 ## Store data
 ### [Enable archive mailboxes](enable-archive-mailboxes.md)
@@ -331,7 +333,7 @@
 #### [Error remediation when processing data](compliance20/error-remediation.md)
 
 ### [Collect data for a case](compliance20/collecting-data-for-ediscovery.md)
-#### [Create a search to collect data](compliance20/create-search-to-collect-data.md)
+#### [Create a search](compliance20/create-search-to-collect-data.md)
 #### [Build search queries](compliance20/building-search-queries.md)
 #### [Search statistics](compliance20/search-statistics.md)
 #### [Add search results to a review set](compliance20/add-data-to-review-set.md)
@@ -482,6 +484,7 @@
 ## [Turn audit log search on or off](turn-audit-log-search-on-or-off.md)
 ## [Manage mailbox auditing](enable-mailbox-auditing.md)
 ## [Detailed properties in the audit log](detailed-properties-in-the-office-365-audit-log.md)
+## [Export, configure, and view audit log records](export-view-audit-log-records.md)
 ## [Use the audit log to troubleshoot common scenarios](auditing-troubleshooting-scenarios.md)
 ## [Use sharing auditing in the audit log](use-sharing-auditing.md)
 ## [Search for eDiscovery activities in the audit log](search-for-ediscovery-activities-in-the-audit-log.md)
@@ -534,10 +537,12 @@
 ### [What's new in Compliance Manager (Preview)](compliance-manager-release-notes.md)
 ### [Working with Compliance Manager (Preview)](working-with-compliance-manager.md)
 ### [Compliance score methodology (Preview)](compliance-score-methodology.md)
-## [Information barriers (Preview)](information-barriers.md)
-### [Define information barrier policies (Preview)](information-barriers-policies.md)
-### [Attributes for information barrier policies (Preview)](information-barriers-attributes.md)
-### [Troubleshooting information barriers (Preview)](information-barriers-troubleshooting.md)
+## [Information barriers](information-barriers.md)
+### [Define information barrier policies](information-barriers-policies.md)
+### [Attributes for information barrier policies](information-barriers-attributes.md)
+### [Troubleshooting information barriers](information-barriers-troubleshooting.md)
+### [Edit information barrier policies](information-barriers-edit-segments-policies.md.md)
+
 
 ## Customer Key
 ### [Controlling your data in Office 365 using Customer Key](controlling-your-data-using-customer-key.md)

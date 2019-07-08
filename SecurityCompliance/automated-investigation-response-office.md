@@ -3,7 +3,7 @@ title: "Automated Investigation and Response (AIR) with Office 365"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 03/25/2019
+ms.date: 06/25/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -32,7 +32,8 @@ In the initial release of AIR in April 2019, alerts generated from following sin
 3. Email messages containing malware removed after delivery*
 4. Email messages containing phish URLs removed after delivery*
 
-***Note**: These alerts have been assigned an "Informational" severity in the respective alert policies within the Security & Compliance Center with email notifications turned off. These can be turned on through the Alert policy configuration.
+> [!NOTE]
+> These alerts have been assigned an "Informational" severity in the respective alert policies within the Security & Compliance Center with email notifications turned off. These can be turned on through the Alert policy configuration.
 
 To view alerts, in the Security & Compliance Center, choose **Alerts** > **View alerts**. Select an alert to view its details, and from there, use the **View investigation** link to go to the corresponding [investigation](#investigation-graph). Note that informational alerts are hidden in the alert view by default. To see them, you need to change the alert filtering to include informational alerts.
 
@@ -51,18 +52,14 @@ The security playbooks you'll get with AIR are designed to tackle the most frequ
 
 As part of AIR, security playbooks are rolling out in phases
 
-- **Phase 1 (April 2019)**: Playbooks include recommendations for actions that security administrators review and approve. 
+- **Phase 1 (April 2019)**: Playbooks include recommendations for actions that security administrators review and approve. Phase 1 will include the following playbooks:
+    - User-reported phish message
+    - URL click verdict change 
+    - Malware detected post-delivery (Malware ZAP)
+    - Phish detected post-delivery ZAP (Phish ZAP)
+    - Manual e-mail investigations (using Threat Explorer)
 
-- **Phase 2 (post-June 2019)**: Playbook improvements, plus security administrators will have the option to configure security playbooks to take some actions automatically without administrative interaction.
-
-Phase 1 will include the following playbooks:
-- User-reported phish message
-- URL click verdict change 
-- Malware detected post-delivery (Malware ZAP)
-- Phish detected post-delivery ZAP (Phish ZAP)
-- Manual e-mail investigations (using Threat Explorer)
-
-Several other playbooks are planned for Phase 2.
+- **Phase 2 (second half of 2019)**: Several new playbooks and playbook improvements, plus the option for security administrators to configure security playbooks to take some actions automatically without administrative interaction. 
 
 ### Playbooks include investigation and recommendations
 

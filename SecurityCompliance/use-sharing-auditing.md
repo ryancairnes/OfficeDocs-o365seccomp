@@ -3,7 +3,7 @@ title: "Use sharing auditing in the Office 365 audit log"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 2/13/2018
+ms.date: 
 audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
@@ -27,9 +27,9 @@ Sharing events (excluding sharing policy and sharing link events) are different 
   
 The Sharing schema provides two additional fields in the audit log related to sharing events: 
   
-- **TargetUserOrGroupName** - Stores the UPN or name of the target user or group that a resource was shared with (User B in the previous example). 
+- **TargetUserOrGroupName** – Stores the UPN or name of the target user or group that a resource was shared with (User B in the previous example). 
     
-- **TargetUserOrGroupType** - Identifies whether the target user or group is a Member, Guest, Group, or Partner. 
+- **TargetUserOrGroupType** – Identifies whether the target user or group is a Member, Guest, Group, or Partner. 
     
 These two fields, in addition to other properties from the Office 365 audit log schema such as User, Operation, and Date can tell the full story about  *which*  user shared  *what*  resource with  *whom*  and  *when*. 
   
@@ -37,7 +37,7 @@ There's another schema property that's important to the sharing story. The **Eve
 
 ## The SharePoint Sharing model and sharing events
 
-Sharing is actually defined by three separate events: **SharingSet**, **SharingInvitationCreated**, and **SharingInvitaitonAccepted**. Here's the work flow for how sharing events are logged in the Office 365 audit log. 
+Sharing is defined by three separate events: **SharingSet**, **SharingInvitationCreated**, and **SharingInvitaitonAccepted**. Here's the work flow for how sharing events are logged in the Office 365 audit log. 
   
 ![Flow chart of how sharing auditing works](media/d83dd40f-919b-484f-bfd6-5dc8de31bff6.png)
   
@@ -68,7 +68,7 @@ A common requirement for administrators is creating a list of all resources that
   
 ### Step 1: Search for sharing events and export the results to a CSV file
 
-The first step is to search the Office 365 audit log for sharing events. For more details (including the required permissions) about searching the audit log, see [Search the audit log in the Security & Compliance Center](search-the-audit-log-in-security-and-compliance.md).
+The first step is to search the Office 365 audit log for sharing events. For more information (including the required permissions) about searching the audit log, see [Search the audit log in the Security & Compliance Center](search-the-audit-log-in-security-and-compliance.md).
   
 1. Go to [https://protection.office.com](https://protection.office.com).
     
@@ -78,67 +78,37 @@ The first step is to search the Office 365 audit log for sharing events. For mor
     
     The **Audit log search** page is displayed. 
     
-4. Under **Activities**, click **Sharing activities** to search only for sharing events. 
+4. Under **Activities**, click **Sharing and access request activities** to search for sharing-related events. 
     
-    ![Under Activities, select Sharing activities](media/46bb25b7-1eb2-4adf-903a-cc9ab58639f9.png)
+    ![Under Activities, select Sharing and access request activities](media/46bb25b7-1eb2-4adf-903a-cc9ab58639f9.png)
   
 5.  Select a date and time range to find the sharing events that occurred within that period. 
     
 6. Click **Search** to run the search. 
     
-7. When the search is finished running and the results are displayed , click **Export results** \> **Download all results**.
+7. When the search is finished running and the results are displayed, click **Export results** \> **Download all results**.
     
     After you select the export option, a message is displayed at the bottom of the window that prompts you to open or save the CSV file.
     
 8. Click **Save** \> **Save as** and save the CSV file to a folder on your local computer. 
-    
 
-  
 ### Step 2: Filter the CSV file for resources shared with external users
 
-The next step is to filter the CSV for the **SharingSet** and **SharingInvitationCreated** events, and to display those events where the **TargetUserOrGroupType** property is **Guest**. You'll use the Power Query feature in Excel to do this. The following procedure is performed in Excel 2016. 
-  
-1. In Excel 2016, open a blank workbook.
+The next step is to filter the CSV for the **SharingSet** and **SharingInvitationCreated** events, and to display those events where the **TargetUserOrGroupType** property is **Guest**. You use the Power Query Editor tool in Excel to do this. For step-by-step instructions, see [Export, configure, and view audit log records](export-view-audit-log-records.md). 
+
+After you've followed the instructions in the previous topic to prepare the CSV file, do the following:
     
-2. Click the **Data** tab. 
+1. Open the CSV file that you prepared with the Power Query Editor. 
+
+2. On the **Home** tab, click **Sort & Filter**, and then click **Filter**.
     
-3. Click **New Query** \> **From file** \> **From CSV**.
-    
-    ![On the Data tab, select New Query, select From file, and then select From CSV](media/5170ab34-b449-40ea-bd3f-f1432c1c5973.png)
-  
-4. Open the CSV file that you downloaded in Step 1.
-    
-    The CSV file is opened in the Query Editor. Note that there are four columns: **Time**, **User**, **Action**, and **Detail**. The **Detail** column is a multi-property field. The next step is to create a new column for each of the properties in the **Detail** column. 
-    
-5. Select the **Detail** column, and then on the **Home** tab, click **Split Column** \> **By Delimiter**.
-    
-    ![On the Home tab, click Split Column, and then click By Delimiter](media/aeb503e8-565b-42ea-91e2-9f127a74c00c.png)
-  
-6. In the **Split Column by Delimiter** window, do the following: 
-    
-      - Under **Select or enter delimiter**, select **Comma**.
-    
-      - Under **Split**, select **At each occurrence of the delimiter**.
-    
-7. Click **OK**.
-    
-    The **Detail** column is split into multiple columns. Each new column is named **Detail.1**, **Detail.2**, **Detail.3**, and so on. You'll notice the values in each cell in the **Detail.n** columns are prefixed with the name of the property; for example, **Operation:SharingSet**, **Operation:SharingInvitationAccepted**, and **Operation:SharingInvitationCreated**.
-    
-    ![The Detail column is split into multiple columns, one for each property](media/4b104ead-0313-4bd4-b2a9-f143ccb378ac.png)
-  
-8. On the **File** tab, click **Close &amp; Load** to close the Query Editor and open the file in an Excel workbook. 
-    
-    The next step is to filter the file to only display the **SharingSet** and **SharingInvitationCreated** events. 
-    
-9. Go to the **Home** tab, and then select the **Action** column. 
-    
-10. In the **Sort &amp; Filter** drop-down list, clear all selections, then select **SharingSet** and **SharingInvitationCreated**, and click **OK**.
+3. In the **Sort & Filter** dropdown list on the **Operations** column, clear all selections, then select **SharingSet** and **SharingInvitationCreated**, and click **OK**.
     
     Excel displays the rows for the **SharingSet** and **SharingInvitationCreated** events. 
     
-11. Go to the column named **Detail.17** (or whichever column contains the **TargetUserOrGroupType** property) and select it. 
+4. Go to the column named **TargetUserOrGroupType** and select it. 
     
-12. In the **Sort &amp; Filter** drop-down list, clear all selections, then select **TargetUserOrGroupType:Guest**, and click **OK**.
+5. In the **Sort & Filter** dropdown list, clear all selections, then select **TargetUserOrGroupType:Guest**, and click **OK**.
     
     Now Excel displays the rows for **SharingInvitationCreated** and **SharingSet** events AND where the target user is outside of your organization, because external users are identified by the value **TargetUserOrGroupType:Guest**. 
     
@@ -146,7 +116,7 @@ The following table shows all users in the organization who shared resources wit
   
 ![Sharing events in Office 365 audit log](media/0e0ecbe3-c794-4ca6-a2ca-63478fb3bb34.png)
   
-Although it's not included in the previous table, the **Detail.10** column (or whichever column contains the **ObjectId** property) identifies the resource that was shared with the target user; for example  `ObjectId:https:\/\/contoso-my.sharepoint.com\/personal\/sarad_contoso_com\/Documents\/Southwater Proposal.docx`.
+Although it's not included in the previous table, the **ObjectId** property identifies the resource that was shared with the target user; for example  `ObjectId:https:\/\/contoso-my.sharepoint.com\/personal\/sarad_contoso_com\/Documents\/Southwater Proposal.docx`.
   
 > [!TIP]
-> If you want to identify when a guest user was actually assigned permissions to access a resource (as opposed to just the resources that where shared with them), repeat Steps 10, 11, and 12, and filter on the **SharingInvitationAccepted** and **SharingSet** events in Step 10. 
+> If you want to identify when a guest user was actually assigned permissions to access a resource (as opposed to just the resources that where shared with them), repeat Steps 2, 3, and 4, and filter on the **SharingInvitationAccepted** and **SharingSet** events in Step 5. 
