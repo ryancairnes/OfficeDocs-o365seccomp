@@ -2,7 +2,7 @@
 title: "Removing a user from the Restricted Users portal after sending spam email"
 ms.author: tracyp
 author: MSFTTracyP
-manager: laurawi
+manager: dansimp
 ms.date: 03/12/2019
 audience: ITPro
 ms.topic: article

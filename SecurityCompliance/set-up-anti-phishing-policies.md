@@ -2,7 +2,7 @@
 title: "Set up Office 365 ATP anti-phishing policies"
 ms.author: tracyp
 author: MSFTTracyP
-manager: laurawi
+manager: dansimp
 audience: ITPro
 ms.topic: article
 ms.date: 07/09/2019

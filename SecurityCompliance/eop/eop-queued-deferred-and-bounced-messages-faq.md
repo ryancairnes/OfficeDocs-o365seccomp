@@ -1,8 +1,8 @@
 ---
 title: "EOP queued, deferred, and bounced messages FAQ"
-ms.author: krowley
-author: kccross
-manager: laurawi
+ms.author: tracyp
+author: MSFTTracyP
+manager: dansimp
 ms.date: 11/17/2014
 audience: ITPro
 ms.topic: article

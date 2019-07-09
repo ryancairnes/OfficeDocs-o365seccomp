@@ -1,9 +1,9 @@
 ---
 title: "Legacy information for Office 365 Message Encryption"
-ms.author: tracyp
-author: MSFTTracyP
+ms.author: krowley
+author: kccross
 manager: laurawi
-ms.date: 1/4/2018
+ms.date: 01/04/2018
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
