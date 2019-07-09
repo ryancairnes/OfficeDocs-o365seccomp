@@ -19,7 +19,7 @@ description: "Sharing is a key activity in SharePoint Online and OneDrive for Bu
 
 # Use sharing auditing in the Office 365 audit log
 
-Sharing is a key activity in SharePoint Online and OneDrive for Business, and it's widely used in Office 365 organizations. Administrators can now use sharing auditing in the Office 365 audit log to determine how sharing is being used in their organization. 
+Sharing is a key activity in SharePoint Online and OneDrive for Business, and it's widely used in Office 365 organizations. Administrators can use sharing auditing in the Office 365 audit log to determine how sharing is being used in their organization. 
   
 ## The SharePoint Sharing schema
 
@@ -33,11 +33,28 @@ The Sharing schema provides two additional fields in the audit log related to sh
     
 These two fields, in addition to other properties from the Office 365 audit log schema such as User, Operation, and Date can tell the full story about  *which*  user shared  *what*  resource with  *whom*  and  *when*. 
   
-There's another schema property that's important to the sharing story. The **EventData** property stores additional information about sharing events. For example, when a user shares a site with another user, this is accomplished by adding the target user to a SharePoint group. The **EventData** property captures this additional information to provide context for administrators. 
+There's another schema property that's important to the sharing story. When you export audit log search results, the **AuditData** column in the exported CSV file stores additional information about sharing events. For example, when a user shares a site with another user, this is accomplished by adding the target user to a SharePoint group. The **AuditData** column captures this additional information to provide context for administrators. 
 
-## The SharePoint Sharing model and sharing events
+## SharePoint sharing events
 
-Sharing is defined by three separate events: **SharingSet**, **SharingInvitationCreated**, and **SharingInvitaitonAccepted**. Here's the work flow for how sharing events are logged in the Office 365 audit log. 
+Sharing is defined by when a user (the *acting* user) wants to share a resource with another user (the *target* user). Sharing a resource with an external user (a user who is outside of your organization and doesn't have a guest account in your organization's Azure Active Directory) is defined by the following events, which are logged in the Office 365 audit log:
+
+- **SharingInvitationCreated** – A user in your organization tried to share resource (likely a site) with an external user. This results in an external sharing invitation being sent to the target user. No access to the resource is granted at this time.
+
+- **SharingInvitationAccepted** – The external user has accepted the sharing invitation that was sent by the acting user and now has access to the resource.
+
+- **AnonymousLinkCreated** – An anonymous link was created for the resource. Because an anonymous link can be created and then copied, it's reasonable to assume that any document with an anonymous link as being shared with a target user.
+
+- **AnonymousLinkUsed** – As the name implies, this event is logged when an anonymous like has been used to access a resource. 
+
+- **SecureLinkCreated** – A user has created a "specific people link" to share a resource with a specific person. This target user may be someone who is external to your organization.
+
+- **AddedToSecureLink** – A user has been added to a specific people link. This target user may be someone who is external to your organization.
+
+
+
+
+**SharingSet**, **SharingInvitationCreated**, and **SharingInvitaitonAccepted**. Here's the work flow for how sharing events are logged in the Office 365 audit log. 
   
 ![Flow chart of how sharing auditing works](media/d83dd40f-919b-484f-bfd6-5dc8de31bff6.png)
   
