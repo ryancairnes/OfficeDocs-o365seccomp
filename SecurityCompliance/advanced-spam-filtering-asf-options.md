@@ -2,7 +2,7 @@
 title: "Advanced spam filtering options"
 ms.author: tracyp
 author: MSFTTracyP
-manager: laurawi
+manager: dansimp
 ms.date: 07/09/2019
 audience: ITPro
 ms.topic: article

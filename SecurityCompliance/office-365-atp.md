@@ -2,7 +2,7 @@
 title: "Office 365 Advanced Threat Protection"
 ms.author: deniseb
 author: denisebmsft
-manager: laurawi
+manager: dansimp
 ms.date: 03/28/2019
 audience: Admin
 ms.topic: hub-page

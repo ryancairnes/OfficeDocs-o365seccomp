@@ -2,7 +2,7 @@
 title: "Create safe sender lists in Office 365"
 ms.author: tracyp
 author: MSFTTracyP
-manager: laurawi
+manager: dansimp
 ms.date: 4/29/2019
 audience: ITPro
 ms.topic: article

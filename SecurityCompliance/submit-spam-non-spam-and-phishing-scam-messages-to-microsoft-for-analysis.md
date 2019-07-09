@@ -2,7 +2,7 @@
 title: "Submit spam, non-spam, and phishing scam messages to Microsoft for analysis"
 ms.author: tracyp
 author: MSFTTracyP
-manager: laurawi
+manager: dansimp
 ms.date: 04/19/2019
 audience: ITPro
 ms.topic: article
