@@ -3,7 +3,7 @@ title: "Advanced spam filtering options"
 ms.author: tracyp
 author: MSFTTracyP
 manager: laurawi
-ms.date: 6/26/2015
+ms.date: 07/09/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
