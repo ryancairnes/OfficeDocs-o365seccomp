@@ -2,8 +2,8 @@
 title: "Find and release quarantined messages as a user in Office 365"
 ms.author: tracyp
 author: MSFTTracyP
-manager: laurawi
-ms.date: 5/19/2018
+manager: dansimp
+ms.date: 05/19/2018
 audience: Consumer/IW
 ms.topic: article
 ms.service: O365-seccomp
