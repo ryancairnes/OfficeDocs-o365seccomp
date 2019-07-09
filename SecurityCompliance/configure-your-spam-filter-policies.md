@@ -2,7 +2,7 @@
 title: "Configure your spam filter policies"
 ms.author: tracyp
 author: MSFTTracyP
-manager: laurawi
+manager: dansimp
 ms.date: 12/05/2018
 audience: ITPro
 ms.topic: article

@@ -2,7 +2,7 @@
 title: "Configure the outbound spam policy"
 ms.author: tracyp
 author: MSFTTracyP
-manager: laurawi
+manager: dansimp
 ms.date: 11/10/2016
 audience: ITPro
 ms.topic: article
