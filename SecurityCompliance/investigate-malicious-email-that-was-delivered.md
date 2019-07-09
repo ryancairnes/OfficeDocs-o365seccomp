@@ -2,7 +2,7 @@
 title: "Find and investigate malicious email that was delivered (Office 365 Threat investigation and response"
 ms.author: deniseb
 author: denisebmsft
-manager: laurawi
+manager: dansimp
 ms.date: 03/19/2019
 audience: ITPro
 ms.topic: article

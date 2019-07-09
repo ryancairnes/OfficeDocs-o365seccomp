@@ -3,7 +3,7 @@ title: "Get started with Office 365 threat investigation and response"
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
-ms.date: 03/19/2019
+ms.date: 07/09/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
