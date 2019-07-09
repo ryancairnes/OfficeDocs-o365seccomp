@@ -2,7 +2,7 @@
 title: "Tune anti-phishing protection in Office 365"
 ms.author: chrisda
 author: chrisda
-manager: serdars
+manager: dansimp
 ms.date: 
 audience: ITPro
 ms.topic: article
