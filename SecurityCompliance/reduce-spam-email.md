@@ -2,8 +2,8 @@
 title: "How to reduce spam email in Office 365"
 ms.author: tracyp
 author: MSFTTracyP
-manager: laurawi
-ms.date: 6/7/2018
+manager: dansimp
+ms.date: 06/07/2018
 audience: Admin
 ms.topic: overview
 ms.service: O365-seccomp
