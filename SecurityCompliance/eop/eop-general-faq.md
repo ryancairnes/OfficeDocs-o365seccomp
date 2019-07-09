@@ -1,8 +1,8 @@
 ---
 title: "EOP general FAQ"
-ms.author: krowley
-author: kccross
-manager: laurawi
+ms.author: tracyp
+author: MSFTTracyP
+manager: dansimp
 ms.date: 1/2/2018
 audience: ITPro
 ms.topic: reference

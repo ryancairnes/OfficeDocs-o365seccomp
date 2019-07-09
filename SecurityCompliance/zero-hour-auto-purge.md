@@ -2,7 +2,7 @@
 title: "Zero-hour auto purge - protection against spam and malware"
 ms.author: tracyp
 author: MSFTTracyP
-manager: laurawi
+manager: dansimp
 ms.date: 04/11/2019
 audience: Admin
 ms.topic: article
