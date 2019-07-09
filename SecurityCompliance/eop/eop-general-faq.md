@@ -30,8 +30,6 @@ Here we answer the most common general questions about the Microsoft Exchange On
     
 - [Message Trace FAQ](http://technet.microsoft.com/library/aa49e3f9-a5b1-4410-aac2-ddbbf3f5bfb2.aspx)
     
-- [FOPE to EOP Transition FAQ](http://technet.microsoft.com/library/e0e76b89-b0d3-4c0a-bfc8-137b579e983b.aspx)
-    
  **Q. What is EOP?**
   
 A. EOP is a cloud-hosted email filtering service built to protect customers from spam and malware, and to implement custom policy rules.
