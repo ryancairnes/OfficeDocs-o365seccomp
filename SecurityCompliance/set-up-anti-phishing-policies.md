@@ -5,7 +5,7 @@ author: MSFTTracyP
 manager: laurawi
 audience: ITPro
 ms.topic: article
-ms.date: 02/06/2019
+ms.date: 07/09/2019
 ms.service: O365-seccomp
 localization_priority: Normal
 ms.assetid: 5a6f2d7f-d998-4f31-b4f5-f7cbf6f38578
