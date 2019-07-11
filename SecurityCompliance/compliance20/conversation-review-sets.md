@@ -46,44 +46,46 @@ Here are few definitions to help you get start using Conversation Reconstruction
    In other apps (such as 1xN chat messages in Teams), there is not a formal reply chain and instead messages appear as a "flat river of messages" within a single thread. In these types apps, conversations are inferred from a group of messages that occur within a certain time. This "soft-grouping" of messages (as opposed to a reply chain) represent the "back and forth" conversation about a specific topic of interest. 
 
 ## Step 1: Run a search
-After you have identified relevant custodians and locations, you can create a search to find potentially relevant content. On the **Searches** tab, you can create a new search by clicking ** + New search** and following the wizard.
 
->[!NOTE]
-> For additional information on how you can create a search, build a search query, and view search results, see [Collect data for a case](create-search-to-collect-data.md).
+After you have identified relevant custodians and content locations, you can create a search to find potentially relevant content. On the **Searches** tab in the Advanced eDiscovery case, you can create a new search by clicking **New search** and following the wizard. For information about how you can create a search, build a search query, and view the search results, see [Collect data for a case](create-search-to-collect-data.md).
 
-## Step 2: Create a Review Set
-Within a review set, you can search, tag, annotate, and redact documents, emails, and chat conversations. Using Advanced eDiscovery, you can tailor your review for conversations to be based off individual messages or threaded conversations.  
-The mode in which you can tailor your review is based off the review set type. Advanced eDiscovery has two different types of review sets: 
-  - **Traditional Review Set:** Messages are processed and displayed as individual items. 
-  - **Conversational Review Set:** Messages are processed individually but displayed in a conversation view. Users in this mode can annotate, tag, and redact a threaded conversation view. 
+## Step 2: Create a conversation review set
 
-> [!Note]
-> For additional information on how you can create and manage review sets, see the section on how to [Manage Review Sets](managing-review-sets.md). 
+In a review set, you can search, tag, annotate, and redact documents, email messages, and chat conversations. In Advanced eDiscovery, you can customize your review of conversations, based in individual messages or threaded conversations. This is determined by the type of review set that you add the results of the of the search created in Step 1 to. There are two different types of review sets: 
+  
+  - **Regular review sets:** Messages in conversations are processed and displayed as individual items. 
+  
+  -  **Conversation review sets:** Messages in conversations are processed individually but displayed in a conversation view. In a conversation review set, you can annotate, tag, and redact messages in a threaded conversation view. 
 
-## Step 3: Enable Conversation Retrieval Options
-Once you have reviewed and finalized your search query, you can add the results into a review set. When you add your search results into a review set, the original data is copied to facilitate the review and analysis process.
+For more information about how to review and manage content in a review set, see [Manage review sets](managing-review-sets.md). 
 
->[!Note]
->For more information on adding search results to a review set, see [Add search results to a review set](add-data-to-review-set.md). 
+## Step 3: Enable conversation retrieval options
 
-In addition, when you add data from convsations into a review set, you can leverage the conversation retrieval options to expand your search and include contextual messages. After conversation retrieval is enabled, the following can happen:
-  1. Using a keyword and date range query, the search returned a hit on *Message 3*. This message was part of a larger conversation, illustrated by *CRC1*. 
-  2. When the user adds the data into a review set and enables the conversation retrieval options, the system will go back and collect other items in *CRC1*. 
-  3. After the items have been added into a review set, the user can review all the individual messages from *CRC1*. 
+After you have reviewed and finalized your search query, you can add the search results to a review set. When you add your search results into a review set, the original data is copied to an Azure storage area to facilitate the review and analysis process. For more information about adding search results to a review set, see [Add search results to a review set](add-data-to-review-set.md). 
 
-    ![Conversation Retrieval](../media/messagesandconversations.png)
+When you add data from conversations to a review set, you can use the conversation retrieval options to expand your search and include contextual messages. After conversation retrieval is enabled, the following can happen:
+  
+1. Using a keyword and date range query, the search returned a hit on *Message 3*. This message was part of a larger conversation, illustrated by *CRC1*. 
+  
+2. When the user adds the data into a review set and enables the conversation retrieval options, the system will go back and collect other items in *CRC1*. 
+  
+3. After the items have been added into a review set, the user can review all the individual messages from *CRC1*. 
 
-### To enable conversation retrieval:
-  1. Navigate to the **Searches** tab.
-  2. Select a search and then click **+ Add to Review Set**.
-  3. Select an existing review set or create a new review set. 
-    > [!Note]: 
-    > For more information on the different kinds of review sets, see the section on [Managing Review Sets](managing-review-sets.md).
-  4. Ensure that you have enabled conversation retrieval for the sources that you would like to expand in your search.  
-  5. Once your Add to Review Set job has finished, you can go ahead and start reviewing your conversations.
+  ![Conversation Retrieval](../media/messagesandconversations.png)
 
-## Step 4: Review Conversations
-Once your content has been processed, you can start reviewing your data within a review set. The review capabilities differ depending on the review set mode.
+To enable conversation retrieval:
+  
+1. On the **Searches** tab in the Advanced eDiscovery case, select a search, and then click **Add to review set** on the flyout page.
+  
+2. Select an existing review set or create a new review set. 
+  
+3. Ensure that you have enabled conversation retrieval for the sources that you would like to expand in your search.  
+  
+4. After the **Add to review set** job on the **Jobs** tab has finished, you start reviewing the conversations.
+
+## Step 4: Review conversations in the review set
+
+After the content has been processed and added to the review set, you can start reviewing the data in the review set. The review capabilities differ depending on whether the content was added to a regular review set or to a conversation review set. 
 
 ### Traditional Review Set
 In a traditional review set, messages are processed and displayed as individual items, similar to how they are stored within a mailbox. 
