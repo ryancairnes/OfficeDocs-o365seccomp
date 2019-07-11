@@ -2,7 +2,7 @@
 title: "Threat Explorer (and real-time detections)"
 ms.author: deniseb
 author: denisebmsft
-manager: laurawi
+manager: dansimp
 ms.date: 06/20/2019
 audience: ITPro
 ms.topic: article
@@ -37,20 +37,38 @@ With this report, you can:
 
 ## New features in real-time detections
 
-For Office 365 ATP Plan 1 customers, the *real-time detections* report was previously referred to as *real-time reports*. In addition to the name change, several new features and enhancements are rolling out:
+Explorer / real-time detections adds fresh new fields designed to give you a more complete picture of where your emails land. Part of the goal of this change is to make hunting easier for Security Ops people, but the net result is knowing the location of problem emails at a glance.
 
-- In the Phish view, you can see more details about detected URLs through [ATP Safe Links](atp-safe-links.md). New details and capabilities include:
-  - URLs in email messages
-  - Filtering based on URL information
-  - URL information displayed in data graphs
-  - Time-of-click data about clicks in messages
+How is this done? Delivery Status is now broken out into two columns:
 
-- Whenever there's a change in a URL click verdict, you'll see an alert. URL click verdicts can change when a URL’s reputation changes post-detonation, or when a user who's protected by ATP Safe Links overrides an [ATP Safe Links warning](atp-safe-links-warning-pages.md).  
- 
-These enhancements enable your organization's security administrators to view more details than before. Security administrators can view information about URL domains, missed URLs, click verdicts, and more, and then adjust Office 365 ATP policies appropriately.
+- Delivery Action - What is the status of this email?
+- Delivery Location - Where was this email routed as a result?
 
-> [!NOTE]
-> While these features are in preview, URL data will be available for a limited number of days. 
+Delivery Action is the action taken on an email due to existing policies or detections. Here are the possible actions an email can take:
+
+|Delivered  |Junked  |Blocked  |Replaced  |
+|---------|---------|---------|---------|
+|Email was delivered to Inbox or folder of a user and the user can directly access it.    | Email was sent to either user’s Junk folder or Deleted folder, and the user has access to emails in those folders.       | Any emails that are quarantined, that  failed, or were dropped. This is completely inaccessible by the user!     | Any email where malicious attachments are replaced by .txt files that state the attachment was malicious.     |
+
+And here is what the user can see, and what they can't:
+
+|Accessible to end users  |Inaccessible to end users  |
+|---------|---------|
+|Delivered     | Blocked        |
+|Junked     | Replaced        |
+
+Delivery location shows the results of policies and detections that run post-delivery. It's linked to a Delivery Action. This field was added to give insight into the action taken when a problem mail is found. Here are the possilbe values of delivery location:
+
+1. Inbox or folder – The email is in inbox or a folder (according to your email rules).
+2. On-prem or external – The mailbox doesn’t exist on cloud but is on-premises.
+3. Junk folder – The email in in the Junk folder of a user.
+4. Deleted items folder – The email in the Deleted items folder of a user.
+5. Quarantine – The email in quarantine, and is not in a user’s mailbox.
+6. Failed – The email failed to reach the mailbox.
+7. Dropped – The email gets lost somewhere in the Mailflow.
+
+The Email Timeline is another new Explorer feature aimed at making the hunting experience better for admins. It cuts down on randomization because there is less time spent checking different locations to try to understand the event. When multiple events happen at, or close to, the same time on an email, those events will show up in a timeline view. In fact, some events that happen post-delivery to your mail will be captured in the 'Special action' column. Combining the information from the timeline of that mail with the special action taken on the mail post-delivery will give admins insight into how their policies work, where the mail was finally routed, and, in some cases, what the final assessment was.
+
 
 ## See malware detected in email by technology
 

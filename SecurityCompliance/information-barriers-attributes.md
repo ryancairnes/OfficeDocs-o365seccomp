@@ -3,7 +3,7 @@ title: "Attributes for information barrier policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 06/26/2019
+ms.date: 07/08/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -13,14 +13,14 @@ localization_priority: None
 description: "Use this article as a reference for various attributes you can use in information barrier policies."
 ---
 
-# Attributes for information barrier policies (Preview)
+# Attributes for information barrier policies
 
 Certain attributes in Azure Active Directory can be used to segment users. Once segments are defined, those segments can be used as filters for information barrier policies. For example, you might use **Department** to define segments of users by department within your organization (assuming no single employee works for two departments at the same time). 
 
 This article describes how to use attributes with information barriers, and it provides a list of attributes that can be used. To learn more about information barriers, see the following resources:
-- [Information barriers (Preview)](information-barriers.md)
-- [Define policies for information barriers in Microsoft Teams (Preview)](information-barriers-policies.md)
-- [Edit (or remove) information barrier policies (Preview)](information-barriers-edit-segments-policies.md.md)
+- [Information barriers](information-barriers.md)
+- [Define policies for information barriers in Microsoft Teams](information-barriers-policies.md)
+- [Edit (or remove) information barrier policies](information-barriers-edit-segments-policies.md.md)
 
 ## How to use attributes in information barrier policies
 
@@ -30,9 +30,9 @@ The attributes listed in this article can be used to define or edit segments of 
 
 2. Make sure the user accounts have values filled in for the attribute(s) you selected in Step 1. View user account details, and if necessary, edit user accounts to include attribute values. 
 
-    To do this using PowerShell, see [Configure user account properties with Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/configure-user-account-properties-with-office-365-powershell).
+    - To edit multiple accounts (or use PowerShell to edit a single account), see [Configure user account properties with Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/configure-user-account-properties-with-office-365-powershell).
 
-    To do this in Azure Active Directory, see [Add or update a user's profile information using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal).
+    - To edit a single account, see [Add or update a user's profile information using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal).
 
 3. [Define segments using PowerShell](information-barriers-policies.md#define-segments-using-powershell), similar to the following examples:
 
@@ -49,7 +49,7 @@ The attributes listed in this article can be used to define or edit segments of 
 
 The following table lists the attributes that you can use with information barriers.
 
-|Azure Active Directory property name (LDAP display name)  |Exchange property name  |
+|Azure Active Directory property name<br/>(LDAP display name)  |Exchange property name  |
 |---------|---------|
 |Co       | Co        |
 |Company     |Company         |
@@ -88,11 +88,11 @@ The following table lists the attributes that you can use with information barri
 
 ## Related topics
 
-[Define policies for information barriers in Microsoft Teams (Preview)](information-barriers-policies.md)
+[Define policies for information barriers in Microsoft Teams](information-barriers-policies.md)
 
-[Troubleshooting information barriers (Preview)](information-barriers-troubleshooting.md)
+[Troubleshooting information barriers](information-barriers-troubleshooting.md)
 
-[Information barriers (Preview)](information-barriers.md)
+[Information barriers](information-barriers.md)
 
 
 

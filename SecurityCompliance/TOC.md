@@ -30,7 +30,7 @@
 ### [Apply a sensitivity label to content automatically](apply-sensitivity-label-automatically.md)
 ### [View label usage with label analytics](label-analytics.md)
 
-## [Prevent data loss (DLP)](data-loss-prevention-policies.md)
+## [Data loss prevention (DLP)](data-loss-prevention-policies.md)
 ### [DLP and Microsoft Teams](dlp-microsoft-teams.md)
 ### [Watch an extended overview of DLP](https://channel9.msdn.com/events/ignite/microsoft-ignite-orlando-2017/brk3111)
 ### Set up DLP
@@ -103,6 +103,7 @@
 #### [Use a sample connector to archive Facebook data](archive-facebook-data-with-sample-connector.md)
 #### [Use a sample connector to archive Twitter data](archive-twitter-data-with-sample-connector.md)
 #### [Set up a connector to archive LinkedIn data](archive-linkedin-data.md)
+#### [Set up a connector to archive Instant Bloomberg data](archive-instant-bloomberg-data.md)
 #### [Work with a partner to archive third-party data](work-with-partner-to-archive-third-party-data.md)
 ## Store data
 ### [Enable archive mailboxes](enable-archive-mailboxes.md)
@@ -155,11 +156,12 @@
 ### [Removing a user from the Restricted Users portal after sending spam email](removing-user-from-restricted-users-portal-after-spam.md)
 ### [Spam confidence levels](spam-confidence-levels.md)
 ### [Fix Error Code 5.7.7xx in Exchange Online](fix-error-code-5-7-7xx-in-exchange-online.md)
-#### [Use mail flow rules to set the spam confidence level (SCL) in messages](use-mail-flow-rules-to-set-the-spam-confidence-level-scl-in-messages.md)
-#### [Submit spam, non-spam, and phishing scam messages to Microsoft for analysis](submit-spam-non-spam-and-phishing-scam-messages-to-microsoft-for-analysis.md)
-#### [Submitting malware and non-malware to Microsoft for analysis](submitting-malware-and-non-malware-to-microsoft-for-analysis.md)
-#### [Use the delist portal to remove yourself from the Office 365 blocked senders list](use-the-delist-portal-to-remove-yourself-from-the-office-365-blocked-senders-lis.md)
-#### [Anti-spam message headers](anti-spam-message-headers.md)
+### [Use mail flow rules to set the spam confidence level (SCL) in messages](use-mail-flow-rules-to-set-the-spam-confidence-level-scl-in-messages.md)
+### [Submit spam, non-spam, and phishing scam messages to Microsoft for analysis](submit-spam-non-spam-and-phishing-scam-messages-to-microsoft-for-analysis.md)
+### [Admin submissions in Office 365 ATP](atp-admin-submission.md)
+### [Submitting malware and non-malware to Microsoft for analysis](submitting-malware-and-non-malware-to-microsoft-for-analysis.md)
+### [Use the delist portal to remove yourself from the Office 365 blocked senders list](use-the-delist-portal-to-remove-yourself-from-the-office-365-blocked-senders-lis.md)
+### [Anti-spam message headers](anti-spam-message-headers.md)
 ## [Anti-phishing protection in Office 365](anti-phishing-protection.md)
 ### [Tune anti-phishing protection](tuning-anti-phishing.md)
 ### [ATP anti-phishing capabilities in Office 365](atp-anti-phishing.md)
@@ -245,6 +247,7 @@
 #### [Use a sample connector to archive Facebook data](archive-facebook-data-with-sample-connector.md)
 #### [Use a sample connector to archive Twitter data](archive-twitter-data-with-sample-connector.md)
 #### [Set up a connector to archive LinkedIn data](archive-linkedin-data.md)
+#### [Set up a connector to archive Instant Bloomberg data](archive-instant-bloomberg-data.md)
 #### [Work with a partner to archive third-party data](work-with-partner-to-archive-third-party-data.md)
 ## Store data
 ### [Enable archive mailboxes](enable-archive-mailboxes.md)
@@ -483,6 +486,7 @@
 ## [Turn audit log search on or off](turn-audit-log-search-on-or-off.md)
 ## [Manage mailbox auditing](enable-mailbox-auditing.md)
 ## [Detailed properties in the audit log](detailed-properties-in-the-office-365-audit-log.md)
+## [Export, configure, and view audit log records](export-view-audit-log-records.md)
 ## [Use the audit log to troubleshoot common scenarios](auditing-troubleshooting-scenarios.md)
 ## [Use sharing auditing in the audit log](use-sharing-auditing.md)
 ## [Search for eDiscovery activities in the audit log](search-for-ediscovery-activities-in-the-audit-log.md)
@@ -535,11 +539,11 @@
 ### [What's new in Compliance Manager (Preview)](compliance-manager-release-notes.md)
 ### [Working with Compliance Manager (Preview)](working-with-compliance-manager.md)
 ### [Compliance score methodology (Preview)](compliance-score-methodology.md)
-## [Information barriers (Preview)](information-barriers.md)
-### [Define information barrier policies (Preview)](information-barriers-policies.md)
-### [Attributes for information barrier policies (Preview)](information-barriers-attributes.md)
-### [Troubleshooting information barriers (Preview)](information-barriers-troubleshooting.md)
-### [Edit information barrier policies (Preview)](information-barriers-edit-segments-policies.md.md)
+## [Information barriers](information-barriers.md)
+### [Define information barrier policies](information-barriers-policies.md)
+### [Attributes for information barrier policies](information-barriers-attributes.md)
+### [Troubleshooting information barriers](information-barriers-troubleshooting.md)
+### [Edit information barrier policies](information-barriers-edit-segments-policies.md.md)
 
 
 ## Customer Key
