@@ -65,7 +65,7 @@ For more information about the different permissions you can give to users in th
 2. Use the **Add-RoleGroupMember** command to add a user to the Organization Management Role, as shown in the following example.
 
    ```
-   Add-RoleGroupMember -Identity "OrganizationManagement" -Member MatildaS
+   Add-RoleGroupMember -Identity "Organization Management" -Member MatildaS
    ```
 
    **Parameters**:
