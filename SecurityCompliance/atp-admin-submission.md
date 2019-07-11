@@ -29,32 +29,32 @@ To submit content to Microsoft click the **New submission** button in the top le
 
 ### Email
 ![Email submission example](media/submission-flyout-email.PNG)
-To submit an email, select **email** and specify the email **network message ID** or upload the email file. 
+1. To submit an email, select **email** and specify the email **network message ID** or upload the email file. 
 
-Specify the recipient(s) that you would like to run the policy check against. The policy check will determine if the email bypassed scanning due to user or tenant level policies. 
+2. Specify the recipient(s) that you would like to run the policy check against. The policy check will determine if the email bypassed scanning due to user or tenant level policies. 
 
-Specify if the email should have been blocked or not. If the email should have been blocked, specify if it should have been blocked as Spam, Phishing, or Malware. If you are not sure what type it might be, use your best judgement.  
+3. Specify if the email should have been blocked or not. If the email should have been blocked, specify if it should have been blocked as Spam, Phishing, or Malware. If you are not sure what type it might be, use your best judgement.  
 
-If the filter was bypassed due to policies upon submission, you'll see information about that policy.
+* If the filter was bypassed due to policies upon submission, you'll see information about that policy.
 
-If the filter was not bypassed due to one or more policies, the scan will complete in several minutes. You'll see additional information about the submission by clicking on the status link. This includes the results of the policy check and the rescan verdict. Note this does not run the email through the Office 365 ATP full filtering stack again but runs a partial rescan based on certain attributes of the mail, URL, or file. 
+* If the filter was not bypassed due to one or more policies, the scan will complete in several minutes. You'll see additional information about the submission by clicking on the status link. This includes the results of the policy check and the rescan verdict. Note this does not run the email through the Office 365 ATP full filtering stack again but runs a partial rescan based on certain attributes of the mail, URL, or file. 
 
-Finally, click the **Submit** button.
+4. Click the **Submit** button.
 
 ### URL
 ![Email submission example](media/submission-url-flyout.png)
-To submit a URL select **URL** from the flyout. Type in the full URL including the protocol (**https://**). 
+1. To submit a URL select **URL** from the flyout. Type in the full URL including the protocol (**https://**). 
 
-If selecting **Should have been filtered**, specify if the URL appears to be phishing or malware.
+* If you selected **Should have been filtered**, specify if the URL is phishing or malware.
 
-Finally click the **Submit** button. 
+2. Click the **Submit** button. 
 
 
 ### File
 ![Email submission example](media/submission-file-flyout.PNG)
-To submit a file select **File** from the flyout and upload the file you would like to scan. 
+1. To submit a file select **File** from the flyout and upload the file you would like to scan. 
 
-Click the **Submit** button.
+2. Click the **Submit** button.
 
 
 ## Related topics
