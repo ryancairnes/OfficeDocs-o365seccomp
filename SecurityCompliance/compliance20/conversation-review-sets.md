@@ -1,5 +1,5 @@
 ---
-title: "Conversation review sets"
+title: "Review conversations in Advanced eDiscovery"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -17,25 +17,33 @@ ms.assetid:
 description: ""
 ---
 
-# Review Conversations in Advanced eDiscovery 
+# Review conversations in Advanced eDiscovery 
 
-## Overview
 Instant messaging is a convenient way to ask questions, share ideas, or quickly communicate across large audiences. As instant messaging platforms, like Microsoft Teams, become core to enterprise collaboration, organizations must evaluate how their eDiscovery workflow will address these new forms of communication and collaboration. 
 
-Conversation Reconstruction from Advanced eDiscovery is designed to help you identify contextual content and produce distinct conversation views, allowing for efficient and rapid review of instant messaging platforms like Microsoft Teams. 
-With Conversation Reconstruction, users can leverage built-in capabilities to reconstruct, review, and export threaded conversations. Use Advanced eDiscovery Conversation Reconstruction to:
-  1. Preserve unique message-level metadata across all messages within a conversation
-  2. Collect contextual messages around your search results
-  3. Review, annotate, and redact threaded conversations
-  4. Export individual messages or threaded conversations
+The Conversation Reconstruction feature in Advanced eDiscovery is designed to help you identify contextual content and produce distinct conversation views. This capability allows you to efficiently and rapidly review complete instant message conversations (also called *threaded conversations*) that are generated in platforms like Microsoft Teams.
+
+With Conversation Reconstruction, you can use built-in capabilities to reconstruct, review, and export threaded conversations. Use Advanced eDiscovery Conversation Reconstruction to:
+
+- Preserve unique message-level metadata across all messages within a conversation.
+
+- Collect contextual messages around your search results.
+
+- Review, annotate, and redact threaded conversations.
+
+- Export individual messages or threaded conversations
 
 ## Terminology
-**Messages** represent the smallest unit of a conversation. Messages may vary in size, structure, and metadata. 
 
-A **conversation** represents a grouping of one or more messages. Across different applications, conversations may be represented in different ways. In some applications, there is an explicit action of replying to existing messages and conversations are formed explicitly as a result of this user action. 
-    ![Microsoft Teams Channel Conversation](../media/threadedchat.png)
+Here are few definitions to help you get start using Conversation Reconstruction.
 
-In other applications, messages appear as a “flat river of messages” within a thread. Here, conversations are inferred heuristically such that there may be a ‘soft’ grouping of a set of messages representing the “back and forth” about a topic of interest.  
+- **Messages** – Represent the smallest unit of a conversation. Messages may vary in size, structure, and metadata. 
+
+- **Conversation** – Represents a grouping of one or more messages. Across different applications, conversations may be represented in different ways. In some applications, there is an explicit action that results from replying to an existing message. Conversations are formed explicitly as a result of this user action. For example, here is a screenshot of a channel conversation in Microsoft Teams.
+
+   ![Microsoft Teams Channel Conversation](../media/threadedchat.png)
+
+   In other apps (such as 1xN chat messages in Teams), there is not a formal reply chain and instead messages appear as a "flat river of messages" within a single thread. In these types apps, conversations are inferred from a group of messages that occur within a certain time. This "soft-grouping" of messages (as opposed to a reply chain) represent the "back and forth" conversation about a specific topic of interest. 
 
 ## Step 1: Run a search
 After you have identified relevant custodians and locations, you can create a search to find potentially relevant content. On the **Searches** tab, you can create a new search by clicking ** + New search** and following the wizard.
