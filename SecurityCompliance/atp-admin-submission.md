@@ -15,7 +15,7 @@ ms.collection:
 description: "Learn how to submit potentially harmful messages, URLs, and files to Microsoft."
 ---
 
-# Submissions
+# Admin submissions in Office 365 ATP
 
 Admins can now send emails by using file or network message ID, URLs, and files for scanning by Microsoft in Office 365. 
 The updated submissions section still includes user reported messages. 
