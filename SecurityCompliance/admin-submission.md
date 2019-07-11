@@ -1,5 +1,5 @@
 ---
-title: "Admin submissions in Office 365 ATP"
+title: "Admin submissions in Office 365"
 ms.author: brwilcox
 author: briwilcox
 manager: dansimp
@@ -15,10 +15,10 @@ ms.collection:
 description: "Learn how to submit potentially harmful messages, URLs, and files to Microsoft."
 ---
 
-# Admin submissions in Office 365 ATP
+# Admin submissions in Office 365
 
 Admins can now send emails by using file or network message ID, URLs, and files for scanning by Microsoft in Office 365. 
-The updated submissions section still includes user reported messages. 
+The updated submissions section still includes user reported messages and available to all customers using EOP.
 
 When you submit an email, you will get information about any policies that may have allowed the incoming email into your tenant, as well as examination of any URLs and attachments in the mail. Policies that may have allowed a mail include an individual user's safe sender list as well as tenant level policies such as ETR rules. 
 
