@@ -28,7 +28,7 @@ When you submit an email, you will get information about any policies that may h
 To submit content to Microsoft click the **New submission** button in the top left hand side of the submissions page. A flyout on the right side of the page appears with the option to submit either an email, URL, or file. 
 
 ### Email
-![Email submission example](media/flyout-email.PNG)
+![Email submission example](media/submission-flyout-email.PNG)
 To submit an email, select **email** and specify the email **network message ID** or upload the email file. 
 
 Specify the recipient(s) that you would like to run the policy check against. The policy check will determine if the email bypassed scanning due to user or tenant level policies. 
@@ -42,7 +42,7 @@ If the filter was not bypassed due to one or more policies, the scan will comple
 Finally, click the **Submit** button.
 
 ### URL
-![Email submission example](media/url-flyout.png)
+![Email submission example](media/submission-url-flyout.png)
 To submit a URL select **URL** from the flyout. Type in the full URL including the protocol (**https://**). 
 
 If selecting **Should have been filtered**, specify if the URL appears to be phishing or malware.
@@ -51,7 +51,7 @@ Finally click the **Submit** button.
 
 
 ### File
-![Email submission example](media/file-flyout.PNG)
+![Email submission example](media/submission-file-flyout.PNG)
 To submit a file select **File** from the flyout and upload the file you would like to scan. 
 
 Click the **Submit** button.
