@@ -158,4 +158,4 @@ Microsoft started storing the Teams chat data for on-premises users on January 3
 
  **Does a Teams and Exchange Online license need to be assigned to the user to create a mailbox for online storage?**
   
-You need at least a license of exchange online plan 1 to get data to save data into the mailbox, relative to the  Microsoft Teams License it's required to access the service. In concrete, yes You'd need that the user has an MS Teams license and a mailbox license at least to take advantage of this feature.
+You need at least a license for Exchange Online Plan 1 to to get data to save into the mailbox, in addition to the  Microsoft Teams License that is required to access the service. So effectively yes, the user does require at least an MS Teams license and a mailbox license to take advantage of this feature.
