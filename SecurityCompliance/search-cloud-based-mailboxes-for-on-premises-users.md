@@ -156,6 +156,6 @@ No.
   
 Microsoft started storing the Teams chat data for on-premises users on January 31, 2018. So, if the identity of an on-premises Teams user has been synched between Active Directory and Azure Active Directory since this date, then their Teams chat data will be stored in a cloud-based mailbox and will be searchable using Content Search. Microsoft is also working on storing Teams chat data from prior to January 31, 2018 in the cloud-based mailboxes for on-premises users. More information about this will be available soon.
 
- **Does a Teams and Exchange Online licesse need to be assigned to the user to create the mailbox for online storage?**
+ **Does a Teams and Exchange Online license need to be assigned to the user to create a mailbox for online storage?**
   
 You need at least a license of exchange online plan 1 to get data to save data into the mailbox, relative to the  Microsoft Teams License it's required to access the service. In concrete, yes You'd need that the user has an MS Teams license and a mailbox license at least to take advantage of this feature.
