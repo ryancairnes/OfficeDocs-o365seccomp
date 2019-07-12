@@ -65,7 +65,7 @@ For more information about the different permissions you can give to users in th
 2. Use the **Add-RoleGroupMember** command to add a user to the Organization Management Role, as shown in the following example.
 
    ```
-   Add-RoleGroupMember -Identity "OrganizationManagement" -Member MatildaS
+   Add-RoleGroupMember -Identity "Organization Management" -Member MatildaS
    ```
 
    **Parameters**:
@@ -81,7 +81,7 @@ For detailed information on syntax and parameters, see [Add-RoleGroupMember](htt
 To verify that you've given users access to the Security & Compliance Center, use the **Get-RoleGroupMember** cmdlet to view the members in the Organization Management role group, as shown in the following example.
   
 ```
-Get-RoleGroupMember -Identity "OrganizationManagement"
+Get-RoleGroupMember -Identity "Organization Management"
 ```
 
 For detailed information on syntax and parameters, see [Get-RoleGroupMember](https://go.microsoft.com/fwlink/p/?LinkId=510860).
