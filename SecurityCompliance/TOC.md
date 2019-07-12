@@ -158,7 +158,7 @@
 ### [Fix Error Code 5.7.7xx in Exchange Online](fix-error-code-5-7-7xx-in-exchange-online.md)
 ### [Use mail flow rules to set the spam confidence level (SCL) in messages](use-mail-flow-rules-to-set-the-spam-confidence-level-scl-in-messages.md)
 ### [Submit spam, non-spam, and phishing scam messages to Microsoft for analysis](submit-spam-non-spam-and-phishing-scam-messages-to-microsoft-for-analysis.md)
-### [Admin submissions in Office 365 ATP](admin-submission.md)
+### [Admin submissions in Office 365](admin-submission.md)
 ### [Submitting malware and non-malware to Microsoft for analysis](submitting-malware-and-non-malware-to-microsoft-for-analysis.md)
 ### [Use the delist portal to remove yourself from the Office 365 blocked senders list](use-the-delist-portal-to-remove-yourself-from-the-office-365-blocked-senders-lis.md)
 ### [Anti-spam message headers](anti-spam-message-headers.md)
