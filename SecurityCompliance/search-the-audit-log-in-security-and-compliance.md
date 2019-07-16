@@ -769,7 +769,7 @@ You can search the audit log for activities in Microsoft Stream. These activitie
 Exchange administrator audit logging (which is enabled by default in Office 365) logs an event in the Office 365 audit log when an administrator (or a user who has been assigned administrative permissions) makes a change in your Exchange Online organization. Changes made by using the Exchange admin center or by running a cmdlet in Exchange Online PowerShell are logged in the Exchange admin audit log. Cmdlets that begin with the verbs **Get-**, **Search-**, or **Test-** are not logged in the Office 365 audit log. For more detailed information about admin audit logging in Exchange, see [Administrator audit logging](https://go.microsoft.com/fwlink/p/?LinkID=619225).
 
 > [!IMPORTANT]
-> There are some Exchange Online cmdlets that aren't logged in the Office 365 audit log.
+> Some Exchange Online cmdlets that aren't logged in the Exchange admin audit log (or in the Office 365 audit log). Many of these cmdlets are related to maintaining the Exchange Online service and are run by Microsoft data center personnel or service accounts. These cmdlets aren't logged because they would result in a large number of "noisy" auditing events. If there's an Exchange Online cmdlet that isn't being audited, please submit a suggestion to the [Office 365 Security & Compliance User Voice forum](https://office365.uservoice.com/forums/289138-office-365-security-compliance) and request that it is enabled for auditing. You can also submit a design change request (DCR) to Microsoft Support.
   
 Here are some tips for searching for Exchange admin activities when searching the Office 365 audit log:
   
@@ -779,11 +779,16 @@ Here are some tips for searching for Exchange admin activities when searching th
     
     ![Type a dash in the Activities box to filter Exchange admin events](media/7628e7aa-6263-474a-a28b-2dcf5694bb27.png)
   
-- To get information about what cmdlet was run, which parameters and parameter values were used, and what objects were affected, you have to export the search results and select the **Download all results** option. 
+- To get information about what cmdlet was run, which parameters and parameter values were used, and what objects were affected, you can export the search results by selecting the **Download all results** option. For more information, see [Export, configure, and view audit log records](export-view-audit-log-records.md). 
     
-- You can use the `Search-UnifiedAuditLog -RecordType ExchangeAdmin` in Exchange Online PowerShell to return only audit records from the Exchange admin audit log. For more information, see [Search-UnifiedAuditLog](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/search-unifiedauditlog). For information about exporting the search results returned by the **Search-UnifiedAuditLog** cmdlet to a CSV file, see the "Tips for exporting and viewing the audit log" section in [Export, configure, and view audit log records](export-view-audit-log-records.md#tips-for-exporting-and-viewing-the-audit-log).
+- You can also use the `Search-UnifiedAuditLog -RecordType ExchangeAdmin` command in Exchange Online PowerShell to return only audit records from the Exchange admin audit log. It may take up to 30 minutes after a Exchange cmdlet is run for the corresponding audit log entry to be returned in the search results. For more information, see [Search-UnifiedAuditLog](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/search-unifiedauditlog). For information about exporting the search results returned by the **Search-UnifiedAuditLog** cmdlet to a CSV file, see the "Tips for exporting and viewing the audit log" section in [Export, configure, and view audit log records](export-view-audit-log-records.md#tips-for-exporting-and-viewing-the-audit-log).
 
-- You can also view events in the Exchange admin audit log by using the Exchange admin center. For instructions, see [View the administrator audit log](https://technet.microsoft.com/library/dn342832%28v=exchg.150%29.aspx). Keep in mind that the same Exchange admin activities are logged in both the Exchange admin audit log and and Office 365 audit log.
+- You can also view events in the Exchange admin audit log by using the Exchange admin center or running the **Search-AdminAuditLog** in Exchange Online PowerShell. For instructions, see:
+   - [View the administrator audit log](https://technet.microsoft.com/library/dn342832%28v=exchg.150%29.aspx). 
+   
+   -  [Search-AdminAuditLog](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/search-adminauditlog)
+   
+   Keep in mind that the same Exchange admin activities are logged in both the Exchange admin audit log and and Office 365 audit log.
   
 ## Frequently asked questions
 
