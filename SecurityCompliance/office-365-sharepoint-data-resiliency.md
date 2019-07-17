@@ -1,7 +1,7 @@
 ---
 title: "Office 365 SharePoint Data Resiliency"
-ms.author: robmazz
-author: robmazz
+ms.author: chrfox
+author: chrfox
 manager: laurawi
 audience: ITPro
 ms.topic: article
