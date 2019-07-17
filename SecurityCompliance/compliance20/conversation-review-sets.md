@@ -92,10 +92,12 @@ After the content has been processed and added to the review set, you can start 
 ### Reviewing conversations in a standard review Set
 
 In a standard review set, messages are processed and displayed as individual items, similar to how they're stored in a mailbox folder. In this workflow, each message is processed as a separate item. As a result, the threaded summary and export options aren't available in a standard review set. 
+  ![Standard Review Set](../media/standardrs.PNG)
 
 ### Reviewing conversations in a conversation review set
 
 In a conversation review set, individual messages are threaded together and presented as conversations. This lets you review and export contextual conversations. The following sections describe reviewing and exporting conversations in a conversation review set.
+  ![Conversation Review Set](../media/ConversationRSOptions.PNG)
 
 #### Reviewing conversations
 
