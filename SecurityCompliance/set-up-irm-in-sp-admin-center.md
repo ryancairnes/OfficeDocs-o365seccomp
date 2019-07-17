@@ -33,7 +33,7 @@ After activating the Rights Management service, sign in to the SharePoint admin 
     
 3. In the left pane, choose **Admin centers** \> **SharePoint**.
     
-4. In the left pane, choose **settings**.
+4. In the left pane, choose **settings**, and then choose **classic settings page**.
     
 5. In the **Information Rights Management (IRM)** section, choose **Use the IRM service specified in your configuration**, and then choose **Refresh IRM Settings**. After you refresh IRM settings, people in your organization can begin using IRM in their SharePoint lists and document libraries. However, the options to do so may take up to an hour to appear in Library Settings and List Settings.
     
