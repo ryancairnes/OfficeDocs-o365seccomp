@@ -281,7 +281,7 @@
         "redirect_document_id": true
     },
     {
-        "source_path": "SecurityCompliance\office-365-sharepoint-data-resiliency.md",
+        "source_path": "SecurityCompliance/office-365-sharepoint-data-resiliency.md",
         "redirect_url": "https://docs.microsoft.com/office365/securitycompliance/office-365-data-resiliency-overview",
         "redirect_document_id": false
     }                              
