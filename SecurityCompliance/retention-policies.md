@@ -57,7 +57,7 @@ For SharePoint site collections, a copy of the original content is retained in t
   
 Notes:
   
-- Skype content is stored in Exchange, where the policy is applied based on message type (email or conversation).
+- Teams (chat) content is stored in Exchange, where the policy is applied based on message type (email or conversation).
     
 - A retention policy applied to an Office 365 group includes both the group mailbox and site.
     
