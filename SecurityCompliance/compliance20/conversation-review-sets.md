@@ -81,7 +81,7 @@ To enable conversation retrieval:
   
 2. Select an existing review set or create a review set. You can configure retrieval options when adding search results to a standard or a conversation review set.
   
-3. Configure the conversation retrieval options for the content sources that you would like to expand in your search, and then click **Add** to start the process.  
+3. Under **Collection options**, configure the conversation retrieval options for the content sources that you want to expand in your search, and then click **Add** to start the process.  
   
 4. After the **Add to review set** job on the **Jobs** tab has finished, you can start reviewing the conversations.
 
@@ -89,7 +89,7 @@ To enable conversation retrieval:
 
 After the content has been processed and added to the review set, you can start reviewing the data in the review set. The review capabilities are different depending on whether the content was added to a standard review set or a conversation review set. 
 
-### Reviewing conversations in a standard review Set
+### Reviewing conversations in a standard review set
 
 In a standard review set, messages are processed and displayed as individual items, similar to how they're stored in a mailbox folder. In this workflow, each message is processed as a separate item. As a result, the threaded summary and export options aren't available in a standard review set. 
 
@@ -97,9 +97,11 @@ In a standard review set, messages are processed and displayed as individual ite
 
 ### Reviewing conversations in a conversation review set
 
-In a conversation review set, individual messages are threaded together and presented as conversations. This lets you review and export contextual conversations. The following sections describe reviewing and exporting conversations in a conversation review set.
+In a conversation review set, individual messages are threaded together and presented as conversations. This lets you review and export contextual conversations. 
 
   ![Conversation review set](../media/ConversationRSOptions.PNG)
+
+The following sections describe reviewing and exporting conversations in a conversation review set.
 
 #### Reviewing conversations
 
@@ -117,9 +119,9 @@ In a conversation review set, you can use the following options to facilitate th
 
 - **Annotate view:** Lets you markup a threaded view of the conversation. All messages in the conversation share the same annotated document.
 
-- **Tag:** When viewing conversations in a review set, you can view and apply tags by clicking the **Coding panel**.
+- **Tagging:** When viewing conversations in a review set, you can view and apply tags by clicking **Tagging panel** in the Coding panel.
 
-- **Rerun conversation conversion:** When messages are added to a conversation review set, a conversion job is automatically run to create the threaded summary and annotate views. If the Conversation Reconstruction job fails, you can rerun the conversion job by clicking **Action > Create conversation PDFs** in the review set.
+- **Rerun conversation conversion:** When messages are added to a conversation review set, a conversion job is automatically run to create the threaded summary and annotate views. If the Conversation Reconstruction job fails, you can rerun this job by clicking **Action > Create conversation PDFs** in the review set.
 
 
 #### Exporting conversations
