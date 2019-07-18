@@ -45,40 +45,37 @@ Sharing is defined by when a user (the *acting* user) wants to share a resource 
 
 - **AnonymousLinkCreated** – An anonymous link was created for the resource. Because an anonymous link can be created and then copied, it's reasonable to assume that any document with an anonymous link as being shared with a target user.
 
-- **AnonymousLinkUsed** – As the name implies, this event is logged when an anonymous like has been used to access a resource. 
+- **AnonymousLinkUsed** – As the name implies, this event is logged when an anonymous link has been used to access a resource. 
 
 - **SecureLinkCreated** – A user has created a "specific people link" to share a resource with a specific person. This target user may be someone who is external to your organization.
 
 - **AddedToSecureLink** – A user has been added to a specific people link. This target user may be someone who is external to your organization.
 
-
-
-
-**SharingSet**, **SharingInvitationCreated**, and **SharingInvitaitonAccepted**. Here's the work flow for how sharing events are logged in the Office 365 audit log. 
+## Sharing auditing work flow
   
-![Flow chart of how sharing auditing works](media/d83dd40f-919b-484f-bfd6-5dc8de31bff6.png)
-  
-When a user (the acting user) wants to share a resource with another user (the target user), SharePoint (or OneDrive for Business) first checks if the email address of the target user is already associated with a user account in the organization's directory. If the target user is in the organization's directory, SharePoint does the following:
+When a user (the acting user) wants to share a resource with another user (the target user), SharePoint (or OneDrive for Business) first checks if the email address of the target user is already associated with a user account in the organization's directory. If the target user is in the organization's directory (and has a corresponding guest user account), SharePoint does the following:
   
 -  Immediately assigns the target user permissions to access the resource. 
     
 - Sends a sharing notification to the email address of the target user.
     
-- Logs a **SharingSet** event. 
+- Logs a SharingSet event. 
     
  If a user account for the target user isn't in the organization's directory, SharePoint does the following: 
   
 - Creates a sharing invitation and sends it to the email address of the target user.
     
-- Logs a **SharingInvitationCreated** event. 
-    
-    > [!NOTE]
-    > The **SharingInvitationCreated** event is most always associated with external or guest sharing when the target user doesn't have access to the resource that was shared. 
-  
-When the target user accepts the sharing invitation that's sent to them (by clicking the link in the invitation), SharePoint logs a **SharingInvitationAccepted** event and assigns the target user permissions to access the resource. Additional information about the target user is also logged, such as the identity of the user that the invitation was sent to and the user who actually accepted the invitation. In some case, these users (or email addresses) might be different. 
-  
+- Logs one of the of the following events, based on how the resource is shared:
 
-  
+   - SharingInvitationCreated
+   - AnonymousLinkCreated
+   - SecureLinkCreated
+   - AddedToSecureLink 
+    
+When the target user accepts the sharing invitation that's sent to them (by clicking the link in the invitation), SharePoint logs a SharingInvitationAccepted event and assigns the target user permissions to access the resource. If the target user is sent an anonymous link, the AnonymousLinkUsed event is logged.
+
+Additional information about the target user is also logged, such as the identity of the user that the invitation was sent to and the user who actually accepted the invitation. In some case, these users (or email addresses) might be different. 
+
 ## How to identify resources shared with external users
 
 A common requirement for administrators is creating a list of all resources that have been shared with users outside of the organization. By using sharing auditing in Office 365, administrators can now generate this list. Here's how.
