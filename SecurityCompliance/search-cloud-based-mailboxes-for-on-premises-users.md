@@ -3,7 +3,7 @@ title: "Searching cloud-based mailboxes for on-premises users in Office 365"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 6/4/2018
+ms.date: 
 audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
@@ -21,9 +21,11 @@ description: "Use the Content Search tool in the Security & Compliance Center to
 
 If your organization has an Exchange hybrid deployment and has enabled Microsoft Teams, users can use the Teams chat application for instant messaging. For the cloud-based user, the Teams chat data (also called 1xN chats) is saved to their primary cloud-based mailbox. When an on-premises user uses the Team chat application, their primary mailbox is located on-premises. To get around this limitation, Microsoft has released a new feature where a cloud-based storage area (called a cloud-based mailbox for on-premises users) is created to store Teams chat data for on-premises users. This lets you use the Content Search tool in the Security & Compliance Center to search and export Teams chat data for on-premises users. 
   
-Here are the requirements and limitation for setting up and to set up and search cloud-based mailboxes for on-premises users:
+Here are the requirements and limitations for setting up cloud-based mailboxes for on-premises users:
   
 - The user accounts in your on-premises directory service (such as Active Directory) must be synchronized with Azure Active Directory, the directory service in Office 365. This means that a mail user account is created in Office 365 and is associated with a user whose primary mailbox is located in the on-premises organization.
+
+- The user whose primary mailbox is located in the on-premises organization must be assigned a Microsoft Teams license and an Exchange Online Plan 1 license.
     
 - The cloud-based mailbox for on-premises users is used only store Teams chat data. An on-premises user can't sign in to the cloud-based mailbox or access in any way. It can't be used to send or receive email messages. 
     
@@ -53,7 +55,7 @@ Include the following information when you submit the request to Microsoft Suppo
     
 - The following title or description of the purpose of the support request: "Enable Application Content Search for On-premises Users". This helps route the request to the Office 365 eDiscovery engineering team who will implement the request. 
     
-After the engineering change is made, Microsoft Support will send you an estimated deployment date. The deployment process usually takes 2-3 weeks after you submit the support request. 
+After the engineering change is made, Microsoft Support will send you an estimated deployment date. The deployment process usually takes 2–3 weeks after you submit the support request. 
   
 ### What happens after this feature is enabled?
 
@@ -85,9 +87,9 @@ After the feature has been enabled, you can use Content Search in the Security &
 
 4. At this point, you can choose one of the following options under **Locations**:
     
-    - **All locations** - Select this option to search the mailboxes of all users in your organization. When the checkbox is selected, all cloud-based mailboxes for on-premises users will also be searched. 
+    - **All locations:** Select this option to search the mailboxes of all users in your organization. When the checkbox is selected, all cloud-based mailboxes for on-premises users will also be searched. 
     
-    - **Specific locations** - Select this option and then click **Modify** \> Choose user, groups, or teams to search specific mailboxes. As previously explained, the locations picker lets you search for on-premises users. 
+    - **Specific locations:** Select this option and then click **Modify** \> Choose user, groups, or teams to search specific mailboxes. As previously explained, the locations picker lets you search for on-premises users. 
     
 5. Save and run the search. Any search results from the cloud-based mailboxes for on-premises users can be previewed like any other search results. You can also export the search results (including any Teams chat data) to a PST file. For more information, see: 
     
@@ -154,4 +156,8 @@ No.
   
  **Can Content Search find older Teams chats for on-premises users before the time my organization submitted the request to enable this feature?**
   
-Microsoft started storing the Teams chat data for on-premises users on January 31, 2018. So, if the identity of an on-premises Teams user has been synched between Active Directory and Azure Active Directory since this date, then their Teams chat data will be stored in a cloud-based mailbox and will be searchable using Content Search. Microsoft is also working on storing Teams chat data from prior to January 31, 2018 in the cloud-based mailboxes for on-premises users. More information about this will be available soon.
+Microsoft started storing the Teams chat data for on-premises users on January 31, 2018. So, if the identity of an on-premises Teams user has been synched between Active Directory and Azure Active Directory since this date, then their Teams chat data is stored in a cloud-based mailbox and is searchable using Content Search. Microsoft is also working on storing Teams chat data from prior to January 31, 2018 in the cloud-based mailboxes for on-premises users. More information about this will be available soon.
+
+ **Do on-premises users need a license to store Teams chat data in a cloud-based mailbox? 
+  
+Yes. To store Teams chat data for an on-premises user in a cloud-based mailbox, the user must be assigned a Microsoft Teams license and an Exchange Online Plan license in Office 365 (or Microsoft 365).

@@ -48,7 +48,7 @@ For more information, see:
 
 If you disabled Azure RMS, or if it was not automatically activated for any reason, you can activate it manually in the:
 
-- **Office 365 admin center**: See [How to activate Azure Rights Management from the Office 365 admin center](https://docs.microsoft.com/en-us/azure/information-protection/activate-office365) for instructions.
+- **Microsoft 365 admin center**: See [How to activate Azure Rights Management from the admin center](https://docs.microsoft.com/en-us/azure/information-protection/activate-office365) for instructions.
 - **Azure portal**: See [How to activate Azure Rights Management from the Azure portal](https://docs.microsoft.com/en-gb/azure/information-protection/activate-azure) for instructions.
 
 ## Configure management of your Azure Information Protection tenant key
@@ -120,7 +120,7 @@ For steps on creating mail flow rules for OME, see [Define mail flow rules to en
 
 To update existing rules to use the new OME capabilities:
 
-1. In the Office 365 admin center, go to **Admin centers > Exchange**.
+1. In the Microsoft 365 admin center, go to **Admin centers > Exchange**.
 2. In the Exchange admin center, go to **Mail flow > Rules**.
 3. For each rule, in **Do the following**:
     - Select **Modify the message security**.
