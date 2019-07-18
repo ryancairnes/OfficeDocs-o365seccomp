@@ -56,7 +56,7 @@ See the following resources to learn more:
   
 - [What is Azure Rights Management?](https://docs.microsoft.com/information-protection/understand-explore/what-is-azure-rms)
 
-- [Activate Rights Management in the Office 365 admin center](https://support.office.com/article/5b6d3ac7-b1ac-428e-b03e-50e882f85a6e)
+- [Activate Rights Management in the admin center](https://support.office.com/article/5b6d3ac7-b1ac-428e-b03e-50e882f85a6e)
 
 - [Set up Information Rights Management (IRM) in SharePoint admin center](set-up-irm-in-sp-admin-center.md)
 
@@ -67,7 +67,7 @@ See the following resources to learn more:
 |Set up encryption for my organization  <br/> |[Set up encryption in Office 365 Enterprise](set-up-encryption.md) <br/> |
 |View details about certificates, technologies, and TLS cipher suites in Office 365  <br/> |[Technical details about encryption in Office 365](technical-reference-details-about-encryption.md) <br/> |
 |Work with encrypted messages on a mobile device  <br/> |[View encrypted messages on your Android device](https://support.office.com/article/83d60f17-2305-407a-a762-7d518401fdeb) <br/> [View encrypted messages on your iPhone or iPad](https://support.office.com/article/4d631321-0d26-4bcc-a483-d294dd0b1caf) <br/> |
-|Encrypt a document using password protection  <br/><br/>  Currently, password protection is not supported in Office Online. Use desktop versions of Word, Excel, and PowerPoint for password protection.           |[Add or remove protection in your document, workbook, or presentation](https://support.office.com/article/05084cc3-300d-4c1a-8416-38d3e37d6826) (Choose an **Add protection** section, and then see **Encrypt with Password** )  <br/> |
+|Encrypt a document using password protection  <br/><br/>  Currently, password protection is not supported in Office in a browser. Use desktop versions of Word, Excel, and PowerPoint for password protection.           |[Add or remove protection in your document, workbook, or presentation](https://support.office.com/article/05084cc3-300d-4c1a-8416-38d3e37d6826) (Choose an **Add protection** section, and then see **Encrypt with Password** )  <br/> |
 |Remove encryption from a document  <br/> |[Add or remove protection in your document, workbook, or presentation](https://support.office.com/article/05084cc3-300d-4c1a-8416-38d3e37d6826) (Choose a **Remove protection** section, and then see **Remove password encryption** )  <br/> |
 
 ## Related topics
