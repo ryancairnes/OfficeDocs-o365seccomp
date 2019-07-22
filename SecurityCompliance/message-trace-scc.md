@@ -19,6 +19,9 @@ Message trace in the Security & Compliance Center follows email messages as they
 
 Message trace in the Security & Compliance Center improves upon message trace that was available in the Exchange admin center (EAC). You can use the information from message trace to efficiently answer user questions about what happened to their messages, troubleshoot mail flow issues, and validate policy changes.
 
+> [!NOTE]
+> The limit for the amount of messages returned is 50 000. In the console, when running a very large query, the Get-HistoricalSearch cmdlet report message count exceeds 240 000.
+
 ## Open message trace
 
 1. [Sign in to Office 365](https://support.office.com/article/e9eb7d51-5430-4929-91ab-6157c5a050b4) with your work or school account.
