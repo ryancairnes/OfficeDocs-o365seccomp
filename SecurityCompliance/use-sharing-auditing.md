@@ -27,10 +27,10 @@ Sharing events (excluding sharing policy and sharing link events) are different 
   
 The Sharing schema provides two additional fields in the audit log related to sharing events: 
   
+- **TargetUserOrGroupType:** Identifies whether the target user or group is a Member, Guest, Group, or Partner.
+
 - **TargetUserOrGroupName:** Stores the UPN or name of the target user or group that a resource was shared with (User B in the previous example). 
-    
-- **TargetUserOrGroupType:** Identifies whether the target user or group is a Member, Guest, Group, or Partner. 
-    
+
 These two fields, in addition to other properties from the Office 365 audit log schema such as User, Operation, and Date can tell the full story about  *which*  user shared  *what*  resource with  *whom*  and  *when*. 
   
 There's another schema property that's important to the sharing story. When you export audit log search results, the **AuditData** column in the exported CSV file stores information about sharing events. For example, when a user shares a site with another user, this is accomplished by adding the target user to a SharePoint group. The **AuditData** column captures this information to provide context for administrators. See [Step 2](#step-2-use-the-powerquery-editor-to-format-the-exported-audit-log) for instructions on how to parse the information in the **AuditData**column.
