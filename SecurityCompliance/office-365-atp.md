@@ -7,7 +7,7 @@ ms.date: 03/28/2019
 audience: Admin
 ms.topic: hub-page
 ms.service: O365-seccomp
-localization_priority: Normal
+localization_priority: Priority
 search.appverid:
 - MET150
 - MOE150

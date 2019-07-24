@@ -7,7 +7,7 @@ ms.date: 05/19/2018
 audience: Consumer/IW
 ms.topic: article
 ms.service: O365-seccomp
-localization_priority: Normal
+localization_priority: Priority
 search.appverid:
 - MET150
 - MEW150
