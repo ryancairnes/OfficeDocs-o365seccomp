@@ -27,7 +27,7 @@ Sharing events (excluding sharing policy and sharing link events) are different 
   
 The Sharing schema provides two additional fields in the audit log related to sharing events: 
   
-- **TargetUserOrGroupType:** Identifies whether the target user or group is a Member, Guest, Group, or Partner.
+- **TargetUserOrGroupType:** Identifies whether the target user or group is a Member, Guest, SharePointGroup, SecurityGroup, or Partner.
 
 - **TargetUserOrGroupName:** Stores the UPN or name of the target user or group that a resource was shared with (User B in the previous example). 
 
@@ -59,7 +59,7 @@ When a user (the acting user) wants to share a resource with another user (the t
     
 - Sends a sharing notification to the email address of the target user.
     
-- Logs a **SharingSet** event. This event has a friendly name of "Shared file, folder, or site" in the activities picker in the audit log search tool. See the screenshot in [Step 1](#step-1-search-for-sharing-events-and-export-the-results-to-a-csv-file))
+- Logs a **SharingSet** event. This event has a friendly name of "Shared file, folder, or site" in the activities picker in the audit log search tool. See the screenshot in [Step 1](#step-1-search-for-sharing-events-and-export-the-results-to-a-csv-file). 
     
  If a user account for the target user isn't in the organization's directory, SharePoint does the following: 
   
