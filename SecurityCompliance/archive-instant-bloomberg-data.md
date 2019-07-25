@@ -1,5 +1,5 @@
 ---
-title: "Set up a connector to archive Instant Bloomberg data in Office 365 (Preview)"
+title: "Set up a connector to archive Instant Bloomberg data in Office 365"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -12,9 +12,8 @@ ms.collection: M365-security-compliance
 description: "Administrators can set up a native connector to import data from the Instant Bloomberg chat tool into Office 365. This lets you archive data from third-party data sources in Office 365 so you can use compliance features such as legal hold, content search, and retention policies to manage your organization's third-party data."
 ---
 
-# Set up a connector to archive Instant Bloomberg data in Office 365 (Preview)
+# Set up a connector to archive Instant Bloomberg data in Office 365
 
-The connector feature to archive Instant Bloomberg data in Office 365 is in Preview.
 
 Use a native connector in the Security & Compliance Center in Office 365 to import and archive financial services chat data from [Instant Bloomberg](https://www.bloomberg.com/professional/product/collaboration/) collaboration tool. After you set up and configure a connector, it connects to your organization's Bloomberg secure FTP site (SFTP) once every day, converts the content of chat messages to an email message format, and then imports those items to mailboxes in Office 365.
 
