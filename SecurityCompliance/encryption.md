@@ -20,7 +20,7 @@ description: "With Office 365, your content is encrypted at rest and in transit,
 
 # Encryption in Office 365
 
-Encryption is an important part of your file protection and information protection strategies. Read this article to get an overview of encryption used for all versions of Office 365, and get help with encryption tasks, from setting up encryption for your organization to password-protecting Office documents.
+Encryption is an important part of your file protection and information protection strategy. Read this article to get an overview of encryption used for all versions of Office 365, and get help with encryption tasks, from setting up encryption for your organization to password-protecting Office documents.
   
 - If you're looking for information about certificates and technologies like TLS, see [Technical reference details about encryption in Office 365](technical-reference-details-about-encryption.md).
 
