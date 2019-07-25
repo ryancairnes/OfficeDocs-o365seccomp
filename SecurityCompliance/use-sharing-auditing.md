@@ -55,11 +55,11 @@ Sharing is defined by when a user (the *acting* user) wants to share a resource 
   
 When a user (the acting user) wants to share a resource with another user (the target user), SharePoint (or OneDrive for Business) first checks if the email address of the target user is already associated with a user account in the organization's directory. If the target user is in the organization's directory (and has a corresponding guest user account), SharePoint does the following:
   
--  Immediately assigns the target user permissions to access the resource. 
+-  Immediately assigns the target user permissions to access the resource by adding the target user to the appropriate SharePoint group, and logging the **AddedToGroup** event. 
     
 - Sends a sharing notification to the email address of the target user.
     
-- Logs a **SharingSet** event. This event has a friendly name of "Shared file, folder, or site" in the activities picker in the audit log search tool. See the screenshot in [Step 1](#step-1-search-for-sharing-events-and-export-the-results-to-a-csv-file). 
+- Logs a **SharingSet** event. This event has a friendly name of "Shared file, folder, or site" in the activities picker in the audit log search tool under **Sharing and access request activities**. See the screenshot in [Step 1](#step-1-search-for-sharing-events-and-export-the-results-to-a-csv-file). 
     
  If a user account for the target user isn't in the organization's directory, SharePoint does the following: 
   
@@ -72,7 +72,7 @@ When a user (the acting user) wants to share a resource with another user (the t
    - **SecureLinkCreated**
    - **AddedToSecureLink** 
     
-When the target user accepts the sharing invitation that's sent to them (by clicking the link in the invitation), SharePoint logs a **SharingInvitationAccepted** event and assigns the target user permissions to access the resource. If the target user is sent an anonymous link, the **AnonymousLinkUsed** event is logged after the target user uses the link to access the resource.
+- When the target user accepts the sharing invitation that's sent to them (by clicking the link in the invitation), SharePoint logs a **SharingInvitationAccepted** event and assigns the target user permissions to access the resource. If the target user is sent an anonymous link, the **AnonymousLinkUsed** event is logged after the target user uses the link to access the resource.
 
 Additional information about the target user is also logged, such as the identity of the user that the invitation was sent to and the user who actually accepted the invitation. In some case, these users (or email addresses) could be different. 
 
