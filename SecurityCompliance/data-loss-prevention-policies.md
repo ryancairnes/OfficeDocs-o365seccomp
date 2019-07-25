@@ -9,7 +9,7 @@ ms.topic: conceptual
 f1_keywords:
 - 'ms.o365.cc.DLPLandingPage'
 ms.service: O365-seccomp
-localization_priority: Normal
+localization_priority: Priority
 ms.collection: 
 - M365-security-compliance
 search.appverid: 
