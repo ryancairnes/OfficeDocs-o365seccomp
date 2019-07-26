@@ -135,6 +135,10 @@ Here's the process for searching the audit log in Office 365.
 [Step 3: Filter the search results](#step-3-filter-the-search-results)
 
 [Step 4: Export the search results to a file](#step-4-export-the-search-results-to-a-file)
+
+
+> [!IMPORTANT]
+>  To search and track the use of privilegies for exchange online administrator privilegies use the Cmdlet *Search-AdminAuditLog* over the *Search-UnifiedAuditLog*.
   
 ### Step 1: Run an audit log search
 
