@@ -33,23 +33,23 @@ The Sharing schema provides two additional fields in the audit log related to sh
 
 These two fields, in addition to other properties from the Office 365 audit log schema such as User, Operation, and Date can tell the full story about  *which*  user shared  *what*  resource with  *whom*  and  *when*. 
   
-There's another schema property that's important to the sharing story. When you export audit log search results, the **AuditData** column in the exported CSV file stores information about sharing events. For example, when a user shares a site with another user, this is accomplished by adding the target user to a SharePoint group. The **AuditData** column captures this information to provide context for administrators. See [Step 2](#step-2-use-the-powerquery-editor-to-format-the-exported-audit-log) for instructions on how to parse the information in the **AuditData**column.
+There's another schema property that's important to the sharing story. When you export audit log search results, the **AuditData** column in the exported CSV file stores information about sharing events. For example, when a user shares a site with another user, this is accomplished by adding the target user to a SharePoint group. The **AuditData** column captures this information to provide context for administrators. See [Step 2](#step-2-use-the-powerquery-editor-to-format-the-exported-audit-log) for instructions on how to parse the information in the **AuditData** column.
 
 ## SharePoint sharing events
 
 Sharing is defined by when a user (the *acting* user) wants to share a resource with another user (the *target* user). Sharing a resource with an external user (a user who is outside of your organization and doesn't have a guest account in your organization's Azure Active Directory) is defined by the following events, which are logged in the Office 365 audit log:
 
-- **SharingInvitationCreated:** A user in your organization tried to share resource (likely a site) with an external user. This results in an external sharing invitation sent to the target user. No access to the resource is granted at this point.
+- **SharingInvitationCreated:** A user in your organization tried to share a resource (likely a site) with an external user. This results in an external sharing invitation sent to the target user. No access to the resource is granted at this point.
 
-- **SharingInvitationAccepted:** The external user has accepted the sharing invitation that was sent by the acting user and now has access to the resource.
+- **SharingInvitationAccepted:** The external user has accepted the sharing invitation sent by the acting user and now has access to the resource.
 
-- **AnonymousLinkCreated:** An anonymous link was created for the resource. Because an anonymous link can be created and then copied, it's reasonable to assume that any document with an anonymous link has been shared with a target user.
+- **AnonymousLinkCreated:** An anonymous link is created for a resource. Because an anonymous link can be created and then copied, it's reasonable to assume that any document with an anonymous link has been shared with a target user.
 
-- **AnonymousLinkUsed:** As the name implies, this event is logged when an anonymous link has been used to access a resource. 
+- **AnonymousLinkUsed:** As the name implies, this event is logged when an anonymous link is used to access a resource. 
 
 - **SecureLinkCreated:** A user has created a "specific people link" to share a resource with a specific person. This target user may be someone who is external to your organization.
 
-- **AddedToSecureLink:** A user has been added to a specific people link. This target user may be someone who is external to your organization.
+- **AddedToSecureLink:** A user was added to a specific people link. This target user may be someone who is external to your organization.
 
 ## Sharing auditing work flow
   
@@ -68,8 +68,11 @@ When a user (the acting user) wants to share a resource with another user (the t
 - Logs one of the following events, based on how the resource is shared:
 
    - **SharingInvitationCreated**
+   
    - **AnonymousLinkCreated**
-   - **SecureLinkCreated**
+   
+   -  **SecureLinkCreated**
+   
    - **AddedToSecureLink** 
     
 - When the target user accepts the sharing invitation that's sent to them (by clicking the link in the invitation), SharePoint logs a **SharingInvitationAccepted** event and assigns the target user permissions to access the resource. If the target user is sent an anonymous link, the **AnonymousLinkUsed** event is logged after the target user uses the link to access the resource.
@@ -125,15 +128,18 @@ After you've followed the instructions in the previous step to prepare the CSV f
 3. In the **Sort & Filter** dropdown list on the **Operations** column, clear all selections, then select one or more the following sharing-related events and then click **Ok**.
  
    - **SharingInvitationCreated**
+   
    - **AnonymousLinkCreated**
+   
    - **SecureLinkCreated**
+   
    - **AddedToSecureLink** 
     
     Excel displays the rows for the events you selected.
     
 4. Go to the column named **TargetUserOrGroupType** and select it. 
     
-5. In the **Sort & Filter** dropdown list, clear all selections, then select **TargetUserOrGroupType:Guest**, and click **OK**.
+5. In the **Sort & Filter** dropdown list, clear all selections, then select **TargetUserOrGroupType:Guest**, and click **Ok**.
     
     Now Excel displays the rows for sharing events AND where the target user is outside of your organization, because external users are identified by the value **TargetUserOrGroupType:Guest**. 
   
