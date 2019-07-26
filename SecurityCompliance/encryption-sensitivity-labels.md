@@ -30,7 +30,7 @@ When a document or email is encrypted, access to the content is restricted, so t
 - Remains encrypted no matter where it resides, inside or outside your organization, even if the file’s renamed.
 - Is encrypted both at rest (for example, in a OneDrive account) and in transit (for example, a sent email).
 
-The encryption settings are available when you create a sensitivity label in the Microsoft 365 compliance center, Microsoft 365 security center, or Office 365 Security & Compliance Center.
+The encryption settings are available when you create a sensitivity label in the Microsoft 365 compliance center, Microsoft 365 security center, or Office 365 Security & Compliance Center under **Classification** > **Sensitivity labels**.
 
 ## How encryption works
 
