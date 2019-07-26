@@ -158,7 +158,7 @@
 ### [Fix Error Code 5.7.7xx in Exchange Online](fix-error-code-5-7-7xx-in-exchange-online.md)
 ### [Use mail flow rules to set the spam confidence level (SCL) in messages](use-mail-flow-rules-to-set-the-spam-confidence-level-scl-in-messages.md)
 ### [Submit spam, non-spam, and phishing scam messages to Microsoft for analysis](submit-spam-non-spam-and-phishing-scam-messages-to-microsoft-for-analysis.md)
-### [Admin submissions in Office 365 ATP](atp-admin-submission.md)
+### [Admin submissions in Office 365](admin-submission.md)
 ### [Submitting malware and non-malware to Microsoft for analysis](submitting-malware-and-non-malware-to-microsoft-for-analysis.md)
 ### [Use the delist portal to remove yourself from the Office 365 blocked senders list](use-the-delist-portal-to-remove-yourself-from-the-office-365-blocked-senders-lis.md)
 ### [Anti-spam message headers](anti-spam-message-headers.md)
@@ -372,6 +372,7 @@
 #### [Limits in Advanced eDiscovery](compliance20/limits-ediscovery20.md)
 #### [Supported file types](compliance20/supported-filetypes-ediscovery20.md)
 #### [Document metadata fields](compliance20/document-metadata-fields.md)
+#### [Conversation review sets](compliance20/conversation-review-sets.md)
 #### [Troubleshoot AzCopy](compliance20/troubleshooting-azcopy.md)
 
 
@@ -586,7 +587,6 @@
 ### [Exchange Online Data Resilience](office-365-exchange-data-resiliency.md)
 ### [Malware and Ransomware Protection](office-365-malware-and-ransomware-protection.md)
 ### [Monitoring and Self-Healing](office-365-monitoring-and-self-healing.md)
-### [SharePoint Online Data Resilience](office-365-sharepoint-data-resiliency.md)
 ## [Data Retention, Deletion, and Destruction in Office 365](office-365-data-retention-deletion-and-destruction-overview.md)
 ### [Data Destruction](office-365-data-destruction.md)
 ### [Immutability in Office 365](office-365-data-immutability.md)
