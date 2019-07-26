@@ -73,7 +73,7 @@ The previous applies to content that exists when the retention policy is applied
   
 Note that a user will receive an error if they try to delete a library, list, folder, or site that's subject to a retention policy. A user can delete a folder if they first move or delete any files in the folder that are subject to the policy. Also note that the Preservation Hold library is created only when the first item needs to be copied to the library - not when you create the retention policy. Therefore, to test your policy, you first need to edit or delete a document in a site subject to the policy, and then browse to the Preservation Hold library to view the retained copy.
   
-![Diagram of content lifecycle in SharePoint and OneDrive](Retention_Diagram_of_retention_flow_in_sites.png)
+![Diagram of content lifecycle in SharePoint and OneDrive](media/Retention_Diagram_of_retention_flow_in_sites.png)
   
 After a retention policy is assigned to a OneDrive account or SharePoint site, content can follow one of two paths:
   
