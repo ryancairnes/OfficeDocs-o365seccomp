@@ -169,4 +169,4 @@ To learn more about roles and permissions, see the following resources:
 
  - **Real-Time detection report** is shipped with ATP P1 subscription while **Threat Explorer** comes with ATP P2.
  - **Real-Time detections** report allows you to show up the detections in real-time while threat explorer reports allow you to see more details in a given attack.
- - **Threat Explorer** reports offer different sets of reports that enhance your experience respect **Real-Time Detector** reports.
+ - **Threat Explorer** reports offer different sets of reports that enhance your experience respect **Real-Time Detector** reports. 
