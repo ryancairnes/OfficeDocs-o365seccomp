@@ -118,24 +118,20 @@ Configure custom keyword dictionaries (or lexicons) to provide simple management
 
 #### Offensive language
 
-Monitor sent or received email messages in your organization for offensive language. The model uses a combination of machine learning, artificial intelligence, and keywords to identify inappropriate email messages as part of anti-harassment and cyber bullying monitoring requirements. To prevent or block offensive language for other communications in your organization, create a [data loss prevention policy](create-test-tune-dlp-policy.md) that uses a [custom keyword dictionary](create-a-keyword-dictionary.md) of offensive terms.
+Monitor sent or received email messages in your organization for offensive language. The model uses a combination of machine learning, artificial intelligence, and keywords to identify language in email messages likely to anti-harassment and bullying policies. To prevent or block offensive language for other communications in your organization, create a [data loss prevention policy](create-test-tune-dlp-policy.md) that uses a [custom keyword dictionary](create-a-keyword-dictionary.md) of blocked terms.
 
-The offensive language model currently supports English keywords and monitors the body of email messages. The offensive language model monitors email for sentiment associated with the following types of language:
+The offensive language model currently supports English keywords and monitors the body of email messages. 
+
+Please note that the model does not provide an exhaustive list of offensive language. Further, language and cultural standards continually change, and in light of these realities, Microsoft reserves the right to update the model in its discretion. While the model may assist your organization in monitoring offensive language, the model is not intended to provide your organization’s sole means of monitoring or addressing such language. Your organization, not Microsoft, remains responsible for all decisions related to monitoring and blocking offensive language.
+
+The offensive language model monitors email for sentiment associated with the following types of language:
 
 |**Type**|**Description**|
 |:-----|:-----|
-| **Profanities** | Expressions that are inappropriate and embarrass most people. |
-| **Slurs** | Expressions that attack cultures and ethnicities. |
-| **Taunts** | Expressions that taunt, condemn, and ridicule. |
-| **References to handicaps** | Expressions that target physical or mental handicaps. |
-| **Squalid language** | Expressions that target sexual interests and physical state of cleanliness. |
-| **Homophobia** | Expressions that target sexual preferences. |
-| **Racism** | Expressions that target race and ethnicity. |
-| **Extremism** | Expressions that target religion and political ideologies. |
-| **Disguise** | Expressions for which the meaning or pronunciation is the same as another more offensive term. |
-| **Provocative language** | Expressions that potentially cause anger or violence. |
-| **Taboo** | Expressions generally inappropriate in polite societal communications. |
-| **Unrefined language** | Expressions that lack polite manners and that are potentially harsh and rude. |
+| **Profanities** | Expressions that embarrass most people. |
+| **Slurs** | Expressions that express prejudice against particular groups (e.g., race, ethnicity, sexual orientation, disability). |
+| **Taunts** | Expressions that taunt, condemn, ridicule, or could potentially cause anger or violence. |
+| **Disguised expressions** | Expressions for which the meaning or pronunciation is the same as another more offensive term. |
 
 #### Conditional settings
 
