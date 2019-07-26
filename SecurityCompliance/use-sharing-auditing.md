@@ -19,13 +19,13 @@ description: "Sharing is a key activity in SharePoint Online and OneDrive for Bu
 
 # Use sharing auditing in the Office 365 audit log
 
-Sharing is a key activity in SharePoint Online and OneDrive for Business, and it's widely used in Office 365 organizations. Administrators can use sharing auditing in the Office 365 audit log to determine how sharing is being used in their organization. 
+Sharing is a key activity in SharePoint Online and OneDrive for Business, and it's widely used in Office 365 organizations. Administrators can use sharing auditing in the Office 365 audit log to determine how sharing is used in their organization. 
   
 ## The SharePoint Sharing schema
 
-Sharing events (excluding sharing policy and sharing link events) are different from file- and folder-related events in one primary way: one user is taking an action that has some effect on another user. For example, User A gives User B access to a file. In this example, User A is the  *acting user*  and User B is the  *target user*. In the SharePoint File schema, the acting user's action only affects the file itself. When User A opens a file, the only information needed in the **FileAccessed** event is the acting user. To address this difference, there is a separate schema, called the  *SharePoint Sharing schema*, that captures more information about sharing events. This ensures that administrators have insight into who shared a resource and the user the resource was shared with. 
+Sharing events (not including events related to sharing policy and sharing links) are different from file- and folder-related events in one primary way: one user is performing an action that has an effect on another user. For example, when a resource User A gives User B access to a file. In this example, User A is the  *acting user*  and User B is the  *target user*. In the SharePoint File schema, the acting user's action only affects the file itself. When User A opens a file, the only information needed in the **FileAccessed** event is the acting user. To address this difference, there is a separate schema, called the  *SharePoint Sharing schema*, that captures more information about sharing events. This ensures that administrators have visibility into who shared a resource and the user the resource was shared with. 
   
-The Sharing schema provides two additional fields in the audit log related to sharing events: 
+The Sharing schema provides two additional fields in an audit record related to sharing events: 
   
 - **TargetUserOrGroupType:** Identifies whether the target user or group is a Member, Guest, SharePointGroup, SecurityGroup, or Partner.
 
@@ -37,13 +37,13 @@ There's another schema property that's important to the sharing story. When you 
 
 ## SharePoint sharing events
 
-Sharing is defined by when a user (the *acting* user) wants to share a resource with another user (the *target* user). Sharing a resource with an external user (a user who is outside of your organization and doesn't have a guest account in your organization's Azure Active Directory) is defined by the following events, which are logged in the Office 365 audit log:
+Sharing is defined by when a user (the *acting* user) wants to share a resource with another user (the *target* user). Audit records related to sharing a resource with an external user (a user who is outside of your organization and doesn't have a guest account in your organization's Azure Active Directory) are identified by the following events, which are logged in the Office 365 audit log:
 
 - **SharingInvitationCreated:** A user in your organization tried to share a resource (likely a site) with an external user. This results in an external sharing invitation sent to the target user. No access to the resource is granted at this point.
 
 - **SharingInvitationAccepted:** The external user has accepted the sharing invitation sent by the acting user and now has access to the resource.
 
-- **AnonymousLinkCreated:** An anonymous link (also called an "Anyone" link) is created for a resource. Because an anonymous link can be created and then copied, it's reasonable to assume that any document with an anonymous link has been shared with a target user.
+- **AnonymousLinkCreated:** An anonymous link (also called an "Anyone" link) is created for a resource. Because an anonymous link can be created and then copied, it's reasonable to assume that any document that has an anonymous link has been shared with a target user.
 
 - **AnonymousLinkUsed:** As the name implies, this event is logged when an anonymous link is used to access a resource. 
 
@@ -53,7 +53,7 @@ Sharing is defined by when a user (the *acting* user) wants to share a resource 
 
 ## Sharing auditing work flow
   
-When a user (the acting user) wants to share a resource with another user (the target user), SharePoint (or OneDrive for Business) first checks if the email address of the target user is already associated with a user account in the organization's directory. If the target user is in the organization's directory (and has a corresponding guest user account), SharePoint does the following:
+When a user (the acting user) wants to share a resource with another user (the target user), SharePoint (or OneDrive for Business) first checks if the email address of the target user is already associated with a user account in the organization's directory. If the target user is in the directory (and has a corresponding guest user account), SharePoint does the following things:
   
 -  Immediately assigns the target user permissions to access the resource by adding the target user to the appropriate SharePoint group, and logs an **AddedToGroup** event. 
     
@@ -61,13 +61,13 @@ When a user (the acting user) wants to share a resource with another user (the t
     
 - Logs a **SharingSet** event. This event has a friendly name of "Shared file, folder, or site" under **Sharing and access request activities** in the activities picker of the audit log search tool. See the screenshot in [Step 1](#step-1-search-for-sharing-events-and-export-the-results-to-a-csv-file). 
     
-If a user account for the target user isn't in the organization's directory, SharePoint does the following: 
+If a user account for the target user isn't in the directory, SharePoint does the following: 
     
    - Logs one of the following events, based on how the resource is shared:
    
       - **AnonymousLinkCreated**
    
-      -  **SecureLinkCreated**
+      - **SecureLinkCreated**
    
       - **AddedToSecureLink** 
 
@@ -75,7 +75,7 @@ If a user account for the target user isn't in the organization's directory, Sha
     
    - When the target user accepts the sharing invitation that's sent to them (by clicking the link in the invitation), SharePoint logs a **SharingInvitationAccepted** event and assigns the target user permissions to access the resource. If the target user is sent an anonymous link, the **AnonymousLinkUsed** event is logged after the target user uses the link to access the resource. For secure links, a **FileAccessed** event is logged when an external user uses the link to access the resource.
 
-Additional information about the target user is also logged, such as the identity of the user that the invitation was sent to and the user who actually accepted the invitation. In some case, these users (or email addresses) could be different. 
+Additional information about the target user is also logged, such as the identity of the user that the invitation is to and the user who actually accepts the invitation. In some case, these users (or email addresses) can be different. 
 
 ## How to identify resources shared with external users
 
