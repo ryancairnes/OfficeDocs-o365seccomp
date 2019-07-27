@@ -230,7 +230,7 @@ Now let's demonstrate access using the Lead Designer user account:
     
 11. On the new **ProjectX-Documents** tab in your browser, click **New > Word document**.
     
-12. Type some text in the **Word Online** page, wait for the status to indicate **Saved**, click the back button on your browser, and then refresh the page. You should see a new **Document.docx** in the **Documents** folder.
+12. Type some text on the page, wait for the status to indicate **Saved**, click the back button on your browser, and then refresh the page. You should see a new **Document.docx** in the **Documents** folder.
     
 13. Click the ellipsis for the **Document.docx** document, and then click **Get a link**.
     

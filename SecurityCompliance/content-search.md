@@ -6,7 +6,7 @@ manager: laurawi
 audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
-localization_priority: Normal
+localization_priority: Priority
 ms.collection: 
 - Strat_O365_IP
 - M365-security-compliance
@@ -102,7 +102,7 @@ To clear the results or create another search, click ![Add icon](media/O365-MDM-
   
 ## Preview search results
 
-There are two configuration settings for previewing search results. After you run a new a new search or open an existing search, click ** Individual results ** to view the following preview settings: 
+There are two configuration settings for previewing search results. After you run a new search or open an existing search, click ** Individual results ** to view the following preview settings: 
   
 ![Preview search results settings](media/83519477-1c85-4442-8886-481f186fd758.png)
   
