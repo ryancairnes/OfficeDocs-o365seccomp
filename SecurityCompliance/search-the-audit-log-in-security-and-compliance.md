@@ -137,8 +137,7 @@ Here's the process for searching the audit log in Office 365.
 [Step 4: Export the search results to a file](#step-4-export-the-search-results-to-a-file)
 
 
-> [!IMPORTANT]
->  To search and track the use of privilegies for exchange online administrator privilegies use the Cmdlet *Search-AdminAuditLog* over the *Search-UnifiedAuditLog*.
+
   
 ### Step 1: Run an audit log search
 
@@ -783,6 +782,9 @@ Here are some tips for searching for activity in the Exchange admin audit log:
 - To get information about what cmdlet was run, which parameters and parameter values were used, and what objects were affected, you will have to export the search results and select the **Download all results** option. 
     
 - You can also view events in the Exchange admin audit log by using the Exchange admin center. For instructions, see [View the administrator audit log](https://technet.microsoft.com/library/dn342832%28v=exchg.150%29.aspx).
+
+> [!IMPORTANT]
+>  To search and track the use of exchange online administrator privilegies use the Cmdlet *Search-AdminAuditLog* over the *Search-UnifiedAuditLog*.
   
 ## Frequently asked questions
 
