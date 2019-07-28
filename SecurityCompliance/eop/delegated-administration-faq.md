@@ -38,6 +38,6 @@ A. Office 365 does not currently have this capability.
   
  **Q. Can I get consolidated reporting across all of my sub-tenants?**
   
-A. Consolidated reporting across the companies you manage is not available for the Micrsoft 365 admin center reports at this time. However, this can be done via remote Windows PowerShell or the [reporting web service](https://go.microsoft.com/fwlink/?LinkId=279926). 
+A. Consolidated reporting across the companies you manage is not available for the Microsoft 365 admin center reports at this time. However, this can be done via remote Windows PowerShell or the [reporting web service](https://go.microsoft.com/fwlink/?LinkId=279926). 
   
 
