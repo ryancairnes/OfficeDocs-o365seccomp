@@ -1,7 +1,7 @@
 ---
 title: "Create custom sensitive information types with Exact Data Match"
-ms.author: deniseb
-author: denisebmsft
+ms.author: chrfox
+author: chrfox
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -61,18 +61,20 @@ Setting up and configuring EDM-based classification involves saving sensitive da
 
 ### Define the schema for your database of sensitive information
 
-1. Identify the sensitive information you want to use. Export the data to an app, such as Microsoft Excel, and save the file in .csv format. The data file can include:
+1. Identify the sensitive information you want to use. Export the data to an app, such as Microsoft Excel, and save the file in .csv format. The data file can include a maximum of:
 
     - Up to 10 million rows of sensitive data
     - Up to 32 columns (fields) per data source
+    - Up to 5 columns (fields) marked as searchable
 
 2. Structure the sensitive data in the .csv file such that the first row includes the names of the fields used for EDM-based classification. In your .csv file, you might have field names, such as "ssn", "birthdate", "firstname", "lastname", and so on. As an example, our .csv file is called *PatientRecords.csv*, and its columns include *PatientID*, *MRN*, *lastname*, *FirstName*, *SSN* and more.
 
 3. Define the schema for the database of sensitive information in .xml format (similar to our example below). Name this schema file `edm.xml`, and configure it such that for each column in the database, there is a line that uses the syntax `<Field name="" unique="" searchable=""/>`. 
 
     - Use column names for *Field name* values.
-    - Use *unique="true"* for the fields that contain unique values (Social Security numbers, identification numbers, etc.); otherwise, use *unique="false"*.
-    - Use *searchable="true"* for the fields that you want to be searchable. Do not specify more than five fields per database to be searchable. All the rest should have *searchable="false"*.  
+    - Use *searchable="true"* for the fields that you want to be searchable up to a maximum of 5 fields. You must designate one field as searchable. 
+     
+
 
     As an example, the following .xml file defines the schema for a patient records database, with five fields specified as searchable: *PatientID*, *MRN*, *SSN*, *Phone*, and *DOB*. 
     
@@ -81,15 +83,15 @@ Setting up and configuring EDM-based classification involves saving sensitive da
     ```<?xml version="1.0" encoding="utf-8"?>
     <EdmSchema xmlns="http://schemas.microsoft.com/office/2018/edm">
     	<DataStore name="PatientRecords" description="Schema for patient records" version="1">
-    		<Field name="PatientID" unique="false" searchable="true" />
-    		<Field name="MRN" unique="false" searchable="true" />
-    		<Field name="FirstName" unique="false" searchable="false" />
-    		<Field name="LastName" unique="false" searchable="false" />
-    		<Field name="SSN" unique="false" searchable="true" />
-    		<Field name="Phone" unique="false" searchable="true" />
-    		<Field name="DOB" unique="false" searchable="true" />
-    		<Field name="Gender" unique="false" searchable="false" />
-    		<Field name="Address" unique="false" searchable="false" />
+    		<Field name="PatientID" searchable="true" />
+    		<Field name="MRN" searchable="true" />
+    		<Field name="FirstName" />
+    		<Field name="LastName" />
+    		<Field name="SSN" searchable="true" />
+    		<Field name="Phone" searchable="true" />
+    		<Field name="DOB" searchable="true" />
+    		<Field name="Gender" />
+    		<Field name="Address" />
     	</DataStore>
     </EdmSchema>
     ```
@@ -111,6 +113,9 @@ Setting up and configuring EDM-based classification involves saving sensitive da
 
     > [!TIP]
     > If you want your changes to occur without confirmation, in Step 5, use this cmdlet instead: `New-DlpEdmSchema -FileData $edmSchemaXml`
+
+    > [!NOTE]
+    > It can take between 10-60 minutes to update the EDMSchema with additions. The update must complete before you execute steps that use the additions.
     
 Now that the schema for your database of sensitive information is defined, the next step is to set up a rule package. Proceed to the section [Set up a rule package](#set-up-a-rule-package).
 
@@ -137,6 +142,8 @@ Now that the schema for your database of sensitive information is defined, the n
 
     > [!TIP]
     > If you want your changes to occur without confirmation, in Step 3, use this cmdlet instead: `Set-DlpEdmSchema -FileData $edmSchemaXml`
+    > [!NOTE]
+    > It can take between 10-60 minutes to update the EDMSchema with additions. The update must complete before you execute steps that use the additions.
 
 #### Removing the schema for EDM-based classification
 
