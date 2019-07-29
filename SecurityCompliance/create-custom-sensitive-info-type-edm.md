@@ -248,8 +248,8 @@ Now that the schema for your database of sensitive information is defined, the n
 
 At this point, you have set up EDM-based classification. The next step is to index the sensitive data, and then upload the indexed data.
 
->    [!NOTE] 
->    It can take between 10-60 minutes to update the EDMSchema with additions. The update must complete before you execute steps that use the additions.
+>[!NOTE] 
+>It can take between 10-60 minutes to update the EDMSchema with additions. The update must complete before you execute steps that use the additions.
 
 ## Part 2: Index and upload the sensitive data
 
