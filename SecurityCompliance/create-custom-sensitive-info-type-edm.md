@@ -185,7 +185,20 @@ Now that the schema for your database of sensitive information is defined, the n
     - The idMatch value references a searchable field that is listed in the database schema file: **idMatch matches = "SSN"**.
     - The classification value references an existing or custom sensitive information type: **classification = "U.S. Social Security Number (SSN)"**. (In this case, we use the existing sensitive information type of U.S. Social Security Number.)
 
-    When you set up your rule package, make sure to correctly reference your .csv file and edm.xml file. (You can copy, modify, and use our example.) 
+    When you set up your rule package, make sure to correctly reference your .csv file and edm.xml file. You can copy, modify, and use our example. In this sample xml the following fields needs to be customized to create a EDM sensitive type:
+    -	**RulePack id & ExactMatch id**: Use [New-GUID](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/new-guid?view=powershell-6) to generate a GUID.
+    -	**Datastore**: This filed specifies EDM lookup data to be used. You provide a data source name of a configured EDM Schema.
+    -	**idMatch**: This filed points to the primary element for EDM.
+        - Matches: Specifies the field to be used in exact lookup. You provide a searchable field name in EDM Schema for the DataStore.
+        - Classification:  This field specifies the regex match that triggers EDM lookup. You provide Name or GUID existing built-in or custom classification.
+    -	**Match**
+        - Matches: You provide any field name in EDM Schema for DataStore.
+    -	**Resource**
+        - idRef: You provide GUID for ExactMatch id.
+        - Name & descriptions: customize as required.
+
+
+ 
 
     ```<?xml version="1.0" encoding="utf-8"?>
     <RulePackage xmlns="http://schemas.microsoft.com/office/2018/edm">
@@ -233,7 +246,10 @@ Now that the schema for your database of sensitive information is defined, the n
 
     `New-DlpSensitiveInformationTypeRulePackage -FileData $rulepack`
 
-At this point, you have set up EDM-based classification. The next step is to index the sensitive data, and then upload the indexed data. 
+At this point, you have set up EDM-based classification. The next step is to index the sensitive data, and then upload the indexed data.
+
+>    [!NOTE] 
+>    It can take between 10-60 minutes to update the EDMSchema with additions. The update must complete before you execute steps that use the additions.
 
 ## Part 2: Index and upload the sensitive data
 
