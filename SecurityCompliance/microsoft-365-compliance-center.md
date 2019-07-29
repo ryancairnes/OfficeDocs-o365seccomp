@@ -1,7 +1,7 @@
 ---
 title: Overview of the new Microsoft 365 compliance center
-ms.author: deniseb
-author: denisebmsft
+ms.author: chrfox
+author: chrfox
 manager: laurawi
 ms.date: 05/29/2019
 audience: ITPro

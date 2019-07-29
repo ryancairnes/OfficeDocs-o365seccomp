@@ -1,7 +1,7 @@
 ---
 title: "What the DLP policy templates include"
-ms.author: deniseb
-author: denisebmsft
+ms.author: chrfox
+author: chrfox
 manager: laurawi
 ms.date: 6/29/2018
 audience: Admin
