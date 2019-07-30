@@ -1,9 +1,9 @@
 ---
 title: "View email security reports in the Security &amp; Compliance Center"
-ms.author: deniseb
-author: denisebmsft
-manager: dansimp
-ms.date: 05/21/2019
+ms.author: chrfox
+author: chrfox
+manager: laurawi
+ms.date: 07/30/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
