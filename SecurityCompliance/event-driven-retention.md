@@ -98,10 +98,10 @@ Note that once you choose an event type and create the label, the event type can
   
 ### Step 3: Publish or auto-apply the label
 
-Just like any label, you need to publish or auto-apply an event-based label, so that it's manually or automatically applied to content. You can do this on the **Labels** or **Label policies** page. 
+Just like any label, you need to publish or auto-apply an event-based label, so that it's manually or automatically applied to content. You can do this under **Classification** > **Retention labels** page.
   
-![Options to publish or auto-apply a label](media/c9232c54-bbc0-40d2-abc2-122d5d1e70af.png)
-  
+![Options to publish or auto-apply retention label](media/options-to-publish-auto-apply-retention-label.png)
+
 ### Step 4: Enter an asset ID
 
 After an event-driven label is applied to content, you can enter an asset ID for each item. For example, your organization might use:
