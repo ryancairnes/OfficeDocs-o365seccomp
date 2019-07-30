@@ -60,7 +60,7 @@ As part of AIR, security playbooks are rolling out in phases
     - Manual e-mail investigations (using Threat Explorer)
 
 - **Phase 2 (second half of 2019)**: Several new playbooks and playbook improvements: 
-    - Compromised user account
+    - Compromised user account (this is the first of new playbooks in Phase 2)
     - The option for security administrators to configure security playbooks to take some actions automatically without administrative interaction
 
 ### Playbooks include investigation and recommendations
