@@ -25,7 +25,7 @@ AIR features are now generally available and are included in [Office 365 Advance
 
 [Alerts](alert-policies.md#viewing-alerts) represent triggers for security operations team workflows for incident response. Prioritizing the right set of alerts for investigation, while making sure no threats are unaddressed is challenging. When investigations into alerts are performed manually, Security Operations teams must hunt and correlate entities (e.g. content, devices and users) at risk from threats. Such tasks and workflows are very time consuming and involve multiple tools and systems. With AIR, investigation and response are automated into key security and threat management alerts that trigger your security response playbooks automatically. 
 
-In the initial release of AIR in April 2019, alerts generated from following single events alert policies will be auto-investigated. 
+In the initial release of AIR (beginning April 2019), alerts generated from following single events alert policies are auto-investigated. 
 
 1. A potentially malicious URL click was detected
 2. Email reported by user as phish*
@@ -37,7 +37,7 @@ In the initial release of AIR in April 2019, alerts generated from following sin
 
 To view alerts, in the Security & Compliance Center, choose **Alerts** > **View alerts**. Select an alert to view its details, and from there, use the **View investigation** link to go to the corresponding [investigation](#investigation-graph). Note that informational alerts are hidden in the alert view by default. To see them, you need to change the alert filtering to include informational alerts.
 
-If your organization manages your security alerts through a alert management system, service management system, or Security Information and Event Management (SIEM) system, you can send Office 365 alerts to that system via either email notification or via the [Office 365 Management Activity API](https://docs.microsoft.com/office/office-365-management-api/office-365-management-activity-api-reference). The investigation alert notifications via email or API will include links to access the alerts in the Security & Compliance Center, enabling the assigned security administrator to navigate quickly to the investigation.
+If your organization manages your security alerts through a alert management system, service management system, or Security Information and Event Management (SIEM) system, you can send Office 365 alerts to that system via either email notification or via the [Office 365 Management Activity API](https://docs.microsoft.com/office/office-365-management-api/office-365-management-activity-api-reference). The investigation alert notifications via email or API include links to access the alerts in the Security & Compliance Center, enabling the assigned security administrator to navigate quickly to the investigation.
 
 ![Alerts that link to investigations](media/air-alerts-page-details.png) 
 
@@ -52,7 +52,7 @@ The security playbooks you'll get with AIR are designed to tackle the most frequ
 
 As part of AIR, security playbooks are rolling out in phases
 
-- **Phase 1 (April 2019)**: Playbooks include recommendations for actions that security administrators review and approve. Phase 1 will include the following playbooks:
+- **Phase 1 (April 2019)**: Playbooks include recommendations for actions that security administrators review and approve. Phase 1 includes the following playbooks:
     - User-reported phish message
     - URL click verdict change 
     - Malware detected post-delivery (Malware ZAP)
@@ -129,7 +129,7 @@ To access your investigations, as an Office 365 global administrator, security a
 
 ![AIR widgets](media/air-widgets.png)
 
-Your AIR widgets will appear across the top of the [Security Dashboard](security-dashboard.md). Select a widget to get started.
+Your AIR widgets appear across the top of the [Security Dashboard](security-dashboard.md). Select a widget to get started.
 
 You may also access an investigation directly from the related Alerts.
 
@@ -144,14 +144,14 @@ You can:
 - Apply filters. Choose from **Investigation Type**, **Time range**, **Status**, or a combination of these.
 - Export the data to a CSV file.
 
-The investigation status indicates the progress of the analysis and actions. As the investigation runs, the status will change to indicate whether threats were found, as well as indicate whether actions have been approved. 
+The investigation status indicates the progress of the analysis and actions. As the investigation runs, status changes to indicate whether threats were found, and whether actions have been approved. 
 - **Starting**: The investigation is queued to begin soon
-- **Running**: The investigation has started and is conducting its' analysis
-- **No Threats Found**: The investigation has completed its' analysis and no threats were found
+- **Running**: The investigation has started and is conducting its analysis
+- **No Threats Found**: The investigation has completed its analysis and no threats were found
 - **Terminated By System**: The investigation was not closed and expired after 7 days
 - **Pending Action**: The investigation found threats with actions recommended
 - **Threats Found**: The investigation found threats, but the threats do not have actions available within AIR
-- **Remediated**: The investgation finished and was fully remediated (all actions were approved)
+- **Remediated**: The investigation finished and was fully remediated (all actions were approved)
 - **Partially Remediated**: The investigation finished and some of the recommended actions were approved
 - **Terminated By User**: An admin terminated the investigation
 - **Failed**: An error occurred during the investigation that prevented it from reaching a conclusion on threats
@@ -191,19 +191,19 @@ Given the sheer volume of email that users in an organization send and receive, 
 
 can take many hours. AIR now automates this process, saving your organization's security team time and effort. 
 
-Two different types of email clusters may be identified during the email analysis step: similarity clusters, and indicator clusters. 
-- Similarity clusters are email messages that contain similar sender and content attributes. These clusters are evaluated for malicious content based on the original detection findings. Email clusters that contain enough malicious detections will be considered malicious.
-- Indicator clusters are email messages that contain the same indicator entity (file hash or URL) from the original email. When the original file/URL entity is identified as malicious, AIR will apply the indicator verdict to the entire cluster of email messages containing that entity. As a file identified as malware will mean that the cluster of email messages containing that file will be treated as malware email messages.
+Two different types of email clusters may be identified during the email analysis step: similarity clusters and indicator clusters. 
+- Similarity clusters are email messages that contain similar sender and content attributes. These clusters are evaluated for malicious content based on the original detection findings. Email clusters that contain enough malicious detections are considered malicious.
+- Indicator clusters are email messages that contain the same indicator entity (file hash or URL) from the original email. When the original file/URL entity is identified as malicious, AIR applies the indicator verdict to the entire cluster of email messages containing that entity. As a file identified as malware means that the cluster of email messages containing that file are treated as malware email messages.
 
 The goal of clustering is to find other related email messages that are sent by the same sender as part of an attack or a campaign.
 
-The **Email** tab will also show email items related to the investigation, such as the user-reported email details, the original email reported, the email message(s) zapped due to malware/phish, etc.
+The **Email** tab also shows email items related to the investigation, such as the user-reported email details, the original email reported, the email message(s) zapped due to malware/phish, etc.
 
-The email count identified on the email tab currently represents the sum total of all email messages shown on the **Email** tab. Since email messages will be present in multiple clusters, the actual total count of email messages identified (and affected by remediation actions) will be the count of unique email messages present across all of the clusters and original recipients' email messages. 
+The email count identified on the email tab currently represents the sum total of all email messages shown on the **Email** tab. Because email messages are present in multiple clusters, the actual total count of email messages identified (and affected by remediation actions) is the count of unique email messages present across all of the clusters and original recipients' email messages. 
 
-Both Explorer and AIR count email messages on a per recipient basis, since the security verdicts, actions, and delivery locations will vary on a per recipient basis. Thus an original email sent to three users will count as a total of three email messages instead of one email. Note there may be cases where an email gets counted two or more times, since the email may have multiple actions on it and there may be multiple copies of the email once all actions occur. For example a malware email that is detected at delivery may result in both a blocked (quarantined) email and a replaced email (threat file replaced with an warning file, then delivered to user's mailbox). Since there are literally two copies of the email in the system - these may both be counted in cluster counts. 
+Both Explorer and AIR count email messages on a per recipient basis, since the security verdicts, actions, and delivery locations vary on a per recipient basis. Thus an original email sent to three users count as a total of three email messages instead of one email. Note there may be cases where an email gets counted two or more times, since the email may have multiple actions on it and there may be multiple copies of the email once all actions occur. For example a malware email that is detected at delivery may result in both a blocked (quarantined) email and a replaced email (threat file replaced with an warning file, then delivered to user's mailbox). Since there are literally two copies of the email in the system - these may both be counted in cluster counts. 
 
-Email counts are calculated at the time of the investigation and some counts are re-calculated when you open investigation flyouts (based on an underlying query). The email counts shown for the email clusters on the email tab and the email quantity value shown on cluster flyout are calculated at the time of investigation. The email count shown at the bottom of the email tab of the cluster flyout, as well as the count of email messages shown in Explorer will reflect email messages received after the investigation's initial analysis. Thus an email cluster that shows an original quantity of 10 email messages would show an email list total of 15 when 5 more email messages arrive between the investigation analysis phase and when the admin reviews the investigation. Showing both counts in different views is done to indicate the email impact at the time of investigation and the current impact up until the time that remediation is run.
+Email counts are calculated at the time of the investigation and some counts are re-calculated when you open investigation flyouts (based on an underlying query). The email counts shown for the email clusters on the email tab and the email quantity value shown on cluster flyout are calculated at the time of investigation. The email count shown at the bottom of the email tab of the cluster flyout, and the count of email messages shown in Explorer reflect email messages received after the investigation's initial analysis. Thus an email cluster that shows an original quantity of 10 email messages would show an email list total of 15 when 5 more email messages arrive between the investigation analysis phase and when the admin reviews the investigation. Showing both counts in different views is done to indicate the email impact at the time of investigation and the current impact up until the time that remediation is run.
 
 As an example, consider the following scenario. The first cluster of three email messages were deemed to be phish. Another cluster of similar messages with the same IP and subject was found and considered malicious, as some of them were identified as phish during initial detection. 
 
@@ -220,7 +220,7 @@ You can:
 
 ### User investigation
 
-On the **Users** tab, you can see all the users identified as part of the investigation. Users will appear in the investigation when there is an event or indication that the user may be affected or compromised.
+On the **Users** tab, you can see all the users identified as part of the investigation. User accounts appear in the investigation when there is an event or indication that those user accounts might be affected or compromised.
 
 For example, in the following image, AIR has identified indicators of compromise and anomalies based on a new inbox rule that was created. Additional details (evidence) of the investigation are available through detailed views within this tab. Indicators of compromise and anomalies may also include anomaly detections from [Microsoft Cloud App Security](https://docs.microsoft.com/cloud-app-security).
 
@@ -272,7 +272,7 @@ You can:
 
 On the **Actions** tab, you can see all the playbook actions that are recommended for remediation after the investigation has completed. 
 
-Actions capture the steps Microsoft recommends you take at the end of a investigation. You can take remediation actions here by selecting one or more actions. Clicking **Approve** will allow remediation to begin. (Appropriate permissions are needed - the 'Search And Purge' role is required to run actions from Explorer and AIR). For example, a Security Reader can view actions but not approve them. Note - you do not have to approve every action. If you do not agree with the recommended action or your organization does not choose certain types of actions - then you can either choose to **Reject** the actions or simply ignore them and take no action. Approving and/or rejecting all actions will let the investigation fully close, while leaving some actions incomplete will result in the investigation status changing to a partially remediated state.
+Actions capture the steps Microsoft recommends you take at the end of a investigation. You can take remediation actions here by selecting one or more actions. Clicking **Approve** allows remediation to begin. (Appropriate permissions are needed - the 'Search And Purge' role is required to run actions from Explorer and AIR). For example, a Security Reader can view actions but not approve them. Note - you do not have to approve every action. If you do not agree with the recommended action or your organization does not choose certain types of actions - then you can either choose to **Reject** the actions or simply ignore them and take no action. Approving and/or rejecting all actions let the investigation fully close, while leaving some actions incomplete results in the investigation status changing to a partially remediated state.
 
 ![AIR investigations action page](media/air-investigationactionspage.png)
 
@@ -285,11 +285,11 @@ You can:
 
 ## How to get AIR
 
-Currently, Office 365 AIR features are in preview. When generally available, Office 365 AIR features will be included in the following subscriptions:
+Office 365 AIR are included in the following subscriptions:
 
 - Microsoft 365 Enterprise E5
 - Office 365 Enterprise E5
 - Microsoft Threat Protection
 - Office 365 Advanced Threat Protection Plan 2
 
-To learn more about feature availability, visit the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap).
+To learn more about feature availability, visit the [Feature availability across Advanced Threat Protection (ATP) plans](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#feature-availability-across-advanced-threat-protection-atp-plans).
