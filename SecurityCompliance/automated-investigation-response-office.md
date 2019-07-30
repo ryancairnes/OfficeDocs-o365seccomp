@@ -3,7 +3,7 @@ title: "Automated Investigation and Response (AIR) with Office 365"
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
-ms.date: 06/25/2019
+ms.date: 07/30/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -17,9 +17,9 @@ description: "Learn about Automated Investigation and Response capabilities in O
 
 # Automated Investigation and Response (AIR) with Office 365
 
-Automated Investigation and Response (AIR) (currently in public preview as one of many [Office 365 Threat investigation and response capabilities](office-365-ti.md)) enables you to run automated investigation and remediation to well-known threats that exist today. Read this article to get an overview of AIR and how it can help your organization and security operations teams mitigate threats more effectively and efficiently. 
+Automated Investigation and Response (AIR) (included in [Office 365 Threat investigation and response](office-365-ti.md)) enables you to run automated investigation and remediation to well-known threats that exist today. Read this article to get an overview of AIR and how it can help your organization and security operations teams mitigate threats more effectively and efficiently. 
 
-To learn more about when  AIR features will be available, see the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap).
+AIR features are now generally available and are included in [Office 365 Advanced Threat Protection Plan 2](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#feature-availability-across-advanced-threat-protection-atp-plans).
 
 ## Alerts
 
@@ -59,7 +59,9 @@ As part of AIR, security playbooks are rolling out in phases
     - Phish detected post-delivery ZAP (Phish ZAP)
     - Manual e-mail investigations (using Threat Explorer)
 
-- **Phase 2 (second half of 2019)**: Several new playbooks and playbook improvements, plus the option for security administrators to configure security playbooks to take some actions automatically without administrative interaction. 
+- **Phase 2 (second half of 2019)**: Several new playbooks and playbook improvements: 
+    - Compromised user 
+    - The option for security administrators to configure security playbooks to take some actions automatically without administrative interaction
 
 ### Playbooks include investigation and recommendations
 
