@@ -26,7 +26,7 @@ description: "Set up Safe Links policies to protect your organization from malic
   
 [New features are continually being added to ATP](office-365-atp.md#new-features-in-office-365-atp). As new features are added, you may need to make adjustments to your existing ATP Safe Links policies.
 
-## What to do 
+## What to do
   
 1. Review the prerequisites.
     
