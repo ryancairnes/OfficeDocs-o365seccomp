@@ -3,7 +3,7 @@ title: "Automated Investigation and Response (AIR) with Office 365"
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
-ms.date: 07/30/2019
+ms.date: 08/01/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -59,9 +59,9 @@ As part of AIR, security playbooks are rolling out in phases
     - Phish detected post-delivery ZAP (Phish ZAP)
     - Manual e-mail investigations (using Threat Explorer)
 
-- **Phase 2 (second half of 2019)**: Several new playbooks and playbook improvements: 
-    - Compromised user account (this is the first of new playbooks in Phase 2)
-    - The option for security administrators to configure security playbooks to take some actions automatically without administrative interaction
+- **Phase 2 (second half of 2019)**: New playbook and playbook improvements: 
+    - Compromised user account (this is a new playbook in Phase 2)
+    - Enchancements to Phase 1 playbooks
 
 ### Playbooks include investigation and recommendations
 
