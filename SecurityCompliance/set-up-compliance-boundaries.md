@@ -184,7 +184,7 @@ Search permissions filters also let you control where content is routed for expo
   
     |**Parameter value**|**Datacenter location**|
     |:-----|:-----|
-    |NAM  <br/> |North American (actual datacenters are in the US)  <br/> |
+    |NAM  <br/> |North American (datacenters are in the US)  <br/> |
     |EUR  <br/> |Europe  <br/> |
     |APC  <br/> |Asia Pacific  <br/> |
     |CAN <br/> |Canada
@@ -200,7 +200,7 @@ Search permissions filters also let you control where content is routed for expo
     |APC  <br/> |Asia Pacific  <br/> |
     |CAN  <br/> |US  <br/> |
     |AUS  <br/> |Asia Pacific  <br/> |
-    |KOR  <br/> |The organization's default data center  <br/> |
+    |KOR  <br/> |The organization's default datacenter  <br/> |
     |GBR  <br/> |Europe  <br/> |
     |JPN  <br/> |Asia Pacific  <br/> |
     |IND  <br/> |Asia Pacific  <br/> |
