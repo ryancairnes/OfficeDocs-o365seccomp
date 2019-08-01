@@ -3,7 +3,7 @@ title: "Deploy an isolated SharePoint Online team site"
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 05/14/2018
+ms.date: 07/30/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
