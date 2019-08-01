@@ -178,7 +178,7 @@ Keep the following limitations in mind when managing eDiscovery cases and invest
 
 Search permissions filters also let you control where content is routed for export and which datacenter can be searched when searching content locations in a [SharePoint Multi-Geo environment](https://go.microsoft.com/fwlink/?linkid=860840).
   
-- **Export search results** - You can export the search results from Exchange mailboxes, SharePoint sites, and OneDrive accounts from a specific datacenter. This means that you can specify the datacenter location that search results will be exported from.
+- **Export search results:** You can export the search results from Exchange mailboxes, SharePoint sites, and OneDrive accounts from a specific datacenter. This means that you can specify the datacenter location that search results will be exported from.
 
     Use the **Region** parameter for **New-ComplianceSecurityFilter** or **Set-ComplianceSecurityFilter** cmdlets to create or change which datacenter the export will be routed through.
   
@@ -187,13 +187,14 @@ Search permissions filters also let you control where content is routed for expo
     |NAM  <br/> |North American (datacenters are in the US)  <br/> |
     |EUR  <br/> |Europe  <br/> |
     |APC  <br/> |Asia Pacific  <br/> |
-    |CAN <br/> |Canada
+    |CAN <br/> |Canada|
+    |||
     
-- **Route content searches** - You can route the content searches of SharePoint sites and OneDrive accounts to a satellite data center. This means you can specify the datacenter location where searches will be run.
+- **Route content searches:** You can route the content searches of SharePoint sites and OneDrive accounts to a satellite data center. This means you can specify the datacenter location where searches will be run.
     
-    Use the following values for the **Region** parameter values to control which datacenter that Content Searches will run in when searching SharePoint sites and OneDrive locations. Note that the following table also shows which datacenter exports will be routed through. 
+    Use the following values for the **Region** parameter values to control which datacenter that Content Searches will run in when searching SharePoint sites and OneDrive locations. 
   
-    |**Parameter value**|**Datacenter routing locations for export**|
+    |**Parameter value**|**Datacenter routing locations for SharePoint**|
     |:-----|:-----|
     |NAM  <br/> |US  <br/> |
     |EUR  <br/> |Europe  <br/> |
@@ -205,9 +206,13 @@ Search permissions filters also let you control where content is routed for expo
     |JPN  <br/> |Asia Pacific  <br/> |
     |IND  <br/> |Asia Pacific  <br/> |
     |LAM  <br/> |US  <br/> |
+    |||
    
-> [!NOTE]
-> If you don't specify the **Region** parameter for a search permissions filter, the organizations default SharePoint region will be searched, then search results are exported to the closest datacenter. 
+
+   If you don't specify the **Region** parameter for a search permissions filter, the organization's default SharePoint region will be searched, then search results are exported to the closest datacenter.
+
+> [!TIP]
+> To simplify the concept, the **Region** parameter controls the datacenter that is used to search for content in SharePoint and OneDrive. This doesn't apply to searching for content in Exchange because Exchange content searches aren't bound by the geographic location of datacenters. Also, the same **Region** parameter value may also dictate the datacenter that exports are routed through. This is often necessary to control the movement of data across geographic boarders.
   
 Here are examples of using the **Region** parameter when creating search permission filters for compliance boundaries. This assumes that the Fourth Coffee subsidiary is located in North America and that Coho Winery is in Europe. 
   
