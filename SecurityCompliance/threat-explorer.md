@@ -2,7 +2,7 @@
 title: "Threat Explorer (and real-time detections)"
 ms.author: deniseb
 author: denisebmsft
-manager: laurawi
+manager: dansimp
 ms.date: 06/20/2019
 audience: ITPro
 ms.topic: article
@@ -66,6 +66,9 @@ Delivery location shows the results of policies and detections that run post-del
 5. Quarantine – The email in quarantine, and is not in a user’s mailbox.
 6. Failed – The email failed to reach the mailbox.
 7. Dropped – The email gets lost somewhere in the Mailflow.
+
+The Email Timeline is another new Explorer feature aimed at making the hunting experience better for admins. It cuts down on randomization because there is less time spent checking different locations to try to understand the event. When multiple events happen at, or close to, the same time on an email, those events will show up in a timeline view. In fact, some events that happen post-delivery to your mail will be captured in the 'Special action' column. Combining the information from the timeline of that mail with the special action taken on the mail post-delivery will give admins insight into how their policies work, where the mail was finally routed, and, in some cases, what the final assessment was.
+
 
 ## See malware detected in email by technology
 
@@ -162,3 +165,8 @@ To learn more about roles and permissions, see the following resources:
 - [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md)
 - [Feature permissions in Exchange Online](https://docs.microsoft.com/exchange/permissions-exo/feature-permissions)
   
+## Some differences between Real time detection and Threat Exporter.
+
+ - **Real-Time detection report** is shipped with ATP P1 subscription while **Threat Explorer** comes with ATP P2.
+ - **Real-Time detections** report allows you to show up the detections in real-time while threat explorer reports allow you to see more details in a given attack.
+ - **Threat Explorer** reports offer different sets of reports that enhance your experience respect **Real-Time Detector** reports.
