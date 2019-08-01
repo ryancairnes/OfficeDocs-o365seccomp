@@ -18,7 +18,7 @@ The sample connector feature to archive Twitter data in Office 365 is in Preview
 
 Use a sample connector in the Security & Compliance Center in Office 365 to import and archive data from Twitter. After you set up and configure a sample connector, it connects to your organization's Twitter account (on a scheduled basis), converts the content of an item to an email message format, and then imports those items to a mailbox in Office 365.
 
-After Twitter data is imported, you can apply Office 365 compliance features such as Litigation Hold, Content Search, In-Place Archiving, Auditing, Supervision, and Office 365 retention policies to the data stored in the mailbox. For example,you can search third-party data using Content Search or associate it with a custodian in an Advanced eDiscovery case. Using sample connectors to import and archive Twitter data in Office 365 can help your organization stay compliant with government and regulatory policies.
+After Twitter data is imported, you can apply Office 365 compliance features such as Litigation Hold, Content Search, In-Place Archiving, Auditing, Supervision, and Office 365 retention policies to the data stored in the mailbox. For example, you can search Twitter data using Content Search or associate the mailbox where the data is stored with a custodian in an Advanced eDiscovery case. Using a sample connectors to import and archive Twitter data in Office 365 can help your organization stay compliant with government and regulatory policies.
 
 > [!NOTE]
 > Currently, only the sample connectors for Twitter and [Facebook Business pages](archive-facebook-data-with-sample-connector.md) are available for Preview. More sample connectors are coming soon.
@@ -28,7 +28,7 @@ After Twitter data is imported, you can apply Office 365 compliance features suc
 
 You must complete the following prerequisites before you can set up and configure a sample connector in the Security & Compliance Center to import and archive data from your organization's Twitter account. 
 
-- You need a Twitter account for your organization; you'll need to sign in to this account when setting up the connector.
+- You need a Twitter account for your organization; you need to sign in to this account when setting up the connector.
 
 - Your organization must have a valid Azure subscription. If you don't have an existing Azure subscription, you can sign up for one of these options:
 
@@ -49,11 +49,11 @@ The first step is to download the source code for the Twitter sample connector a
 
 1. Go to [this GitHub site](https://github.com/microsoft/m365-sample-twitter-connector-csharp-aspnet/releases). 
 2. Under the latest release, click the **SampleConnector.zip** file.
-3. Save the ZIP file to a location on your local computer. You'll upload this zip file to Azure in Step 4.
+3. Save the ZIP file to a location on your local computer. You upload this zip file to Azure in Step 4.
 
 ## Step 2: Create an app in Azure Active Directory
 
-The next step is to register a new app in Azure Active Directory (AAD). This app will correspond to the web app resource that you'll implement in Step 4 for the Twitter connector. 
+The next step is to register a new app in Azure Active Directory (AAD). This app corresponds to the web app resource that you implement in Step 4 for the Twitter connector. 
 
 For step-by-step instructions, see [Step 2: Create an app in Azure Active Directory](deploy-twitter-connector.md#step-2-create-an-app-in-azure-active-directory).
 
@@ -66,11 +66,11 @@ During the completion of this step (by following the step-by-step instructions),
 
 ## Step 3: Create an Azure storage account
 
-The Twitter connector that you deploy for your organization will upload the items from Twitter to the Azure storage location that you create in this step. After you create a custom connector in the Security & Compliance Center (in Step 7), the Office 365 Import service will copy the Twitter data from the Azure storage location to a mailbox in Office 365. As previous explained in the [Prerequisites](#prerequisites-for-setting-up-a-connector-for-twitter) section, you must have a valid Azure subscription to create an Azure storage account.
+The Twitter connector that you deploy for your organization uploads the items from Twitter to the Azure storage location that you create in this step. After you create a custom connector in the Security & Compliance Center (in Step 7), the Office 365 Import service will copy the Twitter data from the Azure storage location to a mailbox in Office 365. As previous explained in the [Prerequisites](#prerequisites-for-setting-up-a-connector-for-twitter) section, you must have a valid Azure subscription to create an Azure storage account.
 
 For step-by-step instructions, see [Step 3: Create an Azure storage account](deploy-twitter-connector.md#step-3-create-an-azure-storage-account).
 
-During the completion of this step (by following the step-by-step instructions) you'll save the connection string Uri that is generated. You'll use this string when creating a web app resource in Azure in Step 4.
+During the completion of this step (by following the step-by-step instructions) you save the connection string Uri that is generated. You use this string when creating a web app resource in Azure in Step 4.
 
 ## Step 4: Create a web app resource in Azure
 
@@ -80,21 +80,21 @@ For step-by-step instructions, see [Step 4: Create a new web app resource in Azu
 
 During the completion of this step (by following the step-by-step instructions), you'll provide the following information (that you've copied to a text file after completing the previous steps) when creating the web app resource.
 
-- APISecretKey – You will create this secret during the completion of this step; it will be used in Step 7.
+- APISecretKey – You create this secret during the completion of this step; it's used in Step 7.
 - StorageAccountConnectionString – The connection string Uri that you copied after creating the Azure storage account in Step 3.
 - tenantId – The tenant ID of your Office 365 organization that you copied after creating the Twitter connector app in Azure Active Directory in Step 2.
 
-Additionally, you will upload the SampleConnector.zip file (that you downloaded in Step 1) in this step to deploy the source code for the Twitter connector app.
+Also, you upload the SampleConnector.zip file (that you downloaded in Step 1) in this step to deploy the source code for the Twitter connector app.
 
-After completing this step, be sure to copy the Azure app service URL (for example, https://twitterconnector.azurewebsites.net). You'll need to use this to complete Step 5, Step 6, and Step 7).
+After completing this step, be sure to copy the Azure app service URL (for example, https://twitterconnector.azurewebsites.net). You need to use this to complete Step 5, Step 6, and Step 7).
 
 ## Step 5: Create developer app on Twitter
 
-The next step is to create and configure a developer app on Twitter. The custom connector that you create in Step 7 will use the Twitter app to interact with the Twitter API to obtain data from your organization's Twitter account.
+The next step is to create and configure a developer app on Twitter. The custom connector that you create in Step 7 uses the Twitter app to interact with the Twitter API to obtain data from your organization's Twitter account.
 
 For step-by-step instructions, see [Step 5: Create the Twitter app](deploy-twitter-connector.md#step-5-create-the-twitter-app).
 
-During the completion of this step (by following the step-by-step instructions), you'll save the following information to a text file. The values for these will be used to configure the Twitter connector app in Step 6.
+During the completion of this step (by following the step-by-step instructions), you save the following information to a text file. The values for these will be used to configure the Twitter connector app in Step 6.
 
 - Twitter API Key
 - Twitter API Secret Key
@@ -103,7 +103,7 @@ During the completion of this step (by following the step-by-step instructions),
 
 ## Step 6: Configure the Twitter connector app
 
-The next step is to add configurations settings to the Twitter connector app that you uploaded when you created the Azure web app resource in Step 4. You'll do this by going to the home page of your connector app and configuring it.
+The next step is to add configurations settings to the Twitter connector app that you uploaded when you created the Azure web app resource in Step 4. You do this by going to the home page of your connector app and configuring it.
 
 For step-by-step instructions, see [Step 6: Configure the connector web app](deploy-twitter-connector.md#step-6-configure-the-connector-web-app).
 
@@ -119,11 +119,11 @@ During the completion of this step (by following the step-by-step instructions),
 
 ## Step 7: Set up a custom connector in the Security & Compliance Center
 
-The final step is to set up the custom connector in the Security & Compliance Center that will import data from your organization's Twitter account to a specified mailbox in Office 365. After you successfully complete this step, the Office 365 Import service will start the process of importing data from Twitter to Office 365. 
+The final step is to set up the custom connector in the Security & Compliance Center that imports data from your organization's Twitter account to a specified mailbox in Office 365. After you successfully complete this step, the Office 365 Import service will start the process of importing data from Twitter to Office 365. 
 
 For step-by-step instructions, see [Step 7: Set up a custom connector in the security and compliance center](deploy-twitter-connector.md#step-7-set-up-a-custom-connector-in-the-security-and-compliance-center). 
 
 During the completion of this step (by following the step-by-step instructions), you'll provide the following information (that you've copied to a text file after completing the steps).
 
-- Azure app service URL (obtained in Step 4; for example https://twitterconnector.azurewebsites.net)
+- Azure app service URL (obtained in Step 4; for example, https://twitterconnector.azurewebsites.net)
 - APISecretKey (that you created in Step 4)

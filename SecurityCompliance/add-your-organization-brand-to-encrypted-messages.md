@@ -70,7 +70,7 @@ You create branding templates for your organization in Windows PowerShell with t
    For example,
 
    ```powershell
-   New-OMEConfiguration -Identity <Branding template 1>
+   New-OMEConfiguration -Identity "Branding template 1"
    ```
 
 3. Define the customizations for the template you just defined by using the Set-OMEConfiguration cmdlet as described in [Set-OMEConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/Set-OMEConfiguration) or use the following table for guidance.
@@ -117,7 +117,7 @@ For information on how to create an Exchange mail flow rule that applies encrypt
 
 2. Choose the **Admin** tile.
 
-3. In the Office 365 admin center, choose **Admin centers** \> **Exchange**.
+3. In the Microsoft 365 admin center, choose **Admin centers** \> **Exchange**.
 
 4. In the EAC, go to **Mail flow** \> **Rules** and select **New** ![New icon](media/457cd93f-22c2-4571-9f83-1b129bcfb58e.gif) \> **Create a new rule**. For more information about using the EAC, see [Exchange admin center in Exchange Online](https://docs.microsoft.com/exchange/exchange-admin-center).
 

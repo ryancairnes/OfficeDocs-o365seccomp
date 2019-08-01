@@ -19,7 +19,7 @@ description: "Once you've finished setting up Office 365 Message Encryption (OME
 
 # Manage Office 365 Message Encryption
 
-Once you've finished setting up Office 365 Message Encryption (OME), you can customize the configuration of your deployment in several ways. For example, you can configure whether to enable one-time pass codes, display the **Protect** button in Outlook on the web, and more. The tasks in this article describe how.
+Once you've finished setting up Office 365 Message Encryption (OME), you can customize the configuration of your deployment in several ways. For example, you can configure whether to enable one-time pass codes, display the **Encrypt** button in Outlook on the web, and more. The tasks in this article describe how.
 
 ## Manage whether Google, Yahoo, and Microsoft Account recipients can use these accounts to sign in to the Office 365 Message Encryption portal
 
@@ -73,11 +73,11 @@ If the recipient of a message encrypted by OME doesn't use Outlook, regardless o
    Set-OMEConfiguration -Identity "OME Configuration" -OTPEnabled $true
    ```
 
-## Manage the display of the Protect button in Outlook on the web
+## Manage the display of the Encrypt button in Outlook on the web
 
-The **Protect** button in Outlook on the web is disabled when you set up OME. As an administrator, you can manage whether to display this button to end users.
+As an administrator, you can manage whether to display this button to end users.
   
-### To manage whether the Protect button appears in Outlook on the web
+### To manage whether the Encrypt button appears in Outlook on the web
   
 1. Use a work or school account that has global administrator permissions in your Office 365 organization and start a Windows PowerShell session and connect to Exchange Online. For instructions, see [Connect to Exchange Online PowerShell](https://aka.ms/exopowershell).
 
@@ -87,13 +87,13 @@ The **Protect** button in Outlook on the web is disabled when you set up OME. As
    Set-IRMConfiguration -SimplifiedClientAccessEnabled <$true|$false>
    ```
 
-   For example, to disable the **Protect** button:
+   For example, to disable the **Encrypt** button:
 
    ```powershell
    Set-IRMConfiguration -SimplifiedClientAccessEnabled $false
    ```
 
-   To enable the **Protect** button:
+   To enable the **Encrypt** button:
 
    ```powershell
    Set-IRMConfiguration -SimplifiedClientAccessEnabled $true
@@ -221,7 +221,7 @@ We hope it doesn't come to it, but if you need to, disabling the new capabilitie
   
 1. Using a work or school account that has global administrator permissions in your Office 365 organization, start a Windows PowerShell session and connect to Exchange Online. For instructions, see [Connect to Exchange Online PowerShell](https://aka.ms/exopowershell).
 
-2. If you enabled the **Protect** button in Outlook on the web, disable it by running the Set-IRMConfiguration cmdlet with the SimplifiedClientAccessEnabled parameter. Otherwise, skip this step.
+2. If you enabled the **Encrypt** button in Outlook on the web, disable it by running the Set-IRMConfiguration cmdlet with the SimplifiedClientAccessEnabled parameter. Otherwise, skip this step.
 
    ```powershell
    Set-IRMConfiguration -SimplifiedClientAccessEnabled $false

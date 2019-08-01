@@ -61,8 +61,7 @@ You create supervision policies in the Compliance center. These policies define 
 Before you start using supervision, you must determine who needs their communications reviewed. In the policy, user email addresses identify individuals or groups of people to supervise. Some examples of these groups are Office 365 Groups, Exchange-based distribution lists, and Microsoft Teams channels. You also can exclude specific users or groups from supervision with a supervised group or a list of groups.
 
 > [!IMPORTANT]
-> Users monitored by supervision policies must have either a Microsoft 365 E5 Compliance license, an Office 365 Enterprise E3 license with the Advanced Compliance add-on, or be included in an Office 365 Enterprise E5 subscription.
-If you don't have an existing Enterprise E5 plan and want to try supervision, you can [sign up for a trial of Office 365 Enterprise E5](https://go.microsoft.com/fwlink/p/?LinkID=698279).
+> Users monitored by supervision policies must have either a Microsoft 365 E5 Compliance license, an Office 365 Enterprise E3 license with the Advanced Compliance add-on, or be included in an Office 365 Enterprise E5 subscription.If you don't have an existing Enterprise E5 plan and want to try supervision, you can [sign up for a trial of Office 365 Enterprise E5](https://go.microsoft.com/fwlink/p/?LinkID=698279).
 
 ### Reviewers
 
@@ -77,10 +76,15 @@ To simplify your setup, create groups for people who need their communications r
 With supervision policies, you can choose to monitor messages in one or more of the following communication platforms:
 
 - **Exchange email:** Mailboxes hosted on Exchange Online as part of your Office 365 subscription are all eligible for message supervision. Emails and attachments matching supervision policy conditions are instantly available for monitoring and in supervision reports. Supported attachment types for supervision are the same as the [file types supported for Exchange mail flow rule content inspections](https://docs.microsoft.com/exchange/security-and-compliance/mail-flow-rules/inspect-message-attachments#supported-file-types-for-mail-flow-rule-content-inspection).
+
 - **Microsoft Teams:** Chat communications and associated attachments in both public and private Microsoft Teams channels and individual chats can be supervised. Teams chats matching supervision policy conditions are processed once every 24 hours and then are available for monitoring and in supervision reports. Use the following group management configurations to supervise individual user chats and channel communications in Teams:
 
     - **For Teams chat supervision:** Assign individual users or assign a [distribution group](https://support.office.com/article/Distribution-groups-E8BA58A8-FAB2-4AAF-8AA1-2A304052D2DE) to the supervision policy. This is for 1-to-1 or 1-to-many user/chat relationships.
     - **For Teams Channel communications:** Assign every Microsoft Team channel or Office 365 group you want to monitor that contains a specific user to the supervision policy. If you add the same user to other Microsoft Teams channels or Office 365 groups, be sure to add these new channels and groups to the supervision policy.
+
+- **Skype for Business Online:** Chat communications and associated attachments in Skype for Business Online can be supervised. Skype for Business Online chats matching supervision policy conditions are processed once every 24 hours and then are available for monitoring and in supervision reports. Supervised chat conversations are sourced from [previous conversations saved in Skype for Business Online](https://support.office.com/article/Find-a-previous-Skype-for-Business-conversation-18892eba-5f18-4281-8c87-fd48bd72e6a2).  Use the following group management configuration to supervise user chat communications in Skype for Business Online:
+
+    - **For Skype for Business Online chat supervision:** Assign individual users or assign a [distribution group](https://support.office.com/article/Distribution-groups-E8BA58A8-FAB2-4AAF-8AA1-2A304052D2DE) to the supervision policy. This is for 1-to-1 or 1-to-many user/chat relationships.
 
 - **Third-party sources:** You can supervise communications from third-party sources (like from Facebook or DropBox) for data imported into Office 365 mailboxes in your organization. [Learn how to import 3rd-party data into Office 365](https://docs.microsoft.com/office365/securitycompliance/archiving-third-party-data).
 
@@ -113,24 +117,20 @@ Configure custom keyword dictionaries (or lexicons) to provide simple management
 
 #### Offensive language
 
-Monitor sent or received email messages in your organization for offensive language. The model uses a combination of machine learning, artificial intelligence, and keywords to identify inappropriate email messages as part of anti-harassment and cyber bullying monitoring requirements. To prevent or block offensive language for other communications in your organization, create a [data loss prevention policy](create-test-tune-dlp-policy.md) that uses a [custom keyword dictionary](create-a-keyword-dictionary.md) of offensive terms.
+Monitor sent or received email messages in your organization for offensive language. The model uses a combination of machine learning, artificial intelligence, and keywords to identify language in email messages likely to violate anti-harassment and bullying policies. 
 
-The offensive language model currently supports English keywords and monitors the body of email messages. The offensive language model monitors email for sentiment associated with the following types of language:
+To prevent or block offensive language for other communications in your organization, create a [data loss prevention policy](create-test-tune-dlp-policy.md) that uses a [custom keyword dictionary](create-a-keyword-dictionary.md) of blocked terms. The offensive language model currently supports English keywords and monitors the body of email messages.
+
+Please note that the model does not provide an exhaustive list of offensive language. Further, language and cultural standards continually change, and in light of these realities, Microsoft reserves the right to update the model in its discretion. While the model may assist your organization in monitoring offensive language, the model is not intended to provide your organization’s sole means of monitoring or addressing such language. Your organization, not Microsoft, remains responsible for all decisions related to monitoring and blocking offensive language.
+
+The offensive language model monitors email for sentiment associated with the following types of language:
 
 |**Type**|**Description**|
 |:-----|:-----|
-| **Profanities** | Expressions that are inappropriate and embarrass most people. |
-| **Slurs** | Expressions that attack cultures and ethnicities. |
-| **Taunts** | Expressions that taunt, condemn, and ridicule. |
-| **References to handicaps** | Expressions that target physical or mental handicaps. |
-| **Squalid language** | Expressions that target sexual interests and physical state of cleanliness. |
-| **Homophobia** | Expressions that target sexual preferences. |
-| **Racism** | Expressions that target race and ethnicity. |
-| **Extremism** | Expressions that target religion and political ideologies. |
-| **Disguise** | Expressions for which the meaning or pronunciation is the same as another more offensive term. |
-| **Provocative language** | Expressions that potentially cause anger or violence. |
-| **Taboo** | Expressions generally inappropriate in polite societal communications. |
-| **Unrefined language** | Expressions that lack polite manners and that are potentially harsh and rude. |
+| **Profanities** | Expressions that embarrass most people. |
+| **Slurs** | Expressions that express prejudice against particular groups (e.g., race, ethnicity, sexual orientation, disability). |
+| **Taunts** | Expressions that taunt, condemn, ridicule, or could potentially cause anger or violence. |
+| **Disguised expressions** | Expressions for which the meaning or pronunciation is the same as another more offensive term. |
 
 #### Conditional settings
 
@@ -140,8 +140,8 @@ The following table explains more about each condition.
   
 |**Condition**|**How to use this condition**|
 |:-----|:-----|
-| **Message is received from any of these domains**  <br><br> **Message is not received from any of these domains** | To apply the policy when certain domains are included or excluded in a received message, enter each domain and separate multiple domains with a comma. Each domain you enter is applied separately (only one of these domains must apply for the policy to apply to the message). |
-| **Message is sent to any of these domains**  <br><br> **Message is not sent to any of these domains** | To apply the policy when certain domains are included or excluded in a sent message, enter each domain and separate multiple domains with a comma. Each domain you enter will be applied separately (only one of these domains must apply for the policy to apply to the message). |
+| **Message is received from any of these domains**  <br><br> **Message is not received from any of these domains** | Apply the policy to include or exclude specific domains or email addresses in received messages. Enter each domain or email address and separate multiple domains or email addresses with a comma. Each domain or email address entered is applied separately, only one domain or email address must apply for the policy to apply to the message. <br><br> If you want to monitor all email from a specific domain but want to exclude messages that do not need review (newsletters, announcements, etc.), you must configure the condition a **Message is not received from any of these domains** condition that excludes the email address (example "newsletter@contoso.com"). |
+| **Message is sent to any of these domains**  <br><br> **Message is not sent to any of these domains** | Apply the policy to include or exclude specific domains or email addresses in sent messages. Enter each domain or email address and separate multiple domains or email addresses with a comma. Each domain or email address is applied separately, only one domain or email address must apply for the policy to apply to the message. <br><br> If you want to monitor all email sent to a specific domain but want to exclude sent messages that do not need review, you must configure two conditions: <br> - A **Message is sent to any of these domains** condition that defines the domain ("contoso.com"), AND <br> - A **Message is not sent to any of these domains** condition that excludes the email address ("subscriptions@contoso.com"). |
 | **Message is classified with any of these labels**  <br><br> **Message is not classified with any of these labels** | To apply the policy when certain retention labels are included or excluded in a message. Retention labels must be configured separately and configured labels are chosen as part of this condition. Each label you choose is applied separately (only one of these labels must apply for the policy to apply to the message). For more information about configuring retention labels, see [Overview of retention labels](https://docs.microsoft.com/office365/securitycompliance/labels).|
 | **Message contains any of these words**  <br><br> **Message contains none of these words** | To apply the policy when certain words or phrases are included or excluded in a message, enter each word or phrase on a separate line. Each line of words you enter are applied separately (only one of these lines must apply for the policy to apply to the message). For more information about entering words or phrases, see the next section [Matching words and phrases to emails or attachments](supervision-policies.md#Matchwords).|
 | **Attachment contains any of these words**  <br><br> **Attachment contains none of these words** | To apply the policy when certain words or phrases are included or excluded in a message attachment (such as a Word document), enter each word or phrase on a separate line. Each line of words you enter are applied separately (only one line must apply for the policy to apply to the attachment). For more information about entering words or phrases, see the next section [Matching words and phrases to emails or attachments](supervision-policies.md#Matchwords).|
@@ -195,7 +195,7 @@ The **Review** tab is where reviewers classify and resolve items identified by t
 - Filter by pending, compliant, non-compliant, and questionable items.
 - Tag a single item as compliant, non-compliant, or questionable. You can also record a comment with the item to help clarify the tagging action taken.
 - Bulk tag multiple items as compliant, non-compliant, or questionable. You can also record a comment with multiple items to help clarify the tagging action taken.
-- View the history of the tagging for a single item. This includes who resolved the item, the date and time of the action, the resolution tag, and any included comments.
+- View the history of the tagging for a single item. Includes who resolved the item, the date and time of the action, the resolution tag, and any included comments.
 - Reclassify previously reviewed items as compliant, non-compliant, or questionable. You can also record a comment with single or multiple items to help clarify the reclassification action taken.
 
 #### Resolved Items tab
@@ -237,7 +237,7 @@ Here's a breakdown of the values displayed the **Tag type** column.
 |:-----|:-----|
 | **Not Reviewed** | The number of emails not reviewed yet. These emails are awaiting review in the Office 365 supervision dashboard.
 | **Compliant** | The number of emails reviewed and marked as compliant. These messages still need resolution. |
-| **Questionable** | The number of emails reviewed and marked questionable. This acts as a flag for other reviewers to help check whether an email needs investigation for compliance. These messages still need resolution. |
+| **Questionable** | The number of emails reviewed and marked questionable. Serves as a flag for other reviewers to help check whether an email needs investigation for compliance. These messages still need resolution. |
 | **Non-Compliant (Active)** | The number of non-compliant emails that reviewers are currently investigating. |
 | **Non-Compliant (Resolved)** | The number of non-compliant emails that reviewers investigated and resolved. |
 | **Hit Policy** | The total number (daily) of messages from Exchange, Teams, and third-party data sources that matched one or more conditions defined in a supervision policy |
@@ -245,7 +245,7 @@ Here's a breakdown of the values displayed the **Tag type** column.
 | **Resolved** | The total number of messages from Exchange, Teams, and third-party data sources classified as **Resolved**|
 
 > [!NOTE]
-> Supervision policies must first be provisioned before they will appear in this report. Additionally, if policies are deleted, historical data is still shown. However, they're indicated as a "Non-existent policy" and the **Export** function isn't available.
+> Supervision policies must be provisioned before they appear in reports. If policies are deleted, historical data is still shown. However, they're indicated as a "Non-existent policy" and the **Export** function isn't available.
 
 ## Audit
 
@@ -271,4 +271,4 @@ In addition to information provided in the supervision reports and logs, you can
 
 ## Ready to get started?
 
-To start configuring supervision policies for your organization, see [Configure supervision policies](configure-supervision-policies.md).
+To configure supervision policies for your organization, see [Configure supervision policies](configure-supervision-policies.md).

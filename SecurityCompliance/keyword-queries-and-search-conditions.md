@@ -39,6 +39,9 @@ For step-by-step instructions on how to create a Content Search, see [Content Se
 ## Searchable email properties
 
 The following table lists email message properties that can be searched by using the Content Search feature in the Security & Compliance Center or by using the **New-ComplianceSearch** or the **Set-ComplianceSearch** cmdlet. The table includes an example of the  _property:value_ syntax for each property and a description of the search results returned by the examples. You can type these  `property:value` pairs in the keywords box for a Content Search. 
+
+> [!NOTE]
+> When searching email properties, it's not possible to search for items in which the specified property is empty or blank. For example, using the *property:value* pair of **subject:""** to search for email messages with an empty subject line will return zero results. This also applies when searching site and contact properties.
   
 |**Property**|**Property description**|**Examples**|**Search results returned by the examples**|
 |:-----|:-----|:-----|:-----|
@@ -60,6 +63,7 @@ The following table lists email message properties that can be searched by using
 |Size|The size of an item, in bytes.|`size>26214400`  <br/> `size:1..1048567`|Messages larger than 25??MB. The second example returns messages from 1 through 1,048,567 bytes (1 MB) in size.|
 |Subject|The text in the subject line of an email message.  <br/> **Note:** When you use the Subject property in a query, ???the search returns all messages in which the subject line contains the text you're searching for. In other words, the query doesn't return only those messages that have an exact match. For example, if you search for  `subject:"Quarterly Financials"`, your results will include messages with the subject "Quarterly Financials 2018".|`subject:"Quarterly Financials"`  <br/> `subject:northwind`|Messages that contain the phrase "Quarterly Financials" anywhere in the text of the subject line. The second example returns all messages that contain the word northwind in the subject line.|
 |To|The To field of an email message.<sup>1</sup>|`to:annb@contoso.com`  <br/> `to:annb ` <br/> `to:"Ann Beebe"`|All examples return messages where Ann Beebe is specified in the To: line.|
+|||||
    
 > [!NOTE]
 > <sup>1</sup> For the value of a recipient property, you can use email address (also called *user principal name* or UPN), display name, or alias to specify a user. For example, you can use annb@contoso.com, annb, or "Ann Beebe" to specify the user Ann Beebe.<br/><br/>When searching any of the recipient properties (From, To, Cc, Bcc, Participants, and Recipients), Office 365 attempts to expand the identity of each user by looking them up in Azure Active Directory.  If the user is found in Azure Active Directory, the query is expanded to include the user's email address (or UPN), alias, display name, and LegacyExchangeDN.<br/><br/>For example, a query such as `participants:ronnie@contoso.com` expands to `participants:ronnie@contoso.com OR participants:ronnie OR participants:"Ronald Nelson" OR participants:"<LegacyExchangeDN>"`.
@@ -87,6 +91,7 @@ For a complete list of SharePoint properties that can be searched, see [Overview
 |Site|The URL of a site or group of sites in your organization.|`site:"https://contoso-my.sharepoint.com"`  <br/> `site:"https://contoso.sharepoint.com/sites/teams"`|The first example returns items from the OneDrive for Business sites for all users in the organization. The second example returns items from all team sites.|
 |Size|The size of an item, in bytes.|`size>=1`  <br/> `size:1..10000`|The first example returns items larger than 1 byte. The second example returns items from 1 through 10,000 bytes in size.|
 |Title|The title of the document. The Title property is metadata that's specified in Microsoft Office documents. It's different from the file name of the document.|`title:"communication plan"`|Any document that contains the phrase "communication plan" in the Title metadata property of an Office document.|
+|||||
    
 ## Searchable contact properties
 
@@ -115,7 +120,7 @@ The following table lists the contact properties that are indexed and that you c
 |OtherAddress|The value for the **Other** address property.|
 |Surname|The name in the **Last** name property.|
 |Title|The title in the **Job title** property.|
-   
+|||||
 
 ## Searchable sensitive data types
 
@@ -151,6 +156,7 @@ Boolean search operators, such as **AND**, **OR**, and **NOT**, help you define 
 |"  "|"fair value"  <br/> subject:"Quarterly Financials"|Use double quotation marks ("  ") to search for an exact phrase or term in keyword and  `property:value` search queries.|
 |\*|cat\*  <br/> subject:set\*|Prefix wildcard searches (where the asterisk is placed at the end of a word) match for zero or more characters in keywords or  `property:value` queries. For example,  `title:set*` returns documents that contain the word set, setup, and setting (and other words that start with "set") in the document title.  <br/><br/> **Note:** You can use only prefix wildcard searches; for example, **cat\*** or **set\***. Suffix searches ( **\*cat** ), infix searches ( **c\*t** ), and substring searches ( **\*cat\*** ) are not supported.|
 |(  )|(fair OR free) AND (from:contoso.com)  <br/> (IPO OR initial) AND (stock OR shares)  <br/> (quarterly financials)|Parentheses group together Boolean phrases,  `property:value` items, and keywords. For example,  `(quarterly financials)` returns items that contain the words quarterly and financials.|
+|||||
    
 > [!NOTE]
 > <sup>1</sup> Use this operator for properties that have date or numeric values.<br/> <sup>2</sup> Boolean search operators must be uppercase; for example, **AND**. If you use a lowercase operator, such as **and**, it will be treated as a keyword in the search query. 
@@ -182,6 +188,7 @@ Create a condition using common properties when searching mailboxes and sites in
 |Size (in bytes)|For both email and documents, the size of the item (in bytes).|
 |Subject/Title|For email, the text in the subject line of a message. For documents, the title of the document. As previously explained, the Title property is metadata specified in Microsoft Office documents. You can type the name of more than one subject/title, separated by commas. Two or more values are logically connected by the **OR** operator.|
 |Compliance tag|For both email and documents, labels that have been assigned to messages and documents automatically by label policies or labels that have been manually assigned by users. Labels are used to classify email and documents for data governance and enforce retention rules based on the classification defined by the label. You can type part of the label name and use a wildcard or type the complete label name. For more information, see [Overview of labels in Office 365](labels.md).|
+|||
   
 ### Conditions for mail properties
 
@@ -198,6 +205,7 @@ Create a condition using mail properties when searching mailboxes or public fold
 |Sent|The date that an email message was sent by the sender. This is the same property as the Sent email property.|
 |Subject|The text in the subject line of an email message.|
 |To|The recipient of an email message.|
+|||
   
 ### Conditions for document properties
 
@@ -210,6 +218,7 @@ Create a condition using document properties when searching for documents on Sha
 |Created|The date that a document is created.|
 |Last modified|The date that a document was last changed.|
 |File type|The extension of a file; for example, docx, one, pptx, or xlsx. This is the same property as the FileExtension site property.|
+|||
   
 ### Operators used with conditions
 
@@ -230,6 +239,7 @@ When you add a condition, you can select an operator that is relevant to type of
 |Less|`size<value`|Returns items that are greater than or equal to the specific value.<sup>1</sup>|
 |Less or equal|`size<=value`|Returns items that are greater than or equal to the specific value.<sup>1</sup>|
 |Not equal|`size<>value`|Returns items that don't equal the specified size.<sup>1</sup>|
+|||
    
 > [!NOTE]
 > <sup>1</sup> This operator is available only for conditions that use the Size property. 
