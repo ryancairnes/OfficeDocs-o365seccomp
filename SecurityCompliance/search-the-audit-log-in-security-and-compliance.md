@@ -135,6 +135,9 @@ Here's the process for searching the audit log in Office 365.
 [Step 3: Filter the search results](#step-3-filter-the-search-results)
 
 [Step 4: Export the search results to a file](#step-4-export-the-search-results-to-a-file)
+
+
+
   
 ### Step 1: Run an audit log search
 
@@ -782,6 +785,13 @@ Here are some tips for searching for Exchange admin activities when searching th
   
 - To get information about what cmdlet was run, which parameters and parameter values were used, and what objects were affected, you can export the search results by selecting the **Download all results** option. For more information, see [Export, configure, and view audit log records](export-view-audit-log-records.md). 
     
+
+- You can also view events in the Exchange admin audit log by using the Exchange admin center. For instructions, see [View the administrator audit log](https://technet.microsoft.com/library/dn342832%28v=exchg.150%29.aspx).
+
+> [!IMPORTANT]
+>  To search and track the use of exchange online administrator privilegies use the Cmdlet *Search-AdminAuditLog* over the *Search-UnifiedAuditLog*.
+
+
 - You can also use the `Search-UnifiedAuditLog -RecordType ExchangeAdmin` command in Exchange Online PowerShell to return only audit records from the Exchange admin audit log. It may take up to 30 minutes after a Exchange cmdlet is run for the corresponding audit log entry to be returned in the search results. For more information, see [Search-UnifiedAuditLog](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/search-unifiedauditlog). For information about exporting the search results returned by the **Search-UnifiedAuditLog** cmdlet to a CSV file, see the "Tips for exporting and viewing the audit log" section in [Export, configure, and view audit log records](export-view-audit-log-records.md#tips-for-exporting-and-viewing-the-audit-log).
 
 - You can also view events in the Exchange admin audit log by using the Exchange admin center or running the **Search-AdminAuditLog** in Exchange Online PowerShell. For instructions, see:
