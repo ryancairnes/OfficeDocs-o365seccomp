@@ -112,19 +112,19 @@ For example, if you have an initial domain of cohovineyardandwinery.onmicrosoft.
   
 ```
 Host name:			selector1._domainkey
-Points to address or value:	**selector1-cohovineyard-com**._domainkey.cohovineyardandwinery.onmicrosoft.com
+Points to address or value:	selector1-cohovineyard-com._domainkey.cohovineyardandwinery.onmicrosoft.com
 TTL:				3600
 
 Host name:			selector2._domainkey
-Points to address or value:	**selector2-cohovineyard-com**._domainkey.cohovineyardandwinery.onmicrosoft.com
+Points to address or value:	selector2-cohovineyard-com._domainkey.cohovineyardandwinery.onmicrosoft.com
 TTL:				3600
 
 Host name:			selector1._domainkey
-Points to address or value:	**selector1-cohowinery-com**._domainkey.cohovineyardandwinery.onmicrosoft.com 
+Points to address or value:	selector1-cohowinery-com._domainkey.cohovineyardandwinery.onmicrosoft.com 
 TTL:				3600
  
 Host name:			selector2._domainkey
-Points to address or value:	**selector2-cohowinery-com**._domainkey.cohovineyardandwinery.onmicrosoft.com 
+Points to address or value:	selector2-cohowinery-com._domainkey.cohovineyardandwinery.onmicrosoft.com 
 TTL:				3600
 ```
 

@@ -3,7 +3,7 @@ title: "Find and investigate malicious email that was delivered (Office 365 Thre
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
-ms.date: 03/19/2019
+ms.date: 08/02/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -25,7 +25,7 @@ description: "Learn how to use threat investigation and response capabilities to
 
 Make sure that the following requirements are met:
   
-- Your organization has [Office 365 Advanced Threat Protection](office-365-atp.md) (Plan 1 or Plan 2) and [licenses are assigned to users](https://docs.microsoft.com/en-us/office365/admin/subscriptions-and-billing/assign-licenses-to-users).
+- Your organization has [Office 365 Advanced Threat Protection](office-365-atp.md) (Plan 2) and [licenses are assigned to users](https://docs.microsoft.com/en-us/office365/admin/subscriptions-and-billing/assign-licenses-to-users).
     
 - [Office 365 audit logging](turn-audit-log-search-on-or-off.md) is turned on for your organization. 
     
@@ -48,20 +48,20 @@ Delivery Status is now broken out into two columns:
 
 Delivery action is the action taken on an email due to existing policies or detections. Here are the possible actions an email can take:
 
-1. **Delivered** – email was delivered to inbox or folder of a user and the user can directly access it.
-2. **Junked** – email was sent to either user’s junk folder or deleted folder, and the user has access to emails in their Junk or Deleted folder.
-3. **Blocked** – any emails that's quarantined, that  failed, or was dropped. This is completely inaccessible by the user!
-4. **Replaced** – any email where malicious attachments are replaced by .txt files that state the attachment was malicious.
+- **Delivered** – email was delivered to inbox or folder of a user and the user can directly access it.
+- **Junked** – email was sent to either user’s junk folder or deleted folder, and the user has access to emails in their Junk or Deleted folder.
+- **Blocked** – any emails that's quarantined, that  failed, or was dropped. This is completely inaccessible by the user!
+- **Replaced** – any email where malicious attachments are replaced by .txt files that state the attachment was malicious.
  
 Delivery location shows the results of policies and detections that run post-delivery. It's linked to a Delivery Action. This field was added to give insight into the action taken when a problem mail is found. Here are the possible values of delivery location:
 
-1. **Inbox or folder** – The email is in inbox or a folder (according to your email rules).
-2. **On-prem or external** – The mailbox doesn’t exist on cloud but is on -premises.
-3. **Junk folder** – The email in in the Junk folder of a user.
-4. **Deleted items folder** – The email in the Deleted items folder of a user.
-5. **Quarantine** – The email in quarantine, and is not in a user’s mailbox.
-6. **Failed** – The email failed to reach the mailbox.
-7. **Dropped** – The email gets lost somewhere in the Mailflow.
+- **Inbox or folder** – The email is in inbox or a folder (according to your email rules).
+- **On-prem or external** – The mailbox doesn’t exist on cloud but is on -premises.
+- **Junk folder** – The email in in the Junk folder of a user.
+- **Deleted items folder** – The email in the Deleted items folder of a user.
+- **Quarantine** – The email in quarantine, and is not in a user’s mailbox.
+- **Failed** – The email failed to reach the mailbox.
+- **Dropped** – The email gets lost somewhere in the Mailflow.
   
 ## Find and delete suspicious email that was delivered
 
@@ -86,8 +86,6 @@ Email timeline cuts down on randomization because there is less time spent check
 
 Once you've opened the email timeline, you should see a table that tells you the post-delivery events for that mail, or, in the case of no further events for the email, you should see a single event for the original delivery that will state a result like *Blocked* with a verdict like *Phish*. The tab also has the option to export the entire email timeline, and this will export all the details on the tab and details on the email (things like Subject, Sender, Recipient, Network, and Message ID).
 
-
-<!--Comment>    
 3. In the View menu, choose **All email**.<br/>![Use the View menu to choose between Email and Content reports](media/d39013ff-93b6-42f6-bee5-628895c251c2.png)
   
 4. Notice the labels that appear in the report, such as **Delivered**, **Unknown**, or **Delivered to junk**.<br/>![Threat Explorer showing data for all email](media/208826ed-a85e-446f-b276-b5fdc312fbcb.png)<br/>(Depending on the actions that were taken on email messages for your organization, you might see additional labels, such as **Blocked** or **Replaced**.)
@@ -102,7 +100,6 @@ Once you've opened the email timeline, you should see a table that tells you the
     
 9. Use the **+ Actions** list to apply an action, such as **Move to deleted** items. This will delete the selected messages from the recipients' mailboxes.<br/>![When you select one or more email messages, you can choose from several available actions](media/ef12e10c-60a7-4f66-8f76-68d77ae26de1.png)
   
--->
 ## Related topics
 
 [Office 365 Advanced Threat Protection Plan 2](office-365-ti.md)
