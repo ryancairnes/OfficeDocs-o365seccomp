@@ -1,10 +1,10 @@
 ---
 title: "Mail flow rules (transport rules) in Exchange Online Protection"
-ms.author: krowley
-author: kccross
-manager: laurawi
-ms.date: 4/29/2017
-ms.audience: ITPro
+ms.author: tracyp
+author: MSFTTracyP
+manager: dansimp
+ms.date: 04/29/2017
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -32,7 +32,7 @@ To implement specific messaging policies by using mail flow rules, see these top
     
 - [Use mail flow rules to set the spam confidence level (SCL) in messages](../use-mail-flow-rules-to-set-the-spam-confidence-level-scl-in-messages.md)
     
-- [Create organization-wide safe sender or blocked sender lists in Office 365](../create-organization-wide-safe-sender-or-blocked-sender-lists-in-office-365.md)
+- [Create block sender lists in Office 365](../create-block-sender-lists-in-office-365.md)
     
 - [Reducing malware threats through file attachment blocking in Exchange Online Protection](reducing-malware-threats-through-file-attachment-blocking-in-exchange-online-pro.md)
     

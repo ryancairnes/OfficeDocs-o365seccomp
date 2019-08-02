@@ -2,8 +2,8 @@
 title: "Auto-forwarded messages report"
 ms.author: chrisda
 author: chrisda
-manager: serdars
-ms.audience: ITPro
+manager: dansimp
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -15,7 +15,7 @@ description: "Admins can learn about the Auto-forwarded messages report in the m
 
 The **Auto-forwarded messages** report in the mail flow dashboard displays information on messages that are automatically forwarded from your Office 365 organization to recipients in external domains.
 
-![x](media/8bc2600b-71c3-4b37-b4d0-9435fe0cfc8d.png)
+![The Auto-forwarded messages insight in the Office 365 Security & Compliance Center](media/8bc2600b-71c3-4b37-b4d0-9435fe0cfc8d.png)
 
 ![The Auto-forwarded messages report in the mail flow dashboard in the Office 365 Security & Compliance Center](media/8bc2600b-71c3-4b37-b4d0-9435fe0cfc8d.png)
 

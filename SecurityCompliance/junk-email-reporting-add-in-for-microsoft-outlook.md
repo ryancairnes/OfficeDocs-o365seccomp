@@ -2,9 +2,9 @@
 title: "Junk email reporting add-in for Microsoft Outlook"
 ms.author: tracyp
 author: MSFTTracyP
-manager: laurawi
-ms.date: 1/14/2016
-ms.audience: ITPro
+manager: dansimp
+ms.date: 01/14/2016
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal

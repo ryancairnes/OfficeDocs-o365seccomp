@@ -4,10 +4,10 @@ ms.author: krowley
 author: kccross
 manager: laurawi
 ms.date: 4/30/2019
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
-localization_priority: Normal
+localization_priority: Priority
 search.appverid: 
 - MET150
 ms.assetid: 7ff0c040-b25c-4378-9904-b1b50210d00e
@@ -48,7 +48,7 @@ For more information, see:
 
 If you disabled Azure RMS, or if it was not automatically activated for any reason, you can activate it manually in the:
 
-- **Office 365 admin center**: See [How to activate Azure Rights Management from the Office 365 admin center](https://docs.microsoft.com/en-us/azure/information-protection/activate-office365) for instructions.
+- **Microsoft 365 admin center**: See [How to activate Azure Rights Management from the admin center](https://docs.microsoft.com/en-us/azure/information-protection/activate-office365) for instructions.
 - **Azure portal**: See [How to activate Azure Rights Management from the Azure portal](https://docs.microsoft.com/en-gb/azure/information-protection/activate-azure) for instructions.
 
 ## Configure management of your Azure Information Protection tenant key
@@ -65,7 +65,7 @@ You can verify that your Office 365 tenant is properly configured to use the new
 
 2. Run the Get-IRMConfiguration cmdlet.
 
-     You should see a value of $True for the AzureRMSEnabled parameter, which indicates that OME is configured in your tenant. If it is not, use Set-IRMConfiguration to set the value of AzureRMSEnabled to $True to enable OME.
+     You should see a value of $True for the AzureRMSLicensingEnabled parameter, which indicates that OME is configured in your tenant. If it is not, use Set-IRMConfiguration to set the value of AzureRMSLicensingEnabled to $True to enable OME.
 
 3. Run the Test-IRMConfiguration cmdlet using the following syntax:
 
@@ -120,7 +120,7 @@ For steps on creating mail flow rules for OME, see [Define mail flow rules to en
 
 To update existing rules to use the new OME capabilities:
 
-1. In the Office 365 admin center, go to **Admin centers > Exchange**.
+1. In the Microsoft 365 admin center, go to **Admin centers > Exchange**.
 2. In the Exchange admin center, go to **Mail flow > Rules**.
 3. For each rule, in **Do the following**:
     - Select **Modify the message security**.

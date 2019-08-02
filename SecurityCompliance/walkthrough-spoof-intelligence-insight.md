@@ -2,8 +2,9 @@
 title: "Walkthrough spoof intelligence insight"
 ms.author: tracyp
 author: MSFTTracyP
+manager: dansimp
 ms.date: 7/30/2018
-ms.audience: ITPro
+audience: ITPro
 ms.topic: overview
 ms.service: O365-seccomp
 localization_priority: Normal

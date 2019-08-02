@@ -3,7 +3,7 @@ title: "Chief Information Security Officer (CISO) Workshop, Module 1: Microsoft 
 ms.author: robmazz
 author: robmazz
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: tutorial
 ms.service: o365-seccomp
 localization_priority: Normal
@@ -35,17 +35,17 @@ This module covers overviews on critical security hygiene, Microsoft cybersecuri
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtVXF]
 
-## Part 5: Microsoft Cybersecurity Reference Architecture (24:30)
+## Part 5: Microsoft Cybersecurity Reference Architecture (21:14)
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtQL2]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE36ldf]
 
 ## Part 6: Reference Architecture for Identity and Access (7:25)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtITd]
 
-## Part 7: Reference Architecture for Security Operations Center (7:39)
+## Part 7: Reference Architecture for Security Operations Center (9:37)
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtYM6]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE36dlc]
 
 ## Part 8: Reference Architecture for PC and Mobile Devices (4:52)
 

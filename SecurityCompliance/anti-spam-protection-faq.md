@@ -2,9 +2,9 @@
 title: "Anti-spam protection FAQ"
 ms.author: krowley
 author: kccross
-manager: laurawi
+manager: dansimp
 ms.date: 12/9/2016
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal

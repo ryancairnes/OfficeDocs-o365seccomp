@@ -2,9 +2,9 @@
 title: "Automated Investigation and Response (AIR) with Office 365"
 ms.author: deniseb
 author: denisebmsft
-manager: laurawi
-ms.date: 03/25/2019
-ms.audience: ITPro
+manager: dansimp
+ms.date: 06/25/2019
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -17,7 +17,7 @@ description: "Learn about Automated Investigation and Response capabilities in O
 
 # Automated Investigation and Response (AIR) with Office 365
 
-Automated Investigation and Response (AIR) (coming soon to [Office 365 Threat investigation and response capabilities](office-365-ti.md)) enables you to run automated investigation and remediation to well-known threats that exist today. Read this article to get an overview of AIR and how it can help your organization and security operations teams mitigate threats more effectively and efficiently. 
+Automated Investigation and Response (AIR) (currently in public preview as one of many [Office 365 Threat investigation and response capabilities](office-365-ti.md)) enables you to run automated investigation and remediation to well-known threats that exist today. Read this article to get an overview of AIR and how it can help your organization and security operations teams mitigate threats more effectively and efficiently. 
 
 To learn more about when  AIR features will be available, see the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap).
 
@@ -32,7 +32,8 @@ In the initial release of AIR in April 2019, alerts generated from following sin
 3. Email messages containing malware removed after delivery*
 4. Email messages containing phish URLs removed after delivery*
 
-***Note**: These alerts have been assigned an "Informational" severity in the respective alert policies within the Security & Compliance Center with email notifications turned off. These can be turned on through the Alert policy configuration.
+> [!NOTE]
+> These alerts have been assigned an "Informational" severity in the respective alert policies within the Security & Compliance Center with email notifications turned off. These can be turned on through the Alert policy configuration.
 
 To view alerts, in the Security & Compliance Center, choose **Alerts** > **View alerts**. Select an alert to view its details, and from there, use the **View investigation** link to go to the corresponding [investigation](#investigation-graph). Note that informational alerts are hidden in the alert view by default. To see them, you need to change the alert filtering to include informational alerts.
 
@@ -51,18 +52,14 @@ The security playbooks you'll get with AIR are designed to tackle the most frequ
 
 As part of AIR, security playbooks are rolling out in phases
 
-- **Phase 1 (April 2019)**: Playbooks include recommendations for actions that security administrators review and approve. 
+- **Phase 1 (April 2019)**: Playbooks include recommendations for actions that security administrators review and approve. Phase 1 will include the following playbooks:
+    - User-reported phish message
+    - URL click verdict change 
+    - Malware detected post-delivery (Malware ZAP)
+    - Phish detected post-delivery ZAP (Phish ZAP)
+    - Manual e-mail investigations (using Threat Explorer)
 
-- **Phase 2 (post-June 2019)**: Playbook improvements, plus security administrators will have the option to configure security playbooks to take some actions automatically without administrative interaction.
-
-Phase 1 will include the following playbooks:
-- User-reported phish message
-- URL click verdict change 
-- Malware detected post-delivery (Malware ZAP)
-- Phish detected post-delivery ZAP (Phish ZAP)
-- Manual e-mail investigations (using Threat Explorer)
-
-Several other playbooks are planned for Phase 2.
+- **Phase 2 (second half of 2019)**: Several new playbooks and playbook improvements, plus the option for security administrators to configure security playbooks to take some actions automatically without administrative interaction. 
 
 ### Playbooks include investigation and recommendations
 
@@ -91,7 +88,7 @@ After the root investigation is complete, the playbook provides a list of recomm
 Next, several threat investigation and hunting steps are executed:
 
 - Similar email messages in other email clusters are searched.
-- The signal is shared with other platforms, such as [Windows Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection).
+- The signal is shared with other platforms, such as [Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection).
 - A determination is made on whether any users have clicked through any malicious links in suspicious email messages.
 - A check is done across Office 365 Exchange Online Protection ([EOP](eop/exchange-online-protection-eop.md)) and Office 365 Advanced Threat Protection ([ATP](office-365-atp.md)) to see if there are any other similar messages reported by users.
 - A check is done to see if a user has been compromised. This check leverages signals across [Microsoft Cloud App Security](https://docs.microsoft.com/cloud-app-security) and [Azure Active Directory](https://docs.microsoft.com/azure/active-directory), correlating any related user activity anomalies. 
@@ -237,11 +234,12 @@ On the **Machines** tab, you can see all the machines identified as part of the 
 
 ![AIR investigation machine page](media/air-investigationmachinepage.png)
 
-As part of the investigation, AIR correlates email threats to devices. For example, an investigation passes a malicious file hash across to [Windows Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection) to investigate. This allows for automated investigation of relevant machines for your users, to help ensure that threats are addressed both in the cloud and across your endpoints. 
+As part of the investigation, AIR correlates email threats to devices. For example, an investigation passes a malicious file hash across to [Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection
+) to investigate. This allows for automated investigation of relevant machines for your users, to help ensure that threats are addressed both in the cloud and across your endpoints. 
 
 You can:
 - Get a visual overview of the current machines and threats found.
-- Select a machine to open a view that into the related [Windows Defender ATP investigations](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/automated-investigations-windows-defender-advanced-threat-protection) in the Windows Defender ATP Security Center.
+- Select a machine to open a view that into the related [Microsoft Defender ATP investigations](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/automated-investigations) in the Microsoft Defender Security Center.
 
 ### Entity investigation
 

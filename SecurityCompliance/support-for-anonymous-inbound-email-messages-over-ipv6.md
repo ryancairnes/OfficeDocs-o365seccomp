@@ -2,9 +2,8 @@
 title: "Support for anonymous inbound email messages over IPv6"
 ms.author: tracyp
 author: MSFTTracyP
-manager: laurawi
-ms.date: 
-ms.audience: ITPro
+manager: dansimp
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal

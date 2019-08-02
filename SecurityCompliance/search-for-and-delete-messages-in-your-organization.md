@@ -3,10 +3,10 @@ title: "Search for and delete email messages in your Office 365 organization - A
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
-localization_priority: Normal
+localization_priority: Priority
 ms.collection: 
 - Strat_O365_IP
 - M365-security-compliance

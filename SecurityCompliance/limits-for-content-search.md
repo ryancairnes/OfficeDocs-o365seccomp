@@ -3,7 +3,7 @@ title: "Limits for Content Search in the Security & Compliance Center"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: reference
 ms.service: O365-seccomp
 localization_priority: Normal

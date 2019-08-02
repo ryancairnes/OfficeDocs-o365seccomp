@@ -2,9 +2,9 @@
 title: "Install the Junk Email Reporting Add-in for Microsoft Outlook"
 ms.author: MSFTTracyP
 author: tracyp
-manager: laurawi
+manager: dansimp
 ms.date: 12/9/2016
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal

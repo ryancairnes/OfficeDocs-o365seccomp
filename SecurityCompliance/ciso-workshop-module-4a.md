@@ -3,7 +3,7 @@ title: "Chief Information Security Officer (CISO) Workshop, Module 4a: Threat Pr
 ms.author: robmazz
 author: robmazz
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: tutorial
 ms.service: o365-seccomp
 localization_priority: Normal
@@ -47,7 +47,7 @@ Explore key learnings about threat protection, security evolution, strategies, a
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtQLJ]
 
-## Part 7: Roadmap for Shadow IT Risk from Third Party Software as a Service (5:05)
+## Part 7: Roadmap for Shadow IT Risk from Third-Party Software as a Service (5:05)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtYMC]
 
@@ -63,9 +63,9 @@ Explore key learnings about threat protection, security evolution, strategies, a
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtQLS]
 
-## Part 11: Roadmap for Securing Privileged Access (12:29)
+## Part 11: Roadmap for Securing Privileged Access (22:26)
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtLpa]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE36aLB]
 
 ## Part 12: Roadmap for (Not) Petya and Critical Security Hygiene (10:28)
 

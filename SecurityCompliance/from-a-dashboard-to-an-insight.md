@@ -2,9 +2,9 @@
 title: "Walkthrough - From a dashboard to an insight"
 ms.author: deniseb
 author: denisebmsft
-manager: laurawi
-ms.date: 6/4/2018
-ms.audience: ITPro
+manager: dansimp
+ms.date: 06/04/2018
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal

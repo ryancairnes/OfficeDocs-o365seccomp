@@ -2,8 +2,8 @@
 title: "View information about malicious files detected in SharePoint, OneDrive, or Microsoft Teams"
 ms.author: deniseb
 author: denisebmsft
-manager: laurawi
-ms.audience: ITPro
+manager: dansimp
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal

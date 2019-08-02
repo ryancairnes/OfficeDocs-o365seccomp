@@ -1,9 +1,9 @@
 ---
 title: "Configure end-user spam notifications in Exchange Online"
 ms.author: tracyp
-author: MSFTTracyP
-manager: laurawi
-ms.audience: ITPro
+author: MSFTTracyp
+manager: dansimp
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal

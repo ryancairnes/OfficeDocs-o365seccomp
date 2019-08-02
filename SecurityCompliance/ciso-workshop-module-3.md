@@ -3,7 +3,7 @@ title: "Chief Information Security Officer (CISO) Workshop, Module 3:Identity, a
 ms.author: robmazz
 author: robmazz
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: tutorial
 ms.service: o365-seccomp
 localization_priority: Normal
@@ -35,7 +35,7 @@ Because most modern attacks involve compromising user identities, learn how to b
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtGm5]
 
-## Part 4: Building an Identity Perimeter (13:57)
+## Part 4: Build an Identity Perimeter (13:57)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtYMg]
 

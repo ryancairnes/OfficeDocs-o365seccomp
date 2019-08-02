@@ -4,7 +4,7 @@ ms.author: stephow
 author: stephow-MSFT
 manager: laurawi
 ms.date: 
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -49,7 +49,7 @@ When you create a retention label in the Microsoft 365 compliance center, Micros
   
 A disposition review can include content in Exchange mailboxes, SharePoint sites, OneDrive accounts, and Office 365 groups. Content awaiting a disposition review in those locations is deleted only after a reviewer chooses to permanently delete the content.
   
-![Dispositions page in Security and Compliance Center](media/Retention_Dispositions_v2_page.png)
+![Dispositions page in Security and Compliance Center](media/Retention-Dispositions-v2-page.png)
 
 ## Setting up the disposition review by creating a retention label
 
@@ -69,7 +69,7 @@ When a reviewer is notified by email that content is ready to review, they can g
 
 After you select a retention label, the next page shows all pending dispositions for that label.
 
-![Disposition options](media/Retention_Disposition_options_v2.png)
+![Disposition options](media/Retention-Disposition-options-v2.png)
 
 The reviewer can then: 
   
@@ -113,13 +113,13 @@ On the **Pending disposition** page, you can view both pending and completed dis
     
 - The **Disposed items** tab shows dispositions were approved for deletion during a disposition review and are now in the process of being permanently deleted. Items that had a different retention label applied or their retention period extended as part of a review won't appear here.
 
-![Disposition tabs](media/Retention_Disposition_tabs.png)
+![Disposition tabs](media/Retention-Disposition-tabs.png)
     
 ### Filter the disposition views
 
 You can filter these views by retention label or time range. For pending dispositions, the time range is based on the expiration date. For disposed items, the time range is based on the deletion date.
   
-![Disposition filter options](media/Retention_filter_options.png)
+![Disposition filter options](media/Retention-filter-options.png)
 
 ### Export the disposition items
 

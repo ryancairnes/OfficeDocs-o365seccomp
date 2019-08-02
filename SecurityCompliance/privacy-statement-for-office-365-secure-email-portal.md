@@ -2,9 +2,9 @@
 title: "Privacy statement for Office 365 Secure Email Portal"
 ms.author: tracyp
 author: MSFTTracyP
-manager: laurawi
+manager: dansimp
 ms.date: 10/12/2018
-ms.audience: End User
+audience: End User
 ms.topic: reference
 ms.service: O365-seccomp
 localization_priority: Normal

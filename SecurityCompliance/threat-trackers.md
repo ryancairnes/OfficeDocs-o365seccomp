@@ -2,8 +2,8 @@
 title: "Threat Trackers - New and Noteworthy"
 ms.author: deniseb
 author: denisebmsft
-manager: laurawi
-ms.audience: ITPro
+manager: dansimp
+audience: ITPro
 ms.topic: overview
 ms.service: O365-seccomp
 localization_priority: Normal

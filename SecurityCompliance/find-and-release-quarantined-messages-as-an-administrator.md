@@ -2,9 +2,9 @@
 title: "Find and release quarantined messages as an administrator"
 ms.author: tracyp
 author: MSFTTracyP
-manager: laurawi
-ms.date: 6/16/2017
-ms.audience: ITPro
+manager: dansimp
+ms.date: 06/16/2017
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal

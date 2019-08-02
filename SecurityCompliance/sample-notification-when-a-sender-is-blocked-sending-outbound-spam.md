@@ -2,9 +2,9 @@
 title: "Sample notification when a sender is blocked sending outbound spam"
 ms.author: tracyp
 author: MSFTTracyP
-manager: laurawi
-ms.date: 11/2/2017
-ms.audience: ITPro
+manager: dansimp
+ms.date: 11/02/2017
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal

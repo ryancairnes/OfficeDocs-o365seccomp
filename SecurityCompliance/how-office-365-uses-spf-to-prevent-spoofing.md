@@ -2,9 +2,9 @@
 title: "How Office 365 uses Sender Policy Framework (SPF) to prevent spoofing"
 ms.author: tracyp
 author: MSFTTracyP
-manager: laurawi
+manager: dansimp
 ms.date: 12/15/2016
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal

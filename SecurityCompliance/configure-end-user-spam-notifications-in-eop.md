@@ -1,9 +1,9 @@
 ---
 title: "Configure end-user spam notifications in EOP"
-ms.author: krowley
-author: kccross
-manager: laurawi
-ms.audience: ITPro
+ms.author: tracyp
+author: MSFTTracyp
+manager: dansimp
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal
@@ -36,7 +36,7 @@ After receiving a notification message, end users can choose from the following 
 
 **Release & Report**, if the message isn’t spam and you want to send the message to your mailbox and report it to Microsoft for analysis.
 
-**Block** if you want Office 365 to add the sender to your blocked senders list.
+**Block Sender** if you want Office 365 to add the sender to your blocked senders list.
   
 ## What do you need to know before you begin?
 <a name="sectionSection0"> </a>
@@ -49,7 +49,7 @@ For information about keyboard shortcuts that may apply to the procedures in thi
   
 ## Use the EAC to configure end-user spam notifications
 
-1. In the Exchange admin center (EAC), navigate to **Protection** \> **Content filter**.
+1. In the Exchange Admin Center (EAC), navigate to **Protection** > **Spam filter**.
     
 2. Select the content filter policy for which you want to enable end-user spam notifications (they are disabled by default).
     

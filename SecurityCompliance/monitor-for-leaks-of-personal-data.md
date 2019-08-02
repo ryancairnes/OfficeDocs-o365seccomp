@@ -3,8 +3,8 @@ title: "Monitor for leaks of personal data"
 ms.author: bcarter
 author: brendacarter
 manager: laurawi
-ms.date: 2/7/2018
-ms.audience: ITPro
+ms.date: 02/07/2018
+audience: ITPro
 ms.topic: overview
 ms.collection: 
 - Strat_O365_Enterprise

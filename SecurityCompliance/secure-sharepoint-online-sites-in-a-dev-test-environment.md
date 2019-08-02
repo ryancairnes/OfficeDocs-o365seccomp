@@ -3,8 +3,8 @@ title: "Secure SharePoint Online sites in a dev/test environment"
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 04/09/2019
-ms.audience: ITPro
+ms.date: 06/18/2019
+audience: ITPro
 ms.topic: article
 ms.collection: 
 - Ent_O365
@@ -179,7 +179,7 @@ Use these steps to verify that group-based licensing is working correctly.
   
 1. From the **Microsoft Office Home** tab of your browser, click the **Admin** tile.
     
-2. From the new **Office Admin center** tab of your browser, click **Users**.
+2. From the new **Microsoft 365 admin center** tab of your browser, click **Users**.
     
 3. In the list of users, click **CEO**.
     
@@ -507,8 +507,8 @@ Next, configure a DLP policy that blocks users when they share a document on a S
     
 16. Click **OK**.
     
-17. In the **What do you want to do if we detect sensitive info?** pane, click **Next**.
-    
+17. In the **Do you want to turn on the policy or test things out first?** pane, click **Yes, turn it on right away**, and then click **Next**.
+
 18. In the **Do you want to turn on the policy or test things out first?** pane, click **Yes, turn it on right away**, and then click **Next**.
     
 19. In the **Review your settings** pane, click **Create**, and then click **Close**.

@@ -3,7 +3,7 @@ title: "Chief Information Security Officer (CISO) Workshop, Module 4b: Threat Pr
 ms.author: robmazz
 author: robmazz
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: tutorial
 ms.service: o365-seccomp
 localization_priority: Normal
@@ -14,7 +14,7 @@ description: "Learn more about security principles and recommendations for moder
 
 # CISO Workshop Module 4b: Threat Protection Strategy 
 
-This module reviews the evolution and trajectory of the Microsoft Security Operations Centers (SOC), powered by the trillions of signals in the Microsoft Intelligent Security Graph.
+This module reviews the evolution and trajectory of the Microsoft Security Operations Centers (SOC), powered by trillions of signals in the Microsoft Intelligent Security Graph.
 
 - Download PDF summary: [Module 4b: Threat Protection Strategy](media/ciso-workshop-4b-threat-protection-strategy.pdf)
 - Download PowerPoint summary: [Module 4b: Threat Protection Strategy](https://docs.microsoft.com/office365/securitycompliance/media/ciso-workshop-4b-threat-protection-strategy.pptx)
@@ -31,9 +31,9 @@ This module reviews the evolution and trajectory of the Microsoft Security Opera
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtDxA]
 
-## Part 3: Learnings from Microsoft’s Corporate IT SOC (8:06)
+## Part 3: Learnings from Microsoft Corporate IT SOC (22:07)
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtNO5]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE368fZ]
 
 ## Part 4: Intelligence (6:04)
 
@@ -51,14 +51,18 @@ This module reviews the evolution and trajectory of the Microsoft Security Opera
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtYMz]
 
-## Part 8: Dark Markets and Criminal Forums (9:19)
+## Part 8: Behavior Analytics
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE36iuc]
+
+## Part 9: Dark Markets and Criminal Forums (9:19)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtYMn]
 
-## Part 9: Graph Security API (3:50)
+## Part 10: SIEM Integration (14:22)
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtYMj]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE3685k]
 
-## Part 10: Summary of Integrated Technology and Automation (9:33)
+## Part 11: Summary of Integrated Technology and Automation (9:33)
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWtLoU]

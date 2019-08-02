@@ -2,8 +2,8 @@
 title: "Mail loop insight"
 ms.author: chrisda
 author: chrisda
-manager: serdars
-ms.audience: ITPro
+manager: dansimp
+audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Normal

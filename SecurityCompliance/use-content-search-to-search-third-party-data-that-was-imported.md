@@ -1,52 +1,52 @@
 ---
-title: "Use Content Search to search third-party data that was imported to Office 365"
+title: "Use Content Search to search third-party data imported to Office 365"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
 ms.date: 10/27/2017
-ms.audience: Admin
+audience: Admin
 ms.topic: conceptual
 ms.service: O365-seccomp
 ms.collection: M365-security-compliance
 localization_priority: Normal
 search.appverid: MOE150
 ms.assetid: ec2677ff-c4d7-4363-a9e7-22c80e015688
-description: "Use the Content Search eDiscovery tool to search for items that were imported to mailboxes in Office 365 from a third-party data source. You can create a query to search for all imported items or create a query to search for specific third-party data types. This article lists the values you can use in a keyword query to search the third-party data types that can be imported to Office 365."
+description: "Use the Content Search eDiscovery tool to search for items imported to mailboxes in Office 365 from a third-party data source. You can create a query to search for all imported items or create a query to search for specific third-party data types. This article lists the values you can use in a keyword query to search the third-party data types that you can import to Office 365."
 ---
 
-# Use Content Search to search third-party data that was imported to Office 365
+# Use Content Search to search third-party data imported to Office 365
 
-You can use the [Content Search eDiscovery tool](content-search.md) in the Security & Compliance Center to search for items that were imported to mailboxes in Office 365 from a third-party data source. You can create a query to search all imported third-party data items or you can create a query to only search specific third-party data items. Additionally, you can also create a query-based Preservation Policy or a query-based eDiscovery hold to preserve third-party data in Office 365. 
+You can use the [Content Search eDiscovery tool](content-search.md) in the Security & Compliance Center to search for items imported to mailboxes in Office 365 from a third-party data source. You can create a query to search all imported third-party data items or you can create a query to search specific third-party data items. Also, you can also create a query-based Office 365 retention policy or a query-based eDiscovery hold to preserve third-party data in Office 365. 
   
-For more information about importing third-party data and a list of the third-party data types that can be imported to Office 365, see [Work with a partner to archive third-party data in Office 365](work-with-partner-to-archive-third-party-data.md). 
+For more information about importing third-party data and a list of the third-party data types that you can import to Office 365, see [Work with a partner to archive third-party data in Office 365](work-with-partner-to-archive-third-party-data.md). 
   
 ## Creating a query to search all third-party data
 
-To search (or place on hold) any type of third-party data that you've imported to Office 365, you can you can use the  `kind:externaldata` message property-value pair in the keyword box for a Content Search or when creating a query-based hold. For example, to search for items that were imported from any third-party data source and contain the word "contoso" in the Subject property of the imported item, you would use the following query: 
+To search (or place on hold) any type of third-party data that you've imported to Office 365, you can use the  `kind:externaldata` message property-value pair in the keyword box for a Content Search or when creating a query-based hold. For example, to search for items imported from any third-party data source and contain the word "contoso" in the Subject property of the imported item, you would use the following query: 
   
 ```
 kind:externaldata AND subject:contoso
 ```
 
-The previous keyword query example includes the subject property. For a list of other properties for third-party data items that can included in a keyword query, see the "More information" section in [Work with a partner to archive third-party data in Office 365](work-with-partner-to-archive-third-party-data.md#more-information).
+The previous keyword query example includes the subject property. For a list of other properties for third-party data items that can include in a keyword query, see the "More information" section in [Work with a partner to archive third-party data in Office 365](work-with-partner-to-archive-third-party-data.md#more-information).
   
 When creating queries to search and hold third-party data, you can also use conditions to narrow the search results. For more information about creating Content Search queries, see [Keyword queries and search conditions for Content Search](keyword-queries-and-search-conditions.md).
   
 ## Creating a query to search specific types of third-party data
 
-Instead of searching all types of third-party data, you can create queries that only search for a specify type of third-party data by using the following message property-value pair in the keyword box for a Content Search:
+Instead of searching all types of third-party data, you can create queries that only search for a specify type of third-party data by using the following message *property:value* pair in the keyword box for a Content Search:
   
 ```
 itemclass:ipm.externaldata.<third-party data type>* 
 ```
 
-For example, to only search Facebook data that contains the word "contoso" in the Subject property, you would use the following query:
+For example, to search Facebook data that contains the word "contoso" in the Subject property, you would use the following query:
   
 ```
 itemclass:ipm.externaldata.Facebook* AND subject:contoso
 ```
 
-The following table lists the third-party data types that you can search, and the value to use for the  `itemclass:` message property to specifically search for that type of third-party data. Note that the query syntax isn't case sensitive. 
+The following table lists the third-party data types that you can search, and the value to use for the  `itemclass:` message property to specifically search for that type of third-party data. The query syntax isn't case sensitive. 
   
 |**Third-party data type**|**Value for  `itemclass:` property**|
 |:-----|:-----|

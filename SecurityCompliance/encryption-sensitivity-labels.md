@@ -3,8 +3,7 @@ title: "Restrict access to content by using encryption in sensitivity labels"
 ms.author: stephow
 author: stephow-MSFT
 manager: laurawi
-ms.date: 
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 localization_priority: Priority
@@ -45,7 +44,7 @@ To begin, simply toggle **Encryption** to **On**, and then use the options below
 2. **Allow access to labeled content to expire**, either on a specific date or after a specific number of days after the label is applied. After this time, users won’t be able to open the labeled item. If you specify a date, it is effective midnight on that date in your current time zone. (Note that some email clients may not enforce expiration and show emails past their expiration date, due to their caching mechanisms.)
 3. **Allow offline access** never, always, or for a specific number of days after the label is applied. If you restrict offline access to never or a number of days, when that threshold is reached, users must be reauthenticated and their access is logged. For more information, see the next section on the Rights Management use license.
 
-![Encryption settings for sensitivity label](media/Sensitivity_Encryption_settings_for_sensitivity_label.png)
+![Encryption settings for sensitivity label](media/Sensitivity-Encryption-settings-for-sensitivity-label.png)
 
 ### Rights Management use license for offline access
 
@@ -66,7 +65,7 @@ Doing so is a straightforward two-step process:
 1. First you add users or groups that will be assigned permissions to the labeled content.
 2. Then you choose which permissions those users have for the labeled content.
 
-![Options to assign permissions to users](media/Sensitivity_Assign_permissions_settings.png)
+![Options to assign permissions to users](media/Sensitivity-Assign-permissions-settings.png)
 
 ### Add users or groups
 
@@ -89,13 +88,13 @@ When you choose which permissions to allow for those users or groups, you can se
 
 For more information on each specific permission, see [Usage rights and descriptions](https://docs.microsoft.com/en-us/azure/information-protection/configure-usage-rights#usage-rights-and-descriptions).  
 
-![Options to choose preset or custom permissions](media/Sensitivity_Choose_permissions_settings.png)
+![Options to choose preset or custom permissions](media/Sensitivity-Choose-permissions-settings.png)
 
 Note that the same label can grant different permissions to different users. For example, a single label can assign some users as Reviewer and a different user as Co-author, as shown below.
 
 To do this, add users or groups, assign them permissions, and save those settings. Then repeat these steps, adding users and assigning them permissions, saving the settings each time. You can do this as often as necessary, to define different permissions for different users.
 
-![Different users with different permissions](media/Sensitivity_Multiple_users_permissions.png)
+![Different users with different permissions](media/Sensitivity-Multiple-users-permissions.png)
 
 ### Rights Management issuer (user applying the sensitivity label) always has Full Control
 
@@ -108,6 +107,26 @@ The Rights Management issuer is always granted Full Control permissions for the 
 - The Rights Management issuer can still open a document after it is revoked.
 
 For more information, see [Rights Management issuer and Rights Management owner](https://docs.microsoft.com/en-us/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
+
+## What happens to existing encryption when a label's applied
+
+Before a sensitivity label is applied to content, it's possible that a user already encrypted the content by applying some other protection setting. For example, a user might have applied:
+
+- The **Do Not Forward** option.
+- Custom protection by using the Azure Information Protection unified labeling client.
+- An Azure Rights Management Service (RMS) template that encrypts the content but is not associated with a label.
+
+This table describe what happens to existing encyption when a sensitivity label is applied to that content.
+<br/>
+<br/>
+
+| |**User applies a sensitivity label with encryption turned off**|**User applies a sensitivity label with encryption turned on**|**User applies a label with Remove Protection**<sup>1</sup>|
+|:-----|:-----|:-----|:-----|
+|**Do Not Forward**|Email - Protection is removed<br/>Document - Protection is preserved|Label protection is applied|**Do Not Forward** is removed|
+|**Custom protection**<sup>1</sup>|Protection is preserved|Label protection is applied|Custom protection is removed|
+|**Azure RMS template**|Protection is preserved|Label protection is applied|Custom protection is removed|
+
+<sup>1</sup>This is supported only in the Azure Information Protection labeling client.
 
 ## Storing encrypted content in OneDrive and SharePoint
 
