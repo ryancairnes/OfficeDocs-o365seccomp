@@ -35,7 +35,7 @@ Office 365 Advanced Threat Protection (ATP) safeguards your organization against
 
 ## Office 365 ATP Plan 1 and Plan 2
 
-ATP is included in Office 365 E5; however, ATP Plan and ATP Plan 2 are each available as an add-on for certain subscriptions. To learn more, see [Feature availability across ATP plans](https://docs.microsoft.com/en-us/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#feature-availability-across-advanced-threat-protection-atp-plans).
+ATP is included in Office 365 E5; however, ATP Plan 1 and ATP Plan 2 are each available as an add-on for certain subscriptions. To learn more, see [Feature availability across ATP plans](https://docs.microsoft.com/en-us/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#feature-availability-across-advanced-threat-protection-atp-plans).
 
 ## Configure ATP policies
 
