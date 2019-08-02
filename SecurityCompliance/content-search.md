@@ -326,7 +326,7 @@ Here are a few things to keep in mind when searching inactive mailboxes.
   - [Delete an inactive mailbox in Office 365](delete-an-inactive-mailbox.md)
 
   
-### Disconnected mailboxes
+###  Disconnected or de-licensed mailboxes
 
 
 
