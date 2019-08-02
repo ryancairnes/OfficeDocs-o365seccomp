@@ -43,7 +43,7 @@ Here's the process for setting up compliance boundaries:
 
 [Step 4: Create a search permissions filter to enforce the compliance boundary](#step-4-create-a-search-permissions-filter-to-enforce-the-compliance-boundary)
 
-[Step 5: Create an eDiscovery case for an intra-agency investigations](#step-5-create-an-ediscovery-case-for-an-intra-agency-investigations)
+[Step 5: Create an eDiscovery case for an intra-agency investigations](#step-5-create-an-ediscovery-case-for-intra-agency-investigations)
   
 ## Step 1: Identify a user attribute to define your agencies
 
