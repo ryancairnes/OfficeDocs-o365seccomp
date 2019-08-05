@@ -9,6 +9,7 @@
 ### [Microsoft Secure Score](microsoft-secure-score.md)
 ## [Go to the Security & Compliance Center](go-to-the-securitycompliance-center.md)
 ### [Permissions in the Security & Compliance Center](permissions-in-the-security-and-compliance-center.md)
+### [Permissions in the Microsoft 365 compliance center and Microsoft 365 security center](permissions-microsoft-365-compliance-security.md)
 ### [Give users access to the Security & Compliance Center](grant-access-to-the-security-and-compliance-center.md)
 ## [Use your free Azure Active Directory subscription](use-your-free-azure-ad-subscription-in-office-365.md)
 ## [Plan for security and compliance in Office 365](plan-for-security-and-compliance.md)
