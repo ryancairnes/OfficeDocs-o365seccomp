@@ -61,7 +61,7 @@ Users with this role have permissions to manage compliance-related features in t
 
 Users with this role have permissions to protect and track data in the Microsoft 365 compliance center, Microsoft 365 admin center, and Azure. Users can also manage all features within the Exchange admin center, Compliance Manager, and Teams & Skype for Business admin center and create support tickets for Azure and Microsoft 365.
 
-|**In this service...**|**The compliance administrator can...**|
+|**In this service...**|**The compliance data administrator can...**|
 |:-----|:-----|
 |[**Microsoft 365 compliance center**](https://compliance.microsoft.com/)|Protect and manage your organization's data across Microsoft 365 services. <br/><br/> Manage compliance alerts. <br/><br/> Manage sensitivity labels|
 |[**Compliance Manager**](https://docs.microsoft.com/office365/securitycompliance/meet-data-protection-and-regulatory-reqs-using-microsoft-cloud)|Track, assign, and verify your organization's regulatory compliance activities.|
@@ -73,7 +73,7 @@ Users with this role have permissions to protect and track data in the Microsoft
 
 Users with this role have permissions to manage security-related features in the Microsoft 365 security center, Azure Active Directory Identity Protection, Azure Information Protection, and Office 365 Security & Compliance Center.
 
-|**In this service...**|**The compliance administrator can...**|
+|**In this service...**|**The security administrator can...**|
 |:-----|:-----|
 |[**Microsoft 365 security center**](https://security.microsoft.com/)|Monitor security-related policies across Microsoft 365 services. <br/><br/>  Manage security threats and alerts. <br/><br/> View reports. <br/><br/> Manage sensitivity labels.|
 |**Identity Protection Center**|Do everything the Security Reader role can, plus  perform all Identity Protection Center operations, except for reset passwords.|
@@ -90,7 +90,7 @@ Users with this role have permissions to manage security-related features in the
 
 Users with this role can manage alerts and have global read-only access on security-related feature, including all information in Microsoft 365 security center, Azure Active Directory, Identity Protection, Privileged Identity Management, as well as the ability to read Azure Active Directory sign-in reports and audit logs, and in Office 365 Security & Compliance Center.
 
-|**In this service...**|**The compliance administrator can...**|
+|**In this service...**|**The security operator can...**|
 |:-----|:-----|
 |[**Microsoft 365 security center**](https://security.microsoft.com/)|Do everything the Security Reader role can. <br/><br/> View, investigate, and respond to security alerts.|
 |**Identity Protection Center** (coming soon)|Do everything the Security Reader role can.|
@@ -105,7 +105,7 @@ Users with this role can manage alerts and have global read-only access on secur
 
 Users with this role have global read-only access on security-related feature, including all information in Microsoft 365 security center, Azure Active Directory, Identity Protection, Privileged Identity Management, as well as the ability to read Azure Active Directory sign-in reports and audit logs, and in Office 365 Security & Compliance Center.
 
-|**In this service...**|**The compliance administrator can...**|
+|**In this service...**|**The security reader can...**|
 |:-----|:-----|
 |[**Microsoft 365 security center**](https://security.microsoft.com/)|View security-related policies across Microsoft 365 services. <br/><br/> View security threats and alerts. <br/><br/> View reports.|
 |**Identity Protection Center**|Read all security reports and settings information for security features: anti-spam, encryption, data loss prevention (DLP), anti-malware, Advanced Threat Protection (ATP), anti-phishing, and mail flow rules (also known as transport rules).|
