@@ -17,7 +17,7 @@ description: "Learn how to submit suspicious emails, suspected phishing mails, s
 
 # How to submit suspected spam, phish, URLs, and files to Microsoft for Office 365 scanning
 
-Admins can now send emails by using file or network message ID, URLs, and files for scanning by Microsoft in Office 365. 
+Admins can send emails by using file or network message ID, URLs, and files for scanning by Microsoft in Office 365. 
 The updated submissions section still includes user reported messages and available to all customers using EOP.
 
 When you submit an email, you will get information about any policies that may have allowed the incoming email into your tenant, as well as examination of any URLs and attachments in the mail. Policies that may have allowed a mail include an individual user's safe sender list as well as tenant level policies such as ETR rules. 
