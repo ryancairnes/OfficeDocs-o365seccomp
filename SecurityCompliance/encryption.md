@@ -74,4 +74,4 @@ See the following resources to learn more:
 
 [Plan for Office 365 security and information protection capabilities](plan-for-security-and-compliance.md)
   
-[Security and Compliance in Office 365 for business - Admin Help](https://support.office.com/article/7fe448f7-49bd-4d3e-919d-0a6d1cf675bb)
+[Security and Compliance in Office 365 for business - Admin Help](https://support.office.com/article/7fe448f7-49bd-4d3e-919d-0a6d1cf675bb).
