@@ -1,9 +1,9 @@
 ---
-title: "Admin submissions in Office 365"
-ms.author: brwilcox
-author: briwilcox
+title: "Admin submissions in Office 365, O365 submissions, Office 365 spam problem, O365 false negative, submit phish in office 365, submit email for scanning, suspicious email in Office 365, scan a mail, have Microsoft scan for phish, have Microsoft scan for spam, submit e-mail, submit email"
+ms.author: tracyp
+author: MSFTTracyP
 manager: dansimp
-ms.date: 07/09/2019
+ms.date: 08/06/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -12,22 +12,21 @@ search.appverid:
 - MET150
 ms.collection:
 - M365-security-compliance
-description: "Learn how to submit potentially harmful messages, URLs, and files to Microsoft."
+description: "Learn how to submit suspicious emails, suspected phishing mails, spam, and other potentially harmful messages, URLs, and files from your Office 365 tenant to Microsoft for scanning."
 ---
 
-# Admin submissions in Office 365
+# How to submit suspected spam, phish, or suspicious emails to Microsoft for Office 365 scanning
 
 Admins can now send emails by using file or network message ID, URLs, and files for scanning by Microsoft in Office 365. 
 The updated submissions section still includes user reported messages and available to all customers using EOP.
 
 When you submit an email, you will get information about any policies that may have allowed the incoming email into your tenant, as well as examination of any URLs and attachments in the mail. Policies that may have allowed a mail include an individual user's safe sender list as well as tenant level policies such as ETR rules. 
 
-
-## How to submit content
+## How to submit content to Microsoft for Office 365 scanning
 
 To submit content to Microsoft click the **New submission** button in the top left hand side of the submissions page. A flyout on the right side of the page appears with the option to submit either an email, URL, or file. 
 
-### Email
+### Submit an email to Microsoft
 ![Email submission example](media/submission-flyout-email.PNG)
 1. To submit an email, select **email** and specify the email **network message ID** or upload the email file. 
 
@@ -41,7 +40,7 @@ To submit content to Microsoft click the **New submission** button in the top le
 
 4. Click the **Submit** button.
 
-### URL
+### Submit a URL to Microsoft
 ![Email submission example](media/submission-url-flyout.png)
 1. To submit a URL select **URL** from the flyout. Type in the full URL including the protocol (**https://**). 
 
@@ -50,7 +49,7 @@ To submit content to Microsoft click the **New submission** button in the top le
 2. Click the **Submit** button. 
 
 
-### File
+### Submit a file to Microsoft
 ![Email submission example](media/submission-file-flyout.PNG)
 1. To submit a file select **File** from the flyout and upload the file you would like to scan. 
 
