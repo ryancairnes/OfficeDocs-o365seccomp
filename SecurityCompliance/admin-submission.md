@@ -1,9 +1,9 @@
 ---
 title: "Admin submissions in Office 365", O365 submissions, Office 365 spam problem, O365 false negative, submit phish in office 365, submit email for scanning, suspicious email in Office 365, scan a mail, have Microsoft scan for phish, have Microsoft scan for spam, submit e-mail, submit email
-ms.author: brwilcox
-author: briwilcox
+ms.author: MSFTTracyP
+author: tracyp
 manager: dansimp
-ms.date: 07/09/2019
+ms.date: 08/06/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
