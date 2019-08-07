@@ -37,16 +37,14 @@ EDM-based classification enables you to create custom sensitive information type
 
 ## Required licenses and permissions
 
-- You must be a global admin, compliance administrator, or Exchange Online administrator to perform the tasks described in this article. To learn more about DLP permissions, see [Permissions](https://review.docs.microsoft.com/en-us/office365/securitycompliance/data-loss-prevention-policies#permissions).
-- When generally available, EDM-based classification will be included in the following subscriptions:
+You must be a global admin, compliance administrator, or Exchange Online administrator to perform the tasks described in this article. To learn more about DLP permissions, see [Permissions](https://review.docs.microsoft.com/en-us/office365/securitycompliance/data-loss-prevention-policies#permissions).
 
-      - Office 365 E5
-    
-      - Microsoft 365 E5
-    
-      - Microsoft 365 Information Protection and Compliance
-    
-      - Office 365 Advanced Compliance
+When generally available, EDM-based classification will be included in the following subscriptions:
+
+- Office 365 E5
+- Microsoft 365 E5
+- Microsoft 365 Information Protection and Compliance
+- Office 365 Advanced Compliance
 
 ## The work flow at a glance
 
