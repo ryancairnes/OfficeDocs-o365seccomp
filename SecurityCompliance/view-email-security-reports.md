@@ -2,7 +2,7 @@
 title: "View email security reports in the Security &amp; Compliance Center"
 ms.author: chrfox
 author: chrfox
-manager: laurawi
+manager: dansimp
 ms.date: 05/21/2019
 audience: ITPro
 ms.topic: article

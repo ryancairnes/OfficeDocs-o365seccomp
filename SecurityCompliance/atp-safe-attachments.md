@@ -1,7 +1,7 @@
 ---
 title: "Office 365 ATP Safe Attachments"
-ms.author: deniseb
-author: denisebmsft
+ms.author: tracyp
+author: MSFTTracyP
 manager: dansimp
 audience: Admin
 ms.date: 05/17/2019

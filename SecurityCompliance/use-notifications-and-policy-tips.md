@@ -2,7 +2,7 @@
 title: "Send email notifications and show policy tips for DLP policies"
 ms.author: chrfox
 author: chrfox
-manager: laurawi
+manager: dansimp
 ms.date: 06/14/2019
 audience: Admin
 ms.topic: article

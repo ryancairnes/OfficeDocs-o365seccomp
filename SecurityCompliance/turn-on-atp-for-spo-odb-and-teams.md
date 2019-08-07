@@ -1,7 +1,7 @@
 ---
 title: "Turn on Office 365 ATP for SharePoint, OneDrive, and Microsoft Teams"
-ms.author: deniseb
-author: denisebmsft
+ms.author: tracyp
+author: msfttracyp
 manager: dansimp
 audience: ITPro
 ms.topic: article

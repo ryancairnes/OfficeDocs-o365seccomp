@@ -1,7 +1,7 @@
 ---
 title: "Office 365 ATP Safe Links warning pages"
-ms.author: deniseb
-author: denisebmsft
+ms.author: tracyp
+author: MSFTTracyP
 manager: dansimp
 audience: ITPro
 ms.topic: overview
