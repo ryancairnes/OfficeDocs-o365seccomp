@@ -554,8 +554,7 @@ Office 365 DLP for Exchange Online (email), OneDrive for Business (files), Micro
 EDM sensitive information types for following scenarios are currently in development, but not yet available:
 
 - Office 365 DLP for SharePoint (files)
-
-  - Auto-classification of sensitivity labels and retention labels
+- Auto-classification of sensitivity labels and retention labels
 
 #### To create a DLP policy with EDM
 
@@ -569,7 +568,7 @@ EDM sensitive information types for following scenarios are currently in develop
 
 5. On the **Choose locations** tab, select **Let me choose specific locations**, and then choose **Next**.<br/>![Choose locations option](media/DLP-EDM-newpolicy-chooselocations.png)<br>
 
-6. In the **Status** column, select **Exchange email, OneDrive accounts, Teams chat and channel message** , and then choose **Next**. (Note: EDM is currently not supported in Sharepoint sites and DLP policy will not detect files in Sharepoint for EDM)<br/>![Choose locations](\media\step-6-edm-dlp-policy.png) 
+6. In the **Status** column, select **Exchange email, OneDrive accounts, Teams chat and channel message** , and then choose **Next**. (Note: EDM is currently not supported in Sharepoint sites and DLP policy will not detect files in Sharepoint for EDM)<br/>![Choose locations](\media\step-6-edm-dlp-policy.png)<br> 
 
 7. On the **Policy settings** tab, choose **Use advanced settings**, and then choose **Next**.<br/>![Use advanced settings](media/edm-dlp-policy-advancedsettings.png)<br/>
 
