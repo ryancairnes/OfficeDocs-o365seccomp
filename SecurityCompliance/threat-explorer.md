@@ -1,9 +1,9 @@
 ---
-title: "Threat Explorer (and real-time detections)"
+title: "Threat Explorer and real-time detections"
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
-ms.date: 08/02/2019
+ms.date: 08/07/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -14,10 +14,10 @@ search.appverid:
 ms.assetid: 82ac9922-939c-41be-9c8a-7c75b0a4e27d
 ms.collection: 
 - M365-security-compliance
-description: "Learn about Explorer (and real-time detections) in the Security &amp; Compliance Center."
+description: "Learn about Explorer and real-time detections in the Security &amp; Compliance Center."
 ---
 
-# Threat Explorer (and real-time detections)
+# Threat Explorer and real-time detections
 
 If your organization has [Office 365 Advanced Threat Protection](office-365-atp.md) (Office 365 ATP), and you have the [necessary permissions](#required-licenses-and-permissions), you have either **Explorer** or **real-time detections** (formerly *real-time reports* — [see what's new](#new-features-in-real-time-detections)!). In the Security & Compliance Center, go to **Threat management**, and then choose **Explorer** OR **Real-time detections**. 
 
@@ -112,11 +112,11 @@ To review phish URLs in messages and clicks on URLs in phish messages, use the [
 
 ## Review email messages reported by users
 
-Suppose that you want to see email messages that users in your organization have reported as Junk, Not Junk, or Phishing by using the [Report Message add-in for Outlook and Outlook on the web](enable-the-report-message-add-in.md). To do this, use the [Email > User-reported](threat-explorer-views.md#email--user-reported) view of Explorer (or real-time detections).
+Suppose that you want to see email messages that users in your organization have reported as Junk, Not Junk, or Phishing by using the [Report Message add-in for Outlook and Outlook on the web](enable-the-report-message-add-in.md). To do this, use the [Email > Submissions](threat-explorer-views.md#email--user-reported) view of Explorer (or real-time detections).
 
 1. In the Security & Compliance Center ([https://protection.office.com](https://protection.office.com)), choose **Threat management** > **Explorer** (or **Real-time detections**). (This example uses Explorer.)
 
-2. In the **View** menu, choose **Email** > **User-reported**.<br/>![View menu for Explorer](media/ExplorerViewMenuEmailUserReported.png)<br/>
+2. In the **View** menu, choose **Email** > **Submissions**.<br/>![View menu for Explorer](media/ExplorerViewMenuEmailUserReported.png)<br/>
 
 3. Click **Sender**, and then choose **Basic** > **Report type**.
 
