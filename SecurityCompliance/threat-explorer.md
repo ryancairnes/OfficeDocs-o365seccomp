@@ -1,5 +1,5 @@
 ---
-title: "Threat Explorer (and real-time detections)"
+title: "Threat Explorer and real-time detections"
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
@@ -14,10 +14,10 @@ search.appverid:
 ms.assetid: 82ac9922-939c-41be-9c8a-7c75b0a4e27d
 ms.collection: 
 - M365-security-compliance
-description: "Learn about Explorer (and real-time detections) in the Security &amp; Compliance Center."
+description: "Learn about Explorer and real-time detections in the Security &amp; Compliance Center."
 ---
 
-# Threat Explorer (and real-time detections)
+# Threat Explorer and real-time detections
 
 If your organization has [Office 365 Advanced Threat Protection](office-365-atp.md) (Office 365 ATP), and you have the [necessary permissions](#required-licenses-and-permissions), you have either **Explorer** or **real-time detections** (formerly *real-time reports* — [see what's new](#new-features-in-real-time-detections)!). In the Security & Compliance Center, go to **Threat management**, and then choose **Explorer** OR **Real-time detections**. 
 
