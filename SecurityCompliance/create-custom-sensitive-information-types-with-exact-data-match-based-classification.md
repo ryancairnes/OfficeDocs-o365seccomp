@@ -148,7 +148,7 @@ You will be prompted to confirm, as follows:
 > If you want your changes to occur without confirmation, in Step 5, use this cmdlet instead: New-DlpEdmSchema -FileData $edmSchemaXml
 
 > [!NOTE]
-It can take between 10-60 minutes to update the EDMSchema with additions. The update must complete before you execute steps that use the additions.
+> It can take between 10-60 minutes to update the EDMSchema with additions. The update must complete before you execute steps that use the additions.
 
 Now that the schema for your database of sensitive information is defined, the next step is to set up a rule package. Proceed to the section [Set up a rule package](https://review.docs.microsoft.com/en-us/office365/securitycompliance/create-custom-sensitive-info-type-edm?branch=chrfox-o365seccomp-pr-working#set-up-a-rule-package).
 
