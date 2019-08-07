@@ -67,9 +67,9 @@ When you select an item in the list, such as a URL that was detected, a fly-out 
 
 ![Details about a detected URL](media/ThreatExplorerEmailPhishURLDetails.png)
 
-## Email > User-reported
+## Email > Submissions
 
-To view this report, in Explorer (or real-time detections), choose **View** > **Email** > **User-reported**. This view shows email that users have reported as junk, not junk, or phishing email. 
+To view this report, in Explorer (or real-time detections), choose **View** > **Email** > **Submissions**. This view shows email that users have reported as junk, not junk, or phishing email. 
 
 ![Email messages reported by users](media/ThreatExplorerEmailUserReportedViewOptions.png) 
 
