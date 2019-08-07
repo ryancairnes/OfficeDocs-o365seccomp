@@ -130,7 +130,7 @@ The ability to filter in a click and navigate to specific details can save you a
 
 ## Queries and filters
 
-Explorer (and the real-time detections report) has several powerful filters and querying capabilities that enable you to drill into details, such as top targeted users, top malware families, detection technology and more. Each kind of report offers a variety of ways to view and explore data.
+Explorer (as well as the real-time detections report) has several powerful filters and querying capabilities that enable you to drill into details, such as top targeted users, top malware families, detection technology and more. Each kind of report offers a variety of ways to view and explore data.
 
 > [!IMPORTANT]
-> Do not use wildcard characters, such as an asterisk (*) or a question mark (?), in the query bar for Explorer (or real-time detections). When you search on the Subject field for email messages, Explorer (or real-time detections) will perform partial matching and yield results similar to a wildcard search.
+> Do not use wildcard characters, such as an asterisk or a question mark, in the query bar for Explorer (or real-time detections). When you search on the **Subject field** for email messages, Explorer (or real-time detections) will perform partial matching and yield results similar to a wildcard search.
