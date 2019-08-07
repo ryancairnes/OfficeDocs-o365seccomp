@@ -16,6 +16,15 @@ search.appverid:
 description: "Create custom sensitive information types with Exact Data Match based classification."
 ---
 
+
+
+
+
+
+ABOVE THIS LINE IS IMPORTED BELOW IS ORIGINAL IMPORT BOOKMARK
+
+
+
 # Create custom sensitive information types with Exact Data Match based classification (Preview)
 
 ## Overview
@@ -28,7 +37,8 @@ But what if you wanted a custom sensitive information type that uses exact data 
 - result in fewer false-positives;
 - work with structured sensitive data;
 - handle sensitive information more securely; and
-- be used with several Microsoft cloud services.
+- be used with several Microsoft cloud service
+
 
 ![EDM-based classification](media/EDMClassification.png)
 
