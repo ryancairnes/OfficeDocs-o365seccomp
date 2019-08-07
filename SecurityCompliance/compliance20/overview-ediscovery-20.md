@@ -90,4 +90,4 @@ Use the **Jobs** tab to monitor long-running processes for case-related tasks th
 
 ## Configuring case settings
 
-Use the **Settings** tab to configure case-wide settings. This includes adding members to a case, closing or deleting a case, and configuring search and analytics settings. For more information, see [Configure case settings in Advanced eDiscovery](configuring-case-settings-ediscovery20.md).
+Use the **Settings** tab to configure case-wide settings. This includes adding members to a case, closing or deleting a case, and configuring search and analytics settings.
