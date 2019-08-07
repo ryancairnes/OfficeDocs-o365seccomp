@@ -220,20 +220,14 @@ When you set up your rule package, make sure to correctly reference your .csv fi
 - **Datastore**: This field specifies EDM lookup data store to be used. You provide a data source name of a configured EDM Schema.
 
 - **idMatch**: This field points to the primary element for EDM.
-    
-      - Matches: Specifies the field to be used in exact lookup. You provide a searchable field name in EDM Schema for the DataStore.
-    
-      - Classification: This field specifies the sensitive type match that triggers EDM lookup. You can provide Name or GUID of an existing built-in or custom classification.
+  - Matches: Specifies the field to be used in exact lookup. You provide a searchable field name in EDM Schema for the DataStore.
+  - Classification: This field specifies the sensitive type match that triggers EDM lookup. You can provide Name or GUID of an existing built-in or custom classification.
 
 - **Match:** This field points to additional evidence found in proximity of idMatch.
-    
-      - Matches: You provide any field name in EDM Schema for DataStore.
-
+  - Matches: You provide any field name in EDM Schema for DataStore.
 - **Resource:** This section specifies the name and description for sensitive type in multiple locales.
-    
-      - idRef: You provide GUID for ExactMatch id.
-    
-      - Name & des Editing the schema criptions: customize as required.
+  - idRef: You provide GUID for ExactMatch id.
+  - Name & des Editing the schema criptions: customize as required.
 
 ```powershell
 > \<RulePackage xmlns="http://schemas.microsoft.com/office/2018/edm"\>
