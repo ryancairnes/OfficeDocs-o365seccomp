@@ -352,7 +352,7 @@ During this phase, you set up a custom security group and user account, and set 
 #### Set up the EDM Upload Agent
 
 >[!NOTE]
-Before you begin this procedure, make sure that you are a member of the *EDM\_DataUploaders* security group and a local admin on your machine.
+> Before you begin this procedure, make sure that you are a member of the *EDM\_DataUploaders* security group and a local admin on your machine.
 
 1. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639). By default, the installation location should be C:\\Program Files\\Microsoft\\EdmUploadAgent.
 
