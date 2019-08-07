@@ -94,3 +94,14 @@ The final step is to use the Azure Storage Explorer and the SAS URL to connect t
       - ExtractionError.csv: This CSV file contains the available metadata for files that weren't properly extracted from their parent item.
         
       - ProcessingError: This folder contains documents with processing errors. This content is at an item level, which means if an attachment had a processing error, the document that contains the attachment will also be included in this folder.
+ 
+8. To export all contents in the export, select the export folder, and then click **Download**.
+
+9. Specify the location where you want to download the exported files, and then click Select folder.
+
+    The Azure Storage Explorer starts the export process. The status of the downloading the exported items is displayed in the **Activities** pane. A message is displayed when the download is finished.
+
+    ![A message is displayed when the download is finished](../media/AzureStorageConnect8.png)
+
+> [!NOTE]
+> Instead of downloading the entire export job, you can select specific items to download. And instead of downloading items, you can double-click an item to view it.
