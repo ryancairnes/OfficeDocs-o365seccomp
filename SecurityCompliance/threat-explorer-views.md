@@ -3,7 +3,7 @@ title: "Views in Threat Explorer and real-time detections"
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
-ms.date: 03/18/2019
+ms.date: 08/07/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
