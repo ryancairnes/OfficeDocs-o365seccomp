@@ -1,7 +1,7 @@
 ---
 title: "Create custom sensitive information types with Exact Data Match"
-ms.author: deniseb
-author: denisebmsft
+ms.author: chrfox
+author: chrfox
 manager: laurawi
 audience: Admin
 ms.topic: article

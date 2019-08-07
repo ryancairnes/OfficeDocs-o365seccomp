@@ -1,7 +1,7 @@
 ---
 title: "Document Fingerprinting"
-ms.author: deniseb
-author: denisebmsft
+ms.author: chrfox
+author: chrfox
 manager: laurawi
 audience: ITPro
 ms.topic: article

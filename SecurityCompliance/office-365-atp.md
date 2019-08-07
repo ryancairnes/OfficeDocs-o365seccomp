@@ -1,7 +1,7 @@
 ---
 title: "Office 365 Advanced Threat Protection"
-ms.author: deniseb
-author: denisebmsft
+ms.author: tracyp
+author: msfttracyp
 manager: dansimp
 ms.date: 03/28/2019
 audience: Admin
