@@ -568,7 +568,7 @@ EDM sensitive information types for following scenarios are currently in develop
 
 5. On the **Choose locations** tab, select **Let me choose specific locations**, and then choose **Next**.<br/>![Choose locations option](media/DLP-EDM-newpolicy-chooselocations.png)<br>
 
-6. In the **Status** column, select **Exchange email, OneDrive accounts, Teams chat and channel message** , and then choose **Next**. (Note: EDM is currently not supported in Sharepoint sites and DLP policy will not detect files in Sharepoint for EDM)<br/>![Choose locations](\media\step-6-edm-dlp-policy.png)<br/> 
+6. In the **Status** column, select **Exchange email, OneDrive accounts, Teams chat and channel message** , and then choose **Next**. (Note: EDM is currently not supported in Sharepoint sites and DLP policy will not detect files in Sharepoint for EDM)<br/>![Choose locations](media/step-6-edm-dlp-policy.png)<br/> 
 
 7. On the **Policy settings** tab, choose **Use advanced settings**, and then choose **Next**.<br/>![Use advanced settings](media/edm-dlp-policy-advancedsettings.png)<br/>
 
