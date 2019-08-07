@@ -335,7 +335,7 @@ In this example, note the following:
 - The classification value references an existing or custom sensitive information type: **classification = "U.S. Social Security Number (SSN)"**. (In this case, we use the existing sensitive information type of U.S. Social Security Number.)
 
 > [!NOTE]
-It can take between 10-60 minutes to update the EDMSchema with additions. The update must complete before you execute steps that use the additions.
+> It can take between 10-60 minutes to update the EDMSchema with additions. The update must complete before you execute steps that use the additions.
 
 ### Part 2: Index and upload the sensitive data
 
