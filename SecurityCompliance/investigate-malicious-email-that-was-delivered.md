@@ -1,9 +1,9 @@
 ---
-title: "Find and investigate malicious email that was delivered (Office 365 Threat investigation and response"
+title: "Find and investigate malicious email that was delivered in Office 365"
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
-ms.date: 08/02/2019
+ms.date: 08/07/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -17,15 +17,15 @@ ms.collection:
 description: "Learn how to use threat investigation and response capabilities to find and investigate malicious email."
 ---
 
-# Find and investigate malicious email that was delivered (Office 365 Advanced Threat Protection Plan 2)
+# Find and investigate malicious email that was delivered in Office 365
 
-[Office 365 Advanced Threat Protection](office-365-atp.md) lets you to investigate activities that put your users at risk and take action to protect your organization. For example, if you are part of your organization's security team, you can find and investigate suspicious email messages that were delivered to your users. You can do this by using [Threat Explorer (or real-time detections)](threat-explorer.md).
+[Office 365 Advanced Threat Protection](office-365-atp.md) enables you to investigate activities that put your users at risk and take action to protect your organization. For example, if you are part of your organization's security team, you can find and investigate suspicious email messages that were delivered to your users. You can do this by using [Threat Explorer (or real-time detections)](threat-explorer.md).
   
 ## Before you begin...
 
 Make sure that the following requirements are met:
   
-- Your organization has [Office 365 Advanced Threat Protection](office-365-atp.md) (Plan 2) and [licenses are assigned to users](https://docs.microsoft.com/en-us/office365/admin/subscriptions-and-billing/assign-licenses-to-users).
+- Your organization has [Office 365 Advanced Threat Protection](office-365-atp.md) and [licenses are assigned to users](https://docs.microsoft.com/en-us/office365/admin/subscriptions-and-billing/assign-licenses-to-users).
     
 - [Office 365 audit logging](turn-audit-log-search-on-or-off.md) is turned on for your organization. 
     

@@ -1,7 +1,7 @@
 ---
 title: "How DLP works between the Security & Compliance Center and Exchange admin center"
-ms.author: deniseb
-author: denisebmsft
+ms.author: chrfox
+author: chrfox
 manager: laurawi
 ms.date: 04/19/2019
 audience: Admin

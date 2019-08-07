@@ -1,7 +1,7 @@
 ---
 title: "Create a custom sensitive information type in Security & Compliance Center PowerShell"
-ms.author: deniseb
-author: denisebmsft
+ms.author: chrfox
+author: chrfox
 manager: laurawi
 audience: Admin
 ms.topic: article
