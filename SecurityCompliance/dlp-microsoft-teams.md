@@ -1,7 +1,7 @@
 ---
 title: "Data loss prevention and Microsoft Teams"
-ms.author: deniseb
-author: denisebmsft
+ms.author: chrfox
+author: chrfox
 manager: laurawi
 ms.date: 07/12/2019
 audience: ITPro
