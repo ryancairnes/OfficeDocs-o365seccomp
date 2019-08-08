@@ -341,19 +341,21 @@ Example: **EdmUploadAgent.exe /UploadData /DataStoreName PatientRecords /DataFil
 To separate and execute index of sensitive data in an isolated environment, execute index and upload steps separately.
 
 To index the sensitive data, run the following command in Windows Command Prompt:
+
 `EdmUploadAgent.exe /CreateHash /DataFile \<DataFilePath\> /HashLocation \<HashedFileLocation\>`
 
 Example: **EdmUploadAgent.exe /CreateHash /DataFile C:\\Edm\\Data\\PatientRecords.csv /HashLocation C:\\Edm\\Hash**
 
 To upload the indexed data, run the following command in Windows Command Prompt:
+
 `EdmUploadAgent.exe /UploadHash /DataStoreName \<DataStoreName\> /HashFile \<HashedSourceFilePath\>`
 
 Example: **EdmUploadAgent.exe /UploadHash /DataStoreName PatientRecords /HashFile C:\\Edm\\Hash\\PatientRecords.EdmHash**
 
 To verify your sensitive data has been uploaded, run the following command in Windows Command Prompt:
-```powershell
-EdmUploadAgent.exe /GetDataStore
-```
+
+`EdmUploadAgent.exe /GetDataStore`
+
 You'll see a list of data stores and when they were last updated, similar to the following:
 
 Proceed to set up your process and schedule for [Refreshing your sensitive information database](https://review.docs.microsoft.com/en-us/office365/securitycompliance/create-custom-sensitive-info-type-edm?branch=chrfox-o365seccomp-pr-working#refreshing-your-sensitive-information-database).
