@@ -48,11 +48,11 @@ To have access to the **Content search** page to run searches and preview and ex
   
     You can choose one of the following options:
     
-    - **Guided search — This option starts a wizard that guides you through the creating the search. The user interface to select content locations and build the search query are the same as the **New search** option. 
+    - **Guided search:** This option starts a wizard that guides you through the creating the search. The user interface to select content locations and build the search query are the same as the **New search** option. 
     
-    - **New search** – This option displays an updated user interface to create a search. This is the default option if you click **New search**.
+    - **New search:** This option displays an updated user interface to create a search. This is the default option if you click **New search**.
     
-    - **Search by ID List** – This option lets you search for specific email messages and other mailbox items using a list of Exchange IDs. To create an ID list search (formally called a targeted search), you submit a comma-separated value (CSV) file that identifies the specific mailbox items to search for. For instructions, see [Prepare a CSV file for an ID list Content Search in Office 365](csv-file-for-an-id-list-content-search.md).
+    - **Search by ID List:** This option lets you search for specific email messages and other mailbox items using a list of Exchange IDs. To create an ID list search (formally called a targeted search), you submit a comma-separated value (CSV) file that identifies the specific mailbox items to search for. For instructions, see [Prepare a CSV file for an ID list Content Search in Office 365](csv-file-for-an-id-list-content-search.md).
     
     The remainder of the steps in this procedure follows the default new search workflow.
     
@@ -62,7 +62,7 @@ To have access to the **Content search** page to run searches and preview and ex
     
     ![Specify keywords, conditions, and locations to search](media/1e6de9dd-eac9-4e2a-819d-9740cf6c9106.png)
   
-   - **Keywords to search for** – Type a search query in **Keywords** box. You can specify keywords, message properties such as sent and received dates, or document properties such as file names or the date that a document was last changed. You can use more complex queries that use a Boolean operator, such as **AND**, **OR**, **NOT**, and **NEAR**. You can also search for sensitive information (such as social security numbers) in documents, or search for documents that have been shared externally. If you leave the keyword box empty, all content located in the specified content locations is included in the search results.
+   - **Keywords to search for:** Type a search query in **Keywords** box. You can specify keywords, message properties such as sent and received dates, or document properties such as file names or the date that a document was last changed. You can use more complex queries that use a Boolean operator, such as **AND**, **OR**, **NOT**, and **NEAR**. You can also search for sensitive information (such as social security numbers) in documents, or search for documents that have been shared externally. If you leave the keyword box empty, all content located in the specified content locations is included in the search results.
     
       Alternatively, you can click the **Show keyword list** checkbox and the type a keyword in each row. If you do this, the keywords on each row are connected by a logical operator (**c:s**) that is similar in functionality to the **OR** operator in the search query that's created. 
     
@@ -71,13 +71,13 @@ To have access to the **Content search** page to run searches and preview and ex
      > [!NOTE]
      > To help reduce issues caused by large keyword lists, you're now limited to a maximum of 20 rows in the keyword list.
     
-    - **Conditions** – You can add search conditions to narrow a search and return a more refined set of results. Each condition adds a clause to the search query that is created and run when you start the search. A condition is logically connected to the keyword query (specified in the keyword box) by a logical operator (**c:c**) that is similar in functionality to the **AND** operator. That means that items have to satisfy both the keyword query and one or more conditions to be included in the results. This is how conditions help to narrow your results. For a list and description of conditions that you can use in a search query, see the "Search conditions" section in [Keyword queries and search conditions for Content Search](keyword-queries-and-search-conditions.md#search-conditions).
+    - **Conditions:** You can add search conditions to narrow a search and return a more refined set of results. Each condition adds a clause to the search query that is created and run when you start the search. A condition is logically connected to the keyword query (specified in the keyword box) by a logical operator (**c:c**) that is similar in functionality to the **AND** operator. That means that items have to satisfy both the keyword query and one or more conditions to be included in the results. This is how conditions help to narrow your results. For a list and description of conditions that you can use in a search query, see the "Search conditions" section in [Keyword queries and search conditions for Content Search](keyword-queries-and-search-conditions.md#search-conditions).
     
-       - **Locations** – Choose the content locations to search.
+       - **Locations:** Choose the content locations to search.
     
-      - **All locations** – Use this option to search all content locations in your organization. This includes email in all Exchange mailboxes (including all inactive mailboxes, mailboxes for all Office 365 Groups, mailboxes for all Microsoft Teams), all Skype for Business conversations, all SharePoint and OneDrive for Business sites (including the sites for all Office 365 Groups and Microsoft Teams), and items in all Exchange public folders.
+      - **All locations:** Use this option to search all content locations in your organization. This includes email in all Exchange mailboxes (including all inactive mailboxes, mailboxes for all Office 365 Groups, mailboxes for all Microsoft Teams), all Skype for Business conversations, all SharePoint and OneDrive for Business sites (including the sites for all Office 365 Groups and Microsoft Teams), and items in all Exchange public folders.
     
-      - **Specific locations** – Use this option to search specific content locations. You can search all content locations for a specific Office 365 service (such as searching all Exchange mailboxes or search all SharePoint sites) or you can search specific locations in any of the Office 365 services that are displayed. 
+      - **Specific locations:** Use this option to search specific content locations. You can search all content locations for a specific Office 365 service (such as searching all Exchange mailboxes or search all SharePoint sites) or you can search specific locations in any of the Office 365 services that are displayed. 
     
         ![User interface to choose content locations to search](media/9a09708b-f8a2-4382-8c4e-2c610ec33c72.png)
   
@@ -106,9 +106,9 @@ There are two configuration settings for previewing search results. After you ru
   
 ![Preview search results settings](media/83519477-1c85-4442-8886-481f186fd758.png)
   
-1. **Preview results automatically** – This setting displays the search results after you a run a search.
+1. **Preview results automatically:** This setting displays the search results after you a run a search.
     
-2. **Preview results manually** – This setting displays placeholders in the search results pane, and displays the **Preview results** button that you have to click to display the search results. This is the default setting. It helps enhance search performance by not automatically displaying the search results when you open an existing search. 
+2. **Preview results manually:** This setting displays placeholders in the search results pane, and displays the **Preview results** button that you have to click to display the search results. This is the default setting. It helps enhance search performance by not automatically displaying the search results when you open an existing search. 
     
 There are limits related to how many items are available to be previewed. For more information, see [Limits for Content Search](limits-for-content-search.md). 
   
@@ -132,11 +132,11 @@ To view search statistics:
     
 4. In the **Type** drop down list, click one of the following options depending on the search statistics you want to view. 
     
-  - **Summary** – Displays statistics for each type of content locations searched. This contents the number of content locations that contained items that matched the search query, and the total number and size of search result items. This is the default setting.
+  - **Summary:** Displays statistics for each type of content locations searched. This contents the number of content locations that contained items that matched the search query, and the total number and size of search result items. This is the default setting.
     
-  - **Queries** – Displays statistics about the search query. This includes the type of content location the query statistics are applicable to, part of the search query the statistics are applicable to (note that **Primary** indicates the entire search query), the number of the content locations that contain items that match the search query, and the total number and size and items that were found (in the specified content location) that match the search query. Statistics for unindexed items (also called *partially indexed items*) are also displayed. However, only partially indexed items from mailboxes are included in the statistics. Partially indexed items from SharePoint and OneDrive are not included in the statistics.
+  - **Queries:** Displays statistics about the search query. This includes the type of content location the query statistics are applicable to, part of the search query the statistics are applicable to (note that **Primary** indicates the entire search query), the number of the content locations that contain items that match the search query, and the total number and size and items that were found (in the specified content location) that match the search query. Statistics for unindexed items (also called *partially indexed items*) are also displayed. However, only partially indexed items from mailboxes are included in the statistics. Partially indexed items from SharePoint and OneDrive are not included in the statistics.
     
-  - **Top locations** – Displays statistics about the number of items that match the search query in each content location. The top 1,000 locations are displayed.
+  - **Top locations:** Displays statistics about the number of items that match the search query in each content location. The top 1,000 locations are displayed.
     
 For more detailed information about search statistics, see [View keyword statistics for Content Search results](view-keyword-statistics-for-content-search.md).
   
@@ -292,14 +292,13 @@ Keep the following things in mind when searching for content in Microsoft Teams 
   
   - To use the **Kind** property as part of the keyword search query, in the **Keywords** box of a search query, type `kind:microsoftteams`.
 
-    ![Use the kind:microsoftteams in the Keywords box](media/O365-ContentSearch-Teams-Keywords.png)
+    ![Use kind:microsoftteams in the Keywords box](media/O365-ContentSearch-Teams-Keywords.png)
   
   - To use a search condition, add the **Message kind** condition and use the value `microsoftteams`. 
 
     ![Use the Message kind condition with the value microsoftteams.](media/O365-ContentSearch-Teams-MessageKindCondition.png)
 
-Note that conditions are logically connected to the keyword query by the **AND** operator. That means an item must match both the keyword query and the search condition to be returned in the search results. For more information, see the "Guidelines for using conditions" section in [Keyword queries and search conditions for Content Search.](keyword-queries-and-search-conditions.md#guidelines-for-using-conditions)
-
+Conditions are logically connected to the keyword query by the **AND** operator. That means an item must match both the keyword query and the search condition to be returned in the search results. For more information, see the "Guidelines for using conditions" section in [Keyword queries and search conditions for Content Search.](keyword-queries-and-search-conditions.md#guidelines-for-using-conditions)
   
 ### Searching inactive mailboxes
 
@@ -307,7 +306,7 @@ You can search inactive mailboxes in a content search. To get a list of the inac
   
 Here are a few things to keep in mind when searching inactive mailboxes.
 
-- If a content search includes a user mailbox and that mailbox is then made inactive, the content search will continue to search the inactive mailbox when you rerun the search after it becomes inactive.
+- If an existing content search includes a user mailbox and that mailbox is made inactive, the content search will continue to search the inactive mailbox when you rerun the search after it becomes inactive.
     
 - Sometimes a user may have an active mailbox and an inactive mailbox that have the same SMTP address. In this case, only the specific mailbox that you select as a location for a content search is searched. In other words, if you add a user's mailbox to a search, you can't assume that both their active and inactive mailboxes are searched. Only the mailbox that you explicitly add to the search is searched.
     
@@ -325,14 +324,17 @@ Here are a few things to keep in mind when searching inactive mailboxes.
     
   - [Delete an inactive mailbox in Office 365](delete-an-inactive-mailbox.md)
 
-  
-###  Disconnected or de-licensed mailboxes
+### Searching disconnected or de-licensed mailboxes
 
+If the Exchange Online license (or the entire Office 365 license) is removed from a user account in Office 365 or in Azure Active Directory, the user's mailbox becomes a *disconnected* mailbox. This means that the mailbox is no longer associated with the user account. Here's what happens when searching disconnected mailboxes:
 
+- When the license is removed from a mailbox, the mailbox goes into a 30-day grace period. During this grace period, you can still use content search to search the mailbox.
 
+- If the mailbox is not re-licensed within 30 days, it will be marked for permanent deletion and will be removed from Office 365 the next time the mailbox is processed. Depending on the when the mailbox is processed, you might be able search it after the 30-day grace period has expired. Eventually the mailbox will be removed and no longer searchable.
 
+- If the license is removed from the mailbox that's been placed on hold, the mailbox will be preserved and searchable beyond the 30-day grace period. These types of holds that can be placed on a mailbox include Litigation Hold, In-Place Hold, holds associated with eDiscovery cases, and Office 365 retention policies. For more information about holds, see [How to identify the type of hold placed on an Exchange Online mailbox](identify-a-hold-on-an-exchange-online-mailbox.md).
 
-
+- If an existing content search includes a user mailbox and the license is removed from that mailbox, the content search will continue to search the disconnected mailbox when you rerun the search until the 30-day grace period expires. If a hold is placed on the disconnected mailbox, it will be searchable indefinitely.
 
 ### Previewing search results
 
