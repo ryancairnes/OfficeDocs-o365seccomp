@@ -1,7 +1,7 @@
 ---
 title: "Create a keyword dictionary"
-ms.author: deniseb
-author: denisebmsft
+ms.author: chrfox
+author: chrfox
 manager: laurawi
 audience: Admin
 ms.topic: article

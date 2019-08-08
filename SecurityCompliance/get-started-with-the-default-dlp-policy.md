@@ -1,7 +1,7 @@
 ---
 title: "Get started with the default DLP policy"
-ms.author: deniseb
-author: denisebmsft
+ms.author: chrfox
+author: chrfox
 manager: laurawi
 ms.date: 8/10/2017
 audience: Admin
