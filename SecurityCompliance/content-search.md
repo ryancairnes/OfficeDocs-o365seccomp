@@ -328,15 +328,15 @@ Here are a few things to keep in mind when searching inactive mailboxes.
 
 ### Searching disconnected or de-licensed mailboxes
 
-If the Exchange Online license (or the entire Office 365 license) is removed from a user account in Office 365 or in Azure Active Directory, the user's mailbox becomes a *disconnected* mailbox. This means that the mailbox is no longer associated with the user account. Here's what happens when searching disconnected mailboxes:
+If the Exchange Online license (or the entire Office 365 license) is removed from a user account in Office 365 or in Azure Active Directory, the user's mailbox becomes a *disconnected* mailbox. This means the mailbox is no longer associated with the user account. Here's what happens when searching disconnected mailboxes:
 
 - When the license is removed from a mailbox, the mailbox goes into a 30-day grace period. During this grace period, you can still use content search to search the mailbox.
 
-- If the mailbox is not re-licensed within 30 days, it will be marked for permanent deletion and will be removed from Office 365 the next time the mailbox is processed. Depending on the when the mailbox is processed, you might be able search it after the 30-day grace period has expired. Eventually the mailbox will be removed and no longer searchable.
+- If the mailbox is not re-licensed within 30 days, it will be marked for permanent deletion and will be removed from Office 365 the next time the mailbox is processed. Depending on the when the mailbox is processed, you might be able search it after the 30-day grace period has expired. Mailboxes are typically processed once every seven days. After it's processed, the mailbox will be removed and no longer searchable.
 
-- If the license is removed from the mailbox that's been placed on hold, the mailbox will be preserved and searchable beyond the 30-day grace period. These types of holds that can be placed on a mailbox include Litigation Hold, In-Place Hold, holds associated with eDiscovery cases, and Office 365 retention policies. For more information about holds, see [How to identify the type of hold placed on an Exchange Online mailbox](identify-a-hold-on-an-exchange-online-mailbox.md).
+- If the license is removed from the mailbox that's been placed on hold, the mailbox will be preserved beyond the 30-day grace period. However, after the 30-day grace expires and the mailbox is processed, the mailbox is no longer searchable.
 
-- If an existing content search includes a user mailbox and the license is removed from that mailbox, the content search will continue to search the disconnected mailbox when you rerun the search until the 30-day grace period expires. If a hold is placed on the disconnected mailbox, it will be searchable indefinitely.
+- If an existing content search includes a user mailbox and the license is removed from that mailbox, the content search will continue to search the disconnected mailbox when you rerun the search until the 30-day grace period expires and the disconnected mailbox is removed.
 
 ### Previewing search results
 
