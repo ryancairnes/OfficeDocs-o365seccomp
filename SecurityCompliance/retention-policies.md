@@ -372,7 +372,7 @@ To use the retention policy cmdlets, you need to:
 ## More information
 
 - [Overview of labels](labels.md)
-- [SharePoint Online Limitations](https://docs.microsoft.com/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits)
+- [SharePoint Online Limits](https://docs.microsoft.com/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits)
 - [Microsoft Teams limits](https://docs.microsoft.com/en-us/microsoftteams/limits-specifications-teams) 
     
 
