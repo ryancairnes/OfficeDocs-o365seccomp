@@ -6,6 +6,7 @@
 ## [The new Microsoft 365 security center and Microsoft 365 compliance center](microsoft-security-and-compliance.md)
 ### [Microsoft 365 compliance center](microsoft-365-compliance-center.md)
 ### [Microsoft 365 security center](overview-security-center.md)
+### [Permissions in the Microsoft 365 compliance center and Microsoft 365 security center](permissions-microsoft-365-compliance-security.md)
 ### [Microsoft Secure Score](microsoft-secure-score.md)
 ## [Go to the Security & Compliance Center](go-to-the-securitycompliance-center.md)
 ### [Permissions in the Security & Compliance Center](permissions-in-the-security-and-compliance-center.md)
@@ -344,7 +345,7 @@
 #### [Add data to another review set](compliance20/add-data-to-review-set-from-another-review-set.md)
 #### [Manage load sets](compliance20/manage-load-sets.md)
 
-### [Review case data](compliance20/reviewing-data-in-review-set.md)
+### Review case data
 #### [View documents in a review set](compliance20/view-documents-in-review-set.md)
 #### [Query the data in a review set](compliance20/review-set-search.md)
 #### [Tag documents in a review set](compliance20/tagging-documents.md)
@@ -362,7 +363,7 @@
 
 ### [Manage jobs](compliance20/managing-jobs-ediscovery20.md)
 
-### [Configure case settings](compliance20/configuring-case-settings-ediscovery20.md)
+### Configure case settings
 #### [Close or delete a case](compliance20/close-or-delete-case.md)
 #### [Add or remove members from a case](compliance20/add-remove-members.md)
 #### [Configure search and analytics settings](compliance20/configure-search-analytics-settings.md)

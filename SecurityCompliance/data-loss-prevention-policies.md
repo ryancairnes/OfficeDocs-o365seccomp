@@ -1,7 +1,7 @@
 ---
 title: "Overview of data loss prevention"
-ms.author: deniseb
-author: denisebmsft
+ms.author: chrfox
+author: chrfox
 manager: laurawi
 ms.date: 07/12/2019
 audience: ITPro

@@ -1,7 +1,7 @@
 ---
 title: "View the reports for data loss prevention"
-ms.author: deniseb
-author: denisebmsft
+ms.author: chrfox
+author: chrfox
 manager: laurawi
 ms.date: 6/7/2018
 audience: Admin
