@@ -6,7 +6,7 @@ manager: dansimp
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
-localization_priority: Normal
+localization_priority: Priority
 search.appverid:
 - MET150
 ms.assetid: 56fee1c7-dc37-470e-9b09-33fff6d94617
@@ -76,9 +76,21 @@ To configure DKIM, you will complete these steps:
 ### Publish two CNAME records for your custom domain in DNS
 <a name="Publish2CNAME"> </a>
 
-For each domain for which you want to add a DKIM signature in DNS, you need to publish two CNAME records. A CNAME record is used by DNS to specify that the canonical name of a domain is an alias for another domain name. The CNAME records should be created on the publicly available DNS servers for your customized domains. The CNAME records in your DNS will point to already created A records that exist in DNS on the Microsoft DNS servers for Office 365.
+For each domain for which you want to add a DKIM signature in DNS, you need to publish two CNAME records. 
+
+Run the following command:    
+   
+    New-DkimSigningConfig -DomainName <domain> -Enabled $false
+       
+    Get-DkimSigningConfig -DomainName domain | fl Selector1CNAME, Selector2CNAME
+    
+Create CNAMEs referenced in Get-DkimSigningConfig output
+    
+    Set-DkimSigningConfig -DomainName domain -Enabled $true
+    
+The CNAME records in your DNS will point to already created A records that exist in DNS on the Microsoft DNS servers for Office 365.
   
- Office 365 performs automatic key rotation using the two records that you establish. If you have provisioned custom domains in addition to the initial domain in Office 365, you must publish two CNAME records for each additional domain. So, if you have two domains, you must publish two additional CNAME records, and so on.
+Office 365 performs automatic key rotation using the two records that you establish. If you have provisioned custom domains in addition to the initial domain in Office 365, you must publish two CNAME records for each additional domain. So, if you have two domains, you must publish two additional CNAME records, and so on.
   
 Use the following format for the CNAME records.
 
@@ -112,19 +124,19 @@ For example, if you have an initial domain of cohovineyardandwinery.onmicrosoft.
   
 ```
 Host name:			selector1._domainkey
-Points to address or value:	**selector1-cohovineyard-com**._domainkey.cohovineyardandwinery.onmicrosoft.com
+Points to address or value:	selector1-cohovineyard-com._domainkey.cohovineyardandwinery.onmicrosoft.com
 TTL:				3600
 
 Host name:			selector2._domainkey
-Points to address or value:	**selector2-cohovineyard-com**._domainkey.cohovineyardandwinery.onmicrosoft.com
+Points to address or value:	selector2-cohovineyard-com._domainkey.cohovineyardandwinery.onmicrosoft.com
 TTL:				3600
 
 Host name:			selector1._domainkey
-Points to address or value:	**selector1-cohowinery-com**._domainkey.cohovineyardandwinery.onmicrosoft.com 
+Points to address or value:	selector1-cohowinery-com._domainkey.cohovineyardandwinery.onmicrosoft.com 
 TTL:				3600
  
 Host name:			selector2._domainkey
-Points to address or value:	**selector2-cohowinery-com**._domainkey.cohovineyardandwinery.onmicrosoft.com 
+Points to address or value:	selector2-cohowinery-com._domainkey.cohovineyardandwinery.onmicrosoft.com 
 TTL:				3600
 ```
 

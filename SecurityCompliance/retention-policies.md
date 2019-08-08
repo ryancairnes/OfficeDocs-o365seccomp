@@ -73,7 +73,7 @@ The previous applies to content that exists when the retention policy is applied
   
 Note that a user will receive an error if they try to delete a library, list, folder, or site that's subject to a retention policy. A user can delete a folder if they first move or delete any files in the folder that are subject to the policy. Also note that the Preservation Hold library is created only when the first item needs to be copied to the library - not when you create the retention policy. Therefore, to test your policy, you first need to edit or delete a document in a site subject to the policy, and then browse to the Preservation Hold library to view the retained copy.
   
-![Diagram of content lifecycle in SharePoint and OneDrive](Retention_Diagram_of_retention_flow_in_sites.png)
+![Diagram of content lifecycle in SharePoint and OneDrive](media/Retention_Diagram_of_retention_flow_in_sites.png)
   
 After a retention policy is assigned to a OneDrive account or SharePoint site, content can follow one of two paths:
   
@@ -295,19 +295,7 @@ A Preservation Lock is now placed on the retention policy. If you run `Get-Reten
   
 ## Releasing a retention policy
 
-You can turn off or delete a retention policy at any time. When you do so, any SharePoint or OneDrive content that's being retained is not immediately and permanently deleted. Instead, to help prevent inadvertent data loss, there is a 30-day grace period, during which content expiration for that policy does not happen in the Preservation Hold library, so that you can restore any content from there, if needed. You can also turn on the retention policy again during the grace period, and no content will be deleted for that policy. This grace period is configurable by using PowerShell.
-
-First, [connect to Office 365 Security & Compliance Center PowerShell](http://go.microsoft.com/fwlink/p/?LinkID=799771).
-
-Then run this PowerShell script. You can set `ip_tenantGracePeriodInDays` property in the tenant subscription settings to any value between 0-100 days. If you set this to 0, there is no grace period, and any retention policy will be released immediately. 
-
-`
-$siteSubscription = Get-SPSiteSubscription -Identity 
-$siteSubScriptionId 
-$siteSubSettingsMgr = [Microsoft.SharePoint.SPSiteSubscriptionSettingsManager]::Local
-$properties = $siteSubSettingsMgr.GetProperties($siteSubscription)
-$properties.SetValue("ip_tenantGracePeriodInDays",  30)
-`
+You can turn off or delete a retention policy at any time. When you do so, any SharePoint or OneDrive content that's being retained is not immediately and permanently deleted. Instead, to help prevent inadvertent data loss, there is a 30-day grace period, during which content expiration for that policy does not happen in the Preservation Hold library, so that you can restore any content from there, if needed. You can also turn on the retention policy again during the grace period, and no content will be deleted for that policy. This grace period is configurable by using PowerShell; coming soon, we'll provide a sample script for you to use.
 
 This 30-day grace period in SharePoint and OneDrive corresponds to the 30-day delay hold in Exchange. For more information, see [Managing mailboxes on delay hold](https://docs.microsoft.com/en-us/office365/securitycompliance/identify-a-hold-on-an-exchange-online-mailbox#managing-mailboxes-on-delay-hold).
 

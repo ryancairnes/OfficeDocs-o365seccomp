@@ -1,7 +1,7 @@
 ---
 title: "Edit information barrier policies"
-ms.author: deniseb
-author: denisebmsft
+ms.author: chrfox
+author: chrfox
 manager: laurawi
 ms.date: 07/08/2019
 audience: ITPro
