@@ -174,6 +174,8 @@ See the following sections for more information about content searches.
   
 [Searching inactive mailboxes](#searching-inactive-mailboxes)
   
+[Searching disconnected or de-licensed mailboxes](#searching-disconnected-or-de-licensed-mailboxes)
+
 [Previewing search results](#previewing-search-results)
   
 [Partially indexed items](#partially-indexed-items)
