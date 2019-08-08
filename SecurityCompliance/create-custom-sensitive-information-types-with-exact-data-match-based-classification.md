@@ -48,43 +48,11 @@ When generally available, EDM-based classification will be included in these sub
 
 ## The work flow at a glance
 
-
-<table>
-<thead>
-<tr class="header">
-<th><strong>Phase</strong></th>
-<th><strong>What's needed</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="https://review.docs.microsoft.com/en-us/office365/securitycompliance/create-custom-sensitive-info-type-edm?branch=chrfox-o365seccomp-pr-working#part-1-set-up-edm-based-classification"><span class="underline">Part 1: Set up EDM-based classification</span></a><br />
-<br />
-(As needed)<br />
-- <a href="https://review.docs.microsoft.com/en-us/office365/securitycompliance/create-custom-sensitive-info-type-edm?branch=chrfox-o365seccomp-pr-working#editing-the-schema-for-edm-based-classification"><span class="underline">Edit the database schema</span></a> <br />
-- <a href="https://review.docs.microsoft.com/en-us/office365/securitycompliance/create-custom-sensitive-info-type-edm?branch=chrfox-o365seccomp-pr-working#removing-the-schema-for-edm-based-classification"><span class="underline">Remove the schema</span></a></td>
-<td>- Read access to the sensitive data<br />
-- Database schema in .xml format (example provided)<br />
-- Rule package in .xml format (example provided)<br />
-- Admin permissions to the Security &amp; Compliance Center (using PowerShell)</td>
-</tr>
-<tr class="even">
-<td><a href="https://review.docs.microsoft.com/en-us/office365/securitycompliance/create-custom-sensitive-info-type-edm?branch=chrfox-o365seccomp-pr-working#part-2-index-and-upload-the-sensitive-data"><span class="underline">Part 2: Index and upload the sensitive data</span></a><br />
-<br />
-(As needed)<br />
-<a href="https://review.docs.microsoft.com/en-us/office365/securitycompliance/create-custom-sensitive-info-type-edm?branch=chrfox-o365seccomp-pr-working#refreshing-your-sensitive-information-database"><span class="underline">Refresh the data</span></a></td>
-<td>- Custom security group and user account<br />
-- Local admin access to machine with EDM Upload Agent<br />
-- Read access to the sensitive data<br />
-- Process and schedule for refreshing the data</td>
-</tr>
-<tr class="odd">
-<td><a href="https://review.docs.microsoft.com/en-us/office365/securitycompliance/create-custom-sensitive-info-type-edm?branch=chrfox-o365seccomp-pr-working#part-3-use-edm-based-classification-with-your-microsoft-cloud-services"><span class="underline">Part 3: Use EDM-based classification with your Microsoft cloud services</span></a></td>
-<td>- Office 365 subscription with DLP<br />
-- EDM-based classification feature enabled (in preview)</td>
-</tr>
-</tbody>
-</table>
+|Phase  |What's needed  |
+|---------|---------|
+|[Part 1: Set up EDM-based classification](#part-1-set-up-edm-based-classification)<br/><br/>(As needed)<br/>- [Edit the database schema](#editing-the-schema-for-edm-based-classification) <br/>- [Remove the schema](#removing-the-schema-for-edm-based-classification) |- Read access to the sensitive data<br/>- Database schema in .xml format (example provided)<br/>- Rule package in .xml format (example provided)<br/>- Admin permissions to the Security & Compliance Center (using PowerShell) |
+|[Part 2: Index and upload the sensitive data](#part-2-index-and-upload-the-sensitive-data)<br/><br/>(As needed)<br/>[Refresh the data](#refreshing-your-sensitive-information-database) |- Custom security group and user account<br/>- Local admin access to machine with EDM Upload Agent<br/>- Read access to the sensitive data<br/>- Process and schedule for refreshing the data|
+|[Part 3: Use EDM-based classification with your Microsoft cloud services](#part-3-use-edm-based-classification-with-your-microsoft-cloud-services) |- Office 365 subscription with DLP<br/>- EDM-based classification feature enabled (in preview) |
 
 ### Part 1: Set up EDM-based classification
 
@@ -124,22 +92,23 @@ As an example, the following .xml file defines the schema for a patient records 
 </EdmSchema>
 ```
 
-3. [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
+4. [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
-4. To upload the database schema, run the following cmdlets, one at a time:
+5. To upload the database schema, run the following cmdlets, one at a time:
 
 ```powershell
 $edmSchemaXml=Get-Content .\\edm.xml -Encoding Byte -ReadCount 0
 New-DlpEdmSchema -FileData $edmSchemaXml -Confirm:$true
 ```
+
 You will be prompted to confirm, as follows:
 
 > Confirm
 >
 > Are you sure you want to perform this action?
-> 
+>
 > New EDM Schema for the data store 'patientrecords' will be imported.
-> 
+>
 > \[Y\] Yes \[A\] Yes to All \[N\] No \[L\] No to All \[?\] Help (default is "Y"):
 
 > [!TIP]
@@ -164,14 +133,15 @@ If you want to make changes to your edm.xml file, such as changing which fields 
 $edmSchemaXml=Get-Content .\\edm.xml -Encoding Byte -ReadCount 0
 Set-DlpEdmSchema -FileData $edmSchemaXml -Confirm:$true
 ```
+
 You will be prompted to confirm, as follows:
 
 > Confirm
-> 
+>
 > Are you sure you want to perform this action?
-> 
+>
 > EDM Schema for the data store 'patientrecords' will be updated.
-> 
+>
 > \[Y\] Yes \[A\] Yes to All \[N\] No \[L\] No to All \[?\] Help (default is "Y"):
 
 > [!TIP]
@@ -191,14 +161,15 @@ You will be prompted to confirm, as follows:
 ```powershell
 Remove-DlpEdmSchema -Identity patientrecords
 ```
+
 You will be prompted to confirm, as follows:
 
 > Confirm
-> 
+>
 > Are you sure you want to perform this action?
-> 
+>
 > EDM Schema for the data store 'patientrecords' will be removed.
-> 
+>
 > \[Y\] Yes \[A\] Yes to All \[N\] No \[L\] No to All \[?\] Help (default is "Y"):
 
 > [!TIP]
@@ -263,11 +234,14 @@ When you set up your rule package, make sure to correctly reference your .csv fi
   </Rules>
 </RulePackage>
 ```
+
 1. Upload the rule package by running the following PowerShell cmdlets, one at a time:
+
 ```powershell
 $rulepack=Get-Content .\\rulepack.xml -Encoding Byte -ReadCount 0
 New-DlpSensitiveInformationTypeRulePackage -FileData $rulepack
 ```
+
 At this point, you have set up EDM-based classification. The next step is to index the sensitive data, and then upload the indexed data.
 
 Recall from the previous procedure that our PatientRecords schema defines five fields as searchable: *PatientID*, *MRN*, *SSN*, *Phone*, and *DOB*. Our example rule package includes those fields and references the database schema file (edm.xml), with one *ExactMatch* items per searchable field. Consider the following ExactMatch item:
@@ -417,6 +391,7 @@ $password=\[Runtime.InteropServices.Marshal\]::PtrToStringAuto(\[Runtime.Interop
 $taskName = 'EDMUpload\_' + $dataStoreName
 Register-ScheduledTask -TaskName $taskName -InputObject $scheduledTask -User $user -Password $password
 ```
+
 #### To schedule index and upload as separate steps
 
 ```powershell
@@ -474,7 +449,7 @@ EDM sensitive information types for following scenarios are currently in develop
 
 5. On the **Choose locations** tab, select **Let me choose specific locations**, and then choose **Next**.<br/>![Choose locations option](media/DLP-EDM-newpolicy-chooselocations.png)<br>
 
-6. In the **Status** column, select **Exchange email, OneDrive accounts, Teams chat and channel message** , and then choose **Next**. (Note: EDM is currently not supported in Sharepoint sites and DLP policy will not detect files in Sharepoint for EDM)<br/>![Choose locations](media/step-6-edm-dlp-snagit.png)<br/> 
+6. In the **Status** column, select **Exchange email, OneDrive accounts, Teams chat and channel message** , and then choose **Next**. (Note: EDM is currently not supported in SharePoint sites and DLP policy will not detect files in Sharepoint for EDM)<br/>![Choose locations](media/step-6-edm-dlp-snagit.png)<br/>
 
 7. On the **Policy settings** tab, choose **Use advanced settings**, and then choose **Next**.<br/>![Use advanced settings](media/edm-dlp-policy-advancedsettings.png)<br/>
 
