@@ -128,9 +128,8 @@ As an example, the following .xml file defines the schema for a patient records 
 4. To upload the database schema, run the following cmdlets, one at a time:
 
 ```powershell
-
-> $edmSchemaXml=Get-Content .\\edm.xml -Encoding Byte -ReadCount 0
-> New-DlpEdmSchema -FileData $edmSchemaXml -Confirm:$true
+$edmSchemaXml=Get-Content .\\edm.xml -Encoding Byte -ReadCount 0
+New-DlpEdmSchema -FileData $edmSchemaXml -Confirm:$true
 ```
 You will be prompted to confirm, as follows:
 
@@ -161,9 +160,8 @@ If you want to make changes to your edm.xml file, such as changing which fields 
 3. To update your database schema, run the following cmdlets, one at a time:
 
 ```powershell
-> $edmSchemaXml=Get-Content .\\edm.xml -Encoding Byte -ReadCount 0
-> 
-> Set-DlpEdmSchema -FileData $edmSchemaXml -Confirm:$true
+$edmSchemaXml=Get-Content .\\edm.xml -Encoding Byte -ReadCount 0
+Set-DlpEdmSchema -FileData $edmSchemaXml -Confirm:$true
 ```
 You will be prompted to confirm, as follows:
 
@@ -190,7 +188,7 @@ You will be prompted to confirm, as follows:
 2. Run the following PowerShell cmdlets, substituting the data store name of "patientrecords" with the one you want to remove:
 
 ```powershell
-> Remove-DlpEdmSchema -Identity patientrecords
+Remove-DlpEdmSchema -Identity patientrecords
 ```
 You will be prompted to confirm, as follows:
 
@@ -266,9 +264,8 @@ When you set up your rule package, make sure to correctly reference your .csv fi
 ```
 1. Upload the rule package by running the following PowerShell cmdlets, one at a time:
 ```powershell
-> $rulepack=Get-Content .\\rulepack.xml -Encoding Byte -ReadCount 0
-> 
-> New-DlpSensitiveInformationTypeRulePackage -FileData $rulepack
+$rulepack=Get-Content .\\rulepack.xml -Encoding Byte -ReadCount 0
+New-DlpSensitiveInformationTypeRulePackage -FileData $rulepack
 ```
 At this point, you have set up EDM-based classification. The next step is to index the sensitive data, and then upload the indexed data.
 
@@ -324,8 +321,7 @@ During this phase, you set up a custom security group and user account, and set 
 1. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639). By default, the installation location should be C:\\Program Files\\Microsoft\\EdmUploadAgent.
 
 2. To authorize the EDM Upload Agent, open Windows Command Prompt (as an administrator), and then run the following command:
-```azurecli
-> EdmUploadAgent.exe /Authorize
+    `EdmUploadAgent.exe /Authorize`
 ```
 3. Sign in with your work or school account for Office 365.
 
@@ -337,30 +333,25 @@ Save the sensitive data file (recall our example is *PatientRecords.csv*) to th
 
 To index and upload the sensitive data, run the following command in Windows Command Prompt:
 
-```azurecli
-> EdmUploadAgent.exe /UploadData /DataStoreName \<DataStoreName\> /DataFile \<DataFilePath\> /HashLocation \<HashedFileLocation\>
-```
+`EdmUploadAgent.exe /UploadData /DataStoreName \<DataStoreName\> /DataFile \<DataFilePath\> /HashLocation \<HashedFileLocation\>`
+
 Example: **EdmUploadAgent.exe /UploadData /DataStoreName PatientRecords /DataFile C:\\Edm\\Hash\\PatientRecords.csv /HashLocation C:\\Edm\\Hash**
 
 To separate and execute index of sensitive data in an isolated environment, execute index and upload steps separately.
 
 To index the sensitive data, run the following command in Windows Command Prompt:
-```powershell 
-> EdmUploadAgent.exe /CreateHash /DataFile \<DataFilePath\> /HashLocation \<HashedFileLocation\>
-```
+`EdmUploadAgent.exe /CreateHash /DataFile \<DataFilePath\> /HashLocation \<HashedFileLocation\>`
 
 Example: **EdmUploadAgent.exe /CreateHash /DataFile C:\\Edm\\Data\\PatientRecords.csv /HashLocation C:\\Edm\\Hash**
 
 To upload the indexed data, run the following command in Windows Command Prompt:
-```powershell
-> EdmUploadAgent.exe /UploadHash /DataStoreName \<DataStoreName\> /HashFile \<HashedSourceFilePath\>
-```
+`EdmUploadAgent.exe /UploadHash /DataStoreName \<DataStoreName\> /HashFile \<HashedSourceFilePath\>`
 
 Example: **EdmUploadAgent.exe /UploadHash /DataStoreName PatientRecords /HashFile C:\\Edm\\Hash\\PatientRecords.EdmHash**
 
 To verify your sensitive data has been uploaded, run the following command in Windows Command Prompt:
 ```powershell
-> EdmUploadAgent.exe /GetDataStore
+EdmUploadAgent.exe /GetDataStore
 ```
 You'll see a list of data stores and when they were last updated, similar to the following:
 
