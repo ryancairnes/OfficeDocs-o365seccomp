@@ -321,8 +321,9 @@ During this phase, you set up a custom security group and user account, and set 
 1. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639). By default, the installation location should be C:\\Program Files\\Microsoft\\EdmUploadAgent.
 
 2. To authorize the EDM Upload Agent, open Windows Command Prompt (as an administrator), and then run the following command:
+
     `EdmUploadAgent.exe /Authorize`
-```
+
 3. Sign in with your work or school account for Office 365.
 
 The next step is to use the EDM Upload Agent to index the sensitive data, and then upload the indexed data.
