@@ -107,20 +107,20 @@ As an example, the following .xml file defines the schema for a patient records 
 
 (You can copy, modify, and use our example.)
 
- ```powershell
-> \<EdmSchema xmlns="http://schemas.microsoft.com/office/2018/edm"\>
-> \<DataStore name="PatientRecords" description="Schema for patient records" version="1"\>
-> \<Field name="PatientID" searchable="true" /\>
-> \<Field name="MRN" searchable="true" /\>
-> \<Field name="FirstName" /\>
-> \<Field name="LastName" /\>
-> \<Field name="SSN" searchable="true" /\>
-> \<Field name="Phone" searchable="true" /\>
-> \<Field name="DOB" searchable="true" /\>
-> \<Field name="Gender" /\>
-> \<Field name="Address" /\>
-> \</DataStore\>
-> \</EdmSchema\>
+ ```xml
+<EdmSchema xmlns="http://schemas.microsoft.com/office/2018/edm">
+      <DataStore name="PatientRecords" description="Schema for patient records" version="1">
+            <Field name="PatientID" searchable="true" />
+            <Field name="MRN" searchable="true" />
+            <Field name="FirstName" />
+            <Field name="LastName" />
+            <Field name="SSN" searchable="true" />
+            <Field name="Phone" searchable="true" />
+            <Field name="DOB" searchable="true" />
+            <Field name="Gender" />
+            <Field name="Address" />
+      </DataStore>
+</EdmSchema>
 ```
 
 3. [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
@@ -134,8 +134,6 @@ As an example, the following .xml file defines the schema for a patient records 
 ```
 You will be prompted to confirm, as follows:
 
-> Copy
->
 > Confirm
 >
 > Are you sure you want to perform this action?
@@ -196,8 +194,6 @@ You will be prompted to confirm, as follows:
 ```
 You will be prompted to confirm, as follows:
 
-> Copy
-> 
 > Confirm
 > 
 > Are you sure you want to perform this action?
@@ -229,80 +225,44 @@ When you set up your rule package, make sure to correctly reference your .csv fi
   - idRef: You provide GUID for ExactMatch id.
   - Name & des Editing the schema criptions: customize as required.
 
-```powershell
-> \<RulePackage xmlns="http://schemas.microsoft.com/office/2018/edm"\>
-> 
-> \<RulePack id="fd098e03-1796-41a5-8ab6-198c93c62b11"\>
-> 
-> \<Version build="0" major="2" minor="0" revision="0" /\>
-> 
-> \<Publisher id="eb553734-8306-44b4-9ad5-c388ad970528" /\>
-> 
-> \<Details defaultLangCode="en-us"\>
-> 
-> \<LocalizedDetails langcode="en-us"\>
-> 
-> \<PublisherName\>IP DLP\</PublisherName\>
-> 
-> \<Name\>Health Care EDM Rulepack\</Name\>
-> 
-> \<Description\>This rule package contains the EDM sensitive type for health care sensitive types.\</Description\>
-> 
-> \</LocalizedDetails\>
-> 
-> \</Details\>
-> 
-> \</RulePack\>
-> 
-> \<Rules\>
-> 
-> \<ExactMatch id = "E1CC861E-3FE9-4A58-82DF-4BD259EAB371" patternsProximity = "300" dataStore ="PatientRecords" recommendedConfidence = "65" \>
-> 
-> \<Pattern confidenceLevel="65"\>
-> 
-> \<idMatch matches = "SSN" classification = "U.S. Social Security Number (SSN)" /\>
-> 
-> \</Pattern\>
-> 
-> \<Pattern confidenceLevel="75"\>
-> 
-> \<idMatch matches = "SSN" classification = "U.S. Social Security Number (SSN)" /\>
-> 
-> \<Any minMatches ="3" \>
-> 
-> \<match matches="PatientID" /\>
-> 
-> \<match matches="MRN"/\>
-> 
-> \<match matches="FirstName"/\>
-> 
-> \<match matches="LastName"/\>
-> 
-> \<match matches="Phone"/\>
-> 
-> \<match matches="DOB"/\>
-> 
-> \</Any\>
-> 
-> \</Pattern\>
-> 
-> \</ExactMatch\>
-> 
-> \<LocalizedStrings\>
-> 
-> \<Resource idRef="E1CC861E-3FE9-4A58-82DF-4BD259EAB371"\>
-> 
-> \<Name default="true" langcode="en-us"\>Patient SSN Exact Match.\</Name\>
-> 
-> \<Description default="true" langcode="en-us"\>EDM Sensitive type for detecting Patient SSN.\</Description\>
-> 
-> \</Resource\>
-> 
-> \</LocalizedStrings\>
-> 
-> \</Rules\>
-> 
-> \</RulePackage\>
+```xml
+<RulePackage xmlns="http://schemas.microsoft.com/office/2018/edm">
+  <RulePack id="fd098e03-1796-41a5-8ab6-198c93c62b11">
+    <Version build="0" major="2" minor="0" revision="0" />
+    <Publisher id="eb553734-8306-44b4-9ad5-c388ad970528" />
+    <Details defaultLangCode="en-us">
+      <LocalizedDetails langcode="en-us">
+        <PublisherName>IP DLP</PublisherName>
+        <Name>Health Care EDM Rulepack</Name>
+        <Description>This rule package contains the EDM sensitive type for health care sensitive types.</Description>
+      </LocalizedDetails>
+    </Details>
+  </RulePack>
+  <Rules>
+    <ExactMatch id = "E1CC861E-3FE9-4A58-82DF-4BD259EAB371" patternsProximity = "300" dataStore ="PatientRecords" recommendedConfidence = "65" >
+      <Pattern confidenceLevel="65">
+        <idMatch matches = "SSN" classification = "U.S. Social Security Number (SSN)" />
+      </Pattern>
+      <Pattern confidenceLevel="75">
+        <idMatch matches = "SSN" classification = "U.S. Social Security Number (SSN)" />
+        <Any minMatches ="3" maxMatches ="100">
+          <match matches="PatientID" />
+          <match matches="MRN"/>
+          <match matches="FirstName"/>
+          <match matches="LastName"/>
+          <match matches="Phone"/>
+          <match matches="DOB"/>
+        </Any>
+      </Pattern>
+    </ExactMatch>
+    <LocalizedStrings>
+      <Resource idRef="E1CC861E-3FE9-4A58-82DF-4BD259EAB371">
+        <Name default="true" langcode="en-us">Patient SSN Exact Match.</Name>
+        <Description default="true" langcode="en-us">EDM Sensitive type for detecting Patient SSN.</Description>
+      </Resource>
+    </LocalizedStrings>
+  </Rules>
+</RulePackage>
 ```
 1. Upload the rule package by running the following PowerShell cmdlets, one at a time:
 ```powershell
@@ -314,16 +274,23 @@ At this point, you have set up EDM-based classification. The next step is to ind
 
 Recall from the previous procedure that our PatientRecords schema defines five fields as searchable: *PatientID*, *MRN*, *SSN*, *Phone*, and *DOB*. Our example rule package includes those fields and references the database schema file (edm.xml), with one *ExactMatch* items per searchable field. Consider the following ExactMatch item:
 
-```powershell
-> \<ExactMatch id = "E1CC861E-3FE9-4A58-82DF-4BD259EAB371" patternsProximity = "300" dataStore ="PatientRecords" recommendedConfidence = "65" \>
-> 
-> \<Pattern confidenceLevel="65"\>
-> 
-> \<idMatch matches = "SSN" classification = "U.S. Social Security Number (SSN)" /\>
-> 
-> \</Pattern\>
-> 
-> \</ExactMatch\>
+```xml
+<ExactMatch id = "E1CC861E-3FE9-4A58-82DF-4BD259EAB371" patternsProximity = "300" dataStore ="PatientRecords" recommendedConfidence = "65" >
+      <Pattern confidenceLevel="65">
+        <idMatch matches = "SSN" classification = "U.S. Social Security Number (SSN)" />
+      </Pattern>
+      <Pattern confidenceLevel="75">
+        <idMatch matches = "SSN" classification = "U.S. Social Security Number (SSN)" />
+        <Any minMatches ="3" maxMatches ="100">
+          <match matches="PatientID" />
+          <match matches="MRN"/>
+          <match matches="FirstName"/>
+          <match matches="LastName"/>
+          <match matches="Phone"/>
+          <match matches="DOB"/>
+        </Any>
+      </Pattern>
+    </ExactMatch>
 ```
 
 In this example, note the following:
@@ -357,7 +324,7 @@ During this phase, you set up a custom security group and user account, and set 
 1. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639). By default, the installation location should be C:\\Program Files\\Microsoft\\EdmUploadAgent.
 
 2. To authorize the EDM Upload Agent, open Windows Command Prompt (as an administrator), and then run the following command:
-```powershell
+```azurecli
 > EdmUploadAgent.exe /Authorize
 ```
 3. Sign in with your work or school account for Office 365.
@@ -370,7 +337,7 @@ Save the sensitive data file (recall our example is *PatientRecords.csv*) to th
 
 To index and upload the sensitive data, run the following command in Windows Command Prompt:
 
-```powershell
+```azurecli
 > EdmUploadAgent.exe /UploadData /DataStoreName \<DataStoreName\> /DataFile \<DataFilePath\> /HashLocation \<HashedFileLocation\>
 ```
 Example: **EdmUploadAgent.exe /UploadData /DataStoreName PatientRecords /DataFile C:\\Edm\\Hash\\PatientRecords.csv /HashLocation C:\\Edm\\Hash**
@@ -427,124 +394,68 @@ This section includes an example PowerShell script you can use to schedule your 
 ##### To schedule index and upload in a combined step
 
 ```powershell
-> param(\[string\]$dataStoreName,\[string\]$fileLocation)
-> 
-> \# Assuming current user is also the user context to run the task
-> 
-> $user = "$env:USERDOMAIN\\$env:USERNAME"
-> 
-> $edminstallpath = 'C:\\Program Files\\Microsoft\\EdmUploadAgent\\'
-> 
-> $edmuploader = $edminstallpath + 'EdmUploadAgent.exe'
-> 
-> $csvext = '.csv'
-> 
-> \# Assuming CSV file name is same as data store name
-> 
-> $dataFile = "$fileLocation\\$dataStoreName$csvext"
-> 
-> \# Assuming location to store hash file is same as the location of csv file
-> 
-> $hashLocation = $fileLocation
-> 
-> $uploadDataArgs = '/UploadData /DataStoreName ' + $dataStoreName + ' /DataFile ' + $dataFile + ‘ /HashLocation’ + $hashLocation
-> 
-> \# Set up actions associated with the task
-> 
-> $actions = @()
-> 
-> $actions += New-ScheduledTaskAction -Execute $edmuploader -Argument $uploadDataArgs -WorkingDirectory $edminstallpath
-> 
-> \# Set up trigger for the task
-> 
-> $trigger = New-ScheduledTaskTrigger -Weekly -DaysOfWeek Sunday -At 2am
-> 
-> \# Set up task settings
-> 
-> $principal = New-ScheduledTaskPrincipal -UserId $user -LogonType S4U -RunLevel Highest
-> 
-> $settings = New-ScheduledTaskSettingsSet -RunOnlyIfNetworkAvailable -StartWhenAvailable -WakeToRun
-> 
-> \# Create the scheduled task
-> 
-> $scheduledTask = New-ScheduledTask -Action $actions -Principal $principal -Trigger $trigger -Settings $settings
-> 
-> \# Get credentials to run the task
-> 
-> $creds = Get-Credential -UserName $user -Message "Enter credentials to run the task"
-> 
-> $password=\[Runtime.InteropServices.Marshal\]::PtrToStringAuto(\[Runtime.InteropServices.Marshal\]::SecureStringToBSTR($creds.Password))
-> 
-> \# Register the scheduled task
-> 
-> $taskName = 'EDMUpload\_' + $dataStoreName
-> 
-> Register-ScheduledTask -TaskName $taskName -InputObject $scheduledTask -User $user -Password $password
+param(\[string\]$dataStoreName,\[string\]$fileLocation)
+\# Assuming current user is also the user context to run the task
+$user = "$env:USERDOMAIN\\$env:USERNAME"
+$edminstallpath = 'C:\\Program Files\\Microsoft\\EdmUploadAgent\\'
+$edmuploader = $edminstallpath + 'EdmUploadAgent.exe'
+$csvext = '.csv'
+\# Assuming CSV file name is same as data store name
+$dataFile = "$fileLocation\\$dataStoreName$csvext"
+\# Assuming location to store hash file is same as the location of csv file
+$hashLocation = $fileLocation
+$uploadDataArgs = '/UploadData /DataStoreName ' + $dataStoreName + ' /DataFile ' + $dataFile + ‘ /HashLocation’ + $hashLocation
+\# Set up actions associated with the task
+$actions = @()
+$actions += New-ScheduledTaskAction -Execute $edmuploader -Argument $uploadDataArgs -WorkingDirectory $edminstallpath
+\# Set up trigger for the task
+$trigger = New-ScheduledTaskTrigger -Weekly -DaysOfWeek Sunday -At 2am
+\# Set up task settings
+$principal = New-ScheduledTaskPrincipal -UserId $user -LogonType S4U -RunLevel Highest
+$settings = New-ScheduledTaskSettingsSet -RunOnlyIfNetworkAvailable -StartWhenAvailable -WakeToRun
+\# Create the scheduled task
+$scheduledTask = New-ScheduledTask -Action $actions -Principal $principal -Trigger $trigger -Settings $settings
+\# Get credentials to run the task
+$creds = Get-Credential -UserName $user -Message "Enter credentials to run the task"
+$password=\[Runtime.InteropServices.Marshal\]::PtrToStringAuto(\[Runtime.InteropServices.Marshal\]::SecureStringToBSTR($creds.Password))
+\# Register the scheduled task
+$taskName = 'EDMUpload\_' + $dataStoreName
+Register-ScheduledTask -TaskName $taskName -InputObject $scheduledTask -User $user -Password $password
 ```
-**<span class="underline">To schedule index and upload as separate steps</span>**
+#### To schedule index and upload as separate steps
 
 ```powershell
-> param(\[string\]$dataStoreName,\[string\]$fileLocation)
-> 
-> \# Assuming current user is also the user context to run the task
-> 
-> $user = "$env:USERDOMAIN\\$env:USERNAME"
-> 
-> $edminstallpath = 'C:\\Program Files\\Microsoft\\EdmUploadAgent\\'
-> 
-> $edmuploader = $edminstallpath + 'EdmUploadAgent.exe'
-> 
-> $csvext = '.csv'
-> 
-> $edmext = '.EdmHash'
-> 
-> \# Assuming CSV file name is same as data store name
-> 
-> $dataFile = "$fileLocation\\$dataStoreName$csvext"
-> 
-> $hashFile = "$fileLocation\\$dataStoreName$edmext"
-> 
-> \# Assuming location to store hash file is same as the location of csv file
-> 
-> $hashLocation = $fileLocation
-> 
-> $createHashArgs = '/CreateHash' + ' /DataFile ' + $dataFile + ' /HashLocation ' + $hashLocation
-> 
-> $uploadHashArgs = '/UploadHash /DataStoreName ' + $dataStoreName + ' /HashFile ' + $hashFile
-> 
-> \# Set up actions associated with the task
-> 
-> $actions = @()
-> 
-> $actions += New-ScheduledTaskAction -Execute $edmuploader -Argument $createHashArgs -WorkingDirectory $edminstallpath
-> 
-> $actions += New-ScheduledTaskAction -Execute $edmuploader -Argument $uploadHashArgs -WorkingDirectory $edminstallpath
-> 
-> \# Set up trigger for the task
-> 
-> $trigger = New-ScheduledTaskTrigger -Weekly -DaysOfWeek Sunday -At 2am
-> 
-> \# Set up task settings
-> 
-> $principal = New-ScheduledTaskPrincipal -UserId $user -LogonType S4U -RunLevel Highest
-> 
-> $settings = New-ScheduledTaskSettingsSet -RunOnlyIfNetworkAvailable -StartWhenAvailable -WakeToRun
-> 
-> \# Create the scheduled task
-> 
-> $scheduledTask = New-ScheduledTask -Action $actions -Principal $principal -Trigger $trigger -Settings $settings
-> 
-> \# Get credentials to run the task
-> 
-> $creds = Get-Credential -UserName $user -Message "Enter credentials to run the task"
-> 
-> $password=\[Runtime.InteropServices.Marshal\]::PtrToStringAuto(\[Runtime.InteropServices.Marshal\]::SecureStringToBSTR($creds.Password))
-> 
-> \# Register the scheduled task
-> 
-> $taskName = 'EDMUpload\_' + $dataStoreName
-> 
-> Register-ScheduledTask -TaskName $taskName -InputObject $scheduledTask -User $user -Password $password
+param(\[string\]$dataStoreName,\[string\]$fileLocation)
+\# Assuming current user is also the user context to run the task
+$user = "$env:USERDOMAIN\\$env:USERNAME"
+$edminstallpath = 'C:\\Program Files\\Microsoft\\EdmUploadAgent\\'
+$edmuploader = $edminstallpath + 'EdmUploadAgent.exe'
+$csvext = '.csv'
+$edmext = '.EdmHash'
+\# Assuming CSV file name is same as data store name
+$dataFile = "$fileLocation\\$dataStoreName$csvext"
+$hashFile = "$fileLocation\\$dataStoreName$edmext"
+\# Assuming location to store hash file is same as the location of csv file
+$hashLocation = $fileLocation
+$createHashArgs = '/CreateHash' + ' /DataFile ' + $dataFile + ' /HashLocation ' + $hashLocation
+$uploadHashArgs = '/UploadHash /DataStoreName ' + $dataStoreName + ' /HashFile ' + $hashFile
+\# Set up actions associated with the task
+$actions = @()
+$actions += New-ScheduledTaskAction -Execute $edmuploader -Argument $createHashArgs -WorkingDirectory $edminstallpath
+$actions += New-ScheduledTaskAction -Execute $edmuploader -Argument $uploadHashArgs -WorkingDirectory $edminstallpath
+\# Set up trigger for the task
+$trigger = New-ScheduledTaskTrigger -Weekly -DaysOfWeek Sunday -At 2am
+\# Set up task settings
+$principal = New-ScheduledTaskPrincipal -UserId $user -LogonType S4U -RunLevel Highest
+$settings = New-ScheduledTaskSettingsSet -RunOnlyIfNetworkAvailable -StartWhenAvailable -WakeToRun
+\# Create the scheduled task
+$scheduledTask = New-ScheduledTask -Action $actions -Principal $principal -Trigger $trigger -Settings $settings
+\# Get credentials to run the task
+$creds = Get-Credential -UserName $user -Message "Enter credentials to run the task"
+$password=\[Runtime.InteropServices.Marshal\]::PtrToStringAuto(\[Runtime.InteropServices.Marshal\]::SecureStringToBSTR($creds.Password))
+\# Register the scheduled task
+$taskName = 'EDMUpload\_' + $dataStoreName
+Register-ScheduledTask -TaskName $taskName -InputObject $scheduledTask -User $user -Password $password
 ```
 
 ### Part 3: Use EDM-based classification with your Microsoft cloud services
