@@ -447,19 +447,19 @@ EDM sensitive information types for following scenarios are currently in develop
 
 4. On the **Name your policy** tab, specify a name and description, and then choose **Next**.
 
-5. On the **Choose locations** tab, select **Let me choose specific locations**, and then choose **Next**.<br/>![Choose locations option](media/DLP-EDM-newpolicy-chooselocations.png)<br>
+5. On the **Choose locations** tab, select **Let me choose specific locations**, and then choose **Next**.
 
-6. In the **Status** column, select **Exchange email, OneDrive accounts, Teams chat and channel message** , and then choose **Next**. (Note: EDM is currently not supported in SharePoint sites and DLP policy will not detect files in Sharepoint for EDM)<br/>![Choose locations](media/step-6-edm-dlp-snagit.png)<br/>
+6. In the **Status** column, select **Exchange email, OneDrive accounts, Teams chat and channel message** , and then choose **Next**. (Note: EDM is currently not supported in SharePoint sites and DLP policy will not detect files in Sharepoint for EDM)
 
-7. On the **Policy settings** tab, choose **Use advanced settings**, and then choose **Next**.<br/>![Use advanced settings](media/edm-dlp-policy-advancedsettings.png)<br/>
+7. On the **Policy settings** tab, choose **Use advanced settings**, and then choose **Next**.
 
-8. Choose **+ New rule**.<br/>![Create a rule](media/edm-dlp-newrule.png)<br/>
+8. Choose **+ New rule**.
 
-9. In the **Name** section, specify a name and description for the rule.<br/>![New rule fields](media/edm-dlp-newruleform.png)<br/>
+9. In the **Name** section, specify a name and description for the rule.
 
 10. In the **Conditions** section, in the **+ Add a condition** list, choose **Content contains sensitive type**.<br/>![Content contains sensitive info types](media/edm-dlp-newrule-conditions.png)<br/>
 
-11. Search for the sensitive information type you created when you set up your rule package, and then choose **+ Add**.<br/>![Find the sensitive info type](media/edm-dlp-newrulefindsensitiverulepack.png)<br/>  
+11. Search for the sensitive information type you created when you set up your rule package, and then choose **+ Add**.  
     Then choose **Done**.
 
 12. Finish selecting options for your rule, such as **User notifications**, **User overrides**, **Incident reports**, and so on, and then choose **Save**.
