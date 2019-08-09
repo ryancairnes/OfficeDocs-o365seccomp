@@ -1,8 +1,8 @@
 ---
 title: "What's new in the Microsoft 365 compliance center"
 ms.author: brendonb
-author: MSFTTracyP
-manager: dansimp
+author: brendonb
+manager: laurawi
 ms.date: 01/14/2019
 audience: Admin
 ms.topic: reference
@@ -15,12 +15,12 @@ search.appverid:
 ms.assetid: e3c6df61-8513-499d-ad8e-8a91770bff63
 ms.collection:
 - M365-security-compliance
-description: "Office 365 can help protect your environment from malware by detecting viruses in files that users upload to SharePoint Online. Files are scanned for viruses after they are uploaded. If a file is found to be infected, a property is set so that users can't download or sync the file."
+description: "We're continuously adding new features to the Microsoft 365 compliance center, fixing issues we learn about, and making changes based on your feedback. Find out what we've been up to this month."
 ---
 
 # What's new in the Microsoft 365 compliance center
 
-We're continuously adding new features to the [Microsoft 365 compliance center](microsoft-365-compliance-center.md), fixing issues we learn about, and making changes based on your feedback. Take a look below to see what's available for you today.
+We're continuously adding new features to the [Microsoft 365 compliance center](microsoft-365-compliance-center.md), fixing issues we learn about, and making changes based on your feedback. Take a look below to see what's available for you today. Some features get rolled out at different speeds to our customers. If you aren't seeing a feature yet, try adding yourself to [targeted release](https://docs.microsoft.com/office365/admin/manage/release-options-in-office-365).
 
 > [!TIP]
 > Interested in what's going on in other admin centers? Check out these articles:<br>[What's new in the Microsoft 365 admin center](https://docs.microsoft.com/office365/admin/whats-new-in-preview?view=o365-worldwide)<br>[What's new in the SharePoint admin center](https://docs.microsoft.com/sharepoint/what-s-new-in-admin-center)
