@@ -67,11 +67,10 @@ Pull up a chair, grab a cup of coffee, and let our latest compliance docs sweep 
 - [Legacy information for Office 365 Message Encryption](legacy-information-for-message-encryption.md)
 
 **Classification**
-- 
+- [Create custom sensitive information types with Exact Data Match based classification](create-custom-sensitive-information-types-with-exact-data-match-based-classification.md)
 
+**Data governance**
+- [Overview of retention policies](retention-policies.md)
 
+**Supervision**
 - [Supervision policies in Office 365](supervision-policies.md)
-
-
-
-[Create custom sensitive information types with Exact Data Match based classification (Preview)](create-custom-sensitive-info-type-edm.md)
