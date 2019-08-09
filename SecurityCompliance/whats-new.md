@@ -25,7 +25,9 @@ We're continuously adding new features to the [Microsoft 365 compliance center](
 > [!TIP]
 > Interested in what's going on in other admin centers? Check out these articles:<br>[What's new in the Microsoft 365 admin center](https://docs.microsoft.com/office365/admin/whats-new-in-preview?view=o365-worldwide)<br>[What's new in the SharePoint admin center](https://docs.microsoft.com/sharepoint/what-s-new-in-admin-center)
 
-## New admin roles
+## July 2019
+
+### New admin roles
 
 We released two new admin roles to help manage security and compliance in your org. Tell all your friends.
 
@@ -34,17 +36,17 @@ We released two new admin roles to help manage security and compliance in your o
 
 [Learn more about these roles](https://docs.microsoft.com/office365/securitycompliance/permissions-microsoft-365-compliance-security)
 
-## Search and filtering for reports
+### Search and filtering for reports
 
 No more scrolling through a sea of reports to find the ones you want. You can now search for reports (based on their titles) and filter on categories like ‘Labels’ and ‘Compliance’ and sources like ‘Office 365’ and 'Microsoft Cloud App Security’.
 
 ![Screen capture of the search and filter buttons for reports with an applied filter](media/mcc_report_filtering.png)
 
-## Partners: Admin on behalf of (AOBO) permissions
+### Partners: Admin on behalf of (AOBO) permissions
 
 Good news for Microsoft Certified Partners. Partners with Admin On Behalf Of (AOBO) permissions can now access the Microsoft 365 security and compliance centers by adding the customer’s domain to the URL. For example: `https://security.microsoft.com/contoso.com`.
 
-## Help content
+### Help content
 
 Pull up a chair, grab a cup of coffee, and let our latest compliance docs sweep you away.
 
