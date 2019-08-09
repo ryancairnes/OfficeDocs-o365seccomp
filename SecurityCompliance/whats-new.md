@@ -48,19 +48,30 @@ Good news for Microsoft Certified Partners. Partners with Admin On Behalf Of (AO
 
 Pull up a chair, grab a cup of coffee, and let our latest compliance docs sweep you away.
 
-### New
+**Advanced eDiscovery**
+- [Review conversations in Advanced eDiscovery](compliance20/conversation-review-sets.md) (New)
+- [Troubleshoot AzCopy in Advanced eDiscovery](compliance20/troubleshooting-azcopy.md)
+- [Load non-Office 365 data into a review set](compliance20/load-non-office365-data.md)
+- [Error remediation when processing data](compliance20/error-remediation.md)
 
-[Review conversations in Advanced eDiscovery](compliance20/conversation-review-sets.md). Conversation reconstruction lets you reconstruct, review, annotate, and export a group of messages in the context of a conversation.
+**Archiving 3rd-party data**
+- [Set up a connector to archive Instant Bloomberg data in Office 365](archive-instant-bloomberg-data.md)
 
-### Updated
+**Auditing**
+- [Use sharing auditing in the Office 365 audit log](use-sharing-auditing.md)
+- [Office 365 Management Activity API reference](https://docs.microsoft.com/office/office-365-management-api/office-365-management-activity-api-reference)
+- [Troubleshooting the Office 365 Management Activity API](https://docs.microsoft.com/office/office-365-management-api/troubleshooting-the-office-365-management-activity-api)
+- [Search the audit log in the Security & Compliance Center](search-the-audit-log-in-security-and-compliance.md)
 
-[Troubleshoot AzCopy in Advanced eDiscovery](compliance20/troubleshooting-azcopy.md)<br>
-[Load non-Office 365 data into a review set](compliance20/load-non-office365-data.md)<br>
-[Error remediation when processing data](compliance20/error-remediation.md)<br>
-All three topics updated with info about requirement to use AzCopy v8.1.
+**Encryption**
+- [Legacy information for Office 365 Message Encryption](legacy-information-for-message-encryption.md)
 
-[Set up a connector to archive Instant Bloomberg data in Office 365](archive-instant-bloomberg-data.md). SSH key, PGP key, and IP address for Office 365 now downloaded in three separate files. Also new instructions about working with Bloomberg support to set up an SFTP site.
+**Classification**
+- 
 
-[Create custom sensitive information types with Exact Data Match based classification (Preview)](create-custom-sensitive-info-type-edm.md). Updated UI and PowerShell procedures.
 
-[Supervision policies in Office 365](supervision-policies.md). New info about the offensive language model and condition for excluding email messages in a policy.
+- [Supervision policies in Office 365](supervision-policies.md)
+
+
+
+[Create custom sensitive information types with Exact Data Match based classification (Preview)](create-custom-sensitive-info-type-edm.md)
