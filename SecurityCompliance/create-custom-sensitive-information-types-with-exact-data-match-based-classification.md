@@ -117,13 +117,13 @@ You will be prompted to confirm, as follows:
 > [!NOTE]
 > It can take between 10-60 minutes to update the EDMSchema with additions. The update must complete before you execute steps that use the additions.
 
-Now that the schema for your database of sensitive information is defined, the next step is to set up a rule package. Proceed to the section [Set up a rule package](https://review.docs.microsoft.com/en-us/office365/securitycompliance/create-custom-sensitive-info-type-edm?branch=chrfox-o365seccomp-pr-working#set-up-a-rule-package).
+Now that the schema for your database of sensitive information is defined, the next step is to set up a rule package. Proceed to the section [Set up a rule package](#set-up-a-rule-package).
 
 #### Editing the schema for EDM-based classification
 
 If you want to make changes to your edm.xml file, such as changing which fields are used for EDM-based classification, follow these steps:
 
-1. Edit your edm.xml file (this is the file discussed in the [Define the schema](https://review.docs.microsoft.com/en-us/office365/securitycompliance/create-custom-sensitive-info-type-edm?branch=chrfox-o365seccomp-pr-working#define-the-schema-for-your-database-of-sensitive-information) section of this article).
+1. Edit your edm.xml file (this is the file discussed in the [Define the schema](#define-the-schema-for-your-database-of-sensitive-information) section of this article).
 
 2. [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
@@ -293,7 +293,7 @@ During this phase, you set up a custom security group and user account, and set 
 >[!NOTE]
 > Before you begin this procedure, make sure that you are a member of the *EDM\_DataUploaders* security group and a local admin on your machine.
 
-1. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639). By default, the installation location should be C:\\Program Files\\Microsoft\\EdmUploadAgent.
+1. Download and install the [EDM Upload Agent](https://go.microsoft.com/fwlink/?linkid=2088639). By default, the installation location should be C:\\Program Files\\Microsoft\\EdmUploadAgent.
 
 2. To authorize the EDM Upload Agent, open Windows Command Prompt (as an administrator), and then run the following command:
 
@@ -333,9 +333,9 @@ To verify your sensitive data has been uploaded, run the following command in Wi
 
 You'll see a list of data stores and when they were last updated, similar to the following:
 
-Proceed to set up your process and schedule for [Refreshing your sensitive information database](https://review.docs.microsoft.com/en-us/office365/securitycompliance/create-custom-sensitive-info-type-edm?branch=chrfox-o365seccomp-pr-working#refreshing-your-sensitive-information-database).
+Proceed to set up your process and schedule for [Refreshing your sensitive information database](#refreshing-your-sensitive-information-database).
 
-At this point, you are ready to use EDM-based classification with your Microsoft cloud services. For example, you can [set up a DLP policy using EDM-based classification](https://review.docs.microsoft.com/en-us/office365/securitycompliance/create-custom-sensitive-info-type-edm?branch=chrfox-o365seccomp-pr-working#to-create-a-dlp-policy-with-edm).
+At this point, you are ready to use EDM-based classification with your Microsoft cloud services. For example, you can [set up a DLP policy using EDM-based classification](#to-create-a-dlp-policy-with-edm).
 
 #### Refreshing your sensitive information database
 
@@ -343,12 +343,12 @@ You can refresh your sensitive information database daily or weekly, and the EDM
 
 1. Determine your process and frequency (daily or weekly) for refreshing the database of sensitive information.
 
-2. Re-export the sensitive data to an app, such as Microsoft Excel, and save the file in .csv format. Keep the same file name and location you used when you followed the steps described in [Index and upload the sensitive data](https://review.docs.microsoft.com/en-us/office365/securitycompliance/create-custom-sensitive-info-type-edm?branch=chrfox-o365seccomp-pr-working#index-and-upload-the-sensitive-data).
+2. Re-export the sensitive data to an app, such as Microsoft Excel, and save the file in .csv format. Keep the same file name and location you used when you followed the steps described in [Index and upload the sensitive data](#index-and-upload-the-sensitive-data).
 
 > [!NOTE]
 > If there are no changes to the structure (field names) of the .csv file, you won't need to make any changes to your database schema file when you refresh the data. But if you must make changes, make sure to edit the database schema and your rule package accordingly.
 
-3. Use [Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/task-scheduler-start-page) to automate steps 2 and 3 in the [Index and upload the sensitive data](https://review.docs.microsoft.com/en-us/office365/securitycompliance/create-custom-sensitive-info-type-edm?branch=chrfox-o365seccomp-pr-working#index-and-upload-the-sensitive-data) procedure. You can schedule tasks using several methods:
+3. Use [Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/task-scheduler-start-page) to automate steps 2 and 3 in the [Index and upload the sensitive data](#index-and-upload-the-sensitive-data) procedure. You can schedule tasks using several methods:
 
 | **Method**             | **What to do**                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
