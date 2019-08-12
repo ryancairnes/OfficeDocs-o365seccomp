@@ -1,7 +1,7 @@
 ---
 title: "Set up Office 365 ATP Safe Attachments policies"
-ms.author: deniseb
-author: denisebmsft
+ms.author: tracyp
+author: msfttracyp
 manager: dansimp
 audience: Admin
 ms.topic: article

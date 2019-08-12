@@ -1,9 +1,9 @@
 ---
-title: "Threat Explorer (and real-time detections)"
+title: "Threat Explorer and real-time detections"
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
-ms.date: 06/20/2019
+ms.date: 08/07/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -14,10 +14,10 @@ search.appverid:
 ms.assetid: 82ac9922-939c-41be-9c8a-7c75b0a4e27d
 ms.collection: 
 - M365-security-compliance
-description: "Learn about Explorer (and real-time detections) in the Security &amp; Compliance Center."
+description: "Learn about Explorer and real-time detections in the Security &amp; Compliance Center."
 ---
 
-# Threat Explorer (and real-time detections)
+# Threat Explorer and real-time detections
 
 If your organization has [Office 365 Advanced Threat Protection](office-365-atp.md) (Office 365 ATP), and you have the [necessary permissions](#required-licenses-and-permissions), you have either **Explorer** or **real-time detections** (formerly *real-time reports* — [see what's new](#new-features-in-real-time-detections)!). In the Security & Compliance Center, go to **Threat management**, and then choose **Explorer** OR **Real-time detections**. 
 
@@ -37,7 +37,7 @@ With this report, you can:
 
 ## New features in real-time detections
 
-Explorer / real-time detections adds fresh new fields designed to give you a more complete picture of where your emails land. Part of the goal of this change is to make hunting easier for Security Ops people, but the net result is knowing the location of problem emails at a glance.
+Explorer (and real-time detections) adds fresh new fields designed to give you a more complete picture of where your emails land. Part of the goal of this change is to make hunting easier for Security Ops people, but the net result is knowing the location of problem emails at a glance.
 
 How is this done? Delivery Status is now broken out into two columns:
 
@@ -100,9 +100,9 @@ To review phish URLs in messages and clicks on URLs in phish messages, use the [
 
     The report refreshes to show two different URL tables on the URL tab under the report:
 
-   1. **Top URLs** are the URLs contained in the messages you have filtered down to, and the email delivery action counts for each URL. In the phish email view, this list typically will contain legitimate URLs. Attackers include a mix of good and bad URLs in their messages to try to get them delivered, but they will make the malicious links more interesting for the user to click. The table of URLs is sorted by total email count (NOTE: This column is not shown to simplify the view).
+   - **Top URLs** are the URLs contained in the messages you have filtered down to, and the email delivery action counts for each URL. In the phish email view, this list typically will contain legitimate URLs. Attackers include a mix of good and bad URLs in their messages to try to get them delivered, but they will make the malicious links more interesting for the user to click. The table of URLs is sorted by total email count (NOTE: This column is not shown to simplify the view).
 
-   2. **Top clicks** are the Safe Links wrapped URLs that were clicked, sorted by total click count (this column is also not shown to simplify the view). Total counts by column indicate the Safe Links click verdict count for each clicked URL. In the phish email view, these are more often suspicious or malicious URLs, but could include clean URLs that are in phish messages. URL clicks on unwrapped links will not show up here.
+   - **Top clicks** are the Safe Links wrapped URLs that were clicked, sorted by total click count (this column is also not shown to simplify the view). Total counts by column indicate the Safe Links click verdict count for each clicked URL. In the phish email view, these are more often suspicious or malicious URLs, but could include clean URLs that are in phish messages. URL clicks on unwrapped links will not show up here.
    
    The two URLs tables show top URLs in phishing emails by delivery action and location, and they show URL clicks that were blocked (or visited despite a warning) so that you can understand what potential bad links were received by users and interacted with by users. From here, you can conduct further analysis. For example, below the chart, you can see the top URLs in emails that were blocked in your organization's environment.
    
@@ -112,11 +112,11 @@ To review phish URLs in messages and clicks on URLs in phish messages, use the [
 
 ## Review email messages reported by users
 
-Suppose that you want to see email messages that users in your organization have reported as Junk, Not Junk, or Phishing by using the [Report Message add-in for Outlook and Outlook on the web](enable-the-report-message-add-in.md). To do this, use the [Email > User-reported](threat-explorer-views.md#email--user-reported) view of Explorer (or real-time detections).
+Suppose that you want to see email messages that users in your organization have reported as Junk, Not Junk, or Phishing by using the [Report Message add-in for Outlook and Outlook on the web](enable-the-report-message-add-in.md). To do this, use the [Email > Submissions](threat-explorer-views.md#email--submissions) view of Explorer (or real-time detections).
 
 1. In the Security & Compliance Center ([https://protection.office.com](https://protection.office.com)), choose **Threat management** > **Explorer** (or **Real-time detections**). (This example uses Explorer.)
 
-2. In the **View** menu, choose **Email** > **User-reported**.<br/>![View menu for Explorer](media/ExplorerViewMenuEmailUserReported.png)<br/>
+2. In the **View** menu, choose **Email** > **Submissions**.<br/>![View menu for Explorer](media/ExplorerViewMenuEmailUserReported.png)<br/>
 
 3. Click **Sender**, and then choose **Basic** > **Report type**.
 
@@ -165,8 +165,7 @@ To learn more about roles and permissions, see the following resources:
 - [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md)
 - [Feature permissions in Exchange Online](https://docs.microsoft.com/exchange/permissions-exo/feature-permissions)
   
-## Some differences between Real time detection and Threat Exporter.
+## Some differences between Threat Exporter and real-time detections
 
- - **Real-Time detection report** is shipped with ATP P1 subscription while **Threat Explorer** comes with ATP P2.
- - **Real-Time detections** report allows you to show up the detections in real-time while threat explorer reports allow you to see more details in a given attack.
- - **Threat Explorer** reports offer different sets of reports that enhance your experience respect **Real-Time Detector** reports.
+ - The **real-time detections** report is available in Office 365 ATP Plan 1, whereas **Threat Explorer** is available in Office 365 ATP Plan 2.
+ - The **real-time detections** report allows you to view detections in real-time. **Threat Explorer** does this as well, but also allows you to view additional details for a given attack.
