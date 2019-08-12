@@ -334,9 +334,9 @@ If the Exchange Online license (or the entire Office 365 license) is removed fro
 
 - If the mailbox is not re-licensed within 30 days, it will be marked for permanent deletion and will be removed from Office 365 the next time the mailbox is processed. Depending on the when the mailbox is processed, you might be able search it after the 30-day grace period has expired. Mailboxes are typically processed once every seven days. After it's processed, the mailbox will be removed and no longer searchable.
 
-- If the license is removed from the mailbox that's been placed on hold, the mailbox will be preserved beyond the 30-day grace period. However, after the 30-day grace expires and the mailbox is processed, the mailbox is no longer searchable.
+- If an existing content search includes a user mailbox in which the license is removed from that mailbox, the content search will continue to search the disconnected mailbox when you rerun the search until the 30-day grace period expires and the disconnected mailbox is removed and will no longer be searched if you re-run an existing content search. 
 
-- If an existing content search includes a user mailbox and the license is removed from that mailbox, the content search will continue to search the disconnected mailbox when you rerun the search until the 30-day grace period expires and the disconnected mailbox is removed.
+- If the license is removed from the mailbox that's been placed on hold (by one the various [hold features in Office 365](identify-a-hold-on-an-exchange-online-mailbox.md), the mailbox will be preserved indefinitely and will remain searchable beyond the 30-day grace period.
 
 ### Previewing search results
 
