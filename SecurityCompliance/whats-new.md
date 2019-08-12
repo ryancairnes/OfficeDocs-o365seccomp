@@ -42,10 +42,6 @@ No more scrolling through a sea of reports to find the ones you want. You can no
 
 ![Screen capture of the search and filter buttons for reports with an applied filter](media/mcc_report_filtering.png)
 
-### Partners: Admin on behalf of (AOBO) permissions
-
-Good news for Microsoft Certified Partners. Partners with Admin On Behalf Of (AOBO) permissions can now access the Microsoft 365 security and compliance centers by adding the customer’s domain to the URL. For example: `https://security.microsoft.com/contoso.com`.
-
 ### Help content
 
 Pull up a chair, grab a cup of coffee, and let our latest compliance docs sweep you away.
