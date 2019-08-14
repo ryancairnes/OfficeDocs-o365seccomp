@@ -164,7 +164,7 @@ Once you have published the CNAME records in DNS, you are ready to enable DKIM s
 2. Run the following command:
     
     ```
-    New-DkimSigningConfig -DomainName <domain> -Enabled $true
+    Set-DkimSigningConfig -DomainName <domain> -Enabled $true
     ```
 
    Where _domain_ is the name of the custom domain that you want to enable DKIM signing for. 
@@ -172,7 +172,7 @@ Once you have published the CNAME records in DNS, you are ready to enable DKIM s
    For example, for the domain contoso.com:
     
     ```
-    New-DkimSigningConfig -DomainName contoso.com -Enabled $true
+    Set-DkimSigningConfig -DomainName contoso.com -Enabled $true
     ```
 
 #### To Confirm DKIM signing is configured properly for Office 365
