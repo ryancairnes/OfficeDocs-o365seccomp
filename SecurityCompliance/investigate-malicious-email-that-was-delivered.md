@@ -1,5 +1,5 @@
 ---
-title: "Find and investigate malicious email that was delivered in Office 365"
+title: "Find and investigate malicious email that was delivered in Office 365, TIMailData-Inline, Security Incident, incident, ATP Powershell, email malware, compromised users, email phish, email malware"
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
