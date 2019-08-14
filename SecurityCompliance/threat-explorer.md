@@ -37,7 +37,11 @@ With this report, you can:
 
 ## New features in real-time detections
 
-Explorer (and real-time detections) adds fresh new fields designed to give you a more complete picture of where your emails land. Part of the goal of this change is to make hunting easier for Security Ops people, but the net result is knowing the location of problem emails at a glance.
+Three new features added into Threat Explorer are outlined below.
+
+First, **email header preview, and download of the email body** are new features available in Threat Explorer. Admins will be able to analyse downloaded headers/emails for threats. Because downloading emails can risk the exposure of information, this process is controlled by roles-based access control (RBAC). A new role, called 'Preview' must be added into another Office 365 role group (for example into sec operations, or sec admin) to grant the ability to download mails and preview headers in all-emails view.
+
+But Explorer (and real-time detections) also adds fresh new fields designed to give you a more complete picture of where your emails land. Part of the goal of this change is to make hunting easier for Security Ops people, but the net result is knowing the location of problem emails at a glance.
 
 How is this done? Delivery Status is now broken out into two columns:
 
@@ -69,7 +73,7 @@ Delivery location shows the results of policies and detections that run post-del
 
 The **Email Timeline** is another new Explorer feature aimed at making the hunting experience better for admins. It cuts down on randomization because there is less time spent checking different locations to try to understand the event. When multiple events happen at, or close to, the same time on an email, those events will show up in a timeline view. In fact, some events that happen post-delivery to your mail will be captured in the 'Special action' column. Combining the information from the timeline of that mail with the special action taken on the mail post-delivery will give admins insight into how their policies work, where the mail was finally routed, and, in some cases, what the final assessment was.
 
-
+For more discussion about investigating malicious emails see [Find and investigate malicious email that was delivered in Office 365](https://docs.microsoft.com/en-us/office365/securitycompliance/investigate-malicious-email-that-was-delivered).
 
 ## See malware detected in email by technology
 
