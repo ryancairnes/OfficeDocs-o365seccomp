@@ -457,6 +457,7 @@
 ### [Annotate and redact documents](datainvestigations/annotate-and-redact-documents.md)
 ### [Load non-Office 365 data](datainvestigations/load-non-office365-data.md)
 ### [Error remediation when processing data](datainvestigations/error-remediation.md)
+### [Delete items from their original location](datainvestigations/delete-items-from-original-locations.md)
 
 ## [Run analytics to investigate faster](datainvestigations/run-analytics-to-investigate-faster.md)
 ### [Email threading](datainvestigations/email-threading.md)
