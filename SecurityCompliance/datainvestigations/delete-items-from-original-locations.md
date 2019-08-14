@@ -1,6 +1,7 @@
 ---
 title: "Delete items from their original location"
 ms.author: markjjo
+author: markjjo
 manager: laurawi
 ms.date: 
 ms.audience: Admin
