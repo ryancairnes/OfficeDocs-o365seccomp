@@ -200,11 +200,11 @@ Create a condition using mail properties when searching mailboxes or public fold
 |Participants|All the people fields in an email message; these fields are From, To, CC, and BCC.|
 |Type|The message class property for an email item. This is the same property as the ItemClass email property. It's also a multi-value condition. So to select multiple message classes, hold the **CTRL** key and then click two or more message classes in the drop-down list that you want to add to the condition. Each message class that you select in the list will be logically connected by the **OR** operator in the corresponding search query.  <br/> For a list of the message classes (and their corresponding message class ID) that are used by Exchange and that you can select in the **Message class** list, see [Item Types and Message Classes](https://go.microsoft.com/fwlink/?linkid=848143).|
 |Received|The date that an email message was received by a recipient. This is the same property as the Received email property.|
-|Recipients|The person an email message was sent to. This is the same property as the To email property.|
+|Recipients|All recepient fields in an email message. This is the same property as the To, CC, and BCC email property.|
 |Sender|The sender of an email message.|
 |Sent|The date that an email message was sent by the sender. This is the same property as the Sent email property.|
 |Subject|The text in the subject line of an email message.|
-|To|The recipient of an email message.|
+|To|The recipient of an email message in the To field.|
 |||
   
 ### Conditions for document properties
