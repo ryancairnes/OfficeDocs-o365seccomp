@@ -220,3 +220,23 @@ So the passthrough user cases are like:
 Even though authentication may be successful, tenant admins should always check the audit logs against the workload **or** to filter the audit logs using the UserID to see if the user from outside the tenant was authorized to access the resource (such as SharePoint, OneDrive).
 
 Such logs can show if any operation was performed by the external account, which is not likely if the external account does not have invitations to access the resource (example: document in SharePoint Online or OneDrive for Business).
+
+### Tips
+
+- Search the audit log for activities performed by the user identified in the **User logged in** audit record. Type the userID in the **Users** box and use a date range if relevant to your scenario. In addition of the **User logged in** activities, other audit records will be returned, such as if the user accessed, modified, or downloaded a document that was shared with them.
+
+- Search for SharePoint sharing activities that would indicate that a file was shared with the external user identified by a **User logged in** audit record. Here are some SharePoint sharing activities that might indicate that a user in your organization shared file with the external user:
+
+   - **SharingInvitationCreated:** A user in your organization tried to share a resource (likely a site) with the external user. This results in an external sharing invitation sent to the target user. No access to the resource is granted at this point.
+
+   - **SharingInvitationAccepted:** The external user has accepted the sharing invitation that was sent to them and now has access to the resource.
+
+    - **AnonymousLinkCreated:** An anonymous link (also called an "Anyone" link) is created for a resource. Because an anonymous link can be created and then copied, it's reasonable to assume that any document that has an anonymous link has been shared with a target user, such as the external user you're investigating.
+
+   - **AnonymousLinkUsed:** As the name implies, this event is logged when an anonymous link is used to access a resource. 
+
+   - **SecureLinkCreated:** A user has created a "specific people link" to share a resource with a specific person. This target user may be the external user you're investigating.
+
+   - **AddedToSecureLink:** A user was added to a specific people link. This target user may be the external user you're investigating.
+
+  For more details about interpreting these SharePoint sharing events, see [Use sharing auditing in the Office 365 audit log](use-sharing-auditing.md).
