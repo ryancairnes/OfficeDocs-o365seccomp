@@ -20,7 +20,7 @@ description: "Create custom sensitive information types with Exact Data Match ba
 
 ## Overview
 
-[Custom sensitive information types](https://review.docs.microsoft.com/en-us/office365/securitycompliance/custom-sensitive-info-types) are used to help prevent inadvertent or inappropriate sharing of sensitive information. As an administrator, you can use the [Security & Compliance Center](https://review.docs.microsoft.com/en-us/office365/securitycompliance/create-a-custom-sensitive-information-type) or [PowerShell](https://review.docs.microsoft.com/en-us/office365/securitycompliance/create-a-custom-sensitive-information-type-in-scc-powershell) to define a custom sensitive information type based on patterns, evidence (keywords such as *employee*, *badge*, *ID*, and so on), character proximity (how close evidence is to characters in a particular pattern), and confidence levels. Such custom sensitive information types meet business needs for many organizations.
+[Custom sensitive information types](https://docs.microsoft.com/en-us/office365/securitycompliance/custom-sensitive-info-types) are used to help prevent inadvertent or inappropriate sharing of sensitive information. As an administrator, you can use the [Security & Compliance Center](https://docs.microsoft.com/en-us/office365/securitycompliance/create-a-custom-sensitive-information-type) or [PowerShell](https://docs.microsoft.com/en-us/office365/securitycompliance/create-a-custom-sensitive-information-type-in-scc-powershell) to define a custom sensitive information type based on patterns, evidence (keywords such as *employee*, *badge*, *ID*, and so on), character proximity (how close evidence is to characters in a particular pattern), and confidence levels. Such custom sensitive information types meet business needs for many organizations.
 
 But what if you wanted a custom sensitive information type that uses exact data values, instead of matching only with generic patterns? With Exact Data Match (EDM)-based classification, you can create a custom sensitive information type that is designed to:
 
@@ -33,11 +33,11 @@ But what if you wanted a custom sensitive information type that uses exact data 
 
 ![EDM-based classification](media/EDMClassification.png)
 
-EDM-based classification enables you to create custom sensitive information types that refer to exact values in a database of sensitive information. The database can be refreshed daily or weekly, and it can contain up to 10 million rows of data. So as employees, patients, or clients come and go, and records change, your custom sensitive information types remain current and applicable. And, you can use EDM-based classification with policies, such as [data loss prevention policies](https://review.docs.microsoft.com/en-us/office365/securitycompliance/data-loss-prevention-policies) (DLP) or [Microsoft Cloud App Security file policies](https://docs.microsoft.com/cloud-app-security/data-protection-policies).
+EDM-based classification enables you to create custom sensitive information types that refer to exact values in a database of sensitive information. The database can be refreshed daily or weekly, and it can contain up to 10 million rows of data. So as employees, patients, or clients come and go, and records change, your custom sensitive information types remain current and applicable. And, you can use EDM-based classification with policies, such as [data loss prevention policies](https://docs.microsoft.com/en-us/office365/securitycompliance/data-loss-prevention-policies) (DLP) or [Microsoft Cloud App Security file policies](https://docs.microsoft.com/cloud-app-security/data-protection-policies).
 
 ## Required licenses and permissions
 
-You must be a global admin, compliance administrator, or Exchange Online administrator to perform the tasks described in this article. To learn more about DLP permissions, see [Permissions](https://review.docs.microsoft.com/en-us/office365/securitycompliance/data-loss-prevention-policies#permissions).
+You must be a global admin, compliance administrator, or Exchange Online administrator to perform the tasks described in this article. To learn more about DLP permissions, see [Permissions](https://docs.microsoft.com/en-us/office365/securitycompliance/data-loss-prevention-policies#permissions).
 
 When generally available, EDM-based classification will be included in these subscriptions
 
@@ -52,7 +52,7 @@ When generally available, EDM-based classification will be included in these sub
 |---------|---------|
 |[Part 1: Set up EDM-based classification](#part-1-set-up-edm-based-classification)<br/><br/>(As needed)<br/>- [Edit the database schema](#editing-the-schema-for-edm-based-classification) <br/>- [Remove the schema](#removing-the-schema-for-edm-based-classification) |- Read access to the sensitive data<br/>- Database schema in .xml format (example provided)<br/>- Rule package in .xml format (example provided)<br/>- Admin permissions to the Security & Compliance Center (using PowerShell) |
 |[Part 2: Index and upload the sensitive data](#part-2-index-and-upload-the-sensitive-data)<br/><br/>(As needed)<br/>[Refresh the data](#refreshing-your-sensitive-information-database) |- Custom security group and user account<br/>- Local admin access to machine with EDM Upload Agent<br/>- Read access to the sensitive data<br/>- Process and schedule for refreshing the data|
-|[Part 3: Use EDM-based classification with your Microsoft cloud services](#part-3-use-edm-based-classification-with-your-microsoft-cloud-services) |- Office 365 subscription with DLP<br/>- EDM-based classification feature enabled (in preview) |
+|[Part 3: Use EDM-based classification with your Microsoft cloud services](#part-3-use-edm-based-classification-with-your-microsoft-cloud-services) |- Office 365 subscription with DLP<br/>- EDM-based classification feature enabled |
 
 ### Part 1: Set up EDM-based classification
 
@@ -117,13 +117,13 @@ You will be prompted to confirm, as follows:
 > [!NOTE]
 > It can take between 10-60 minutes to update the EDMSchema with additions. The update must complete before you execute steps that use the additions.
 
-Now that the schema for your database of sensitive information is defined, the next step is to set up a rule package. Proceed to the section [Set up a rule package](https://review.docs.microsoft.com/en-us/office365/securitycompliance/create-custom-sensitive-info-type-edm?branch=chrfox-o365seccomp-pr-working#set-up-a-rule-package).
+Now that the schema for your database of sensitive information is defined, the next step is to set up a rule package. Proceed to the section [Set up a rule package](#set-up-a-rule-package).
 
 #### Editing the schema for EDM-based classification
 
 If you want to make changes to your edm.xml file, such as changing which fields are used for EDM-based classification, follow these steps:
 
-1. Edit your edm.xml file (this is the file discussed in the [Define the schema](https://review.docs.microsoft.com/en-us/office365/securitycompliance/create-custom-sensitive-info-type-edm?branch=chrfox-o365seccomp-pr-working#define-the-schema-for-your-database-of-sensitive-information) section of this article).
+1. Edit your edm.xml file (this is the file discussed in the [Define the schema](#define-the-schema-for-your-database-of-sensitive-information) section of this article).
 
 2. [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
 
@@ -293,7 +293,7 @@ During this phase, you set up a custom security group and user account, and set 
 >[!NOTE]
 > Before you begin this procedure, make sure that you are a member of the *EDM\_DataUploaders* security group and a local admin on your machine.
 
-1. Download and install the EDM Upload Agent at [https://go.microsoft.com/fwlink/?linkid=2088639](https://go.microsoft.com/fwlink/?linkid=2088639). By default, the installation location should be C:\\Program Files\\Microsoft\\EdmUploadAgent.
+1. Download and install the [EDM Upload Agent](https://go.microsoft.com/fwlink/?linkid=2088639). By default, the installation location should be C:\\Program Files\\Microsoft\\EdmUploadAgent.
 
 2. To authorize the EDM Upload Agent, open Windows Command Prompt (as an administrator), and then run the following command:
 
@@ -333,9 +333,9 @@ To verify your sensitive data has been uploaded, run the following command in Wi
 
 You'll see a list of data stores and when they were last updated, similar to the following:
 
-Proceed to set up your process and schedule for [Refreshing your sensitive information database](https://review.docs.microsoft.com/en-us/office365/securitycompliance/create-custom-sensitive-info-type-edm?branch=chrfox-o365seccomp-pr-working#refreshing-your-sensitive-information-database).
+Proceed to set up your process and schedule for [Refreshing your sensitive information database](#refreshing-your-sensitive-information-database).
 
-At this point, you are ready to use EDM-based classification with your Microsoft cloud services. For example, you can [set up a DLP policy using EDM-based classification](https://review.docs.microsoft.com/en-us/office365/securitycompliance/create-custom-sensitive-info-type-edm?branch=chrfox-o365seccomp-pr-working#to-create-a-dlp-policy-with-edm).
+At this point, you are ready to use EDM-based classification with your Microsoft cloud services. For example, you can [set up a DLP policy using EDM-based classification](#to-create-a-dlp-policy-with-edm).
 
 #### Refreshing your sensitive information database
 
@@ -343,16 +343,16 @@ You can refresh your sensitive information database daily or weekly, and the EDM
 
 1. Determine your process and frequency (daily or weekly) for refreshing the database of sensitive information.
 
-2. Re-export the sensitive data to an app, such as Microsoft Excel, and save the file in .csv format. Keep the same file name and location you used when you followed the steps described in [Index and upload the sensitive data](https://review.docs.microsoft.com/en-us/office365/securitycompliance/create-custom-sensitive-info-type-edm?branch=chrfox-o365seccomp-pr-working#index-and-upload-the-sensitive-data).
+2. Re-export the sensitive data to an app, such as Microsoft Excel, and save the file in .csv format. Keep the same file name and location you used when you followed the steps described in [Index and upload the sensitive data](#index-and-upload-the-sensitive-data).
 
 > [!NOTE]
 > If there are no changes to the structure (field names) of the .csv file, you won't need to make any changes to your database schema file when you refresh the data. But if you must make changes, make sure to edit the database schema and your rule package accordingly.
 
-3. Use [Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/task-scheduler-start-page) to automate steps 2 and 3 in the [Index and upload the sensitive data](https://review.docs.microsoft.com/en-us/office365/securitycompliance/create-custom-sensitive-info-type-edm?branch=chrfox-o365seccomp-pr-working#index-and-upload-the-sensitive-data) procedure. You can schedule tasks using several methods:
+3. Use [Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/task-scheduler-start-page) to automate steps 2 and 3 in the [Index and upload the sensitive data](#index-and-upload-the-sensitive-data) procedure. You can schedule tasks using several methods:
 
 | **Method**             | **What to do**                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Windows PowerShell     | See the [ScheduledTasks](https://docs.microsoft.com/powershell/module/scheduledtasks/?view=win10-ps) documentation and the [example PowerShell script](https://review.docs.microsoft.com/en-us/office365/securitycompliance/create-custom-sensitive-info-type-edm?branch=chrfox-o365seccomp-pr-working#example-powershell-script-for-task-scheduler) in this article |
+| Windows PowerShell     | See the [ScheduledTasks](https://docs.microsoft.com/powershell/module/scheduledtasks/?view=win10-ps) documentation and the [example PowerShell script](#example-powershell-script-for-task-scheduler) in this article |
 | Task Scheduler API     | See the [Task Scheduler](https://docs.microsoft.com/windows/desktop/TaskSchd/using-the-task-scheduler) documentation                                                                                                                                                                                                                                                                                |
 | Windows user interface | In Windows, click **Start**, and type Task Scheduler. Then, in the list of results, right-click **Task Scheduler**, and choose **Run as administrator**.                                                                                                                                                                                                                                                                           |
 
@@ -475,15 +475,15 @@ EDM sensitive information types for following scenarios are currently in develop
 
 ## Related articles
 
-[Built-in sensitive information types and what they look for](https://review.docs.microsoft.com/en-us/office365/securitycompliance/what-the-sensitive-information-types-look-for)
+[Built-in sensitive information types and what they look for](https://docs.microsoft.com/en-us/office365/securitycompliance/what-the-sensitive-information-types-look-for)
 
-[Custom sensitive information types](https://review.docs.microsoft.com/en-us/office365/securitycompliance/custom-sensitive-info-types)
+[Custom sensitive information types](https://docs.microsoft.com/en-us/office365/securitycompliance/custom-sensitive-info-types)
 
-[Overview of DLP policies](https://review.docs.microsoft.com/en-us/office365/securitycompliance/data-loss-prevention-policies)
+[Overview of DLP policies](https://docs.microsoft.com/en-us/office365/securitycompliance/data-loss-prevention-policies)
 
 [Microsoft Cloud App Security](https://docs.microsoft.com/cloud-app-security)
 
-[New-DlpEdmSchema](https://docs.microsoft.com/en-us/powershell/module/exchange/policy-and-compliance-dlp/new-dlpedmsschema?view=exchange-ps)
+[New-DlpEdmSchema](https://docs.microsoft.com/en-us/powershell/module/exchange/policy-and-compliance-dlp/new-dlpedmschema?view=exchange-ps)
 
 ## Feedback
 GitHub feedback is enabled, but adding issues is only available on the public site.
