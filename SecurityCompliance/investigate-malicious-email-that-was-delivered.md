@@ -45,9 +45,19 @@ So where do problem emails go, and what tools help investigators understand what
 
 ### View the email headers and download the email body
 
-**Email header preview, and download of the email body** are helpful features available in Threat Explorer. Admins will be able to analyse and download headers and emails for threats. Access to use this feature is controlled by roles-based access control (RBAC), to reduce the risk of exposure of user email contents. 
+**Email header preview, and download of the email body** are helpful email threat management features available in Threat Explorer. Admins will be able to analyse and download headers and emails for threats. Access to use this feature is controlled by roles-based access control (RBAC), to reduce the risk of exposure of user email contents.
 
 A new *role*, called 'Preview' must be added into another Office 365 role group (for example into sec operations, or sec admin) to grant the ability to download mails and preview headers in all-emails view.
+
+To see the flyout with your email download and email header preview options: 
+
+1. Go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account for Office 365. This takes you to the Security &amp; Compliance Center. 
+    
+2. In the left navigation, choose **Threat management** \> **Explorer**.
+
+3. Click on a subject in the Threat Explorer table.
+
+This will open the flyout, where both header preview and email download links are positioned.
 
 > [!IMPORTANT]
 > Use both the tables that follow together. One tells you the RBAC required, the other, the location where rights should be granted.
@@ -74,6 +84,8 @@ A new *role*, called 'Preview' must be added into another Office 365 role group 
 
 > [!CAUTION]
 > Remember, 'Preview' is a role and not a rolegroup and that role must be added to a Rolegroup afterwards.
+
+![Threat Explorer flyout with download and preview links on the page.](media/ThreatExplorerDownloadandPreview.PNG)
 
 ### Check the delivery action and location
 
