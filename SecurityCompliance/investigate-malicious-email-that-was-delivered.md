@@ -35,9 +35,47 @@ Make sure that the following requirements are met:
     
 ## Dealing with suspicious emails
 
-Malicious attackers may be sending mail to your users to try and phish their credentials and gain access to your corporate secrets! To prevent this, you should use the threat protection services in Office 365, including [Exchange Online Protection](eop/exchange-online-protection-overview.md) and [Advanced Threat Protection](office-365-atp.md). However, there are times when an attacker could send mail to your users containing a URL and only later on make that URL point to malicious content (malware, etc.). Alternately, you may realize too late that a user in your organization has been compromised, and while that user was compromised, an attacker used that account to send email to other users in your company. As part of cleaning up both of these scenarios, you may want to remove email messages from user inboxes. In situations like these, you can leverage [Threat Explorer (or real-time detections)](threat-explorer.md) to find and remove those email messages!
+Malicious attackers may be sending mail to your users to try and phish their credentials and gain access to your corporate secrets! To prevent this, you should use the threat protection services in Office 365, including [Exchange Online Protection](eop/exchange-online-protection-overview.md) and [Advanced Threat Protection](office-365-atp.md). However, there are times when an attacker could send mail to your users containing a URL and only later on make that URL point to malicious content (malware, etc.). 
+
+Alternately, you may realize too late that a user in your organization has been compromised, and while that user was compromised, an attacker used that account to send email to other users in your company. As part of cleaning up both of these scenarios, you may want to remove email messages from user inboxes. In situations like these, you can leverage [Threat Explorer (or real-time detections)](threat-explorer.md) to find and remove those email messages!
 
 ## Where re-routed emails are located after actions are taken
+
+So where do problem emails go, and what tools help investigators understand what happened to them? Threat Explorer fields report information that will help Admins decode problem email events.
+
+### View the email headers and download the email body
+
+**Email header preview, and download of the email body** are helpful features available in Threat Explorer. Admins will be able to analyse and download headers and emails for threats. Access to use this feature is controlled by roles-based access control (RBAC), to reduce the risk of exposure of user email contents. 
+
+A new *role*, called 'Preview' must be added into another Office 365 role group (for example into sec operations, or sec admin) to grant the ability to download mails and preview headers in all-emails view.
+
+> [!IMPORTANT]
+> Use both the tables that follow together. One tells you the RBAC required, the other, the location where rights should be granted.
+<p>
+
+|Activity  |RBAC rolegroup with access |'Preview' role needed?  |
+|---------|---------|---------|
+|Use Threat Explorer (and real-time detections) to view headers for emails ​as well as preview and download quarantined emails    |     Office 365 Global Administrator, <br> Security Administrator, <br>Security Reader    |       No  |
+|Use Threat Explorer to view headers and download emails delivered to mailboxes     |      Office 365 Global Administrator, <br>Security Administrator,<br> Security Reader, <br> Preview    |   Yes      |
+|Use Threat Explorer (and real-time detections) to analyze threats ​    |  Office 365 Global Administrator,<br> Security Administrator, <br> Security Reader      | No   |
+|Access to view headers for an email in explorer​    |   Office 365 Global Administrator,<br> Security Administrator,<br> ​Security Reader <br>| No        |
+|Access to view headers, preview and download quarantined emails​     |  Office 365 Global Administrator,<br> Security Administrator,<br> Security Reader       |     No    |
+|Access to view headers, preview and download email in explorer​     | Preview role plus on top of the above permission sets | Yes         |
+
+<br>
+
+|RBAC rolegroup  |Where users are assigned to them  |
+|---------|---------|
+| Global Admin   | Office 365 Admin Center        |
+| Security Admin      |    Security & Compliance Center     |
+| Security Reader   |    Security & Compliance Center     |
+|      |    Security & Compliance Center     |
+
+
+> [!CAUTION]
+> Remember, 'Preview' is a role and not a rolegroup and that role must be added to a Rolegroup afterwards.
+
+### Check the delivery action and location
 
 Threat Explorer real-time detections has added the Delivery Action and Delivery Location fields in the place of Delivery Status. This results in a more complete picture of where your emails land. Part of the goal of this change is to make hunting easier for Security Ops people, but the net result is knowing the location of problem emails at a glance.
 
@@ -62,7 +100,11 @@ Delivery location shows the results of policies and detections that run post-del
 - **Quarantine** – The email in quarantine, and is not in a user’s mailbox.
 - **Failed** – The email failed to reach the mailbox.
 - **Dropped** – The email gets lost somewhere in the Mailflow.
+
+### View the timeline of your email
   
+ **Email Timeline** another field in Threat Explorer will also ake hunting easier for admins. Instead of spending valuable time checking where the email might have gone, when, while investigating an event, when multiple events happen at, or close to, the same time on an email, those events will show up in a timeline view. Some events that happen post-delivery to your mail will be captured in the '*Special action*' column. Combining  information from the timeline of the mail with the special action taken on the mail post-delivery gives admins insight into policies and threat handling (such as where the mail was routed, and, in some cases, what the final assessment was).
+
 ## Find and delete suspicious email that was delivered
 
 > [!TIP]
