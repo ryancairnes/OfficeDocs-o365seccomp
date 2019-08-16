@@ -118,7 +118,28 @@ Download a blank template (or start from an export of your current file plan).
 
 ![Blank file plan template open in Excel](media/file-plan-blank-template.png)
 
-Fill-out the template (coming soon: reference information about valid value combinations for a single retention label).
+Fill-out the template. This table provides valid values.
+
+|**Property**|**Type**|**Valid values**|
+|:-----|:-----|:-----|
+|LabelName|String|If the value contains spaces, enclose the value in quotation marks (").|
+|Comment|String|If the value contains spaces, enclose the value in quotation marks ("). |
+|Notes|String|Custom|
+|IsRecordLabel|String|$true: The label is a record label.</br>$false: The label isn't a record label. This is the default value.|
+|RetentionAction|String|Delete</br>Keep</br>KeepAndDelete |
+|RetentionDuration|String|This property specifies the number of days to retain the content. Valid values are:</br>A positive integer.</br>The value is unlimited.|
+|RetentionType|String|This property specifies whether the retention duration is calculated from the content creation date, labeled (tagged) date, or last modified date. Valid values are:</br>CreationAgeInDays</br>EventAgeInDays</br>ModificationAgeInDays</br>TaggedAgeInDays |
+|ReviewerEmail|SmtpAddress[]|This property specifies the email address of a reviewer for Delete and KeepAndDelete retention actions. You can specify multiple email addresses separated by commas.|
+|ReferenceId|String|Custom|
+|DepartmentName|String|Custom|
+|Category|String|Custom|
+|SubCategory|String|Custom|
+|AuthorityType|String|Custom|
+|CitationName|String|Custom|
+|CitationUrl|String|Custom|
+|CitationJurisdiction|String|Custom|
+|Regulatory|String|Custom|
+|EventType|String|This property specifies the retention rule that's associated with the label. You can use any value that uniquely identifies the rule. For example:</br>Name</br>Distinguished name (DN)</br>GUID </br>You can use the [Get-RetentionComplianceRule](https://docs.microsoft.com/en-us/powershell/module/exchange/policy-and-compliance-retention/get-retentioncompliancerule?view=exchange-ps) cmdlet to view the available retention rules.|
 
 ![File plan template with information filled in](media/file-plan-filled-out-template.png)
 
