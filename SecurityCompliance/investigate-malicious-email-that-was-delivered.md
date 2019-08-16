@@ -1,5 +1,5 @@
 ---
-title: "Find and investigate malicious email that was delivered in Office 365, TIMailData-Inline, Security Incident, incident, ATP Powershell, email malware, compromised users, email phish, email malware"
+title: "Find and investigate malicious email that was delivered in Office 365, TIMailData-Inline, Security Incident, incident, ATP Powershell, email malware, compromised users, email phish, email malware, read email headers, read headers, open email headers"
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
@@ -68,7 +68,6 @@ This will open the flyout, where both header preview and email download links ar
 |Use Threat Explorer (and real-time detections) to analyze threats ​    |  Office 365 Global Administrator,<br> Security Administrator, <br> Security Reader      | No   |
 |Use Threat Explorer (and real-time detections) to view headers for emails ​as well as preview and download quarantined emails    |     Office 365 Global Administrator, <br> Security Administrator, <br>Security Reader    |       No  |
 |Use Threat Explorer to view headers and download emails delivered to mailboxes     |      Office 365 Global Administrator, <br>Security Administrator,<br> Security Reader, <br> Preview    |   Yes      |
-
 
 <br>
 
