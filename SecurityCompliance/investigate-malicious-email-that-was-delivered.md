@@ -65,12 +65,10 @@ This will open the flyout, where both header preview and email download links ar
 
 |Activity  |RBAC rolegroup with access |'Preview' role needed?  |
 |---------|---------|---------|
+|Use Threat Explorer (and real-time detections) to analyze threats ​    |  Office 365 Global Administrator,<br> Security Administrator, <br> Security Reader      | No   |
 |Use Threat Explorer (and real-time detections) to view headers for emails ​as well as preview and download quarantined emails    |     Office 365 Global Administrator, <br> Security Administrator, <br>Security Reader    |       No  |
 |Use Threat Explorer to view headers and download emails delivered to mailboxes     |      Office 365 Global Administrator, <br>Security Administrator,<br> Security Reader, <br> Preview    |   Yes      |
-|Use Threat Explorer (and real-time detections) to analyze threats ​    |  Office 365 Global Administrator,<br> Security Administrator, <br> Security Reader      | No   |
-|Access to view headers for an email in explorer​    |   Office 365 Global Administrator,<br> Security Administrator,<br> ​Security Reader <br>| No        |
-|Access to view headers, preview and download quarantined emails​     |  Office 365 Global Administrator,<br> Security Administrator,<br> Security Reader       |     No    |
-|Access to view headers, preview and download email in explorer​     | Preview role plus on top of the above permission sets | Yes         |
+
 
 <br>
 
