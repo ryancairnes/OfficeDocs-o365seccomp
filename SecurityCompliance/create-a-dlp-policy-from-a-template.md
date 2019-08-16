@@ -1,7 +1,7 @@
 ---
 title: "Create a DLP policy from a template"
-ms.author: deniseb
-author: denisebmsft
+ms.author: chrfox
+author: chrfox
 manager: laurawi
 ms.date: 6/29/2018
 audience: Admin

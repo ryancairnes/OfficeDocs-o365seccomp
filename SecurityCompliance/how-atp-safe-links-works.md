@@ -1,7 +1,7 @@
 ---
 title: "How Office 365 ATP Safe Links works"
-ms.author: deniseb
-author: denisebmsft
+ms.author: tracyp
+author: msfttracyp
 manager: dansimp
 audience: Admin
 ms.date: 05/19/2019
