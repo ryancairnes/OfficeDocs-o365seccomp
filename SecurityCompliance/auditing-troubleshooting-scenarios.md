@@ -191,21 +191,28 @@ d. The **UserId** field indicates the user who created the inbox rule specified 
 
 ## Investigate why there was a successful login by a user outside your organization
 
-When reviewing audit records in the Office 365 audit log, you might see records that indicate an external user was authenticated by Azure Active Directory and successfully logged in to your organization. Similarly, you might also see audit records that indicate that users with a Microsoft account, such as an Outlook.com or Live.com, successfully logged in to your organization. In these situations, the audit activity is **User logged In**. Here's an example of a audit record for this scenario:
+When reviewing audit records in the Office 365 audit log, you may see records that indicate an external user was authenticated by Azure Active Directory and successfully logged in to your organization. For example, an admin in contoso.com may see an audit record showing that a user from a different fabrikam.com successfully logged into contoso.com. Similarly, you may also see audit records that indicate that users with a Microsoft account, such as an Outlook.com or Live.com, successfully logged in to your organization. In these situations, the audit activity is **User logged In**. 
 
-In the Unified Audit Logs, Admin in Tenant A (contoso.com) may see a user in Tenant B (Fabrikam.com) attempt to authenticate in AAD (and the login is successful). You may also notice at times users from Microsoft Accounts such as Outlook.com or Live.com have a login event registered.
+This behavior is by-design. Azure Active Directory (Azure AD), the directory service in Office 365, allows something called *pass-through authentication* when an external user tries to access a SharePoint site or a OneDrive location in your organization. When the external user tries to do this, they are prompted to enter their Office 365 credentials. Azure AD will use the credentials to authenticate the user, meaning only Azure AD verifies that the user is who they say they are. The indication of the successful login in the audit record is the result of Azure AD authenticating the user. The successful login does not mean that the user was able to access any resources or perform any other actions in your organization. It only indicates that the user was authenticated by Azure AD. In order for pass-through user to access SharePoint or OneDrive resources, a user in your organization would have to explicitly share a resource with the external user by sending them a sharing invitation or anonymous sharing link. 
 
-The audit event that is usually logged is ‘User Logged In’.
+> [!NOTE]
+> Azure AD allows pass-through authentication only for *first-party applications*, such as SharePoint Online and OneDrive for Business. It isn't allowed for other third-party applications.
+
+Here's an example and descriptions of of a audit record for **User logged In** event that is a result of pass-through authentication.
+
+
+
+
 
 **Cause:**
 
 This is **by design.**
 
-The resource tenant in Azure Active Directory (contoso.com) is not aware about user account. Such an account might be an account from another Azure Active Directory tenant belonging to fabrikam.com. The user visits another tenant uninvited, or this might be MSA user like outlook.com (or any social IDP user) who tries to access Azure AD resource application (like SharePoint,OneDrive) without any guest invitation. You can see in the audit event that the ID is unknown
+
 
 ![](media/auditrecordpassthruauth1.png)
 
-Azure Active Directory allows pass-through authentication for 1st party applications (such as SharePoint Online, OneDrive for Business) and does not allow those for 3rd parties.
+
 
 In order for pass-through user to become a legitimate guest in Azure AD tenant, they needs to redeem an invitation issued by a company user account.
 
