@@ -191,59 +191,44 @@ d. The **UserId** field indicates the user who created the inbox rule specified 
 
 ## Investigate why there was a successful login by a user outside your organization
 
-When reviewing audit records in the Office 365 audit log, you may see records that indicate an external user was authenticated by Azure Active Directory and successfully logged in to your organization. For example, an admin in contoso.com may see an audit record showing that a user from a different fabrikam.com successfully logged into contoso.com. Similarly, you may also see audit records that indicate that users with a Microsoft account, such as an Outlook.com or Live.com, successfully logged in to your organization. In these situations, the audit activity is **User logged In**. 
+When reviewing audit records in the Office 365 audit log, you may see records that indicate an external user was authenticated by Azure Active Directory and successfully logged in to your organization. For example, an admin in contoso.onmicrosoft.com may see an audit record showing that a user from a different Office 365 organization (for example, fabrikam.onmicrosoft.com) successfully logged into contoso.onmicrosoft.com. Similarly, you may see audit records that indicate users with a Microsoft Account (MSA), such as an Outlook.com or Live.com, successfully logged in to your organization. In these situations, the audited activity is **User logged In**. 
 
-This behavior is by-design. Azure Active Directory (Azure AD), the directory service in Office 365, allows something called *pass-through authentication* when an external user tries to access a SharePoint site or a OneDrive location in your organization. When the external user tries to do this, they are prompted to enter their Office 365 credentials. Azure AD will use the credentials to authenticate the user, meaning only Azure AD verifies that the user is who they say they are. The indication of the successful login in the audit record is the result of Azure AD authenticating the user. The successful login does not mean that the user was able to access any resources or perform any other actions in your organization. It only indicates that the user was authenticated by Azure AD. In order for pass-through user to access SharePoint or OneDrive resources, a user in your organization would have to explicitly share a resource with the external user by sending them a sharing invitation or anonymous sharing link. 
+This behavior is by-design. Azure Active Directory (Azure AD), the directory service in Office 365, allows something called *pass-through authentication* when an external user tries to access a SharePoint site or a OneDrive location in your organization. When the external user tries to do this, they are prompted to enter their Office 365 credentials. Azure AD uses the credentials to authenticate the user, meaning only Azure AD verifies that the user is who they say they are. The indication of the successful login in the audit record is the result of Azure AD authenticating the user. The successful login does not mean that the user was able to access any resources or perform any other actions in your organization. It only indicates that the user was authenticated by Azure AD. In order for pass-through user to access SharePoint or OneDrive resources, a user in your organization would have to explicitly share a resource with the external user by sending them a sharing invitation or anonymous sharing link. 
 
 > [!NOTE]
 > Azure AD allows pass-through authentication only for *first-party applications*, such as SharePoint Online and OneDrive for Business. It isn't allowed for other third-party applications.
 
-Here's an example and descriptions of of a audit record for **User logged In** event that is a result of pass-through authentication.
+Here's an example and descriptions of relevant properties in an audit record for **User logged In** event that is a result of pass-through authentication. Click the audit record to display the **Details** flyout page, and then click **More information**.
+
+![Example of audit record for successful pass-thru authentication](media/PassThroughAuth1.png)
+
+   a. This field indicates that the user who attempted to access a resource in your organization was not found in your organization's Azure AD.
+
+   b. This field displays the UPN of the external user that attempted to access a resource in your organization. This user ID is also identified in the **User** and **UserId** properties in the audit record.
+
+   c. The **ApplicationId** property identifies the application that triggered the logon request. The value of 00000003-0000-0ff1-ce00-000000000000 displayed in the ApplicationId property in this audit record indicates SharePoint Online. OneDrive for Business also has this same ApplicationId.
+
+   d. This indicates that the pass-through authentication was successful. In other words, the user was successfully authenticated by Azure AD. 
+
+   e. The **RecordType** value of **15** indicates that the audited activity (UserLoggedIn) is a  Secure Token Service (STS) logon event in Azure AD.
+
+For more information about the other properties displayed in a UserLoggedIn audit record, see the Azure AD-related schema information in [Office 365 Management Activity API schema](https://docs.microsoft.com/office/office-365-management-api/office-365-management-activity-api-schema#azure-active-directory-base-schema).
+
+Here are two examples scenarios that would result in a successful **User logged in** audit activity because of pass-through authentication: 
+
+  - A user with a Microsoft Account (such as SaraD@outlook.com) has tried to access a document in a OneDrive for Business account in fourthcoffee.onmicrosoft.com and their isn't a corresponding guest user account for SaraD@outlook.com in fourthcoffee.onmicrosoft.com.
+
+  - A user with a Work or School account in an Office 365 organization (such as pilarp@fabrikam.onmicrosoft.com) has tried to access a SharePoint site in contoso.onmicrosoft.com and their isn't a corresponding guest user account for pilarp@fabrikam.com in contoso.onmicrosoft.com.
 
 
+### Tips for investigating successful logins resulting from pass-through authentication
 
+- Search the audit log for activities performed by the external user identified in the **User logged in** audit record. Type the UPN for the external user in the **Users** box and use a date range if relevant to your scenario. For example, you can create a search using the following search criteria:
 
+   ![Search for all activities performed by the external user](media/PassThroughAuth2.png)
 
-**Cause:**
+    In addition of the **User logged in** activities, other audit records may be returned, such ones that indicate a user in your organization shared resources with the external user and whether the external user accessed, modified, or downloaded a document that was shared with them.
 
-This is **by design.**
+- Search for SharePoint sharing activities that would indicate that a file was shared with the external user identified by a **User logged in** audit record. For more information, see [Use sharing auditing in the Office 365 audit log](use-sharing-auditing.md).
 
-
-
-![](media/auditrecordpassthruauth1.png)
-
-
-
-In order for pass-through user to become a legitimate guest in Azure AD tenant, they needs to redeem an invitation issued by a company user account.
-
-So the passthrough user cases are like:
-
-  - An MSA user, say <JohnDoe@outlook.com>, has tried to access OneDrive in fabrikam.onmicrosoft.com, and JohnDoe has no guest account in fabrikam.onmicrosoft.com.
-
-  - An AAD user, say <chris@contoso.com>, has tried to access OneDrive in fabrikam.onmicrosoft.com, and Chris has no guest account in fabrikam.onmicrosoft.com.
-
-**Resolution:**
-
-Even though authentication may be successful, tenant admins should always check the audit logs against the workload **or** to filter the audit logs using the UserID to see if the user from outside the tenant was authorized to access the resource (such as SharePoint, OneDrive).
-
-Such logs can show if any operation was performed by the external account, which is not likely if the external account does not have invitations to access the resource (example: document in SharePoint Online or OneDrive for Business).
-
-### Tips
-
-- Search the audit log for activities performed by the user identified in the **User logged in** audit record. Type the userID in the **Users** box and use a date range if relevant to your scenario. In addition of the **User logged in** activities, other audit records will be returned, such as if the user accessed, modified, or downloaded a document that was shared with them.
-
-- Search for SharePoint sharing activities that would indicate that a file was shared with the external user identified by a **User logged in** audit record. Here are some SharePoint sharing activities that might indicate that a user in your organization shared file with the external user:
-
-   - **SharingInvitationCreated:** A user in your organization tried to share a resource (likely a site) with the external user. This results in an external sharing invitation sent to the target user. No access to the resource is granted at this point.
-
-   - **SharingInvitationAccepted:** The external user has accepted the sharing invitation that was sent to them and now has access to the resource.
-
-    - **AnonymousLinkCreated:** An anonymous link (also called an "Anyone" link) is created for a resource. Because an anonymous link can be created and then copied, it's reasonable to assume that any document that has an anonymous link has been shared with a target user, such as the external user you're investigating.
-
-   - **AnonymousLinkUsed:** As the name implies, this event is logged when an anonymous link is used to access a resource. 
-
-   - **SecureLinkCreated:** A user has created a "specific people link" to share a resource with a specific person. This target user may be the external user you're investigating.
-
-   - **AddedToSecureLink:** A user was added to a specific people link. This target user may be the external user you're investigating.
-
-  For more details about interpreting these SharePoint sharing events, see [Use sharing auditing in the Office 365 audit log](use-sharing-auditing.md).
+- Export the audit log search results that contain records relevant to your investigation so that you can use Excel to search for other activities related to the external user. For more information, see  [Export, configure, and view audit log records](export-view-audit-log-records.md).
