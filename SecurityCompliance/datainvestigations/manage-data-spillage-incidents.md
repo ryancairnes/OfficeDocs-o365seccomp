@@ -1,6 +1,7 @@
 ---
 title: "Manage a data spillage incident in Microsoft 365"
 ms.author: markjjo
+author: markjjo
 manager: laurawi
 ms.date: 
 ms.audience: Admin
