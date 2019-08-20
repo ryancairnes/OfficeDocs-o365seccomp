@@ -6126,41 +6126,44 @@ No
 
 A DLP policy is 85% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
 - The function Func_ssn finds content that matches the pattern.
--	A keyword from Keyword_ssn is found.
--	The function Func_us_date finds a date in the right date format.
--	The function Func_us_address finds an address in the right format.
+- A keyword from Keyword_ssn is found.
+- The function Func_us_date finds a date in the right date format.
+- The function Func_us_address finds an address in the right format.
 
 A DLP policy is 75% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
--	The function Func_unformatted_ssn finds content that matches the pattern.
--	A keyword from Keyword_ssn is found.
--	The function Func_us_date finds a date in the right date format.
--	The function Func_us_address finds an address in the right format.
+- The function Func_unformatted_ssn finds content that matches the pattern.
+- A keyword from Keyword_ssn is found.
+- The function Func_us_date finds a date in the right date format.
+- The function Func_us_address finds an address in the right format.
 
 A DLP policy is 65% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
--	The function Func_randomized_formatted_ssn finds content that matches the pattern.
--	A keyword from Keyword_ssn is found.
--	The function Func_us_date finds a date in the right date format.
--	The function Func_us_address finds an address in the right format.
+- The function Func_randomized_formatted_ssn finds content that matches the pattern.
+- A keyword from Keyword_ssn is found.
+- The function Func_us_date finds a date in the right date format.
+- The function Func_us_address finds an address in the right format.
 
 A DLP policy is 55% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
--	The function Func_randomized_unformatted_ssn finds content that matches the pattern.
--	A keyword from Keyword_ssn is found.
--	The function Func_us_date finds a date in the right date format.
--	The function Func_us_address finds an address in the right format.
+- The function Func_randomized_unformatted_ssn finds content that matches the pattern.
+- A keyword from Keyword_ssn is found.
+- The function Func_us_date finds a date in the right date format.
+- The function Func_us_address finds an address in the right format.
 
 A DLP policy is 40% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
--	The function Func_ssn finds content that matches the pattern.
--	The function Func_unformatted_ssn does not find content that matches the pattern.
--	The function Func_randomized_unformatted_ssn does not find content that matches the pattern.
--	A keyword from Keyword_ssn is not found.
+- The function Func_ssn finds content that matches the pattern.
+- The function Func_unformatted_ssn does not find content that matches the pattern.
+- The function Func_randomized_unformatted_ssn does not find content that matches the pattern.
+- A keyword from Keyword_ssn is not found.
+ 
 Or
--	The function Func_randomized_formatted_ssn finds content that matches the pattern.
--	The function Func_unformatted_ssn does not find content that matches the pattern.
--	The function Func_randomized_unformatted_ssn does not find content that matches the pattern.
--	A keyword from Keyword_ssn is not found.
+
+- The function Func_randomized_formatted_ssn finds content that matches the pattern.
+- The function Func_unformatted_ssn does not find content that matches the pattern.
+- The function Func_randomized_unformatted_ssn does not find content that matches the pattern.
+- A keyword from Keyword_ssn is not found.
 
 ```xml
-<Entity id="a44669fe-0d48-453d-a9b1-2cc83f2cba77" patternsProximity="300" recommendedConfidence="75">
+<!-- U.S. Social Security Number (SSN) -->
+  <Entity id="a44669fe-0d48-453d-a9b1-2cc83f2cba77" patternsProximity="300" recommendedConfidence="75">
       <Pattern confidenceLevel="85">
         <IdMatch idRef="Func_ssn" />
         <Any minMatches="1">
