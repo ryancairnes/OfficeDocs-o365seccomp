@@ -3,7 +3,7 @@ title: "Configure permissions filtering for Content Search"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 5/14/2018
+ms.date: 
 audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
