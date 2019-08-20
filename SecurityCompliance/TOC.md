@@ -206,8 +206,6 @@
 #### [Set up a custom blocked URLs list](set-up-a-custom-blocked-urls-list-wtih-atp.md)
 ### Role Administrator setup tasks
 #### [Turn on ATP for SharePoint, OneDrive, and Microsoft Teams](turn-on-atp-for-spo-odb-and-teams.md)
-#### [ATP for SharePoint, OneDrive, and Microsoft Teams](atp-for-spo-odb-and-teams.md)
-## Manage your security - ATP post-setup
 ## [Understanding latest attack campaigns with threat analytics](latest-attack-campaigns.md)
 ## [Hunting in Microsoft 365](hunting.md)
 ## [View and read your ATP reports](view-reports-for-atp.md)
@@ -218,17 +216,19 @@
 ## [Find and investigate malicious email that was delivered](investigate-malicious-email-that-was-delivered.md)
 ## [Threat Explorer (and real-time detections)](threat-explorer.md)
 ### [Threat Explorer views](threat-explorer-views.md)
+### [Identify suspicious messages in Outlook.com and Outlook on the web](unverified-sender-feature.md)
 ## Integration for greater security
 ### [Integrate Office 365 ATP with Microsoft Defender ATP](integrate-office-365-ti-with-wdatp.md)
 ### [SIEM integration with Office 365 ATP](siem-integration-with-office-365-ti.md)
 ## How ATP works
 ### [How ATP Safe Links works](how-atp-safe-links-works.md)
 ### [How ATP Safe Attachments works](how-atp-safe-attachments-works.md)
-#### [Dynamic Delivery and previewing details](dynamic-delivery-and-previewing.md)
-### [How Threat Investigation and Response works](get-started-with-ti.md)
-#### [About Threat investigation and response](office-365-ti.md)
+### [Dynamic Delivery and previewing details](dynamic-delivery-and-previewing.md)
+### [ATP for SharePoint, OneDrive, and Microsoft Teams](atp-for-spo-odb-and-teams.md)
+### [How threat investigation works](get-started-with-ti.md)
+#### [About threat investigation and response](office-365-ti.md)
 ### [How Automated Investigation and Response works](automated-investigation-response-office.md)
-### [Identify suspicious messages in Outlook.com and Outlook on the web](unverified-sender-feature.md)
+
 
 # Security incident management
 ## [Office 365 Security Incident Response](office365-security-incident-response-overview.md)
