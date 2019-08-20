@@ -206,8 +206,6 @@
 #### [Set up a custom blocked URLs list](set-up-a-custom-blocked-urls-list-wtih-atp.md)
 ### Role Administrator setup tasks
 #### [Turn on ATP for SharePoint, OneDrive, and Microsoft Teams](turn-on-atp-for-spo-odb-and-teams.md)
-#### [ATP for SharePoint, OneDrive, and Microsoft Teams](atp-for-spo-odb-and-teams.md)
-## Manage your security - ATP post-setup
 ## [Understanding latest attack campaigns with threat analytics](latest-attack-campaigns.md)
 ## [Hunting in Microsoft 365](hunting.md)
 ## [View and read your ATP reports](view-reports-for-atp.md)
@@ -224,7 +222,8 @@
 ## How ATP works
 ### [How ATP Safe Links works](how-atp-safe-links-works.md)
 ### [How ATP Safe Attachments works](how-atp-safe-attachments-works.md)
-#### [Dynamic Delivery and previewing details](dynamic-delivery-and-previewing.md)
+### [Dynamic Delivery and previewing details](dynamic-delivery-and-previewing.md)
+### [ATP for SharePoint, OneDrive, and Microsoft Teams](atp-for-spo-odb-and-teams.md)
 ### [How Threat Investigation and Response works](get-started-with-ti.md)
 #### [About Threat investigation and response](office-365-ti.md)
 ### [How Automated Investigation and Response works](automated-investigation-response-office.md)
