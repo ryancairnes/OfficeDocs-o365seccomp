@@ -49,7 +49,7 @@ To view and use this dashboard, in the Security &amp; Compliance Center, go to *
   
 ### Threat Explorer
 
-Use the [Threat Explorer (and real-time detections)](threat-explorer.md) to analyze threats, see the volume of attacks over time, and analyze data by threat families, attacker infrastructure, and more. Threat Explorer (also referred to as Explorer) is the starting place for any security analyst's investigation workflow.
+Use [Threat Explorer (and real-time detections)](threat-explorer.md) to analyze threats, see the volume of attacks over time, and analyze data by threat families, attacker infrastructure, and more. Threat Explorer (also referred to as Explorer) is the starting place for any security analyst's investigation workflow.
   
 ![Threat explorer](media/7a7cecee-17f0-4134-bcb8-7cee3f3c3890.png)
   
