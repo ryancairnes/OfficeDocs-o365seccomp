@@ -225,8 +225,7 @@
 ### [How ATP Safe Attachments works](how-atp-safe-attachments-works.md)
 ### [Dynamic Delivery and previewing details](dynamic-delivery-and-previewing.md)
 ### [ATP for SharePoint, OneDrive, and Microsoft Teams](atp-for-spo-odb-and-teams.md)
-### [How threat investigation works](get-started-with-ti.md)
-#### [About threat investigation and response](office-365-ti.md)
+### [How threat investigation and response works](office-365-ti.md)
 ### [How Automated Investigation and Response works](automated-investigation-response-office.md)
 
 
