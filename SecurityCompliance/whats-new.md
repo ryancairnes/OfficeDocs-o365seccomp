@@ -3,7 +3,7 @@ title: "What's new in the Microsoft 365 compliance center"
 ms.author: brendonb
 author: brendonb
 manager: laurawi
-ms.date: 01/14/2019
+ms.date:
 audience: Admin
 ms.topic: reference
 ms.service: O365-seccomp

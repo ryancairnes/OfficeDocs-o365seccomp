@@ -1,5 +1,5 @@
 ---
-title: "Threat Explorer and real-time detections"
+title: "Threat Explorer and real-time detections, new to Threat Explorer, changes to Threat Explorer, new to Office 365, Security, Cloud Security, new to Security in ATP, new ATP features"
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
@@ -37,12 +37,16 @@ With this report, you can:
 
 ## New features in real-time detections
 
-Explorer (and real-time detections) adds fresh new fields designed to give you a more complete picture of where your emails land. Part of the goal of this change is to make hunting easier for Security Ops people, but the net result is knowing the location of problem emails at a glance.
+Three new features added into Threat Explorer are outlined below.
+
+First, **email header preview, and download of the email body** are new features available in Threat Explorer. Admins will be able to analyse downloaded headers/emails for threats. Because downloading emails can risk the exposure of information, this process is controlled by roles-based access control (RBAC). A new role, called 'Preview' must be added into another Office 365 role group (for example into sec operations, or sec admin) to grant the ability to download mails and preview headers in all-emails view.
+
+But Explorer (and real-time detections) also adds fresh new fields designed to give you a more complete picture of where your emails land. Part of the goal of this change is to make hunting easier for Security Ops people, but the net result is knowing the location of problem emails at a glance.
 
 How is this done? Delivery Status is now broken out into two columns:
 
-- Delivery Action - What is the status of this email?
-- Delivery Location - Where was this email routed as a result?
+- **Delivery Action** - What is the status of this email?
+- **Delivery Location** - Where was this email routed as a result?
 
 Delivery Action is the action taken on an email due to existing policies or detections. Here are the possible actions an email can take:
 
@@ -57,7 +61,7 @@ And here is what the user can see, and what they can't:
 |Delivered     | Blocked        |
 |Junked     | Replaced        |
 
-Delivery location shows the results of policies and detections that run post-delivery. It's linked to a Delivery Action. This field was added to give insight into the action taken when a problem mail is found. Here are the possilbe values of delivery location:
+Delivery location shows the results of policies and detections that run post-delivery. It's linked to a Delivery Action. This field was added to give insight into the action taken when a problem mail is found. Here are the possible values of delivery location:
 
 1. Inbox or folder – The email is in inbox or a folder (according to your email rules).
 2. On-prem or external – The mailbox doesn’t exist on cloud but is on-premises.
@@ -67,8 +71,9 @@ Delivery location shows the results of policies and detections that run post-del
 6. Failed – The email failed to reach the mailbox.
 7. Dropped – The email gets lost somewhere in the Mailflow.
 
-The Email Timeline is another new Explorer feature aimed at making the hunting experience better for admins. It cuts down on randomization because there is less time spent checking different locations to try to understand the event. When multiple events happen at, or close to, the same time on an email, those events will show up in a timeline view. In fact, some events that happen post-delivery to your mail will be captured in the 'Special action' column. Combining the information from the timeline of that mail with the special action taken on the mail post-delivery will give admins insight into how their policies work, where the mail was finally routed, and, in some cases, what the final assessment was.
+The **Email Timeline** is another new Explorer feature aimed at making the hunting experience better for admins. It cuts down on randomization because there is less time spent checking different locations to try to understand the event. When multiple events happen at, or close to, the same time on an email, those events will show up in a timeline view. In fact, some events that happen post-delivery to your mail will be captured in the 'Special action' column. Combining the information from the timeline of that mail with the special action taken on the mail post-delivery will give admins insight into how their policies work, where the mail was finally routed, and, in some cases, what the final assessment was.
 
+For more discussion about investigating malicious emails see [Find and investigate malicious email that was delivered in Office 365](https://docs.microsoft.com/en-us/office365/securitycompliance/investigate-malicious-email-that-was-delivered).
 
 ## See malware detected in email by technology
 

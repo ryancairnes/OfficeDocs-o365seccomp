@@ -20,7 +20,7 @@ description: "Create custom sensitive information types with Exact Data Match ba
 
 ## Overview
 
-[Custom sensitive information types](https://review.docs.microsoft.com/en-us/office365/securitycompliance/custom-sensitive-info-types) are used to help prevent inadvertent or inappropriate sharing of sensitive information. As an administrator, you can use the [Security & Compliance Center](https://review.docs.microsoft.com/en-us/office365/securitycompliance/create-a-custom-sensitive-information-type) or [PowerShell](https://review.docs.microsoft.com/en-us/office365/securitycompliance/create-a-custom-sensitive-information-type-in-scc-powershell) to define a custom sensitive information type based on patterns, evidence (keywords such as *employee*, *badge*, *ID*, and so on), character proximity (how close evidence is to characters in a particular pattern), and confidence levels. Such custom sensitive information types meet business needs for many organizations.
+[Custom sensitive information types](https://docs.microsoft.com/en-us/office365/securitycompliance/custom-sensitive-info-types) are used to help prevent inadvertent or inappropriate sharing of sensitive information. As an administrator, you can use the [Security & Compliance Center](https://docs.microsoft.com/en-us/office365/securitycompliance/create-a-custom-sensitive-information-type) or [PowerShell](https://docs.microsoft.com/en-us/office365/securitycompliance/create-a-custom-sensitive-information-type-in-scc-powershell) to define a custom sensitive information type based on patterns, evidence (keywords such as *employee*, *badge*, *ID*, and so on), character proximity (how close evidence is to characters in a particular pattern), and confidence levels. Such custom sensitive information types meet business needs for many organizations.
 
 But what if you wanted a custom sensitive information type that uses exact data values, instead of matching only with generic patterns? With Exact Data Match (EDM)-based classification, you can create a custom sensitive information type that is designed to:
 
@@ -33,11 +33,11 @@ But what if you wanted a custom sensitive information type that uses exact data 
 
 ![EDM-based classification](media/EDMClassification.png)
 
-EDM-based classification enables you to create custom sensitive information types that refer to exact values in a database of sensitive information. The database can be refreshed daily or weekly, and it can contain up to 10 million rows of data. So as employees, patients, or clients come and go, and records change, your custom sensitive information types remain current and applicable. And, you can use EDM-based classification with policies, such as [data loss prevention policies](https://review.docs.microsoft.com/en-us/office365/securitycompliance/data-loss-prevention-policies) (DLP) or [Microsoft Cloud App Security file policies](https://docs.microsoft.com/cloud-app-security/data-protection-policies).
+EDM-based classification enables you to create custom sensitive information types that refer to exact values in a database of sensitive information. The database can be refreshed daily or weekly, and it can contain up to 10 million rows of data. So as employees, patients, or clients come and go, and records change, your custom sensitive information types remain current and applicable. And, you can use EDM-based classification with policies, such as [data loss prevention policies](https://docs.microsoft.com/en-us/office365/securitycompliance/data-loss-prevention-policies) (DLP) or [Microsoft Cloud App Security file policies](https://docs.microsoft.com/cloud-app-security/data-protection-policies).
 
 ## Required licenses and permissions
 
-You must be a global admin, compliance administrator, or Exchange Online administrator to perform the tasks described in this article. To learn more about DLP permissions, see [Permissions](https://review.docs.microsoft.com/en-us/office365/securitycompliance/data-loss-prevention-policies#permissions).
+You must be a global admin, compliance administrator, or Exchange Online administrator to perform the tasks described in this article. To learn more about DLP permissions, see [Permissions](https://docs.microsoft.com/en-us/office365/securitycompliance/data-loss-prevention-policies#permissions).
 
 When generally available, EDM-based classification will be included in these subscriptions
 
@@ -52,7 +52,7 @@ When generally available, EDM-based classification will be included in these sub
 |---------|---------|
 |[Part 1: Set up EDM-based classification](#part-1-set-up-edm-based-classification)<br/><br/>(As needed)<br/>- [Edit the database schema](#editing-the-schema-for-edm-based-classification) <br/>- [Remove the schema](#removing-the-schema-for-edm-based-classification) |- Read access to the sensitive data<br/>- Database schema in .xml format (example provided)<br/>- Rule package in .xml format (example provided)<br/>- Admin permissions to the Security & Compliance Center (using PowerShell) |
 |[Part 2: Index and upload the sensitive data](#part-2-index-and-upload-the-sensitive-data)<br/><br/>(As needed)<br/>[Refresh the data](#refreshing-your-sensitive-information-database) |- Custom security group and user account<br/>- Local admin access to machine with EDM Upload Agent<br/>- Read access to the sensitive data<br/>- Process and schedule for refreshing the data|
-|[Part 3: Use EDM-based classification with your Microsoft cloud services](#part-3-use-edm-based-classification-with-your-microsoft-cloud-services) |- Office 365 subscription with DLP<br/>- EDM-based classification feature enabled (in preview) |
+|[Part 3: Use EDM-based classification with your Microsoft cloud services](#part-3-use-edm-based-classification-with-your-microsoft-cloud-services) |- Office 365 subscription with DLP<br/>- EDM-based classification feature enabled |
 
 ### Part 1: Set up EDM-based classification
 
@@ -475,11 +475,11 @@ EDM sensitive information types for following scenarios are currently in develop
 
 ## Related articles
 
-[Built-in sensitive information types and what they look for](https://review.docs.microsoft.com/en-us/office365/securitycompliance/what-the-sensitive-information-types-look-for)
+[Built-in sensitive information types and what they look for](https://docs.microsoft.com/en-us/office365/securitycompliance/what-the-sensitive-information-types-look-for)
 
-[Custom sensitive information types](https://review.docs.microsoft.com/en-us/office365/securitycompliance/custom-sensitive-info-types)
+[Custom sensitive information types](https://docs.microsoft.com/en-us/office365/securitycompliance/custom-sensitive-info-types)
 
-[Overview of DLP policies](https://review.docs.microsoft.com/en-us/office365/securitycompliance/data-loss-prevention-policies)
+[Overview of DLP policies](https://docs.microsoft.com/en-us/office365/securitycompliance/data-loss-prevention-policies)
 
 [Microsoft Cloud App Security](https://docs.microsoft.com/cloud-app-security)
 
