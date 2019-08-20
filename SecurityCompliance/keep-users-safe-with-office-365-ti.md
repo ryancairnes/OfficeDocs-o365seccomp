@@ -1,5 +1,5 @@
 ---
-title: "Keep your Office 365 users safe with Office 365 threat investigation and response capabilities"
+title: "Keep your organization safe with Office 365 threat investigation and response capabilities"
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
@@ -17,7 +17,7 @@ ms.collection:
 description: "Learn how Office 365 threat investigation and response capabilities can help your organization detect intrusions and threats, and quickly mitigate and recover from threats."
 ---
 
-# Keep your Office 365 users safe with Office 365 threat investigation and response capabilities
+# Keep your organization safe with Office 365 threat investigation and response capabilities
 
 ## Overview
 
