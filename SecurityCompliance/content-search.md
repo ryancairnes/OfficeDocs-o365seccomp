@@ -219,13 +219,13 @@ Keep the following things in mind when using the keyword list to create a search
   
 - When you run a content search, Office 365 automatically checks your search query for unsupported characters and for Boolean operators that may not be capitalized. Unsupported characters are often hidden and typically cause a search error or return unintended results. For more information about the unsupported characters that are checked, see [Check your Content Search query for errors](check-your-content-search-query-for-errors.md).
     
-- If you have a search query that contains keywords for non-English characters (such as Chinese characters), you can click **Query language-country/region**![Query language-country/region icon in Content search](media/8d4b60c8-e1f1-40f9-88ae-ee2a7eca0886.png) and select a language-country culture code value for the search. The default language/region is neutral. How can you tell if you need to change the language setting for a content search? If you're certain content locations contain the non-English characters you're searching for, but the search returns no results, the language setting might be the cause. 
+- If you have a search query that contains keywords for non-English characters (such as Chinese characters), you can click **Query language-country/region**![Query language-country/region icon in Content search](media/8d4b60c8-e1f1-40f9-88ae-ee2a7eca0886.png) and select a language-country culture code value for the search. The default language/region is neutral. How can you tell if you need to change the language setting for a content search? If you're certain content locations contain the non-English characters you're searching for, but the search returns no results, the language setting may be the cause. 
   
 ### Searching OneDrive accounts
 
 - To collect a list of the URLs for the OneDrive sites in your organization, see [Create a list of all OneDrive locations in your organization](https://support.office.com/article/8e200cb2-c768-49cb-88ec-53493e8ad80a). This script in this article creates a text file that contains a list of all OneDrive sites. To run this script, you have to install and use the SharePoint Online Management Shell. Be sure to append the URL for your organization's MySite domain to each OneDrive site that you want to search. This is the domain that contains all your OneDrive; for example,  `https://contoso-my.sharepoint.com`. Here's an example of a URL for a user's OneDrive site:  `https://contoso-my.sharepoint.com/personal/sarad_contoso_onmicrosoft.com`.
     
-    In the rare case that a person's user principal name (UPN) is changed, the URL for their OneDrive location is changed to incorporate the new UPN. If this happens, you have to modify a content search by adding the user's new OneDrive URL and removing the old one.
+    In the rare case of a person's user principal name (UPN) being changed, the URL for their OneDrive location is changed to incorporate the new UPN. If this happens, you have to modify a content search by adding the user's new OneDrive URL and removing the old one.
   
 ### Searching Microsoft Teams and Office 365 Groups
 
@@ -328,15 +328,15 @@ Here are a few things to keep in mind when searching inactive mailboxes.
 
 ### Searching disconnected or de-licensed mailboxes
 
-If the Exchange Online license (or the entire Office 365 license) is removed from a user account in Office 365 or in Azure Active Directory, the user's mailbox becomes a *disconnected* mailbox. This means the mailbox is no longer associated with the user account. Here's what happens when searching disconnected mailboxes:
+If the Exchange Online license (or the entire Office 365 license) is removed from a user account in Office 365 or in Azure Active Directory, the user's mailbox becomes a *disconnected* mailbox. This means that the mailbox is no longer associated with the user account. Here's what happens when searching disconnected mailboxes:
 
 - When the license is removed from a mailbox, the mailbox goes into a 30-day grace period. During this grace period, you can still use content search to search the mailbox.
 
-- If the mailbox is not re-licensed within 30 days, it will be marked for permanent deletion and will be removed from Office 365 the next time the mailbox is processed. Depending on the when the mailbox is processed, you might be able search it after the 30-day grace period has expired. Mailboxes are typically processed once every seven days. After it's processed, the mailbox will be removed and no longer searchable.
+- If the mailbox is not re-licensed within 30 days, it will be marked for permanent deletion and removed from Office 365 the next time the mailbox is processed. Depending on the when the mailbox is processed, you may be able search it after the 30-day grace period has expired. Mailboxes are typically processed once every seven days. After it's processed, the mailbox will be removed and no longer searchable.
 
-- If an existing content search includes a user mailbox in which the license is removed from that mailbox, the content search will continue to search the disconnected mailbox when you rerun the search until the 30-day grace period expires and the disconnected mailbox is removed and will no longer be searched if you re-run an existing content search. 
+- If an existing content search includes a user mailbox in which the license was removed, the disconnected mailbox will be included when you rerun the search until the 30-day grace period expires. After the grace period expires and the mailbox is removed, it will no longer be included when you rerun the search.
 
-- If the license is removed from the mailbox that's been placed on hold (by one the various [hold features in Office 365](identify-a-hold-on-an-exchange-online-mailbox.md), the mailbox will be preserved indefinitely and will remain searchable beyond the 30-day grace period.
+- If the license is removed from a mailbox that's been placed on hold (by one the various [hold features in Office 365](identify-a-hold-on-an-exchange-online-mailbox.md), the mailbox will be preserved indefinitely and will remain searchable beyond the 30-day grace period.
 
 ### Previewing search results
 
