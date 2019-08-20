@@ -331,7 +331,7 @@ To verify your sensitive data has been uploaded, run the following command in Wi
 
 `EdmUploadAgent.exe /GetDataStore`
 
-You'll see a list of data stores and when they were last updated, similar to the following:
+You'll see a list of data stores and when they were last updated.
 
 Proceed to set up your process and schedule for [Refreshing your sensitive information database](#refreshing-your-sensitive-information-database).
 
