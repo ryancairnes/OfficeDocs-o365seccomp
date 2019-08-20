@@ -130,8 +130,8 @@ For more information, see [Rights Management issuer and Rights Management owner]
 
 You can use these options to let users assign permissions when they manually apply a sensitivity label to content:
 
-- In Outlook, a user can enforce restrictions equivalent to the **Do Not Forward** option.
-- In Word, PowerPoint, and Excel, a user is prompted to select a permission level for specific users, groups, or organizations.
+- In Outlook, a user can enforce restrictions equivalent to the **Do Not Forward** option. This option is supported natively in Outlook on Windows, and does not require you to install the Azure Information Protection unified labeling client.
+- In Word, PowerPoint, and Excel, a user is prompted to select a permission level for specific users, groups, or organizations. This option is not supported natively in these Office apps, so your users must install the Azure Information Protection unified labeling client.
 
 These options determine in which apps the sensitivity label will appear:
 
@@ -142,7 +142,7 @@ These options determine in which apps the sensitivity label will appear:
 A sensitivity label that lets users assign permissions can be applied to content only manually by users; it can't be auto-applied or used as a recommended label.
 
 > [!NOTE]
-> Letting users assign permissions requires an Azure Information Protection subscription. To use this feature, you must download and install the [Azure Information Protection unified labeling client](https://docs.microsoft.com/azure/information-protection/rms-client/install-unifiedlabelingclient-app). We're working on native support for this feature in Office apps, so that it won't require the Azure Information Protection client. Also, the client runs only on Windows, so this feature is not yet supported on Mac, iOS, Android, or Office for the web.
+> Letting users assign permissions requires an Azure Information Protection subscription. To use this feature in Word, PowerPoint, and Excel, you must download and install the [Azure Information Protection unified labeling client](https://docs.microsoft.com/azure/information-protection/rms-client/install-unifiedlabelingclient-app). We're working on native support for this feature in these Office apps, so that they won't require the Azure Information Protection client. Also, the client runs only on Windows, so this feature is not yet supported on Mac, iOS, Android, or Office for the web.
 
 ![Encryption settings for user defined permissions](media/sensitivity-encryption-settings-for-user-defined-permissions.png)
 
