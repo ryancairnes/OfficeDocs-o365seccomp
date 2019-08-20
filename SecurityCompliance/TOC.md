@@ -216,6 +216,7 @@
 ## [Find and investigate malicious email that was delivered](investigate-malicious-email-that-was-delivered.md)
 ## [Threat Explorer (and real-time detections)](threat-explorer.md)
 ### [Threat Explorer views](threat-explorer-views.md)
+### [Identify suspicious messages in Outlook.com and Outlook on the web](unverified-sender-feature.md)
 ## Integration for greater security
 ### [Integrate Office 365 ATP with Microsoft Defender ATP](integrate-office-365-ti-with-wdatp.md)
 ### [SIEM integration with Office 365 ATP](siem-integration-with-office-365-ti.md)
@@ -224,10 +225,10 @@
 ### [How ATP Safe Attachments works](how-atp-safe-attachments-works.md)
 ### [Dynamic Delivery and previewing details](dynamic-delivery-and-previewing.md)
 ### [ATP for SharePoint, OneDrive, and Microsoft Teams](atp-for-spo-odb-and-teams.md)
-### [How Threat Investigation and Response works](get-started-with-ti.md)
-#### [About Threat investigation and response](office-365-ti.md)
+### [How threat investigation works](get-started-with-ti.md)
+#### [About threat investigation and response](office-365-ti.md)
 ### [How Automated Investigation and Response works](automated-investigation-response-office.md)
-### [Identify suspicious messages in Outlook.com and Outlook on the web](unverified-sender-feature.md)
+
 
 # Security incident management
 ## [Office 365 Security Incident Response](office365-security-incident-response-overview.md)
