@@ -330,13 +330,13 @@ Here are a few things to keep in mind when searching inactive mailboxes.
 
 If the Exchange Online license (or the entire Office 365 license) is removed from a user account in Office 365 or in Azure Active Directory, the user's mailbox becomes a *disconnected* mailbox. This means that the mailbox is no longer associated with the user account. Here's what happens when searching disconnected mailboxes:
 
-- When the license is removed from a mailbox, the mailbox goes into a 30-day grace period. During this grace period, you can still use content search to search the mailbox.
+- If the license is removed from a mailbox, the mailbox is no longer searchable. 
 
-- If the mailbox is not re-licensed within 30 days, it will be marked for permanent deletion and removed from Office 365 the next time the mailbox is processed. Depending on the when the mailbox is processed, you may be able search it after the 30-day grace period has expired. Mailboxes are typically processed once every seven days. After it's processed, the mailbox will be removed and no longer searchable.
+- If the license is removed from a mailbox that's been placed on hold (by one the various [hold features in Office 365](identify-a-hold-on-an-exchange-online-mailbox.md), the mailbox will be preserved indefinitely and remains searchable.
 
-- If an existing content search includes a user mailbox in which the license was removed, the disconnected mailbox will be included when you rerun the search until the 30-day grace period expires. After the grace period expires and the mailbox is removed, it will no longer be included when you rerun the search.
+- If an existing content search includes a mailbox in which the license is removed, no search results from the disconnected mailbox will be returned if you rerun the content search.
 
-- If the license is removed from a mailbox that's been placed on hold (by one the various [hold features in Office 365](identify-a-hold-on-an-exchange-online-mailbox.md), the mailbox will be preserved indefinitely and will remain searchable beyond the 30-day grace period.
+- If you use the **New-ComplianceSearch** cmdlet to create a content search and specify a disconnected mailbox as the Exchange content location to search, the content search won't return any search results from the disconnected mailbox.
 
 ### Previewing search results
 
