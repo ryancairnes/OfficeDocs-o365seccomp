@@ -162,7 +162,7 @@ Use a text editor (like Notepad), to create a file that includes the keyword ter
 
     - Give the policy a name and description.
     - Choose the users or groups to supervise, including choosing users or groups you'd like to exclude.
-    - Define the supervision policy [conditions](configure-supervision-policies.md#ConditionalSettings). You can choose from message address, keyword, file types, and size match conditions.
+    - Define the supervision policy [conditions](supervision-policies.md#ConditionalSettings). You can choose from message address, keyword, file types, and size match conditions.
     - Choose if you'd like to include sensitive information types. This is where you can select default and custom sensitive info types.
     - Choose if you'd like to enable the offensive language model. This detects inappropriate language sent or received in the body of email messages.
     - Define the percentage of communications to review.
