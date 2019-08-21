@@ -64,7 +64,7 @@ Use the following workflow to remediate files with errors in Data Investigations
 7. After downloading the files, you can remediate them with an appropriate tool. For password protected files, there are several password cracking tools you can use. If you know the passwords for the files, you can open them and remove the password protection.
     
    > [!NOTE]
-    > It's important that you retain the directory structure and file names of the remediated files. The pathnames of the downloaded files and folders make it possible to associate the remdiated files with the original files.  If the directory structure or file names are changed, you'll receive the following error: `Cannot apply Error Remediation to the current Evidenceset`.
+    > It's important that you retain the directory structure and file names of the remediated files. The path names of the downloaded files and folders make it possible to associate the remediated files with the original files.  If the directory structure or file names are changed, you'll receive the following error: `Cannot apply Error Remediation to the current Evidenceset`.
 
 8. Now, return to Data Investigations (Preview) and click **Next: Upload files**.  This will move to the next step where you can now upload the files.
 
