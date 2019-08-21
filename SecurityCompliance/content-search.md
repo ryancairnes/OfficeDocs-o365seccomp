@@ -332,11 +332,11 @@ If the Exchange Online license (or the entire Office 365 license) is removed fro
 
 - If the license is removed from a mailbox, the mailbox is no longer searchable. 
 
-- If the license is removed from a mailbox that's been placed on hold (by one the various [hold features in Office 365](identify-a-hold-on-an-exchange-online-mailbox.md), the mailbox will be preserved indefinitely and remains searchable.
-
 - If an existing content search includes a mailbox in which the license is removed, no search results from the disconnected mailbox will be returned if you rerun the content search.
 
 - If you use the **New-ComplianceSearch** cmdlet to create a content search and specify a disconnected mailbox as the Exchange content location to search, the content search won't return any search results from the disconnected mailbox.
+
+If you need to preserve the data in a disconnected mailbox so that it's searchable, you must place a hold on the mailbox before removing the license. This preserves the data and keeps the disconnected mailbox searchable until the hold is removed. For more information about holds, see [How to identify the type of hold placed on an Exchange Online mailbox](identify-a-hold-on-an-exchange-online-mailbox.md).
 
 ### Previewing search results
 
