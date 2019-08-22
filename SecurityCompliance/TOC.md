@@ -441,7 +441,6 @@
 ### [Preserve Bcc and expanded distribution group recipients](preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery.md)
 
 # [Manage data investigations](datainvestigations/overview-data-investigations.md)
-## [Release notes](datainvestigations/data-investigations-release-notes.md)
 ## [Manage a data spillage incident](datainvestigations/manage-data-spillage-incidents.md)
 ## [Create a new investigation](datainvestigations/create-new-investigation.md)
 ## [Assign permissions for data investigations](datainvestigations/permissions.md)
@@ -478,6 +477,7 @@
 ### [Close or delete an investigation](datainvestigations/close-or-delete-investigation.md)
 
 ## Data Investigations reference
+### [Release notes](datainvestigations/data-investigations-release-notes.md)
 ### [Limits in Data Investigations](datainvestigations/limits-datainvestigations.md)
 ### [Supported file types](datainvestigations/supported-filetypes-datainvestigations.md)
 ### [Document metadata fields](datainvestigations/document-metadata-fields.md)
