@@ -48,9 +48,9 @@ Sharing is defined by when a user (the *acting* user) wants to share a resource 
 
 - **AnonymousLinkUsed:** As the name implies, this event is logged when an anonymous link is used to access a resource. 
 
-- **SecureLinkCreated:** A user has created a "specific people link" to share a resource with a specific person. This target user may be someone who is external to your organization.
+- **SecureLinkCreated:** A user has created a "specific people link" to share a resource with a specific person. This target user may be someone who is external to your organization. The person that the resource is shared with is identified in the audit record for the **AddedToSecureLink** event. The time stamps for these two events are nearly identical.
 
-- **AddedToSecureLink:** A user was added to a specific people link. This target user may be someone who is external to your organization.
+- **AddedToSecureLink:** A user was added to a specific people link. Use the **TargetUserOrGroupName** field in this event to identify the user added to the corresponding specific people link. This target user may be someone who is external to your organization.
 
 ## Sharing auditing work flow
   
@@ -76,7 +76,7 @@ If a user account for the target user isn't in the directory, SharePoint does th
     
    - When the target user accepts the sharing invitation that's sent to them (by clicking the link in the invitation), SharePoint logs a **SharingInvitationAccepted** event and assigns the target user permissions to access the resource. If the target user is sent an anonymous link, the **AnonymousLinkUsed** event is logged after the target user uses the link to access the resource. For secure links, a **FileAccessed** event is logged when an external user uses the link to access the resource.
 
-Additional information about the target user is also logged, such as the identity of the user that the invitation is to and the user who actually accepts the invitation. In some case, these users (or email addresses) can be different. 
+Additional information about the target user is also logged, such as the identity of the user the invitation is to and the user who accepts the invitation. In some case, these users (or email addresses) can be different. 
 
 ## How to identify resources shared with external users
 
@@ -104,7 +104,7 @@ The first step is to search the Office 365 audit log for sharing events. For mor
     
 7. When the search is finished running and the results are displayed, click **Export results** \> **Download all results**.
     
-    After you select the export option, a message is displayed at the bottom of the window that prompts you to open or save the CSV file.
+    After you select the export option, a message at the bottom of the window prompts you to open or save the CSV file.
     
 8. Click **Save** \> **Save as** and save the CSV file to a folder on your local computer. 
 
