@@ -84,6 +84,9 @@ This will open the flyout, where both header preview and email download links ar
 
 ![Threat Explorer flyout with download and preview links on the page.](media/ThreatExplorerDownloadandPreview.PNG)
 
+> [!IMPORTANT]
+> This capability doesn't show up for emails that were never found in a user's mailbox, which can happen if an email was dropped or its delivery failed. For cases when emails were deleted from users' mailboxes, admins will see an  error mentioning 'Mail not found'.
+
 ### Check the delivery action and location
 
 Threat Explorer real-time detections has added the Delivery Action and Delivery Location fields in the place of Delivery Status. This results in a more complete picture of where your emails land. Part of the goal of this change is to make hunting easier for Security Ops people, but the net result is knowing the location of problem emails at a glance.
