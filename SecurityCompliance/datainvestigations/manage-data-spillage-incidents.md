@@ -125,7 +125,7 @@ To delete items from their original locations:
 
 3. On the flyout page, verify the number of items and related child documents that will be deleted, and then click **Delete**.
 
-At this time, when you delete items from their original location, the items are soft-deleted. This means that the deleted items will be retained until the deleted item recovery period for the item expires. This also means it's possible for users to recover these items. For more information about what happens when items are deleted from mailboxes and sites, see [Delete items from original locations](delete-items-from-original-locations.md).
+At this time, when you delete items from their original location, the items are soft-deleted. This means that the deleted items will be retained until the deleted item recovery period for the item expires. This also means it's possible for users to recover these items. For more information about what happens when items are deleted from mailboxes and sites, see [Delete items from their original location](delete-items-from-original-locations.md).
 
 ## Step 5: Close or delete the investigation
 
