@@ -26,7 +26,7 @@ Recommended capabilities for protecting identities and devices that access Offic
 [PDF](https://go.microsoft.com/fwlink/p/?linkid=841656) | [Visio](https://go.microsoft.com/fwlink/p/?linkid=841657) | [More languages](https://www.microsoft.com/download/details.aspx?id=55032)
   
 ## Step 2: Protect administrator accounts and access
-The administrative accounts you use to administer your Office 365 environment include elevated privileges. These are valuable targets for hackers and cyber criminals. 
+The administrative accounts you use to administer your Office 365 environment include elevated privileges. These are valuable targets for hackers and cyberattackers. 
 
 Begin by using administrator accounts only for administration. Admins should have a separate user account for regular, non-administrative use and only use their administrative account when necessary to complete a task associated with their job function.
 

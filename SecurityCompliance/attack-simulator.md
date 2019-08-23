@@ -3,7 +3,7 @@ title: "Attack Simulator in Office 365"
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
-ms.date: 06/13/2019
+ms.date: 08/23/2019
 audience: ITPro
 ms.topic: overview
 ms.service: O365-seccomp
@@ -19,10 +19,7 @@ description: "As an Office 365 global administrator, you can use Attack Simulato
 
 # Attack Simulator in Office 365
 
-**Summary** If you are an Office 365 global administrator or a security administrator and your organization has [Office 365 Threat Investigation and Response capabilities](office-365-ti.md), you can use Attack Simulator to run realistic attack scenarios in your organization. This can help you identify and find vulnerable users before a real attack impacts your bottom line. Read this article to learn more.
-
-> [!IMPORTANT]
-> Office 365 Advanced Threat Protection and Threat Investigation and Response (formerly known as Threat Intelligence) are part of Office 365 Advanced Threat Protection Plan 2, along with additional threat protection capabilities. To learn more, see [Office 365 Advanced Threat Protection plans and pricing](https://products.office.com/exchange/advance-threat-protection) and the [Office 365 Advanced Threat Protection Service Description](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description).
+**Summary** If you are an Office 365 global administrator or a security administrator and your organization has Office 365 Advanced Threat Protection Plan 2, which includes [Threat Investigation and Response capabilities](office-365-ti.md), you can use Attack Simulator to run realistic attack scenarios in your organization. This can help you identify and find vulnerable users before a real attack impacts your bottom line. Read this article to learn more.
   
 ## The Attacks
 
@@ -44,15 +41,15 @@ Make sure that you and your organization meet the following requirements for Att
     
 - **You are an Office 365 global administrator or security administrator**
     
-- **[Multi-factor authentication/Conditional Access](https://docs.microsoft.com/office365/admin/security-and-compliance/set-up-multi-factor-authentication?view=o365-worldwide) is turned on, for at least the Office 365 global administrator account and security administrators**. (Ideally, multi-factor authentication/conditional access is turned on for all users in your organization.)
+- **[Multi-factor authentication/Conditional Access](https://docs.microsoft.com/office365/admin/security-and-compliance/set-up-multi-factor-authentication?view=o365-worldwide) is turned on, for at least the Office 365 global administrator account and security administrators** who will be using Attack Simulator. (Ideally, multi-factor authentication/conditional access is turned on for all users in your organization.)
  
-- **Your organization has [Office 365 Advanced Threat Protection Plan 2](office-365-ti.md)**, with Attack Simulator visible in the Security &amp; Compliance Center (go to **Threat management** \> **Attack simulator**)<br/>![Threat management - Attack Simulator](media/ThreatMgmt-AttackSimulator.png)
+- **Your organization has [Office 365 Advanced Threat Protection Plan 2](office-365-atp.md)**, with Attack Simulator visible in the Security &amp; Compliance Center (go to **Threat management** \> **Attack simulator**)<br/>![Threat management - Attack Simulator](media/ThreatMgmt-AttackSimulator.png)
 
 ## Display name spear-phishing attack
 
 Phishing is a generic term for a broad suite of attacks classed as a social engineering style attack. This attack is focused on spear phishing, a more targeted attack that is aimed at a specific group of individuals or an organization. Typically, a customized attack with some reconnaissance performed and using a display name that will generate trust in the recipient, such as an email message that looks like it came from an executive within your organization.
   
-This attack focuses on letting you manipulate who the message appears to have originated from by changing the display name and source address. When spear-phishing attacks are successful, cybercriminals gain access to users' credentials.
+This attack focuses on letting you manipulate who the message appears to have originated from by changing the display name and source address. When spear-phishing attacks are successful, cyberattackers gain access to users' credentials.
   
 ### To simulate a spear-phishing attack
 

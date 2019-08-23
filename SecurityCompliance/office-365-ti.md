@@ -29,11 +29,11 @@ Threat investigation and response capabilities in [Office 365 Advanced Threat Pr
 
 - Employing [automated investigation and response](automated-investigation-response-office.md) for critical email-based threats
     
-Threat investigation and response capabilities help drive insights into threats and related response actions that are available in the Office 365 Security &amp; Compliance Center. These insights can help your organization's security team protect Office 365 users from email- or file-based attacks. The capabilities help monitor signals and gathers data from multiple sources, such as user activity, authentication, email, compromised PCs, and security incidents. Business decision makers and Office 365 global administrators, security administrators, and security analysts can all use this information to understand and respond to threats against Office 365 users and protect intellectual property.
+Threat investigation and response capabilities provide insights into threats and related response actions that are available in the Office 365 Security &amp; Compliance Center. These insights can help your organization's security team protect Office 365 users from email- or file-based attacks. The capabilities help monitor signals and gathers data from multiple sources, such as user activity, authentication, email, compromised PCs, and security incidents. Business decision makers and Office 365 global administrators, security administrators, and security analysts can all use this information to understand and respond to threats against Office 365 users and protect intellectual property.
 
 ## Get acquainted with threat investigation and response tools
 
-Threat investigation and response capabilities surface in the Security &amp; Compliance Center, as a set of tools and response workflows, including the [threat dashboard](#threat-dashboard), [Explorer](#threat-explorer), [Incidents](#incidents), [Attack Simulator](attack-simulator.md), and [Automated Investigation & Response](automated-investigation-response-office.md).
+Threat investigation and response capabilities surface in the Security &amp; Compliance Center, as a set of tools and response workflows, including the [threat dashboard](#threat-dashboard), [Explorer](#threat-explorer), [Incidents](#incidents), [Attack Simulator](#attack-simulator), and [Automated Investigation & Response](automated-investigation-response-office.md).
   
 ### Threat dashboard
 
@@ -42,6 +42,8 @@ Use the Threat dashboard (this is also referred to as the [Security dashboard](s
 ![Threat Dashboard](media/ce013a31-3f80-4d09-bb95-bfb7623b8bc4.png)
   
 To view and use this dashboard, in the Security &amp; Compliance Center, go to **Threat management** \> **Dashboard**.
+
+To learn more about 
   
 ### Threat Explorer
 
@@ -61,12 +63,15 @@ To view the list of current incidents for your organization, in the Security &am
   
 ![In the Security &amp; Compliance Center, choose Threat management \> Review](media/e0f46454-fa38-40f0-a120-b595614d1d22.png)
 
-### Attack simulator
+### Attack Simulator
 
+Use Attack Simulator to set up and run realistic cyberattacks in your organization, and identify vulnerable people before a real cyberattack affects your business. To learn more, see [Attack Simulator in Office 365](attack-simulator.md).
 
 ### Automated investigation and response
+
+Use automated investigation and response (AIR) capabilities to save time and effort correlating content, devices, and people at risk from threats in your organization. AIR processes can begin whenever certain alerts are triggered, or when started by your security operations team. To learn more, see [Automated Investigation and Response (AIR) with Office 365](automated-investigation-response-office.md). 
   
-## Learn more about malware and threats
+## Threat intelligence widgets
 
 As part of the Office 365 Advanced Threat Protection Plan 2 offering, security analysts can review details about a known threat. This is useful to determine whether there are additional preventative measures/steps that can be taken to keep users safe.
   
