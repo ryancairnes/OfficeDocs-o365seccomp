@@ -179,6 +179,8 @@ See the following sections for more information about content searches.
 [Previewing search results](#previewing-search-results)
   
 [Partially indexed items](#partially-indexed-items)
+
+[Searching for content in a SharePoint Multi-Geo environment](#searching-for-content-in-a-sharepoint-multi-geo-environment)
   
 ### Content search limits
 
