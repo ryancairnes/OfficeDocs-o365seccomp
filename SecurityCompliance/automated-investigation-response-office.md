@@ -51,22 +51,20 @@ The security playbooks you'll get with AIR are designed to tackle the most frequ
 
 ### Security playbooks are rolling out in phases
 
-As part of AIR, security playbooks are rolling out in phases
+As part of AIR, security playbooks are rolling out in phases. During Phase 1 (began rolling out in April 2019), several playbooks were released that include recommendations for actions that security administrators review and approve:
+- User-reported phish message
+- URL click verdict change 
+- Malware detected post-delivery (Malware ZAP)
+- Phish detected post-delivery ZAP (Phish ZAP)
 
-- **Phase 1 (April 2019)**: Playbooks include recommendations for actions that security administrators review and approve. Phase 1 includes the following playbooks:
-    - User-reported phish message
-    - URL click verdict change 
-    - Malware detected post-delivery (Malware ZAP)
-    - Phish detected post-delivery ZAP (Phish ZAP)
-    - Manual e-mail investigations (using Threat Explorer)
+Phase 1 also includes manual e-mail investigations (using [Threat Explorer](threat-explorer.md)).
 
-- **Phase 2 (second half of 2019)**: New playbook and playbook improvements: 
-    - Compromised user account (this is a new playbook in Phase 2)
-    - Enchancements to Phase 1 playbooks
+> [!TIP]
+> Visit the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap) to see what else is planned and coming soon.
 
 ### Playbooks include investigation and recommendations
 
-Each playbook includes: 
+In AIR, each security playbook includes: 
 - a root investigation, 
 - steps taken to identify and correlate other potential threats, and 
 - recommended threat remediation actions.
