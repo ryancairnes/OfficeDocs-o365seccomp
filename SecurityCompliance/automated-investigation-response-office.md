@@ -3,7 +3,7 @@ title: "Automated Investigation and Response (AIR) with Office 365"
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
-ms.date: 08/01/2019
+ms.date: 08/23/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -17,9 +17,7 @@ description: "Learn about Automated Investigation and Response capabilities in O
 
 # Automated Investigation and Response (AIR) with Office 365
 
-Automated Investigation and Response (AIR) (included in [Office 365 Threat investigation and response](office-365-ti.md)) enables you to run automated investigation and remediation to well-known threats that exist today. Read this article to get an overview of AIR and how it can help your organization and security operations teams mitigate threats more effectively and efficiently. 
-
-AIR features are now generally available and are included in [Office 365 Advanced Threat Protection Plan 2](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#feature-availability-across-advanced-threat-protection-atp-plans).
+Automated investigation and response (AIR) capabilities (included in [Office 365 Advanced Threat Protection](office-365-atp.md) Plan 2) enable you to run automated investigation and remediation processes in response to well known threats that exist today. Read this article to get an overview of AIR and how it can help your organization and security operations teams mitigate threats more effectively and efficiently. 
 
 ## Alerts
 
@@ -27,10 +25,13 @@ AIR features are now generally available and are included in [Office 365 Advance
 
 In the initial release of AIR (beginning April 2019), alerts generated from following single events alert policies are auto-investigated. 
 
-1. A potentially malicious URL click was detected
-2. Email reported by user as phish*
-3. Email messages containing malware removed after delivery*
-4. Email messages containing phish URLs removed after delivery*
+- A potentially malicious URL click was detected
+
+- Email reported by user as phish*
+
+- Email messages containing malware removed after delivery*
+
+- Email messages containing phish URLs removed after delivery*
 
 > [!NOTE]
 > These alerts have been assigned an "Informational" severity in the respective alert policies within the Security & Compliance Center with email notifications turned off. These can be turned on through the Alert policy configuration.
