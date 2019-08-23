@@ -16,9 +16,10 @@ description: "You can now apply DLP policies to Microsoft Teams chats and channe
 ---
 
 # Data loss prevention and Microsoft Teams
+<!-- the note duplicates the first sentence of the overview, delete one or the other- -->
 
 > [!NOTE]
-> Data loss prevention capabilities were recently added to Microsoft Teams chat and channel messages for users licensed for for Office 365 Advanced Compliance, which is available as a standalone option and is included in Office 365 E5 and Microsoft 365 E5 Compliance. To learn more about licensing requirements, see [Microsoft 365 Tenant-Level Services Licensing Guidance](https://docs.microsoft.com/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance).
+> Data loss prevention capabilities were recently added to Microsoft Teams chat and channel messages for users licensed for Office 365 Advanced Compliance, which is available as a standalone option and is included in Office 365 E5 and Microsoft 365 E5 Compliance. To learn more about licensing requirements, see [Microsoft 365 Tenant-Level Services Licensing Guidance](https://docs.microsoft.com/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance).
 
 ## Overview of DLP for Microsoft Teams
 
@@ -33,7 +34,7 @@ Recently, [data loss prevention](data-loss-prevention-policies.md) (DLP) capabil
 
 ## Policy tips help educate users
 
-Similar to how DLP works in [Exchange, Outlook, and Outlook on the web](data-loss-prevention-policies.md#policy-evaluation-in-exchange-online-outlook-and-outlook-on-the-web), [SharePoint and OneDrive for Business sites](data-loss-prevention-policies.md#policy-evaluation-in-onedrive-for-business-and-sharepoint-online-sites), and [Office desktop clients](data-loss-prevention-policies.md#policy-evaluation-in-the-office-desktop-programs), policy tips appear when an action conflicts with a DLP policy. Here's an example of a policy tip:
+Similar to how DLP works in [Exchange, Outlook, Outlook on the web](data-loss-prevention-policies.md#policy-evaluation-in-exchange-online-outlook-and-outlook-on-the-web), [SharePoint Online, OneDrive for Business sites](data-loss-prevention-policies.md#policy-evaluation-in-onedrive-for-business-and-sharepoint-online-sites), and [Office desktop clients](data-loss-prevention-policies.md#policy-evaluation-in-the-office-desktop-programs), policy tips appear when an action conflicts with a DLP policy. Here's an example of a policy tip:
 
 ![Blocked message notification in Teams](media/dlp-teams-blockedmessage-notification.png)
 
@@ -41,7 +42,7 @@ In this case, the sender attempted to share a social security number in a Micros
 
 ![Options to resolve blocked message](media/dlp-teams-blockedmessage-possibleactions.png)
 
-In your organization, you can choose whether to allow users to override a DLP policy, or not. And, when you configure your DLP policies, you can use the default policy tips, or [customize policy tips](#to-customize-policy-tips) for your organization. 
+In your organization, you can choose to allow users to override a DLP policy. And, when you configure your DLP policies, you can use the default policy tips, or [customize policy tips](#to-customize-policy-tips) for your organization. 
 
 Returning to our example, where a sender shared a social security number in a Teams channel, here's what the recipient saw:
 
@@ -68,7 +69,7 @@ To perform this task, you must be assigned a role that has permissions to edit D
 7. On the **Policy settings** tab, choose **Save**.
 
 Allow approximately one hour for your changes to work their way through your data center and sync to user accounts.
- 
+ <!-- why are these syncing to user accounts? -->
 ## Add Microsoft Teams as a location to existing DLP policies
 
 To perform this task, you must be assigned a role that has permissions to edit DLP policies. To learn more, see [Permissions](data-loss-prevention-policies.md#permissions).
@@ -86,7 +87,7 @@ To perform this task, you must be assigned a role that has permissions to edit D
 6. Click **Save**.
 
 Allow approximately one hour for your changes to work their way through your data center and sync to user accounts.
-
+<!-- again, why user accounts? -->
 ## Define a new DLP policy for Microsoft Teams
 
 To perform this task, you must be assigned a role that has permissions to edit DLP policies. To learn more, see [Permissions](data-loss-prevention-policies.md#permissions).
@@ -99,7 +100,7 @@ To perform this task, you must be assigned a role that has permissions to edit D
 
 4. On the **Name your policy** tab, specify a name and description for the policy, and then choose **Next**. 
 
-5. On the **Choose locations** tab, keep the default setting of all locations, or select **Let me choose specific locations**, and then choose **Next**.<br/>If you opted to choose specific locations, select the locations for your DLP policy, and then choose **Next**.<br/>![DLP policy locations](media/dlp-teams-selectlocationsnewpolicy.png)<br/>
+5. On the **Choose locations** tab, keep the default setting of all locations, or select **Let me choose specific locations**, and then choose **Next**.<br/>If you chose specific locations, select them for your DLP policy, and then choose **Next**.<br/>![DLP policy locations](media/dlp-teams-selectlocationsnewpolicy.png)<br/>
     > [!NOTE]
     > If you want to make sure documents that contain sensitive information are not shared inappropriately, make sure **SharePoint sites** and **OneDrive accounts** are turned on, along with **Teams chat and channel messages**.
 <br/>
