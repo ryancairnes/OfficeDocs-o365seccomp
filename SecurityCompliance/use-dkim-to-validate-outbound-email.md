@@ -82,11 +82,11 @@ Run the following command:
    
     New-DkimSigningConfig -DomainName <domain> -Enabled $false
        
-    Get-DkimSigningConfig -DomainName domain | fl Selector1CNAME, Selector2CNAME
+    Get-DkimSigningConfig -Identity <domain> | fl Selector1CNAME, Selector2CNAME
     
 Create CNAMEs referenced in Get-DkimSigningConfig output
     
-    Set-DkimSigningConfig -DomainName domain -Enabled $true
+    Set-DkimSigningConfig -Identity <domain> -Enabled $true
     
 The CNAME records in your DNS will point to already created A records that exist in DNS on the Microsoft DNS servers for Office 365.
   
