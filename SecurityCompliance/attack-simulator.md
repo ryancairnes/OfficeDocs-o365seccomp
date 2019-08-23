@@ -43,7 +43,9 @@ Make sure that you and your organization meet the following requirements for Att
     
 - **[Multi-factor authentication/Conditional Access](https://docs.microsoft.com/office365/admin/security-and-compliance/set-up-multi-factor-authentication?view=o365-worldwide) is turned on, for at least the Office 365 global administrator account and security administrators** who will be using Attack Simulator. (Ideally, multi-factor authentication/conditional access is turned on for all users in your organization.)
  
-- **Your organization has [Office 365 Advanced Threat Protection Plan 2](office-365-atp.md)**, with Attack Simulator visible in the Security &amp; Compliance Center (go to **Threat management** \> **Attack simulator**)<br/>![Threat management - Attack Simulator](media/ThreatMgmt-AttackSimulator.png)
+- **Your organization has [Office 365 Advanced Threat Protection Plan 2](office-365-atp.md)**, with Attack Simulator visible in the Security &amp; Compliance Center (go to **Threat management** \> **Attack simulator**)
+
+    ![Threat management - Attack Simulator](media/ThreatMgmt-AttackSimulator.png)
 
 ## Display name spear-phishing attack
 
@@ -59,15 +61,25 @@ You can craft the rich HTML editor directly in the **Email body** field itself o
   
 1. In the [Security &amp; Compliance Center](https://protection.office.com), choose **Threat management** \> **Attack simulator**.
     
-2. Specify a meaningful campaign name for the attack or select a template. <br/>![Phishing Start Page](media/5e93b3cc-5981-462f-8b45-bdf85d97f1b8.jpg)
+2. Specify a meaningful campaign name for the attack or select a template. 
+
+    ![Phishing Start Page](media/5e93b3cc-5981-462f-8b45-bdf85d97f1b8.jpg)
   
-3. Specify the target recipients. This can be individuals or groups in your organization. Each targeted recipient must have an Exchange Online Mailbox in order for the attack to be successful. <br/>![Recipient Selection](media/faf8c2e0-6175-4cd7-8265-0c8e727f4d0f.jpg)
+3. Specify the target recipients. This can be individuals or groups in your organization. Each targeted recipient must have an Exchange Online Mailbox in order for the attack to be successful. 
+
+    ![Recipient Selection](media/faf8c2e0-6175-4cd7-8265-0c8e727f4d0f.jpg)
   
-4. Configure the Phishing email details. <br/>![Configure email details](media/f043608f-f8ce-4aae-be28-86e8ecc524a9.jpg)<br/>The HTML formatting can be as complex or basic as your campaign needs. As the email format is HTML, you can insert images and text to enhance believability. You have control on what the received message will look like in the receiving email client.
+4. Configure the Phishing email details. 
+
+    ![Configure email details](media/f043608f-f8ce-4aae-be28-86e8ecc524a9.jpg)
+    
+    The HTML formatting can be as complex or basic as your campaign needs. As the email format is HTML, you can insert images and text to enhance believability. You have control on what the received message will look like in the receiving email client.
     
 5. Specify text for the **From (Name)** field. This is the field that shows in the **Display Name** in the receiving email client. 
     
-6. Specify text or the **From** field. This is the field that shows as the email address of the sender in the receiving email client. <br/>You can enter an existing email namespace within your organization (doing this will make the email address actually resolve in the receiving client, facilitating a very high trust model), or you can enter an external email address. The email address that you specify does not have to actually exist, but it does need to following the format of a valid SMTP address, such as user@domainname.extension. 
+6. Specify text or the **From** field. This is the field that shows as the email address of the sender in the receiving email client.
+
+    You can enter an existing email namespace within your organization (doing this will make the email address actually resolve in the receiving client, facilitating a very high trust model), or you can enter an external email address. The email address that you specify does not have to actually exist, but it does need to following the format of a valid SMTP address, such as `user@domainname.extension`. 
   
 7. Using the drop-down selector, select a Phishing Login server URL that reflects the type of content you will have within your attack. Several themed URLs are provided for you to choose from, such as document delivery, technical, payroll etc. This is effectively the URL that targeted users are asked to click.
     
@@ -75,7 +87,11 @@ You can craft the rich HTML editor directly in the **Email body** field itself o
     
 9. Specify text for the **Subject** field. This is the field that shows as the **Subject Name** in the receiving email client. 
     
-10. Compose the **Email body** that the target will receive. <br/>`${username}` inserts the targets name into the Email body. <br/>`${loginserverurl}` inserts the URL we want target users to click 
+10. Compose the **Email body** that the target will receive. 
+
+    `${username}` inserts the targets name into the Email body. 
+
+    `${loginserverurl}` inserts the URL we want target users to click 
     
 11. Choose **Next,** then **Finish** to launch the attack. The spear phishing email message is delivered to your target recipients' mailboxes. 
     
@@ -91,9 +107,9 @@ This attack focuses on letting you specify a common password against a large tar
     
 2. Specify a meaningful campaign name for the attack.
     
-3. Specify the target recipients. This can be individuals or groups in your organization. A targeted recipient must have an Exchange Online Mailbox in order for the attack to be successful.
+3. Specify the target recipients. This can be individuals or groups in your organization. A targeted recipient must have an Exchange Online mailbox in order for the attack to be successful.
     
-4. Specify a password to use for the attack. For example, one common, relevant password you could try is `Fall2017`. Another might be `Spring2018`, or `Password1`.
+4. Specify a password to use for the attack. For example, one common, relevant password you could try is `Summer2019`. Another might be `Fall2019`, or `Password1`.
     
 5. Choose **Finish** to launch the attack. 
     
@@ -107,7 +123,7 @@ A brute-force password attack against an organization is typically used after a 
     
 2. Specify a meaningful campaign name for the attack.
     
-3. Specify the target recipient. A targeted recipient must have an Exchange Online Mailbox in order for the attack to be successful.
+3. Specify the target recipient. A targeted recipient must have an Exchange Online mailbox in order for the attack to be successful.
     
 4. Specify a set of passwords to use for the attack. To do this, you can use a text (.txt) file for your list of passwords. The text file cannot exceed 10 MB in file size. Use one password per line, and make sure to include a hard return after the last password in your list.
     
@@ -121,9 +137,9 @@ New features have recently been added to Attack Simulator. These include:
 
 - **Email template editor**. The ability to create a custom, reusable email template's that you can use for future attack simulations.
 
-- **CSV Recipient Import**. The ability to use a CSV file to import your target recipient list instead of using the address book picker.
+- **CSV Recipient Import**. The ability to use a .csv file to import your target recipient list instead of using the address book picker.
 
-**More new features are coming soon to Attack Simulator**. These include:
+More new features are coming soon to Attack Simulator. These include:
 
 - **Attachment payload phishing simulation**. The ability to use an attachment as the payload for phishing simulation in place of a URL.
 
@@ -131,7 +147,7 @@ Visit the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadma
 
 ## See also
 
-[Office 365 Advanced Threat Protection Service Desription](https://docs.microsoft.com/en-us/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)
+[Office 365 Advanced Threat Protection Service Description](https://docs.microsoft.com/en-us/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)
 
 [Office 365 Advanced Threat Protection](office-365-atp.md)
 
