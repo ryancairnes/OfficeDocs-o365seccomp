@@ -44,10 +44,10 @@ Office 365 threat investigation and response capabilities are powered with data 
   
 ## Next steps
 
-- Learn more about [Office 365 Advanced Threat Protection](office-365-atp.md)
+- Learn more about [Office 365 Advanced Threat Protection](office-365-atp.md).
 
-- Learn more about Office 365 threat investigation and response capabilities in this recorded session: [Stay Ahead of the Cyberattacks with Office 365](https://myignite.microsoft.com/videos/53723)
+- Learn more about Office 365 threat investigation and response capabilities in this recorded session: [Stay Ahead of the Cyberattacks with Office 365](https://myignite.microsoft.com/videos/53723).
 
 - If you don't already have Office 365 Advanced Threat Protection Plan 2, try or buy it now. See [Office 365 Advanced Threat Protection: Plans and pricing](https://products.office.com/exchange/advance-threat-protection#pmg-allup-content).
     
-- Extend protection with [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
+- Extend protection with [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection).
