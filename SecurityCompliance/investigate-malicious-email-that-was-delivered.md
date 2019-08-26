@@ -18,7 +18,7 @@ description: "Learn how to use threat investigation and response capabilities to
 
 # Find and investigate malicious email that was delivered in Office 365
 
-[Office 365 Advanced Threat Protection](office-365-atp.md) enables you to investigate activities that put your users at risk and take action to protect your organization. For example, if you are part of your organization's security team, you can find and investigate suspicious email messages that were delivered to your users. You can do this by using [Threat Explorer (or real-time detections)](threat-explorer.md).
+[Office 365 Advanced Threat Protection](office-365-atp.md) enables you to investigate activities that put people in your organization at risk, and to take action to protect your organization. For example, if you are part of your organization's security team, you can find and investigate suspicious email messages that were delivered. You can do this by using [Threat Explorer (or real-time detections)](threat-explorer.md).
   
 ## Before you begin...
 
@@ -34,39 +34,45 @@ Make sure that the following requirements are met:
     
 ## Dealing with suspicious emails
 
-Malicious attackers may be sending mail to your users to try and phish their credentials and gain access to your corporate secrets! To prevent this, you should use the threat protection services in Office 365, including [Exchange Online Protection](eop/exchange-online-protection-overview.md) and [Advanced Threat Protection](office-365-atp.md). However, there are times when an attacker could send mail to your users containing a URL and only later on make that URL point to malicious content (malware, etc.). 
+Malicious attackers might be sending mail to people in your organization in an attempt to phish their credentials and gain access to your corporate secrets. To prevent this, you should use the threat protection services in Office 365, including [Exchange Online Protection](eop/exchange-online-protection-overview.md) and [Advanced Threat Protection](office-365-atp.md). However, it occasionally happens that an attacker sends email that contains a link (URL) that only later points to malicious content (such as malware). 
 
-Alternately, you may realize too late that a user in your organization has been compromised, and while that user was compromised, an attacker used that account to send email to other users in your company. As part of cleaning up both of these scenarios, you may want to remove email messages from user inboxes. In situations like these, you can leverage [Threat Explorer (or real-time detections)](threat-explorer.md) to find and remove those email messages!
+Or, you might realize too late that someone in your organization has been compromised, and while they were compromised, an attacker used their account to send email to other people in your organization. As part of dealing with either of these scenarios, you might want to remove suspicious email messages from user inboxes. To do that, you can use [Threat Explorer (or real-time detections)](threat-explorer.md).
 
-## Where re-routed emails are located after actions are taken
+## Finding re-routed email messages after actions are taken
 
-So where do problem emails go, and what tools help investigators understand what happened to them? Threat Explorer fields report information that will help Admins decode problem email events.
+Threat Explorer (and real-time detections) provide your security operations team with the details they need to investigate suspicious email. For example, assuming you have appropriate permissions, you can:
+
+- [View the email headers and download the email body](#view-the-email-headers-and-download-the-email-body) 
+
+- [Check the delivery action and location](#check-the-delivery-action-and-location)
+
+- [View the timeline of your email](#view-the-timeline-of-your-email)
 
 ### View the email headers and download the email body
 
-**Email header preview, and download of the email body** are helpful email threat management features available in Threat Explorer. Admins will be able to analyse and download headers and emails for threats. Access to use this feature is controlled by roles-based access control (RBAC), to reduce the risk of exposure of user email contents.
+The ability to preview email headers and download the body of an email body are powerful capabilities in Threat Explorer. Appropriate permissions must be assigned. Permissions are controlled through role-based access control (RBAC). Additionally, a new role, called *Preview* must be added to an Office 365 role group (for example into security operations, or security administrator). See [Preview role permissions for viewing message headers and downloading email content](#preview-role-permissions-for-viewing-message-headers-and-downloading-email-content).
 
-A new *role*, called 'Preview' must be added into another Office 365 role group (for example into sec operations, or sec admin) to grant the ability to download mails and preview headers in all-emails view.
-
-To see the flyout with your email download and email header preview options: 
+To access your message header and email download options, follow these steps: 
 
 1. Go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account for Office 365. This takes you to the Security &amp; Compliance Center. 
     
 2. In the left navigation, choose **Threat management** \> **Explorer**.
 
-3. Click on a subject in the Threat Explorer table.
+3. Click on a subject in the Threat Explorer table. 
 
-This will open the flyout, where both header preview and email download links are positioned.
+    This will open the flyout, where both header preview and email download links are positioned.
 
-> [!IMPORTANT]
-> Use both the tables that follow together. One tells you the RBAC required, the other, the location where rights should be granted.
-<p>
+    ![Threat Explorer flyout with download and preview links on the page.](media/ThreatExplorerDownloadandPreview.PNG)
 
-|Activity  |RBAC rolegroup with access |'Preview' role needed?  |
+#### Preview role permissions for viewing message headers and downloading email content
+
+|Activity  |Role-based access control |'Preview' role needed?  |
 |---------|---------|---------|
-|Use Threat Explorer (and real-time detections) to analyze threats ​    |  Office 365 Global Administrator,<br> Security Administrator, <br> Security Reader      | No   |
+|Use Threat Explorer (and real-time detections) to analyze threats ​    |Office 365 Global Administrator<br> Security Administrator <br> Security Reader      | No   |
 |Use Threat Explorer (and real-time detections) to view headers for emails ​as well as preview and download quarantined emails    |     Office 365 Global Administrator, <br> Security Administrator, <br>Security Reader    |       No  |
 |Use Threat Explorer to view headers and download emails delivered to mailboxes     |      Office 365 Global Administrator, <br>Security Administrator,<br> Security Reader, <br> Preview    |   Yes      |
+
+
 
 <br>
 
@@ -81,7 +87,6 @@ This will open the flyout, where both header preview and email download links ar
 > [!CAUTION]
 > Remember, 'Preview' is a role and not a rolegroup and that role must be added to a Rolegroup afterwards.
 
-![Threat Explorer flyout with download and preview links on the page.](media/ThreatExplorerDownloadandPreview.PNG)
 
 > [!IMPORTANT]
 > This capability doesn't show up for emails that were never found in a user's mailbox, which can happen if an email was dropped or its delivery failed. For cases when emails were deleted from users' mailboxes, admins will see an  error mentioning 'Mail not found'.
