@@ -1,5 +1,6 @@
 ---
-title: "Find and investigate malicious email that was delivered in Office 365, TIMailData-Inline, Security Incident, incident, ATP Powershell, email malware, compromised users, email phish, email malware, read email headers, read headers, open email headers"
+title: "Find and investigate malicious email that was delivered in Office 365"
+keywords: TIMailData-Inline, Security Incident, incident, ATP PowerShell, email malware, compromised users, email phish, email malware, read email headers, read headers, open email headers
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
