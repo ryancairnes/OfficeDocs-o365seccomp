@@ -39,13 +39,13 @@ To perform certain actions, such as viewing message headers or downloading email
 |Activity  |Role-based access control |'Preview' role needed?  |
 |---------|---------|---------|
 |Use Threat Explorer (and real-time detections) to analyze threats ​    |Office 365 Global Administrator <br> Security Administrator <br> Security Reader     | No   |
-|Use Threat Explorer (and real-time detections) to view headers for emails ​as well as preview and download quarantined emails    |     Office 365 Global Administrator <br> Security Administrator <br>Security Reader   |       No  |
-|Use Threat Explorer to view headers and download emails delivered to mailboxes     |      Office 365 Global Administrator <br>Security Administrator <br> Security Reader <br> Preview   |   Yes      |
+|Use Threat Explorer (and real-time detections) to view headers for email messages ​as well as preview and download quarantined email messages    |     Office 365 Global Administrator <br> Security Administrator <br>Security Reader   |       No  |
+|Use Threat Explorer to view headers and download email messages delivered to mailboxes     |      Office 365 Global Administrator <br>Security Administrator <br> Security Reader <br> Preview   |   Yes      |
 
 > [!NOTE]
 > *Preview* is a role and not a role group; the *Preview* role must be added to one of the existing role groups listed above.<br/>The Office 365 Global Administrator role is assigned the Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com))<br/>The Security Administrator and Security Reader roles are assigned in the Office 365 Security & Compliance Center ([https://protection.office.com](https://protection.office.com))
 
-## Dealing with suspicious emails
+## Dealing with suspicious email messages
 
 Malicious attackers might be sending mail to people in your organization in an attempt to phish their credentials and gain access to your corporate secrets. To prevent this, you should use the threat protection services in Office 365, including [Exchange Online Protection](eop/exchange-online-protection-overview.md) and [Advanced Threat Protection](office-365-atp.md). However, it occasionally happens that an attacker sends email that contains a link (URL) that only later points to malicious content (such as malware). 
 
@@ -53,7 +53,7 @@ Or, you might realize too late that someone in your organization has been compro
 
 ## Finding re-routed email messages after actions are taken
 
-Threat Explorer (and real-time detections) provide your security operations team with the details they need to investigate suspicious email. For example, assuming you have appropriate permissions, you can:
+Threat Explorer provides your security operations team with the details they need to investigate suspicious email. Your security operations team can:
 
 - [View the email headers and download the email body](#view-the-email-headers-and-download-the-email-body) 
 
@@ -63,7 +63,7 @@ Threat Explorer (and real-time detections) provide your security operations team
 
 ### View the email headers and download the email body
 
-The ability to preview email headers and download the body of an email body are powerful capabilities in Threat Explorer. Appropriate permissions must be assigned. Permissions are controlled through role-based access control (RBAC). Additionally, a new role, called *Preview* must be added to an Office 365 role group (for example into security operations, or security administrator). See [Preview role permissions](#preview-role-permissions).
+The ability to preview email headers and download the body of an email body are powerful capabilities in Threat Explorer. Appropriate [permissions](permissions-in-the-security-and-compliance-center.md) must be assigned. See [Preview role permissions](#preview-role-permissions).
 
 To access your message header and email download options, follow these steps: 
 
@@ -77,13 +77,12 @@ To access your message header and email download options, follow these steps:
 
     ![Threat Explorer flyout with download and preview links on the page.](media/ThreatExplorerDownloadandPreview.PNG)
 
-
 > [!IMPORTANT]
-> This capability doesn't show up for emails that were never found in a user's mailbox, which can happen if an email was dropped or its delivery failed. For cases when emails were deleted from users' mailboxes, admins will see an  error mentioning 'Mail not found'.
+> This capability doesn't show up for email messages that were never found in a user's mailbox, which can happen if an email was dropped or its delivery failed. For cases when email messages were deleted from users' mailboxes, admins will see an  error mentioning 'Mail not found'.
 
 ### Check the delivery action and location
 
-Threat Explorer real-time detections has added the Delivery Action and Delivery Location fields in the place of Delivery Status. This results in a more complete picture of where your emails land. Part of the goal of this change is to make hunting easier for Security Ops people, but the net result is knowing the location of problem emails at a glance.
+Threat Explorer real-time detections has added the Delivery Action and Delivery Location fields in the place of Delivery Status. This results in a more complete picture of where your email messages land. Part of the goal of this change is to make hunting easier for Security Ops people, but the net result is knowing the location of problem email messages at a glance.
 
 Delivery Status is now broken out into two columns:
 
@@ -93,8 +92,8 @@ Delivery Status is now broken out into two columns:
 Delivery action is the action taken on an email due to existing policies or detections. Here are the possible actions an email can take:
 
 - **Delivered** – email was delivered to inbox or folder of a user and the user can directly access it.
-- **Junked** – email was sent to either user’s junk folder or deleted folder, and the user has access to emails in their Junk or Deleted folder.
-- **Blocked** – any emails that's quarantined, that  failed, or was dropped. This is completely inaccessible by the user!
+- **Junked** – email was sent to either user’s junk folder or deleted folder, and the user has access to email messages in their Junk or Deleted folder.
+- **Blocked** – any email messages that are quarantined, that failed, or were dropped. (This is completely inaccessible by the user.)
 - **Replaced** – any email where malicious attachments are replaced by .txt files that state the attachment was malicious.
  
 Delivery location shows the results of policies and detections that run post-delivery. It's linked to a Delivery Action. This field was added to give insight into the action taken when a problem mail is found. Here are the possible values of delivery location:
@@ -138,7 +137,7 @@ Once you've opened the email timeline, you should see a table that tells you the
   
 4. Notice the labels that appear in the report, such as **Delivered**, **Unknown**, or **Delivered to junk**.<br/>![Threat Explorer showing data for all email](media/208826ed-a85e-446f-b276-b5fdc312fbcb.png)<br/>(Depending on the actions that were taken on email messages for your organization, you might see additional labels, such as **Blocked** or **Replaced**.)
     
-5. In the report, choose **Delivered** to view only emails that ended up in users' inboxes.<br/>![Clicking "Delivered to junk" removes that data from view](media/e6fb2e47-461e-4f6f-8c65-c331bd858758.png)
+5. In the report, choose **Delivered** to view only email messages that ended up in users' inboxes.<br/>![Clicking "Delivered to junk" removes that data from view](media/e6fb2e47-461e-4f6f-8c65-c331bd858758.png)
   
 6. Below the chart, review the **Email** list below the chart.<br/>![Below the chart, view a list of email messages that were detected](media/dfb60590-1236-499d-97da-86c68621e2bc.png)
   
