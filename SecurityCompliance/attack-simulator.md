@@ -25,7 +25,9 @@ description: "As an Office 365 global administrator, you can use Attack Simulato
 Three kinds of attack simulations are currently available:
   
 - [Display name spear-phishing attack](#display-name-spear-phishing-attack)
+
 - [Password-spray attack](#password-spray-attack)
+
 - [Brute-force password attack](#brute-force-password-attack)
     
 For an attack to be successfully launched, make sure that the account you are using to run simulated attacks is using multi-factor authentication. In addition, you must be an Office 365 global administrator or a security administrator. (To learn more about roles and permissions, see [Permissions in the Office 365 Security & Compliance Center](permissions-in-the-security-and-compliance-center.md).)
@@ -132,15 +134,15 @@ A brute-force password attack against an organization is typically used after a 
 
 New features have recently been added to Attack Simulator. These include:
 
-- **Advanced reporting capabilities**. The ability to see data such as the fastest (or slowest) time to open an attack simulation email message, the fastest (or slowest) time to click a link in the message, and more visualizations.
+- Advanced reporting capabilities. The ability to see data such as the fastest (or slowest) time to open an attack simulation email message, the fastest (or slowest) time to click a link in the message, and more visualizations.
 
-- **Email template editor**. The ability to create a custom, reusable email template's that you can use for future attack simulations.
+- Email template editor. The ability to create a custom, reusable email template's that you can use for future attack simulations.
 
-- **CSV Recipient Import**. The ability to use a .csv file to import your target recipient list instead of using the address book picker.
+- CSV Recipient Import. The ability to use a .csv file to import your target recipient list instead of using the address book picker.
 
 More new features are coming soon to Attack Simulator. These include:
 
-- **Attachment payload phishing simulation**. The ability to use an attachment as the payload for phishing simulation in place of a URL.
+- Attachment payload phishing simulation. The ability to use an attachment as the payload for phishing simulation in place of a URL.
 
 Visit the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap) to see what's in development, what's rolling out, and what's already launched.
 
