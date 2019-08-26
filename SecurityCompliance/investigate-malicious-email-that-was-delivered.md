@@ -45,11 +45,60 @@ To perform certain actions, such as viewing message headers or downloading email
 > [!NOTE]
 > *Preview* is a role and not a role group; the *Preview* role must be added to an existing role group for Office 365. The Office 365 Global Administrator role is assigned the Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)), and the Security Administrator and Security Reader roles are assigned in the Office 365 Security & Compliance Center ([https://protection.office.com](https://protection.office.com)). To learn more about roles and permissions, see [Permissions in the Office 365 Security & Compliance Center](permissions-in-the-security-and-compliance-center.md).
 
+## Find and delete suspicious email that was delivered
+
+Threat Explorer is a powerful report that can serve multiple purposes, such as finding and deleting messages, identifying the IP address of a malicious email sender, or starting an incident for further investigation. The following procedure focuses on using Explorer to find and delete malicious email from recipients mailboxes.
+
+1. Go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account for Office 365. This takes you to the Security &amp; Compliance Center. 
+    
+2. In the left navigation, choose **Threat management** \> **Explorer**.
+
+    ![Explorer with Delivery Action and Delivery Location fields.](media/ThreatExFields.PNG)
+
+    You may notice the new **Special actions** column. This feature is aimed at telling admins the outcome of processing an email. The **Special actions** column can be accessed in the same place as **Delivery action** and **Delivery location**. Special actions might be updated at the end of Threat Explorer's email timeline, which is a new feature aimed at making the hunting experience better for admins.
+
+3. To view an email timeline, click on the subject of an email message, and then click **Email timeline**. (It appears among other headings on the panel like **Summary** or **Details**.)
+
+    Once you've opened the email timeline, you should see a table that tells you the post-delivery events for that mail. In the case of no further events for the email, you should see a single event for the original delivery that states a result like **Blocked** with a verdict like **Phish**. The tab also has the option to export the entire email timeline, and this exports all the details on the tab and details on the email (things like Subject, Sender, Recipient, Network, and Message ID).
+
+    Email timeline cuts down on randomization because there is less time spent checking different locations to try to understand events that happened since the email arrived. When multiple events happen at, or close to, the same time on an email, those events show up in a timeline view. 
+    
+    Some events that happen post-delivery to your mail are captured in the **Special actions** column. Combining the information from the email timeline along with special actions taken on email post-delivery gives admins insight into how their policies work, where the email was finally routed, and, in some cases, what the final assessment was. 
+
+4. On the panel that appears, click **Email timeline**. (It appears among other headings on the panel like **Summary** or **Details**.)
+
+
+5. In the **View** menu, choose **All email**.<br/>![Use the View menu to choose between Email and Content reports](media/d39013ff-93b6-42f6-bee5-628895c251c2.png)
+  
+6. Notice the labels that appear in the report, such as **Delivered**, **Unknown**, or **Delivered to junk**.
+
+    ![Threat Explorer showing data for all email](media/208826ed-a85e-446f-b276-b5fdc312fbcb.png)
+    
+    (Depending on the actions that were taken on email messages for your organization, you might see additional labels, such as **Blocked** or **Replaced**.)
+    
+7. In the report, choose **Delivered** to view only email messages that ended up in users' inboxes.
+
+    ![Clicking "Delivered to junk" removes that data from view](media/e6fb2e47-461e-4f6f-8c65-c331bd858758.png)
+  
+8. Below the chart, review the **Email** list below the chart.
+
+    ![Below the chart, view a list of email messages that were detected](media/dfb60590-1236-499d-97da-86c68621e2bc.png)
+  
+9. In the list, choose an item to view more details about that email message. For example, you can click the subject line to view information about the sender, recipients, attachments, and other similar email messages.
+
+    ![You can view additional information about an item](media/5a5707c3-d62a-4610-ae7b-900fff8708b2.png)
+  
+10. After viewing information about email messages, select one or more items in the list to activate **+ Actions**.
+    
+11. Use the **+ Actions** list to apply an action, such as **Move to deleted** items. This deletes the selected messages from the recipients' mailboxes.
+
+    ![When you select one or more email messages, you can choose from several available actions](media/ef12e10c-60a7-4f66-8f76-68d77ae26de1.png)
+
 ## Dealing with suspicious email messages
 
 Malicious attackers might be sending mail to people in your organization in an attempt to phish their credentials and gain access to your corporate secrets. To prevent this, you should use the threat protection services in Office 365, including [Exchange Online Protection](eop/exchange-online-protection-overview.md) and [Advanced Threat Protection](office-365-atp.md). However, it occasionally happens that an attacker sends email that contains a link (URL) that only later points to malicious content (such as malware). 
 
-Or, you might realize too late that someone in your organization has been compromised, and while they were compromised, an attacker used their account to send email to other people in your organization. As part of dealing with either of these scenarios, you might want to remove suspicious email messages from user inboxes. To do that, you can use [Threat Explorer (or real-time detections)](threat-explorer.md).
+Or, you might realize too late that someone in your organization has been compromised, and while they were compromised, an attacker used their account to send email to other people in your organization. As part of dealing with either of these scenarios, you might want to remove suspicious email messages from user inboxes. To do that, you can use [Threat Explorer](threat-explorer.md).
 
 ## Finding re-routed email messages after actions are taken
 
@@ -73,16 +122,16 @@ To access your message header and email download options, follow these steps:
 
 3. Click on a subject in the Threat Explorer table. 
 
-    This will open the flyout, where both header preview and email download links are positioned.
+    This opens the flyout, where both header preview and email download links are positioned.
 
     ![Threat Explorer flyout with download and preview links on the page.](media/ThreatExplorerDownloadandPreview.PNG)
 
 > [!IMPORTANT]
-> This capability doesn't show up for email messages that were never found in a user's mailbox, which can happen if an email was dropped or its delivery failed. For cases when email messages were deleted from users' mailboxes, admins will see an  error mentioning 'Mail not found'.
+> This capability doesn't show up for email messages that were never found in a user's mailbox, which can happen if an email was dropped or its delivery failed. In cases where email messages were deleted from users' mailboxes, admins see a "Mail not found" error message.
 
 ### Check the delivery action and location
 
-Threat Explorer real-time detections has added the Delivery Action and Delivery Location fields in the place of Delivery Status. This results in a more complete picture of where your email messages land. Part of the goal of this change is to make hunting easier for Security Ops people, but the net result is knowing the location of problem email messages at a glance.
+In [Threat Explorer (and real-time detections)](threat-explorer.md), you now have **Delivery Action** and **Delivery Location** columns instead of the former **Delivery Status** column. This results in a more complete picture of where your email messages land. Part of the goal of this change is to make hunting easier for security operations, but the net result is knowing the location of problem email messages at a glance.
 
 Delivery Status is now broken out into two columns:
 
@@ -98,54 +147,18 @@ Delivery action is the action taken on an email due to existing policies or dete
  
 Delivery location shows the results of policies and detections that run post-delivery. It's linked to a Delivery Action. This field was added to give insight into the action taken when a problem mail is found. Here are the possible values of delivery location:
 
-- **Inbox or folder** – The email is in inbox or a folder (according to your email rules).
-- **On-prem or external** – The mailbox doesn’t exist on cloud but is on -premises.
-- **Junk folder** – The email in in the Junk folder of a user.
-- **Deleted items folder** – The email in the Deleted items folder of a user.
-- **Quarantine** – The email in quarantine, and is not in a user’s mailbox.
+- **Inbox or folder** – The email is in the inbox or a folder (according to your email rules).
+- **On-prem or external** – The mailbox doesn’t exist on cloud but is on-premises.
+- **Junk folder** – The email is in a user's Junk folder.
+- **Deleted items folder** – The email is in a user's Deleted items folder.
+- **Quarantine** – The email in quarantine, and not in a user’s mailbox.
 - **Failed** – The email failed to reach the mailbox.
-- **Dropped** – The email gets lost somewhere in the Mailflow.
+- **Dropped** – The email gets lost somewhere in the mail flow.
 
 ### View the timeline of your email
   
- **Email Timeline** another field in Threat Explorer will also ake hunting easier for admins. Instead of spending valuable time checking where the email might have gone, when, while investigating an event, when multiple events happen at, or close to, the same time on an email, those events will show up in a timeline view. Some events that happen post-delivery to your mail will be captured in the '*Special action*' column. Combining  information from the timeline of the mail with the special action taken on the mail post-delivery gives admins insight into policies and threat handling (such as where the mail was routed, and, in some cases, what the final assessment was).
+ **Email Timeline** another field in Threat Explorer also makes hunting easier for your security operations team. When multiple events happen at or close to the same time on an email, those events show up in a timeline view. Some events that happen post-delivery to email are captured in the **Special action** column. Combining information from the timeline of an email message with any special actions that were taken post-delivery gives admins insight into policies and threat handling (such as where the mail was routed, and, in some cases, what the final assessment was).
 
-## Find and delete suspicious email that was delivered
-
-> [!TIP]
-> Threat Explorer (sometimes called Explorer), is a powerful report that can serve multiple purposes, such as finding and deleting messages, identifying the IP address of a malicious email sender, or starting an incident for further investigation. The following procedure focuses on using Explorer to find and delete malicious email from recipients mailboxes.
-
-To see the changes to the former Delivery Status field (now Delivery Action and Delivery Location): 
-
-1. Go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account for Office 365. This takes you to the Security &amp; Compliance Center. 
-    
-2. In the left navigation, choose **Threat management** \> **Explorer**.
-
-
-![Threat Explorer with Delivery Action and Delivery Location fields.](media/ThreatExFields.PNG)
-
-You may notice the new 'Special actions' column in this graphic. This feature is aimed at telling admins the outcome of processing an email. Special actions may be updated at the end of Threat Explorer's *email timeline*, which is a new feature aimed at making the hunting experience better for admins.
-
-Email timeline cuts down on randomization because there is less time spent checking different locations to try to understand events that happened since the email arrived. When multiple events happen at, or close to, the same time on an email, those events will show up in a timeline view. Some events that happen post-delivery to your mail will be captured in the 'Special actions' column. Combining the information from the *email timeline* of that mail with the *Special actions* taken on the mail post-delivery will give admins insight into how their policies work, where the mail was finally routed, and, in some cases, what the final assessment was. The Special actions column can be accessed in the same place as Delivery action and Delivery location, but to see an email timeline:
-
-1. Click on the subject of the email.
-2. On the panel that appears, click *Email timeline*. (It will appear among other headings on the panel like 'Summary' or 'Details', et cetera.)
-
-Once you've opened the email timeline, you should see a table that tells you the post-delivery events for that mail, or, in the case of no further events for the email, you should see a single event for the original delivery that will state a result like *Blocked* with a verdict like *Phish*. The tab also has the option to export the entire email timeline, and this will export all the details on the tab and details on the email (things like Subject, Sender, Recipient, Network, and Message ID).
-
-3. In the View menu, choose **All email**.<br/>![Use the View menu to choose between Email and Content reports](media/d39013ff-93b6-42f6-bee5-628895c251c2.png)
-  
-4. Notice the labels that appear in the report, such as **Delivered**, **Unknown**, or **Delivered to junk**.<br/>![Threat Explorer showing data for all email](media/208826ed-a85e-446f-b276-b5fdc312fbcb.png)<br/>(Depending on the actions that were taken on email messages for your organization, you might see additional labels, such as **Blocked** or **Replaced**.)
-    
-5. In the report, choose **Delivered** to view only email messages that ended up in users' inboxes.<br/>![Clicking "Delivered to junk" removes that data from view](media/e6fb2e47-461e-4f6f-8c65-c331bd858758.png)
-  
-6. Below the chart, review the **Email** list below the chart.<br/>![Below the chart, view a list of email messages that were detected](media/dfb60590-1236-499d-97da-86c68621e2bc.png)
-  
-7. In the list, choose an item to view more details about that email message. For example, you can click the subject line to view information about the sender, recipients, attachments, and other similar email messages.<br/>![You can view additional information about an item, including details and any attachments](media/5a5707c3-d62a-4610-ae7b-900fff8708b2.png)
-  
-8. After viewing information about email messages, select one or more items in the list to activate **+ Actions**.
-    
-9. Use the **+ Actions** list to apply an action, such as **Move to deleted** items. This will delete the selected messages from the recipients' mailboxes.<br/>![When you select one or more email messages, you can choose from several available actions](media/ef12e10c-60a7-4f66-8f76-68d77ae26de1.png)
   
 ## Related topics
 
