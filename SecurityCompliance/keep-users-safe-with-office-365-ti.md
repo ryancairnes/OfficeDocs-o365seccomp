@@ -3,7 +3,6 @@ title: "Keep your organization safe with Office 365 threat investigation and res
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
-ms.date: 08/20/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp

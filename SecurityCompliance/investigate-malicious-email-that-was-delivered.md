@@ -3,7 +3,6 @@ title: "Find and investigate malicious email that was delivered in Office 365, T
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
-ms.date: 08/07/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
