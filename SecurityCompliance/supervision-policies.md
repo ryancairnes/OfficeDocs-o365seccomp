@@ -139,6 +139,7 @@ The offensive language model monitors email for sentiment associated with the fo
 | **Disguised expressions** | Expressions for which the meaning or pronunciation is the same as another more offensive term. |
 
 #### Conditional settings
+<a name="ConditionalSettings"> </a>
 
 The conditions you choose for the policy apply to communications from both email and 3rd-party sources in your organization (like from Facebook or DropBox).
 
