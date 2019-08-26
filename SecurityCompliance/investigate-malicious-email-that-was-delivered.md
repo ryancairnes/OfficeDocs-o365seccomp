@@ -164,11 +164,11 @@ Delivery location shows the results of policies and detections that run post-del
 
 ### View the timeline of your email
   
-**Email Timeline** is a field in Threat Explorer that makes hunting easier for your security operations team. When multiple events happen at or close to the same time on an email, those events show up in a timeline view. Some events that happen post-delivery to email are captured in the **Special action** column. Combining information from the timeline of an email message with any special actions that were taken post-delivery gives admins insight into policies and threat handling (such as where the mail was routed, and, in some cases, what the final assessment was).
+**Email Timeline** is a field in Threat Explorer that makes hunting easier for your security operations team. When multiple events happen at or close to the same time on an email, those events show up in a timeline view. Some events that happen post-delivery to email are captured in the **Special actions** column. Combining information from the timeline of an email message with any special actions that were taken post-delivery gives admins insight into policies and threat handling (such as where the mail was routed, and, in some cases, what the final assessment was).
   
 ## Related topics
 
-[Office 365 Advanced Threat Protection Plan 2](office-365-ti.md)
+[Office 365 Advanced Threat Protection](office-365-ti.md)
   
 [Protect against threats in Office 365](protect-against-threats.md)
   
