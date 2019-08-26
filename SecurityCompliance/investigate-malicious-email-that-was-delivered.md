@@ -74,7 +74,7 @@ Threat Explorer is a powerful report that can serve multiple purposes, such as f
 
     ![Threat Explorer showing data for all email](media/208826ed-a85e-446f-b276-b5fdc312fbcb.png)
     
-    (Depending on the actions that were taken on email messages for your organization, you might see additional labels, such as **Blocked** or **Replaced**.)
+    (Depending on the actions that were taken on email messages for your organization, you might see other labels, such as **Blocked** or **Replaced**.)
     
 6. In the report, choose **Delivered** to view only email messages that ended up in users' inboxes.
 
