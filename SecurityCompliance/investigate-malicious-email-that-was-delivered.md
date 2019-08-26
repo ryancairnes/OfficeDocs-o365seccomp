@@ -38,13 +38,13 @@ To perform certain actions, such as viewing message headers or downloading email
 
 |Activity  |Role-based access control |'Preview' role needed?  |
 |---------|---------|---------|
-|Use Threat Explorer (and real-time detections) to analyze threats ​    |Office 365 Global Administrator (assigned in the Microsoft 365 admin center)<br> Security Administrator  (assigned in the Office 365 Security & Compliance Center)<br> Security Reader (assigned in the Office 365 Security & Compliance Center)     | No   |
-|Use Threat Explorer (and real-time detections) to view headers for emails ​as well as preview and download quarantined emails    |     Office 365 Global Administrator (assigned in the Microsoft 365 admin center) <br> Security Administrator (assigned in the Office 365 Security & Compliance Center) <br>Security Reader (assigned in the Office 365 Security & Compliance Center)    |       No  |
-|Use Threat Explorer to view headers and download emails delivered to mailboxes     |      Office 365 Global Administrator (assigned in the Microsoft 365 admin center) <br>Security Administrator (assigned in the Office 365 Security & Compliance Center)<br> Security Reader (assigned in the Office 365 Security & Compliance Center) <br> Preview (assigned in the Office 365 Security & Compliance Center)    |   Yes      |
+|Use Threat Explorer (and real-time detections) to analyze threats ​    |Office 365 Global Administrator <br> Security Administrator <br> Security Reader     | No   |
+|Use Threat Explorer (and real-time detections) to view headers for emails ​as well as preview and download quarantined emails    |     Office 365 Global Administrator <br> Security Administrator <br>Security Reader   |       No  |
+|Use Threat Explorer to view headers and download emails delivered to mailboxes     |      Office 365 Global Administrator <br>Security Administrator <br> Security Reader <br> Preview   |   Yes      |
 
 > [!NOTE]
-> Remember, *Preview* is a role and not a role group; the *Preview* role must be added to an existing role group.
-  
+> *Preview* is a role and not a role group; the *Preview* role must be added to one of the existing role groups listed above.<br/>The Office 365 Global Administrator role is assigned the Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com))<br/>The Security Administrator and Security Reader roles are assigned in the Office 365 Security & Compliance Center ([https://protection.office.com](https://protection.office.com))
+
 ## Dealing with suspicious emails
 
 Malicious attackers might be sending mail to people in your organization in an attempt to phish their credentials and gain access to your corporate secrets. To prevent this, you should use the threat protection services in Office 365, including [Exchange Online Protection](eop/exchange-online-protection-overview.md) and [Advanced Threat Protection](office-365-atp.md). However, it occasionally happens that an attacker sends email that contains a link (URL) that only later points to malicious content (such as malware). 
