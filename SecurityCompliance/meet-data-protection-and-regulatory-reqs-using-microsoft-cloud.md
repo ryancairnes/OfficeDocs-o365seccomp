@@ -1,7 +1,7 @@
 ---
 title: "Use Compliance Manager to help meet data protection and regulatory requirements when using Microsoft cloud services"
-ms.author: robmazz
-author: robmazz
+ms.author: chvukosw
+author: chvukosw
 manager: laurawi
 audience: Admin
 ms.topic: article

@@ -1,7 +1,7 @@
 ---
 title: "Microsoft Compliance Manager Release Notes"
-ms.author: robmazz
-author: robmazz
+ms.author: chvukosw
+author: chvukosw
 manager: laurawi
 audience: Admin
 ms.topic: article
