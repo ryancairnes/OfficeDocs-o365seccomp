@@ -1,6 +1,6 @@
 ---
 name: Repo locked
-about: Describe this issue template's purpose here.
+about: This repo is temporarily locked and is not accepting new issues.
 title: ''
 labels: ''
 assignees: ''
