@@ -1,7 +1,7 @@
 ---
 title: "Compliance Score Methodology"
-ms.author: robmazz
-author: robmazz
+ms.author: chvukosw
+author: chvukosw
 manager: laurawi
 audience: Admin
 ms.topic: article
