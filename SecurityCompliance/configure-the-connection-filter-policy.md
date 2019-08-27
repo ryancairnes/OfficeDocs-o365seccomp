@@ -3,7 +3,7 @@ title: "Configure the connection filter policy"
 ms.author: tracyp
 author: MSFTTracyP
 manager: dansimp
-ms.date: 10/24/2018
+ms.date: 8/27/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -20,7 +20,14 @@ description: "To make sure that email sent from people you trust isn't blocked, 
  
 Most of us have friends and business partners we trust. It can be frustrating to find email from them in your junk email folder, or even blocked entirely by a spam filter. If you want to make sure that email sent from people you trust isn't blocked, you can use the connection filter policy to create an Allow list, also known as a safe sender list, of IP addresses that you trust. You can also create a blocked senders list, which is a list of IP addresses, typically from known spammers, that you don't ever want to receive email messages from.
   
+- When thinking about *[Allow lists](create-safe-sender-lists-in-office-365.md)*, keep in mind connection filter policies concern themselves with the *trusted accounts allowed* by the filter. This is done in the interest of more accurately filtering out less trusted or untrusted mailers while keeping what you need. A connection filter policy Allow list is about filtering to the few trusted IPs from a much larger pool of accounts and IPs, and assuring your trusted mailers easier access.
+
+- A connection filter policy creating a Block list can be thought of as catching less, or untrustworthy accounts in the filter instead.
+
  For more spam settings that apply to the whole organization, take a look at [How to help ensure that a message isn't marked as spam](https://go.microsoft.com/fwlink/p/?LinkId=534224) or [Block email spam with the Office 365 spam filter to prevent false negative issues](https://go.microsoft.com/fwlink/p/?LinkId=534225). These are helpful if you have administrator-level control and you want to prevent false positives or false negatives.
+
+> [!TIP]
+> You may want to pause and read up on how to create [Allow- (or safe sender)](create-safe-sender-lists-in-office-365.md) and [Block lists](create-block-sender-lists-in-office-365.md).
   
 The following video shows the configuration steps for the connection filter policy:
   
