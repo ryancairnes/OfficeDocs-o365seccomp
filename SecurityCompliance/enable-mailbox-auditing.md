@@ -14,12 +14,12 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: aaca8987-5b62-458b-9882-c28476a66918
-description: "Mailbox audit logging is turned on by default in Microsoft 365 (also called default mailbox auditing or mailbox auditing on by default). This means that certain actions performed by mailbox owners, delegates, and admins are automatically logged in a mailbox audit log, where you can search for activities performed on the mailbox."
+description: "Mailbox audit logging is turned on by default in Office 365 (also called default mailbox auditing or mailbox auditing on by default). This means that certain actions performed by mailbox owners, delegates, and admins are automatically logged in a mailbox audit log, where you can search for activities performed on the mailbox."
 ---
 
 # Manage mailbox auditing
 
-Starting in January 2019, Microsoft is turning on mailbox audit logging by default for all Microsoft 365 organizations. This means that certain actions performed by mailbox owners, delegates, and admins are automatically logged, and the corresponding mailbox audit records will be available when you search for them in the mailbox audit log. Before mailbox auditing was turned on by default, you had to manually enable it for every user mailbox in your organization.
+Starting in January 2019, Microsoft is turning on mailbox audit logging by default for all Office 365 organizations. This means that certain actions performed by mailbox owners, delegates, and admins are automatically logged, and the corresponding mailbox audit records will be available when you search for them in the mailbox audit log. Before mailbox auditing was turned on by default, you had to manually enable it for every user mailbox in your organization.
 
 Here are some benefits of mailbox auditing on by default:
 
@@ -31,8 +31,8 @@ Here are some benefits of mailbox auditing on by default:
 
 - You have a consistent mailbox auditing policy across your organization (because you're auditing the same actions for all mailboxes).
 
-> [!TIP]
-> The important thing to remember about the release of mailbox auditing on by default is: you don't need to do anything to manage mailbox auditing. However, to learn more, customize mailbox auditing from the default settings, or turn it off altogether, this topic can help you.
+> [!NOTE]
+>• The important thing to remember about the release of mailbox auditing on by default is: you don't need to do anything to manage mailbox auditing. However, to learn more, customize mailbox auditing from the default settings, or turn it off altogether, this topic can help you. <br><br>• Even when mailbox auditing on by default is turned on, you might notice that mailbox audit events for some users aren't found in audit log searches in the Security & Compliance Center or via the Office 365 Management Activity API. For more information, see the [More information](#more-information) section in this topic.
 
 ## Verify mailbox auditing on by default is turned on
 
@@ -329,7 +329,23 @@ The value **True** indicates that mailbox audit logging is bypassed for the user
 
 ## More information
 
-- By default, mailbox audit log records are retained for 90 days before they're deleted. You can change the age limit for audit log records by using the *AuditLogAgeLimit* parameter on the **Set-Mailbox** cmdlet in Exchange Online PowerShell. However, increasing this value doesn't allow you to search for events that are older than 90 days in the Microsoft 365 audit log.
+- Only users with E5 licenses or mailboxes where mailbox audit logging was manually enabled by an admin will return mailbox audit log events in audit log searches in the Security & Compliance Center or via the Office 365 Management Activity API.
+
+  To retrieve mailbox audit log entries for users without E5 licenses, you can:
+
+  - Use the following cmdlets in Exchange Online PowerShell:
+
+    - [Search-MailboxAuditLog](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/search-mailboxauditlog) to search the mailbox audit log for specific users.
+
+    - [New-MailboxAuditLogSearch](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/new-mailboxauditlogsearch) to search the mailbox audit log for specific users and to have the results sent via email to specified recipients.
+
+  - Use the Exchange admin center (EAC) in Exchange Online to do the following:
+
+    - [Export mailbox audit logs](https://docs.microsoft.com/Exchange/security-and-compliance/exchange-auditing-reports/export-mailbox-audit-logs)
+
+    - [Run a non-owner mailbox access report](https://docs.microsoft.com/Exchange/security-and-compliance/exchange-auditing-reports/non-owner-mailbox-access-report)
+
+- By default, mailbox audit log records are retained for 90 days before they're deleted. You can change the age limit for audit log records by using the *AuditLogAgeLimit* parameter on the **Set-Mailbox** cmdlet in Exchange Online PowerShell. However, increasing this value doesn't allow you to search for events that are older than 90 days in the Office 365 audit log.
 
   If you increase the age limit, you need to use the [Search-MailboxAuditLog](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-audit/search-mailboxauditlog) cmdlet in Exchange Online PowerShell to search the user's mailbox audit log for records that are older than 90 days.
 
@@ -356,6 +372,6 @@ The value **True** indicates that mailbox audit logging is bypassed for the user
       Get-MailboxFolderStatistics -Identity <MailboxIdentity> -FolderScope RecoverableItems | Where-Object {$_.Name -eq 'Audits'} | Format-List FolderPath,FolderSize,ItemsInFolder
       ```
 
-    - You can't directly access an audit log record in the Recoverable Items folder; instead, you use the **Search-MailboxAuditLog** cmdlet or search the Microsoft 365 audit log to find and view mailbox audit records.
+    - You can't directly access an audit log record in the Recoverable Items folder; instead, you use the **Search-MailboxAuditLog** cmdlet or search the Office 365 audit log to find and view mailbox audit records.
 
 - If a mailbox is placed on hold or assigned to a retention policy in the Compliance Center, audit log records are still retained for the duration that's defined by the mailbox's *AuditLogAgeLimit* property (90 days by default). To retain audit log records longer for mailboxes on hold, you need to increase mailbox's *AuditLogAgeLimit* value.
