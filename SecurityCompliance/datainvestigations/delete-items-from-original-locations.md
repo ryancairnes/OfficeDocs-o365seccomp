@@ -59,6 +59,9 @@ When the items in the job are deleted, the job status is set to **Successful**. 
 
 ![Completed delete items job](../media/DataInvestigationsDeleteItems4.png)
 
+> [!NOTE]
+> You may receive a status of **Partially Successful** for the **Delete items from original locations** job. There are a number of situations that result in this job status. For more information, see the [Partially successful deletions](#partially-successful-deletions) section in this article.
+
 ## What happens when you delete items
 
 At this time, when you delete items from their original content location, the items are *soft-deleted*. This means that items are moved to special location and retained until the deleted item retention period expires and an item is marked for permanent deletion from Office 365. Soft-deleting items means that users can still recover these items until the retention period expires. Here are descriptions about what happens when items are soft-deleted from Exchange mailboxes and SharePoint and OneDrive for Business sites, and what users can do after items are deleted from their original locations.
@@ -70,3 +73,15 @@ At this time, when you delete items from their original content location, the it
 ## What happens if a content location is on hold
 
 In Office 365, mailboxes and sites can be placed on hold or assigned to a retention policy. This means that nothing is permanently removed until the retention period for an item expires or until the hold is removed. So even if you delete an item from its original location, the item may not be permanently removed from Office 365. For example, if a mailbox is on hold, soft-deleted items are moved to Purges or DiscoveryHold subfolders in the Recoverable Items folder and retained until the hold duration or retention period expires. For sites, a copy of the item that's moved to the Recycle Bin is copied to the Preservation Hold library that's created when a hold or retention policy is placed on a site.
+
+## Partially successful deletions
+
+After the Delete items from original locations job has completed running, you may received a job status of **Partially Successful**. In general, this status indicates that the job ran successfully, but that items may not have been soft-deleted. Here's a list of reasons that result in partially successful deletions:
+
+- A mailbox item was already located in the Recoverable Items folder in the source mailbox.
+
+- A document was already located in the first-stage Recycle Bin in a SharePoint or OneDrive site.
+
+- A document was moved to a different site after it was added to the evidence set. In this case, the document is not moved to the Recycle Bin in the site it was moved to.
+
+- 
