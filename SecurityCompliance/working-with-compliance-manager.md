@@ -1,7 +1,7 @@
 ---
 title: "Work with Microsoft Compliance Manager (Preview)"
-ms.author: robmazz
-author: robmazz
+ms.author: chvukosw
+author: chvukosw
 manager: laurawi
 audience: Admin
 ms.topic: article
