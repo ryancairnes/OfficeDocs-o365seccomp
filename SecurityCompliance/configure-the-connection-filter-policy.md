@@ -1,5 +1,5 @@
 ---
-title: "Configure the connection filter policy"
+title: "Configure the connection filter policy, Allow list, Block list"
 ms.author: tracyp
 author: MSFTTracyP
 manager: dansimp
