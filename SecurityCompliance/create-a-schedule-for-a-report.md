@@ -3,7 +3,7 @@ title: "Create a schedule for a report in the Security &amp; Compliance Center"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 6/1/2018
+ms.date: 08/28/2018
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -28,11 +28,11 @@ In the Security &amp; Compliance Center, several [reports and insights](reports-
   
 1. In the [Security &amp; Compliance Center](https://protection.office.com), go to **Reports** \> **Dashboard**.
     
-2. Choose a report. For this example, we'll choose the Threat Protection Status report.
+2. Choose a report. For this example, we'll choose the Advanced Threat Protection File Types report.
     
 3. In the upper left corner of the report, choose **+ Create schedule**.
     
-    ![You can create a schedule for reports in the Security &amp; Compliance Center](media/2311327c-14f6-4a17-b604-0c9ff2d485d1.png)
+    ![Create schedule](media/atpfiletypes-createschedule.png)
   
     The **Create schedule** dialog box opens. 
     
