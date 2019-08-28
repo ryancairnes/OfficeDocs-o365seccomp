@@ -28,11 +28,29 @@ In the Security &amp; Compliance Center, several [reports and insights](reports-
   
 1. In the [Security &amp; Compliance Center](https://protection.office.com), go to **Reports** \> **Dashboard**.
     
-2. Choose a report. For this example, we'll choose the Advanced Threat Protection File Types report.
+2. Choose one of the following reports: 
+
+    - DLP policy matches
+    - Exchange Transport Rule
+    - DLP false positives and overrides
+    - Office 365 ATP file types
+    - Office 365 ATP message disposition
+    - Malware detected in email
+    - Top malware
+    - Top senders and recipients
+    - Spoof detections
+    - Spam detections
+    - Sent and received email
+    - DLP incidents
+    - Encryption report
+
+    For this example, we'll choose the Advanced Threat Protection File Types report.
     
-3. In the upper left corner of the report, choose **+ Create schedule**.
+3. In the upper left corner of the report, choose **+ Create schedule**. 
     
     ![Create schedule](media/atpfiletypes-createschedule.png)
+
+    (NOTE: Not all reports have the **+ Create schedule** button.)
   
     The **Create schedule** dialog box opens. 
     
