@@ -17,7 +17,9 @@ ms.assetid:
 description: "This article describes how to use the new Data Investigations (Preview) tool in the Security & Compliance Center to delete items from their original locations."
 ---
 
-# Delete items from their original location
+# Delete items from their original location (Preview)
+
+The feature to delete items from their original location is in Preview.
 
 Using data investigations, you can delete items from their original locations. This means you can delete items from  Exchange mailboxes, SharePoint sites, and OneDrive accounts across your organization. Because you collected items as evidence, you have copies of the items retained in the evidence set for further investigation or keep as reference.
 
@@ -25,7 +27,7 @@ Using data investigations, you can delete items from their original locations. T
 
 - To delete items, you have to be assigned the **Search And Purge** role in the Security & Compliance Center. This role is assigned by default to the built-in Data Investigator role group. 
 
-- The procedure in this topic assumes that you have run a search associated with an investigation and have added the search results to evidence. After search results are in evidence, you can select one or more items to delete. For more information, see [Search for data in an investigation](search-for-data.md).
+- The procedure in this topic assumes that you have run a search associated with an investigation and added the search results to an evidence set. After the search results are in evidence, you can select one or more items to delete. For more information, see [Search for data in an investigation](search-for-data.md).
 
 - It's important to keep in mind that only the items in the original content locations (such as Exchange mailboxes, SharePoint sites, and OneDrive accounts) are deleted. These items aren't deleted from the evidence set. That's because the items in an evidence set are copies of the original. These items are copied when you added the results of a search to an evidence set.
 
@@ -72,16 +74,18 @@ At this time, when you delete items from their original content location, the it
 
 ## What happens if a content location is on hold
 
-In Office 365, mailboxes and sites can be placed on hold or assigned to a retention policy. This means that nothing is permanently removed until the retention period for an item expires or until the hold is removed. So even if you delete an item from its original location, the item may not be permanently removed from Office 365. For example, if a mailbox is on hold, soft-deleted items are moved to Purges or DiscoveryHold subfolders in the Recoverable Items folder and retained until the hold duration or retention period expires. For sites, a copy of the item that's moved to the Recycle Bin is copied to the Preservation Hold library that's created when a hold or retention policy is placed on a site.
+In Office 365, mailboxes and sites can be placed on hold or assigned to a retention policy. This means that nothing is permanently removed until the retention period for an item expires or until the hold is removed. Even if you delete an item from its original location, the item may not be permanently removed from Office 365. For example, if a mailbox is on hold, soft-deleted items are eventually moved to Purges or DiscoveryHold subfolders in the Recoverable Items folder and retained until the hold duration or retention period expires. For sites, a copy of the item that's moved to the Recycle Bin is copied to the Preservation Hold library that's created when a hold or retention policy is placed on a site.
 
 ## Partially successful deletions
 
-After the Delete items from original locations job has completed running, you may received a job status of **Partially Successful**. In general, this status indicates that the job ran successfully, but that items may not have been soft-deleted. Here's a list of reasons that result in partially successful deletions:
+After the **Delete items from original locations** job has completed running, you may received a job status of **Partially Successful**. In general, this status indicates that the job ran successfully, but not all items were soft-deleted. Here's a list of reasons that result in partially successful deletions:
 
 - A mailbox item was already located in the Recoverable Items folder in the source mailbox.
 
+- A mailbox item was purged from the Recoverable Items folder in the source mailbox.
+
 - A document was already located in the first-stage Recycle Bin in a SharePoint or OneDrive site.
 
-- A document was moved to a different site after it was added to the evidence set. In this case, the document is not moved to the Recycle Bin in the site it was moved to.
+- A document was moved to a different SharePoint site after it was added to the evidence set. In this case, the document isn't moved to the Recycle Bin in the site it was moved to.
 
-- 
+- A document was permanently deleted in SharePoint or OneDrive (moved to the second-stage Recycle Bin) after it was added to the evidence set.
