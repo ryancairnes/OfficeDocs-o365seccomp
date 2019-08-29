@@ -193,6 +193,8 @@ Other important features of an org-wide retention policy include:
 - There is no limit to the number of mailboxes or sites the policy can include.
     
 - For Exchange, any new mailbox created after the policy is applied will automatically inherit the policy.
+
+
   
 ### A policy that applies to entire locations
 
@@ -382,5 +384,7 @@ To use the retention policy cmdlets, you need to:
 ## More information
 
 - [Overview of labels](labels.md)
+- [SharePoint Online Limits](https://docs.microsoft.com/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits)
+- [Limits and specifications for Microsoft Teams](https://docs.microsoft.com/en-us/microsoftteams/limits-specifications-teams) 
     
 
