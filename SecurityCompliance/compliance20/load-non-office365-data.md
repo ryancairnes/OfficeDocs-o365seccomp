@@ -36,7 +36,7 @@ Using the upload non-Office 365 feature described in this article requires that 
 
 - Non-Office 365 data must be a file type that's supported by Advanced eDiscovery. For more information, see [Supported file types in Advanced eDiscovery](supported-filetypes-ediscovery20.md).
 
-- All files that are uploaded to a review set must be located in folders, where each folder is associated with a specific custodian. The names for these folders must use the following naming format: *alias@domainname*. The *alias@domainname* must be the user's Office 365 alias and domain. You can collect all the *alias@domainname* folders in a root folder. The root folder can only contain the *alias@domainname* folders. Loose files in the root folder aren't supported.
+- All files that are uploaded to a review set must be located in folders, where each folder is associated with a specific custodian. The names for these folders must use the following naming format: *alias@domainname*. The alias@domainname must be the user's Office 365 alias and domain. You can collect all the alias@domainname folders in a root folder. The root folder can only contain the alias@domainname folders. Loose files in the root folder aren't supported.
 
    The folder structure for the non-Office 365 data that you want to upload would be similar to the following example:
 
@@ -50,7 +50,7 @@ Using the upload non-Office 365 feature described in this article requires that 
 
 - An account that is assigned to the eDiscovery Manager role group (and added as eDiscovery Administrator).
 
-- Microsoft Azure Storage Tools installed on a computer that has access to the non-Office 365 content folder structure. To install AzCopy, see [Get started with AzCopy](https://docs.microsoft.com/azure/storage/common/storage-use-azcopy). Be sure to install AzCopy in the default location, which is **%ProgramFiles(x86)%\Microsoft SDKs\Azure\AzCopy**.
+- The AzCopy v8.1 tool installed on a computer that has access to the non-Office 365 content folder structure. To install AzCopy, see [Transfer data with the AzCopy v8.1 on Windows](https://docs.microsoft.com/previous-versions/azure/storage/storage-use-azcopy). Be sure to install AzCopy in the default location, which is **%ProgramFiles(x86)%\Microsoft SDKs\Azure\AzCopy**. You must use AzCopy v8.1. Other versions of AzCopy may not work when loading non-Office 365 data in Advanced eDiscovery.
 
 
 ## Upload non-Office 365 content into Advanced eDiscovery
@@ -77,14 +77,14 @@ Using the upload non-Office 365 feature described in this article requires that 
 
    a. In the **Path to location of files** box, verify or type the location of the root folder where you've stored the non-Office 365 data you want to upload. For example, for the location of the example files shown in the **Before you begin section**, you would type **%USERPROFILE\Downloads\nonO365**. Providing the correct location ensures the AzCopy command displayed in box under the path is properly updated.
 
-   b. Click **Copy to clipboard** to copy the command that is displayed in the box. Start a windows command prompt, paste the command and press enter.  The files will be uploaded to the secure Azure blob storage for the next step.
+   b. Click **Copy to clipboard** to copy the command that is displayed in the box.
 
 7. Start a Windows command prompt, paste the command that you copied in the previous step, and then press **Enter** to start the AzCopy command.  After you start the command, the non-Office 365 files will be uploaded to the Azure Storage location that was prepared in step 4.
 
    ![Non-Office 365 Import: AzCopy](../media/504e2dbe-f36f-4f36-9b08-04aea85d8250.png)
 
    > [!NOTE]
-   > If the supplied AzCopy command fails, refer to [Troubleshoot AzCopy in Advanced eDiscovery](troubleshooting-azcopy.md)
+   > As previously stated, you must use AzCopy v8.1 to successfully use the command that's provided on the **Upload files** page. If the supplied AzCopy command fails, please see [Troubleshoot AzCopy in Advanced eDiscovery](troubleshooting-azcopy.md).
 
 8. Go back to the Security & Compliance Center, and click **Next: Process files** in the wizard.  This initiates processing, text extraction, and indexing of the non-Office 365 files that were uploaded to the Azure Storage location.  
 

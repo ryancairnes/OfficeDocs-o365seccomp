@@ -46,8 +46,8 @@ Finally, some organizations might need to comply with regulations such as Securi
   
 You create and manage retention policies on the:
 
-- **Policies** page in the Microsoft 365 compliance center.
-- **Retention** page under **Data governance** in the Office 365 Security &amp; Compliance Center.
+- **Policies** page in the [Microsoft 365 compliance center](https://compliance.microsoft.com/).
+- **Retention** page under **Data governance** in the [Office 365 Security &amp; Compliance Center](https://protection.office.com/).
   
 ## How a retention policy works with content in place
 
@@ -182,7 +182,7 @@ One of the most powerful features of a retention policy is that by default it ap
     
 - OneDrive accounts
     
-- Office 365 groups (applies to content in the group's mailbox, site, and documents. Support for content in Planner, Yammer, and CRM is coming soon.)
+- Office 365 groups (applies to content in the group's mailbox, site, and documents. Support for content in Planner, Yammer, CRM Microsoft Teams, PowerBI, Stream, Exchange and SharePoint Team Sites is coming soon.)
     
 - Exchange public folders
     
@@ -226,7 +226,7 @@ Note that **Conversation History**, a folder in Outlook, is a feature that has n
 
 ### Office 365 groups locations
 
-To retain content for an Office 365 group, you need to use the Office 365 groups location. Even though an Office 365 group has an Exchange mailbox, a retention policy that includes the entire Exchange location won't include content in Office 365 group mailboxes. A retention policy applied to an Office 365 group includes both the group mailbox and site.
+To retain content for an Office 365 group, you need to use the Office 365 groups location. Even though an Office 365 group has an Exchange mailbox, a retention policy that includes the entire Exchange location won't include content in Office 365 group mailboxes. A retention policy applied to an Office 365 group includes both the group mailbox and site. A retention policy applied to an Office 365 group will protect the resources created by an Office 365 group, which would include Microsoft Teams.
 
 In addition, it's not possible to use the Exchange location to include or exclude a specific group mailbox. Although the Exchange location initially allows a group mailbox to be selected, when you try to save the retention policy, you'll receive an error that "RemoteGroupMailbox" is not a valid selection for the Exchange location. 
   
@@ -248,7 +248,7 @@ We're still working on retention in Teams, and additional features are coming. I
     
 - **Teams may take up to 30 days to clean up retained content** A retention policy applied to Teams will delete the content from all relevant storage locations. However, immediately after launch, it may take up to 30 days for Teams clients to clean up content based on the retention policy. But even though content still appears in the Teams clients, that content will not appear in content search or eDiscovery after the end of the retention period. 
     
-In a Team, files that are shared in chat are stored in the OneDrive account of the user who shared the file. Files that are uploaded into channels are stored in the SharePoint site for the Team. Therefore, to retain or delete files in a Team, you need to create a retention policy that applies to the SharePoint and OneDrive locations. If you want to apply a policy to the files of just a specific team, you can choose the SharePoint site for the Team and the OneDrive accounts of users in the Team.
+In a Team, files that are shared in chat are stored in the OneDrive account of the user who shared the file. Files that are uploaded into channels are stored in the SharePoint site for the Team. Therefore, to retain or delete files in a Team, you need to create a retention policy that applies to the SharePoint and OneDrive locations specifically. If you want to apply a policy to the files of just a specific team, you can choose the SharePoint site for the Team and the OneDrive accounts of users in the Team.
   
 A retention policy that applies to Teams can use [Preservation Lock](#locking-a-retention-policy).
   
@@ -295,19 +295,7 @@ A Preservation Lock is now placed on the retention policy. If you run `Get-Reten
   
 ## Releasing a retention policy
 
-You can turn off or delete a retention policy at any time. When you do so, any SharePoint or OneDrive content that's being retained is not immediately and permanently deleted. Instead, to help prevent inadvertent data loss, there is a 30-day grace period, during which content expiration for that policy does not happen in the Preservation Hold library, so that you can restore any content from there, if needed. You can also turn on the retention policy again during the grace period, and no content will be deleted for that policy. This grace period is configurable by using PowerShell.
-
-First, [connect to Office 365 Security & Compliance Center PowerShell](http://go.microsoft.com/fwlink/p/?LinkID=799771).
-
-Then run this PowerShell script. You can set `ip_tenantGracePeriodInDays` property in the tenant subscription settings to any value between 0-100 days. If you set this to 0, there is no grace period, and any retention policy will be released immediately. 
-
-`
-$siteSubscription = Get-SPSiteSubscription -Identity 
-$siteSubScriptionId 
-$siteSubSettingsMgr = [Microsoft.SharePoint.SPSiteSubscriptionSettingsManager]::Local
-$properties = $siteSubSettingsMgr.GetProperties($siteSubscription)
-$properties.SetValue("ip_tenantGracePeriodInDays",  30)
-`
+You can turn off or delete a retention policy at any time. When you do so, any SharePoint or OneDrive content that's being retained in the Preservation Hold library is not immediately and permanently deleted. Instead, to help prevent inadvertent data loss, there is a 30-day grace period, during which content expiration for that policy does not happen in the Preservation Hold library, so that you can restore any content from there, if needed. You can also turn on the retention policy again during the grace period, and no content will be deleted for that policy.
 
 This 30-day grace period in SharePoint and OneDrive corresponds to the 30-day delay hold in Exchange. For more information, see [Managing mailboxes on delay hold](https://docs.microsoft.com/en-us/office365/securitycompliance/identify-a-hold-on-an-exchange-online-mailbox#managing-mailboxes-on-delay-hold).
 
@@ -346,6 +334,8 @@ There are several other features that have previously been used to retain or del
 - [Manage eDiscovery cases in the Office 365 Security &amp; Compliance Center](https://support.office.com/article/edea80d6-20a7-40fb-b8c4-5e8c8395f6da) (eDiscovery hold) 
     
 - [In-Place Hold and Litigation Hold](https://go.microsoft.com/fwlink/?linkid=846124) (eDiscovery hold) 
+
+- [How to identify the type of hold placed on an Exchange Online mailbox](https://docs.microsoft.com/office365/securitycompliance/identify-a-hold-on-an-exchange-online-mailbox)
     
 - [Retention tags and retention policies](https://go.microsoft.com/fwlink/?linkid=846125), also known as [messaging records management (MRM)](https://go.microsoft.com/fwlink/?linkid=846126) (Deletion only) 
     
@@ -371,11 +361,11 @@ In SharePoint sites, you may be using [information management policies](intro-to
   
 ## What happened to preservation policies?
 
-If you were using a preservation policy, that policy has been automatically converted to a retention policy that uses only the retain action - the policy won't delete content. The preservation policy will continue to work and preserve your content without requiring any changes from you. You can find these policies on the **Policies** page in the Microsoft 365 compliance center, or on the **Retention** page under **Data governance** in the Security &amp; Compliance Center. You can edit a preservation policy to change the retention period, but you can't make other changes, such as adding or removing locations. 
+If you were using a preservation policy, that policy has been automatically converted to a retention policy that uses only the retain action - the policy won't delete content. The preservation policy will continue to work and preserve your content without requiring any changes from you. You can find these policies on the **Policies** page in the [Microsoft 365 compliance center](https://compliance.microsoft.com/), or on the **Retention** page under **Data governance** in the [Security &amp; Compliance Center](https://protection.office.com/). You can edit a preservation policy to change the retention period, but you can't make other changes, such as adding or removing locations. 
   
 ## Permissions
 
-Members of your compliance team who will create retention policies need permissions to the Security &amp; Compliance Center. By default, your tenant admin will have access to this location and can give compliance officers and other people access to the Security &amp; Compliance Center, without giving them all of the permissions of a tenant admin. To do this, we recommend that you go to the **Permissions** page of the Security &amp; Compliance Center, edit the **Compliance Administrator** role group, and add members to that role group. 
+Members of your compliance team who will create retention policies need permissions to the [Security &amp; Compliance Center](https://protection.office.com/). By default, your tenant admin will have access to this location and can give compliance officers and other people access to the [Security &amp; Compliance Center](https://protection.office.com/), without giving them all of the permissions of a tenant admin. To do this, we recommend that you go to the **Permissions** page of the [Security &amp; Compliance Center](https://protection.office.com/), edit the **Compliance Administrator** role group, and add members to that role group. 
   
 For more information, see [Give users access to the Office 365 Security &amp; Compliance Center](grant-access-to-the-security-and-compliance-center.md).
   

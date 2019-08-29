@@ -69,7 +69,7 @@ To disable Malware ZAP for your O365 tenant, or a set of users, use the **ZapEna
 In the following example, ZAP is disabled for a content filter policy named "Test".
 
 ```Powershell
-  Set-HostedContentFilterPolicy -Identity Test -ZapEnabled $false
+  Set-MalwareFilterPolicy -Identity Test -ZapEnabled $false
 ```
 **Disabling Phish and Spam ZAP**
 To disable both Phish and Spam ZAP for your O365 tenant, or a set of users, use the **ZapEnabled** parameter of [Set-HostedContentFilterPolicy](https://go.microsoft.com/fwlink/p/?LinkId=722758), an EOP cmdlet.
