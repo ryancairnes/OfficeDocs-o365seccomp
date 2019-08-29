@@ -43,40 +43,38 @@ For more information about how Premier Support can help your organization maximi
 ### Ask for help on the web
 
 1. Login to the Microsoft 365 admin center.
-    
+
 2. Go to **Support** \> **Ask for Customer Support** \> **New Service Request**
-    
+
 3. Use the form to add information about your issue, search for solutions to previous issues, or attach logs or related files.
-    
+
 ### Ask for help on the telephone
 
 1. Login to the Microsoft 365 admin center.
-    
+
 2. For general product issues go to **Support** \> **Ask for Customer Support** \> **Call technical support**.
-    
+
     For questions before you buy EOP, or questions about billing and subscriptions, go to **Support** \> **Ask for Customer Support** \> **Call billing and subscription support**.
-    
+
 3. Use the Virtual Agent for Microsoft Office 365 to search for the most current appropriate telephone number.
-    
+
 ## Support telephone numbers
 
 Microsoft provides local or toll-free telephone numbers for product support around the world. Many of these support centers provide help in your local language during business hours or in English 24 hours a day, every day. If you don't see your location listed below, use the Virtual Agent for Microsoft Office 365 as described above to find your local support telephone number.
   
 |**Country or region**|**Pre-purchase and billing questions**|**Technical Support questions**|
 |:-----|:-----|:-----|
-|Brazil  <br/> |Toll-free: 08007621146          Local: 1147001999  <br/> |Same  <br/> |
-|France  <br/> |Toll-free: 0805 540 594           Local: 01 57 32 42 97  <br/> |Same  <br/> |
-|Germany  <br/> |Toll-free: 0800 589 2332           Local: 069 380 789 508  <br/> |Same  <br/> |
-|Japan  <br/> |Toll-free: 0120-628860          Local: 343326257  <br/> |Toll-free: 0120-996680          Local: 357679793  <br/> |
-|Korea  <br/> |Toll-free: 080-495-0880          Local: 234831937  <br/> |Same  <br/> |
-|Spain  <br/> |Toll-free: 900 814 197          Local: 912 718 160  <br/> |Same  <br/> |
-|United Kingdom  <br/> |Toll-free: 0800 032 6417          Local: 0203 450 6455  <br/> |Same  <br/> |
-|United States  <br/> |Toll-free: 1-877-913-2707  <br/> |Toll-free: 1-800-865-9408  <br/> |
+|Brazil|Toll-free: 08007621146 <br/> Local: 1147001999|Same|
+|France|Toll-free: 0805 540 594 <br/> Local: 01 57 32 42 97|Same|
+|Germany|Toll-free: 0800 589 2332 <br/>  Local: 069 380 789 508|Same|
+|Japan|Toll-free: 0120-628860 <br/> Local: 343326257|Toll-free: 0120-996680 <br/> Local: 357679793|
+|Korea|Toll-free: 080-495-0880 <br/> Local: 234831937|Same|
+|Spain|Toll-free: 900 814 197 <br/> Local: 912 718 160|Same|
+|United Kingdom|Toll-free: 0800 032 6417 <br/> Local: 0203 450 6455|Same|
+|United States|Toll-free: 1-877-913-2707|Toll-free: 1-800-865-9408|
    
 ## For more information about EOP documentation
 
 [Third-party copyright notices](third-party-copyright-notices.md)
   
 [Accessibility for people with disabilities](accessibility-for-people-with-disabilities.md)
-  
-
