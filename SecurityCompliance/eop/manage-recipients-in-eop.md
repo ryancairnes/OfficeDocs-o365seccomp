@@ -18,16 +18,12 @@ Microsoft Exchange Online Protection (EOP) offers several ways to manage your ma
   
 EOP supports the following types of recipients:
   
-- **Mail Users** Mail users are recipients in your EOP managed domains. These recipients have logon credentials in your Office 365 organization, but they have external email addresses, meaning that their recipient mailboxes are located outside of your cloud organization. You can add mail users so that they can receive mail and you can also create mail flow rules (also known as transport rules) for specific users. You can also assign roles to mail users in your organization; users with management role group privileges can access the Exchange admin center (EAC) and perform certain management tasks. To learn more about user roles and how to assign user roles in EOP, see [Manage admin role group permissions in EOP](manage-admin-role-group-permissions-in-eop.md).
-    
-    For more information about managing mail users in EOP, see [Manage mail users in EOP](manage-mail-users-in-eop.md).
-    
-- **Groups** Mail users can be grouped together into distribution groups or security groups. 
-    
-    For more information about managing groups in EOP, see [Manage groups in EOP](manage-groups-in-eop.md).
-    
-Looking for the Exchange Online version of this topic? See [Recipients in Exchange Online](http://technet.microsoft.com/library/50d16941-5cd7-435d-8715-e2b69f8410ab.aspx).
-  
-Looking for the Exchange Server version of this topic? See [Recipients](http://technet.microsoft.com/library/40300ed4-85a5-463d-bb3a-cf787bd44e9d.aspx).
-  
+- **Mail Users**: Mail users are recipients in your EOP managed domains. These recipients have logon credentials in your Office 365 organization, but they have external email addresses, meaning that their recipient mailboxes are located outside of your cloud organization.
 
+  You can add mail users so that they can receive mail and you can also create mail flow rules (also known as transport rules) for specific users. You can also assign roles to mail users in your organization; users with management role group privileges can access the Exchange admin center (EAC) and perform certain management tasks. To learn more about user roles and how to assign user roles in EOP, see [Manage admin role group permissions in EOP](manage-admin-role-group-permissions-in-eop.md).
+
+  For more information about managing mail users in EOP, see [Manage mail users in EOP](manage-mail-users-in-eop.md).
+
+- **Groups**: Mail users can be grouped together into distribution groups or security groups.
+
+For more information about managing groups in EOP, see [Manage groups in EOP](manage-groups-in-eop.md).
