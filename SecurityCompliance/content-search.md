@@ -179,6 +179,8 @@ See the following sections for more information about content searches.
 [Previewing search results](#previewing-search-results)
   
 [Partially indexed items](#partially-indexed-items)
+
+[Searching for content in a SharePoint Multi-Geo environment](#searching-for-content-in-a-sharepoint-multi-geo-environment)
   
 ### Content search limits
 
@@ -363,3 +365,40 @@ Also, the following file container types are supported. You can view the list of
 - As previously explained, partially indexed items in mailboxes are included in the estimated search results. Partially indexed items from SharePoint and OneDrive aren't included in the estimated search results. 
     
 - If a partially indexed item matches the search query (because other message or document properties meet the search criteria), it isn't included in the estimated number of unindexed items. If a partially indexed item is excluded by the search criteria, it isn't included in the estimated number of unindexed items. For more information, see [Partially indexed items in Content Search in Office 365](partially-indexed-items-in-content-search.md).
+
+### Searching for content in a SharePoint Multi-Geo environment
+
+If it's necessary for an eDiscovery manager to search for content in SharePoint and OneDrive in different regions in a [SharePoint multi-geo environment](https://go.microsoft.com/fwlink/?linkid=860840), then you need to do the following things to make that happen:
+   
+1. Create a separate user account for each satellite geo location that the eDiscovery manager needs to search. To search for content in sites in that geo location, the eDiscovery manager must sign in to the account you created for that location and then run a content search.
+
+2. Create a search permissions filter for each satellite geo location (and corresponding user account) the eDiscovery manager needs to search. Each of these search permissions filters limits the scope of the content search to a specific geo location when the eDiscovery manager is signed in to the user account associated with that location.
+ 
+> [!TIP]
+> You don't have to use this strategy when using the search tool in [Advanced eDiscovery](compliance20/overview-ediscovery-20.md). That's because all datacenters are searched when you search SharePoint sites and OneDrive accounts in Advanced eDiscovery. You have to use this strategy of region-specific user accounts and search permissions filters only when using the Content Search tool and running searches associated with [eDiscovery cases](ediscovery-cases.md). 
+
+
+For example, let's say that an eDiscovery manager needs to search for SharePoint and OneDrive content in satellite locations in Chicago, London, and Tokyo. The first step is to create three users accounts, one each location. The next step is to create three search permissions filters, one for each location and corresponding user account. Here are examples of the three search permissions filters for this scenario. In each of these examples, the **Region** specifies the SharePoint datacenter location for that geo and the **Users** parameter specifies the corresponding user account. 
+
+**North America**
+```
+New-ComplianceSecurityFilter -FilterName "SPMultiGeo-Chicago" -Users ediscovery-chicago@contoso.com -Region NAM -Action ALL
+```
+
+**Europe**
+```
+New-ComplianceSecurityFilter -FilterName "SPMultiGeo-London" -Users ediscovery-london@contoso.com -Region GBR -Action ALL
+```
+
+**Asia Pacific**
+```
+New-ComplianceSecurityFilter -FilterName "SPMultiGeo-Toyko" -Users ediscovery-tokyo@contoso.com -Region JPN -Action ALL
+```
+
+Keep the following things in mind when using search permissions filters to search for content in multi-geo environments:
+
+- The **Region** parameter directs searches to the specified satellite location. If an eDiscovery manager only searches SharePoint and OneDrive sites outside of the region specified in the search permissions filter, no search results are returned. 
+
+- The **Region** parameter doesn't control searches of Exchange mailboxes. All datacenters are searched when you search mailboxes. 
+    
+For more information about using search permissions filters in a multi-geo environment, see the "Searching and exporting content in Multi-Geo environments" section in [Set up compliance boundaries for eDiscovery investigations in Office 365](set-up-compliance-boundaries.md#searching-and-exporting-content-in-multi-geo-environments).
