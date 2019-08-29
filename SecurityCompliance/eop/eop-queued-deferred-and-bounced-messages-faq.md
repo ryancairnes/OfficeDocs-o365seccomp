@@ -30,6 +30,4 @@ A. Messages in deferral will remain in our queues for 1 day. Message retry attem
   
  **Q. After your email server is restored, how are queued messages distributed?**
   
-A. After your email server is restored, all queued messages are automatically processed in the order in which they were received and queued when the server became unavailable. 
-  
-
+A. After your email server is restored, all queued messages are automatically processed in the order in which they were received and queued when the server became unavailable.
