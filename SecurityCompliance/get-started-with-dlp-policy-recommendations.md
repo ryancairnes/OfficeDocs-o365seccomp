@@ -1,7 +1,7 @@
 ---
 title: "Get started with DLP policy recommendations"
-ms.author: deniseb
-author: denisebmsft
+ms.author: chrfox
+author: chrfox
 manager: laurawi
 ms.date: 8/7/2017
 audience: Admin

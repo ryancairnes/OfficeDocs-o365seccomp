@@ -186,7 +186,7 @@ Office 365 Message Encryption uses Rights Management Services (RMS) as its encry
 
 For more information, see [AD RMS Cryptographic Modes](http://go.microsoft.com/fwlink/p/?LinkId=398616).
   
- **Q. Why do some encrypted messages say they come from Office365@messaging.microsoft.com?**
+ **Q. Why do some encrypted messages say they come from** Office365@messaging.microsoft.com?
   
 When an encrypted reply is sent from the encryption portal or through the OME Viewer app, the sending email address is set to Office365@messaging.microsoft.com because the encrypted message is sent through a Microsoft endpoint. This helps to prevent encrypted messages from being marked as spam. The displayed name on the email and the address within the encryption portal aren't changed because of this labeling. Also, this labeling only applies to messages sent through the portal, not through any other email client.
   

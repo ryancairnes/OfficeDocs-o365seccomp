@@ -1,7 +1,7 @@
 ---
 title: "Dynamic Delivery and previewing with Office 365 ATP Safe Attachments"
-ms.author: deniseb
-author: denisebmsft
+ms.author: tracyp
+author: msfttracyp
 manager: dansimp
 ms.date: 04/19/2019
 audience: Admin

@@ -1,9 +1,9 @@
 ---
-title: "Keep your Office 365 users safe with Office 365 threat investigation and response capabilities"
+title: "Keep your organization safe with Office 365 threat investigation and response capabilities"
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
-ms.date: 07/09/2019
+ms.date: 08/20/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -17,19 +17,19 @@ ms.collection:
 description: "Learn how Office 365 threat investigation and response capabilities can help your organization detect intrusions and threats, and quickly mitigate and recover from threats."
 ---
 
-# Keep your Office 365 users safe with Office 365 threat investigation and response capabilities
+# Keep your organization safe with Office 365 threat investigation and response capabilities
 
 ## Overview
 
 Do you know which of your Office 365 users are under attack, or worse - compromised? Do know how to mitigate and recover from attacks that are targeting your users? Did you know you can do exactly this with security capabilities that are already available to you in Office 365? 
   
-[Office 365 threat investigation and response](office-365-ti.md) capabilities are included in your Office 365 E5 subscription (as part of Office 365 Advanced Threat Protection Plan 2). These capabilities have helped Microsoft IT reduce average time to resolution for social engineering incidents by 80%, and increased case throughput by 37% per month compared to the previous 2 quarters! 
+[Office 365 threat investigation and response](office-365-ti.md) capabilities are included in your Office 365 E5 subscription (as part of [Office 365 Advanced Threat Protection](office-365-atp.md) Plan 2). These capabilities have helped Microsoft IT reduce average time to resolution for social engineering incidents by 80%, and increased case throughput by 37% per month compared to the previous 2 quarters! 
 
 We've recently added new capabilities to help improve how you can detect and recover from threats! Here's a quick walk through of how the updated Threat investigation and response capabilities can make you even more efficient.
   
 ## Detect intrusions and threats
 
-[Threat Explorer (or real-time detections)](threat-explorer.md) (also referred to as Threat Explorer) helps security admins and analysts identify and understand threats that are active in your enterprise because even the most complex security settings can be circumvented by seemingly innocuous user configurations like safe sender whitelists. Explorer helps Office 365 global or security admins quickly determine whether users have been compromised by threats such as malware or phish. This helps prioritize which users are most at risk for a threat and the requisite response. 
+[Threat Explorer (or real-time detections)](threat-explorer.md) (also referred to as Explorer) helps security admins and analysts identify and understand threats that are active in your enterprise because even the most complex security settings can be circumvented by seemingly innocuous user configurations like safe sender whitelists. Explorer helps Office 365 global or security admins quickly determine whether users have been compromised by threats such as malware or phish. This helps prioritize which users are most at risk for a threat and the requisite response. 
   
 Explorer also helps admins navigate the relationships between users and mail. Know of a particular mail that was bad? Search for it to see what users received the mail, then follow the series of events and see what those users in turn have done.
 
@@ -51,7 +51,6 @@ If you don't already have these capabilities, [try it now](https://aka.ms/tryo36
 
 Office 365 threat investigation and response capabilities are powered with data from the Microsoft Intelligent Security Graph. The graph acquires the latest threat signal from over 1 billion Windows devices, 450 billion monthly Azure logins, and 400 billion monthly email messages in Office 365. This unrivaled threat signal is what gives the broad visibility into a customer tenant that is crucial for admins and security analysts to have a complete view of the threats impacting their organization. 
   
-   
 ## Why use Office 365 threat investigation and response capabilities?
 
 Gartner estimates that in 2017 alone over $90B was spent on cybersecurity. Sid Deshpande, principal research analyst at Gartner, is quoted as saying that "the industry's shift to detection and response … sends a clear message that prevention is futile unless it is tied into a detection and response capability." Threat investigation and response is a critical part of every enterprise's portfolio of services, and can be consumed as standalone service or as part of Office 365 E5.
