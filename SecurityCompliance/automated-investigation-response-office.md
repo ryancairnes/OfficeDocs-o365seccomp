@@ -22,8 +22,8 @@ Automated investigation and response (AIR) capabilities (included in [Office 365
 ## The overall flow of AIR
 
 At a high level, the AIR flow works like this:
-1. An alert that is triggered, and a security playbook initiates. 
-2. Depending on the particular alert and security playbook, automated investigation begins immediately. (Alternately, a security analyst can start an automated investigation manually, from a value in a report such as Explorer.)
+1. An [alert](#alerts) that is triggered, and a [security playbook](#security-playbooks) initiates. 
+2. Depending on the particular alert and security playbook, [automated investigation begins immediately](#example-a-user-reported-phish-message-launches-an-investigation-playbook). (Alternately, a security analyst can [start an automated investigation manually](#example-a-security-administrator-triggers-an-investigation-from-threat-explorer), from a value in a report such as Explorer.)
 3. While an automated investigation runs, its scope can increase as new, related alerts are triggered.
 4. During and after an automated investigation, details and results are available to view. Results include recommended actions that can be taken to respond and remediate any threats that were found.
 5. Your security operations team reviews the results and recommendations, and approves remediation actions.
