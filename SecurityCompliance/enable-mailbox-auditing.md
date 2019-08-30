@@ -83,7 +83,7 @@ Logon types classify the user that did the audited actions on the mailbox. The f
 
     - In-Place eDiscovery in Exchange Online.
 
-  - The mailbox is accessed by using the [Microsoft Exchange Server MAPI Editor](https://go.microsoft.com/fwlink/p/?linkId=204086).
+  - The mailbox is accessed by using the Microsoft Exchange Server MAPI Editor.
 
 ### Mailbox actions for user mailboxes and shared mailboxes
 
