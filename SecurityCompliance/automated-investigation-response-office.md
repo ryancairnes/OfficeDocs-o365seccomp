@@ -19,6 +19,19 @@ description: "Learn about Automated Investigation and Response capabilities in O
 
 Automated investigation and response (AIR) capabilities (included in [Office 365 Advanced Threat Protection](office-365-atp.md) Plan 2) enable you to run automated investigation and remediation processes in response to well known threats that exist today. Read this article to get an overview of AIR and how it can help your organization and security operations teams mitigate threats more effectively and efficiently. To get started using AIR, see [Automatically investigate and respond to threats in Office 365](office-365-air.md).
 
+## The overall flow of AIR
+
+At a high level, the AIR flow works like this:
+1. An alert that is triggered, and a security playbook initiates. 
+2. Depending on the particular alert and security playbook, automated investigation begins immediately. (Alternately, a security analyst can start an automated investigation manually, from a value in a report such as Explorer.)
+3. While an automated investigation runs, its scope can increase as new, related alerts are triggered.
+4. During and after an automated investigation, details and results are available to view. Results include recommended actions that can be taken to respond and remediate any threats that were found.
+5. Your security operations team reviews the results and recommendations, and approves remediation actions.
+
+In Office 365, remediation actions are taken only upon approval by your organization's security team. 
+
+The following sections provide more details about alerts and security playbooks. In addition, two examples
+
 ## Alerts
 
 [Alerts](alert-policies.md#viewing-alerts) represent triggers for security operations team workflows for incident response. Prioritizing the right set of alerts for investigation, while making sure no threats are unaddressed is challenging. When investigations into alerts are performed manually, Security Operations teams must hunt and correlate entities (e.g. content, devices and users) at risk from threats. Such tasks and workflows are very time consuming and involve multiple tools and systems. With AIR, investigation and response are automated into key security and threat management alerts that trigger your security response playbooks automatically. 
