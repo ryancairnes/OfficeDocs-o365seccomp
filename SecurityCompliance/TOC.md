@@ -6,6 +6,7 @@
 ## [The new Microsoft 365 security center and Microsoft 365 compliance center](microsoft-security-and-compliance.md)
 ### [Microsoft 365 compliance center](microsoft-365-compliance-center.md)
 ### [Microsoft 365 security center](overview-security-center.md)
+### [Permissions in the Microsoft 365 compliance center and Microsoft 365 security center](permissions-microsoft-365-compliance-security.md)
 ### [Microsoft Secure Score](microsoft-secure-score.md)
 ## [Go to the Security & Compliance Center](go-to-the-securitycompliance-center.md)
 ### [Permissions in the Security & Compliance Center](permissions-in-the-security-and-compliance-center.md)
@@ -51,7 +52,7 @@
 ### [Watch an extended overview of customizing DLP](https://go.microsoft.com/fwlink/?linkid=852306)
 ### [Customize a built-in sensitive information type](customize-a-built-in-sensitive-information-type.md)
 ### [Custom sensitive information types](custom-sensitive-info-types.md)
-### [Create a custom sensitive information type with Exact Data Match (Preview)](create-custom-sensitive-info-type-edm.md)
+### [Create custom sensitive information types with exact data match based classification](create-custom-sensitive-information-types-with-exact-data-match-based-classification.md)
 ### [Create a custom sensitive information type in the Security & Compliance Center](create-a-custom-sensitive-information-type.md)
 ### [Create a custom sensitive information type using PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md)
 ### [Create a keyword dictionary](create-a-keyword-dictionary.md)
@@ -205,8 +206,6 @@
 #### [Set up a custom blocked URLs list](set-up-a-custom-blocked-urls-list-wtih-atp.md)
 ### Role Administrator setup tasks
 #### [Turn on ATP for SharePoint, OneDrive, and Microsoft Teams](turn-on-atp-for-spo-odb-and-teams.md)
-#### [ATP for SharePoint, OneDrive, and Microsoft Teams](atp-for-spo-odb-and-teams.md)
-## Manage your security - ATP post-setup
 ## [Understanding latest attack campaigns with threat analytics](latest-attack-campaigns.md)
 ## [Hunting in Microsoft 365](hunting.md)
 ## [View and read your ATP reports](view-reports-for-atp.md)
@@ -217,67 +216,24 @@
 ## [Find and investigate malicious email that was delivered](investigate-malicious-email-that-was-delivered.md)
 ## [Threat Explorer (and real-time detections)](threat-explorer.md)
 ### [Threat Explorer views](threat-explorer-views.md)
+### [Identify suspicious messages in Outlook.com and Outlook on the web](unverified-sender-feature.md)
 ## Integration for greater security
 ### [Integrate Office 365 ATP with Microsoft Defender ATP](integrate-office-365-ti-with-wdatp.md)
 ### [SIEM integration with Office 365 ATP](siem-integration-with-office-365-ti.md)
 ## How ATP works
 ### [How ATP Safe Links works](how-atp-safe-links-works.md)
 ### [How ATP Safe Attachments works](how-atp-safe-attachments-works.md)
-#### [Dynamic Delivery and previewing details](dynamic-delivery-and-previewing.md)
-### [How Threat Investigation and Response works](get-started-with-ti.md)
-#### [About Threat investigation and response](office-365-ti.md)
+### [Dynamic Delivery and previewing details](dynamic-delivery-and-previewing.md)
+### [ATP for SharePoint, OneDrive, and Microsoft Teams](atp-for-spo-odb-and-teams.md)
+### [How threat investigation and response works](office-365-ti.md)
 ### [How Automated Investigation and Response works](automated-investigation-response-office.md)
-### [Identify suspicious messages in Outlook.com and Outlook on the web](unverified-sender-feature.md)
+
 
 # Security incident management
 ## [Office 365 Security Incident Response](office365-security-incident-response-overview.md)
 ## [Detect and Remediate Illicit Consent Grants in Office 365](detect-and-remediate-illicit-consent-grants.md)
 ## [Detect and Remediate Outlook Rules and Custom Forms Injections Attacks in Office 365](detect-and-remediate-outlook-rules-forms-attack.md)
 ## [Responding to a Compromised Email Account in Office 365](responding-to-a-compromised-email-account.md)
-
-# Manage data governance
-## [Import data](importing-pst-files-to-office-365.md)
-### [Use network upload to import PST files](use-network-upload-to-import-pst-files.md)
-### [Use drive shipping to import PST files](use-drive-shipping-to-import-pst-files-to-office-365.md)
-### [Use the PST Collection tool to find, copy, and delete PST files](find-copy-and-delete-pst-files-in-your-organization.md)
-### [Filter data when importing PST files](filter-data-when-importing-pst-files.md)
-### [Use network upload to import RMS-encrypted PST files](use-network-upload-to-import-rms-encrypted-pst-files.md)
-### [FAQ about importing PST files](faqimporting-pst-files-to-office-365.md)
-### [Archive third-party data in Office 365](archiving-third-party-data.md)
-#### [Use a sample connector to archive Facebook data](archive-facebook-data-with-sample-connector.md)
-#### [Use a sample connector to archive Twitter data](archive-twitter-data-with-sample-connector.md)
-#### [Set up a connector to archive LinkedIn data](archive-linkedin-data.md)
-#### [Set up a connector to archive Instant Bloomberg data](archive-instant-bloomberg-data.md)
-#### [Work with a partner to archive third-party data](work-with-partner-to-archive-third-party-data.md)
-## Store data
-### [Enable archive mailboxes](enable-archive-mailboxes.md)
-### [Overview of unlimited archiving](unlimited-archiving.md)
-### [Enable unlimited archiving](enable-unlimited-archiving.md)
-### [Set up an archive and deletion policy for mailboxes](set-up-an-archive-and-deletion-policy-for-mailboxes.md)
-## Retain data
-### [Retention policies](retention-policies.md)
-### [File plan manager](file-plan-manager.md)
-### [Retention labels](labels.md)
-### [Comply with SEC Rule 17a-4](use-exchange-online-to-comply-with-sec-rule-17a-4.md)
-### [Create and publish retention labels by using PowerShell](https://docs.microsoft.com/en-us/office365/securitycompliance/bulk-create-publish-labels-using-powershell)
-### [Event-based retention](event-driven-retention.md)
-### [Automate event-based retention](automate-event-driven-retention.md)
-## [Dispose data](disposition-reviews.md)
-## Supervise communications
-### [Supervision policies](supervision-policies.md)
-### [Configure supervision policies for your organization](configure-supervision-policies.md)
-## [Manage inactive mailboxes](inactive-mailboxes-in-office-365.md)
-### [Create and manage inactive mailboxes](create-and-manage-inactive-mailboxes.md)
-### [Change the hold duration for an inactive mailbox](change-the-hold-duration-for-an-inactive-mailbox.md)
-### [Recover an inactive mailbox](recover-an-inactive-mailbox.md)
-### [Restore an inactive mailbox](restore-an-inactive-mailbox.md)
-### [Delete an inactive mailbox](delete-an-inactive-mailbox.md)
-## Monitor data governance
-### [View label activity for documents](view-label-activity-for-documents.md)
-### [View label usage with label analytics](label-analytics.md)
-### [View the data governance reports](view-the-data-governance-reports.md)
-## More information about data governance
-### [Watch videos from the Microsoft Data Governance team](https://go.microsoft.com/fwlink/?linkid=867039)
 
 # [Search for content](search-for-content.md)
 ## [Use Content Search](content-search.md)
@@ -344,7 +300,7 @@
 #### [Add data to another review set](compliance20/add-data-to-review-set-from-another-review-set.md)
 #### [Manage load sets](compliance20/manage-load-sets.md)
 
-### [Review case data](compliance20/reviewing-data-in-review-set.md)
+### Review case data
 #### [View documents in a review set](compliance20/view-documents-in-review-set.md)
 #### [Query the data in a review set](compliance20/review-set-search.md)
 #### [Tag documents in a review set](compliance20/tagging-documents.md)
@@ -362,7 +318,7 @@
 
 ### [Manage jobs](compliance20/managing-jobs-ediscovery20.md)
 
-### [Configure case settings](compliance20/configuring-case-settings-ediscovery20.md)
+### Configure case settings
 #### [Close or delete a case](compliance20/close-or-delete-case.md)
 #### [Add or remove members from a case](compliance20/add-remove-members.md)
 #### [Configure search and analytics settings](compliance20/configure-search-analytics-settings.md)
@@ -441,7 +397,6 @@
 ### [Preserve Bcc and expanded distribution group recipients](preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery.md)
 
 # [Manage data investigations](datainvestigations/overview-data-investigations.md)
-## [Release notes](datainvestigations/data-investigations-release-notes.md)
 ## [Manage a data spillage incident](datainvestigations/manage-data-spillage-incidents.md)
 ## [Create a new investigation](datainvestigations/create-new-investigation.md)
 ## [Assign permissions for data investigations](datainvestigations/permissions.md)
@@ -456,6 +411,7 @@
 ### [Annotate and redact documents](datainvestigations/annotate-and-redact-documents.md)
 ### [Load non-Office 365 data](datainvestigations/load-non-office365-data.md)
 ### [Error remediation when processing data](datainvestigations/error-remediation.md)
+### [Delete items from their original location](datainvestigations/delete-items-from-original-locations.md)
 
 ## [Run analytics to investigate faster](datainvestigations/run-analytics-to-investigate-faster.md)
 ### [Email threading](datainvestigations/email-threading.md)
@@ -477,6 +433,7 @@
 ### [Close or delete an investigation](datainvestigations/close-or-delete-investigation.md)
 
 ## Data Investigations reference
+### [Release notes](datainvestigations/data-investigations-release-notes.md)
 ### [Limits in Data Investigations](datainvestigations/limits-datainvestigations.md)
 ### [Supported file types](datainvestigations/supported-filetypes-datainvestigations.md)
 ### [Document metadata fields](datainvestigations/document-metadata-fields.md)

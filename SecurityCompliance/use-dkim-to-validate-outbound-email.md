@@ -76,9 +76,21 @@ To configure DKIM, you will complete these steps:
 ### Publish two CNAME records for your custom domain in DNS
 <a name="Publish2CNAME"> </a>
 
-For each domain for which you want to add a DKIM signature in DNS, you need to publish two CNAME records. A CNAME record is used by DNS to specify that the canonical name of a domain is an alias for another domain name. The CNAME records should be created on the publicly available DNS servers for your customized domains. The CNAME records in your DNS will point to already created A records that exist in DNS on the Microsoft DNS servers for Office 365.
+For each domain for which you want to add a DKIM signature in DNS, you need to publish two CNAME records. 
+
+Run the following command:    
+   
+    New-DkimSigningConfig -DomainName <domain> -Enabled $false
+       
+    Get-DkimSigningConfig -Identity <domain> | fl Selector1CNAME, Selector2CNAME
+    
+Create CNAMEs referenced in Get-DkimSigningConfig output
+    
+    Set-DkimSigningConfig -Identity <domain> -Enabled $true
+    
+The CNAME records in your DNS will point to already created A records that exist in DNS on the Microsoft DNS servers for Office 365.
   
- Office 365 performs automatic key rotation using the two records that you establish. If you have provisioned custom domains in addition to the initial domain in Office 365, you must publish two CNAME records for each additional domain. So, if you have two domains, you must publish two additional CNAME records, and so on.
+Office 365 performs automatic key rotation using the two records that you establish. If you have provisioned custom domains in addition to the initial domain in Office 365, you must publish two CNAME records for each additional domain. So, if you have two domains, you must publish two additional CNAME records, and so on.
   
 Use the following format for the CNAME records.
 
@@ -112,19 +124,19 @@ For example, if you have an initial domain of cohovineyardandwinery.onmicrosoft.
   
 ```
 Host name:			selector1._domainkey
-Points to address or value:	**selector1-cohovineyard-com**._domainkey.cohovineyardandwinery.onmicrosoft.com
+Points to address or value:	selector1-cohovineyard-com._domainkey.cohovineyardandwinery.onmicrosoft.com
 TTL:				3600
 
 Host name:			selector2._domainkey
-Points to address or value:	**selector2-cohovineyard-com**._domainkey.cohovineyardandwinery.onmicrosoft.com
+Points to address or value:	selector2-cohovineyard-com._domainkey.cohovineyardandwinery.onmicrosoft.com
 TTL:				3600
 
 Host name:			selector1._domainkey
-Points to address or value:	**selector1-cohowinery-com**._domainkey.cohovineyardandwinery.onmicrosoft.com 
+Points to address or value:	selector1-cohowinery-com._domainkey.cohovineyardandwinery.onmicrosoft.com 
 TTL:				3600
  
 Host name:			selector2._domainkey
-Points to address or value:	**selector2-cohowinery-com**._domainkey.cohovineyardandwinery.onmicrosoft.com 
+Points to address or value:	selector2-cohowinery-com._domainkey.cohovineyardandwinery.onmicrosoft.com 
 TTL:				3600
 ```
 
@@ -152,7 +164,7 @@ Once you have published the CNAME records in DNS, you are ready to enable DKIM s
 2. Run the following command:
     
     ```
-    New-DkimSigningConfig -DomainName <domain> -Enabled $true
+    Set-DkimSigningConfig -Identity <domain> -Enabled $true
     ```
 
    Where _domain_ is the name of the custom domain that you want to enable DKIM signing for. 
@@ -160,7 +172,7 @@ Once you have published the CNAME records in DNS, you are ready to enable DKIM s
    For example, for the domain contoso.com:
     
     ```
-    New-DkimSigningConfig -DomainName contoso.com -Enabled $true
+    Set-DkimSigningConfig -Identity contoso.com -Enabled $true
     ```
 
 #### To Confirm DKIM signing is configured properly for Office 365
@@ -203,27 +215,27 @@ Disabling the signing policy does not completely disable DKIM. After a period of
 2. Run one of the following commands for each domain for which you want to disable DKIM signing.
     
     ```
-    $p=Get-DkimSigningConfig -identity <domain>
-    $p[0] | set-DkimSigningConfig -enabled $false
+    $p = Get-DkimSigningConfig -Identity <domain>
+    $p[0] | Set-DkimSigningConfig -Enabled $false
     ```
-
+   
    For example:
     
     ```
-    $p=Get-DkimSigningConfig -identity contoso.com
-    $p[0] | set-DkimSigningConfig -enabled $false
+    $p = Get-DkimSigningConfig -Identity contoso.com
+    $p[0] | Set-DkimSigningConfig -Enabled $false
     ```
 
    Or
     
     ```
-    Set-DkimSigningConfig -identity $p[<number>].identity -enabled $false
+    Set-DkimSigningConfig -Identity $p[<number>].Identity -Enabled $false
     ```
 
     Where _number_ is the index of the policy. For example: 
     
     ```
-    Set-DkimSigningConfig -identity $p[0].identity -enabled $false
+    Set-DkimSigningConfig -Identity $p[0].Identity -Enabled $false
     ```
 
 ## Default behavior for DKIM and Office 365
