@@ -24,60 +24,16 @@ To learn more about how AIR works, see [Automated Investigation and Response (AI
 
 ## View investigations
 
-To access your investigations, as an Office 365 global administrator, security administrator, or security reader, go to the Security & Compliance Center ([https://protection.office.com](https://protection.office.com)) and sign in. Then, do one of the following:
+1. As an Office 365 global administrator, security administrator, or security reader, go to [https://protection.office.com](https://protection.office.com) and sign in. This takes you to the the Security & Compliance Center.
 
-- In the left navigation, go to **Alerts** > **View alerts**, open one of the investigation related alerts, then click the **View investigation** link at the bottom of the alert flyout. 
+2. Do one of the following:
 
-    or
+    - Go to **Alerts** > **View alerts**. Open one of the investigation-related alerts, and then click the **View investigation** link at the bottom of the alert flyout. 
 
-- In the left navigation, go to **Threat management** > **Investigations**.
+    - Go to **Threat management** > **Investigations**. Select an item in the **ID** column.
 
-    or
+    - Go to **Threat management** > **Dashboard**. This takes you to the [Security Dashboard](security-dashboard.md). Your AIR widgets appear across the top of the [Security Dashboard](security-dashboard.md).<br/>![AIR widgets](media/air-widgets.png)
 
-- Visit the Threat management dashboard (In the Security & Compliance Center, go to **Threat management** > **Dashboard**).
-
-![AIR widgets](media/air-widgets.png)
-
-Your AIR widgets appear across the top of the [Security Dashboard](security-dashboard.md). Select a widget to get started.
-
-You may also access an investigation directly from the related Alerts.
-
-### Automated investigations
-
-The automated investigations page shows your organization's investigations and their current states.
-
-![Main investigation page for AIR](media/air-maininvestigationpage.png) 
-  
-You can:
-- Navigate directly to an investigation (select an **Investigation ID**).
-- Apply filters. Choose from **Investigation Type**, **Time range**, **Status**, or a combination of these.
-- Export the data to a CSV file.
-
-The investigation status indicates the progress of the analysis and actions. As the investigation runs, status changes to indicate whether threats were found, and whether actions have been approved. 
-- **Starting**: The investigation is queued to begin soon
-- **Running**: The investigation has started and is conducting its analysis
-- **No Threats Found**: The investigation has completed its analysis and no threats were found
-- **Terminated By System**: The investigation was not closed and expired after 7 days
-- **Pending Action**: The investigation found threats with actions recommended
-- **Threats Found**: The investigation found threats, but the threats do not have actions available within AIR
-- **Remediated**: The investigation finished and was fully remediated (all actions were approved)
-- **Partially Remediated**: The investigation finished and some of the recommended actions were approved
-- **Terminated By User**: An admin terminated the investigation
-- **Failed**: An error occurred during the investigation that prevented it from reaching a conclusion on threats
-- **Queued By Throttling**: The investigation is waiting for analysis due to system processing limitations (to protect service performance)
-- **Terminated By Throttling**: The investigation could not be completed in sufficient time due to investigation volume and system processing limitations. You can re-trigger the investigation by selecting the email in Explorer and selecting the Investigate action.
-
-### Investigation graph
-
-When you open a specific investigation, you see the investigation graph page. This page shows all the different entities: email messages, users (and their activities), and devices that were automatically investigated as part of the alert that was triggered.
-
-![AIR investigation graph page](media/air-investigationgraphpage.png)
-
-You can:
-- Get a visual overview of the current investigation.
-- View a summary of the investigation duration.
-- Select a node in the visualization to view details for that node.
-- Select a tab across the top to view details for that tab.
 
 ### Alert investigation
 
