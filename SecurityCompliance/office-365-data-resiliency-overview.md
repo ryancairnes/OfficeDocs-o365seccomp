@@ -45,4 +45,3 @@ Through the building of our cloud services to these principles, coupled with rob
 - [Malware and Ransomware Protection](office-365-malware-and-ransomware-protection.md)
 - [Monitoring and Self-Healing](office-365-monitoring-and-self-healing.md)
 - [Exchange Data Resiliency](office-365-exchange-data-resiliency.md)
-- [SharePoint Data Resiliency](office-365-sharepoint-data-resiliency.md)

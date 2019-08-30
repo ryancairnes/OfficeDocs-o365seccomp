@@ -24,7 +24,7 @@ Use supervision policies to capture employee communications for examination by i
 
 > [!NOTE]
 > Users monitored by supervision policies must have either a Microsoft 365 E5 Compliance license, an Office 365 Enterprise E3 license with the Advanced Compliance add-on, or be included in an Office 365 Enterprise E5 subscription.
-If you don't have an existing Enterprise E5 plan and want to try supervision, you can [sign up for a trial of Office 365 Enterprise E5](https://go.microsoft.com/fwlink/p/?LinkID=698279).
+> If you don't have an existing Enterprise E5 plan and want to try supervision, you can [sign up for a trial of Office 365 Enterprise E5](https://go.microsoft.com/fwlink/p/?LinkID=698279).
   
 Follow these steps to set up and use supervision in your Office 365 organization:
   
@@ -94,6 +94,7 @@ To manage supervised users in large enterprise organizations, you may need to mo
     ```
 
 For more information about setting up groups, see:
+
 - [Create and manage distribution groups](https://docs.microsoft.com/Exchange/recipients-in-exchange-online/manage-distribution-groups/manage-distribution-groups)
 - [Manage mail-enabled security groups](https://docs.microsoft.com/Exchange/recipients-in-exchange-online/manage-mail-enabled-security-groups)
 - [Overview of Office 365 Groups](https://docs.microsoft.com/office365/admin/create-groups/office-365-groups?view=o365-worldwide)
@@ -161,7 +162,7 @@ Use a text editor (like Notepad), to create a file that includes the keyword ter
 
     - Give the policy a name and description.
     - Choose the users or groups to supervise, including choosing users or groups you'd like to exclude.
-    - Define the supervision policy conditions.
+    - Define the supervision policy [conditions](supervision-policies.md#ConditionalSettings). You can choose from message address, keyword, file types, and size match conditions.
     - Choose if you'd like to include sensitive information types. This is where you can select default and custom sensitive info types.
     - Choose if you'd like to enable the offensive language model. This detects inappropriate language sent or received in the body of email messages.
     - Define the percentage of communications to review.
@@ -191,7 +192,7 @@ To configure review for Outlook desktop, you need the address for the supervisio
 > [!NOTE]
 > If someone else created the policy, you need to get this address from them to install the add-in.
 
- **To find the supervision mailbox address**
+**To find the supervision mailbox address**
   
 1. Sign into the [Compliance Center](https://compliance.microsoft.com) using credentials for an admin account in your organization.
 
