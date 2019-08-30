@@ -81,7 +81,7 @@ For each domain for which you want to add a DKIM signature in DNS, you need to p
 Run the following commands:
 
 ```powershell
-    New-DkimSigningConfig -DomainName <domain> -Enabled $false
+    New-DkimSigningConfig -DomainName <domain> -Enabled $false   
     Get-DkimSigningConfig -Identity <domain> | fl Selector1CNAME, Selector2CNAME
 ```
 
@@ -90,7 +90,6 @@ Create CNAMEs referenced in Get-DkimSigningConfig output
 ```powershell
     Set-DkimSigningConfig -Identity <domain> -Enabled $true
 ```
-
 The CNAME records in your DNS will point to already created A records that exist in DNS on the Microsoft DNS servers for Office 365.
   
 Office 365 performs automatic key rotation using the two records that you establish. If you have provisioned custom domains in addition to the initial domain in Office 365, you must publish two CNAME records for each additional domain. So, if you have two domains, you must publish two additional CNAME records, and so on.
@@ -172,8 +171,8 @@ Once you have published the CNAME records in DNS, you are ready to enable DKIM s
    Where _domain_ is the name of the custom domain that you want to enable DKIM signing for. 
 
    For example, for the domain contoso.com:
-    
-    ```powershell
+   
+   ```powershell
     Set-DkimSigningConfig -Identity contoso.com -Enabled $true
     ```
 
@@ -217,27 +216,27 @@ Disabling the signing policy does not completely disable DKIM. After a period of
 2. Run one of the following commands for each domain for which you want to disable DKIM signing.
     
     ```powershell
-    $p=Get-DkimSigningConfig -identity <domain>
-    $p[0] | set-DkimSigningConfig -enabled $false
+    $p = Get-DkimSigningConfig -Identity <domain>
+    $p[0] | Set-DkimSigningConfig -Enabled $false
     ```
-
+   
    For example:
     
     ```powershell
-    $p=Get-DkimSigningConfig -identity contoso.com
-    $p[0] | set-DkimSigningConfig -enabled $false
+    $p = Get-DkimSigningConfig -Identity contoso.com
+    $p[0] | Set-DkimSigningConfig -Enabled $false
     ```
 
    Or
     
     ```powershell
-    Set-DkimSigningConfig -identity $p[<number>].identity -enabled $false
+    Set-DkimSigningConfig -Identity $p[<number>].Identity -Enabled $false
     ```
 
     Where _number_ is the index of the policy. For example:
     
     ```powershell
-    Set-DkimSigningConfig -identity $p[0].identity -enabled $false
+    Set-DkimSigningConfig -Identity $p[0].Identity -Enabled $false
     ```
 
 ## Default behavior for DKIM and Office 365
