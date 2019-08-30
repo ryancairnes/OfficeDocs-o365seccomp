@@ -215,26 +215,27 @@ Disabling the signing policy does not completely disable DKIM. After a period of
 2. Run one of the following commands for each domain for which you want to disable DKIM signing.
     
     ```
-    $p=Get-DkimSigningConfig -Identity <domain>
+    $p = Get-DkimSigningConfig -Identity <domain>
     $p[0] | Set-DkimSigningConfig -Enabled $false
     ```
+   
    For example:
     
     ```
-    $p=Get-DkimSigningConfig -Identity contoso.com
+    $p = Get-DkimSigningConfig -Identity contoso.com
     $p[0] | Set-DkimSigningConfig -Enabled $false
     ```
 
    Or
     
     ```
-    Set-DkimSigningConfig -Identity $p[<number>].identity -Enabled $false
+    Set-DkimSigningConfig -Identity $p[<number>].Identity -Enabled $false
     ```
 
     Where _number_ is the index of the policy. For example: 
     
     ```
-    Set-DkimSigningConfig -Identity $p[0].identity -Enabled $false
+    Set-DkimSigningConfig -Identity $p[0].Identity -Enabled $false
     ```
 
 ## Default behavior for DKIM and Office 365
