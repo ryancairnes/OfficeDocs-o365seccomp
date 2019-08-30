@@ -17,7 +17,7 @@ description: "Learn about Automated Investigation and Response capabilities in O
 
 # Automated Investigation and Response (AIR) with Office 365
 
-Automated investigation and response (AIR) capabilities (included in [Office 365 Advanced Threat Protection](office-365-atp.md) Plan 2) enable you to run automated investigation and remediation processes in response to well known threats that exist today. Read this article to get an overview of AIR and how it can help your organization and security operations teams mitigate threats more effectively and efficiently. 
+Automated investigation and response (AIR) capabilities (included in [Office 365 Advanced Threat Protection](office-365-atp.md) Plan 2) enable you to run automated investigation and remediation processes in response to well known threats that exist today. Read this article to get an overview of AIR and how it can help your organization and security operations teams mitigate threats more effectively and efficiently. To get started using AIR, see [Automatically investigate and respond to threats in Office 365](office-365-air.md).
 
 ## Alerts
 
@@ -119,4 +119,12 @@ Office 365 AIR are included in the following subscriptions:
 - Microsoft Threat Protection
 - Office 365 Advanced Threat Protection Plan 2
 
+If you don't have any of these subscriptions, [start a free trial](https://go.microsoft.com/fwlink/p/?LinkID=698279&culture=en-US&country=US).
+
 To learn more about feature availability, visit the [Feature availability across Advanced Threat Protection (ATP) plans](https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#feature-availability-across-advanced-threat-protection-atp-plans).
+
+## Next steps
+
+- [Get started using AIR in Office 365](office-365-air.md)
+
+- [Learn about AIR in Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/automated-investigations) 

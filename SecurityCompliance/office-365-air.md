@@ -192,3 +192,10 @@ You can:
 - Export the results to a CSV file.
 - Filter the view.
 
+## Next steps
+
+- [Learn about AIR in Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/automated-investigations)
+
+- [Manually find and investigate malicious email that was delivered in Office 365](investigate-malicious-email-that-was-delivered.md)
+
+- 
