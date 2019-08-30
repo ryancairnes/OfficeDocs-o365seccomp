@@ -35,7 +35,7 @@ To search for a user account:
 
 2. When you have the username correctly entered, select **Search**.
 
-3. For user accounts not returned, 'User not found' is displayed on the page. Check the user's email address information and make corrections as necessary. To retry, select **Search**.
+3. For user accounts not returned, the page displays **User not found**. Check the user's email address information and make corrections as necessary. To retry, select **Search**.
 
 4. For user accounts returned, the text of the button changes from **Search** to **Clear**. This indicates that the returned user account is the operating context for the additional functions and that these functions apply to this user account.
 

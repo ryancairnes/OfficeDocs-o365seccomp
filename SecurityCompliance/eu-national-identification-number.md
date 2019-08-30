@@ -3,7 +3,7 @@ title: "EU National Identification Number"
 ms.author: stephow
 author: stephow-MSFT
 manager: laurawi
-ms.date: 8/17/2018
+ms.date: 
 audience: Admin
 ms.topic: reference
 ms.service: O365-seccomp
@@ -514,7 +514,7 @@ codice id personale
   
 codice fiscale
   
-## Italy
+## Latvia
 
 ### Format
 

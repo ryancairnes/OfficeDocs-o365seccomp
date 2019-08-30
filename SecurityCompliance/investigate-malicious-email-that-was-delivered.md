@@ -1,5 +1,5 @@
 ---
-title: "Find and investigate malicious email that was delivered in Office 365, TIMailData-Inline, Security Incident, incident, ATP Powershell, email malware, compromised users, email phish, email malware, read email headers, read headers, open email headers"
+title: "Find and investigate malicious email that was delivered in Office 365"
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
@@ -83,6 +83,9 @@ This will open the flyout, where both header preview and email download links ar
 > Remember, 'Preview' is a role and not a rolegroup and that role must be added to a Rolegroup afterwards.
 
 ![Threat Explorer flyout with download and preview links on the page.](media/ThreatExplorerDownloadandPreview.PNG)
+
+> [!IMPORTANT]
+> This capability doesn't show up for emails that were never found in a user's mailbox, which can happen if an email was dropped or its delivery failed. For cases when emails were deleted from users' mailboxes, admins will see an  error mentioning 'Mail not found'.
 
 ### Check the delivery action and location
 

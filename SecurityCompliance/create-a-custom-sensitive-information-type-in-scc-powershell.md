@@ -29,7 +29,7 @@ After you've created a well-formed XML file, you can upload it to Office 365 by 
 > You can also create less complex custom sensitive information types in the Security & Compliance Center UI. For more information, see [Create a custom sensitive information type](create-a-custom-sensitive-information-type.md).
 
 ## Important disclaimer
-
+<!-- this is worded much better than the previous one is -->
 Due to the variances in customer environments and content match requirements, Microsoft Support cannot assist in providing custom content-matching definitions; e.g., defining custom classifications or regular expression (also known as RegEx) patterns. For custom content-matching development, testing, and debugging, Office 365 customers will need to rely upon internal IT resources, or use an external consulting resource such as Microsoft Consulting Services (MCS). Support engineers can provide limited support for the feature, but cannot provide assurances that any custom content-matching development will fulfill the customer's requirements or obligations.  As an example of the type of support that can be provided, sample regular expression patterns may be provided for testing purposes. Or, support can assist with troubleshooting an existing RegEx pattern which is not triggering as expected with a single specific content example.
 
  For more information about the Boost.RegEx (formerly known as RegEx++) engine that's used for processing the text, see [Boost.Regex 5.1.3](https://www.boost.org/doc/libs/1_68_0/libs/regex/doc/html/).
@@ -38,7 +38,7 @@ Due to the variances in customer environments and content match requirements, Mi
 
 Here's the sample XML of the rule package that we'll create in this topic. Elements and attributes are explained in the sections below.
   
-```
+```xml
 <?xml version="1.0" encoding="UTF-16"?>
 <RulePackage xmlns="http://schemas.microsoft.com/office/2011/mce">
 <RulePack id="DAD86A92-AB18-43BB-AB35-96F7C594ADAA">
@@ -125,7 +125,7 @@ Here's the sample XML of the rule package that we'll create in this topic. Eleme
 Before you get started, it's helpful to understand the basic structure of the XML schema for a rule, and how you can use this structure to define your custom sensitive information type so that it will identify the right content.
   
 A rule defines one or more entities (sensitive information types), and each entity defines one or more patterns. A pattern is what DLP looks for when it evaluates content such as email and documents.
-  
+  <!-- ok then this is going to be really confusing since the terminology changes.... -->
 (A quick note on terminology - if you're familiar with DLP policies, you know that a policy contains one or more rules comprised of conditions and actions. However, in this topic, the XML markup uses rule to mean the patterns that define an entity, also known as a sensitive information type. So in this topic, when you see rule, think entity or sensitive information type, not conditions and actions.)
   
 ### Simplest scenario: entity with one pattern
@@ -155,7 +155,7 @@ Note a couple of important aspects of this structure:
 An entity is a sensitive information type, such as a credit card number, that has a well-defined pattern. Each entity has a unique GUID as its ID.
   
 ### Name the entity and generate its GUID
-
+<!-- why isn't the following in procedure format? -->
 Add the Rules and Entity elements. Then add a comment that contains the name of your custom entity - in this example, Employee ID. Later, you'll add the entity name to the localized strings section, and that name is what appears in the UI when you create a DLP policy.
   
 Next, generate a GUID for your entity. There are several ways to generate GUIDs, but you can do it easily in PowerShell by typing [guid]::NewGuid(). Later, you'll also add the entity GUID to the localized strings section.
@@ -316,7 +316,7 @@ Most importantly, you'll need to generate a GUID for the RulePack. Above, you ge
   
 The Version element is also important. When you upload your rule package for the first time, Office 365 notes the version number. Later, if you update the rule package and upload a new version, make sure to update the version number or Office 365 won't deploy the rule package.
   
-```
+```xml
 <?xml version="1.0" encoding="utf-16"?>
 <RulePackage xmlns="http://schemas.microsoft.com/office/2011/mce">
   <RulePack id=". . .">
@@ -358,13 +358,13 @@ To upload your rule package, do the following steps:
     
 3. Use the following syntax:
 
-    ```
+    ```powershell
     New-DlpSensitiveInformationTypeRulePackage -FileData (Get-Content -Path "PathToUnicodeXMLFile" -Encoding Byte)
     ```
 
     This example uploads the Unicode XML file named MyNewRulePack.xml from C:\My Documents.
 
-    ```
+    ```powershell
     New-DlpSensitiveInformationTypeRulePackage -FileData (Get-Content -Path "C:\My Documents\MyNewRulePack.xml" -Encoding Byte)
     ```
 
@@ -388,7 +388,7 @@ To upload your rule package, do the following steps:
 
   - Replace \<Name\> with the Name value of the sensitive information type (example: Employee ID) and run the [Get-DlpSensitiveInformationType](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/get-dlpsensitiveinformationtype?view=exchange-ps) cmdlet:
 
-    ```
+    ```powershell
     Get-DlpSensitiveInformationType -Identity "<Name>"
     ```
     
@@ -552,7 +552,7 @@ For detailed syntax and parameter information, see [Set-DlpSensitiveInformationT
 
 You can copy this markup, save it as an XSD file, and use it to validate your rule package XML file.
   
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:mce="http://schemas.microsoft.com/office/2011/mce"
            targetNamespace="http://schemas.microsoft.com/office/2011/mce" 
