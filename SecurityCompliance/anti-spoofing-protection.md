@@ -3,7 +3,7 @@ title: "Anti-spoofing protection in Office 365"
 ms.author: tracyp
 author: MSFTtracyp
 manager: dansimp
-ms.date: 03/29/2019
+ms.date: 08/30/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -98,9 +98,10 @@ Authentication-Results:
 |||
 |:-----|:-----|
 |**Reason**|**Description**|
-|0xx|Message failed composite authentication.<br/>**000** means the message failed DMARC with an action of reject or quarantine.  <br/>**001** means the message failed implicit email authentication. This means that the sending domain did not have email authentication records published, or if they did, they had a weaker failure policy (SPF soft fail or neutral, DMARC policy of p=none).  <br/>**002** means the organization has a policy for the sender/domain pair that is explicitly prohibited from sending spoofed email, this setting is manually set by an administrator.  <br/>**010** means the message failed DMARC with an action of reject or quarantine, and the sending domain is one of your organization's accepted-domains (this is part of self-to-self, or intra-org, spoofing).  <br/>**011** means the message failed implicit email authentication, and the sending domain is one of your organization's accepted domains (this is part of self-to-self, or intra-org, spoofing).|
-|All other codes (1xx, 2xx, 3xx, 4xx, 5xx)|Corresponds to various internal codes for why a message passed implicit authentication, or had no authentication but no action was applied.|
-   
+|0xx |Message failed composite authentication.<br/>**000** means the message failed DMARC with an action of reject or quarantine.  <br/>**001** means the message failed implicit email authentication. This means that the sending domain did not have email authentication records published, or if they did, they had a weaker failure policy (SPF soft fail or neutral, DMARC policy of p=none).  <br/>**002** means the organization has a policy for the sender/domain pair that is explicitly prohibited from sending spoofed email, this setting is manually set by an administrator.  <br/>**010** means the message failed DMARC with an action of reject or quarantine, and the sending domain is one of your organization's accepted-domains (this is part of self-to-self, or intra-org, spoofing). <br/> |
+|1xx, 2xx, 3xx, 4xx, and 5xx|Correspond to various internal codes for why a message passed implicit authentication, or had no authentication but no action was applied.|
+|6xx|Means the message failed implicit email authentication, and the sending domain is one of your organization's accepted domains (this is part of self-to-self, or intra-org, spoofing).|
+
 By looking at the headers of a message, an administrator or even an end user can determine how Office 365 arrives at the conclusion that the sender may be spoofed.
   
 ### Differentiating between different types of spoofing
