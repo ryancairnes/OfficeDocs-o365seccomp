@@ -20,7 +20,7 @@ Message trace in the Security & Compliance Center follows email messages as they
 Message trace in the Security & Compliance Center improves upon message trace that was available in the Exchange admin center (EAC). You can use the information from message trace to efficiently answer user questions about what happened to their messages, troubleshoot mail flow issues, and validate policy changes.
 
 > [!NOTE]
->  The message count will stop at 50 000 and the report will only reflect up to this amount in the console. The PowerShell cmdlet Get-HistoricalSearch cmdlet will show the true message count.
+> Only the first 50000 messages are displayed in the results. The [Get-HistoricalSearch](https://docs.microsoft.com/powershell/module/exchange/reporting/get-historicalsearch) cmdlet in Exchange Online PowerShell or Exchange Online Protection PowerShell returns all messages in the results.
 
 ## Open message trace
 
