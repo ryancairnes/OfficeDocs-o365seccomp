@@ -20,7 +20,7 @@ Message trace in the Security & Compliance Center follows email messages as they
 Message trace in the Security & Compliance Center improves upon message trace that was available in the Exchange admin center (EAC). You can use the information from message trace to efficiently answer user questions about what happened to their messages, troubleshoot mail flow issues, and validate policy changes.
 
 > [!NOTE]
->  The message count will stop at 50 000 and the report will only reflect up to this amount in the console. The PowerShell cmdlet Get-HistoricalSearch cmdlet will show the true message count.
+> Only the first 50000 messages are displayed in the results. The [Get-HistoricalSearch](https://docs.microsoft.com/powershell/module/exchange/reporting/get-historicalsearch) cmdlet in Exchange Online PowerShell or Exchange Online Protection PowerShell returns all messages in the results.
 
 ## Open message trace
 
@@ -185,35 +185,39 @@ In the summary report output, you can view details about a message by using eith
 
 The message trace details contain the following additional information that's not present in the summary report:
 
-- **Message events**: This section contains classifications that help categorize the actions that the service takes on messages. Some of the more interesting events that you might encounter are:
+- **Message events**: This section contains classifications that help categorize the actions that the service takes on messages. **Some of the more interesting events** that you might encounter are:
 
-   - **Receive**: The message was received by the service.
+  - **Receive**: The message was received by the service.
 
-   - **Send**: The message was sent by the service.
+  - **Send**: The message was sent by the service.
 
-   - **Fail**: The message failed to be delivered.
+  - **Fail**: The message failed to be delivered.
 
-   - **Deliver**: The message was delivered to a mailbox.
+  - **Deliver**: The message was delivered to a mailbox.
 
-   - **Expand**: The message was sent to a distribution group that was expanded.
+  - **Expand**: The message was sent to a distribution group that was expanded.
 
-   - **Transfer**: Recipients were moved to a bifurcated message because of content conversion, message recipient limits, or agents.
+  - **Transfer**: Recipients were moved to a bifurcated message because of content conversion, message recipient limits, or agents.
 
-   - **Defer**: The message delivery was postponed and might be re-attempted later.
+  - **Defer**: The message delivery was postponed and might be re-attempted later.
 
-   - **Resolved**: The message was redirected to a new recipient address based on an Active Directory look up. When this happens, the original recipient address is listed in a separate row in the message trace along with the final delivery status for the message.
+  - **Resolved**: The message was redirected to a new recipient address based on an Active Directory look up. When this happens, the original recipient address is listed in a separate row in the message trace along with the final delivery status for the message.
 
-   Note that even an uneventful message that's successfully delivered will generate multiple **Event** entries in the message trace.
+  Notes:
+
+  - An uneventful message that's successfully delivered will generate multiple **Event** entries in the message trace.
+
+  - This list is not meant to be exhaustive. For descriptions of more events, see [Event types in the message tracking log](https://docs.microsoft.com/Exchange/mail-flow/transport-logs/message-tracking#event-types-in-the-message-tracking-log). Note that this link is an Exchange Server (on-premises Exchange) topic.
 
 - **More information**: This section contains the following details:
 
-   - **Message ID**: This value is described in the [Message ID](#message-id) section earlier in this topic. For example, `<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@DM3NAM06BG401.Eop-nam06.prod.protection.outlook.com>`.
+  - **Message ID**: This value is described in the [Message ID](#message-id) section earlier in this topic. For example, `<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@DM3NAM06BG401.Eop-nam06.prod.protection.outlook.com>`.
 
-   - **Message size**
+  - **Message size**
 
-   - **From IP**: The IP address of the computer that sent the message. For outbound messages sent from Exchange Online, this value is blank.
+  - **From IP**: The IP address of the computer that sent the message. For outbound messages sent from Exchange Online, this value is blank.
 
-   - **To IP**: The IP address or addresses where the service attempted to deliver the message. If the message has multiple recipients, these are displayed. For inbound messages sent to Exchange Online, this value is blank.
+  - **To IP**: The IP address or addresses where the service attempted to deliver the message. If the message has multiple recipients, these are displayed. For inbound messages sent to Exchange Online, this value is blank.
 
 ### Enhanced summary reports
 
@@ -225,11 +229,11 @@ Available (completed) Enhanced summary reports are available in the **Downloadab
 
 - **Recipient_status**: The status of the delivery of the message to the recipient. If the message was sent to multiple recipients, it will show all the recipients and the corresponding status for each, in the format: \<*email address*\>##\<*status*\>. For example:
 
-   - **##Receive, Send** means the message was received by the service and was sent to the intended destination.
+  - **##Receive, Send** means the message was received by the service and was sent to the intended destination.
 
-   - **##Receive, Fail** means the message was received by the service but delivery to the intended destination failed.
+  - **##Receive, Fail** means the message was received by the service but delivery to the intended destination failed.
 
-   - **##Receive, Deliver** means the message was received by the service and was delivered to the recipient's mailbox.
+  - **##Receive, Deliver** means the message was received by the service and was delivered to the recipient's mailbox.
 
 - **message_subject**: The first 256 characters of the message's **Subject** field.
 
@@ -263,17 +267,17 @@ Available (completed) Extended reports are available in the **Downloadable repor
 
 - **source_context**: Extra information associated with the **source** field. For example:
 
-   - `Protocol Filter Agent`
+  - `Protocol Filter Agent`
 
-   - `3489061114359050000`
+  - `3489061114359050000`
 
 - **source**: The Exchange Online component that's responsible for the event. For example:
 
-   - `AGENT`
+  - `AGENT`
 
-   - `MAILBOXRULE`
+  - `MAILBOXRULE`
 
-   - `SMTP`
+  - `SMTP`
 
 - **event_id**: These correspond to the **Message event** values that are explained in the [Find related records for this message](#find-related-records-for-this-message) section.
 
@@ -287,27 +291,27 @@ Available (completed) Extended reports are available in the **Downloadable repor
 
 - **reference**: This field contains additional information for specific types of events. For example:
 
-   - **DSN**: Contains the report link, which is the **message_id** value of the associated delivery status notification (also known as a DSN, non-delivery report, NDR, or bounce message) if a DSN is generated subsequent to this event. If this is a DSN message, this field contains the **message_id** value of the original message that the DSN was generated for.
+  - **DSN**: Contains the report link, which is the **message_id** value of the associated delivery status notification (also known as a DSN, non-delivery report, NDR, or bounce message) if a DSN is generated subsequent to this event. If this is a DSN message, this field contains the **message_id** value of the original message that the DSN was generated for.
 
-   - **EXPAND**: Contains the **related_recipient_address** value of the related messages.
+  - **EXPAND**: Contains the **related_recipient_address** value of the related messages.
 
-   - **RECEIVE**: Might contain the **message_id** value of the related message if the message was generated by other processes (for example, Inbox rules).
+  - **RECEIVE**: Might contain the **message_id** value of the related message if the message was generated by other processes (for example, Inbox rules).
 
-   - **SEND**: Contains the **internal_message_id** value of any DSN messages.
+  - **SEND**: Contains the **internal_message_id** value of any DSN messages.
 
-   - **TRANSFER**: Contains the **internal_message_id** value of the message that's being forked (for example, by content conversion, message recipient limits, or agents).
+  - **TRANSFER**: Contains the **internal_message_id** value of the message that's being forked (for example, by content conversion, message recipient limits, or agents).
 
-   - **MAILBOXRULE**: Contains the **internal_message_id** value of the inbound message that caused the Inbox rule to generate the outbound message.
+  - **MAILBOXRULE**: Contains the **internal_message_id** value of the inbound message that caused the Inbox rule to generate the outbound message.
 
-   For other types of events, this field is usually blank.
+    For other types of events, this field is usually blank.
 
 - **return_path**: The return email address specified by the **MAIL FROM** command that sent the message. Although this field is never empty, it can have the null sender address value represented as `<>`.
 
 - **message_info**: Additional information about the message. For example:
 
-   - The message origination date-time in UTC for `DELIVER` and `SEND` events. The origination date-time is the time when the message first entered the Exchange Online organization. The UTC date-time is represented in the ISO 8601 date-time format: `yyyy-mm-ddThh:mm:ss.fffZ`, where `yyyy` = year, `mm` = month, `dd` = day, `T` indicates the beginning of the time component, `hh` = hour, `mm` = minute, `ss` = second, `fff` = fractions of a second, and `Z` signifies `Zulu`, which is another way to denote UTC.
+  - The message origination date-time in UTC for `DELIVER` and `SEND` events. The origination date-time is the time when the message first entered the Exchange Online organization. The UTC date-time is represented in the ISO 8601 date-time format: `yyyy-mm-ddThh:mm:ss.fffZ`, where `yyyy` = year, `mm` = month, `dd` = day, `T` indicates the beginning of the time component, `hh` = hour, `mm` = minute, `ss` = second, `fff` = fractions of a second, and `Z` signifies `Zulu`, which is another way to denote UTC.
 
-   - Authentication errors. For example, you might see the value `11a` and the type of authentication that was used when the authentication error occurred.
+  - Authentication errors. For example, you might see the value `11a` and the type of authentication that was used when the authentication error occurred.
 
 - **tenant_id**: A GUID value that represents the Exchange Online organization (for example, `39238e87-b5ab-4ef6-a559-af54c6b07b42`).
 
