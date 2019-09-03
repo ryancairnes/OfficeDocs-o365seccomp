@@ -41,8 +41,6 @@ To learn more about how AIR works, see [Automated Investigation and Response (AI
 
 ## Next steps
 
-- [Learn about AIR in Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/automated-investigations)
+[Learn about AIR in Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/automated-investigations)
 
-- [Manually find and investigate malicious email that was delivered in Office 365](investigate-malicious-email-that-was-delivered.md)
-
-- 
+[Manually find and investigate malicious email that was delivered in Office 365](investigate-malicious-email-that-was-delivered.md)
