@@ -3,7 +3,7 @@ title: "What the sensitive information types look for"
 ms.author: chrfox
 author: chrfox
 manager: laurawi
-ms.date: 05/20/2019
+ms.date:
 audience: Admin
 search.appverid: MET150
 ms.topic: reference
