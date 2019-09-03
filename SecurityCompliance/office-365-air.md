@@ -49,6 +49,10 @@ In Office 365, automated investigations typically result in one or more recommen
 
 1. As an Office 365 global administrator, security administrator, or security reader, go to [https://protection.office.com](https://protection.office.com) and sign in. This takes you to the the Security & Compliance Center.
 
+2. Go to **Threat management** > **Investigations**.
+
+3. In the list of investigations, select an item in the **ID** column. 
+
 3. On the investigation details view, select the **Actions** tab. Any actions that are pending approval are listed here.
 
 4. Select an item in the list.
@@ -57,11 +61,17 @@ In Office 365, automated investigations typically result in one or more recommen
 
 ## View details about an alert related to an investigation
 
-1. With details of an investigation open, select the **Alerts** tab. Any alerts that triggered the investigation are listed here.
+1. As an Office 365 global administrator, security administrator, or security reader, go to [https://protection.office.com](https://protection.office.com) and sign in. This takes you to the the Security & Compliance Center.
 
-2. Select an item in the list. A flyout opens, with details about the alert and links to additional information and actions.
+2. Go to **Threat management** > **Investigations**.
 
-3. Review the information on the flyout, and, depending on the particular alert, take an action, such as **Resolve**, **Suppress**, or **Notify users**. 
+3. In the list of investigations, select an item in the **ID** column. 
+
+4. With details of an investigation open, select the **Alerts** tab. Any alerts that triggered the investigation are listed here.
+
+5. Select an item in the list. A flyout opens, with details about the alert and links to additional information and actions.
+
+6. Review the information on the flyout, and, depending on the particular alert, take an action, such as **Resolve**, **Suppress**, or **Notify users**. 
 
 ## Next steps
 
