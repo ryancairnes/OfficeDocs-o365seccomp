@@ -25,15 +25,17 @@ Automated investigation and response (AIR) capabilities (included in [Office 365
 ## The overall flow of AIR
 
 At a high level, the AIR flow works like this:
-1. An [alert](#alerts) that is triggered, and a [security playbook](#security-playbooks) initiates. 
-2. Depending on the particular alert and security playbook, [automated investigation begins immediately](#example-a-user-reported-phish-message-launches-an-investigation-playbook). (Alternately, a security analyst can [start an automated investigation manually](#example-a-security-administrator-triggers-an-investigation-from-threat-explorer), from a value in a report such as Explorer.)
-3. While an automated investigation runs, its scope can increase as new, related alerts are triggered.
-4. During and after an automated investigation, [details and results](#investigation-graph) are available to view. Results include recommended actions that can be taken to respond and remediate any threats that were found.
-5. Your security operations team reviews the results and recommendations, and approves remediation actions.
 
-In Office 365, remediation actions are taken only upon approval by your organization's security team. 
 
-The following sections provide more details about alerts and security playbooks. In addition, two examples
+|Step  |What's involved  |
+|---------|---------|
+|1     |An [alert](#alerts) that is triggered, and a [security playbook](#security-playbooks) initiates.         |
+|2     |Depending on the particular alert and security playbook, [automated investigation begins immediately](#example-a-user-reported-phish-message-launches-an-investigation-playbook). (Alternately, a security analyst can [start an automated investigation manually](#example-a-security-administrator-triggers-an-investigation-from-threat-explorer), from a value in a report such as Explorer.)         |
+|3     |While an automated investigation runs, its scope can increase as new, related alerts are triggered.         |
+|4     |During and after an automated investigation, [details and results](#investigation-graph) are available to view. Results include [recommended actions](#recommended-actions) that can be taken to respond and remediate any threats that were found. In addition, a [playbook log](#playbook-log) is available that tracks all investigation activity.         |
+|5     |Your security operations team reviews the results and recommendations, and approves remediation actions. In Office 365, remediation actions are taken only upon approval by your organization's security team.         |
+
+The following sections provide more details about alerts and security playbooks. In addition, two examples show how AIR works are included in this article. To get started using AIR, see [Automatically investigate and respond to threats in Office 365](office-365-air.md).
 
 ## Alerts
 
