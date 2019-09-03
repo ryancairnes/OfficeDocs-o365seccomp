@@ -32,7 +32,7 @@ When a document or email is encrypted, access to the content is restricted, so t
 
 Finally, as an admin, when you create a sensitivity label, you can choose either to:
 
-- **Assign permissions now**, so that you can determine exactly which users get which permissions to content with that label.
+- **Assign permissions now**, so that you determine exactly which users get which permissions to content with that label.
 - **Let users assign permissions** when they apply the label to content. This way, you can allow people in your organization some flexibility that they might need to collaborate and get their work done.
 
 The encryption settings are available when you create a sensitivity label in the Microsoft 365 compliance center, Microsoft 365 security center, or Office 365 Security & Compliance Center. In the left nav, choose **Classification** > **Sensitivity label** > **Create a label**.
