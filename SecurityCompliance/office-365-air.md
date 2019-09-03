@@ -18,9 +18,7 @@ description: "Get started using automated investigation and response capabilitie
 
 # Automatically investigate and respond to threats in Office 365
 
-[Office 365 Advanced Threat Protection](office-365-atp.md) Plan 2 includes automated investigation and response (AIR) capabilities. These capabilities can save your security operations team time and effort in dealing with alerts and threats. With AIR, when certain alerts are triggered, one or more security playbooks initiate, and automated investigation begins. During and after an automated investigation process, your administrators and security operations team can view the results and review/approve pending actions. Read this article to get started using AIR capabilities in Office 365. 
-
-To learn more about how AIR works, see [Automated Investigation and Response (AIR) with Office 365](automated-investigation-response-office.md).
+[Office 365 Advanced Threat Protection](office-365-atp.md) Plan 2 includes automated investigation and response (AIR) capabilities. These capabilities can save your security operations team time and effort in dealing with alerts and threats. With AIR, when certain alerts are triggered, one or more security playbooks initiate, and automated investigation begins. During and after an automated investigation process, your administrators and security operations team can view the results and review/approve pending actions. Read this article to get started using AIR capabilities in Office 365. To learn more about how AIR works, see [Automated Investigation and Response (AIR) with Office 365](automated-investigation-response-office.md).
 
 ## View details of an investigation
 
@@ -43,9 +41,9 @@ To learn more about how AIR works, see [Automated Investigation and Response (AI
 
 4. Use the various tabs to learn more about the investigation.
 
-## Review and approve pending actions
+## Review and approve actions
 
-In Office 365, automated investigations typically result in one or more recommended actions. However, no actions are taken until they are approved by your security operations team. 
+In Office 365, automated investigations typically result in one or more recommended actions. However, no actions are taken until they are approved by your security operations team.  
 
 1. As an Office 365 global administrator, security administrator, or security reader, go to [https://protection.office.com](https://protection.office.com) and sign in. This takes you to the the Security & Compliance Center.
 
@@ -74,6 +72,8 @@ In Office 365, automated investigations typically result in one or more recommen
 6. Review the information on the flyout, and, depending on the particular alert, take an action, such as **Resolve**, **Suppress**, or **Notify users**. 
 
 ## Next steps
+
+[Learn more about alerts](alert-policies.md)
 
 [Learn about AIR in Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/automated-investigations)
 
