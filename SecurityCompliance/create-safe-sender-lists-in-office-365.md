@@ -46,7 +46,7 @@ To ensure that only legitimate messages are allowed into your organization the c
 > [!IMPORTANT]
 > If you allow an IP address that is NATted, you should know the machines that are involved in that NAT pool in order to know the scope of your Allow. Be aware that IP addresses may change, and NAT participants may too. You must recheck all Allow lists, including IP Allows as part of your standard maintenance.
 
-- *Optionally*, add a condition that the message originates from outside the organization (this is implicit, but it's fine to add it as a condition to account for on-premise servers that may not be correctly configured).
+- *Optionally*, add a condition that the message originates from outside the organization (this is implicit, but it's fine to add it as a condition to account for on-premises servers that may not be correctly configured).
 
 - *Optionally*, if you can identify any unique keywords or phrases in the email Subject or Body use this information as an additional condition to further restrict the email messages allowed by the mail flow rule.
 
