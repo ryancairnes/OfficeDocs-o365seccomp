@@ -26,20 +26,40 @@ To learn more about how AIR works, see [Automated Investigation and Response (AI
 
 
 
-## View investigations
+## View details of an investigation
 
 1. As an Office 365 global administrator, security administrator, or security reader, go to [https://protection.office.com](https://protection.office.com) and sign in. This takes you to the the Security & Compliance Center.
 
 2. Do one of the following:
 
-    - Go to **Alerts** > **View alerts**. Open one of the investigation-related alerts, and then click the **View investigation** link at the bottom of the alert flyout. 
+    - Go to **Threat management** > **Dashboard**. This takes you to the [Security Dashboard](security-dashboard.md). Your AIR widgets appear across the top of the [Security Dashboard](security-dashboard.md). Select a widget, such as **Investigations summary**.
 
-    - Go to **Threat management** > **Investigations**. Select an item in the **ID** column.
+    - Go to **Threat management** > **Investigations**. 
 
-    - Go to **Threat management** > **Dashboard**. This takes you to the [Security Dashboard](security-dashboard.md). Your AIR widgets appear across the top of the [Security Dashboard](security-dashboard.md).<br/>![AIR widgets](media/air-widgets.png)
+    Either method takes you to a list of investigations.
+
+    ![Main investigation page for AIR](media/air-maininvestigationpage.png) 
 
 
+3. In the list of investigations, select an item in the **ID** column. This opens investigation details page, starting with the investigation graph.
 
+    ![AIR investigation graph page](media/air-investigationgraphpage.png)
+
+4. Use the various tabs to learn more about the investigation.
+
+## Review and approve pending actions
+
+1. On the investigation details view, select the **Actions** tab.
+
+2. 
+
+## View an alert related to an investigation
+
+1. As an Office 365 global administrator, security administrator, or security reader, go to [https://protection.office.com](https://protection.office.com) and sign in. This takes you to the the Security & Compliance Center.
+
+2. Go to **Alerts** > **View alerts**. 
+
+3. Open one of the investigation-related alerts, and then click the **View investigation** link at the bottom of the alert flyout. 
 
 ## Next steps
 
