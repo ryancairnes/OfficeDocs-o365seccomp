@@ -288,6 +288,6 @@ To learn more about feature availability, visit the [Feature availability across
 
 ## Next steps
 
-- [Get started using AIR in Office 365](office-365-air.md)
+[Get started using AIR in Office 365](office-365-air.md)
 
-- [Learn about AIR in Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/automated-investigations) 
+[Learn about AIR in Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/automated-investigations) 

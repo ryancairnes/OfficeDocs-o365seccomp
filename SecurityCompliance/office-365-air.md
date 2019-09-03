@@ -68,6 +68,8 @@ In Office 365, automated investigations typically result in one or more recommen
 
 ## View details about an alert related to an investigation
 
+Certain kinds of alerts trigger automated investigation in Office 365. To learn more, see [Alerts](automated-investigation-response-office.md#alerts). Use the following procedure to view details about an alert that is associated with an automated investigation.
+
 1. As an Office 365 global administrator, security administrator, or security reader, go to [https://protection.office.com](https://protection.office.com) and sign in. This takes you to the the Security & Compliance Center.
 
 2. Go to **Threat management** > **Investigations**.
