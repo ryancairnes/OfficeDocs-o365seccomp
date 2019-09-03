@@ -47,11 +47,13 @@ To learn more about how AIR works, see [Automated Investigation and Response (AI
 
 In Office 365, automated investigations typically result in one or more recommended actions. However, no actions are taken until they are approved by your security operations team. 
 
-1. With details of an investigation open, select the **Actions** tab. Any actions that are pending approval are listed here.
+1. As an Office 365 global administrator, security administrator, or security reader, go to [https://protection.office.com](https://protection.office.com) and sign in. This takes you to the the Security & Compliance Center.
 
-2. Select an item in the list.
+3. On the investigation details view, select the **Actions** tab. Any actions that are pending approval are listed here.
 
-3. Select **Approve** (or **Reject**) to take the recommended action (or close the investigation without taking action).
+4. Select an item in the list.
+
+5. Select **Approve** to take the recommended action (or **Reject** to close the investigation without taking action).
 
 ## View details about an alert related to an investigation
 
