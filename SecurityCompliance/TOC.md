@@ -235,50 +235,6 @@
 ## [Detect and Remediate Outlook Rules and Custom Forms Injections Attacks in Office 365](detect-and-remediate-outlook-rules-forms-attack.md)
 ## [Responding to a Compromised Email Account in Office 365](responding-to-a-compromised-email-account.md)
 
-# Manage data governance
-## [Import data](importing-pst-files-to-office-365.md)
-### [Use network upload to import PST files](use-network-upload-to-import-pst-files.md)
-### [Use drive shipping to import PST files](use-drive-shipping-to-import-pst-files-to-office-365.md)
-### [Use the PST Collection tool to find, copy, and delete PST files](find-copy-and-delete-pst-files-in-your-organization.md)
-### [Filter data when importing PST files](filter-data-when-importing-pst-files.md)
-### [Use network upload to import RMS-encrypted PST files](use-network-upload-to-import-rms-encrypted-pst-files.md)
-### [FAQ about importing PST files](faqimporting-pst-files-to-office-365.md)
-### [Archive third-party data in Office 365](archiving-third-party-data.md)
-#### [Use a sample connector to archive Facebook data](archive-facebook-data-with-sample-connector.md)
-#### [Use a sample connector to archive Twitter data](archive-twitter-data-with-sample-connector.md)
-#### [Set up a connector to archive LinkedIn data](archive-linkedin-data.md)
-#### [Set up a connector to archive Instant Bloomberg data](archive-instant-bloomberg-data.md)
-#### [Work with a partner to archive third-party data](work-with-partner-to-archive-third-party-data.md)
-## Store data
-### [Enable archive mailboxes](enable-archive-mailboxes.md)
-### [Overview of unlimited archiving](unlimited-archiving.md)
-### [Enable unlimited archiving](enable-unlimited-archiving.md)
-### [Set up an archive and deletion policy for mailboxes](set-up-an-archive-and-deletion-policy-for-mailboxes.md)
-## Retain data
-### [Retention policies](retention-policies.md)
-### [File plan manager](file-plan-manager.md)
-### [Retention labels](labels.md)
-### [Comply with SEC Rule 17a-4](use-exchange-online-to-comply-with-sec-rule-17a-4.md)
-### [Create and publish retention labels by using PowerShell](https://docs.microsoft.com/en-us/office365/securitycompliance/bulk-create-publish-labels-using-powershell)
-### [Event-based retention](event-driven-retention.md)
-### [Automate event-based retention](automate-event-driven-retention.md)
-## [Dispose data](disposition-reviews.md)
-## Supervise communications
-### [Supervision policies](supervision-policies.md)
-### [Configure supervision policies for your organization](configure-supervision-policies.md)
-## [Manage inactive mailboxes](inactive-mailboxes-in-office-365.md)
-### [Create and manage inactive mailboxes](create-and-manage-inactive-mailboxes.md)
-### [Change the hold duration for an inactive mailbox](change-the-hold-duration-for-an-inactive-mailbox.md)
-### [Recover an inactive mailbox](recover-an-inactive-mailbox.md)
-### [Restore an inactive mailbox](restore-an-inactive-mailbox.md)
-### [Delete an inactive mailbox](delete-an-inactive-mailbox.md)
-## Monitor data governance
-### [View label activity for documents](view-label-activity-for-documents.md)
-### [View label usage with label analytics](label-analytics.md)
-### [View the data governance reports](view-the-data-governance-reports.md)
-## More information about data governance
-### [Watch videos from the Microsoft Data Governance team](https://go.microsoft.com/fwlink/?linkid=867039)
-
 # [Search for content](search-for-content.md)
 ## [Use Content Search](content-search.md)
 ### [Keyword queries and search conditions for Content Search](keyword-queries-and-search-conditions.md)
@@ -441,7 +397,6 @@
 ### [Preserve Bcc and expanded distribution group recipients](preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery.md)
 
 # [Manage data investigations](datainvestigations/overview-data-investigations.md)
-## [Release notes](datainvestigations/data-investigations-release-notes.md)
 ## [Manage a data spillage incident](datainvestigations/manage-data-spillage-incidents.md)
 ## [Create a new investigation](datainvestigations/create-new-investigation.md)
 ## [Assign permissions for data investigations](datainvestigations/permissions.md)
@@ -456,6 +411,7 @@
 ### [Annotate and redact documents](datainvestigations/annotate-and-redact-documents.md)
 ### [Load non-Office 365 data](datainvestigations/load-non-office365-data.md)
 ### [Error remediation when processing data](datainvestigations/error-remediation.md)
+### [Delete items from their original location](datainvestigations/delete-items-from-original-locations.md)
 
 ## [Run analytics to investigate faster](datainvestigations/run-analytics-to-investigate-faster.md)
 ### [Email threading](datainvestigations/email-threading.md)
@@ -477,6 +433,7 @@
 ### [Close or delete an investigation](datainvestigations/close-or-delete-investigation.md)
 
 ## Data Investigations reference
+### [Release notes](datainvestigations/data-investigations-release-notes.md)
 ### [Limits in Data Investigations](datainvestigations/limits-datainvestigations.md)
 ### [Supported file types](datainvestigations/supported-filetypes-datainvestigations.md)
 ### [Document metadata fields](datainvestigations/document-metadata-fields.md)
