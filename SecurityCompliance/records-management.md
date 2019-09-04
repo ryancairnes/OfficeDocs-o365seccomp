@@ -27,7 +27,7 @@ The records-management solution supports the following elements:
 
 - 	**Trigger event-based retention** with [event-based retention](event-driven-retention.md).
 
-- 	**Label as a record**. Publish [record labels](labels.md#using-retention-labels-for-records-management) to be applied by end users, or [auto-apply record labels](labels.md#applying-a-retention-label-automatically-based-on-conditions) to items containing specific sensitive information, keywords or content types.
+- 	**Label as a record**. Publish [record labels](labels.md#using-retention-labels-for-records-management) to be applied by end users, or [auto-apply record labels](labels.md#applying-a-retention-label-automatically-based-on-conditions) to items containing specific sensitive information, keywords, or content types.
 
 - 	**Review and validate disposition** with [disposition review](disposition-reviews.md).
 
