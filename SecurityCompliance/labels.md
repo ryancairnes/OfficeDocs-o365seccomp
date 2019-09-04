@@ -55,7 +55,7 @@ With retention labels, you can:
 
 - **Apply a default retention label to a document library, folder, or document set** in SharePoint, so that all documents that arrive in that location inherit the default retention label.  
     
-You create and manage retention labels on the **Labels** page > **Retention** tab in the Microsoft 365 compliance center, Microsoft 365 security center, or Office 365 Security and Compliance Center.  
+You create retention labels in the Microsoft 365 compliance center, Microsoft 365 security center, or Office 365 Security & Compliance Center. In the left nav, choose **Classification** > **Retention label** > **Create a label**.
 
 ## How retention labels work with retention label policies
 

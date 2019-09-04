@@ -13,7 +13,7 @@ ms.collection:
 search.appverid: 
 - MOE150
 - MET150
-description: "With retention labels in Office 365, you can base a retention period on when a specific type of event occurs. The event triggers the start of the retention period, and all content with a retention label applied for that type of event get the label's retention actions enforced on them. Event-driven retention is typically used as part of a records-management process."
+description: "With retention labels, you can base a retention period on when a specific type of event occurs. The event triggers the start of the retention period, and all content with a retention label applied for that type of event get the label's retention actions enforced on them. Event-driven retention is typically used as part of a records-management process."
 ---
 
 # Overview of event-driven retention
@@ -72,7 +72,7 @@ Here's the high-level workflow for event-driven retention. More detailed steps f
   
 ### Step 1: Create a label whose retention period is based on an event
 
-In the Microsoft 365 compliance center, Microsoft 365 security center, or Office 365 Security &amp; Compliance Center, in the left navigation, choose **Classifications** > **Labels** > **Retention labels** tab > **Create a label**.
+In the Microsoft 365 compliance center, Microsoft 365 security center, or Office 365 Security &amp; Compliance Center, in the left navigation, choose **Classification** > **Retention labels** > **Labels** tab > **Create a label**.
   
 When you create the label, turn on retention, and then choose the option shown below to retain or delete the content based on an event. This means that the retention settings won't go into effect until Step 5, when you create an event on the **Events** page. 
   
@@ -98,10 +98,10 @@ Note that once you choose an event type and create the label, the event type can
   
 ### Step 3: Publish or auto-apply the label
 
-Just like any label, you need to publish or auto-apply an event-based label, so that it's manually or automatically applied to content. You can do this on the **Labels** or **Label policies** page. 
+Just like any label, you need to publish or auto-apply an event-based label, so that it's manually or automatically applied to content. You can do this under **Classification** > **Retention labels** page.
   
-![Options to publish or auto-apply a label](media/c9232c54-bbc0-40d2-abc2-122d5d1e70af.png)
-  
+![Options to publish or auto-apply retention label](media/options-to-publish-auto-apply-retention-label.png)
+
 ### Step 4: Enter an asset ID
 
 After an event-driven label is applied to content, you can enter an asset ID for each item. For example, your organization might use:
