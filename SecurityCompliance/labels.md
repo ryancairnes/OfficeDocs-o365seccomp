@@ -158,7 +158,7 @@ In addition, a retention label has two retention options that are available only
   
 - Trigger a disposition review at the end of the retention period, so that SharePoint and OneDrive documents must be reviewed before they can be deleted. For more information, see [Overview of disposition reviews](disposition-reviews.md).
     
-- Start the retention period from when the content was labeled, instead of the age of the content or when it was last modified.
+- Start the retention period from when the content was labeled, instead of the age of the content or when it was last modified. Note that this option applies only to content in SharePoint sites and OneDrive accounts. For Exchange email, the retention period is always based on the date when the message was sent or received, no matter which option you choose here.
     
 ![Retention settings with options specific to labels](media/c49118c9-6279-4661-94db-deffa76e27ac.png)
   

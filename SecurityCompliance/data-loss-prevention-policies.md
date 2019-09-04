@@ -1,5 +1,6 @@
 ---
 title: "Overview of data loss prevention"
+# rename the md file to the above title
 ms.author: chrfox
 author: chrfox
 manager: laurawi
@@ -18,9 +19,9 @@ description: "With a data loss prevention (DLP) policy in the Security &amp; Com
 ---
 
 # Overview of data loss prevention
-
+<!-- this topic needs to be split into smaller, more coherent ones. It is confusing as it is. -->
 > [!NOTE]
-> Data loss prevention capabilities were recently added to Microsoft Teams chat and channel messages for users licensed for for Office 365 Advanced Compliance, which is available as a standalone option and is included in Office 365 E5 and Microsoft 365 E5 Compliance. To learn more about licensing requirements, see [Microsoft 365 Tenant-Level Services Licensing Guidance](https://docs.microsoft.com/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance).
+> Data loss prevention capabilities were recently added to Microsoft Teams chat and channel messages for users licensed for Office 365 Advanced Compliance, which is available as a standalone option and is included in Office 365 E5 and Microsoft 365 E5 Compliance. To learn more about licensing requirements, see [Microsoft 365 Tenant-Level Services Licensing Guidance](https://docs.microsoft.com/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance).
 
 To comply with business standards and industry regulations, organizations must protect sensitive information and prevent its inadvertent disclosure. Sensitive information can include financial data or personally identifiable information (PII) such as credit card numbers, social security numbers, or health records. With a data loss prevention (DLP) policy in the Office 365 Security &amp; Compliance Center, you can identify, monitor, and automatically protect sensitive information across Office 365.
   
@@ -309,6 +310,7 @@ For these reasons, the guidance for creating rules with different match accuraci
 ## Using a label as a condition in a DLP policy
 
 You can create a label and then:
+<!-- what kind of label? -->
   
 - **Publish** it, so that end users can see and manually apply the label to content. 
     
@@ -362,7 +364,7 @@ Don't worry, under the covers, simple settings and advanced settings work exactl
   
 ### Simple settings
 
-By far, the most common DLP scenario is creating a policy to help protect content containing sensitive information from being shared with people outside your organization, and taking an automatic remedial action such as restricting who can access the content, sending end-user or admin notifications, and auditing the event for later investigation. People use DLP to help prevent the inadvertent disclosure of sensitive information.
+By far, the most common DLP scenario is creating a policy to help protect content containing sensitive information from being shared with people outside your organization, and taking an automatic remediating action such as restricting who can access the content, sending end-user or admin notifications, and auditing the event for later investigation. People use DLP to help prevent the inadvertent disclosure of sensitive information.
   
 To simplify achieving this goal, when you create a DLP policy, you can choose **Use simple settings**. These settings provide everything you need to implement the most common DLP policy, without having to go into the rule editor.
   
@@ -445,12 +447,14 @@ After you create a DLP policy in the Security &amp; Compliance Center, it's stor
 - Microsoft Teams channels and chat messages
     
 After the policy's synced to the right locations, it starts to evaluate content and enforce actions.
+<!-- what is the time delay for first deployment of a policy and what is the sync schedule? -->
   
 ### Policy evaluation in OneDrive for Business and SharePoint Online sites
 
 Across all of your SharePoint Online sites and OneDrive for Business sites, documents are constantly changing — they're continually being created, edited, shared, and so on. This means documents can conflict or become compliant with a DLP policy at any time. For example, a person can upload a document that contains no sensitive information to their team site, but later, a different person can edit the same document and add sensitive information to it.
   
 For this reason, DLP policies check documents for policy matches frequently in the background. You can think of this as asynchronous policy evaluation.
+<!-- what is the frequency? looks like it is tied to the search crawl schedule -->
   
 #### How it works
  
@@ -458,6 +462,7 @@ As people add or change documents in their sites, the search engine scans the co
   
 ![Diagram showing how DLP policy evaluates content asynchronously](media/bdf73099-039a-4909-ae89-ac12c41992ba.png)
   
+<!-- conflict with a DLP policy is bad wording -->
 Finally, documents can conflict with a DLP policy, but they can also become compliant with a DLP policy. For example, if a person adds credit card numbers to a document, it might cause a DLP policy to block access to the document automatically. But if the person later removes the sensitive information, the action (in this case, blocking) is automatically undone the next time the document is evaluated against the policy.
   
 DLP evaluates any content that can be indexed. For more information on what file types are crawled by default, see [Default crawled file name extensions and parsed file types in SharePoint Server](https://docs.microsoft.com/SharePoint/technical-reference/default-crawled-file-name-extensions-and-parsed-file-types).
@@ -470,12 +475,14 @@ When a message is being composed in Outlook, the user can see policy tips as the
   
 ### Policy evaluation in the Office desktop programs
 
+<!-- same capability to identify sensitive information line conflates sensitive information types and such -->
 Excel, PowerPoint, and Word include the same capability to identify sensitive information and apply DLP policies as SharePoint Online and OneDrive for Business. These Office programs sync their DLP policies directly from the central policy store, and then continuously evaluate the content against the DLP policies when people work with documents opened from a site that's included in a DLP policy.
   
 DLP policy evaluation in Office is designed not to affect the performance of the programs or the productivity of people working on content. If they're working on a large document, or the user's computer is busy, it might take a few seconds for a policy tip to appear.
 
 ### Policy evaluation in Microsoft Teams
- 
+ <!--what do you mean that it's synched to user accounts?  I thought DLP policies were applied to locations not users like sensitivity labels are  -->
+
 When you create a DLP policy that includes Microsoft Teams as a location, the policy's synced from the Office 365 Security &amp; Compliance Center to user accounts and Microsoft Teams channels and chat messages. Depending on how DLP policies are configured, when someone attempts to share sensitive information in a Microsoft Teams chat or channel message, the message can be blocked or revoked. And, documents that contain sensitive information and that are shared with guests (external users) won't open for those users. To learn more, see [Data loss prevention and Microsoft Teams](dlp-microsoft-teams.md).
  
 ## Permissions
