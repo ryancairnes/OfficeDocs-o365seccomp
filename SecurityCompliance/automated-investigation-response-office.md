@@ -1,9 +1,9 @@
 ---
-title: "Automated Investigation and Response (AIR) in Office 365"
+title: "Automated investigation and response (AIR) in Office 365"
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
-ms.date: 09/03/2019
+ms.date: 09/04/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -15,9 +15,9 @@ ms.collection: M365-security-compliance
 description: "Learn about Automated Investigation and Response capabilities in Office 365 Advanced Threat Protection."
 ---
 
-# Automated Investigation and Response (AIR) in Office 365
+# Automated investigation and response (AIR) in Office 365
 
-Automated investigation and response (AIR) capabilities (included in [Office 365 Advanced Threat Protection](office-365-atp.md) Plan 2) enable you to run automated investigation and remediation processes in response to well known threats that exist today. Read this article to get an overview of AIR and how it can help your organization and security operations teams mitigate threats more effectively and efficiently. To get started using AIR, see [Automatically investigate and respond to threats in Office 365](office-365-air.md).
+Automated investigation and response (AIR) capabilities (included in [Office 365 Advanced Threat Protection](office-365-atp.md) Plan 2) enable you to run automated investigation processes in response to well known threats that exist today. Read this article to get an overview of AIR and how it can help your organization and security operations teams mitigate threats more effectively and efficiently. To get started using AIR, see [Automatically investigate and respond to threats in Office 365](office-365-air.md).
 
 > [!NOTE]
 > You must be a global administrator, security administrator, security operator, or security reader to perform the tasks described in this article. To learn more, see [Microsoft 365 security center: roles and permissions](https://docs.microsoft.com/office365/securitycompliance/microsoft-security-and-compliance#required-licenses-and-permissions).
@@ -26,13 +26,12 @@ Automated investigation and response (AIR) capabilities (included in [Office 365
 
 At a high level, the AIR flow works like this:
 
-
-|Step  |What's involved  |
+|Phase  |What's involved  |
 |---------|---------|
 |1     |An [alert](#alerts) that is triggered, and a [security playbook](#security-playbooks) initiates.         |
 |2     |Depending on the particular alert and security playbook, [automated investigation begins immediately](#example-a-user-reported-phish-message-launches-an-investigation-playbook). (Alternately, a security analyst can [start an automated investigation manually](#example-a-security-administrator-triggers-an-investigation-from-threat-explorer), from a value in a report such as [Explorer](threat-explorer.md).)         |
 |3     |While an automated investigation runs, its scope can increase as new, related alerts are triggered.         |
-|4     |During and after an automated investigation, [details and results](#investigation-graph) are available to view. Results include [recommended actions](#recommended-actions) that can be taken to respond and remediate any threats that were found. In addition, a [playbook log](#playbook-log) is available that tracks all investigation activity.         |
+|4     |During and after an automated investigation, [details and results](#investigation-graph) are available to view. Results include [recommended actions](#recommended-actions) that can be taken to respond and remediate any threats that were found. In addition, a [playbook log](#playbook-log) is available that tracks all investigation activity.<br/>If your organization is using a custom reporting solution or a third-party solution, you can [use the Office 365 Management Activity API](office-365-air.md#use-the-office-365-management-activity-api-for-custom-or-third-party-reporting-solutions) to view information about automated investigations and threats.         |
 |5     |Your security operations team reviews the results and recommendations, and approves remediation actions. In Office 365, remediation actions are taken only upon approval by your organization's security team.         |
 
 The following sections provide more details about AIR, including details about alerts, security playbooks, and investigation details. In addition, two examples of how AIR works are included in this article. To get started using AIR, see [Automatically investigate and respond to threats in Office 365](office-365-air.md).
