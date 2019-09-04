@@ -32,9 +32,11 @@ Although you can't disable or change outbound spam filtering, you can configure 
 
 - Estimated time to complete: 5 minutes
 
-- To open the Security & Compliance Center, see [Go to the Office 365 Security & Compliance Center](go-to-the-securitycompliance-center.md). To connect to Office 365 Security & Compliance Center PowerShell, see [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
+- To open the Security & Compliance Center, see [Go to the Office 365 Security & Compliance Center](go-to-the-securitycompliance-center.md).
 
-- To open the EAC, see [Exchange admin center in Exchange Online](https://docs.microsoft.com/Exchange/exchange-admin-center) or [Exchange admin center in Exchange Online Protection](exchange-admin-center-in-exchange-online-protection-eop.md). To open Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell). To open Exchange Online Protection PowerShell, see [Connect to Exchange Online Protection PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-eop/exchange-online-protection-powershell).
+- To open the EAC, see [Exchange admin center in Exchange Online](https://docs.microsoft.com/Exchange/exchange-admin-center) or [Exchange admin center in Exchange Online Protection](exchange-admin-center-in-exchange-online-protection-eop.md).
+
+- To open Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell). To open Exchange Online Protection PowerShell, see [Connect to Exchange Online Protection PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-eop/exchange-online-protection-powershell).
 
 - Your account needs to be assigned permissions before you can perform this procedure. To see what permissions you need, see the "Manage Alerts" role entry in [Permissions in the Office 365 Security & Compliance Center](permissions-in-the-security-and-compliance-center.md).
 
@@ -101,28 +103,6 @@ For detailed syntax and parameter information, see [Set-HostedOutboundSpamFilter
    - **Daily notification limit**: The default value is **No limit**, but you can configure various limits from 1 to 200.
 
    When you're finished, click **Save**.
-
-### Use Security & ComplianceCenter PowerShell to configure notifications when a sender is blocked
-
-To specify recipients to receive notifications when users are blocked from sending email messages, use the following syntax:
-
-```PowerShell
-Set-ProtectionAlert -Identity "User restricted from sending email" -NotifyUser <emailaddress1>,<emailaddress2>,...<emailaddressN>
-```
-
-**Notes**:
-
-- The *Disabled* parameter specifies whether notifications are turned on for the policy. The default value is `$false` (notifications are enabled).
-
-- Any additional email address you specify will *overwrite* the existing values. To preserve the existing values, run the command `Get-ProtectionAlert -Identity "User restricted from sending email"` to record and reuse the existing values in the command.
-
-This example preserves existing notifications for TenantAdmins, and adds chris@contoso.com and michelle@contoso.com.
-
-```PowerShell
-Set-ProtectionAlert -Identity "User restricted from sending email" -NotifyUser TenantAdmins,chris@contoso.com,michelle@contoso.com
-```
-
-For detailed syntax and parameter information, see [Set-ProtectionAlert](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-protectionalert).
 
 ## For more information
 
