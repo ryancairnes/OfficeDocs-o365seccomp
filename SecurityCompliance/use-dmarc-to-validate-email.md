@@ -131,7 +131,7 @@ For instructions on setting up DKIM for your domain, including how to set up DKI
 Although there are other syntax options that are not mentioned here, these are the most commonly used options for Office 365. Form the DMARC TXT record for your domain in the format:
   
 ```
-_dmarc.domain  TTL  IN  TXT  "v=DMARC1; pct=100; p=policy"
+_dmarc.domain  TTL  IN  TXT  "v=DMARC1; p=policy; pct=100"
 ```
 
 where:
