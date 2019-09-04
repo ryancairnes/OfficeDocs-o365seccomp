@@ -34,7 +34,7 @@ After setting up your Office 365 subscription, take note of your starting score.
     
 ## Step 3: Plan access protection for identity and devices
 
-Protecting access to your Office 365 data and services is crucial to defending against cyber-attacks and guarding against data loss.
+Protecting access to your Office 365 data and services is crucial to defending against cyberattacks and guarding against data loss.
   
 - [Protect access to data and services in Office 365](protect-access-to-data-and-services.md)
     
