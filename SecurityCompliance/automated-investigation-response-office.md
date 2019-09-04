@@ -30,7 +30,7 @@ At a high level, the AIR flow works like this:
 |Step  |What's involved  |
 |---------|---------|
 |1     |An [alert](#alerts) that is triggered, and a [security playbook](#security-playbooks) initiates.         |
-|2     |Depending on the particular alert and security playbook, [automated investigation begins immediately](#example-a-user-reported-phish-message-launches-an-investigation-playbook). (Alternately, a security analyst can [start an automated investigation manually](#example-a-security-administrator-triggers-an-investigation-from-threat-explorer), from a value in a report such as Explorer.)         |
+|2     |Depending on the particular alert and security playbook, [automated investigation begins immediately](#example-a-user-reported-phish-message-launches-an-investigation-playbook). (Alternately, a security analyst can [start an automated investigation manually](#example-a-security-administrator-triggers-an-investigation-from-threat-explorer), from a value in a report such as [Explorer](threat-explorer.md).)         |
 |3     |While an automated investigation runs, its scope can increase as new, related alerts are triggered.         |
 |4     |During and after an automated investigation, [details and results](#investigation-graph) are available to view. Results include [recommended actions](#recommended-actions) that can be taken to respond and remediate any threats that were found. In addition, a [playbook log](#playbook-log) is available that tracks all investigation activity.         |
 |5     |Your security operations team reviews the results and recommendations, and approves remediation actions. In Office 365, remediation actions are taken only upon approval by your organization's security team.         |
@@ -68,7 +68,7 @@ The security playbooks you'll get with AIR are designed to tackle the most frequ
 
 ### Security playbooks are rolling out in phases
 
-As part of AIR, security playbooks are rolling out in phases. During Phase 1 (began rolling out in April 2019), several playbooks were released that include recommendations for actions that security administrators review and approve:
+As part of AIR, security playbooks are rolling out in phases. During Phase 1 (the preview began rolling out in April 2019), several playbooks were released that include recommendations for actions that security administrators review and approve:
 - User-reported phish message
 - URL click verdict change 
 - Malware detected post-delivery (Malware ZAP)
@@ -96,7 +96,7 @@ The automated investigations page shows your organization's investigations and t
 You can:
 - Navigate directly to an investigation (select an **Investigation ID**).
 - Apply filters. Choose from **Investigation Type**, **Time range**, **Status**, or a combination of these.
-- Export the data to a CSV file.
+- Export the data to a .csv file.
 
 The investigation status indicates the progress of the analysis and actions. As the investigation runs, status changes to indicate whether threats were found, and whether actions have been approved. 
 - **Starting**: The investigation is queued to begin soon

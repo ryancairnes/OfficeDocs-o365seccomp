@@ -4,7 +4,7 @@ keywords: AIR, autoIR, ATP, automated, investigation, response, remediation, thr
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
-ms.date: 09/03/2019
+ms.date: 09/04/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -82,6 +82,19 @@ Certain kinds of alerts trigger automated investigation in Office 365. To learn 
 5. Select an item in the list. A flyout opens, with details about the alert and links to additional information and actions.
 
 6. Review the information on the flyout, and, depending on the particular alert, take an action, such as **Resolve**, **Suppress**, or **Notify users**. 
+
+## Use the Office 365 Management Activity API for custom or third-party reporting solutions
+
+If your organization is using a custom reporting solution, or a third-party reporting solution, you can view information about automated investigations in that solution by using the Office 365 Management Activity API.
+
+Use the following resources to set this up:
+
+|Resource  |Description  |
+|---------|---------|
+|[Office 365 Management APIs overview](https://docs.microsoft.com/office/office-365-management-api/office-365-management-apis-overview)     |The Office 365 Management Activity API provides information about various user, admin, system, and policy actions and events from Office 365 and Azure Active Directory activity logs.         |
+|[Get started with Office 365 Management APIs](https://docs.microsoft.com/office/office-365-management-api/get-started-with-office-365-management-apis)     |The Office 365 Management API uses Azure AD to provide authentication services for your application to access Office 365 data. Follow the steps in this article to set this up.          |
+|[Office 365 Management Activity API reference](https://docs.microsoft.com/office/office-365-management-api/office-365-management-activity-api-reference)     |You can use the Office 365 Management Activity API to retrieve information about user, admin, system, and policy actions and events from Office 365 and Azure AD activity logs. Read this article to learn more about how this works.        |
+|[Office 365 Management Activity API schema](https://docs.microsoft.com/office/office-365-management-api/office-365-management-activity-api-schema)     |Get an overview of the [Common schema](https://docs.microsoft.com/office/office-365-management-api/office-365-management-activity-api-schema#common-schema) and the [Office 365 ATP and threat investigation and response schema](https://docs.microsoft.com/office/office-365-management-api/office-365-management-activity-api-schema#office-365-advanced-threat-protection-and-threat-investigation-and-response-schema) to learn about specific kinds of data available through the Office 365 Management Activity API.         |
 
 ## Next steps
 
