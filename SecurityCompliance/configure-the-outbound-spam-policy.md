@@ -98,7 +98,7 @@ For detailed syntax and parameter information, see [Set-HostedOutboundSpamFilter
 
    - **Send email notifications**: Verify that **On** is selected.
 
-   - **Email recipients**: By default **TenantAdmins** is the only value here. To add additional recipients, click in an empty spot in this box and start typing the recipient. To remove recipients, click on the **X** next to their names.
+   - **Email recipients**: By default **TenantAdmins** is the only value here. To add additional recipients, click in an empty spot in this box, start typing the recipient, and select the recipient when their name resolves. To remove recipients, click on the **X** next to their names.
 
    - **Daily notification limit**: The default value is **No limit**, but you can configure various limits from 1 to 200.
 
