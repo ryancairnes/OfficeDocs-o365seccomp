@@ -295,3 +295,5 @@ To learn more about feature availability, visit the [Feature availability across
 [Get started using AIR in Office 365](office-365-air.md)
 
 [Learn about AIR in Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/automated-investigations) 
+
+[Visit the Microsoft 365 Roadmap to see what's coming soon and rolling out](https://www.microsoft.com/microsoft-365/roadmap?filters=)
