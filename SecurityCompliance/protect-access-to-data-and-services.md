@@ -17,7 +17,7 @@ description: "landing page for protecting access to O365 data and services"
 
 # Protect user and device access
 
-Protecting access to your Office 365 data and services is crucial to defending against cyber-attacks and guarding against data loss. The same protections can be applied to other SaaS applications in your environment and even to on-premises applications published with Azure Active Directory Application Proxy.
+Protecting access to your Office 365 data and services is crucial to defending against cyberattacks and guarding against data loss. The same protections can be applied to other SaaS applications in your environment and even to on-premises applications published with Azure Active Directory Application Proxy.
   
 ## Step 1: Review recommendations
 
@@ -26,7 +26,7 @@ Recommended capabilities for protecting identities and devices that access Offic
 [PDF](https://go.microsoft.com/fwlink/p/?linkid=841656) | [Visio](https://go.microsoft.com/fwlink/p/?linkid=841657) | [More languages](https://www.microsoft.com/download/details.aspx?id=55032)
   
 ## Step 2: Protect administrator accounts and access
-The administrative accounts you use to administer your Office 365 environment include elevated privileges. These are valuable targets for hackers and cyber criminals. 
+The administrative accounts you use to administer your Office 365 environment include elevated privileges. These are valuable targets for hackers and cyberattackers. 
 
 Begin by using administrator accounts only for administration. Admins should have a separate user account for regular, non-administrative use and only use their administrative account when necessary to complete a task associated with their job function.
 
@@ -51,7 +51,7 @@ Multi-factor authentication (MFA) and conditional access policies are powerful t
 - Intune device compliance
 - Azure AD Identity Protection
 
-Implemetning Intune device compliance requires device enrollment. Managing devices allows you to ensure that they are healthy and compliant before allowing them access to resources in your environment. See [Enroll devices for management in Intune](https://docs.microsoft.com/intune-classic/deploy-use/enroll-devices-in-microsoft-intune)
+Implementing Intune device compliance requires device enrollment. Managing devices allows you to ensure that they are healthy and compliant before allowing them access to resources in your environment. See [Enroll devices for management in Intune](https://docs.microsoft.com/intune-classic/deploy-use/enroll-devices-in-microsoft-intune)
 
 ## Step 4: Configure SharePoint device access policies
 
