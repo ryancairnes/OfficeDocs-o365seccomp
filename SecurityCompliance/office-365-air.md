@@ -4,7 +4,7 @@ keywords: AIR, autoIR, ATP, automated, investigation, response, remediation, thr
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
-ms.date: 09/04/2019
+ms.date: 09/06/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -84,6 +84,12 @@ Certain kinds of alerts trigger automated investigation in Office 365. To learn 
 5. Select an item in the list. A flyout opens, with details about the alert and links to additional information and actions.
 
 6. Review the information on the flyout, and, depending on the particular alert, take an action, such as **Resolve**, **Suppress**, or **Notify users**. 
+
+    - **Resolve** is equivalent to closing an alert
+    
+    - **Suppress** causes a policy to not trigger alerts for a specified period of time
+    
+    - **Notify users** starts an email with users' email addresses already entered, and enables your security operations team to type a message to those users. (This is similar to sending a message to recipients using [Threat Explorer](threat-explorer.md).)  
 
 ## Use the Office 365 Management Activity API for custom or third-party reporting solutions
 
