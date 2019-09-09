@@ -4,7 +4,7 @@ keywords: AIR, autoIR, ATP, automated, investigation, response, remediation, thr
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
-ms.date: 09/06/2019
+ms.date: 09/09/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -20,7 +20,7 @@ description: "Get started using automated investigation and response capabilitie
 
 ## Overview
 
-[Office 365 Advanced Threat Protection](office-365-atp.md) Plan 2 includes automated investigation and response (AIR) capabilities that can save your security operations team time and effort in dealing with alerts and threats. Read this article to get started using AIR capabilities in Office 365. To learn more about how AIR works, see [Automated Investigation and Response (AIR) with Office 365](automated-investigation-response-office.md).
+[Office 365 Advanced Threat Protection](office-365-atp.md) Plan 2 includes automated incident response (AIR) capabilities that can save your security operations team time and effort in dealing with alerts and threats. Read this article to get started using AIR capabilities in Office 365. To learn more about how AIR works, see [Automated incident response (AIR) in Office 365](automated-investigation-response-office.md).
 
 With AIR, when certain alerts are triggered, one or more security playbooks initiate, and automated investigation begins. During and after an automated investigation process, your administrators and security operations team can:
 
@@ -93,7 +93,7 @@ Certain kinds of alerts trigger automated investigation in Office 365. To learn 
 
 ## Use the Office 365 Management Activity API for custom or third-party reporting solutions
 
-If your organization is using a custom reporting solution, or a third-party reporting solution, you can view information about automated investigations in that solution by using the Office 365 Management Activity API.
+If your organization is using a custom or third-party reporting solution, you can view information about automated investigations in that solution by using the Office 365 Management Activity API.
 
 Use the following resources to set this up:
 
