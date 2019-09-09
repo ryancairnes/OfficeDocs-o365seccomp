@@ -182,7 +182,7 @@ One of the most powerful features of a retention policy is that by default it ap
     
 - OneDrive accounts
     
-- Office 365 groups (applies to content in the group's mailbox, site, and documents. Support for content in Planner, Yammer, CRM Microsoft Teams, PowerBI, Stream, Exchange and SharePoint Team Sites is coming soon.)
+- Office 365 groups (applies to content in the group's mailbox, site, and documents.)
     
 - Exchange public folders
     
