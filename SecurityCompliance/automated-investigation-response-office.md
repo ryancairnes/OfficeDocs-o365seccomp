@@ -1,9 +1,9 @@
 ---
-title: "Automated investigation and response (AIR) in Office 365"
+title: "Automated incident response (AIR) in Office 365"
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
-ms.date: 09/04/2019
+ms.date: 09/09/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -12,12 +12,12 @@ search.appverid:
 - MET150
 - MOE150
 ms.collection: M365-security-compliance
-description: "Learn about Automated Investigation and Response capabilities in Office 365 Advanced Threat Protection."
+description: "Learn about automated incident response capabilities in Office 365 Advanced Threat Protection."
 ---
 
-# Automated investigation and response (AIR) in Office 365
+# Automated incident response (AIR) in Office 365
 
-Automated investigation and response (AIR) capabilities (included in [Office 365 Advanced Threat Protection](office-365-atp.md) Plan 2) enable you to run automated investigation processes in response to well known threats that exist today. Read this article to get an overview of AIR and how it can help your organization and security operations teams mitigate threats more effectively and efficiently. To get started using AIR, see [Automatically investigate and respond to threats in Office 365](office-365-air.md).
+Automated incident response (AIR) capabilities (included in [Office 365 Advanced Threat Protection](office-365-atp.md) Plan 2) enable you to run automated investigation processes in response to well known threats that exist today. Read this article to get an overview of AIR and how it can help your organization and security operations teams mitigate threats more effectively and efficiently. To get started using AIR, see [Automatically investigate and respond to threats in Office 365](office-365-air.md).
 
 > [!NOTE]
 > You must be a global administrator, security administrator, security operator, or security reader to perform the tasks described in this article. To learn more, see [Microsoft 365 security center: roles and permissions](https://docs.microsoft.com/office365/securitycompliance/microsoft-security-and-compliance#required-licenses-and-permissions).
@@ -97,19 +97,22 @@ You can:
 - Apply filters. Choose from **Investigation Type**, **Time range**, **Status**, or a combination of these.
 - Export the data to a .csv file.
 
-The investigation status indicates the progress of the analysis and actions. As the investigation runs, status changes to indicate whether threats were found, and whether actions have been approved. 
-- **Starting**: The investigation is queued to begin soon
-- **Running**: The investigation has started and is conducting its analysis
-- **No Threats Found**: The investigation has completed its analysis and no threats were found
-- **Terminated By System**: The investigation was not closed and expired after 7 days
-- **Pending Action**: The investigation found threats with actions recommended
-- **Threats Found**: The investigation found threats, but the threats do not have actions available within AIR
-- **Remediated**: The investigation finished and was fully remediated (all actions were approved)
-- **Partially Remediated**: The investigation finished and some of the recommended actions were approved
-- **Terminated By User**: An admin terminated the investigation
-- **Failed**: An error occurred during the investigation that prevented it from reaching a conclusion on threats
-- **Queued By Throttling**: The investigation is waiting for analysis due to system processing limitations (to protect service performance)
-- **Terminated By Throttling**: The investigation could not be completed in sufficient time due to investigation volume and system processing limitations. You can re-trigger the investigation by selecting the email in Explorer and selecting the Investigate action.
+The investigation status indicates the progress of the analysis and actions. As the investigation runs, status changes to indicate whether threats were found, and whether actions have been approved, as described in the following table:
+
+|Status | Description  |
+|----|----| 
+|**Starting**|The investigation is queued to begin soon |
+|**Running** |The investigation has started and is conducting its analysis |
+|**No Threats Found** |The investigation has completed its analysis and no threats were found |
+|**Terminated By System** |The investigation was not closed and expired after 7 days |
+|**Pending Action** |The investigation found threats with actions recommended |
+|**Threats Found** |The investigation found threats, but the threats do not have actions available within AIR |
+|**Remediated** |The investigation finished and was fully remediated (all actions were approved) |
+|**Partially Remediated** |The investigation finished and some of the recommended actions were approved |
+|**Terminated By User** |An admin terminated the investigation |
+|**Failed**|An error occurred during the investigation that prevented it from reaching a conclusion on threats |
+|**Queued By Throttling**|The investigation is waiting for analysis due to system processing limitations (to protect service performance) |
+|**Terminated By Throttling**|The investigation could not be completed in sufficient time due to investigation volume and system processing limitations. You can re-trigger the investigation by selecting the email in Explorer and selecting the Investigate action. |
 
 ### Investigation graph
 
@@ -265,7 +268,7 @@ Remediation is the final phase of the playbook. During this phase, remediation s
 
 ## Example: A security administrator triggers an investigation from Threat Explorer
 
-In addition to automatic investigations that are triggered by an alert, your organization's security operations team can trigger an automatic investigation from a view in [Threat Explorer](use-explorer-in-security-and-compliance.md).
+In addition to automated investigations that are triggered by an alert, your organization's security operations team can trigger an automated investigation from a view in [Threat Explorer](use-explorer-in-security-and-compliance.md).
 
 For example, suppose that you are viewing data in Explorer about user-reported messages. You can select an item in the list of results, and then click **Investigate**.
 
@@ -275,7 +278,7 @@ As another example, suppose you are viewing data about email messages detected a
 
 ![Starting an investigation for malware in Explorer](media/Explorer-Malware-Email-ActionsInvestigate.png)
 
-Similar to playbooks triggered by an alert, automatic investigations that are triggered from a view in Explorer include a root investigation, steps to identify and correlate threats, and recommended actions to mitigate those threats.
+Similar to playbooks triggered by an alert, automated investigations that are triggered from a view in Explorer include a root investigation, steps to identify and correlate threats, and recommended actions to mitigate those threats.
 
 ## How to get AIR
 
