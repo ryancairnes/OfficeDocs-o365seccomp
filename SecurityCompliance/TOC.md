@@ -213,6 +213,7 @@
 ## [Use Threat Trackers](threat-trackers.md)
 ## [Use Attack Simulator in Office 365](attack-simulator.md)
 ## [Keep users safe with threat investigation and response](keep-users-safe-with-office-365-ti.md)
+## [Automatically investigate and respond to threats in Office 365](office-365-air.md)
 ## [Find and investigate malicious email that was delivered](investigate-malicious-email-that-was-delivered.md)
 ## [Threat Explorer (and real-time detections)](threat-explorer.md)
 ### [Threat Explorer views](threat-explorer-views.md)
@@ -226,7 +227,7 @@
 ### [Dynamic Delivery and previewing details](dynamic-delivery-and-previewing.md)
 ### [ATP for SharePoint, OneDrive, and Microsoft Teams](atp-for-spo-odb-and-teams.md)
 ### [How threat investigation and response works](office-365-ti.md)
-### [How Automated Investigation and Response works](automated-investigation-response-office.md)
+### [How automated incident response works](automated-investigation-response-office.md)
 
 
 # Security incident management

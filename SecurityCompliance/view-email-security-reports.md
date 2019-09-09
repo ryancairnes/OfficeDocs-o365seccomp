@@ -1,7 +1,7 @@
 ---
 title: "View email security reports in the Security &amp; Compliance Center"
-ms.author: chrfox
-author: chrfox
+ms.author: tracyp
+author: msfttracyp
 manager: dansimp
 ms.date: 08/29/2019
 audience: ITPro

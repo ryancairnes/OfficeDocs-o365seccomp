@@ -3,7 +3,7 @@ title: "Office 365 threat investigation and response"
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
-ms.date: 08/22/2019
+ms.date: 08/23/2019
 audience: Admin
 ms.topic: overview
 ms.service: O365-seccomp
@@ -21,23 +21,19 @@ description: "Find out how threat intelligence capabilities in Office 365 Advanc
 
 Threat investigation and response capabilities in [Office 365 Advanced Threat Protection](office-365-atp.md) help security analysts and administrators protect their organization's Office 365 users by:
   
-- Making it easy to identify, monitor and understand attacks
+- Making it easy to identify, monitor and understand cyberattacks
     
 - Helping to quickly address threats in Exchange Online, SharePoint Online, OneDrive for Business and Microsoft Teams
     
-- Providing insights and knowledge to help prevent attacks against their organization
+- Providing insights and knowledge to help security operations prevent cyberattacks against their organization
 
-- Employing [automated investigation and response](automated-investigation-response-office.md) for critical email based threats
+- Employing [automated investigation and response](automated-investigation-response-office.md) for critical email-based threats
     
-Read this article to learn more about threat investigation and response, and how to get started.
-  
-## Threat investigation and response in Office 365
+Threat investigation and response capabilities provide insights into threats and related response actions that are available in the Office 365 Security &amp; Compliance Center. These insights can help your organization's security team protect Office 365 users from email- or file-based attacks. The capabilities help monitor signals and gathers data from multiple sources, such as user activity, authentication, email, compromised PCs, and security incidents. Business decision makers and Office 365 global administrators, security administrators, and security analysts can all use this information to understand and respond to threats against Office 365 users and protect intellectual property.
 
-Threat investigation and response capabilities help drive insights into threats and related response actions that are available in the Office 365 Security &amp; Compliance Center. These insights can help your organization's security team protect Office 365 users from email- or file-based attacks. The capabilities help monitor signals and gathers data from multiple sources, such as user activity, authentication, email, compromised PCs, and security incidents. Business decision makers and Office 365 global administrators, security administrators, and security analysts can all use this information to understand and respond to threats against Office 365 users and protect their intellectual property.
+## Get acquainted with threat investigation and response tools
 
-## Get acquainted with the Threat dashboard, Explorer, and Incidents
-
-Threat investigation and response capabilities surface in the Security &amp; Compliance Center, as a set of tools and response workflows, including the [threat dashboard](#threat-dashboard), [Explorer](#threat-explorer), [Incidents](#incidents), [Attack Simulator](attack-simulator.md), and [Automated Investigation & Response](automated-investigation-response-office.md).
+Threat investigation and response capabilities surface in the Security &amp; Compliance Center, as a set of tools and response workflows, including the [threat dashboard](#threat-dashboard), [Explorer](#threat-explorer), [Incidents](#incidents), [Attack Simulator](#attack-simulator), and [Automated Investigation & Response](automated-investigation-response-office.md).
   
 ### Threat dashboard
 
@@ -46,6 +42,8 @@ Use the Threat dashboard (this is also referred to as the [Security dashboard](s
 ![Threat Dashboard](media/ce013a31-3f80-4d09-bb95-bfb7623b8bc4.png)
   
 To view and use this dashboard, in the Security &amp; Compliance Center, go to **Threat management** \> **Dashboard**.
+
+To learn more about 
   
 ### Threat Explorer
 
@@ -64,8 +62,16 @@ Use the Incidents list (this is also called Investigations) to see a list of in 
 To view the list of current incidents for your organization, in the Security &amp; Compliance Center, go to **Threat management** \> **Review** \> **Incidents**.
   
 ![In the Security &amp; Compliance Center, choose Threat management \> Review](media/e0f46454-fa38-40f0-a120-b595614d1d22.png)
+
+### Attack Simulator
+
+Use Attack Simulator to set up and run realistic cyberattacks in your organization, and identify vulnerable people before a real cyberattack affects your business. To learn more, see [Attack Simulator in Office 365](attack-simulator.md).
+
+### Automated investigation and response
+
+Use automated investigation and response (AIR) capabilities to save time and effort correlating content, devices, and people at risk from threats in your organization. AIR processes can begin whenever certain alerts are triggered, or when started by your security operations team. To learn more, see [Automated Investigation and Response (AIR) with Office 365](automated-investigation-response-office.md). 
   
-## Learn more about malware and threats
+## Threat intelligence widgets
 
 As part of the Office 365 Advanced Threat Protection Plan 2 offering, security analysts can review details about a known threat. This is useful to determine whether there are additional preventative measures/steps that can be taken to keep users safe.
   
