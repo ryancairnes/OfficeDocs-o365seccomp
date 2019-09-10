@@ -3,7 +3,7 @@ title: "What the sensitive information types look for"
 ms.author: chrfox
 author: chrfox
 manager: laurawi
-ms.date: 05/20/2019
+ms.date:
 audience: Admin
 search.appverid: MET150
 ms.topic: reference
@@ -3567,7 +3567,7 @@ The checksum passes.
      <IdMatch idRef="Func_india_aadhaar"/>
   </Pattern>
 </Entity>
-
+```
 ### Keywords
    
 #### Keyword_india_aadhar
@@ -3607,7 +3607,7 @@ A DLP policy is 75% confident that it's detected this type of sensitive informat
 A DLP policy is 75% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
 - The regular expression Regex_indonesia_id_card finds content that matches the pattern.
 
-```
+```xml
 <!-- Indonesia Identity Card (KTP) Number -->
 <Entity id="da68fdb0-f383-4981-8c86-82689d3b7d55" recommendedConfidence="85" patternsProximity="300">
   <Pattern confidenceLevel="85">
@@ -3751,22 +3751,31 @@ No
 ### Definition
 
 A DLP policy is 85% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
-- A keyword from Dictionary_icd_10_cm is found.
+- A keyword from Dictionary_icd_10_updated is found.
+- A keyword from Dictionary_icd_10_codes is found.
+
+A DLP policy is 75% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
+- A keyword from Dictionary_icd_10_ updated is found.
 
 ```xml
       <!-- ICD-10 CM -->
       <Entity id="3356946c-6bb7-449b-b253-6ffa419c0ce7" patternsProximity="300" recommendedConfidence="85">
         <Pattern confidenceLevel="85">
-          <IdMatch idRef="Dictionary_icd_10_cm" />
+          <IdMatch idRef="Dictionary_icd_10_updated" />
+          <Match idRef="Dictionary_icd_10_codes" />
         </Pattern>
-      </Entity>
+        <Pattern confidenceLevel="75">
+          <IdMatch idRef="Dictionary_icd_10_updated" />
+        </Pattern>
+
 ```
 
 Keywords
 
-Any term from the Dictionary_icd_10_cm keyword dictionary, which is based on the [International Classification of Diseases, Tenth Revision, Clinical Modification (ICD-10-CM)](https://go.microsoft.com/fwlink/?linkid=852604). This type looks only for the term, not the insurance codes.
+Any term from the Dictionary_icd_10_updated keyword dictionary, which is based on the [International Classification of Diseases, Tenth Revision, Clinical Modification (ICD-10-CM)](https://go.microsoft.com/fwlink/?linkid=852604). This type looks only for the term, not the insurance codes.
 
-   
+Any term from the Dictionary_icd_10_codes keyword dictionary, which is based on the [International Classification of Diseases, Tenth Revision, Clinical Modification (ICD-10-CM)](https://go.microsoft.com/fwlink/?linkid=852604). This type looks only for insurance codes, not the description.
+
 ## International Classification of Diseases (ICD-9-CM)
 
 ### Format
@@ -3784,20 +3793,30 @@ No
 ### Definition
 
 A DLP policy is 85% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
-- A keyword from Dictionary_icd_9_cm is found.
+- A keyword from Dictionary_icd_9_updated is found.
+- A keyword from Dictionary_icd_9_codes is found.
+
+A DLP policy is 75% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
+- A keyword from Dictionary_icd_9_updated is found.
 
 ```xml
-      <Entity id="fa3f9c74-ee07-4c52-b5f2-085d6b2c0ec4" patternsProximity="300" recommendedConfidence="85">
+    <Entity id="fa3f9c74-ee07-4c52-b5f2-085d6b2c0ec4" patternsProximity="300" recommendedConfidence="85">
         <Pattern confidenceLevel="85">
-          <IdMatch idRef="Dictionary_icd_9_cm" />
+          <IdMatch idRef="Dictionary_icd_9_updated" />
+          <Match idRef="Dictionary_icd_9_codes" />
+        </Pattern>
+        <Pattern confidenceLevel="75">
+          <IdMatch idRef="Dictionary_icd_9_updated" />
         </Pattern>
       </Entity>
 ```
 
 ### Keywords
 
-Any term from the Dictionary_icd_9_cm keyword dictionary, which is based on the [International Classification of Diseases,Ninth Revision, Clinical Modification (ICD-9-CM)](https://go.microsoft.com/fwlink/?linkid=852605). This type looks only for the term, not the insurance codes.
-   
+Any term from the Dictionary_icd_9_updated keyword dictionary, which is based on the [International Classification of Diseases,Ninth Revision, Clinical Modification (ICD-9-CM)](https://go.microsoft.com/fwlink/?linkid=852605). This type looks only for the term, not the insurance codes.
+
+Any term from the Dictionary_icd_9_codes keyword dictionary, which is based on the [International Classification of Diseases,Ninth Revision, Clinical Modification (ICD-9-CM)](https://go.microsoft.com/fwlink/?linkid=852605). This type looks only for insurance codes, not the description.
+
 ## Ireland Personal Public Service (PPS) Number
 
 ### Format

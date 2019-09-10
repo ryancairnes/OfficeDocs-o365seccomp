@@ -1,9 +1,9 @@
 ---
 title: "View email security reports in the Security &amp; Compliance Center"
-ms.author: chrfox
-author: chrfox
+ms.author: tracyp
+author: msfttracyp
 manager: dansimp
-ms.date: 05/21/2019
+ms.date: 08/29/2019
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -137,7 +137,7 @@ Click (or tap) the report to open it in a new browser window, where you can get 
   
 ## Spam Detections report
 
-The **Spam Detections** report shows all the spam content blocked by Exchange Online. 
+The **Spam Detections** report shows all the spam content blocked by Exchange Online. Messages are counted per message, and not per recipient. For example, if an email message was sent to 100 recipients in your organization, it is counted as one message.
   
 To view this report, in the [Security &amp; Compliance Center](https://protection.office.com), go to **Reports** \> **Dashboard** \> **Spam Detections**.
   

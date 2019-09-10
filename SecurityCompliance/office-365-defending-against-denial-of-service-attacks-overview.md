@@ -29,7 +29,7 @@ Microsoft delivers a trustworthy infrastructure for more than 200 cloud services
 - Skype
 - Xbox Live
 
-As a global organization with a significant Internet presence and many prominent Internet properties that provide cloud services, Microsoft is a large, common target for hackers and other malicious individuals. The network communication layer between clients and the Microsoft Cloud is one of the biggest targets of malicious attacks. In fact, Microsoft is continuously and persistently under some form of network-based cyber-attack. In line with this, Microsoft uses defense-in-depth security principles to protect its cloud services and networks. Without reliable and persistent mitigation systems that defend against these attacks, Microsoft's cloud services would be offline and unavailable to customers.
+As a global organization with a significant Internet presence and many prominent Internet properties that provide cloud services, Microsoft is a large, common target for hackers and other malicious individuals. The network communication layer between clients and the Microsoft Cloud is one of the biggest targets of malicious attacks. In fact, Microsoft is continuously and persistently under some form of network-based cyberattack. In line with this, Microsoft uses defense-in-depth security principles to protect its cloud services and networks. Without reliable and persistent mitigation systems that defend against these attacks, Microsoft's cloud services would be offline and unavailable to customers.
 
 ## Definition and Symptoms of Denial-of-Service Attacks
 
