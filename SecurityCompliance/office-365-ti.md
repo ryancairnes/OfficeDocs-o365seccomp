@@ -1,7 +1,7 @@
 ---
 title: "Office 365 threat investigation and response"
-ms.author: deniseb
-author: denisebmsft
+ms.author: tracyp
+author: msfttracyp
 manager: dansimp
 ms.date: 08/23/2019
 audience: Admin
