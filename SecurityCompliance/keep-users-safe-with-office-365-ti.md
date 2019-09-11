@@ -1,7 +1,7 @@
 ---
 title: "Keep your organization safe with Office 365 threat investigation and response capabilities"
-ms.author: deniseb
-author: denisebmsft
+ms.author: tracyp
+author: msfttracyp
 manager: dansimp
 audience: ITPro
 ms.topic: article
