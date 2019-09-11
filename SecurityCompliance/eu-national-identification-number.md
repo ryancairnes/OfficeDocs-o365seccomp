@@ -1091,13 +1091,13 @@ emšo
 
 ### Format
 
-Seven digits followed by one character
+Eight digits followed by one character
   
 ### Pattern
 
-Seven digits followed by one character
+Eight digits followed by one character
   
-- Seven digits
+- Eight digits
     
 - One digit or letter (not case-sensitive)
     
