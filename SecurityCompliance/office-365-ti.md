@@ -69,7 +69,7 @@ Use Attack Simulator to set up and run realistic cyberattacks in your organizati
 
 ### Automated investigation and response
 
-Use automated investigation and response (AIR) capabilities to save time and effort correlating content, devices, and people at risk from threats in your organization. AIR processes can begin whenever certain alerts are triggered, or when started by your security operations team. To learn more, see [Automated Investigation and Response (AIR) with Office 365](automated-investigation-response-office.md). 
+Use automated investigation and response (AIR) capabilities to save time and effort correlating content, devices, and people at risk from threats in your organization. AIR processes can begin whenever certain alerts are triggered, or when started by your security operations team. To learn more, see [Automated Incident Response (AIR) with Office 365](automated-investigation-response-office.md). 
   
 ## Threat intelligence widgets
 
