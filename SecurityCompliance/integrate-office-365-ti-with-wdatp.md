@@ -1,7 +1,7 @@
 ---
 title: Integrate Office 365 Advanced Threat Protection with Microsoft Defender Advanced Threat Protection
-ms.author: deniseb
-author: denisebmsft
+ms.author: tracyp
+author: msfttracyp
 manager: dansimp
 ms.date: 01/22/2019
 audience: ITPro
