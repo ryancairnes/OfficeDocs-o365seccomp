@@ -25,6 +25,12 @@ We're continuously adding new features to the [Microsoft 365 compliance center](
 > [!TIP]
 > Interested in what's going on in other admin centers? Check out these articles:<br>[What's new in the Microsoft 365 admin center](https://docs.microsoft.com/office365/admin/whats-new-in-preview?view=o365-worldwide)<br>[What's new in the SharePoint admin center](https://docs.microsoft.com/sharepoint/what-s-new-in-admin-center)
 
+## August 2019
+
+### Data investigations
+
+When performing a data investigation, you can now delete items from their original locations. This means you can delete items from Exchange mailboxes, SharePoint sites, and OneDrive accounts across your organization. Because you collected the items as evidence, you’ll have copies of them retained in the evidence set to you can investigate further or just keep as a reference. [Learn more](datainvestigations/delete-items-from-original-locations.md)
+
 ## July 2019
 
 ### New admin roles

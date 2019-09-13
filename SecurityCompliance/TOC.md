@@ -1,7 +1,8 @@
 # [Security & Compliance](index.md)
 
 # Get started
-## [What's new in the Compliance Center](whats-new.md)
+## [What's new in the compliance center](whats-new.md)
+## [Recent updates to compliance content](new-updated-compliance-content.md)
 ## [Office 365 security roadmap](security-roadmap.md)
 ## [Configure your Office 365 tenant for increased security](tenant-wide-setup-for-increased-security.md)
 ## [The new Microsoft 365 security center and Microsoft 365 compliance center](microsoft-security-and-compliance.md)
